@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ScriptsToExecuteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scripts")
-      private final @Nullable Input<ScriptsToExecuteArgs> scripts;
+      private final @Nullable Output<ScriptsToExecuteArgs> scripts;
 
-    public Input<ScriptsToExecuteArgs> getScripts() {
-        return this.scripts == null ? Input.empty() : this.scripts;
+    public Output<ScriptsToExecuteArgs> getScripts() {
+        return this.scripts == null ? Output.empty() : this.scripts;
     }
 
-    public SetupScriptsArgs(@Nullable Input<ScriptsToExecuteArgs> scripts) {
+    public SetupScriptsArgs(@Nullable Output<ScriptsToExecuteArgs> scripts) {
         this.scripts = scripts;
     }
 
     private SetupScriptsArgs() {
-        this.scripts = Input.empty();
+        this.scripts = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ScriptsToExecuteArgs> scripts;
+        private @Nullable Output<ScriptsToExecuteArgs> scripts;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scripts = defaults.scripts;
         }
 
-        public Builder scripts(@Nullable Input<ScriptsToExecuteArgs> scripts) {
+        public Builder scripts(@Nullable Output<ScriptsToExecuteArgs> scripts) {
             this.scripts = scripts;
             return this;
         }
 
         public Builder scripts(@Nullable ScriptsToExecuteArgs scripts) {
-            this.scripts = Input.ofNullable(scripts);
+            this.scripts = Output.ofNullable(scripts);
             return this;
         }
         public SetupScriptsArgs build() {

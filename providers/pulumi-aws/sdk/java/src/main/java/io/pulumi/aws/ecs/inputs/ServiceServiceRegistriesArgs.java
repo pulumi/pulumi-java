@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="registryArn", required=true)
-      private final Input<String> registryArn;
+      private final Output<String> registryArn;
 
-    public Input<String> getRegistryArn() {
+    public Output<String> getRegistryArn() {
         return this.registryArn;
     }
 
     public ServiceServiceRegistriesArgs(
-        @Nullable Input<String> containerName,
-        @Nullable Input<Integer> containerPort,
-        @Nullable Input<Integer> port,
-        Input<String> registryArn) {
+        @Nullable Output<String> containerName,
+        @Nullable Output<Integer> containerPort,
+        @Nullable Output<Integer> port,
+        Output<String> registryArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;
@@ -71,10 +71,10 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceServiceRegistriesArgs() {
-        this.containerName = Input.empty();
-        this.containerPort = Input.empty();
-        this.port = Input.empty();
-        this.registryArn = Input.empty();
+        this.containerName = Output.empty();
+        this.containerPort = Output.empty();
+        this.port = Output.empty();
+        this.registryArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<Integer> containerPort;
-        private @Nullable Input<Integer> port;
-        private Input<String> registryArn;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<Integer> containerPort;
+        private @Nullable Output<Integer> port;
+        private Output<String> registryArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
     	      this.registryArn = defaults.registryArn;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder registryArn(Input<String> registryArn) {
+        public Builder registryArn(Output<String> registryArn) {
             this.registryArn = Objects.requireNonNull(registryArn);
             return this;
         }
 
         public Builder registryArn(String registryArn) {
-            this.registryArn = Input.of(Objects.requireNonNull(registryArn));
+            this.registryArn = Output.of(Objects.requireNonNull(registryArn));
             return this;
         }
         public ServiceServiceRegistriesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace")
-      private final @Nullable Input<String> serviceNamespace;
+      private final @Nullable Output<String> serviceNamespace;
 
-    public Input<String> getServiceNamespace() {
-        return this.serviceNamespace == null ? Input.empty() : this.serviceNamespace;
+    public Output<String> getServiceNamespace() {
+        return this.serviceNamespace == null ? Output.empty() : this.serviceNamespace;
     }
 
     public ClusterIstioArgs(
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<String> serviceNamespace) {
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<String> serviceNamespace) {
         this.clusterName = clusterName;
         this.location = location;
         this.serviceName = serviceName;
@@ -74,10 +74,10 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterIstioArgs() {
-        this.clusterName = Input.empty();
-        this.location = Input.empty();
-        this.serviceName = Input.empty();
-        this.serviceNamespace = Input.empty();
+        this.clusterName = Output.empty();
+        this.location = Output.empty();
+        this.serviceName = Output.empty();
+        this.serviceNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<String> serviceNamespace;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<String> serviceNamespace;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder serviceNamespace(@Nullable Input<String> serviceNamespace) {
+        public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
 
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Input.ofNullable(serviceNamespace);
+            this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
         }
         public ClusterIstioArgs build() {

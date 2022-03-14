@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.TrackPropertyCompareOperation;
 import io.pulumi.azurenative.media.enums.TrackPropertyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operation", required=true)
-      private final Input<Either<String,TrackPropertyCompareOperation>> operation;
+      private final Output<Either<String,TrackPropertyCompareOperation>> operation;
 
-    public Input<Either<String,TrackPropertyCompareOperation>> getOperation() {
+    public Output<Either<String,TrackPropertyCompareOperation>> getOperation() {
         return this.operation;
     }
 
@@ -37,9 +37,9 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="property", required=true)
-      private final Input<Either<String,TrackPropertyType>> property;
+      private final Output<Either<String,TrackPropertyType>> property;
 
-    public Input<Either<String,TrackPropertyType>> getProperty() {
+    public Output<Either<String,TrackPropertyType>> getProperty() {
         return this.property;
     }
 
@@ -48,25 +48,25 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public TrackPropertyConditionArgs(
-        Input<Either<String,TrackPropertyCompareOperation>> operation,
-        Input<Either<String,TrackPropertyType>> property,
-        @Nullable Input<String> value) {
+        Output<Either<String,TrackPropertyCompareOperation>> operation,
+        Output<Either<String,TrackPropertyType>> property,
+        @Nullable Output<String> value) {
         this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
         this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
         this.value = value;
     }
 
     private TrackPropertyConditionArgs() {
-        this.operation = Input.empty();
-        this.property = Input.empty();
-        this.value = Input.empty();
+        this.operation = Output.empty();
+        this.property = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Either<String,TrackPropertyCompareOperation>> operation;
-        private Input<Either<String,TrackPropertyType>> property;
-        private @Nullable Input<String> value;
+        private Output<Either<String,TrackPropertyCompareOperation>> operation;
+        private Output<Either<String,TrackPropertyType>> property;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
     	      this.value = defaults.value;
         }
 
-        public Builder operation(Input<Either<String,TrackPropertyCompareOperation>> operation) {
+        public Builder operation(Output<Either<String,TrackPropertyCompareOperation>> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
         public Builder operation(Either<String,TrackPropertyCompareOperation> operation) {
-            this.operation = Input.of(Objects.requireNonNull(operation));
+            this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
 
-        public Builder property(Input<Either<String,TrackPropertyType>> property) {
+        public Builder property(Output<Either<String,TrackPropertyType>> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
         public Builder property(Either<String,TrackPropertyType> property) {
-            this.property = Input.of(Objects.requireNonNull(property));
+            this.property = Output.of(Objects.requireNonNull(property));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public TrackPropertyConditionArgs build() {

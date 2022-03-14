@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServiceTypeHealthPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultServiceTypeHealthPolicy")
-      private final @Nullable Input<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
+      private final @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
-    public Input<ServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
-        return this.defaultServiceTypeHealthPolicy == null ? Input.empty() : this.defaultServiceTypeHealthPolicy;
+    public Output<ServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
+        return this.defaultServiceTypeHealthPolicy == null ? Output.empty() : this.defaultServiceTypeHealthPolicy;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceTypeHealthPolicies")
-      private final @Nullable Input<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
+      private final @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 
-    public Input<Map<String,ServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicies() {
-        return this.serviceTypeHealthPolicies == null ? Input.empty() : this.serviceTypeHealthPolicies;
+    public Output<Map<String,ServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicies() {
+        return this.serviceTypeHealthPolicies == null ? Output.empty() : this.serviceTypeHealthPolicies;
     }
 
     public ApplicationHealthPolicyArgs(
-        @Nullable Input<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy,
-        @Nullable Input<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
+        @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy,
+        @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
         this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
     }
 
     private ApplicationHealthPolicyArgs() {
-        this.defaultServiceTypeHealthPolicy = Input.empty();
-        this.serviceTypeHealthPolicies = Input.empty();
+        this.defaultServiceTypeHealthPolicy = Output.empty();
+        this.serviceTypeHealthPolicies = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
-        private @Nullable Input<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
+        private @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
+        private @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
     	      this.serviceTypeHealthPolicies = defaults.serviceTypeHealthPolicies;
         }
 
-        public Builder defaultServiceTypeHealthPolicy(@Nullable Input<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
+        public Builder defaultServiceTypeHealthPolicy(@Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
         public Builder defaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
-            this.defaultServiceTypeHealthPolicy = Input.ofNullable(defaultServiceTypeHealthPolicy);
+            this.defaultServiceTypeHealthPolicy = Output.ofNullable(defaultServiceTypeHealthPolicy);
             return this;
         }
 
-        public Builder serviceTypeHealthPolicies(@Nullable Input<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
+        public Builder serviceTypeHealthPolicies(@Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
             this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
         }
 
         public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyArgs> serviceTypeHealthPolicies) {
-            this.serviceTypeHealthPolicies = Input.ofNullable(serviceTypeHealthPolicies);
+            this.serviceTypeHealthPolicies = Output.ofNullable(serviceTypeHealthPolicies);
             return this;
         }
         public ApplicationHealthPolicyArgs build() {

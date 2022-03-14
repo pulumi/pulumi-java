@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.IotDpsSku;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Double> capacity;
+      private final @Nullable Output<Double> capacity;
 
-    public Input<Double> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Double> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,IotDpsSku>> name;
+      private final @Nullable Output<Either<String,IotDpsSku>> name;
 
-    public Input<Either<String,IotDpsSku>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,IotDpsSku>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public IotDpsSkuInfoArgs(
-        @Nullable Input<Double> capacity,
-        @Nullable Input<Either<String,IotDpsSku>> name) {
+        @Nullable Output<Double> capacity,
+        @Nullable Output<Either<String,IotDpsSku>> name) {
         this.capacity = capacity;
         this.name = name;
     }
 
     private IotDpsSkuInfoArgs() {
-        this.capacity = Input.empty();
-        this.name = Input.empty();
+        this.capacity = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> capacity;
-        private @Nullable Input<Either<String,IotDpsSku>> name;
+        private @Nullable Output<Double> capacity;
+        private @Nullable Output<Either<String,IotDpsSku>> name;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder capacity(@Nullable Input<Double> capacity) {
+        public Builder capacity(@Nullable Output<Double> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder name(@Nullable Input<Either<String,IotDpsSku>> name) {
+        public Builder name(@Nullable Output<Either<String,IotDpsSku>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,IotDpsSku> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public IotDpsSkuInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -42,25 +42,25 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public BasicAuthenticationArgs(
-        @Nullable Input<String> password,
-        Input<String> type,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> password,
+        Output<String> type,
+        @Nullable Output<String> username) {
         this.password = password;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.username = username;
     }
 
     private BasicAuthenticationArgs() {
-        this.password = Input.empty();
-        this.type = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.type = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private Input<String> type;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> password;
+        private Output<String> type;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public BasicAuthenticationArgs build() {

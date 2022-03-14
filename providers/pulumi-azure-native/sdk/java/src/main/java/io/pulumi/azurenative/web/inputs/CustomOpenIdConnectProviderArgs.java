@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.OpenIdConnectLoginArgs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectRegistrationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="login")
-      private final @Nullable Input<OpenIdConnectLoginArgs> login;
+      private final @Nullable Output<OpenIdConnectLoginArgs> login;
 
-    public Input<OpenIdConnectLoginArgs> getLogin() {
-        return this.login == null ? Input.empty() : this.login;
+    public Output<OpenIdConnectLoginArgs> getLogin() {
+        return this.login == null ? Output.empty() : this.login;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="registration")
-      private final @Nullable Input<OpenIdConnectRegistrationArgs> registration;
+      private final @Nullable Output<OpenIdConnectRegistrationArgs> registration;
 
-    public Input<OpenIdConnectRegistrationArgs> getRegistration() {
-        return this.registration == null ? Input.empty() : this.registration;
+    public Output<OpenIdConnectRegistrationArgs> getRegistration() {
+        return this.registration == null ? Output.empty() : this.registration;
     }
 
     public CustomOpenIdConnectProviderArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<OpenIdConnectLoginArgs> login,
-        @Nullable Input<OpenIdConnectRegistrationArgs> registration) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<OpenIdConnectLoginArgs> login,
+        @Nullable Output<OpenIdConnectRegistrationArgs> registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;
     }
 
     private CustomOpenIdConnectProviderArgs() {
-        this.enabled = Input.empty();
-        this.login = Input.empty();
-        this.registration = Input.empty();
+        this.enabled = Output.empty();
+        this.login = Output.empty();
+        this.registration = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<OpenIdConnectLoginArgs> login;
-        private @Nullable Input<OpenIdConnectRegistrationArgs> registration;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<OpenIdConnectLoginArgs> login;
+        private @Nullable Output<OpenIdConnectRegistrationArgs> registration;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
     	      this.registration = defaults.registration;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder login(@Nullable Input<OpenIdConnectLoginArgs> login) {
+        public Builder login(@Nullable Output<OpenIdConnectLoginArgs> login) {
             this.login = login;
             return this;
         }
 
         public Builder login(@Nullable OpenIdConnectLoginArgs login) {
-            this.login = Input.ofNullable(login);
+            this.login = Output.ofNullable(login);
             return this;
         }
 
-        public Builder registration(@Nullable Input<OpenIdConnectRegistrationArgs> registration) {
+        public Builder registration(@Nullable Output<OpenIdConnectRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
         public Builder registration(@Nullable OpenIdConnectRegistrationArgs registration) {
-            this.registration = Input.ofNullable(registration);
+            this.registration = Output.ofNullable(registration);
             return this;
         }
         public CustomOpenIdConnectProviderArgs build() {

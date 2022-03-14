@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="registry", required=true)
-      private final Input<String> registry;
+      private final Output<String> registry;
 
-    public Input<String> getRegistry() {
+    public Output<String> getRegistry() {
         return this.registry;
     }
 
@@ -57,10 +57,10 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tenant")
-      private final @Nullable Input<String> tenant;
+      private final @Nullable Output<String> tenant;
 
-    public Input<String> getTenant() {
-        return this.tenant == null ? Input.empty() : this.tenant;
+    public Output<String> getTenant() {
+        return this.tenant == null ? Output.empty() : this.tenant;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="volume", required=true)
-      private final Input<String> volume;
+      private final Output<String> volume;
 
-    public Input<String> getVolume() {
+    public Output<String> getVolume() {
         return this.volume;
     }
 
     public QuobyteVolumeSourceArgs(
-        @Nullable Input<String> group,
-        @Nullable Input<Boolean> readOnly,
-        Input<String> registry,
-        @Nullable Input<String> tenant,
-        @Nullable Input<String> user,
-        Input<String> volume) {
+        @Nullable Output<String> group,
+        @Nullable Output<Boolean> readOnly,
+        Output<String> registry,
+        @Nullable Output<String> tenant,
+        @Nullable Output<String> user,
+        Output<String> volume) {
         this.group = group;
         this.readOnly = readOnly;
         this.registry = Objects.requireNonNull(registry, "expected parameter 'registry' to be non-null");
@@ -101,12 +101,12 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private QuobyteVolumeSourceArgs() {
-        this.group = Input.empty();
-        this.readOnly = Input.empty();
-        this.registry = Input.empty();
-        this.tenant = Input.empty();
-        this.user = Input.empty();
-        this.volume = Input.empty();
+        this.group = Output.empty();
+        this.readOnly = Output.empty();
+        this.registry = Output.empty();
+        this.tenant = Output.empty();
+        this.user = Output.empty();
+        this.volume = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> group;
-        private @Nullable Input<Boolean> readOnly;
-        private Input<String> registry;
-        private @Nullable Input<String> tenant;
-        private @Nullable Input<String> user;
-        private Input<String> volume;
+        private @Nullable Output<String> group;
+        private @Nullable Output<Boolean> readOnly;
+        private Output<String> registry;
+        private @Nullable Output<String> tenant;
+        private @Nullable Output<String> user;
+        private Output<String> volume;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     	      this.volume = defaults.volume;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder registry(Input<String> registry) {
+        public Builder registry(Output<String> registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
 
         public Builder registry(String registry) {
-            this.registry = Input.of(Objects.requireNonNull(registry));
+            this.registry = Output.of(Objects.requireNonNull(registry));
             return this;
         }
 
-        public Builder tenant(@Nullable Input<String> tenant) {
+        public Builder tenant(@Nullable Output<String> tenant) {
             this.tenant = tenant;
             return this;
         }
 
         public Builder tenant(@Nullable String tenant) {
-            this.tenant = Input.ofNullable(tenant);
+            this.tenant = Output.ofNullable(tenant);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
 
-        public Builder volume(Input<String> volume) {
+        public Builder volume(Output<String> volume) {
             this.volume = Objects.requireNonNull(volume);
             return this;
         }
 
         public Builder volume(String volume) {
-            this.volume = Input.of(Objects.requireNonNull(volume));
+            this.volume = Output.of(Objects.requireNonNull(volume));
             return this;
         }
         public QuobyteVolumeSourceArgs build() {

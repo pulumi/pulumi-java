@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,9 +19,9 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="labels", required=true)
-      private final Input<Map<String,String>> labels;
+      private final Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
 
@@ -30,22 +30,22 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public UptimeCheckConfigMonitoredResourceGetArgs(
-        Input<Map<String,String>> labels,
-        Input<String> type) {
+        Output<Map<String,String>> labels,
+        Output<String> type) {
         this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private UptimeCheckConfigMonitoredResourceGetArgs() {
-        this.labels = Input.empty();
-        this.type = Input.empty();
+        this.labels = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> labels;
-        private Input<String> type;
+        private Output<Map<String,String>> labels;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder labels(Input<Map<String,String>> labels) {
+        public Builder labels(Output<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Input.of(Objects.requireNonNull(labels));
+            this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public UptimeCheckConfigMonitoredResourceGetArgs build() {

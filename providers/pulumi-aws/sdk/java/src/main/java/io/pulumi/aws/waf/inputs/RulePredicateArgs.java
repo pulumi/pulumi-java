@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.waf.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class RulePredicateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataId", required=true)
-      private final Input<String> dataId;
+      private final Output<String> dataId;
 
-    public Input<String> getDataId() {
+    public Output<String> getDataId() {
         return this.dataId;
     }
 
@@ -33,9 +33,9 @@ public final class RulePredicateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="negated", required=true)
-      private final Input<Boolean> negated;
+      private final Output<Boolean> negated;
 
-    public Input<Boolean> getNegated() {
+    public Output<Boolean> getNegated() {
         return this.negated;
     }
 
@@ -44,25 +44,25 @@ public final class RulePredicateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public RulePredicateArgs(
-        Input<String> dataId,
-        Input<Boolean> negated,
-        Input<String> type) {
+        Output<String> dataId,
+        Output<Boolean> negated,
+        Output<String> type) {
         this.dataId = Objects.requireNonNull(dataId, "expected parameter 'dataId' to be non-null");
         this.negated = Objects.requireNonNull(negated, "expected parameter 'negated' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private RulePredicateArgs() {
-        this.dataId = Input.empty();
-        this.negated = Input.empty();
-        this.type = Input.empty();
+        this.dataId = Output.empty();
+        this.negated = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class RulePredicateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dataId;
-        private Input<Boolean> negated;
-        private Input<String> type;
+        private Output<String> dataId;
+        private Output<Boolean> negated;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class RulePredicateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder dataId(Input<String> dataId) {
+        public Builder dataId(Output<String> dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
 
         public Builder dataId(String dataId) {
-            this.dataId = Input.of(Objects.requireNonNull(dataId));
+            this.dataId = Output.of(Objects.requireNonNull(dataId));
             return this;
         }
 
-        public Builder negated(Input<Boolean> negated) {
+        public Builder negated(Output<Boolean> negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
 
         public Builder negated(Boolean negated) {
-            this.negated = Input.of(Objects.requireNonNull(negated));
+            this.negated = Output.of(Objects.requireNonNull(negated));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RulePredicateArgs build() {

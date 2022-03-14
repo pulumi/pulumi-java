@@ -8,7 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisParametersArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,16 +21,16 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     public static final AnalysisArgs Empty = new AnalysisArgs();
 
     @InputImport(name="analysisId", required=true)
-      private final Input<String> analysisId;
+      private final Output<String> analysisId;
 
-    public Input<String> getAnalysisId() {
+    public Output<String> getAnalysisId() {
         return this.analysisId;
     }
 
     @InputImport(name="awsAccountId", required=true)
-      private final Input<String> awsAccountId;
+      private final Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
+    public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
 
@@ -39,10 +39,10 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errors")
-      private final @Nullable Input<List<AnalysisErrorArgs>> errors;
+      private final @Nullable Output<List<AnalysisErrorArgs>> errors;
 
-    public Input<List<AnalysisErrorArgs>> getErrors() {
-        return this.errors == null ? Input.empty() : this.errors;
+    public Output<List<AnalysisErrorArgs>> getErrors() {
+        return this.errors == null ? Output.empty() : this.errors;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="parameters")
-      private final @Nullable Input<AnalysisParametersArgs> parameters;
+      private final @Nullable Output<AnalysisParametersArgs> parameters;
 
-    public Input<AnalysisParametersArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<AnalysisParametersArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -73,16 +73,16 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<AnalysisResourcePermissionArgs>> permissions;
+      private final @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
 
-    public Input<List<AnalysisResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<AnalysisResourcePermissionArgs>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     @InputImport(name="sourceEntity", required=true)
-      private final Input<AnalysisSourceEntityArgs> sourceEntity;
+      private final Output<AnalysisSourceEntityArgs> sourceEntity;
 
-    public Input<AnalysisSourceEntityArgs> getSourceEntity() {
+    public Output<AnalysisSourceEntityArgs> getSourceEntity() {
         return this.sourceEntity;
     }
 
@@ -92,10 +92,10 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AnalysisTagArgs>> tags;
+      private final @Nullable Output<List<AnalysisTagArgs>> tags;
 
-    public Input<List<AnalysisTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AnalysisTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -103,22 +103,22 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="themeArn")
-      private final @Nullable Input<String> themeArn;
+      private final @Nullable Output<String> themeArn;
 
-    public Input<String> getThemeArn() {
-        return this.themeArn == null ? Input.empty() : this.themeArn;
+    public Output<String> getThemeArn() {
+        return this.themeArn == null ? Output.empty() : this.themeArn;
     }
 
     public AnalysisArgs(
-        Input<String> analysisId,
-        Input<String> awsAccountId,
-        @Nullable Input<List<AnalysisErrorArgs>> errors,
-        @Nullable Input<String> name,
-        @Nullable Input<AnalysisParametersArgs> parameters,
-        @Nullable Input<List<AnalysisResourcePermissionArgs>> permissions,
-        Input<AnalysisSourceEntityArgs> sourceEntity,
-        @Nullable Input<List<AnalysisTagArgs>> tags,
-        @Nullable Input<String> themeArn) {
+        Output<String> analysisId,
+        Output<String> awsAccountId,
+        @Nullable Output<List<AnalysisErrorArgs>> errors,
+        @Nullable Output<String> name,
+        @Nullable Output<AnalysisParametersArgs> parameters,
+        @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions,
+        Output<AnalysisSourceEntityArgs> sourceEntity,
+        @Nullable Output<List<AnalysisTagArgs>> tags,
+        @Nullable Output<String> themeArn) {
         this.analysisId = Objects.requireNonNull(analysisId, "expected parameter 'analysisId' to be non-null");
         this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
         this.errors = errors;
@@ -131,15 +131,15 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalysisArgs() {
-        this.analysisId = Input.empty();
-        this.awsAccountId = Input.empty();
-        this.errors = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.permissions = Input.empty();
-        this.sourceEntity = Input.empty();
-        this.tags = Input.empty();
-        this.themeArn = Input.empty();
+        this.analysisId = Output.empty();
+        this.awsAccountId = Output.empty();
+        this.errors = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.permissions = Output.empty();
+        this.sourceEntity = Output.empty();
+        this.tags = Output.empty();
+        this.themeArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,15 +151,15 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> analysisId;
-        private Input<String> awsAccountId;
-        private @Nullable Input<List<AnalysisErrorArgs>> errors;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AnalysisParametersArgs> parameters;
-        private @Nullable Input<List<AnalysisResourcePermissionArgs>> permissions;
-        private Input<AnalysisSourceEntityArgs> sourceEntity;
-        private @Nullable Input<List<AnalysisTagArgs>> tags;
-        private @Nullable Input<String> themeArn;
+        private Output<String> analysisId;
+        private Output<String> awsAccountId;
+        private @Nullable Output<List<AnalysisErrorArgs>> errors;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AnalysisParametersArgs> parameters;
+        private @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
+        private Output<AnalysisSourceEntityArgs> sourceEntity;
+        private @Nullable Output<List<AnalysisTagArgs>> tags;
+        private @Nullable Output<String> themeArn;
 
         public Builder() {
     	      // Empty
@@ -178,93 +178,93 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     	      this.themeArn = defaults.themeArn;
         }
 
-        public Builder analysisId(Input<String> analysisId) {
+        public Builder analysisId(Output<String> analysisId) {
             this.analysisId = Objects.requireNonNull(analysisId);
             return this;
         }
 
         public Builder analysisId(String analysisId) {
-            this.analysisId = Input.of(Objects.requireNonNull(analysisId));
+            this.analysisId = Output.of(Objects.requireNonNull(analysisId));
             return this;
         }
 
-        public Builder awsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
+            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder errors(@Nullable Input<List<AnalysisErrorArgs>> errors) {
+        public Builder errors(@Nullable Output<List<AnalysisErrorArgs>> errors) {
             this.errors = errors;
             return this;
         }
 
         public Builder errors(@Nullable List<AnalysisErrorArgs> errors) {
-            this.errors = Input.ofNullable(errors);
+            this.errors = Output.ofNullable(errors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<AnalysisParametersArgs> parameters) {
+        public Builder parameters(@Nullable Output<AnalysisParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable AnalysisParametersArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<AnalysisResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<AnalysisResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<AnalysisResourcePermissionArgs> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder sourceEntity(Input<AnalysisSourceEntityArgs> sourceEntity) {
+        public Builder sourceEntity(Output<AnalysisSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
 
         public Builder sourceEntity(AnalysisSourceEntityArgs sourceEntity) {
-            this.sourceEntity = Input.of(Objects.requireNonNull(sourceEntity));
+            this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AnalysisTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AnalysisTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder themeArn(@Nullable Input<String> themeArn) {
+        public Builder themeArn(@Nullable Output<String> themeArn) {
             this.themeArn = themeArn;
             return this;
         }
 
         public Builder themeArn(@Nullable String themeArn) {
-            this.themeArn = Input.ofNullable(themeArn);
+            this.themeArn = Output.ofNullable(themeArn);
             return this;
         }
         public AnalysisArgs build() {

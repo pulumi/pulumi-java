@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<String> resource;
+      private final @Nullable Output<String> resource;
 
-    public Input<String> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<String> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
-    public ManagedIdentitySettingsArgs(@Nullable Input<String> resource) {
+    public ManagedIdentitySettingsArgs(@Nullable Output<String> resource) {
         this.resource = resource;
     }
 
     private ManagedIdentitySettingsArgs() {
-        this.resource = Input.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resource;
+        private @Nullable Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
     	      this.resource = defaults.resource;
         }
 
-        public Builder resource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
         public ManagedIdentitySettingsArgs build() {

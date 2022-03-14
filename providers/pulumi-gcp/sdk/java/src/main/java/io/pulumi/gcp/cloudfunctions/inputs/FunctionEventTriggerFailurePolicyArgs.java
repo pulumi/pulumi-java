@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FunctionEventTriggerFailurePolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="retry", required=true)
-      private final Input<Boolean> retry;
+      private final Output<Boolean> retry;
 
-    public Input<Boolean> getRetry() {
+    public Output<Boolean> getRetry() {
         return this.retry;
     }
 
-    public FunctionEventTriggerFailurePolicyArgs(Input<Boolean> retry) {
+    public FunctionEventTriggerFailurePolicyArgs(Output<Boolean> retry) {
         this.retry = Objects.requireNonNull(retry, "expected parameter 'retry' to be non-null");
     }
 
     private FunctionEventTriggerFailurePolicyArgs() {
-        this.retry = Input.empty();
+        this.retry = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FunctionEventTriggerFailurePolicyArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<Boolean> retry;
+        private Output<Boolean> retry;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FunctionEventTriggerFailurePolicyArgs extends io.pulumi.resou
     	      this.retry = defaults.retry;
         }
 
-        public Builder retry(Input<Boolean> retry) {
+        public Builder retry(Output<Boolean> retry) {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
 
         public Builder retry(Boolean retry) {
-            this.retry = Input.of(Objects.requireNonNull(retry));
+            this.retry = Output.of(Objects.requireNonNull(retry));
             return this;
         }
         public FunctionEventTriggerFailurePolicyArgs build() {

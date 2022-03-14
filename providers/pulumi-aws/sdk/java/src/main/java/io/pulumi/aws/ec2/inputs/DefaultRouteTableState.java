@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.DefaultRouteTableRouteGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultRouteTableId")
-      private final @Nullable Input<String> defaultRouteTableId;
+      private final @Nullable Output<String> defaultRouteTableId;
 
-    public Input<String> getDefaultRouteTableId() {
-        return this.defaultRouteTableId == null ? Input.empty() : this.defaultRouteTableId;
+    public Output<String> getDefaultRouteTableId() {
+        return this.defaultRouteTableId == null ? Output.empty() : this.defaultRouteTableId;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="propagatingVgws")
-      private final @Nullable Input<List<String>> propagatingVgws;
+      private final @Nullable Output<List<String>> propagatingVgws;
 
-    public Input<List<String>> getPropagatingVgws() {
-        return this.propagatingVgws == null ? Input.empty() : this.propagatingVgws;
+    public Output<List<String>> getPropagatingVgws() {
+        return this.propagatingVgws == null ? Output.empty() : this.propagatingVgws;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="routes")
-      private final @Nullable Input<List<DefaultRouteTableRouteGetArgs>> routes;
+      private final @Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes;
 
-    public Input<List<DefaultRouteTableRouteGetArgs>> getRoutes() {
-        return this.routes == null ? Input.empty() : this.routes;
+    public Output<List<DefaultRouteTableRouteGetArgs>> getRoutes() {
+        return this.routes == null ? Output.empty() : this.routes;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public DefaultRouteTableState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> defaultRouteTableId,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<List<String>> propagatingVgws,
-        @Nullable Input<List<DefaultRouteTableRouteGetArgs>> routes,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> defaultRouteTableId,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<List<String>> propagatingVgws,
+        @Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId) {
         this.arn = arn;
         this.defaultRouteTableId = defaultRouteTableId;
         this.ownerId = ownerId;
@@ -125,14 +125,14 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
     }
 
     private DefaultRouteTableState() {
-        this.arn = Input.empty();
-        this.defaultRouteTableId = Input.empty();
-        this.ownerId = Input.empty();
-        this.propagatingVgws = Input.empty();
-        this.routes = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
+        this.arn = Output.empty();
+        this.defaultRouteTableId = Output.empty();
+        this.ownerId = Output.empty();
+        this.propagatingVgws = Output.empty();
+        this.routes = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> defaultRouteTableId;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<List<String>> propagatingVgws;
-        private @Nullable Input<List<DefaultRouteTableRouteGetArgs>> routes;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> defaultRouteTableId;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<List<String>> propagatingVgws;
+        private @Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder defaultRouteTableId(@Nullable Input<String> defaultRouteTableId) {
+        public Builder defaultRouteTableId(@Nullable Output<String> defaultRouteTableId) {
             this.defaultRouteTableId = defaultRouteTableId;
             return this;
         }
 
         public Builder defaultRouteTableId(@Nullable String defaultRouteTableId) {
-            this.defaultRouteTableId = Input.ofNullable(defaultRouteTableId);
+            this.defaultRouteTableId = Output.ofNullable(defaultRouteTableId);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder propagatingVgws(@Nullable Input<List<String>> propagatingVgws) {
+        public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
 
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
-            this.propagatingVgws = Input.ofNullable(propagatingVgws);
+            this.propagatingVgws = Output.ofNullable(propagatingVgws);
             return this;
         }
 
-        public Builder routes(@Nullable Input<List<DefaultRouteTableRouteGetArgs>> routes) {
+        public Builder routes(@Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
         public Builder routes(@Nullable List<DefaultRouteTableRouteGetArgs> routes) {
-            this.routes = Input.ofNullable(routes);
+            this.routes = Output.ofNullable(routes);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public DefaultRouteTableState build() {

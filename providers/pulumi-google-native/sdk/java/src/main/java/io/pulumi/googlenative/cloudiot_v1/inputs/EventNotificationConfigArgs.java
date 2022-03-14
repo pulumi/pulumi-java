@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pubsubTopicName")
-      private final @Nullable Input<String> pubsubTopicName;
+      private final @Nullable Output<String> pubsubTopicName;
 
-    public Input<String> getPubsubTopicName() {
-        return this.pubsubTopicName == null ? Input.empty() : this.pubsubTopicName;
+    public Output<String> getPubsubTopicName() {
+        return this.pubsubTopicName == null ? Output.empty() : this.pubsubTopicName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subfolderMatches")
-      private final @Nullable Input<String> subfolderMatches;
+      private final @Nullable Output<String> subfolderMatches;
 
-    public Input<String> getSubfolderMatches() {
-        return this.subfolderMatches == null ? Input.empty() : this.subfolderMatches;
+    public Output<String> getSubfolderMatches() {
+        return this.subfolderMatches == null ? Output.empty() : this.subfolderMatches;
     }
 
     public EventNotificationConfigArgs(
-        @Nullable Input<String> pubsubTopicName,
-        @Nullable Input<String> subfolderMatches) {
+        @Nullable Output<String> pubsubTopicName,
+        @Nullable Output<String> subfolderMatches) {
         this.pubsubTopicName = pubsubTopicName;
         this.subfolderMatches = subfolderMatches;
     }
 
     private EventNotificationConfigArgs() {
-        this.pubsubTopicName = Input.empty();
-        this.subfolderMatches = Input.empty();
+        this.pubsubTopicName = Output.empty();
+        this.subfolderMatches = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pubsubTopicName;
-        private @Nullable Input<String> subfolderMatches;
+        private @Nullable Output<String> pubsubTopicName;
+        private @Nullable Output<String> subfolderMatches;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
     	      this.subfolderMatches = defaults.subfolderMatches;
         }
 
-        public Builder pubsubTopicName(@Nullable Input<String> pubsubTopicName) {
+        public Builder pubsubTopicName(@Nullable Output<String> pubsubTopicName) {
             this.pubsubTopicName = pubsubTopicName;
             return this;
         }
 
         public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
-            this.pubsubTopicName = Input.ofNullable(pubsubTopicName);
+            this.pubsubTopicName = Output.ofNullable(pubsubTopicName);
             return this;
         }
 
-        public Builder subfolderMatches(@Nullable Input<String> subfolderMatches) {
+        public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
             this.subfolderMatches = subfolderMatches;
             return this;
         }
 
         public Builder subfolderMatches(@Nullable String subfolderMatches) {
-            this.subfolderMatches = Input.ofNullable(subfolderMatches);
+            this.subfolderMatches = Output.ofNullable(subfolderMatches);
             return this;
         }
         public EventNotificationConfigArgs build() {

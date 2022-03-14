@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageModel")
-      private final @Nullable Input<String> usageModel;
+      private final @Nullable Output<String> usageModel;
 
-    public Input<String> getUsageModel() {
-        return this.usageModel == null ? Input.empty() : this.usageModel;
+    public Output<String> getUsageModel() {
+        return this.usageModel == null ? Output.empty() : this.usageModel;
     }
 
     public BlobNfsTargetArgs(
-        @Nullable Input<String> target,
-        @Nullable Input<String> usageModel) {
+        @Nullable Output<String> target,
+        @Nullable Output<String> usageModel) {
         this.target = target;
         this.usageModel = usageModel;
     }
 
     private BlobNfsTargetArgs() {
-        this.target = Input.empty();
-        this.usageModel = Input.empty();
+        this.target = Output.empty();
+        this.usageModel = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> target;
-        private @Nullable Input<String> usageModel;
+        private @Nullable Output<String> target;
+        private @Nullable Output<String> usageModel;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usageModel = defaults.usageModel;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder usageModel(@Nullable Input<String> usageModel) {
+        public Builder usageModel(@Nullable Output<String> usageModel) {
             this.usageModel = usageModel;
             return this;
         }
 
         public Builder usageModel(@Nullable String usageModel) {
-            this.usageModel = Input.ofNullable(usageModel);
+            this.usageModel = Output.ofNullable(usageModel);
             return this;
         }
         public BlobNfsTargetArgs build() {

@@ -19,7 +19,7 @@ import io.pulumi.aws.iot.inputs.TopicRuleS3GetArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleSnsGetArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleSqsGetArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleStepFunctionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,24 +38,24 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     @InputImport(name="cloudwatchAlarm")
-      private final @Nullable Input<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
+      private final @Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
 
-    public Input<TopicRuleCloudwatchAlarmGetArgs> getCloudwatchAlarm() {
-        return this.cloudwatchAlarm == null ? Input.empty() : this.cloudwatchAlarm;
+    public Output<TopicRuleCloudwatchAlarmGetArgs> getCloudwatchAlarm() {
+        return this.cloudwatchAlarm == null ? Output.empty() : this.cloudwatchAlarm;
     }
 
     @InputImport(name="cloudwatchMetric")
-      private final @Nullable Input<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
+      private final @Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
 
-    public Input<TopicRuleCloudwatchMetricGetArgs> getCloudwatchMetric() {
-        return this.cloudwatchMetric == null ? Input.empty() : this.cloudwatchMetric;
+    public Output<TopicRuleCloudwatchMetricGetArgs> getCloudwatchMetric() {
+        return this.cloudwatchMetric == null ? Output.empty() : this.cloudwatchMetric;
     }
 
     /**
@@ -63,31 +63,31 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="dynamodb")
-      private final @Nullable Input<TopicRuleDynamodbGetArgs> dynamodb;
+      private final @Nullable Output<TopicRuleDynamodbGetArgs> dynamodb;
 
-    public Input<TopicRuleDynamodbGetArgs> getDynamodb() {
-        return this.dynamodb == null ? Input.empty() : this.dynamodb;
+    public Output<TopicRuleDynamodbGetArgs> getDynamodb() {
+        return this.dynamodb == null ? Output.empty() : this.dynamodb;
     }
 
     @InputImport(name="dynamodbv2s")
-      private final @Nullable Input<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
+      private final @Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
 
-    public Input<List<TopicRuleDynamodbv2GetArgs>> getDynamodbv2s() {
-        return this.dynamodbv2s == null ? Input.empty() : this.dynamodbv2s;
+    public Output<List<TopicRuleDynamodbv2GetArgs>> getDynamodbv2s() {
+        return this.dynamodbv2s == null ? Output.empty() : this.dynamodbv2s;
     }
 
     @InputImport(name="elasticsearch")
-      private final @Nullable Input<TopicRuleElasticsearchGetArgs> elasticsearch;
+      private final @Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch;
 
-    public Input<TopicRuleElasticsearchGetArgs> getElasticsearch() {
-        return this.elasticsearch == null ? Input.empty() : this.elasticsearch;
+    public Output<TopicRuleElasticsearchGetArgs> getElasticsearch() {
+        return this.elasticsearch == null ? Output.empty() : this.elasticsearch;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -106,45 +106,45 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorAction")
-      private final @Nullable Input<TopicRuleErrorActionGetArgs> errorAction;
+      private final @Nullable Output<TopicRuleErrorActionGetArgs> errorAction;
 
-    public Input<TopicRuleErrorActionGetArgs> getErrorAction() {
-        return this.errorAction == null ? Input.empty() : this.errorAction;
+    public Output<TopicRuleErrorActionGetArgs> getErrorAction() {
+        return this.errorAction == null ? Output.empty() : this.errorAction;
     }
 
     @InputImport(name="firehose")
-      private final @Nullable Input<TopicRuleFirehoseGetArgs> firehose;
+      private final @Nullable Output<TopicRuleFirehoseGetArgs> firehose;
 
-    public Input<TopicRuleFirehoseGetArgs> getFirehose() {
-        return this.firehose == null ? Input.empty() : this.firehose;
+    public Output<TopicRuleFirehoseGetArgs> getFirehose() {
+        return this.firehose == null ? Output.empty() : this.firehose;
     }
 
     @InputImport(name="iotAnalytics")
-      private final @Nullable Input<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
+      private final @Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
 
-    public Input<List<TopicRuleIotAnalyticGetArgs>> getIotAnalytics() {
-        return this.iotAnalytics == null ? Input.empty() : this.iotAnalytics;
+    public Output<List<TopicRuleIotAnalyticGetArgs>> getIotAnalytics() {
+        return this.iotAnalytics == null ? Output.empty() : this.iotAnalytics;
     }
 
     @InputImport(name="iotEvents")
-      private final @Nullable Input<List<TopicRuleIotEventGetArgs>> iotEvents;
+      private final @Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents;
 
-    public Input<List<TopicRuleIotEventGetArgs>> getIotEvents() {
-        return this.iotEvents == null ? Input.empty() : this.iotEvents;
+    public Output<List<TopicRuleIotEventGetArgs>> getIotEvents() {
+        return this.iotEvents == null ? Output.empty() : this.iotEvents;
     }
 
     @InputImport(name="kinesis")
-      private final @Nullable Input<TopicRuleKinesisGetArgs> kinesis;
+      private final @Nullable Output<TopicRuleKinesisGetArgs> kinesis;
 
-    public Input<TopicRuleKinesisGetArgs> getKinesis() {
-        return this.kinesis == null ? Input.empty() : this.kinesis;
+    public Output<TopicRuleKinesisGetArgs> getKinesis() {
+        return this.kinesis == null ? Output.empty() : this.kinesis;
     }
 
     @InputImport(name="lambda")
-      private final @Nullable Input<TopicRuleLambdaGetArgs> lambda;
+      private final @Nullable Output<TopicRuleLambdaGetArgs> lambda;
 
-    public Input<TopicRuleLambdaGetArgs> getLambda() {
-        return this.lambda == null ? Input.empty() : this.lambda;
+    public Output<TopicRuleLambdaGetArgs> getLambda() {
+        return this.lambda == null ? Output.empty() : this.lambda;
     }
 
     /**
@@ -152,31 +152,31 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="republish")
-      private final @Nullable Input<TopicRuleRepublishGetArgs> republish;
+      private final @Nullable Output<TopicRuleRepublishGetArgs> republish;
 
-    public Input<TopicRuleRepublishGetArgs> getRepublish() {
-        return this.republish == null ? Input.empty() : this.republish;
+    public Output<TopicRuleRepublishGetArgs> getRepublish() {
+        return this.republish == null ? Output.empty() : this.republish;
     }
 
     @InputImport(name="s3")
-      private final @Nullable Input<TopicRuleS3GetArgs> s3;
+      private final @Nullable Output<TopicRuleS3GetArgs> s3;
 
-    public Input<TopicRuleS3GetArgs> getS3() {
-        return this.s3 == null ? Input.empty() : this.s3;
+    public Output<TopicRuleS3GetArgs> getS3() {
+        return this.s3 == null ? Output.empty() : this.s3;
     }
 
     @InputImport(name="sns")
-      private final @Nullable Input<TopicRuleSnsGetArgs> sns;
+      private final @Nullable Output<TopicRuleSnsGetArgs> sns;
 
-    public Input<TopicRuleSnsGetArgs> getSns() {
-        return this.sns == null ? Input.empty() : this.sns;
+    public Output<TopicRuleSnsGetArgs> getSns() {
+        return this.sns == null ? Output.empty() : this.sns;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sql")
-      private final @Nullable Input<String> sql;
+      private final @Nullable Output<String> sql;
 
-    public Input<String> getSql() {
-        return this.sql == null ? Input.empty() : this.sql;
+    public Output<String> getSql() {
+        return this.sql == null ? Output.empty() : this.sql;
     }
 
     /**
@@ -195,24 +195,24 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlVersion")
-      private final @Nullable Input<String> sqlVersion;
+      private final @Nullable Output<String> sqlVersion;
 
-    public Input<String> getSqlVersion() {
-        return this.sqlVersion == null ? Input.empty() : this.sqlVersion;
+    public Output<String> getSqlVersion() {
+        return this.sqlVersion == null ? Output.empty() : this.sqlVersion;
     }
 
     @InputImport(name="sqs")
-      private final @Nullable Input<TopicRuleSqsGetArgs> sqs;
+      private final @Nullable Output<TopicRuleSqsGetArgs> sqs;
 
-    public Input<TopicRuleSqsGetArgs> getSqs() {
-        return this.sqs == null ? Input.empty() : this.sqs;
+    public Output<TopicRuleSqsGetArgs> getSqs() {
+        return this.sqs == null ? Output.empty() : this.sqs;
     }
 
     @InputImport(name="stepFunctions")
-      private final @Nullable Input<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
+      private final @Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
 
-    public Input<List<TopicRuleStepFunctionGetArgs>> getStepFunctions() {
-        return this.stepFunctions == null ? Input.empty() : this.stepFunctions;
+    public Output<List<TopicRuleStepFunctionGetArgs>> getStepFunctions() {
+        return this.stepFunctions == null ? Output.empty() : this.stepFunctions;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -231,37 +231,37 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public TopicRuleState(
-        @Nullable Input<String> arn,
-        @Nullable Input<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm,
-        @Nullable Input<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric,
-        @Nullable Input<String> description,
-        @Nullable Input<TopicRuleDynamodbGetArgs> dynamodb,
-        @Nullable Input<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s,
-        @Nullable Input<TopicRuleElasticsearchGetArgs> elasticsearch,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<TopicRuleErrorActionGetArgs> errorAction,
-        @Nullable Input<TopicRuleFirehoseGetArgs> firehose,
-        @Nullable Input<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics,
-        @Nullable Input<List<TopicRuleIotEventGetArgs>> iotEvents,
-        @Nullable Input<TopicRuleKinesisGetArgs> kinesis,
-        @Nullable Input<TopicRuleLambdaGetArgs> lambda,
-        @Nullable Input<String> name,
-        @Nullable Input<TopicRuleRepublishGetArgs> republish,
-        @Nullable Input<TopicRuleS3GetArgs> s3,
-        @Nullable Input<TopicRuleSnsGetArgs> sns,
-        @Nullable Input<String> sql,
-        @Nullable Input<String> sqlVersion,
-        @Nullable Input<TopicRuleSqsGetArgs> sqs,
-        @Nullable Input<List<TopicRuleStepFunctionGetArgs>> stepFunctions,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm,
+        @Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric,
+        @Nullable Output<String> description,
+        @Nullable Output<TopicRuleDynamodbGetArgs> dynamodb,
+        @Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s,
+        @Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<TopicRuleErrorActionGetArgs> errorAction,
+        @Nullable Output<TopicRuleFirehoseGetArgs> firehose,
+        @Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics,
+        @Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents,
+        @Nullable Output<TopicRuleKinesisGetArgs> kinesis,
+        @Nullable Output<TopicRuleLambdaGetArgs> lambda,
+        @Nullable Output<String> name,
+        @Nullable Output<TopicRuleRepublishGetArgs> republish,
+        @Nullable Output<TopicRuleS3GetArgs> s3,
+        @Nullable Output<TopicRuleSnsGetArgs> sns,
+        @Nullable Output<String> sql,
+        @Nullable Output<String> sqlVersion,
+        @Nullable Output<TopicRuleSqsGetArgs> sqs,
+        @Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.cloudwatchAlarm = cloudwatchAlarm;
         this.cloudwatchMetric = cloudwatchMetric;
@@ -289,30 +289,30 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicRuleState() {
-        this.arn = Input.empty();
-        this.cloudwatchAlarm = Input.empty();
-        this.cloudwatchMetric = Input.empty();
-        this.description = Input.empty();
-        this.dynamodb = Input.empty();
-        this.dynamodbv2s = Input.empty();
-        this.elasticsearch = Input.empty();
-        this.enabled = Input.empty();
-        this.errorAction = Input.empty();
-        this.firehose = Input.empty();
-        this.iotAnalytics = Input.empty();
-        this.iotEvents = Input.empty();
-        this.kinesis = Input.empty();
-        this.lambda = Input.empty();
-        this.name = Input.empty();
-        this.republish = Input.empty();
-        this.s3 = Input.empty();
-        this.sns = Input.empty();
-        this.sql = Input.empty();
-        this.sqlVersion = Input.empty();
-        this.sqs = Input.empty();
-        this.stepFunctions = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.cloudwatchAlarm = Output.empty();
+        this.cloudwatchMetric = Output.empty();
+        this.description = Output.empty();
+        this.dynamodb = Output.empty();
+        this.dynamodbv2s = Output.empty();
+        this.elasticsearch = Output.empty();
+        this.enabled = Output.empty();
+        this.errorAction = Output.empty();
+        this.firehose = Output.empty();
+        this.iotAnalytics = Output.empty();
+        this.iotEvents = Output.empty();
+        this.kinesis = Output.empty();
+        this.lambda = Output.empty();
+        this.name = Output.empty();
+        this.republish = Output.empty();
+        this.s3 = Output.empty();
+        this.sns = Output.empty();
+        this.sql = Output.empty();
+        this.sqlVersion = Output.empty();
+        this.sqs = Output.empty();
+        this.stepFunctions = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -324,30 +324,30 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
-        private @Nullable Input<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
-        private @Nullable Input<String> description;
-        private @Nullable Input<TopicRuleDynamodbGetArgs> dynamodb;
-        private @Nullable Input<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
-        private @Nullable Input<TopicRuleElasticsearchGetArgs> elasticsearch;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<TopicRuleErrorActionGetArgs> errorAction;
-        private @Nullable Input<TopicRuleFirehoseGetArgs> firehose;
-        private @Nullable Input<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
-        private @Nullable Input<List<TopicRuleIotEventGetArgs>> iotEvents;
-        private @Nullable Input<TopicRuleKinesisGetArgs> kinesis;
-        private @Nullable Input<TopicRuleLambdaGetArgs> lambda;
-        private @Nullable Input<String> name;
-        private @Nullable Input<TopicRuleRepublishGetArgs> republish;
-        private @Nullable Input<TopicRuleS3GetArgs> s3;
-        private @Nullable Input<TopicRuleSnsGetArgs> sns;
-        private @Nullable Input<String> sql;
-        private @Nullable Input<String> sqlVersion;
-        private @Nullable Input<TopicRuleSqsGetArgs> sqs;
-        private @Nullable Input<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
+        private @Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
+        private @Nullable Output<String> description;
+        private @Nullable Output<TopicRuleDynamodbGetArgs> dynamodb;
+        private @Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
+        private @Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<TopicRuleErrorActionGetArgs> errorAction;
+        private @Nullable Output<TopicRuleFirehoseGetArgs> firehose;
+        private @Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
+        private @Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents;
+        private @Nullable Output<TopicRuleKinesisGetArgs> kinesis;
+        private @Nullable Output<TopicRuleLambdaGetArgs> lambda;
+        private @Nullable Output<String> name;
+        private @Nullable Output<TopicRuleRepublishGetArgs> republish;
+        private @Nullable Output<TopicRuleS3GetArgs> s3;
+        private @Nullable Output<TopicRuleSnsGetArgs> sns;
+        private @Nullable Output<String> sql;
+        private @Nullable Output<String> sqlVersion;
+        private @Nullable Output<TopicRuleSqsGetArgs> sqs;
+        private @Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -381,243 +381,243 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder cloudwatchAlarm(@Nullable Input<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm) {
+        public Builder cloudwatchAlarm(@Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm) {
             this.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
 
         public Builder cloudwatchAlarm(@Nullable TopicRuleCloudwatchAlarmGetArgs cloudwatchAlarm) {
-            this.cloudwatchAlarm = Input.ofNullable(cloudwatchAlarm);
+            this.cloudwatchAlarm = Output.ofNullable(cloudwatchAlarm);
             return this;
         }
 
-        public Builder cloudwatchMetric(@Nullable Input<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric) {
+        public Builder cloudwatchMetric(@Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric) {
             this.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
 
         public Builder cloudwatchMetric(@Nullable TopicRuleCloudwatchMetricGetArgs cloudwatchMetric) {
-            this.cloudwatchMetric = Input.ofNullable(cloudwatchMetric);
+            this.cloudwatchMetric = Output.ofNullable(cloudwatchMetric);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dynamodb(@Nullable Input<TopicRuleDynamodbGetArgs> dynamodb) {
+        public Builder dynamodb(@Nullable Output<TopicRuleDynamodbGetArgs> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
         public Builder dynamodb(@Nullable TopicRuleDynamodbGetArgs dynamodb) {
-            this.dynamodb = Input.ofNullable(dynamodb);
+            this.dynamodb = Output.ofNullable(dynamodb);
             return this;
         }
 
-        public Builder dynamodbv2s(@Nullable Input<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s) {
+        public Builder dynamodbv2s(@Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s) {
             this.dynamodbv2s = dynamodbv2s;
             return this;
         }
 
         public Builder dynamodbv2s(@Nullable List<TopicRuleDynamodbv2GetArgs> dynamodbv2s) {
-            this.dynamodbv2s = Input.ofNullable(dynamodbv2s);
+            this.dynamodbv2s = Output.ofNullable(dynamodbv2s);
             return this;
         }
 
-        public Builder elasticsearch(@Nullable Input<TopicRuleElasticsearchGetArgs> elasticsearch) {
+        public Builder elasticsearch(@Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
 
         public Builder elasticsearch(@Nullable TopicRuleElasticsearchGetArgs elasticsearch) {
-            this.elasticsearch = Input.ofNullable(elasticsearch);
+            this.elasticsearch = Output.ofNullable(elasticsearch);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder errorAction(@Nullable Input<TopicRuleErrorActionGetArgs> errorAction) {
+        public Builder errorAction(@Nullable Output<TopicRuleErrorActionGetArgs> errorAction) {
             this.errorAction = errorAction;
             return this;
         }
 
         public Builder errorAction(@Nullable TopicRuleErrorActionGetArgs errorAction) {
-            this.errorAction = Input.ofNullable(errorAction);
+            this.errorAction = Output.ofNullable(errorAction);
             return this;
         }
 
-        public Builder firehose(@Nullable Input<TopicRuleFirehoseGetArgs> firehose) {
+        public Builder firehose(@Nullable Output<TopicRuleFirehoseGetArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
 
         public Builder firehose(@Nullable TopicRuleFirehoseGetArgs firehose) {
-            this.firehose = Input.ofNullable(firehose);
+            this.firehose = Output.ofNullable(firehose);
             return this;
         }
 
-        public Builder iotAnalytics(@Nullable Input<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics) {
+        public Builder iotAnalytics(@Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics) {
             this.iotAnalytics = iotAnalytics;
             return this;
         }
 
         public Builder iotAnalytics(@Nullable List<TopicRuleIotAnalyticGetArgs> iotAnalytics) {
-            this.iotAnalytics = Input.ofNullable(iotAnalytics);
+            this.iotAnalytics = Output.ofNullable(iotAnalytics);
             return this;
         }
 
-        public Builder iotEvents(@Nullable Input<List<TopicRuleIotEventGetArgs>> iotEvents) {
+        public Builder iotEvents(@Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
 
         public Builder iotEvents(@Nullable List<TopicRuleIotEventGetArgs> iotEvents) {
-            this.iotEvents = Input.ofNullable(iotEvents);
+            this.iotEvents = Output.ofNullable(iotEvents);
             return this;
         }
 
-        public Builder kinesis(@Nullable Input<TopicRuleKinesisGetArgs> kinesis) {
+        public Builder kinesis(@Nullable Output<TopicRuleKinesisGetArgs> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
         public Builder kinesis(@Nullable TopicRuleKinesisGetArgs kinesis) {
-            this.kinesis = Input.ofNullable(kinesis);
+            this.kinesis = Output.ofNullable(kinesis);
             return this;
         }
 
-        public Builder lambda(@Nullable Input<TopicRuleLambdaGetArgs> lambda) {
+        public Builder lambda(@Nullable Output<TopicRuleLambdaGetArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
 
         public Builder lambda(@Nullable TopicRuleLambdaGetArgs lambda) {
-            this.lambda = Input.ofNullable(lambda);
+            this.lambda = Output.ofNullable(lambda);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder republish(@Nullable Input<TopicRuleRepublishGetArgs> republish) {
+        public Builder republish(@Nullable Output<TopicRuleRepublishGetArgs> republish) {
             this.republish = republish;
             return this;
         }
 
         public Builder republish(@Nullable TopicRuleRepublishGetArgs republish) {
-            this.republish = Input.ofNullable(republish);
+            this.republish = Output.ofNullable(republish);
             return this;
         }
 
-        public Builder s3(@Nullable Input<TopicRuleS3GetArgs> s3) {
+        public Builder s3(@Nullable Output<TopicRuleS3GetArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
         public Builder s3(@Nullable TopicRuleS3GetArgs s3) {
-            this.s3 = Input.ofNullable(s3);
+            this.s3 = Output.ofNullable(s3);
             return this;
         }
 
-        public Builder sns(@Nullable Input<TopicRuleSnsGetArgs> sns) {
+        public Builder sns(@Nullable Output<TopicRuleSnsGetArgs> sns) {
             this.sns = sns;
             return this;
         }
 
         public Builder sns(@Nullable TopicRuleSnsGetArgs sns) {
-            this.sns = Input.ofNullable(sns);
+            this.sns = Output.ofNullable(sns);
             return this;
         }
 
-        public Builder sql(@Nullable Input<String> sql) {
+        public Builder sql(@Nullable Output<String> sql) {
             this.sql = sql;
             return this;
         }
 
         public Builder sql(@Nullable String sql) {
-            this.sql = Input.ofNullable(sql);
+            this.sql = Output.ofNullable(sql);
             return this;
         }
 
-        public Builder sqlVersion(@Nullable Input<String> sqlVersion) {
+        public Builder sqlVersion(@Nullable Output<String> sqlVersion) {
             this.sqlVersion = sqlVersion;
             return this;
         }
 
         public Builder sqlVersion(@Nullable String sqlVersion) {
-            this.sqlVersion = Input.ofNullable(sqlVersion);
+            this.sqlVersion = Output.ofNullable(sqlVersion);
             return this;
         }
 
-        public Builder sqs(@Nullable Input<TopicRuleSqsGetArgs> sqs) {
+        public Builder sqs(@Nullable Output<TopicRuleSqsGetArgs> sqs) {
             this.sqs = sqs;
             return this;
         }
 
         public Builder sqs(@Nullable TopicRuleSqsGetArgs sqs) {
-            this.sqs = Input.ofNullable(sqs);
+            this.sqs = Output.ofNullable(sqs);
             return this;
         }
 
-        public Builder stepFunctions(@Nullable Input<List<TopicRuleStepFunctionGetArgs>> stepFunctions) {
+        public Builder stepFunctions(@Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions) {
             this.stepFunctions = stepFunctions;
             return this;
         }
 
         public Builder stepFunctions(@Nullable List<TopicRuleStepFunctionGetArgs> stepFunctions) {
-            this.stepFunctions = Input.ofNullable(stepFunctions);
+            this.stepFunctions = Output.ofNullable(stepFunctions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public TopicRuleState build() {

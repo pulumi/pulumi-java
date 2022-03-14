@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudasset.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationArgs extends io.pu
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
-    public FolderFeedFeedOutputConfigPubsubDestinationArgs(Input<String> topic) {
+    public FolderFeedFeedOutputConfigPubsubDestinationArgs(Output<String> topic) {
         this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
     }
 
     private FolderFeedFeedOutputConfigPubsubDestinationArgs() {
-        this.topic = Input.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> topic;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationArgs extends io.pu
     	      this.topic = defaults.topic;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public FolderFeedFeedOutputConfigPubsubDestinationArgs build() {

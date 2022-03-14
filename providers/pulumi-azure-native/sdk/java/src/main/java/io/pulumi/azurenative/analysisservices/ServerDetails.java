@@ -10,7 +10,6 @@ import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallSettingsRespon
 import io.pulumi.azurenative.analysisservices.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ServerAdministratorsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -286,21 +285,21 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerDetails(String name, ServerDetailsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:analysisservices:ServerDetails", name, args == null ? ServerDetailsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:analysisservices:ServerDetails", name, args == null ? ServerDetailsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServerDetails(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServerDetails(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:analysisservices:ServerDetails", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:analysisservices/v20160516:ServerDetails").build()),
-                Input.of(Alias.builder().setType("azure-native:analysisservices/v20170714:ServerDetails").build()),
-                Input.of(Alias.builder().setType("azure-native:analysisservices/v20170801:ServerDetails").build()),
-                Input.of(Alias.builder().setType("azure-native:analysisservices/v20170801beta:ServerDetails").build())
+                Output.of(Alias.builder().setType("azure-native:analysisservices/v20160516:ServerDetails").build()),
+                Output.of(Alias.builder().setType("azure-native:analysisservices/v20170714:ServerDetails").build()),
+                Output.of(Alias.builder().setType("azure-native:analysisservices/v20170801:ServerDetails").build()),
+                Output.of(Alias.builder().setType("azure-native:analysisservices/v20170801beta:ServerDetails").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -314,7 +313,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServerDetails get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServerDetails get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerDetails(name, id, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.enums.ZoneRedundant;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -37,9 +37,9 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
@@ -48,25 +48,25 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="zoneRedundant")
-      private final @Nullable Input<Either<String,ZoneRedundant>> zoneRedundant;
+      private final @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
 
-    public Input<Either<String,ZoneRedundant>> getZoneRedundant() {
-        return this.zoneRedundant == null ? Input.empty() : this.zoneRedundant;
+    public Output<Either<String,ZoneRedundant>> getZoneRedundant() {
+        return this.zoneRedundant == null ? Output.empty() : this.zoneRedundant;
     }
 
     public SqlElasticPoolResourceSettingsArgs(
-        Input<String> resourceType,
-        Input<String> targetResourceName,
-        @Nullable Input<Either<String,ZoneRedundant>> zoneRedundant) {
+        Output<String> resourceType,
+        Output<String> targetResourceName,
+        @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant) {
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
         this.zoneRedundant = zoneRedundant;
     }
 
     private SqlElasticPoolResourceSettingsArgs() {
-        this.resourceType = Input.empty();
-        this.targetResourceName = Input.empty();
-        this.zoneRedundant = Input.empty();
+        this.resourceType = Output.empty();
+        this.targetResourceName = Output.empty();
+        this.zoneRedundant = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> resourceType;
-        private Input<String> targetResourceName;
-        private @Nullable Input<Either<String,ZoneRedundant>> zoneRedundant;
+        private Output<String> resourceType;
+        private Output<String> targetResourceName;
+        private @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder zoneRedundant(@Nullable Input<Either<String,ZoneRedundant>> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Output<Either<String,ZoneRedundant>> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
         public Builder zoneRedundant(@Nullable Either<String,ZoneRedundant> zoneRedundant) {
-            this.zoneRedundant = Input.ofNullable(zoneRedundant);
+            this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
         }
         public SqlElasticPoolResourceSettingsArgs build() {

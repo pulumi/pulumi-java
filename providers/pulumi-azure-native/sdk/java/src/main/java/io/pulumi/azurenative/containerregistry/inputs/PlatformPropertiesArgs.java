@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.Architecture;
 import io.pulumi.azurenative.containerregistry.enums.OS;
 import io.pulumi.azurenative.containerregistry.enums.Variant;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="architecture")
-      private final @Nullable Input<Either<String,Architecture>> architecture;
+      private final @Nullable Output<Either<String,Architecture>> architecture;
 
-    public Input<Either<String,Architecture>> getArchitecture() {
-        return this.architecture == null ? Input.empty() : this.architecture;
+    public Output<Either<String,Architecture>> getArchitecture() {
+        return this.architecture == null ? Output.empty() : this.architecture;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="os", required=true)
-      private final Input<Either<String,OS>> os;
+      private final Output<Either<String,OS>> os;
 
-    public Input<Either<String,OS>> getOs() {
+    public Output<Either<String,OS>> getOs() {
         return this.os;
     }
 
@@ -49,25 +49,25 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="variant")
-      private final @Nullable Input<Either<String,Variant>> variant;
+      private final @Nullable Output<Either<String,Variant>> variant;
 
-    public Input<Either<String,Variant>> getVariant() {
-        return this.variant == null ? Input.empty() : this.variant;
+    public Output<Either<String,Variant>> getVariant() {
+        return this.variant == null ? Output.empty() : this.variant;
     }
 
     public PlatformPropertiesArgs(
-        @Nullable Input<Either<String,Architecture>> architecture,
-        Input<Either<String,OS>> os,
-        @Nullable Input<Either<String,Variant>> variant) {
+        @Nullable Output<Either<String,Architecture>> architecture,
+        Output<Either<String,OS>> os,
+        @Nullable Output<Either<String,Variant>> variant) {
         this.architecture = architecture;
         this.os = Objects.requireNonNull(os, "expected parameter 'os' to be non-null");
         this.variant = variant;
     }
 
     private PlatformPropertiesArgs() {
-        this.architecture = Input.empty();
-        this.os = Input.empty();
-        this.variant = Input.empty();
+        this.architecture = Output.empty();
+        this.os = Output.empty();
+        this.variant = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Architecture>> architecture;
-        private Input<Either<String,OS>> os;
-        private @Nullable Input<Either<String,Variant>> variant;
+        private @Nullable Output<Either<String,Architecture>> architecture;
+        private Output<Either<String,OS>> os;
+        private @Nullable Output<Either<String,Variant>> variant;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.variant = defaults.variant;
         }
 
-        public Builder architecture(@Nullable Input<Either<String,Architecture>> architecture) {
+        public Builder architecture(@Nullable Output<Either<String,Architecture>> architecture) {
             this.architecture = architecture;
             return this;
         }
 
         public Builder architecture(@Nullable Either<String,Architecture> architecture) {
-            this.architecture = Input.ofNullable(architecture);
+            this.architecture = Output.ofNullable(architecture);
             return this;
         }
 
-        public Builder os(Input<Either<String,OS>> os) {
+        public Builder os(Output<Either<String,OS>> os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
 
         public Builder os(Either<String,OS> os) {
-            this.os = Input.of(Objects.requireNonNull(os));
+            this.os = Output.of(Objects.requireNonNull(os));
             return this;
         }
 
-        public Builder variant(@Nullable Input<Either<String,Variant>> variant) {
+        public Builder variant(@Nullable Output<Either<String,Variant>> variant) {
             this.variant = variant;
             return this;
         }
 
         public Builder variant(@Nullable Either<String,Variant> variant) {
-            this.variant = Input.ofNullable(variant);
+            this.variant = Output.ofNullable(variant);
             return this;
         }
         public PlatformPropertiesArgs build() {

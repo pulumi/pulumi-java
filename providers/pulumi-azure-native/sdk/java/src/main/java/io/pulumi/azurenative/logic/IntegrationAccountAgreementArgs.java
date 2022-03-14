@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.enums.AgreementType;
 import io.pulumi.azurenative.logic.inputs.AgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="agreementName")
-      private final @Nullable Input<String> agreementName;
+      private final @Nullable Output<String> agreementName;
 
-    public Input<String> getAgreementName() {
-        return this.agreementName == null ? Input.empty() : this.agreementName;
+    public Output<String> getAgreementName() {
+        return this.agreementName == null ? Output.empty() : this.agreementName;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="agreementType", required=true)
-      private final Input<AgreementType> agreementType;
+      private final Output<AgreementType> agreementType;
 
-    public Input<AgreementType> getAgreementType() {
+    public Output<AgreementType> getAgreementType() {
         return this.agreementType;
     }
 
@@ -46,9 +46,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<AgreementContentArgs> content;
+      private final Output<AgreementContentArgs> content;
 
-    public Input<AgreementContentArgs> getContent() {
+    public Output<AgreementContentArgs> getContent() {
         return this.content;
     }
 
@@ -57,9 +57,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="guestIdentity", required=true)
-      private final Input<BusinessIdentityArgs> guestIdentity;
+      private final Output<BusinessIdentityArgs> guestIdentity;
 
-    public Input<BusinessIdentityArgs> getGuestIdentity() {
+    public Output<BusinessIdentityArgs> getGuestIdentity() {
         return this.guestIdentity;
     }
 
@@ -68,9 +68,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="guestPartner", required=true)
-      private final Input<String> guestPartner;
+      private final Output<String> guestPartner;
 
-    public Input<String> getGuestPartner() {
+    public Output<String> getGuestPartner() {
         return this.guestPartner;
     }
 
@@ -79,9 +79,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hostIdentity", required=true)
-      private final Input<BusinessIdentityArgs> hostIdentity;
+      private final Output<BusinessIdentityArgs> hostIdentity;
 
-    public Input<BusinessIdentityArgs> getHostIdentity() {
+    public Output<BusinessIdentityArgs> getHostIdentity() {
         return this.hostIdentity;
     }
 
@@ -90,9 +90,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hostPartner", required=true)
-      private final Input<String> hostPartner;
+      private final Output<String> hostPartner;
 
-    public Input<String> getHostPartner() {
+    public Output<String> getHostPartner() {
         return this.hostPartner;
     }
 
@@ -101,9 +101,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-      private final Input<String> integrationAccountName;
+      private final Output<String> integrationAccountName;
 
-    public Input<String> getIntegrationAccountName() {
+    public Output<String> getIntegrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -112,10 +112,10 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -134,9 +134,9 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -145,25 +145,25 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IntegrationAccountAgreementArgs(
-        @Nullable Input<String> agreementName,
-        Input<AgreementType> agreementType,
-        Input<AgreementContentArgs> content,
-        Input<BusinessIdentityArgs> guestIdentity,
-        Input<String> guestPartner,
-        Input<BusinessIdentityArgs> hostIdentity,
-        Input<String> hostPartner,
-        Input<String> integrationAccountName,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> metadata,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> agreementName,
+        Output<AgreementType> agreementType,
+        Output<AgreementContentArgs> content,
+        Output<BusinessIdentityArgs> guestIdentity,
+        Output<String> guestPartner,
+        Output<BusinessIdentityArgs> hostIdentity,
+        Output<String> hostPartner,
+        Output<String> integrationAccountName,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> metadata,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.agreementName = agreementName;
         this.agreementType = Objects.requireNonNull(agreementType, "expected parameter 'agreementType' to be non-null");
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
@@ -179,18 +179,18 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
     }
 
     private IntegrationAccountAgreementArgs() {
-        this.agreementName = Input.empty();
-        this.agreementType = Input.empty();
-        this.content = Input.empty();
-        this.guestIdentity = Input.empty();
-        this.guestPartner = Input.empty();
-        this.hostIdentity = Input.empty();
-        this.hostPartner = Input.empty();
-        this.integrationAccountName = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.agreementName = Output.empty();
+        this.agreementType = Output.empty();
+        this.content = Output.empty();
+        this.guestIdentity = Output.empty();
+        this.guestPartner = Output.empty();
+        this.hostIdentity = Output.empty();
+        this.hostPartner = Output.empty();
+        this.integrationAccountName = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -202,18 +202,18 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agreementName;
-        private Input<AgreementType> agreementType;
-        private Input<AgreementContentArgs> content;
-        private Input<BusinessIdentityArgs> guestIdentity;
-        private Input<String> guestPartner;
-        private Input<BusinessIdentityArgs> hostIdentity;
-        private Input<String> hostPartner;
-        private Input<String> integrationAccountName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> metadata;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> agreementName;
+        private Output<AgreementType> agreementType;
+        private Output<AgreementContentArgs> content;
+        private Output<BusinessIdentityArgs> guestIdentity;
+        private Output<String> guestPartner;
+        private Output<BusinessIdentityArgs> hostIdentity;
+        private Output<String> hostPartner;
+        private Output<String> integrationAccountName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> metadata;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -235,123 +235,123 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
     	      this.tags = defaults.tags;
         }
 
-        public Builder agreementName(@Nullable Input<String> agreementName) {
+        public Builder agreementName(@Nullable Output<String> agreementName) {
             this.agreementName = agreementName;
             return this;
         }
 
         public Builder agreementName(@Nullable String agreementName) {
-            this.agreementName = Input.ofNullable(agreementName);
+            this.agreementName = Output.ofNullable(agreementName);
             return this;
         }
 
-        public Builder agreementType(Input<AgreementType> agreementType) {
+        public Builder agreementType(Output<AgreementType> agreementType) {
             this.agreementType = Objects.requireNonNull(agreementType);
             return this;
         }
 
         public Builder agreementType(AgreementType agreementType) {
-            this.agreementType = Input.of(Objects.requireNonNull(agreementType));
+            this.agreementType = Output.of(Objects.requireNonNull(agreementType));
             return this;
         }
 
-        public Builder content(Input<AgreementContentArgs> content) {
+        public Builder content(Output<AgreementContentArgs> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(AgreementContentArgs content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder guestIdentity(Input<BusinessIdentityArgs> guestIdentity) {
+        public Builder guestIdentity(Output<BusinessIdentityArgs> guestIdentity) {
             this.guestIdentity = Objects.requireNonNull(guestIdentity);
             return this;
         }
 
         public Builder guestIdentity(BusinessIdentityArgs guestIdentity) {
-            this.guestIdentity = Input.of(Objects.requireNonNull(guestIdentity));
+            this.guestIdentity = Output.of(Objects.requireNonNull(guestIdentity));
             return this;
         }
 
-        public Builder guestPartner(Input<String> guestPartner) {
+        public Builder guestPartner(Output<String> guestPartner) {
             this.guestPartner = Objects.requireNonNull(guestPartner);
             return this;
         }
 
         public Builder guestPartner(String guestPartner) {
-            this.guestPartner = Input.of(Objects.requireNonNull(guestPartner));
+            this.guestPartner = Output.of(Objects.requireNonNull(guestPartner));
             return this;
         }
 
-        public Builder hostIdentity(Input<BusinessIdentityArgs> hostIdentity) {
+        public Builder hostIdentity(Output<BusinessIdentityArgs> hostIdentity) {
             this.hostIdentity = Objects.requireNonNull(hostIdentity);
             return this;
         }
 
         public Builder hostIdentity(BusinessIdentityArgs hostIdentity) {
-            this.hostIdentity = Input.of(Objects.requireNonNull(hostIdentity));
+            this.hostIdentity = Output.of(Objects.requireNonNull(hostIdentity));
             return this;
         }
 
-        public Builder hostPartner(Input<String> hostPartner) {
+        public Builder hostPartner(Output<String> hostPartner) {
             this.hostPartner = Objects.requireNonNull(hostPartner);
             return this;
         }
 
         public Builder hostPartner(String hostPartner) {
-            this.hostPartner = Input.of(Objects.requireNonNull(hostPartner));
+            this.hostPartner = Output.of(Objects.requireNonNull(hostPartner));
             return this;
         }
 
-        public Builder integrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
+            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IntegrationAccountAgreementArgs build() {

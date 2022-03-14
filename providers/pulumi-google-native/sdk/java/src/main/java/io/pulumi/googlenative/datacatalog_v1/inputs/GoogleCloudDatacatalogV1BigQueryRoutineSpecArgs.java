@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
      * 
      */
     @InputImport(name="importedLibraries")
-      private final @Nullable Input<List<String>> importedLibraries;
+      private final @Nullable Output<List<String>> importedLibraries;
 
-    public Input<List<String>> getImportedLibraries() {
-        return this.importedLibraries == null ? Input.empty() : this.importedLibraries;
+    public Output<List<String>> getImportedLibraries() {
+        return this.importedLibraries == null ? Output.empty() : this.importedLibraries;
     }
 
-    public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(@Nullable Input<List<String>> importedLibraries) {
+    public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(@Nullable Output<List<String>> importedLibraries) {
         this.importedLibraries = importedLibraries;
     }
 
     private GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs() {
-        this.importedLibraries = Input.empty();
+        this.importedLibraries = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> importedLibraries;
+        private @Nullable Output<List<String>> importedLibraries;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
     	      this.importedLibraries = defaults.importedLibraries;
         }
 
-        public Builder importedLibraries(@Nullable Input<List<String>> importedLibraries) {
+        public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
             this.importedLibraries = importedLibraries;
             return this;
         }
 
         public Builder importedLibraries(@Nullable List<String> importedLibraries) {
-            this.importedLibraries = Input.ofNullable(importedLibraries);
+            this.importedLibraries = Output.ofNullable(importedLibraries);
             return this;
         }
         public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs build() {

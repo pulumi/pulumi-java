@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codepipeline.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="category", required=true)
-      private final Input<String> category;
+      private final Output<String> category;
 
-    public Input<String> getCategory() {
+    public Output<String> getCategory() {
         return this.category;
     }
 
@@ -33,10 +33,10 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<Map<String,String>> configuration;
+      private final @Nullable Output<Map<String,String>> configuration;
 
-    public Input<Map<String,String>> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<Map<String,String>> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inputArtifacts")
-      private final @Nullable Input<List<String>> inputArtifacts;
+      private final @Nullable Output<List<String>> inputArtifacts;
 
-    public Input<List<String>> getInputArtifacts() {
-        return this.inputArtifacts == null ? Input.empty() : this.inputArtifacts;
+    public Output<List<String>> getInputArtifacts() {
+        return this.inputArtifacts == null ? Output.empty() : this.inputArtifacts;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -66,10 +66,10 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="outputArtifacts")
-      private final @Nullable Input<List<String>> outputArtifacts;
+      private final @Nullable Output<List<String>> outputArtifacts;
 
-    public Input<List<String>> getOutputArtifacts() {
-        return this.outputArtifacts == null ? Input.empty() : this.outputArtifacts;
+    public Output<List<String>> getOutputArtifacts() {
+        return this.outputArtifacts == null ? Output.empty() : this.outputArtifacts;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="owner", required=true)
-      private final Input<String> owner;
+      private final Output<String> owner;
 
-    public Input<String> getOwner() {
+    public Output<String> getOwner() {
         return this.owner;
     }
 
@@ -99,9 +99,9 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="provider", required=true)
-      private final Input<String> provider;
+      private final Output<String> provider;
 
-    public Input<String> getProvider() {
+    public Output<String> getProvider() {
         return this.provider;
     }
 
@@ -110,10 +110,10 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="runOrder")
-      private final @Nullable Input<Integer> runOrder;
+      private final @Nullable Output<Integer> runOrder;
 
-    public Input<Integer> getRunOrder() {
-        return this.runOrder == null ? Input.empty() : this.runOrder;
+    public Output<Integer> getRunOrder() {
+        return this.runOrder == null ? Output.empty() : this.runOrder;
     }
 
     /**
@@ -143,25 +143,25 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public PipelineStageActionGetArgs(
-        Input<String> category,
-        @Nullable Input<Map<String,String>> configuration,
-        @Nullable Input<List<String>> inputArtifacts,
-        Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<List<String>> outputArtifacts,
-        Input<String> owner,
-        Input<String> provider,
-        @Nullable Input<String> region,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<Integer> runOrder,
-        Input<String> version) {
+        Output<String> category,
+        @Nullable Output<Map<String,String>> configuration,
+        @Nullable Output<List<String>> inputArtifacts,
+        Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<List<String>> outputArtifacts,
+        Output<String> owner,
+        Output<String> provider,
+        @Nullable Output<String> region,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<Integer> runOrder,
+        Output<String> version) {
         this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
         this.configuration = configuration;
         this.inputArtifacts = inputArtifacts;
@@ -177,18 +177,18 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
     }
 
     private PipelineStageActionGetArgs() {
-        this.category = Input.empty();
-        this.configuration = Input.empty();
-        this.inputArtifacts = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.outputArtifacts = Input.empty();
-        this.owner = Input.empty();
-        this.provider = Input.empty();
-        this.region = Input.empty();
-        this.roleArn = Input.empty();
-        this.runOrder = Input.empty();
-        this.version = Input.empty();
+        this.category = Output.empty();
+        this.configuration = Output.empty();
+        this.inputArtifacts = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.outputArtifacts = Output.empty();
+        this.owner = Output.empty();
+        this.provider = Output.empty();
+        this.region = Output.empty();
+        this.roleArn = Output.empty();
+        this.runOrder = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -200,18 +200,18 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> category;
-        private @Nullable Input<Map<String,String>> configuration;
-        private @Nullable Input<List<String>> inputArtifacts;
-        private Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<List<String>> outputArtifacts;
-        private Input<String> owner;
-        private Input<String> provider;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<Integer> runOrder;
-        private Input<String> version;
+        private Output<String> category;
+        private @Nullable Output<Map<String,String>> configuration;
+        private @Nullable Output<List<String>> inputArtifacts;
+        private Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<List<String>> outputArtifacts;
+        private Output<String> owner;
+        private Output<String> provider;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<Integer> runOrder;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -233,123 +233,123 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder category(Input<String> category) {
+        public Builder category(Output<String> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
         public Builder category(String category) {
-            this.category = Input.of(Objects.requireNonNull(category));
+            this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder configuration(@Nullable Input<Map<String,String>> configuration) {
+        public Builder configuration(@Nullable Output<Map<String,String>> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable Map<String,String> configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder inputArtifacts(@Nullable Input<List<String>> inputArtifacts) {
+        public Builder inputArtifacts(@Nullable Output<List<String>> inputArtifacts) {
             this.inputArtifacts = inputArtifacts;
             return this;
         }
 
         public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
-            this.inputArtifacts = Input.ofNullable(inputArtifacts);
+            this.inputArtifacts = Output.ofNullable(inputArtifacts);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder outputArtifacts(@Nullable Input<List<String>> outputArtifacts) {
+        public Builder outputArtifacts(@Nullable Output<List<String>> outputArtifacts) {
             this.outputArtifacts = outputArtifacts;
             return this;
         }
 
         public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
-            this.outputArtifacts = Input.ofNullable(outputArtifacts);
+            this.outputArtifacts = Output.ofNullable(outputArtifacts);
             return this;
         }
 
-        public Builder owner(Input<String> owner) {
+        public Builder owner(Output<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
         public Builder owner(String owner) {
-            this.owner = Input.of(Objects.requireNonNull(owner));
+            this.owner = Output.of(Objects.requireNonNull(owner));
             return this;
         }
 
-        public Builder provider(Input<String> provider) {
+        public Builder provider(Output<String> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
         public Builder provider(String provider) {
-            this.provider = Input.of(Objects.requireNonNull(provider));
+            this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder runOrder(@Nullable Input<Integer> runOrder) {
+        public Builder runOrder(@Nullable Output<Integer> runOrder) {
             this.runOrder = runOrder;
             return this;
         }
 
         public Builder runOrder(@Nullable Integer runOrder) {
-            this.runOrder = Input.ofNullable(runOrder);
+            this.runOrder = Output.ofNullable(runOrder);
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public PipelineStageActionGetArgs build() {

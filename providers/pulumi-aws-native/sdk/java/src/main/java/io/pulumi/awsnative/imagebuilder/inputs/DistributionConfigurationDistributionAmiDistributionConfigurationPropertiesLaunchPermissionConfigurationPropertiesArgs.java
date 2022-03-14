@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationArns")
-      private final @Nullable Input<List<String>> organizationArns;
+      private final @Nullable Output<List<String>> organizationArns;
 
-    public Input<List<String>> getOrganizationArns() {
-        return this.organizationArns == null ? Input.empty() : this.organizationArns;
+    public Output<List<String>> getOrganizationArns() {
+        return this.organizationArns == null ? Output.empty() : this.organizationArns;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="organizationalUnitArns")
-      private final @Nullable Input<List<String>> organizationalUnitArns;
+      private final @Nullable Output<List<String>> organizationalUnitArns;
 
-    public Input<List<String>> getOrganizationalUnitArns() {
-        return this.organizationalUnitArns == null ? Input.empty() : this.organizationalUnitArns;
+    public Output<List<String>> getOrganizationalUnitArns() {
+        return this.organizationalUnitArns == null ? Output.empty() : this.organizationalUnitArns;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userGroups")
-      private final @Nullable Input<List<String>> userGroups;
+      private final @Nullable Output<List<String>> userGroups;
 
-    public Input<List<String>> getUserGroups() {
-        return this.userGroups == null ? Input.empty() : this.userGroups;
+    public Output<List<String>> getUserGroups() {
+        return this.userGroups == null ? Output.empty() : this.userGroups;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userIds")
-      private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Output<List<String>> userIds;
 
-    public Input<List<String>> getUserIds() {
-        return this.userIds == null ? Input.empty() : this.userIds;
+    public Output<List<String>> getUserIds() {
+        return this.userIds == null ? Output.empty() : this.userIds;
     }
 
     public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(
-        @Nullable Input<List<String>> organizationArns,
-        @Nullable Input<List<String>> organizationalUnitArns,
-        @Nullable Input<List<String>> userGroups,
-        @Nullable Input<List<String>> userIds) {
+        @Nullable Output<List<String>> organizationArns,
+        @Nullable Output<List<String>> organizationalUnitArns,
+        @Nullable Output<List<String>> userGroups,
+        @Nullable Output<List<String>> userIds) {
         this.organizationArns = organizationArns;
         this.organizationalUnitArns = organizationalUnitArns;
         this.userGroups = userGroups;
@@ -75,10 +75,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs() {
-        this.organizationArns = Input.empty();
-        this.organizationalUnitArns = Input.empty();
-        this.userGroups = Input.empty();
-        this.userIds = Input.empty();
+        this.organizationArns = Output.empty();
+        this.organizationalUnitArns = Output.empty();
+        this.userGroups = Output.empty();
+        this.userIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> organizationArns;
-        private @Nullable Input<List<String>> organizationalUnitArns;
-        private @Nullable Input<List<String>> userGroups;
-        private @Nullable Input<List<String>> userIds;
+        private @Nullable Output<List<String>> organizationArns;
+        private @Nullable Output<List<String>> organizationalUnitArns;
+        private @Nullable Output<List<String>> userGroups;
+        private @Nullable Output<List<String>> userIds;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder organizationArns(@Nullable Input<List<String>> organizationArns) {
+        public Builder organizationArns(@Nullable Output<List<String>> organizationArns) {
             this.organizationArns = organizationArns;
             return this;
         }
 
         public Builder organizationArns(@Nullable List<String> organizationArns) {
-            this.organizationArns = Input.ofNullable(organizationArns);
+            this.organizationArns = Output.ofNullable(organizationArns);
             return this;
         }
 
-        public Builder organizationalUnitArns(@Nullable Input<List<String>> organizationalUnitArns) {
+        public Builder organizationalUnitArns(@Nullable Output<List<String>> organizationalUnitArns) {
             this.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
 
         public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
-            this.organizationalUnitArns = Input.ofNullable(organizationalUnitArns);
+            this.organizationalUnitArns = Output.ofNullable(organizationalUnitArns);
             return this;
         }
 
-        public Builder userGroups(@Nullable Input<List<String>> userGroups) {
+        public Builder userGroups(@Nullable Output<List<String>> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
 
         public Builder userGroups(@Nullable List<String> userGroups) {
-            this.userGroups = Input.ofNullable(userGroups);
+            this.userGroups = Output.ofNullable(userGroups);
             return this;
         }
 
-        public Builder userIds(@Nullable Input<List<String>> userIds) {
+        public Builder userIds(@Nullable Output<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
 
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Input.ofNullable(userIds);
+            this.userIds = Output.ofNullable(userIds);
             return this;
         }
         public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs build() {

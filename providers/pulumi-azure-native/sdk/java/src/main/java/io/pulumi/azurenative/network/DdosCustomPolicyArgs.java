@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.ProtocolCustomSettingsFormatArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ddosCustomPolicyName")
-      private final @Nullable Input<String> ddosCustomPolicyName;
+      private final @Nullable Output<String> ddosCustomPolicyName;
 
-    public Input<String> getDdosCustomPolicyName() {
-        return this.ddosCustomPolicyName == null ? Input.empty() : this.ddosCustomPolicyName;
+    public Output<String> getDdosCustomPolicyName() {
+        return this.ddosCustomPolicyName == null ? Output.empty() : this.ddosCustomPolicyName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protocolCustomSettings")
-      private final @Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
+      private final @Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
 
-    public Input<List<ProtocolCustomSettingsFormatArgs>> getProtocolCustomSettings() {
-        return this.protocolCustomSettings == null ? Input.empty() : this.protocolCustomSettings;
+    public Output<List<ProtocolCustomSettingsFormatArgs>> getProtocolCustomSettings() {
+        return this.protocolCustomSettings == null ? Output.empty() : this.protocolCustomSettings;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,19 +77,19 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DdosCustomPolicyArgs(
-        @Nullable Input<String> ddosCustomPolicyName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> ddosCustomPolicyName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.ddosCustomPolicyName = ddosCustomPolicyName;
         this.id = id;
         this.location = location;
@@ -99,12 +99,12 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DdosCustomPolicyArgs() {
-        this.ddosCustomPolicyName = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.protocolCustomSettings = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.ddosCustomPolicyName = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.protocolCustomSettings = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ddosCustomPolicyName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> ddosCustomPolicyName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder ddosCustomPolicyName(@Nullable Input<String> ddosCustomPolicyName) {
+        public Builder ddosCustomPolicyName(@Nullable Output<String> ddosCustomPolicyName) {
             this.ddosCustomPolicyName = ddosCustomPolicyName;
             return this;
         }
 
         public Builder ddosCustomPolicyName(@Nullable String ddosCustomPolicyName) {
-            this.ddosCustomPolicyName = Input.ofNullable(ddosCustomPolicyName);
+            this.ddosCustomPolicyName = Output.ofNullable(ddosCustomPolicyName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder protocolCustomSettings(@Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings) {
+        public Builder protocolCustomSettings(@Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings) {
             this.protocolCustomSettings = protocolCustomSettings;
             return this;
         }
 
         public Builder protocolCustomSettings(@Nullable List<ProtocolCustomSettingsFormatArgs> protocolCustomSettings) {
-            this.protocolCustomSettings = Input.ofNullable(protocolCustomSettings);
+            this.protocolCustomSettings = Output.ofNullable(protocolCustomSettings);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DdosCustomPolicyArgs build() {

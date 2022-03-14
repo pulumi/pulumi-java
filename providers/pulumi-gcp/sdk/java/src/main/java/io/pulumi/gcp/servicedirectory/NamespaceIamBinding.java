@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.servicedirectory;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -156,14 +155,14 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceIamBinding(String name, NamespaceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, args == null ? NamespaceIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, args == null ? NamespaceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NamespaceIamBinding(String name, Input<String> id, @Nullable NamespaceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NamespaceIamBinding(String name, Output<String> id, @Nullable NamespaceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -179,7 +178,7 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NamespaceIamBinding get(String name, Input<String> id, @Nullable NamespaceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NamespaceIamBinding get(String name, Output<String> id, @Nullable NamespaceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamespaceIamBinding(name, id, state, options);
     }
 }

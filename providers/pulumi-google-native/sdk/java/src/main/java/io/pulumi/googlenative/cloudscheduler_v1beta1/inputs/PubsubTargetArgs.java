@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-      private final Input<String> topicName;
+      private final Output<String> topicName;
 
-    public Input<String> getTopicName() {
+    public Output<String> getTopicName() {
         return this.topicName;
     }
 
     public PubsubTargetArgs(
-        @Nullable Input<Map<String,String>> attributes,
-        @Nullable Input<String> data,
-        Input<String> topicName) {
+        @Nullable Output<Map<String,String>> attributes,
+        @Nullable Output<String> data,
+        Output<String> topicName) {
         this.attributes = attributes;
         this.data = data;
         this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
     }
 
     private PubsubTargetArgs() {
-        this.attributes = Input.empty();
-        this.data = Input.empty();
-        this.topicName = Input.empty();
+        this.attributes = Output.empty();
+        this.data = Output.empty();
+        this.topicName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributes;
-        private @Nullable Input<String> data;
-        private Input<String> topicName;
+        private @Nullable Output<Map<String,String>> attributes;
+        private @Nullable Output<String> data;
+        private Output<String> topicName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder topicName(Input<String> topicName) {
+        public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
         public Builder topicName(String topicName) {
-            this.topicName = Input.of(Objects.requireNonNull(topicName));
+            this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
         }
         public PubsubTargetArgs build() {

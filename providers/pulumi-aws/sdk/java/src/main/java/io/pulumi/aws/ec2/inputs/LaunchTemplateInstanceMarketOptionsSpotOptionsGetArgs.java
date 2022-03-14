@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * 
      */
     @InputImport(name="blockDurationMinutes")
-      private final @Nullable Input<Integer> blockDurationMinutes;
+      private final @Nullable Output<Integer> blockDurationMinutes;
 
-    public Input<Integer> getBlockDurationMinutes() {
-        return this.blockDurationMinutes == null ? Input.empty() : this.blockDurationMinutes;
+    public Output<Integer> getBlockDurationMinutes() {
+        return this.blockDurationMinutes == null ? Output.empty() : this.blockDurationMinutes;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * 
      */
     @InputImport(name="instanceInterruptionBehavior")
-      private final @Nullable Input<String> instanceInterruptionBehavior;
+      private final @Nullable Output<String> instanceInterruptionBehavior;
 
-    public Input<String> getInstanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Input.empty() : this.instanceInterruptionBehavior;
+    public Output<String> getInstanceInterruptionBehavior() {
+        return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * 
      */
     @InputImport(name="maxPrice")
-      private final @Nullable Input<String> maxPrice;
+      private final @Nullable Output<String> maxPrice;
 
-    public Input<String> getMaxPrice() {
-        return this.maxPrice == null ? Input.empty() : this.maxPrice;
+    public Output<String> getMaxPrice() {
+        return this.maxPrice == null ? Output.empty() : this.maxPrice;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * 
      */
     @InputImport(name="spotInstanceType")
-      private final @Nullable Input<String> spotInstanceType;
+      private final @Nullable Output<String> spotInstanceType;
 
-    public Input<String> getSpotInstanceType() {
-        return this.spotInstanceType == null ? Input.empty() : this.spotInstanceType;
+    public Output<String> getSpotInstanceType() {
+        return this.spotInstanceType == null ? Output.empty() : this.spotInstanceType;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * 
      */
     @InputImport(name="validUntil")
-      private final @Nullable Input<String> validUntil;
+      private final @Nullable Output<String> validUntil;
 
-    public Input<String> getValidUntil() {
-        return this.validUntil == null ? Input.empty() : this.validUntil;
+    public Output<String> getValidUntil() {
+        return this.validUntil == null ? Output.empty() : this.validUntil;
     }
 
     public LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs(
-        @Nullable Input<Integer> blockDurationMinutes,
-        @Nullable Input<String> instanceInterruptionBehavior,
-        @Nullable Input<String> maxPrice,
-        @Nullable Input<String> spotInstanceType,
-        @Nullable Input<String> validUntil) {
+        @Nullable Output<Integer> blockDurationMinutes,
+        @Nullable Output<String> instanceInterruptionBehavior,
+        @Nullable Output<String> maxPrice,
+        @Nullable Output<String> spotInstanceType,
+        @Nullable Output<String> validUntil) {
         this.blockDurationMinutes = blockDurationMinutes;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.maxPrice = maxPrice;
@@ -85,11 +85,11 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
     }
 
     private LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs() {
-        this.blockDurationMinutes = Input.empty();
-        this.instanceInterruptionBehavior = Input.empty();
-        this.maxPrice = Input.empty();
-        this.spotInstanceType = Input.empty();
-        this.validUntil = Input.empty();
+        this.blockDurationMinutes = Output.empty();
+        this.instanceInterruptionBehavior = Output.empty();
+        this.maxPrice = Output.empty();
+        this.spotInstanceType = Output.empty();
+        this.validUntil = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> blockDurationMinutes;
-        private @Nullable Input<String> instanceInterruptionBehavior;
-        private @Nullable Input<String> maxPrice;
-        private @Nullable Input<String> spotInstanceType;
-        private @Nullable Input<String> validUntil;
+        private @Nullable Output<Integer> blockDurationMinutes;
+        private @Nullable Output<String> instanceInterruptionBehavior;
+        private @Nullable Output<String> maxPrice;
+        private @Nullable Output<String> spotInstanceType;
+        private @Nullable Output<String> validUntil;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
     	      this.validUntil = defaults.validUntil;
         }
 
-        public Builder blockDurationMinutes(@Nullable Input<Integer> blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Output<Integer> blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
 
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
-            this.blockDurationMinutes = Input.ofNullable(blockDurationMinutes);
+            this.blockDurationMinutes = Output.ofNullable(blockDurationMinutes);
             return this;
         }
 
-        public Builder instanceInterruptionBehavior(@Nullable Input<String> instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Input.ofNullable(instanceInterruptionBehavior);
+            this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
             return this;
         }
 
-        public Builder maxPrice(@Nullable Input<String> maxPrice) {
+        public Builder maxPrice(@Nullable Output<String> maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
         public Builder maxPrice(@Nullable String maxPrice) {
-            this.maxPrice = Input.ofNullable(maxPrice);
+            this.maxPrice = Output.ofNullable(maxPrice);
             return this;
         }
 
-        public Builder spotInstanceType(@Nullable Input<String> spotInstanceType) {
+        public Builder spotInstanceType(@Nullable Output<String> spotInstanceType) {
             this.spotInstanceType = spotInstanceType;
             return this;
         }
 
         public Builder spotInstanceType(@Nullable String spotInstanceType) {
-            this.spotInstanceType = Input.ofNullable(spotInstanceType);
+            this.spotInstanceType = Output.ofNullable(spotInstanceType);
             return this;
         }
 
-        public Builder validUntil(@Nullable Input<String> validUntil) {
+        public Builder validUntil(@Nullable Output<String> validUntil) {
             this.validUntil = validUntil;
             return this;
         }
 
         public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = Input.ofNullable(validUntil);
+            this.validUntil = Output.ofNullable(validUntil);
             return this;
         }
         public LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs build() {

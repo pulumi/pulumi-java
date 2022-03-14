@@ -6,7 +6,6 @@ package io.pulumi.aws.serverlessrepository;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.serverlessrepository.CloudFormationStackArgs;
 import io.pulumi.aws.serverlessrepository.inputs.CloudFormationStackState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,14 +181,14 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudFormationStack(String name, CloudFormationStackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:serverlessrepository/cloudFormationStack:CloudFormationStack", name, args == null ? CloudFormationStackArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:serverlessrepository/cloudFormationStack:CloudFormationStack", name, args == null ? CloudFormationStackArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CloudFormationStack(String name, Input<String> id, @Nullable CloudFormationStackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CloudFormationStack(String name, Output<String> id, @Nullable CloudFormationStackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:serverlessrepository/cloudFormationStack:CloudFormationStack", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -205,7 +204,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CloudFormationStack get(String name, Input<String> id, @Nullable CloudFormationStackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CloudFormationStack get(String name, Output<String> id, @Nullable CloudFormationStackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloudFormationStack(name, id, state, options);
     }
 }

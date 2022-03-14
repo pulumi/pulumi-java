@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,9 +21,9 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="broker", required=true)
-      private final Input<String> broker;
+      private final Output<String> broker;
 
-    public Input<String> getBroker() {
+    public Output<String> getBroker() {
         return this.broker;
     }
 
@@ -32,10 +32,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="includeControlDetails")
-      private final @Nullable Input<Boolean> includeControlDetails;
+      private final @Nullable Output<Boolean> includeControlDetails;
 
-    public Input<Boolean> getIncludeControlDetails() {
-        return this.includeControlDetails == null ? Input.empty() : this.includeControlDetails;
+    public Output<Boolean> getIncludeControlDetails() {
+        return this.includeControlDetails == null ? Output.empty() : this.includeControlDetails;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="includeNullAndEmpty")
-      private final @Nullable Input<Boolean> includeNullAndEmpty;
+      private final @Nullable Output<Boolean> includeNullAndEmpty;
 
-    public Input<Boolean> getIncludeNullAndEmpty() {
-        return this.includeNullAndEmpty == null ? Input.empty() : this.includeNullAndEmpty;
+    public Output<Boolean> getIncludeNullAndEmpty() {
+        return this.includeNullAndEmpty == null ? Output.empty() : this.includeNullAndEmpty;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="includePartitionValue")
-      private final @Nullable Input<Boolean> includePartitionValue;
+      private final @Nullable Output<Boolean> includePartitionValue;
 
-    public Input<Boolean> getIncludePartitionValue() {
-        return this.includePartitionValue == null ? Input.empty() : this.includePartitionValue;
+    public Output<Boolean> getIncludePartitionValue() {
+        return this.includePartitionValue == null ? Output.empty() : this.includePartitionValue;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="includeTableAlterOperations")
-      private final @Nullable Input<Boolean> includeTableAlterOperations;
+      private final @Nullable Output<Boolean> includeTableAlterOperations;
 
-    public Input<Boolean> getIncludeTableAlterOperations() {
-        return this.includeTableAlterOperations == null ? Input.empty() : this.includeTableAlterOperations;
+    public Output<Boolean> getIncludeTableAlterOperations() {
+        return this.includeTableAlterOperations == null ? Output.empty() : this.includeTableAlterOperations;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="includeTransactionDetails")
-      private final @Nullable Input<Boolean> includeTransactionDetails;
+      private final @Nullable Output<Boolean> includeTransactionDetails;
 
-    public Input<Boolean> getIncludeTransactionDetails() {
-        return this.includeTransactionDetails == null ? Input.empty() : this.includeTransactionDetails;
+    public Output<Boolean> getIncludeTransactionDetails() {
+        return this.includeTransactionDetails == null ? Output.empty() : this.includeTransactionDetails;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messageFormat")
-      private final @Nullable Input<String> messageFormat;
+      private final @Nullable Output<String> messageFormat;
 
-    public Input<String> getMessageFormat() {
-        return this.messageFormat == null ? Input.empty() : this.messageFormat;
+    public Output<String> getMessageFormat() {
+        return this.messageFormat == null ? Output.empty() : this.messageFormat;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messageMaxBytes")
-      private final @Nullable Input<Integer> messageMaxBytes;
+      private final @Nullable Output<Integer> messageMaxBytes;
 
-    public Input<Integer> getMessageMaxBytes() {
-        return this.messageMaxBytes == null ? Input.empty() : this.messageMaxBytes;
+    public Output<Integer> getMessageMaxBytes() {
+        return this.messageMaxBytes == null ? Output.empty() : this.messageMaxBytes;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="noHexPrefix")
-      private final @Nullable Input<Boolean> noHexPrefix;
+      private final @Nullable Output<Boolean> noHexPrefix;
 
-    public Input<Boolean> getNoHexPrefix() {
-        return this.noHexPrefix == null ? Input.empty() : this.noHexPrefix;
+    public Output<Boolean> getNoHexPrefix() {
+        return this.noHexPrefix == null ? Output.empty() : this.noHexPrefix;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionIncludeSchemaTable")
-      private final @Nullable Input<Boolean> partitionIncludeSchemaTable;
+      private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
-    public Input<Boolean> getPartitionIncludeSchemaTable() {
-        return this.partitionIncludeSchemaTable == null ? Input.empty() : this.partitionIncludeSchemaTable;
+    public Output<Boolean> getPartitionIncludeSchemaTable() {
+        return this.partitionIncludeSchemaTable == null ? Output.empty() : this.partitionIncludeSchemaTable;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="saslPassword")
-      private final @Nullable Input<String> saslPassword;
+      private final @Nullable Output<String> saslPassword;
 
-    public Input<String> getSaslPassword() {
-        return this.saslPassword == null ? Input.empty() : this.saslPassword;
+    public Output<String> getSaslPassword() {
+        return this.saslPassword == null ? Output.empty() : this.saslPassword;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="saslUsername")
-      private final @Nullable Input<String> saslUsername;
+      private final @Nullable Output<String> saslUsername;
 
-    public Input<String> getSaslUsername() {
-        return this.saslUsername == null ? Input.empty() : this.saslUsername;
+    public Output<String> getSaslUsername() {
+        return this.saslUsername == null ? Output.empty() : this.saslUsername;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="securityProtocol")
-      private final @Nullable Input<String> securityProtocol;
+      private final @Nullable Output<String> securityProtocol;
 
-    public Input<String> getSecurityProtocol() {
-        return this.securityProtocol == null ? Input.empty() : this.securityProtocol;
+    public Output<String> getSecurityProtocol() {
+        return this.securityProtocol == null ? Output.empty() : this.securityProtocol;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sslCaCertificateArn")
-      private final @Nullable Input<String> sslCaCertificateArn;
+      private final @Nullable Output<String> sslCaCertificateArn;
 
-    public Input<String> getSslCaCertificateArn() {
-        return this.sslCaCertificateArn == null ? Input.empty() : this.sslCaCertificateArn;
+    public Output<String> getSslCaCertificateArn() {
+        return this.sslCaCertificateArn == null ? Output.empty() : this.sslCaCertificateArn;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sslClientCertificateArn")
-      private final @Nullable Input<String> sslClientCertificateArn;
+      private final @Nullable Output<String> sslClientCertificateArn;
 
-    public Input<String> getSslClientCertificateArn() {
-        return this.sslClientCertificateArn == null ? Input.empty() : this.sslClientCertificateArn;
+    public Output<String> getSslClientCertificateArn() {
+        return this.sslClientCertificateArn == null ? Output.empty() : this.sslClientCertificateArn;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sslClientKeyArn")
-      private final @Nullable Input<String> sslClientKeyArn;
+      private final @Nullable Output<String> sslClientKeyArn;
 
-    public Input<String> getSslClientKeyArn() {
-        return this.sslClientKeyArn == null ? Input.empty() : this.sslClientKeyArn;
+    public Output<String> getSslClientKeyArn() {
+        return this.sslClientKeyArn == null ? Output.empty() : this.sslClientKeyArn;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sslClientKeyPassword")
-      private final @Nullable Input<String> sslClientKeyPassword;
+      private final @Nullable Output<String> sslClientKeyPassword;
 
-    public Input<String> getSslClientKeyPassword() {
-        return this.sslClientKeyPassword == null ? Input.empty() : this.sslClientKeyPassword;
+    public Output<String> getSslClientKeyPassword() {
+        return this.sslClientKeyPassword == null ? Output.empty() : this.sslClientKeyPassword;
     }
 
     /**
@@ -208,31 +208,31 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public EndpointKafkaSettingsGetArgs(
-        Input<String> broker,
-        @Nullable Input<Boolean> includeControlDetails,
-        @Nullable Input<Boolean> includeNullAndEmpty,
-        @Nullable Input<Boolean> includePartitionValue,
-        @Nullable Input<Boolean> includeTableAlterOperations,
-        @Nullable Input<Boolean> includeTransactionDetails,
-        @Nullable Input<String> messageFormat,
-        @Nullable Input<Integer> messageMaxBytes,
-        @Nullable Input<Boolean> noHexPrefix,
-        @Nullable Input<Boolean> partitionIncludeSchemaTable,
-        @Nullable Input<String> saslPassword,
-        @Nullable Input<String> saslUsername,
-        @Nullable Input<String> securityProtocol,
-        @Nullable Input<String> sslCaCertificateArn,
-        @Nullable Input<String> sslClientCertificateArn,
-        @Nullable Input<String> sslClientKeyArn,
-        @Nullable Input<String> sslClientKeyPassword,
-        @Nullable Input<String> topic) {
+        Output<String> broker,
+        @Nullable Output<Boolean> includeControlDetails,
+        @Nullable Output<Boolean> includeNullAndEmpty,
+        @Nullable Output<Boolean> includePartitionValue,
+        @Nullable Output<Boolean> includeTableAlterOperations,
+        @Nullable Output<Boolean> includeTransactionDetails,
+        @Nullable Output<String> messageFormat,
+        @Nullable Output<Integer> messageMaxBytes,
+        @Nullable Output<Boolean> noHexPrefix,
+        @Nullable Output<Boolean> partitionIncludeSchemaTable,
+        @Nullable Output<String> saslPassword,
+        @Nullable Output<String> saslUsername,
+        @Nullable Output<String> securityProtocol,
+        @Nullable Output<String> sslCaCertificateArn,
+        @Nullable Output<String> sslClientCertificateArn,
+        @Nullable Output<String> sslClientKeyArn,
+        @Nullable Output<String> sslClientKeyPassword,
+        @Nullable Output<String> topic) {
         this.broker = Objects.requireNonNull(broker, "expected parameter 'broker' to be non-null");
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;
@@ -254,24 +254,24 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     }
 
     private EndpointKafkaSettingsGetArgs() {
-        this.broker = Input.empty();
-        this.includeControlDetails = Input.empty();
-        this.includeNullAndEmpty = Input.empty();
-        this.includePartitionValue = Input.empty();
-        this.includeTableAlterOperations = Input.empty();
-        this.includeTransactionDetails = Input.empty();
-        this.messageFormat = Input.empty();
-        this.messageMaxBytes = Input.empty();
-        this.noHexPrefix = Input.empty();
-        this.partitionIncludeSchemaTable = Input.empty();
-        this.saslPassword = Input.empty();
-        this.saslUsername = Input.empty();
-        this.securityProtocol = Input.empty();
-        this.sslCaCertificateArn = Input.empty();
-        this.sslClientCertificateArn = Input.empty();
-        this.sslClientKeyArn = Input.empty();
-        this.sslClientKeyPassword = Input.empty();
-        this.topic = Input.empty();
+        this.broker = Output.empty();
+        this.includeControlDetails = Output.empty();
+        this.includeNullAndEmpty = Output.empty();
+        this.includePartitionValue = Output.empty();
+        this.includeTableAlterOperations = Output.empty();
+        this.includeTransactionDetails = Output.empty();
+        this.messageFormat = Output.empty();
+        this.messageMaxBytes = Output.empty();
+        this.noHexPrefix = Output.empty();
+        this.partitionIncludeSchemaTable = Output.empty();
+        this.saslPassword = Output.empty();
+        this.saslUsername = Output.empty();
+        this.securityProtocol = Output.empty();
+        this.sslCaCertificateArn = Output.empty();
+        this.sslClientCertificateArn = Output.empty();
+        this.sslClientKeyArn = Output.empty();
+        this.sslClientKeyPassword = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -283,24 +283,24 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> broker;
-        private @Nullable Input<Boolean> includeControlDetails;
-        private @Nullable Input<Boolean> includeNullAndEmpty;
-        private @Nullable Input<Boolean> includePartitionValue;
-        private @Nullable Input<Boolean> includeTableAlterOperations;
-        private @Nullable Input<Boolean> includeTransactionDetails;
-        private @Nullable Input<String> messageFormat;
-        private @Nullable Input<Integer> messageMaxBytes;
-        private @Nullable Input<Boolean> noHexPrefix;
-        private @Nullable Input<Boolean> partitionIncludeSchemaTable;
-        private @Nullable Input<String> saslPassword;
-        private @Nullable Input<String> saslUsername;
-        private @Nullable Input<String> securityProtocol;
-        private @Nullable Input<String> sslCaCertificateArn;
-        private @Nullable Input<String> sslClientCertificateArn;
-        private @Nullable Input<String> sslClientKeyArn;
-        private @Nullable Input<String> sslClientKeyPassword;
-        private @Nullable Input<String> topic;
+        private Output<String> broker;
+        private @Nullable Output<Boolean> includeControlDetails;
+        private @Nullable Output<Boolean> includeNullAndEmpty;
+        private @Nullable Output<Boolean> includePartitionValue;
+        private @Nullable Output<Boolean> includeTableAlterOperations;
+        private @Nullable Output<Boolean> includeTransactionDetails;
+        private @Nullable Output<String> messageFormat;
+        private @Nullable Output<Integer> messageMaxBytes;
+        private @Nullable Output<Boolean> noHexPrefix;
+        private @Nullable Output<Boolean> partitionIncludeSchemaTable;
+        private @Nullable Output<String> saslPassword;
+        private @Nullable Output<String> saslUsername;
+        private @Nullable Output<String> securityProtocol;
+        private @Nullable Output<String> sslCaCertificateArn;
+        private @Nullable Output<String> sslClientCertificateArn;
+        private @Nullable Output<String> sslClientKeyArn;
+        private @Nullable Output<String> sslClientKeyPassword;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -328,183 +328,183 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     	      this.topic = defaults.topic;
         }
 
-        public Builder broker(Input<String> broker) {
+        public Builder broker(Output<String> broker) {
             this.broker = Objects.requireNonNull(broker);
             return this;
         }
 
         public Builder broker(String broker) {
-            this.broker = Input.of(Objects.requireNonNull(broker));
+            this.broker = Output.of(Objects.requireNonNull(broker));
             return this;
         }
 
-        public Builder includeControlDetails(@Nullable Input<Boolean> includeControlDetails) {
+        public Builder includeControlDetails(@Nullable Output<Boolean> includeControlDetails) {
             this.includeControlDetails = includeControlDetails;
             return this;
         }
 
         public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
-            this.includeControlDetails = Input.ofNullable(includeControlDetails);
+            this.includeControlDetails = Output.ofNullable(includeControlDetails);
             return this;
         }
 
-        public Builder includeNullAndEmpty(@Nullable Input<Boolean> includeNullAndEmpty) {
+        public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
             this.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
 
         public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
-            this.includeNullAndEmpty = Input.ofNullable(includeNullAndEmpty);
+            this.includeNullAndEmpty = Output.ofNullable(includeNullAndEmpty);
             return this;
         }
 
-        public Builder includePartitionValue(@Nullable Input<Boolean> includePartitionValue) {
+        public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
             this.includePartitionValue = includePartitionValue;
             return this;
         }
 
         public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
-            this.includePartitionValue = Input.ofNullable(includePartitionValue);
+            this.includePartitionValue = Output.ofNullable(includePartitionValue);
             return this;
         }
 
-        public Builder includeTableAlterOperations(@Nullable Input<Boolean> includeTableAlterOperations) {
+        public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
             this.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
 
         public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
-            this.includeTableAlterOperations = Input.ofNullable(includeTableAlterOperations);
+            this.includeTableAlterOperations = Output.ofNullable(includeTableAlterOperations);
             return this;
         }
 
-        public Builder includeTransactionDetails(@Nullable Input<Boolean> includeTransactionDetails) {
+        public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
             this.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
 
         public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
-            this.includeTransactionDetails = Input.ofNullable(includeTransactionDetails);
+            this.includeTransactionDetails = Output.ofNullable(includeTransactionDetails);
             return this;
         }
 
-        public Builder messageFormat(@Nullable Input<String> messageFormat) {
+        public Builder messageFormat(@Nullable Output<String> messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
         public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Input.ofNullable(messageFormat);
+            this.messageFormat = Output.ofNullable(messageFormat);
             return this;
         }
 
-        public Builder messageMaxBytes(@Nullable Input<Integer> messageMaxBytes) {
+        public Builder messageMaxBytes(@Nullable Output<Integer> messageMaxBytes) {
             this.messageMaxBytes = messageMaxBytes;
             return this;
         }
 
         public Builder messageMaxBytes(@Nullable Integer messageMaxBytes) {
-            this.messageMaxBytes = Input.ofNullable(messageMaxBytes);
+            this.messageMaxBytes = Output.ofNullable(messageMaxBytes);
             return this;
         }
 
-        public Builder noHexPrefix(@Nullable Input<Boolean> noHexPrefix) {
+        public Builder noHexPrefix(@Nullable Output<Boolean> noHexPrefix) {
             this.noHexPrefix = noHexPrefix;
             return this;
         }
 
         public Builder noHexPrefix(@Nullable Boolean noHexPrefix) {
-            this.noHexPrefix = Input.ofNullable(noHexPrefix);
+            this.noHexPrefix = Output.ofNullable(noHexPrefix);
             return this;
         }
 
-        public Builder partitionIncludeSchemaTable(@Nullable Input<Boolean> partitionIncludeSchemaTable) {
+        public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
 
         public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
-            this.partitionIncludeSchemaTable = Input.ofNullable(partitionIncludeSchemaTable);
+            this.partitionIncludeSchemaTable = Output.ofNullable(partitionIncludeSchemaTable);
             return this;
         }
 
-        public Builder saslPassword(@Nullable Input<String> saslPassword) {
+        public Builder saslPassword(@Nullable Output<String> saslPassword) {
             this.saslPassword = saslPassword;
             return this;
         }
 
         public Builder saslPassword(@Nullable String saslPassword) {
-            this.saslPassword = Input.ofNullable(saslPassword);
+            this.saslPassword = Output.ofNullable(saslPassword);
             return this;
         }
 
-        public Builder saslUsername(@Nullable Input<String> saslUsername) {
+        public Builder saslUsername(@Nullable Output<String> saslUsername) {
             this.saslUsername = saslUsername;
             return this;
         }
 
         public Builder saslUsername(@Nullable String saslUsername) {
-            this.saslUsername = Input.ofNullable(saslUsername);
+            this.saslUsername = Output.ofNullable(saslUsername);
             return this;
         }
 
-        public Builder securityProtocol(@Nullable Input<String> securityProtocol) {
+        public Builder securityProtocol(@Nullable Output<String> securityProtocol) {
             this.securityProtocol = securityProtocol;
             return this;
         }
 
         public Builder securityProtocol(@Nullable String securityProtocol) {
-            this.securityProtocol = Input.ofNullable(securityProtocol);
+            this.securityProtocol = Output.ofNullable(securityProtocol);
             return this;
         }
 
-        public Builder sslCaCertificateArn(@Nullable Input<String> sslCaCertificateArn) {
+        public Builder sslCaCertificateArn(@Nullable Output<String> sslCaCertificateArn) {
             this.sslCaCertificateArn = sslCaCertificateArn;
             return this;
         }
 
         public Builder sslCaCertificateArn(@Nullable String sslCaCertificateArn) {
-            this.sslCaCertificateArn = Input.ofNullable(sslCaCertificateArn);
+            this.sslCaCertificateArn = Output.ofNullable(sslCaCertificateArn);
             return this;
         }
 
-        public Builder sslClientCertificateArn(@Nullable Input<String> sslClientCertificateArn) {
+        public Builder sslClientCertificateArn(@Nullable Output<String> sslClientCertificateArn) {
             this.sslClientCertificateArn = sslClientCertificateArn;
             return this;
         }
 
         public Builder sslClientCertificateArn(@Nullable String sslClientCertificateArn) {
-            this.sslClientCertificateArn = Input.ofNullable(sslClientCertificateArn);
+            this.sslClientCertificateArn = Output.ofNullable(sslClientCertificateArn);
             return this;
         }
 
-        public Builder sslClientKeyArn(@Nullable Input<String> sslClientKeyArn) {
+        public Builder sslClientKeyArn(@Nullable Output<String> sslClientKeyArn) {
             this.sslClientKeyArn = sslClientKeyArn;
             return this;
         }
 
         public Builder sslClientKeyArn(@Nullable String sslClientKeyArn) {
-            this.sslClientKeyArn = Input.ofNullable(sslClientKeyArn);
+            this.sslClientKeyArn = Output.ofNullable(sslClientKeyArn);
             return this;
         }
 
-        public Builder sslClientKeyPassword(@Nullable Input<String> sslClientKeyPassword) {
+        public Builder sslClientKeyPassword(@Nullable Output<String> sslClientKeyPassword) {
             this.sslClientKeyPassword = sslClientKeyPassword;
             return this;
         }
 
         public Builder sslClientKeyPassword(@Nullable String sslClientKeyPassword) {
-            this.sslClientKeyPassword = Input.ofNullable(sslClientKeyPassword);
+            this.sslClientKeyPassword = Output.ofNullable(sslClientKeyPassword);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public EndpointKafkaSettingsGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ServiceOrderedPlacementStrategyGetArgs(
-        @Nullable Input<String> field,
-        Input<String> type) {
+        @Nullable Output<String> field,
+        Output<String> type) {
         this.field = field;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ServiceOrderedPlacementStrategyGetArgs() {
-        this.field = Input.empty();
-        this.type = Input.empty();
+        this.field = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> field;
-        private Input<String> type;
+        private @Nullable Output<String> field;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ServiceOrderedPlacementStrategyGetArgs build() {

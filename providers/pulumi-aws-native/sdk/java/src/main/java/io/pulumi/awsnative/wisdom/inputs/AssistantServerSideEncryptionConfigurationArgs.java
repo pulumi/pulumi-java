@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wisdom.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class AssistantServerSideEncryptionConfigurationArgs extends io.pul
     public static final AssistantServerSideEncryptionConfigurationArgs Empty = new AssistantServerSideEncryptionConfigurationArgs();
 
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
-    public AssistantServerSideEncryptionConfigurationArgs(@Nullable Input<String> kmsKeyId) {
+    public AssistantServerSideEncryptionConfigurationArgs(@Nullable Output<String> kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 
     private AssistantServerSideEncryptionConfigurationArgs() {
-        this.kmsKeyId = Input.empty();
+        this.kmsKeyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class AssistantServerSideEncryptionConfigurationArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
+        private @Nullable Output<String> kmsKeyId;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class AssistantServerSideEncryptionConfigurationArgs extends io.pul
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
         public AssistantServerSideEncryptionConfigurationArgs build() {

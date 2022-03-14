@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.enums.ServerVersion;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverVersion")
-      private final @Nullable Input<Either<String,ServerVersion>> serverVersion;
+      private final @Nullable Output<Either<String,ServerVersion>> serverVersion;
 
-    public Input<Either<String,ServerVersion>> getServerVersion() {
-        return this.serverVersion == null ? Input.empty() : this.serverVersion;
+    public Output<Either<String,ServerVersion>> getServerVersion() {
+        return this.serverVersion == null ? Output.empty() : this.serverVersion;
     }
 
-    public ApiPropertiesArgs(@Nullable Input<Either<String,ServerVersion>> serverVersion) {
+    public ApiPropertiesArgs(@Nullable Output<Either<String,ServerVersion>> serverVersion) {
         this.serverVersion = serverVersion;
     }
 
     private ApiPropertiesArgs() {
-        this.serverVersion = Input.empty();
+        this.serverVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ServerVersion>> serverVersion;
+        private @Nullable Output<Either<String,ServerVersion>> serverVersion;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverVersion = defaults.serverVersion;
         }
 
-        public Builder serverVersion(@Nullable Input<Either<String,ServerVersion>> serverVersion) {
+        public Builder serverVersion(@Nullable Output<Either<String,ServerVersion>> serverVersion) {
             this.serverVersion = serverVersion;
             return this;
         }
 
         public Builder serverVersion(@Nullable Either<String,ServerVersion> serverVersion) {
-            this.serverVersion = Input.ofNullable(serverVersion);
+            this.serverVersion = Output.ofNullable(serverVersion);
             return this;
         }
         public ApiPropertiesArgs build() {

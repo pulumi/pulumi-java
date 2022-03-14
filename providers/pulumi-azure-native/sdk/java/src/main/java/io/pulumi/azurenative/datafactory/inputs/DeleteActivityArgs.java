@@ -22,7 +22,7 @@ import io.pulumi.azurenative.datafactory.inputs.LogStorageSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -45,9 +45,9 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset", required=true)
-      private final Input<DatasetReferenceArgs> dataset;
+      private final Output<DatasetReferenceArgs> dataset;
 
-    public Input<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> getDataset() {
         return this.dataset;
     }
 
@@ -56,10 +56,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogging")
-      private final @Nullable Input<Object> enableLogging;
+      private final @Nullable Output<Object> enableLogging;
 
-    public Input<Object> getEnableLogging() {
-        return this.enableLogging == null ? Input.empty() : this.enableLogging;
+    public Output<Object> getEnableLogging() {
+        return this.enableLogging == null ? Output.empty() : this.enableLogging;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logStorageSettings")
-      private final @Nullable Input<LogStorageSettingsArgs> logStorageSettings;
+      private final @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
 
-    public Input<LogStorageSettingsArgs> getLogStorageSettings() {
-        return this.logStorageSettings == null ? Input.empty() : this.logStorageSettings;
+    public Output<LogStorageSettingsArgs> getLogStorageSettings() {
+        return this.logStorageSettings == null ? Output.empty() : this.logStorageSettings;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Integer> maxConcurrentConnections;
+      private final @Nullable Output<Integer> maxConcurrentConnections;
 
-    public Input<Integer> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Integer> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -133,10 +133,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recursive")
-      private final @Nullable Input<Object> recursive;
+      private final @Nullable Output<Object> recursive;
 
-    public Input<Object> getRecursive() {
-        return this.recursive == null ? Input.empty() : this.recursive;
+    public Output<Object> getRecursive() {
+        return this.recursive == null ? Output.empty() : this.recursive;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storeSettings")
-      private final @Nullable Input<Object> storeSettings;
+      private final @Nullable Output<Object> storeSettings;
 
-    public Input<Object> getStoreSettings() {
-        return this.storeSettings == null ? Input.empty() : this.storeSettings;
+    public Output<Object> getStoreSettings() {
+        return this.storeSettings == null ? Output.empty() : this.storeSettings;
     }
 
     /**
@@ -167,9 +167,9 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -178,26 +178,26 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public DeleteActivityArgs(
-        Input<DatasetReferenceArgs> dataset,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> enableLogging,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<LogStorageSettingsArgs> logStorageSettings,
-        @Nullable Input<Integer> maxConcurrentConnections,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<Object> recursive,
-        @Nullable Input<Object> storeSettings,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        Output<DatasetReferenceArgs> dataset,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> enableLogging,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<LogStorageSettingsArgs> logStorageSettings,
+        @Nullable Output<Integer> maxConcurrentConnections,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<Object> recursive,
+        @Nullable Output<Object> storeSettings,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
         this.dependsOn = dependsOn;
         this.description = description;
@@ -214,19 +214,19 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeleteActivityArgs() {
-        this.dataset = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.enableLogging = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.logStorageSettings = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.recursive = Input.empty();
-        this.storeSettings = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.dataset = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.enableLogging = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.logStorageSettings = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.recursive = Output.empty();
+        this.storeSettings = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -238,19 +238,19 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DatasetReferenceArgs> dataset;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> enableLogging;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<LogStorageSettingsArgs> logStorageSettings;
-        private @Nullable Input<Integer> maxConcurrentConnections;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<Object> recursive;
-        private @Nullable Input<Object> storeSettings;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private Output<DatasetReferenceArgs> dataset;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> enableLogging;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
+        private @Nullable Output<Integer> maxConcurrentConnections;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<Object> recursive;
+        private @Nullable Output<Object> storeSettings;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -273,133 +273,133 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder dataset(Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(Output<DatasetReferenceArgs> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
         public Builder dataset(DatasetReferenceArgs dataset) {
-            this.dataset = Input.of(Objects.requireNonNull(dataset));
+            this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableLogging(@Nullable Input<Object> enableLogging) {
+        public Builder enableLogging(@Nullable Output<Object> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
         public Builder enableLogging(@Nullable Object enableLogging) {
-            this.enableLogging = Input.ofNullable(enableLogging);
+            this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder logStorageSettings(@Nullable Input<LogStorageSettingsArgs> logStorageSettings) {
+        public Builder logStorageSettings(@Nullable Output<LogStorageSettingsArgs> logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
 
         public Builder logStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
-            this.logStorageSettings = Input.ofNullable(logStorageSettings);
+            this.logStorageSettings = Output.ofNullable(logStorageSettings);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Integer> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Integer> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Integer maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder recursive(@Nullable Input<Object> recursive) {
+        public Builder recursive(@Nullable Output<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
 
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Input.ofNullable(recursive);
+            this.recursive = Output.ofNullable(recursive);
             return this;
         }
 
-        public Builder storeSettings(@Nullable Input<Object> storeSettings) {
+        public Builder storeSettings(@Nullable Output<Object> storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
 
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = Input.ofNullable(storeSettings);
+            this.storeSettings = Output.ofNullable(storeSettings);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public DeleteActivityArgs build() {

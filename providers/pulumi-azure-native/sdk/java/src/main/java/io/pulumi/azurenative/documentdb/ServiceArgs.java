@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.enums.ServiceSize;
 import io.pulumi.azurenative.documentdb.enums.ServiceType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -34,10 +34,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceSize")
-      private final @Nullable Input<Either<String,ServiceSize>> instanceSize;
+      private final @Nullable Output<Either<String,ServiceSize>> instanceSize;
 
-    public Input<Either<String,ServiceSize>> getInstanceSize() {
-        return this.instanceSize == null ? Input.empty() : this.instanceSize;
+    public Output<Either<String,ServiceSize>> getInstanceSize() {
+        return this.instanceSize == null ? Output.empty() : this.instanceSize;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,10 +67,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceType")
-      private final @Nullable Input<Either<String,ServiceType>> serviceType;
+      private final @Nullable Output<Either<String,ServiceType>> serviceType;
 
-    public Input<Either<String,ServiceType>> getServiceType() {
-        return this.serviceType == null ? Input.empty() : this.serviceType;
+    public Output<Either<String,ServiceType>> getServiceType() {
+        return this.serviceType == null ? Output.empty() : this.serviceType;
     }
 
     public ServiceArgs(
-        Input<String> accountName,
-        @Nullable Input<Integer> instanceCount,
-        @Nullable Input<Either<String,ServiceSize>> instanceSize,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<Either<String,ServiceType>> serviceType) {
+        Output<String> accountName,
+        @Nullable Output<Integer> instanceCount,
+        @Nullable Output<Either<String,ServiceSize>> instanceSize,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<Either<String,ServiceType>> serviceType) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;
@@ -100,12 +100,12 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.accountName = Input.empty();
-        this.instanceCount = Input.empty();
-        this.instanceSize = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.serviceType = Input.empty();
+        this.accountName = Output.empty();
+        this.instanceCount = Output.empty();
+        this.instanceSize = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.serviceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<Integer> instanceCount;
-        private @Nullable Input<Either<String,ServiceSize>> instanceSize;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<Either<String,ServiceType>> serviceType;
+        private Output<String> accountName;
+        private @Nullable Output<Integer> instanceCount;
+        private @Nullable Output<Either<String,ServiceSize>> instanceSize;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<Either<String,ServiceType>> serviceType;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceType = defaults.serviceType;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder instanceSize(@Nullable Input<Either<String,ServiceSize>> instanceSize) {
+        public Builder instanceSize(@Nullable Output<Either<String,ServiceSize>> instanceSize) {
             this.instanceSize = instanceSize;
             return this;
         }
 
         public Builder instanceSize(@Nullable Either<String,ServiceSize> instanceSize) {
-            this.instanceSize = Input.ofNullable(instanceSize);
+            this.instanceSize = Output.ofNullable(instanceSize);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder serviceType(@Nullable Input<Either<String,ServiceType>> serviceType) {
+        public Builder serviceType(@Nullable Output<Either<String,ServiceType>> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
 
         public Builder serviceType(@Nullable Either<String,ServiceType> serviceType) {
-            this.serviceType = Input.ofNullable(serviceType);
+            this.serviceType = Output.ofNullable(serviceType);
             return this;
         }
         public ServiceArgs build() {

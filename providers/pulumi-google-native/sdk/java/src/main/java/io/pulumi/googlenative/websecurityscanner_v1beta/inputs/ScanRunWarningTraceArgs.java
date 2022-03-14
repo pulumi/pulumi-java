@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunWarningTraceCode;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<ScanRunWarningTraceCode> code;
+      private final @Nullable Output<ScanRunWarningTraceCode> code;
 
-    public Input<ScanRunWarningTraceCode> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<ScanRunWarningTraceCode> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
-    public ScanRunWarningTraceArgs(@Nullable Input<ScanRunWarningTraceCode> code) {
+    public ScanRunWarningTraceArgs(@Nullable Output<ScanRunWarningTraceCode> code) {
         this.code = code;
     }
 
     private ScanRunWarningTraceArgs() {
-        this.code = Input.empty();
+        this.code = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<ScanRunWarningTraceCode> code;
+        private @Nullable Output<ScanRunWarningTraceCode> code;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
     	      this.code = defaults.code;
         }
 
-        public Builder code(@Nullable Input<ScanRunWarningTraceCode> code) {
+        public Builder code(@Nullable Output<ScanRunWarningTraceCode> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable ScanRunWarningTraceCode code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
         public ScanRunWarningTraceArgs build() {

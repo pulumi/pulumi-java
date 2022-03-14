@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.awsnative.devopsguru.inputs.NotificationChannelSnsChannelConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     public static final NotificationChannelConfigArgs Empty = new NotificationChannelConfigArgs();
 
     @InputImport(name="sns")
-      private final @Nullable Input<NotificationChannelSnsChannelConfigArgs> sns;
+      private final @Nullable Output<NotificationChannelSnsChannelConfigArgs> sns;
 
-    public Input<NotificationChannelSnsChannelConfigArgs> getSns() {
-        return this.sns == null ? Input.empty() : this.sns;
+    public Output<NotificationChannelSnsChannelConfigArgs> getSns() {
+        return this.sns == null ? Output.empty() : this.sns;
     }
 
-    public NotificationChannelConfigArgs(@Nullable Input<NotificationChannelSnsChannelConfigArgs> sns) {
+    public NotificationChannelConfigArgs(@Nullable Output<NotificationChannelSnsChannelConfigArgs> sns) {
         this.sns = sns;
     }
 
     private NotificationChannelConfigArgs() {
-        this.sns = Input.empty();
+        this.sns = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<NotificationChannelSnsChannelConfigArgs> sns;
+        private @Nullable Output<NotificationChannelSnsChannelConfigArgs> sns;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     	      this.sns = defaults.sns;
         }
 
-        public Builder sns(@Nullable Input<NotificationChannelSnsChannelConfigArgs> sns) {
+        public Builder sns(@Nullable Output<NotificationChannelSnsChannelConfigArgs> sns) {
             this.sns = sns;
             return this;
         }
 
         public Builder sns(@Nullable NotificationChannelSnsChannelConfigArgs sns) {
-            this.sns = Input.ofNullable(sns);
+            this.sns = Output.ofNullable(sns);
             return this;
         }
         public NotificationChannelConfigArgs build() {

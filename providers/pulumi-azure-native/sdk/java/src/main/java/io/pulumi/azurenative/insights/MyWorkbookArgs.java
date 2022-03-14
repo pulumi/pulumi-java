@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.enums.Kind;
 import io.pulumi.azurenative.insights.inputs.MyWorkbookManagedIdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,9 +23,9 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category", required=true)
-      private final Input<String> category;
+      private final Output<String> category;
 
-    public Input<String> getCategory() {
+    public Output<String> getCategory() {
         return this.category;
     }
 
@@ -34,9 +34,9 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -45,10 +45,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<MyWorkbookManagedIdentityArgs> identity;
+      private final @Nullable Output<MyWorkbookManagedIdentityArgs> identity;
 
-    public Input<MyWorkbookManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<MyWorkbookManagedIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,Kind>> kind;
+      private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Input<Either<String,Kind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,Kind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serializedData", required=true)
-      private final Input<String> serializedData;
+      private final Output<String> serializedData;
 
-    public Input<String> getSerializedData() {
+    public Output<String> getSerializedData() {
         return this.serializedData;
     }
 
@@ -133,10 +133,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceId")
-      private final @Nullable Input<String> sourceId;
+      private final @Nullable Output<String> sourceId;
 
-    public Input<String> getSourceId() {
-        return this.sourceId == null ? Input.empty() : this.sourceId;
+    public Output<String> getSourceId() {
+        return this.sourceId == null ? Output.empty() : this.sourceId;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageUri")
-      private final @Nullable Input<String> storageUri;
+      private final @Nullable Output<String> storageUri;
 
-    public Input<String> getStorageUri() {
-        return this.storageUri == null ? Input.empty() : this.storageUri;
+    public Output<String> getStorageUri() {
+        return this.storageUri == null ? Output.empty() : this.storageUri;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -177,28 +177,28 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public MyWorkbookArgs(
-        Input<String> category,
-        Input<String> displayName,
-        @Nullable Input<String> id,
-        @Nullable Input<MyWorkbookManagedIdentityArgs> identity,
-        @Nullable Input<Either<String,Kind>> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        Input<String> serializedData,
-        @Nullable Input<String> sourceId,
-        @Nullable Input<String> storageUri,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> type,
-        @Nullable Input<String> version) {
+        Output<String> category,
+        Output<String> displayName,
+        @Nullable Output<String> id,
+        @Nullable Output<MyWorkbookManagedIdentityArgs> identity,
+        @Nullable Output<Either<String,Kind>> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        Output<String> serializedData,
+        @Nullable Output<String> sourceId,
+        @Nullable Output<String> storageUri,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> type,
+        @Nullable Output<String> version) {
         this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.id = id;
@@ -217,21 +217,21 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MyWorkbookArgs() {
-        this.category = Input.empty();
-        this.displayName = Input.empty();
-        this.id = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.serializedData = Input.empty();
-        this.sourceId = Input.empty();
-        this.storageUri = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.category = Output.empty();
+        this.displayName = Output.empty();
+        this.id = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.serializedData = Output.empty();
+        this.sourceId = Output.empty();
+        this.storageUri = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -243,21 +243,21 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> category;
-        private Input<String> displayName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<MyWorkbookManagedIdentityArgs> identity;
-        private @Nullable Input<Either<String,Kind>> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private Input<String> serializedData;
-        private @Nullable Input<String> sourceId;
-        private @Nullable Input<String> storageUri;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> version;
+        private Output<String> category;
+        private Output<String> displayName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<MyWorkbookManagedIdentityArgs> identity;
+        private @Nullable Output<Either<String,Kind>> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private Output<String> serializedData;
+        private @Nullable Output<String> sourceId;
+        private @Nullable Output<String> storageUri;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -282,153 +282,153 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder category(Input<String> category) {
+        public Builder category(Output<String> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
         public Builder category(String category) {
-            this.category = Input.of(Objects.requireNonNull(category));
+            this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder identity(@Nullable Input<MyWorkbookManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<MyWorkbookManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable MyWorkbookManagedIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,Kind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder serializedData(Input<String> serializedData) {
+        public Builder serializedData(Output<String> serializedData) {
             this.serializedData = Objects.requireNonNull(serializedData);
             return this;
         }
 
         public Builder serializedData(String serializedData) {
-            this.serializedData = Input.of(Objects.requireNonNull(serializedData));
+            this.serializedData = Output.of(Objects.requireNonNull(serializedData));
             return this;
         }
 
-        public Builder sourceId(@Nullable Input<String> sourceId) {
+        public Builder sourceId(@Nullable Output<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Input.ofNullable(sourceId);
+            this.sourceId = Output.ofNullable(sourceId);
             return this;
         }
 
-        public Builder storageUri(@Nullable Input<String> storageUri) {
+        public Builder storageUri(@Nullable Output<String> storageUri) {
             this.storageUri = storageUri;
             return this;
         }
 
         public Builder storageUri(@Nullable String storageUri) {
-            this.storageUri = Input.ofNullable(storageUri);
+            this.storageUri = Output.ofNullable(storageUri);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public MyWorkbookArgs build() {

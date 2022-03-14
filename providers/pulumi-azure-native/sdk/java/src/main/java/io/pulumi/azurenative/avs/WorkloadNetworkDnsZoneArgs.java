@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsServerIps")
-      private final @Nullable Input<List<String>> dnsServerIps;
+      private final @Nullable Output<List<String>> dnsServerIps;
 
-    public Input<List<String>> getDnsServerIps() {
-        return this.dnsServerIps == null ? Input.empty() : this.dnsServerIps;
+    public Output<List<String>> getDnsServerIps() {
+        return this.dnsServerIps == null ? Output.empty() : this.dnsServerIps;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsServices")
-      private final @Nullable Input<Double> dnsServices;
+      private final @Nullable Output<Double> dnsServices;
 
-    public Input<Double> getDnsServices() {
-        return this.dnsServices == null ? Input.empty() : this.dnsServices;
+    public Output<Double> getDnsServices() {
+        return this.dnsServices == null ? Output.empty() : this.dnsServices;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsZoneId")
-      private final @Nullable Input<String> dnsZoneId;
+      private final @Nullable Output<String> dnsZoneId;
 
-    public Input<String> getDnsZoneId() {
-        return this.dnsZoneId == null ? Input.empty() : this.dnsZoneId;
+    public Output<String> getDnsZoneId() {
+        return this.dnsZoneId == null ? Output.empty() : this.dnsZoneId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<List<String>> domain;
+      private final @Nullable Output<List<String>> domain;
 
-    public Input<List<String>> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<List<String>> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -87,9 +87,9 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -98,10 +98,10 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Double> revision;
+      private final @Nullable Output<Double> revision;
 
-    public Input<Double> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Double> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceIp")
-      private final @Nullable Input<String> sourceIp;
+      private final @Nullable Output<String> sourceIp;
 
-    public Input<String> getSourceIp() {
-        return this.sourceIp == null ? Input.empty() : this.sourceIp;
+    public Output<String> getSourceIp() {
+        return this.sourceIp == null ? Output.empty() : this.sourceIp;
     }
 
     public WorkloadNetworkDnsZoneArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<String>> dnsServerIps,
-        @Nullable Input<Double> dnsServices,
-        @Nullable Input<String> dnsZoneId,
-        @Nullable Input<List<String>> domain,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Double> revision,
-        @Nullable Input<String> sourceIp) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<String>> dnsServerIps,
+        @Nullable Output<Double> dnsServices,
+        @Nullable Output<String> dnsZoneId,
+        @Nullable Output<List<String>> domain,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Double> revision,
+        @Nullable Output<String> sourceIp) {
         this.displayName = displayName;
         this.dnsServerIps = dnsServerIps;
         this.dnsServices = dnsServices;
@@ -137,15 +137,15 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadNetworkDnsZoneArgs() {
-        this.displayName = Input.empty();
-        this.dnsServerIps = Input.empty();
-        this.dnsServices = Input.empty();
-        this.dnsZoneId = Input.empty();
-        this.domain = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.revision = Input.empty();
-        this.sourceIp = Input.empty();
+        this.displayName = Output.empty();
+        this.dnsServerIps = Output.empty();
+        this.dnsServices = Output.empty();
+        this.dnsZoneId = Output.empty();
+        this.domain = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.revision = Output.empty();
+        this.sourceIp = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<String>> dnsServerIps;
-        private @Nullable Input<Double> dnsServices;
-        private @Nullable Input<String> dnsZoneId;
-        private @Nullable Input<List<String>> domain;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Double> revision;
-        private @Nullable Input<String> sourceIp;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<String>> dnsServerIps;
+        private @Nullable Output<Double> dnsServices;
+        private @Nullable Output<String> dnsZoneId;
+        private @Nullable Output<List<String>> domain;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Double> revision;
+        private @Nullable Output<String> sourceIp;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     	      this.sourceIp = defaults.sourceIp;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder dnsServerIps(@Nullable Input<List<String>> dnsServerIps) {
+        public Builder dnsServerIps(@Nullable Output<List<String>> dnsServerIps) {
             this.dnsServerIps = dnsServerIps;
             return this;
         }
 
         public Builder dnsServerIps(@Nullable List<String> dnsServerIps) {
-            this.dnsServerIps = Input.ofNullable(dnsServerIps);
+            this.dnsServerIps = Output.ofNullable(dnsServerIps);
             return this;
         }
 
-        public Builder dnsServices(@Nullable Input<Double> dnsServices) {
+        public Builder dnsServices(@Nullable Output<Double> dnsServices) {
             this.dnsServices = dnsServices;
             return this;
         }
 
         public Builder dnsServices(@Nullable Double dnsServices) {
-            this.dnsServices = Input.ofNullable(dnsServices);
+            this.dnsServices = Output.ofNullable(dnsServices);
             return this;
         }
 
-        public Builder dnsZoneId(@Nullable Input<String> dnsZoneId) {
+        public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
             this.dnsZoneId = dnsZoneId;
             return this;
         }
 
         public Builder dnsZoneId(@Nullable String dnsZoneId) {
-            this.dnsZoneId = Input.ofNullable(dnsZoneId);
+            this.dnsZoneId = Output.ofNullable(dnsZoneId);
             return this;
         }
 
-        public Builder domain(@Nullable Input<List<String>> domain) {
+        public Builder domain(@Nullable Output<List<String>> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable List<String> domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder revision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Double revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder sourceIp(@Nullable Input<String> sourceIp) {
+        public Builder sourceIp(@Nullable Output<String> sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
 
         public Builder sourceIp(@Nullable String sourceIp) {
-            this.sourceIp = Input.ofNullable(sourceIp);
+            this.sourceIp = Output.ofNullable(sourceIp);
             return this;
         }
         public WorkloadNetworkDnsZoneArgs build() {

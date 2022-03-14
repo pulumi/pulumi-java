@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.HDInsightArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.IdentityArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SkuArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="computeName")
-      private final @Nullable Input<String> computeName;
+      private final @Nullable Output<String> computeName;
 
-    public Input<String> getComputeName() {
-        return this.computeName == null ? Input.empty() : this.computeName;
+    public Output<String> getComputeName() {
+        return this.computeName == null ? Output.empty() : this.computeName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,10 +86,10 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -108,21 +108,21 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public MachineLearningComputeArgs(
-        @Nullable Input<String> computeName,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workspaceName) {
+        @Nullable Output<String> computeName,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workspaceName) {
         this.computeName = computeName;
         this.identity = identity;
         this.location = location;
@@ -134,14 +134,14 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     }
 
     private MachineLearningComputeArgs() {
-        this.computeName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.computeName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -153,14 +153,14 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> computeName;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> computeName;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -178,83 +178,83 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder computeName(@Nullable Input<String> computeName) {
+        public Builder computeName(@Nullable Output<String> computeName) {
             this.computeName = computeName;
             return this;
         }
 
         public Builder computeName(@Nullable String computeName) {
-            this.computeName = Input.ofNullable(computeName);
+            this.computeName = Output.ofNullable(computeName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public MachineLearningComputeArgs build() {

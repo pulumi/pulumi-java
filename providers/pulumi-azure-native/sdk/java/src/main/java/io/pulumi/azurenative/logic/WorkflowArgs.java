@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.logic.inputs.WorkflowParameterArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessControl")
-      private final @Nullable Input<FlowAccessControlConfigurationArgs> accessControl;
+      private final @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
 
-    public Input<FlowAccessControlConfigurationArgs> getAccessControl() {
-        return this.accessControl == null ? Input.empty() : this.accessControl;
+    public Output<FlowAccessControlConfigurationArgs> getAccessControl() {
+        return this.accessControl == null ? Output.empty() : this.accessControl;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition")
-      private final @Nullable Input<Object> definition;
+      private final @Nullable Output<Object> definition;
 
-    public Input<Object> getDefinition() {
-        return this.definition == null ? Input.empty() : this.definition;
+    public Output<Object> getDefinition() {
+        return this.definition == null ? Output.empty() : this.definition;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointsConfiguration")
-      private final @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
+      private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
-    public Input<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
-        return this.endpointsConfiguration == null ? Input.empty() : this.endpointsConfiguration;
+    public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
+        return this.endpointsConfiguration == null ? Output.empty() : this.endpointsConfiguration;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="integrationAccount")
-      private final @Nullable Input<ResourceReferenceArgs> integrationAccount;
+      private final @Nullable Output<ResourceReferenceArgs> integrationAccount;
 
-    public Input<ResourceReferenceArgs> getIntegrationAccount() {
-        return this.integrationAccount == null ? Input.empty() : this.integrationAccount;
+    public Output<ResourceReferenceArgs> getIntegrationAccount() {
+        return this.integrationAccount == null ? Output.empty() : this.integrationAccount;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="integrationServiceEnvironment")
-      private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
+      private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Input<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
+    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
+        return this.integrationServiceEnvironment == null ? Output.empty() : this.integrationServiceEnvironment;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,WorkflowParameterArgs>> parameters;
+      private final @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
 
-    public Input<Map<String,WorkflowParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,WorkflowParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -116,9 +116,9 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -127,10 +127,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,WorkflowState>> state;
+      private final @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Input<Either<String,WorkflowState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,WorkflowState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -149,25 +149,25 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workflowName")
-      private final @Nullable Input<String> workflowName;
+      private final @Nullable Output<String> workflowName;
 
-    public Input<String> getWorkflowName() {
-        return this.workflowName == null ? Input.empty() : this.workflowName;
+    public Output<String> getWorkflowName() {
+        return this.workflowName == null ? Output.empty() : this.workflowName;
     }
 
     public WorkflowArgs(
-        @Nullable Input<FlowAccessControlConfigurationArgs> accessControl,
-        @Nullable Input<Object> definition,
-        @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<ResourceReferenceArgs> integrationAccount,
-        @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,WorkflowParameterArgs>> parameters,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,WorkflowState>> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> workflowName) {
+        @Nullable Output<FlowAccessControlConfigurationArgs> accessControl,
+        @Nullable Output<Object> definition,
+        @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<ResourceReferenceArgs> integrationAccount,
+        @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,WorkflowParameterArgs>> parameters,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,WorkflowState>> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> workflowName) {
         this.accessControl = accessControl;
         this.definition = definition;
         this.endpointsConfiguration = endpointsConfiguration;
@@ -183,18 +183,18 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkflowArgs() {
-        this.accessControl = Input.empty();
-        this.definition = Input.empty();
-        this.endpointsConfiguration = Input.empty();
-        this.identity = Input.empty();
-        this.integrationAccount = Input.empty();
-        this.integrationServiceEnvironment = Input.empty();
-        this.location = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.workflowName = Input.empty();
+        this.accessControl = Output.empty();
+        this.definition = Output.empty();
+        this.endpointsConfiguration = Output.empty();
+        this.identity = Output.empty();
+        this.integrationAccount = Output.empty();
+        this.integrationServiceEnvironment = Output.empty();
+        this.location = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.workflowName = Output.empty();
     }
 
     public static Builder builder() {
@@ -206,18 +206,18 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowAccessControlConfigurationArgs> accessControl;
-        private @Nullable Input<Object> definition;
-        private @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<ResourceReferenceArgs> integrationAccount;
-        private @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,WorkflowParameterArgs>> parameters;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,WorkflowState>> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> workflowName;
+        private @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
+        private @Nullable Output<Object> definition;
+        private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<ResourceReferenceArgs> integrationAccount;
+        private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,WorkflowState>> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> workflowName;
 
         public Builder() {
     	      // Empty
@@ -239,123 +239,123 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder accessControl(@Nullable Input<FlowAccessControlConfigurationArgs> accessControl) {
+        public Builder accessControl(@Nullable Output<FlowAccessControlConfigurationArgs> accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
         public Builder accessControl(@Nullable FlowAccessControlConfigurationArgs accessControl) {
-            this.accessControl = Input.ofNullable(accessControl);
+            this.accessControl = Output.ofNullable(accessControl);
             return this;
         }
 
-        public Builder definition(@Nullable Input<Object> definition) {
+        public Builder definition(@Nullable Output<Object> definition) {
             this.definition = definition;
             return this;
         }
 
         public Builder definition(@Nullable Object definition) {
-            this.definition = Input.ofNullable(definition);
+            this.definition = Output.ofNullable(definition);
             return this;
         }
 
-        public Builder endpointsConfiguration(@Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
-            this.endpointsConfiguration = Input.ofNullable(endpointsConfiguration);
+            this.endpointsConfiguration = Output.ofNullable(endpointsConfiguration);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder integrationAccount(@Nullable Input<ResourceReferenceArgs> integrationAccount) {
+        public Builder integrationAccount(@Nullable Output<ResourceReferenceArgs> integrationAccount) {
             this.integrationAccount = integrationAccount;
             return this;
         }
 
         public Builder integrationAccount(@Nullable ResourceReferenceArgs integrationAccount) {
-            this.integrationAccount = Input.ofNullable(integrationAccount);
+            this.integrationAccount = Output.ofNullable(integrationAccount);
             return this;
         }
 
-        public Builder integrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Input.ofNullable(integrationServiceEnvironment);
+            this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,WorkflowParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,WorkflowParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,WorkflowParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,WorkflowState>> state) {
+        public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workflowName(@Nullable Input<String> workflowName) {
+        public Builder workflowName(@Nullable Output<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
 
         public Builder workflowName(@Nullable String workflowName) {
-            this.workflowName = Input.ofNullable(workflowName);
+            this.workflowName = Output.ofNullable(workflowName);
             return this;
         }
         public WorkflowArgs build() {

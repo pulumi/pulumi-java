@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs;
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="exec")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> getExec() {
-        return this.exec == null ? Input.empty() : this.exec;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> getExec() {
+        return this.exec == null ? Output.empty() : this.exec;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -56,10 +56,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="pkg")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> getPkg() {
-        return this.pkg == null ? Input.empty() : this.pkg;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> getPkg() {
+        return this.pkg == null ? Output.empty() : this.pkg;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs(
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec,
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file,
-        Input<String> id,
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg,
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec,
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file,
+        Output<String> id,
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg,
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
         this.exec = exec;
         this.file = file;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
@@ -87,11 +87,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs() {
-        this.exec = Input.empty();
-        this.file = Input.empty();
-        this.id = Input.empty();
-        this.pkg = Input.empty();
-        this.repository = Input.empty();
+        this.exec = Output.empty();
+        this.file = Output.empty();
+        this.id = Output.empty();
+        this.pkg = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
-        private Input<String> id;
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
+        private Output<String> id;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     	      this.repository = defaults.repository;
         }
 
-        public Builder exec(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec) {
+        public Builder exec(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec) {
             this.exec = exec;
             return this;
         }
 
         public Builder exec(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs exec) {
-            this.exec = Input.ofNullable(exec);
+            this.exec = Output.ofNullable(exec);
             return this;
         }
 
-        public Builder file(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file) {
+        public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder pkg(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg) {
+        public Builder pkg(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg) {
             this.pkg = pkg;
             return this;
         }
 
         public Builder pkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs pkg) {
-            this.pkg = Input.ofNullable(pkg);
+            this.pkg = Output.ofNullable(pkg);
             return this;
         }
 
-        public Builder repository(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
+        public Builder repository(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs build() {

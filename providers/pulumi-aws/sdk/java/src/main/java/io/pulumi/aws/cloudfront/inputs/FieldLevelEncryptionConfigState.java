@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="callerReference")
-      private final @Nullable Input<String> callerReference;
+      private final @Nullable Output<String> callerReference;
 
-    public Input<String> getCallerReference() {
-        return this.callerReference == null ? Input.empty() : this.callerReference;
+    public Output<String> getCallerReference() {
+        return this.callerReference == null ? Output.empty() : this.callerReference;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="contentTypeProfileConfig")
-      private final @Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
+      private final @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
 
-    public Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> getContentTypeProfileConfig() {
-        return this.contentTypeProfileConfig == null ? Input.empty() : this.contentTypeProfileConfig;
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> getContentTypeProfileConfig() {
+        return this.contentTypeProfileConfig == null ? Output.empty() : this.contentTypeProfileConfig;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="queryArgProfileConfig")
-      private final @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
+      private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
 
-    public Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> getQueryArgProfileConfig() {
-        return this.queryArgProfileConfig == null ? Input.empty() : this.queryArgProfileConfig;
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> getQueryArgProfileConfig() {
+        return this.queryArgProfileConfig == null ? Output.empty() : this.queryArgProfileConfig;
     }
 
     public FieldLevelEncryptionConfigState(
-        @Nullable Input<String> callerReference,
-        @Nullable Input<String> comment,
-        @Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig,
-        @Nullable Input<String> etag,
-        @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
+        @Nullable Output<String> callerReference,
+        @Nullable Output<String> comment,
+        @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig,
+        @Nullable Output<String> etag,
+        @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
         this.callerReference = callerReference;
         this.comment = comment;
         this.contentTypeProfileConfig = contentTypeProfileConfig;
@@ -85,11 +85,11 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
     }
 
     private FieldLevelEncryptionConfigState() {
-        this.callerReference = Input.empty();
-        this.comment = Input.empty();
-        this.contentTypeProfileConfig = Input.empty();
-        this.etag = Input.empty();
-        this.queryArgProfileConfig = Input.empty();
+        this.callerReference = Output.empty();
+        this.comment = Output.empty();
+        this.contentTypeProfileConfig = Output.empty();
+        this.etag = Output.empty();
+        this.queryArgProfileConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> callerReference;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
+        private @Nullable Output<String> callerReference;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
     	      this.queryArgProfileConfig = defaults.queryArgProfileConfig;
         }
 
-        public Builder callerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Output<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
         public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Input.ofNullable(callerReference);
+            this.callerReference = Output.ofNullable(callerReference);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder contentTypeProfileConfig(@Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(@Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig) {
             this.contentTypeProfileConfig = contentTypeProfileConfig;
             return this;
         }
 
         public Builder contentTypeProfileConfig(@Nullable FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs contentTypeProfileConfig) {
-            this.contentTypeProfileConfig = Input.ofNullable(contentTypeProfileConfig);
+            this.contentTypeProfileConfig = Output.ofNullable(contentTypeProfileConfig);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder queryArgProfileConfig(@Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
             this.queryArgProfileConfig = queryArgProfileConfig;
             return this;
         }
 
         public Builder queryArgProfileConfig(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs queryArgProfileConfig) {
-            this.queryArgProfileConfig = Input.ofNullable(queryArgProfileConfig);
+            this.queryArgProfileConfig = Output.ofNullable(queryArgProfileConfig);
             return this;
         }
         public FieldLevelEncryptionConfigState build() {

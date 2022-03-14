@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionAuthorityKeyIdArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionCertFingerprintArgs;
@@ -22,38 +22,38 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
     public static final CertificateCertificateDescriptionArgs Empty = new CertificateCertificateDescriptionArgs();
 
     @InputImport(name="aiaIssuingCertificateUrls")
-      private final @Nullable Input<List<String>> aiaIssuingCertificateUrls;
+      private final @Nullable Output<List<String>> aiaIssuingCertificateUrls;
 
-    public Input<List<String>> getAiaIssuingCertificateUrls() {
-        return this.aiaIssuingCertificateUrls == null ? Input.empty() : this.aiaIssuingCertificateUrls;
+    public Output<List<String>> getAiaIssuingCertificateUrls() {
+        return this.aiaIssuingCertificateUrls == null ? Output.empty() : this.aiaIssuingCertificateUrls;
     }
 
     @InputImport(name="authorityKeyIds")
-      private final @Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds;
+      private final @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds;
 
-    public Input<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> getAuthorityKeyIds() {
-        return this.authorityKeyIds == null ? Input.empty() : this.authorityKeyIds;
+    public Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> getAuthorityKeyIds() {
+        return this.authorityKeyIds == null ? Output.empty() : this.authorityKeyIds;
     }
 
     @InputImport(name="certFingerprints")
-      private final @Nullable Input<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints;
+      private final @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints;
 
-    public Input<List<CertificateCertificateDescriptionCertFingerprintArgs>> getCertFingerprints() {
-        return this.certFingerprints == null ? Input.empty() : this.certFingerprints;
+    public Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> getCertFingerprints() {
+        return this.certFingerprints == null ? Output.empty() : this.certFingerprints;
     }
 
     @InputImport(name="configValues")
-      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueArgs>> configValues;
+      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues;
 
-    public Input<List<CertificateCertificateDescriptionConfigValueArgs>> getConfigValues() {
-        return this.configValues == null ? Input.empty() : this.configValues;
+    public Output<List<CertificateCertificateDescriptionConfigValueArgs>> getConfigValues() {
+        return this.configValues == null ? Output.empty() : this.configValues;
     }
 
     @InputImport(name="crlDistributionPoints")
-      private final @Nullable Input<List<String>> crlDistributionPoints;
+      private final @Nullable Output<List<String>> crlDistributionPoints;
 
-    public Input<List<String>> getCrlDistributionPoints() {
-        return this.crlDistributionPoints == null ? Input.empty() : this.crlDistributionPoints;
+    public Output<List<String>> getCrlDistributionPoints() {
+        return this.crlDistributionPoints == null ? Output.empty() : this.crlDistributionPoints;
     }
 
     /**
@@ -62,35 +62,35 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="publicKeys")
-      private final @Nullable Input<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys;
+      private final @Nullable Output<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys;
 
-    public Input<List<CertificateCertificateDescriptionPublicKeyArgs>> getPublicKeys() {
-        return this.publicKeys == null ? Input.empty() : this.publicKeys;
+    public Output<List<CertificateCertificateDescriptionPublicKeyArgs>> getPublicKeys() {
+        return this.publicKeys == null ? Output.empty() : this.publicKeys;
     }
 
     @InputImport(name="subjectDescriptions")
-      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions;
+      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions;
 
-    public Input<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> getSubjectDescriptions() {
-        return this.subjectDescriptions == null ? Input.empty() : this.subjectDescriptions;
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> getSubjectDescriptions() {
+        return this.subjectDescriptions == null ? Output.empty() : this.subjectDescriptions;
     }
 
     @InputImport(name="subjectKeyIds")
-      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds;
+      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds;
 
-    public Input<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> getSubjectKeyIds() {
-        return this.subjectKeyIds == null ? Input.empty() : this.subjectKeyIds;
+    public Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> getSubjectKeyIds() {
+        return this.subjectKeyIds == null ? Output.empty() : this.subjectKeyIds;
     }
 
     public CertificateCertificateDescriptionArgs(
-        @Nullable Input<List<String>> aiaIssuingCertificateUrls,
-        @Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds,
-        @Nullable Input<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints,
-        @Nullable Input<List<CertificateCertificateDescriptionConfigValueArgs>> configValues,
-        @Nullable Input<List<String>> crlDistributionPoints,
-        @Nullable Input<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys,
-        @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions,
-        @Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds) {
+        @Nullable Output<List<String>> aiaIssuingCertificateUrls,
+        @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds,
+        @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints,
+        @Nullable Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues,
+        @Nullable Output<List<String>> crlDistributionPoints,
+        @Nullable Output<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys,
+        @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions,
+        @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         this.authorityKeyIds = authorityKeyIds;
         this.certFingerprints = certFingerprints;
@@ -102,14 +102,14 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
     }
 
     private CertificateCertificateDescriptionArgs() {
-        this.aiaIssuingCertificateUrls = Input.empty();
-        this.authorityKeyIds = Input.empty();
-        this.certFingerprints = Input.empty();
-        this.configValues = Input.empty();
-        this.crlDistributionPoints = Input.empty();
-        this.publicKeys = Input.empty();
-        this.subjectDescriptions = Input.empty();
-        this.subjectKeyIds = Input.empty();
+        this.aiaIssuingCertificateUrls = Output.empty();
+        this.authorityKeyIds = Output.empty();
+        this.certFingerprints = Output.empty();
+        this.configValues = Output.empty();
+        this.crlDistributionPoints = Output.empty();
+        this.publicKeys = Output.empty();
+        this.subjectDescriptions = Output.empty();
+        this.subjectKeyIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,14 +121,14 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> aiaIssuingCertificateUrls;
-        private @Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds;
-        private @Nullable Input<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints;
-        private @Nullable Input<List<CertificateCertificateDescriptionConfigValueArgs>> configValues;
-        private @Nullable Input<List<String>> crlDistributionPoints;
-        private @Nullable Input<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys;
-        private @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions;
-        private @Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds;
+        private @Nullable Output<List<String>> aiaIssuingCertificateUrls;
+        private @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds;
+        private @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints;
+        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues;
+        private @Nullable Output<List<String>> crlDistributionPoints;
+        private @Nullable Output<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys;
+        private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions;
+        private @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds;
 
         public Builder() {
     	      // Empty
@@ -146,83 +146,83 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
     	      this.subjectKeyIds = defaults.subjectKeyIds;
         }
 
-        public Builder aiaIssuingCertificateUrls(@Nullable Input<List<String>> aiaIssuingCertificateUrls) {
+        public Builder aiaIssuingCertificateUrls(@Nullable Output<List<String>> aiaIssuingCertificateUrls) {
             this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
             return this;
         }
 
         public Builder aiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
-            this.aiaIssuingCertificateUrls = Input.ofNullable(aiaIssuingCertificateUrls);
+            this.aiaIssuingCertificateUrls = Output.ofNullable(aiaIssuingCertificateUrls);
             return this;
         }
 
-        public Builder authorityKeyIds(@Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds) {
+        public Builder authorityKeyIds(@Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds) {
             this.authorityKeyIds = authorityKeyIds;
             return this;
         }
 
         public Builder authorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyIdArgs> authorityKeyIds) {
-            this.authorityKeyIds = Input.ofNullable(authorityKeyIds);
+            this.authorityKeyIds = Output.ofNullable(authorityKeyIds);
             return this;
         }
 
-        public Builder certFingerprints(@Nullable Input<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints) {
+        public Builder certFingerprints(@Nullable Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints) {
             this.certFingerprints = certFingerprints;
             return this;
         }
 
         public Builder certFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprintArgs> certFingerprints) {
-            this.certFingerprints = Input.ofNullable(certFingerprints);
+            this.certFingerprints = Output.ofNullable(certFingerprints);
             return this;
         }
 
-        public Builder configValues(@Nullable Input<List<CertificateCertificateDescriptionConfigValueArgs>> configValues) {
+        public Builder configValues(@Nullable Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues) {
             this.configValues = configValues;
             return this;
         }
 
         public Builder configValues(@Nullable List<CertificateCertificateDescriptionConfigValueArgs> configValues) {
-            this.configValues = Input.ofNullable(configValues);
+            this.configValues = Output.ofNullable(configValues);
             return this;
         }
 
-        public Builder crlDistributionPoints(@Nullable Input<List<String>> crlDistributionPoints) {
+        public Builder crlDistributionPoints(@Nullable Output<List<String>> crlDistributionPoints) {
             this.crlDistributionPoints = crlDistributionPoints;
             return this;
         }
 
         public Builder crlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
-            this.crlDistributionPoints = Input.ofNullable(crlDistributionPoints);
+            this.crlDistributionPoints = Output.ofNullable(crlDistributionPoints);
             return this;
         }
 
-        public Builder publicKeys(@Nullable Input<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Output<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
         public Builder publicKeys(@Nullable List<CertificateCertificateDescriptionPublicKeyArgs> publicKeys) {
-            this.publicKeys = Input.ofNullable(publicKeys);
+            this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
 
-        public Builder subjectDescriptions(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions) {
+        public Builder subjectDescriptions(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions) {
             this.subjectDescriptions = subjectDescriptions;
             return this;
         }
 
         public Builder subjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionArgs> subjectDescriptions) {
-            this.subjectDescriptions = Input.ofNullable(subjectDescriptions);
+            this.subjectDescriptions = Output.ofNullable(subjectDescriptions);
             return this;
         }
 
-        public Builder subjectKeyIds(@Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds) {
+        public Builder subjectKeyIds(@Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds) {
             this.subjectKeyIds = subjectKeyIds;
             return this;
         }
 
         public Builder subjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyIdArgs> subjectKeyIds) {
-            this.subjectKeyIds = Input.ofNullable(subjectKeyIds);
+            this.subjectKeyIds = Output.ofNullable(subjectKeyIds);
             return this;
         }
         public CertificateCertificateDescriptionArgs build() {

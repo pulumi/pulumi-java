@@ -11,7 +11,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowSalesforceDestinationPropertiesArg
 import io.pulumi.awsnative.appflow.inputs.FlowSnowflakeDestinationPropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowUpsolverDestinationPropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowZendeskDestinationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,70 +26,70 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
     public static final FlowDestinationConnectorPropertiesArgs Empty = new FlowDestinationConnectorPropertiesArgs();
 
     @InputImport(name="eventBridge")
-      private final @Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge;
+      private final @Nullable Output<FlowEventBridgeDestinationPropertiesArgs> eventBridge;
 
-    public Input<FlowEventBridgeDestinationPropertiesArgs> getEventBridge() {
-        return this.eventBridge == null ? Input.empty() : this.eventBridge;
+    public Output<FlowEventBridgeDestinationPropertiesArgs> getEventBridge() {
+        return this.eventBridge == null ? Output.empty() : this.eventBridge;
     }
 
     @InputImport(name="lookoutMetrics")
-      private final @Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics;
+      private final @Nullable Output<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics;
 
-    public Input<FlowLookoutMetricsDestinationPropertiesArgs> getLookoutMetrics() {
-        return this.lookoutMetrics == null ? Input.empty() : this.lookoutMetrics;
+    public Output<FlowLookoutMetricsDestinationPropertiesArgs> getLookoutMetrics() {
+        return this.lookoutMetrics == null ? Output.empty() : this.lookoutMetrics;
     }
 
     @InputImport(name="redshift")
-      private final @Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift;
+      private final @Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift;
 
-    public Input<FlowRedshiftDestinationPropertiesArgs> getRedshift() {
-        return this.redshift == null ? Input.empty() : this.redshift;
+    public Output<FlowRedshiftDestinationPropertiesArgs> getRedshift() {
+        return this.redshift == null ? Output.empty() : this.redshift;
     }
 
     @InputImport(name="s3")
-      private final @Nullable Input<FlowS3DestinationPropertiesArgs> s3;
+      private final @Nullable Output<FlowS3DestinationPropertiesArgs> s3;
 
-    public Input<FlowS3DestinationPropertiesArgs> getS3() {
-        return this.s3 == null ? Input.empty() : this.s3;
+    public Output<FlowS3DestinationPropertiesArgs> getS3() {
+        return this.s3 == null ? Output.empty() : this.s3;
     }
 
     @InputImport(name="salesforce")
-      private final @Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce;
+      private final @Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce;
 
-    public Input<FlowSalesforceDestinationPropertiesArgs> getSalesforce() {
-        return this.salesforce == null ? Input.empty() : this.salesforce;
+    public Output<FlowSalesforceDestinationPropertiesArgs> getSalesforce() {
+        return this.salesforce == null ? Output.empty() : this.salesforce;
     }
 
     @InputImport(name="snowflake")
-      private final @Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake;
+      private final @Nullable Output<FlowSnowflakeDestinationPropertiesArgs> snowflake;
 
-    public Input<FlowSnowflakeDestinationPropertiesArgs> getSnowflake() {
-        return this.snowflake == null ? Input.empty() : this.snowflake;
+    public Output<FlowSnowflakeDestinationPropertiesArgs> getSnowflake() {
+        return this.snowflake == null ? Output.empty() : this.snowflake;
     }
 
     @InputImport(name="upsolver")
-      private final @Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver;
+      private final @Nullable Output<FlowUpsolverDestinationPropertiesArgs> upsolver;
 
-    public Input<FlowUpsolverDestinationPropertiesArgs> getUpsolver() {
-        return this.upsolver == null ? Input.empty() : this.upsolver;
+    public Output<FlowUpsolverDestinationPropertiesArgs> getUpsolver() {
+        return this.upsolver == null ? Output.empty() : this.upsolver;
     }
 
     @InputImport(name="zendesk")
-      private final @Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk;
+      private final @Nullable Output<FlowZendeskDestinationPropertiesArgs> zendesk;
 
-    public Input<FlowZendeskDestinationPropertiesArgs> getZendesk() {
-        return this.zendesk == null ? Input.empty() : this.zendesk;
+    public Output<FlowZendeskDestinationPropertiesArgs> getZendesk() {
+        return this.zendesk == null ? Output.empty() : this.zendesk;
     }
 
     public FlowDestinationConnectorPropertiesArgs(
-        @Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge,
-        @Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics,
-        @Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift,
-        @Nullable Input<FlowS3DestinationPropertiesArgs> s3,
-        @Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce,
-        @Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake,
-        @Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver,
-        @Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk) {
+        @Nullable Output<FlowEventBridgeDestinationPropertiesArgs> eventBridge,
+        @Nullable Output<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics,
+        @Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift,
+        @Nullable Output<FlowS3DestinationPropertiesArgs> s3,
+        @Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce,
+        @Nullable Output<FlowSnowflakeDestinationPropertiesArgs> snowflake,
+        @Nullable Output<FlowUpsolverDestinationPropertiesArgs> upsolver,
+        @Nullable Output<FlowZendeskDestinationPropertiesArgs> zendesk) {
         this.eventBridge = eventBridge;
         this.lookoutMetrics = lookoutMetrics;
         this.redshift = redshift;
@@ -101,14 +101,14 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
     }
 
     private FlowDestinationConnectorPropertiesArgs() {
-        this.eventBridge = Input.empty();
-        this.lookoutMetrics = Input.empty();
-        this.redshift = Input.empty();
-        this.s3 = Input.empty();
-        this.salesforce = Input.empty();
-        this.snowflake = Input.empty();
-        this.upsolver = Input.empty();
-        this.zendesk = Input.empty();
+        this.eventBridge = Output.empty();
+        this.lookoutMetrics = Output.empty();
+        this.redshift = Output.empty();
+        this.s3 = Output.empty();
+        this.salesforce = Output.empty();
+        this.snowflake = Output.empty();
+        this.upsolver = Output.empty();
+        this.zendesk = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,14 +120,14 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge;
-        private @Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics;
-        private @Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift;
-        private @Nullable Input<FlowS3DestinationPropertiesArgs> s3;
-        private @Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce;
-        private @Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake;
-        private @Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver;
-        private @Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk;
+        private @Nullable Output<FlowEventBridgeDestinationPropertiesArgs> eventBridge;
+        private @Nullable Output<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics;
+        private @Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift;
+        private @Nullable Output<FlowS3DestinationPropertiesArgs> s3;
+        private @Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce;
+        private @Nullable Output<FlowSnowflakeDestinationPropertiesArgs> snowflake;
+        private @Nullable Output<FlowUpsolverDestinationPropertiesArgs> upsolver;
+        private @Nullable Output<FlowZendeskDestinationPropertiesArgs> zendesk;
 
         public Builder() {
     	      // Empty
@@ -145,83 +145,83 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder eventBridge(@Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge) {
+        public Builder eventBridge(@Nullable Output<FlowEventBridgeDestinationPropertiesArgs> eventBridge) {
             this.eventBridge = eventBridge;
             return this;
         }
 
         public Builder eventBridge(@Nullable FlowEventBridgeDestinationPropertiesArgs eventBridge) {
-            this.eventBridge = Input.ofNullable(eventBridge);
+            this.eventBridge = Output.ofNullable(eventBridge);
             return this;
         }
 
-        public Builder lookoutMetrics(@Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics) {
+        public Builder lookoutMetrics(@Nullable Output<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics) {
             this.lookoutMetrics = lookoutMetrics;
             return this;
         }
 
         public Builder lookoutMetrics(@Nullable FlowLookoutMetricsDestinationPropertiesArgs lookoutMetrics) {
-            this.lookoutMetrics = Input.ofNullable(lookoutMetrics);
+            this.lookoutMetrics = Output.ofNullable(lookoutMetrics);
             return this;
         }
 
-        public Builder redshift(@Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift) {
+        public Builder redshift(@Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift) {
             this.redshift = redshift;
             return this;
         }
 
         public Builder redshift(@Nullable FlowRedshiftDestinationPropertiesArgs redshift) {
-            this.redshift = Input.ofNullable(redshift);
+            this.redshift = Output.ofNullable(redshift);
             return this;
         }
 
-        public Builder s3(@Nullable Input<FlowS3DestinationPropertiesArgs> s3) {
+        public Builder s3(@Nullable Output<FlowS3DestinationPropertiesArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
         public Builder s3(@Nullable FlowS3DestinationPropertiesArgs s3) {
-            this.s3 = Input.ofNullable(s3);
+            this.s3 = Output.ofNullable(s3);
             return this;
         }
 
-        public Builder salesforce(@Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce) {
+        public Builder salesforce(@Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
         public Builder salesforce(@Nullable FlowSalesforceDestinationPropertiesArgs salesforce) {
-            this.salesforce = Input.ofNullable(salesforce);
+            this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
 
-        public Builder snowflake(@Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake) {
+        public Builder snowflake(@Nullable Output<FlowSnowflakeDestinationPropertiesArgs> snowflake) {
             this.snowflake = snowflake;
             return this;
         }
 
         public Builder snowflake(@Nullable FlowSnowflakeDestinationPropertiesArgs snowflake) {
-            this.snowflake = Input.ofNullable(snowflake);
+            this.snowflake = Output.ofNullable(snowflake);
             return this;
         }
 
-        public Builder upsolver(@Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver) {
+        public Builder upsolver(@Nullable Output<FlowUpsolverDestinationPropertiesArgs> upsolver) {
             this.upsolver = upsolver;
             return this;
         }
 
         public Builder upsolver(@Nullable FlowUpsolverDestinationPropertiesArgs upsolver) {
-            this.upsolver = Input.ofNullable(upsolver);
+            this.upsolver = Output.ofNullable(upsolver);
             return this;
         }
 
-        public Builder zendesk(@Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk) {
+        public Builder zendesk(@Nullable Output<FlowZendeskDestinationPropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
         public Builder zendesk(@Nullable FlowZendeskDestinationPropertiesArgs zendesk) {
-            this.zendesk = Input.ofNullable(zendesk);
+            this.zendesk = Output.ofNullable(zendesk);
             return this;
         }
         public FlowDestinationConnectorPropertiesArgs build() {

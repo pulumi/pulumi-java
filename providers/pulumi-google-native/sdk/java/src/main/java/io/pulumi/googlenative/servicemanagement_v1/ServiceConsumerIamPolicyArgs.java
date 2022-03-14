@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BindingArgs;
@@ -23,10 +23,10 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Input<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     /**
@@ -34,16 +34,16 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     @InputImport(name="consumerId", required=true)
-      private final Input<String> consumerId;
+      private final Output<String> consumerId;
 
-    public Input<String> getConsumerId() {
+    public Output<String> getConsumerId() {
         return this.consumerId;
     }
 
@@ -52,16 +52,16 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
@@ -70,10 +70,10 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -81,20 +81,20 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ServiceConsumerIamPolicyArgs(
-        @Nullable Input<List<AuditConfigArgs>> auditConfigs,
-        @Nullable Input<List<BindingArgs>> bindings,
-        Input<String> consumerId,
-        @Nullable Input<String> etag,
-        Input<String> serviceId,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
+        @Nullable Output<List<BindingArgs>> bindings,
+        Output<String> consumerId,
+        @Nullable Output<String> etag,
+        Output<String> serviceId,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.consumerId = Objects.requireNonNull(consumerId, "expected parameter 'consumerId' to be non-null");
@@ -105,13 +105,13 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceConsumerIamPolicyArgs() {
-        this.auditConfigs = Input.empty();
-        this.bindings = Input.empty();
-        this.consumerId = Input.empty();
-        this.etag = Input.empty();
-        this.serviceId = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.auditConfigs = Output.empty();
+        this.bindings = Output.empty();
+        this.consumerId = Output.empty();
+        this.etag = Output.empty();
+        this.serviceId = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,13 +123,13 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuditConfigArgs>> auditConfigs;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private Input<String> consumerId;
-        private @Nullable Input<String> etag;
-        private Input<String> serviceId;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private Output<String> consumerId;
+        private @Nullable Output<String> etag;
+        private Output<String> serviceId;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -146,73 +146,73 @@ public final class ServiceConsumerIamPolicyArgs extends io.pulumi.resources.Reso
     	      this.version = defaults.version;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder consumerId(Input<String> consumerId) {
+        public Builder consumerId(Output<String> consumerId) {
             this.consumerId = Objects.requireNonNull(consumerId);
             return this;
         }
 
         public Builder consumerId(String consumerId) {
-            this.consumerId = Input.of(Objects.requireNonNull(consumerId));
+            this.consumerId = Output.of(Objects.requireNonNull(consumerId));
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ServiceConsumerIamPolicyArgs build() {

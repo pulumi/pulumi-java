@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="algorithm", required=true)
-      private final Input<String> algorithm;
+      private final Output<String> algorithm;
 
-    public Input<String> getAlgorithm() {
+    public Output<String> getAlgorithm() {
         return this.algorithm;
     }
 
@@ -31,22 +31,22 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionLevel")
-      private final @Nullable Input<String> protectionLevel;
+      private final @Nullable Output<String> protectionLevel;
 
-    public Input<String> getProtectionLevel() {
-        return this.protectionLevel == null ? Input.empty() : this.protectionLevel;
+    public Output<String> getProtectionLevel() {
+        return this.protectionLevel == null ? Output.empty() : this.protectionLevel;
     }
 
     public CryptoKeyVersionTemplateArgs(
-        Input<String> algorithm,
-        @Nullable Input<String> protectionLevel) {
+        Output<String> algorithm,
+        @Nullable Output<String> protectionLevel) {
         this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
         this.protectionLevel = protectionLevel;
     }
 
     private CryptoKeyVersionTemplateArgs() {
-        this.algorithm = Input.empty();
-        this.protectionLevel = Input.empty();
+        this.algorithm = Output.empty();
+        this.protectionLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> algorithm;
-        private @Nullable Input<String> protectionLevel;
+        private Output<String> algorithm;
+        private @Nullable Output<String> protectionLevel;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
     	      this.protectionLevel = defaults.protectionLevel;
         }
 
-        public Builder algorithm(Input<String> algorithm) {
+        public Builder algorithm(Output<String> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Input.of(Objects.requireNonNull(algorithm));
+            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder protectionLevel(@Nullable Input<String> protectionLevel) {
+        public Builder protectionLevel(@Nullable Output<String> protectionLevel) {
             this.protectionLevel = protectionLevel;
             return this;
         }
 
         public Builder protectionLevel(@Nullable String protectionLevel) {
-            this.protectionLevel = Input.ofNullable(protectionLevel);
+            this.protectionLevel = Output.ofNullable(protectionLevel);
             return this;
         }
         public CryptoKeyVersionTemplateArgs build() {

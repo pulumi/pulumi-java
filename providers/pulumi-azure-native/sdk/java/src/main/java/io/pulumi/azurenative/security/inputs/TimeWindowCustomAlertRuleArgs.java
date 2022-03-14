@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,9 +24,9 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -35,9 +35,9 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxThreshold", required=true)
-      private final Input<Integer> maxThreshold;
+      private final Output<Integer> maxThreshold;
 
-    public Input<Integer> getMaxThreshold() {
+    public Output<Integer> getMaxThreshold() {
         return this.maxThreshold;
     }
 
@@ -46,9 +46,9 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minThreshold", required=true)
-      private final Input<Integer> minThreshold;
+      private final Output<Integer> minThreshold;
 
-    public Input<Integer> getMinThreshold() {
+    public Output<Integer> getMinThreshold() {
         return this.minThreshold;
     }
 
@@ -58,9 +58,9 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ruleType", required=true)
-      private final Input<String> ruleType;
+      private final Output<String> ruleType;
 
-    public Input<String> getRuleType() {
+    public Output<String> getRuleType() {
         return this.ruleType;
     }
 
@@ -69,18 +69,18 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeWindowSize", required=true)
-      private final Input<String> timeWindowSize;
+      private final Output<String> timeWindowSize;
 
-    public Input<String> getTimeWindowSize() {
+    public Output<String> getTimeWindowSize() {
         return this.timeWindowSize;
     }
 
     public TimeWindowCustomAlertRuleArgs(
-        Input<Boolean> isEnabled,
-        Input<Integer> maxThreshold,
-        Input<Integer> minThreshold,
-        Input<String> ruleType,
-        Input<String> timeWindowSize) {
+        Output<Boolean> isEnabled,
+        Output<Integer> maxThreshold,
+        Output<Integer> minThreshold,
+        Output<String> ruleType,
+        Output<String> timeWindowSize) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.maxThreshold = Objects.requireNonNull(maxThreshold, "expected parameter 'maxThreshold' to be non-null");
         this.minThreshold = Objects.requireNonNull(minThreshold, "expected parameter 'minThreshold' to be non-null");
@@ -89,11 +89,11 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
     }
 
     private TimeWindowCustomAlertRuleArgs() {
-        this.isEnabled = Input.empty();
-        this.maxThreshold = Input.empty();
-        this.minThreshold = Input.empty();
-        this.ruleType = Input.empty();
-        this.timeWindowSize = Input.empty();
+        this.isEnabled = Output.empty();
+        this.maxThreshold = Output.empty();
+        this.minThreshold = Output.empty();
+        this.ruleType = Output.empty();
+        this.timeWindowSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Boolean> isEnabled;
-        private Input<Integer> maxThreshold;
-        private Input<Integer> minThreshold;
-        private Input<String> ruleType;
-        private Input<String> timeWindowSize;
+        private Output<Boolean> isEnabled;
+        private Output<Integer> maxThreshold;
+        private Output<Integer> minThreshold;
+        private Output<String> ruleType;
+        private Output<String> timeWindowSize;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
     	      this.timeWindowSize = defaults.timeWindowSize;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder maxThreshold(Input<Integer> maxThreshold) {
+        public Builder maxThreshold(Output<Integer> maxThreshold) {
             this.maxThreshold = Objects.requireNonNull(maxThreshold);
             return this;
         }
 
         public Builder maxThreshold(Integer maxThreshold) {
-            this.maxThreshold = Input.of(Objects.requireNonNull(maxThreshold));
+            this.maxThreshold = Output.of(Objects.requireNonNull(maxThreshold));
             return this;
         }
 
-        public Builder minThreshold(Input<Integer> minThreshold) {
+        public Builder minThreshold(Output<Integer> minThreshold) {
             this.minThreshold = Objects.requireNonNull(minThreshold);
             return this;
         }
 
         public Builder minThreshold(Integer minThreshold) {
-            this.minThreshold = Input.of(Objects.requireNonNull(minThreshold));
+            this.minThreshold = Output.of(Objects.requireNonNull(minThreshold));
             return this;
         }
 
-        public Builder ruleType(Input<String> ruleType) {
+        public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
         public Builder ruleType(String ruleType) {
-            this.ruleType = Input.of(Objects.requireNonNull(ruleType));
+            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
 
-        public Builder timeWindowSize(Input<String> timeWindowSize) {
+        public Builder timeWindowSize(Output<String> timeWindowSize) {
             this.timeWindowSize = Objects.requireNonNull(timeWindowSize);
             return this;
         }
 
         public Builder timeWindowSize(String timeWindowSize) {
-            this.timeWindowSize = Input.of(Objects.requireNonNull(timeWindowSize));
+            this.timeWindowSize = Output.of(Objects.requireNonNull(timeWindowSize));
             return this;
         }
         public TimeWindowCustomAlertRuleArgs build() {

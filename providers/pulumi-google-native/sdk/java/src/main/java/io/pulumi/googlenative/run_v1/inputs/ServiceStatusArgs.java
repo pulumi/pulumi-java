@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.AddressableArgs;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
@@ -28,10 +28,10 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<AddressableArgs> address;
+      private final @Nullable Output<AddressableArgs> address;
 
-    public Input<AddressableArgs> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<AddressableArgs> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
+      private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
-    public Input<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestCreatedRevisionName")
-      private final @Nullable Input<String> latestCreatedRevisionName;
+      private final @Nullable Output<String> latestCreatedRevisionName;
 
-    public Input<String> getLatestCreatedRevisionName() {
-        return this.latestCreatedRevisionName == null ? Input.empty() : this.latestCreatedRevisionName;
+    public Output<String> getLatestCreatedRevisionName() {
+        return this.latestCreatedRevisionName == null ? Output.empty() : this.latestCreatedRevisionName;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestReadyRevisionName")
-      private final @Nullable Input<String> latestReadyRevisionName;
+      private final @Nullable Output<String> latestReadyRevisionName;
 
-    public Input<String> getLatestReadyRevisionName() {
-        return this.latestReadyRevisionName == null ? Input.empty() : this.latestReadyRevisionName;
+    public Output<String> getLatestReadyRevisionName() {
+        return this.latestReadyRevisionName == null ? Output.empty() : this.latestReadyRevisionName;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-      private final @Nullable Input<List<TrafficTargetArgs>> traffic;
+      private final @Nullable Output<List<TrafficTargetArgs>> traffic;
 
-    public Input<List<TrafficTargetArgs>> getTraffic() {
-        return this.traffic == null ? Input.empty() : this.traffic;
+    public Output<List<TrafficTargetArgs>> getTraffic() {
+        return this.traffic == null ? Output.empty() : this.traffic;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public ServiceStatusArgs(
-        @Nullable Input<AddressableArgs> address,
-        @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions,
-        @Nullable Input<String> latestCreatedRevisionName,
-        @Nullable Input<String> latestReadyRevisionName,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<List<TrafficTargetArgs>> traffic,
-        @Nullable Input<String> url) {
+        @Nullable Output<AddressableArgs> address,
+        @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions,
+        @Nullable Output<String> latestCreatedRevisionName,
+        @Nullable Output<String> latestReadyRevisionName,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<List<TrafficTargetArgs>> traffic,
+        @Nullable Output<String> url) {
         this.address = address;
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
@@ -118,13 +118,13 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceStatusArgs() {
-        this.address = Input.empty();
-        this.conditions = Input.empty();
-        this.latestCreatedRevisionName = Input.empty();
-        this.latestReadyRevisionName = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.traffic = Input.empty();
-        this.url = Input.empty();
+        this.address = Output.empty();
+        this.conditions = Output.empty();
+        this.latestCreatedRevisionName = Output.empty();
+        this.latestReadyRevisionName = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.traffic = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AddressableArgs> address;
-        private @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
-        private @Nullable Input<String> latestCreatedRevisionName;
-        private @Nullable Input<String> latestReadyRevisionName;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<List<TrafficTargetArgs>> traffic;
-        private @Nullable Input<String> url;
+        private @Nullable Output<AddressableArgs> address;
+        private @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
+        private @Nullable Output<String> latestCreatedRevisionName;
+        private @Nullable Output<String> latestReadyRevisionName;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<List<TrafficTargetArgs>> traffic;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder address(@Nullable Input<AddressableArgs> address) {
+        public Builder address(@Nullable Output<AddressableArgs> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable AddressableArgs address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<GoogleCloudRunV1ConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder latestCreatedRevisionName(@Nullable Input<String> latestCreatedRevisionName) {
+        public Builder latestCreatedRevisionName(@Nullable Output<String> latestCreatedRevisionName) {
             this.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
 
         public Builder latestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = Input.ofNullable(latestCreatedRevisionName);
+            this.latestCreatedRevisionName = Output.ofNullable(latestCreatedRevisionName);
             return this;
         }
 
-        public Builder latestReadyRevisionName(@Nullable Input<String> latestReadyRevisionName) {
+        public Builder latestReadyRevisionName(@Nullable Output<String> latestReadyRevisionName) {
             this.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
 
         public Builder latestReadyRevisionName(@Nullable String latestReadyRevisionName) {
-            this.latestReadyRevisionName = Input.ofNullable(latestReadyRevisionName);
+            this.latestReadyRevisionName = Output.ofNullable(latestReadyRevisionName);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder traffic(@Nullable Input<List<TrafficTargetArgs>> traffic) {
+        public Builder traffic(@Nullable Output<List<TrafficTargetArgs>> traffic) {
             this.traffic = traffic;
             return this;
         }
 
         public Builder traffic(@Nullable List<TrafficTargetArgs> traffic) {
-            this.traffic = Input.ofNullable(traffic);
+            this.traffic = Output.ofNullable(traffic);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public ServiceStatusArgs build() {

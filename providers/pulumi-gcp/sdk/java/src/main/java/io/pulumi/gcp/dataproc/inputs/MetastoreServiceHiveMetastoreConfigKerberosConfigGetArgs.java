@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * 
      */
     @InputImport(name="keytab", required=true)
-      private final Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
+      private final Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
 
-    public Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> getKeytab() {
+    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> getKeytab() {
         return this.keytab;
     }
 
@@ -31,9 +31,9 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * 
      */
     @InputImport(name="krb5ConfigGcsUri", required=true)
-      private final Input<String> krb5ConfigGcsUri;
+      private final Output<String> krb5ConfigGcsUri;
 
-    public Input<String> getKrb5ConfigGcsUri() {
+    public Output<String> getKrb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
 
@@ -42,25 +42,25 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * 
      */
     @InputImport(name="principal", required=true)
-      private final Input<String> principal;
+      private final Output<String> principal;
 
-    public Input<String> getPrincipal() {
+    public Output<String> getPrincipal() {
         return this.principal;
     }
 
     public MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs(
-        Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab,
-        Input<String> krb5ConfigGcsUri,
-        Input<String> principal) {
+        Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab,
+        Output<String> krb5ConfigGcsUri,
+        Output<String> principal) {
         this.keytab = Objects.requireNonNull(keytab, "expected parameter 'keytab' to be non-null");
         this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri, "expected parameter 'krb5ConfigGcsUri' to be non-null");
         this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
     }
 
     private MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs() {
-        this.keytab = Input.empty();
-        this.krb5ConfigGcsUri = Input.empty();
-        this.principal = Input.empty();
+        this.keytab = Output.empty();
+        this.krb5ConfigGcsUri = Output.empty();
+        this.principal = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     }
 
     public static final class Builder {
-        private Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
-        private Input<String> krb5ConfigGcsUri;
-        private Input<String> principal;
+        private Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
+        private Output<String> krb5ConfigGcsUri;
+        private Output<String> principal;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     	      this.principal = defaults.principal;
         }
 
-        public Builder keytab(Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab) {
+        public Builder keytab(Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab) {
             this.keytab = Objects.requireNonNull(keytab);
             return this;
         }
 
         public Builder keytab(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs keytab) {
-            this.keytab = Input.of(Objects.requireNonNull(keytab));
+            this.keytab = Output.of(Objects.requireNonNull(keytab));
             return this;
         }
 
-        public Builder krb5ConfigGcsUri(Input<String> krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(Output<String> krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
             return this;
         }
 
         public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
-            this.krb5ConfigGcsUri = Input.of(Objects.requireNonNull(krb5ConfigGcsUri));
+            this.krb5ConfigGcsUri = Output.of(Objects.requireNonNull(krb5ConfigGcsUri));
             return this;
         }
 
-        public Builder principal(Input<String> principal) {
+        public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
         public Builder principal(String principal) {
-            this.principal = Input.of(Objects.requireNonNull(principal));
+            this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
         public MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs build() {

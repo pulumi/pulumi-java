@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="blobTypes", required=true)
-      private final Input<List<String>> blobTypes;
+      private final Output<List<String>> blobTypes;
 
-    public Input<List<String>> getBlobTypes() {
+    public Output<List<String>> getBlobTypes() {
         return this.blobTypes;
     }
 
@@ -36,10 +36,10 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="includeBlobVersions")
-      private final @Nullable Input<Boolean> includeBlobVersions;
+      private final @Nullable Output<Boolean> includeBlobVersions;
 
-    public Input<Boolean> getIncludeBlobVersions() {
-        return this.includeBlobVersions == null ? Input.empty() : this.includeBlobVersions;
+    public Output<Boolean> getIncludeBlobVersions() {
+        return this.includeBlobVersions == null ? Output.empty() : this.includeBlobVersions;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="includeSnapshots")
-      private final @Nullable Input<Boolean> includeSnapshots;
+      private final @Nullable Output<Boolean> includeSnapshots;
 
-    public Input<Boolean> getIncludeSnapshots() {
-        return this.includeSnapshots == null ? Input.empty() : this.includeSnapshots;
+    public Output<Boolean> getIncludeSnapshots() {
+        return this.includeSnapshots == null ? Output.empty() : this.includeSnapshots;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="prefixMatch")
-      private final @Nullable Input<List<String>> prefixMatch;
+      private final @Nullable Output<List<String>> prefixMatch;
 
-    public Input<List<String>> getPrefixMatch() {
-        return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
+    public Output<List<String>> getPrefixMatch() {
+        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
     }
 
     public BlobInventoryPolicyFilterArgs(
-        Input<List<String>> blobTypes,
-        @Nullable Input<Boolean> includeBlobVersions,
-        @Nullable Input<Boolean> includeSnapshots,
-        @Nullable Input<List<String>> prefixMatch) {
+        Output<List<String>> blobTypes,
+        @Nullable Output<Boolean> includeBlobVersions,
+        @Nullable Output<Boolean> includeSnapshots,
+        @Nullable Output<List<String>> prefixMatch) {
         this.blobTypes = Objects.requireNonNull(blobTypes, "expected parameter 'blobTypes' to be non-null");
         this.includeBlobVersions = includeBlobVersions;
         this.includeSnapshots = includeSnapshots;
@@ -76,10 +76,10 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     }
 
     private BlobInventoryPolicyFilterArgs() {
-        this.blobTypes = Input.empty();
-        this.includeBlobVersions = Input.empty();
-        this.includeSnapshots = Input.empty();
-        this.prefixMatch = Input.empty();
+        this.blobTypes = Output.empty();
+        this.includeBlobVersions = Output.empty();
+        this.includeSnapshots = Output.empty();
+        this.prefixMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<List<String>> blobTypes;
-        private @Nullable Input<Boolean> includeBlobVersions;
-        private @Nullable Input<Boolean> includeSnapshots;
-        private @Nullable Input<List<String>> prefixMatch;
+        private Output<List<String>> blobTypes;
+        private @Nullable Output<Boolean> includeBlobVersions;
+        private @Nullable Output<Boolean> includeSnapshots;
+        private @Nullable Output<List<String>> prefixMatch;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder blobTypes(Input<List<String>> blobTypes) {
+        public Builder blobTypes(Output<List<String>> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
 
         public Builder blobTypes(List<String> blobTypes) {
-            this.blobTypes = Input.of(Objects.requireNonNull(blobTypes));
+            this.blobTypes = Output.of(Objects.requireNonNull(blobTypes));
             return this;
         }
 
-        public Builder includeBlobVersions(@Nullable Input<Boolean> includeBlobVersions) {
+        public Builder includeBlobVersions(@Nullable Output<Boolean> includeBlobVersions) {
             this.includeBlobVersions = includeBlobVersions;
             return this;
         }
 
         public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
-            this.includeBlobVersions = Input.ofNullable(includeBlobVersions);
+            this.includeBlobVersions = Output.ofNullable(includeBlobVersions);
             return this;
         }
 
-        public Builder includeSnapshots(@Nullable Input<Boolean> includeSnapshots) {
+        public Builder includeSnapshots(@Nullable Output<Boolean> includeSnapshots) {
             this.includeSnapshots = includeSnapshots;
             return this;
         }
 
         public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
-            this.includeSnapshots = Input.ofNullable(includeSnapshots);
+            this.includeSnapshots = Output.ofNullable(includeSnapshots);
             return this;
         }
 
-        public Builder prefixMatch(@Nullable Input<List<String>> prefixMatch) {
+        public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Input.ofNullable(prefixMatch);
+            this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
         public BlobInventoryPolicyFilterArgs build() {

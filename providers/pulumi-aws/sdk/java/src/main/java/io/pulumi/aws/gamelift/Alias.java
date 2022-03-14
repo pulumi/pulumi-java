@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.gamelift.AliasArgs;
 import io.pulumi.aws.gamelift.inputs.AliasState;
 import io.pulumi.aws.gamelift.outputs.AliasRoutingStrategy;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -154,14 +153,14 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Alias(String name, AliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:gamelift/alias:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:gamelift/alias:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Alias(String name, Input<String> id, @Nullable AliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Alias(String name, Output<String> id, @Nullable AliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:gamelift/alias:Alias", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -177,7 +176,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Alias get(String name, Input<String> id, @Nullable AliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Alias get(String name, Output<String> id, @Nullable AliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Alias(name, id, state, options);
     }
 }

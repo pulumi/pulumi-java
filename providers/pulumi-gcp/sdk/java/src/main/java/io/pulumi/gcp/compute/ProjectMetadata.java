@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -107,14 +106,14 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectMetadata(String name, ProjectMetadataArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/projectMetadata:ProjectMetadata", name, args == null ? ProjectMetadataArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/projectMetadata:ProjectMetadata", name, args == null ? ProjectMetadataArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProjectMetadata(String name, Input<String> id, @Nullable ProjectMetadataState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProjectMetadata(String name, Output<String> id, @Nullable ProjectMetadataState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/projectMetadata:ProjectMetadata", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -130,7 +129,7 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProjectMetadata get(String name, Input<String> id, @Nullable ProjectMetadataState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProjectMetadata get(String name, Output<String> id, @Nullable ProjectMetadataState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProjectMetadata(name, id, state, options);
     }
 }

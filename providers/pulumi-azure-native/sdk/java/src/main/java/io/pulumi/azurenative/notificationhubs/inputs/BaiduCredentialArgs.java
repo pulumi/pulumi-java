@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="baiduApiKey")
-      private final @Nullable Input<String> baiduApiKey;
+      private final @Nullable Output<String> baiduApiKey;
 
-    public Input<String> getBaiduApiKey() {
-        return this.baiduApiKey == null ? Input.empty() : this.baiduApiKey;
+    public Output<String> getBaiduApiKey() {
+        return this.baiduApiKey == null ? Output.empty() : this.baiduApiKey;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="baiduEndPoint")
-      private final @Nullable Input<String> baiduEndPoint;
+      private final @Nullable Output<String> baiduEndPoint;
 
-    public Input<String> getBaiduEndPoint() {
-        return this.baiduEndPoint == null ? Input.empty() : this.baiduEndPoint;
+    public Output<String> getBaiduEndPoint() {
+        return this.baiduEndPoint == null ? Output.empty() : this.baiduEndPoint;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="baiduSecretKey")
-      private final @Nullable Input<String> baiduSecretKey;
+      private final @Nullable Output<String> baiduSecretKey;
 
-    public Input<String> getBaiduSecretKey() {
-        return this.baiduSecretKey == null ? Input.empty() : this.baiduSecretKey;
+    public Output<String> getBaiduSecretKey() {
+        return this.baiduSecretKey == null ? Output.empty() : this.baiduSecretKey;
     }
 
     public BaiduCredentialArgs(
-        @Nullable Input<String> baiduApiKey,
-        @Nullable Input<String> baiduEndPoint,
-        @Nullable Input<String> baiduSecretKey) {
+        @Nullable Output<String> baiduApiKey,
+        @Nullable Output<String> baiduEndPoint,
+        @Nullable Output<String> baiduSecretKey) {
         this.baiduApiKey = baiduApiKey;
         this.baiduEndPoint = baiduEndPoint;
         this.baiduSecretKey = baiduSecretKey;
     }
 
     private BaiduCredentialArgs() {
-        this.baiduApiKey = Input.empty();
-        this.baiduEndPoint = Input.empty();
-        this.baiduSecretKey = Input.empty();
+        this.baiduApiKey = Output.empty();
+        this.baiduEndPoint = Output.empty();
+        this.baiduSecretKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> baiduApiKey;
-        private @Nullable Input<String> baiduEndPoint;
-        private @Nullable Input<String> baiduSecretKey;
+        private @Nullable Output<String> baiduApiKey;
+        private @Nullable Output<String> baiduEndPoint;
+        private @Nullable Output<String> baiduSecretKey;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
     	      this.baiduSecretKey = defaults.baiduSecretKey;
         }
 
-        public Builder baiduApiKey(@Nullable Input<String> baiduApiKey) {
+        public Builder baiduApiKey(@Nullable Output<String> baiduApiKey) {
             this.baiduApiKey = baiduApiKey;
             return this;
         }
 
         public Builder baiduApiKey(@Nullable String baiduApiKey) {
-            this.baiduApiKey = Input.ofNullable(baiduApiKey);
+            this.baiduApiKey = Output.ofNullable(baiduApiKey);
             return this;
         }
 
-        public Builder baiduEndPoint(@Nullable Input<String> baiduEndPoint) {
+        public Builder baiduEndPoint(@Nullable Output<String> baiduEndPoint) {
             this.baiduEndPoint = baiduEndPoint;
             return this;
         }
 
         public Builder baiduEndPoint(@Nullable String baiduEndPoint) {
-            this.baiduEndPoint = Input.ofNullable(baiduEndPoint);
+            this.baiduEndPoint = Output.ofNullable(baiduEndPoint);
             return this;
         }
 
-        public Builder baiduSecretKey(@Nullable Input<String> baiduSecretKey) {
+        public Builder baiduSecretKey(@Nullable Output<String> baiduSecretKey) {
             this.baiduSecretKey = baiduSecretKey;
             return this;
         }
 
         public Builder baiduSecretKey(@Nullable String baiduSecretKey) {
-            this.baiduSecretKey = Input.ofNullable(baiduSecretKey);
+            this.baiduSecretKey = Output.ofNullable(baiduSecretKey);
             return this;
         }
         public BaiduCredentialArgs build() {

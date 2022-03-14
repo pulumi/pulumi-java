@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -46,9 +46,9 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -57,9 +57,9 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="systemIds", required=true)
-      private final Input<List<String>> systemIds;
+      private final Output<List<String>> systemIds;
 
-    public Input<List<String>> getSystemIds() {
+    public Output<List<String>> getSystemIds() {
         return this.systemIds;
     }
 
@@ -68,18 +68,18 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public OriginEndpointSpekeKeyProviderArgs(
-        @Nullable Input<String> certificateArn,
-        Input<String> resourceId,
-        Input<String> roleArn,
-        Input<List<String>> systemIds,
-        Input<String> url) {
+        @Nullable Output<String> certificateArn,
+        Output<String> resourceId,
+        Output<String> roleArn,
+        Output<List<String>> systemIds,
+        Output<String> url) {
         this.certificateArn = certificateArn;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
@@ -88,11 +88,11 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     }
 
     private OriginEndpointSpekeKeyProviderArgs() {
-        this.certificateArn = Input.empty();
-        this.resourceId = Input.empty();
-        this.roleArn = Input.empty();
-        this.systemIds = Input.empty();
-        this.url = Input.empty();
+        this.certificateArn = Output.empty();
+        this.resourceId = Output.empty();
+        this.roleArn = Output.empty();
+        this.systemIds = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateArn;
-        private Input<String> resourceId;
-        private Input<String> roleArn;
-        private Input<List<String>> systemIds;
-        private Input<String> url;
+        private @Nullable Output<String> certificateArn;
+        private Output<String> resourceId;
+        private Output<String> roleArn;
+        private Output<List<String>> systemIds;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     	      this.url = defaults.url;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder systemIds(Input<List<String>> systemIds) {
+        public Builder systemIds(Output<List<String>> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
 
         public Builder systemIds(List<String> systemIds) {
-            this.systemIds = Input.of(Objects.requireNonNull(systemIds));
+            this.systemIds = Output.of(Objects.requireNonNull(systemIds));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public OriginEndpointSpekeKeyProviderArgs build() {

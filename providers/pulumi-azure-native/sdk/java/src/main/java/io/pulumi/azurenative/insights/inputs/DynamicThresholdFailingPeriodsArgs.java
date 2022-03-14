@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minFailingPeriodsToAlert", required=true)
-      private final Input<Double> minFailingPeriodsToAlert;
+      private final Output<Double> minFailingPeriodsToAlert;
 
-    public Input<Double> getMinFailingPeriodsToAlert() {
+    public Output<Double> getMinFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
     }
 
@@ -33,22 +33,22 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="numberOfEvaluationPeriods", required=true)
-      private final Input<Double> numberOfEvaluationPeriods;
+      private final Output<Double> numberOfEvaluationPeriods;
 
-    public Input<Double> getNumberOfEvaluationPeriods() {
+    public Output<Double> getNumberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }
 
     public DynamicThresholdFailingPeriodsArgs(
-        Input<Double> minFailingPeriodsToAlert,
-        Input<Double> numberOfEvaluationPeriods) {
+        Output<Double> minFailingPeriodsToAlert,
+        Output<Double> numberOfEvaluationPeriods) {
         this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert, "expected parameter 'minFailingPeriodsToAlert' to be non-null");
         this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods, "expected parameter 'numberOfEvaluationPeriods' to be non-null");
     }
 
     private DynamicThresholdFailingPeriodsArgs() {
-        this.minFailingPeriodsToAlert = Input.empty();
-        this.numberOfEvaluationPeriods = Input.empty();
+        this.minFailingPeriodsToAlert = Output.empty();
+        this.numberOfEvaluationPeriods = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Double> minFailingPeriodsToAlert;
-        private Input<Double> numberOfEvaluationPeriods;
+        private Output<Double> minFailingPeriodsToAlert;
+        private Output<Double> numberOfEvaluationPeriods;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
     	      this.numberOfEvaluationPeriods = defaults.numberOfEvaluationPeriods;
         }
 
-        public Builder minFailingPeriodsToAlert(Input<Double> minFailingPeriodsToAlert) {
+        public Builder minFailingPeriodsToAlert(Output<Double> minFailingPeriodsToAlert) {
             this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert);
             return this;
         }
 
         public Builder minFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
-            this.minFailingPeriodsToAlert = Input.of(Objects.requireNonNull(minFailingPeriodsToAlert));
+            this.minFailingPeriodsToAlert = Output.of(Objects.requireNonNull(minFailingPeriodsToAlert));
             return this;
         }
 
-        public Builder numberOfEvaluationPeriods(Input<Double> numberOfEvaluationPeriods) {
+        public Builder numberOfEvaluationPeriods(Output<Double> numberOfEvaluationPeriods) {
             this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
             return this;
         }
 
         public Builder numberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
-            this.numberOfEvaluationPeriods = Input.of(Objects.requireNonNull(numberOfEvaluationPeriods));
+            this.numberOfEvaluationPeriods = Output.of(Objects.requireNonNull(numberOfEvaluationPeriods));
             return this;
         }
         public DynamicThresholdFailingPeriodsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="virtualMachineId")
-      private final @Nullable Input<String> virtualMachineId;
+      private final @Nullable Output<String> virtualMachineId;
 
-    public Input<String> getVirtualMachineId() {
-        return this.virtualMachineId == null ? Input.empty() : this.virtualMachineId;
+    public Output<String> getVirtualMachineId() {
+        return this.virtualMachineId == null ? Output.empty() : this.virtualMachineId;
     }
 
     public RecoveryPlanProtectedItemArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> virtualMachineId) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> virtualMachineId) {
         this.id = id;
         this.virtualMachineId = virtualMachineId;
     }
 
     private RecoveryPlanProtectedItemArgs() {
-        this.id = Input.empty();
-        this.virtualMachineId = Input.empty();
+        this.id = Output.empty();
+        this.virtualMachineId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> virtualMachineId;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> virtualMachineId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
     	      this.virtualMachineId = defaults.virtualMachineId;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder virtualMachineId(@Nullable Input<String> virtualMachineId) {
+        public Builder virtualMachineId(@Nullable Output<String> virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
 
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
-            this.virtualMachineId = Input.ofNullable(virtualMachineId);
+            this.virtualMachineId = Output.ofNullable(virtualMachineId);
             return this;
         }
         public RecoveryPlanProtectedItemArgs build() {

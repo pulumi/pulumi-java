@@ -5,7 +5,7 @@ package io.pulumi.aws.transfer;
 
 import io.pulumi.aws.transfer.inputs.UserHomeDirectoryMappingArgs;
 import io.pulumi.aws.transfer.inputs.UserPosixProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectory")
-      private final @Nullable Input<String> homeDirectory;
+      private final @Nullable Output<String> homeDirectory;
 
-    public Input<String> getHomeDirectory() {
-        return this.homeDirectory == null ? Input.empty() : this.homeDirectory;
+    public Output<String> getHomeDirectory() {
+        return this.homeDirectory == null ? Output.empty() : this.homeDirectory;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryMappings")
-      private final @Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
+      private final @Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
-    public Input<List<UserHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
-        return this.homeDirectoryMappings == null ? Input.empty() : this.homeDirectoryMappings;
+    public Output<List<UserHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
+        return this.homeDirectoryMappings == null ? Output.empty() : this.homeDirectoryMappings;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryType")
-      private final @Nullable Input<String> homeDirectoryType;
+      private final @Nullable Output<String> homeDirectoryType;
 
-    public Input<String> getHomeDirectoryType() {
-        return this.homeDirectoryType == null ? Input.empty() : this.homeDirectoryType;
+    public Output<String> getHomeDirectoryType() {
+        return this.homeDirectoryType == null ? Output.empty() : this.homeDirectoryType;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixProfile")
-      private final @Nullable Input<UserPosixProfileArgs> posixProfile;
+      private final @Nullable Output<UserPosixProfileArgs> posixProfile;
 
-    public Input<UserPosixProfileArgs> getPosixProfile() {
-        return this.posixProfile == null ? Input.empty() : this.posixProfile;
+    public Output<UserPosixProfileArgs> getPosixProfile() {
+        return this.posixProfile == null ? Output.empty() : this.posixProfile;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -89,9 +89,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-      private final Input<String> serverId;
+      private final Output<String> serverId;
 
-    public Input<String> getServerId() {
+    public Output<String> getServerId() {
         return this.serverId;
     }
 
@@ -100,10 +100,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public UserArgs(
-        @Nullable Input<String> homeDirectory,
-        @Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings,
-        @Nullable Input<String> homeDirectoryType,
-        @Nullable Input<String> policy,
-        @Nullable Input<UserPosixProfileArgs> posixProfile,
-        Input<String> role,
-        Input<String> serverId,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> userName) {
+        @Nullable Output<String> homeDirectory,
+        @Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings,
+        @Nullable Output<String> homeDirectoryType,
+        @Nullable Output<String> policy,
+        @Nullable Output<UserPosixProfileArgs> posixProfile,
+        Output<String> role,
+        Output<String> serverId,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> userName) {
         this.homeDirectory = homeDirectory;
         this.homeDirectoryMappings = homeDirectoryMappings;
         this.homeDirectoryType = homeDirectoryType;
@@ -139,15 +139,15 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.homeDirectory = Input.empty();
-        this.homeDirectoryMappings = Input.empty();
-        this.homeDirectoryType = Input.empty();
-        this.policy = Input.empty();
-        this.posixProfile = Input.empty();
-        this.role = Input.empty();
-        this.serverId = Input.empty();
-        this.tags = Input.empty();
-        this.userName = Input.empty();
+        this.homeDirectory = Output.empty();
+        this.homeDirectoryMappings = Output.empty();
+        this.homeDirectoryType = Output.empty();
+        this.policy = Output.empty();
+        this.posixProfile = Output.empty();
+        this.role = Output.empty();
+        this.serverId = Output.empty();
+        this.tags = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> homeDirectory;
-        private @Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
-        private @Nullable Input<String> homeDirectoryType;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<UserPosixProfileArgs> posixProfile;
-        private Input<String> role;
-        private Input<String> serverId;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> userName;
+        private @Nullable Output<String> homeDirectory;
+        private @Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
+        private @Nullable Output<String> homeDirectoryType;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<UserPosixProfileArgs> posixProfile;
+        private Output<String> role;
+        private Output<String> serverId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
         public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Input.ofNullable(homeDirectory);
+            this.homeDirectory = Output.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder homeDirectoryMappings(@Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
 
         public Builder homeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingArgs> homeDirectoryMappings) {
-            this.homeDirectoryMappings = Input.ofNullable(homeDirectoryMappings);
+            this.homeDirectoryMappings = Output.ofNullable(homeDirectoryMappings);
             return this;
         }
 
-        public Builder homeDirectoryType(@Nullable Input<String> homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable Output<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
 
         public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
-            this.homeDirectoryType = Input.ofNullable(homeDirectoryType);
+            this.homeDirectoryType = Output.ofNullable(homeDirectoryType);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder posixProfile(@Nullable Input<UserPosixProfileArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Output<UserPosixProfileArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
 
         public Builder posixProfile(@Nullable UserPosixProfileArgs posixProfile) {
-            this.posixProfile = Input.ofNullable(posixProfile);
+            this.posixProfile = Output.ofNullable(posixProfile);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder serverId(Input<String> serverId) {
+        public Builder serverId(Output<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
         public Builder serverId(String serverId) {
-            this.serverId = Input.of(Objects.requireNonNull(serverId));
+            this.serverId = Output.of(Objects.requireNonNull(serverId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public UserArgs build() {

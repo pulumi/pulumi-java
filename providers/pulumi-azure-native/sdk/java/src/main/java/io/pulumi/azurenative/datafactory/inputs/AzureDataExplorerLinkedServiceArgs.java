@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Input<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialReferenceArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<Object> database;
+      private final Output<Object> database;
 
-    public Input<Object> getDatabase() {
+    public Output<Object> getDatabase() {
         return this.database;
     }
 
@@ -76,10 +76,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<Object> endpoint;
+      private final Output<Object> endpoint;
 
-    public Input<Object> getEndpoint() {
+    public Output<Object> getEndpoint() {
         return this.endpoint;
     }
 
@@ -98,10 +98,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="servicePrincipalId")
-      private final @Nullable Input<Object> servicePrincipalId;
+      private final @Nullable Output<Object> servicePrincipalId;
 
-    public Input<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
+    public Output<Object> getServicePrincipalId() {
+        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="servicePrincipalKey")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tenant")
-      private final @Nullable Input<Object> tenant;
+      private final @Nullable Output<Object> tenant;
 
-    public Input<Object> getTenant() {
-        return this.tenant == null ? Input.empty() : this.tenant;
+    public Output<Object> getTenant() {
+        return this.tenant == null ? Output.empty() : this.tenant;
     }
 
     /**
@@ -143,24 +143,24 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureDataExplorerLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<CredentialReferenceArgs> credential,
-        Input<Object> database,
-        @Nullable Input<String> description,
-        Input<Object> endpoint,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Object> servicePrincipalId,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
-        @Nullable Input<Object> tenant,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<CredentialReferenceArgs> credential,
+        Output<Object> database,
+        @Nullable Output<String> description,
+        Output<Object> endpoint,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Object> servicePrincipalId,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
+        @Nullable Output<Object> tenant,
+        Output<String> type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.credential = credential;
@@ -175,17 +175,17 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
     }
 
     private AzureDataExplorerLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.connectVia = Input.empty();
-        this.credential = Input.empty();
-        this.database = Input.empty();
-        this.description = Input.empty();
-        this.endpoint = Input.empty();
-        this.parameters = Input.empty();
-        this.servicePrincipalId = Input.empty();
-        this.servicePrincipalKey = Input.empty();
-        this.tenant = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.connectVia = Output.empty();
+        this.credential = Output.empty();
+        this.database = Output.empty();
+        this.description = Output.empty();
+        this.endpoint = Output.empty();
+        this.parameters = Output.empty();
+        this.servicePrincipalId = Output.empty();
+        this.servicePrincipalKey = Output.empty();
+        this.tenant = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -197,17 +197,17 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<CredentialReferenceArgs> credential;
-        private Input<Object> database;
-        private @Nullable Input<String> description;
-        private Input<Object> endpoint;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Object> servicePrincipalId;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
-        private @Nullable Input<Object> tenant;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<CredentialReferenceArgs> credential;
+        private Output<Object> database;
+        private @Nullable Output<String> description;
+        private Output<Object> endpoint;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Object> servicePrincipalId;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private @Nullable Output<Object> tenant;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -228,113 +228,113 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder database(Input<Object> database) {
+        public Builder database(Output<Object> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(Object database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endpoint(Input<Object> endpoint) {
+        public Builder endpoint(Output<Object> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(Object endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder servicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
             return this;
         }
 
-        public Builder tenant(@Nullable Input<Object> tenant) {
+        public Builder tenant(@Nullable Output<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
 
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Input.ofNullable(tenant);
+            this.tenant = Output.ofNullable(tenant);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureDataExplorerLinkedServiceArgs build() {

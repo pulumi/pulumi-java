@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseImage", required=true)
-      private final Input<String> baseImage;
+      private final Output<String> baseImage;
 
-    public Input<String> getBaseImage() {
+    public Output<String> getBaseImage() {
         return this.baseImage;
     }
 
@@ -29,22 +29,22 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName", required=true)
-      private final Input<String> imageName;
+      private final Output<String> imageName;
 
-    public Input<String> getImageName() {
+    public Output<String> getImageName() {
         return this.imageName;
     }
 
     public ImageVersionArgs(
-        Input<String> baseImage,
-        Input<String> imageName) {
+        Output<String> baseImage,
+        Output<String> imageName) {
         this.baseImage = Objects.requireNonNull(baseImage, "expected parameter 'baseImage' to be non-null");
         this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
     }
 
     private ImageVersionArgs() {
-        this.baseImage = Input.empty();
-        this.imageName = Input.empty();
+        this.baseImage = Output.empty();
+        this.imageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> baseImage;
-        private Input<String> imageName;
+        private Output<String> baseImage;
+        private Output<String> imageName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.imageName = defaults.imageName;
         }
 
-        public Builder baseImage(Input<String> baseImage) {
+        public Builder baseImage(Output<String> baseImage) {
             this.baseImage = Objects.requireNonNull(baseImage);
             return this;
         }
 
         public Builder baseImage(String baseImage) {
-            this.baseImage = Input.of(Objects.requireNonNull(baseImage));
+            this.baseImage = Output.of(Objects.requireNonNull(baseImage));
             return this;
         }
 
-        public Builder imageName(Input<String> imageName) {
+        public Builder imageName(Output<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
         public Builder imageName(String imageName) {
-            this.imageName = Input.of(Objects.requireNonNull(imageName));
+            this.imageName = Output.of(Objects.requireNonNull(imageName));
             return this;
         }
         public ImageVersionArgs build() {

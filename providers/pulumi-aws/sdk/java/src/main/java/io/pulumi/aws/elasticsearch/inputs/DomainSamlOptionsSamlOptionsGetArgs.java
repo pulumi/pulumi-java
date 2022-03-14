@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsIdpGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="idp")
-      private final @Nullable Input<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
+      private final @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
 
-    public Input<DomainSamlOptionsSamlOptionsIdpGetArgs> getIdp() {
-        return this.idp == null ? Input.empty() : this.idp;
+    public Output<DomainSamlOptionsSamlOptionsIdpGetArgs> getIdp() {
+        return this.idp == null ? Output.empty() : this.idp;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="masterBackendRole")
-      private final @Nullable Input<String> masterBackendRole;
+      private final @Nullable Output<String> masterBackendRole;
 
-    public Input<String> getMasterBackendRole() {
-        return this.masterBackendRole == null ? Input.empty() : this.masterBackendRole;
+    public Output<String> getMasterBackendRole() {
+        return this.masterBackendRole == null ? Output.empty() : this.masterBackendRole;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="masterUserName")
-      private final @Nullable Input<String> masterUserName;
+      private final @Nullable Output<String> masterUserName;
 
-    public Input<String> getMasterUserName() {
-        return this.masterUserName == null ? Input.empty() : this.masterUserName;
+    public Output<String> getMasterUserName() {
+        return this.masterUserName == null ? Output.empty() : this.masterUserName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rolesKey")
-      private final @Nullable Input<String> rolesKey;
+      private final @Nullable Output<String> rolesKey;
 
-    public Input<String> getRolesKey() {
-        return this.rolesKey == null ? Input.empty() : this.rolesKey;
+    public Output<String> getRolesKey() {
+        return this.rolesKey == null ? Output.empty() : this.rolesKey;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sessionTimeoutMinutes")
-      private final @Nullable Input<Integer> sessionTimeoutMinutes;
+      private final @Nullable Output<Integer> sessionTimeoutMinutes;
 
-    public Input<Integer> getSessionTimeoutMinutes() {
-        return this.sessionTimeoutMinutes == null ? Input.empty() : this.sessionTimeoutMinutes;
+    public Output<Integer> getSessionTimeoutMinutes() {
+        return this.sessionTimeoutMinutes == null ? Output.empty() : this.sessionTimeoutMinutes;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subjectKey")
-      private final @Nullable Input<String> subjectKey;
+      private final @Nullable Output<String> subjectKey;
 
-    public Input<String> getSubjectKey() {
-        return this.subjectKey == null ? Input.empty() : this.subjectKey;
+    public Output<String> getSubjectKey() {
+        return this.subjectKey == null ? Output.empty() : this.subjectKey;
     }
 
     public DomainSamlOptionsSamlOptionsGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<DomainSamlOptionsSamlOptionsIdpGetArgs> idp,
-        @Nullable Input<String> masterBackendRole,
-        @Nullable Input<String> masterUserName,
-        @Nullable Input<String> rolesKey,
-        @Nullable Input<Integer> sessionTimeoutMinutes,
-        @Nullable Input<String> subjectKey) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp,
+        @Nullable Output<String> masterBackendRole,
+        @Nullable Output<String> masterUserName,
+        @Nullable Output<String> rolesKey,
+        @Nullable Output<Integer> sessionTimeoutMinutes,
+        @Nullable Output<String> subjectKey) {
         this.enabled = enabled;
         this.idp = idp;
         this.masterBackendRole = masterBackendRole;
@@ -112,13 +112,13 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     }
 
     private DomainSamlOptionsSamlOptionsGetArgs() {
-        this.enabled = Input.empty();
-        this.idp = Input.empty();
-        this.masterBackendRole = Input.empty();
-        this.masterUserName = Input.empty();
-        this.rolesKey = Input.empty();
-        this.sessionTimeoutMinutes = Input.empty();
-        this.subjectKey = Input.empty();
+        this.enabled = Output.empty();
+        this.idp = Output.empty();
+        this.masterBackendRole = Output.empty();
+        this.masterUserName = Output.empty();
+        this.rolesKey = Output.empty();
+        this.sessionTimeoutMinutes = Output.empty();
+        this.subjectKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
-        private @Nullable Input<String> masterBackendRole;
-        private @Nullable Input<String> masterUserName;
-        private @Nullable Input<String> rolesKey;
-        private @Nullable Input<Integer> sessionTimeoutMinutes;
-        private @Nullable Input<String> subjectKey;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
+        private @Nullable Output<String> masterBackendRole;
+        private @Nullable Output<String> masterUserName;
+        private @Nullable Output<String> rolesKey;
+        private @Nullable Output<Integer> sessionTimeoutMinutes;
+        private @Nullable Output<String> subjectKey;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     	      this.subjectKey = defaults.subjectKey;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder idp(@Nullable Input<DomainSamlOptionsSamlOptionsIdpGetArgs> idp) {
+        public Builder idp(@Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp) {
             this.idp = idp;
             return this;
         }
 
         public Builder idp(@Nullable DomainSamlOptionsSamlOptionsIdpGetArgs idp) {
-            this.idp = Input.ofNullable(idp);
+            this.idp = Output.ofNullable(idp);
             return this;
         }
 
-        public Builder masterBackendRole(@Nullable Input<String> masterBackendRole) {
+        public Builder masterBackendRole(@Nullable Output<String> masterBackendRole) {
             this.masterBackendRole = masterBackendRole;
             return this;
         }
 
         public Builder masterBackendRole(@Nullable String masterBackendRole) {
-            this.masterBackendRole = Input.ofNullable(masterBackendRole);
+            this.masterBackendRole = Output.ofNullable(masterBackendRole);
             return this;
         }
 
-        public Builder masterUserName(@Nullable Input<String> masterUserName) {
+        public Builder masterUserName(@Nullable Output<String> masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
 
         public Builder masterUserName(@Nullable String masterUserName) {
-            this.masterUserName = Input.ofNullable(masterUserName);
+            this.masterUserName = Output.ofNullable(masterUserName);
             return this;
         }
 
-        public Builder rolesKey(@Nullable Input<String> rolesKey) {
+        public Builder rolesKey(@Nullable Output<String> rolesKey) {
             this.rolesKey = rolesKey;
             return this;
         }
 
         public Builder rolesKey(@Nullable String rolesKey) {
-            this.rolesKey = Input.ofNullable(rolesKey);
+            this.rolesKey = Output.ofNullable(rolesKey);
             return this;
         }
 
-        public Builder sessionTimeoutMinutes(@Nullable Input<Integer> sessionTimeoutMinutes) {
+        public Builder sessionTimeoutMinutes(@Nullable Output<Integer> sessionTimeoutMinutes) {
             this.sessionTimeoutMinutes = sessionTimeoutMinutes;
             return this;
         }
 
         public Builder sessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
-            this.sessionTimeoutMinutes = Input.ofNullable(sessionTimeoutMinutes);
+            this.sessionTimeoutMinutes = Output.ofNullable(sessionTimeoutMinutes);
             return this;
         }
 
-        public Builder subjectKey(@Nullable Input<String> subjectKey) {
+        public Builder subjectKey(@Nullable Output<String> subjectKey) {
             this.subjectKey = subjectKey;
             return this;
         }
 
         public Builder subjectKey(@Nullable String subjectKey) {
-            this.subjectKey = Input.ofNullable(subjectKey);
+            this.subjectKey = Output.ofNullable(subjectKey);
             return this;
         }
         public DomainSamlOptionsSamlOptionsGetArgs build() {

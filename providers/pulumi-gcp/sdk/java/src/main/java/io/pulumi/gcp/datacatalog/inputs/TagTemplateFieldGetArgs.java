@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeGetArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fieldId", required=true)
-      private final Input<String> fieldId;
+      private final Output<String> fieldId;
 
-    public Input<String> getFieldId() {
+    public Output<String> getFieldId() {
         return this.fieldId;
     }
 
@@ -55,10 +55,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isRequired")
-      private final @Nullable Input<Boolean> isRequired;
+      private final @Nullable Output<Boolean> isRequired;
 
-    public Input<Boolean> getIsRequired() {
-        return this.isRequired == null ? Input.empty() : this.isRequired;
+    public Output<Boolean> getIsRequired() {
+        return this.isRequired == null ? Output.empty() : this.isRequired;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="order")
-      private final @Nullable Input<Integer> order;
+      private final @Nullable Output<Integer> order;
 
-    public Input<Integer> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<Integer> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<TagTemplateFieldTypeGetArgs> type;
+      private final Output<TagTemplateFieldTypeGetArgs> type;
 
-    public Input<TagTemplateFieldTypeGetArgs> getType() {
+    public Output<TagTemplateFieldTypeGetArgs> getType() {
         return this.type;
     }
 
     public TagTemplateFieldGetArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> fieldId,
-        @Nullable Input<Boolean> isRequired,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> order,
-        Input<TagTemplateFieldTypeGetArgs> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> fieldId,
+        @Nullable Output<Boolean> isRequired,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> order,
+        Output<TagTemplateFieldTypeGetArgs> type) {
         this.description = description;
         this.displayName = displayName;
         this.fieldId = Objects.requireNonNull(fieldId, "expected parameter 'fieldId' to be non-null");
@@ -116,13 +116,13 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private TagTemplateFieldGetArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.fieldId = Input.empty();
-        this.isRequired = Input.empty();
-        this.name = Input.empty();
-        this.order = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.fieldId = Output.empty();
+        this.isRequired = Output.empty();
+        this.name = Output.empty();
+        this.order = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> fieldId;
-        private @Nullable Input<Boolean> isRequired;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> order;
-        private Input<TagTemplateFieldTypeGetArgs> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> fieldId;
+        private @Nullable Output<Boolean> isRequired;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> order;
+        private Output<TagTemplateFieldTypeGetArgs> type;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder fieldId(Input<String> fieldId) {
+        public Builder fieldId(Output<String> fieldId) {
             this.fieldId = Objects.requireNonNull(fieldId);
             return this;
         }
 
         public Builder fieldId(String fieldId) {
-            this.fieldId = Input.of(Objects.requireNonNull(fieldId));
+            this.fieldId = Output.of(Objects.requireNonNull(fieldId));
             return this;
         }
 
-        public Builder isRequired(@Nullable Input<Boolean> isRequired) {
+        public Builder isRequired(@Nullable Output<Boolean> isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
         public Builder isRequired(@Nullable Boolean isRequired) {
-            this.isRequired = Input.ofNullable(isRequired);
+            this.isRequired = Output.ofNullable(isRequired);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder order(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable Integer order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
 
-        public Builder type(Input<TagTemplateFieldTypeGetArgs> type) {
+        public Builder type(Output<TagTemplateFieldTypeGetArgs> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(TagTemplateFieldTypeGetArgs type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TagTemplateFieldGetArgs build() {

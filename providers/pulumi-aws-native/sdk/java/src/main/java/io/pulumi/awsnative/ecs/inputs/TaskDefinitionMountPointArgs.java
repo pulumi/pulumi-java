@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
     public static final TaskDefinitionMountPointArgs Empty = new TaskDefinitionMountPointArgs();
 
     @InputImport(name="containerPath")
-      private final @Nullable Input<String> containerPath;
+      private final @Nullable Output<String> containerPath;
 
-    public Input<String> getContainerPath() {
-        return this.containerPath == null ? Input.empty() : this.containerPath;
+    public Output<String> getContainerPath() {
+        return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     @InputImport(name="sourceVolume")
-      private final @Nullable Input<String> sourceVolume;
+      private final @Nullable Output<String> sourceVolume;
 
-    public Input<String> getSourceVolume() {
-        return this.sourceVolume == null ? Input.empty() : this.sourceVolume;
+    public Output<String> getSourceVolume() {
+        return this.sourceVolume == null ? Output.empty() : this.sourceVolume;
     }
 
     public TaskDefinitionMountPointArgs(
-        @Nullable Input<String> containerPath,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<String> sourceVolume) {
+        @Nullable Output<String> containerPath,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<String> sourceVolume) {
         this.containerPath = containerPath;
         this.readOnly = readOnly;
         this.sourceVolume = sourceVolume;
     }
 
     private TaskDefinitionMountPointArgs() {
-        this.containerPath = Input.empty();
-        this.readOnly = Input.empty();
-        this.sourceVolume = Input.empty();
+        this.containerPath = Output.empty();
+        this.readOnly = Output.empty();
+        this.sourceVolume = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerPath;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<String> sourceVolume;
+        private @Nullable Output<String> containerPath;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<String> sourceVolume;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
     	      this.sourceVolume = defaults.sourceVolume;
         }
 
-        public Builder containerPath(@Nullable Input<String> containerPath) {
+        public Builder containerPath(@Nullable Output<String> containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Input.ofNullable(containerPath);
+            this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder sourceVolume(@Nullable Input<String> sourceVolume) {
+        public Builder sourceVolume(@Nullable Output<String> sourceVolume) {
             this.sourceVolume = sourceVolume;
             return this;
         }
 
         public Builder sourceVolume(@Nullable String sourceVolume) {
-            this.sourceVolume = Input.ofNullable(sourceVolume);
+            this.sourceVolume = Output.ofNullable(sourceVolume);
             return this;
         }
         public TaskDefinitionMountPointArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigNodeConfigIpAllocationPolicyArgs;
 import java.lang.Boolean;
@@ -19,94 +19,94 @@ public final class EnvironmentConfigNodeConfigArgs extends io.pulumi.resources.R
     public static final EnvironmentConfigNodeConfigArgs Empty = new EnvironmentConfigNodeConfigArgs();
 
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     @InputImport(name="enableIpMasqAgent")
-      private final @Nullable Input<Boolean> enableIpMasqAgent;
+      private final @Nullable Output<Boolean> enableIpMasqAgent;
 
-    public Input<Boolean> getEnableIpMasqAgent() {
-        return this.enableIpMasqAgent == null ? Input.empty() : this.enableIpMasqAgent;
+    public Output<Boolean> getEnableIpMasqAgent() {
+        return this.enableIpMasqAgent == null ? Output.empty() : this.enableIpMasqAgent;
     }
 
     @InputImport(name="ipAllocationPolicy")
-      private final @Nullable Input<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy;
+      private final @Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy;
 
-    public Input<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> getIpAllocationPolicy() {
-        return this.ipAllocationPolicy == null ? Input.empty() : this.ipAllocationPolicy;
+    public Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> getIpAllocationPolicy() {
+        return this.ipAllocationPolicy == null ? Output.empty() : this.ipAllocationPolicy;
     }
 
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     @InputImport(name="maxPodsPerNode")
-      private final @Nullable Input<Integer> maxPodsPerNode;
+      private final @Nullable Output<Integer> maxPodsPerNode;
 
-    public Input<Integer> getMaxPodsPerNode() {
-        return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
+    public Output<Integer> getMaxPodsPerNode() {
+        return this.maxPodsPerNode == null ? Output.empty() : this.maxPodsPerNode;
     }
 
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     @InputImport(name="oauthScopes")
-      private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Output<List<String>> oauthScopes;
 
-    public Input<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
+    public Output<List<String>> getOauthScopes() {
+        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
     }
 
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public EnvironmentConfigNodeConfigArgs(
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<Boolean> enableIpMasqAgent,
-        @Nullable Input<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy,
-        @Nullable Input<String> machineType,
-        @Nullable Input<Integer> maxPodsPerNode,
-        @Nullable Input<String> network,
-        @Nullable Input<List<String>> oauthScopes,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> zone) {
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<Boolean> enableIpMasqAgent,
+        @Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy,
+        @Nullable Output<String> machineType,
+        @Nullable Output<Integer> maxPodsPerNode,
+        @Nullable Output<String> network,
+        @Nullable Output<List<String>> oauthScopes,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> zone) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicy = ipAllocationPolicy;
@@ -121,17 +121,17 @@ public final class EnvironmentConfigNodeConfigArgs extends io.pulumi.resources.R
     }
 
     private EnvironmentConfigNodeConfigArgs() {
-        this.diskSizeGb = Input.empty();
-        this.enableIpMasqAgent = Input.empty();
-        this.ipAllocationPolicy = Input.empty();
-        this.machineType = Input.empty();
-        this.maxPodsPerNode = Input.empty();
-        this.network = Input.empty();
-        this.oauthScopes = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.subnetwork = Input.empty();
-        this.tags = Input.empty();
-        this.zone = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.enableIpMasqAgent = Output.empty();
+        this.ipAllocationPolicy = Output.empty();
+        this.machineType = Output.empty();
+        this.maxPodsPerNode = Output.empty();
+        this.network = Output.empty();
+        this.oauthScopes = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.subnetwork = Output.empty();
+        this.tags = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,17 +143,17 @@ public final class EnvironmentConfigNodeConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<Boolean> enableIpMasqAgent;
-        private @Nullable Input<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<Integer> maxPodsPerNode;
-        private @Nullable Input<String> network;
-        private @Nullable Input<List<String>> oauthScopes;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<Boolean> enableIpMasqAgent;
+        private @Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<Integer> maxPodsPerNode;
+        private @Nullable Output<String> network;
+        private @Nullable Output<List<String>> oauthScopes;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -174,113 +174,113 @@ public final class EnvironmentConfigNodeConfigArgs extends io.pulumi.resources.R
     	      this.zone = defaults.zone;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder enableIpMasqAgent(@Nullable Input<Boolean> enableIpMasqAgent) {
+        public Builder enableIpMasqAgent(@Nullable Output<Boolean> enableIpMasqAgent) {
             this.enableIpMasqAgent = enableIpMasqAgent;
             return this;
         }
 
         public Builder enableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
-            this.enableIpMasqAgent = Input.ofNullable(enableIpMasqAgent);
+            this.enableIpMasqAgent = Output.ofNullable(enableIpMasqAgent);
             return this;
         }
 
-        public Builder ipAllocationPolicy(@Nullable Input<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(@Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
 
         public Builder ipAllocationPolicy(@Nullable EnvironmentConfigNodeConfigIpAllocationPolicyArgs ipAllocationPolicy) {
-            this.ipAllocationPolicy = Input.ofNullable(ipAllocationPolicy);
+            this.ipAllocationPolicy = Output.ofNullable(ipAllocationPolicy);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder maxPodsPerNode(@Nullable Input<Integer> maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
         public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Input.ofNullable(maxPodsPerNode);
+            this.maxPodsPerNode = Output.ofNullable(maxPodsPerNode);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Input.ofNullable(oauthScopes);
+            this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public EnvironmentConfigNodeConfigArgs build() {

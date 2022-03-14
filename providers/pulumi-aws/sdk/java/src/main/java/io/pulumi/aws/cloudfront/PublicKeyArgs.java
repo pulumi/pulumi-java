@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encodedKey", required=true)
-      private final Input<String> encodedKey;
+      private final Output<String> encodedKey;
 
-    public Input<String> getEncodedKey() {
+    public Output<String> getEncodedKey() {
         return this.encodedKey;
     }
 
@@ -41,10 +41,10 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     public PublicKeyArgs(
-        @Nullable Input<String> comment,
-        Input<String> encodedKey,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix) {
+        @Nullable Output<String> comment,
+        Output<String> encodedKey,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix) {
         this.comment = comment;
         this.encodedKey = Objects.requireNonNull(encodedKey, "expected parameter 'encodedKey' to be non-null");
         this.name = name;
@@ -70,10 +70,10 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublicKeyArgs() {
-        this.comment = Input.empty();
-        this.encodedKey = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
+        this.comment = Output.empty();
+        this.encodedKey = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private Input<String> encodedKey;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
+        private @Nullable Output<String> comment;
+        private Output<String> encodedKey;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder encodedKey(Input<String> encodedKey) {
+        public Builder encodedKey(Output<String> encodedKey) {
             this.encodedKey = Objects.requireNonNull(encodedKey);
             return this;
         }
 
         public Builder encodedKey(String encodedKey) {
-            this.encodedKey = Input.of(Objects.requireNonNull(encodedKey));
+            this.encodedKey = Output.of(Objects.requireNonNull(encodedKey));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
         public PublicKeyArgs build() {

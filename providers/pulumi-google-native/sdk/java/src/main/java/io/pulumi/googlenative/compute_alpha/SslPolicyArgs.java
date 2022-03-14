@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SslPolicyMinTlsVersion;
 import io.pulumi.googlenative.compute_alpha.enums.SslPolicyProfile;
@@ -23,10 +23,10 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customFeatures")
-      private final @Nullable Input<List<String>> customFeatures;
+      private final @Nullable Output<List<String>> customFeatures;
 
-    public Input<List<String>> getCustomFeatures() {
-        return this.customFeatures == null ? Input.empty() : this.customFeatures;
+    public Output<List<String>> getCustomFeatures() {
+        return this.customFeatures == null ? Output.empty() : this.customFeatures;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minTlsVersion")
-      private final @Nullable Input<SslPolicyMinTlsVersion> minTlsVersion;
+      private final @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion;
 
-    public Input<SslPolicyMinTlsVersion> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
+    public Output<SslPolicyMinTlsVersion> getMinTlsVersion() {
+        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,24 +67,24 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-      private final @Nullable Input<SslPolicyProfile> profile;
+      private final @Nullable Output<SslPolicyProfile> profile;
 
-    public Input<SslPolicyProfile> getProfile() {
-        return this.profile == null ? Input.empty() : this.profile;
+    public Output<SslPolicyProfile> getProfile() {
+        return this.profile == null ? Output.empty() : this.profile;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -92,21 +92,21 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tlsSettings")
-      private final @Nullable Input<ServerTlsSettingsArgs> tlsSettings;
+      private final @Nullable Output<ServerTlsSettingsArgs> tlsSettings;
 
-    public Input<ServerTlsSettingsArgs> getTlsSettings() {
-        return this.tlsSettings == null ? Input.empty() : this.tlsSettings;
+    public Output<ServerTlsSettingsArgs> getTlsSettings() {
+        return this.tlsSettings == null ? Output.empty() : this.tlsSettings;
     }
 
     public SslPolicyArgs(
-        @Nullable Input<List<String>> customFeatures,
-        @Nullable Input<String> description,
-        @Nullable Input<SslPolicyMinTlsVersion> minTlsVersion,
-        @Nullable Input<String> name,
-        @Nullable Input<SslPolicyProfile> profile,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<ServerTlsSettingsArgs> tlsSettings) {
+        @Nullable Output<List<String>> customFeatures,
+        @Nullable Output<String> description,
+        @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion,
+        @Nullable Output<String> name,
+        @Nullable Output<SslPolicyProfile> profile,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<ServerTlsSettingsArgs> tlsSettings) {
         this.customFeatures = customFeatures;
         this.description = description;
         this.minTlsVersion = minTlsVersion;
@@ -118,14 +118,14 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslPolicyArgs() {
-        this.customFeatures = Input.empty();
-        this.description = Input.empty();
-        this.minTlsVersion = Input.empty();
-        this.name = Input.empty();
-        this.profile = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.tlsSettings = Input.empty();
+        this.customFeatures = Output.empty();
+        this.description = Output.empty();
+        this.minTlsVersion = Output.empty();
+        this.name = Output.empty();
+        this.profile = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.tlsSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,14 +137,14 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> customFeatures;
-        private @Nullable Input<String> description;
-        private @Nullable Input<SslPolicyMinTlsVersion> minTlsVersion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SslPolicyProfile> profile;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<ServerTlsSettingsArgs> tlsSettings;
+        private @Nullable Output<List<String>> customFeatures;
+        private @Nullable Output<String> description;
+        private @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SslPolicyProfile> profile;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<ServerTlsSettingsArgs> tlsSettings;
 
         public Builder() {
     	      // Empty
@@ -162,83 +162,83 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tlsSettings = defaults.tlsSettings;
         }
 
-        public Builder customFeatures(@Nullable Input<List<String>> customFeatures) {
+        public Builder customFeatures(@Nullable Output<List<String>> customFeatures) {
             this.customFeatures = customFeatures;
             return this;
         }
 
         public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Input.ofNullable(customFeatures);
+            this.customFeatures = Output.ofNullable(customFeatures);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder minTlsVersion(@Nullable Input<SslPolicyMinTlsVersion> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Output<SslPolicyMinTlsVersion> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
         public Builder minTlsVersion(@Nullable SslPolicyMinTlsVersion minTlsVersion) {
-            this.minTlsVersion = Input.ofNullable(minTlsVersion);
+            this.minTlsVersion = Output.ofNullable(minTlsVersion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder profile(@Nullable Input<SslPolicyProfile> profile) {
+        public Builder profile(@Nullable Output<SslPolicyProfile> profile) {
             this.profile = profile;
             return this;
         }
 
         public Builder profile(@Nullable SslPolicyProfile profile) {
-            this.profile = Input.ofNullable(profile);
+            this.profile = Output.ofNullable(profile);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder tlsSettings(@Nullable Input<ServerTlsSettingsArgs> tlsSettings) {
+        public Builder tlsSettings(@Nullable Output<ServerTlsSettingsArgs> tlsSettings) {
             this.tlsSettings = tlsSettings;
             return this;
         }
 
         public Builder tlsSettings(@Nullable ServerTlsSettingsArgs tlsSettings) {
-            this.tlsSettings = Input.ofNullable(tlsSettings);
+            this.tlsSettings = Output.ofNullable(tlsSettings);
             return this;
         }
         public SslPolicyArgs build() {

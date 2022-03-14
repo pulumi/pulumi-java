@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class LaunchTemplateLicenseSpecificationGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="licenseConfigurationArn", required=true)
-      private final Input<String> licenseConfigurationArn;
+      private final Output<String> licenseConfigurationArn;
 
-    public Input<String> getLicenseConfigurationArn() {
+    public Output<String> getLicenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
 
-    public LaunchTemplateLicenseSpecificationGetArgs(Input<String> licenseConfigurationArn) {
+    public LaunchTemplateLicenseSpecificationGetArgs(Output<String> licenseConfigurationArn) {
         this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn, "expected parameter 'licenseConfigurationArn' to be non-null");
     }
 
     private LaunchTemplateLicenseSpecificationGetArgs() {
-        this.licenseConfigurationArn = Input.empty();
+        this.licenseConfigurationArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class LaunchTemplateLicenseSpecificationGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> licenseConfigurationArn;
+        private Output<String> licenseConfigurationArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class LaunchTemplateLicenseSpecificationGetArgs extends io.pulumi.r
     	      this.licenseConfigurationArn = defaults.licenseConfigurationArn;
         }
 
-        public Builder licenseConfigurationArn(Input<String> licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(Output<String> licenseConfigurationArn) {
             this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
             return this;
         }
 
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
-            this.licenseConfigurationArn = Input.of(Objects.requireNonNull(licenseConfigurationArn));
+            this.licenseConfigurationArn = Output.of(Objects.requireNonNull(licenseConfigurationArn));
             return this;
         }
         public LaunchTemplateLicenseSpecificationGetArgs build() {

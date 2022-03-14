@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeDesiredState;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactArgs;
@@ -27,10 +27,10 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts")
-      private final @Nullable Input<List<SoftwareRecipeArtifactArgs>> artifacts;
+      private final @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
 
-    public Input<List<SoftwareRecipeArtifactArgs>> getArtifacts() {
-        return this.artifacts == null ? Input.empty() : this.artifacts;
+    public Output<List<SoftwareRecipeArtifactArgs>> getArtifacts() {
+        return this.artifacts == null ? Output.empty() : this.artifacts;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredState")
-      private final @Nullable Input<SoftwareRecipeDesiredState> desiredState;
+      private final @Nullable Output<SoftwareRecipeDesiredState> desiredState;
 
-    public Input<SoftwareRecipeDesiredState> getDesiredState() {
-        return this.desiredState == null ? Input.empty() : this.desiredState;
+    public Output<SoftwareRecipeDesiredState> getDesiredState() {
+        return this.desiredState == null ? Output.empty() : this.desiredState;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installSteps")
-      private final @Nullable Input<List<SoftwareRecipeStepArgs>> installSteps;
+      private final @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
 
-    public Input<List<SoftwareRecipeStepArgs>> getInstallSteps() {
-        return this.installSteps == null ? Input.empty() : this.installSteps;
+    public Output<List<SoftwareRecipeStepArgs>> getInstallSteps() {
+        return this.installSteps == null ? Output.empty() : this.installSteps;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -71,10 +71,10 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateSteps")
-      private final @Nullable Input<List<SoftwareRecipeStepArgs>> updateSteps;
+      private final @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
 
-    public Input<List<SoftwareRecipeStepArgs>> getUpdateSteps() {
-        return this.updateSteps == null ? Input.empty() : this.updateSteps;
+    public Output<List<SoftwareRecipeStepArgs>> getUpdateSteps() {
+        return this.updateSteps == null ? Output.empty() : this.updateSteps;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SoftwareRecipeArgs(
-        @Nullable Input<List<SoftwareRecipeArtifactArgs>> artifacts,
-        @Nullable Input<SoftwareRecipeDesiredState> desiredState,
-        @Nullable Input<List<SoftwareRecipeStepArgs>> installSteps,
-        Input<String> name,
-        @Nullable Input<List<SoftwareRecipeStepArgs>> updateSteps,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts,
+        @Nullable Output<SoftwareRecipeDesiredState> desiredState,
+        @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps,
+        Output<String> name,
+        @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps,
+        @Nullable Output<String> version) {
         this.artifacts = artifacts;
         this.desiredState = desiredState;
         this.installSteps = installSteps;
@@ -104,12 +104,12 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SoftwareRecipeArgs() {
-        this.artifacts = Input.empty();
-        this.desiredState = Input.empty();
-        this.installSteps = Input.empty();
-        this.name = Input.empty();
-        this.updateSteps = Input.empty();
-        this.version = Input.empty();
+        this.artifacts = Output.empty();
+        this.desiredState = Output.empty();
+        this.installSteps = Output.empty();
+        this.name = Output.empty();
+        this.updateSteps = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SoftwareRecipeArtifactArgs>> artifacts;
-        private @Nullable Input<SoftwareRecipeDesiredState> desiredState;
-        private @Nullable Input<List<SoftwareRecipeStepArgs>> installSteps;
-        private Input<String> name;
-        private @Nullable Input<List<SoftwareRecipeStepArgs>> updateSteps;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
+        private @Nullable Output<SoftwareRecipeDesiredState> desiredState;
+        private @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
+        private Output<String> name;
+        private @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder artifacts(@Nullable Input<List<SoftwareRecipeArtifactArgs>> artifacts) {
+        public Builder artifacts(@Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         public Builder artifacts(@Nullable List<SoftwareRecipeArtifactArgs> artifacts) {
-            this.artifacts = Input.ofNullable(artifacts);
+            this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
 
-        public Builder desiredState(@Nullable Input<SoftwareRecipeDesiredState> desiredState) {
+        public Builder desiredState(@Nullable Output<SoftwareRecipeDesiredState> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
         public Builder desiredState(@Nullable SoftwareRecipeDesiredState desiredState) {
-            this.desiredState = Input.ofNullable(desiredState);
+            this.desiredState = Output.ofNullable(desiredState);
             return this;
         }
 
-        public Builder installSteps(@Nullable Input<List<SoftwareRecipeStepArgs>> installSteps) {
+        public Builder installSteps(@Nullable Output<List<SoftwareRecipeStepArgs>> installSteps) {
             this.installSteps = installSteps;
             return this;
         }
 
         public Builder installSteps(@Nullable List<SoftwareRecipeStepArgs> installSteps) {
-            this.installSteps = Input.ofNullable(installSteps);
+            this.installSteps = Output.ofNullable(installSteps);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder updateSteps(@Nullable Input<List<SoftwareRecipeStepArgs>> updateSteps) {
+        public Builder updateSteps(@Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps) {
             this.updateSteps = updateSteps;
             return this;
         }
 
         public Builder updateSteps(@Nullable List<SoftwareRecipeStepArgs> updateSteps) {
-            this.updateSteps = Input.ofNullable(updateSteps);
+            this.updateSteps = Output.ofNullable(updateSteps);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SoftwareRecipeArgs build() {

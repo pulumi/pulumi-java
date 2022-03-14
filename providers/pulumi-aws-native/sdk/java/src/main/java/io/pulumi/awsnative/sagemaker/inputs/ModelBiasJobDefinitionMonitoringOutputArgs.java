@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionS3OutputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends io.pulumi.
     public static final ModelBiasJobDefinitionMonitoringOutputArgs Empty = new ModelBiasJobDefinitionMonitoringOutputArgs();
 
     @InputImport(name="s3Output", required=true)
-      private final Input<ModelBiasJobDefinitionS3OutputArgs> s3Output;
+      private final Output<ModelBiasJobDefinitionS3OutputArgs> s3Output;
 
-    public Input<ModelBiasJobDefinitionS3OutputArgs> getS3Output() {
+    public Output<ModelBiasJobDefinitionS3OutputArgs> getS3Output() {
         return this.s3Output;
     }
 
-    public ModelBiasJobDefinitionMonitoringOutputArgs(Input<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
+    public ModelBiasJobDefinitionMonitoringOutputArgs(Output<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
         this.s3Output = Objects.requireNonNull(s3Output, "expected parameter 's3Output' to be non-null");
     }
 
     private ModelBiasJobDefinitionMonitoringOutputArgs() {
-        this.s3Output = Input.empty();
+        this.s3Output = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<ModelBiasJobDefinitionS3OutputArgs> s3Output;
+        private Output<ModelBiasJobDefinitionS3OutputArgs> s3Output;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends io.pulumi.
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder s3Output(Input<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
+        public Builder s3Output(Output<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
 
         public Builder s3Output(ModelBiasJobDefinitionS3OutputArgs s3Output) {
-            this.s3Output = Input.of(Objects.requireNonNull(s3Output));
+            this.s3Output = Output.of(Objects.requireNonNull(s3Output));
             return this;
         }
         public ModelBiasJobDefinitionMonitoringOutputArgs build() {

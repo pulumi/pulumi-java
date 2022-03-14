@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -16,46 +16,46 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     public static final TopicRuleKafkaActionArgs Empty = new TopicRuleKafkaActionArgs();
 
     @InputImport(name="clientProperties", required=true)
-      private final Input<Object> clientProperties;
+      private final Output<Object> clientProperties;
 
-    public Input<Object> getClientProperties() {
+    public Output<Object> getClientProperties() {
         return this.clientProperties;
     }
 
     @InputImport(name="destinationArn", required=true)
-      private final Input<String> destinationArn;
+      private final Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
+    public Output<String> getDestinationArn() {
         return this.destinationArn;
     }
 
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     @InputImport(name="partition")
-      private final @Nullable Input<String> partition;
+      private final @Nullable Output<String> partition;
 
-    public Input<String> getPartition() {
-        return this.partition == null ? Input.empty() : this.partition;
+    public Output<String> getPartition() {
+        return this.partition == null ? Output.empty() : this.partition;
     }
 
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public TopicRuleKafkaActionArgs(
-        Input<Object> clientProperties,
-        Input<String> destinationArn,
-        @Nullable Input<String> key,
-        @Nullable Input<String> partition,
-        Input<String> topic) {
+        Output<Object> clientProperties,
+        Output<String> destinationArn,
+        @Nullable Output<String> key,
+        @Nullable Output<String> partition,
+        Output<String> topic) {
         this.clientProperties = Objects.requireNonNull(clientProperties, "expected parameter 'clientProperties' to be non-null");
         this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
         this.key = key;
@@ -64,11 +64,11 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     }
 
     private TopicRuleKafkaActionArgs() {
-        this.clientProperties = Input.empty();
-        this.destinationArn = Input.empty();
-        this.key = Input.empty();
-        this.partition = Input.empty();
-        this.topic = Input.empty();
+        this.clientProperties = Output.empty();
+        this.destinationArn = Output.empty();
+        this.key = Output.empty();
+        this.partition = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Object> clientProperties;
-        private Input<String> destinationArn;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> partition;
-        private Input<String> topic;
+        private Output<Object> clientProperties;
+        private Output<String> destinationArn;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> partition;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     	      this.topic = defaults.topic;
         }
 
-        public Builder clientProperties(Input<Object> clientProperties) {
+        public Builder clientProperties(Output<Object> clientProperties) {
             this.clientProperties = Objects.requireNonNull(clientProperties);
             return this;
         }
 
         public Builder clientProperties(Object clientProperties) {
-            this.clientProperties = Input.of(Objects.requireNonNull(clientProperties));
+            this.clientProperties = Output.of(Objects.requireNonNull(clientProperties));
             return this;
         }
 
-        public Builder destinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Output<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
+            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder partition(@Nullable Input<String> partition) {
+        public Builder partition(@Nullable Output<String> partition) {
             this.partition = partition;
             return this;
         }
 
         public Builder partition(@Nullable String partition) {
-            this.partition = Input.ofNullable(partition);
+            this.partition = Output.ofNullable(partition);
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public TopicRuleKafkaActionArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.azurenative.resources.outputs.IdentityResponse;
 import io.pulumi.azurenative.resources.outputs.PlanResponse;
 import io.pulumi.azurenative.resources.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -212,35 +211,35 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:resources:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Resource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Resource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:Resource", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:resources/v20151101:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20160201:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20160701:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20160901:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20170510:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20180201:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20180501:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190301:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190501:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190510:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190701:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190801:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20191001:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20200601:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20200801:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20201001:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210101:Resource").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210401:Resource").build())
+                Output.of(Alias.builder().setType("azure-native:resources/v20151101:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20160201:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20160701:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20160901:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20170510:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20180201:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20180501:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190301:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190501:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190510:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190701:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190801:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20191001:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200601:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200801:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20201001:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210101:Resource").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210401:Resource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -254,7 +253,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Resource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Resource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Resource(name, id, options);
     }
 }

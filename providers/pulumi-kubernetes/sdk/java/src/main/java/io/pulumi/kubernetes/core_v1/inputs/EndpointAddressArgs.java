@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ip", required=true)
-      private final Input<String> ip;
+      private final Output<String> ip;
 
-    public Input<String> getIp() {
+    public Output<String> getIp() {
         return this.ip;
     }
 
@@ -46,10 +46,10 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nodeName")
-      private final @Nullable Input<String> nodeName;
+      private final @Nullable Output<String> nodeName;
 
-    public Input<String> getNodeName() {
-        return this.nodeName == null ? Input.empty() : this.nodeName;
+    public Output<String> getNodeName() {
+        return this.nodeName == null ? Output.empty() : this.nodeName;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetRef")
-      private final @Nullable Input<ObjectReferenceArgs> targetRef;
+      private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
-    public Input<ObjectReferenceArgs> getTargetRef() {
-        return this.targetRef == null ? Input.empty() : this.targetRef;
+    public Output<ObjectReferenceArgs> getTargetRef() {
+        return this.targetRef == null ? Output.empty() : this.targetRef;
     }
 
     public EndpointAddressArgs(
-        @Nullable Input<String> hostname,
-        Input<String> ip,
-        @Nullable Input<String> nodeName,
-        @Nullable Input<ObjectReferenceArgs> targetRef) {
+        @Nullable Output<String> hostname,
+        Output<String> ip,
+        @Nullable Output<String> nodeName,
+        @Nullable Output<ObjectReferenceArgs> targetRef) {
         this.hostname = hostname;
         this.ip = Objects.requireNonNull(ip, "expected parameter 'ip' to be non-null");
         this.nodeName = nodeName;
@@ -75,10 +75,10 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EndpointAddressArgs() {
-        this.hostname = Input.empty();
-        this.ip = Input.empty();
-        this.nodeName = Input.empty();
-        this.targetRef = Input.empty();
+        this.hostname = Output.empty();
+        this.ip = Output.empty();
+        this.nodeName = Output.empty();
+        this.targetRef = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostname;
-        private Input<String> ip;
-        private @Nullable Input<String> nodeName;
-        private @Nullable Input<ObjectReferenceArgs> targetRef;
+        private @Nullable Output<String> hostname;
+        private Output<String> ip;
+        private @Nullable Output<String> nodeName;
+        private @Nullable Output<ObjectReferenceArgs> targetRef;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetRef = defaults.targetRef;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder ip(Input<String> ip) {
+        public Builder ip(Output<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
         public Builder ip(String ip) {
-            this.ip = Input.of(Objects.requireNonNull(ip));
+            this.ip = Output.of(Objects.requireNonNull(ip));
             return this;
         }
 
-        public Builder nodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Output<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Input.ofNullable(nodeName);
+            this.nodeName = Output.ofNullable(nodeName);
             return this;
         }
 
-        public Builder targetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
+        public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
         public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
-            this.targetRef = Input.ofNullable(targetRef);
+            this.targetRef = Output.ofNullable(targetRef);
             return this;
         }
         public EndpointAddressArgs build() {

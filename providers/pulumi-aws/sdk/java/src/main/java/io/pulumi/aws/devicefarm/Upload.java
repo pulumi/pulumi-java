@@ -6,7 +6,6 @@ package io.pulumi.aws.devicefarm;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.devicefarm.UploadArgs;
 import io.pulumi.aws.devicefarm.inputs.UploadState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,14 +181,14 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Upload(String name, UploadArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:devicefarm/upload:Upload", name, args == null ? UploadArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:devicefarm/upload:Upload", name, args == null ? UploadArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Upload(String name, Input<String> id, @Nullable UploadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Upload(String name, Output<String> id, @Nullable UploadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:devicefarm/upload:Upload", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -205,7 +204,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Upload get(String name, Input<String> id, @Nullable UploadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Upload get(String name, Output<String> id, @Nullable UploadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Upload(name, id, state, options);
     }
 }

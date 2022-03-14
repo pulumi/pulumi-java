@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-      private final @Nullable Input<Integer> number;
+      private final @Nullable Output<Integer> number;
 
-    public Input<Integer> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Integer> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public CardinalityArgs(
-        @Nullable Input<Integer> number,
-        @Nullable Input<String> path) {
+        @Nullable Output<Integer> number,
+        @Nullable Output<String> path) {
         this.number = number;
         this.path = path;
     }
 
     private CardinalityArgs() {
-        this.number = Input.empty();
-        this.path = Input.empty();
+        this.number = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> number;
-        private @Nullable Input<String> path;
+        private @Nullable Output<Integer> number;
+        private @Nullable Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder number(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Integer number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public CardinalityArgs build() {

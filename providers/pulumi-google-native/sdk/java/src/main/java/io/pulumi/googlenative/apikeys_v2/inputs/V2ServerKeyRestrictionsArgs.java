@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allowedIps")
-      private final @Nullable Input<List<String>> allowedIps;
+      private final @Nullable Output<List<String>> allowedIps;
 
-    public Input<List<String>> getAllowedIps() {
-        return this.allowedIps == null ? Input.empty() : this.allowedIps;
+    public Output<List<String>> getAllowedIps() {
+        return this.allowedIps == null ? Output.empty() : this.allowedIps;
     }
 
-    public V2ServerKeyRestrictionsArgs(@Nullable Input<List<String>> allowedIps) {
+    public V2ServerKeyRestrictionsArgs(@Nullable Output<List<String>> allowedIps) {
         this.allowedIps = allowedIps;
     }
 
     private V2ServerKeyRestrictionsArgs() {
-        this.allowedIps = Input.empty();
+        this.allowedIps = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedIps;
+        private @Nullable Output<List<String>> allowedIps;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
     	      this.allowedIps = defaults.allowedIps;
         }
 
-        public Builder allowedIps(@Nullable Input<List<String>> allowedIps) {
+        public Builder allowedIps(@Nullable Output<List<String>> allowedIps) {
             this.allowedIps = allowedIps;
             return this;
         }
 
         public Builder allowedIps(@Nullable List<String> allowedIps) {
-            this.allowedIps = Input.ofNullable(allowedIps);
+            this.allowedIps = Output.ofNullable(allowedIps);
             return this;
         }
         public V2ServerKeyRestrictionsArgs build() {

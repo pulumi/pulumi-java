@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
      * 
      */
     @InputImport(name="acm")
-      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm;
+      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm;
 
-    public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> getAcm() {
-        return this.acm == null ? Input.empty() : this.acm;
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> getAcm() {
+        return this.acm == null ? Output.empty() : this.acm;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file;
+      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file;
 
-    public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
      * 
      */
     @InputImport(name="sds")
-      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds;
+      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds;
 
-    public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> getSds() {
-        return this.sds == null ? Input.empty() : this.sds;
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> getSds() {
+        return this.sds == null ? Output.empty() : this.sds;
     }
 
     public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs(
-        @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm,
-        @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file,
-        @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds) {
+        @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm,
+        @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file,
+        @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;
     }
 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs() {
-        this.acm = Input.empty();
-        this.file = Input.empty();
-        this.sds = Input.empty();
+        this.acm = Output.empty();
+        this.file = Output.empty();
+        this.sds = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm;
-        private @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file;
-        private @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds;
+        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm;
+        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file;
+        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     	      this.sds = defaults.sds;
         }
 
-        public Builder acm(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm) {
+        public Builder acm(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm) {
             this.acm = acm;
             return this;
         }
 
         public Builder acm(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs acm) {
-            this.acm = Input.ofNullable(acm);
+            this.acm = Output.ofNullable(acm);
             return this;
         }
 
-        public Builder file(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file) {
+        public Builder file(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder sds(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds) {
+        public Builder sds(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
 
         public Builder sds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs sds) {
-            this.sds = Input.ofNullable(sds);
+            this.sds = Output.ofNullable(sds);
             return this;
         }
         public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs build() {

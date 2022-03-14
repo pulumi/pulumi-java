@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.enums.AddonType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-      private final @Nullable Input<String> addonName;
+      private final @Nullable Output<String> addonName;
 
-    public Input<String> getAddonName() {
-        return this.addonName == null ? Input.empty() : this.addonName;
+    public Output<String> getAddonName() {
+        return this.addonName == null ? Output.empty() : this.addonName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonType")
-      private final @Nullable Input<Either<String,AddonType>> addonType;
+      private final @Nullable Output<Either<String,AddonType>> addonType;
 
-    public Input<Either<String,AddonType>> getAddonType() {
-        return this.addonType == null ? Input.empty() : this.addonType;
+    public Output<Either<String,AddonType>> getAddonType() {
+        return this.addonType == null ? Output.empty() : this.addonType;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseKey")
-      private final @Nullable Input<String> licenseKey;
+      private final @Nullable Output<String> licenseKey;
 
-    public Input<String> getLicenseKey() {
-        return this.licenseKey == null ? Input.empty() : this.licenseKey;
+    public Output<String> getLicenseKey() {
+        return this.licenseKey == null ? Output.empty() : this.licenseKey;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -65,18 +65,18 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public AddonArgs(
-        @Nullable Input<String> addonName,
-        @Nullable Input<Either<String,AddonType>> addonType,
-        @Nullable Input<String> licenseKey,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> addonName,
+        @Nullable Output<Either<String,AddonType>> addonType,
+        @Nullable Output<String> licenseKey,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName) {
         this.addonName = addonName;
         this.addonType = addonType;
         this.licenseKey = licenseKey;
@@ -85,11 +85,11 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddonArgs() {
-        this.addonName = Input.empty();
-        this.addonType = Input.empty();
-        this.licenseKey = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.addonName = Output.empty();
+        this.addonType = Output.empty();
+        this.licenseKey = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addonName;
-        private @Nullable Input<Either<String,AddonType>> addonType;
-        private @Nullable Input<String> licenseKey;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> addonName;
+        private @Nullable Output<Either<String,AddonType>> addonType;
+        private @Nullable Output<String> licenseKey;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder addonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Output<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Input.ofNullable(addonName);
+            this.addonName = Output.ofNullable(addonName);
             return this;
         }
 
-        public Builder addonType(@Nullable Input<Either<String,AddonType>> addonType) {
+        public Builder addonType(@Nullable Output<Either<String,AddonType>> addonType) {
             this.addonType = addonType;
             return this;
         }
 
         public Builder addonType(@Nullable Either<String,AddonType> addonType) {
-            this.addonType = Input.ofNullable(addonType);
+            this.addonType = Output.ofNullable(addonType);
             return this;
         }
 
-        public Builder licenseKey(@Nullable Input<String> licenseKey) {
+        public Builder licenseKey(@Nullable Output<String> licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
 
         public Builder licenseKey(@Nullable String licenseKey) {
-            this.licenseKey = Input.ofNullable(licenseKey);
+            this.licenseKey = Output.ofNullable(licenseKey);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public AddonArgs build() {

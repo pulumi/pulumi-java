@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -32,22 +32,22 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public ClusterNotificationConfigPubsubArgs(
-        Input<Boolean> enabled,
-        @Nullable Input<String> topic) {
+        Output<Boolean> enabled,
+        @Nullable Output<String> topic) {
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.topic = topic;
     }
 
     private ClusterNotificationConfigPubsubArgs() {
-        this.enabled = Input.empty();
-        this.topic = Input.empty();
+        this.enabled = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> enabled;
-        private @Nullable Input<String> topic;
+        private Output<Boolean> enabled;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ClusterNotificationConfigPubsubArgs extends io.pulumi.resourc
     	      this.topic = defaults.topic;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public ClusterNotificationConfigPubsubArgs build() {

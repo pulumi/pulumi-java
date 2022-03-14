@@ -9,7 +9,7 @@ import io.pulumi.azurenative.dbformariadb.enums.ServerVersion;
 import io.pulumi.azurenative.dbformariadb.enums.SslEnforcementEnum;
 import io.pulumi.azurenative.dbformariadb.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -30,9 +30,9 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="createMode", required=true)
-      private final Input<String> createMode;
+      private final Output<String> createMode;
 
-    public Input<String> getCreateMode() {
+    public Output<String> getCreateMode() {
         return this.createMode;
     }
 
@@ -41,10 +41,10 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="minimalTlsVersion")
-      private final @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
+      private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
-    public Input<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
+    public Output<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
+        return this.minimalTlsVersion == null ? Output.empty() : this.minimalTlsVersion;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="restorePointInTime", required=true)
-      private final Input<String> restorePointInTime;
+      private final Output<String> restorePointInTime;
 
-    public Input<String> getRestorePointInTime() {
+    public Output<String> getRestorePointInTime() {
         return this.restorePointInTime;
     }
 
@@ -74,9 +74,9 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sourceServerId", required=true)
-      private final Input<String> sourceServerId;
+      private final Output<String> sourceServerId;
 
-    public Input<String> getSourceServerId() {
+    public Output<String> getSourceServerId() {
         return this.sourceServerId;
     }
 
@@ -85,10 +85,10 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sslEnforcement")
-      private final @Nullable Input<SslEnforcementEnum> sslEnforcement;
+      private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
-    public Input<SslEnforcementEnum> getSslEnforcement() {
-        return this.sslEnforcement == null ? Input.empty() : this.sslEnforcement;
+    public Output<SslEnforcementEnum> getSslEnforcement() {
+        return this.sslEnforcement == null ? Output.empty() : this.sslEnforcement;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageProfile")
-      private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Input<StorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Input.empty() : this.storageProfile;
+    public Output<StorageProfileArgs> getStorageProfile() {
+        return this.storageProfile == null ? Output.empty() : this.storageProfile;
     }
 
     /**
@@ -107,21 +107,21 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Either<String,ServerVersion>> version;
+      private final @Nullable Output<Either<String,ServerVersion>> version;
 
-    public Input<Either<String,ServerVersion>> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Either<String,ServerVersion>> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ServerPropertiesForRestoreArgs(
-        Input<String> createMode,
-        @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion,
-        @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess,
-        Input<String> restorePointInTime,
-        Input<String> sourceServerId,
-        @Nullable Input<SslEnforcementEnum> sslEnforcement,
-        @Nullable Input<StorageProfileArgs> storageProfile,
-        @Nullable Input<Either<String,ServerVersion>> version) {
+        Output<String> createMode,
+        @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion,
+        @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess,
+        Output<String> restorePointInTime,
+        Output<String> sourceServerId,
+        @Nullable Output<SslEnforcementEnum> sslEnforcement,
+        @Nullable Output<StorageProfileArgs> storageProfile,
+        @Nullable Output<Either<String,ServerVersion>> version) {
         this.createMode = Objects.requireNonNull(createMode, "expected parameter 'createMode' to be non-null");
         this.minimalTlsVersion = minimalTlsVersion;
         this.publicNetworkAccess = publicNetworkAccess;
@@ -133,14 +133,14 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
     }
 
     private ServerPropertiesForRestoreArgs() {
-        this.createMode = Input.empty();
-        this.minimalTlsVersion = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.restorePointInTime = Input.empty();
-        this.sourceServerId = Input.empty();
-        this.sslEnforcement = Input.empty();
-        this.storageProfile = Input.empty();
-        this.version = Input.empty();
+        this.createMode = Output.empty();
+        this.minimalTlsVersion = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.restorePointInTime = Output.empty();
+        this.sourceServerId = Output.empty();
+        this.sslEnforcement = Output.empty();
+        this.storageProfile = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,14 +152,14 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> createMode;
-        private @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
-        private @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
-        private Input<String> restorePointInTime;
-        private Input<String> sourceServerId;
-        private @Nullable Input<SslEnforcementEnum> sslEnforcement;
-        private @Nullable Input<StorageProfileArgs> storageProfile;
-        private @Nullable Input<Either<String,ServerVersion>> version;
+        private Output<String> createMode;
+        private @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
+        private @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
+        private Output<String> restorePointInTime;
+        private Output<String> sourceServerId;
+        private @Nullable Output<SslEnforcementEnum> sslEnforcement;
+        private @Nullable Output<StorageProfileArgs> storageProfile;
+        private @Nullable Output<Either<String,ServerVersion>> version;
 
         public Builder() {
     	      // Empty
@@ -177,83 +177,83 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
     	      this.version = defaults.version;
         }
 
-        public Builder createMode(Input<String> createMode) {
+        public Builder createMode(Output<String> createMode) {
             this.createMode = Objects.requireNonNull(createMode);
             return this;
         }
 
         public Builder createMode(String createMode) {
-            this.createMode = Input.of(Objects.requireNonNull(createMode));
+            this.createMode = Output.of(Objects.requireNonNull(createMode));
             return this;
         }
 
-        public Builder minimalTlsVersion(@Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
         public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
-            this.minimalTlsVersion = Input.ofNullable(minimalTlsVersion);
+            this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder restorePointInTime(Input<String> restorePointInTime) {
+        public Builder restorePointInTime(Output<String> restorePointInTime) {
             this.restorePointInTime = Objects.requireNonNull(restorePointInTime);
             return this;
         }
 
         public Builder restorePointInTime(String restorePointInTime) {
-            this.restorePointInTime = Input.of(Objects.requireNonNull(restorePointInTime));
+            this.restorePointInTime = Output.of(Objects.requireNonNull(restorePointInTime));
             return this;
         }
 
-        public Builder sourceServerId(Input<String> sourceServerId) {
+        public Builder sourceServerId(Output<String> sourceServerId) {
             this.sourceServerId = Objects.requireNonNull(sourceServerId);
             return this;
         }
 
         public Builder sourceServerId(String sourceServerId) {
-            this.sourceServerId = Input.of(Objects.requireNonNull(sourceServerId));
+            this.sourceServerId = Output.of(Objects.requireNonNull(sourceServerId));
             return this;
         }
 
-        public Builder sslEnforcement(@Nullable Input<SslEnforcementEnum> sslEnforcement) {
+        public Builder sslEnforcement(@Nullable Output<SslEnforcementEnum> sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
 
         public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
-            this.sslEnforcement = Input.ofNullable(sslEnforcement);
+            this.sslEnforcement = Output.ofNullable(sslEnforcement);
             return this;
         }
 
-        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Input.ofNullable(storageProfile);
+            this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder version(@Nullable Input<Either<String,ServerVersion>> version) {
+        public Builder version(@Nullable Output<Either<String,ServerVersion>> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Either<String,ServerVersion> version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ServerPropertiesForRestoreArgs build() {

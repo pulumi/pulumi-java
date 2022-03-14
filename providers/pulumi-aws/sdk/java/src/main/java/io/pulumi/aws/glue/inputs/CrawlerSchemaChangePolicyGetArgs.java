@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CrawlerSchemaChangePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deleteBehavior")
-      private final @Nullable Input<String> deleteBehavior;
+      private final @Nullable Output<String> deleteBehavior;
 
-    public Input<String> getDeleteBehavior() {
-        return this.deleteBehavior == null ? Input.empty() : this.deleteBehavior;
+    public Output<String> getDeleteBehavior() {
+        return this.deleteBehavior == null ? Output.empty() : this.deleteBehavior;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class CrawlerSchemaChangePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="updateBehavior")
-      private final @Nullable Input<String> updateBehavior;
+      private final @Nullable Output<String> updateBehavior;
 
-    public Input<String> getUpdateBehavior() {
-        return this.updateBehavior == null ? Input.empty() : this.updateBehavior;
+    public Output<String> getUpdateBehavior() {
+        return this.updateBehavior == null ? Output.empty() : this.updateBehavior;
     }
 
     public CrawlerSchemaChangePolicyGetArgs(
-        @Nullable Input<String> deleteBehavior,
-        @Nullable Input<String> updateBehavior) {
+        @Nullable Output<String> deleteBehavior,
+        @Nullable Output<String> updateBehavior) {
         this.deleteBehavior = deleteBehavior;
         this.updateBehavior = updateBehavior;
     }
 
     private CrawlerSchemaChangePolicyGetArgs() {
-        this.deleteBehavior = Input.empty();
-        this.updateBehavior = Input.empty();
+        this.deleteBehavior = Output.empty();
+        this.updateBehavior = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class CrawlerSchemaChangePolicyGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deleteBehavior;
-        private @Nullable Input<String> updateBehavior;
+        private @Nullable Output<String> deleteBehavior;
+        private @Nullable Output<String> updateBehavior;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class CrawlerSchemaChangePolicyGetArgs extends io.pulumi.resources.
     	      this.updateBehavior = defaults.updateBehavior;
         }
 
-        public Builder deleteBehavior(@Nullable Input<String> deleteBehavior) {
+        public Builder deleteBehavior(@Nullable Output<String> deleteBehavior) {
             this.deleteBehavior = deleteBehavior;
             return this;
         }
 
         public Builder deleteBehavior(@Nullable String deleteBehavior) {
-            this.deleteBehavior = Input.ofNullable(deleteBehavior);
+            this.deleteBehavior = Output.ofNullable(deleteBehavior);
             return this;
         }
 
-        public Builder updateBehavior(@Nullable Input<String> updateBehavior) {
+        public Builder updateBehavior(@Nullable Output<String> updateBehavior) {
             this.updateBehavior = updateBehavior;
             return this;
         }
 
         public Builder updateBehavior(@Nullable String updateBehavior) {
-            this.updateBehavior = Input.ofNullable(updateBehavior);
+            this.updateBehavior = Output.ofNullable(updateBehavior);
             return this;
         }
         public CrawlerSchemaChangePolicyGetArgs build() {

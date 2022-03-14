@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.assuredworkloads_v1.enums.WorkloadComplianceRegime;
 import io.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs;
@@ -25,10 +25,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount")
-      private final @Nullable Input<String> billingAccount;
+      private final @Nullable Output<String> billingAccount;
 
-    public Input<String> getBillingAccount() {
-        return this.billingAccount == null ? Input.empty() : this.billingAccount;
+    public Output<String> getBillingAccount() {
+        return this.billingAccount == null ? Output.empty() : this.billingAccount;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceRegime", required=true)
-      private final Input<WorkloadComplianceRegime> complianceRegime;
+      private final Output<WorkloadComplianceRegime> complianceRegime;
 
-    public Input<WorkloadComplianceRegime> getComplianceRegime() {
+    public Output<WorkloadComplianceRegime> getComplianceRegime() {
         return this.complianceRegime;
     }
 
@@ -47,9 +47,9 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -58,10 +58,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSovereignControls")
-      private final @Nullable Input<Boolean> enableSovereignControls;
+      private final @Nullable Output<Boolean> enableSovereignControls;
 
-    public Input<Boolean> getEnableSovereignControls() {
-        return this.enableSovereignControls == null ? Input.empty() : this.enableSovereignControls;
+    public Output<Boolean> getEnableSovereignControls() {
+        return this.enableSovereignControls == null ? Output.empty() : this.enableSovereignControls;
     }
 
     /**
@@ -69,17 +69,17 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="externalId")
-      private final @Nullable Input<String> externalId;
+      private final @Nullable Output<String> externalId;
 
-    public Input<String> getExternalId() {
-        return this.externalId == null ? Input.empty() : this.externalId;
+    public Output<String> getExternalId() {
+        return this.externalId == null ? Output.empty() : this.externalId;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsSettings")
-      private final @Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
+      private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
 
-    public Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> getKmsSettings() {
-        return this.kmsSettings == null ? Input.empty() : this.kmsSettings;
+    public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> getKmsSettings() {
+        return this.kmsSettings == null ? Output.empty() : this.kmsSettings;
     }
 
     /**
@@ -98,17 +98,17 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -116,16 +116,16 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -134,10 +134,10 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedResourcesParent")
-      private final @Nullable Input<String> provisionedResourcesParent;
+      private final @Nullable Output<String> provisionedResourcesParent;
 
-    public Input<String> getProvisionedResourcesParent() {
-        return this.provisionedResourcesParent == null ? Input.empty() : this.provisionedResourcesParent;
+    public Output<String> getProvisionedResourcesParent() {
+        return this.provisionedResourcesParent == null ? Output.empty() : this.provisionedResourcesParent;
     }
 
     /**
@@ -145,26 +145,26 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSettings")
-      private final @Nullable Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
+      private final @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
 
-    public Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> getResourceSettings() {
-        return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
+    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> getResourceSettings() {
+        return this.resourceSettings == null ? Output.empty() : this.resourceSettings;
     }
 
     public WorkloadArgs(
-        @Nullable Input<String> billingAccount,
-        Input<WorkloadComplianceRegime> complianceRegime,
-        Input<String> displayName,
-        @Nullable Input<Boolean> enableSovereignControls,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> externalId,
-        @Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        @Nullable Input<String> provisionedResourcesParent,
-        @Nullable Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
+        @Nullable Output<String> billingAccount,
+        Output<WorkloadComplianceRegime> complianceRegime,
+        Output<String> displayName,
+        @Nullable Output<Boolean> enableSovereignControls,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> externalId,
+        @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        @Nullable Output<String> provisionedResourcesParent,
+        @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
         this.billingAccount = billingAccount;
         this.complianceRegime = Objects.requireNonNull(complianceRegime, "expected parameter 'complianceRegime' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -181,19 +181,19 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkloadArgs() {
-        this.billingAccount = Input.empty();
-        this.complianceRegime = Input.empty();
-        this.displayName = Input.empty();
-        this.enableSovereignControls = Input.empty();
-        this.etag = Input.empty();
-        this.externalId = Input.empty();
-        this.kmsSettings = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.provisionedResourcesParent = Input.empty();
-        this.resourceSettings = Input.empty();
+        this.billingAccount = Output.empty();
+        this.complianceRegime = Output.empty();
+        this.displayName = Output.empty();
+        this.enableSovereignControls = Output.empty();
+        this.etag = Output.empty();
+        this.externalId = Output.empty();
+        this.kmsSettings = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.provisionedResourcesParent = Output.empty();
+        this.resourceSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -205,19 +205,19 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> billingAccount;
-        private Input<WorkloadComplianceRegime> complianceRegime;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enableSovereignControls;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> externalId;
-        private @Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private @Nullable Input<String> provisionedResourcesParent;
-        private @Nullable Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
+        private @Nullable Output<String> billingAccount;
+        private Output<WorkloadComplianceRegime> complianceRegime;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enableSovereignControls;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> externalId;
+        private @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private @Nullable Output<String> provisionedResourcesParent;
+        private @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
 
         public Builder() {
     	      // Empty
@@ -240,133 +240,133 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceSettings = defaults.resourceSettings;
         }
 
-        public Builder billingAccount(@Nullable Input<String> billingAccount) {
+        public Builder billingAccount(@Nullable Output<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
         public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Input.ofNullable(billingAccount);
+            this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
 
-        public Builder complianceRegime(Input<WorkloadComplianceRegime> complianceRegime) {
+        public Builder complianceRegime(Output<WorkloadComplianceRegime> complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
 
         public Builder complianceRegime(WorkloadComplianceRegime complianceRegime) {
-            this.complianceRegime = Input.of(Objects.requireNonNull(complianceRegime));
+            this.complianceRegime = Output.of(Objects.requireNonNull(complianceRegime));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enableSovereignControls(@Nullable Input<Boolean> enableSovereignControls) {
+        public Builder enableSovereignControls(@Nullable Output<Boolean> enableSovereignControls) {
             this.enableSovereignControls = enableSovereignControls;
             return this;
         }
 
         public Builder enableSovereignControls(@Nullable Boolean enableSovereignControls) {
-            this.enableSovereignControls = Input.ofNullable(enableSovereignControls);
+            this.enableSovereignControls = Output.ofNullable(enableSovereignControls);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder externalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Input.ofNullable(externalId);
+            this.externalId = Output.ofNullable(externalId);
             return this;
         }
 
-        public Builder kmsSettings(@Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings) {
+        public Builder kmsSettings(@Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
 
         public Builder kmsSettings(@Nullable GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs kmsSettings) {
-            this.kmsSettings = Input.ofNullable(kmsSettings);
+            this.kmsSettings = Output.ofNullable(kmsSettings);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder provisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
 
         public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
-            this.provisionedResourcesParent = Input.ofNullable(provisionedResourcesParent);
+            this.provisionedResourcesParent = Output.ofNullable(provisionedResourcesParent);
             return this;
         }
 
-        public Builder resourceSettings(@Nullable Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
+        public Builder resourceSettings(@Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
         public Builder resourceSettings(@Nullable List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs> resourceSettings) {
-            this.resourceSettings = Input.ofNullable(resourceSettings);
+            this.resourceSettings = Output.ofNullable(resourceSettings);
             return this;
         }
         public WorkloadArgs build() {

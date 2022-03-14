@@ -7,7 +7,7 @@ import io.pulumi.azurenative.edgeorder.enums.OrderItemType;
 import io.pulumi.azurenative.edgeorder.inputs.PreferencesArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ProductDetailsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notificationEmailList")
-      private final @Nullable Input<List<String>> notificationEmailList;
+      private final @Nullable Output<List<String>> notificationEmailList;
 
-    public Input<List<String>> getNotificationEmailList() {
-        return this.notificationEmailList == null ? Input.empty() : this.notificationEmailList;
+    public Output<List<String>> getNotificationEmailList() {
+        return this.notificationEmailList == null ? Output.empty() : this.notificationEmailList;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="orderItemType", required=true)
-      private final Input<Either<String,OrderItemType>> orderItemType;
+      private final Output<Either<String,OrderItemType>> orderItemType;
 
-    public Input<Either<String,OrderItemType>> getOrderItemType() {
+    public Output<Either<String,OrderItemType>> getOrderItemType() {
         return this.orderItemType;
     }
 
@@ -50,10 +50,10 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferences")
-      private final @Nullable Input<PreferencesArgs> preferences;
+      private final @Nullable Output<PreferencesArgs> preferences;
 
-    public Input<PreferencesArgs> getPreferences() {
-        return this.preferences == null ? Input.empty() : this.preferences;
+    public Output<PreferencesArgs> getPreferences() {
+        return this.preferences == null ? Output.empty() : this.preferences;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="productDetails", required=true)
-      private final Input<ProductDetailsArgs> productDetails;
+      private final Output<ProductDetailsArgs> productDetails;
 
-    public Input<ProductDetailsArgs> getProductDetails() {
+    public Output<ProductDetailsArgs> getProductDetails() {
         return this.productDetails;
     }
 
     public OrderItemDetailsArgs(
-        @Nullable Input<List<String>> notificationEmailList,
-        Input<Either<String,OrderItemType>> orderItemType,
-        @Nullable Input<PreferencesArgs> preferences,
-        Input<ProductDetailsArgs> productDetails) {
+        @Nullable Output<List<String>> notificationEmailList,
+        Output<Either<String,OrderItemType>> orderItemType,
+        @Nullable Output<PreferencesArgs> preferences,
+        Output<ProductDetailsArgs> productDetails) {
         this.notificationEmailList = notificationEmailList;
         this.orderItemType = Objects.requireNonNull(orderItemType, "expected parameter 'orderItemType' to be non-null");
         this.preferences = preferences;
@@ -79,10 +79,10 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OrderItemDetailsArgs() {
-        this.notificationEmailList = Input.empty();
-        this.orderItemType = Input.empty();
-        this.preferences = Input.empty();
-        this.productDetails = Input.empty();
+        this.notificationEmailList = Output.empty();
+        this.orderItemType = Output.empty();
+        this.preferences = Output.empty();
+        this.productDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> notificationEmailList;
-        private Input<Either<String,OrderItemType>> orderItemType;
-        private @Nullable Input<PreferencesArgs> preferences;
-        private Input<ProductDetailsArgs> productDetails;
+        private @Nullable Output<List<String>> notificationEmailList;
+        private Output<Either<String,OrderItemType>> orderItemType;
+        private @Nullable Output<PreferencesArgs> preferences;
+        private Output<ProductDetailsArgs> productDetails;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     	      this.productDetails = defaults.productDetails;
         }
 
-        public Builder notificationEmailList(@Nullable Input<List<String>> notificationEmailList) {
+        public Builder notificationEmailList(@Nullable Output<List<String>> notificationEmailList) {
             this.notificationEmailList = notificationEmailList;
             return this;
         }
 
         public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
-            this.notificationEmailList = Input.ofNullable(notificationEmailList);
+            this.notificationEmailList = Output.ofNullable(notificationEmailList);
             return this;
         }
 
-        public Builder orderItemType(Input<Either<String,OrderItemType>> orderItemType) {
+        public Builder orderItemType(Output<Either<String,OrderItemType>> orderItemType) {
             this.orderItemType = Objects.requireNonNull(orderItemType);
             return this;
         }
 
         public Builder orderItemType(Either<String,OrderItemType> orderItemType) {
-            this.orderItemType = Input.of(Objects.requireNonNull(orderItemType));
+            this.orderItemType = Output.of(Objects.requireNonNull(orderItemType));
             return this;
         }
 
-        public Builder preferences(@Nullable Input<PreferencesArgs> preferences) {
+        public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
 
         public Builder preferences(@Nullable PreferencesArgs preferences) {
-            this.preferences = Input.ofNullable(preferences);
+            this.preferences = Output.ofNullable(preferences);
             return this;
         }
 
-        public Builder productDetails(Input<ProductDetailsArgs> productDetails) {
+        public Builder productDetails(Output<ProductDetailsArgs> productDetails) {
             this.productDetails = Objects.requireNonNull(productDetails);
             return this;
         }
 
         public Builder productDetails(ProductDetailsArgs productDetails) {
-            this.productDetails = Input.of(Objects.requireNonNull(productDetails));
+            this.productDetails = Output.of(Objects.requireNonNull(productDetails));
             return this;
         }
         public OrderItemDetailsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class ManagedSslCertificateManagedArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domains", required=true)
-      private final Input<List<String>> domains;
+      private final Output<List<String>> domains;
 
-    public Input<List<String>> getDomains() {
+    public Output<List<String>> getDomains() {
         return this.domains;
     }
 
-    public ManagedSslCertificateManagedArgs(Input<List<String>> domains) {
+    public ManagedSslCertificateManagedArgs(Output<List<String>> domains) {
         this.domains = Objects.requireNonNull(domains, "expected parameter 'domains' to be non-null");
     }
 
     private ManagedSslCertificateManagedArgs() {
-        this.domains = Input.empty();
+        this.domains = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ManagedSslCertificateManagedArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<String>> domains;
+        private Output<List<String>> domains;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ManagedSslCertificateManagedArgs extends io.pulumi.resources.
     	      this.domains = defaults.domains;
         }
 
-        public Builder domains(Input<List<String>> domains) {
+        public Builder domains(Output<List<String>> domains) {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }
 
         public Builder domains(List<String> domains) {
-            this.domains = Input.of(Objects.requireNonNull(domains));
+            this.domains = Output.of(Objects.requireNonNull(domains));
             return this;
         }
         public ManagedSslCertificateManagedArgs build() {

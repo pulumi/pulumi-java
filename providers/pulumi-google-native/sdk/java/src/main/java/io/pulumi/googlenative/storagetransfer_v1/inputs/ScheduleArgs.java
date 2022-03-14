@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.DateArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.TimeOfDayArgs;
@@ -25,10 +25,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTimeOfDay")
-      private final @Nullable Input<TimeOfDayArgs> endTimeOfDay;
+      private final @Nullable Output<TimeOfDayArgs> endTimeOfDay;
 
-    public Input<TimeOfDayArgs> getEndTimeOfDay() {
-        return this.endTimeOfDay == null ? Input.empty() : this.endTimeOfDay;
+    public Output<TimeOfDayArgs> getEndTimeOfDay() {
+        return this.endTimeOfDay == null ? Output.empty() : this.endTimeOfDay;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repeatInterval")
-      private final @Nullable Input<String> repeatInterval;
+      private final @Nullable Output<String> repeatInterval;
 
-    public Input<String> getRepeatInterval() {
-        return this.repeatInterval == null ? Input.empty() : this.repeatInterval;
+    public Output<String> getRepeatInterval() {
+        return this.repeatInterval == null ? Output.empty() : this.repeatInterval;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleEndDate")
-      private final @Nullable Input<DateArgs> scheduleEndDate;
+      private final @Nullable Output<DateArgs> scheduleEndDate;
 
-    public Input<DateArgs> getScheduleEndDate() {
-        return this.scheduleEndDate == null ? Input.empty() : this.scheduleEndDate;
+    public Output<DateArgs> getScheduleEndDate() {
+        return this.scheduleEndDate == null ? Output.empty() : this.scheduleEndDate;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleStartDate", required=true)
-      private final Input<DateArgs> scheduleStartDate;
+      private final Output<DateArgs> scheduleStartDate;
 
-    public Input<DateArgs> getScheduleStartDate() {
+    public Output<DateArgs> getScheduleStartDate() {
         return this.scheduleStartDate;
     }
 
@@ -69,18 +69,18 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOfDay")
-      private final @Nullable Input<TimeOfDayArgs> startTimeOfDay;
+      private final @Nullable Output<TimeOfDayArgs> startTimeOfDay;
 
-    public Input<TimeOfDayArgs> getStartTimeOfDay() {
-        return this.startTimeOfDay == null ? Input.empty() : this.startTimeOfDay;
+    public Output<TimeOfDayArgs> getStartTimeOfDay() {
+        return this.startTimeOfDay == null ? Output.empty() : this.startTimeOfDay;
     }
 
     public ScheduleArgs(
-        @Nullable Input<TimeOfDayArgs> endTimeOfDay,
-        @Nullable Input<String> repeatInterval,
-        @Nullable Input<DateArgs> scheduleEndDate,
-        Input<DateArgs> scheduleStartDate,
-        @Nullable Input<TimeOfDayArgs> startTimeOfDay) {
+        @Nullable Output<TimeOfDayArgs> endTimeOfDay,
+        @Nullable Output<String> repeatInterval,
+        @Nullable Output<DateArgs> scheduleEndDate,
+        Output<DateArgs> scheduleStartDate,
+        @Nullable Output<TimeOfDayArgs> startTimeOfDay) {
         this.endTimeOfDay = endTimeOfDay;
         this.repeatInterval = repeatInterval;
         this.scheduleEndDate = scheduleEndDate;
@@ -89,11 +89,11 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.endTimeOfDay = Input.empty();
-        this.repeatInterval = Input.empty();
-        this.scheduleEndDate = Input.empty();
-        this.scheduleStartDate = Input.empty();
-        this.startTimeOfDay = Input.empty();
+        this.endTimeOfDay = Output.empty();
+        this.repeatInterval = Output.empty();
+        this.scheduleEndDate = Output.empty();
+        this.scheduleStartDate = Output.empty();
+        this.startTimeOfDay = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TimeOfDayArgs> endTimeOfDay;
-        private @Nullable Input<String> repeatInterval;
-        private @Nullable Input<DateArgs> scheduleEndDate;
-        private Input<DateArgs> scheduleStartDate;
-        private @Nullable Input<TimeOfDayArgs> startTimeOfDay;
+        private @Nullable Output<TimeOfDayArgs> endTimeOfDay;
+        private @Nullable Output<String> repeatInterval;
+        private @Nullable Output<DateArgs> scheduleEndDate;
+        private Output<DateArgs> scheduleStartDate;
+        private @Nullable Output<TimeOfDayArgs> startTimeOfDay;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTimeOfDay = defaults.startTimeOfDay;
         }
 
-        public Builder endTimeOfDay(@Nullable Input<TimeOfDayArgs> endTimeOfDay) {
+        public Builder endTimeOfDay(@Nullable Output<TimeOfDayArgs> endTimeOfDay) {
             this.endTimeOfDay = endTimeOfDay;
             return this;
         }
 
         public Builder endTimeOfDay(@Nullable TimeOfDayArgs endTimeOfDay) {
-            this.endTimeOfDay = Input.ofNullable(endTimeOfDay);
+            this.endTimeOfDay = Output.ofNullable(endTimeOfDay);
             return this;
         }
 
-        public Builder repeatInterval(@Nullable Input<String> repeatInterval) {
+        public Builder repeatInterval(@Nullable Output<String> repeatInterval) {
             this.repeatInterval = repeatInterval;
             return this;
         }
 
         public Builder repeatInterval(@Nullable String repeatInterval) {
-            this.repeatInterval = Input.ofNullable(repeatInterval);
+            this.repeatInterval = Output.ofNullable(repeatInterval);
             return this;
         }
 
-        public Builder scheduleEndDate(@Nullable Input<DateArgs> scheduleEndDate) {
+        public Builder scheduleEndDate(@Nullable Output<DateArgs> scheduleEndDate) {
             this.scheduleEndDate = scheduleEndDate;
             return this;
         }
 
         public Builder scheduleEndDate(@Nullable DateArgs scheduleEndDate) {
-            this.scheduleEndDate = Input.ofNullable(scheduleEndDate);
+            this.scheduleEndDate = Output.ofNullable(scheduleEndDate);
             return this;
         }
 
-        public Builder scheduleStartDate(Input<DateArgs> scheduleStartDate) {
+        public Builder scheduleStartDate(Output<DateArgs> scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
 
         public Builder scheduleStartDate(DateArgs scheduleStartDate) {
-            this.scheduleStartDate = Input.of(Objects.requireNonNull(scheduleStartDate));
+            this.scheduleStartDate = Output.of(Objects.requireNonNull(scheduleStartDate));
             return this;
         }
 
-        public Builder startTimeOfDay(@Nullable Input<TimeOfDayArgs> startTimeOfDay) {
+        public Builder startTimeOfDay(@Nullable Output<TimeOfDayArgs> startTimeOfDay) {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }
 
         public Builder startTimeOfDay(@Nullable TimeOfDayArgs startTimeOfDay) {
-            this.startTimeOfDay = Input.ofNullable(startTimeOfDay);
+            this.startTimeOfDay = Output.ofNullable(startTimeOfDay);
             return this;
         }
         public ScheduleArgs build() {

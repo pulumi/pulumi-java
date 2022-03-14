@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs;
 import java.lang.Boolean;
@@ -25,9 +25,9 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="launchParameter", required=true)
-      private final Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
+      private final Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
 
-    public Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> getLaunchParameter() {
+    public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> getLaunchParameter() {
         return this.launchParameter;
     }
 
@@ -36,9 +36,9 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -47,9 +47,9 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
@@ -58,17 +58,17 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="validateOnly")
-      private final @Nullable Input<Boolean> validateOnly;
+      private final @Nullable Output<Boolean> validateOnly;
 
-    public Input<Boolean> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<Boolean> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(
-        Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter,
-        Input<String> location,
-        Input<String> project,
-        @Nullable Input<Boolean> validateOnly) {
+        Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter,
+        Output<String> location,
+        Output<String> project,
+        @Nullable Output<Boolean> validateOnly) {
         this.launchParameter = Objects.requireNonNull(launchParameter, "expected parameter 'launchParameter' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
@@ -76,10 +76,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     }
 
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs() {
-        this.launchParameter = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.validateOnly = Input.empty();
+        this.launchParameter = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     }
 
     public static final class Builder {
-        private Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
-        private Input<String> location;
-        private Input<String> project;
-        private @Nullable Input<Boolean> validateOnly;
+        private Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
+        private Output<String> location;
+        private Output<String> project;
+        private @Nullable Output<Boolean> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder launchParameter(Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter) {
+        public Builder launchParameter(Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter) {
             this.launchParameter = Objects.requireNonNull(launchParameter);
             return this;
         }
 
         public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs launchParameter) {
-            this.launchParameter = Input.of(Objects.requireNonNull(launchParameter));
+            this.launchParameter = Output.of(Objects.requireNonNull(launchParameter));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<Boolean> validateOnly) {
+        public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable Boolean validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
         public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs build() {

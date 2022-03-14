@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectArgs;
@@ -25,10 +25,10 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName")
-      private final @Nullable Input<String> commonName;
+      private final @Nullable Output<String> commonName;
 
-    public Input<String> getCommonName() {
-        return this.commonName == null ? Input.empty() : this.commonName;
+    public Output<String> getCommonName() {
+        return this.commonName == null ? Output.empty() : this.commonName;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject", required=true)
-      private final Input<SubjectArgs> subject;
+      private final Output<SubjectArgs> subject;
 
-    public Input<SubjectArgs> getSubject() {
+    public Output<SubjectArgs> getSubject() {
         return this.subject;
     }
 
@@ -47,25 +47,25 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectAltName")
-      private final @Nullable Input<SubjectAltNamesArgs> subjectAltName;
+      private final @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
-    public Input<SubjectAltNamesArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Input.empty() : this.subjectAltName;
+    public Output<SubjectAltNamesArgs> getSubjectAltName() {
+        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
     }
 
     public SubjectConfigArgs(
-        @Nullable Input<String> commonName,
-        Input<SubjectArgs> subject,
-        @Nullable Input<SubjectAltNamesArgs> subjectAltName) {
+        @Nullable Output<String> commonName,
+        Output<SubjectArgs> subject,
+        @Nullable Output<SubjectAltNamesArgs> subjectAltName) {
         this.commonName = commonName;
         this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
         this.subjectAltName = subjectAltName;
     }
 
     private SubjectConfigArgs() {
-        this.commonName = Input.empty();
-        this.subject = Input.empty();
-        this.subjectAltName = Input.empty();
+        this.commonName = Output.empty();
+        this.subject = Output.empty();
+        this.subjectAltName = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> commonName;
-        private Input<SubjectArgs> subject;
-        private @Nullable Input<SubjectAltNamesArgs> subjectAltName;
+        private @Nullable Output<String> commonName;
+        private Output<SubjectArgs> subject;
+        private @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder commonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Input.ofNullable(commonName);
+            this.commonName = Output.ofNullable(commonName);
             return this;
         }
 
-        public Builder subject(Input<SubjectArgs> subject) {
+        public Builder subject(Output<SubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
         public Builder subject(SubjectArgs subject) {
-            this.subject = Input.of(Objects.requireNonNull(subject));
+            this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder subjectAltName(@Nullable Input<SubjectAltNamesArgs> subjectAltName) {
+        public Builder subjectAltName(@Nullable Output<SubjectAltNamesArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
 
         public Builder subjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
-            this.subjectAltName = Input.ofNullable(subjectAltName);
+            this.subjectAltName = Output.ofNullable(subjectAltName);
             return this;
         }
         public SubjectConfigArgs build() {

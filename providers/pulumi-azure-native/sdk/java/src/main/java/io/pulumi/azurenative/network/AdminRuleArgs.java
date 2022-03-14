@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.enums.AdminRuleKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationName", required=true)
-      private final Input<String> configurationName;
+      private final Output<String> configurationName;
 
-    public Input<String> getConfigurationName() {
+    public Output<String> getConfigurationName() {
         return this.configurationName;
     }
 
@@ -32,9 +32,9 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,AdminRuleKind>> kind;
+      private final Output<Either<String,AdminRuleKind>> kind;
 
-    public Input<Either<String,AdminRuleKind>> getKind() {
+    public Output<Either<String,AdminRuleKind>> getKind() {
         return this.kind;
     }
 
@@ -43,9 +43,9 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-      private final Input<String> networkManagerName;
+      private final Output<String> networkManagerName;
 
-    public Input<String> getNetworkManagerName() {
+    public Output<String> getNetworkManagerName() {
         return this.networkManagerName;
     }
 
@@ -54,9 +54,9 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,9 +65,9 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleCollectionName", required=true)
-      private final Input<String> ruleCollectionName;
+      private final Output<String> ruleCollectionName;
 
-    public Input<String> getRuleCollectionName() {
+    public Output<String> getRuleCollectionName() {
         return this.ruleCollectionName;
     }
 
@@ -76,19 +76,19 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     public AdminRuleArgs(
-        Input<String> configurationName,
-        Input<Either<String,AdminRuleKind>> kind,
-        Input<String> networkManagerName,
-        Input<String> resourceGroupName,
-        Input<String> ruleCollectionName,
-        @Nullable Input<String> ruleName) {
+        Output<String> configurationName,
+        Output<Either<String,AdminRuleKind>> kind,
+        Output<String> networkManagerName,
+        Output<String> resourceGroupName,
+        Output<String> ruleCollectionName,
+        @Nullable Output<String> ruleName) {
         this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
@@ -98,12 +98,12 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AdminRuleArgs() {
-        this.configurationName = Input.empty();
-        this.kind = Input.empty();
-        this.networkManagerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleCollectionName = Input.empty();
-        this.ruleName = Input.empty();
+        this.configurationName = Output.empty();
+        this.kind = Output.empty();
+        this.networkManagerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleCollectionName = Output.empty();
+        this.ruleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> configurationName;
-        private Input<Either<String,AdminRuleKind>> kind;
-        private Input<String> networkManagerName;
-        private Input<String> resourceGroupName;
-        private Input<String> ruleCollectionName;
-        private @Nullable Input<String> ruleName;
+        private Output<String> configurationName;
+        private Output<Either<String,AdminRuleKind>> kind;
+        private Output<String> networkManagerName;
+        private Output<String> resourceGroupName;
+        private Output<String> ruleCollectionName;
+        private @Nullable Output<String> ruleName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder configurationName(Input<String> configurationName) {
+        public Builder configurationName(Output<String> configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
         public Builder configurationName(String configurationName) {
-            this.configurationName = Input.of(Objects.requireNonNull(configurationName));
+            this.configurationName = Output.of(Objects.requireNonNull(configurationName));
             return this;
         }
 
-        public Builder kind(Input<Either<String,AdminRuleKind>> kind) {
+        public Builder kind(Output<Either<String,AdminRuleKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,AdminRuleKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder networkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
+            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleCollectionName(Input<String> ruleCollectionName) {
+        public Builder ruleCollectionName(Output<String> ruleCollectionName) {
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
         }
 
         public Builder ruleCollectionName(String ruleCollectionName) {
-            this.ruleCollectionName = Input.of(Objects.requireNonNull(ruleCollectionName));
+            this.ruleCollectionName = Output.of(Objects.requireNonNull(ruleCollectionName));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
         public AdminRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowCredentials")
-      private final @Nullable Input<Boolean> allowCredentials;
+      private final @Nullable Output<Boolean> allowCredentials;
 
-    public Input<Boolean> getAllowCredentials() {
-        return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
+    public Output<Boolean> getAllowCredentials() {
+        return this.allowCredentials == null ? Output.empty() : this.allowCredentials;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<String>> headers;
+      private final @Nullable Output<List<String>> headers;
 
-    public Input<List<String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxAge")
-      private final @Nullable Input<Integer> maxAge;
+      private final @Nullable Output<Integer> maxAge;
 
-    public Input<Integer> getMaxAge() {
-        return this.maxAge == null ? Input.empty() : this.maxAge;
+    public Output<Integer> getMaxAge() {
+        return this.maxAge == null ? Output.empty() : this.maxAge;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="methods")
-      private final @Nullable Input<List<String>> methods;
+      private final @Nullable Output<List<String>> methods;
 
-    public Input<List<String>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<String>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="origins")
-      private final @Nullable Input<List<String>> origins;
+      private final @Nullable Output<List<String>> origins;
 
-    public Input<List<String>> getOrigins() {
-        return this.origins == null ? Input.empty() : this.origins;
+    public Output<List<String>> getOrigins() {
+        return this.origins == null ? Output.empty() : this.origins;
     }
 
     public ServiceCorsConfigurationInfoArgs(
-        @Nullable Input<Boolean> allowCredentials,
-        @Nullable Input<List<String>> headers,
-        @Nullable Input<Integer> maxAge,
-        @Nullable Input<List<String>> methods,
-        @Nullable Input<List<String>> origins) {
+        @Nullable Output<Boolean> allowCredentials,
+        @Nullable Output<List<String>> headers,
+        @Nullable Output<Integer> maxAge,
+        @Nullable Output<List<String>> methods,
+        @Nullable Output<List<String>> origins) {
         this.allowCredentials = allowCredentials;
         this.headers = headers;
         this.maxAge = maxAge;
@@ -90,11 +90,11 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     }
 
     private ServiceCorsConfigurationInfoArgs() {
-        this.allowCredentials = Input.empty();
-        this.headers = Input.empty();
-        this.maxAge = Input.empty();
-        this.methods = Input.empty();
-        this.origins = Input.empty();
+        this.allowCredentials = Output.empty();
+        this.headers = Output.empty();
+        this.maxAge = Output.empty();
+        this.methods = Output.empty();
+        this.origins = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowCredentials;
-        private @Nullable Input<List<String>> headers;
-        private @Nullable Input<Integer> maxAge;
-        private @Nullable Input<List<String>> methods;
-        private @Nullable Input<List<String>> origins;
+        private @Nullable Output<Boolean> allowCredentials;
+        private @Nullable Output<List<String>> headers;
+        private @Nullable Output<Integer> maxAge;
+        private @Nullable Output<List<String>> methods;
+        private @Nullable Output<List<String>> origins;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     	      this.origins = defaults.origins;
         }
 
-        public Builder allowCredentials(@Nullable Input<Boolean> allowCredentials) {
+        public Builder allowCredentials(@Nullable Output<Boolean> allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
-            this.allowCredentials = Input.ofNullable(allowCredentials);
+            this.allowCredentials = Output.ofNullable(allowCredentials);
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<String>> headers) {
+        public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder maxAge(@Nullable Input<Integer> maxAge) {
+        public Builder maxAge(@Nullable Output<Integer> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
         public Builder maxAge(@Nullable Integer maxAge) {
-            this.maxAge = Input.ofNullable(maxAge);
+            this.maxAge = Output.ofNullable(maxAge);
             return this;
         }
 
-        public Builder methods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder origins(@Nullable Input<List<String>> origins) {
+        public Builder origins(@Nullable Output<List<String>> origins) {
             this.origins = origins;
             return this;
         }
 
         public Builder origins(@Nullable List<String> origins) {
-            this.origins = Input.ofNullable(origins);
+            this.origins = Output.ofNullable(origins);
             return this;
         }
         public ServiceCorsConfigurationInfoArgs build() {

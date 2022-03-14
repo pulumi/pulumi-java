@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nameServers", required=true)
-      private final Input<List<String>> nameServers;
+      private final Output<List<String>> nameServers;
 
-    public Input<List<String>> getNameServers() {
+    public Output<List<String>> getNameServers() {
         return this.nameServers;
     }
 
@@ -35,10 +35,10 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<String> options;
+      private final @Nullable Output<String> options;
 
-    public Input<String> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<String> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="searchDomains")
-      private final @Nullable Input<String> searchDomains;
+      private final @Nullable Output<String> searchDomains;
 
-    public Input<String> getSearchDomains() {
-        return this.searchDomains == null ? Input.empty() : this.searchDomains;
+    public Output<String> getSearchDomains() {
+        return this.searchDomains == null ? Output.empty() : this.searchDomains;
     }
 
     public DnsConfigurationArgs(
-        Input<List<String>> nameServers,
-        @Nullable Input<String> options,
-        @Nullable Input<String> searchDomains) {
+        Output<List<String>> nameServers,
+        @Nullable Output<String> options,
+        @Nullable Output<String> searchDomains) {
         this.nameServers = Objects.requireNonNull(nameServers, "expected parameter 'nameServers' to be non-null");
         this.options = options;
         this.searchDomains = searchDomains;
     }
 
     private DnsConfigurationArgs() {
-        this.nameServers = Input.empty();
-        this.options = Input.empty();
-        this.searchDomains = Input.empty();
+        this.nameServers = Output.empty();
+        this.options = Output.empty();
+        this.searchDomains = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<String>> nameServers;
-        private @Nullable Input<String> options;
-        private @Nullable Input<String> searchDomains;
+        private Output<List<String>> nameServers;
+        private @Nullable Output<String> options;
+        private @Nullable Output<String> searchDomains;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.searchDomains = defaults.searchDomains;
         }
 
-        public Builder nameServers(Input<List<String>> nameServers) {
+        public Builder nameServers(Output<List<String>> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
         public Builder nameServers(List<String> nameServers) {
-            this.nameServers = Input.of(Objects.requireNonNull(nameServers));
+            this.nameServers = Output.of(Objects.requireNonNull(nameServers));
             return this;
         }
 
-        public Builder options(@Nullable Input<String> options) {
+        public Builder options(@Nullable Output<String> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable String options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder searchDomains(@Nullable Input<String> searchDomains) {
+        public Builder searchDomains(@Nullable Output<String> searchDomains) {
             this.searchDomains = searchDomains;
             return this;
         }
 
         public Builder searchDomains(@Nullable String searchDomains) {
-            this.searchDomains = Input.ofNullable(searchDomains);
+            this.searchDomains = Output.ofNullable(searchDomains);
             return this;
         }
         public DnsConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.DaprComponentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appPort")
-      private final @Nullable Input<Integer> appPort;
+      private final @Nullable Output<Integer> appPort;
 
-    public Input<Integer> getAppPort() {
-        return this.appPort == null ? Input.empty() : this.appPort;
+    public Output<Integer> getAppPort() {
+        return this.appPort == null ? Output.empty() : this.appPort;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components")
-      private final @Nullable Input<List<DaprComponentArgs>> components;
+      private final @Nullable Output<List<DaprComponentArgs>> components;
 
-    public Input<List<DaprComponentArgs>> getComponents() {
-        return this.components == null ? Input.empty() : this.components;
+    public Output<List<DaprComponentArgs>> getComponents() {
+        return this.components == null ? Output.empty() : this.components;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public DaprArgs(
-        @Nullable Input<String> appId,
-        @Nullable Input<Integer> appPort,
-        @Nullable Input<List<DaprComponentArgs>> components,
-        @Nullable Input<Boolean> enabled) {
+        @Nullable Output<String> appId,
+        @Nullable Output<Integer> appPort,
+        @Nullable Output<List<DaprComponentArgs>> components,
+        @Nullable Output<Boolean> enabled) {
         this.appId = appId;
         this.appPort = appPort;
         this.components = components;
@@ -78,10 +78,10 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DaprArgs() {
-        this.appId = Input.empty();
-        this.appPort = Input.empty();
-        this.components = Input.empty();
-        this.enabled = Input.empty();
+        this.appId = Output.empty();
+        this.appPort = Output.empty();
+        this.components = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appId;
-        private @Nullable Input<Integer> appPort;
-        private @Nullable Input<List<DaprComponentArgs>> components;
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<Integer> appPort;
+        private @Nullable Output<List<DaprComponentArgs>> components;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder appPort(@Nullable Input<Integer> appPort) {
+        public Builder appPort(@Nullable Output<Integer> appPort) {
             this.appPort = appPort;
             return this;
         }
 
         public Builder appPort(@Nullable Integer appPort) {
-            this.appPort = Input.ofNullable(appPort);
+            this.appPort = Output.ofNullable(appPort);
             return this;
         }
 
-        public Builder components(@Nullable Input<List<DaprComponentArgs>> components) {
+        public Builder components(@Nullable Output<List<DaprComponentArgs>> components) {
             this.components = components;
             return this;
         }
 
         public Builder components(@Nullable List<DaprComponentArgs> components) {
-            this.components = Input.ofNullable(components);
+            this.components = Output.ofNullable(components);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public DaprArgs build() {

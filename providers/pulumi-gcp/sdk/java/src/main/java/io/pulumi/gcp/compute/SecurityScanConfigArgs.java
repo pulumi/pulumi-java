@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleArgs;
@@ -25,10 +25,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<SecurityScanConfigAuthenticationArgs> authentication;
+      private final @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
 
-    public Input<SecurityScanConfigAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<SecurityScanConfigAuthenticationArgs> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="blacklistPatterns")
-      private final @Nullable Input<List<String>> blacklistPatterns;
+      private final @Nullable Output<List<String>> blacklistPatterns;
 
-    public Input<List<String>> getBlacklistPatterns() {
-        return this.blacklistPatterns == null ? Input.empty() : this.blacklistPatterns;
+    public Output<List<String>> getBlacklistPatterns() {
+        return this.blacklistPatterns == null ? Output.empty() : this.blacklistPatterns;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -61,10 +61,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="exportToSecurityCommandCenter")
-      private final @Nullable Input<String> exportToSecurityCommandCenter;
+      private final @Nullable Output<String> exportToSecurityCommandCenter;
 
-    public Input<String> getExportToSecurityCommandCenter() {
-        return this.exportToSecurityCommandCenter == null ? Input.empty() : this.exportToSecurityCommandCenter;
+    public Output<String> getExportToSecurityCommandCenter() {
+        return this.exportToSecurityCommandCenter == null ? Output.empty() : this.exportToSecurityCommandCenter;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxQps")
-      private final @Nullable Input<Integer> maxQps;
+      private final @Nullable Output<Integer> maxQps;
 
-    public Input<Integer> getMaxQps() {
-        return this.maxQps == null ? Input.empty() : this.maxQps;
+    public Output<Integer> getMaxQps() {
+        return this.maxQps == null ? Output.empty() : this.maxQps;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<SecurityScanConfigScheduleArgs> schedule;
+      private final @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
 
-    public Input<SecurityScanConfigScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<SecurityScanConfigScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -108,9 +108,9 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="startingUrls", required=true)
-      private final Input<List<String>> startingUrls;
+      private final Output<List<String>> startingUrls;
 
-    public Input<List<String>> getStartingUrls() {
+    public Output<List<String>> getStartingUrls() {
         return this.startingUrls;
     }
 
@@ -120,10 +120,10 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetPlatforms")
-      private final @Nullable Input<List<String>> targetPlatforms;
+      private final @Nullable Output<List<String>> targetPlatforms;
 
-    public Input<List<String>> getTargetPlatforms() {
-        return this.targetPlatforms == null ? Input.empty() : this.targetPlatforms;
+    public Output<List<String>> getTargetPlatforms() {
+        return this.targetPlatforms == null ? Output.empty() : this.targetPlatforms;
     }
 
     /**
@@ -133,23 +133,23 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userAgent")
-      private final @Nullable Input<String> userAgent;
+      private final @Nullable Output<String> userAgent;
 
-    public Input<String> getUserAgent() {
-        return this.userAgent == null ? Input.empty() : this.userAgent;
+    public Output<String> getUserAgent() {
+        return this.userAgent == null ? Output.empty() : this.userAgent;
     }
 
     public SecurityScanConfigArgs(
-        @Nullable Input<SecurityScanConfigAuthenticationArgs> authentication,
-        @Nullable Input<List<String>> blacklistPatterns,
-        Input<String> displayName,
-        @Nullable Input<String> exportToSecurityCommandCenter,
-        @Nullable Input<Integer> maxQps,
-        @Nullable Input<String> project,
-        @Nullable Input<SecurityScanConfigScheduleArgs> schedule,
-        Input<List<String>> startingUrls,
-        @Nullable Input<List<String>> targetPlatforms,
-        @Nullable Input<String> userAgent) {
+        @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication,
+        @Nullable Output<List<String>> blacklistPatterns,
+        Output<String> displayName,
+        @Nullable Output<String> exportToSecurityCommandCenter,
+        @Nullable Output<Integer> maxQps,
+        @Nullable Output<String> project,
+        @Nullable Output<SecurityScanConfigScheduleArgs> schedule,
+        Output<List<String>> startingUrls,
+        @Nullable Output<List<String>> targetPlatforms,
+        @Nullable Output<String> userAgent) {
         this.authentication = authentication;
         this.blacklistPatterns = blacklistPatterns;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -163,16 +163,16 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SecurityScanConfigArgs() {
-        this.authentication = Input.empty();
-        this.blacklistPatterns = Input.empty();
-        this.displayName = Input.empty();
-        this.exportToSecurityCommandCenter = Input.empty();
-        this.maxQps = Input.empty();
-        this.project = Input.empty();
-        this.schedule = Input.empty();
-        this.startingUrls = Input.empty();
-        this.targetPlatforms = Input.empty();
-        this.userAgent = Input.empty();
+        this.authentication = Output.empty();
+        this.blacklistPatterns = Output.empty();
+        this.displayName = Output.empty();
+        this.exportToSecurityCommandCenter = Output.empty();
+        this.maxQps = Output.empty();
+        this.project = Output.empty();
+        this.schedule = Output.empty();
+        this.startingUrls = Output.empty();
+        this.targetPlatforms = Output.empty();
+        this.userAgent = Output.empty();
     }
 
     public static Builder builder() {
@@ -184,16 +184,16 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityScanConfigAuthenticationArgs> authentication;
-        private @Nullable Input<List<String>> blacklistPatterns;
-        private Input<String> displayName;
-        private @Nullable Input<String> exportToSecurityCommandCenter;
-        private @Nullable Input<Integer> maxQps;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SecurityScanConfigScheduleArgs> schedule;
-        private Input<List<String>> startingUrls;
-        private @Nullable Input<List<String>> targetPlatforms;
-        private @Nullable Input<String> userAgent;
+        private @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
+        private @Nullable Output<List<String>> blacklistPatterns;
+        private Output<String> displayName;
+        private @Nullable Output<String> exportToSecurityCommandCenter;
+        private @Nullable Output<Integer> maxQps;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
+        private Output<List<String>> startingUrls;
+        private @Nullable Output<List<String>> targetPlatforms;
+        private @Nullable Output<String> userAgent;
 
         public Builder() {
     	      // Empty
@@ -213,103 +213,103 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.userAgent = defaults.userAgent;
         }
 
-        public Builder authentication(@Nullable Input<SecurityScanConfigAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Output<SecurityScanConfigAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable SecurityScanConfigAuthenticationArgs authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder blacklistPatterns(@Nullable Input<List<String>> blacklistPatterns) {
+        public Builder blacklistPatterns(@Nullable Output<List<String>> blacklistPatterns) {
             this.blacklistPatterns = blacklistPatterns;
             return this;
         }
 
         public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
-            this.blacklistPatterns = Input.ofNullable(blacklistPatterns);
+            this.blacklistPatterns = Output.ofNullable(blacklistPatterns);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder exportToSecurityCommandCenter(@Nullable Input<String> exportToSecurityCommandCenter) {
+        public Builder exportToSecurityCommandCenter(@Nullable Output<String> exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
             return this;
         }
 
         public Builder exportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
-            this.exportToSecurityCommandCenter = Input.ofNullable(exportToSecurityCommandCenter);
+            this.exportToSecurityCommandCenter = Output.ofNullable(exportToSecurityCommandCenter);
             return this;
         }
 
-        public Builder maxQps(@Nullable Input<Integer> maxQps) {
+        public Builder maxQps(@Nullable Output<Integer> maxQps) {
             this.maxQps = maxQps;
             return this;
         }
 
         public Builder maxQps(@Nullable Integer maxQps) {
-            this.maxQps = Input.ofNullable(maxQps);
+            this.maxQps = Output.ofNullable(maxQps);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<SecurityScanConfigScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<SecurityScanConfigScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable SecurityScanConfigScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder startingUrls(Input<List<String>> startingUrls) {
+        public Builder startingUrls(Output<List<String>> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
 
         public Builder startingUrls(List<String> startingUrls) {
-            this.startingUrls = Input.of(Objects.requireNonNull(startingUrls));
+            this.startingUrls = Output.of(Objects.requireNonNull(startingUrls));
             return this;
         }
 
-        public Builder targetPlatforms(@Nullable Input<List<String>> targetPlatforms) {
+        public Builder targetPlatforms(@Nullable Output<List<String>> targetPlatforms) {
             this.targetPlatforms = targetPlatforms;
             return this;
         }
 
         public Builder targetPlatforms(@Nullable List<String> targetPlatforms) {
-            this.targetPlatforms = Input.ofNullable(targetPlatforms);
+            this.targetPlatforms = Output.ofNullable(targetPlatforms);
             return this;
         }
 
-        public Builder userAgent(@Nullable Input<String> userAgent) {
+        public Builder userAgent(@Nullable Output<String> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
 
         public Builder userAgent(@Nullable String userAgent) {
-            this.userAgent = Input.ofNullable(userAgent);
+            this.userAgent = Output.ofNullable(userAgent);
             return this;
         }
         public SecurityScanConfigArgs build() {

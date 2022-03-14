@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageSuggestionArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
      * 
      */
     @InputImport(name="suggestions", required=true)
-      private final Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
+      private final Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
 
-    public Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> getSuggestions() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> getSuggestions() {
         return this.suggestions;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSuggestionsArgs(Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions) {
+    public GoogleCloudDialogflowV2IntentMessageSuggestionsArgs(Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions) {
         this.suggestions = Objects.requireNonNull(suggestions, "expected parameter 'suggestions' to be non-null");
     }
 
     private GoogleCloudDialogflowV2IntentMessageSuggestionsArgs() {
-        this.suggestions = Input.empty();
+        this.suggestions = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
+        private Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
     	      this.suggestions = defaults.suggestions;
         }
 
-        public Builder suggestions(Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions) {
+        public Builder suggestions(Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
 
         public Builder suggestions(List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs> suggestions) {
-            this.suggestions = Input.of(Objects.requireNonNull(suggestions));
+            this.suggestions = Output.of(Objects.requireNonNull(suggestions));
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageSuggestionsArgs build() {

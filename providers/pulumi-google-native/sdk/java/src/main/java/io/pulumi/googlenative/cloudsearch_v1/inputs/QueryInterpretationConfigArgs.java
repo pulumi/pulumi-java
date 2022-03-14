@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="forceDisableSupplementalResults")
-      private final @Nullable Input<Boolean> forceDisableSupplementalResults;
+      private final @Nullable Output<Boolean> forceDisableSupplementalResults;
 
-    public Input<Boolean> getForceDisableSupplementalResults() {
-        return this.forceDisableSupplementalResults == null ? Input.empty() : this.forceDisableSupplementalResults;
+    public Output<Boolean> getForceDisableSupplementalResults() {
+        return this.forceDisableSupplementalResults == null ? Output.empty() : this.forceDisableSupplementalResults;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="forceVerbatimMode")
-      private final @Nullable Input<Boolean> forceVerbatimMode;
+      private final @Nullable Output<Boolean> forceVerbatimMode;
 
-    public Input<Boolean> getForceVerbatimMode() {
-        return this.forceVerbatimMode == null ? Input.empty() : this.forceVerbatimMode;
+    public Output<Boolean> getForceVerbatimMode() {
+        return this.forceVerbatimMode == null ? Output.empty() : this.forceVerbatimMode;
     }
 
     public QueryInterpretationConfigArgs(
-        @Nullable Input<Boolean> forceDisableSupplementalResults,
-        @Nullable Input<Boolean> forceVerbatimMode) {
+        @Nullable Output<Boolean> forceDisableSupplementalResults,
+        @Nullable Output<Boolean> forceVerbatimMode) {
         this.forceDisableSupplementalResults = forceDisableSupplementalResults;
         this.forceVerbatimMode = forceVerbatimMode;
     }
 
     private QueryInterpretationConfigArgs() {
-        this.forceDisableSupplementalResults = Input.empty();
-        this.forceVerbatimMode = Input.empty();
+        this.forceDisableSupplementalResults = Output.empty();
+        this.forceVerbatimMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> forceDisableSupplementalResults;
-        private @Nullable Input<Boolean> forceVerbatimMode;
+        private @Nullable Output<Boolean> forceDisableSupplementalResults;
+        private @Nullable Output<Boolean> forceVerbatimMode;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
     	      this.forceVerbatimMode = defaults.forceVerbatimMode;
         }
 
-        public Builder forceDisableSupplementalResults(@Nullable Input<Boolean> forceDisableSupplementalResults) {
+        public Builder forceDisableSupplementalResults(@Nullable Output<Boolean> forceDisableSupplementalResults) {
             this.forceDisableSupplementalResults = forceDisableSupplementalResults;
             return this;
         }
 
         public Builder forceDisableSupplementalResults(@Nullable Boolean forceDisableSupplementalResults) {
-            this.forceDisableSupplementalResults = Input.ofNullable(forceDisableSupplementalResults);
+            this.forceDisableSupplementalResults = Output.ofNullable(forceDisableSupplementalResults);
             return this;
         }
 
-        public Builder forceVerbatimMode(@Nullable Input<Boolean> forceVerbatimMode) {
+        public Builder forceVerbatimMode(@Nullable Output<Boolean> forceVerbatimMode) {
             this.forceVerbatimMode = forceVerbatimMode;
             return this;
         }
 
         public Builder forceVerbatimMode(@Nullable Boolean forceVerbatimMode) {
-            this.forceVerbatimMode = Input.ofNullable(forceVerbatimMode);
+            this.forceVerbatimMode = Output.ofNullable(forceVerbatimMode);
             return this;
         }
         public QueryInterpretationConfigArgs build() {

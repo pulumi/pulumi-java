@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="root")
-      private final @Nullable Input<String> root;
+      private final @Nullable Output<String> root;
 
-    public Input<String> getRoot() {
-        return this.root == null ? Input.empty() : this.root;
+    public Output<String> getRoot() {
+        return this.root == null ? Output.empty() : this.root;
     }
 
     public MixinArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> root) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> root) {
         this.name = name;
         this.root = root;
     }
 
     private MixinArgs() {
-        this.name = Input.empty();
-        this.root = Input.empty();
+        this.name = Output.empty();
+        this.root = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> root;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> root;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
     	      this.root = defaults.root;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder root(@Nullable Input<String> root) {
+        public Builder root(@Nullable Output<String> root) {
             this.root = root;
             return this;
         }
 
         public Builder root(@Nullable String root) {
-            this.root = Input.ofNullable(root);
+            this.root = Output.ofNullable(root);
             return this;
         }
         public MixinArgs build() {

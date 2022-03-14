@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -247,14 +246,14 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetInstance(String name, TargetInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/targetInstance:TargetInstance", name, args == null ? TargetInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/targetInstance:TargetInstance", name, args == null ? TargetInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TargetInstance(String name, Input<String> id, @Nullable TargetInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TargetInstance(String name, Output<String> id, @Nullable TargetInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/targetInstance:TargetInstance", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -270,7 +269,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TargetInstance get(String name, Input<String> id, @Nullable TargetInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TargetInstance get(String name, Output<String> id, @Nullable TargetInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TargetInstance(name, id, state, options);
     }
 }

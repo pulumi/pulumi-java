@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.IndexKeyLocation;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,62 +16,62 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
     public static final IndexJwtTokenTypeConfigurationArgs Empty = new IndexJwtTokenTypeConfigurationArgs();
 
     @InputImport(name="claimRegex")
-      private final @Nullable Input<String> claimRegex;
+      private final @Nullable Output<String> claimRegex;
 
-    public Input<String> getClaimRegex() {
-        return this.claimRegex == null ? Input.empty() : this.claimRegex;
+    public Output<String> getClaimRegex() {
+        return this.claimRegex == null ? Output.empty() : this.claimRegex;
     }
 
     @InputImport(name="groupAttributeField")
-      private final @Nullable Input<String> groupAttributeField;
+      private final @Nullable Output<String> groupAttributeField;
 
-    public Input<String> getGroupAttributeField() {
-        return this.groupAttributeField == null ? Input.empty() : this.groupAttributeField;
+    public Output<String> getGroupAttributeField() {
+        return this.groupAttributeField == null ? Output.empty() : this.groupAttributeField;
     }
 
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     @InputImport(name="keyLocation", required=true)
-      private final Input<IndexKeyLocation> keyLocation;
+      private final Output<IndexKeyLocation> keyLocation;
 
-    public Input<IndexKeyLocation> getKeyLocation() {
+    public Output<IndexKeyLocation> getKeyLocation() {
         return this.keyLocation;
     }
 
     @InputImport(name="secretManagerArn")
-      private final @Nullable Input<String> secretManagerArn;
+      private final @Nullable Output<String> secretManagerArn;
 
-    public Input<String> getSecretManagerArn() {
-        return this.secretManagerArn == null ? Input.empty() : this.secretManagerArn;
+    public Output<String> getSecretManagerArn() {
+        return this.secretManagerArn == null ? Output.empty() : this.secretManagerArn;
     }
 
     @InputImport(name="uRL")
-      private final @Nullable Input<String> uRL;
+      private final @Nullable Output<String> uRL;
 
-    public Input<String> getURL() {
-        return this.uRL == null ? Input.empty() : this.uRL;
+    public Output<String> getURL() {
+        return this.uRL == null ? Output.empty() : this.uRL;
     }
 
     @InputImport(name="userNameAttributeField")
-      private final @Nullable Input<String> userNameAttributeField;
+      private final @Nullable Output<String> userNameAttributeField;
 
-    public Input<String> getUserNameAttributeField() {
-        return this.userNameAttributeField == null ? Input.empty() : this.userNameAttributeField;
+    public Output<String> getUserNameAttributeField() {
+        return this.userNameAttributeField == null ? Output.empty() : this.userNameAttributeField;
     }
 
     public IndexJwtTokenTypeConfigurationArgs(
-        @Nullable Input<String> claimRegex,
-        @Nullable Input<String> groupAttributeField,
-        @Nullable Input<String> issuer,
-        Input<IndexKeyLocation> keyLocation,
-        @Nullable Input<String> secretManagerArn,
-        @Nullable Input<String> uRL,
-        @Nullable Input<String> userNameAttributeField) {
+        @Nullable Output<String> claimRegex,
+        @Nullable Output<String> groupAttributeField,
+        @Nullable Output<String> issuer,
+        Output<IndexKeyLocation> keyLocation,
+        @Nullable Output<String> secretManagerArn,
+        @Nullable Output<String> uRL,
+        @Nullable Output<String> userNameAttributeField) {
         this.claimRegex = claimRegex;
         this.groupAttributeField = groupAttributeField;
         this.issuer = issuer;
@@ -82,13 +82,13 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
     }
 
     private IndexJwtTokenTypeConfigurationArgs() {
-        this.claimRegex = Input.empty();
-        this.groupAttributeField = Input.empty();
-        this.issuer = Input.empty();
-        this.keyLocation = Input.empty();
-        this.secretManagerArn = Input.empty();
-        this.uRL = Input.empty();
-        this.userNameAttributeField = Input.empty();
+        this.claimRegex = Output.empty();
+        this.groupAttributeField = Output.empty();
+        this.issuer = Output.empty();
+        this.keyLocation = Output.empty();
+        this.secretManagerArn = Output.empty();
+        this.uRL = Output.empty();
+        this.userNameAttributeField = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,13 +100,13 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> claimRegex;
-        private @Nullable Input<String> groupAttributeField;
-        private @Nullable Input<String> issuer;
-        private Input<IndexKeyLocation> keyLocation;
-        private @Nullable Input<String> secretManagerArn;
-        private @Nullable Input<String> uRL;
-        private @Nullable Input<String> userNameAttributeField;
+        private @Nullable Output<String> claimRegex;
+        private @Nullable Output<String> groupAttributeField;
+        private @Nullable Output<String> issuer;
+        private Output<IndexKeyLocation> keyLocation;
+        private @Nullable Output<String> secretManagerArn;
+        private @Nullable Output<String> uRL;
+        private @Nullable Output<String> userNameAttributeField;
 
         public Builder() {
     	      // Empty
@@ -123,73 +123,73 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
     	      this.userNameAttributeField = defaults.userNameAttributeField;
         }
 
-        public Builder claimRegex(@Nullable Input<String> claimRegex) {
+        public Builder claimRegex(@Nullable Output<String> claimRegex) {
             this.claimRegex = claimRegex;
             return this;
         }
 
         public Builder claimRegex(@Nullable String claimRegex) {
-            this.claimRegex = Input.ofNullable(claimRegex);
+            this.claimRegex = Output.ofNullable(claimRegex);
             return this;
         }
 
-        public Builder groupAttributeField(@Nullable Input<String> groupAttributeField) {
+        public Builder groupAttributeField(@Nullable Output<String> groupAttributeField) {
             this.groupAttributeField = groupAttributeField;
             return this;
         }
 
         public Builder groupAttributeField(@Nullable String groupAttributeField) {
-            this.groupAttributeField = Input.ofNullable(groupAttributeField);
+            this.groupAttributeField = Output.ofNullable(groupAttributeField);
             return this;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
 
-        public Builder keyLocation(Input<IndexKeyLocation> keyLocation) {
+        public Builder keyLocation(Output<IndexKeyLocation> keyLocation) {
             this.keyLocation = Objects.requireNonNull(keyLocation);
             return this;
         }
 
         public Builder keyLocation(IndexKeyLocation keyLocation) {
-            this.keyLocation = Input.of(Objects.requireNonNull(keyLocation));
+            this.keyLocation = Output.of(Objects.requireNonNull(keyLocation));
             return this;
         }
 
-        public Builder secretManagerArn(@Nullable Input<String> secretManagerArn) {
+        public Builder secretManagerArn(@Nullable Output<String> secretManagerArn) {
             this.secretManagerArn = secretManagerArn;
             return this;
         }
 
         public Builder secretManagerArn(@Nullable String secretManagerArn) {
-            this.secretManagerArn = Input.ofNullable(secretManagerArn);
+            this.secretManagerArn = Output.ofNullable(secretManagerArn);
             return this;
         }
 
-        public Builder uRL(@Nullable Input<String> uRL) {
+        public Builder uRL(@Nullable Output<String> uRL) {
             this.uRL = uRL;
             return this;
         }
 
         public Builder uRL(@Nullable String uRL) {
-            this.uRL = Input.ofNullable(uRL);
+            this.uRL = Output.ofNullable(uRL);
             return this;
         }
 
-        public Builder userNameAttributeField(@Nullable Input<String> userNameAttributeField) {
+        public Builder userNameAttributeField(@Nullable Output<String> userNameAttributeField) {
             this.userNameAttributeField = userNameAttributeField;
             return this;
         }
 
         public Builder userNameAttributeField(@Nullable String userNameAttributeField) {
-            this.userNameAttributeField = Input.ofNullable(userNameAttributeField);
+            this.userNameAttributeField = Output.ofNullable(userNameAttributeField);
             return this;
         }
         public IndexJwtTokenTypeConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sqlInjectionMatchTuples")
-      private final @Nullable Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
+      private final @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
 
-    public Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> getSqlInjectionMatchTuples() {
-        return this.sqlInjectionMatchTuples == null ? Input.empty() : this.sqlInjectionMatchTuples;
+    public Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> getSqlInjectionMatchTuples() {
+        return this.sqlInjectionMatchTuples == null ? Output.empty() : this.sqlInjectionMatchTuples;
     }
 
     public SqlInjectionMatchSetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples) {
         this.name = name;
         this.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
     }
 
     private SqlInjectionMatchSetArgs() {
-        this.name = Input.empty();
-        this.sqlInjectionMatchTuples = Input.empty();
+        this.name = Output.empty();
+        this.sqlInjectionMatchTuples = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
     	      this.sqlInjectionMatchTuples = defaults.sqlInjectionMatchTuples;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sqlInjectionMatchTuples(@Nullable Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples) {
+        public Builder sqlInjectionMatchTuples(@Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples) {
             this.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
             return this;
         }
 
         public Builder sqlInjectionMatchTuples(@Nullable List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs> sqlInjectionMatchTuples) {
-            this.sqlInjectionMatchTuples = Input.ofNullable(sqlInjectionMatchTuples);
+            this.sqlInjectionMatchTuples = Output.ofNullable(sqlInjectionMatchTuples);
             return this;
         }
         public SqlInjectionMatchSetArgs build() {

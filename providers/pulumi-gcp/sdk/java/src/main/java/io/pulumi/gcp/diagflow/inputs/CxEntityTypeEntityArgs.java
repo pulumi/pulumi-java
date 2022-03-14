@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class CxEntityTypeEntityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="synonyms")
-      private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Output<List<String>> synonyms;
 
-    public Input<List<String>> getSynonyms() {
-        return this.synonyms == null ? Input.empty() : this.synonyms;
+    public Output<List<String>> getSynonyms() {
+        return this.synonyms == null ? Output.empty() : this.synonyms;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class CxEntityTypeEntityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public CxEntityTypeEntityArgs(
-        @Nullable Input<List<String>> synonyms,
-        @Nullable Input<String> value) {
+        @Nullable Output<List<String>> synonyms,
+        @Nullable Output<String> value) {
         this.synonyms = synonyms;
         this.value = value;
     }
 
     private CxEntityTypeEntityArgs() {
-        this.synonyms = Input.empty();
-        this.value = Input.empty();
+        this.synonyms = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class CxEntityTypeEntityArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> synonyms;
-        private @Nullable Input<String> value;
+        private @Nullable Output<List<String>> synonyms;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class CxEntityTypeEntityArgs extends io.pulumi.resources.ResourceAr
     	      this.value = defaults.value;
         }
 
-        public Builder synonyms(@Nullable Input<List<String>> synonyms) {
+        public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
         public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Input.ofNullable(synonyms);
+            this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public CxEntityTypeEntityArgs build() {

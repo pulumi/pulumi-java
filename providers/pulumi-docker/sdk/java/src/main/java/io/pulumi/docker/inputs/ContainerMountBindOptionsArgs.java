@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ContainerMountBindOptionsArgs extends io.pulumi.resources.Res
     public static final ContainerMountBindOptionsArgs Empty = new ContainerMountBindOptionsArgs();
 
     @InputImport(name="propagation")
-      private final @Nullable Input<String> propagation;
+      private final @Nullable Output<String> propagation;
 
-    public Input<String> getPropagation() {
-        return this.propagation == null ? Input.empty() : this.propagation;
+    public Output<String> getPropagation() {
+        return this.propagation == null ? Output.empty() : this.propagation;
     }
 
-    public ContainerMountBindOptionsArgs(@Nullable Input<String> propagation) {
+    public ContainerMountBindOptionsArgs(@Nullable Output<String> propagation) {
         this.propagation = propagation;
     }
 
     private ContainerMountBindOptionsArgs() {
-        this.propagation = Input.empty();
+        this.propagation = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ContainerMountBindOptionsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> propagation;
+        private @Nullable Output<String> propagation;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ContainerMountBindOptionsArgs extends io.pulumi.resources.Res
     	      this.propagation = defaults.propagation;
         }
 
-        public Builder propagation(@Nullable Input<String> propagation) {
+        public Builder propagation(@Nullable Output<String> propagation) {
             this.propagation = propagation;
             return this;
         }
 
         public Builder propagation(@Nullable String propagation) {
-            this.propagation = Input.ofNullable(propagation);
+            this.propagation = Output.ofNullable(propagation);
             return this;
         }
         public ContainerMountBindOptionsArgs build() {

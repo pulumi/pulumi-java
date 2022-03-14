@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.AcceleratorConfigType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="coreCount")
-      private final @Nullable Input<String> coreCount;
+      private final @Nullable Output<String> coreCount;
 
-    public Input<String> getCoreCount() {
-        return this.coreCount == null ? Input.empty() : this.coreCount;
+    public Output<String> getCoreCount() {
+        return this.coreCount == null ? Output.empty() : this.coreCount;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<AcceleratorConfigType> type;
+      private final @Nullable Output<AcceleratorConfigType> type;
 
-    public Input<AcceleratorConfigType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<AcceleratorConfigType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AcceleratorConfigArgs(
-        @Nullable Input<String> coreCount,
-        @Nullable Input<AcceleratorConfigType> type) {
+        @Nullable Output<String> coreCount,
+        @Nullable Output<AcceleratorConfigType> type) {
         this.coreCount = coreCount;
         this.type = type;
     }
 
     private AcceleratorConfigArgs() {
-        this.coreCount = Input.empty();
-        this.type = Input.empty();
+        this.coreCount = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> coreCount;
-        private @Nullable Input<AcceleratorConfigType> type;
+        private @Nullable Output<String> coreCount;
+        private @Nullable Output<AcceleratorConfigType> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder coreCount(@Nullable Input<String> coreCount) {
+        public Builder coreCount(@Nullable Output<String> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
         public Builder coreCount(@Nullable String coreCount) {
-            this.coreCount = Input.ofNullable(coreCount);
+            this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
 
-        public Builder type(@Nullable Input<AcceleratorConfigType> type) {
+        public Builder type(@Nullable Output<AcceleratorConfigType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable AcceleratorConfigType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AcceleratorConfigArgs build() {

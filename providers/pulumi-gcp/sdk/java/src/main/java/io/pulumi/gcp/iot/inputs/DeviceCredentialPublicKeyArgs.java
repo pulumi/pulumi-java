@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<String> format;
+      private final Output<String> format;
 
-    public Input<String> getFormat() {
+    public Output<String> getFormat() {
         return this.format;
     }
 
@@ -30,22 +30,22 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     public DeviceCredentialPublicKeyArgs(
-        Input<String> format,
-        Input<String> key) {
+        Output<String> format,
+        Output<String> key) {
         this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
     }
 
     private DeviceCredentialPublicKeyArgs() {
-        this.format = Input.empty();
-        this.key = Input.empty();
+        this.format = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> format;
-        private Input<String> key;
+        private Output<String> format;
+        private Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
     	      this.key = defaults.key;
         }
 
-        public Builder format(Input<String> format) {
+        public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(String format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
         public DeviceCredentialPublicKeyArgs build() {

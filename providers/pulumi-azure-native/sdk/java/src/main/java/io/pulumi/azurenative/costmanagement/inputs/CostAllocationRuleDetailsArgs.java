@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.SourceCostAllocationResourceArgs;
 import io.pulumi.azurenative.costmanagement.inputs.TargetCostAllocationResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceResources")
-      private final @Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources;
+      private final @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
 
-    public Input<List<SourceCostAllocationResourceArgs>> getSourceResources() {
-        return this.sourceResources == null ? Input.empty() : this.sourceResources;
+    public Output<List<SourceCostAllocationResourceArgs>> getSourceResources() {
+        return this.sourceResources == null ? Output.empty() : this.sourceResources;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetResources")
-      private final @Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources;
+      private final @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
 
-    public Input<List<TargetCostAllocationResourceArgs>> getTargetResources() {
-        return this.targetResources == null ? Input.empty() : this.targetResources;
+    public Output<List<TargetCostAllocationResourceArgs>> getTargetResources() {
+        return this.targetResources == null ? Output.empty() : this.targetResources;
     }
 
     public CostAllocationRuleDetailsArgs(
-        @Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources,
-        @Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources) {
+        @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources,
+        @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources) {
         this.sourceResources = sourceResources;
         this.targetResources = targetResources;
     }
 
     private CostAllocationRuleDetailsArgs() {
-        this.sourceResources = Input.empty();
-        this.targetResources = Input.empty();
+        this.sourceResources = Output.empty();
+        this.targetResources = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources;
-        private @Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources;
+        private @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
+        private @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     	      this.targetResources = defaults.targetResources;
         }
 
-        public Builder sourceResources(@Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources) {
+        public Builder sourceResources(@Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources) {
             this.sourceResources = sourceResources;
             return this;
         }
 
         public Builder sourceResources(@Nullable List<SourceCostAllocationResourceArgs> sourceResources) {
-            this.sourceResources = Input.ofNullable(sourceResources);
+            this.sourceResources = Output.ofNullable(sourceResources);
             return this;
         }
 
-        public Builder targetResources(@Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources) {
+        public Builder targetResources(@Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
 
         public Builder targetResources(@Nullable List<TargetCostAllocationResourceArgs> targetResources) {
-            this.targetResources = Input.ofNullable(targetResources);
+            this.targetResources = Output.ofNullable(targetResources);
             return this;
         }
         public CostAllocationRuleDetailsArgs build() {

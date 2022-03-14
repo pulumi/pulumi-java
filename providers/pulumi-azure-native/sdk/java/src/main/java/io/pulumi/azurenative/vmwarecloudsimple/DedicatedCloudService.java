@@ -6,7 +6,6 @@ package io.pulumi.azurenative.vmwarecloudsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.vmwarecloudsimple.DedicatedCloudServiceArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,18 +183,18 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DedicatedCloudService(String name, DedicatedCloudServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:vmwarecloudsimple:DedicatedCloudService", name, args == null ? DedicatedCloudServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:vmwarecloudsimple:DedicatedCloudService", name, args == null ? DedicatedCloudServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DedicatedCloudService(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DedicatedCloudService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:vmwarecloudsimple:DedicatedCloudService", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:vmwarecloudsimple/v20190401:DedicatedCloudService").build())
+                Output.of(Alias.builder().setType("azure-native:vmwarecloudsimple/v20190401:DedicatedCloudService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -209,7 +208,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DedicatedCloudService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DedicatedCloudService get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DedicatedCloudService(name, id, options);
     }
 }

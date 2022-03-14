@@ -6,7 +6,6 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.VolumeArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -239,18 +238,18 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Volume(String name, VolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storsimple:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storsimple:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Volume(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Volume(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storsimple:Volume", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storsimple/v20170601:Volume").build())
+                Output.of(Alias.builder().setType("azure-native:storsimple/v20170601:Volume").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -264,7 +263,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Volume get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Volume get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Volume(name, id, options);
     }
 }

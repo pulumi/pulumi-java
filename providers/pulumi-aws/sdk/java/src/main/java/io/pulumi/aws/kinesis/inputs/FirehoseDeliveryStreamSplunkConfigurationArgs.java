@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-      private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+      private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
+    public Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecAcknowledgmentTimeout")
-      private final @Nullable Input<Integer> hecAcknowledgmentTimeout;
+      private final @Nullable Output<Integer> hecAcknowledgmentTimeout;
 
-    public Input<Integer> getHecAcknowledgmentTimeout() {
-        return this.hecAcknowledgmentTimeout == null ? Input.empty() : this.hecAcknowledgmentTimeout;
+    public Output<Integer> getHecAcknowledgmentTimeout() {
+        return this.hecAcknowledgmentTimeout == null ? Output.empty() : this.hecAcknowledgmentTimeout;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecEndpoint", required=true)
-      private final Input<String> hecEndpoint;
+      private final Output<String> hecEndpoint;
 
-    public Input<String> getHecEndpoint() {
+    public Output<String> getHecEndpoint() {
         return this.hecEndpoint;
     }
 
@@ -55,10 +55,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecEndpointType")
-      private final @Nullable Input<String> hecEndpointType;
+      private final @Nullable Output<String> hecEndpointType;
 
-    public Input<String> getHecEndpointType() {
-        return this.hecEndpointType == null ? Input.empty() : this.hecEndpointType;
+    public Output<String> getHecEndpointType() {
+        return this.hecEndpointType == null ? Output.empty() : this.hecEndpointType;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecToken", required=true)
-      private final Input<String> hecToken;
+      private final Output<String> hecToken;
 
-    public Input<String> getHecToken() {
+    public Output<String> getHecToken() {
         return this.hecToken;
     }
 
@@ -77,10 +77,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="processingConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration;
 
-    public Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
+    public Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
+        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="retryDuration")
-      private final @Nullable Input<Integer> retryDuration;
+      private final @Nullable Output<Integer> retryDuration;
 
-    public Input<Integer> getRetryDuration() {
-        return this.retryDuration == null ? Input.empty() : this.retryDuration;
+    public Output<Integer> getRetryDuration() {
+        return this.retryDuration == null ? Output.empty() : this.retryDuration;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="s3BackupMode")
-      private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Output<String> s3BackupMode;
 
-    public Input<String> getS3BackupMode() {
-        return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
+    public Output<String> getS3BackupMode() {
+        return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
     }
 
     public FirehoseDeliveryStreamSplunkConfigurationArgs(
-        @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
-        @Nullable Input<Integer> hecAcknowledgmentTimeout,
-        Input<String> hecEndpoint,
-        @Nullable Input<String> hecEndpointType,
-        Input<String> hecToken,
-        @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration,
-        @Nullable Input<Integer> retryDuration,
-        @Nullable Input<String> s3BackupMode) {
+        @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
+        @Nullable Output<Integer> hecAcknowledgmentTimeout,
+        Output<String> hecEndpoint,
+        @Nullable Output<String> hecEndpointType,
+        Output<String> hecToken,
+        @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration,
+        @Nullable Output<Integer> retryDuration,
+        @Nullable Output<String> s3BackupMode) {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
         this.hecEndpoint = Objects.requireNonNull(hecEndpoint, "expected parameter 'hecEndpoint' to be non-null");
@@ -125,14 +125,14 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
     }
 
     private FirehoseDeliveryStreamSplunkConfigurationArgs() {
-        this.cloudwatchLoggingOptions = Input.empty();
-        this.hecAcknowledgmentTimeout = Input.empty();
-        this.hecEndpoint = Input.empty();
-        this.hecEndpointType = Input.empty();
-        this.hecToken = Input.empty();
-        this.processingConfiguration = Input.empty();
-        this.retryDuration = Input.empty();
-        this.s3BackupMode = Input.empty();
+        this.cloudwatchLoggingOptions = Output.empty();
+        this.hecAcknowledgmentTimeout = Output.empty();
+        this.hecEndpoint = Output.empty();
+        this.hecEndpointType = Output.empty();
+        this.hecToken = Output.empty();
+        this.processingConfiguration = Output.empty();
+        this.retryDuration = Output.empty();
+        this.s3BackupMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
-        private @Nullable Input<Integer> hecAcknowledgmentTimeout;
-        private Input<String> hecEndpoint;
-        private @Nullable Input<String> hecEndpointType;
-        private Input<String> hecToken;
-        private @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration;
-        private @Nullable Input<Integer> retryDuration;
-        private @Nullable Input<String> s3BackupMode;
+        private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+        private @Nullable Output<Integer> hecAcknowledgmentTimeout;
+        private Output<String> hecEndpoint;
+        private @Nullable Output<String> hecEndpointType;
+        private Output<String> hecToken;
+        private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration;
+        private @Nullable Output<Integer> retryDuration;
+        private @Nullable Output<String> s3BackupMode;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
     	      this.s3BackupMode = defaults.s3BackupMode;
         }
 
-        public Builder cloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder hecAcknowledgmentTimeout(@Nullable Input<Integer> hecAcknowledgmentTimeout) {
+        public Builder hecAcknowledgmentTimeout(@Nullable Output<Integer> hecAcknowledgmentTimeout) {
             this.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
             return this;
         }
 
         public Builder hecAcknowledgmentTimeout(@Nullable Integer hecAcknowledgmentTimeout) {
-            this.hecAcknowledgmentTimeout = Input.ofNullable(hecAcknowledgmentTimeout);
+            this.hecAcknowledgmentTimeout = Output.ofNullable(hecAcknowledgmentTimeout);
             return this;
         }
 
-        public Builder hecEndpoint(Input<String> hecEndpoint) {
+        public Builder hecEndpoint(Output<String> hecEndpoint) {
             this.hecEndpoint = Objects.requireNonNull(hecEndpoint);
             return this;
         }
 
         public Builder hecEndpoint(String hecEndpoint) {
-            this.hecEndpoint = Input.of(Objects.requireNonNull(hecEndpoint));
+            this.hecEndpoint = Output.of(Objects.requireNonNull(hecEndpoint));
             return this;
         }
 
-        public Builder hecEndpointType(@Nullable Input<String> hecEndpointType) {
+        public Builder hecEndpointType(@Nullable Output<String> hecEndpointType) {
             this.hecEndpointType = hecEndpointType;
             return this;
         }
 
         public Builder hecEndpointType(@Nullable String hecEndpointType) {
-            this.hecEndpointType = Input.ofNullable(hecEndpointType);
+            this.hecEndpointType = Output.ofNullable(hecEndpointType);
             return this;
         }
 
-        public Builder hecToken(Input<String> hecToken) {
+        public Builder hecToken(Output<String> hecToken) {
             this.hecToken = Objects.requireNonNull(hecToken);
             return this;
         }
 
         public Builder hecToken(String hecToken) {
-            this.hecToken = Input.of(Objects.requireNonNull(hecToken));
+            this.hecToken = Output.of(Objects.requireNonNull(hecToken));
             return this;
         }
 
-        public Builder processingConfiguration(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Input.ofNullable(processingConfiguration);
+            this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder retryDuration(@Nullable Input<Integer> retryDuration) {
+        public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
         public Builder retryDuration(@Nullable Integer retryDuration) {
-            this.retryDuration = Input.ofNullable(retryDuration);
+            this.retryDuration = Output.ofNullable(retryDuration);
             return this;
         }
 
-        public Builder s3BackupMode(@Nullable Input<String> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
-            this.s3BackupMode = Input.ofNullable(s3BackupMode);
+            this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
         public FirehoseDeliveryStreamSplunkConfigurationArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityandcompliance;
 import io.pulumi.azurenative.securityandcompliance.enums.Kind;
 import io.pulumi.azurenative.securityandcompliance.inputs.ServicesPropertiesArgs;
 import io.pulumi.azurenative.securityandcompliance.inputs.ServicesResourceIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ServicesResourceIdentityArgs> identity;
+      private final @Nullable Output<ServicesResourceIdentityArgs> identity;
 
-    public Input<ServicesResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ServicesResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Kind> kind;
+      private final Output<Kind> kind;
 
-    public Input<Kind> getKind() {
+    public Output<Kind> getKind() {
         return this.kind;
     }
 
@@ -45,10 +45,10 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ServicesPropertiesArgs> properties;
+      private final @Nullable Output<ServicesPropertiesArgs> properties;
 
-    public Input<ServicesPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ServicesPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,10 +78,10 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PrivateLinkServicesForEDMUploadArgs(
-        @Nullable Input<ServicesResourceIdentityArgs> identity,
-        Input<Kind> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<ServicesPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ServicesResourceIdentityArgs> identity,
+        Output<Kind> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<ServicesPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.identity = identity;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.location = location;
@@ -113,13 +113,13 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
     }
 
     private PrivateLinkServicesForEDMUploadArgs() {
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ServicesResourceIdentityArgs> identity;
-        private Input<Kind> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ServicesPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ServicesResourceIdentityArgs> identity;
+        private Output<Kind> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ServicesPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class PrivateLinkServicesForEDMUploadArgs extends io.pulumi.resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder identity(@Nullable Input<ServicesResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ServicesResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ServicesResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(Input<Kind> kind) {
+        public Builder kind(Output<Kind> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Kind kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ServicesPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ServicesPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ServicesPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PrivateLinkServicesForEDMUploadArgs build() {

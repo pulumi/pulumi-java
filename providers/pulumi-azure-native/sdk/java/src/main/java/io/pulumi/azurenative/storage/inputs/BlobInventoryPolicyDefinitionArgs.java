@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="filters", required=true)
-      private final Input<BlobInventoryPolicyFilterArgs> filters;
+      private final Output<BlobInventoryPolicyFilterArgs> filters;
 
-    public Input<BlobInventoryPolicyFilterArgs> getFilters() {
+    public Output<BlobInventoryPolicyFilterArgs> getFilters() {
         return this.filters;
     }
 
-    public BlobInventoryPolicyDefinitionArgs(Input<BlobInventoryPolicyFilterArgs> filters) {
+    public BlobInventoryPolicyDefinitionArgs(Output<BlobInventoryPolicyFilterArgs> filters) {
         this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
     }
 
     private BlobInventoryPolicyDefinitionArgs() {
-        this.filters = Input.empty();
+        this.filters = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<BlobInventoryPolicyFilterArgs> filters;
+        private Output<BlobInventoryPolicyFilterArgs> filters;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
     	      this.filters = defaults.filters;
         }
 
-        public Builder filters(Input<BlobInventoryPolicyFilterArgs> filters) {
+        public Builder filters(Output<BlobInventoryPolicyFilterArgs> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
         public Builder filters(BlobInventoryPolicyFilterArgs filters) {
-            this.filters = Input.of(Objects.requireNonNull(filters));
+            this.filters = Output.of(Objects.requireNonNull(filters));
             return this;
         }
         public BlobInventoryPolicyDefinitionArgs build() {

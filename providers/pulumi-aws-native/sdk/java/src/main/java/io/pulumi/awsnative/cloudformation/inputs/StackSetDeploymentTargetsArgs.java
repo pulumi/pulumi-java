@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accounts")
-      private final @Nullable Input<List<String>> accounts;
+      private final @Nullable Output<List<String>> accounts;
 
-    public Input<List<String>> getAccounts() {
-        return this.accounts == null ? Input.empty() : this.accounts;
+    public Output<List<String>> getAccounts() {
+        return this.accounts == null ? Output.empty() : this.accounts;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="organizationalUnitIds")
-      private final @Nullable Input<List<String>> organizationalUnitIds;
+      private final @Nullable Output<List<String>> organizationalUnitIds;
 
-    public Input<List<String>> getOrganizationalUnitIds() {
-        return this.organizationalUnitIds == null ? Input.empty() : this.organizationalUnitIds;
+    public Output<List<String>> getOrganizationalUnitIds() {
+        return this.organizationalUnitIds == null ? Output.empty() : this.organizationalUnitIds;
     }
 
     public StackSetDeploymentTargetsArgs(
-        @Nullable Input<List<String>> accounts,
-        @Nullable Input<List<String>> organizationalUnitIds) {
+        @Nullable Output<List<String>> accounts,
+        @Nullable Output<List<String>> organizationalUnitIds) {
         this.accounts = accounts;
         this.organizationalUnitIds = organizationalUnitIds;
     }
 
     private StackSetDeploymentTargetsArgs() {
-        this.accounts = Input.empty();
-        this.organizationalUnitIds = Input.empty();
+        this.accounts = Output.empty();
+        this.organizationalUnitIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> accounts;
-        private @Nullable Input<List<String>> organizationalUnitIds;
+        private @Nullable Output<List<String>> accounts;
+        private @Nullable Output<List<String>> organizationalUnitIds;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
     	      this.organizationalUnitIds = defaults.organizationalUnitIds;
         }
 
-        public Builder accounts(@Nullable Input<List<String>> accounts) {
+        public Builder accounts(@Nullable Output<List<String>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
         public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Input.ofNullable(accounts);
+            this.accounts = Output.ofNullable(accounts);
             return this;
         }
 
-        public Builder organizationalUnitIds(@Nullable Input<List<String>> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable Output<List<String>> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
-            this.organizationalUnitIds = Input.ofNullable(organizationalUnitIds);
+            this.organizationalUnitIds = Output.ofNullable(organizationalUnitIds);
             return this;
         }
         public StackSetDeploymentTargetsArgs build() {

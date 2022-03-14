@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
     public static final SwaggerSpecificationArgs Empty = new SwaggerSpecificationArgs();
 
     @InputImport(name="apiVersions")
-      private final @Nullable Input<List<String>> apiVersions;
+      private final @Nullable Output<List<String>> apiVersions;
 
-    public Input<List<String>> getApiVersions() {
-        return this.apiVersions == null ? Input.empty() : this.apiVersions;
+    public Output<List<String>> getApiVersions() {
+        return this.apiVersions == null ? Output.empty() : this.apiVersions;
     }
 
     @InputImport(name="swaggerSpecFolderUri")
-      private final @Nullable Input<String> swaggerSpecFolderUri;
+      private final @Nullable Output<String> swaggerSpecFolderUri;
 
-    public Input<String> getSwaggerSpecFolderUri() {
-        return this.swaggerSpecFolderUri == null ? Input.empty() : this.swaggerSpecFolderUri;
+    public Output<String> getSwaggerSpecFolderUri() {
+        return this.swaggerSpecFolderUri == null ? Output.empty() : this.swaggerSpecFolderUri;
     }
 
     public SwaggerSpecificationArgs(
-        @Nullable Input<List<String>> apiVersions,
-        @Nullable Input<String> swaggerSpecFolderUri) {
+        @Nullable Output<List<String>> apiVersions,
+        @Nullable Output<String> swaggerSpecFolderUri) {
         this.apiVersions = apiVersions;
         this.swaggerSpecFolderUri = swaggerSpecFolderUri;
     }
 
     private SwaggerSpecificationArgs() {
-        this.apiVersions = Input.empty();
-        this.swaggerSpecFolderUri = Input.empty();
+        this.apiVersions = Output.empty();
+        this.swaggerSpecFolderUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> apiVersions;
-        private @Nullable Input<String> swaggerSpecFolderUri;
+        private @Nullable Output<List<String>> apiVersions;
+        private @Nullable Output<String> swaggerSpecFolderUri;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
     	      this.swaggerSpecFolderUri = defaults.swaggerSpecFolderUri;
         }
 
-        public Builder apiVersions(@Nullable Input<List<String>> apiVersions) {
+        public Builder apiVersions(@Nullable Output<List<String>> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Input.ofNullable(apiVersions);
+            this.apiVersions = Output.ofNullable(apiVersions);
             return this;
         }
 
-        public Builder swaggerSpecFolderUri(@Nullable Input<String> swaggerSpecFolderUri) {
+        public Builder swaggerSpecFolderUri(@Nullable Output<String> swaggerSpecFolderUri) {
             this.swaggerSpecFolderUri = swaggerSpecFolderUri;
             return this;
         }
 
         public Builder swaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
-            this.swaggerSpecFolderUri = Input.ofNullable(swaggerSpecFolderUri);
+            this.swaggerSpecFolderUri = Output.ofNullable(swaggerSpecFolderUri);
             return this;
         }
         public SwaggerSpecificationArgs build() {

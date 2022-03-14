@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricCounterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class MetricCounterSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="counters", required=true)
-      private final Input<List<MetricCounterArgs>> counters;
+      private final Output<List<MetricCounterArgs>> counters;
 
-    public Input<List<MetricCounterArgs>> getCounters() {
+    public Output<List<MetricCounterArgs>> getCounters() {
         return this.counters;
     }
 
-    public MetricCounterSetArgs(Input<List<MetricCounterArgs>> counters) {
+    public MetricCounterSetArgs(Output<List<MetricCounterArgs>> counters) {
         this.counters = Objects.requireNonNull(counters, "expected parameter 'counters' to be non-null");
     }
 
     private MetricCounterSetArgs() {
-        this.counters = Input.empty();
+        this.counters = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MetricCounterSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<MetricCounterArgs>> counters;
+        private Output<List<MetricCounterArgs>> counters;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MetricCounterSetArgs extends io.pulumi.resources.ResourceArgs
     	      this.counters = defaults.counters;
         }
 
-        public Builder counters(Input<List<MetricCounterArgs>> counters) {
+        public Builder counters(Output<List<MetricCounterArgs>> counters) {
             this.counters = Objects.requireNonNull(counters);
             return this;
         }
 
         public Builder counters(List<MetricCounterArgs> counters) {
-            this.counters = Input.of(Objects.requireNonNull(counters));
+            this.counters = Output.of(Objects.requireNonNull(counters));
             return this;
         }
         public MetricCounterSetArgs build() {

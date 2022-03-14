@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
-    public ClusterIdentityUserAssignedIdentitiesArgs(@Nullable Input<String> tenantId) {
+    public ClusterIdentityUserAssignedIdentitiesArgs(@Nullable Output<String> tenantId) {
         this.tenantId = tenantId;
     }
 
     private ClusterIdentityUserAssignedIdentitiesArgs() {
-        this.tenantId = Input.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public ClusterIdentityUserAssignedIdentitiesArgs build() {

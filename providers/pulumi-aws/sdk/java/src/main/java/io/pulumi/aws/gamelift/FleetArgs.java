@@ -6,7 +6,7 @@ package io.pulumi.aws.gamelift;
 import io.pulumi.aws.gamelift.inputs.FleetEc2InboundPermissionArgs;
 import io.pulumi.aws.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import io.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildId", required=true)
-      private final Input<String> buildId;
+      private final Output<String> buildId;
 
-    public Input<String> getBuildId() {
+    public Output<String> getBuildId() {
         return this.buildId;
     }
 
@@ -35,10 +35,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2InboundPermissions")
-      private final @Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
+      private final @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
 
-    public Input<List<FleetEc2InboundPermissionArgs>> getEc2InboundPermissions() {
-        return this.ec2InboundPermissions == null ? Input.empty() : this.ec2InboundPermissions;
+    public Output<List<FleetEc2InboundPermissionArgs>> getEc2InboundPermissions() {
+        return this.ec2InboundPermissions == null ? Output.empty() : this.ec2InboundPermissions;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2InstanceType", required=true)
-      private final Input<String> ec2InstanceType;
+      private final Output<String> ec2InstanceType;
 
-    public Input<String> getEc2InstanceType() {
+    public Output<String> getEc2InstanceType() {
         return this.ec2InstanceType;
     }
 
@@ -68,10 +68,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetType")
-      private final @Nullable Input<String> fleetType;
+      private final @Nullable Output<String> fleetType;
 
-    public Input<String> getFleetType() {
-        return this.fleetType == null ? Input.empty() : this.fleetType;
+    public Output<String> getFleetType() {
+        return this.fleetType == null ? Output.empty() : this.fleetType;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceRoleArn")
-      private final @Nullable Input<String> instanceRoleArn;
+      private final @Nullable Output<String> instanceRoleArn;
 
-    public Input<String> getInstanceRoleArn() {
-        return this.instanceRoleArn == null ? Input.empty() : this.instanceRoleArn;
+    public Output<String> getInstanceRoleArn() {
+        return this.instanceRoleArn == null ? Output.empty() : this.instanceRoleArn;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricGroups")
-      private final @Nullable Input<List<String>> metricGroups;
+      private final @Nullable Output<List<String>> metricGroups;
 
-    public Input<List<String>> getMetricGroups() {
-        return this.metricGroups == null ? Input.empty() : this.metricGroups;
+    public Output<List<String>> getMetricGroups() {
+        return this.metricGroups == null ? Output.empty() : this.metricGroups;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="newGameSessionProtectionPolicy")
-      private final @Nullable Input<String> newGameSessionProtectionPolicy;
+      private final @Nullable Output<String> newGameSessionProtectionPolicy;
 
-    public Input<String> getNewGameSessionProtectionPolicy() {
-        return this.newGameSessionProtectionPolicy == null ? Input.empty() : this.newGameSessionProtectionPolicy;
+    public Output<String> getNewGameSessionProtectionPolicy() {
+        return this.newGameSessionProtectionPolicy == null ? Output.empty() : this.newGameSessionProtectionPolicy;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceCreationLimitPolicy")
-      private final @Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
+      private final @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
-    public Input<FleetResourceCreationLimitPolicyArgs> getResourceCreationLimitPolicy() {
-        return this.resourceCreationLimitPolicy == null ? Input.empty() : this.resourceCreationLimitPolicy;
+    public Output<FleetResourceCreationLimitPolicyArgs> getResourceCreationLimitPolicy() {
+        return this.resourceCreationLimitPolicy == null ? Output.empty() : this.resourceCreationLimitPolicy;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeConfiguration")
-      private final @Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration;
+      private final @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
-    public Input<FleetRuntimeConfigurationArgs> getRuntimeConfiguration() {
-        return this.runtimeConfiguration == null ? Input.empty() : this.runtimeConfiguration;
+    public Output<FleetRuntimeConfigurationArgs> getRuntimeConfiguration() {
+        return this.runtimeConfiguration == null ? Output.empty() : this.runtimeConfiguration;
     }
 
     /**
@@ -145,25 +145,25 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FleetArgs(
-        Input<String> buildId,
-        @Nullable Input<String> description,
-        @Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions,
-        Input<String> ec2InstanceType,
-        @Nullable Input<String> fleetType,
-        @Nullable Input<String> instanceRoleArn,
-        @Nullable Input<List<String>> metricGroups,
-        @Nullable Input<String> name,
-        @Nullable Input<String> newGameSessionProtectionPolicy,
-        @Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy,
-        @Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> buildId,
+        @Nullable Output<String> description,
+        @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions,
+        Output<String> ec2InstanceType,
+        @Nullable Output<String> fleetType,
+        @Nullable Output<String> instanceRoleArn,
+        @Nullable Output<List<String>> metricGroups,
+        @Nullable Output<String> name,
+        @Nullable Output<String> newGameSessionProtectionPolicy,
+        @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy,
+        @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration,
+        @Nullable Output<Map<String,String>> tags) {
         this.buildId = Objects.requireNonNull(buildId, "expected parameter 'buildId' to be non-null");
         this.description = description;
         this.ec2InboundPermissions = ec2InboundPermissions;
@@ -179,18 +179,18 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.buildId = Input.empty();
-        this.description = Input.empty();
-        this.ec2InboundPermissions = Input.empty();
-        this.ec2InstanceType = Input.empty();
-        this.fleetType = Input.empty();
-        this.instanceRoleArn = Input.empty();
-        this.metricGroups = Input.empty();
-        this.name = Input.empty();
-        this.newGameSessionProtectionPolicy = Input.empty();
-        this.resourceCreationLimitPolicy = Input.empty();
-        this.runtimeConfiguration = Input.empty();
-        this.tags = Input.empty();
+        this.buildId = Output.empty();
+        this.description = Output.empty();
+        this.ec2InboundPermissions = Output.empty();
+        this.ec2InstanceType = Output.empty();
+        this.fleetType = Output.empty();
+        this.instanceRoleArn = Output.empty();
+        this.metricGroups = Output.empty();
+        this.name = Output.empty();
+        this.newGameSessionProtectionPolicy = Output.empty();
+        this.resourceCreationLimitPolicy = Output.empty();
+        this.runtimeConfiguration = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -202,18 +202,18 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> buildId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
-        private Input<String> ec2InstanceType;
-        private @Nullable Input<String> fleetType;
-        private @Nullable Input<String> instanceRoleArn;
-        private @Nullable Input<List<String>> metricGroups;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> newGameSessionProtectionPolicy;
-        private @Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
-        private @Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> buildId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
+        private Output<String> ec2InstanceType;
+        private @Nullable Output<String> fleetType;
+        private @Nullable Output<String> instanceRoleArn;
+        private @Nullable Output<List<String>> metricGroups;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> newGameSessionProtectionPolicy;
+        private @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
+        private @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -235,123 +235,123 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder buildId(Input<String> buildId) {
+        public Builder buildId(Output<String> buildId) {
             this.buildId = Objects.requireNonNull(buildId);
             return this;
         }
 
         public Builder buildId(String buildId) {
-            this.buildId = Input.of(Objects.requireNonNull(buildId));
+            this.buildId = Output.of(Objects.requireNonNull(buildId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ec2InboundPermissions(@Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(@Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions) {
             this.ec2InboundPermissions = ec2InboundPermissions;
             return this;
         }
 
         public Builder ec2InboundPermissions(@Nullable List<FleetEc2InboundPermissionArgs> ec2InboundPermissions) {
-            this.ec2InboundPermissions = Input.ofNullable(ec2InboundPermissions);
+            this.ec2InboundPermissions = Output.ofNullable(ec2InboundPermissions);
             return this;
         }
 
-        public Builder ec2InstanceType(Input<String> ec2InstanceType) {
+        public Builder ec2InstanceType(Output<String> ec2InstanceType) {
             this.ec2InstanceType = Objects.requireNonNull(ec2InstanceType);
             return this;
         }
 
         public Builder ec2InstanceType(String ec2InstanceType) {
-            this.ec2InstanceType = Input.of(Objects.requireNonNull(ec2InstanceType));
+            this.ec2InstanceType = Output.of(Objects.requireNonNull(ec2InstanceType));
             return this;
         }
 
-        public Builder fleetType(@Nullable Input<String> fleetType) {
+        public Builder fleetType(@Nullable Output<String> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
 
         public Builder fleetType(@Nullable String fleetType) {
-            this.fleetType = Input.ofNullable(fleetType);
+            this.fleetType = Output.ofNullable(fleetType);
             return this;
         }
 
-        public Builder instanceRoleArn(@Nullable Input<String> instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
-            this.instanceRoleArn = Input.ofNullable(instanceRoleArn);
+            this.instanceRoleArn = Output.ofNullable(instanceRoleArn);
             return this;
         }
 
-        public Builder metricGroups(@Nullable Input<List<String>> metricGroups) {
+        public Builder metricGroups(@Nullable Output<List<String>> metricGroups) {
             this.metricGroups = metricGroups;
             return this;
         }
 
         public Builder metricGroups(@Nullable List<String> metricGroups) {
-            this.metricGroups = Input.ofNullable(metricGroups);
+            this.metricGroups = Output.ofNullable(metricGroups);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder newGameSessionProtectionPolicy(@Nullable Input<String> newGameSessionProtectionPolicy) {
+        public Builder newGameSessionProtectionPolicy(@Nullable Output<String> newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
 
         public Builder newGameSessionProtectionPolicy(@Nullable String newGameSessionProtectionPolicy) {
-            this.newGameSessionProtectionPolicy = Input.ofNullable(newGameSessionProtectionPolicy);
+            this.newGameSessionProtectionPolicy = Output.ofNullable(newGameSessionProtectionPolicy);
             return this;
         }
 
-        public Builder resourceCreationLimitPolicy(@Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
 
         public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
-            this.resourceCreationLimitPolicy = Input.ofNullable(resourceCreationLimitPolicy);
+            this.resourceCreationLimitPolicy = Output.ofNullable(resourceCreationLimitPolicy);
             return this;
         }
 
-        public Builder runtimeConfiguration(@Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
+        public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
 
         public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
-            this.runtimeConfiguration = Input.ofNullable(runtimeConfiguration);
+            this.runtimeConfiguration = Output.ofNullable(runtimeConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FleetArgs build() {

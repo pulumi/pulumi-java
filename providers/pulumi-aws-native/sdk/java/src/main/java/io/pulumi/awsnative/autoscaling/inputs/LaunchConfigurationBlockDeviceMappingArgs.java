@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.autoscaling.inputs;
 
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationBlockDeviceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -36,10 +36,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ebs")
-      private final @Nullable Input<LaunchConfigurationBlockDeviceArgs> ebs;
+      private final @Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs;
 
-    public Input<LaunchConfigurationBlockDeviceArgs> getEbs() {
-        return this.ebs == null ? Input.empty() : this.ebs;
+    public Output<LaunchConfigurationBlockDeviceArgs> getEbs() {
+        return this.ebs == null ? Output.empty() : this.ebs;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="noDevice")
-      private final @Nullable Input<Boolean> noDevice;
+      private final @Nullable Output<Boolean> noDevice;
 
-    public Input<Boolean> getNoDevice() {
-        return this.noDevice == null ? Input.empty() : this.noDevice;
+    public Output<Boolean> getNoDevice() {
+        return this.noDevice == null ? Output.empty() : this.noDevice;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="virtualName")
-      private final @Nullable Input<String> virtualName;
+      private final @Nullable Output<String> virtualName;
 
-    public Input<String> getVirtualName() {
-        return this.virtualName == null ? Input.empty() : this.virtualName;
+    public Output<String> getVirtualName() {
+        return this.virtualName == null ? Output.empty() : this.virtualName;
     }
 
     public LaunchConfigurationBlockDeviceMappingArgs(
-        Input<String> deviceName,
-        @Nullable Input<LaunchConfigurationBlockDeviceArgs> ebs,
-        @Nullable Input<Boolean> noDevice,
-        @Nullable Input<String> virtualName) {
+        Output<String> deviceName,
+        @Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs,
+        @Nullable Output<Boolean> noDevice,
+        @Nullable Output<String> virtualName) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.ebs = ebs;
         this.noDevice = noDevice;
@@ -76,10 +76,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     }
 
     private LaunchConfigurationBlockDeviceMappingArgs() {
-        this.deviceName = Input.empty();
-        this.ebs = Input.empty();
-        this.noDevice = Input.empty();
-        this.virtualName = Input.empty();
+        this.deviceName = Output.empty();
+        this.ebs = Output.empty();
+        this.noDevice = Output.empty();
+        this.virtualName = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> deviceName;
-        private @Nullable Input<LaunchConfigurationBlockDeviceArgs> ebs;
-        private @Nullable Input<Boolean> noDevice;
-        private @Nullable Input<String> virtualName;
+        private Output<String> deviceName;
+        private @Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs;
+        private @Nullable Output<Boolean> noDevice;
+        private @Nullable Output<String> virtualName;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder ebs(@Nullable Input<LaunchConfigurationBlockDeviceArgs> ebs) {
+        public Builder ebs(@Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
 
         public Builder ebs(@Nullable LaunchConfigurationBlockDeviceArgs ebs) {
-            this.ebs = Input.ofNullable(ebs);
+            this.ebs = Output.ofNullable(ebs);
             return this;
         }
 
-        public Builder noDevice(@Nullable Input<Boolean> noDevice) {
+        public Builder noDevice(@Nullable Output<Boolean> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
         public Builder noDevice(@Nullable Boolean noDevice) {
-            this.noDevice = Input.ofNullable(noDevice);
+            this.noDevice = Output.ofNullable(noDevice);
             return this;
         }
 
-        public Builder virtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Input.ofNullable(virtualName);
+            this.virtualName = Output.ofNullable(virtualName);
             return this;
         }
         public LaunchConfigurationBlockDeviceMappingArgs build() {

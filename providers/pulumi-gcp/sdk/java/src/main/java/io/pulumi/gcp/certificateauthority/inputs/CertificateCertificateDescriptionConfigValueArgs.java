@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageArgs;
 import java.util.List;
@@ -21,18 +21,18 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
      * 
      */
     @InputImport(name="keyUsages")
-      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
+      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
 
-    public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> getKeyUsages() {
-        return this.keyUsages == null ? Input.empty() : this.keyUsages;
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> getKeyUsages() {
+        return this.keyUsages == null ? Output.empty() : this.keyUsages;
     }
 
-    public CertificateCertificateDescriptionConfigValueArgs(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages) {
+    public CertificateCertificateDescriptionConfigValueArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages) {
         this.keyUsages = keyUsages;
     }
 
     private CertificateCertificateDescriptionConfigValueArgs() {
-        this.keyUsages = Input.empty();
+        this.keyUsages = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
+        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
     	      this.keyUsages = defaults.keyUsages;
         }
 
-        public Builder keyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages) {
+        public Builder keyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages) {
             this.keyUsages = keyUsages;
             return this;
         }
 
         public Builder keyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageArgs> keyUsages) {
-            this.keyUsages = Input.ofNullable(keyUsages);
+            this.keyUsages = Output.ofNullable(keyUsages);
             return this;
         }
         public CertificateCertificateDescriptionConfigValueArgs build() {

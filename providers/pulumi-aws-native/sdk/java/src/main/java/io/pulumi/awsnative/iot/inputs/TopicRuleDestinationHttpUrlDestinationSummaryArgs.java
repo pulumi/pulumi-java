@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
     public static final TopicRuleDestinationHttpUrlDestinationSummaryArgs Empty = new TopicRuleDestinationHttpUrlDestinationSummaryArgs();
 
     @InputImport(name="confirmationUrl")
-      private final @Nullable Input<String> confirmationUrl;
+      private final @Nullable Output<String> confirmationUrl;
 
-    public Input<String> getConfirmationUrl() {
-        return this.confirmationUrl == null ? Input.empty() : this.confirmationUrl;
+    public Output<String> getConfirmationUrl() {
+        return this.confirmationUrl == null ? Output.empty() : this.confirmationUrl;
     }
 
-    public TopicRuleDestinationHttpUrlDestinationSummaryArgs(@Nullable Input<String> confirmationUrl) {
+    public TopicRuleDestinationHttpUrlDestinationSummaryArgs(@Nullable Output<String> confirmationUrl) {
         this.confirmationUrl = confirmationUrl;
     }
 
     private TopicRuleDestinationHttpUrlDestinationSummaryArgs() {
-        this.confirmationUrl = Input.empty();
+        this.confirmationUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> confirmationUrl;
+        private @Nullable Output<String> confirmationUrl;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
     	      this.confirmationUrl = defaults.confirmationUrl;
         }
 
-        public Builder confirmationUrl(@Nullable Input<String> confirmationUrl) {
+        public Builder confirmationUrl(@Nullable Output<String> confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
 
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
-            this.confirmationUrl = Input.ofNullable(confirmationUrl);
+            this.confirmationUrl = Output.ofNullable(confirmationUrl);
             return this;
         }
         public TopicRuleDestinationHttpUrlDestinationSummaryArgs build() {

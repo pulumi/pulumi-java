@@ -11,7 +11,6 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusRespon
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VirtualDiskResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -445,18 +444,18 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineTemplate(String name, VirtualMachineTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:connectedvmwarevsphere:VirtualMachineTemplate", name, args == null ? VirtualMachineTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:connectedvmwarevsphere:VirtualMachineTemplate", name, args == null ? VirtualMachineTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualMachineTemplate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualMachineTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:connectedvmwarevsphere:VirtualMachineTemplate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:connectedvmwarevsphere/v20201001preview:VirtualMachineTemplate").build())
+                Output.of(Alias.builder().setType("azure-native:connectedvmwarevsphere/v20201001preview:VirtualMachineTemplate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -470,7 +469,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualMachineTemplate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualMachineTemplate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineTemplate(name, id, options);
     }
 }

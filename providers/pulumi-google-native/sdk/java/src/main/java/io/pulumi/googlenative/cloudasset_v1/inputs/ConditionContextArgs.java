@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessTime")
-      private final @Nullable Input<String> accessTime;
+      private final @Nullable Output<String> accessTime;
 
-    public Input<String> getAccessTime() {
-        return this.accessTime == null ? Input.empty() : this.accessTime;
+    public Output<String> getAccessTime() {
+        return this.accessTime == null ? Output.empty() : this.accessTime;
     }
 
-    public ConditionContextArgs(@Nullable Input<String> accessTime) {
+    public ConditionContextArgs(@Nullable Output<String> accessTime) {
         this.accessTime = accessTime;
     }
 
     private ConditionContextArgs() {
-        this.accessTime = Input.empty();
+        this.accessTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessTime;
+        private @Nullable Output<String> accessTime;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs
     	      this.accessTime = defaults.accessTime;
         }
 
-        public Builder accessTime(@Nullable Input<String> accessTime) {
+        public Builder accessTime(@Nullable Output<String> accessTime) {
             this.accessTime = accessTime;
             return this;
         }
 
         public Builder accessTime(@Nullable String accessTime) {
-            this.accessTime = Input.ofNullable(accessTime);
+            this.accessTime = Output.ofNullable(accessTime);
             return this;
         }
         public ConditionContextArgs build() {

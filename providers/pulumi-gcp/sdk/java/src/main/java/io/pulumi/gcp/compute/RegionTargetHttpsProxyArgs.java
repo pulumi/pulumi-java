@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sslCertificates", required=true)
-      private final Input<List<String>> sslCertificates;
+      private final Output<List<String>> sslCertificates;
 
-    public Input<List<String>> getSslCertificates() {
+    public Output<List<String>> getSslCertificates() {
         return this.sslCertificates;
     }
 
@@ -86,19 +86,19 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="urlMap", required=true)
-      private final Input<String> urlMap;
+      private final Output<String> urlMap;
 
-    public Input<String> getUrlMap() {
+    public Output<String> getUrlMap() {
         return this.urlMap;
     }
 
     public RegionTargetHttpsProxyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<List<String>> sslCertificates,
-        Input<String> urlMap) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<List<String>> sslCertificates,
+        Output<String> urlMap) {
         this.description = description;
         this.name = name;
         this.project = project;
@@ -108,12 +108,12 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     }
 
     private RegionTargetHttpsProxyArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.sslCertificates = Input.empty();
-        this.urlMap = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.sslCertificates = Output.empty();
+        this.urlMap = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,12 +125,12 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<List<String>> sslCertificates;
-        private Input<String> urlMap;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<List<String>> sslCertificates;
+        private Output<String> urlMap;
 
         public Builder() {
     	      // Empty
@@ -146,63 +146,63 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder sslCertificates(Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(Output<List<String>> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
 
         public Builder sslCertificates(List<String> sslCertificates) {
-            this.sslCertificates = Input.of(Objects.requireNonNull(sslCertificates));
+            this.sslCertificates = Output.of(Objects.requireNonNull(sslCertificates));
             return this;
         }
 
-        public Builder urlMap(Input<String> urlMap) {
+        public Builder urlMap(Output<String> urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
 
         public Builder urlMap(String urlMap) {
-            this.urlMap = Input.of(Objects.requireNonNull(urlMap));
+            this.urlMap = Output.of(Objects.requireNonNull(urlMap));
             return this;
         }
         public RegionTargetHttpsProxyArgs build() {

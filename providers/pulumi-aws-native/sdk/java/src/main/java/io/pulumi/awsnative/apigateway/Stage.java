@@ -9,7 +9,6 @@ import io.pulumi.awsnative.apigateway.outputs.StageAccessLogSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageCanarySetting;
 import io.pulumi.awsnative.apigateway.outputs.StageMethodSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -260,14 +259,14 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stage(String name, StageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:apigateway:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Stage(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Stage(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apigateway:Stage", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -282,7 +281,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Stage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Stage get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Stage(name, id, options);
     }
 }

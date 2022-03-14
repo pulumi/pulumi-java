@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -15,29 +15,29 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
     public static final NetworkInterfacePrivateIpAddressSpecificationArgs Empty = new NetworkInterfacePrivateIpAddressSpecificationArgs();
 
     @InputImport(name="primary", required=true)
-      private final Input<Boolean> primary;
+      private final Output<Boolean> primary;
 
-    public Input<Boolean> getPrimary() {
+    public Output<Boolean> getPrimary() {
         return this.primary;
     }
 
     @InputImport(name="privateIpAddress", required=true)
-      private final Input<String> privateIpAddress;
+      private final Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
+    public Output<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
     public NetworkInterfacePrivateIpAddressSpecificationArgs(
-        Input<Boolean> primary,
-        Input<String> privateIpAddress) {
+        Output<Boolean> primary,
+        Output<String> privateIpAddress) {
         this.primary = Objects.requireNonNull(primary, "expected parameter 'primary' to be non-null");
         this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
     }
 
     private NetworkInterfacePrivateIpAddressSpecificationArgs() {
-        this.primary = Input.empty();
-        this.privateIpAddress = Input.empty();
+        this.primary = Output.empty();
+        this.privateIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
     }
 
     public static final class Builder {
-        private Input<Boolean> primary;
-        private Input<String> privateIpAddress;
+        private Output<Boolean> primary;
+        private Output<String> privateIpAddress;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder primary(Input<Boolean> primary) {
+        public Builder primary(Output<Boolean> primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
 
         public Builder primary(Boolean primary) {
-            this.primary = Input.of(Objects.requireNonNull(primary));
+            this.primary = Output.of(Objects.requireNonNull(primary));
             return this;
         }
 
-        public Builder privateIpAddress(Input<String> privateIpAddress) {
+        public Builder privateIpAddress(Output<String> privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Input.of(Objects.requireNonNull(privateIpAddress));
+            this.privateIpAddress = Output.of(Objects.requireNonNull(privateIpAddress));
             return this;
         }
         public NetworkInterfacePrivateIpAddressSpecificationArgs build() {

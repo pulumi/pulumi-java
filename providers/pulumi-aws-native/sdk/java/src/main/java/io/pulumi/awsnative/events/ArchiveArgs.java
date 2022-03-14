@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -17,38 +17,38 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     public static final ArchiveArgs Empty = new ArchiveArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="eventPattern")
-      private final @Nullable Input<Object> eventPattern;
+      private final @Nullable Output<Object> eventPattern;
 
-    public Input<Object> getEventPattern() {
-        return this.eventPattern == null ? Input.empty() : this.eventPattern;
+    public Output<Object> getEventPattern() {
+        return this.eventPattern == null ? Output.empty() : this.eventPattern;
     }
 
     @InputImport(name="retentionDays")
-      private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Output<Integer> retentionDays;
 
-    public Input<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Input.empty() : this.retentionDays;
+    public Output<Integer> getRetentionDays() {
+        return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
     @InputImport(name="sourceArn", required=true)
-      private final Input<String> sourceArn;
+      private final Output<String> sourceArn;
 
-    public Input<String> getSourceArn() {
+    public Output<String> getSourceArn() {
         return this.sourceArn;
     }
 
     public ArchiveArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Object> eventPattern,
-        @Nullable Input<Integer> retentionDays,
-        Input<String> sourceArn) {
+        @Nullable Output<String> description,
+        @Nullable Output<Object> eventPattern,
+        @Nullable Output<Integer> retentionDays,
+        Output<String> sourceArn) {
         this.description = description;
         this.eventPattern = eventPattern;
         this.retentionDays = retentionDays;
@@ -56,10 +56,10 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArchiveArgs() {
-        this.description = Input.empty();
-        this.eventPattern = Input.empty();
-        this.retentionDays = Input.empty();
-        this.sourceArn = Input.empty();
+        this.description = Output.empty();
+        this.eventPattern = Output.empty();
+        this.retentionDays = Output.empty();
+        this.sourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> eventPattern;
-        private @Nullable Input<Integer> retentionDays;
-        private Input<String> sourceArn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> eventPattern;
+        private @Nullable Output<Integer> retentionDays;
+        private Output<String> sourceArn;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder eventPattern(@Nullable Input<Object> eventPattern) {
+        public Builder eventPattern(@Nullable Output<Object> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
         public Builder eventPattern(@Nullable Object eventPattern) {
-            this.eventPattern = Input.ofNullable(eventPattern);
+            this.eventPattern = Output.ofNullable(eventPattern);
             return this;
         }
 
-        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Input.ofNullable(retentionDays);
+            this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
 
-        public Builder sourceArn(Input<String> sourceArn) {
+        public Builder sourceArn(Output<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
 
         public Builder sourceArn(String sourceArn) {
-            this.sourceArn = Input.of(Objects.requireNonNull(sourceArn));
+            this.sourceArn = Output.of(Objects.requireNonNull(sourceArn));
             return this;
         }
         public ArchiveArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.orgpolicy_v2;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -87,14 +86,14 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationPolicy(String name, OrganizationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:orgpolicy/v2:OrganizationPolicy", name, args == null ? OrganizationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:orgpolicy/v2:OrganizationPolicy", name, args == null ? OrganizationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OrganizationPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:orgpolicy/v2:OrganizationPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -109,7 +108,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationPolicy(name, id, options);
     }
 }

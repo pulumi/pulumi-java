@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workspaceId")
-      private final @Nullable Input<String> workspaceId;
+      private final @Nullable Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
-        return this.workspaceId == null ? Input.empty() : this.workspaceId;
+    public Output<String> getWorkspaceId() {
+        return this.workspaceId == null ? Output.empty() : this.workspaceId;
     }
 
     public RuleGroupNamespaceState(
-        @Nullable Input<String> data,
-        @Nullable Input<String> name,
-        @Nullable Input<String> workspaceId) {
+        @Nullable Output<String> data,
+        @Nullable Output<String> name,
+        @Nullable Output<String> workspaceId) {
         this.data = data;
         this.name = name;
         this.workspaceId = workspaceId;
     }
 
     private RuleGroupNamespaceState() {
-        this.data = Input.empty();
-        this.name = Input.empty();
-        this.workspaceId = Input.empty();
+        this.data = Output.empty();
+        this.name = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> data;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> workspaceId;
+        private @Nullable Output<String> data;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder workspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Input.ofNullable(workspaceId);
+            this.workspaceId = Output.ofNullable(workspaceId);
             return this;
         }
         public RuleGroupNamespaceState build() {

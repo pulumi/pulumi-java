@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
@@ -29,22 +29,22 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceShareArn", required=true)
-      private final Input<String> resourceShareArn;
+      private final Output<String> resourceShareArn;
 
-    public Input<String> getResourceShareArn() {
+    public Output<String> getResourceShareArn() {
         return this.resourceShareArn;
     }
 
     public ResourceAssociationArgs(
-        Input<String> resourceArn,
-        Input<String> resourceShareArn) {
+        Output<String> resourceArn,
+        Output<String> resourceShareArn) {
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
         this.resourceShareArn = Objects.requireNonNull(resourceShareArn, "expected parameter 'resourceShareArn' to be non-null");
     }
 
     private ResourceAssociationArgs() {
-        this.resourceArn = Input.empty();
-        this.resourceShareArn = Input.empty();
+        this.resourceArn = Output.empty();
+        this.resourceShareArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> resourceArn;
-        private Input<String> resourceShareArn;
+        private Output<String> resourceArn;
+        private Output<String> resourceShareArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder resourceShareArn(Input<String> resourceShareArn) {
+        public Builder resourceShareArn(Output<String> resourceShareArn) {
             this.resourceShareArn = Objects.requireNonNull(resourceShareArn);
             return this;
         }
 
         public Builder resourceShareArn(String resourceShareArn) {
-            this.resourceShareArn = Input.of(Objects.requireNonNull(resourceShareArn));
+            this.resourceShareArn = Output.of(Objects.requireNonNull(resourceShareArn));
             return this;
         }
         public ResourceAssociationArgs build() {

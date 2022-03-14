@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
     public static final EntryBigqueryDateShardedSpecGetArgs Empty = new EntryBigqueryDateShardedSpecGetArgs();
 
     @InputImport(name="dataset")
-      private final @Nullable Input<String> dataset;
+      private final @Nullable Output<String> dataset;
 
-    public Input<String> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<String> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     @InputImport(name="shardCount")
-      private final @Nullable Input<Integer> shardCount;
+      private final @Nullable Output<Integer> shardCount;
 
-    public Input<Integer> getShardCount() {
-        return this.shardCount == null ? Input.empty() : this.shardCount;
+    public Output<Integer> getShardCount() {
+        return this.shardCount == null ? Output.empty() : this.shardCount;
     }
 
     @InputImport(name="tablePrefix")
-      private final @Nullable Input<String> tablePrefix;
+      private final @Nullable Output<String> tablePrefix;
 
-    public Input<String> getTablePrefix() {
-        return this.tablePrefix == null ? Input.empty() : this.tablePrefix;
+    public Output<String> getTablePrefix() {
+        return this.tablePrefix == null ? Output.empty() : this.tablePrefix;
     }
 
     public EntryBigqueryDateShardedSpecGetArgs(
-        @Nullable Input<String> dataset,
-        @Nullable Input<Integer> shardCount,
-        @Nullable Input<String> tablePrefix) {
+        @Nullable Output<String> dataset,
+        @Nullable Output<Integer> shardCount,
+        @Nullable Output<String> tablePrefix) {
         this.dataset = dataset;
         this.shardCount = shardCount;
         this.tablePrefix = tablePrefix;
     }
 
     private EntryBigqueryDateShardedSpecGetArgs() {
-        this.dataset = Input.empty();
-        this.shardCount = Input.empty();
-        this.tablePrefix = Input.empty();
+        this.dataset = Output.empty();
+        this.shardCount = Output.empty();
+        this.tablePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataset;
-        private @Nullable Input<Integer> shardCount;
-        private @Nullable Input<String> tablePrefix;
+        private @Nullable Output<String> dataset;
+        private @Nullable Output<Integer> shardCount;
+        private @Nullable Output<String> tablePrefix;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder dataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder shardCount(@Nullable Input<Integer> shardCount) {
+        public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Input.ofNullable(shardCount);
+            this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
 
-        public Builder tablePrefix(@Nullable Input<String> tablePrefix) {
+        public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
 
         public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Input.ofNullable(tablePrefix);
+            this.tablePrefix = Output.ofNullable(tablePrefix);
             return this;
         }
         public EntryBigqueryDateShardedSpecGetArgs build() {

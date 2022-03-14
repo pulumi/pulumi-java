@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.BasicSliArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliArgs;
@@ -25,10 +25,10 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="basicSliPerformance")
-      private final @Nullable Input<BasicSliArgs> basicSliPerformance;
+      private final @Nullable Output<BasicSliArgs> basicSliPerformance;
 
-    public Input<BasicSliArgs> getBasicSliPerformance() {
-        return this.basicSliPerformance == null ? Input.empty() : this.basicSliPerformance;
+    public Output<BasicSliArgs> getBasicSliPerformance() {
+        return this.basicSliPerformance == null ? Output.empty() : this.basicSliPerformance;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="performance")
-      private final @Nullable Input<RequestBasedSliArgs> performance;
+      private final @Nullable Output<RequestBasedSliArgs> performance;
 
-    public Input<RequestBasedSliArgs> getPerformance() {
-        return this.performance == null ? Input.empty() : this.performance;
+    public Output<RequestBasedSliArgs> getPerformance() {
+        return this.performance == null ? Output.empty() : this.performance;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="threshold")
-      private final @Nullable Input<Double> threshold;
+      private final @Nullable Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
-        return this.threshold == null ? Input.empty() : this.threshold;
+    public Output<Double> getThreshold() {
+        return this.threshold == null ? Output.empty() : this.threshold;
     }
 
     public PerformanceThresholdArgs(
-        @Nullable Input<BasicSliArgs> basicSliPerformance,
-        @Nullable Input<RequestBasedSliArgs> performance,
-        @Nullable Input<Double> threshold) {
+        @Nullable Output<BasicSliArgs> basicSliPerformance,
+        @Nullable Output<RequestBasedSliArgs> performance,
+        @Nullable Output<Double> threshold) {
         this.basicSliPerformance = basicSliPerformance;
         this.performance = performance;
         this.threshold = threshold;
     }
 
     private PerformanceThresholdArgs() {
-        this.basicSliPerformance = Input.empty();
-        this.performance = Input.empty();
-        this.threshold = Input.empty();
+        this.basicSliPerformance = Output.empty();
+        this.performance = Output.empty();
+        this.threshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<BasicSliArgs> basicSliPerformance;
-        private @Nullable Input<RequestBasedSliArgs> performance;
-        private @Nullable Input<Double> threshold;
+        private @Nullable Output<BasicSliArgs> basicSliPerformance;
+        private @Nullable Output<RequestBasedSliArgs> performance;
+        private @Nullable Output<Double> threshold;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder basicSliPerformance(@Nullable Input<BasicSliArgs> basicSliPerformance) {
+        public Builder basicSliPerformance(@Nullable Output<BasicSliArgs> basicSliPerformance) {
             this.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
         public Builder basicSliPerformance(@Nullable BasicSliArgs basicSliPerformance) {
-            this.basicSliPerformance = Input.ofNullable(basicSliPerformance);
+            this.basicSliPerformance = Output.ofNullable(basicSliPerformance);
             return this;
         }
 
-        public Builder performance(@Nullable Input<RequestBasedSliArgs> performance) {
+        public Builder performance(@Nullable Output<RequestBasedSliArgs> performance) {
             this.performance = performance;
             return this;
         }
 
         public Builder performance(@Nullable RequestBasedSliArgs performance) {
-            this.performance = Input.ofNullable(performance);
+            this.performance = Output.ofNullable(performance);
             return this;
         }
 
-        public Builder threshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Input.ofNullable(threshold);
+            this.threshold = Output.ofNullable(threshold);
             return this;
         }
         public PerformanceThresholdArgs build() {

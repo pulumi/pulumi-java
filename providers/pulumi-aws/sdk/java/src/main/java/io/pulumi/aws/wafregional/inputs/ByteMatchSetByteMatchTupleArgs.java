@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleFieldToMatchArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
+      private final Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
 
-    public Input<ByteMatchSetByteMatchTupleFieldToMatchArgs> getFieldToMatch() {
+    public Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -31,9 +31,9 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="positionalConstraint", required=true)
-      private final Input<String> positionalConstraint;
+      private final Output<String> positionalConstraint;
 
-    public Input<String> getPositionalConstraint() {
+    public Output<String> getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
@@ -42,10 +42,10 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="targetString")
-      private final @Nullable Input<String> targetString;
+      private final @Nullable Output<String> targetString;
 
-    public Input<String> getTargetString() {
-        return this.targetString == null ? Input.empty() : this.targetString;
+    public Output<String> getTargetString() {
+        return this.targetString == null ? Output.empty() : this.targetString;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="textTransformation", required=true)
-      private final Input<String> textTransformation;
+      private final Output<String> textTransformation;
 
-    public Input<String> getTextTransformation() {
+    public Output<String> getTextTransformation() {
         return this.textTransformation;
     }
 
     public ByteMatchSetByteMatchTupleArgs(
-        Input<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch,
-        Input<String> positionalConstraint,
-        @Nullable Input<String> targetString,
-        Input<String> textTransformation) {
+        Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch,
+        Output<String> positionalConstraint,
+        @Nullable Output<String> targetString,
+        Output<String> textTransformation) {
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
         this.targetString = targetString;
@@ -71,10 +71,10 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     }
 
     private ByteMatchSetByteMatchTupleArgs() {
-        this.fieldToMatch = Input.empty();
-        this.positionalConstraint = Input.empty();
-        this.targetString = Input.empty();
-        this.textTransformation = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.positionalConstraint = Output.empty();
+        this.targetString = Output.empty();
+        this.textTransformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
-        private Input<String> positionalConstraint;
-        private @Nullable Input<String> targetString;
-        private Input<String> textTransformation;
+        private Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
+        private Output<String> positionalConstraint;
+        private @Nullable Output<String> targetString;
+        private Output<String> textTransformation;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder fieldToMatch(Input<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder positionalConstraint(Input<String> positionalConstraint) {
+        public Builder positionalConstraint(Output<String> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
         public Builder positionalConstraint(String positionalConstraint) {
-            this.positionalConstraint = Input.of(Objects.requireNonNull(positionalConstraint));
+            this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
 
-        public Builder targetString(@Nullable Input<String> targetString) {
+        public Builder targetString(@Nullable Output<String> targetString) {
             this.targetString = targetString;
             return this;
         }
 
         public Builder targetString(@Nullable String targetString) {
-            this.targetString = Input.ofNullable(targetString);
+            this.targetString = Output.ofNullable(targetString);
             return this;
         }
 
-        public Builder textTransformation(Input<String> textTransformation) {
+        public Builder textTransformation(Output<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
 
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Input.of(Objects.requireNonNull(textTransformation));
+            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
             return this;
         }
         public ByteMatchSetByteMatchTupleArgs build() {

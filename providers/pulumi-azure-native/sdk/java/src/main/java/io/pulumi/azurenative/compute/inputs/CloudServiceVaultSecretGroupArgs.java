@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultCertificateArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class CloudServiceVaultSecretGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceVault")
-      private final @Nullable Input<SubResourceArgs> sourceVault;
+      private final @Nullable Output<SubResourceArgs> sourceVault;
 
-    public Input<SubResourceArgs> getSourceVault() {
-        return this.sourceVault == null ? Input.empty() : this.sourceVault;
+    public Output<SubResourceArgs> getSourceVault() {
+        return this.sourceVault == null ? Output.empty() : this.sourceVault;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CloudServiceVaultSecretGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vaultCertificates")
-      private final @Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates;
+      private final @Nullable Output<List<CloudServiceVaultCertificateArgs>> vaultCertificates;
 
-    public Input<List<CloudServiceVaultCertificateArgs>> getVaultCertificates() {
-        return this.vaultCertificates == null ? Input.empty() : this.vaultCertificates;
+    public Output<List<CloudServiceVaultCertificateArgs>> getVaultCertificates() {
+        return this.vaultCertificates == null ? Output.empty() : this.vaultCertificates;
     }
 
     public CloudServiceVaultSecretGroupArgs(
-        @Nullable Input<SubResourceArgs> sourceVault,
-        @Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates) {
+        @Nullable Output<SubResourceArgs> sourceVault,
+        @Nullable Output<List<CloudServiceVaultCertificateArgs>> vaultCertificates) {
         this.sourceVault = sourceVault;
         this.vaultCertificates = vaultCertificates;
     }
 
     private CloudServiceVaultSecretGroupArgs() {
-        this.sourceVault = Input.empty();
-        this.vaultCertificates = Input.empty();
+        this.sourceVault = Output.empty();
+        this.vaultCertificates = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CloudServiceVaultSecretGroupArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> sourceVault;
-        private @Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates;
+        private @Nullable Output<SubResourceArgs> sourceVault;
+        private @Nullable Output<List<CloudServiceVaultCertificateArgs>> vaultCertificates;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CloudServiceVaultSecretGroupArgs extends io.pulumi.resources.
     	      this.vaultCertificates = defaults.vaultCertificates;
         }
 
-        public Builder sourceVault(@Nullable Input<SubResourceArgs> sourceVault) {
+        public Builder sourceVault(@Nullable Output<SubResourceArgs> sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }
 
         public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
-            this.sourceVault = Input.ofNullable(sourceVault);
+            this.sourceVault = Output.ofNullable(sourceVault);
             return this;
         }
 
-        public Builder vaultCertificates(@Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates) {
+        public Builder vaultCertificates(@Nullable Output<List<CloudServiceVaultCertificateArgs>> vaultCertificates) {
             this.vaultCertificates = vaultCertificates;
             return this;
         }
 
         public Builder vaultCertificates(@Nullable List<CloudServiceVaultCertificateArgs> vaultCertificates) {
-            this.vaultCertificates = Input.ofNullable(vaultCertificates);
+            this.vaultCertificates = Output.ofNullable(vaultCertificates);
             return this;
         }
         public CloudServiceVaultSecretGroupArgs build() {

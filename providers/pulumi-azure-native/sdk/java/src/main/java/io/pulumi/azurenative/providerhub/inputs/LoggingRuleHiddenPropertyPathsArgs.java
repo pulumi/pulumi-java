@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
     public static final LoggingRuleHiddenPropertyPathsArgs Empty = new LoggingRuleHiddenPropertyPathsArgs();
 
     @InputImport(name="hiddenPathsOnRequest")
-      private final @Nullable Input<List<String>> hiddenPathsOnRequest;
+      private final @Nullable Output<List<String>> hiddenPathsOnRequest;
 
-    public Input<List<String>> getHiddenPathsOnRequest() {
-        return this.hiddenPathsOnRequest == null ? Input.empty() : this.hiddenPathsOnRequest;
+    public Output<List<String>> getHiddenPathsOnRequest() {
+        return this.hiddenPathsOnRequest == null ? Output.empty() : this.hiddenPathsOnRequest;
     }
 
     @InputImport(name="hiddenPathsOnResponse")
-      private final @Nullable Input<List<String>> hiddenPathsOnResponse;
+      private final @Nullable Output<List<String>> hiddenPathsOnResponse;
 
-    public Input<List<String>> getHiddenPathsOnResponse() {
-        return this.hiddenPathsOnResponse == null ? Input.empty() : this.hiddenPathsOnResponse;
+    public Output<List<String>> getHiddenPathsOnResponse() {
+        return this.hiddenPathsOnResponse == null ? Output.empty() : this.hiddenPathsOnResponse;
     }
 
     public LoggingRuleHiddenPropertyPathsArgs(
-        @Nullable Input<List<String>> hiddenPathsOnRequest,
-        @Nullable Input<List<String>> hiddenPathsOnResponse) {
+        @Nullable Output<List<String>> hiddenPathsOnRequest,
+        @Nullable Output<List<String>> hiddenPathsOnResponse) {
         this.hiddenPathsOnRequest = hiddenPathsOnRequest;
         this.hiddenPathsOnResponse = hiddenPathsOnResponse;
     }
 
     private LoggingRuleHiddenPropertyPathsArgs() {
-        this.hiddenPathsOnRequest = Input.empty();
-        this.hiddenPathsOnResponse = Input.empty();
+        this.hiddenPathsOnRequest = Output.empty();
+        this.hiddenPathsOnResponse = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> hiddenPathsOnRequest;
-        private @Nullable Input<List<String>> hiddenPathsOnResponse;
+        private @Nullable Output<List<String>> hiddenPathsOnRequest;
+        private @Nullable Output<List<String>> hiddenPathsOnResponse;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
     	      this.hiddenPathsOnResponse = defaults.hiddenPathsOnResponse;
         }
 
-        public Builder hiddenPathsOnRequest(@Nullable Input<List<String>> hiddenPathsOnRequest) {
+        public Builder hiddenPathsOnRequest(@Nullable Output<List<String>> hiddenPathsOnRequest) {
             this.hiddenPathsOnRequest = hiddenPathsOnRequest;
             return this;
         }
 
         public Builder hiddenPathsOnRequest(@Nullable List<String> hiddenPathsOnRequest) {
-            this.hiddenPathsOnRequest = Input.ofNullable(hiddenPathsOnRequest);
+            this.hiddenPathsOnRequest = Output.ofNullable(hiddenPathsOnRequest);
             return this;
         }
 
-        public Builder hiddenPathsOnResponse(@Nullable Input<List<String>> hiddenPathsOnResponse) {
+        public Builder hiddenPathsOnResponse(@Nullable Output<List<String>> hiddenPathsOnResponse) {
             this.hiddenPathsOnResponse = hiddenPathsOnResponse;
             return this;
         }
 
         public Builder hiddenPathsOnResponse(@Nullable List<String> hiddenPathsOnResponse) {
-            this.hiddenPathsOnResponse = Input.ofNullable(hiddenPathsOnResponse);
+            this.hiddenPathsOnResponse = Output.ofNullable(hiddenPathsOnResponse);
             return this;
         }
         public LoggingRuleHiddenPropertyPathsArgs build() {

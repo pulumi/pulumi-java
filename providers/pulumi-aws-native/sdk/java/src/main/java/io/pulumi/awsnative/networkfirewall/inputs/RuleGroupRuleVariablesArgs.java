@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
     public static final RuleGroupRuleVariablesArgs Empty = new RuleGroupRuleVariablesArgs();
 
     @InputImport(name="iPSets")
-      private final @Nullable Input<Object> iPSets;
+      private final @Nullable Output<Object> iPSets;
 
-    public Input<Object> getIPSets() {
-        return this.iPSets == null ? Input.empty() : this.iPSets;
+    public Output<Object> getIPSets() {
+        return this.iPSets == null ? Output.empty() : this.iPSets;
     }
 
     @InputImport(name="portSets")
-      private final @Nullable Input<Object> portSets;
+      private final @Nullable Output<Object> portSets;
 
-    public Input<Object> getPortSets() {
-        return this.portSets == null ? Input.empty() : this.portSets;
+    public Output<Object> getPortSets() {
+        return this.portSets == null ? Output.empty() : this.portSets;
     }
 
     public RuleGroupRuleVariablesArgs(
-        @Nullable Input<Object> iPSets,
-        @Nullable Input<Object> portSets) {
+        @Nullable Output<Object> iPSets,
+        @Nullable Output<Object> portSets) {
         this.iPSets = iPSets;
         this.portSets = portSets;
     }
 
     private RuleGroupRuleVariablesArgs() {
-        this.iPSets = Input.empty();
-        this.portSets = Input.empty();
+        this.iPSets = Output.empty();
+        this.portSets = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> iPSets;
-        private @Nullable Input<Object> portSets;
+        private @Nullable Output<Object> iPSets;
+        private @Nullable Output<Object> portSets;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
     	      this.portSets = defaults.portSets;
         }
 
-        public Builder iPSets(@Nullable Input<Object> iPSets) {
+        public Builder iPSets(@Nullable Output<Object> iPSets) {
             this.iPSets = iPSets;
             return this;
         }
 
         public Builder iPSets(@Nullable Object iPSets) {
-            this.iPSets = Input.ofNullable(iPSets);
+            this.iPSets = Output.ofNullable(iPSets);
             return this;
         }
 
-        public Builder portSets(@Nullable Input<Object> portSets) {
+        public Builder portSets(@Nullable Output<Object> portSets) {
             this.portSets = portSets;
             return this;
         }
 
         public Builder portSets(@Nullable Object portSets) {
-            this.portSets = Input.ofNullable(portSets);
+            this.portSets = Output.ofNullable(portSets);
             return this;
         }
         public RuleGroupRuleVariablesArgs build() {

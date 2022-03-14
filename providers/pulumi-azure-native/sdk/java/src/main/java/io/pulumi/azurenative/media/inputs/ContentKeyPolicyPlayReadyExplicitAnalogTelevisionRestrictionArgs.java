@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
      * 
      */
     @InputImport(name="bestEffort", required=true)
-      private final Input<Boolean> bestEffort;
+      private final Output<Boolean> bestEffort;
 
-    public Input<Boolean> getBestEffort() {
+    public Output<Boolean> getBestEffort() {
         return this.bestEffort;
     }
 
@@ -34,22 +34,22 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
      * 
      */
     @InputImport(name="configurationData", required=true)
-      private final Input<Integer> configurationData;
+      private final Output<Integer> configurationData;
 
-    public Input<Integer> getConfigurationData() {
+    public Output<Integer> getConfigurationData() {
         return this.configurationData;
     }
 
     public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs(
-        Input<Boolean> bestEffort,
-        Input<Integer> configurationData) {
+        Output<Boolean> bestEffort,
+        Output<Integer> configurationData) {
         this.bestEffort = Objects.requireNonNull(bestEffort, "expected parameter 'bestEffort' to be non-null");
         this.configurationData = Objects.requireNonNull(configurationData, "expected parameter 'configurationData' to be non-null");
     }
 
     private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs() {
-        this.bestEffort = Input.empty();
-        this.configurationData = Input.empty();
+        this.bestEffort = Output.empty();
+        this.configurationData = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
     }
 
     public static final class Builder {
-        private Input<Boolean> bestEffort;
-        private Input<Integer> configurationData;
+        private Output<Boolean> bestEffort;
+        private Output<Integer> configurationData;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
     	      this.configurationData = defaults.configurationData;
         }
 
-        public Builder bestEffort(Input<Boolean> bestEffort) {
+        public Builder bestEffort(Output<Boolean> bestEffort) {
             this.bestEffort = Objects.requireNonNull(bestEffort);
             return this;
         }
 
         public Builder bestEffort(Boolean bestEffort) {
-            this.bestEffort = Input.of(Objects.requireNonNull(bestEffort));
+            this.bestEffort = Output.of(Objects.requireNonNull(bestEffort));
             return this;
         }
 
-        public Builder configurationData(Input<Integer> configurationData) {
+        public Builder configurationData(Output<Integer> configurationData) {
             this.configurationData = Objects.requireNonNull(configurationData);
             return this;
         }
 
         public Builder configurationData(Integer configurationData) {
-            this.configurationData = Input.of(Objects.requireNonNull(configurationData));
+            this.configurationData = Output.of(Objects.requireNonNull(configurationData));
             return this;
         }
         public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry;
 
 import io.pulumi.awsnative.servicecatalogappregistry.inputs.AttributeGroupTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -17,9 +17,9 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final AttributeGroupArgs Empty = new AttributeGroupArgs();
 
     @InputImport(name="attributes", required=true)
-      private final Input<Object> attributes;
+      private final Output<Object> attributes;
 
-    public Input<Object> getAttributes() {
+    public Output<Object> getAttributes() {
         return this.attributes;
     }
 
@@ -28,10 +28,10 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -39,24 +39,24 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<AttributeGroupTagsArgs> tags;
+      private final @Nullable Output<AttributeGroupTagsArgs> tags;
 
-    public Input<AttributeGroupTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<AttributeGroupTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AttributeGroupArgs(
-        Input<Object> attributes,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<AttributeGroupTagsArgs> tags) {
+        Output<Object> attributes,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<AttributeGroupTagsArgs> tags) {
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
         this.description = description;
         this.name = name;
@@ -64,10 +64,10 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttributeGroupArgs() {
-        this.attributes = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.attributes = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,10 +79,10 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Object> attributes;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AttributeGroupTagsArgs> tags;
+        private Output<Object> attributes;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AttributeGroupTagsArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -96,43 +96,43 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder attributes(Input<Object> attributes) {
+        public Builder attributes(Output<Object> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
         public Builder attributes(Object attributes) {
-            this.attributes = Input.of(Objects.requireNonNull(attributes));
+            this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<AttributeGroupTagsArgs> tags) {
+        public Builder tags(@Nullable Output<AttributeGroupTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable AttributeGroupTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AttributeGroupArgs build() {

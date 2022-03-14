@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualGatewaySpecBackendDefaultsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="clientPolicy")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {
-        return this.clientPolicy == null ? Input.empty() : this.clientPolicy;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {
+        return this.clientPolicy == null ? Output.empty() : this.clientPolicy;
     }
 
-    public VirtualGatewaySpecBackendDefaultsGetArgs(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
+    public VirtualGatewaySpecBackendDefaultsGetArgs(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
         this.clientPolicy = clientPolicy;
     }
 
     private VirtualGatewaySpecBackendDefaultsGetArgs() {
-        this.clientPolicy = Input.empty();
+        this.clientPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecBackendDefaultsGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualGatewaySpecBackendDefaultsGetArgs extends io.pulumi.re
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder clientPolicy(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
+        public Builder clientPolicy(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }
 
         public Builder clientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs clientPolicy) {
-            this.clientPolicy = Input.ofNullable(clientPolicy);
+            this.clientPolicy = Output.ofNullable(clientPolicy);
             return this;
         }
         public VirtualGatewaySpecBackendDefaultsGetArgs build() {

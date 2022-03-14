@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -32,22 +32,22 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matcher")
-      private final @Nullable Input<String> matcher;
+      private final @Nullable Output<String> matcher;
 
-    public Input<String> getMatcher() {
-        return this.matcher == null ? Input.empty() : this.matcher;
+    public Output<String> getMatcher() {
+        return this.matcher == null ? Output.empty() : this.matcher;
     }
 
     public UptimeCheckConfigContentMatcherArgs(
-        Input<String> content,
-        @Nullable Input<String> matcher) {
+        Output<String> content,
+        @Nullable Output<String> matcher) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.matcher = matcher;
     }
 
     private UptimeCheckConfigContentMatcherArgs() {
-        this.content = Input.empty();
-        this.matcher = Input.empty();
+        this.content = Output.empty();
+        this.matcher = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> content;
-        private @Nullable Input<String> matcher;
+        private Output<String> content;
+        private @Nullable Output<String> matcher;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
     	      this.matcher = defaults.matcher;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder matcher(@Nullable Input<String> matcher) {
+        public Builder matcher(@Nullable Output<String> matcher) {
             this.matcher = matcher;
             return this;
         }
 
         public Builder matcher(@Nullable String matcher) {
-            this.matcher = Input.ofNullable(matcher);
+            this.matcher = Output.ofNullable(matcher);
             return this;
         }
         public UptimeCheckConfigContentMatcherArgs build() {

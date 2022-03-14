@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pinpoint.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lambdaFunctionName")
-      private final @Nullable Input<String> lambdaFunctionName;
+      private final @Nullable Output<String> lambdaFunctionName;
 
-    public Input<String> getLambdaFunctionName() {
-        return this.lambdaFunctionName == null ? Input.empty() : this.lambdaFunctionName;
+    public Output<String> getLambdaFunctionName() {
+        return this.lambdaFunctionName == null ? Output.empty() : this.lambdaFunctionName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="webUrl")
-      private final @Nullable Input<String> webUrl;
+      private final @Nullable Output<String> webUrl;
 
-    public Input<String> getWebUrl() {
-        return this.webUrl == null ? Input.empty() : this.webUrl;
+    public Output<String> getWebUrl() {
+        return this.webUrl == null ? Output.empty() : this.webUrl;
     }
 
     public AppCampaignHookArgs(
-        @Nullable Input<String> lambdaFunctionName,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> webUrl) {
+        @Nullable Output<String> lambdaFunctionName,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> webUrl) {
         this.lambdaFunctionName = lambdaFunctionName;
         this.mode = mode;
         this.webUrl = webUrl;
     }
 
     private AppCampaignHookArgs() {
-        this.lambdaFunctionName = Input.empty();
-        this.mode = Input.empty();
-        this.webUrl = Input.empty();
+        this.lambdaFunctionName = Output.empty();
+        this.mode = Output.empty();
+        this.webUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> lambdaFunctionName;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> webUrl;
+        private @Nullable Output<String> lambdaFunctionName;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> webUrl;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
     	      this.webUrl = defaults.webUrl;
         }
 
-        public Builder lambdaFunctionName(@Nullable Input<String> lambdaFunctionName) {
+        public Builder lambdaFunctionName(@Nullable Output<String> lambdaFunctionName) {
             this.lambdaFunctionName = lambdaFunctionName;
             return this;
         }
 
         public Builder lambdaFunctionName(@Nullable String lambdaFunctionName) {
-            this.lambdaFunctionName = Input.ofNullable(lambdaFunctionName);
+            this.lambdaFunctionName = Output.ofNullable(lambdaFunctionName);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder webUrl(@Nullable Input<String> webUrl) {
+        public Builder webUrl(@Nullable Output<String> webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public Builder webUrl(@Nullable String webUrl) {
-            this.webUrl = Input.ofNullable(webUrl);
+            this.webUrl = Output.ofNullable(webUrl);
             return this;
         }
         public AppCampaignHookArgs build() {

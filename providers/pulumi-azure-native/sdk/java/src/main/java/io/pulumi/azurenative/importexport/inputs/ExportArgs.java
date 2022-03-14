@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobListBlobPath")
-      private final @Nullable Input<String> blobListBlobPath;
+      private final @Nullable Output<String> blobListBlobPath;
 
-    public Input<String> getBlobListBlobPath() {
-        return this.blobListBlobPath == null ? Input.empty() : this.blobListBlobPath;
+    public Output<String> getBlobListBlobPath() {
+        return this.blobListBlobPath == null ? Output.empty() : this.blobListBlobPath;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPath")
-      private final @Nullable Input<List<String>> blobPath;
+      private final @Nullable Output<List<String>> blobPath;
 
-    public Input<List<String>> getBlobPath() {
-        return this.blobPath == null ? Input.empty() : this.blobPath;
+    public Output<List<String>> getBlobPath() {
+        return this.blobPath == null ? Output.empty() : this.blobPath;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPathPrefix")
-      private final @Nullable Input<List<String>> blobPathPrefix;
+      private final @Nullable Output<List<String>> blobPathPrefix;
 
-    public Input<List<String>> getBlobPathPrefix() {
-        return this.blobPathPrefix == null ? Input.empty() : this.blobPathPrefix;
+    public Output<List<String>> getBlobPathPrefix() {
+        return this.blobPathPrefix == null ? Output.empty() : this.blobPathPrefix;
     }
 
     public ExportArgs(
-        @Nullable Input<String> blobListBlobPath,
-        @Nullable Input<List<String>> blobPath,
-        @Nullable Input<List<String>> blobPathPrefix) {
+        @Nullable Output<String> blobListBlobPath,
+        @Nullable Output<List<String>> blobPath,
+        @Nullable Output<List<String>> blobPathPrefix) {
         this.blobListBlobPath = blobListBlobPath;
         this.blobPath = blobPath;
         this.blobPathPrefix = blobPathPrefix;
     }
 
     private ExportArgs() {
-        this.blobListBlobPath = Input.empty();
-        this.blobPath = Input.empty();
-        this.blobPathPrefix = Input.empty();
+        this.blobListBlobPath = Output.empty();
+        this.blobPath = Output.empty();
+        this.blobPathPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> blobListBlobPath;
-        private @Nullable Input<List<String>> blobPath;
-        private @Nullable Input<List<String>> blobPathPrefix;
+        private @Nullable Output<String> blobListBlobPath;
+        private @Nullable Output<List<String>> blobPath;
+        private @Nullable Output<List<String>> blobPathPrefix;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.blobPathPrefix = defaults.blobPathPrefix;
         }
 
-        public Builder blobListBlobPath(@Nullable Input<String> blobListBlobPath) {
+        public Builder blobListBlobPath(@Nullable Output<String> blobListBlobPath) {
             this.blobListBlobPath = blobListBlobPath;
             return this;
         }
 
         public Builder blobListBlobPath(@Nullable String blobListBlobPath) {
-            this.blobListBlobPath = Input.ofNullable(blobListBlobPath);
+            this.blobListBlobPath = Output.ofNullable(blobListBlobPath);
             return this;
         }
 
-        public Builder blobPath(@Nullable Input<List<String>> blobPath) {
+        public Builder blobPath(@Nullable Output<List<String>> blobPath) {
             this.blobPath = blobPath;
             return this;
         }
 
         public Builder blobPath(@Nullable List<String> blobPath) {
-            this.blobPath = Input.ofNullable(blobPath);
+            this.blobPath = Output.ofNullable(blobPath);
             return this;
         }
 
-        public Builder blobPathPrefix(@Nullable Input<List<String>> blobPathPrefix) {
+        public Builder blobPathPrefix(@Nullable Output<List<String>> blobPathPrefix) {
             this.blobPathPrefix = blobPathPrefix;
             return this;
         }
 
         public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
-            this.blobPathPrefix = Input.ofNullable(blobPathPrefix);
+            this.blobPathPrefix = Output.ofNullable(blobPathPrefix);
             return this;
         }
         public ExportArgs build() {

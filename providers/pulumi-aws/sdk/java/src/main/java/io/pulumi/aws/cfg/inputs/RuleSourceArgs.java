@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RuleSourceSourceDetailArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner", required=true)
-      private final Input<String> owner;
+      private final Output<String> owner;
 
-    public Input<String> getOwner() {
+    public Output<String> getOwner() {
         return this.owner;
     }
 
@@ -32,10 +32,10 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDetails")
-      private final @Nullable Input<List<RuleSourceSourceDetailArgs>> sourceDetails;
+      private final @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails;
 
-    public Input<List<RuleSourceSourceDetailArgs>> getSourceDetails() {
-        return this.sourceDetails == null ? Input.empty() : this.sourceDetails;
+    public Output<List<RuleSourceSourceDetailArgs>> getSourceDetails() {
+        return this.sourceDetails == null ? Output.empty() : this.sourceDetails;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIdentifier", required=true)
-      private final Input<String> sourceIdentifier;
+      private final Output<String> sourceIdentifier;
 
-    public Input<String> getSourceIdentifier() {
+    public Output<String> getSourceIdentifier() {
         return this.sourceIdentifier;
     }
 
     public RuleSourceArgs(
-        Input<String> owner,
-        @Nullable Input<List<RuleSourceSourceDetailArgs>> sourceDetails,
-        Input<String> sourceIdentifier) {
+        Output<String> owner,
+        @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails,
+        Output<String> sourceIdentifier) {
         this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
         this.sourceDetails = sourceDetails;
         this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
     }
 
     private RuleSourceArgs() {
-        this.owner = Input.empty();
-        this.sourceDetails = Input.empty();
-        this.sourceIdentifier = Input.empty();
+        this.owner = Output.empty();
+        this.sourceDetails = Output.empty();
+        this.sourceIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> owner;
-        private @Nullable Input<List<RuleSourceSourceDetailArgs>> sourceDetails;
-        private Input<String> sourceIdentifier;
+        private Output<String> owner;
+        private @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails;
+        private Output<String> sourceIdentifier;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceIdentifier = defaults.sourceIdentifier;
         }
 
-        public Builder owner(Input<String> owner) {
+        public Builder owner(Output<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
         public Builder owner(String owner) {
-            this.owner = Input.of(Objects.requireNonNull(owner));
+            this.owner = Output.of(Objects.requireNonNull(owner));
             return this;
         }
 
-        public Builder sourceDetails(@Nullable Input<List<RuleSourceSourceDetailArgs>> sourceDetails) {
+        public Builder sourceDetails(@Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails) {
             this.sourceDetails = sourceDetails;
             return this;
         }
 
         public Builder sourceDetails(@Nullable List<RuleSourceSourceDetailArgs> sourceDetails) {
-            this.sourceDetails = Input.ofNullable(sourceDetails);
+            this.sourceDetails = Output.ofNullable(sourceDetails);
             return this;
         }
 
-        public Builder sourceIdentifier(Input<String> sourceIdentifier) {
+        public Builder sourceIdentifier(Output<String> sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
 
         public Builder sourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = Input.of(Objects.requireNonNull(sourceIdentifier));
+            this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
             return this;
         }
         public RuleSourceArgs build() {

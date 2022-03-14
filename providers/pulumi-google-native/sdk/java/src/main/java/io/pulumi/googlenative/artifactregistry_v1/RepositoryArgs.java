@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.artifactregistry_v1.enums.RepositoryFormat;
 import io.pulumi.googlenative.artifactregistry_v1.inputs.MavenRepositoryConfigArgs;
@@ -22,10 +22,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<RepositoryFormat> format;
+      private final @Nullable Output<RepositoryFormat> format;
 
-    public Input<RepositoryFormat> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<RepositoryFormat> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -66,17 +66,17 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mavenConfig")
-      private final @Nullable Input<MavenRepositoryConfigArgs> mavenConfig;
+      private final @Nullable Output<MavenRepositoryConfigArgs> mavenConfig;
 
-    public Input<MavenRepositoryConfigArgs> getMavenConfig() {
-        return this.mavenConfig == null ? Input.empty() : this.mavenConfig;
+    public Output<MavenRepositoryConfigArgs> getMavenConfig() {
+        return this.mavenConfig == null ? Output.empty() : this.mavenConfig;
     }
 
     /**
@@ -95,24 +95,24 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="repositoryId")
-      private final @Nullable Input<String> repositoryId;
+      private final @Nullable Output<String> repositoryId;
 
-    public Input<String> getRepositoryId() {
-        return this.repositoryId == null ? Input.empty() : this.repositoryId;
+    public Output<String> getRepositoryId() {
+        return this.repositoryId == null ? Output.empty() : this.repositoryId;
     }
 
     /**
@@ -120,24 +120,24 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public RepositoryArgs(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> description,
-        @Nullable Input<RepositoryFormat> format,
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<MavenRepositoryConfigArgs> mavenConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> repositoryId,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> description,
+        @Nullable Output<RepositoryFormat> format,
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<MavenRepositoryConfigArgs> mavenConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> repositoryId,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.format = format;
@@ -152,17 +152,17 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.createTime = Input.empty();
-        this.description = Input.empty();
-        this.format = Input.empty();
-        this.kmsKeyName = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.mavenConfig = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.repositoryId = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.description = Output.empty();
+        this.format = Output.empty();
+        this.kmsKeyName = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.mavenConfig = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.repositoryId = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,17 +174,17 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<RepositoryFormat> format;
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MavenRepositoryConfigArgs> mavenConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> repositoryId;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<RepositoryFormat> format;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MavenRepositoryConfigArgs> mavenConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> repositoryId;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -205,113 +205,113 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder format(@Nullable Input<RepositoryFormat> format) {
+        public Builder format(@Nullable Output<RepositoryFormat> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable RepositoryFormat format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mavenConfig(@Nullable Input<MavenRepositoryConfigArgs> mavenConfig) {
+        public Builder mavenConfig(@Nullable Output<MavenRepositoryConfigArgs> mavenConfig) {
             this.mavenConfig = mavenConfig;
             return this;
         }
 
         public Builder mavenConfig(@Nullable MavenRepositoryConfigArgs mavenConfig) {
-            this.mavenConfig = Input.ofNullable(mavenConfig);
+            this.mavenConfig = Output.ofNullable(mavenConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder repositoryId(@Nullable Input<String> repositoryId) {
+        public Builder repositoryId(@Nullable Output<String> repositoryId) {
             this.repositoryId = repositoryId;
             return this;
         }
 
         public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Input.ofNullable(repositoryId);
+            this.repositoryId = Output.ofNullable(repositoryId);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public RepositoryArgs build() {

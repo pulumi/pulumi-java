@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="authority")
-      private final @Nullable Input<String> authority;
+      private final @Nullable Output<String> authority;
 
-    public Input<String> getAuthority() {
-        return this.authority == null ? Input.empty() : this.authority;
+    public Output<String> getAuthority() {
+        return this.authority == null ? Output.empty() : this.authority;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="smartProxyEnabled")
-      private final @Nullable Input<Boolean> smartProxyEnabled;
+      private final @Nullable Output<Boolean> smartProxyEnabled;
 
-    public Input<Boolean> getSmartProxyEnabled() {
-        return this.smartProxyEnabled == null ? Input.empty() : this.smartProxyEnabled;
+    public Output<Boolean> getSmartProxyEnabled() {
+        return this.smartProxyEnabled == null ? Output.empty() : this.smartProxyEnabled;
     }
 
     public ServiceAuthenticationConfigurationInfoArgs(
-        @Nullable Input<String> audience,
-        @Nullable Input<String> authority,
-        @Nullable Input<Boolean> smartProxyEnabled) {
+        @Nullable Output<String> audience,
+        @Nullable Output<String> authority,
+        @Nullable Output<Boolean> smartProxyEnabled) {
         this.audience = audience;
         this.authority = authority;
         this.smartProxyEnabled = smartProxyEnabled;
     }
 
     private ServiceAuthenticationConfigurationInfoArgs() {
-        this.audience = Input.empty();
-        this.authority = Input.empty();
-        this.smartProxyEnabled = Input.empty();
+        this.audience = Output.empty();
+        this.authority = Output.empty();
+        this.smartProxyEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audience;
-        private @Nullable Input<String> authority;
-        private @Nullable Input<Boolean> smartProxyEnabled;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<String> authority;
+        private @Nullable Output<Boolean> smartProxyEnabled;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
     	      this.smartProxyEnabled = defaults.smartProxyEnabled;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder authority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Output<String> authority) {
             this.authority = authority;
             return this;
         }
 
         public Builder authority(@Nullable String authority) {
-            this.authority = Input.ofNullable(authority);
+            this.authority = Output.ofNullable(authority);
             return this;
         }
 
-        public Builder smartProxyEnabled(@Nullable Input<Boolean> smartProxyEnabled) {
+        public Builder smartProxyEnabled(@Nullable Output<Boolean> smartProxyEnabled) {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
 
         public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
-            this.smartProxyEnabled = Input.ofNullable(smartProxyEnabled);
+            this.smartProxyEnabled = Output.ofNullable(smartProxyEnabled);
             return this;
         }
         public ServiceAuthenticationConfigurationInfoArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp.inputs;
 import io.pulumi.azurenative.netapp.enums.EndpointType;
 import io.pulumi.azurenative.netapp.enums.ReplicationSchedule;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpointType")
-      private final @Nullable Input<Either<String,EndpointType>> endpointType;
+      private final @Nullable Output<Either<String,EndpointType>> endpointType;
 
-    public Input<Either<String,EndpointType>> getEndpointType() {
-        return this.endpointType == null ? Input.empty() : this.endpointType;
+    public Output<Either<String,EndpointType>> getEndpointType() {
+        return this.endpointType == null ? Output.empty() : this.endpointType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remoteVolumeRegion")
-      private final @Nullable Input<String> remoteVolumeRegion;
+      private final @Nullable Output<String> remoteVolumeRegion;
 
-    public Input<String> getRemoteVolumeRegion() {
-        return this.remoteVolumeRegion == null ? Input.empty() : this.remoteVolumeRegion;
+    public Output<String> getRemoteVolumeRegion() {
+        return this.remoteVolumeRegion == null ? Output.empty() : this.remoteVolumeRegion;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remoteVolumeResourceId", required=true)
-      private final Input<String> remoteVolumeResourceId;
+      private final Output<String> remoteVolumeResourceId;
 
-    public Input<String> getRemoteVolumeResourceId() {
+    public Output<String> getRemoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
 
@@ -59,10 +59,10 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationId")
-      private final @Nullable Input<String> replicationId;
+      private final @Nullable Output<String> replicationId;
 
-    public Input<String> getReplicationId() {
-        return this.replicationId == null ? Input.empty() : this.replicationId;
+    public Output<String> getReplicationId() {
+        return this.replicationId == null ? Output.empty() : this.replicationId;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationSchedule", required=true)
-      private final Input<Either<String,ReplicationSchedule>> replicationSchedule;
+      private final Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
-    public Input<Either<String,ReplicationSchedule>> getReplicationSchedule() {
+    public Output<Either<String,ReplicationSchedule>> getReplicationSchedule() {
         return this.replicationSchedule;
     }
 
     public ReplicationObjectArgs(
-        @Nullable Input<Either<String,EndpointType>> endpointType,
-        @Nullable Input<String> remoteVolumeRegion,
-        Input<String> remoteVolumeResourceId,
-        @Nullable Input<String> replicationId,
-        Input<Either<String,ReplicationSchedule>> replicationSchedule) {
+        @Nullable Output<Either<String,EndpointType>> endpointType,
+        @Nullable Output<String> remoteVolumeRegion,
+        Output<String> remoteVolumeResourceId,
+        @Nullable Output<String> replicationId,
+        Output<Either<String,ReplicationSchedule>> replicationSchedule) {
         this.endpointType = endpointType;
         this.remoteVolumeRegion = remoteVolumeRegion;
         this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId, "expected parameter 'remoteVolumeResourceId' to be non-null");
@@ -90,11 +90,11 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReplicationObjectArgs() {
-        this.endpointType = Input.empty();
-        this.remoteVolumeRegion = Input.empty();
-        this.remoteVolumeResourceId = Input.empty();
-        this.replicationId = Input.empty();
-        this.replicationSchedule = Input.empty();
+        this.endpointType = Output.empty();
+        this.remoteVolumeRegion = Output.empty();
+        this.remoteVolumeResourceId = Output.empty();
+        this.replicationId = Output.empty();
+        this.replicationSchedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EndpointType>> endpointType;
-        private @Nullable Input<String> remoteVolumeRegion;
-        private Input<String> remoteVolumeResourceId;
-        private @Nullable Input<String> replicationId;
-        private Input<Either<String,ReplicationSchedule>> replicationSchedule;
+        private @Nullable Output<Either<String,EndpointType>> endpointType;
+        private @Nullable Output<String> remoteVolumeRegion;
+        private Output<String> remoteVolumeResourceId;
+        private @Nullable Output<String> replicationId;
+        private Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     	      this.replicationSchedule = defaults.replicationSchedule;
         }
 
-        public Builder endpointType(@Nullable Input<Either<String,EndpointType>> endpointType) {
+        public Builder endpointType(@Nullable Output<Either<String,EndpointType>> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
         public Builder endpointType(@Nullable Either<String,EndpointType> endpointType) {
-            this.endpointType = Input.ofNullable(endpointType);
+            this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
 
-        public Builder remoteVolumeRegion(@Nullable Input<String> remoteVolumeRegion) {
+        public Builder remoteVolumeRegion(@Nullable Output<String> remoteVolumeRegion) {
             this.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
 
         public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
-            this.remoteVolumeRegion = Input.ofNullable(remoteVolumeRegion);
+            this.remoteVolumeRegion = Output.ofNullable(remoteVolumeRegion);
             return this;
         }
 
-        public Builder remoteVolumeResourceId(Input<String> remoteVolumeResourceId) {
+        public Builder remoteVolumeResourceId(Output<String> remoteVolumeResourceId) {
             this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
             return this;
         }
 
         public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
-            this.remoteVolumeResourceId = Input.of(Objects.requireNonNull(remoteVolumeResourceId));
+            this.remoteVolumeResourceId = Output.of(Objects.requireNonNull(remoteVolumeResourceId));
             return this;
         }
 
-        public Builder replicationId(@Nullable Input<String> replicationId) {
+        public Builder replicationId(@Nullable Output<String> replicationId) {
             this.replicationId = replicationId;
             return this;
         }
 
         public Builder replicationId(@Nullable String replicationId) {
-            this.replicationId = Input.ofNullable(replicationId);
+            this.replicationId = Output.ofNullable(replicationId);
             return this;
         }
 
-        public Builder replicationSchedule(Input<Either<String,ReplicationSchedule>> replicationSchedule) {
+        public Builder replicationSchedule(Output<Either<String,ReplicationSchedule>> replicationSchedule) {
             this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
             return this;
         }
 
         public Builder replicationSchedule(Either<String,ReplicationSchedule> replicationSchedule) {
-            this.replicationSchedule = Input.of(Objects.requireNonNull(replicationSchedule));
+            this.replicationSchedule = Output.of(Objects.requireNonNull(replicationSchedule));
             return this;
         }
         public ReplicationObjectArgs build() {

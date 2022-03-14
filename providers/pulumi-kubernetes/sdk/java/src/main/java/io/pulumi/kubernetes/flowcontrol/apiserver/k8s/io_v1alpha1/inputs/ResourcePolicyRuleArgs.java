@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiGroups", required=true)
-      private final Input<List<String>> apiGroups;
+      private final Output<List<String>> apiGroups;
 
-    public Input<List<String>> getApiGroups() {
+    public Output<List<String>> getApiGroups() {
         return this.apiGroups;
     }
 
@@ -36,10 +36,10 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterScope")
-      private final @Nullable Input<Boolean> clusterScope;
+      private final @Nullable Output<Boolean> clusterScope;
 
-    public Input<Boolean> getClusterScope() {
-        return this.clusterScope == null ? Input.empty() : this.clusterScope;
+    public Output<Boolean> getClusterScope() {
+        return this.clusterScope == null ? Output.empty() : this.clusterScope;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespaces")
-      private final @Nullable Input<List<String>> namespaces;
+      private final @Nullable Output<List<String>> namespaces;
 
-    public Input<List<String>> getNamespaces() {
-        return this.namespaces == null ? Input.empty() : this.namespaces;
+    public Output<List<String>> getNamespaces() {
+        return this.namespaces == null ? Output.empty() : this.namespaces;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resources", required=true)
-      private final Input<List<String>> resources;
+      private final Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
+    public Output<List<String>> getResources() {
         return this.resources;
     }
 
@@ -69,18 +69,18 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="verbs", required=true)
-      private final Input<List<String>> verbs;
+      private final Output<List<String>> verbs;
 
-    public Input<List<String>> getVerbs() {
+    public Output<List<String>> getVerbs() {
         return this.verbs;
     }
 
     public ResourcePolicyRuleArgs(
-        Input<List<String>> apiGroups,
-        @Nullable Input<Boolean> clusterScope,
-        @Nullable Input<List<String>> namespaces,
-        Input<List<String>> resources,
-        Input<List<String>> verbs) {
+        Output<List<String>> apiGroups,
+        @Nullable Output<Boolean> clusterScope,
+        @Nullable Output<List<String>> namespaces,
+        Output<List<String>> resources,
+        Output<List<String>> verbs) {
         this.apiGroups = Objects.requireNonNull(apiGroups, "expected parameter 'apiGroups' to be non-null");
         this.clusterScope = clusterScope;
         this.namespaces = namespaces;
@@ -89,11 +89,11 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourcePolicyRuleArgs() {
-        this.apiGroups = Input.empty();
-        this.clusterScope = Input.empty();
-        this.namespaces = Input.empty();
-        this.resources = Input.empty();
-        this.verbs = Input.empty();
+        this.apiGroups = Output.empty();
+        this.clusterScope = Output.empty();
+        this.namespaces = Output.empty();
+        this.resources = Output.empty();
+        this.verbs = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<List<String>> apiGroups;
-        private @Nullable Input<Boolean> clusterScope;
-        private @Nullable Input<List<String>> namespaces;
-        private Input<List<String>> resources;
-        private Input<List<String>> verbs;
+        private Output<List<String>> apiGroups;
+        private @Nullable Output<Boolean> clusterScope;
+        private @Nullable Output<List<String>> namespaces;
+        private Output<List<String>> resources;
+        private Output<List<String>> verbs;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder apiGroups(Input<List<String>> apiGroups) {
+        public Builder apiGroups(Output<List<String>> apiGroups) {
             this.apiGroups = Objects.requireNonNull(apiGroups);
             return this;
         }
 
         public Builder apiGroups(List<String> apiGroups) {
-            this.apiGroups = Input.of(Objects.requireNonNull(apiGroups));
+            this.apiGroups = Output.of(Objects.requireNonNull(apiGroups));
             return this;
         }
 
-        public Builder clusterScope(@Nullable Input<Boolean> clusterScope) {
+        public Builder clusterScope(@Nullable Output<Boolean> clusterScope) {
             this.clusterScope = clusterScope;
             return this;
         }
 
         public Builder clusterScope(@Nullable Boolean clusterScope) {
-            this.clusterScope = Input.ofNullable(clusterScope);
+            this.clusterScope = Output.ofNullable(clusterScope);
             return this;
         }
 
-        public Builder namespaces(@Nullable Input<List<String>> namespaces) {
+        public Builder namespaces(@Nullable Output<List<String>> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
         public Builder namespaces(@Nullable List<String> namespaces) {
-            this.namespaces = Input.ofNullable(namespaces);
+            this.namespaces = Output.ofNullable(namespaces);
             return this;
         }
 
-        public Builder resources(Input<List<String>> resources) {
+        public Builder resources(Output<List<String>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
         public Builder resources(List<String> resources) {
-            this.resources = Input.of(Objects.requireNonNull(resources));
+            this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
 
-        public Builder verbs(Input<List<String>> verbs) {
+        public Builder verbs(Output<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
 
         public Builder verbs(List<String> verbs) {
-            this.verbs = Input.of(Objects.requireNonNull(verbs));
+            this.verbs = Output.of(Objects.requireNonNull(verbs));
             return this;
         }
         public ResourcePolicyRuleArgs build() {

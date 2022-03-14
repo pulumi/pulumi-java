@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="analysisScheme")
-      private final @Nullable Input<String> analysisScheme;
+      private final @Nullable Output<String> analysisScheme;
 
-    public Input<String> getAnalysisScheme() {
-        return this.analysisScheme == null ? Input.empty() : this.analysisScheme;
+    public Output<String> getAnalysisScheme() {
+        return this.analysisScheme == null ? Output.empty() : this.analysisScheme;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="facet")
-      private final @Nullable Input<Boolean> facet;
+      private final @Nullable Output<Boolean> facet;
 
-    public Input<Boolean> getFacet() {
-        return this.facet == null ? Input.empty() : this.facet;
+    public Output<Boolean> getFacet() {
+        return this.facet == null ? Output.empty() : this.facet;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="highlight")
-      private final @Nullable Input<Boolean> highlight;
+      private final @Nullable Output<Boolean> highlight;
 
-    public Input<Boolean> getHighlight() {
-        return this.highlight == null ? Input.empty() : this.highlight;
+    public Output<Boolean> getHighlight() {
+        return this.highlight == null ? Output.empty() : this.highlight;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -75,10 +75,10 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="return")
-      private final @Nullable Input<Boolean> $return;
+      private final @Nullable Output<Boolean> $return;
 
-    public Input<Boolean> get$return() {
-        return this.$return == null ? Input.empty() : this.$return;
+    public Output<Boolean> get$return() {
+        return this.$return == null ? Output.empty() : this.$return;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="search")
-      private final @Nullable Input<Boolean> search;
+      private final @Nullable Output<Boolean> search;
 
-    public Input<Boolean> getSearch() {
-        return this.search == null ? Input.empty() : this.search;
+    public Output<Boolean> getSearch() {
+        return this.search == null ? Output.empty() : this.search;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sort")
-      private final @Nullable Input<Boolean> sort;
+      private final @Nullable Output<Boolean> sort;
 
-    public Input<Boolean> getSort() {
-        return this.sort == null ? Input.empty() : this.sort;
+    public Output<Boolean> getSort() {
+        return this.sort == null ? Output.empty() : this.sort;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DomainIndexFieldArgs(
-        @Nullable Input<String> analysisScheme,
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<Boolean> facet,
-        @Nullable Input<Boolean> highlight,
-        Input<String> name,
-        @Nullable Input<Boolean> $return,
-        @Nullable Input<Boolean> search,
-        @Nullable Input<Boolean> sort,
-        Input<String> type) {
+        @Nullable Output<String> analysisScheme,
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<Boolean> facet,
+        @Nullable Output<Boolean> highlight,
+        Output<String> name,
+        @Nullable Output<Boolean> $return,
+        @Nullable Output<Boolean> search,
+        @Nullable Output<Boolean> sort,
+        Output<String> type) {
         this.analysisScheme = analysisScheme;
         this.defaultValue = defaultValue;
         this.facet = facet;
@@ -136,15 +136,15 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DomainIndexFieldArgs() {
-        this.analysisScheme = Input.empty();
-        this.defaultValue = Input.empty();
-        this.facet = Input.empty();
-        this.highlight = Input.empty();
-        this.name = Input.empty();
-        this.$return = Input.empty();
-        this.search = Input.empty();
-        this.sort = Input.empty();
-        this.type = Input.empty();
+        this.analysisScheme = Output.empty();
+        this.defaultValue = Output.empty();
+        this.facet = Output.empty();
+        this.highlight = Output.empty();
+        this.name = Output.empty();
+        this.$return = Output.empty();
+        this.search = Output.empty();
+        this.sort = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> analysisScheme;
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<Boolean> facet;
-        private @Nullable Input<Boolean> highlight;
-        private Input<String> name;
-        private @Nullable Input<Boolean> $return;
-        private @Nullable Input<Boolean> search;
-        private @Nullable Input<Boolean> sort;
-        private Input<String> type;
+        private @Nullable Output<String> analysisScheme;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<Boolean> facet;
+        private @Nullable Output<Boolean> highlight;
+        private Output<String> name;
+        private @Nullable Output<Boolean> $return;
+        private @Nullable Output<Boolean> search;
+        private @Nullable Output<Boolean> sort;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder analysisScheme(@Nullable Input<String> analysisScheme) {
+        public Builder analysisScheme(@Nullable Output<String> analysisScheme) {
             this.analysisScheme = analysisScheme;
             return this;
         }
 
         public Builder analysisScheme(@Nullable String analysisScheme) {
-            this.analysisScheme = Input.ofNullable(analysisScheme);
+            this.analysisScheme = Output.ofNullable(analysisScheme);
             return this;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder facet(@Nullable Input<Boolean> facet) {
+        public Builder facet(@Nullable Output<Boolean> facet) {
             this.facet = facet;
             return this;
         }
 
         public Builder facet(@Nullable Boolean facet) {
-            this.facet = Input.ofNullable(facet);
+            this.facet = Output.ofNullable(facet);
             return this;
         }
 
-        public Builder highlight(@Nullable Input<Boolean> highlight) {
+        public Builder highlight(@Nullable Output<Boolean> highlight) {
             this.highlight = highlight;
             return this;
         }
 
         public Builder highlight(@Nullable Boolean highlight) {
-            this.highlight = Input.ofNullable(highlight);
+            this.highlight = Output.ofNullable(highlight);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder $return(@Nullable Input<Boolean> $return) {
+        public Builder $return(@Nullable Output<Boolean> $return) {
             this.$return = $return;
             return this;
         }
 
         public Builder $return(@Nullable Boolean $return) {
-            this.$return = Input.ofNullable($return);
+            this.$return = Output.ofNullable($return);
             return this;
         }
 
-        public Builder search(@Nullable Input<Boolean> search) {
+        public Builder search(@Nullable Output<Boolean> search) {
             this.search = search;
             return this;
         }
 
         public Builder search(@Nullable Boolean search) {
-            this.search = Input.ofNullable(search);
+            this.search = Output.ofNullable(search);
             return this;
         }
 
-        public Builder sort(@Nullable Input<Boolean> sort) {
+        public Builder sort(@Nullable Output<Boolean> sort) {
             this.sort = sort;
             return this;
         }
 
         public Builder sort(@Nullable Boolean sort) {
-            this.sort = Input.ofNullable(sort);
+            this.sort = Output.ofNullable(sort);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DomainIndexFieldArgs build() {

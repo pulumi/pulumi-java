@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.SessionAffinityEnabledState;
 import io.pulumi.azurenative.network.inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostName")
-      private final @Nullable Input<String> hostName;
+      private final @Nullable Output<String> hostName;
 
-    public Input<String> getHostName() {
-        return this.hostName == null ? Input.empty() : this.hostName;
+    public Output<String> getHostName() {
+        return this.hostName == null ? Output.empty() : this.hostName;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionAffinityEnabledState")
-      private final @Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
+      private final @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
 
-    public Input<Either<String,SessionAffinityEnabledState>> getSessionAffinityEnabledState() {
-        return this.sessionAffinityEnabledState == null ? Input.empty() : this.sessionAffinityEnabledState;
+    public Output<Either<String,SessionAffinityEnabledState>> getSessionAffinityEnabledState() {
+        return this.sessionAffinityEnabledState == null ? Output.empty() : this.sessionAffinityEnabledState;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionAffinityTtlSeconds")
-      private final @Nullable Input<Integer> sessionAffinityTtlSeconds;
+      private final @Nullable Output<Integer> sessionAffinityTtlSeconds;
 
-    public Input<Integer> getSessionAffinityTtlSeconds() {
-        return this.sessionAffinityTtlSeconds == null ? Input.empty() : this.sessionAffinityTtlSeconds;
+    public Output<Integer> getSessionAffinityTtlSeconds() {
+        return this.sessionAffinityTtlSeconds == null ? Output.empty() : this.sessionAffinityTtlSeconds;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="webApplicationFirewallPolicyLink")
-      private final @Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+      private final @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Input.empty() : this.webApplicationFirewallPolicyLink;
+    public Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
+        return this.webApplicationFirewallPolicyLink == null ? Output.empty() : this.webApplicationFirewallPolicyLink;
     }
 
     public FrontendEndpointArgs(
-        @Nullable Input<String> hostName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState,
-        @Nullable Input<Integer> sessionAffinityTtlSeconds,
-        @Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        @Nullable Output<String> hostName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState,
+        @Nullable Output<Integer> sessionAffinityTtlSeconds,
+        @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
         this.hostName = hostName;
         this.id = id;
         this.name = name;
@@ -104,12 +104,12 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FrontendEndpointArgs() {
-        this.hostName = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.sessionAffinityEnabledState = Input.empty();
-        this.sessionAffinityTtlSeconds = Input.empty();
-        this.webApplicationFirewallPolicyLink = Input.empty();
+        this.hostName = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.sessionAffinityEnabledState = Output.empty();
+        this.sessionAffinityTtlSeconds = Output.empty();
+        this.webApplicationFirewallPolicyLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
-        private @Nullable Input<Integer> sessionAffinityTtlSeconds;
-        private @Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+        private @Nullable Output<String> hostName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
+        private @Nullable Output<Integer> sessionAffinityTtlSeconds;
+        private @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder hostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Input.ofNullable(hostName);
+            this.hostName = Output.ofNullable(hostName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sessionAffinityEnabledState(@Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState) {
+        public Builder sessionAffinityEnabledState(@Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
 
         public Builder sessionAffinityEnabledState(@Nullable Either<String,SessionAffinityEnabledState> sessionAffinityEnabledState) {
-            this.sessionAffinityEnabledState = Input.ofNullable(sessionAffinityEnabledState);
+            this.sessionAffinityEnabledState = Output.ofNullable(sessionAffinityEnabledState);
             return this;
         }
 
-        public Builder sessionAffinityTtlSeconds(@Nullable Input<Integer> sessionAffinityTtlSeconds) {
+        public Builder sessionAffinityTtlSeconds(@Nullable Output<Integer> sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
 
         public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
-            this.sessionAffinityTtlSeconds = Input.ofNullable(sessionAffinityTtlSeconds);
+            this.sessionAffinityTtlSeconds = Output.ofNullable(sessionAffinityTtlSeconds);
             return this;
         }
 
-        public Builder webApplicationFirewallPolicyLink(@Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
 
         public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = Input.ofNullable(webApplicationFirewallPolicyLink);
+            this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }
         public FrontendEndpointArgs build() {

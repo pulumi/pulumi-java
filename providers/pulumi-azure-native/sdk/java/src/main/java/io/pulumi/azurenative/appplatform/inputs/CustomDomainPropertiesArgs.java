@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="certName")
-      private final @Nullable Input<String> certName;
+      private final @Nullable Output<String> certName;
 
-    public Input<String> getCertName() {
-        return this.certName == null ? Input.empty() : this.certName;
+    public Output<String> getCertName() {
+        return this.certName == null ? Output.empty() : this.certName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
     public CustomDomainPropertiesArgs(
-        @Nullable Input<String> certName,
-        @Nullable Input<String> thumbprint) {
+        @Nullable Output<String> certName,
+        @Nullable Output<String> thumbprint) {
         this.certName = certName;
         this.thumbprint = thumbprint;
     }
 
     private CustomDomainPropertiesArgs() {
-        this.certName = Input.empty();
-        this.thumbprint = Input.empty();
+        this.certName = Output.empty();
+        this.thumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certName;
-        private @Nullable Input<String> thumbprint;
+        private @Nullable Output<String> certName;
+        private @Nullable Output<String> thumbprint;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder certName(@Nullable Input<String> certName) {
+        public Builder certName(@Nullable Output<String> certName) {
             this.certName = certName;
             return this;
         }
 
         public Builder certName(@Nullable String certName) {
-            this.certName = Input.ofNullable(certName);
+            this.certName = Output.ofNullable(certName);
             return this;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
         public CustomDomainPropertiesArgs build() {

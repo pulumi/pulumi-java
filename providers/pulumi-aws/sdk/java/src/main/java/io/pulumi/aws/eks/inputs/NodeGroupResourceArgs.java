@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.NodeGroupResourceAutoscalingGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoscalingGroups")
-      private final @Nullable Input<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
+      private final @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
 
-    public Input<List<NodeGroupResourceAutoscalingGroupArgs>> getAutoscalingGroups() {
-        return this.autoscalingGroups == null ? Input.empty() : this.autoscalingGroups;
+    public Output<List<NodeGroupResourceAutoscalingGroupArgs>> getAutoscalingGroups() {
+        return this.autoscalingGroups == null ? Output.empty() : this.autoscalingGroups;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remoteAccessSecurityGroupId")
-      private final @Nullable Input<String> remoteAccessSecurityGroupId;
+      private final @Nullable Output<String> remoteAccessSecurityGroupId;
 
-    public Input<String> getRemoteAccessSecurityGroupId() {
-        return this.remoteAccessSecurityGroupId == null ? Input.empty() : this.remoteAccessSecurityGroupId;
+    public Output<String> getRemoteAccessSecurityGroupId() {
+        return this.remoteAccessSecurityGroupId == null ? Output.empty() : this.remoteAccessSecurityGroupId;
     }
 
     public NodeGroupResourceArgs(
-        @Nullable Input<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups,
-        @Nullable Input<String> remoteAccessSecurityGroupId) {
+        @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups,
+        @Nullable Output<String> remoteAccessSecurityGroupId) {
         this.autoscalingGroups = autoscalingGroups;
         this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
     }
 
     private NodeGroupResourceArgs() {
-        this.autoscalingGroups = Input.empty();
-        this.remoteAccessSecurityGroupId = Input.empty();
+        this.autoscalingGroups = Output.empty();
+        this.remoteAccessSecurityGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
-        private @Nullable Input<String> remoteAccessSecurityGroupId;
+        private @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
+        private @Nullable Output<String> remoteAccessSecurityGroupId;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
     	      this.remoteAccessSecurityGroupId = defaults.remoteAccessSecurityGroupId;
         }
 
-        public Builder autoscalingGroups(@Nullable Input<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups) {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
         public Builder autoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroupArgs> autoscalingGroups) {
-            this.autoscalingGroups = Input.ofNullable(autoscalingGroups);
+            this.autoscalingGroups = Output.ofNullable(autoscalingGroups);
             return this;
         }
 
-        public Builder remoteAccessSecurityGroupId(@Nullable Input<String> remoteAccessSecurityGroupId) {
+        public Builder remoteAccessSecurityGroupId(@Nullable Output<String> remoteAccessSecurityGroupId) {
             this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
             return this;
         }
 
         public Builder remoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
-            this.remoteAccessSecurityGroupId = Input.ofNullable(remoteAccessSecurityGroupId);
+            this.remoteAccessSecurityGroupId = Output.ofNullable(remoteAccessSecurityGroupId);
             return this;
         }
         public NodeGroupResourceArgs build() {

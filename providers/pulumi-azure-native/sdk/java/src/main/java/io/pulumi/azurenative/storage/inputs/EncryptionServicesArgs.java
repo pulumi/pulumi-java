@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.EncryptionServiceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="blob")
-      private final @Nullable Input<EncryptionServiceArgs> blob;
+      private final @Nullable Output<EncryptionServiceArgs> blob;
 
-    public Input<EncryptionServiceArgs> getBlob() {
-        return this.blob == null ? Input.empty() : this.blob;
+    public Output<EncryptionServiceArgs> getBlob() {
+        return this.blob == null ? Output.empty() : this.blob;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<EncryptionServiceArgs> file;
+      private final @Nullable Output<EncryptionServiceArgs> file;
 
-    public Input<EncryptionServiceArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<EncryptionServiceArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queue")
-      private final @Nullable Input<EncryptionServiceArgs> queue;
+      private final @Nullable Output<EncryptionServiceArgs> queue;
 
-    public Input<EncryptionServiceArgs> getQueue() {
-        return this.queue == null ? Input.empty() : this.queue;
+    public Output<EncryptionServiceArgs> getQueue() {
+        return this.queue == null ? Output.empty() : this.queue;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<EncryptionServiceArgs> table;
+      private final @Nullable Output<EncryptionServiceArgs> table;
 
-    public Input<EncryptionServiceArgs> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<EncryptionServiceArgs> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     public EncryptionServicesArgs(
-        @Nullable Input<EncryptionServiceArgs> blob,
-        @Nullable Input<EncryptionServiceArgs> file,
-        @Nullable Input<EncryptionServiceArgs> queue,
-        @Nullable Input<EncryptionServiceArgs> table) {
+        @Nullable Output<EncryptionServiceArgs> blob,
+        @Nullable Output<EncryptionServiceArgs> file,
+        @Nullable Output<EncryptionServiceArgs> queue,
+        @Nullable Output<EncryptionServiceArgs> table) {
         this.blob = blob;
         this.file = file;
         this.queue = queue;
@@ -74,10 +74,10 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EncryptionServicesArgs() {
-        this.blob = Input.empty();
-        this.file = Input.empty();
-        this.queue = Input.empty();
-        this.table = Input.empty();
+        this.blob = Output.empty();
+        this.file = Output.empty();
+        this.queue = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<EncryptionServiceArgs> blob;
-        private @Nullable Input<EncryptionServiceArgs> file;
-        private @Nullable Input<EncryptionServiceArgs> queue;
-        private @Nullable Input<EncryptionServiceArgs> table;
+        private @Nullable Output<EncryptionServiceArgs> blob;
+        private @Nullable Output<EncryptionServiceArgs> file;
+        private @Nullable Output<EncryptionServiceArgs> queue;
+        private @Nullable Output<EncryptionServiceArgs> table;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     	      this.table = defaults.table;
         }
 
-        public Builder blob(@Nullable Input<EncryptionServiceArgs> blob) {
+        public Builder blob(@Nullable Output<EncryptionServiceArgs> blob) {
             this.blob = blob;
             return this;
         }
 
         public Builder blob(@Nullable EncryptionServiceArgs blob) {
-            this.blob = Input.ofNullable(blob);
+            this.blob = Output.ofNullable(blob);
             return this;
         }
 
-        public Builder file(@Nullable Input<EncryptionServiceArgs> file) {
+        public Builder file(@Nullable Output<EncryptionServiceArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable EncryptionServiceArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder queue(@Nullable Input<EncryptionServiceArgs> queue) {
+        public Builder queue(@Nullable Output<EncryptionServiceArgs> queue) {
             this.queue = queue;
             return this;
         }
 
         public Builder queue(@Nullable EncryptionServiceArgs queue) {
-            this.queue = Input.ofNullable(queue);
+            this.queue = Output.ofNullable(queue);
             return this;
         }
 
-        public Builder table(@Nullable Input<EncryptionServiceArgs> table) {
+        public Builder table(@Nullable Output<EncryptionServiceArgs> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable EncryptionServiceArgs table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
         public EncryptionServicesArgs build() {

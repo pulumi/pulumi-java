@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.CarrierGatewayArgs;
 import io.pulumi.aws.ec2.inputs.CarrierGatewayState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -139,14 +138,14 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CarrierGateway(String name, CarrierGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/carrierGateway:CarrierGateway", name, args == null ? CarrierGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/carrierGateway:CarrierGateway", name, args == null ? CarrierGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CarrierGateway(String name, Input<String> id, @Nullable CarrierGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CarrierGateway(String name, Output<String> id, @Nullable CarrierGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/carrierGateway:CarrierGateway", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -162,7 +161,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CarrierGateway get(String name, Input<String> id, @Nullable CarrierGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CarrierGateway get(String name, Output<String> id, @Nullable CarrierGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CarrierGateway(name, id, state, options);
     }
 }

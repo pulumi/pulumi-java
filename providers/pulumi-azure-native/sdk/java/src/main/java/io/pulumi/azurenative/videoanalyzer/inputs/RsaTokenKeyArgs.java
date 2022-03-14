@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyRsaAlgo;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alg", required=true)
-      private final Input<Either<String,AccessPolicyRsaAlgo>> alg;
+      private final Output<Either<String,AccessPolicyRsaAlgo>> alg;
 
-    public Input<Either<String,AccessPolicyRsaAlgo>> getAlg() {
+    public Output<Either<String,AccessPolicyRsaAlgo>> getAlg() {
         return this.alg;
     }
 
@@ -35,9 +35,9 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="e", required=true)
-      private final Input<String> e;
+      private final Output<String> e;
 
-    public Input<String> getE() {
+    public Output<String> getE() {
         return this.e;
     }
 
@@ -46,9 +46,9 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kid", required=true)
-      private final Input<String> kid;
+      private final Output<String> kid;
 
-    public Input<String> getKid() {
+    public Output<String> getKid() {
         return this.kid;
     }
 
@@ -57,9 +57,9 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="n", required=true)
-      private final Input<String> n;
+      private final Output<String> n;
 
-    public Input<String> getN() {
+    public Output<String> getN() {
         return this.n;
     }
 
@@ -69,18 +69,18 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public RsaTokenKeyArgs(
-        Input<Either<String,AccessPolicyRsaAlgo>> alg,
-        Input<String> e,
-        Input<String> kid,
-        Input<String> n,
-        Input<String> type) {
+        Output<Either<String,AccessPolicyRsaAlgo>> alg,
+        Output<String> e,
+        Output<String> kid,
+        Output<String> n,
+        Output<String> type) {
         this.alg = Objects.requireNonNull(alg, "expected parameter 'alg' to be non-null");
         this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
         this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
@@ -89,11 +89,11 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RsaTokenKeyArgs() {
-        this.alg = Input.empty();
-        this.e = Input.empty();
-        this.kid = Input.empty();
-        this.n = Input.empty();
-        this.type = Input.empty();
+        this.alg = Output.empty();
+        this.e = Output.empty();
+        this.kid = Output.empty();
+        this.n = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,AccessPolicyRsaAlgo>> alg;
-        private Input<String> e;
-        private Input<String> kid;
-        private Input<String> n;
-        private Input<String> type;
+        private Output<Either<String,AccessPolicyRsaAlgo>> alg;
+        private Output<String> e;
+        private Output<String> kid;
+        private Output<String> n;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder alg(Input<Either<String,AccessPolicyRsaAlgo>> alg) {
+        public Builder alg(Output<Either<String,AccessPolicyRsaAlgo>> alg) {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
 
         public Builder alg(Either<String,AccessPolicyRsaAlgo> alg) {
-            this.alg = Input.of(Objects.requireNonNull(alg));
+            this.alg = Output.of(Objects.requireNonNull(alg));
             return this;
         }
 
-        public Builder e(Input<String> e) {
+        public Builder e(Output<String> e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
 
         public Builder e(String e) {
-            this.e = Input.of(Objects.requireNonNull(e));
+            this.e = Output.of(Objects.requireNonNull(e));
             return this;
         }
 
-        public Builder kid(Input<String> kid) {
+        public Builder kid(Output<String> kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
 
         public Builder kid(String kid) {
-            this.kid = Input.of(Objects.requireNonNull(kid));
+            this.kid = Output.of(Objects.requireNonNull(kid));
             return this;
         }
 
-        public Builder n(Input<String> n) {
+        public Builder n(Output<String> n) {
             this.n = Objects.requireNonNull(n);
             return this;
         }
 
         public Builder n(String n) {
-            this.n = Input.of(Objects.requireNonNull(n));
+            this.n = Output.of(Objects.requireNonNull(n));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RsaTokenKeyArgs build() {

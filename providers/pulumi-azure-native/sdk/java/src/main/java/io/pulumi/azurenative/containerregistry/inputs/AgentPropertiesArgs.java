@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Integer> cpu;
+      private final @Nullable Output<Integer> cpu;
 
-    public Input<Integer> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Integer> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
-    public AgentPropertiesArgs(@Nullable Input<Integer> cpu) {
+    public AgentPropertiesArgs(@Nullable Output<Integer> cpu) {
         this.cpu = cpu;
     }
 
     private AgentPropertiesArgs() {
-        this.cpu = Input.empty();
+        this.cpu = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cpu;
+        private @Nullable Output<Integer> cpu;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.cpu = defaults.cpu;
         }
 
-        public Builder cpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Output<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
         public AgentPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
-    public CertificatePropertiesArgs(@Nullable Input<String> certificate) {
+    public CertificatePropertiesArgs(@Nullable Output<String> certificate) {
         this.certificate = certificate;
     }
 
     private CertificatePropertiesArgs() {
-        this.certificate = Input.empty();
+        this.certificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
+        private @Nullable Output<String> certificate;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.certificate = defaults.certificate;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
         public CertificatePropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ranges")
-      private final @Nullable Input<List<IDRangeArgs>> ranges;
+      private final @Nullable Output<List<IDRangeArgs>> ranges;
 
-    public Input<List<IDRangeArgs>> getRanges() {
-        return this.ranges == null ? Input.empty() : this.ranges;
+    public Output<List<IDRangeArgs>> getRanges() {
+        return this.ranges == null ? Output.empty() : this.ranges;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rule", required=true)
-      private final Input<String> rule;
+      private final Output<String> rule;
 
-    public Input<String> getRule() {
+    public Output<String> getRule() {
         return this.rule;
     }
 
     public RunAsGroupStrategyOptionsArgs(
-        @Nullable Input<List<IDRangeArgs>> ranges,
-        Input<String> rule) {
+        @Nullable Output<List<IDRangeArgs>> ranges,
+        Output<String> rule) {
         this.ranges = ranges;
         this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
     }
 
     private RunAsGroupStrategyOptionsArgs() {
-        this.ranges = Input.empty();
-        this.rule = Input.empty();
+        this.ranges = Output.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IDRangeArgs>> ranges;
-        private Input<String> rule;
+        private @Nullable Output<List<IDRangeArgs>> ranges;
+        private Output<String> rule;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
     	      this.rule = defaults.rule;
         }
 
-        public Builder ranges(@Nullable Input<List<IDRangeArgs>> ranges) {
+        public Builder ranges(@Nullable Output<List<IDRangeArgs>> ranges) {
             this.ranges = ranges;
             return this;
         }
 
         public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
-            this.ranges = Input.ofNullable(ranges);
+            this.ranges = Output.ofNullable(ranges);
             return this;
         }
 
-        public Builder rule(Input<String> rule) {
+        public Builder rule(Output<String> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
         public Builder rule(String rule) {
-            this.rule = Input.of(Objects.requireNonNull(rule));
+            this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
         }
         public RunAsGroupStrategyOptionsArgs build() {

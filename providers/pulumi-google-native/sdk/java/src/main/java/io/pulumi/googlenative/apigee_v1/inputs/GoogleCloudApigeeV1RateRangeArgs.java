@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleTypeMoneyArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="end")
-      private final @Nullable Input<String> end;
+      private final @Nullable Output<String> end;
 
-    public Input<String> getEnd() {
-        return this.end == null ? Input.empty() : this.end;
+    public Output<String> getEnd() {
+        return this.end == null ? Output.empty() : this.end;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fee")
-      private final @Nullable Input<GoogleTypeMoneyArgs> fee;
+      private final @Nullable Output<GoogleTypeMoneyArgs> fee;
 
-    public Input<GoogleTypeMoneyArgs> getFee() {
-        return this.fee == null ? Input.empty() : this.fee;
+    public Output<GoogleTypeMoneyArgs> getFee() {
+        return this.fee == null ? Output.empty() : this.fee;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="start")
-      private final @Nullable Input<String> start;
+      private final @Nullable Output<String> start;
 
-    public Input<String> getStart() {
-        return this.start == null ? Input.empty() : this.start;
+    public Output<String> getStart() {
+        return this.start == null ? Output.empty() : this.start;
     }
 
     public GoogleCloudApigeeV1RateRangeArgs(
-        @Nullable Input<String> end,
-        @Nullable Input<GoogleTypeMoneyArgs> fee,
-        @Nullable Input<String> start) {
+        @Nullable Output<String> end,
+        @Nullable Output<GoogleTypeMoneyArgs> fee,
+        @Nullable Output<String> start) {
         this.end = end;
         this.fee = fee;
         this.start = start;
     }
 
     private GoogleCloudApigeeV1RateRangeArgs() {
-        this.end = Input.empty();
-        this.fee = Input.empty();
-        this.start = Input.empty();
+        this.end = Output.empty();
+        this.fee = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> end;
-        private @Nullable Input<GoogleTypeMoneyArgs> fee;
-        private @Nullable Input<String> start;
+        private @Nullable Output<String> end;
+        private @Nullable Output<GoogleTypeMoneyArgs> fee;
+        private @Nullable Output<String> start;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     	      this.start = defaults.start;
         }
 
-        public Builder end(@Nullable Input<String> end) {
+        public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
 
         public Builder end(@Nullable String end) {
-            this.end = Input.ofNullable(end);
+            this.end = Output.ofNullable(end);
             return this;
         }
 
-        public Builder fee(@Nullable Input<GoogleTypeMoneyArgs> fee) {
+        public Builder fee(@Nullable Output<GoogleTypeMoneyArgs> fee) {
             this.fee = fee;
             return this;
         }
 
         public Builder fee(@Nullable GoogleTypeMoneyArgs fee) {
-            this.fee = Input.ofNullable(fee);
+            this.fee = Output.ofNullable(fee);
             return this;
         }
 
-        public Builder start(@Nullable Input<String> start) {
+        public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
 
         public Builder start(@Nullable String start) {
-            this.start = Input.ofNullable(start);
+            this.start = Output.ofNullable(start);
             return this;
         }
         public GoogleCloudApigeeV1RateRangeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="azureStorageSid", required=true)
-      private final Input<String> azureStorageSid;
+      private final Output<String> azureStorageSid;
 
-    public Input<String> getAzureStorageSid() {
+    public Output<String> getAzureStorageSid() {
         return this.azureStorageSid;
     }
 
@@ -33,9 +33,9 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainGuid", required=true)
-      private final Input<String> domainGuid;
+      private final Output<String> domainGuid;
 
-    public Input<String> getDomainGuid() {
+    public Output<String> getDomainGuid() {
         return this.domainGuid;
     }
 
@@ -44,9 +44,9 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -55,9 +55,9 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainSid", required=true)
-      private final Input<String> domainSid;
+      private final Output<String> domainSid;
 
-    public Input<String> getDomainSid() {
+    public Output<String> getDomainSid() {
         return this.domainSid;
     }
 
@@ -66,9 +66,9 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="forestName", required=true)
-      private final Input<String> forestName;
+      private final Output<String> forestName;
 
-    public Input<String> getForestName() {
+    public Output<String> getForestName() {
         return this.forestName;
     }
 
@@ -77,19 +77,19 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="netBiosDomainName", required=true)
-      private final Input<String> netBiosDomainName;
+      private final Output<String> netBiosDomainName;
 
-    public Input<String> getNetBiosDomainName() {
+    public Output<String> getNetBiosDomainName() {
         return this.netBiosDomainName;
     }
 
     public ActiveDirectoryPropertiesArgs(
-        Input<String> azureStorageSid,
-        Input<String> domainGuid,
-        Input<String> domainName,
-        Input<String> domainSid,
-        Input<String> forestName,
-        Input<String> netBiosDomainName) {
+        Output<String> azureStorageSid,
+        Output<String> domainGuid,
+        Output<String> domainName,
+        Output<String> domainSid,
+        Output<String> forestName,
+        Output<String> netBiosDomainName) {
         this.azureStorageSid = Objects.requireNonNull(azureStorageSid, "expected parameter 'azureStorageSid' to be non-null");
         this.domainGuid = Objects.requireNonNull(domainGuid, "expected parameter 'domainGuid' to be non-null");
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
@@ -99,12 +99,12 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ActiveDirectoryPropertiesArgs() {
-        this.azureStorageSid = Input.empty();
-        this.domainGuid = Input.empty();
-        this.domainName = Input.empty();
-        this.domainSid = Input.empty();
-        this.forestName = Input.empty();
-        this.netBiosDomainName = Input.empty();
+        this.azureStorageSid = Output.empty();
+        this.domainGuid = Output.empty();
+        this.domainName = Output.empty();
+        this.domainSid = Output.empty();
+        this.forestName = Output.empty();
+        this.netBiosDomainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> azureStorageSid;
-        private Input<String> domainGuid;
-        private Input<String> domainName;
-        private Input<String> domainSid;
-        private Input<String> forestName;
-        private Input<String> netBiosDomainName;
+        private Output<String> azureStorageSid;
+        private Output<String> domainGuid;
+        private Output<String> domainName;
+        private Output<String> domainSid;
+        private Output<String> forestName;
+        private Output<String> netBiosDomainName;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     	      this.netBiosDomainName = defaults.netBiosDomainName;
         }
 
-        public Builder azureStorageSid(Input<String> azureStorageSid) {
+        public Builder azureStorageSid(Output<String> azureStorageSid) {
             this.azureStorageSid = Objects.requireNonNull(azureStorageSid);
             return this;
         }
 
         public Builder azureStorageSid(String azureStorageSid) {
-            this.azureStorageSid = Input.of(Objects.requireNonNull(azureStorageSid));
+            this.azureStorageSid = Output.of(Objects.requireNonNull(azureStorageSid));
             return this;
         }
 
-        public Builder domainGuid(Input<String> domainGuid) {
+        public Builder domainGuid(Output<String> domainGuid) {
             this.domainGuid = Objects.requireNonNull(domainGuid);
             return this;
         }
 
         public Builder domainGuid(String domainGuid) {
-            this.domainGuid = Input.of(Objects.requireNonNull(domainGuid));
+            this.domainGuid = Output.of(Objects.requireNonNull(domainGuid));
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder domainSid(Input<String> domainSid) {
+        public Builder domainSid(Output<String> domainSid) {
             this.domainSid = Objects.requireNonNull(domainSid);
             return this;
         }
 
         public Builder domainSid(String domainSid) {
-            this.domainSid = Input.of(Objects.requireNonNull(domainSid));
+            this.domainSid = Output.of(Objects.requireNonNull(domainSid));
             return this;
         }
 
-        public Builder forestName(Input<String> forestName) {
+        public Builder forestName(Output<String> forestName) {
             this.forestName = Objects.requireNonNull(forestName);
             return this;
         }
 
         public Builder forestName(String forestName) {
-            this.forestName = Input.of(Objects.requireNonNull(forestName));
+            this.forestName = Output.of(Objects.requireNonNull(forestName));
             return this;
         }
 
-        public Builder netBiosDomainName(Input<String> netBiosDomainName) {
+        public Builder netBiosDomainName(Output<String> netBiosDomainName) {
             this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
             return this;
         }
 
         public Builder netBiosDomainName(String netBiosDomainName) {
-            this.netBiosDomainName = Input.of(Objects.requireNonNull(netBiosDomainName));
+            this.netBiosDomainName = Output.of(Objects.requireNonNull(netBiosDomainName));
             return this;
         }
         public ActiveDirectoryPropertiesArgs build() {

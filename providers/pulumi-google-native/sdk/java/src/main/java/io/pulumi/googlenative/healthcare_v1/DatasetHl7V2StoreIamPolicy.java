@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.healthcare_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -119,14 +118,14 @@ public class DatasetHl7V2StoreIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public DatasetHl7V2StoreIamPolicy(String name, DatasetHl7V2StoreIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1:DatasetHl7V2StoreIamPolicy", name, args == null ? DatasetHl7V2StoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:healthcare/v1:DatasetHl7V2StoreIamPolicy", name, args == null ? DatasetHl7V2StoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DatasetHl7V2StoreIamPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DatasetHl7V2StoreIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:healthcare/v1:DatasetHl7V2StoreIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -141,7 +140,7 @@ public class DatasetHl7V2StoreIamPolicy extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatasetHl7V2StoreIamPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DatasetHl7V2StoreIamPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DatasetHl7V2StoreIamPolicy(name, id, options);
     }
 }

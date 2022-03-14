@@ -6,7 +6,6 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.IotHubDataConnectionArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -240,10 +239,10 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IotHubDataConnection(String name, IotHubDataConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kusto:IotHubDataConnection", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:kusto:IotHubDataConnection", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private IotHubDataConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IotHubDataConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kusto:IotHubDataConnection", name, null, makeResourceOptions(options, id));
     }
 
@@ -254,19 +253,19 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:kusto/v20190121:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20190515:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20190907:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20191109:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200215:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200614:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200918:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20210101:IotHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20210827:IotHubDataConnection").build())
+                Output.of(Alias.builder().setType("azure-native:kusto/v20190121:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20190515:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20190907:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:IotHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:IotHubDataConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -280,7 +279,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IotHubDataConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IotHubDataConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IotHubDataConnection(name, id, options);
     }
 }

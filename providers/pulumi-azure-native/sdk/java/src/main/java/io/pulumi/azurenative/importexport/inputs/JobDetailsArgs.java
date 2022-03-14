@@ -11,7 +11,7 @@ import io.pulumi.azurenative.importexport.inputs.PackageInformationArgs;
 import io.pulumi.azurenative.importexport.inputs.ReturnAddressArgs;
 import io.pulumi.azurenative.importexport.inputs.ReturnShippingArgs;
 import io.pulumi.azurenative.importexport.inputs.ShippingInformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,10 +34,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupDriveManifest")
-      private final @Nullable Input<Boolean> backupDriveManifest;
+      private final @Nullable Output<Boolean> backupDriveManifest;
 
-    public Input<Boolean> getBackupDriveManifest() {
-        return this.backupDriveManifest == null ? Input.empty() : this.backupDriveManifest;
+    public Output<Boolean> getBackupDriveManifest() {
+        return this.backupDriveManifest == null ? Output.empty() : this.backupDriveManifest;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cancelRequested")
-      private final @Nullable Input<Boolean> cancelRequested;
+      private final @Nullable Output<Boolean> cancelRequested;
 
-    public Input<Boolean> getCancelRequested() {
-        return this.cancelRequested == null ? Input.empty() : this.cancelRequested;
+    public Output<Boolean> getCancelRequested() {
+        return this.cancelRequested == null ? Output.empty() : this.cancelRequested;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryPackage")
-      private final @Nullable Input<DeliveryPackageInformationArgs> deliveryPackage;
+      private final @Nullable Output<DeliveryPackageInformationArgs> deliveryPackage;
 
-    public Input<DeliveryPackageInformationArgs> getDeliveryPackage() {
-        return this.deliveryPackage == null ? Input.empty() : this.deliveryPackage;
+    public Output<DeliveryPackageInformationArgs> getDeliveryPackage() {
+        return this.deliveryPackage == null ? Output.empty() : this.deliveryPackage;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnosticsPath")
-      private final @Nullable Input<String> diagnosticsPath;
+      private final @Nullable Output<String> diagnosticsPath;
 
-    public Input<String> getDiagnosticsPath() {
-        return this.diagnosticsPath == null ? Input.empty() : this.diagnosticsPath;
+    public Output<String> getDiagnosticsPath() {
+        return this.diagnosticsPath == null ? Output.empty() : this.diagnosticsPath;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driveList")
-      private final @Nullable Input<List<DriveStatusArgs>> driveList;
+      private final @Nullable Output<List<DriveStatusArgs>> driveList;
 
-    public Input<List<DriveStatusArgs>> getDriveList() {
-        return this.driveList == null ? Input.empty() : this.driveList;
+    public Output<List<DriveStatusArgs>> getDriveList() {
+        return this.driveList == null ? Output.empty() : this.driveList;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-      private final @Nullable Input<EncryptionKeyDetailsArgs> encryptionKey;
+      private final @Nullable Output<EncryptionKeyDetailsArgs> encryptionKey;
 
-    public Input<EncryptionKeyDetailsArgs> getEncryptionKey() {
-        return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
+    public Output<EncryptionKeyDetailsArgs> getEncryptionKey() {
+        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="export")
-      private final @Nullable Input<ExportArgs> export;
+      private final @Nullable Output<ExportArgs> export;
 
-    public Input<ExportArgs> getExport() {
-        return this.export == null ? Input.empty() : this.export;
+    public Output<ExportArgs> getExport() {
+        return this.export == null ? Output.empty() : this.export;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incompleteBlobListUri")
-      private final @Nullable Input<String> incompleteBlobListUri;
+      private final @Nullable Output<String> incompleteBlobListUri;
 
-    public Input<String> getIncompleteBlobListUri() {
-        return this.incompleteBlobListUri == null ? Input.empty() : this.incompleteBlobListUri;
+    public Output<String> getIncompleteBlobListUri() {
+        return this.incompleteBlobListUri == null ? Output.empty() : this.incompleteBlobListUri;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobType")
-      private final @Nullable Input<String> jobType;
+      private final @Nullable Output<String> jobType;
 
-    public Input<String> getJobType() {
-        return this.jobType == null ? Input.empty() : this.jobType;
+    public Output<String> getJobType() {
+        return this.jobType == null ? Output.empty() : this.jobType;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-      private final @Nullable Input<String> logLevel;
+      private final @Nullable Output<String> logLevel;
 
-    public Input<String> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<String> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percentComplete")
-      private final @Nullable Input<Integer> percentComplete;
+      private final @Nullable Output<Integer> percentComplete;
 
-    public Input<Integer> getPercentComplete() {
-        return this.percentComplete == null ? Input.empty() : this.percentComplete;
+    public Output<Integer> getPercentComplete() {
+        return this.percentComplete == null ? Output.empty() : this.percentComplete;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnAddress")
-      private final @Nullable Input<ReturnAddressArgs> returnAddress;
+      private final @Nullable Output<ReturnAddressArgs> returnAddress;
 
-    public Input<ReturnAddressArgs> getReturnAddress() {
-        return this.returnAddress == null ? Input.empty() : this.returnAddress;
+    public Output<ReturnAddressArgs> getReturnAddress() {
+        return this.returnAddress == null ? Output.empty() : this.returnAddress;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnPackage")
-      private final @Nullable Input<PackageInformationArgs> returnPackage;
+      private final @Nullable Output<PackageInformationArgs> returnPackage;
 
-    public Input<PackageInformationArgs> getReturnPackage() {
-        return this.returnPackage == null ? Input.empty() : this.returnPackage;
+    public Output<PackageInformationArgs> getReturnPackage() {
+        return this.returnPackage == null ? Output.empty() : this.returnPackage;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnShipping")
-      private final @Nullable Input<ReturnShippingArgs> returnShipping;
+      private final @Nullable Output<ReturnShippingArgs> returnShipping;
 
-    public Input<ReturnShippingArgs> getReturnShipping() {
-        return this.returnShipping == null ? Input.empty() : this.returnShipping;
+    public Output<ReturnShippingArgs> getReturnShipping() {
+        return this.returnShipping == null ? Output.empty() : this.returnShipping;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shippingInformation")
-      private final @Nullable Input<ShippingInformationArgs> shippingInformation;
+      private final @Nullable Output<ShippingInformationArgs> shippingInformation;
 
-    public Input<ShippingInformationArgs> getShippingInformation() {
-        return this.shippingInformation == null ? Input.empty() : this.shippingInformation;
+    public Output<ShippingInformationArgs> getShippingInformation() {
+        return this.shippingInformation == null ? Output.empty() : this.shippingInformation;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -221,33 +221,33 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-      private final @Nullable Input<String> storageAccountId;
+      private final @Nullable Output<String> storageAccountId;
 
-    public Input<String> getStorageAccountId() {
-        return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
+    public Output<String> getStorageAccountId() {
+        return this.storageAccountId == null ? Output.empty() : this.storageAccountId;
     }
 
     public JobDetailsArgs(
-        @Nullable Input<Boolean> backupDriveManifest,
-        @Nullable Input<Boolean> cancelRequested,
-        @Nullable Input<DeliveryPackageInformationArgs> deliveryPackage,
-        @Nullable Input<String> diagnosticsPath,
-        @Nullable Input<List<DriveStatusArgs>> driveList,
-        @Nullable Input<EncryptionKeyDetailsArgs> encryptionKey,
-        @Nullable Input<ExportArgs> export,
-        @Nullable Input<String> incompleteBlobListUri,
-        @Nullable Input<String> jobType,
-        @Nullable Input<String> logLevel,
-        @Nullable Input<Integer> percentComplete,
-        @Nullable Input<String> provisioningState,
-        @Nullable Input<ReturnAddressArgs> returnAddress,
-        @Nullable Input<PackageInformationArgs> returnPackage,
-        @Nullable Input<ReturnShippingArgs> returnShipping,
-        @Nullable Input<ShippingInformationArgs> shippingInformation,
-        @Nullable Input<String> state,
-        @Nullable Input<String> storageAccountId) {
-        this.backupDriveManifest = backupDriveManifest == null ? Input.ofNullable(false) : backupDriveManifest;
-        this.cancelRequested = cancelRequested == null ? Input.ofNullable(false) : cancelRequested;
+        @Nullable Output<Boolean> backupDriveManifest,
+        @Nullable Output<Boolean> cancelRequested,
+        @Nullable Output<DeliveryPackageInformationArgs> deliveryPackage,
+        @Nullable Output<String> diagnosticsPath,
+        @Nullable Output<List<DriveStatusArgs>> driveList,
+        @Nullable Output<EncryptionKeyDetailsArgs> encryptionKey,
+        @Nullable Output<ExportArgs> export,
+        @Nullable Output<String> incompleteBlobListUri,
+        @Nullable Output<String> jobType,
+        @Nullable Output<String> logLevel,
+        @Nullable Output<Integer> percentComplete,
+        @Nullable Output<String> provisioningState,
+        @Nullable Output<ReturnAddressArgs> returnAddress,
+        @Nullable Output<PackageInformationArgs> returnPackage,
+        @Nullable Output<ReturnShippingArgs> returnShipping,
+        @Nullable Output<ShippingInformationArgs> shippingInformation,
+        @Nullable Output<String> state,
+        @Nullable Output<String> storageAccountId) {
+        this.backupDriveManifest = backupDriveManifest == null ? Output.ofNullable(false) : backupDriveManifest;
+        this.cancelRequested = cancelRequested == null ? Output.ofNullable(false) : cancelRequested;
         this.deliveryPackage = deliveryPackage;
         this.diagnosticsPath = diagnosticsPath;
         this.driveList = driveList;
@@ -262,29 +262,29 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
         this.returnPackage = returnPackage;
         this.returnShipping = returnShipping;
         this.shippingInformation = shippingInformation;
-        this.state = state == null ? Input.ofNullable("Creating") : state;
+        this.state = state == null ? Output.ofNullable("Creating") : state;
         this.storageAccountId = storageAccountId;
     }
 
     private JobDetailsArgs() {
-        this.backupDriveManifest = Input.empty();
-        this.cancelRequested = Input.empty();
-        this.deliveryPackage = Input.empty();
-        this.diagnosticsPath = Input.empty();
-        this.driveList = Input.empty();
-        this.encryptionKey = Input.empty();
-        this.export = Input.empty();
-        this.incompleteBlobListUri = Input.empty();
-        this.jobType = Input.empty();
-        this.logLevel = Input.empty();
-        this.percentComplete = Input.empty();
-        this.provisioningState = Input.empty();
-        this.returnAddress = Input.empty();
-        this.returnPackage = Input.empty();
-        this.returnShipping = Input.empty();
-        this.shippingInformation = Input.empty();
-        this.state = Input.empty();
-        this.storageAccountId = Input.empty();
+        this.backupDriveManifest = Output.empty();
+        this.cancelRequested = Output.empty();
+        this.deliveryPackage = Output.empty();
+        this.diagnosticsPath = Output.empty();
+        this.driveList = Output.empty();
+        this.encryptionKey = Output.empty();
+        this.export = Output.empty();
+        this.incompleteBlobListUri = Output.empty();
+        this.jobType = Output.empty();
+        this.logLevel = Output.empty();
+        this.percentComplete = Output.empty();
+        this.provisioningState = Output.empty();
+        this.returnAddress = Output.empty();
+        this.returnPackage = Output.empty();
+        this.returnShipping = Output.empty();
+        this.shippingInformation = Output.empty();
+        this.state = Output.empty();
+        this.storageAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -296,24 +296,24 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> backupDriveManifest;
-        private @Nullable Input<Boolean> cancelRequested;
-        private @Nullable Input<DeliveryPackageInformationArgs> deliveryPackage;
-        private @Nullable Input<String> diagnosticsPath;
-        private @Nullable Input<List<DriveStatusArgs>> driveList;
-        private @Nullable Input<EncryptionKeyDetailsArgs> encryptionKey;
-        private @Nullable Input<ExportArgs> export;
-        private @Nullable Input<String> incompleteBlobListUri;
-        private @Nullable Input<String> jobType;
-        private @Nullable Input<String> logLevel;
-        private @Nullable Input<Integer> percentComplete;
-        private @Nullable Input<String> provisioningState;
-        private @Nullable Input<ReturnAddressArgs> returnAddress;
-        private @Nullable Input<PackageInformationArgs> returnPackage;
-        private @Nullable Input<ReturnShippingArgs> returnShipping;
-        private @Nullable Input<ShippingInformationArgs> shippingInformation;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> storageAccountId;
+        private @Nullable Output<Boolean> backupDriveManifest;
+        private @Nullable Output<Boolean> cancelRequested;
+        private @Nullable Output<DeliveryPackageInformationArgs> deliveryPackage;
+        private @Nullable Output<String> diagnosticsPath;
+        private @Nullable Output<List<DriveStatusArgs>> driveList;
+        private @Nullable Output<EncryptionKeyDetailsArgs> encryptionKey;
+        private @Nullable Output<ExportArgs> export;
+        private @Nullable Output<String> incompleteBlobListUri;
+        private @Nullable Output<String> jobType;
+        private @Nullable Output<String> logLevel;
+        private @Nullable Output<Integer> percentComplete;
+        private @Nullable Output<String> provisioningState;
+        private @Nullable Output<ReturnAddressArgs> returnAddress;
+        private @Nullable Output<PackageInformationArgs> returnPackage;
+        private @Nullable Output<ReturnShippingArgs> returnShipping;
+        private @Nullable Output<ShippingInformationArgs> shippingInformation;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> storageAccountId;
 
         public Builder() {
     	      // Empty
@@ -341,183 +341,183 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder backupDriveManifest(@Nullable Input<Boolean> backupDriveManifest) {
+        public Builder backupDriveManifest(@Nullable Output<Boolean> backupDriveManifest) {
             this.backupDriveManifest = backupDriveManifest;
             return this;
         }
 
         public Builder backupDriveManifest(@Nullable Boolean backupDriveManifest) {
-            this.backupDriveManifest = Input.ofNullable(backupDriveManifest);
+            this.backupDriveManifest = Output.ofNullable(backupDriveManifest);
             return this;
         }
 
-        public Builder cancelRequested(@Nullable Input<Boolean> cancelRequested) {
+        public Builder cancelRequested(@Nullable Output<Boolean> cancelRequested) {
             this.cancelRequested = cancelRequested;
             return this;
         }
 
         public Builder cancelRequested(@Nullable Boolean cancelRequested) {
-            this.cancelRequested = Input.ofNullable(cancelRequested);
+            this.cancelRequested = Output.ofNullable(cancelRequested);
             return this;
         }
 
-        public Builder deliveryPackage(@Nullable Input<DeliveryPackageInformationArgs> deliveryPackage) {
+        public Builder deliveryPackage(@Nullable Output<DeliveryPackageInformationArgs> deliveryPackage) {
             this.deliveryPackage = deliveryPackage;
             return this;
         }
 
         public Builder deliveryPackage(@Nullable DeliveryPackageInformationArgs deliveryPackage) {
-            this.deliveryPackage = Input.ofNullable(deliveryPackage);
+            this.deliveryPackage = Output.ofNullable(deliveryPackage);
             return this;
         }
 
-        public Builder diagnosticsPath(@Nullable Input<String> diagnosticsPath) {
+        public Builder diagnosticsPath(@Nullable Output<String> diagnosticsPath) {
             this.diagnosticsPath = diagnosticsPath;
             return this;
         }
 
         public Builder diagnosticsPath(@Nullable String diagnosticsPath) {
-            this.diagnosticsPath = Input.ofNullable(diagnosticsPath);
+            this.diagnosticsPath = Output.ofNullable(diagnosticsPath);
             return this;
         }
 
-        public Builder driveList(@Nullable Input<List<DriveStatusArgs>> driveList) {
+        public Builder driveList(@Nullable Output<List<DriveStatusArgs>> driveList) {
             this.driveList = driveList;
             return this;
         }
 
         public Builder driveList(@Nullable List<DriveStatusArgs> driveList) {
-            this.driveList = Input.ofNullable(driveList);
+            this.driveList = Output.ofNullable(driveList);
             return this;
         }
 
-        public Builder encryptionKey(@Nullable Input<EncryptionKeyDetailsArgs> encryptionKey) {
+        public Builder encryptionKey(@Nullable Output<EncryptionKeyDetailsArgs> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
         public Builder encryptionKey(@Nullable EncryptionKeyDetailsArgs encryptionKey) {
-            this.encryptionKey = Input.ofNullable(encryptionKey);
+            this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder export(@Nullable Input<ExportArgs> export) {
+        public Builder export(@Nullable Output<ExportArgs> export) {
             this.export = export;
             return this;
         }
 
         public Builder export(@Nullable ExportArgs export) {
-            this.export = Input.ofNullable(export);
+            this.export = Output.ofNullable(export);
             return this;
         }
 
-        public Builder incompleteBlobListUri(@Nullable Input<String> incompleteBlobListUri) {
+        public Builder incompleteBlobListUri(@Nullable Output<String> incompleteBlobListUri) {
             this.incompleteBlobListUri = incompleteBlobListUri;
             return this;
         }
 
         public Builder incompleteBlobListUri(@Nullable String incompleteBlobListUri) {
-            this.incompleteBlobListUri = Input.ofNullable(incompleteBlobListUri);
+            this.incompleteBlobListUri = Output.ofNullable(incompleteBlobListUri);
             return this;
         }
 
-        public Builder jobType(@Nullable Input<String> jobType) {
+        public Builder jobType(@Nullable Output<String> jobType) {
             this.jobType = jobType;
             return this;
         }
 
         public Builder jobType(@Nullable String jobType) {
-            this.jobType = Input.ofNullable(jobType);
+            this.jobType = Output.ofNullable(jobType);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
 
-        public Builder percentComplete(@Nullable Input<Integer> percentComplete) {
+        public Builder percentComplete(@Nullable Output<Integer> percentComplete) {
             this.percentComplete = percentComplete;
             return this;
         }
 
         public Builder percentComplete(@Nullable Integer percentComplete) {
-            this.percentComplete = Input.ofNullable(percentComplete);
+            this.percentComplete = Output.ofNullable(percentComplete);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder returnAddress(@Nullable Input<ReturnAddressArgs> returnAddress) {
+        public Builder returnAddress(@Nullable Output<ReturnAddressArgs> returnAddress) {
             this.returnAddress = returnAddress;
             return this;
         }
 
         public Builder returnAddress(@Nullable ReturnAddressArgs returnAddress) {
-            this.returnAddress = Input.ofNullable(returnAddress);
+            this.returnAddress = Output.ofNullable(returnAddress);
             return this;
         }
 
-        public Builder returnPackage(@Nullable Input<PackageInformationArgs> returnPackage) {
+        public Builder returnPackage(@Nullable Output<PackageInformationArgs> returnPackage) {
             this.returnPackage = returnPackage;
             return this;
         }
 
         public Builder returnPackage(@Nullable PackageInformationArgs returnPackage) {
-            this.returnPackage = Input.ofNullable(returnPackage);
+            this.returnPackage = Output.ofNullable(returnPackage);
             return this;
         }
 
-        public Builder returnShipping(@Nullable Input<ReturnShippingArgs> returnShipping) {
+        public Builder returnShipping(@Nullable Output<ReturnShippingArgs> returnShipping) {
             this.returnShipping = returnShipping;
             return this;
         }
 
         public Builder returnShipping(@Nullable ReturnShippingArgs returnShipping) {
-            this.returnShipping = Input.ofNullable(returnShipping);
+            this.returnShipping = Output.ofNullable(returnShipping);
             return this;
         }
 
-        public Builder shippingInformation(@Nullable Input<ShippingInformationArgs> shippingInformation) {
+        public Builder shippingInformation(@Nullable Output<ShippingInformationArgs> shippingInformation) {
             this.shippingInformation = shippingInformation;
             return this;
         }
 
         public Builder shippingInformation(@Nullable ShippingInformationArgs shippingInformation) {
-            this.shippingInformation = Input.ofNullable(shippingInformation);
+            this.shippingInformation = Output.ofNullable(shippingInformation);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Input.ofNullable(storageAccountId);
+            this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
         public JobDetailsArgs build() {

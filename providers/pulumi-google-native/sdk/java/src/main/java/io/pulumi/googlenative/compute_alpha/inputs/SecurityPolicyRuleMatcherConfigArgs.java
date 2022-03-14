@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherConfigDestinationPortArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherConfigLayer4ConfigArgs;
@@ -22,10 +22,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="destIpRanges")
-      private final @Nullable Input<List<String>> destIpRanges;
+      private final @Nullable Output<List<String>> destIpRanges;
 
-    public Input<List<String>> getDestIpRanges() {
-        return this.destIpRanges == null ? Input.empty() : this.destIpRanges;
+    public Output<List<String>> getDestIpRanges() {
+        return this.destIpRanges == null ? Output.empty() : this.destIpRanges;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="destPorts")
-      private final @Nullable Input<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
+      private final @Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
 
-    public Input<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> getDestPorts() {
-        return this.destPorts == null ? Input.empty() : this.destPorts;
+    public Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> getDestPorts() {
+        return this.destPorts == null ? Output.empty() : this.destPorts;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="layer4Configs")
-      private final @Nullable Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
+      private final @Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
 
-    public Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> getLayer4Configs() {
-        return this.layer4Configs == null ? Input.empty() : this.layer4Configs;
+    public Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> getLayer4Configs() {
+        return this.layer4Configs == null ? Output.empty() : this.layer4Configs;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="srcIpRanges")
-      private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Input<List<String>> getSrcIpRanges() {
-        return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;
+    public Output<List<String>> getSrcIpRanges() {
+        return this.srcIpRanges == null ? Output.empty() : this.srcIpRanges;
     }
 
     public SecurityPolicyRuleMatcherConfigArgs(
-        @Nullable Input<List<String>> destIpRanges,
-        @Nullable Input<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts,
-        @Nullable Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs,
-        @Nullable Input<List<String>> srcIpRanges) {
+        @Nullable Output<List<String>> destIpRanges,
+        @Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts,
+        @Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs,
+        @Nullable Output<List<String>> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.destPorts = destPorts;
         this.layer4Configs = layer4Configs;
@@ -73,10 +73,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     }
 
     private SecurityPolicyRuleMatcherConfigArgs() {
-        this.destIpRanges = Input.empty();
-        this.destPorts = Input.empty();
-        this.layer4Configs = Input.empty();
-        this.srcIpRanges = Input.empty();
+        this.destIpRanges = Output.empty();
+        this.destPorts = Output.empty();
+        this.layer4Configs = Output.empty();
+        this.srcIpRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> destIpRanges;
-        private @Nullable Input<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
-        private @Nullable Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
-        private @Nullable Input<List<String>> srcIpRanges;
+        private @Nullable Output<List<String>> destIpRanges;
+        private @Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
+        private @Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
+        private @Nullable Output<List<String>> srcIpRanges;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder destIpRanges(@Nullable Input<List<String>> destIpRanges) {
+        public Builder destIpRanges(@Nullable Output<List<String>> destIpRanges) {
             this.destIpRanges = destIpRanges;
             return this;
         }
 
         public Builder destIpRanges(@Nullable List<String> destIpRanges) {
-            this.destIpRanges = Input.ofNullable(destIpRanges);
+            this.destIpRanges = Output.ofNullable(destIpRanges);
             return this;
         }
 
-        public Builder destPorts(@Nullable Input<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts) {
+        public Builder destPorts(@Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts) {
             this.destPorts = destPorts;
             return this;
         }
 
         public Builder destPorts(@Nullable List<SecurityPolicyRuleMatcherConfigDestinationPortArgs> destPorts) {
-            this.destPorts = Input.ofNullable(destPorts);
+            this.destPorts = Output.ofNullable(destPorts);
             return this;
         }
 
-        public Builder layer4Configs(@Nullable Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs) {
+        public Builder layer4Configs(@Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs) {
             this.layer4Configs = layer4Configs;
             return this;
         }
 
         public Builder layer4Configs(@Nullable List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs> layer4Configs) {
-            this.layer4Configs = Input.ofNullable(layer4Configs);
+            this.layer4Configs = Output.ofNullable(layer4Configs);
             return this;
         }
 
-        public Builder srcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
 
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Input.ofNullable(srcIpRanges);
+            this.srcIpRanges = Output.ofNullable(srcIpRanges);
             return this;
         }
         public SecurityPolicyRuleMatcherConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      * 
      */
     @InputImport(name="actionOnTimeout")
-      private final @Nullable Input<String> actionOnTimeout;
+      private final @Nullable Output<String> actionOnTimeout;
 
-    public Input<String> getActionOnTimeout() {
-        return this.actionOnTimeout == null ? Input.empty() : this.actionOnTimeout;
+    public Output<String> getActionOnTimeout() {
+        return this.actionOnTimeout == null ? Output.empty() : this.actionOnTimeout;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      * 
      */
     @InputImport(name="waitTimeInMinutes")
-      private final @Nullable Input<Integer> waitTimeInMinutes;
+      private final @Nullable Output<Integer> waitTimeInMinutes;
 
-    public Input<Integer> getWaitTimeInMinutes() {
-        return this.waitTimeInMinutes == null ? Input.empty() : this.waitTimeInMinutes;
+    public Output<Integer> getWaitTimeInMinutes() {
+        return this.waitTimeInMinutes == null ? Output.empty() : this.waitTimeInMinutes;
     }
 
     public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs(
-        @Nullable Input<String> actionOnTimeout,
-        @Nullable Input<Integer> waitTimeInMinutes) {
+        @Nullable Output<String> actionOnTimeout,
+        @Nullable Output<Integer> waitTimeInMinutes) {
         this.actionOnTimeout = actionOnTimeout;
         this.waitTimeInMinutes = waitTimeInMinutes;
     }
 
     private DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs() {
-        this.actionOnTimeout = Input.empty();
-        this.waitTimeInMinutes = Input.empty();
+        this.actionOnTimeout = Output.empty();
+        this.waitTimeInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionOnTimeout;
-        private @Nullable Input<Integer> waitTimeInMinutes;
+        private @Nullable Output<String> actionOnTimeout;
+        private @Nullable Output<Integer> waitTimeInMinutes;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
     	      this.waitTimeInMinutes = defaults.waitTimeInMinutes;
         }
 
-        public Builder actionOnTimeout(@Nullable Input<String> actionOnTimeout) {
+        public Builder actionOnTimeout(@Nullable Output<String> actionOnTimeout) {
             this.actionOnTimeout = actionOnTimeout;
             return this;
         }
 
         public Builder actionOnTimeout(@Nullable String actionOnTimeout) {
-            this.actionOnTimeout = Input.ofNullable(actionOnTimeout);
+            this.actionOnTimeout = Output.ofNullable(actionOnTimeout);
             return this;
         }
 
-        public Builder waitTimeInMinutes(@Nullable Input<Integer> waitTimeInMinutes) {
+        public Builder waitTimeInMinutes(@Nullable Output<Integer> waitTimeInMinutes) {
             this.waitTimeInMinutes = waitTimeInMinutes;
             return this;
         }
 
         public Builder waitTimeInMinutes(@Nullable Integer waitTimeInMinutes) {
-            this.waitTimeInMinutes = Input.ofNullable(waitTimeInMinutes);
+            this.waitTimeInMinutes = Output.ofNullable(waitTimeInMinutes);
             return this;
         }
         public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs build() {

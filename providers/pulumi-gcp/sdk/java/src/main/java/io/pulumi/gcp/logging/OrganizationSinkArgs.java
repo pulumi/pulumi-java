@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkBigqueryOptionsArgs;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkExclusionArgs;
@@ -23,10 +23,10 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bigqueryOptions")
-      private final @Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
+      private final @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
 
-    public Input<OrganizationSinkBigqueryOptionsArgs> getBigqueryOptions() {
-        return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
+    public Output<OrganizationSinkBigqueryOptionsArgs> getBigqueryOptions() {
+        return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<String> destination;
+      private final Output<String> destination;
 
-    public Input<String> getDestination() {
+    public Output<String> getDestination() {
         return this.destination;
     }
 
@@ -59,10 +59,10 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions;
+      private final @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions;
 
-    public Input<List<OrganizationSinkExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<OrganizationSinkExclusionArgs>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="includeChildren")
-      private final @Nullable Input<Boolean> includeChildren;
+      private final @Nullable Output<Boolean> includeChildren;
 
-    public Input<Boolean> getIncludeChildren() {
-        return this.includeChildren == null ? Input.empty() : this.includeChildren;
+    public Output<Boolean> getIncludeChildren() {
+        return this.includeChildren == null ? Output.empty() : this.includeChildren;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -116,22 +116,22 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
     public OrganizationSinkArgs(
-        @Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions,
-        @Nullable Input<String> description,
-        Input<String> destination,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions,
-        @Nullable Input<String> filter,
-        @Nullable Input<Boolean> includeChildren,
-        @Nullable Input<String> name,
-        Input<String> orgId) {
+        @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions,
+        @Nullable Output<String> description,
+        Output<String> destination,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions,
+        @Nullable Output<String> filter,
+        @Nullable Output<Boolean> includeChildren,
+        @Nullable Output<String> name,
+        Output<String> orgId) {
         this.bigqueryOptions = bigqueryOptions;
         this.description = description;
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
@@ -144,15 +144,15 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OrganizationSinkArgs() {
-        this.bigqueryOptions = Input.empty();
-        this.description = Input.empty();
-        this.destination = Input.empty();
-        this.disabled = Input.empty();
-        this.exclusions = Input.empty();
-        this.filter = Input.empty();
-        this.includeChildren = Input.empty();
-        this.name = Input.empty();
-        this.orgId = Input.empty();
+        this.bigqueryOptions = Output.empty();
+        this.description = Output.empty();
+        this.destination = Output.empty();
+        this.disabled = Output.empty();
+        this.exclusions = Output.empty();
+        this.filter = Output.empty();
+        this.includeChildren = Output.empty();
+        this.name = Output.empty();
+        this.orgId = Output.empty();
     }
 
     public static Builder builder() {
@@ -164,15 +164,15 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
-        private @Nullable Input<String> description;
-        private Input<String> destination;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<Boolean> includeChildren;
-        private @Nullable Input<String> name;
-        private Input<String> orgId;
+        private @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
+        private @Nullable Output<String> description;
+        private Output<String> destination;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<Boolean> includeChildren;
+        private @Nullable Output<String> name;
+        private Output<String> orgId;
 
         public Builder() {
     	      // Empty
@@ -191,93 +191,93 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder bigqueryOptions(@Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions) {
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
 
         public Builder bigqueryOptions(@Nullable OrganizationSinkBigqueryOptionsArgs bigqueryOptions) {
-            this.bigqueryOptions = Input.ofNullable(bigqueryOptions);
+            this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destination(Input<String> destination) {
+        public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(String destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder exclusions(@Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<OrganizationSinkExclusionArgs> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder includeChildren(@Nullable Input<Boolean> includeChildren) {
+        public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
             this.includeChildren = includeChildren;
             return this;
         }
 
         public Builder includeChildren(@Nullable Boolean includeChildren) {
-            this.includeChildren = Input.ofNullable(includeChildren);
+            this.includeChildren = Output.ofNullable(includeChildren);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
         public OrganizationSinkArgs build() {

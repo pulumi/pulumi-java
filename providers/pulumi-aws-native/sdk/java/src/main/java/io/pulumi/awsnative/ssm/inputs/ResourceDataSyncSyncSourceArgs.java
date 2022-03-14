@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncAwsOrganizationsSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,38 +18,38 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
     public static final ResourceDataSyncSyncSourceArgs Empty = new ResourceDataSyncSyncSourceArgs();
 
     @InputImport(name="awsOrganizationsSource")
-      private final @Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
+      private final @Nullable Output<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
 
-    public Input<ResourceDataSyncAwsOrganizationsSourceArgs> getAwsOrganizationsSource() {
-        return this.awsOrganizationsSource == null ? Input.empty() : this.awsOrganizationsSource;
+    public Output<ResourceDataSyncAwsOrganizationsSourceArgs> getAwsOrganizationsSource() {
+        return this.awsOrganizationsSource == null ? Output.empty() : this.awsOrganizationsSource;
     }
 
     @InputImport(name="includeFutureRegions")
-      private final @Nullable Input<Boolean> includeFutureRegions;
+      private final @Nullable Output<Boolean> includeFutureRegions;
 
-    public Input<Boolean> getIncludeFutureRegions() {
-        return this.includeFutureRegions == null ? Input.empty() : this.includeFutureRegions;
+    public Output<Boolean> getIncludeFutureRegions() {
+        return this.includeFutureRegions == null ? Output.empty() : this.includeFutureRegions;
     }
 
     @InputImport(name="sourceRegions", required=true)
-      private final Input<List<String>> sourceRegions;
+      private final Output<List<String>> sourceRegions;
 
-    public Input<List<String>> getSourceRegions() {
+    public Output<List<String>> getSourceRegions() {
         return this.sourceRegions;
     }
 
     @InputImport(name="sourceType", required=true)
-      private final Input<String> sourceType;
+      private final Output<String> sourceType;
 
-    public Input<String> getSourceType() {
+    public Output<String> getSourceType() {
         return this.sourceType;
     }
 
     public ResourceDataSyncSyncSourceArgs(
-        @Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource,
-        @Nullable Input<Boolean> includeFutureRegions,
-        Input<List<String>> sourceRegions,
-        Input<String> sourceType) {
+        @Nullable Output<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource,
+        @Nullable Output<Boolean> includeFutureRegions,
+        Output<List<String>> sourceRegions,
+        Output<String> sourceType) {
         this.awsOrganizationsSource = awsOrganizationsSource;
         this.includeFutureRegions = includeFutureRegions;
         this.sourceRegions = Objects.requireNonNull(sourceRegions, "expected parameter 'sourceRegions' to be non-null");
@@ -57,10 +57,10 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
     }
 
     private ResourceDataSyncSyncSourceArgs() {
-        this.awsOrganizationsSource = Input.empty();
-        this.includeFutureRegions = Input.empty();
-        this.sourceRegions = Input.empty();
-        this.sourceType = Input.empty();
+        this.awsOrganizationsSource = Output.empty();
+        this.includeFutureRegions = Output.empty();
+        this.sourceRegions = Output.empty();
+        this.sourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
-        private @Nullable Input<Boolean> includeFutureRegions;
-        private Input<List<String>> sourceRegions;
-        private Input<String> sourceType;
+        private @Nullable Output<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
+        private @Nullable Output<Boolean> includeFutureRegions;
+        private Output<List<String>> sourceRegions;
+        private Output<String> sourceType;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder awsOrganizationsSource(@Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource) {
+        public Builder awsOrganizationsSource(@Nullable Output<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource) {
             this.awsOrganizationsSource = awsOrganizationsSource;
             return this;
         }
 
         public Builder awsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSourceArgs awsOrganizationsSource) {
-            this.awsOrganizationsSource = Input.ofNullable(awsOrganizationsSource);
+            this.awsOrganizationsSource = Output.ofNullable(awsOrganizationsSource);
             return this;
         }
 
-        public Builder includeFutureRegions(@Nullable Input<Boolean> includeFutureRegions) {
+        public Builder includeFutureRegions(@Nullable Output<Boolean> includeFutureRegions) {
             this.includeFutureRegions = includeFutureRegions;
             return this;
         }
 
         public Builder includeFutureRegions(@Nullable Boolean includeFutureRegions) {
-            this.includeFutureRegions = Input.ofNullable(includeFutureRegions);
+            this.includeFutureRegions = Output.ofNullable(includeFutureRegions);
             return this;
         }
 
-        public Builder sourceRegions(Input<List<String>> sourceRegions) {
+        public Builder sourceRegions(Output<List<String>> sourceRegions) {
             this.sourceRegions = Objects.requireNonNull(sourceRegions);
             return this;
         }
 
         public Builder sourceRegions(List<String> sourceRegions) {
-            this.sourceRegions = Input.of(Objects.requireNonNull(sourceRegions));
+            this.sourceRegions = Output.of(Objects.requireNonNull(sourceRegions));
             return this;
         }
 
-        public Builder sourceType(Input<String> sourceType) {
+        public Builder sourceType(Output<String> sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
 
         public Builder sourceType(String sourceType) {
-            this.sourceType = Input.of(Objects.requireNonNull(sourceType));
+            this.sourceType = Output.of(Objects.requireNonNull(sourceType));
             return this;
         }
         public ResourceDataSyncSyncSourceArgs build() {

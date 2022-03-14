@@ -6,7 +6,6 @@ package io.pulumi.aws.inspector;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.inspector.ResourceGroupArgs;
 import io.pulumi.aws.inspector.inputs.ResourceGroupState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -89,14 +88,14 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceGroup(String name, ResourceGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:inspector/resourceGroup:ResourceGroup", name, args == null ? ResourceGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:inspector/resourceGroup:ResourceGroup", name, args == null ? ResourceGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResourceGroup(String name, Input<String> id, @Nullable ResourceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResourceGroup(String name, Output<String> id, @Nullable ResourceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:inspector/resourceGroup:ResourceGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -112,7 +111,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourceGroup get(String name, Input<String> id, @Nullable ResourceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResourceGroup get(String name, Output<String> id, @Nullable ResourceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceGroup(name, id, state, options);
     }
 }

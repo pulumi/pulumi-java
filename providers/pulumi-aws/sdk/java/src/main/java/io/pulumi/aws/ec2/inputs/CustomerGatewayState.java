@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bgpAsn")
-      private final @Nullable Input<String> bgpAsn;
+      private final @Nullable Output<String> bgpAsn;
 
-    public Input<String> getBgpAsn() {
-        return this.bgpAsn == null ? Input.empty() : this.bgpAsn;
+    public Output<String> getBgpAsn() {
+        return this.bgpAsn == null ? Output.empty() : this.bgpAsn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public CustomerGatewayState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> bgpAsn,
-        @Nullable Input<String> certificateArn,
-        @Nullable Input<String> deviceName,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> bgpAsn,
+        @Nullable Output<String> certificateArn,
+        @Nullable Output<String> deviceName,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type) {
         this.arn = arn;
         this.bgpAsn = bgpAsn;
         this.certificateArn = certificateArn;
@@ -124,14 +124,14 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
     }
 
     private CustomerGatewayState() {
-        this.arn = Input.empty();
-        this.bgpAsn = Input.empty();
-        this.certificateArn = Input.empty();
-        this.deviceName = Input.empty();
-        this.ipAddress = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
+        this.arn = Output.empty();
+        this.bgpAsn = Output.empty();
+        this.certificateArn = Output.empty();
+        this.deviceName = Output.empty();
+        this.ipAddress = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> bgpAsn;
-        private @Nullable Input<String> certificateArn;
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> bgpAsn;
+        private @Nullable Output<String> certificateArn;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder bgpAsn(@Nullable Input<String> bgpAsn) {
+        public Builder bgpAsn(@Nullable Output<String> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
 
         public Builder bgpAsn(@Nullable String bgpAsn) {
-            this.bgpAsn = Input.ofNullable(bgpAsn);
+            this.bgpAsn = Output.ofNullable(bgpAsn);
             return this;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public CustomerGatewayState build() {

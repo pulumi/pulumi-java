@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.SubResourceArgs;
 import io.pulumi.azurenative.servicefabric.inputs.VaultCertificateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceVault", required=true)
-      private final Input<SubResourceArgs> sourceVault;
+      private final Output<SubResourceArgs> sourceVault;
 
-    public Input<SubResourceArgs> getSourceVault() {
+    public Output<SubResourceArgs> getSourceVault() {
         return this.sourceVault;
     }
 
@@ -35,22 +35,22 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vaultCertificates", required=true)
-      private final Input<List<VaultCertificateArgs>> vaultCertificates;
+      private final Output<List<VaultCertificateArgs>> vaultCertificates;
 
-    public Input<List<VaultCertificateArgs>> getVaultCertificates() {
+    public Output<List<VaultCertificateArgs>> getVaultCertificates() {
         return this.vaultCertificates;
     }
 
     public VaultSecretGroupArgs(
-        Input<SubResourceArgs> sourceVault,
-        Input<List<VaultCertificateArgs>> vaultCertificates) {
+        Output<SubResourceArgs> sourceVault,
+        Output<List<VaultCertificateArgs>> vaultCertificates) {
         this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
         this.vaultCertificates = Objects.requireNonNull(vaultCertificates, "expected parameter 'vaultCertificates' to be non-null");
     }
 
     private VaultSecretGroupArgs() {
-        this.sourceVault = Input.empty();
-        this.vaultCertificates = Input.empty();
+        this.sourceVault = Output.empty();
+        this.vaultCertificates = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<SubResourceArgs> sourceVault;
-        private Input<List<VaultCertificateArgs>> vaultCertificates;
+        private Output<SubResourceArgs> sourceVault;
+        private Output<List<VaultCertificateArgs>> vaultCertificates;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     	      this.vaultCertificates = defaults.vaultCertificates;
         }
 
-        public Builder sourceVault(Input<SubResourceArgs> sourceVault) {
+        public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
 
         public Builder sourceVault(SubResourceArgs sourceVault) {
-            this.sourceVault = Input.of(Objects.requireNonNull(sourceVault));
+            this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
             return this;
         }
 
-        public Builder vaultCertificates(Input<List<VaultCertificateArgs>> vaultCertificates) {
+        public Builder vaultCertificates(Output<List<VaultCertificateArgs>> vaultCertificates) {
             this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
             return this;
         }
 
         public Builder vaultCertificates(List<VaultCertificateArgs> vaultCertificates) {
-            this.vaultCertificates = Input.of(Objects.requireNonNull(vaultCertificates));
+            this.vaultCertificates = Output.of(Objects.requireNonNull(vaultCertificates));
             return this;
         }
         public VaultSecretGroupArgs build() {

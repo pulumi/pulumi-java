@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.CassandraSchemaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="analyticalStorageTtl")
-      private final @Nullable Input<Integer> analyticalStorageTtl;
+      private final @Nullable Output<Integer> analyticalStorageTtl;
 
-    public Input<Integer> getAnalyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Input.empty() : this.analyticalStorageTtl;
+    public Output<Integer> getAnalyticalStorageTtl() {
+        return this.analyticalStorageTtl == null ? Output.empty() : this.analyticalStorageTtl;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="defaultTtl")
-      private final @Nullable Input<Integer> defaultTtl;
+      private final @Nullable Output<Integer> defaultTtl;
 
-    public Input<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
+    public Output<Integer> getDefaultTtl() {
+        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -58,17 +58,17 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<CassandraSchemaArgs> schema;
+      private final @Nullable Output<CassandraSchemaArgs> schema;
 
-    public Input<CassandraSchemaArgs> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<CassandraSchemaArgs> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     public CassandraTableResourceArgs(
-        @Nullable Input<Integer> analyticalStorageTtl,
-        @Nullable Input<Integer> defaultTtl,
-        Input<String> id,
-        @Nullable Input<CassandraSchemaArgs> schema) {
+        @Nullable Output<Integer> analyticalStorageTtl,
+        @Nullable Output<Integer> defaultTtl,
+        Output<String> id,
+        @Nullable Output<CassandraSchemaArgs> schema) {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.defaultTtl = defaultTtl;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
@@ -76,10 +76,10 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
     }
 
     private CassandraTableResourceArgs() {
-        this.analyticalStorageTtl = Input.empty();
-        this.defaultTtl = Input.empty();
-        this.id = Input.empty();
-        this.schema = Input.empty();
+        this.analyticalStorageTtl = Output.empty();
+        this.defaultTtl = Output.empty();
+        this.id = Output.empty();
+        this.schema = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> analyticalStorageTtl;
-        private @Nullable Input<Integer> defaultTtl;
-        private Input<String> id;
-        private @Nullable Input<CassandraSchemaArgs> schema;
+        private @Nullable Output<Integer> analyticalStorageTtl;
+        private @Nullable Output<Integer> defaultTtl;
+        private Output<String> id;
+        private @Nullable Output<CassandraSchemaArgs> schema;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
     	      this.schema = defaults.schema;
         }
 
-        public Builder analyticalStorageTtl(@Nullable Input<Integer> analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Output<Integer> analyticalStorageTtl) {
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = Input.ofNullable(analyticalStorageTtl);
+            this.analyticalStorageTtl = Output.ofNullable(analyticalStorageTtl);
             return this;
         }
 
-        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Input.ofNullable(defaultTtl);
+            this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder schema(@Nullable Input<CassandraSchemaArgs> schema) {
+        public Builder schema(@Nullable Output<CassandraSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable CassandraSchemaArgs schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
         public CassandraTableResourceArgs build() {

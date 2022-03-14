@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disk")
-      private final @Nullable Input<String> disk;
+      private final @Nullable Output<String> disk;
 
-    public Input<String> getDisk() {
-        return this.disk == null ? Input.empty() : this.disk;
+    public Output<String> getDisk() {
+        return this.disk == null ? Output.empty() : this.disk;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -85,19 +85,19 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public AttachedDiskState(
-        @Nullable Input<String> deviceName,
-        @Nullable Input<String> disk,
-        @Nullable Input<String> instance,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> project,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> deviceName,
+        @Nullable Output<String> disk,
+        @Nullable Output<String> instance,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> project,
+        @Nullable Output<String> zone) {
         this.deviceName = deviceName;
         this.disk = disk;
         this.instance = instance;
@@ -107,12 +107,12 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachedDiskState() {
-        this.deviceName = Input.empty();
-        this.disk = Input.empty();
-        this.instance = Input.empty();
-        this.mode = Input.empty();
-        this.project = Input.empty();
-        this.zone = Input.empty();
+        this.deviceName = Output.empty();
+        this.disk = Output.empty();
+        this.instance = Output.empty();
+        this.mode = Output.empty();
+        this.project = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<String> disk;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<String> disk;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder disk(@Nullable Input<String> disk) {
+        public Builder disk(@Nullable Output<String> disk) {
             this.disk = disk;
             return this;
         }
 
         public Builder disk(@Nullable String disk) {
-            this.disk = Input.ofNullable(disk);
+            this.disk = Output.ofNullable(disk);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public AttachedDiskState build() {

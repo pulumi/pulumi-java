@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetGroupArn", required=true)
-      private final Input<String> targetGroupArn;
+      private final Output<String> targetGroupArn;
 
-    public Input<String> getTargetGroupArn() {
+    public Output<String> getTargetGroupArn() {
         return this.targetGroupArn;
     }
 
@@ -53,17 +53,17 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetId", required=true)
-      private final Input<String> targetId;
+      private final Output<String> targetId;
 
-    public Input<String> getTargetId() {
+    public Output<String> getTargetId() {
         return this.targetId;
     }
 
     public TargetGroupAttachmentArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<Integer> port,
-        Input<String> targetGroupArn,
-        Input<String> targetId) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<Integer> port,
+        Output<String> targetGroupArn,
+        Output<String> targetId) {
         this.availabilityZone = availabilityZone;
         this.port = port;
         this.targetGroupArn = Objects.requireNonNull(targetGroupArn, "expected parameter 'targetGroupArn' to be non-null");
@@ -71,10 +71,10 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     }
 
     private TargetGroupAttachmentArgs() {
-        this.availabilityZone = Input.empty();
-        this.port = Input.empty();
-        this.targetGroupArn = Input.empty();
-        this.targetId = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.port = Output.empty();
+        this.targetGroupArn = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<Integer> port;
-        private Input<String> targetGroupArn;
-        private Input<String> targetId;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<Integer> port;
+        private Output<String> targetGroupArn;
+        private Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder targetGroupArn(Input<String> targetGroupArn) {
+        public Builder targetGroupArn(Output<String> targetGroupArn) {
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }
 
         public Builder targetGroupArn(String targetGroupArn) {
-            this.targetGroupArn = Input.of(Objects.requireNonNull(targetGroupArn));
+            this.targetGroupArn = Output.of(Objects.requireNonNull(targetGroupArn));
             return this;
         }
 
-        public Builder targetId(Input<String> targetId) {
+        public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
         public Builder targetId(String targetId) {
-            this.targetId = Input.of(Objects.requireNonNull(targetId));
+            this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
         public TargetGroupAttachmentArgs build() {

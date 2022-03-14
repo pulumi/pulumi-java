@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.cdn.inputs.HealthProbeParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-      private final Input<String> endpointName;
+      private final Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
+    public Output<String> getEndpointName() {
         return this.endpointName;
     }
 
@@ -35,10 +35,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthProbeSettings")
-      private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
+      private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
-    public Input<HealthProbeParametersArgs> getHealthProbeSettings() {
-        return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
+    public Output<HealthProbeParametersArgs> getHealthProbeSettings() {
+        return this.healthProbeSettings == null ? Output.empty() : this.healthProbeSettings;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroupName")
-      private final @Nullable Input<String> originGroupName;
+      private final @Nullable Output<String> originGroupName;
 
-    public Input<String> getOriginGroupName() {
-        return this.originGroupName == null ? Input.empty() : this.originGroupName;
+    public Output<String> getOriginGroupName() {
+        return this.originGroupName == null ? Output.empty() : this.originGroupName;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins", required=true)
-      private final Input<List<ResourceReferenceArgs>> origins;
+      private final Output<List<ResourceReferenceArgs>> origins;
 
-    public Input<List<ResourceReferenceArgs>> getOrigins() {
+    public Output<List<ResourceReferenceArgs>> getOrigins() {
         return this.origins;
     }
 
@@ -68,9 +68,9 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -79,9 +79,9 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,10 +90,10 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseBasedOriginErrorDetectionSettings")
-      private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
+      private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
-    public Input<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedOriginErrorDetectionSettings() {
-        return this.responseBasedOriginErrorDetectionSettings == null ? Input.empty() : this.responseBasedOriginErrorDetectionSettings;
+    public Output<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedOriginErrorDetectionSettings() {
+        return this.responseBasedOriginErrorDetectionSettings == null ? Output.empty() : this.responseBasedOriginErrorDetectionSettings;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
-      private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+      private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    public Input<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
-        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Input.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+    public Output<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Output.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
 
     public OriginGroupArgs(
-        Input<String> endpointName,
-        @Nullable Input<HealthProbeParametersArgs> healthProbeSettings,
-        @Nullable Input<String> originGroupName,
-        Input<List<ResourceReferenceArgs>> origins,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings,
-        @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        Output<String> endpointName,
+        @Nullable Output<HealthProbeParametersArgs> healthProbeSettings,
+        @Nullable Output<String> originGroupName,
+        Output<List<ResourceReferenceArgs>> origins,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings,
+        @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
         this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
         this.healthProbeSettings = healthProbeSettings;
         this.originGroupName = originGroupName;
@@ -127,14 +127,14 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OriginGroupArgs() {
-        this.endpointName = Input.empty();
-        this.healthProbeSettings = Input.empty();
-        this.originGroupName = Input.empty();
-        this.origins = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.responseBasedOriginErrorDetectionSettings = Input.empty();
-        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Input.empty();
+        this.endpointName = Output.empty();
+        this.healthProbeSettings = Output.empty();
+        this.originGroupName = Output.empty();
+        this.origins = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.responseBasedOriginErrorDetectionSettings = Output.empty();
+        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> endpointName;
-        private @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
-        private @Nullable Input<String> originGroupName;
-        private Input<List<ResourceReferenceArgs>> origins;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
-        private @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+        private Output<String> endpointName;
+        private @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
+        private @Nullable Output<String> originGroupName;
+        private Output<List<ResourceReferenceArgs>> origins;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
+        private @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = defaults.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
         }
 
-        public Builder endpointName(Input<String> endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Input.of(Objects.requireNonNull(endpointName));
+            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder healthProbeSettings(@Nullable Input<HealthProbeParametersArgs> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable Output<HealthProbeParametersArgs> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
         public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
-            this.healthProbeSettings = Input.ofNullable(healthProbeSettings);
+            this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
 
-        public Builder originGroupName(@Nullable Input<String> originGroupName) {
+        public Builder originGroupName(@Nullable Output<String> originGroupName) {
             this.originGroupName = originGroupName;
             return this;
         }
 
         public Builder originGroupName(@Nullable String originGroupName) {
-            this.originGroupName = Input.ofNullable(originGroupName);
+            this.originGroupName = Output.ofNullable(originGroupName);
             return this;
         }
 
-        public Builder origins(Input<List<ResourceReferenceArgs>> origins) {
+        public Builder origins(Output<List<ResourceReferenceArgs>> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
 
         public Builder origins(List<ResourceReferenceArgs> origins) {
-            this.origins = Input.of(Objects.requireNonNull(origins));
+            this.origins = Output.of(Objects.requireNonNull(origins));
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder responseBasedOriginErrorDetectionSettings(@Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings) {
+        public Builder responseBasedOriginErrorDetectionSettings(@Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
 
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
-            this.responseBasedOriginErrorDetectionSettings = Input.ofNullable(responseBasedOriginErrorDetectionSettings);
+            this.responseBasedOriginErrorDetectionSettings = Output.ofNullable(responseBasedOriginErrorDetectionSettings);
             return this;
         }
 
-        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
 
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Input.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
+            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
         }
         public OriginGroupArgs build() {

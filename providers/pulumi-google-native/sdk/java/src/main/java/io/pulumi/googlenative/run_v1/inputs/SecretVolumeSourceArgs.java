@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.KeyToPathArgs;
 import java.lang.Boolean;
@@ -27,10 +27,10 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultMode")
-      private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Output<Integer> defaultMode;
 
-    public Input<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Input.empty() : this.defaultMode;
+    public Output<Integer> getDefaultMode() {
+        return this.defaultMode == null ? Output.empty() : this.defaultMode;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<KeyToPathArgs>> items;
+      private final @Nullable Output<List<KeyToPathArgs>> items;
 
-    public Input<List<KeyToPathArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<KeyToPathArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="optional")
-      private final @Nullable Input<Boolean> optional;
+      private final @Nullable Output<Boolean> optional;
 
-    public Input<Boolean> getOptional() {
-        return this.optional == null ? Input.empty() : this.optional;
+    public Output<Boolean> getOptional() {
+        return this.optional == null ? Output.empty() : this.optional;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secretName")
-      private final @Nullable Input<String> secretName;
+      private final @Nullable Output<String> secretName;
 
-    public Input<String> getSecretName() {
-        return this.secretName == null ? Input.empty() : this.secretName;
+    public Output<String> getSecretName() {
+        return this.secretName == null ? Output.empty() : this.secretName;
     }
 
     public SecretVolumeSourceArgs(
-        @Nullable Input<Integer> defaultMode,
-        @Nullable Input<List<KeyToPathArgs>> items,
-        @Nullable Input<Boolean> optional,
-        @Nullable Input<String> secretName) {
+        @Nullable Output<Integer> defaultMode,
+        @Nullable Output<List<KeyToPathArgs>> items,
+        @Nullable Output<Boolean> optional,
+        @Nullable Output<String> secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.optional = optional;
@@ -78,10 +78,10 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SecretVolumeSourceArgs() {
-        this.defaultMode = Input.empty();
-        this.items = Input.empty();
-        this.optional = Input.empty();
-        this.secretName = Input.empty();
+        this.defaultMode = Output.empty();
+        this.items = Output.empty();
+        this.optional = Output.empty();
+        this.secretName = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> defaultMode;
-        private @Nullable Input<List<KeyToPathArgs>> items;
-        private @Nullable Input<Boolean> optional;
-        private @Nullable Input<String> secretName;
+        private @Nullable Output<Integer> defaultMode;
+        private @Nullable Output<List<KeyToPathArgs>> items;
+        private @Nullable Output<Boolean> optional;
+        private @Nullable Output<String> secretName;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder defaultMode(@Nullable Input<Integer> defaultMode) {
+        public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Input.ofNullable(defaultMode);
+            this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
 
-        public Builder items(@Nullable Input<List<KeyToPathArgs>> items) {
+        public Builder items(@Nullable Output<List<KeyToPathArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<KeyToPathArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder optional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Input.ofNullable(optional);
+            this.optional = Output.ofNullable(optional);
             return this;
         }
 
-        public Builder secretName(@Nullable Input<String> secretName) {
+        public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
 
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Input.ofNullable(secretName);
+            this.secretName = Output.ofNullable(secretName);
             return this;
         }
         public SecretVolumeSourceArgs build() {

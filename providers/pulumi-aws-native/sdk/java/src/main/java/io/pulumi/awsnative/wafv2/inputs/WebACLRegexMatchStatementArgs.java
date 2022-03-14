@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class WebACLRegexMatchStatementArgs extends io.pulumi.resources.Res
     public static final WebACLRegexMatchStatementArgs Empty = new WebACLRegexMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+      private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="regexString", required=true)
-      private final Input<String> regexString;
+      private final Output<String> regexString;
 
-    public Input<String> getRegexString() {
+    public Output<String> getRegexString() {
         return this.regexString;
     }
 
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+      private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebACLRegexMatchStatementArgs(
-        Input<WebACLFieldToMatchArgs> fieldToMatch,
-        Input<String> regexString,
-        Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        Output<WebACLFieldToMatchArgs> fieldToMatch,
+        Output<String> regexString,
+        Output<List<WebACLTextTransformationArgs>> textTransformations) {
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.regexString = Objects.requireNonNull(regexString, "expected parameter 'regexString' to be non-null");
         this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
     }
 
     private WebACLRegexMatchStatementArgs() {
-        this.fieldToMatch = Input.empty();
-        this.regexString = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.regexString = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class WebACLRegexMatchStatementArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<WebACLFieldToMatchArgs> fieldToMatch;
-        private Input<String> regexString;
-        private Input<List<WebACLTextTransformationArgs>> textTransformations;
+        private Output<WebACLFieldToMatchArgs> fieldToMatch;
+        private Output<String> regexString;
+        private Output<List<WebACLTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class WebACLRegexMatchStatementArgs extends io.pulumi.resources.Res
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder regexString(Input<String> regexString) {
+        public Builder regexString(Output<String> regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
 
         public Builder regexString(String regexString) {
-            this.regexString = Input.of(Objects.requireNonNull(regexString));
+            this.regexString = Output.of(Objects.requireNonNull(regexString));
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebACLRegexMatchStatementArgs build() {

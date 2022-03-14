@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1_StudyConfig_MetricSpecGoal;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="goal", required=true)
-      private final Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
+      private final Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
 
-    public Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> getGoal() {
+    public Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> getGoal() {
         return this.goal;
     }
 
@@ -34,22 +34,22 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="metric", required=true)
-      private final Input<String> metric;
+      private final Output<String> metric;
 
-    public Input<String> getMetric() {
+    public Output<String> getMetric() {
         return this.metric;
     }
 
     public GoogleCloudMlV1_StudyConfig_MetricSpecArgs(
-        Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal,
-        Input<String> metric) {
+        Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal,
+        Output<String> metric) {
         this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
     }
 
     private GoogleCloudMlV1_StudyConfig_MetricSpecArgs() {
-        this.goal = Input.empty();
-        this.metric = Input.empty();
+        this.goal = Output.empty();
+        this.metric = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
-        private Input<String> metric;
+        private Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
+        private Output<String> metric;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
     	      this.metric = defaults.metric;
         }
 
-        public Builder goal(Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal) {
+        public Builder goal(Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
         public Builder goal(GoogleCloudMlV1_StudyConfig_MetricSpecGoal goal) {
-            this.goal = Input.of(Objects.requireNonNull(goal));
+            this.goal = Output.of(Objects.requireNonNull(goal));
             return this;
         }
 
-        public Builder metric(Input<String> metric) {
+        public Builder metric(Output<String> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
         public Builder metric(String metric) {
-            this.metric = Input.of(Objects.requireNonNull(metric));
+            this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
         public GoogleCloudMlV1_StudyConfig_MetricSpecArgs build() {

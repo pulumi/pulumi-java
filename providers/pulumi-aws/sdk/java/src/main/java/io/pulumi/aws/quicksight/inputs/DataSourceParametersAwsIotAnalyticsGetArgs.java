@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DataSourceParametersAwsIotAnalyticsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dataSetName", required=true)
-      private final Input<String> dataSetName;
+      private final Output<String> dataSetName;
 
-    public Input<String> getDataSetName() {
+    public Output<String> getDataSetName() {
         return this.dataSetName;
     }
 
-    public DataSourceParametersAwsIotAnalyticsGetArgs(Input<String> dataSetName) {
+    public DataSourceParametersAwsIotAnalyticsGetArgs(Output<String> dataSetName) {
         this.dataSetName = Objects.requireNonNull(dataSetName, "expected parameter 'dataSetName' to be non-null");
     }
 
     private DataSourceParametersAwsIotAnalyticsGetArgs() {
-        this.dataSetName = Input.empty();
+        this.dataSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DataSourceParametersAwsIotAnalyticsGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> dataSetName;
+        private Output<String> dataSetName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DataSourceParametersAwsIotAnalyticsGetArgs extends io.pulumi.
     	      this.dataSetName = defaults.dataSetName;
         }
 
-        public Builder dataSetName(Input<String> dataSetName) {
+        public Builder dataSetName(Output<String> dataSetName) {
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
         }
 
         public Builder dataSetName(String dataSetName) {
-            this.dataSetName = Input.of(Objects.requireNonNull(dataSetName));
+            this.dataSetName = Output.of(Objects.requireNonNull(dataSetName));
             return this;
         }
         public DataSourceParametersAwsIotAnalyticsGetArgs build() {

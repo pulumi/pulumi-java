@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataflowSinks")
-      private final @Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks;
+      private final @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
 
-    public Input<List<PowerQuerySinkArgs>> getDataflowSinks() {
-        return this.dataflowSinks == null ? Input.empty() : this.dataflowSinks;
+    public Output<List<PowerQuerySinkArgs>> getDataflowSinks() {
+        return this.dataflowSinks == null ? Output.empty() : this.dataflowSinks;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="queryName")
-      private final @Nullable Input<String> queryName;
+      private final @Nullable Output<String> queryName;
 
-    public Input<String> getQueryName() {
-        return this.queryName == null ? Input.empty() : this.queryName;
+    public Output<String> getQueryName() {
+        return this.queryName == null ? Output.empty() : this.queryName;
     }
 
     public PowerQuerySinkMappingArgs(
-        @Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks,
-        @Nullable Input<String> queryName) {
+        @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks,
+        @Nullable Output<String> queryName) {
         this.dataflowSinks = dataflowSinks;
         this.queryName = queryName;
     }
 
     private PowerQuerySinkMappingArgs() {
-        this.dataflowSinks = Input.empty();
-        this.queryName = Input.empty();
+        this.dataflowSinks = Output.empty();
+        this.queryName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks;
-        private @Nullable Input<String> queryName;
+        private @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
+        private @Nullable Output<String> queryName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     	      this.queryName = defaults.queryName;
         }
 
-        public Builder dataflowSinks(@Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks) {
+        public Builder dataflowSinks(@Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks) {
             this.dataflowSinks = dataflowSinks;
             return this;
         }
 
         public Builder dataflowSinks(@Nullable List<PowerQuerySinkArgs> dataflowSinks) {
-            this.dataflowSinks = Input.ofNullable(dataflowSinks);
+            this.dataflowSinks = Output.ofNullable(dataflowSinks);
             return this;
         }
 
-        public Builder queryName(@Nullable Input<String> queryName) {
+        public Builder queryName(@Nullable Output<String> queryName) {
             this.queryName = queryName;
             return this;
         }
 
         public Builder queryName(@Nullable String queryName) {
-            this.queryName = Input.ofNullable(queryName);
+            this.queryName = Output.ofNullable(queryName);
             return this;
         }
         public PowerQuerySinkMappingArgs build() {

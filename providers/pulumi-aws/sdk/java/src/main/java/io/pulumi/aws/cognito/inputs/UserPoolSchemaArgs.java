@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.UserPoolSchemaNumberAttributeConstraintsArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolSchemaStringAttributeConstraintsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeDataType", required=true)
-      private final Input<String> attributeDataType;
+      private final Output<String> attributeDataType;
 
-    public Input<String> getAttributeDataType() {
+    public Output<String> getAttributeDataType() {
         return this.attributeDataType;
     }
 
@@ -33,10 +33,10 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerOnlyAttribute")
-      private final @Nullable Input<Boolean> developerOnlyAttribute;
+      private final @Nullable Output<Boolean> developerOnlyAttribute;
 
-    public Input<Boolean> getDeveloperOnlyAttribute() {
-        return this.developerOnlyAttribute == null ? Input.empty() : this.developerOnlyAttribute;
+    public Output<Boolean> getDeveloperOnlyAttribute() {
+        return this.developerOnlyAttribute == null ? Output.empty() : this.developerOnlyAttribute;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutable")
-      private final @Nullable Input<Boolean> mutable;
+      private final @Nullable Output<Boolean> mutable;
 
-    public Input<Boolean> getMutable() {
-        return this.mutable == null ? Input.empty() : this.mutable;
+    public Output<Boolean> getMutable() {
+        return this.mutable == null ? Output.empty() : this.mutable;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -66,10 +66,10 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberAttributeConstraints")
-      private final @Nullable Input<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints;
+      private final @Nullable Output<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints;
 
-    public Input<UserPoolSchemaNumberAttributeConstraintsArgs> getNumberAttributeConstraints() {
-        return this.numberAttributeConstraints == null ? Input.empty() : this.numberAttributeConstraints;
+    public Output<UserPoolSchemaNumberAttributeConstraintsArgs> getNumberAttributeConstraints() {
+        return this.numberAttributeConstraints == null ? Output.empty() : this.numberAttributeConstraints;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="required")
-      private final @Nullable Input<Boolean> required;
+      private final @Nullable Output<Boolean> required;
 
-    public Input<Boolean> getRequired() {
-        return this.required == null ? Input.empty() : this.required;
+    public Output<Boolean> getRequired() {
+        return this.required == null ? Output.empty() : this.required;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringAttributeConstraints")
-      private final @Nullable Input<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints;
+      private final @Nullable Output<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints;
 
-    public Input<UserPoolSchemaStringAttributeConstraintsArgs> getStringAttributeConstraints() {
-        return this.stringAttributeConstraints == null ? Input.empty() : this.stringAttributeConstraints;
+    public Output<UserPoolSchemaStringAttributeConstraintsArgs> getStringAttributeConstraints() {
+        return this.stringAttributeConstraints == null ? Output.empty() : this.stringAttributeConstraints;
     }
 
     public UserPoolSchemaArgs(
-        Input<String> attributeDataType,
-        @Nullable Input<Boolean> developerOnlyAttribute,
-        @Nullable Input<Boolean> mutable,
-        Input<String> name,
-        @Nullable Input<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints,
-        @Nullable Input<Boolean> required,
-        @Nullable Input<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints) {
+        Output<String> attributeDataType,
+        @Nullable Output<Boolean> developerOnlyAttribute,
+        @Nullable Output<Boolean> mutable,
+        Output<String> name,
+        @Nullable Output<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints,
+        @Nullable Output<Boolean> required,
+        @Nullable Output<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints) {
         this.attributeDataType = Objects.requireNonNull(attributeDataType, "expected parameter 'attributeDataType' to be non-null");
         this.developerOnlyAttribute = developerOnlyAttribute;
         this.mutable = mutable;
@@ -112,13 +112,13 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPoolSchemaArgs() {
-        this.attributeDataType = Input.empty();
-        this.developerOnlyAttribute = Input.empty();
-        this.mutable = Input.empty();
-        this.name = Input.empty();
-        this.numberAttributeConstraints = Input.empty();
-        this.required = Input.empty();
-        this.stringAttributeConstraints = Input.empty();
+        this.attributeDataType = Output.empty();
+        this.developerOnlyAttribute = Output.empty();
+        this.mutable = Output.empty();
+        this.name = Output.empty();
+        this.numberAttributeConstraints = Output.empty();
+        this.required = Output.empty();
+        this.stringAttributeConstraints = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> attributeDataType;
-        private @Nullable Input<Boolean> developerOnlyAttribute;
-        private @Nullable Input<Boolean> mutable;
-        private Input<String> name;
-        private @Nullable Input<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints;
-        private @Nullable Input<Boolean> required;
-        private @Nullable Input<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints;
+        private Output<String> attributeDataType;
+        private @Nullable Output<Boolean> developerOnlyAttribute;
+        private @Nullable Output<Boolean> mutable;
+        private Output<String> name;
+        private @Nullable Output<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints;
+        private @Nullable Output<Boolean> required;
+        private @Nullable Output<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stringAttributeConstraints = defaults.stringAttributeConstraints;
         }
 
-        public Builder attributeDataType(Input<String> attributeDataType) {
+        public Builder attributeDataType(Output<String> attributeDataType) {
             this.attributeDataType = Objects.requireNonNull(attributeDataType);
             return this;
         }
 
         public Builder attributeDataType(String attributeDataType) {
-            this.attributeDataType = Input.of(Objects.requireNonNull(attributeDataType));
+            this.attributeDataType = Output.of(Objects.requireNonNull(attributeDataType));
             return this;
         }
 
-        public Builder developerOnlyAttribute(@Nullable Input<Boolean> developerOnlyAttribute) {
+        public Builder developerOnlyAttribute(@Nullable Output<Boolean> developerOnlyAttribute) {
             this.developerOnlyAttribute = developerOnlyAttribute;
             return this;
         }
 
         public Builder developerOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
-            this.developerOnlyAttribute = Input.ofNullable(developerOnlyAttribute);
+            this.developerOnlyAttribute = Output.ofNullable(developerOnlyAttribute);
             return this;
         }
 
-        public Builder mutable(@Nullable Input<Boolean> mutable) {
+        public Builder mutable(@Nullable Output<Boolean> mutable) {
             this.mutable = mutable;
             return this;
         }
 
         public Builder mutable(@Nullable Boolean mutable) {
-            this.mutable = Input.ofNullable(mutable);
+            this.mutable = Output.ofNullable(mutable);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder numberAttributeConstraints(@Nullable Input<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints) {
+        public Builder numberAttributeConstraints(@Nullable Output<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints) {
             this.numberAttributeConstraints = numberAttributeConstraints;
             return this;
         }
 
         public Builder numberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraintsArgs numberAttributeConstraints) {
-            this.numberAttributeConstraints = Input.ofNullable(numberAttributeConstraints);
+            this.numberAttributeConstraints = Output.ofNullable(numberAttributeConstraints);
             return this;
         }
 
-        public Builder required(@Nullable Input<Boolean> required) {
+        public Builder required(@Nullable Output<Boolean> required) {
             this.required = required;
             return this;
         }
 
         public Builder required(@Nullable Boolean required) {
-            this.required = Input.ofNullable(required);
+            this.required = Output.ofNullable(required);
             return this;
         }
 
-        public Builder stringAttributeConstraints(@Nullable Input<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints) {
+        public Builder stringAttributeConstraints(@Nullable Output<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints) {
             this.stringAttributeConstraints = stringAttributeConstraints;
             return this;
         }
 
         public Builder stringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraintsArgs stringAttributeConstraints) {
-            this.stringAttributeConstraints = Input.ofNullable(stringAttributeConstraints);
+            this.stringAttributeConstraints = Output.ofNullable(stringAttributeConstraints);
             return this;
         }
         public UserPoolSchemaArgs build() {

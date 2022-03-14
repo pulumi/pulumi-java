@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -206,14 +205,14 @@ public class SubnetworkIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubnetworkIAMBinding(String name, SubnetworkIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/subnetworkIAMBinding:SubnetworkIAMBinding", name, args == null ? SubnetworkIAMBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/subnetworkIAMBinding:SubnetworkIAMBinding", name, args == null ? SubnetworkIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SubnetworkIAMBinding(String name, Input<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SubnetworkIAMBinding(String name, Output<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/subnetworkIAMBinding:SubnetworkIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -229,7 +228,7 @@ public class SubnetworkIAMBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubnetworkIAMBinding get(String name, Input<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SubnetworkIAMBinding get(String name, Output<String> id, @Nullable SubnetworkIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubnetworkIAMBinding(name, id, state, options);
     }
 }

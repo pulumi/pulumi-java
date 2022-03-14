@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deleteOnTermination")
-      private final @Nullable Input<Boolean> deleteOnTermination;
+      private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Input<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
+    public Output<Boolean> getDeleteOnTermination() {
+        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="snapshotId")
-      private final @Nullable Input<String> snapshotId;
+      private final @Nullable Output<String> snapshotId;
 
-    public Input<String> getSnapshotId() {
-        return this.snapshotId == null ? Input.empty() : this.snapshotId;
+    public Output<String> getSnapshotId() {
+        return this.snapshotId == null ? Output.empty() : this.snapshotId;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="throughput")
-      private final @Nullable Input<Integer> throughput;
+      private final @Nullable Output<Integer> throughput;
 
-    public Input<Integer> getThroughput() {
-        return this.throughput == null ? Input.empty() : this.throughput;
+    public Output<Integer> getThroughput() {
+        return this.throughput == null ? Output.empty() : this.throughput;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumeSize")
-      private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Output<Integer> volumeSize;
 
-    public Input<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Input.empty() : this.volumeSize;
+    public Output<Integer> getVolumeSize() {
+        return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public LaunchConfigurationBlockDeviceArgs(
-        @Nullable Input<Boolean> deleteOnTermination,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<Integer> iops,
-        @Nullable Input<String> snapshotId,
-        @Nullable Input<Integer> throughput,
-        @Nullable Input<Integer> volumeSize,
-        @Nullable Input<String> volumeType) {
+        @Nullable Output<Boolean> deleteOnTermination,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<Integer> iops,
+        @Nullable Output<String> snapshotId,
+        @Nullable Output<Integer> throughput,
+        @Nullable Output<Integer> volumeSize,
+        @Nullable Output<String> volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;
@@ -115,13 +115,13 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
     }
 
     private LaunchConfigurationBlockDeviceArgs() {
-        this.deleteOnTermination = Input.empty();
-        this.encrypted = Input.empty();
-        this.iops = Input.empty();
-        this.snapshotId = Input.empty();
-        this.throughput = Input.empty();
-        this.volumeSize = Input.empty();
-        this.volumeType = Input.empty();
+        this.deleteOnTermination = Output.empty();
+        this.encrypted = Output.empty();
+        this.iops = Output.empty();
+        this.snapshotId = Output.empty();
+        this.throughput = Output.empty();
+        this.volumeSize = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deleteOnTermination;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<String> snapshotId;
-        private @Nullable Input<Integer> throughput;
-        private @Nullable Input<Integer> volumeSize;
-        private @Nullable Input<String> volumeType;
+        private @Nullable Output<Boolean> deleteOnTermination;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<String> snapshotId;
+        private @Nullable Output<Integer> throughput;
+        private @Nullable Output<Integer> volumeSize;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder deleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder snapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Input.ofNullable(snapshotId);
+            this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder throughput(@Nullable Input<Integer> throughput) {
+        public Builder throughput(@Nullable Output<Integer> throughput) {
             this.throughput = throughput;
             return this;
         }
 
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Input.ofNullable(throughput);
+            this.throughput = Output.ofNullable(throughput);
             return this;
         }
 
-        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Input.ofNullable(volumeSize);
+            this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public LaunchConfigurationBlockDeviceArgs build() {

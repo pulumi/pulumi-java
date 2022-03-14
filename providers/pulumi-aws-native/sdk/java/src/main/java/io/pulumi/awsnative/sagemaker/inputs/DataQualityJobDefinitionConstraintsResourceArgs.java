@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DataQualityJobDefinitionConstraintsResourceArgs extends io.pu
      * 
      */
     @InputImport(name="s3Uri")
-      private final @Nullable Input<String> s3Uri;
+      private final @Nullable Output<String> s3Uri;
 
-    public Input<String> getS3Uri() {
-        return this.s3Uri == null ? Input.empty() : this.s3Uri;
+    public Output<String> getS3Uri() {
+        return this.s3Uri == null ? Output.empty() : this.s3Uri;
     }
 
-    public DataQualityJobDefinitionConstraintsResourceArgs(@Nullable Input<String> s3Uri) {
+    public DataQualityJobDefinitionConstraintsResourceArgs(@Nullable Output<String> s3Uri) {
         this.s3Uri = s3Uri;
     }
 
     private DataQualityJobDefinitionConstraintsResourceArgs() {
-        this.s3Uri = Input.empty();
+        this.s3Uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DataQualityJobDefinitionConstraintsResourceArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> s3Uri;
+        private @Nullable Output<String> s3Uri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DataQualityJobDefinitionConstraintsResourceArgs extends io.pu
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder s3Uri(@Nullable Input<String> s3Uri) {
+        public Builder s3Uri(@Nullable Output<String> s3Uri) {
             this.s3Uri = s3Uri;
             return this;
         }
 
         public Builder s3Uri(@Nullable String s3Uri) {
-            this.s3Uri = Input.ofNullable(s3Uri);
+            this.s3Uri = Output.ofNullable(s3Uri);
             return this;
         }
         public DataQualityJobDefinitionConstraintsResourceArgs build() {

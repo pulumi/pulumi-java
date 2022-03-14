@@ -7,7 +7,7 @@ import io.pulumi.azurenative.delegatednetwork.enums.OrchestratorKind;
 import io.pulumi.azurenative.delegatednetwork.inputs.ControllerDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.inputs.OrchestratorIdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="apiServerEndpoint")
-      private final @Nullable Input<String> apiServerEndpoint;
+      private final @Nullable Output<String> apiServerEndpoint;
 
-    public Input<String> getApiServerEndpoint() {
-        return this.apiServerEndpoint == null ? Input.empty() : this.apiServerEndpoint;
+    public Output<String> getApiServerEndpoint() {
+        return this.apiServerEndpoint == null ? Output.empty() : this.apiServerEndpoint;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="clusterRootCA")
-      private final @Nullable Input<String> clusterRootCA;
+      private final @Nullable Output<String> clusterRootCA;
 
-    public Input<String> getClusterRootCA() {
-        return this.clusterRootCA == null ? Input.empty() : this.clusterRootCA;
+    public Output<String> getClusterRootCA() {
+        return this.clusterRootCA == null ? Output.empty() : this.clusterRootCA;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="controllerDetails", required=true)
-      private final Input<ControllerDetailsArgs> controllerDetails;
+      private final Output<ControllerDetailsArgs> controllerDetails;
 
-    public Input<ControllerDetailsArgs> getControllerDetails() {
+    public Output<ControllerDetailsArgs> getControllerDetails() {
         return this.controllerDetails;
     }
 
@@ -57,10 +57,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<OrchestratorIdentityArgs> identity;
+      private final @Nullable Output<OrchestratorIdentityArgs> identity;
 
-    public Input<OrchestratorIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<OrchestratorIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,OrchestratorKind>> kind;
+      private final Output<Either<String,OrchestratorKind>> kind;
 
-    public Input<Either<String,OrchestratorKind>> getKind() {
+    public Output<Either<String,OrchestratorKind>> getKind() {
         return this.kind;
     }
 
@@ -79,10 +79,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="orchestratorAppId")
-      private final @Nullable Input<String> orchestratorAppId;
+      private final @Nullable Output<String> orchestratorAppId;
 
-    public Input<String> getOrchestratorAppId() {
-        return this.orchestratorAppId == null ? Input.empty() : this.orchestratorAppId;
+    public Output<String> getOrchestratorAppId() {
+        return this.orchestratorAppId == null ? Output.empty() : this.orchestratorAppId;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="orchestratorTenantId")
-      private final @Nullable Input<String> orchestratorTenantId;
+      private final @Nullable Output<String> orchestratorTenantId;
 
-    public Input<String> getOrchestratorTenantId() {
-        return this.orchestratorTenantId == null ? Input.empty() : this.orchestratorTenantId;
+    public Output<String> getOrchestratorTenantId() {
+        return this.orchestratorTenantId == null ? Output.empty() : this.orchestratorTenantId;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateLinkResourceId")
-      private final @Nullable Input<String> privateLinkResourceId;
+      private final @Nullable Output<String> privateLinkResourceId;
 
-    public Input<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
+    public Output<String> getPrivateLinkResourceId() {
+        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -134,10 +134,10 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -145,25 +145,25 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public OrchestratorInstanceServiceDetailsArgs(
-        @Nullable Input<String> apiServerEndpoint,
-        @Nullable Input<String> clusterRootCA,
-        Input<ControllerDetailsArgs> controllerDetails,
-        @Nullable Input<OrchestratorIdentityArgs> identity,
-        Input<Either<String,OrchestratorKind>> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> orchestratorAppId,
-        @Nullable Input<String> orchestratorTenantId,
-        @Nullable Input<String> privateLinkResourceId,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> apiServerEndpoint,
+        @Nullable Output<String> clusterRootCA,
+        Output<ControllerDetailsArgs> controllerDetails,
+        @Nullable Output<OrchestratorIdentityArgs> identity,
+        Output<Either<String,OrchestratorKind>> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> orchestratorAppId,
+        @Nullable Output<String> orchestratorTenantId,
+        @Nullable Output<String> privateLinkResourceId,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.apiServerEndpoint = apiServerEndpoint;
         this.clusterRootCA = clusterRootCA;
         this.controllerDetails = Objects.requireNonNull(controllerDetails, "expected parameter 'controllerDetails' to be non-null");
@@ -179,18 +179,18 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     }
 
     private OrchestratorInstanceServiceDetailsArgs() {
-        this.apiServerEndpoint = Input.empty();
-        this.clusterRootCA = Input.empty();
-        this.controllerDetails = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.orchestratorAppId = Input.empty();
-        this.orchestratorTenantId = Input.empty();
-        this.privateLinkResourceId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
+        this.apiServerEndpoint = Output.empty();
+        this.clusterRootCA = Output.empty();
+        this.controllerDetails = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.orchestratorAppId = Output.empty();
+        this.orchestratorTenantId = Output.empty();
+        this.privateLinkResourceId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -202,18 +202,18 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiServerEndpoint;
-        private @Nullable Input<String> clusterRootCA;
-        private Input<ControllerDetailsArgs> controllerDetails;
-        private @Nullable Input<OrchestratorIdentityArgs> identity;
-        private Input<Either<String,OrchestratorKind>> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> orchestratorAppId;
-        private @Nullable Input<String> orchestratorTenantId;
-        private @Nullable Input<String> privateLinkResourceId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> apiServerEndpoint;
+        private @Nullable Output<String> clusterRootCA;
+        private Output<ControllerDetailsArgs> controllerDetails;
+        private @Nullable Output<OrchestratorIdentityArgs> identity;
+        private Output<Either<String,OrchestratorKind>> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> orchestratorAppId;
+        private @Nullable Output<String> orchestratorTenantId;
+        private @Nullable Output<String> privateLinkResourceId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -235,123 +235,123 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder apiServerEndpoint(@Nullable Input<String> apiServerEndpoint) {
+        public Builder apiServerEndpoint(@Nullable Output<String> apiServerEndpoint) {
             this.apiServerEndpoint = apiServerEndpoint;
             return this;
         }
 
         public Builder apiServerEndpoint(@Nullable String apiServerEndpoint) {
-            this.apiServerEndpoint = Input.ofNullable(apiServerEndpoint);
+            this.apiServerEndpoint = Output.ofNullable(apiServerEndpoint);
             return this;
         }
 
-        public Builder clusterRootCA(@Nullable Input<String> clusterRootCA) {
+        public Builder clusterRootCA(@Nullable Output<String> clusterRootCA) {
             this.clusterRootCA = clusterRootCA;
             return this;
         }
 
         public Builder clusterRootCA(@Nullable String clusterRootCA) {
-            this.clusterRootCA = Input.ofNullable(clusterRootCA);
+            this.clusterRootCA = Output.ofNullable(clusterRootCA);
             return this;
         }
 
-        public Builder controllerDetails(Input<ControllerDetailsArgs> controllerDetails) {
+        public Builder controllerDetails(Output<ControllerDetailsArgs> controllerDetails) {
             this.controllerDetails = Objects.requireNonNull(controllerDetails);
             return this;
         }
 
         public Builder controllerDetails(ControllerDetailsArgs controllerDetails) {
-            this.controllerDetails = Input.of(Objects.requireNonNull(controllerDetails));
+            this.controllerDetails = Output.of(Objects.requireNonNull(controllerDetails));
             return this;
         }
 
-        public Builder identity(@Nullable Input<OrchestratorIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<OrchestratorIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable OrchestratorIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(Input<Either<String,OrchestratorKind>> kind) {
+        public Builder kind(Output<Either<String,OrchestratorKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,OrchestratorKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder orchestratorAppId(@Nullable Input<String> orchestratorAppId) {
+        public Builder orchestratorAppId(@Nullable Output<String> orchestratorAppId) {
             this.orchestratorAppId = orchestratorAppId;
             return this;
         }
 
         public Builder orchestratorAppId(@Nullable String orchestratorAppId) {
-            this.orchestratorAppId = Input.ofNullable(orchestratorAppId);
+            this.orchestratorAppId = Output.ofNullable(orchestratorAppId);
             return this;
         }
 
-        public Builder orchestratorTenantId(@Nullable Input<String> orchestratorTenantId) {
+        public Builder orchestratorTenantId(@Nullable Output<String> orchestratorTenantId) {
             this.orchestratorTenantId = orchestratorTenantId;
             return this;
         }
 
         public Builder orchestratorTenantId(@Nullable String orchestratorTenantId) {
-            this.orchestratorTenantId = Input.ofNullable(orchestratorTenantId);
+            this.orchestratorTenantId = Output.ofNullable(orchestratorTenantId);
             return this;
         }
 
-        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public OrchestratorInstanceServiceDetailsArgs build() {

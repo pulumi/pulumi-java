@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
      * 
      */
     @InputImport(name="objectIdPaths", required=true)
-      private final Input<List<Integer>> objectIdPaths;
+      private final Output<List<Integer>> objectIdPaths;
 
-    public Input<List<Integer>> getObjectIdPaths() {
+    public Output<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths;
     }
 
-    public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdGetArgs(Input<List<Integer>> objectIdPaths) {
+    public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdGetArgs(Output<List<Integer>> objectIdPaths) {
         this.objectIdPaths = Objects.requireNonNull(objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
     }
 
     private CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdGetArgs() {
-        this.objectIdPaths = Input.empty();
+        this.objectIdPaths = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
     }
 
     public static final class Builder {
-        private Input<List<Integer>> objectIdPaths;
+        private Output<List<Integer>> objectIdPaths;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
     	      this.objectIdPaths = defaults.objectIdPaths;
         }
 
-        public Builder objectIdPaths(Input<List<Integer>> objectIdPaths) {
+        public Builder objectIdPaths(Output<List<Integer>> objectIdPaths) {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
 
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
-            this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
+            this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
         public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     public static final TaskDefinitionEphemeralStorageArgs Empty = new TaskDefinitionEphemeralStorageArgs();
 
     @InputImport(name="sizeInGiB")
-      private final @Nullable Input<Integer> sizeInGiB;
+      private final @Nullable Output<Integer> sizeInGiB;
 
-    public Input<Integer> getSizeInGiB() {
-        return this.sizeInGiB == null ? Input.empty() : this.sizeInGiB;
+    public Output<Integer> getSizeInGiB() {
+        return this.sizeInGiB == null ? Output.empty() : this.sizeInGiB;
     }
 
-    public TaskDefinitionEphemeralStorageArgs(@Nullable Input<Integer> sizeInGiB) {
+    public TaskDefinitionEphemeralStorageArgs(@Nullable Output<Integer> sizeInGiB) {
         this.sizeInGiB = sizeInGiB;
     }
 
     private TaskDefinitionEphemeralStorageArgs() {
-        this.sizeInGiB = Input.empty();
+        this.sizeInGiB = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> sizeInGiB;
+        private @Nullable Output<Integer> sizeInGiB;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     	      this.sizeInGiB = defaults.sizeInGiB;
         }
 
-        public Builder sizeInGiB(@Nullable Input<Integer> sizeInGiB) {
+        public Builder sizeInGiB(@Nullable Output<Integer> sizeInGiB) {
             this.sizeInGiB = sizeInGiB;
             return this;
         }
 
         public Builder sizeInGiB(@Nullable Integer sizeInGiB) {
-            this.sizeInGiB = Input.ofNullable(sizeInGiB);
+            this.sizeInGiB = Output.ofNullable(sizeInGiB);
             return this;
         }
         public TaskDefinitionEphemeralStorageArgs build() {

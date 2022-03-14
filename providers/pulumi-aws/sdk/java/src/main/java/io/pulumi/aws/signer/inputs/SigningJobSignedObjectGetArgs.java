@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningJobSignedObjectS3GetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class SigningJobSignedObjectGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="s3s")
-      private final @Nullable Input<List<SigningJobSignedObjectS3GetArgs>> s3s;
+      private final @Nullable Output<List<SigningJobSignedObjectS3GetArgs>> s3s;
 
-    public Input<List<SigningJobSignedObjectS3GetArgs>> getS3s() {
-        return this.s3s == null ? Input.empty() : this.s3s;
+    public Output<List<SigningJobSignedObjectS3GetArgs>> getS3s() {
+        return this.s3s == null ? Output.empty() : this.s3s;
     }
 
-    public SigningJobSignedObjectGetArgs(@Nullable Input<List<SigningJobSignedObjectS3GetArgs>> s3s) {
+    public SigningJobSignedObjectGetArgs(@Nullable Output<List<SigningJobSignedObjectS3GetArgs>> s3s) {
         this.s3s = s3s;
     }
 
     private SigningJobSignedObjectGetArgs() {
-        this.s3s = Input.empty();
+        this.s3s = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class SigningJobSignedObjectGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SigningJobSignedObjectS3GetArgs>> s3s;
+        private @Nullable Output<List<SigningJobSignedObjectS3GetArgs>> s3s;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class SigningJobSignedObjectGetArgs extends io.pulumi.resources.Res
     	      this.s3s = defaults.s3s;
         }
 
-        public Builder s3s(@Nullable Input<List<SigningJobSignedObjectS3GetArgs>> s3s) {
+        public Builder s3s(@Nullable Output<List<SigningJobSignedObjectS3GetArgs>> s3s) {
             this.s3s = s3s;
             return this;
         }
 
         public Builder s3s(@Nullable List<SigningJobSignedObjectS3GetArgs> s3s) {
-            this.s3s = Input.ofNullable(s3s);
+            this.s3s = Output.ofNullable(s3s);
             return this;
         }
         public SigningJobSignedObjectGetArgs build() {

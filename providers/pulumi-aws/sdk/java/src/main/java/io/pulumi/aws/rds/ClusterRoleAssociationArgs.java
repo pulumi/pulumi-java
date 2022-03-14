@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dbClusterIdentifier", required=true)
-      private final Input<String> dbClusterIdentifier;
+      private final Output<String> dbClusterIdentifier;
 
-    public Input<String> getDbClusterIdentifier() {
+    public Output<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -29,9 +29,9 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="featureName", required=true)
-      private final Input<String> featureName;
+      private final Output<String> featureName;
 
-    public Input<String> getFeatureName() {
+    public Output<String> getFeatureName() {
         return this.featureName;
     }
 
@@ -40,25 +40,25 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public ClusterRoleAssociationArgs(
-        Input<String> dbClusterIdentifier,
-        Input<String> featureName,
-        Input<String> roleArn) {
+        Output<String> dbClusterIdentifier,
+        Output<String> featureName,
+        Output<String> roleArn) {
         this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
         this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private ClusterRoleAssociationArgs() {
-        this.dbClusterIdentifier = Input.empty();
-        this.featureName = Input.empty();
-        this.roleArn = Input.empty();
+        this.dbClusterIdentifier = Output.empty();
+        this.featureName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> dbClusterIdentifier;
-        private Input<String> featureName;
-        private Input<String> roleArn;
+        private Output<String> dbClusterIdentifier;
+        private Output<String> featureName;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder dbClusterIdentifier(Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
 
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Input.of(Objects.requireNonNull(dbClusterIdentifier));
+            this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
 
-        public Builder featureName(Input<String> featureName) {
+        public Builder featureName(Output<String> featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
         public Builder featureName(String featureName) {
-            this.featureName = Input.of(Objects.requireNonNull(featureName));
+            this.featureName = Output.of(Objects.requireNonNull(featureName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public ClusterRoleAssociationArgs build() {

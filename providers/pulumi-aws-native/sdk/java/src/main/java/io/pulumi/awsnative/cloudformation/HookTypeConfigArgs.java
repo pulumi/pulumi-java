@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.enums.HookTypeConfigConfigurationAlias;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<String> configuration;
+      private final @Nullable Output<String> configuration;
 
-    public Input<String> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<String> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationAlias")
-      private final @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias;
+      private final @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
 
-    public Input<HookTypeConfigConfigurationAlias> getConfigurationAlias() {
-        return this.configurationAlias == null ? Input.empty() : this.configurationAlias;
+    public Output<HookTypeConfigConfigurationAlias> getConfigurationAlias() {
+        return this.configurationAlias == null ? Output.empty() : this.configurationAlias;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeArn")
-      private final @Nullable Input<String> typeArn;
+      private final @Nullable Output<String> typeArn;
 
-    public Input<String> getTypeArn() {
-        return this.typeArn == null ? Input.empty() : this.typeArn;
+    public Output<String> getTypeArn() {
+        return this.typeArn == null ? Output.empty() : this.typeArn;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     public HookTypeConfigArgs(
-        @Nullable Input<String> configuration,
-        @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias,
-        @Nullable Input<String> typeArn,
-        @Nullable Input<String> typeName) {
+        @Nullable Output<String> configuration,
+        @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias,
+        @Nullable Output<String> typeArn,
+        @Nullable Output<String> typeName) {
         this.configuration = configuration;
         this.configurationAlias = configurationAlias;
         this.typeArn = typeArn;
@@ -73,10 +73,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HookTypeConfigArgs() {
-        this.configuration = Input.empty();
-        this.configurationAlias = Input.empty();
-        this.typeArn = Input.empty();
-        this.typeName = Input.empty();
+        this.configuration = Output.empty();
+        this.configurationAlias = Output.empty();
+        this.typeArn = Output.empty();
+        this.typeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configuration;
-        private @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias;
-        private @Nullable Input<String> typeArn;
-        private @Nullable Input<String> typeName;
+        private @Nullable Output<String> configuration;
+        private @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
+        private @Nullable Output<String> typeArn;
+        private @Nullable Output<String> typeName;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder configuration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Output<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable String configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder configurationAlias(@Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias) {
+        public Builder configurationAlias(@Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias) {
             this.configurationAlias = configurationAlias;
             return this;
         }
 
         public Builder configurationAlias(@Nullable HookTypeConfigConfigurationAlias configurationAlias) {
-            this.configurationAlias = Input.ofNullable(configurationAlias);
+            this.configurationAlias = Output.ofNullable(configurationAlias);
             return this;
         }
 
-        public Builder typeArn(@Nullable Input<String> typeArn) {
+        public Builder typeArn(@Nullable Output<String> typeArn) {
             this.typeArn = typeArn;
             return this;
         }
 
         public Builder typeArn(@Nullable String typeArn) {
-            this.typeArn = Input.ofNullable(typeArn);
+            this.typeArn = Output.ofNullable(typeArn);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
         public HookTypeConfigArgs build() {

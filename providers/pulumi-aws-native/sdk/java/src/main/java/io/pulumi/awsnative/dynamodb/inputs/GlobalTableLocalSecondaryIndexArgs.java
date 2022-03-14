@@ -5,7 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableKeySchemaArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableProjectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class GlobalTableLocalSecondaryIndexArgs extends io.pulumi.resource
     public static final GlobalTableLocalSecondaryIndexArgs Empty = new GlobalTableLocalSecondaryIndexArgs();
 
     @InputImport(name="indexName", required=true)
-      private final Input<String> indexName;
+      private final Output<String> indexName;
 
-    public Input<String> getIndexName() {
+    public Output<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="keySchema", required=true)
-      private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
+      private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
-    public Input<List<GlobalTableKeySchemaArgs>> getKeySchema() {
+    public Output<List<GlobalTableKeySchemaArgs>> getKeySchema() {
         return this.keySchema;
     }
 
     @InputImport(name="projection", required=true)
-      private final Input<GlobalTableProjectionArgs> projection;
+      private final Output<GlobalTableProjectionArgs> projection;
 
-    public Input<GlobalTableProjectionArgs> getProjection() {
+    public Output<GlobalTableProjectionArgs> getProjection() {
         return this.projection;
     }
 
     public GlobalTableLocalSecondaryIndexArgs(
-        Input<String> indexName,
-        Input<List<GlobalTableKeySchemaArgs>> keySchema,
-        Input<GlobalTableProjectionArgs> projection) {
+        Output<String> indexName,
+        Output<List<GlobalTableKeySchemaArgs>> keySchema,
+        Output<GlobalTableProjectionArgs> projection) {
         this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
         this.keySchema = Objects.requireNonNull(keySchema, "expected parameter 'keySchema' to be non-null");
         this.projection = Objects.requireNonNull(projection, "expected parameter 'projection' to be non-null");
     }
 
     private GlobalTableLocalSecondaryIndexArgs() {
-        this.indexName = Input.empty();
-        this.keySchema = Input.empty();
-        this.projection = Input.empty();
+        this.indexName = Output.empty();
+        this.keySchema = Output.empty();
+        this.projection = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class GlobalTableLocalSecondaryIndexArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> indexName;
-        private Input<List<GlobalTableKeySchemaArgs>> keySchema;
-        private Input<GlobalTableProjectionArgs> projection;
+        private Output<String> indexName;
+        private Output<List<GlobalTableKeySchemaArgs>> keySchema;
+        private Output<GlobalTableProjectionArgs> projection;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class GlobalTableLocalSecondaryIndexArgs extends io.pulumi.resource
     	      this.projection = defaults.projection;
         }
 
-        public Builder indexName(Input<String> indexName) {
+        public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
         public Builder indexName(String indexName) {
-            this.indexName = Input.of(Objects.requireNonNull(indexName));
+            this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder keySchema(Input<List<GlobalTableKeySchemaArgs>> keySchema) {
+        public Builder keySchema(Output<List<GlobalTableKeySchemaArgs>> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
 
         public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
-            this.keySchema = Input.of(Objects.requireNonNull(keySchema));
+            this.keySchema = Output.of(Objects.requireNonNull(keySchema));
             return this;
         }
 
-        public Builder projection(Input<GlobalTableProjectionArgs> projection) {
+        public Builder projection(Output<GlobalTableProjectionArgs> projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
 
         public Builder projection(GlobalTableProjectionArgs projection) {
-            this.projection = Input.of(Objects.requireNonNull(projection));
+            this.projection = Output.of(Objects.requireNonNull(projection));
             return this;
         }
         public GlobalTableLocalSecondaryIndexArgs build() {

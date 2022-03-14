@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.OntapFileSystemDiskIopsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="automaticBackupRetentionDays")
-      private final @Nullable Input<Integer> automaticBackupRetentionDays;
+      private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
-    public Input<Integer> getAutomaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays == null ? Input.empty() : this.automaticBackupRetentionDays;
+    public Output<Integer> getAutomaticBackupRetentionDays() {
+        return this.automaticBackupRetentionDays == null ? Output.empty() : this.automaticBackupRetentionDays;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dailyAutomaticBackupStartTime")
-      private final @Nullable Input<String> dailyAutomaticBackupStartTime;
+      private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
-    public Input<String> getDailyAutomaticBackupStartTime() {
-        return this.dailyAutomaticBackupStartTime == null ? Input.empty() : this.dailyAutomaticBackupStartTime;
+    public Output<String> getDailyAutomaticBackupStartTime() {
+        return this.dailyAutomaticBackupStartTime == null ? Output.empty() : this.dailyAutomaticBackupStartTime;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentType", required=true)
-      private final Input<String> deploymentType;
+      private final Output<String> deploymentType;
 
-    public Input<String> getDeploymentType() {
+    public Output<String> getDeploymentType() {
         return this.deploymentType;
     }
 
@@ -56,10 +56,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="diskIopsConfiguration")
-      private final @Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
+      private final @Nullable Output<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
 
-    public Input<OntapFileSystemDiskIopsConfigurationArgs> getDiskIopsConfiguration() {
-        return this.diskIopsConfiguration == null ? Input.empty() : this.diskIopsConfiguration;
+    public Output<OntapFileSystemDiskIopsConfigurationArgs> getDiskIopsConfiguration() {
+        return this.diskIopsConfiguration == null ? Output.empty() : this.diskIopsConfiguration;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endpointIpAddressRange")
-      private final @Nullable Input<String> endpointIpAddressRange;
+      private final @Nullable Output<String> endpointIpAddressRange;
 
-    public Input<String> getEndpointIpAddressRange() {
-        return this.endpointIpAddressRange == null ? Input.empty() : this.endpointIpAddressRange;
+    public Output<String> getEndpointIpAddressRange() {
+        return this.endpointIpAddressRange == null ? Output.empty() : this.endpointIpAddressRange;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fsxAdminPassword")
-      private final @Nullable Input<String> fsxAdminPassword;
+      private final @Nullable Output<String> fsxAdminPassword;
 
-    public Input<String> getFsxAdminPassword() {
-        return this.fsxAdminPassword == null ? Input.empty() : this.fsxAdminPassword;
+    public Output<String> getFsxAdminPassword() {
+        return this.fsxAdminPassword == null ? Output.empty() : this.fsxAdminPassword;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preferredSubnetId", required=true)
-      private final Input<String> preferredSubnetId;
+      private final Output<String> preferredSubnetId;
 
-    public Input<String> getPreferredSubnetId() {
+    public Output<String> getPreferredSubnetId() {
         return this.preferredSubnetId;
     }
 
@@ -111,10 +111,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="routeTableIds")
-      private final @Nullable Input<List<String>> routeTableIds;
+      private final @Nullable Output<List<String>> routeTableIds;
 
-    public Input<List<String>> getRouteTableIds() {
-        return this.routeTableIds == null ? Input.empty() : this.routeTableIds;
+    public Output<List<String>> getRouteTableIds() {
+        return this.routeTableIds == null ? Output.empty() : this.routeTableIds;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageCapacity")
-      private final @Nullable Input<Integer> storageCapacity;
+      private final @Nullable Output<Integer> storageCapacity;
 
-    public Input<Integer> getStorageCapacity() {
-        return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
+    public Output<Integer> getStorageCapacity() {
+        return this.storageCapacity == null ? Output.empty() : this.storageCapacity;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     /**
@@ -155,9 +155,9 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -166,16 +166,16 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="throughputCapacity", required=true)
-      private final Input<Integer> throughputCapacity;
+      private final Output<Integer> throughputCapacity;
 
-    public Input<Integer> getThroughputCapacity() {
+    public Output<Integer> getThroughputCapacity() {
         return this.throughputCapacity;
     }
 
@@ -184,29 +184,29 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="weeklyMaintenanceStartTime")
-      private final @Nullable Input<String> weeklyMaintenanceStartTime;
+      private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
-    public Input<String> getWeeklyMaintenanceStartTime() {
-        return this.weeklyMaintenanceStartTime == null ? Input.empty() : this.weeklyMaintenanceStartTime;
+    public Output<String> getWeeklyMaintenanceStartTime() {
+        return this.weeklyMaintenanceStartTime == null ? Output.empty() : this.weeklyMaintenanceStartTime;
     }
 
     public OntapFileSystemArgs(
-        @Nullable Input<Integer> automaticBackupRetentionDays,
-        @Nullable Input<String> dailyAutomaticBackupStartTime,
-        Input<String> deploymentType,
-        @Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration,
-        @Nullable Input<String> endpointIpAddressRange,
-        @Nullable Input<String> fsxAdminPassword,
-        @Nullable Input<String> kmsKeyId,
-        Input<String> preferredSubnetId,
-        @Nullable Input<List<String>> routeTableIds,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<Integer> storageCapacity,
-        @Nullable Input<String> storageType,
-        Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        Input<Integer> throughputCapacity,
-        @Nullable Input<String> weeklyMaintenanceStartTime) {
+        @Nullable Output<Integer> automaticBackupRetentionDays,
+        @Nullable Output<String> dailyAutomaticBackupStartTime,
+        Output<String> deploymentType,
+        @Nullable Output<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration,
+        @Nullable Output<String> endpointIpAddressRange,
+        @Nullable Output<String> fsxAdminPassword,
+        @Nullable Output<String> kmsKeyId,
+        Output<String> preferredSubnetId,
+        @Nullable Output<List<String>> routeTableIds,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<Integer> storageCapacity,
+        @Nullable Output<String> storageType,
+        Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        Output<Integer> throughputCapacity,
+        @Nullable Output<String> weeklyMaintenanceStartTime) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         this.deploymentType = Objects.requireNonNull(deploymentType, "expected parameter 'deploymentType' to be non-null");
@@ -226,22 +226,22 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private OntapFileSystemArgs() {
-        this.automaticBackupRetentionDays = Input.empty();
-        this.dailyAutomaticBackupStartTime = Input.empty();
-        this.deploymentType = Input.empty();
-        this.diskIopsConfiguration = Input.empty();
-        this.endpointIpAddressRange = Input.empty();
-        this.fsxAdminPassword = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.preferredSubnetId = Input.empty();
-        this.routeTableIds = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.storageCapacity = Input.empty();
-        this.storageType = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.throughputCapacity = Input.empty();
-        this.weeklyMaintenanceStartTime = Input.empty();
+        this.automaticBackupRetentionDays = Output.empty();
+        this.dailyAutomaticBackupStartTime = Output.empty();
+        this.deploymentType = Output.empty();
+        this.diskIopsConfiguration = Output.empty();
+        this.endpointIpAddressRange = Output.empty();
+        this.fsxAdminPassword = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.preferredSubnetId = Output.empty();
+        this.routeTableIds = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.storageCapacity = Output.empty();
+        this.storageType = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.throughputCapacity = Output.empty();
+        this.weeklyMaintenanceStartTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -253,22 +253,22 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> automaticBackupRetentionDays;
-        private @Nullable Input<String> dailyAutomaticBackupStartTime;
-        private Input<String> deploymentType;
-        private @Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
-        private @Nullable Input<String> endpointIpAddressRange;
-        private @Nullable Input<String> fsxAdminPassword;
-        private @Nullable Input<String> kmsKeyId;
-        private Input<String> preferredSubnetId;
-        private @Nullable Input<List<String>> routeTableIds;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<Integer> storageCapacity;
-        private @Nullable Input<String> storageType;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<Integer> throughputCapacity;
-        private @Nullable Input<String> weeklyMaintenanceStartTime;
+        private @Nullable Output<Integer> automaticBackupRetentionDays;
+        private @Nullable Output<String> dailyAutomaticBackupStartTime;
+        private Output<String> deploymentType;
+        private @Nullable Output<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
+        private @Nullable Output<String> endpointIpAddressRange;
+        private @Nullable Output<String> fsxAdminPassword;
+        private @Nullable Output<String> kmsKeyId;
+        private Output<String> preferredSubnetId;
+        private @Nullable Output<List<String>> routeTableIds;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<Integer> storageCapacity;
+        private @Nullable Output<String> storageType;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<Integer> throughputCapacity;
+        private @Nullable Output<String> weeklyMaintenanceStartTime;
 
         public Builder() {
     	      // Empty
@@ -294,163 +294,163 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
     	      this.weeklyMaintenanceStartTime = defaults.weeklyMaintenanceStartTime;
         }
 
-        public Builder automaticBackupRetentionDays(@Nullable Input<Integer> automaticBackupRetentionDays) {
+        public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
 
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = Input.ofNullable(automaticBackupRetentionDays);
+            this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
             return this;
         }
 
-        public Builder dailyAutomaticBackupStartTime(@Nullable Input<String> dailyAutomaticBackupStartTime) {
+        public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
 
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = Input.ofNullable(dailyAutomaticBackupStartTime);
+            this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
 
-        public Builder deploymentType(Input<String> deploymentType) {
+        public Builder deploymentType(Output<String> deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
 
         public Builder deploymentType(String deploymentType) {
-            this.deploymentType = Input.of(Objects.requireNonNull(deploymentType));
+            this.deploymentType = Output.of(Objects.requireNonNull(deploymentType));
             return this;
         }
 
-        public Builder diskIopsConfiguration(@Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable Output<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
             this.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
 
         public Builder diskIopsConfiguration(@Nullable OntapFileSystemDiskIopsConfigurationArgs diskIopsConfiguration) {
-            this.diskIopsConfiguration = Input.ofNullable(diskIopsConfiguration);
+            this.diskIopsConfiguration = Output.ofNullable(diskIopsConfiguration);
             return this;
         }
 
-        public Builder endpointIpAddressRange(@Nullable Input<String> endpointIpAddressRange) {
+        public Builder endpointIpAddressRange(@Nullable Output<String> endpointIpAddressRange) {
             this.endpointIpAddressRange = endpointIpAddressRange;
             return this;
         }
 
         public Builder endpointIpAddressRange(@Nullable String endpointIpAddressRange) {
-            this.endpointIpAddressRange = Input.ofNullable(endpointIpAddressRange);
+            this.endpointIpAddressRange = Output.ofNullable(endpointIpAddressRange);
             return this;
         }
 
-        public Builder fsxAdminPassword(@Nullable Input<String> fsxAdminPassword) {
+        public Builder fsxAdminPassword(@Nullable Output<String> fsxAdminPassword) {
             this.fsxAdminPassword = fsxAdminPassword;
             return this;
         }
 
         public Builder fsxAdminPassword(@Nullable String fsxAdminPassword) {
-            this.fsxAdminPassword = Input.ofNullable(fsxAdminPassword);
+            this.fsxAdminPassword = Output.ofNullable(fsxAdminPassword);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder preferredSubnetId(Input<String> preferredSubnetId) {
+        public Builder preferredSubnetId(Output<String> preferredSubnetId) {
             this.preferredSubnetId = Objects.requireNonNull(preferredSubnetId);
             return this;
         }
 
         public Builder preferredSubnetId(String preferredSubnetId) {
-            this.preferredSubnetId = Input.of(Objects.requireNonNull(preferredSubnetId));
+            this.preferredSubnetId = Output.of(Objects.requireNonNull(preferredSubnetId));
             return this;
         }
 
-        public Builder routeTableIds(@Nullable Input<List<String>> routeTableIds) {
+        public Builder routeTableIds(@Nullable Output<List<String>> routeTableIds) {
             this.routeTableIds = routeTableIds;
             return this;
         }
 
         public Builder routeTableIds(@Nullable List<String> routeTableIds) {
-            this.routeTableIds = Input.ofNullable(routeTableIds);
+            this.routeTableIds = Output.ofNullable(routeTableIds);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder storageCapacity(@Nullable Input<Integer> storageCapacity) {
+        public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
 
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
-            this.storageCapacity = Input.ofNullable(storageCapacity);
+            this.storageCapacity = Output.ofNullable(storageCapacity);
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder throughputCapacity(Input<Integer> throughputCapacity) {
+        public Builder throughputCapacity(Output<Integer> throughputCapacity) {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }
 
         public Builder throughputCapacity(Integer throughputCapacity) {
-            this.throughputCapacity = Input.of(Objects.requireNonNull(throughputCapacity));
+            this.throughputCapacity = Output.of(Objects.requireNonNull(throughputCapacity));
             return this;
         }
 
-        public Builder weeklyMaintenanceStartTime(@Nullable Input<String> weeklyMaintenanceStartTime) {
+        public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
 
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = Input.ofNullable(weeklyMaintenanceStartTime);
+            this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }
         public OntapFileSystemArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.SecurityRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkSecurityGroupName")
-      private final @Nullable Input<String> networkSecurityGroupName;
+      private final @Nullable Output<String> networkSecurityGroupName;
 
-    public Input<String> getNetworkSecurityGroupName() {
-        return this.networkSecurityGroupName == null ? Input.empty() : this.networkSecurityGroupName;
+    public Output<String> getNetworkSecurityGroupName() {
+        return this.networkSecurityGroupName == null ? Output.empty() : this.networkSecurityGroupName;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="securityRules")
-      private final @Nullable Input<List<SecurityRuleArgs>> securityRules;
+      private final @Nullable Output<List<SecurityRuleArgs>> securityRules;
 
-    public Input<List<SecurityRuleArgs>> getSecurityRules() {
-        return this.securityRules == null ? Input.empty() : this.securityRules;
+    public Output<List<SecurityRuleArgs>> getSecurityRules() {
+        return this.securityRules == null ? Output.empty() : this.securityRules;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkSecurityGroupArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<String> networkSecurityGroupName,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<SecurityRuleArgs>> securityRules,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<String> networkSecurityGroupName,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<SecurityRuleArgs>> securityRules,
+        @Nullable Output<Map<String,String>> tags) {
         this.id = id;
         this.location = location;
         this.networkSecurityGroupName = networkSecurityGroupName;
@@ -99,12 +99,12 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkSecurityGroupArgs() {
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.networkSecurityGroupName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityRules = Input.empty();
-        this.tags = Input.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.networkSecurityGroupName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityRules = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> networkSecurityGroupName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<SecurityRuleArgs>> securityRules;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> networkSecurityGroupName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<SecurityRuleArgs>> securityRules;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkSecurityGroupName(@Nullable Input<String> networkSecurityGroupName) {
+        public Builder networkSecurityGroupName(@Nullable Output<String> networkSecurityGroupName) {
             this.networkSecurityGroupName = networkSecurityGroupName;
             return this;
         }
 
         public Builder networkSecurityGroupName(@Nullable String networkSecurityGroupName) {
-            this.networkSecurityGroupName = Input.ofNullable(networkSecurityGroupName);
+            this.networkSecurityGroupName = Output.ofNullable(networkSecurityGroupName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityRules(@Nullable Input<List<SecurityRuleArgs>> securityRules) {
+        public Builder securityRules(@Nullable Output<List<SecurityRuleArgs>> securityRules) {
             this.securityRules = securityRules;
             return this;
         }
 
         public Builder securityRules(@Nullable List<SecurityRuleArgs> securityRules) {
-            this.securityRules = Input.ofNullable(securityRules);
+            this.securityRules = Output.ofNullable(securityRules);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkSecurityGroupArgs build() {

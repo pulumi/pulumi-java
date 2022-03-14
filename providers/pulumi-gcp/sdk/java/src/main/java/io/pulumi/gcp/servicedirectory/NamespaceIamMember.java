@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.servicedirectory;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,14 +154,14 @@ public class NamespaceIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceIamMember(String name, NamespaceIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/namespaceIamMember:NamespaceIamMember", name, args == null ? NamespaceIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:servicedirectory/namespaceIamMember:NamespaceIamMember", name, args == null ? NamespaceIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NamespaceIamMember(String name, Input<String> id, @Nullable NamespaceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NamespaceIamMember(String name, Output<String> id, @Nullable NamespaceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:servicedirectory/namespaceIamMember:NamespaceIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -178,7 +177,7 @@ public class NamespaceIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NamespaceIamMember get(String name, Input<String> id, @Nullable NamespaceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NamespaceIamMember get(String name, Output<String> id, @Nullable NamespaceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamespaceIamMember(name, id, state, options);
     }
 }

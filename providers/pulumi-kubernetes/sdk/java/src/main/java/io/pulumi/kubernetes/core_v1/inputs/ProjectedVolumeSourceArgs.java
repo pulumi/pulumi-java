@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.VolumeProjectionArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultMode")
-      private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Output<Integer> defaultMode;
 
-    public Input<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Input.empty() : this.defaultMode;
+    public Output<Integer> getDefaultMode() {
+        return this.defaultMode == null ? Output.empty() : this.defaultMode;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sources", required=true)
-      private final Input<List<VolumeProjectionArgs>> sources;
+      private final Output<List<VolumeProjectionArgs>> sources;
 
-    public Input<List<VolumeProjectionArgs>> getSources() {
+    public Output<List<VolumeProjectionArgs>> getSources() {
         return this.sources;
     }
 
     public ProjectedVolumeSourceArgs(
-        @Nullable Input<Integer> defaultMode,
-        Input<List<VolumeProjectionArgs>> sources) {
+        @Nullable Output<Integer> defaultMode,
+        Output<List<VolumeProjectionArgs>> sources) {
         this.defaultMode = defaultMode;
         this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
     }
 
     private ProjectedVolumeSourceArgs() {
-        this.defaultMode = Input.empty();
-        this.sources = Input.empty();
+        this.defaultMode = Output.empty();
+        this.sources = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> defaultMode;
-        private Input<List<VolumeProjectionArgs>> sources;
+        private @Nullable Output<Integer> defaultMode;
+        private Output<List<VolumeProjectionArgs>> sources;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
     	      this.sources = defaults.sources;
         }
 
-        public Builder defaultMode(@Nullable Input<Integer> defaultMode) {
+        public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Input.ofNullable(defaultMode);
+            this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
 
-        public Builder sources(Input<List<VolumeProjectionArgs>> sources) {
+        public Builder sources(Output<List<VolumeProjectionArgs>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
         public Builder sources(List<VolumeProjectionArgs> sources) {
-            this.sources = Input.of(Objects.requireNonNull(sources));
+            this.sources = Output.of(Objects.requireNonNull(sources));
             return this;
         }
         public ProjectedVolumeSourceArgs build() {

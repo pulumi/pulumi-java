@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.healthbot.inputs;
 
 import io.pulumi.azurenative.healthbot.enums.SkuName;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<SkuName> name;
+      private final Output<SkuName> name;
 
-    public Input<SkuName> getName() {
+    public Output<SkuName> getName() {
         return this.name;
     }
 
-    public SkuArgs(Input<SkuName> name) {
+    public SkuArgs(Output<SkuName> name) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private SkuArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SkuName> name;
+        private Output<SkuName> name;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(Input<SkuName> name) {
+        public Builder name(Output<SkuName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(SkuName name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public SkuArgs build() {

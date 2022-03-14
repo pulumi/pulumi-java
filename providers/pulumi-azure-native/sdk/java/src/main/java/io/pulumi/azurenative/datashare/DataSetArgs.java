@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.datashare.enums.DataSetKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSetName")
-      private final @Nullable Input<String> dataSetName;
+      private final @Nullable Output<String> dataSetName;
 
-    public Input<String> getDataSetName() {
-        return this.dataSetName == null ? Input.empty() : this.dataSetName;
+    public Output<String> getDataSetName() {
+        return this.dataSetName == null ? Output.empty() : this.dataSetName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,DataSetKind>> kind;
+      private final Output<Either<String,DataSetKind>> kind;
 
-    public Input<Either<String,DataSetKind>> getKind() {
+    public Output<Either<String,DataSetKind>> getKind() {
         return this.kind;
     }
 
@@ -54,9 +54,9 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
     public DataSetArgs(
-        Input<String> accountName,
-        @Nullable Input<String> dataSetName,
-        Input<Either<String,DataSetKind>> kind,
-        Input<String> resourceGroupName,
-        Input<String> shareName) {
+        Output<String> accountName,
+        @Nullable Output<String> dataSetName,
+        Output<Either<String,DataSetKind>> kind,
+        Output<String> resourceGroupName,
+        Output<String> shareName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetName = dataSetName;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -85,11 +85,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSetArgs() {
-        this.accountName = Input.empty();
-        this.dataSetName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareName = Input.empty();
+        this.accountName = Output.empty();
+        this.dataSetName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> dataSetName;
-        private Input<Either<String,DataSetKind>> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> shareName;
+        private Output<String> accountName;
+        private @Nullable Output<String> dataSetName;
+        private Output<Either<String,DataSetKind>> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> shareName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareName = defaults.shareName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataSetName(@Nullable Input<String> dataSetName) {
+        public Builder dataSetName(@Nullable Output<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
 
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Input.ofNullable(dataSetName);
+            this.dataSetName = Output.ofNullable(dataSetName);
             return this;
         }
 
-        public Builder kind(Input<Either<String,DataSetKind>> kind) {
+        public Builder kind(Output<Either<String,DataSetKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,DataSetKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
         public DataSetArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.AppServicePlanRouteForVnetArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -161,29 +160,29 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AppServicePlanRouteForVnet(String name, AppServicePlanRouteForVnetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:AppServicePlanRouteForVnet", name, args == null ? AppServicePlanRouteForVnetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:AppServicePlanRouteForVnet", name, args == null ? AppServicePlanRouteForVnetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AppServicePlanRouteForVnet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AppServicePlanRouteForVnet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:AppServicePlanRouteForVnet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160901:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:AppServicePlanRouteForVnet").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:AppServicePlanRouteForVnet").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160901:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:AppServicePlanRouteForVnet").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:AppServicePlanRouteForVnet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -197,7 +196,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppServicePlanRouteForVnet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AppServicePlanRouteForVnet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppServicePlanRouteForVnet(name, id, options);
     }
 }

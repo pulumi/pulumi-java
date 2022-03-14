@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-      private final Input<String> dayOfWeek;
+      private final Output<String> dayOfWeek;
 
-    public Input<String> getDayOfWeek() {
+    public Output<String> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
-    public PatchDeploymentRecurringScheduleWeeklyGetArgs(Input<String> dayOfWeek) {
+    public PatchDeploymentRecurringScheduleWeeklyGetArgs(Output<String> dayOfWeek) {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
     }
 
     private PatchDeploymentRecurringScheduleWeeklyGetArgs() {
-        this.dayOfWeek = Input.empty();
+        this.dayOfWeek = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> dayOfWeek;
+        private Output<String> dayOfWeek;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
     	      this.dayOfWeek = defaults.dayOfWeek;
         }
 
-        public Builder dayOfWeek(Input<String> dayOfWeek) {
+        public Builder dayOfWeek(Output<String> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
+            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
         public PatchDeploymentRecurringScheduleWeeklyGetArgs build() {

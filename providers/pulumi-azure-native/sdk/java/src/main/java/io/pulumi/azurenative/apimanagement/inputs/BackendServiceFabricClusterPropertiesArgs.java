@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.X509CertificateNameArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientCertificateId")
-      private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Output<String> clientCertificateId;
 
-    public Input<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
+    public Output<String> getClientCertificateId() {
+        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientCertificatethumbprint")
-      private final @Nullable Input<String> clientCertificatethumbprint;
+      private final @Nullable Output<String> clientCertificatethumbprint;
 
-    public Input<String> getClientCertificatethumbprint() {
-        return this.clientCertificatethumbprint == null ? Input.empty() : this.clientCertificatethumbprint;
+    public Output<String> getClientCertificatethumbprint() {
+        return this.clientCertificatethumbprint == null ? Output.empty() : this.clientCertificatethumbprint;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="managementEndpoints", required=true)
-      private final Input<List<String>> managementEndpoints;
+      private final Output<List<String>> managementEndpoints;
 
-    public Input<List<String>> getManagementEndpoints() {
+    public Output<List<String>> getManagementEndpoints() {
         return this.managementEndpoints;
     }
 
@@ -59,10 +59,10 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxPartitionResolutionRetries")
-      private final @Nullable Input<Integer> maxPartitionResolutionRetries;
+      private final @Nullable Output<Integer> maxPartitionResolutionRetries;
 
-    public Input<Integer> getMaxPartitionResolutionRetries() {
-        return this.maxPartitionResolutionRetries == null ? Input.empty() : this.maxPartitionResolutionRetries;
+    public Output<Integer> getMaxPartitionResolutionRetries() {
+        return this.maxPartitionResolutionRetries == null ? Output.empty() : this.maxPartitionResolutionRetries;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="serverCertificateThumbprints")
-      private final @Nullable Input<List<String>> serverCertificateThumbprints;
+      private final @Nullable Output<List<String>> serverCertificateThumbprints;
 
-    public Input<List<String>> getServerCertificateThumbprints() {
-        return this.serverCertificateThumbprints == null ? Input.empty() : this.serverCertificateThumbprints;
+    public Output<List<String>> getServerCertificateThumbprints() {
+        return this.serverCertificateThumbprints == null ? Output.empty() : this.serverCertificateThumbprints;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="serverX509Names")
-      private final @Nullable Input<List<X509CertificateNameArgs>> serverX509Names;
+      private final @Nullable Output<List<X509CertificateNameArgs>> serverX509Names;
 
-    public Input<List<X509CertificateNameArgs>> getServerX509Names() {
-        return this.serverX509Names == null ? Input.empty() : this.serverX509Names;
+    public Output<List<X509CertificateNameArgs>> getServerX509Names() {
+        return this.serverX509Names == null ? Output.empty() : this.serverX509Names;
     }
 
     public BackendServiceFabricClusterPropertiesArgs(
-        @Nullable Input<String> clientCertificateId,
-        @Nullable Input<String> clientCertificatethumbprint,
-        Input<List<String>> managementEndpoints,
-        @Nullable Input<Integer> maxPartitionResolutionRetries,
-        @Nullable Input<List<String>> serverCertificateThumbprints,
-        @Nullable Input<List<X509CertificateNameArgs>> serverX509Names) {
+        @Nullable Output<String> clientCertificateId,
+        @Nullable Output<String> clientCertificatethumbprint,
+        Output<List<String>> managementEndpoints,
+        @Nullable Output<Integer> maxPartitionResolutionRetries,
+        @Nullable Output<List<String>> serverCertificateThumbprints,
+        @Nullable Output<List<X509CertificateNameArgs>> serverX509Names) {
         this.clientCertificateId = clientCertificateId;
         this.clientCertificatethumbprint = clientCertificatethumbprint;
         this.managementEndpoints = Objects.requireNonNull(managementEndpoints, "expected parameter 'managementEndpoints' to be non-null");
@@ -103,12 +103,12 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     }
 
     private BackendServiceFabricClusterPropertiesArgs() {
-        this.clientCertificateId = Input.empty();
-        this.clientCertificatethumbprint = Input.empty();
-        this.managementEndpoints = Input.empty();
-        this.maxPartitionResolutionRetries = Input.empty();
-        this.serverCertificateThumbprints = Input.empty();
-        this.serverX509Names = Input.empty();
+        this.clientCertificateId = Output.empty();
+        this.clientCertificatethumbprint = Output.empty();
+        this.managementEndpoints = Output.empty();
+        this.maxPartitionResolutionRetries = Output.empty();
+        this.serverCertificateThumbprints = Output.empty();
+        this.serverX509Names = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientCertificateId;
-        private @Nullable Input<String> clientCertificatethumbprint;
-        private Input<List<String>> managementEndpoints;
-        private @Nullable Input<Integer> maxPartitionResolutionRetries;
-        private @Nullable Input<List<String>> serverCertificateThumbprints;
-        private @Nullable Input<List<X509CertificateNameArgs>> serverX509Names;
+        private @Nullable Output<String> clientCertificateId;
+        private @Nullable Output<String> clientCertificatethumbprint;
+        private Output<List<String>> managementEndpoints;
+        private @Nullable Output<Integer> maxPartitionResolutionRetries;
+        private @Nullable Output<List<String>> serverCertificateThumbprints;
+        private @Nullable Output<List<X509CertificateNameArgs>> serverX509Names;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     	      this.serverX509Names = defaults.serverX509Names;
         }
 
-        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Input.ofNullable(clientCertificateId);
+            this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder clientCertificatethumbprint(@Nullable Input<String> clientCertificatethumbprint) {
+        public Builder clientCertificatethumbprint(@Nullable Output<String> clientCertificatethumbprint) {
             this.clientCertificatethumbprint = clientCertificatethumbprint;
             return this;
         }
 
         public Builder clientCertificatethumbprint(@Nullable String clientCertificatethumbprint) {
-            this.clientCertificatethumbprint = Input.ofNullable(clientCertificatethumbprint);
+            this.clientCertificatethumbprint = Output.ofNullable(clientCertificatethumbprint);
             return this;
         }
 
-        public Builder managementEndpoints(Input<List<String>> managementEndpoints) {
+        public Builder managementEndpoints(Output<List<String>> managementEndpoints) {
             this.managementEndpoints = Objects.requireNonNull(managementEndpoints);
             return this;
         }
 
         public Builder managementEndpoints(List<String> managementEndpoints) {
-            this.managementEndpoints = Input.of(Objects.requireNonNull(managementEndpoints));
+            this.managementEndpoints = Output.of(Objects.requireNonNull(managementEndpoints));
             return this;
         }
 
-        public Builder maxPartitionResolutionRetries(@Nullable Input<Integer> maxPartitionResolutionRetries) {
+        public Builder maxPartitionResolutionRetries(@Nullable Output<Integer> maxPartitionResolutionRetries) {
             this.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
             return this;
         }
 
         public Builder maxPartitionResolutionRetries(@Nullable Integer maxPartitionResolutionRetries) {
-            this.maxPartitionResolutionRetries = Input.ofNullable(maxPartitionResolutionRetries);
+            this.maxPartitionResolutionRetries = Output.ofNullable(maxPartitionResolutionRetries);
             return this;
         }
 
-        public Builder serverCertificateThumbprints(@Nullable Input<List<String>> serverCertificateThumbprints) {
+        public Builder serverCertificateThumbprints(@Nullable Output<List<String>> serverCertificateThumbprints) {
             this.serverCertificateThumbprints = serverCertificateThumbprints;
             return this;
         }
 
         public Builder serverCertificateThumbprints(@Nullable List<String> serverCertificateThumbprints) {
-            this.serverCertificateThumbprints = Input.ofNullable(serverCertificateThumbprints);
+            this.serverCertificateThumbprints = Output.ofNullable(serverCertificateThumbprints);
             return this;
         }
 
-        public Builder serverX509Names(@Nullable Input<List<X509CertificateNameArgs>> serverX509Names) {
+        public Builder serverX509Names(@Nullable Output<List<X509CertificateNameArgs>> serverX509Names) {
             this.serverX509Names = serverX509Names;
             return this;
         }
 
         public Builder serverX509Names(@Nullable List<X509CertificateNameArgs> serverX509Names) {
-            this.serverX509Names = Input.ofNullable(serverX509Names);
+            this.serverX509Names = Output.ofNullable(serverX509Names);
             return this;
         }
         public BackendServiceFabricClusterPropertiesArgs build() {

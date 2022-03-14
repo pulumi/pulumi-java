@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
      * 
      */
     @InputImport(name="allocationStrategy", required=true)
-      private final Input<String> allocationStrategy;
+      private final Output<String> allocationStrategy;
 
-    public Input<String> getAllocationStrategy() {
+    public Output<String> getAllocationStrategy() {
         return this.allocationStrategy;
     }
 
-    public ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs(Input<String> allocationStrategy) {
+    public ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs(Output<String> allocationStrategy) {
         this.allocationStrategy = Objects.requireNonNull(allocationStrategy, "expected parameter 'allocationStrategy' to be non-null");
     }
 
     private ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs() {
-        this.allocationStrategy = Input.empty();
+        this.allocationStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
     }
 
     public static final class Builder {
-        private Input<String> allocationStrategy;
+        private Output<String> allocationStrategy;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder allocationStrategy(Input<String> allocationStrategy) {
+        public Builder allocationStrategy(Output<String> allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
 
         public Builder allocationStrategy(String allocationStrategy) {
-            this.allocationStrategy = Input.of(Objects.requireNonNull(allocationStrategy));
+            this.allocationStrategy = Output.of(Objects.requireNonNull(allocationStrategy));
             return this;
         }
         public ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs build() {

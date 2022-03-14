@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="fromPort", required=true)
-      private final Input<Integer> fromPort;
+      private final Output<Integer> fromPort;
 
-    public Input<Integer> getFromPort() {
+    public Output<Integer> getFromPort() {
         return this.fromPort;
     }
 
@@ -30,22 +30,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="toPort")
-      private final @Nullable Input<Integer> toPort;
+      private final @Nullable Output<Integer> toPort;
 
-    public Input<Integer> getToPort() {
-        return this.toPort == null ? Input.empty() : this.toPort;
+    public Output<Integer> getToPort() {
+        return this.toPort == null ? Output.empty() : this.toPort;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs(
-        Input<Integer> fromPort,
-        @Nullable Input<Integer> toPort) {
+        Output<Integer> fromPort,
+        @Nullable Output<Integer> toPort) {
         this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
         this.toPort = toPort;
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs() {
-        this.fromPort = Input.empty();
-        this.toPort = Input.empty();
+        this.fromPort = Output.empty();
+        this.toPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     public static final class Builder {
-        private Input<Integer> fromPort;
-        private @Nullable Input<Integer> toPort;
+        private Output<Integer> fromPort;
+        private @Nullable Output<Integer> toPort;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder fromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Output<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Input.of(Objects.requireNonNull(fromPort));
+            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder toPort(@Nullable Input<Integer> toPort) {
+        public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
 
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Input.ofNullable(toPort);
+            this.toPort = Output.ofNullable(toPort);
             return this;
         }
         public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs build() {

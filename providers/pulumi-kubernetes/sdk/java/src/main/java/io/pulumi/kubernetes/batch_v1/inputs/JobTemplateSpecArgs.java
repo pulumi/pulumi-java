@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.batch_v1.inputs.JobSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -24,10 +24,10 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<JobSpecArgs> spec;
+      private final @Nullable Output<JobSpecArgs> spec;
 
-    public Input<JobSpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<JobSpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     public JobTemplateSpecArgs(
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<JobSpecArgs> spec) {
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<JobSpecArgs> spec) {
         this.metadata = metadata;
         this.spec = spec;
     }
 
     private JobTemplateSpecArgs() {
-        this.metadata = Input.empty();
-        this.spec = Input.empty();
+        this.metadata = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<JobSpecArgs> spec;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<JobSpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
     	      this.spec = defaults.spec;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder spec(@Nullable Input<JobSpecArgs> spec) {
+        public Builder spec(@Nullable Output<JobSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable JobSpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
         public JobTemplateSpecArgs build() {

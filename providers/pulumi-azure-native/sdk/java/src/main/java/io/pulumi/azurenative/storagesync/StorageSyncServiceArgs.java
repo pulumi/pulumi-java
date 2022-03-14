@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.azurenative.storagesync.enums.IncomingTrafficPolicy;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="incomingTrafficPolicy")
-      private final @Nullable Input<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
+      private final @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
 
-    public Input<Either<String,IncomingTrafficPolicy>> getIncomingTrafficPolicy() {
-        return this.incomingTrafficPolicy == null ? Input.empty() : this.incomingTrafficPolicy;
+    public Output<Either<String,IncomingTrafficPolicy>> getIncomingTrafficPolicy() {
+        return this.incomingTrafficPolicy == null ? Output.empty() : this.incomingTrafficPolicy;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,10 +55,10 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageSyncServiceName")
-      private final @Nullable Input<String> storageSyncServiceName;
+      private final @Nullable Output<String> storageSyncServiceName;
 
-    public Input<String> getStorageSyncServiceName() {
-        return this.storageSyncServiceName == null ? Input.empty() : this.storageSyncServiceName;
+    public Output<String> getStorageSyncServiceName() {
+        return this.storageSyncServiceName == null ? Output.empty() : this.storageSyncServiceName;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StorageSyncServiceArgs(
-        @Nullable Input<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> storageSyncServiceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> storageSyncServiceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.incomingTrafficPolicy = incomingTrafficPolicy;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -86,11 +86,11 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private StorageSyncServiceArgs() {
-        this.incomingTrafficPolicy = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageSyncServiceName = Input.empty();
-        this.tags = Input.empty();
+        this.incomingTrafficPolicy = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageSyncServiceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> storageSyncServiceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> storageSyncServiceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder incomingTrafficPolicy(@Nullable Input<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy) {
+        public Builder incomingTrafficPolicy(@Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy) {
             this.incomingTrafficPolicy = incomingTrafficPolicy;
             return this;
         }
 
         public Builder incomingTrafficPolicy(@Nullable Either<String,IncomingTrafficPolicy> incomingTrafficPolicy) {
-            this.incomingTrafficPolicy = Input.ofNullable(incomingTrafficPolicy);
+            this.incomingTrafficPolicy = Output.ofNullable(incomingTrafficPolicy);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageSyncServiceName(@Nullable Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(@Nullable Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
         public Builder storageSyncServiceName(@Nullable String storageSyncServiceName) {
-            this.storageSyncServiceName = Input.ofNullable(storageSyncServiceName);
+            this.storageSyncServiceName = Output.ofNullable(storageSyncServiceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StorageSyncServiceArgs build() {

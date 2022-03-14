@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -17,54 +17,54 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends io.pulumi.resour
     public static final SpotFleetLaunchTemplateOverridesArgs Empty = new SpotFleetLaunchTemplateOverridesArgs();
 
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     @InputImport(name="instanceRequirements")
-      private final @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
+      private final @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
 
-    public Input<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
-        return this.instanceRequirements == null ? Input.empty() : this.instanceRequirements;
+    public Output<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
+        return this.instanceRequirements == null ? Output.empty() : this.instanceRequirements;
     }
 
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     @InputImport(name="spotPrice")
-      private final @Nullable Input<String> spotPrice;
+      private final @Nullable Output<String> spotPrice;
 
-    public Input<String> getSpotPrice() {
-        return this.spotPrice == null ? Input.empty() : this.spotPrice;
+    public Output<String> getSpotPrice() {
+        return this.spotPrice == null ? Output.empty() : this.spotPrice;
     }
 
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     @InputImport(name="weightedCapacity")
-      private final @Nullable Input<Double> weightedCapacity;
+      private final @Nullable Output<Double> weightedCapacity;
 
-    public Input<Double> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;
+    public Output<Double> getWeightedCapacity() {
+        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
     }
 
     public SpotFleetLaunchTemplateOverridesArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> spotPrice,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Double> weightedCapacity) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> spotPrice,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Double> weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;
@@ -74,12 +74,12 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends io.pulumi.resour
     }
 
     private SpotFleetLaunchTemplateOverridesArgs() {
-        this.availabilityZone = Input.empty();
-        this.instanceRequirements = Input.empty();
-        this.instanceType = Input.empty();
-        this.spotPrice = Input.empty();
-        this.subnetId = Input.empty();
-        this.weightedCapacity = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.instanceRequirements = Output.empty();
+        this.instanceType = Output.empty();
+        this.spotPrice = Output.empty();
+        this.subnetId = Output.empty();
+        this.weightedCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,12 +91,12 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> spotPrice;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Double> weightedCapacity;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> spotPrice;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Double> weightedCapacity;
 
         public Builder() {
     	      // Empty
@@ -112,63 +112,63 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends io.pulumi.resour
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder instanceRequirements(@Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements) {
+        public Builder instanceRequirements(@Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
         public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequestArgs instanceRequirements) {
-            this.instanceRequirements = Input.ofNullable(instanceRequirements);
+            this.instanceRequirements = Output.ofNullable(instanceRequirements);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder spotPrice(@Nullable Input<String> spotPrice) {
+        public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Input.ofNullable(spotPrice);
+            this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder weightedCapacity(@Nullable Input<Double> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = Input.ofNullable(weightedCapacity);
+            this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
         }
         public SpotFleetLaunchTemplateOverridesArgs build() {

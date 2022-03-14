@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="groups")
-      private final @Nullable Input<List<String>> groups;
+      private final @Nullable Output<List<String>> groups;
 
-    public Input<List<String>> getGroups() {
-        return this.groups == null ? Input.empty() : this.groups;
+    public Output<List<String>> getGroups() {
+        return this.groups == null ? Output.empty() : this.groups;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyArn")
-      private final @Nullable Input<String> policyArn;
+      private final @Nullable Output<String> policyArn;
 
-    public Input<String> getPolicyArn() {
-        return this.policyArn == null ? Input.empty() : this.policyArn;
+    public Output<String> getPolicyArn() {
+        return this.policyArn == null ? Output.empty() : this.policyArn;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<String>> roles;
+      private final @Nullable Output<List<String>> roles;
 
-    public Input<List<String>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<String>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="users")
-      private final @Nullable Input<List<String>> users;
+      private final @Nullable Output<List<String>> users;
 
-    public Input<List<String>> getUsers() {
-        return this.users == null ? Input.empty() : this.users;
+    public Output<List<String>> getUsers() {
+        return this.users == null ? Output.empty() : this.users;
     }
 
     public PolicyAttachmentState(
-        @Nullable Input<List<String>> groups,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policyArn,
-        @Nullable Input<List<String>> roles,
-        @Nullable Input<List<String>> users) {
+        @Nullable Output<List<String>> groups,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policyArn,
+        @Nullable Output<List<String>> roles,
+        @Nullable Output<List<String>> users) {
         this.groups = groups;
         this.name = name;
         this.policyArn = policyArn;
@@ -84,11 +84,11 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     }
 
     private PolicyAttachmentState() {
-        this.groups = Input.empty();
-        this.name = Input.empty();
-        this.policyArn = Input.empty();
-        this.roles = Input.empty();
-        this.users = Input.empty();
+        this.groups = Output.empty();
+        this.name = Output.empty();
+        this.policyArn = Output.empty();
+        this.roles = Output.empty();
+        this.users = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groups;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policyArn;
-        private @Nullable Input<List<String>> roles;
-        private @Nullable Input<List<String>> users;
+        private @Nullable Output<List<String>> groups;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policyArn;
+        private @Nullable Output<List<String>> roles;
+        private @Nullable Output<List<String>> users;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     	      this.users = defaults.users;
         }
 
-        public Builder groups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Input.ofNullable(groups);
+            this.groups = Output.ofNullable(groups);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyArn(@Nullable Input<String> policyArn) {
+        public Builder policyArn(@Nullable Output<String> policyArn) {
             this.policyArn = policyArn;
             return this;
         }
 
         public Builder policyArn(@Nullable String policyArn) {
-            this.policyArn = Input.ofNullable(policyArn);
+            this.policyArn = Output.ofNullable(policyArn);
             return this;
         }
 
-        public Builder roles(@Nullable Input<List<String>> roles) {
+        public Builder roles(@Nullable Output<List<String>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<String> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
 
-        public Builder users(@Nullable Input<List<String>> users) {
+        public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
 
         public Builder users(@Nullable List<String> users) {
-            this.users = Input.ofNullable(users);
+            this.users = Output.ofNullable(users);
             return this;
         }
         public PolicyAttachmentState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<ExportDeliveryDestinationArgs> destination;
+      private final Output<ExportDeliveryDestinationArgs> destination;
 
-    public Input<ExportDeliveryDestinationArgs> getDestination() {
+    public Output<ExportDeliveryDestinationArgs> getDestination() {
         return this.destination;
     }
 
-    public ExportDeliveryInfoArgs(Input<ExportDeliveryDestinationArgs> destination) {
+    public ExportDeliveryInfoArgs(Output<ExportDeliveryDestinationArgs> destination) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
     }
 
     private ExportDeliveryInfoArgs() {
-        this.destination = Input.empty();
+        this.destination = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<ExportDeliveryDestinationArgs> destination;
+        private Output<ExportDeliveryDestinationArgs> destination;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     	      this.destination = defaults.destination;
         }
 
-        public Builder destination(Input<ExportDeliveryDestinationArgs> destination) {
+        public Builder destination(Output<ExportDeliveryDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(ExportDeliveryDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
         public ExportDeliveryInfoArgs build() {

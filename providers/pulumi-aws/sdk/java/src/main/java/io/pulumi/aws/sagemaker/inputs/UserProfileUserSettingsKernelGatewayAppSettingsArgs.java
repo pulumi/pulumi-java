@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
      * 
      */
     @InputImport(name="customImages")
-      private final @Nullable Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
+      private final @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
 
-    public Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> getCustomImages() {
-        return this.customImages == null ? Input.empty() : this.customImages;
+    public Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> getCustomImages() {
+        return this.customImages == null ? Output.empty() : this.customImages;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
      * 
      */
     @InputImport(name="defaultResourceSpec", required=true)
-      private final Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+      private final Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
-    public Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
@@ -44,25 +44,25 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
      * 
      */
     @InputImport(name="lifecycleConfigArns")
-      private final @Nullable Input<List<String>> lifecycleConfigArns;
+      private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Input<List<String>> getLifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Input.empty() : this.lifecycleConfigArns;
+    public Output<List<String>> getLifecycleConfigArns() {
+        return this.lifecycleConfigArns == null ? Output.empty() : this.lifecycleConfigArns;
     }
 
     public UserProfileUserSettingsKernelGatewayAppSettingsArgs(
-        @Nullable Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages,
-        Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec,
-        @Nullable Input<List<String>> lifecycleConfigArns) {
+        @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages,
+        Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec,
+        @Nullable Output<List<String>> lifecycleConfigArns) {
         this.customImages = customImages;
         this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec, "expected parameter 'defaultResourceSpec' to be non-null");
         this.lifecycleConfigArns = lifecycleConfigArns;
     }
 
     private UserProfileUserSettingsKernelGatewayAppSettingsArgs() {
-        this.customImages = Input.empty();
-        this.defaultResourceSpec = Input.empty();
-        this.lifecycleConfigArns = Input.empty();
+        this.customImages = Output.empty();
+        this.defaultResourceSpec = Output.empty();
+        this.lifecycleConfigArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
-        private Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
-        private @Nullable Input<List<String>> lifecycleConfigArns;
+        private @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
+        private Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+        private @Nullable Output<List<String>> lifecycleConfigArns;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
     	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
         }
 
-        public Builder customImages(@Nullable Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages) {
+        public Builder customImages(@Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages) {
             this.customImages = customImages;
             return this;
         }
 
         public Builder customImages(@Nullable List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs> customImages) {
-            this.customImages = Input.ofNullable(customImages);
+            this.customImages = Output.ofNullable(customImages);
             return this;
         }
 
-        public Builder defaultResourceSpec(Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
 
         public Builder defaultResourceSpec(UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.of(Objects.requireNonNull(defaultResourceSpec));
+            this.defaultResourceSpec = Output.of(Objects.requireNonNull(defaultResourceSpec));
             return this;
         }
 
-        public Builder lifecycleConfigArns(@Nullable Input<List<String>> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
 
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Input.ofNullable(lifecycleConfigArns);
+            this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
             return this;
         }
         public UserProfileUserSettingsKernelGatewayAppSettingsArgs build() {

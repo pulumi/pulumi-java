@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
     public static final AssetModelTumblingWindowArgs Empty = new AssetModelTumblingWindowArgs();
 
     @InputImport(name="interval", required=true)
-      private final Input<String> interval;
+      private final Output<String> interval;
 
-    public Input<String> getInterval() {
+    public Output<String> getInterval() {
         return this.interval;
     }
 
     @InputImport(name="offset")
-      private final @Nullable Input<String> offset;
+      private final @Nullable Output<String> offset;
 
-    public Input<String> getOffset() {
-        return this.offset == null ? Input.empty() : this.offset;
+    public Output<String> getOffset() {
+        return this.offset == null ? Output.empty() : this.offset;
     }
 
     public AssetModelTumblingWindowArgs(
-        Input<String> interval,
-        @Nullable Input<String> offset) {
+        Output<String> interval,
+        @Nullable Output<String> offset) {
         this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
         this.offset = offset;
     }
 
     private AssetModelTumblingWindowArgs() {
-        this.interval = Input.empty();
-        this.offset = Input.empty();
+        this.interval = Output.empty();
+        this.offset = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> interval;
-        private @Nullable Input<String> offset;
+        private Output<String> interval;
+        private @Nullable Output<String> offset;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
     	      this.offset = defaults.offset;
         }
 
-        public Builder interval(Input<String> interval) {
+        public Builder interval(Output<String> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
         public Builder interval(String interval) {
-            this.interval = Input.of(Objects.requireNonNull(interval));
+            this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder offset(@Nullable Input<String> offset) {
+        public Builder offset(@Nullable Output<String> offset) {
             this.offset = offset;
             return this;
         }
 
         public Builder offset(@Nullable String offset) {
-            this.offset = Input.ofNullable(offset);
+            this.offset = Output.ofNullable(offset);
             return this;
         }
         public AssetModelTumblingWindowArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorColumnArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSerDeInfoArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSkewedInfoArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSortColumnArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketColumns")
-      private final @Nullable Input<List<String>> bucketColumns;
+      private final @Nullable Output<List<String>> bucketColumns;
 
-    public Input<List<String>> getBucketColumns() {
-        return this.bucketColumns == null ? Input.empty() : this.bucketColumns;
+    public Output<List<String>> getBucketColumns() {
+        return this.bucketColumns == null ? Output.empty() : this.bucketColumns;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<List<PartitionStorageDescriptorColumnArgs>> columns;
+      private final @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns;
 
-    public Input<List<PartitionStorageDescriptorColumnArgs>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<PartitionStorageDescriptorColumnArgs>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="compressed")
-      private final @Nullable Input<Boolean> compressed;
+      private final @Nullable Output<Boolean> compressed;
 
-    public Input<Boolean> getCompressed() {
-        return this.compressed == null ? Input.empty() : this.compressed;
+    public Output<Boolean> getCompressed() {
+        return this.compressed == null ? Output.empty() : this.compressed;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="inputFormat")
-      private final @Nullable Input<String> inputFormat;
+      private final @Nullable Output<String> inputFormat;
 
-    public Input<String> getInputFormat() {
-        return this.inputFormat == null ? Input.empty() : this.inputFormat;
+    public Output<String> getInputFormat() {
+        return this.inputFormat == null ? Output.empty() : this.inputFormat;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="numberOfBuckets")
-      private final @Nullable Input<Integer> numberOfBuckets;
+      private final @Nullable Output<Integer> numberOfBuckets;
 
-    public Input<Integer> getNumberOfBuckets() {
-        return this.numberOfBuckets == null ? Input.empty() : this.numberOfBuckets;
+    public Output<Integer> getNumberOfBuckets() {
+        return this.numberOfBuckets == null ? Output.empty() : this.numberOfBuckets;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="outputFormat")
-      private final @Nullable Input<String> outputFormat;
+      private final @Nullable Output<String> outputFormat;
 
-    public Input<String> getOutputFormat() {
-        return this.outputFormat == null ? Input.empty() : this.outputFormat;
+    public Output<String> getOutputFormat() {
+        return this.outputFormat == null ? Output.empty() : this.outputFormat;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serDeInfo")
-      private final @Nullable Input<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
+      private final @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
 
-    public Input<PartitionStorageDescriptorSerDeInfoArgs> getSerDeInfo() {
-        return this.serDeInfo == null ? Input.empty() : this.serDeInfo;
+    public Output<PartitionStorageDescriptorSerDeInfoArgs> getSerDeInfo() {
+        return this.serDeInfo == null ? Output.empty() : this.serDeInfo;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="skewedInfo")
-      private final @Nullable Input<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
+      private final @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
 
-    public Input<PartitionStorageDescriptorSkewedInfoArgs> getSkewedInfo() {
-        return this.skewedInfo == null ? Input.empty() : this.skewedInfo;
+    public Output<PartitionStorageDescriptorSkewedInfoArgs> getSkewedInfo() {
+        return this.skewedInfo == null ? Output.empty() : this.skewedInfo;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sortColumns")
-      private final @Nullable Input<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
+      private final @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
 
-    public Input<List<PartitionStorageDescriptorSortColumnArgs>> getSortColumns() {
-        return this.sortColumns == null ? Input.empty() : this.sortColumns;
+    public Output<List<PartitionStorageDescriptorSortColumnArgs>> getSortColumns() {
+        return this.sortColumns == null ? Output.empty() : this.sortColumns;
     }
 
     /**
@@ -148,25 +148,25 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storedAsSubDirectories")
-      private final @Nullable Input<Boolean> storedAsSubDirectories;
+      private final @Nullable Output<Boolean> storedAsSubDirectories;
 
-    public Input<Boolean> getStoredAsSubDirectories() {
-        return this.storedAsSubDirectories == null ? Input.empty() : this.storedAsSubDirectories;
+    public Output<Boolean> getStoredAsSubDirectories() {
+        return this.storedAsSubDirectories == null ? Output.empty() : this.storedAsSubDirectories;
     }
 
     public PartitionStorageDescriptorArgs(
-        @Nullable Input<List<String>> bucketColumns,
-        @Nullable Input<List<PartitionStorageDescriptorColumnArgs>> columns,
-        @Nullable Input<Boolean> compressed,
-        @Nullable Input<String> inputFormat,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> numberOfBuckets,
-        @Nullable Input<String> outputFormat,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo,
-        @Nullable Input<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo,
-        @Nullable Input<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns,
-        @Nullable Input<Boolean> storedAsSubDirectories) {
+        @Nullable Output<List<String>> bucketColumns,
+        @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns,
+        @Nullable Output<Boolean> compressed,
+        @Nullable Output<String> inputFormat,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> numberOfBuckets,
+        @Nullable Output<String> outputFormat,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo,
+        @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo,
+        @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns,
+        @Nullable Output<Boolean> storedAsSubDirectories) {
         this.bucketColumns = bucketColumns;
         this.columns = columns;
         this.compressed = compressed;
@@ -182,18 +182,18 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     }
 
     private PartitionStorageDescriptorArgs() {
-        this.bucketColumns = Input.empty();
-        this.columns = Input.empty();
-        this.compressed = Input.empty();
-        this.inputFormat = Input.empty();
-        this.location = Input.empty();
-        this.numberOfBuckets = Input.empty();
-        this.outputFormat = Input.empty();
-        this.parameters = Input.empty();
-        this.serDeInfo = Input.empty();
-        this.skewedInfo = Input.empty();
-        this.sortColumns = Input.empty();
-        this.storedAsSubDirectories = Input.empty();
+        this.bucketColumns = Output.empty();
+        this.columns = Output.empty();
+        this.compressed = Output.empty();
+        this.inputFormat = Output.empty();
+        this.location = Output.empty();
+        this.numberOfBuckets = Output.empty();
+        this.outputFormat = Output.empty();
+        this.parameters = Output.empty();
+        this.serDeInfo = Output.empty();
+        this.skewedInfo = Output.empty();
+        this.sortColumns = Output.empty();
+        this.storedAsSubDirectories = Output.empty();
     }
 
     public static Builder builder() {
@@ -205,18 +205,18 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> bucketColumns;
-        private @Nullable Input<List<PartitionStorageDescriptorColumnArgs>> columns;
-        private @Nullable Input<Boolean> compressed;
-        private @Nullable Input<String> inputFormat;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> numberOfBuckets;
-        private @Nullable Input<String> outputFormat;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
-        private @Nullable Input<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
-        private @Nullable Input<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
-        private @Nullable Input<Boolean> storedAsSubDirectories;
+        private @Nullable Output<List<String>> bucketColumns;
+        private @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns;
+        private @Nullable Output<Boolean> compressed;
+        private @Nullable Output<String> inputFormat;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> numberOfBuckets;
+        private @Nullable Output<String> outputFormat;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
+        private @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
+        private @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
+        private @Nullable Output<Boolean> storedAsSubDirectories;
 
         public Builder() {
     	      // Empty
@@ -238,123 +238,123 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     	      this.storedAsSubDirectories = defaults.storedAsSubDirectories;
         }
 
-        public Builder bucketColumns(@Nullable Input<List<String>> bucketColumns) {
+        public Builder bucketColumns(@Nullable Output<List<String>> bucketColumns) {
             this.bucketColumns = bucketColumns;
             return this;
         }
 
         public Builder bucketColumns(@Nullable List<String> bucketColumns) {
-            this.bucketColumns = Input.ofNullable(bucketColumns);
+            this.bucketColumns = Output.ofNullable(bucketColumns);
             return this;
         }
 
-        public Builder columns(@Nullable Input<List<PartitionStorageDescriptorColumnArgs>> columns) {
+        public Builder columns(@Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<PartitionStorageDescriptorColumnArgs> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
 
-        public Builder compressed(@Nullable Input<Boolean> compressed) {
+        public Builder compressed(@Nullable Output<Boolean> compressed) {
             this.compressed = compressed;
             return this;
         }
 
         public Builder compressed(@Nullable Boolean compressed) {
-            this.compressed = Input.ofNullable(compressed);
+            this.compressed = Output.ofNullable(compressed);
             return this;
         }
 
-        public Builder inputFormat(@Nullable Input<String> inputFormat) {
+        public Builder inputFormat(@Nullable Output<String> inputFormat) {
             this.inputFormat = inputFormat;
             return this;
         }
 
         public Builder inputFormat(@Nullable String inputFormat) {
-            this.inputFormat = Input.ofNullable(inputFormat);
+            this.inputFormat = Output.ofNullable(inputFormat);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder numberOfBuckets(@Nullable Input<Integer> numberOfBuckets) {
+        public Builder numberOfBuckets(@Nullable Output<Integer> numberOfBuckets) {
             this.numberOfBuckets = numberOfBuckets;
             return this;
         }
 
         public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
-            this.numberOfBuckets = Input.ofNullable(numberOfBuckets);
+            this.numberOfBuckets = Output.ofNullable(numberOfBuckets);
             return this;
         }
 
-        public Builder outputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Input.ofNullable(outputFormat);
+            this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder serDeInfo(@Nullable Input<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo) {
+        public Builder serDeInfo(@Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo) {
             this.serDeInfo = serDeInfo;
             return this;
         }
 
         public Builder serDeInfo(@Nullable PartitionStorageDescriptorSerDeInfoArgs serDeInfo) {
-            this.serDeInfo = Input.ofNullable(serDeInfo);
+            this.serDeInfo = Output.ofNullable(serDeInfo);
             return this;
         }
 
-        public Builder skewedInfo(@Nullable Input<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo) {
+        public Builder skewedInfo(@Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo) {
             this.skewedInfo = skewedInfo;
             return this;
         }
 
         public Builder skewedInfo(@Nullable PartitionStorageDescriptorSkewedInfoArgs skewedInfo) {
-            this.skewedInfo = Input.ofNullable(skewedInfo);
+            this.skewedInfo = Output.ofNullable(skewedInfo);
             return this;
         }
 
-        public Builder sortColumns(@Nullable Input<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns) {
+        public Builder sortColumns(@Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns) {
             this.sortColumns = sortColumns;
             return this;
         }
 
         public Builder sortColumns(@Nullable List<PartitionStorageDescriptorSortColumnArgs> sortColumns) {
-            this.sortColumns = Input.ofNullable(sortColumns);
+            this.sortColumns = Output.ofNullable(sortColumns);
             return this;
         }
 
-        public Builder storedAsSubDirectories(@Nullable Input<Boolean> storedAsSubDirectories) {
+        public Builder storedAsSubDirectories(@Nullable Output<Boolean> storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }
 
         public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
-            this.storedAsSubDirectories = Input.ofNullable(storedAsSubDirectories);
+            this.storedAsSubDirectories = Output.ofNullable(storedAsSubDirectories);
             return this;
         }
         public PartitionStorageDescriptorArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.inputs.DeploymentAccessLogSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentCanarySettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentMethodSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -28,10 +28,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accessLogSetting")
-      private final @Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting;
+      private final @Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting;
 
-    public Input<DeploymentAccessLogSettingArgs> getAccessLogSetting() {
-        return this.accessLogSetting == null ? Input.empty() : this.accessLogSetting;
+    public Output<DeploymentAccessLogSettingArgs> getAccessLogSetting() {
+        return this.accessLogSetting == null ? Output.empty() : this.accessLogSetting;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheClusterEnabled")
-      private final @Nullable Input<Boolean> cacheClusterEnabled;
+      private final @Nullable Output<Boolean> cacheClusterEnabled;
 
-    public Input<Boolean> getCacheClusterEnabled() {
-        return this.cacheClusterEnabled == null ? Input.empty() : this.cacheClusterEnabled;
+    public Output<Boolean> getCacheClusterEnabled() {
+        return this.cacheClusterEnabled == null ? Output.empty() : this.cacheClusterEnabled;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheClusterSize")
-      private final @Nullable Input<String> cacheClusterSize;
+      private final @Nullable Output<String> cacheClusterSize;
 
-    public Input<String> getCacheClusterSize() {
-        return this.cacheClusterSize == null ? Input.empty() : this.cacheClusterSize;
+    public Output<String> getCacheClusterSize() {
+        return this.cacheClusterSize == null ? Output.empty() : this.cacheClusterSize;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheDataEncrypted")
-      private final @Nullable Input<Boolean> cacheDataEncrypted;
+      private final @Nullable Output<Boolean> cacheDataEncrypted;
 
-    public Input<Boolean> getCacheDataEncrypted() {
-        return this.cacheDataEncrypted == null ? Input.empty() : this.cacheDataEncrypted;
+    public Output<Boolean> getCacheDataEncrypted() {
+        return this.cacheDataEncrypted == null ? Output.empty() : this.cacheDataEncrypted;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheTtlInSeconds")
-      private final @Nullable Input<Integer> cacheTtlInSeconds;
+      private final @Nullable Output<Integer> cacheTtlInSeconds;
 
-    public Input<Integer> getCacheTtlInSeconds() {
-        return this.cacheTtlInSeconds == null ? Input.empty() : this.cacheTtlInSeconds;
+    public Output<Integer> getCacheTtlInSeconds() {
+        return this.cacheTtlInSeconds == null ? Output.empty() : this.cacheTtlInSeconds;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cachingEnabled")
-      private final @Nullable Input<Boolean> cachingEnabled;
+      private final @Nullable Output<Boolean> cachingEnabled;
 
-    public Input<Boolean> getCachingEnabled() {
-        return this.cachingEnabled == null ? Input.empty() : this.cachingEnabled;
+    public Output<Boolean> getCachingEnabled() {
+        return this.cachingEnabled == null ? Output.empty() : this.cachingEnabled;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="canarySetting")
-      private final @Nullable Input<DeploymentCanarySettingArgs> canarySetting;
+      private final @Nullable Output<DeploymentCanarySettingArgs> canarySetting;
 
-    public Input<DeploymentCanarySettingArgs> getCanarySetting() {
-        return this.canarySetting == null ? Input.empty() : this.canarySetting;
+    public Output<DeploymentCanarySettingArgs> getCanarySetting() {
+        return this.canarySetting == null ? Output.empty() : this.canarySetting;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientCertificateId")
-      private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Output<String> clientCertificateId;
 
-    public Input<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
+    public Output<String> getClientCertificateId() {
+        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataTraceEnabled")
-      private final @Nullable Input<Boolean> dataTraceEnabled;
+      private final @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Input<Boolean> getDataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Input.empty() : this.dataTraceEnabled;
+    public Output<Boolean> getDataTraceEnabled() {
+        return this.dataTraceEnabled == null ? Output.empty() : this.dataTraceEnabled;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="documentationVersion")
-      private final @Nullable Input<String> documentationVersion;
+      private final @Nullable Output<String> documentationVersion;
 
-    public Input<String> getDocumentationVersion() {
-        return this.documentationVersion == null ? Input.empty() : this.documentationVersion;
+    public Output<String> getDocumentationVersion() {
+        return this.documentationVersion == null ? Output.empty() : this.documentationVersion;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loggingLevel")
-      private final @Nullable Input<String> loggingLevel;
+      private final @Nullable Output<String> loggingLevel;
 
-    public Input<String> getLoggingLevel() {
-        return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
+    public Output<String> getLoggingLevel() {
+        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="methodSettings")
-      private final @Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings;
+      private final @Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings;
 
-    public Input<List<DeploymentMethodSettingArgs>> getMethodSettings() {
-        return this.methodSettings == null ? Input.empty() : this.methodSettings;
+    public Output<List<DeploymentMethodSettingArgs>> getMethodSettings() {
+        return this.methodSettings == null ? Output.empty() : this.methodSettings;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="metricsEnabled")
-      private final @Nullable Input<Boolean> metricsEnabled;
+      private final @Nullable Output<Boolean> metricsEnabled;
 
-    public Input<Boolean> getMetricsEnabled() {
-        return this.metricsEnabled == null ? Input.empty() : this.metricsEnabled;
+    public Output<Boolean> getMetricsEnabled() {
+        return this.metricsEnabled == null ? Output.empty() : this.metricsEnabled;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DeploymentTagArgs>> tags;
+      private final @Nullable Output<List<DeploymentTagArgs>> tags;
 
-    public Input<List<DeploymentTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DeploymentTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="throttlingBurstLimit")
-      private final @Nullable Input<Integer> throttlingBurstLimit;
+      private final @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Input<Integer> getThrottlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Input.empty() : this.throttlingBurstLimit;
+    public Output<Integer> getThrottlingBurstLimit() {
+        return this.throttlingBurstLimit == null ? Output.empty() : this.throttlingBurstLimit;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="throttlingRateLimit")
-      private final @Nullable Input<Double> throttlingRateLimit;
+      private final @Nullable Output<Double> throttlingRateLimit;
 
-    public Input<Double> getThrottlingRateLimit() {
-        return this.throttlingRateLimit == null ? Input.empty() : this.throttlingRateLimit;
+    public Output<Double> getThrottlingRateLimit() {
+        return this.throttlingRateLimit == null ? Output.empty() : this.throttlingRateLimit;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tracingEnabled")
-      private final @Nullable Input<Boolean> tracingEnabled;
+      private final @Nullable Output<Boolean> tracingEnabled;
 
-    public Input<Boolean> getTracingEnabled() {
-        return this.tracingEnabled == null ? Input.empty() : this.tracingEnabled;
+    public Output<Boolean> getTracingEnabled() {
+        return this.tracingEnabled == null ? Output.empty() : this.tracingEnabled;
     }
 
     /**
@@ -226,32 +226,32 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Object> variables;
+      private final @Nullable Output<Object> variables;
 
-    public Input<Object> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Object> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
     public DeploymentStageDescriptionArgs(
-        @Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting,
-        @Nullable Input<Boolean> cacheClusterEnabled,
-        @Nullable Input<String> cacheClusterSize,
-        @Nullable Input<Boolean> cacheDataEncrypted,
-        @Nullable Input<Integer> cacheTtlInSeconds,
-        @Nullable Input<Boolean> cachingEnabled,
-        @Nullable Input<DeploymentCanarySettingArgs> canarySetting,
-        @Nullable Input<String> clientCertificateId,
-        @Nullable Input<Boolean> dataTraceEnabled,
-        @Nullable Input<String> description,
-        @Nullable Input<String> documentationVersion,
-        @Nullable Input<String> loggingLevel,
-        @Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings,
-        @Nullable Input<Boolean> metricsEnabled,
-        @Nullable Input<List<DeploymentTagArgs>> tags,
-        @Nullable Input<Integer> throttlingBurstLimit,
-        @Nullable Input<Double> throttlingRateLimit,
-        @Nullable Input<Boolean> tracingEnabled,
-        @Nullable Input<Object> variables) {
+        @Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting,
+        @Nullable Output<Boolean> cacheClusterEnabled,
+        @Nullable Output<String> cacheClusterSize,
+        @Nullable Output<Boolean> cacheDataEncrypted,
+        @Nullable Output<Integer> cacheTtlInSeconds,
+        @Nullable Output<Boolean> cachingEnabled,
+        @Nullable Output<DeploymentCanarySettingArgs> canarySetting,
+        @Nullable Output<String> clientCertificateId,
+        @Nullable Output<Boolean> dataTraceEnabled,
+        @Nullable Output<String> description,
+        @Nullable Output<String> documentationVersion,
+        @Nullable Output<String> loggingLevel,
+        @Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings,
+        @Nullable Output<Boolean> metricsEnabled,
+        @Nullable Output<List<DeploymentTagArgs>> tags,
+        @Nullable Output<Integer> throttlingBurstLimit,
+        @Nullable Output<Double> throttlingRateLimit,
+        @Nullable Output<Boolean> tracingEnabled,
+        @Nullable Output<Object> variables) {
         this.accessLogSetting = accessLogSetting;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;
@@ -274,25 +274,25 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     private DeploymentStageDescriptionArgs() {
-        this.accessLogSetting = Input.empty();
-        this.cacheClusterEnabled = Input.empty();
-        this.cacheClusterSize = Input.empty();
-        this.cacheDataEncrypted = Input.empty();
-        this.cacheTtlInSeconds = Input.empty();
-        this.cachingEnabled = Input.empty();
-        this.canarySetting = Input.empty();
-        this.clientCertificateId = Input.empty();
-        this.dataTraceEnabled = Input.empty();
-        this.description = Input.empty();
-        this.documentationVersion = Input.empty();
-        this.loggingLevel = Input.empty();
-        this.methodSettings = Input.empty();
-        this.metricsEnabled = Input.empty();
-        this.tags = Input.empty();
-        this.throttlingBurstLimit = Input.empty();
-        this.throttlingRateLimit = Input.empty();
-        this.tracingEnabled = Input.empty();
-        this.variables = Input.empty();
+        this.accessLogSetting = Output.empty();
+        this.cacheClusterEnabled = Output.empty();
+        this.cacheClusterSize = Output.empty();
+        this.cacheDataEncrypted = Output.empty();
+        this.cacheTtlInSeconds = Output.empty();
+        this.cachingEnabled = Output.empty();
+        this.canarySetting = Output.empty();
+        this.clientCertificateId = Output.empty();
+        this.dataTraceEnabled = Output.empty();
+        this.description = Output.empty();
+        this.documentationVersion = Output.empty();
+        this.loggingLevel = Output.empty();
+        this.methodSettings = Output.empty();
+        this.metricsEnabled = Output.empty();
+        this.tags = Output.empty();
+        this.throttlingBurstLimit = Output.empty();
+        this.throttlingRateLimit = Output.empty();
+        this.tracingEnabled = Output.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -304,25 +304,25 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting;
-        private @Nullable Input<Boolean> cacheClusterEnabled;
-        private @Nullable Input<String> cacheClusterSize;
-        private @Nullable Input<Boolean> cacheDataEncrypted;
-        private @Nullable Input<Integer> cacheTtlInSeconds;
-        private @Nullable Input<Boolean> cachingEnabled;
-        private @Nullable Input<DeploymentCanarySettingArgs> canarySetting;
-        private @Nullable Input<String> clientCertificateId;
-        private @Nullable Input<Boolean> dataTraceEnabled;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> documentationVersion;
-        private @Nullable Input<String> loggingLevel;
-        private @Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings;
-        private @Nullable Input<Boolean> metricsEnabled;
-        private @Nullable Input<List<DeploymentTagArgs>> tags;
-        private @Nullable Input<Integer> throttlingBurstLimit;
-        private @Nullable Input<Double> throttlingRateLimit;
-        private @Nullable Input<Boolean> tracingEnabled;
-        private @Nullable Input<Object> variables;
+        private @Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting;
+        private @Nullable Output<Boolean> cacheClusterEnabled;
+        private @Nullable Output<String> cacheClusterSize;
+        private @Nullable Output<Boolean> cacheDataEncrypted;
+        private @Nullable Output<Integer> cacheTtlInSeconds;
+        private @Nullable Output<Boolean> cachingEnabled;
+        private @Nullable Output<DeploymentCanarySettingArgs> canarySetting;
+        private @Nullable Output<String> clientCertificateId;
+        private @Nullable Output<Boolean> dataTraceEnabled;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> documentationVersion;
+        private @Nullable Output<String> loggingLevel;
+        private @Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings;
+        private @Nullable Output<Boolean> metricsEnabled;
+        private @Nullable Output<List<DeploymentTagArgs>> tags;
+        private @Nullable Output<Integer> throttlingBurstLimit;
+        private @Nullable Output<Double> throttlingRateLimit;
+        private @Nullable Output<Boolean> tracingEnabled;
+        private @Nullable Output<Object> variables;
 
         public Builder() {
     	      // Empty
@@ -351,193 +351,193 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     	      this.variables = defaults.variables;
         }
 
-        public Builder accessLogSetting(@Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting) {
+        public Builder accessLogSetting(@Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting) {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
 
         public Builder accessLogSetting(@Nullable DeploymentAccessLogSettingArgs accessLogSetting) {
-            this.accessLogSetting = Input.ofNullable(accessLogSetting);
+            this.accessLogSetting = Output.ofNullable(accessLogSetting);
             return this;
         }
 
-        public Builder cacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
-            this.cacheClusterEnabled = Input.ofNullable(cacheClusterEnabled);
+            this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
             return this;
         }
 
-        public Builder cacheClusterSize(@Nullable Input<String> cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
-            this.cacheClusterSize = Input.ofNullable(cacheClusterSize);
+            this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
             return this;
         }
 
-        public Builder cacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Output<Boolean> cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
-            this.cacheDataEncrypted = Input.ofNullable(cacheDataEncrypted);
+            this.cacheDataEncrypted = Output.ofNullable(cacheDataEncrypted);
             return this;
         }
 
-        public Builder cacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
-            this.cacheTtlInSeconds = Input.ofNullable(cacheTtlInSeconds);
+            this.cacheTtlInSeconds = Output.ofNullable(cacheTtlInSeconds);
             return this;
         }
 
-        public Builder cachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
 
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
-            this.cachingEnabled = Input.ofNullable(cachingEnabled);
+            this.cachingEnabled = Output.ofNullable(cachingEnabled);
             return this;
         }
 
-        public Builder canarySetting(@Nullable Input<DeploymentCanarySettingArgs> canarySetting) {
+        public Builder canarySetting(@Nullable Output<DeploymentCanarySettingArgs> canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
 
         public Builder canarySetting(@Nullable DeploymentCanarySettingArgs canarySetting) {
-            this.canarySetting = Input.ofNullable(canarySetting);
+            this.canarySetting = Output.ofNullable(canarySetting);
             return this;
         }
 
-        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Input.ofNullable(clientCertificateId);
+            this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder dataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = Input.ofNullable(dataTraceEnabled);
+            this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder documentationVersion(@Nullable Input<String> documentationVersion) {
+        public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
         public Builder documentationVersion(@Nullable String documentationVersion) {
-            this.documentationVersion = Input.ofNullable(documentationVersion);
+            this.documentationVersion = Output.ofNullable(documentationVersion);
             return this;
         }
 
-        public Builder loggingLevel(@Nullable Input<String> loggingLevel) {
+        public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
         public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Input.ofNullable(loggingLevel);
+            this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder methodSettings(@Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings) {
+        public Builder methodSettings(@Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
 
         public Builder methodSettings(@Nullable List<DeploymentMethodSettingArgs> methodSettings) {
-            this.methodSettings = Input.ofNullable(methodSettings);
+            this.methodSettings = Output.ofNullable(methodSettings);
             return this;
         }
 
-        public Builder metricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
 
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
-            this.metricsEnabled = Input.ofNullable(metricsEnabled);
+            this.metricsEnabled = Output.ofNullable(metricsEnabled);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DeploymentTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DeploymentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DeploymentTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder throttlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = Input.ofNullable(throttlingBurstLimit);
+            this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
             return this;
         }
 
-        public Builder throttlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = Input.ofNullable(throttlingRateLimit);
+            this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
             return this;
         }
 
-        public Builder tracingEnabled(@Nullable Input<Boolean> tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Output<Boolean> tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
 
         public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
-            this.tracingEnabled = Input.ofNullable(tracingEnabled);
+            this.tracingEnabled = Output.ofNullable(tracingEnabled);
             return this;
         }
 
-        public Builder variables(@Nullable Input<Object> variables) {
+        public Builder variables(@Nullable Output<Object> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Object variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public DeploymentStageDescriptionArgs build() {

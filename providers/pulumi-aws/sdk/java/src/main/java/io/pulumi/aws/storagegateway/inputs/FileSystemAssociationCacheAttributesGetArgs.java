@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class FileSystemAssociationCacheAttributesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="cacheStaleTimeoutInSeconds")
-      private final @Nullable Input<Integer> cacheStaleTimeoutInSeconds;
+      private final @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
 
-    public Input<Integer> getCacheStaleTimeoutInSeconds() {
-        return this.cacheStaleTimeoutInSeconds == null ? Input.empty() : this.cacheStaleTimeoutInSeconds;
+    public Output<Integer> getCacheStaleTimeoutInSeconds() {
+        return this.cacheStaleTimeoutInSeconds == null ? Output.empty() : this.cacheStaleTimeoutInSeconds;
     }
 
-    public FileSystemAssociationCacheAttributesGetArgs(@Nullable Input<Integer> cacheStaleTimeoutInSeconds) {
+    public FileSystemAssociationCacheAttributesGetArgs(@Nullable Output<Integer> cacheStaleTimeoutInSeconds) {
         this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
     }
 
     private FileSystemAssociationCacheAttributesGetArgs() {
-        this.cacheStaleTimeoutInSeconds = Input.empty();
+        this.cacheStaleTimeoutInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class FileSystemAssociationCacheAttributesGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cacheStaleTimeoutInSeconds;
+        private @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class FileSystemAssociationCacheAttributesGetArgs extends io.pulumi
     	      this.cacheStaleTimeoutInSeconds = defaults.cacheStaleTimeoutInSeconds;
         }
 
-        public Builder cacheStaleTimeoutInSeconds(@Nullable Input<Integer> cacheStaleTimeoutInSeconds) {
+        public Builder cacheStaleTimeoutInSeconds(@Nullable Output<Integer> cacheStaleTimeoutInSeconds) {
             this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
         }
 
         public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
-            this.cacheStaleTimeoutInSeconds = Input.ofNullable(cacheStaleTimeoutInSeconds);
+            this.cacheStaleTimeoutInSeconds = Output.ofNullable(cacheStaleTimeoutInSeconds);
             return this;
         }
         public FileSystemAssociationCacheAttributesGetArgs build() {

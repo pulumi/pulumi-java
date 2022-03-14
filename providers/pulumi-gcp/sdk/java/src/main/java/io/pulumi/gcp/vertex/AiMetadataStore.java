@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.vertex;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -198,14 +197,14 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AiMetadataStore(String name, @Nullable AiMetadataStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vertex/aiMetadataStore:AiMetadataStore", name, args == null ? AiMetadataStoreArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:vertex/aiMetadataStore:AiMetadataStore", name, args == null ? AiMetadataStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AiMetadataStore(String name, Input<String> id, @Nullable io.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AiMetadataStore(String name, Output<String> id, @Nullable io.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:vertex/aiMetadataStore:AiMetadataStore", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -221,7 +220,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AiMetadataStore get(String name, Input<String> id, @Nullable io.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AiMetadataStore get(String name, Output<String> id, @Nullable io.pulumi.gcp.vertex.inputs.AiMetadataStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AiMetadataStore(name, id, state, options);
     }
 }

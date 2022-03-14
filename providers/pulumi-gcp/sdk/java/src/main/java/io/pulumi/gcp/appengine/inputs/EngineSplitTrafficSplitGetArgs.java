@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allocations", required=true)
-      private final Input<Map<String,String>> allocations;
+      private final Output<Map<String,String>> allocations;
 
-    public Input<Map<String,String>> getAllocations() {
+    public Output<Map<String,String>> getAllocations() {
         return this.allocations;
     }
 
@@ -32,22 +32,22 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="shardBy")
-      private final @Nullable Input<String> shardBy;
+      private final @Nullable Output<String> shardBy;
 
-    public Input<String> getShardBy() {
-        return this.shardBy == null ? Input.empty() : this.shardBy;
+    public Output<String> getShardBy() {
+        return this.shardBy == null ? Output.empty() : this.shardBy;
     }
 
     public EngineSplitTrafficSplitGetArgs(
-        Input<Map<String,String>> allocations,
-        @Nullable Input<String> shardBy) {
+        Output<Map<String,String>> allocations,
+        @Nullable Output<String> shardBy) {
         this.allocations = Objects.requireNonNull(allocations, "expected parameter 'allocations' to be non-null");
         this.shardBy = shardBy;
     }
 
     private EngineSplitTrafficSplitGetArgs() {
-        this.allocations = Input.empty();
-        this.shardBy = Input.empty();
+        this.allocations = Output.empty();
+        this.shardBy = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> allocations;
-        private @Nullable Input<String> shardBy;
+        private Output<Map<String,String>> allocations;
+        private @Nullable Output<String> shardBy;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
     	      this.shardBy = defaults.shardBy;
         }
 
-        public Builder allocations(Input<Map<String,String>> allocations) {
+        public Builder allocations(Output<Map<String,String>> allocations) {
             this.allocations = Objects.requireNonNull(allocations);
             return this;
         }
 
         public Builder allocations(Map<String,String> allocations) {
-            this.allocations = Input.of(Objects.requireNonNull(allocations));
+            this.allocations = Output.of(Objects.requireNonNull(allocations));
             return this;
         }
 
-        public Builder shardBy(@Nullable Input<String> shardBy) {
+        public Builder shardBy(@Nullable Output<String> shardBy) {
             this.shardBy = shardBy;
             return this;
         }
 
         public Builder shardBy(@Nullable String shardBy) {
-            this.shardBy = Input.ofNullable(shardBy);
+            this.shardBy = Output.ofNullable(shardBy);
             return this;
         }
         public EngineSplitTrafficSplitGetArgs build() {

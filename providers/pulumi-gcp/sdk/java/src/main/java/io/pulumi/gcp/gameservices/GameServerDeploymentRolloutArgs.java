@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="defaultGameServerConfig", required=true)
-      private final Input<String> defaultGameServerConfig;
+      private final Output<String> defaultGameServerConfig;
 
-    public Input<String> getDefaultGameServerConfig() {
+    public Output<String> getDefaultGameServerConfig() {
         return this.defaultGameServerConfig;
     }
 
@@ -34,9 +34,9 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deploymentId", required=true)
-      private final Input<String> deploymentId;
+      private final Output<String> deploymentId;
 
-    public Input<String> getDeploymentId() {
+    public Output<String> getDeploymentId() {
         return this.deploymentId;
     }
 
@@ -49,10 +49,10 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="gameServerConfigOverrides")
-      private final @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
+      private final @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
 
-    public Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> getGameServerConfigOverrides() {
-        return this.gameServerConfigOverrides == null ? Input.empty() : this.gameServerConfigOverrides;
+    public Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> getGameServerConfigOverrides() {
+        return this.gameServerConfigOverrides == null ? Output.empty() : this.gameServerConfigOverrides;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public GameServerDeploymentRolloutArgs(
-        Input<String> defaultGameServerConfig,
-        Input<String> deploymentId,
-        @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides,
-        @Nullable Input<String> project) {
+        Output<String> defaultGameServerConfig,
+        Output<String> deploymentId,
+        @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides,
+        @Nullable Output<String> project) {
         this.defaultGameServerConfig = Objects.requireNonNull(defaultGameServerConfig, "expected parameter 'defaultGameServerConfig' to be non-null");
         this.deploymentId = Objects.requireNonNull(deploymentId, "expected parameter 'deploymentId' to be non-null");
         this.gameServerConfigOverrides = gameServerConfigOverrides;
@@ -79,10 +79,10 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     }
 
     private GameServerDeploymentRolloutArgs() {
-        this.defaultGameServerConfig = Input.empty();
-        this.deploymentId = Input.empty();
-        this.gameServerConfigOverrides = Input.empty();
-        this.project = Input.empty();
+        this.defaultGameServerConfig = Output.empty();
+        this.deploymentId = Output.empty();
+        this.gameServerConfigOverrides = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> defaultGameServerConfig;
-        private Input<String> deploymentId;
-        private @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
-        private @Nullable Input<String> project;
+        private Output<String> defaultGameServerConfig;
+        private Output<String> deploymentId;
+        private @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     	      this.project = defaults.project;
         }
 
-        public Builder defaultGameServerConfig(Input<String> defaultGameServerConfig) {
+        public Builder defaultGameServerConfig(Output<String> defaultGameServerConfig) {
             this.defaultGameServerConfig = Objects.requireNonNull(defaultGameServerConfig);
             return this;
         }
 
         public Builder defaultGameServerConfig(String defaultGameServerConfig) {
-            this.defaultGameServerConfig = Input.of(Objects.requireNonNull(defaultGameServerConfig));
+            this.defaultGameServerConfig = Output.of(Objects.requireNonNull(defaultGameServerConfig));
             return this;
         }
 
-        public Builder deploymentId(Input<String> deploymentId) {
+        public Builder deploymentId(Output<String> deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
         public Builder deploymentId(String deploymentId) {
-            this.deploymentId = Input.of(Objects.requireNonNull(deploymentId));
+            this.deploymentId = Output.of(Objects.requireNonNull(deploymentId));
             return this;
         }
 
-        public Builder gameServerConfigOverrides(@Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides) {
+        public Builder gameServerConfigOverrides(@Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides) {
             this.gameServerConfigOverrides = gameServerConfigOverrides;
             return this;
         }
 
         public Builder gameServerConfigOverrides(@Nullable List<GameServerDeploymentRolloutGameServerConfigOverrideArgs> gameServerConfigOverrides) {
-            this.gameServerConfigOverrides = Input.ofNullable(gameServerConfigOverrides);
+            this.gameServerConfigOverrides = Output.ofNullable(gameServerConfigOverrides);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public GameServerDeploymentRolloutArgs build() {

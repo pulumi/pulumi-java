@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
      * 
      */
     @InputImport(name="allowNonRestoredState")
-      private final @Nullable Input<Boolean> allowNonRestoredState;
+      private final @Nullable Output<Boolean> allowNonRestoredState;
 
-    public Input<Boolean> getAllowNonRestoredState() {
-        return this.allowNonRestoredState == null ? Input.empty() : this.allowNonRestoredState;
+    public Output<Boolean> getAllowNonRestoredState() {
+        return this.allowNonRestoredState == null ? Output.empty() : this.allowNonRestoredState;
     }
 
-    public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs(@Nullable Input<Boolean> allowNonRestoredState) {
+    public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs(@Nullable Output<Boolean> allowNonRestoredState) {
         this.allowNonRestoredState = allowNonRestoredState;
     }
 
     private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs() {
-        this.allowNonRestoredState = Input.empty();
+        this.allowNonRestoredState = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowNonRestoredState;
+        private @Nullable Output<Boolean> allowNonRestoredState;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
     	      this.allowNonRestoredState = defaults.allowNonRestoredState;
         }
 
-        public Builder allowNonRestoredState(@Nullable Input<Boolean> allowNonRestoredState) {
+        public Builder allowNonRestoredState(@Nullable Output<Boolean> allowNonRestoredState) {
             this.allowNonRestoredState = allowNonRestoredState;
             return this;
         }
 
         public Builder allowNonRestoredState(@Nullable Boolean allowNonRestoredState) {
-            this.allowNonRestoredState = Input.ofNullable(allowNonRestoredState);
+            this.allowNonRestoredState = Output.ofNullable(allowNonRestoredState);
             return this;
         }
         public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs build() {

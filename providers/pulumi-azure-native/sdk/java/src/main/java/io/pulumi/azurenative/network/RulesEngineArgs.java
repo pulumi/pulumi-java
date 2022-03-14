@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RulesEngineRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontDoorName", required=true)
-      private final Input<String> frontDoorName;
+      private final Output<String> frontDoorName;
 
-    public Input<String> getFrontDoorName() {
+    public Output<String> getFrontDoorName() {
         return this.frontDoorName;
     }
 
@@ -32,9 +32,9 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,10 +43,10 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<RulesEngineRuleArgs>> rules;
+      private final @Nullable Output<List<RulesEngineRuleArgs>> rules;
 
-    public Input<List<RulesEngineRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<RulesEngineRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rulesEngineName")
-      private final @Nullable Input<String> rulesEngineName;
+      private final @Nullable Output<String> rulesEngineName;
 
-    public Input<String> getRulesEngineName() {
-        return this.rulesEngineName == null ? Input.empty() : this.rulesEngineName;
+    public Output<String> getRulesEngineName() {
+        return this.rulesEngineName == null ? Output.empty() : this.rulesEngineName;
     }
 
     public RulesEngineArgs(
-        Input<String> frontDoorName,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<RulesEngineRuleArgs>> rules,
-        @Nullable Input<String> rulesEngineName) {
+        Output<String> frontDoorName,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<RulesEngineRuleArgs>> rules,
+        @Nullable Output<String> rulesEngineName) {
         this.frontDoorName = Objects.requireNonNull(frontDoorName, "expected parameter 'frontDoorName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.rules = rules;
@@ -72,10 +72,10 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RulesEngineArgs() {
-        this.frontDoorName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rules = Input.empty();
-        this.rulesEngineName = Input.empty();
+        this.frontDoorName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rules = Output.empty();
+        this.rulesEngineName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> frontDoorName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<RulesEngineRuleArgs>> rules;
-        private @Nullable Input<String> rulesEngineName;
+        private Output<String> frontDoorName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<RulesEngineRuleArgs>> rules;
+        private @Nullable Output<String> rulesEngineName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rulesEngineName = defaults.rulesEngineName;
         }
 
-        public Builder frontDoorName(Input<String> frontDoorName) {
+        public Builder frontDoorName(Output<String> frontDoorName) {
             this.frontDoorName = Objects.requireNonNull(frontDoorName);
             return this;
         }
 
         public Builder frontDoorName(String frontDoorName) {
-            this.frontDoorName = Input.of(Objects.requireNonNull(frontDoorName));
+            this.frontDoorName = Output.of(Objects.requireNonNull(frontDoorName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<RulesEngineRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<RulesEngineRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<RulesEngineRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder rulesEngineName(@Nullable Input<String> rulesEngineName) {
+        public Builder rulesEngineName(@Nullable Output<String> rulesEngineName) {
             this.rulesEngineName = rulesEngineName;
             return this;
         }
 
         public Builder rulesEngineName(@Nullable String rulesEngineName) {
-            this.rulesEngineName = Input.ofNullable(rulesEngineName);
+            this.rulesEngineName = Output.ofNullable(rulesEngineName);
             return this;
         }
         public RulesEngineArgs build() {

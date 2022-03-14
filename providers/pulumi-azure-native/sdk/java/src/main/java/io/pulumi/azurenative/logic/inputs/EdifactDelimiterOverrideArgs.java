@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.EdifactDecimalIndicator;
 import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,9 +26,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-      private final Input<Integer> componentSeparator;
+      private final Output<Integer> componentSeparator;
 
-    public Input<Integer> getComponentSeparator() {
+    public Output<Integer> getComponentSeparator() {
         return this.componentSeparator;
     }
 
@@ -37,9 +37,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-      private final Input<Integer> dataElementSeparator;
+      private final Output<Integer> dataElementSeparator;
 
-    public Input<Integer> getDataElementSeparator() {
+    public Output<Integer> getDataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -48,9 +48,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="decimalPointIndicator", required=true)
-      private final Input<EdifactDecimalIndicator> decimalPointIndicator;
+      private final Output<EdifactDecimalIndicator> decimalPointIndicator;
 
-    public Input<EdifactDecimalIndicator> getDecimalPointIndicator() {
+    public Output<EdifactDecimalIndicator> getDecimalPointIndicator() {
         return this.decimalPointIndicator;
     }
 
@@ -59,10 +59,10 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messageAssociationAssignedCode")
-      private final @Nullable Input<String> messageAssociationAssignedCode;
+      private final @Nullable Output<String> messageAssociationAssignedCode;
 
-    public Input<String> getMessageAssociationAssignedCode() {
-        return this.messageAssociationAssignedCode == null ? Input.empty() : this.messageAssociationAssignedCode;
+    public Output<String> getMessageAssociationAssignedCode() {
+        return this.messageAssociationAssignedCode == null ? Output.empty() : this.messageAssociationAssignedCode;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messageId")
-      private final @Nullable Input<String> messageId;
+      private final @Nullable Output<String> messageId;
 
-    public Input<String> getMessageId() {
-        return this.messageId == null ? Input.empty() : this.messageId;
+    public Output<String> getMessageId() {
+        return this.messageId == null ? Output.empty() : this.messageId;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messageRelease")
-      private final @Nullable Input<String> messageRelease;
+      private final @Nullable Output<String> messageRelease;
 
-    public Input<String> getMessageRelease() {
-        return this.messageRelease == null ? Input.empty() : this.messageRelease;
+    public Output<String> getMessageRelease() {
+        return this.messageRelease == null ? Output.empty() : this.messageRelease;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messageVersion")
-      private final @Nullable Input<String> messageVersion;
+      private final @Nullable Output<String> messageVersion;
 
-    public Input<String> getMessageVersion() {
-        return this.messageVersion == null ? Input.empty() : this.messageVersion;
+    public Output<String> getMessageVersion() {
+        return this.messageVersion == null ? Output.empty() : this.messageVersion;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="releaseIndicator", required=true)
-      private final Input<Integer> releaseIndicator;
+      private final Output<Integer> releaseIndicator;
 
-    public Input<Integer> getReleaseIndicator() {
+    public Output<Integer> getReleaseIndicator() {
         return this.releaseIndicator;
     }
 
@@ -114,9 +114,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="repetitionSeparator", required=true)
-      private final Input<Integer> repetitionSeparator;
+      private final Output<Integer> repetitionSeparator;
 
-    public Input<Integer> getRepetitionSeparator() {
+    public Output<Integer> getRepetitionSeparator() {
         return this.repetitionSeparator;
     }
 
@@ -125,9 +125,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-      private final Input<Integer> segmentTerminator;
+      private final Output<Integer> segmentTerminator;
 
-    public Input<Integer> getSegmentTerminator() {
+    public Output<Integer> getSegmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -136,9 +136,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-      private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+      private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Input<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -147,25 +147,25 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetNamespace")
-      private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Output<String> targetNamespace;
 
-    public Input<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Input.empty() : this.targetNamespace;
+    public Output<String> getTargetNamespace() {
+        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
     }
 
     public EdifactDelimiterOverrideArgs(
-        Input<Integer> componentSeparator,
-        Input<Integer> dataElementSeparator,
-        Input<EdifactDecimalIndicator> decimalPointIndicator,
-        @Nullable Input<String> messageAssociationAssignedCode,
-        @Nullable Input<String> messageId,
-        @Nullable Input<String> messageRelease,
-        @Nullable Input<String> messageVersion,
-        Input<Integer> releaseIndicator,
-        Input<Integer> repetitionSeparator,
-        Input<Integer> segmentTerminator,
-        Input<SegmentTerminatorSuffix> segmentTerminatorSuffix,
-        @Nullable Input<String> targetNamespace) {
+        Output<Integer> componentSeparator,
+        Output<Integer> dataElementSeparator,
+        Output<EdifactDecimalIndicator> decimalPointIndicator,
+        @Nullable Output<String> messageAssociationAssignedCode,
+        @Nullable Output<String> messageId,
+        @Nullable Output<String> messageRelease,
+        @Nullable Output<String> messageVersion,
+        Output<Integer> releaseIndicator,
+        Output<Integer> repetitionSeparator,
+        Output<Integer> segmentTerminator,
+        Output<SegmentTerminatorSuffix> segmentTerminatorSuffix,
+        @Nullable Output<String> targetNamespace) {
         this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
         this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
         this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator, "expected parameter 'decimalPointIndicator' to be non-null");
@@ -181,18 +181,18 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     }
 
     private EdifactDelimiterOverrideArgs() {
-        this.componentSeparator = Input.empty();
-        this.dataElementSeparator = Input.empty();
-        this.decimalPointIndicator = Input.empty();
-        this.messageAssociationAssignedCode = Input.empty();
-        this.messageId = Input.empty();
-        this.messageRelease = Input.empty();
-        this.messageVersion = Input.empty();
-        this.releaseIndicator = Input.empty();
-        this.repetitionSeparator = Input.empty();
-        this.segmentTerminator = Input.empty();
-        this.segmentTerminatorSuffix = Input.empty();
-        this.targetNamespace = Input.empty();
+        this.componentSeparator = Output.empty();
+        this.dataElementSeparator = Output.empty();
+        this.decimalPointIndicator = Output.empty();
+        this.messageAssociationAssignedCode = Output.empty();
+        this.messageId = Output.empty();
+        this.messageRelease = Output.empty();
+        this.messageVersion = Output.empty();
+        this.releaseIndicator = Output.empty();
+        this.repetitionSeparator = Output.empty();
+        this.segmentTerminator = Output.empty();
+        this.segmentTerminatorSuffix = Output.empty();
+        this.targetNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,18 +204,18 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<Integer> componentSeparator;
-        private Input<Integer> dataElementSeparator;
-        private Input<EdifactDecimalIndicator> decimalPointIndicator;
-        private @Nullable Input<String> messageAssociationAssignedCode;
-        private @Nullable Input<String> messageId;
-        private @Nullable Input<String> messageRelease;
-        private @Nullable Input<String> messageVersion;
-        private Input<Integer> releaseIndicator;
-        private Input<Integer> repetitionSeparator;
-        private Input<Integer> segmentTerminator;
-        private Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
-        private @Nullable Input<String> targetNamespace;
+        private Output<Integer> componentSeparator;
+        private Output<Integer> dataElementSeparator;
+        private Output<EdifactDecimalIndicator> decimalPointIndicator;
+        private @Nullable Output<String> messageAssociationAssignedCode;
+        private @Nullable Output<String> messageId;
+        private @Nullable Output<String> messageRelease;
+        private @Nullable Output<String> messageVersion;
+        private Output<Integer> releaseIndicator;
+        private Output<Integer> repetitionSeparator;
+        private Output<Integer> segmentTerminator;
+        private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+        private @Nullable Output<String> targetNamespace;
 
         public Builder() {
     	      // Empty
@@ -237,123 +237,123 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder componentSeparator(Input<Integer> componentSeparator) {
+        public Builder componentSeparator(Output<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Input.of(Objects.requireNonNull(componentSeparator));
+            this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
 
-        public Builder dataElementSeparator(Input<Integer> dataElementSeparator) {
+        public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Input.of(Objects.requireNonNull(dataElementSeparator));
+            this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
 
-        public Builder decimalPointIndicator(Input<EdifactDecimalIndicator> decimalPointIndicator) {
+        public Builder decimalPointIndicator(Output<EdifactDecimalIndicator> decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
 
         public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
-            this.decimalPointIndicator = Input.of(Objects.requireNonNull(decimalPointIndicator));
+            this.decimalPointIndicator = Output.of(Objects.requireNonNull(decimalPointIndicator));
             return this;
         }
 
-        public Builder messageAssociationAssignedCode(@Nullable Input<String> messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable Output<String> messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
-            this.messageAssociationAssignedCode = Input.ofNullable(messageAssociationAssignedCode);
+            this.messageAssociationAssignedCode = Output.ofNullable(messageAssociationAssignedCode);
             return this;
         }
 
-        public Builder messageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Input.ofNullable(messageId);
+            this.messageId = Output.ofNullable(messageId);
             return this;
         }
 
-        public Builder messageRelease(@Nullable Input<String> messageRelease) {
+        public Builder messageRelease(@Nullable Output<String> messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
 
         public Builder messageRelease(@Nullable String messageRelease) {
-            this.messageRelease = Input.ofNullable(messageRelease);
+            this.messageRelease = Output.ofNullable(messageRelease);
             return this;
         }
 
-        public Builder messageVersion(@Nullable Input<String> messageVersion) {
+        public Builder messageVersion(@Nullable Output<String> messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
 
         public Builder messageVersion(@Nullable String messageVersion) {
-            this.messageVersion = Input.ofNullable(messageVersion);
+            this.messageVersion = Output.ofNullable(messageVersion);
             return this;
         }
 
-        public Builder releaseIndicator(Input<Integer> releaseIndicator) {
+        public Builder releaseIndicator(Output<Integer> releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
 
         public Builder releaseIndicator(Integer releaseIndicator) {
-            this.releaseIndicator = Input.of(Objects.requireNonNull(releaseIndicator));
+            this.releaseIndicator = Output.of(Objects.requireNonNull(releaseIndicator));
             return this;
         }
 
-        public Builder repetitionSeparator(Input<Integer> repetitionSeparator) {
+        public Builder repetitionSeparator(Output<Integer> repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
 
         public Builder repetitionSeparator(Integer repetitionSeparator) {
-            this.repetitionSeparator = Input.of(Objects.requireNonNull(repetitionSeparator));
+            this.repetitionSeparator = Output.of(Objects.requireNonNull(repetitionSeparator));
             return this;
         }
 
-        public Builder segmentTerminator(Input<Integer> segmentTerminator) {
+        public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Input.of(Objects.requireNonNull(segmentTerminator));
+            this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
 
-        public Builder segmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
+            this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
 
-        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Input.ofNullable(targetNamespace);
+            this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
         }
         public EdifactDelimiterOverrideArgs build() {

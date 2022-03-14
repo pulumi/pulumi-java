@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,29 +20,29 @@ public final class DatasetFilterExpressionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
     @InputImport(name="valuesMap", required=true)
-      private final Input<List<DatasetFilterValueArgs>> valuesMap;
+      private final Output<List<DatasetFilterValueArgs>> valuesMap;
 
-    public Input<List<DatasetFilterValueArgs>> getValuesMap() {
+    public Output<List<DatasetFilterValueArgs>> getValuesMap() {
         return this.valuesMap;
     }
 
     public DatasetFilterExpressionArgs(
-        Input<String> expression,
-        Input<List<DatasetFilterValueArgs>> valuesMap) {
+        Output<String> expression,
+        Output<List<DatasetFilterValueArgs>> valuesMap) {
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
         this.valuesMap = Objects.requireNonNull(valuesMap, "expected parameter 'valuesMap' to be non-null");
     }
 
     private DatasetFilterExpressionArgs() {
-        this.expression = Input.empty();
-        this.valuesMap = Input.empty();
+        this.expression = Output.empty();
+        this.valuesMap = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class DatasetFilterExpressionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> expression;
-        private Input<List<DatasetFilterValueArgs>> valuesMap;
+        private Output<String> expression;
+        private Output<List<DatasetFilterValueArgs>> valuesMap;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class DatasetFilterExpressionArgs extends io.pulumi.resources.Resou
     	      this.valuesMap = defaults.valuesMap;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder valuesMap(Input<List<DatasetFilterValueArgs>> valuesMap) {
+        public Builder valuesMap(Output<List<DatasetFilterValueArgs>> valuesMap) {
             this.valuesMap = Objects.requireNonNull(valuesMap);
             return this;
         }
 
         public Builder valuesMap(List<DatasetFilterValueArgs> valuesMap) {
-            this.valuesMap = Input.of(Objects.requireNonNull(valuesMap));
+            this.valuesMap = Output.of(Objects.requireNonNull(valuesMap));
             return this;
         }
         public DatasetFilterExpressionArgs build() {

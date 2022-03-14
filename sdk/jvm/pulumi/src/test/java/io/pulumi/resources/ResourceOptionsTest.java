@@ -1,8 +1,8 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
-import io.pulumi.core.InputOutputTests;
+import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -20,7 +20,7 @@ class ResourceOptionsTest {
     private static Stream<Arguments> testMergeSharedOptions() {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
-                        null, null, Input.empty(), false, null,
+                        null, null, Output.empty(), false, null,
                         null, null, null, null, null, null, null
                 )),
                 arguments(new TestResourceOptions(
@@ -38,9 +38,9 @@ class ResourceOptionsTest {
                                 null
                         ),
                         new TestResourceOptions(
-                                Input.of("id"),
+                                Output.of("id"),
                                 null,
-                                Input.empty(),
+                                Output.empty(),
                                 true,
                                 List.of("b"),
                                 "test",
@@ -52,9 +52,9 @@ class ResourceOptionsTest {
                                 List.of()
                         ),
                         new TestResourceOptions(
-                                Input.of("id"),
+                                Output.of("id"),
                                 null,
-                                Input.empty(),
+                                Output.empty(),
                                 true,
                                 List.of("a", "b"),
                                 "test",
@@ -65,7 +65,7 @@ class ResourceOptionsTest {
                                 "urn",
                                 List.of()
                         )
-                ) // FIXME
+                ) // TODO: more test cases
         );
     }
 
@@ -73,13 +73,13 @@ class ResourceOptionsTest {
     @MethodSource
     void testMergeSharedOptions(ResourceOptions options1, ResourceOptions options2, ResourceOptions expected) {
         options1 = ResourceOptions.mergeSharedOptions(options1, options2);
-        assertThat(options1.id != null ? InputOutputTests.waitFor(options1.id).getValueNullable() : null)
-                .isEqualTo(expected.id != null ? InputOutputTests.waitFor(expected.id).getValueNullable() : null); // FIXME
+        assertThat(options1.id != null ? OutputTests.waitFor(options1.id).getValueNullable() : null)
+                .isEqualTo(expected.id != null ? OutputTests.waitFor(expected.id).getValueNullable() : null); // FIXME
         assertThat(options1.parent).isEqualTo(expected.parent);
         assertThatNullable(
-                InputOutputTests.waitFor(options1.dependsOn).getValueNullable()
+                OutputTests.waitFor(options1.dependsOn).getValueNullable()
         ).containsAll(
-                InputOutputTests.waitFor(expected.dependsOn).getValueNullable()
+                OutputTests.waitFor(expected.dependsOn).getValueNullable()
         );
         assertThat(options1.protect).isEqualTo(expected.protect);
         assertThatNullable(options1.ignoreChanges).containsAll(expected.ignoreChanges);
@@ -97,16 +97,16 @@ class ResourceOptionsTest {
         protected TestResourceOptions() { /* empty */ }
 
         public TestResourceOptions(
-                @Nullable Input<String> id,
+                @Nullable Output<String> id,
                 @Nullable Resource parent,
-                @Nullable Input<List<Resource>> dependsOn,
+                @Nullable Output<List<Resource>> dependsOn,
                 boolean protect,
                 @Nullable List<String> ignoreChanges,
                 @Nullable String version,
                 @Nullable ProviderResource provider,
                 @Nullable CustomTimeouts customTimeouts,
                 @Nullable List<ResourceTransformation> resourceTransformations,
-                @Nullable List<Input<Alias>> aliases,
+                @Nullable List<Output<Alias>> aliases,
                 @Nullable String urn,
                 @Nullable List<String> replaceOnChanges
         ) {

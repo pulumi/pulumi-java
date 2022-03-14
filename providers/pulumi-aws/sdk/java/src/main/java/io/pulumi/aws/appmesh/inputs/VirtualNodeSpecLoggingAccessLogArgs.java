@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogFileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<VirtualNodeSpecLoggingAccessLogFileArgs> file;
+      private final @Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file;
 
-    public Input<VirtualNodeSpecLoggingAccessLogFileArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<VirtualNodeSpecLoggingAccessLogFileArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
-    public VirtualNodeSpecLoggingAccessLogArgs(@Nullable Input<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
+    public VirtualNodeSpecLoggingAccessLogArgs(@Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
         this.file = file;
     }
 
     private VirtualNodeSpecLoggingAccessLogArgs() {
-        this.file = Input.empty();
+        this.file = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecLoggingAccessLogFileArgs> file;
+        private @Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
     	      this.file = defaults.file;
         }
 
-        public Builder file(@Nullable Input<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
+        public Builder file(@Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable VirtualNodeSpecLoggingAccessLogFileArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
         public VirtualNodeSpecLoggingAccessLogArgs build() {

@@ -11,7 +11,6 @@ import io.pulumi.azurenative.network.outputs.VpnConnectionResponse;
 import io.pulumi.azurenative.network.outputs.VpnGatewayIpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.VpnGatewayNatRuleResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -260,42 +259,42 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnGateway(String name, VpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VpnGateway", name, args == null ? VpnGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:VpnGateway", name, args == null ? VpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VpnGateway(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VpnGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VpnGateway", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:VpnGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:VpnGateway").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:VpnGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:VpnGateway").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -309,7 +308,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VpnGateway get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpnGateway(name, id, options);
     }
 }

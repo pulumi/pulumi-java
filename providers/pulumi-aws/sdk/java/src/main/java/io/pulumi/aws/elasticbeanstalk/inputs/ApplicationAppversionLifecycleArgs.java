@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deleteSourceFromS3")
-      private final @Nullable Input<Boolean> deleteSourceFromS3;
+      private final @Nullable Output<Boolean> deleteSourceFromS3;
 
-    public Input<Boolean> getDeleteSourceFromS3() {
-        return this.deleteSourceFromS3 == null ? Input.empty() : this.deleteSourceFromS3;
+    public Output<Boolean> getDeleteSourceFromS3() {
+        return this.deleteSourceFromS3 == null ? Output.empty() : this.deleteSourceFromS3;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxAgeInDays")
-      private final @Nullable Input<Integer> maxAgeInDays;
+      private final @Nullable Output<Integer> maxAgeInDays;
 
-    public Input<Integer> getMaxAgeInDays() {
-        return this.maxAgeInDays == null ? Input.empty() : this.maxAgeInDays;
+    public Output<Integer> getMaxAgeInDays() {
+        return this.maxAgeInDays == null ? Output.empty() : this.maxAgeInDays;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxCount")
-      private final @Nullable Input<Integer> maxCount;
+      private final @Nullable Output<Integer> maxCount;
 
-    public Input<Integer> getMaxCount() {
-        return this.maxCount == null ? Input.empty() : this.maxCount;
+    public Output<Integer> getMaxCount() {
+        return this.maxCount == null ? Output.empty() : this.maxCount;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceRole", required=true)
-      private final Input<String> serviceRole;
+      private final Output<String> serviceRole;
 
-    public Input<String> getServiceRole() {
+    public Output<String> getServiceRole() {
         return this.serviceRole;
     }
 
     public ApplicationAppversionLifecycleArgs(
-        @Nullable Input<Boolean> deleteSourceFromS3,
-        @Nullable Input<Integer> maxAgeInDays,
-        @Nullable Input<Integer> maxCount,
-        Input<String> serviceRole) {
+        @Nullable Output<Boolean> deleteSourceFromS3,
+        @Nullable Output<Integer> maxAgeInDays,
+        @Nullable Output<Integer> maxCount,
+        Output<String> serviceRole) {
         this.deleteSourceFromS3 = deleteSourceFromS3;
         this.maxAgeInDays = maxAgeInDays;
         this.maxCount = maxCount;
@@ -72,10 +72,10 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
     }
 
     private ApplicationAppversionLifecycleArgs() {
-        this.deleteSourceFromS3 = Input.empty();
-        this.maxAgeInDays = Input.empty();
-        this.maxCount = Input.empty();
-        this.serviceRole = Input.empty();
+        this.deleteSourceFromS3 = Output.empty();
+        this.maxAgeInDays = Output.empty();
+        this.maxCount = Output.empty();
+        this.serviceRole = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deleteSourceFromS3;
-        private @Nullable Input<Integer> maxAgeInDays;
-        private @Nullable Input<Integer> maxCount;
-        private Input<String> serviceRole;
+        private @Nullable Output<Boolean> deleteSourceFromS3;
+        private @Nullable Output<Integer> maxAgeInDays;
+        private @Nullable Output<Integer> maxCount;
+        private Output<String> serviceRole;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
     	      this.serviceRole = defaults.serviceRole;
         }
 
-        public Builder deleteSourceFromS3(@Nullable Input<Boolean> deleteSourceFromS3) {
+        public Builder deleteSourceFromS3(@Nullable Output<Boolean> deleteSourceFromS3) {
             this.deleteSourceFromS3 = deleteSourceFromS3;
             return this;
         }
 
         public Builder deleteSourceFromS3(@Nullable Boolean deleteSourceFromS3) {
-            this.deleteSourceFromS3 = Input.ofNullable(deleteSourceFromS3);
+            this.deleteSourceFromS3 = Output.ofNullable(deleteSourceFromS3);
             return this;
         }
 
-        public Builder maxAgeInDays(@Nullable Input<Integer> maxAgeInDays) {
+        public Builder maxAgeInDays(@Nullable Output<Integer> maxAgeInDays) {
             this.maxAgeInDays = maxAgeInDays;
             return this;
         }
 
         public Builder maxAgeInDays(@Nullable Integer maxAgeInDays) {
-            this.maxAgeInDays = Input.ofNullable(maxAgeInDays);
+            this.maxAgeInDays = Output.ofNullable(maxAgeInDays);
             return this;
         }
 
-        public Builder maxCount(@Nullable Input<Integer> maxCount) {
+        public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Input.ofNullable(maxCount);
+            this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
 
-        public Builder serviceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
         public Builder serviceRole(String serviceRole) {
-            this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
+            this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
         }
         public ApplicationAppversionLifecycleArgs build() {

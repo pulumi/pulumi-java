@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -31,22 +31,22 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<BucketReplicationConfigurationRuleArgs>> rules;
+      private final Output<List<BucketReplicationConfigurationRuleArgs>> rules;
 
-    public Input<List<BucketReplicationConfigurationRuleArgs>> getRules() {
+    public Output<List<BucketReplicationConfigurationRuleArgs>> getRules() {
         return this.rules;
     }
 
     public BucketReplicationConfigurationArgs(
-        Input<String> role,
-        Input<List<BucketReplicationConfigurationRuleArgs>> rules) {
+        Output<String> role,
+        Output<List<BucketReplicationConfigurationRuleArgs>> rules) {
         this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private BucketReplicationConfigurationArgs() {
-        this.role = Input.empty();
-        this.rules = Input.empty();
+        this.role = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> role;
-        private Input<List<BucketReplicationConfigurationRuleArgs>> rules;
+        private Output<String> role;
+        private Output<List<BucketReplicationConfigurationRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
     	      this.rules = defaults.rules;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder rules(Input<List<BucketReplicationConfigurationRuleArgs>> rules) {
+        public Builder rules(Output<List<BucketReplicationConfigurationRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<BucketReplicationConfigurationRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public BucketReplicationConfigurationArgs build() {

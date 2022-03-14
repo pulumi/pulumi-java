@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -26,9 +26,9 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="colSpan", required=true)
-      private final Input<Integer> colSpan;
+      private final Output<Integer> colSpan;
 
-    public Input<Integer> getColSpan() {
+    public Output<Integer> getColSpan() {
         return this.colSpan;
     }
 
@@ -37,10 +37,10 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,Object>> metadata;
+      private final @Nullable Output<Map<String,Object>> metadata;
 
-    public Input<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,Object>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rowSpan", required=true)
-      private final Input<Integer> rowSpan;
+      private final Output<Integer> rowSpan;
 
-    public Input<Integer> getRowSpan() {
+    public Output<Integer> getRowSpan() {
         return this.rowSpan;
     }
 
@@ -59,9 +59,9 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="x", required=true)
-      private final Input<Integer> x;
+      private final Output<Integer> x;
 
-    public Input<Integer> getX() {
+    public Output<Integer> getX() {
         return this.x;
     }
 
@@ -70,18 +70,18 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="y", required=true)
-      private final Input<Integer> y;
+      private final Output<Integer> y;
 
-    public Input<Integer> getY() {
+    public Output<Integer> getY() {
         return this.y;
     }
 
     public DashboardPartsPositionArgs(
-        Input<Integer> colSpan,
-        @Nullable Input<Map<String,Object>> metadata,
-        Input<Integer> rowSpan,
-        Input<Integer> x,
-        Input<Integer> y) {
+        Output<Integer> colSpan,
+        @Nullable Output<Map<String,Object>> metadata,
+        Output<Integer> rowSpan,
+        Output<Integer> x,
+        Output<Integer> y) {
         this.colSpan = Objects.requireNonNull(colSpan, "expected parameter 'colSpan' to be non-null");
         this.metadata = metadata;
         this.rowSpan = Objects.requireNonNull(rowSpan, "expected parameter 'rowSpan' to be non-null");
@@ -90,11 +90,11 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     }
 
     private DashboardPartsPositionArgs() {
-        this.colSpan = Input.empty();
-        this.metadata = Input.empty();
-        this.rowSpan = Input.empty();
-        this.x = Input.empty();
-        this.y = Input.empty();
+        this.colSpan = Output.empty();
+        this.metadata = Output.empty();
+        this.rowSpan = Output.empty();
+        this.x = Output.empty();
+        this.y = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Integer> colSpan;
-        private @Nullable Input<Map<String,Object>> metadata;
-        private Input<Integer> rowSpan;
-        private Input<Integer> x;
-        private Input<Integer> y;
+        private Output<Integer> colSpan;
+        private @Nullable Output<Map<String,Object>> metadata;
+        private Output<Integer> rowSpan;
+        private Output<Integer> x;
+        private Output<Integer> y;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     	      this.y = defaults.y;
         }
 
-        public Builder colSpan(Input<Integer> colSpan) {
+        public Builder colSpan(Output<Integer> colSpan) {
             this.colSpan = Objects.requireNonNull(colSpan);
             return this;
         }
 
         public Builder colSpan(Integer colSpan) {
-            this.colSpan = Input.of(Objects.requireNonNull(colSpan));
+            this.colSpan = Output.of(Objects.requireNonNull(colSpan));
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,Object>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder rowSpan(Input<Integer> rowSpan) {
+        public Builder rowSpan(Output<Integer> rowSpan) {
             this.rowSpan = Objects.requireNonNull(rowSpan);
             return this;
         }
 
         public Builder rowSpan(Integer rowSpan) {
-            this.rowSpan = Input.of(Objects.requireNonNull(rowSpan));
+            this.rowSpan = Output.of(Objects.requireNonNull(rowSpan));
             return this;
         }
 
-        public Builder x(Input<Integer> x) {
+        public Builder x(Output<Integer> x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
         public Builder x(Integer x) {
-            this.x = Input.of(Objects.requireNonNull(x));
+            this.x = Output.of(Objects.requireNonNull(x));
             return this;
         }
 
-        public Builder y(Input<Integer> y) {
+        public Builder y(Output<Integer> y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }
 
         public Builder y(Integer y) {
-            this.y = Input.of(Objects.requireNonNull(y));
+            this.y = Output.of(Objects.requireNonNull(y));
             return this;
         }
         public DashboardPartsPositionArgs build() {

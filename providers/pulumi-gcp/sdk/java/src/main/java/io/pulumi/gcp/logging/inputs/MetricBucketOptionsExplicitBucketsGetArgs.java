@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bounds", required=true)
-      private final Input<List<Double>> bounds;
+      private final Output<List<Double>> bounds;
 
-    public Input<List<Double>> getBounds() {
+    public Output<List<Double>> getBounds() {
         return this.bounds;
     }
 
-    public MetricBucketOptionsExplicitBucketsGetArgs(Input<List<Double>> bounds) {
+    public MetricBucketOptionsExplicitBucketsGetArgs(Output<List<Double>> bounds) {
         this.bounds = Objects.requireNonNull(bounds, "expected parameter 'bounds' to be non-null");
     }
 
     private MetricBucketOptionsExplicitBucketsGetArgs() {
-        this.bounds = Input.empty();
+        this.bounds = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<List<Double>> bounds;
+        private Output<List<Double>> bounds;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
     	      this.bounds = defaults.bounds;
         }
 
-        public Builder bounds(Input<List<Double>> bounds) {
+        public Builder bounds(Output<List<Double>> bounds) {
             this.bounds = Objects.requireNonNull(bounds);
             return this;
         }
 
         public Builder bounds(List<Double> bounds) {
-            this.bounds = Input.of(Objects.requireNonNull(bounds));
+            this.bounds = Output.of(Objects.requireNonNull(bounds));
             return this;
         }
         public MetricBucketOptionsExplicitBucketsGetArgs build() {

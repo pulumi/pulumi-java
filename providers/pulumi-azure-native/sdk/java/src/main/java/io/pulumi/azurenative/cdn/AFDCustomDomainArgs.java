@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.cdn.inputs.AFDDomainHttpsParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="azureDnsZone")
-      private final @Nullable Input<ResourceReferenceArgs> azureDnsZone;
+      private final @Nullable Output<ResourceReferenceArgs> azureDnsZone;
 
-    public Input<ResourceReferenceArgs> getAzureDnsZone() {
-        return this.azureDnsZone == null ? Input.empty() : this.azureDnsZone;
+    public Output<ResourceReferenceArgs> getAzureDnsZone() {
+        return this.azureDnsZone == null ? Output.empty() : this.azureDnsZone;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customDomainName")
-      private final @Nullable Input<String> customDomainName;
+      private final @Nullable Output<String> customDomainName;
 
-    public Input<String> getCustomDomainName() {
-        return this.customDomainName == null ? Input.empty() : this.customDomainName;
+    public Output<String> getCustomDomainName() {
+        return this.customDomainName == null ? Output.empty() : this.customDomainName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
@@ -54,9 +54,9 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -65,9 +65,9 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,19 +76,19 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tlsSettings")
-      private final @Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings;
+      private final @Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings;
 
-    public Input<AFDDomainHttpsParametersArgs> getTlsSettings() {
-        return this.tlsSettings == null ? Input.empty() : this.tlsSettings;
+    public Output<AFDDomainHttpsParametersArgs> getTlsSettings() {
+        return this.tlsSettings == null ? Output.empty() : this.tlsSettings;
     }
 
     public AFDCustomDomainArgs(
-        @Nullable Input<ResourceReferenceArgs> azureDnsZone,
-        @Nullable Input<String> customDomainName,
-        Input<String> hostName,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings) {
+        @Nullable Output<ResourceReferenceArgs> azureDnsZone,
+        @Nullable Output<String> customDomainName,
+        Output<String> hostName,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings) {
         this.azureDnsZone = azureDnsZone;
         this.customDomainName = customDomainName;
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
@@ -98,12 +98,12 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AFDCustomDomainArgs() {
-        this.azureDnsZone = Input.empty();
-        this.customDomainName = Input.empty();
-        this.hostName = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tlsSettings = Input.empty();
+        this.azureDnsZone = Output.empty();
+        this.customDomainName = Output.empty();
+        this.hostName = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tlsSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceReferenceArgs> azureDnsZone;
-        private @Nullable Input<String> customDomainName;
-        private Input<String> hostName;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings;
+        private @Nullable Output<ResourceReferenceArgs> azureDnsZone;
+        private @Nullable Output<String> customDomainName;
+        private Output<String> hostName;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tlsSettings = defaults.tlsSettings;
         }
 
-        public Builder azureDnsZone(@Nullable Input<ResourceReferenceArgs> azureDnsZone) {
+        public Builder azureDnsZone(@Nullable Output<ResourceReferenceArgs> azureDnsZone) {
             this.azureDnsZone = azureDnsZone;
             return this;
         }
 
         public Builder azureDnsZone(@Nullable ResourceReferenceArgs azureDnsZone) {
-            this.azureDnsZone = Input.ofNullable(azureDnsZone);
+            this.azureDnsZone = Output.ofNullable(azureDnsZone);
             return this;
         }
 
-        public Builder customDomainName(@Nullable Input<String> customDomainName) {
+        public Builder customDomainName(@Nullable Output<String> customDomainName) {
             this.customDomainName = customDomainName;
             return this;
         }
 
         public Builder customDomainName(@Nullable String customDomainName) {
-            this.customDomainName = Input.ofNullable(customDomainName);
+            this.customDomainName = Output.ofNullable(customDomainName);
             return this;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tlsSettings(@Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings) {
+        public Builder tlsSettings(@Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings) {
             this.tlsSettings = tlsSettings;
             return this;
         }
 
         public Builder tlsSettings(@Nullable AFDDomainHttpsParametersArgs tlsSettings) {
-            this.tlsSettings = Input.ofNullable(tlsSettings);
+            this.tlsSettings = Output.ofNullable(tlsSettings);
             return this;
         }
         public AFDCustomDomainArgs build() {

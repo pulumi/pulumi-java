@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="datastoreName")
-      private final @Nullable Input<String> datastoreName;
+      private final @Nullable Output<String> datastoreName;
 
-    public Input<String> getDatastoreName() {
-        return this.datastoreName == null ? Input.empty() : this.datastoreName;
+    public Output<String> getDatastoreName() {
+        return this.datastoreName == null ? Output.empty() : this.datastoreName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     public DatasetCreateRequestQueryArgs(
-        @Nullable Input<String> datastoreName,
-        @Nullable Input<String> query) {
+        @Nullable Output<String> datastoreName,
+        @Nullable Output<String> query) {
         this.datastoreName = datastoreName;
         this.query = query;
     }
 
     private DatasetCreateRequestQueryArgs() {
-        this.datastoreName = Input.empty();
-        this.query = Input.empty();
+        this.datastoreName = Output.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datastoreName;
-        private @Nullable Input<String> query;
+        private @Nullable Output<String> datastoreName;
+        private @Nullable Output<String> query;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
     	      this.query = defaults.query;
         }
 
-        public Builder datastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Output<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Input.ofNullable(datastoreName);
+            this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
         public DatasetCreateRequestQueryArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="generation")
-      private final @Nullable Input<Integer> generation;
+      private final @Nullable Output<Integer> generation;
 
-    public Input<Integer> getGeneration() {
-        return this.generation == null ? Input.empty() : this.generation;
+    public Output<Integer> getGeneration() {
+        return this.generation == null ? Output.empty() : this.generation;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
@@ -82,10 +82,10 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceVersion")
-      private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Output<String> resourceVersion;
 
-    public Input<String> getResourceVersion() {
-        return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
+    public Output<String> getResourceVersion() {
+        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -108,20 +108,20 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public DomainMappingMetadataArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<Integer> generation,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> namespace,
-        @Nullable Input<String> resourceVersion,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> uid) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<Integer> generation,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> namespace,
+        @Nullable Output<String> resourceVersion,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> uid) {
         this.annotations = annotations;
         this.generation = generation;
         this.labels = labels;
@@ -132,13 +132,13 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainMappingMetadataArgs() {
-        this.annotations = Input.empty();
-        this.generation = Input.empty();
-        this.labels = Input.empty();
-        this.namespace = Input.empty();
-        this.resourceVersion = Input.empty();
-        this.selfLink = Input.empty();
-        this.uid = Input.empty();
+        this.annotations = Output.empty();
+        this.generation = Output.empty();
+        this.labels = Output.empty();
+        this.namespace = Output.empty();
+        this.resourceVersion = Output.empty();
+        this.selfLink = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,13 +150,13 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<Integer> generation;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> namespace;
-        private @Nullable Input<String> resourceVersion;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> uid;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<Integer> generation;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> namespace;
+        private @Nullable Output<String> resourceVersion;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -173,73 +173,73 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
     	      this.uid = defaults.uid;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder generation(@Nullable Input<Integer> generation) {
+        public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
 
         public Builder generation(@Nullable Integer generation) {
-            this.generation = Input.ofNullable(generation);
+            this.generation = Output.ofNullable(generation);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Input.ofNullable(resourceVersion);
+            this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public DomainMappingMetadataArgs build() {

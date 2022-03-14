@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class VpcIpamOrganizationAdminAccountArgs extends io.pulumi.resourc
     public static final VpcIpamOrganizationAdminAccountArgs Empty = new VpcIpamOrganizationAdminAccountArgs();
 
     @InputImport(name="delegatedAdminAccountId", required=true)
-      private final Input<String> delegatedAdminAccountId;
+      private final Output<String> delegatedAdminAccountId;
 
-    public Input<String> getDelegatedAdminAccountId() {
+    public Output<String> getDelegatedAdminAccountId() {
         return this.delegatedAdminAccountId;
     }
 
-    public VpcIpamOrganizationAdminAccountArgs(Input<String> delegatedAdminAccountId) {
+    public VpcIpamOrganizationAdminAccountArgs(Output<String> delegatedAdminAccountId) {
         this.delegatedAdminAccountId = Objects.requireNonNull(delegatedAdminAccountId, "expected parameter 'delegatedAdminAccountId' to be non-null");
     }
 
     private VpcIpamOrganizationAdminAccountArgs() {
-        this.delegatedAdminAccountId = Input.empty();
+        this.delegatedAdminAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class VpcIpamOrganizationAdminAccountArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> delegatedAdminAccountId;
+        private Output<String> delegatedAdminAccountId;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class VpcIpamOrganizationAdminAccountArgs extends io.pulumi.resourc
     	      this.delegatedAdminAccountId = defaults.delegatedAdminAccountId;
         }
 
-        public Builder delegatedAdminAccountId(Input<String> delegatedAdminAccountId) {
+        public Builder delegatedAdminAccountId(Output<String> delegatedAdminAccountId) {
             this.delegatedAdminAccountId = Objects.requireNonNull(delegatedAdminAccountId);
             return this;
         }
 
         public Builder delegatedAdminAccountId(String delegatedAdminAccountId) {
-            this.delegatedAdminAccountId = Input.of(Objects.requireNonNull(delegatedAdminAccountId));
+            this.delegatedAdminAccountId = Output.of(Objects.requireNonNull(delegatedAdminAccountId));
             return this;
         }
         public VpcIpamOrganizationAdminAccountArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.IntegrationTlsConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheKeyParameters")
-      private final @Nullable Input<List<String>> cacheKeyParameters;
+      private final @Nullable Output<List<String>> cacheKeyParameters;
 
-    public Input<List<String>> getCacheKeyParameters() {
-        return this.cacheKeyParameters == null ? Input.empty() : this.cacheKeyParameters;
+    public Output<List<String>> getCacheKeyParameters() {
+        return this.cacheKeyParameters == null ? Output.empty() : this.cacheKeyParameters;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheNamespace")
-      private final @Nullable Input<String> cacheNamespace;
+      private final @Nullable Output<String> cacheNamespace;
 
-    public Input<String> getCacheNamespace() {
-        return this.cacheNamespace == null ? Input.empty() : this.cacheNamespace;
+    public Output<String> getCacheNamespace() {
+        return this.cacheNamespace == null ? Output.empty() : this.cacheNamespace;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionId")
-      private final @Nullable Input<String> connectionId;
+      private final @Nullable Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
-        return this.connectionId == null ? Input.empty() : this.connectionId;
+    public Output<String> getConnectionId() {
+        return this.connectionId == null ? Output.empty() : this.connectionId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionType")
-      private final @Nullable Input<String> connectionType;
+      private final @Nullable Output<String> connectionType;
 
-    public Input<String> getConnectionType() {
-        return this.connectionType == null ? Input.empty() : this.connectionType;
+    public Output<String> getConnectionType() {
+        return this.connectionType == null ? Output.empty() : this.connectionType;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentHandling")
-      private final @Nullable Input<String> contentHandling;
+      private final @Nullable Output<String> contentHandling;
 
-    public Input<String> getContentHandling() {
-        return this.contentHandling == null ? Input.empty() : this.contentHandling;
+    public Output<String> getContentHandling() {
+        return this.contentHandling == null ? Output.empty() : this.contentHandling;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<String> credentials;
+      private final @Nullable Output<String> credentials;
 
-    public Input<String> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<String> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod", required=true)
-      private final Input<String> httpMethod;
+      private final Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
+    public Output<String> getHttpMethod() {
         return this.httpMethod;
     }
 
@@ -105,10 +105,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="integrationHttpMethod")
-      private final @Nullable Input<String> integrationHttpMethod;
+      private final @Nullable Output<String> integrationHttpMethod;
 
-    public Input<String> getIntegrationHttpMethod() {
-        return this.integrationHttpMethod == null ? Input.empty() : this.integrationHttpMethod;
+    public Output<String> getIntegrationHttpMethod() {
+        return this.integrationHttpMethod == null ? Output.empty() : this.integrationHttpMethod;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passthroughBehavior")
-      private final @Nullable Input<String> passthroughBehavior;
+      private final @Nullable Output<String> passthroughBehavior;
 
-    public Input<String> getPassthroughBehavior() {
-        return this.passthroughBehavior == null ? Input.empty() : this.passthroughBehavior;
+    public Output<String> getPassthroughBehavior() {
+        return this.passthroughBehavior == null ? Output.empty() : this.passthroughBehavior;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestParameters")
-      private final @Nullable Input<Map<String,String>> requestParameters;
+      private final @Nullable Output<Map<String,String>> requestParameters;
 
-    public Input<Map<String,String>> getRequestParameters() {
-        return this.requestParameters == null ? Input.empty() : this.requestParameters;
+    public Output<Map<String,String>> getRequestParameters() {
+        return this.requestParameters == null ? Output.empty() : this.requestParameters;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTemplates")
-      private final @Nullable Input<Map<String,String>> requestTemplates;
+      private final @Nullable Output<Map<String,String>> requestTemplates;
 
-    public Input<Map<String,String>> getRequestTemplates() {
-        return this.requestTemplates == null ? Input.empty() : this.requestTemplates;
+    public Output<Map<String,String>> getRequestTemplates() {
+        return this.requestTemplates == null ? Output.empty() : this.requestTemplates;
     }
 
     /**
@@ -150,9 +150,9 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -161,9 +161,9 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-      private final Input<String> restApi;
+      private final Output<String> restApi;
 
-    public Input<String> getRestApi() {
+    public Output<String> getRestApi() {
         return this.restApi;
     }
 
@@ -172,10 +172,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutMilliseconds")
-      private final @Nullable Input<Integer> timeoutMilliseconds;
+      private final @Nullable Output<Integer> timeoutMilliseconds;
 
-    public Input<Integer> getTimeoutMilliseconds() {
-        return this.timeoutMilliseconds == null ? Input.empty() : this.timeoutMilliseconds;
+    public Output<Integer> getTimeoutMilliseconds() {
+        return this.timeoutMilliseconds == null ? Output.empty() : this.timeoutMilliseconds;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tlsConfig")
-      private final @Nullable Input<IntegrationTlsConfigArgs> tlsConfig;
+      private final @Nullable Output<IntegrationTlsConfigArgs> tlsConfig;
 
-    public Input<IntegrationTlsConfigArgs> getTlsConfig() {
-        return this.tlsConfig == null ? Input.empty() : this.tlsConfig;
+    public Output<IntegrationTlsConfigArgs> getTlsConfig() {
+        return this.tlsConfig == null ? Output.empty() : this.tlsConfig;
     }
 
     /**
@@ -194,9 +194,9 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -207,30 +207,30 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public IntegrationArgs(
-        @Nullable Input<List<String>> cacheKeyParameters,
-        @Nullable Input<String> cacheNamespace,
-        @Nullable Input<String> connectionId,
-        @Nullable Input<String> connectionType,
-        @Nullable Input<String> contentHandling,
-        @Nullable Input<String> credentials,
-        Input<String> httpMethod,
-        @Nullable Input<String> integrationHttpMethod,
-        @Nullable Input<String> passthroughBehavior,
-        @Nullable Input<Map<String,String>> requestParameters,
-        @Nullable Input<Map<String,String>> requestTemplates,
-        Input<String> resourceId,
-        Input<String> restApi,
-        @Nullable Input<Integer> timeoutMilliseconds,
-        @Nullable Input<IntegrationTlsConfigArgs> tlsConfig,
-        Input<String> type,
-        @Nullable Input<String> uri) {
+        @Nullable Output<List<String>> cacheKeyParameters,
+        @Nullable Output<String> cacheNamespace,
+        @Nullable Output<String> connectionId,
+        @Nullable Output<String> connectionType,
+        @Nullable Output<String> contentHandling,
+        @Nullable Output<String> credentials,
+        Output<String> httpMethod,
+        @Nullable Output<String> integrationHttpMethod,
+        @Nullable Output<String> passthroughBehavior,
+        @Nullable Output<Map<String,String>> requestParameters,
+        @Nullable Output<Map<String,String>> requestTemplates,
+        Output<String> resourceId,
+        Output<String> restApi,
+        @Nullable Output<Integer> timeoutMilliseconds,
+        @Nullable Output<IntegrationTlsConfigArgs> tlsConfig,
+        Output<String> type,
+        @Nullable Output<String> uri) {
         this.cacheKeyParameters = cacheKeyParameters;
         this.cacheNamespace = cacheNamespace;
         this.connectionId = connectionId;
@@ -251,23 +251,23 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntegrationArgs() {
-        this.cacheKeyParameters = Input.empty();
-        this.cacheNamespace = Input.empty();
-        this.connectionId = Input.empty();
-        this.connectionType = Input.empty();
-        this.contentHandling = Input.empty();
-        this.credentials = Input.empty();
-        this.httpMethod = Input.empty();
-        this.integrationHttpMethod = Input.empty();
-        this.passthroughBehavior = Input.empty();
-        this.requestParameters = Input.empty();
-        this.requestTemplates = Input.empty();
-        this.resourceId = Input.empty();
-        this.restApi = Input.empty();
-        this.timeoutMilliseconds = Input.empty();
-        this.tlsConfig = Input.empty();
-        this.type = Input.empty();
-        this.uri = Input.empty();
+        this.cacheKeyParameters = Output.empty();
+        this.cacheNamespace = Output.empty();
+        this.connectionId = Output.empty();
+        this.connectionType = Output.empty();
+        this.contentHandling = Output.empty();
+        this.credentials = Output.empty();
+        this.httpMethod = Output.empty();
+        this.integrationHttpMethod = Output.empty();
+        this.passthroughBehavior = Output.empty();
+        this.requestParameters = Output.empty();
+        this.requestTemplates = Output.empty();
+        this.resourceId = Output.empty();
+        this.restApi = Output.empty();
+        this.timeoutMilliseconds = Output.empty();
+        this.tlsConfig = Output.empty();
+        this.type = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -279,23 +279,23 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> cacheKeyParameters;
-        private @Nullable Input<String> cacheNamespace;
-        private @Nullable Input<String> connectionId;
-        private @Nullable Input<String> connectionType;
-        private @Nullable Input<String> contentHandling;
-        private @Nullable Input<String> credentials;
-        private Input<String> httpMethod;
-        private @Nullable Input<String> integrationHttpMethod;
-        private @Nullable Input<String> passthroughBehavior;
-        private @Nullable Input<Map<String,String>> requestParameters;
-        private @Nullable Input<Map<String,String>> requestTemplates;
-        private Input<String> resourceId;
-        private Input<String> restApi;
-        private @Nullable Input<Integer> timeoutMilliseconds;
-        private @Nullable Input<IntegrationTlsConfigArgs> tlsConfig;
-        private Input<String> type;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<List<String>> cacheKeyParameters;
+        private @Nullable Output<String> cacheNamespace;
+        private @Nullable Output<String> connectionId;
+        private @Nullable Output<String> connectionType;
+        private @Nullable Output<String> contentHandling;
+        private @Nullable Output<String> credentials;
+        private Output<String> httpMethod;
+        private @Nullable Output<String> integrationHttpMethod;
+        private @Nullable Output<String> passthroughBehavior;
+        private @Nullable Output<Map<String,String>> requestParameters;
+        private @Nullable Output<Map<String,String>> requestTemplates;
+        private Output<String> resourceId;
+        private Output<String> restApi;
+        private @Nullable Output<Integer> timeoutMilliseconds;
+        private @Nullable Output<IntegrationTlsConfigArgs> tlsConfig;
+        private Output<String> type;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -322,168 +322,168 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder cacheKeyParameters(@Nullable Input<List<String>> cacheKeyParameters) {
+        public Builder cacheKeyParameters(@Nullable Output<List<String>> cacheKeyParameters) {
             this.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
 
         public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
-            this.cacheKeyParameters = Input.ofNullable(cacheKeyParameters);
+            this.cacheKeyParameters = Output.ofNullable(cacheKeyParameters);
             return this;
         }
 
-        public Builder cacheNamespace(@Nullable Input<String> cacheNamespace) {
+        public Builder cacheNamespace(@Nullable Output<String> cacheNamespace) {
             this.cacheNamespace = cacheNamespace;
             return this;
         }
 
         public Builder cacheNamespace(@Nullable String cacheNamespace) {
-            this.cacheNamespace = Input.ofNullable(cacheNamespace);
+            this.cacheNamespace = Output.ofNullable(cacheNamespace);
             return this;
         }
 
-        public Builder connectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Input.ofNullable(connectionId);
+            this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
 
-        public Builder connectionType(@Nullable Input<String> connectionType) {
+        public Builder connectionType(@Nullable Output<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
         public Builder connectionType(@Nullable String connectionType) {
-            this.connectionType = Input.ofNullable(connectionType);
+            this.connectionType = Output.ofNullable(connectionType);
             return this;
         }
 
-        public Builder contentHandling(@Nullable Input<String> contentHandling) {
+        public Builder contentHandling(@Nullable Output<String> contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
         public Builder contentHandling(@Nullable String contentHandling) {
-            this.contentHandling = Input.ofNullable(contentHandling);
+            this.contentHandling = Output.ofNullable(contentHandling);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<String> credentials) {
+        public Builder credentials(@Nullable Output<String> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder httpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
+            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder integrationHttpMethod(@Nullable Input<String> integrationHttpMethod) {
+        public Builder integrationHttpMethod(@Nullable Output<String> integrationHttpMethod) {
             this.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
 
         public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
-            this.integrationHttpMethod = Input.ofNullable(integrationHttpMethod);
+            this.integrationHttpMethod = Output.ofNullable(integrationHttpMethod);
             return this;
         }
 
-        public Builder passthroughBehavior(@Nullable Input<String> passthroughBehavior) {
+        public Builder passthroughBehavior(@Nullable Output<String> passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
 
         public Builder passthroughBehavior(@Nullable String passthroughBehavior) {
-            this.passthroughBehavior = Input.ofNullable(passthroughBehavior);
+            this.passthroughBehavior = Output.ofNullable(passthroughBehavior);
             return this;
         }
 
-        public Builder requestParameters(@Nullable Input<Map<String,String>> requestParameters) {
+        public Builder requestParameters(@Nullable Output<Map<String,String>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
         public Builder requestParameters(@Nullable Map<String,String> requestParameters) {
-            this.requestParameters = Input.ofNullable(requestParameters);
+            this.requestParameters = Output.ofNullable(requestParameters);
             return this;
         }
 
-        public Builder requestTemplates(@Nullable Input<Map<String,String>> requestTemplates) {
+        public Builder requestTemplates(@Nullable Output<Map<String,String>> requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
 
         public Builder requestTemplates(@Nullable Map<String,String> requestTemplates) {
-            this.requestTemplates = Input.ofNullable(requestTemplates);
+            this.requestTemplates = Output.ofNullable(requestTemplates);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder restApi(Input<String> restApi) {
+        public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder timeoutMilliseconds(@Nullable Input<Integer> timeoutMilliseconds) {
+        public Builder timeoutMilliseconds(@Nullable Output<Integer> timeoutMilliseconds) {
             this.timeoutMilliseconds = timeoutMilliseconds;
             return this;
         }
 
         public Builder timeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
-            this.timeoutMilliseconds = Input.ofNullable(timeoutMilliseconds);
+            this.timeoutMilliseconds = Output.ofNullable(timeoutMilliseconds);
             return this;
         }
 
-        public Builder tlsConfig(@Nullable Input<IntegrationTlsConfigArgs> tlsConfig) {
+        public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigArgs> tlsConfig) {
             this.tlsConfig = tlsConfig;
             return this;
         }
 
         public Builder tlsConfig(@Nullable IntegrationTlsConfigArgs tlsConfig) {
-            this.tlsConfig = Input.ofNullable(tlsConfig);
+            this.tlsConfig = Output.ofNullable(tlsConfig);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public IntegrationArgs build() {

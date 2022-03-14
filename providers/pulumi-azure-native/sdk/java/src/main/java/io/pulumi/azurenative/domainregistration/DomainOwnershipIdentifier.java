@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.domainregistration.DomainOwnershipIdentifierArgs;
 import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -138,28 +137,28 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainOwnershipIdentifier(String name, DomainOwnershipIdentifierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:domainregistration:DomainOwnershipIdentifier", name, args == null ? DomainOwnershipIdentifierArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:domainregistration:DomainOwnershipIdentifier", name, args == null ? DomainOwnershipIdentifierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DomainOwnershipIdentifier(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DomainOwnershipIdentifier(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:domainregistration:DomainOwnershipIdentifier", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20150401:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20180201:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20190801:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20200601:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20200901:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20201001:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20201201:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20210101:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20210115:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20210201:DomainOwnershipIdentifier").build()),
-                Input.of(Alias.builder().setType("azure-native:domainregistration/v20210301:DomainOwnershipIdentifier").build())
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20150401:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20180201:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20190801:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20200601:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20200901:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20201001:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20201201:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20210101:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20210115:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20210201:DomainOwnershipIdentifier").build()),
+                Output.of(Alias.builder().setType("azure-native:domainregistration/v20210301:DomainOwnershipIdentifier").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -173,7 +172,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DomainOwnershipIdentifier get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DomainOwnershipIdentifier get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DomainOwnershipIdentifier(name, id, options);
     }
 }

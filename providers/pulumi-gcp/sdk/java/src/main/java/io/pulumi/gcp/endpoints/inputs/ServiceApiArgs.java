@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.endpoints.inputs.ServiceApiMethodArgs;
 import java.lang.String;
@@ -17,38 +17,38 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceApiArgs Empty = new ServiceApiArgs();
 
     @InputImport(name="methods")
-      private final @Nullable Input<List<ServiceApiMethodArgs>> methods;
+      private final @Nullable Output<List<ServiceApiMethodArgs>> methods;
 
-    public Input<List<ServiceApiMethodArgs>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<ServiceApiMethodArgs>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="syntax")
-      private final @Nullable Input<String> syntax;
+      private final @Nullable Output<String> syntax;
 
-    public Input<String> getSyntax() {
-        return this.syntax == null ? Input.empty() : this.syntax;
+    public Output<String> getSyntax() {
+        return this.syntax == null ? Output.empty() : this.syntax;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ServiceApiArgs(
-        @Nullable Input<List<ServiceApiMethodArgs>> methods,
-        @Nullable Input<String> name,
-        @Nullable Input<String> syntax,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<ServiceApiMethodArgs>> methods,
+        @Nullable Output<String> name,
+        @Nullable Output<String> syntax,
+        @Nullable Output<String> version) {
         this.methods = methods;
         this.name = name;
         this.syntax = syntax;
@@ -56,10 +56,10 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceApiArgs() {
-        this.methods = Input.empty();
-        this.name = Input.empty();
-        this.syntax = Input.empty();
-        this.version = Input.empty();
+        this.methods = Output.empty();
+        this.name = Output.empty();
+        this.syntax = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ServiceApiMethodArgs>> methods;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> syntax;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<ServiceApiMethodArgs>> methods;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> syntax;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder methods(@Nullable Input<List<ServiceApiMethodArgs>> methods) {
+        public Builder methods(@Nullable Output<List<ServiceApiMethodArgs>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<ServiceApiMethodArgs> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder syntax(@Nullable Input<String> syntax) {
+        public Builder syntax(@Nullable Output<String> syntax) {
             this.syntax = syntax;
             return this;
         }
 
         public Builder syntax(@Nullable String syntax) {
-            this.syntax = Input.ofNullable(syntax);
+            this.syntax = Output.ofNullable(syntax);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ServiceApiArgs build() {

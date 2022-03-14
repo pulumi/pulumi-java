@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.BackendServiceFabricClusterPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceFabricCluster")
-      private final @Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
+      private final @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
-    public Input<BackendServiceFabricClusterPropertiesArgs> getServiceFabricCluster() {
-        return this.serviceFabricCluster == null ? Input.empty() : this.serviceFabricCluster;
+    public Output<BackendServiceFabricClusterPropertiesArgs> getServiceFabricCluster() {
+        return this.serviceFabricCluster == null ? Output.empty() : this.serviceFabricCluster;
     }
 
-    public BackendPropertiesArgs(@Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
+    public BackendPropertiesArgs(@Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
         this.serviceFabricCluster = serviceFabricCluster;
     }
 
     private BackendPropertiesArgs() {
-        this.serviceFabricCluster = Input.empty();
+        this.serviceFabricCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
+        private @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.serviceFabricCluster = defaults.serviceFabricCluster;
         }
 
-        public Builder serviceFabricCluster(@Nullable Input<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
+        public Builder serviceFabricCluster(@Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
             this.serviceFabricCluster = serviceFabricCluster;
             return this;
         }
 
         public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesArgs serviceFabricCluster) {
-            this.serviceFabricCluster = Input.ofNullable(serviceFabricCluster);
+            this.serviceFabricCluster = Output.ofNullable(serviceFabricCluster);
             return this;
         }
         public BackendPropertiesArgs build() {

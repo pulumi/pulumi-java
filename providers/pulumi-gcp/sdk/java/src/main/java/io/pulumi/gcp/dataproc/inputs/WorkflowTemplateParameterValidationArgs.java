@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationRegexArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationValuesArgs;
@@ -20,10 +20,10 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<WorkflowTemplateParameterValidationRegexArgs> regex;
+      private final @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex;
 
-    public Input<WorkflowTemplateParameterValidationRegexArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<WorkflowTemplateParameterValidationRegexArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<WorkflowTemplateParameterValidationValuesArgs> values;
+      private final @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values;
 
-    public Input<WorkflowTemplateParameterValidationValuesArgs> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<WorkflowTemplateParameterValidationValuesArgs> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public WorkflowTemplateParameterValidationArgs(
-        @Nullable Input<WorkflowTemplateParameterValidationRegexArgs> regex,
-        @Nullable Input<WorkflowTemplateParameterValidationValuesArgs> values) {
+        @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex,
+        @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values) {
         this.regex = regex;
         this.values = values;
     }
 
     private WorkflowTemplateParameterValidationArgs() {
-        this.regex = Input.empty();
-        this.values = Input.empty();
+        this.regex = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkflowTemplateParameterValidationRegexArgs> regex;
-        private @Nullable Input<WorkflowTemplateParameterValidationValuesArgs> values;
+        private @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex;
+        private @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
     	      this.values = defaults.values;
         }
 
-        public Builder regex(@Nullable Input<WorkflowTemplateParameterValidationRegexArgs> regex) {
+        public Builder regex(@Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable WorkflowTemplateParameterValidationRegexArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
 
-        public Builder values(@Nullable Input<WorkflowTemplateParameterValidationValuesArgs> values) {
+        public Builder values(@Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable WorkflowTemplateParameterValidationValuesArgs values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public WorkflowTemplateParameterValidationArgs build() {

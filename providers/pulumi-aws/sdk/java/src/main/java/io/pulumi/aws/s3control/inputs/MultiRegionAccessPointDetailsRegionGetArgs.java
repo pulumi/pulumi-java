@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class MultiRegionAccessPointDetailsRegionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
-    public MultiRegionAccessPointDetailsRegionGetArgs(Input<String> bucket) {
+    public MultiRegionAccessPointDetailsRegionGetArgs(Output<String> bucket) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
     }
 
     private MultiRegionAccessPointDetailsRegionGetArgs() {
-        this.bucket = Input.empty();
+        this.bucket = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MultiRegionAccessPointDetailsRegionGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> bucket;
+        private Output<String> bucket;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MultiRegionAccessPointDetailsRegionGetArgs extends io.pulumi.
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
         public MultiRegionAccessPointDetailsRegionGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.folder.inputs.IAMMemberConditionGetArgs;
 import java.lang.String;
@@ -16,46 +16,46 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     public static final IAMMemberState Empty = new IAMMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<IAMMemberConditionGetArgs> condition;
+      private final @Nullable Output<IAMMemberConditionGetArgs> condition;
 
-    public Input<IAMMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<IAMMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="folder")
-      private final @Nullable Input<String> folder;
+      private final @Nullable Output<String> folder;
 
-    public Input<String> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<String> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public IAMMemberState(
-        @Nullable Input<IAMMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> folder,
-        @Nullable Input<String> member,
-        @Nullable Input<String> role) {
+        @Nullable Output<IAMMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> folder,
+        @Nullable Output<String> member,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.folder = folder;
@@ -64,11 +64,11 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.folder = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.folder = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IAMMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> folder;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> role;
+        private @Nullable Output<IAMMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> folder;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<IAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<IAMMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable IAMMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder folder(@Nullable Input<String> folder) {
+        public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable String folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public IAMMemberState build() {

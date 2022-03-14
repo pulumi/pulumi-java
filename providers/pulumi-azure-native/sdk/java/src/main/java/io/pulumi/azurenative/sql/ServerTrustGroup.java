@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ServerTrustGroupArgs;
 import io.pulumi.azurenative.sql.outputs.ServerInfoResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,23 +126,23 @@ public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerTrustGroup(String name, ServerTrustGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ServerTrustGroup", name, args == null ? ServerTrustGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:ServerTrustGroup", name, args == null ? ServerTrustGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServerTrustGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServerTrustGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ServerTrustGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:ServerTrustGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:ServerTrustGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:ServerTrustGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:ServerTrustGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:ServerTrustGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:ServerTrustGroup").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ServerTrustGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ServerTrustGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ServerTrustGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ServerTrustGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ServerTrustGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ServerTrustGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -157,7 +156,7 @@ public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServerTrustGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServerTrustGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerTrustGroup(name, id, options);
     }
 }

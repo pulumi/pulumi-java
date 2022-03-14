@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationGroupArgs;
@@ -19,10 +19,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiProductArgs Empty = new ApiProductArgs();
 
     @InputImport(name="apiResources")
-      private final @Nullable Input<List<String>> apiResources;
+      private final @Nullable Output<List<String>> apiResources;
 
-    public Input<List<String>> getApiResources() {
-        return this.apiResources == null ? Input.empty() : this.apiResources;
+    public Output<List<String>> getApiResources() {
+        return this.apiResources == null ? Output.empty() : this.apiResources;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalType")
-      private final @Nullable Input<String> approvalType;
+      private final @Nullable Output<String> approvalType;
 
-    public Input<String> getApprovalType() {
-        return this.approvalType == null ? Input.empty() : this.approvalType;
+    public Output<String> getApprovalType() {
+        return this.approvalType == null ? Output.empty() : this.approvalType;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environments")
-      private final @Nullable Input<List<String>> environments;
+      private final @Nullable Output<List<String>> environments;
 
-    public Input<List<String>> getEnvironments() {
-        return this.environments == null ? Input.empty() : this.environments;
+    public Output<List<String>> getEnvironments() {
+        return this.environments == null ? Output.empty() : this.environments;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphqlOperationGroup")
-      private final @Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
+      private final @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
 
-    public Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> getGraphqlOperationGroup() {
-        return this.graphqlOperationGroup == null ? Input.empty() : this.graphqlOperationGroup;
+    public Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> getGraphqlOperationGroup() {
+        return this.graphqlOperationGroup == null ? Output.empty() : this.graphqlOperationGroup;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-      private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Output<String> lastModifiedAt;
 
-    public Input<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
+    public Output<String> getLastModifiedAt() {
+        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -129,16 +129,16 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationGroup")
-      private final @Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
+      private final @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
 
-    public Input<GoogleCloudApigeeV1OperationGroupArgs> getOperationGroup() {
-        return this.operationGroup == null ? Input.empty() : this.operationGroup;
+    public Output<GoogleCloudApigeeV1OperationGroupArgs> getOperationGroup() {
+        return this.operationGroup == null ? Output.empty() : this.operationGroup;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -147,10 +147,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxies")
-      private final @Nullable Input<List<String>> proxies;
+      private final @Nullable Output<List<String>> proxies;
 
-    public Input<List<String>> getProxies() {
-        return this.proxies == null ? Input.empty() : this.proxies;
+    public Output<List<String>> getProxies() {
+        return this.proxies == null ? Output.empty() : this.proxies;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quota")
-      private final @Nullable Input<String> quota;
+      private final @Nullable Output<String> quota;
 
-    public Input<String> getQuota() {
-        return this.quota == null ? Input.empty() : this.quota;
+    public Output<String> getQuota() {
+        return this.quota == null ? Output.empty() : this.quota;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaInterval")
-      private final @Nullable Input<String> quotaInterval;
+      private final @Nullable Output<String> quotaInterval;
 
-    public Input<String> getQuotaInterval() {
-        return this.quotaInterval == null ? Input.empty() : this.quotaInterval;
+    public Output<String> getQuotaInterval() {
+        return this.quotaInterval == null ? Output.empty() : this.quotaInterval;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaTimeUnit")
-      private final @Nullable Input<String> quotaTimeUnit;
+      private final @Nullable Output<String> quotaTimeUnit;
 
-    public Input<String> getQuotaTimeUnit() {
-        return this.quotaTimeUnit == null ? Input.empty() : this.quotaTimeUnit;
+    public Output<String> getQuotaTimeUnit() {
+        return this.quotaTimeUnit == null ? Output.empty() : this.quotaTimeUnit;
     }
 
     /**
@@ -191,30 +191,30 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<String>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     public ApiProductArgs(
-        @Nullable Input<List<String>> apiResources,
-        @Nullable Input<String> approvalType,
-        @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<String>> environments,
-        @Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup,
-        @Nullable Input<String> lastModifiedAt,
-        @Nullable Input<String> name,
-        @Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup,
-        Input<String> organizationId,
-        @Nullable Input<List<String>> proxies,
-        @Nullable Input<String> quota,
-        @Nullable Input<String> quotaInterval,
-        @Nullable Input<String> quotaTimeUnit,
-        @Nullable Input<List<String>> scopes) {
+        @Nullable Output<List<String>> apiResources,
+        @Nullable Output<String> approvalType,
+        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<String>> environments,
+        @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup,
+        @Nullable Output<String> lastModifiedAt,
+        @Nullable Output<String> name,
+        @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup,
+        Output<String> organizationId,
+        @Nullable Output<List<String>> proxies,
+        @Nullable Output<String> quota,
+        @Nullable Output<String> quotaInterval,
+        @Nullable Output<String> quotaTimeUnit,
+        @Nullable Output<List<String>> scopes) {
         this.apiResources = apiResources;
         this.approvalType = approvalType;
         this.attributes = attributes;
@@ -235,23 +235,23 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiProductArgs() {
-        this.apiResources = Input.empty();
-        this.approvalType = Input.empty();
-        this.attributes = Input.empty();
-        this.createdAt = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.environments = Input.empty();
-        this.graphqlOperationGroup = Input.empty();
-        this.lastModifiedAt = Input.empty();
-        this.name = Input.empty();
-        this.operationGroup = Input.empty();
-        this.organizationId = Input.empty();
-        this.proxies = Input.empty();
-        this.quota = Input.empty();
-        this.quotaInterval = Input.empty();
-        this.quotaTimeUnit = Input.empty();
-        this.scopes = Input.empty();
+        this.apiResources = Output.empty();
+        this.approvalType = Output.empty();
+        this.attributes = Output.empty();
+        this.createdAt = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.environments = Output.empty();
+        this.graphqlOperationGroup = Output.empty();
+        this.lastModifiedAt = Output.empty();
+        this.name = Output.empty();
+        this.operationGroup = Output.empty();
+        this.organizationId = Output.empty();
+        this.proxies = Output.empty();
+        this.quota = Output.empty();
+        this.quotaInterval = Output.empty();
+        this.quotaTimeUnit = Output.empty();
+        this.scopes = Output.empty();
     }
 
     public static Builder builder() {
@@ -263,23 +263,23 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> apiResources;
-        private @Nullable Input<String> approvalType;
-        private @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<String>> environments;
-        private @Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
-        private @Nullable Input<String> lastModifiedAt;
-        private @Nullable Input<String> name;
-        private @Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
-        private Input<String> organizationId;
-        private @Nullable Input<List<String>> proxies;
-        private @Nullable Input<String> quota;
-        private @Nullable Input<String> quotaInterval;
-        private @Nullable Input<String> quotaTimeUnit;
-        private @Nullable Input<List<String>> scopes;
+        private @Nullable Output<List<String>> apiResources;
+        private @Nullable Output<String> approvalType;
+        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<String>> environments;
+        private @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
+        private @Nullable Output<String> lastModifiedAt;
+        private @Nullable Output<String> name;
+        private @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
+        private Output<String> organizationId;
+        private @Nullable Output<List<String>> proxies;
+        private @Nullable Output<String> quota;
+        private @Nullable Output<String> quotaInterval;
+        private @Nullable Output<String> quotaTimeUnit;
+        private @Nullable Output<List<String>> scopes;
 
         public Builder() {
     	      // Empty
@@ -306,173 +306,173 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder apiResources(@Nullable Input<List<String>> apiResources) {
+        public Builder apiResources(@Nullable Output<List<String>> apiResources) {
             this.apiResources = apiResources;
             return this;
         }
 
         public Builder apiResources(@Nullable List<String> apiResources) {
-            this.apiResources = Input.ofNullable(apiResources);
+            this.apiResources = Output.ofNullable(apiResources);
             return this;
         }
 
-        public Builder approvalType(@Nullable Input<String> approvalType) {
+        public Builder approvalType(@Nullable Output<String> approvalType) {
             this.approvalType = approvalType;
             return this;
         }
 
         public Builder approvalType(@Nullable String approvalType) {
-            this.approvalType = Input.ofNullable(approvalType);
+            this.approvalType = Output.ofNullable(approvalType);
             return this;
         }
 
-        public Builder attributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder environments(@Nullable Input<List<String>> environments) {
+        public Builder environments(@Nullable Output<List<String>> environments) {
             this.environments = environments;
             return this;
         }
 
         public Builder environments(@Nullable List<String> environments) {
-            this.environments = Input.ofNullable(environments);
+            this.environments = Output.ofNullable(environments);
             return this;
         }
 
-        public Builder graphqlOperationGroup(@Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup) {
+        public Builder graphqlOperationGroup(@Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup) {
             this.graphqlOperationGroup = graphqlOperationGroup;
             return this;
         }
 
         public Builder graphqlOperationGroup(@Nullable GoogleCloudApigeeV1GraphQLOperationGroupArgs graphqlOperationGroup) {
-            this.graphqlOperationGroup = Input.ofNullable(graphqlOperationGroup);
+            this.graphqlOperationGroup = Output.ofNullable(graphqlOperationGroup);
             return this;
         }
 
-        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder operationGroup(@Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup) {
+        public Builder operationGroup(@Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup) {
             this.operationGroup = operationGroup;
             return this;
         }
 
         public Builder operationGroup(@Nullable GoogleCloudApigeeV1OperationGroupArgs operationGroup) {
-            this.operationGroup = Input.ofNullable(operationGroup);
+            this.operationGroup = Output.ofNullable(operationGroup);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder proxies(@Nullable Input<List<String>> proxies) {
+        public Builder proxies(@Nullable Output<List<String>> proxies) {
             this.proxies = proxies;
             return this;
         }
 
         public Builder proxies(@Nullable List<String> proxies) {
-            this.proxies = Input.ofNullable(proxies);
+            this.proxies = Output.ofNullable(proxies);
             return this;
         }
 
-        public Builder quota(@Nullable Input<String> quota) {
+        public Builder quota(@Nullable Output<String> quota) {
             this.quota = quota;
             return this;
         }
 
         public Builder quota(@Nullable String quota) {
-            this.quota = Input.ofNullable(quota);
+            this.quota = Output.ofNullable(quota);
             return this;
         }
 
-        public Builder quotaInterval(@Nullable Input<String> quotaInterval) {
+        public Builder quotaInterval(@Nullable Output<String> quotaInterval) {
             this.quotaInterval = quotaInterval;
             return this;
         }
 
         public Builder quotaInterval(@Nullable String quotaInterval) {
-            this.quotaInterval = Input.ofNullable(quotaInterval);
+            this.quotaInterval = Output.ofNullable(quotaInterval);
             return this;
         }
 
-        public Builder quotaTimeUnit(@Nullable Input<String> quotaTimeUnit) {
+        public Builder quotaTimeUnit(@Nullable Output<String> quotaTimeUnit) {
             this.quotaTimeUnit = quotaTimeUnit;
             return this;
         }
 
         public Builder quotaTimeUnit(@Nullable String quotaTimeUnit) {
-            this.quotaTimeUnit = Input.ofNullable(quotaTimeUnit);
+            this.quotaTimeUnit = Output.ofNullable(quotaTimeUnit);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
         public ApiProductArgs build() {

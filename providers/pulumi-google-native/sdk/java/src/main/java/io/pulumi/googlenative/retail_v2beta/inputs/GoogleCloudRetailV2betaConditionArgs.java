@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionQueryTermArgs;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionTimeRangeArgs;
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="activeTimeRange")
-      private final @Nullable Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
+      private final @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
 
-    public Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> getActiveTimeRange() {
-        return this.activeTimeRange == null ? Input.empty() : this.activeTimeRange;
+    public Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> getActiveTimeRange() {
+        return this.activeTimeRange == null ? Output.empty() : this.activeTimeRange;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="queryTerms")
-      private final @Nullable Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
+      private final @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
 
-    public Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> getQueryTerms() {
-        return this.queryTerms == null ? Input.empty() : this.queryTerms;
+    public Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> getQueryTerms() {
+        return this.queryTerms == null ? Output.empty() : this.queryTerms;
     }
 
     public GoogleCloudRetailV2betaConditionArgs(
-        @Nullable Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange,
-        @Nullable Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms) {
+        @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange,
+        @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms) {
         this.activeTimeRange = activeTimeRange;
         this.queryTerms = queryTerms;
     }
 
     private GoogleCloudRetailV2betaConditionArgs() {
-        this.activeTimeRange = Input.empty();
-        this.queryTerms = Input.empty();
+        this.activeTimeRange = Output.empty();
+        this.queryTerms = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
-        private @Nullable Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
+        private @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
+        private @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
     	      this.queryTerms = defaults.queryTerms;
         }
 
-        public Builder activeTimeRange(@Nullable Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange) {
+        public Builder activeTimeRange(@Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange) {
             this.activeTimeRange = activeTimeRange;
             return this;
         }
 
         public Builder activeTimeRange(@Nullable List<GoogleCloudRetailV2betaConditionTimeRangeArgs> activeTimeRange) {
-            this.activeTimeRange = Input.ofNullable(activeTimeRange);
+            this.activeTimeRange = Output.ofNullable(activeTimeRange);
             return this;
         }
 
-        public Builder queryTerms(@Nullable Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms) {
+        public Builder queryTerms(@Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
 
         public Builder queryTerms(@Nullable List<GoogleCloudRetailV2betaConditionQueryTermArgs> queryTerms) {
-            this.queryTerms = Input.ofNullable(queryTerms);
+            this.queryTerms = Output.ofNullable(queryTerms);
             return this;
         }
         public GoogleCloudRetailV2betaConditionArgs build() {

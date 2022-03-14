@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketObjectLockRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
     public static final BucketObjectLockConfigurationArgs Empty = new BucketObjectLockConfigurationArgs();
 
     @InputImport(name="objectLockEnabled")
-      private final @Nullable Input<String> objectLockEnabled;
+      private final @Nullable Output<String> objectLockEnabled;
 
-    public Input<String> getObjectLockEnabled() {
-        return this.objectLockEnabled == null ? Input.empty() : this.objectLockEnabled;
+    public Output<String> getObjectLockEnabled() {
+        return this.objectLockEnabled == null ? Output.empty() : this.objectLockEnabled;
     }
 
     @InputImport(name="rule")
-      private final @Nullable Input<BucketObjectLockRuleArgs> rule;
+      private final @Nullable Output<BucketObjectLockRuleArgs> rule;
 
-    public Input<BucketObjectLockRuleArgs> getRule() {
-        return this.rule == null ? Input.empty() : this.rule;
+    public Output<BucketObjectLockRuleArgs> getRule() {
+        return this.rule == null ? Output.empty() : this.rule;
     }
 
     public BucketObjectLockConfigurationArgs(
-        @Nullable Input<String> objectLockEnabled,
-        @Nullable Input<BucketObjectLockRuleArgs> rule) {
+        @Nullable Output<String> objectLockEnabled,
+        @Nullable Output<BucketObjectLockRuleArgs> rule) {
         this.objectLockEnabled = objectLockEnabled;
         this.rule = rule;
     }
 
     private BucketObjectLockConfigurationArgs() {
-        this.objectLockEnabled = Input.empty();
-        this.rule = Input.empty();
+        this.objectLockEnabled = Output.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> objectLockEnabled;
-        private @Nullable Input<BucketObjectLockRuleArgs> rule;
+        private @Nullable Output<String> objectLockEnabled;
+        private @Nullable Output<BucketObjectLockRuleArgs> rule;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
     	      this.rule = defaults.rule;
         }
 
-        public Builder objectLockEnabled(@Nullable Input<String> objectLockEnabled) {
+        public Builder objectLockEnabled(@Nullable Output<String> objectLockEnabled) {
             this.objectLockEnabled = objectLockEnabled;
             return this;
         }
 
         public Builder objectLockEnabled(@Nullable String objectLockEnabled) {
-            this.objectLockEnabled = Input.ofNullable(objectLockEnabled);
+            this.objectLockEnabled = Output.ofNullable(objectLockEnabled);
             return this;
         }
 
-        public Builder rule(@Nullable Input<BucketObjectLockRuleArgs> rule) {
+        public Builder rule(@Nullable Output<BucketObjectLockRuleArgs> rule) {
             this.rule = rule;
             return this;
         }
 
         public Builder rule(@Nullable BucketObjectLockRuleArgs rule) {
-            this.rule = Input.ofNullable(rule);
+            this.rule = Output.ofNullable(rule);
             return this;
         }
         public BucketObjectLockConfigurationArgs build() {

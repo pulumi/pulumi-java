@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
     public static final BackupSelectionConditionResourceTypeArgs Empty = new BackupSelectionConditionResourceTypeArgs();
 
     @InputImport(name="conditionKey", required=true)
-      private final Input<String> conditionKey;
+      private final Output<String> conditionKey;
 
-    public Input<String> getConditionKey() {
+    public Output<String> getConditionKey() {
         return this.conditionKey;
     }
 
     @InputImport(name="conditionType", required=true)
-      private final Input<String> conditionType;
+      private final Output<String> conditionType;
 
-    public Input<String> getConditionType() {
+    public Output<String> getConditionType() {
         return this.conditionType;
     }
 
     @InputImport(name="conditionValue", required=true)
-      private final Input<String> conditionValue;
+      private final Output<String> conditionValue;
 
-    public Input<String> getConditionValue() {
+    public Output<String> getConditionValue() {
         return this.conditionValue;
     }
 
     public BackupSelectionConditionResourceTypeArgs(
-        Input<String> conditionKey,
-        Input<String> conditionType,
-        Input<String> conditionValue) {
+        Output<String> conditionKey,
+        Output<String> conditionType,
+        Output<String> conditionValue) {
         this.conditionKey = Objects.requireNonNull(conditionKey, "expected parameter 'conditionKey' to be non-null");
         this.conditionType = Objects.requireNonNull(conditionType, "expected parameter 'conditionType' to be non-null");
         this.conditionValue = Objects.requireNonNull(conditionValue, "expected parameter 'conditionValue' to be non-null");
     }
 
     private BackupSelectionConditionResourceTypeArgs() {
-        this.conditionKey = Input.empty();
-        this.conditionType = Input.empty();
-        this.conditionValue = Input.empty();
+        this.conditionKey = Output.empty();
+        this.conditionType = Output.empty();
+        this.conditionValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> conditionKey;
-        private Input<String> conditionType;
-        private Input<String> conditionValue;
+        private Output<String> conditionKey;
+        private Output<String> conditionType;
+        private Output<String> conditionValue;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
     	      this.conditionValue = defaults.conditionValue;
         }
 
-        public Builder conditionKey(Input<String> conditionKey) {
+        public Builder conditionKey(Output<String> conditionKey) {
             this.conditionKey = Objects.requireNonNull(conditionKey);
             return this;
         }
 
         public Builder conditionKey(String conditionKey) {
-            this.conditionKey = Input.of(Objects.requireNonNull(conditionKey));
+            this.conditionKey = Output.of(Objects.requireNonNull(conditionKey));
             return this;
         }
 
-        public Builder conditionType(Input<String> conditionType) {
+        public Builder conditionType(Output<String> conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
 
         public Builder conditionType(String conditionType) {
-            this.conditionType = Input.of(Objects.requireNonNull(conditionType));
+            this.conditionType = Output.of(Objects.requireNonNull(conditionType));
             return this;
         }
 
-        public Builder conditionValue(Input<String> conditionValue) {
+        public Builder conditionValue(Output<String> conditionValue) {
             this.conditionValue = Objects.requireNonNull(conditionValue);
             return this;
         }
 
         public Builder conditionValue(String conditionValue) {
-            this.conditionValue = Input.of(Objects.requireNonNull(conditionValue));
+            this.conditionValue = Output.of(Objects.requireNonNull(conditionValue));
             return this;
         }
         public BackupSelectionConditionResourceTypeArgs build() {

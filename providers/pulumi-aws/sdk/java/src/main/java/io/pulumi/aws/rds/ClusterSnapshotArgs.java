@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dbClusterIdentifier", required=true)
-      private final Input<String> dbClusterIdentifier;
+      private final Output<String> dbClusterIdentifier;
 
-    public Input<String> getDbClusterIdentifier() {
+    public Output<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -31,9 +31,9 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dbClusterSnapshotIdentifier", required=true)
-      private final Input<String> dbClusterSnapshotIdentifier;
+      private final Output<String> dbClusterSnapshotIdentifier;
 
-    public Input<String> getDbClusterSnapshotIdentifier() {
+    public Output<String> getDbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
     }
 
@@ -42,25 +42,25 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterSnapshotArgs(
-        Input<String> dbClusterIdentifier,
-        Input<String> dbClusterSnapshotIdentifier,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> dbClusterIdentifier,
+        Output<String> dbClusterSnapshotIdentifier,
+        @Nullable Output<Map<String,String>> tags) {
         this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
         this.dbClusterSnapshotIdentifier = Objects.requireNonNull(dbClusterSnapshotIdentifier, "expected parameter 'dbClusterSnapshotIdentifier' to be non-null");
         this.tags = tags;
     }
 
     private ClusterSnapshotArgs() {
-        this.dbClusterIdentifier = Input.empty();
-        this.dbClusterSnapshotIdentifier = Input.empty();
-        this.tags = Input.empty();
+        this.dbClusterIdentifier = Output.empty();
+        this.dbClusterSnapshotIdentifier = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> dbClusterIdentifier;
-        private Input<String> dbClusterSnapshotIdentifier;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> dbClusterIdentifier;
+        private Output<String> dbClusterSnapshotIdentifier;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder dbClusterIdentifier(Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
 
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Input.of(Objects.requireNonNull(dbClusterIdentifier));
+            this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
 
-        public Builder dbClusterSnapshotIdentifier(Input<String> dbClusterSnapshotIdentifier) {
+        public Builder dbClusterSnapshotIdentifier(Output<String> dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = Objects.requireNonNull(dbClusterSnapshotIdentifier);
             return this;
         }
 
         public Builder dbClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
-            this.dbClusterSnapshotIdentifier = Input.of(Objects.requireNonNull(dbClusterSnapshotIdentifier));
+            this.dbClusterSnapshotIdentifier = Output.of(Objects.requireNonNull(dbClusterSnapshotIdentifier));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterSnapshotArgs build() {

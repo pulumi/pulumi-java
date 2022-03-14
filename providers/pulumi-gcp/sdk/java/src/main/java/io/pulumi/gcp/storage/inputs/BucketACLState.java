@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAcl")
-      private final @Nullable Input<String> defaultAcl;
+      private final @Nullable Output<String> defaultAcl;
 
-    public Input<String> getDefaultAcl() {
-        return this.defaultAcl == null ? Input.empty() : this.defaultAcl;
+    public Output<String> getDefaultAcl() {
+        return this.defaultAcl == null ? Output.empty() : this.defaultAcl;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedAcl")
-      private final @Nullable Input<String> predefinedAcl;
+      private final @Nullable Output<String> predefinedAcl;
 
-    public Input<String> getPredefinedAcl() {
-        return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
+    public Output<String> getPredefinedAcl() {
+        return this.predefinedAcl == null ? Output.empty() : this.predefinedAcl;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleEntities")
-      private final @Nullable Input<List<String>> roleEntities;
+      private final @Nullable Output<List<String>> roleEntities;
 
-    public Input<List<String>> getRoleEntities() {
-        return this.roleEntities == null ? Input.empty() : this.roleEntities;
+    public Output<List<String>> getRoleEntities() {
+        return this.roleEntities == null ? Output.empty() : this.roleEntities;
     }
 
     public BucketACLState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> defaultAcl,
-        @Nullable Input<String> predefinedAcl,
-        @Nullable Input<List<String>> roleEntities) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> defaultAcl,
+        @Nullable Output<String> predefinedAcl,
+        @Nullable Output<List<String>> roleEntities) {
         this.bucket = bucket;
         this.defaultAcl = defaultAcl;
         this.predefinedAcl = predefinedAcl;
@@ -71,10 +71,10 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketACLState() {
-        this.bucket = Input.empty();
-        this.defaultAcl = Input.empty();
-        this.predefinedAcl = Input.empty();
-        this.roleEntities = Input.empty();
+        this.bucket = Output.empty();
+        this.defaultAcl = Output.empty();
+        this.predefinedAcl = Output.empty();
+        this.roleEntities = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> defaultAcl;
-        private @Nullable Input<String> predefinedAcl;
-        private @Nullable Input<List<String>> roleEntities;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> defaultAcl;
+        private @Nullable Output<String> predefinedAcl;
+        private @Nullable Output<List<String>> roleEntities;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
     	      this.roleEntities = defaults.roleEntities;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder defaultAcl(@Nullable Input<String> defaultAcl) {
+        public Builder defaultAcl(@Nullable Output<String> defaultAcl) {
             this.defaultAcl = defaultAcl;
             return this;
         }
 
         public Builder defaultAcl(@Nullable String defaultAcl) {
-            this.defaultAcl = Input.ofNullable(defaultAcl);
+            this.defaultAcl = Output.ofNullable(defaultAcl);
             return this;
         }
 
-        public Builder predefinedAcl(@Nullable Input<String> predefinedAcl) {
+        public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
 
         public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Input.ofNullable(predefinedAcl);
+            this.predefinedAcl = Output.ofNullable(predefinedAcl);
             return this;
         }
 
-        public Builder roleEntities(@Nullable Input<List<String>> roleEntities) {
+        public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
 
         public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Input.ofNullable(roleEntities);
+            this.roleEntities = Output.ofNullable(roleEntities);
             return this;
         }
         public BucketACLState build() {

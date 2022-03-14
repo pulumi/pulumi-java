@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,29 +20,29 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
     public static final StorageLensBucketsAndRegionsArgs Empty = new StorageLensBucketsAndRegionsArgs();
 
     @InputImport(name="buckets")
-      private final @Nullable Input<List<String>> buckets;
+      private final @Nullable Output<List<String>> buckets;
 
-    public Input<List<String>> getBuckets() {
-        return this.buckets == null ? Input.empty() : this.buckets;
+    public Output<List<String>> getBuckets() {
+        return this.buckets == null ? Output.empty() : this.buckets;
     }
 
     @InputImport(name="regions")
-      private final @Nullable Input<List<String>> regions;
+      private final @Nullable Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<List<String>> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     public StorageLensBucketsAndRegionsArgs(
-        @Nullable Input<List<String>> buckets,
-        @Nullable Input<List<String>> regions) {
+        @Nullable Output<List<String>> buckets,
+        @Nullable Output<List<String>> regions) {
         this.buckets = buckets;
         this.regions = regions;
     }
 
     private StorageLensBucketsAndRegionsArgs() {
-        this.buckets = Input.empty();
-        this.regions = Input.empty();
+        this.buckets = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> buckets;
-        private @Nullable Input<List<String>> regions;
+        private @Nullable Output<List<String>> buckets;
+        private @Nullable Output<List<String>> regions;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
     	      this.regions = defaults.regions;
         }
 
-        public Builder buckets(@Nullable Input<List<String>> buckets) {
+        public Builder buckets(@Nullable Output<List<String>> buckets) {
             this.buckets = buckets;
             return this;
         }
 
         public Builder buckets(@Nullable List<String> buckets) {
-            this.buckets = Input.ofNullable(buckets);
+            this.buckets = Output.ofNullable(buckets);
             return this;
         }
 
-        public Builder regions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
         public StorageLensBucketsAndRegionsArgs build() {

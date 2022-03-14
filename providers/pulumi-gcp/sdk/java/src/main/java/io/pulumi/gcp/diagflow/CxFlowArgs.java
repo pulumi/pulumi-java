@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerArgs;
 import io.pulumi.gcp.diagflow.inputs.CxFlowNluSettingsArgs;
@@ -23,10 +23,10 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -49,10 +49,10 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHandlers")
-      private final @Nullable Input<List<CxFlowEventHandlerArgs>> eventHandlers;
+      private final @Nullable Output<List<CxFlowEventHandlerArgs>> eventHandlers;
 
-    public Input<List<CxFlowEventHandlerArgs>> getEventHandlers() {
-        return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
+    public Output<List<CxFlowEventHandlerArgs>> getEventHandlers() {
+        return this.eventHandlers == null ? Output.empty() : this.eventHandlers;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nluSettings")
-      private final @Nullable Input<CxFlowNluSettingsArgs> nluSettings;
+      private final @Nullable Output<CxFlowNluSettingsArgs> nluSettings;
 
-    public Input<CxFlowNluSettingsArgs> getNluSettings() {
-        return this.nluSettings == null ? Input.empty() : this.nluSettings;
+    public Output<CxFlowNluSettingsArgs> getNluSettings() {
+        return this.nluSettings == null ? Output.empty() : this.nluSettings;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRouteGroups")
-      private final @Nullable Input<List<String>> transitionRouteGroups;
+      private final @Nullable Output<List<String>> transitionRouteGroups;
 
-    public Input<List<String>> getTransitionRouteGroups() {
-        return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
+    public Output<List<String>> getTransitionRouteGroups() {
+        return this.transitionRouteGroups == null ? Output.empty() : this.transitionRouteGroups;
     }
 
     /**
@@ -116,21 +116,21 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRoutes")
-      private final @Nullable Input<List<CxFlowTransitionRouteArgs>> transitionRoutes;
+      private final @Nullable Output<List<CxFlowTransitionRouteArgs>> transitionRoutes;
 
-    public Input<List<CxFlowTransitionRouteArgs>> getTransitionRoutes() {
-        return this.transitionRoutes == null ? Input.empty() : this.transitionRoutes;
+    public Output<List<CxFlowTransitionRouteArgs>> getTransitionRoutes() {
+        return this.transitionRoutes == null ? Output.empty() : this.transitionRoutes;
     }
 
     public CxFlowArgs(
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<List<CxFlowEventHandlerArgs>> eventHandlers,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<CxFlowNluSettingsArgs> nluSettings,
-        @Nullable Input<String> parent,
-        @Nullable Input<List<String>> transitionRouteGroups,
-        @Nullable Input<List<CxFlowTransitionRouteArgs>> transitionRoutes) {
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<List<CxFlowEventHandlerArgs>> eventHandlers,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<CxFlowNluSettingsArgs> nluSettings,
+        @Nullable Output<String> parent,
+        @Nullable Output<List<String>> transitionRouteGroups,
+        @Nullable Output<List<CxFlowTransitionRouteArgs>> transitionRoutes) {
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.eventHandlers = eventHandlers;
@@ -142,14 +142,14 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxFlowArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.eventHandlers = Input.empty();
-        this.languageCode = Input.empty();
-        this.nluSettings = Input.empty();
-        this.parent = Input.empty();
-        this.transitionRouteGroups = Input.empty();
-        this.transitionRoutes = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.eventHandlers = Output.empty();
+        this.languageCode = Output.empty();
+        this.nluSettings = Output.empty();
+        this.parent = Output.empty();
+        this.transitionRouteGroups = Output.empty();
+        this.transitionRoutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,14 +161,14 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<List<CxFlowEventHandlerArgs>> eventHandlers;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<CxFlowNluSettingsArgs> nluSettings;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<List<String>> transitionRouteGroups;
-        private @Nullable Input<List<CxFlowTransitionRouteArgs>> transitionRoutes;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<List<CxFlowEventHandlerArgs>> eventHandlers;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<CxFlowNluSettingsArgs> nluSettings;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<List<String>> transitionRouteGroups;
+        private @Nullable Output<List<CxFlowTransitionRouteArgs>> transitionRoutes;
 
         public Builder() {
     	      // Empty
@@ -186,83 +186,83 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitionRoutes = defaults.transitionRoutes;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder eventHandlers(@Nullable Input<List<CxFlowEventHandlerArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Output<List<CxFlowEventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
 
         public Builder eventHandlers(@Nullable List<CxFlowEventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Input.ofNullable(eventHandlers);
+            this.eventHandlers = Output.ofNullable(eventHandlers);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder nluSettings(@Nullable Input<CxFlowNluSettingsArgs> nluSettings) {
+        public Builder nluSettings(@Nullable Output<CxFlowNluSettingsArgs> nluSettings) {
             this.nluSettings = nluSettings;
             return this;
         }
 
         public Builder nluSettings(@Nullable CxFlowNluSettingsArgs nluSettings) {
-            this.nluSettings = Input.ofNullable(nluSettings);
+            this.nluSettings = Output.ofNullable(nluSettings);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder transitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
             this.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
 
         public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
-            this.transitionRouteGroups = Input.ofNullable(transitionRouteGroups);
+            this.transitionRouteGroups = Output.ofNullable(transitionRouteGroups);
             return this;
         }
 
-        public Builder transitionRoutes(@Nullable Input<List<CxFlowTransitionRouteArgs>> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable Output<List<CxFlowTransitionRouteArgs>> transitionRoutes) {
             this.transitionRoutes = transitionRoutes;
             return this;
         }
 
         public Builder transitionRoutes(@Nullable List<CxFlowTransitionRouteArgs> transitionRoutes) {
-            this.transitionRoutes = Input.ofNullable(transitionRoutes);
+            this.transitionRoutes = Output.ofNullable(transitionRoutes);
             return this;
         }
         public CxFlowArgs build() {

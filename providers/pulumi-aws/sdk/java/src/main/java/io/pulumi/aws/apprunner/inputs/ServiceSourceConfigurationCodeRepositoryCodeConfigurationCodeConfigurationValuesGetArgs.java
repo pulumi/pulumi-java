@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * 
      */
     @InputImport(name="buildCommand")
-      private final @Nullable Input<String> buildCommand;
+      private final @Nullable Output<String> buildCommand;
 
-    public Input<String> getBuildCommand() {
-        return this.buildCommand == null ? Input.empty() : this.buildCommand;
+    public Output<String> getBuildCommand() {
+        return this.buildCommand == null ? Output.empty() : this.buildCommand;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<String> port;
+      private final @Nullable Output<String> port;
 
-    public Input<String> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<String> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * 
      */
     @InputImport(name="runtime", required=true)
-      private final Input<String> runtime;
+      private final Output<String> runtime;
 
-    public Input<String> getRuntime() {
+    public Output<String> getRuntime() {
         return this.runtime;
     }
 
@@ -53,10 +53,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * 
      */
     @InputImport(name="runtimeEnvironmentVariables")
-      private final @Nullable Input<Map<String,String>> runtimeEnvironmentVariables;
+      private final @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
 
-    public Input<Map<String,String>> getRuntimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? Input.empty() : this.runtimeEnvironmentVariables;
+    public Output<Map<String,String>> getRuntimeEnvironmentVariables() {
+        return this.runtimeEnvironmentVariables == null ? Output.empty() : this.runtimeEnvironmentVariables;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * 
      */
     @InputImport(name="startCommand")
-      private final @Nullable Input<String> startCommand;
+      private final @Nullable Output<String> startCommand;
 
-    public Input<String> getStartCommand() {
-        return this.startCommand == null ? Input.empty() : this.startCommand;
+    public Output<String> getStartCommand() {
+        return this.startCommand == null ? Output.empty() : this.startCommand;
     }
 
     public ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs(
-        @Nullable Input<String> buildCommand,
-        @Nullable Input<String> port,
-        Input<String> runtime,
-        @Nullable Input<Map<String,String>> runtimeEnvironmentVariables,
-        @Nullable Input<String> startCommand) {
+        @Nullable Output<String> buildCommand,
+        @Nullable Output<String> port,
+        Output<String> runtime,
+        @Nullable Output<Map<String,String>> runtimeEnvironmentVariables,
+        @Nullable Output<String> startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
         this.runtime = Objects.requireNonNull(runtime, "expected parameter 'runtime' to be non-null");
@@ -84,11 +84,11 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     }
 
     private ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs() {
-        this.buildCommand = Input.empty();
-        this.port = Input.empty();
-        this.runtime = Input.empty();
-        this.runtimeEnvironmentVariables = Input.empty();
-        this.startCommand = Input.empty();
+        this.buildCommand = Output.empty();
+        this.port = Output.empty();
+        this.runtime = Output.empty();
+        this.runtimeEnvironmentVariables = Output.empty();
+        this.startCommand = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     }
 
     public static final class Builder {
-        private @Nullable Input<String> buildCommand;
-        private @Nullable Input<String> port;
-        private Input<String> runtime;
-        private @Nullable Input<Map<String,String>> runtimeEnvironmentVariables;
-        private @Nullable Input<String> startCommand;
+        private @Nullable Output<String> buildCommand;
+        private @Nullable Output<String> port;
+        private Output<String> runtime;
+        private @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
+        private @Nullable Output<String> startCommand;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder buildCommand(@Nullable Input<String> buildCommand) {
+        public Builder buildCommand(@Nullable Output<String> buildCommand) {
             this.buildCommand = buildCommand;
             return this;
         }
 
         public Builder buildCommand(@Nullable String buildCommand) {
-            this.buildCommand = Input.ofNullable(buildCommand);
+            this.buildCommand = Output.ofNullable(buildCommand);
             return this;
         }
 
-        public Builder port(@Nullable Input<String> port) {
+        public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable String port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder runtime(Input<String> runtime) {
+        public Builder runtime(Output<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
         public Builder runtime(String runtime) {
-            this.runtime = Input.of(Objects.requireNonNull(runtime));
+            this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
         }
 
-        public Builder runtimeEnvironmentVariables(@Nullable Input<Map<String,String>> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Output<Map<String,String>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
         public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = Input.ofNullable(runtimeEnvironmentVariables);
+            this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
 
-        public Builder startCommand(@Nullable Input<String> startCommand) {
+        public Builder startCommand(@Nullable Output<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
 
         public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = Input.ofNullable(startCommand);
+            this.startCommand = Output.ofNullable(startCommand);
             return this;
         }
         public ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs build() {

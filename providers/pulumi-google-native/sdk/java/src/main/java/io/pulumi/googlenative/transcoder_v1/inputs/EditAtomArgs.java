@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTimeOffset")
-      private final @Nullable Input<String> endTimeOffset;
+      private final @Nullable Output<String> endTimeOffset;
 
-    public Input<String> getEndTimeOffset() {
-        return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
+    public Output<String> getEndTimeOffset() {
+        return this.endTimeOffset == null ? Output.empty() : this.endTimeOffset;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<List<String>> inputs;
+      private final @Nullable Output<List<String>> inputs;
 
-    public Input<List<String>> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<List<String>> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOffset")
-      private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Output<String> startTimeOffset;
 
-    public Input<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
+    public Output<String> getStartTimeOffset() {
+        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
     }
 
     public EditAtomArgs(
-        @Nullable Input<String> endTimeOffset,
-        @Nullable Input<List<String>> inputs,
-        @Nullable Input<String> key,
-        @Nullable Input<String> startTimeOffset) {
+        @Nullable Output<String> endTimeOffset,
+        @Nullable Output<List<String>> inputs,
+        @Nullable Output<String> key,
+        @Nullable Output<String> startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.inputs = inputs;
         this.key = key;
@@ -75,10 +75,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EditAtomArgs() {
-        this.endTimeOffset = Input.empty();
-        this.inputs = Input.empty();
-        this.key = Input.empty();
-        this.startTimeOffset = Input.empty();
+        this.endTimeOffset = Output.empty();
+        this.inputs = Output.empty();
+        this.key = Output.empty();
+        this.startTimeOffset = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endTimeOffset;
-        private @Nullable Input<List<String>> inputs;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> startTimeOffset;
+        private @Nullable Output<String> endTimeOffset;
+        private @Nullable Output<List<String>> inputs;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> startTimeOffset;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder endTimeOffset(@Nullable Input<String> endTimeOffset) {
+        public Builder endTimeOffset(@Nullable Output<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Input.ofNullable(endTimeOffset);
+            this.endTimeOffset = Output.ofNullable(endTimeOffset);
             return this;
         }
 
-        public Builder inputs(@Nullable Input<List<String>> inputs) {
+        public Builder inputs(@Nullable Output<List<String>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable List<String> inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Input.ofNullable(startTimeOffset);
+            this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
         }
         public EditAtomArgs build() {

@@ -14,7 +14,6 @@ import io.pulumi.azurenative.network.outputs.VpnServerConfigRadiusServerRootCert
 import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRootCertificateResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -331,31 +330,31 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnServerConfiguration(String name, VpnServerConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VpnServerConfiguration", name, args == null ? VpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:VpnServerConfiguration", name, args == null ? VpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VpnServerConfiguration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VpnServerConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VpnServerConfiguration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:VpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:VpnServerConfiguration").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:VpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:VpnServerConfiguration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -369,7 +368,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnServerConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VpnServerConfiguration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpnServerConfiguration(name, id, options);
     }
 }

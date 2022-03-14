@@ -11,7 +11,7 @@ import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupTagArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupWarmPoolArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -31,10 +31,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityRebalance")
-      private final @Nullable Input<Boolean> capacityRebalance;
+      private final @Nullable Output<Boolean> capacityRebalance;
 
-    public Input<Boolean> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;
+    public Output<Boolean> getCapacityRebalance() {
+        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCooldown")
-      private final @Nullable Input<Integer> defaultCooldown;
+      private final @Nullable Output<Integer> defaultCooldown;
 
-    public Input<Integer> getDefaultCooldown() {
-        return this.defaultCooldown == null ? Input.empty() : this.defaultCooldown;
+    public Output<Integer> getDefaultCooldown() {
+        return this.defaultCooldown == null ? Output.empty() : this.defaultCooldown;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredCapacity")
-      private final @Nullable Input<Integer> desiredCapacity;
+      private final @Nullable Output<Integer> desiredCapacity;
 
-    public Input<Integer> getDesiredCapacity() {
-        return this.desiredCapacity == null ? Input.empty() : this.desiredCapacity;
+    public Output<Integer> getDesiredCapacity() {
+        return this.desiredCapacity == null ? Output.empty() : this.desiredCapacity;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledMetrics")
-      private final @Nullable Input<List<String>> enabledMetrics;
+      private final @Nullable Output<List<String>> enabledMetrics;
 
-    public Input<List<String>> getEnabledMetrics() {
-        return this.enabledMetrics == null ? Input.empty() : this.enabledMetrics;
+    public Output<List<String>> getEnabledMetrics() {
+        return this.enabledMetrics == null ? Output.empty() : this.enabledMetrics;
     }
 
     /**
@@ -92,17 +92,17 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDelete")
-      private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Output<Boolean> forceDelete;
 
-    public Input<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Input.empty() : this.forceDelete;
+    public Output<Boolean> getForceDelete() {
+        return this.forceDelete == null ? Output.empty() : this.forceDelete;
     }
 
     @InputImport(name="forceDeleteWarmPool")
-      private final @Nullable Input<Boolean> forceDeleteWarmPool;
+      private final @Nullable Output<Boolean> forceDeleteWarmPool;
 
-    public Input<Boolean> getForceDeleteWarmPool() {
-        return this.forceDeleteWarmPool == null ? Input.empty() : this.forceDeleteWarmPool;
+    public Output<Boolean> getForceDeleteWarmPool() {
+        return this.forceDeleteWarmPool == null ? Output.empty() : this.forceDeleteWarmPool;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckGracePeriod")
-      private final @Nullable Input<Integer> healthCheckGracePeriod;
+      private final @Nullable Output<Integer> healthCheckGracePeriod;
 
-    public Input<Integer> getHealthCheckGracePeriod() {
-        return this.healthCheckGracePeriod == null ? Input.empty() : this.healthCheckGracePeriod;
+    public Output<Integer> getHealthCheckGracePeriod() {
+        return this.healthCheckGracePeriod == null ? Output.empty() : this.healthCheckGracePeriod;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckType")
-      private final @Nullable Input<String> healthCheckType;
+      private final @Nullable Output<String> healthCheckType;
 
-    public Input<String> getHealthCheckType() {
-        return this.healthCheckType == null ? Input.empty() : this.healthCheckType;
+    public Output<String> getHealthCheckType() {
+        return this.healthCheckType == null ? Output.empty() : this.healthCheckType;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialLifecycleHooks")
-      private final @Nullable Input<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
+      private final @Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
 
-    public Input<List<GroupInitialLifecycleHookArgs>> getInitialLifecycleHooks() {
-        return this.initialLifecycleHooks == null ? Input.empty() : this.initialLifecycleHooks;
+    public Output<List<GroupInitialLifecycleHookArgs>> getInitialLifecycleHooks() {
+        return this.initialLifecycleHooks == null ? Output.empty() : this.initialLifecycleHooks;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceRefresh")
-      private final @Nullable Input<GroupInstanceRefreshArgs> instanceRefresh;
+      private final @Nullable Output<GroupInstanceRefreshArgs> instanceRefresh;
 
-    public Input<GroupInstanceRefreshArgs> getInstanceRefresh() {
-        return this.instanceRefresh == null ? Input.empty() : this.instanceRefresh;
+    public Output<GroupInstanceRefreshArgs> getInstanceRefresh() {
+        return this.instanceRefresh == null ? Output.empty() : this.instanceRefresh;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchConfiguration")
-      private final @Nullable Input<String> launchConfiguration;
+      private final @Nullable Output<String> launchConfiguration;
 
-    public Input<String> getLaunchConfiguration() {
-        return this.launchConfiguration == null ? Input.empty() : this.launchConfiguration;
+    public Output<String> getLaunchConfiguration() {
+        return this.launchConfiguration == null ? Output.empty() : this.launchConfiguration;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchTemplate")
-      private final @Nullable Input<GroupLaunchTemplateArgs> launchTemplate;
+      private final @Nullable Output<GroupLaunchTemplateArgs> launchTemplate;
 
-    public Input<GroupLaunchTemplateArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
+    public Output<GroupLaunchTemplateArgs> getLaunchTemplate() {
+        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-      private final @Nullable Input<List<String>> loadBalancers;
+      private final @Nullable Output<List<String>> loadBalancers;
 
-    public Input<List<String>> getLoadBalancers() {
-        return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
+    public Output<List<String>> getLoadBalancers() {
+        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxInstanceLifetime")
-      private final @Nullable Input<Integer> maxInstanceLifetime;
+      private final @Nullable Output<Integer> maxInstanceLifetime;
 
-    public Input<Integer> getMaxInstanceLifetime() {
-        return this.maxInstanceLifetime == null ? Input.empty() : this.maxInstanceLifetime;
+    public Output<Integer> getMaxInstanceLifetime() {
+        return this.maxInstanceLifetime == null ? Output.empty() : this.maxInstanceLifetime;
     }
 
     /**
@@ -207,9 +207,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSize", required=true)
-      private final Input<Integer> maxSize;
+      private final Output<Integer> maxSize;
 
-    public Input<Integer> getMaxSize() {
+    public Output<Integer> getMaxSize() {
         return this.maxSize;
     }
 
@@ -218,10 +218,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricsGranularity")
-      private final @Nullable Input<Either<String,MetricsGranularity>> metricsGranularity;
+      private final @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
 
-    public Input<Either<String,MetricsGranularity>> getMetricsGranularity() {
-        return this.metricsGranularity == null ? Input.empty() : this.metricsGranularity;
+    public Output<Either<String,MetricsGranularity>> getMetricsGranularity() {
+        return this.metricsGranularity == null ? Output.empty() : this.metricsGranularity;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minElbCapacity")
-      private final @Nullable Input<Integer> minElbCapacity;
+      private final @Nullable Output<Integer> minElbCapacity;
 
-    public Input<Integer> getMinElbCapacity() {
-        return this.minElbCapacity == null ? Input.empty() : this.minElbCapacity;
+    public Output<Integer> getMinElbCapacity() {
+        return this.minElbCapacity == null ? Output.empty() : this.minElbCapacity;
     }
 
     /**
@@ -243,9 +243,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minSize", required=true)
-      private final Input<Integer> minSize;
+      private final Output<Integer> minSize;
 
-    public Input<Integer> getMinSize() {
+    public Output<Integer> getMinSize() {
         return this.minSize;
     }
 
@@ -254,10 +254,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mixedInstancesPolicy")
-      private final @Nullable Input<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
+      private final @Nullable Output<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
 
-    public Input<GroupMixedInstancesPolicyArgs> getMixedInstancesPolicy() {
-        return this.mixedInstancesPolicy == null ? Input.empty() : this.mixedInstancesPolicy;
+    public Output<GroupMixedInstancesPolicyArgs> getMixedInstancesPolicy() {
+        return this.mixedInstancesPolicy == null ? Output.empty() : this.mixedInstancesPolicy;
     }
 
     /**
@@ -265,10 +265,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -277,10 +277,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -288,10 +288,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementGroup")
-      private final @Nullable Input<String> placementGroup;
+      private final @Nullable Output<String> placementGroup;
 
-    public Input<String> getPlacementGroup() {
-        return this.placementGroup == null ? Input.empty() : this.placementGroup;
+    public Output<String> getPlacementGroup() {
+        return this.placementGroup == null ? Output.empty() : this.placementGroup;
     }
 
     /**
@@ -301,10 +301,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectFromScaleIn")
-      private final @Nullable Input<Boolean> protectFromScaleIn;
+      private final @Nullable Output<Boolean> protectFromScaleIn;
 
-    public Input<Boolean> getProtectFromScaleIn() {
-        return this.protectFromScaleIn == null ? Input.empty() : this.protectFromScaleIn;
+    public Output<Boolean> getProtectFromScaleIn() {
+        return this.protectFromScaleIn == null ? Output.empty() : this.protectFromScaleIn;
     }
 
     /**
@@ -312,10 +312,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLinkedRoleArn")
-      private final @Nullable Input<String> serviceLinkedRoleArn;
+      private final @Nullable Output<String> serviceLinkedRoleArn;
 
-    public Input<String> getServiceLinkedRoleArn() {
-        return this.serviceLinkedRoleArn == null ? Input.empty() : this.serviceLinkedRoleArn;
+    public Output<String> getServiceLinkedRoleArn() {
+        return this.serviceLinkedRoleArn == null ? Output.empty() : this.serviceLinkedRoleArn;
     }
 
     /**
@@ -324,10 +324,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspendedProcesses")
-      private final @Nullable Input<List<String>> suspendedProcesses;
+      private final @Nullable Output<List<String>> suspendedProcesses;
 
-    public Input<List<String>> getSuspendedProcesses() {
-        return this.suspendedProcesses == null ? Input.empty() : this.suspendedProcesses;
+    public Output<List<String>> getSuspendedProcesses() {
+        return this.suspendedProcesses == null ? Output.empty() : this.suspendedProcesses;
     }
 
     /**
@@ -335,10 +335,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<GroupTagArgs>> tags;
+      private final @Nullable Output<List<GroupTagArgs>> tags;
 
-    public Input<List<GroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<GroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -346,10 +346,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsCollection")
-      private final @Nullable Input<List<Map<String,String>>> tagsCollection;
+      private final @Nullable Output<List<Map<String,String>>> tagsCollection;
 
-    public Input<List<Map<String,String>>> getTagsCollection() {
-        return this.tagsCollection == null ? Input.empty() : this.tagsCollection;
+    public Output<List<Map<String,String>>> getTagsCollection() {
+        return this.tagsCollection == null ? Output.empty() : this.tagsCollection;
     }
 
     /**
@@ -357,10 +357,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupArns")
-      private final @Nullable Input<List<String>> targetGroupArns;
+      private final @Nullable Output<List<String>> targetGroupArns;
 
-    public Input<List<String>> getTargetGroupArns() {
-        return this.targetGroupArns == null ? Input.empty() : this.targetGroupArns;
+    public Output<List<String>> getTargetGroupArns() {
+        return this.targetGroupArns == null ? Output.empty() : this.targetGroupArns;
     }
 
     /**
@@ -368,10 +368,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationPolicies")
-      private final @Nullable Input<List<String>> terminationPolicies;
+      private final @Nullable Output<List<String>> terminationPolicies;
 
-    public Input<List<String>> getTerminationPolicies() {
-        return this.terminationPolicies == null ? Input.empty() : this.terminationPolicies;
+    public Output<List<String>> getTerminationPolicies() {
+        return this.terminationPolicies == null ? Output.empty() : this.terminationPolicies;
     }
 
     /**
@@ -379,10 +379,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcZoneIdentifiers")
-      private final @Nullable Input<List<String>> vpcZoneIdentifiers;
+      private final @Nullable Output<List<String>> vpcZoneIdentifiers;
 
-    public Input<List<String>> getVpcZoneIdentifiers() {
-        return this.vpcZoneIdentifiers == null ? Input.empty() : this.vpcZoneIdentifiers;
+    public Output<List<String>> getVpcZoneIdentifiers() {
+        return this.vpcZoneIdentifiers == null ? Output.empty() : this.vpcZoneIdentifiers;
     }
 
     /**
@@ -394,10 +394,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForCapacityTimeout")
-      private final @Nullable Input<String> waitForCapacityTimeout;
+      private final @Nullable Output<String> waitForCapacityTimeout;
 
-    public Input<String> getWaitForCapacityTimeout() {
-        return this.waitForCapacityTimeout == null ? Input.empty() : this.waitForCapacityTimeout;
+    public Output<String> getWaitForCapacityTimeout() {
+        return this.waitForCapacityTimeout == null ? Output.empty() : this.waitForCapacityTimeout;
     }
 
     /**
@@ -409,10 +409,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForElbCapacity")
-      private final @Nullable Input<Integer> waitForElbCapacity;
+      private final @Nullable Output<Integer> waitForElbCapacity;
 
-    public Input<Integer> getWaitForElbCapacity() {
-        return this.waitForElbCapacity == null ? Input.empty() : this.waitForElbCapacity;
+    public Output<Integer> getWaitForElbCapacity() {
+        return this.waitForElbCapacity == null ? Output.empty() : this.waitForElbCapacity;
     }
 
     /**
@@ -421,47 +421,47 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="warmPool")
-      private final @Nullable Input<GroupWarmPoolArgs> warmPool;
+      private final @Nullable Output<GroupWarmPoolArgs> warmPool;
 
-    public Input<GroupWarmPoolArgs> getWarmPool() {
-        return this.warmPool == null ? Input.empty() : this.warmPool;
+    public Output<GroupWarmPoolArgs> getWarmPool() {
+        return this.warmPool == null ? Output.empty() : this.warmPool;
     }
 
     public GroupArgs(
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<Boolean> capacityRebalance,
-        @Nullable Input<Integer> defaultCooldown,
-        @Nullable Input<Integer> desiredCapacity,
-        @Nullable Input<List<String>> enabledMetrics,
-        @Nullable Input<Boolean> forceDelete,
-        @Nullable Input<Boolean> forceDeleteWarmPool,
-        @Nullable Input<Integer> healthCheckGracePeriod,
-        @Nullable Input<String> healthCheckType,
-        @Nullable Input<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks,
-        @Nullable Input<GroupInstanceRefreshArgs> instanceRefresh,
-        @Nullable Input<String> launchConfiguration,
-        @Nullable Input<GroupLaunchTemplateArgs> launchTemplate,
-        @Nullable Input<List<String>> loadBalancers,
-        @Nullable Input<Integer> maxInstanceLifetime,
-        Input<Integer> maxSize,
-        @Nullable Input<Either<String,MetricsGranularity>> metricsGranularity,
-        @Nullable Input<Integer> minElbCapacity,
-        Input<Integer> minSize,
-        @Nullable Input<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> placementGroup,
-        @Nullable Input<Boolean> protectFromScaleIn,
-        @Nullable Input<String> serviceLinkedRoleArn,
-        @Nullable Input<List<String>> suspendedProcesses,
-        @Nullable Input<List<GroupTagArgs>> tags,
-        @Nullable Input<List<Map<String,String>>> tagsCollection,
-        @Nullable Input<List<String>> targetGroupArns,
-        @Nullable Input<List<String>> terminationPolicies,
-        @Nullable Input<List<String>> vpcZoneIdentifiers,
-        @Nullable Input<String> waitForCapacityTimeout,
-        @Nullable Input<Integer> waitForElbCapacity,
-        @Nullable Input<GroupWarmPoolArgs> warmPool) {
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<Boolean> capacityRebalance,
+        @Nullable Output<Integer> defaultCooldown,
+        @Nullable Output<Integer> desiredCapacity,
+        @Nullable Output<List<String>> enabledMetrics,
+        @Nullable Output<Boolean> forceDelete,
+        @Nullable Output<Boolean> forceDeleteWarmPool,
+        @Nullable Output<Integer> healthCheckGracePeriod,
+        @Nullable Output<String> healthCheckType,
+        @Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks,
+        @Nullable Output<GroupInstanceRefreshArgs> instanceRefresh,
+        @Nullable Output<String> launchConfiguration,
+        @Nullable Output<GroupLaunchTemplateArgs> launchTemplate,
+        @Nullable Output<List<String>> loadBalancers,
+        @Nullable Output<Integer> maxInstanceLifetime,
+        Output<Integer> maxSize,
+        @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity,
+        @Nullable Output<Integer> minElbCapacity,
+        Output<Integer> minSize,
+        @Nullable Output<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> placementGroup,
+        @Nullable Output<Boolean> protectFromScaleIn,
+        @Nullable Output<String> serviceLinkedRoleArn,
+        @Nullable Output<List<String>> suspendedProcesses,
+        @Nullable Output<List<GroupTagArgs>> tags,
+        @Nullable Output<List<Map<String,String>>> tagsCollection,
+        @Nullable Output<List<String>> targetGroupArns,
+        @Nullable Output<List<String>> terminationPolicies,
+        @Nullable Output<List<String>> vpcZoneIdentifiers,
+        @Nullable Output<String> waitForCapacityTimeout,
+        @Nullable Output<Integer> waitForElbCapacity,
+        @Nullable Output<GroupWarmPoolArgs> warmPool) {
         this.availabilityZones = availabilityZones;
         this.capacityRebalance = capacityRebalance;
         this.defaultCooldown = defaultCooldown;
@@ -499,40 +499,40 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.availabilityZones = Input.empty();
-        this.capacityRebalance = Input.empty();
-        this.defaultCooldown = Input.empty();
-        this.desiredCapacity = Input.empty();
-        this.enabledMetrics = Input.empty();
-        this.forceDelete = Input.empty();
-        this.forceDeleteWarmPool = Input.empty();
-        this.healthCheckGracePeriod = Input.empty();
-        this.healthCheckType = Input.empty();
-        this.initialLifecycleHooks = Input.empty();
-        this.instanceRefresh = Input.empty();
-        this.launchConfiguration = Input.empty();
-        this.launchTemplate = Input.empty();
-        this.loadBalancers = Input.empty();
-        this.maxInstanceLifetime = Input.empty();
-        this.maxSize = Input.empty();
-        this.metricsGranularity = Input.empty();
-        this.minElbCapacity = Input.empty();
-        this.minSize = Input.empty();
-        this.mixedInstancesPolicy = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.placementGroup = Input.empty();
-        this.protectFromScaleIn = Input.empty();
-        this.serviceLinkedRoleArn = Input.empty();
-        this.suspendedProcesses = Input.empty();
-        this.tags = Input.empty();
-        this.tagsCollection = Input.empty();
-        this.targetGroupArns = Input.empty();
-        this.terminationPolicies = Input.empty();
-        this.vpcZoneIdentifiers = Input.empty();
-        this.waitForCapacityTimeout = Input.empty();
-        this.waitForElbCapacity = Input.empty();
-        this.warmPool = Input.empty();
+        this.availabilityZones = Output.empty();
+        this.capacityRebalance = Output.empty();
+        this.defaultCooldown = Output.empty();
+        this.desiredCapacity = Output.empty();
+        this.enabledMetrics = Output.empty();
+        this.forceDelete = Output.empty();
+        this.forceDeleteWarmPool = Output.empty();
+        this.healthCheckGracePeriod = Output.empty();
+        this.healthCheckType = Output.empty();
+        this.initialLifecycleHooks = Output.empty();
+        this.instanceRefresh = Output.empty();
+        this.launchConfiguration = Output.empty();
+        this.launchTemplate = Output.empty();
+        this.loadBalancers = Output.empty();
+        this.maxInstanceLifetime = Output.empty();
+        this.maxSize = Output.empty();
+        this.metricsGranularity = Output.empty();
+        this.minElbCapacity = Output.empty();
+        this.minSize = Output.empty();
+        this.mixedInstancesPolicy = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.placementGroup = Output.empty();
+        this.protectFromScaleIn = Output.empty();
+        this.serviceLinkedRoleArn = Output.empty();
+        this.suspendedProcesses = Output.empty();
+        this.tags = Output.empty();
+        this.tagsCollection = Output.empty();
+        this.targetGroupArns = Output.empty();
+        this.terminationPolicies = Output.empty();
+        this.vpcZoneIdentifiers = Output.empty();
+        this.waitForCapacityTimeout = Output.empty();
+        this.waitForElbCapacity = Output.empty();
+        this.warmPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -544,40 +544,40 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<Boolean> capacityRebalance;
-        private @Nullable Input<Integer> defaultCooldown;
-        private @Nullable Input<Integer> desiredCapacity;
-        private @Nullable Input<List<String>> enabledMetrics;
-        private @Nullable Input<Boolean> forceDelete;
-        private @Nullable Input<Boolean> forceDeleteWarmPool;
-        private @Nullable Input<Integer> healthCheckGracePeriod;
-        private @Nullable Input<String> healthCheckType;
-        private @Nullable Input<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
-        private @Nullable Input<GroupInstanceRefreshArgs> instanceRefresh;
-        private @Nullable Input<String> launchConfiguration;
-        private @Nullable Input<GroupLaunchTemplateArgs> launchTemplate;
-        private @Nullable Input<List<String>> loadBalancers;
-        private @Nullable Input<Integer> maxInstanceLifetime;
-        private Input<Integer> maxSize;
-        private @Nullable Input<Either<String,MetricsGranularity>> metricsGranularity;
-        private @Nullable Input<Integer> minElbCapacity;
-        private Input<Integer> minSize;
-        private @Nullable Input<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> placementGroup;
-        private @Nullable Input<Boolean> protectFromScaleIn;
-        private @Nullable Input<String> serviceLinkedRoleArn;
-        private @Nullable Input<List<String>> suspendedProcesses;
-        private @Nullable Input<List<GroupTagArgs>> tags;
-        private @Nullable Input<List<Map<String,String>>> tagsCollection;
-        private @Nullable Input<List<String>> targetGroupArns;
-        private @Nullable Input<List<String>> terminationPolicies;
-        private @Nullable Input<List<String>> vpcZoneIdentifiers;
-        private @Nullable Input<String> waitForCapacityTimeout;
-        private @Nullable Input<Integer> waitForElbCapacity;
-        private @Nullable Input<GroupWarmPoolArgs> warmPool;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<Boolean> capacityRebalance;
+        private @Nullable Output<Integer> defaultCooldown;
+        private @Nullable Output<Integer> desiredCapacity;
+        private @Nullable Output<List<String>> enabledMetrics;
+        private @Nullable Output<Boolean> forceDelete;
+        private @Nullable Output<Boolean> forceDeleteWarmPool;
+        private @Nullable Output<Integer> healthCheckGracePeriod;
+        private @Nullable Output<String> healthCheckType;
+        private @Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
+        private @Nullable Output<GroupInstanceRefreshArgs> instanceRefresh;
+        private @Nullable Output<String> launchConfiguration;
+        private @Nullable Output<GroupLaunchTemplateArgs> launchTemplate;
+        private @Nullable Output<List<String>> loadBalancers;
+        private @Nullable Output<Integer> maxInstanceLifetime;
+        private Output<Integer> maxSize;
+        private @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
+        private @Nullable Output<Integer> minElbCapacity;
+        private Output<Integer> minSize;
+        private @Nullable Output<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> placementGroup;
+        private @Nullable Output<Boolean> protectFromScaleIn;
+        private @Nullable Output<String> serviceLinkedRoleArn;
+        private @Nullable Output<List<String>> suspendedProcesses;
+        private @Nullable Output<List<GroupTagArgs>> tags;
+        private @Nullable Output<List<Map<String,String>>> tagsCollection;
+        private @Nullable Output<List<String>> targetGroupArns;
+        private @Nullable Output<List<String>> terminationPolicies;
+        private @Nullable Output<List<String>> vpcZoneIdentifiers;
+        private @Nullable Output<String> waitForCapacityTimeout;
+        private @Nullable Output<Integer> waitForElbCapacity;
+        private @Nullable Output<GroupWarmPoolArgs> warmPool;
 
         public Builder() {
     	      // Empty
@@ -621,333 +621,333 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.warmPool = defaults.warmPool;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder capacityRebalance(@Nullable Input<Boolean> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Output<Boolean> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
         public Builder capacityRebalance(@Nullable Boolean capacityRebalance) {
-            this.capacityRebalance = Input.ofNullable(capacityRebalance);
+            this.capacityRebalance = Output.ofNullable(capacityRebalance);
             return this;
         }
 
-        public Builder defaultCooldown(@Nullable Input<Integer> defaultCooldown) {
+        public Builder defaultCooldown(@Nullable Output<Integer> defaultCooldown) {
             this.defaultCooldown = defaultCooldown;
             return this;
         }
 
         public Builder defaultCooldown(@Nullable Integer defaultCooldown) {
-            this.defaultCooldown = Input.ofNullable(defaultCooldown);
+            this.defaultCooldown = Output.ofNullable(defaultCooldown);
             return this;
         }
 
-        public Builder desiredCapacity(@Nullable Input<Integer> desiredCapacity) {
+        public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
 
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
-            this.desiredCapacity = Input.ofNullable(desiredCapacity);
+            this.desiredCapacity = Output.ofNullable(desiredCapacity);
             return this;
         }
 
-        public Builder enabledMetrics(@Nullable Input<List<String>> enabledMetrics) {
+        public Builder enabledMetrics(@Nullable Output<List<String>> enabledMetrics) {
             this.enabledMetrics = enabledMetrics;
             return this;
         }
 
         public Builder enabledMetrics(@Nullable List<String> enabledMetrics) {
-            this.enabledMetrics = Input.ofNullable(enabledMetrics);
+            this.enabledMetrics = Output.ofNullable(enabledMetrics);
             return this;
         }
 
-        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Input.ofNullable(forceDelete);
+            this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder forceDeleteWarmPool(@Nullable Input<Boolean> forceDeleteWarmPool) {
+        public Builder forceDeleteWarmPool(@Nullable Output<Boolean> forceDeleteWarmPool) {
             this.forceDeleteWarmPool = forceDeleteWarmPool;
             return this;
         }
 
         public Builder forceDeleteWarmPool(@Nullable Boolean forceDeleteWarmPool) {
-            this.forceDeleteWarmPool = Input.ofNullable(forceDeleteWarmPool);
+            this.forceDeleteWarmPool = Output.ofNullable(forceDeleteWarmPool);
             return this;
         }
 
-        public Builder healthCheckGracePeriod(@Nullable Input<Integer> healthCheckGracePeriod) {
+        public Builder healthCheckGracePeriod(@Nullable Output<Integer> healthCheckGracePeriod) {
             this.healthCheckGracePeriod = healthCheckGracePeriod;
             return this;
         }
 
         public Builder healthCheckGracePeriod(@Nullable Integer healthCheckGracePeriod) {
-            this.healthCheckGracePeriod = Input.ofNullable(healthCheckGracePeriod);
+            this.healthCheckGracePeriod = Output.ofNullable(healthCheckGracePeriod);
             return this;
         }
 
-        public Builder healthCheckType(@Nullable Input<String> healthCheckType) {
+        public Builder healthCheckType(@Nullable Output<String> healthCheckType) {
             this.healthCheckType = healthCheckType;
             return this;
         }
 
         public Builder healthCheckType(@Nullable String healthCheckType) {
-            this.healthCheckType = Input.ofNullable(healthCheckType);
+            this.healthCheckType = Output.ofNullable(healthCheckType);
             return this;
         }
 
-        public Builder initialLifecycleHooks(@Nullable Input<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks) {
+        public Builder initialLifecycleHooks(@Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks) {
             this.initialLifecycleHooks = initialLifecycleHooks;
             return this;
         }
 
         public Builder initialLifecycleHooks(@Nullable List<GroupInitialLifecycleHookArgs> initialLifecycleHooks) {
-            this.initialLifecycleHooks = Input.ofNullable(initialLifecycleHooks);
+            this.initialLifecycleHooks = Output.ofNullable(initialLifecycleHooks);
             return this;
         }
 
-        public Builder instanceRefresh(@Nullable Input<GroupInstanceRefreshArgs> instanceRefresh) {
+        public Builder instanceRefresh(@Nullable Output<GroupInstanceRefreshArgs> instanceRefresh) {
             this.instanceRefresh = instanceRefresh;
             return this;
         }
 
         public Builder instanceRefresh(@Nullable GroupInstanceRefreshArgs instanceRefresh) {
-            this.instanceRefresh = Input.ofNullable(instanceRefresh);
+            this.instanceRefresh = Output.ofNullable(instanceRefresh);
             return this;
         }
 
-        public Builder launchConfiguration(@Nullable Input<String> launchConfiguration) {
+        public Builder launchConfiguration(@Nullable Output<String> launchConfiguration) {
             this.launchConfiguration = launchConfiguration;
             return this;
         }
 
-        public Builder launchTemplate(@Nullable Input<GroupLaunchTemplateArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<GroupLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
         public Builder launchTemplate(@Nullable GroupLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Input.ofNullable(launchTemplate);
+            this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
 
-        public Builder loadBalancers(@Nullable Input<List<String>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Output<List<String>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
         public Builder loadBalancers(@Nullable List<String> loadBalancers) {
-            this.loadBalancers = Input.ofNullable(loadBalancers);
+            this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder maxInstanceLifetime(@Nullable Input<Integer> maxInstanceLifetime) {
+        public Builder maxInstanceLifetime(@Nullable Output<Integer> maxInstanceLifetime) {
             this.maxInstanceLifetime = maxInstanceLifetime;
             return this;
         }
 
         public Builder maxInstanceLifetime(@Nullable Integer maxInstanceLifetime) {
-            this.maxInstanceLifetime = Input.ofNullable(maxInstanceLifetime);
+            this.maxInstanceLifetime = Output.ofNullable(maxInstanceLifetime);
             return this;
         }
 
-        public Builder maxSize(Input<Integer> maxSize) {
+        public Builder maxSize(Output<Integer> maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
         public Builder maxSize(Integer maxSize) {
-            this.maxSize = Input.of(Objects.requireNonNull(maxSize));
+            this.maxSize = Output.of(Objects.requireNonNull(maxSize));
             return this;
         }
 
-        public Builder metricsGranularity(@Nullable Input<Either<String,MetricsGranularity>> metricsGranularity) {
+        public Builder metricsGranularity(@Nullable Output<Either<String,MetricsGranularity>> metricsGranularity) {
             this.metricsGranularity = metricsGranularity;
             return this;
         }
 
         public Builder metricsGranularity(@Nullable Either<String,MetricsGranularity> metricsGranularity) {
-            this.metricsGranularity = Input.ofNullable(metricsGranularity);
+            this.metricsGranularity = Output.ofNullable(metricsGranularity);
             return this;
         }
 
-        public Builder minElbCapacity(@Nullable Input<Integer> minElbCapacity) {
+        public Builder minElbCapacity(@Nullable Output<Integer> minElbCapacity) {
             this.minElbCapacity = minElbCapacity;
             return this;
         }
 
         public Builder minElbCapacity(@Nullable Integer minElbCapacity) {
-            this.minElbCapacity = Input.ofNullable(minElbCapacity);
+            this.minElbCapacity = Output.ofNullable(minElbCapacity);
             return this;
         }
 
-        public Builder minSize(Input<Integer> minSize) {
+        public Builder minSize(Output<Integer> minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
 
         public Builder minSize(Integer minSize) {
-            this.minSize = Input.of(Objects.requireNonNull(minSize));
+            this.minSize = Output.of(Objects.requireNonNull(minSize));
             return this;
         }
 
-        public Builder mixedInstancesPolicy(@Nullable Input<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy) {
+        public Builder mixedInstancesPolicy(@Nullable Output<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy) {
             this.mixedInstancesPolicy = mixedInstancesPolicy;
             return this;
         }
 
         public Builder mixedInstancesPolicy(@Nullable GroupMixedInstancesPolicyArgs mixedInstancesPolicy) {
-            this.mixedInstancesPolicy = Input.ofNullable(mixedInstancesPolicy);
+            this.mixedInstancesPolicy = Output.ofNullable(mixedInstancesPolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder placementGroup(@Nullable Input<String> placementGroup) {
+        public Builder placementGroup(@Nullable Output<String> placementGroup) {
             this.placementGroup = placementGroup;
             return this;
         }
 
-        public Builder protectFromScaleIn(@Nullable Input<Boolean> protectFromScaleIn) {
+        public Builder protectFromScaleIn(@Nullable Output<Boolean> protectFromScaleIn) {
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
         public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
-            this.protectFromScaleIn = Input.ofNullable(protectFromScaleIn);
+            this.protectFromScaleIn = Output.ofNullable(protectFromScaleIn);
             return this;
         }
 
-        public Builder serviceLinkedRoleArn(@Nullable Input<String> serviceLinkedRoleArn) {
+        public Builder serviceLinkedRoleArn(@Nullable Output<String> serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = serviceLinkedRoleArn;
             return this;
         }
 
         public Builder serviceLinkedRoleArn(@Nullable String serviceLinkedRoleArn) {
-            this.serviceLinkedRoleArn = Input.ofNullable(serviceLinkedRoleArn);
+            this.serviceLinkedRoleArn = Output.ofNullable(serviceLinkedRoleArn);
             return this;
         }
 
-        public Builder suspendedProcesses(@Nullable Input<List<String>> suspendedProcesses) {
+        public Builder suspendedProcesses(@Nullable Output<List<String>> suspendedProcesses) {
             this.suspendedProcesses = suspendedProcesses;
             return this;
         }
 
         public Builder suspendedProcesses(@Nullable List<String> suspendedProcesses) {
-            this.suspendedProcesses = Input.ofNullable(suspendedProcesses);
+            this.suspendedProcesses = Output.ofNullable(suspendedProcesses);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<GroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<GroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<GroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsCollection(@Nullable Input<List<Map<String,String>>> tagsCollection) {
+        public Builder tagsCollection(@Nullable Output<List<Map<String,String>>> tagsCollection) {
             this.tagsCollection = tagsCollection;
             return this;
         }
 
         public Builder tagsCollection(@Nullable List<Map<String,String>> tagsCollection) {
-            this.tagsCollection = Input.ofNullable(tagsCollection);
+            this.tagsCollection = Output.ofNullable(tagsCollection);
             return this;
         }
 
-        public Builder targetGroupArns(@Nullable Input<List<String>> targetGroupArns) {
+        public Builder targetGroupArns(@Nullable Output<List<String>> targetGroupArns) {
             this.targetGroupArns = targetGroupArns;
             return this;
         }
 
         public Builder targetGroupArns(@Nullable List<String> targetGroupArns) {
-            this.targetGroupArns = Input.ofNullable(targetGroupArns);
+            this.targetGroupArns = Output.ofNullable(targetGroupArns);
             return this;
         }
 
-        public Builder terminationPolicies(@Nullable Input<List<String>> terminationPolicies) {
+        public Builder terminationPolicies(@Nullable Output<List<String>> terminationPolicies) {
             this.terminationPolicies = terminationPolicies;
             return this;
         }
 
         public Builder terminationPolicies(@Nullable List<String> terminationPolicies) {
-            this.terminationPolicies = Input.ofNullable(terminationPolicies);
+            this.terminationPolicies = Output.ofNullable(terminationPolicies);
             return this;
         }
 
-        public Builder vpcZoneIdentifiers(@Nullable Input<List<String>> vpcZoneIdentifiers) {
+        public Builder vpcZoneIdentifiers(@Nullable Output<List<String>> vpcZoneIdentifiers) {
             this.vpcZoneIdentifiers = vpcZoneIdentifiers;
             return this;
         }
 
         public Builder vpcZoneIdentifiers(@Nullable List<String> vpcZoneIdentifiers) {
-            this.vpcZoneIdentifiers = Input.ofNullable(vpcZoneIdentifiers);
+            this.vpcZoneIdentifiers = Output.ofNullable(vpcZoneIdentifiers);
             return this;
         }
 
-        public Builder waitForCapacityTimeout(@Nullable Input<String> waitForCapacityTimeout) {
+        public Builder waitForCapacityTimeout(@Nullable Output<String> waitForCapacityTimeout) {
             this.waitForCapacityTimeout = waitForCapacityTimeout;
             return this;
         }
 
         public Builder waitForCapacityTimeout(@Nullable String waitForCapacityTimeout) {
-            this.waitForCapacityTimeout = Input.ofNullable(waitForCapacityTimeout);
+            this.waitForCapacityTimeout = Output.ofNullable(waitForCapacityTimeout);
             return this;
         }
 
-        public Builder waitForElbCapacity(@Nullable Input<Integer> waitForElbCapacity) {
+        public Builder waitForElbCapacity(@Nullable Output<Integer> waitForElbCapacity) {
             this.waitForElbCapacity = waitForElbCapacity;
             return this;
         }
 
         public Builder waitForElbCapacity(@Nullable Integer waitForElbCapacity) {
-            this.waitForElbCapacity = Input.ofNullable(waitForElbCapacity);
+            this.waitForElbCapacity = Output.ofNullable(waitForElbCapacity);
             return this;
         }
 
-        public Builder warmPool(@Nullable Input<GroupWarmPoolArgs> warmPool) {
+        public Builder warmPool(@Nullable Output<GroupWarmPoolArgs> warmPool) {
             this.warmPool = warmPool;
             return this;
         }
 
         public Builder warmPool(@Nullable GroupWarmPoolArgs warmPool) {
-            this.warmPool = Input.ofNullable(warmPool);
+            this.warmPool = Output.ofNullable(warmPool);
             return this;
         }
         public GroupArgs build() {

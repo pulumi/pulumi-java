@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.RolloutStatus;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.DeleteServiceStrategyArgs;
@@ -22,10 +22,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteServiceStrategy")
-      private final @Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy;
+      private final @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
-    public Input<DeleteServiceStrategyArgs> getDeleteServiceStrategy() {
-        return this.deleteServiceStrategy == null ? Input.empty() : this.deleteServiceStrategy;
+    public Output<DeleteServiceStrategyArgs> getDeleteServiceStrategy() {
+        return this.deleteServiceStrategy == null ? Output.empty() : this.deleteServiceStrategy;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutId")
-      private final @Nullable Input<String> rolloutId;
+      private final @Nullable Output<String> rolloutId;
 
-    public Input<String> getRolloutId() {
-        return this.rolloutId == null ? Input.empty() : this.rolloutId;
+    public Output<String> getRolloutId() {
+        return this.rolloutId == null ? Output.empty() : this.rolloutId;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -66,10 +66,10 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<RolloutStatus> status;
+      private final @Nullable Output<RolloutStatus> status;
 
-    public Input<RolloutStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<RolloutStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficPercentStrategy")
-      private final @Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy;
+      private final @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
-    public Input<TrafficPercentStrategyArgs> getTrafficPercentStrategy() {
-        return this.trafficPercentStrategy == null ? Input.empty() : this.trafficPercentStrategy;
+    public Output<TrafficPercentStrategyArgs> getTrafficPercentStrategy() {
+        return this.trafficPercentStrategy == null ? Output.empty() : this.trafficPercentStrategy;
     }
 
     public RolloutArgs(
-        @Nullable Input<String> createTime,
-        @Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy,
-        @Nullable Input<String> rolloutId,
-        Input<String> serviceName,
-        @Nullable Input<RolloutStatus> status,
-        @Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy,
+        @Nullable Output<String> rolloutId,
+        Output<String> serviceName,
+        @Nullable Output<RolloutStatus> status,
+        @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy) {
         this.createTime = createTime;
         this.deleteServiceStrategy = deleteServiceStrategy;
         this.rolloutId = rolloutId;
@@ -99,12 +99,12 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RolloutArgs() {
-        this.createTime = Input.empty();
-        this.deleteServiceStrategy = Input.empty();
-        this.rolloutId = Input.empty();
-        this.serviceName = Input.empty();
-        this.status = Input.empty();
-        this.trafficPercentStrategy = Input.empty();
+        this.createTime = Output.empty();
+        this.deleteServiceStrategy = Output.empty();
+        this.rolloutId = Output.empty();
+        this.serviceName = Output.empty();
+        this.status = Output.empty();
+        this.trafficPercentStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy;
-        private @Nullable Input<String> rolloutId;
-        private Input<String> serviceName;
-        private @Nullable Input<RolloutStatus> status;
-        private @Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
+        private @Nullable Output<String> rolloutId;
+        private Output<String> serviceName;
+        private @Nullable Output<RolloutStatus> status;
+        private @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficPercentStrategy = defaults.trafficPercentStrategy;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder deleteServiceStrategy(@Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy) {
+        public Builder deleteServiceStrategy(@Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy) {
             this.deleteServiceStrategy = deleteServiceStrategy;
             return this;
         }
 
         public Builder deleteServiceStrategy(@Nullable DeleteServiceStrategyArgs deleteServiceStrategy) {
-            this.deleteServiceStrategy = Input.ofNullable(deleteServiceStrategy);
+            this.deleteServiceStrategy = Output.ofNullable(deleteServiceStrategy);
             return this;
         }
 
-        public Builder rolloutId(@Nullable Input<String> rolloutId) {
+        public Builder rolloutId(@Nullable Output<String> rolloutId) {
             this.rolloutId = rolloutId;
             return this;
         }
 
         public Builder rolloutId(@Nullable String rolloutId) {
-            this.rolloutId = Input.ofNullable(rolloutId);
+            this.rolloutId = Output.ofNullable(rolloutId);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder status(@Nullable Input<RolloutStatus> status) {
+        public Builder status(@Nullable Output<RolloutStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable RolloutStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder trafficPercentStrategy(@Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy) {
+        public Builder trafficPercentStrategy(@Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy) {
             this.trafficPercentStrategy = trafficPercentStrategy;
             return this;
         }
 
         public Builder trafficPercentStrategy(@Nullable TrafficPercentStrategyArgs trafficPercentStrategy) {
-            this.trafficPercentStrategy = Input.ofNullable(trafficPercentStrategy);
+            this.trafficPercentStrategy = Output.ofNullable(trafficPercentStrategy);
             return this;
         }
         public RolloutArgs build() {

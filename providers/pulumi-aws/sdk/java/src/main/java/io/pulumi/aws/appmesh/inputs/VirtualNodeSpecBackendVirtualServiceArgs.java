@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="clientPolicy")
-      private final @Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy;
+      private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy;
 
-    public Input<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> getClientPolicy() {
-        return this.clientPolicy == null ? Input.empty() : this.clientPolicy;
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> getClientPolicy() {
+        return this.clientPolicy == null ? Output.empty() : this.clientPolicy;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="virtualServiceName", required=true)
-      private final Input<String> virtualServiceName;
+      private final Output<String> virtualServiceName;
 
-    public Input<String> getVirtualServiceName() {
+    public Output<String> getVirtualServiceName() {
         return this.virtualServiceName;
     }
 
     public VirtualNodeSpecBackendVirtualServiceArgs(
-        @Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy,
-        Input<String> virtualServiceName) {
+        @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy,
+        Output<String> virtualServiceName) {
         this.clientPolicy = clientPolicy;
         this.virtualServiceName = Objects.requireNonNull(virtualServiceName, "expected parameter 'virtualServiceName' to be non-null");
     }
 
     private VirtualNodeSpecBackendVirtualServiceArgs() {
-        this.clientPolicy = Input.empty();
-        this.virtualServiceName = Input.empty();
+        this.clientPolicy = Output.empty();
+        this.virtualServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy;
-        private Input<String> virtualServiceName;
+        private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy;
+        private Output<String> virtualServiceName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     	      this.virtualServiceName = defaults.virtualServiceName;
         }
 
-        public Builder clientPolicy(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy) {
+        public Builder clientPolicy(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }
 
         public Builder clientPolicy(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyArgs clientPolicy) {
-            this.clientPolicy = Input.ofNullable(clientPolicy);
+            this.clientPolicy = Output.ofNullable(clientPolicy);
             return this;
         }
 
-        public Builder virtualServiceName(Input<String> virtualServiceName) {
+        public Builder virtualServiceName(Output<String> virtualServiceName) {
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
         }
 
         public Builder virtualServiceName(String virtualServiceName) {
-            this.virtualServiceName = Input.of(Objects.requireNonNull(virtualServiceName));
+            this.virtualServiceName = Output.of(Objects.requireNonNull(virtualServiceName));
             return this;
         }
         public VirtualNodeSpecBackendVirtualServiceArgs build() {

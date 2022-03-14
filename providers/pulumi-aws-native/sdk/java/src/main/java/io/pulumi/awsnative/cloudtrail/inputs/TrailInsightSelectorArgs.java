@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudtrail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="insightType")
-      private final @Nullable Input<String> insightType;
+      private final @Nullable Output<String> insightType;
 
-    public Input<String> getInsightType() {
-        return this.insightType == null ? Input.empty() : this.insightType;
+    public Output<String> getInsightType() {
+        return this.insightType == null ? Output.empty() : this.insightType;
     }
 
-    public TrailInsightSelectorArgs(@Nullable Input<String> insightType) {
+    public TrailInsightSelectorArgs(@Nullable Output<String> insightType) {
         this.insightType = insightType;
     }
 
     private TrailInsightSelectorArgs() {
-        this.insightType = Input.empty();
+        this.insightType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> insightType;
+        private @Nullable Output<String> insightType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
     	      this.insightType = defaults.insightType;
         }
 
-        public Builder insightType(@Nullable Input<String> insightType) {
+        public Builder insightType(@Nullable Output<String> insightType) {
             this.insightType = insightType;
             return this;
         }
 
         public Builder insightType(@Nullable String insightType) {
-            this.insightType = Input.ofNullable(insightType);
+            this.insightType = Output.ofNullable(insightType);
             return this;
         }
         public TrailInsightSelectorArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.peering;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.RegisteredAsnArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,22 +140,22 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegisteredAsn(String name, RegisteredAsnArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:RegisteredAsn", name, args == null ? RegisteredAsnArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:peering:RegisteredAsn", name, args == null ? RegisteredAsnArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegisteredAsn(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegisteredAsn(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:peering:RegisteredAsn", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:peering/v20200101preview:RegisteredAsn").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20200401:RegisteredAsn").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20201001:RegisteredAsn").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20210101:RegisteredAsn").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20210601:RegisteredAsn").build())
+                Output.of(Alias.builder().setType("azure-native:peering/v20200101preview:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20200401:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20201001:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210101:RegisteredAsn").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210601:RegisteredAsn").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -170,7 +169,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegisteredAsn get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegisteredAsn get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegisteredAsn(name, id, options);
     }
 }

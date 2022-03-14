@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,29 +16,29 @@ public final class ServiceTaskSpecLogDriverArgs extends io.pulumi.resources.Reso
     public static final ServiceTaskSpecLogDriverArgs Empty = new ServiceTaskSpecLogDriverArgs();
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="options")
-      private final @Nullable Input<Map<String,String>> options;
+      private final @Nullable Output<Map<String,String>> options;
 
-    public Input<Map<String,String>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<Map<String,String>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     public ServiceTaskSpecLogDriverArgs(
-        Input<String> name,
-        @Nullable Input<Map<String,String>> options) {
+        Output<String> name,
+        @Nullable Output<Map<String,String>> options) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.options = options;
     }
 
     private ServiceTaskSpecLogDriverArgs() {
-        this.name = Input.empty();
-        this.options = Input.empty();
+        this.name = Output.empty();
+        this.options = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServiceTaskSpecLogDriverArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<Map<String,String>> options;
+        private Output<String> name;
+        private @Nullable Output<Map<String,String>> options;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServiceTaskSpecLogDriverArgs extends io.pulumi.resources.Reso
     	      this.options = defaults.options;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder options(@Nullable Input<Map<String,String>> options) {
+        public Builder options(@Nullable Output<Map<String,String>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable Map<String,String> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
         public ServiceTaskSpecLogDriverArgs build() {

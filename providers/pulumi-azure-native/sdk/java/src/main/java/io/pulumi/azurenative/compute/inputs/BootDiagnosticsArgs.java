@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageUri")
-      private final @Nullable Input<String> storageUri;
+      private final @Nullable Output<String> storageUri;
 
-    public Input<String> getStorageUri() {
-        return this.storageUri == null ? Input.empty() : this.storageUri;
+    public Output<String> getStorageUri() {
+        return this.storageUri == null ? Output.empty() : this.storageUri;
     }
 
     public BootDiagnosticsArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> storageUri) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> storageUri) {
         this.enabled = enabled;
         this.storageUri = storageUri;
     }
 
     private BootDiagnosticsArgs() {
-        this.enabled = Input.empty();
-        this.storageUri = Input.empty();
+        this.enabled = Output.empty();
+        this.storageUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> storageUri;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> storageUri;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.storageUri = defaults.storageUri;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder storageUri(@Nullable Input<String> storageUri) {
+        public Builder storageUri(@Nullable Output<String> storageUri) {
             this.storageUri = storageUri;
             return this;
         }
 
         public Builder storageUri(@Nullable String storageUri) {
-            this.storageUri = Input.ofNullable(storageUri);
+            this.storageUri = Output.ofNullable(storageUri);
             return this;
         }
         public BootDiagnosticsArgs build() {

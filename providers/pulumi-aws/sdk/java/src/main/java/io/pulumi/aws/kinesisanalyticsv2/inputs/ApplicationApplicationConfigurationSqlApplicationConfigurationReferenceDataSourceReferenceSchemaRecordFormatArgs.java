@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="mappingParameters", required=true)
-      private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
+      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
-    public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> getMappingParameters() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> getMappingParameters() {
         return this.mappingParameters;
     }
 
@@ -30,22 +30,22 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordFormatType", required=true)
-      private final Input<String> recordFormatType;
+      private final Output<String> recordFormatType;
 
-    public Input<String> getRecordFormatType() {
+    public Output<String> getRecordFormatType() {
         return this.recordFormatType;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs(
-        Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters,
-        Input<String> recordFormatType) {
+        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters,
+        Output<String> recordFormatType) {
         this.mappingParameters = Objects.requireNonNull(mappingParameters, "expected parameter 'mappingParameters' to be non-null");
         this.recordFormatType = Objects.requireNonNull(recordFormatType, "expected parameter 'recordFormatType' to be non-null");
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs() {
-        this.mappingParameters = Input.empty();
-        this.recordFormatType = Input.empty();
+        this.mappingParameters = Output.empty();
+        this.recordFormatType = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
-        private Input<String> recordFormatType;
+        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
+        private Output<String> recordFormatType;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder mappingParameters(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters) {
+        public Builder mappingParameters(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters) {
             this.mappingParameters = Objects.requireNonNull(mappingParameters);
             return this;
         }
 
         public Builder mappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs mappingParameters) {
-            this.mappingParameters = Input.of(Objects.requireNonNull(mappingParameters));
+            this.mappingParameters = Output.of(Objects.requireNonNull(mappingParameters));
             return this;
         }
 
-        public Builder recordFormatType(Input<String> recordFormatType) {
+        public Builder recordFormatType(Output<String> recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }
 
         public Builder recordFormatType(String recordFormatType) {
-            this.recordFormatType = Input.of(Objects.requireNonNull(recordFormatType));
+            this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs build() {

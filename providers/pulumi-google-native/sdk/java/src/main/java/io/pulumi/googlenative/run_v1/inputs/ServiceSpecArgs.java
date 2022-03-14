@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.RevisionTemplateArgs;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
@@ -25,10 +25,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<RevisionTemplateArgs> template;
+      private final @Nullable Output<RevisionTemplateArgs> template;
 
-    public Input<RevisionTemplateArgs> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<RevisionTemplateArgs> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-      private final @Nullable Input<List<TrafficTargetArgs>> traffic;
+      private final @Nullable Output<List<TrafficTargetArgs>> traffic;
 
-    public Input<List<TrafficTargetArgs>> getTraffic() {
-        return this.traffic == null ? Input.empty() : this.traffic;
+    public Output<List<TrafficTargetArgs>> getTraffic() {
+        return this.traffic == null ? Output.empty() : this.traffic;
     }
 
     public ServiceSpecArgs(
-        @Nullable Input<RevisionTemplateArgs> template,
-        @Nullable Input<List<TrafficTargetArgs>> traffic) {
+        @Nullable Output<RevisionTemplateArgs> template,
+        @Nullable Output<List<TrafficTargetArgs>> traffic) {
         this.template = template;
         this.traffic = traffic;
     }
 
     private ServiceSpecArgs() {
-        this.template = Input.empty();
-        this.traffic = Input.empty();
+        this.template = Output.empty();
+        this.traffic = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RevisionTemplateArgs> template;
-        private @Nullable Input<List<TrafficTargetArgs>> traffic;
+        private @Nullable Output<RevisionTemplateArgs> template;
+        private @Nullable Output<List<TrafficTargetArgs>> traffic;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder template(@Nullable Input<RevisionTemplateArgs> template) {
+        public Builder template(@Nullable Output<RevisionTemplateArgs> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable RevisionTemplateArgs template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
 
-        public Builder traffic(@Nullable Input<List<TrafficTargetArgs>> traffic) {
+        public Builder traffic(@Nullable Output<List<TrafficTargetArgs>> traffic) {
             this.traffic = traffic;
             return this;
         }
 
         public Builder traffic(@Nullable List<TrafficTargetArgs> traffic) {
-            this.traffic = Input.ofNullable(traffic);
+            this.traffic = Output.ofNullable(traffic);
             return this;
         }
         public ServiceSpecArgs build() {

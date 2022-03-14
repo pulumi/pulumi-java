@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LoadBalancerFrontendIPConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class LoadBalancerConfigurationPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="frontendIPConfigurations", required=true)
-      private final Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
+      private final Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
-    public Input<List<LoadBalancerFrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
+    public Output<List<LoadBalancerFrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 
-    public LoadBalancerConfigurationPropertiesArgs(Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
+    public LoadBalancerConfigurationPropertiesArgs(Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
         this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations, "expected parameter 'frontendIPConfigurations' to be non-null");
     }
 
     private LoadBalancerConfigurationPropertiesArgs() {
-        this.frontendIPConfigurations = Input.empty();
+        this.frontendIPConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class LoadBalancerConfigurationPropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
+        private Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class LoadBalancerConfigurationPropertiesArgs extends io.pulumi.res
     	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
         }
 
-        public Builder frontendIPConfigurations(Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
 
         public Builder frontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Input.of(Objects.requireNonNull(frontendIPConfigurations));
+            this.frontendIPConfigurations = Output.of(Objects.requireNonNull(frontendIPConfigurations));
             return this;
         }
         public LoadBalancerConfigurationPropertiesArgs build() {

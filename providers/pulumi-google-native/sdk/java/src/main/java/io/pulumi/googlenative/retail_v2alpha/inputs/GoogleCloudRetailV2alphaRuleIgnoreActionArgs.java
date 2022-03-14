@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
      * 
      */
     @InputImport(name="ignoreTerms")
-      private final @Nullable Input<List<String>> ignoreTerms;
+      private final @Nullable Output<List<String>> ignoreTerms;
 
-    public Input<List<String>> getIgnoreTerms() {
-        return this.ignoreTerms == null ? Input.empty() : this.ignoreTerms;
+    public Output<List<String>> getIgnoreTerms() {
+        return this.ignoreTerms == null ? Output.empty() : this.ignoreTerms;
     }
 
-    public GoogleCloudRetailV2alphaRuleIgnoreActionArgs(@Nullable Input<List<String>> ignoreTerms) {
+    public GoogleCloudRetailV2alphaRuleIgnoreActionArgs(@Nullable Output<List<String>> ignoreTerms) {
         this.ignoreTerms = ignoreTerms;
     }
 
     private GoogleCloudRetailV2alphaRuleIgnoreActionArgs() {
-        this.ignoreTerms = Input.empty();
+        this.ignoreTerms = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ignoreTerms;
+        private @Nullable Output<List<String>> ignoreTerms;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
     	      this.ignoreTerms = defaults.ignoreTerms;
         }
 
-        public Builder ignoreTerms(@Nullable Input<List<String>> ignoreTerms) {
+        public Builder ignoreTerms(@Nullable Output<List<String>> ignoreTerms) {
             this.ignoreTerms = ignoreTerms;
             return this;
         }
 
         public Builder ignoreTerms(@Nullable List<String> ignoreTerms) {
-            this.ignoreTerms = Input.ofNullable(ignoreTerms);
+            this.ignoreTerms = Output.ofNullable(ignoreTerms);
             return this;
         }
         public GoogleCloudRetailV2alphaRuleIgnoreActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     public static final EntryGroupIamMemberArgs Empty = new EntryGroupIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<EntryGroupIamMemberConditionArgs> condition;
+      private final @Nullable Output<EntryGroupIamMemberConditionArgs> condition;
 
-    public Input<EntryGroupIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<EntryGroupIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,16 +27,16 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entryGroup", required=true)
-      private final Input<String> entryGroup;
+      private final Output<String> entryGroup;
 
-    public Input<String> getEntryGroup() {
+    public Output<String> getEntryGroup() {
         return this.entryGroup;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -46,17 +46,17 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -66,19 +66,19 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public EntryGroupIamMemberArgs(
-        @Nullable Input<EntryGroupIamMemberConditionArgs> condition,
-        Input<String> entryGroup,
-        Input<String> member,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> role) {
+        @Nullable Output<EntryGroupIamMemberConditionArgs> condition,
+        Output<String> entryGroup,
+        Output<String> member,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> role) {
         this.condition = condition;
         this.entryGroup = Objects.requireNonNull(entryGroup, "expected parameter 'entryGroup' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -88,12 +88,12 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     }
 
     private EntryGroupIamMemberArgs() {
-        this.condition = Input.empty();
-        this.entryGroup = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.entryGroup = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,12 +105,12 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<EntryGroupIamMemberConditionArgs> condition;
-        private Input<String> entryGroup;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> role;
+        private @Nullable Output<EntryGroupIamMemberConditionArgs> condition;
+        private Output<String> entryGroup;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -126,63 +126,63 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<EntryGroupIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<EntryGroupIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable EntryGroupIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder entryGroup(Input<String> entryGroup) {
+        public Builder entryGroup(Output<String> entryGroup) {
             this.entryGroup = Objects.requireNonNull(entryGroup);
             return this;
         }
 
         public Builder entryGroup(String entryGroup) {
-            this.entryGroup = Input.of(Objects.requireNonNull(entryGroup));
+            this.entryGroup = Output.of(Objects.requireNonNull(entryGroup));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public EntryGroupIamMemberArgs build() {

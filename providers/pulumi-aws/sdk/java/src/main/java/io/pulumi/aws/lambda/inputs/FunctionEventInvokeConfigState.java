@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destinationConfig")
-      private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
+      private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
 
-    public Input<FunctionEventInvokeConfigDestinationConfigGetArgs> getDestinationConfig() {
-        return this.destinationConfig == null ? Input.empty() : this.destinationConfig;
+    public Output<FunctionEventInvokeConfigDestinationConfigGetArgs> getDestinationConfig() {
+        return this.destinationConfig == null ? Output.empty() : this.destinationConfig;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="functionName")
-      private final @Nullable Input<String> functionName;
+      private final @Nullable Output<String> functionName;
 
-    public Input<String> getFunctionName() {
-        return this.functionName == null ? Input.empty() : this.functionName;
+    public Output<String> getFunctionName() {
+        return this.functionName == null ? Output.empty() : this.functionName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maximumEventAgeInSeconds")
-      private final @Nullable Input<Integer> maximumEventAgeInSeconds;
+      private final @Nullable Output<Integer> maximumEventAgeInSeconds;
 
-    public Input<Integer> getMaximumEventAgeInSeconds() {
-        return this.maximumEventAgeInSeconds == null ? Input.empty() : this.maximumEventAgeInSeconds;
+    public Output<Integer> getMaximumEventAgeInSeconds() {
+        return this.maximumEventAgeInSeconds == null ? Output.empty() : this.maximumEventAgeInSeconds;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maximumRetryAttempts")
-      private final @Nullable Input<Integer> maximumRetryAttempts;
+      private final @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Input<Integer> getMaximumRetryAttempts() {
-        return this.maximumRetryAttempts == null ? Input.empty() : this.maximumRetryAttempts;
+    public Output<Integer> getMaximumRetryAttempts() {
+        return this.maximumRetryAttempts == null ? Output.empty() : this.maximumRetryAttempts;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="qualifier")
-      private final @Nullable Input<String> qualifier;
+      private final @Nullable Output<String> qualifier;
 
-    public Input<String> getQualifier() {
-        return this.qualifier == null ? Input.empty() : this.qualifier;
+    public Output<String> getQualifier() {
+        return this.qualifier == null ? Output.empty() : this.qualifier;
     }
 
     public FunctionEventInvokeConfigState(
-        @Nullable Input<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig,
-        @Nullable Input<String> functionName,
-        @Nullable Input<Integer> maximumEventAgeInSeconds,
-        @Nullable Input<Integer> maximumRetryAttempts,
-        @Nullable Input<String> qualifier) {
+        @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig,
+        @Nullable Output<String> functionName,
+        @Nullable Output<Integer> maximumEventAgeInSeconds,
+        @Nullable Output<Integer> maximumRetryAttempts,
+        @Nullable Output<String> qualifier) {
         this.destinationConfig = destinationConfig;
         this.functionName = functionName;
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
@@ -85,11 +85,11 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
     }
 
     private FunctionEventInvokeConfigState() {
-        this.destinationConfig = Input.empty();
-        this.functionName = Input.empty();
-        this.maximumEventAgeInSeconds = Input.empty();
-        this.maximumRetryAttempts = Input.empty();
-        this.qualifier = Input.empty();
+        this.destinationConfig = Output.empty();
+        this.functionName = Output.empty();
+        this.maximumEventAgeInSeconds = Output.empty();
+        this.maximumRetryAttempts = Output.empty();
+        this.qualifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
-        private @Nullable Input<String> functionName;
-        private @Nullable Input<Integer> maximumEventAgeInSeconds;
-        private @Nullable Input<Integer> maximumRetryAttempts;
-        private @Nullable Input<String> qualifier;
+        private @Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig;
+        private @Nullable Output<String> functionName;
+        private @Nullable Output<Integer> maximumEventAgeInSeconds;
+        private @Nullable Output<Integer> maximumRetryAttempts;
+        private @Nullable Output<String> qualifier;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder destinationConfig(@Nullable Input<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig) {
+        public Builder destinationConfig(@Nullable Output<FunctionEventInvokeConfigDestinationConfigGetArgs> destinationConfig) {
             this.destinationConfig = destinationConfig;
             return this;
         }
 
         public Builder destinationConfig(@Nullable FunctionEventInvokeConfigDestinationConfigGetArgs destinationConfig) {
-            this.destinationConfig = Input.ofNullable(destinationConfig);
+            this.destinationConfig = Output.ofNullable(destinationConfig);
             return this;
         }
 
-        public Builder functionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Input.ofNullable(functionName);
+            this.functionName = Output.ofNullable(functionName);
             return this;
         }
 
-        public Builder maximumEventAgeInSeconds(@Nullable Input<Integer> maximumEventAgeInSeconds) {
+        public Builder maximumEventAgeInSeconds(@Nullable Output<Integer> maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
 
         public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = Input.ofNullable(maximumEventAgeInSeconds);
+            this.maximumEventAgeInSeconds = Output.ofNullable(maximumEventAgeInSeconds);
             return this;
         }
 
-        public Builder maximumRetryAttempts(@Nullable Input<Integer> maximumRetryAttempts) {
+        public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
 
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
-            this.maximumRetryAttempts = Input.ofNullable(maximumRetryAttempts);
+            this.maximumRetryAttempts = Output.ofNullable(maximumRetryAttempts);
             return this;
         }
 
-        public Builder qualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Input.ofNullable(qualifier);
+            this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
         public FunctionEventInvokeConfigState build() {

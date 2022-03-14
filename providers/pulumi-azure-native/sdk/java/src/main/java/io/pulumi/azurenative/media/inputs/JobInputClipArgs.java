@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.FromEachInputFileArgs;
 import io.pulumi.azurenative.media.inputs.InputFileArgs;
 import io.pulumi.azurenative.media.inputs.UtcClipTimeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-      private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
+      private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
-    public Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getEnd() {
-        return this.end == null ? Input.empty() : this.end;
+    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getEnd() {
+        return this.end == null ? Output.empty() : this.end;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="files")
-      private final @Nullable Input<List<String>> files;
+      private final @Nullable Output<List<String>> files;
 
-    public Input<List<String>> getFiles() {
-        return this.files == null ? Input.empty() : this.files;
+    public Output<List<String>> getFiles() {
+        return this.files == null ? Output.empty() : this.files;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputDefinitions")
-      private final @Nullable Input<List<Object>> inputDefinitions;
+      private final @Nullable Output<List<Object>> inputDefinitions;
 
-    public Input<List<Object>> getInputDefinitions() {
-        return this.inputDefinitions == null ? Input.empty() : this.inputDefinitions;
+    public Output<List<Object>> getInputDefinitions() {
+        return this.inputDefinitions == null ? Output.empty() : this.inputDefinitions;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -87,19 +87,19 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-      private final @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
+      private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
-    public Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getStart() {
-        return this.start == null ? Input.empty() : this.start;
+    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getStart() {
+        return this.start == null ? Output.empty() : this.start;
     }
 
     public JobInputClipArgs(
-        @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end,
-        @Nullable Input<List<String>> files,
-        @Nullable Input<List<Object>> inputDefinitions,
-        @Nullable Input<String> label,
-        Input<String> odataType,
-        @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
+        @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end,
+        @Nullable Output<List<String>> files,
+        @Nullable Output<List<Object>> inputDefinitions,
+        @Nullable Output<String> label,
+        Output<String> odataType,
+        @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
         this.end = end;
         this.files = files;
         this.inputDefinitions = inputDefinitions;
@@ -109,12 +109,12 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobInputClipArgs() {
-        this.end = Input.empty();
-        this.files = Input.empty();
-        this.inputDefinitions = Input.empty();
-        this.label = Input.empty();
-        this.odataType = Input.empty();
-        this.start = Input.empty();
+        this.end = Output.empty();
+        this.files = Output.empty();
+        this.inputDefinitions = Output.empty();
+        this.label = Output.empty();
+        this.odataType = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -126,12 +126,12 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
-        private @Nullable Input<List<String>> files;
-        private @Nullable Input<List<Object>> inputDefinitions;
-        private @Nullable Input<String> label;
-        private Input<String> odataType;
-        private @Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
+        private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
+        private @Nullable Output<List<String>> files;
+        private @Nullable Output<List<Object>> inputDefinitions;
+        private @Nullable Output<String> label;
+        private Output<String> odataType;
+        private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
         public Builder() {
     	      // Empty
@@ -147,63 +147,63 @@ public final class JobInputClipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder end(@Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
+        public Builder end(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
             this.end = end;
             return this;
         }
 
         public Builder end(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
-            this.end = Input.ofNullable(end);
+            this.end = Output.ofNullable(end);
             return this;
         }
 
-        public Builder files(@Nullable Input<List<String>> files) {
+        public Builder files(@Nullable Output<List<String>> files) {
             this.files = files;
             return this;
         }
 
         public Builder files(@Nullable List<String> files) {
-            this.files = Input.ofNullable(files);
+            this.files = Output.ofNullable(files);
             return this;
         }
 
-        public Builder inputDefinitions(@Nullable Input<List<Object>> inputDefinitions) {
+        public Builder inputDefinitions(@Nullable Output<List<Object>> inputDefinitions) {
             this.inputDefinitions = inputDefinitions;
             return this;
         }
 
         public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
-            this.inputDefinitions = Input.ofNullable(inputDefinitions);
+            this.inputDefinitions = Output.ofNullable(inputDefinitions);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder start(@Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
+        public Builder start(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
             this.start = start;
             return this;
         }
 
         public Builder start(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
-            this.start = Input.ofNullable(start);
+            this.start = Output.ofNullable(start);
             return this;
         }
         public JobInputClipArgs build() {

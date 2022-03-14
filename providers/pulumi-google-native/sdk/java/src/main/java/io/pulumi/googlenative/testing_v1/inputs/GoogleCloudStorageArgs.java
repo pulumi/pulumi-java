@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gcsPath", required=true)
-      private final Input<String> gcsPath;
+      private final Output<String> gcsPath;
 
-    public Input<String> getGcsPath() {
+    public Output<String> getGcsPath() {
         return this.gcsPath;
     }
 
-    public GoogleCloudStorageArgs(Input<String> gcsPath) {
+    public GoogleCloudStorageArgs(Output<String> gcsPath) {
         this.gcsPath = Objects.requireNonNull(gcsPath, "expected parameter 'gcsPath' to be non-null");
     }
 
     private GoogleCloudStorageArgs() {
-        this.gcsPath = Input.empty();
+        this.gcsPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> gcsPath;
+        private Output<String> gcsPath;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
     	      this.gcsPath = defaults.gcsPath;
         }
 
-        public Builder gcsPath(Input<String> gcsPath) {
+        public Builder gcsPath(Output<String> gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
 
         public Builder gcsPath(String gcsPath) {
-            this.gcsPath = Input.of(Objects.requireNonNull(gcsPath));
+            this.gcsPath = Output.of(Objects.requireNonNull(gcsPath));
             return this;
         }
         public GoogleCloudStorageArgs build() {

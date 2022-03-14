@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.deploymentmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentLabelArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetArgs;
@@ -29,10 +29,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createPolicy")
-      private final @Nullable Input<String> createPolicy;
+      private final @Nullable Output<String> createPolicy;
 
-    public Input<String> getCreatePolicy() {
-        return this.createPolicy == null ? Input.empty() : this.createPolicy;
+    public Output<String> getCreatePolicy() {
+        return this.createPolicy == null ? Output.empty() : this.createPolicy;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletePolicy")
-      private final @Nullable Input<String> deletePolicy;
+      private final @Nullable Output<String> deletePolicy;
 
-    public Input<String> getDeletePolicy() {
-        return this.deletePolicy == null ? Input.empty() : this.deletePolicy;
+    public Output<String> getDeletePolicy() {
+        return this.deletePolicy == null ? Output.empty() : this.deletePolicy;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<DeploymentLabelArgs>> labels;
+      private final @Nullable Output<List<DeploymentLabelArgs>> labels;
 
-    public Input<List<DeploymentLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<DeploymentLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preview")
-      private final @Nullable Input<Boolean> preview;
+      private final @Nullable Output<Boolean> preview;
 
-    public Input<Boolean> getPreview() {
-        return this.preview == null ? Input.empty() : this.preview;
+    public Output<Boolean> getPreview() {
+        return this.preview == null ? Output.empty() : this.preview;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -125,21 +125,21 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<DeploymentTargetArgs> target;
+      private final Output<DeploymentTargetArgs> target;
 
-    public Input<DeploymentTargetArgs> getTarget() {
+    public Output<DeploymentTargetArgs> getTarget() {
         return this.target;
     }
 
     public DeploymentArgs(
-        @Nullable Input<String> createPolicy,
-        @Nullable Input<String> deletePolicy,
-        @Nullable Input<String> description,
-        @Nullable Input<List<DeploymentLabelArgs>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> preview,
-        @Nullable Input<String> project,
-        Input<DeploymentTargetArgs> target) {
+        @Nullable Output<String> createPolicy,
+        @Nullable Output<String> deletePolicy,
+        @Nullable Output<String> description,
+        @Nullable Output<List<DeploymentLabelArgs>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> preview,
+        @Nullable Output<String> project,
+        Output<DeploymentTargetArgs> target) {
         this.createPolicy = createPolicy;
         this.deletePolicy = deletePolicy;
         this.description = description;
@@ -151,14 +151,14 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.createPolicy = Input.empty();
-        this.deletePolicy = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.preview = Input.empty();
-        this.project = Input.empty();
-        this.target = Input.empty();
+        this.createPolicy = Output.empty();
+        this.deletePolicy = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.preview = Output.empty();
+        this.project = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,14 +170,14 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createPolicy;
-        private @Nullable Input<String> deletePolicy;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<DeploymentLabelArgs>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> preview;
-        private @Nullable Input<String> project;
-        private Input<DeploymentTargetArgs> target;
+        private @Nullable Output<String> createPolicy;
+        private @Nullable Output<String> deletePolicy;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<DeploymentLabelArgs>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> preview;
+        private @Nullable Output<String> project;
+        private Output<DeploymentTargetArgs> target;
 
         public Builder() {
     	      // Empty
@@ -195,83 +195,83 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder createPolicy(@Nullable Input<String> createPolicy) {
+        public Builder createPolicy(@Nullable Output<String> createPolicy) {
             this.createPolicy = createPolicy;
             return this;
         }
 
         public Builder createPolicy(@Nullable String createPolicy) {
-            this.createPolicy = Input.ofNullable(createPolicy);
+            this.createPolicy = Output.ofNullable(createPolicy);
             return this;
         }
 
-        public Builder deletePolicy(@Nullable Input<String> deletePolicy) {
+        public Builder deletePolicy(@Nullable Output<String> deletePolicy) {
             this.deletePolicy = deletePolicy;
             return this;
         }
 
         public Builder deletePolicy(@Nullable String deletePolicy) {
-            this.deletePolicy = Input.ofNullable(deletePolicy);
+            this.deletePolicy = Output.ofNullable(deletePolicy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<DeploymentLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<DeploymentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<DeploymentLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder preview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Input.ofNullable(preview);
+            this.preview = Output.ofNullable(preview);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder target(Input<DeploymentTargetArgs> target) {
+        public Builder target(Output<DeploymentTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(DeploymentTargetArgs target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public DeploymentArgs build() {

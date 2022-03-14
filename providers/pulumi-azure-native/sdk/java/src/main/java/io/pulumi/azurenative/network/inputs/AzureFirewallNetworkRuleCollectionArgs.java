@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AzureFirewallNetworkRuleArgs;
 import io.pulumi.azurenative.network.inputs.AzureFirewallRCActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<AzureFirewallRCActionArgs> action;
+      private final @Nullable Output<AzureFirewallRCActionArgs> action;
 
-    public Input<AzureFirewallRCActionArgs> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<AzureFirewallRCActionArgs> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<AzureFirewallNetworkRuleArgs>> rules;
+      private final @Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules;
 
-    public Input<List<AzureFirewallNetworkRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<AzureFirewallNetworkRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public AzureFirewallNetworkRuleCollectionArgs(
-        @Nullable Input<AzureFirewallRCActionArgs> action,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<List<AzureFirewallNetworkRuleArgs>> rules) {
+        @Nullable Output<AzureFirewallRCActionArgs> action,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules) {
         this.action = action;
         this.id = id;
         this.name = name;
@@ -91,11 +91,11 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
     }
 
     private AzureFirewallNetworkRuleCollectionArgs() {
-        this.action = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.rules = Input.empty();
+        this.action = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<AzureFirewallRCActionArgs> action;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<List<AzureFirewallNetworkRuleArgs>> rules;
+        private @Nullable Output<AzureFirewallRCActionArgs> action;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder action(@Nullable Input<AzureFirewallRCActionArgs> action) {
+        public Builder action(@Nullable Output<AzureFirewallRCActionArgs> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable AzureFirewallRCActionArgs action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<AzureFirewallNetworkRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<AzureFirewallNetworkRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public AzureFirewallNetworkRuleCollectionArgs build() {

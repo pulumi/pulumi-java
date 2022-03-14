@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedClientApplications")
-      private final @Nullable Input<List<String>> allowedClientApplications;
+      private final @Nullable Output<List<String>> allowedClientApplications;
 
-    public Input<List<String>> getAllowedClientApplications() {
-        return this.allowedClientApplications == null ? Input.empty() : this.allowedClientApplications;
+    public Output<List<String>> getAllowedClientApplications() {
+        return this.allowedClientApplications == null ? Output.empty() : this.allowedClientApplications;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedGroups")
-      private final @Nullable Input<List<String>> allowedGroups;
+      private final @Nullable Output<List<String>> allowedGroups;
 
-    public Input<List<String>> getAllowedGroups() {
-        return this.allowedGroups == null ? Input.empty() : this.allowedGroups;
+    public Output<List<String>> getAllowedGroups() {
+        return this.allowedGroups == null ? Output.empty() : this.allowedGroups;
     }
 
     public JwtClaimChecksArgs(
-        @Nullable Input<List<String>> allowedClientApplications,
-        @Nullable Input<List<String>> allowedGroups) {
+        @Nullable Output<List<String>> allowedClientApplications,
+        @Nullable Output<List<String>> allowedGroups) {
         this.allowedClientApplications = allowedClientApplications;
         this.allowedGroups = allowedGroups;
     }
 
     private JwtClaimChecksArgs() {
-        this.allowedClientApplications = Input.empty();
-        this.allowedGroups = Input.empty();
+        this.allowedClientApplications = Output.empty();
+        this.allowedGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedClientApplications;
-        private @Nullable Input<List<String>> allowedGroups;
+        private @Nullable Output<List<String>> allowedClientApplications;
+        private @Nullable Output<List<String>> allowedGroups;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
     	      this.allowedGroups = defaults.allowedGroups;
         }
 
-        public Builder allowedClientApplications(@Nullable Input<List<String>> allowedClientApplications) {
+        public Builder allowedClientApplications(@Nullable Output<List<String>> allowedClientApplications) {
             this.allowedClientApplications = allowedClientApplications;
             return this;
         }
 
         public Builder allowedClientApplications(@Nullable List<String> allowedClientApplications) {
-            this.allowedClientApplications = Input.ofNullable(allowedClientApplications);
+            this.allowedClientApplications = Output.ofNullable(allowedClientApplications);
             return this;
         }
 
-        public Builder allowedGroups(@Nullable Input<List<String>> allowedGroups) {
+        public Builder allowedGroups(@Nullable Output<List<String>> allowedGroups) {
             this.allowedGroups = allowedGroups;
             return this;
         }
 
         public Builder allowedGroups(@Nullable List<String> allowedGroups) {
-            this.allowedGroups = Input.ofNullable(allowedGroups);
+            this.allowedGroups = Output.ofNullable(allowedGroups);
             return this;
         }
         public JwtClaimChecksArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless;
 
 import io.pulumi.awsnative.iotwireless.inputs.FuotaTaskLoRaWANArgs;
 import io.pulumi.awsnative.iotwireless.inputs.FuotaTaskTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateMulticastGroup")
-      private final @Nullable Input<String> associateMulticastGroup;
+      private final @Nullable Output<String> associateMulticastGroup;
 
-    public Input<String> getAssociateMulticastGroup() {
-        return this.associateMulticastGroup == null ? Input.empty() : this.associateMulticastGroup;
+    public Output<String> getAssociateMulticastGroup() {
+        return this.associateMulticastGroup == null ? Output.empty() : this.associateMulticastGroup;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateWirelessDevice")
-      private final @Nullable Input<String> associateWirelessDevice;
+      private final @Nullable Output<String> associateWirelessDevice;
 
-    public Input<String> getAssociateWirelessDevice() {
-        return this.associateWirelessDevice == null ? Input.empty() : this.associateWirelessDevice;
+    public Output<String> getAssociateWirelessDevice() {
+        return this.associateWirelessDevice == null ? Output.empty() : this.associateWirelessDevice;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disassociateMulticastGroup")
-      private final @Nullable Input<String> disassociateMulticastGroup;
+      private final @Nullable Output<String> disassociateMulticastGroup;
 
-    public Input<String> getDisassociateMulticastGroup() {
-        return this.disassociateMulticastGroup == null ? Input.empty() : this.disassociateMulticastGroup;
+    public Output<String> getDisassociateMulticastGroup() {
+        return this.disassociateMulticastGroup == null ? Output.empty() : this.disassociateMulticastGroup;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disassociateWirelessDevice")
-      private final @Nullable Input<String> disassociateWirelessDevice;
+      private final @Nullable Output<String> disassociateWirelessDevice;
 
-    public Input<String> getDisassociateWirelessDevice() {
-        return this.disassociateWirelessDevice == null ? Input.empty() : this.disassociateWirelessDevice;
+    public Output<String> getDisassociateWirelessDevice() {
+        return this.disassociateWirelessDevice == null ? Output.empty() : this.disassociateWirelessDevice;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firmwareUpdateImage", required=true)
-      private final Input<String> firmwareUpdateImage;
+      private final Output<String> firmwareUpdateImage;
 
-    public Input<String> getFirmwareUpdateImage() {
+    public Output<String> getFirmwareUpdateImage() {
         return this.firmwareUpdateImage;
     }
 
@@ -88,9 +88,9 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firmwareUpdateRole", required=true)
-      private final Input<String> firmwareUpdateRole;
+      private final Output<String> firmwareUpdateRole;
 
-    public Input<String> getFirmwareUpdateRole() {
+    public Output<String> getFirmwareUpdateRole() {
         return this.firmwareUpdateRole;
     }
 
@@ -99,9 +99,9 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWAN", required=true)
-      private final Input<FuotaTaskLoRaWANArgs> loRaWAN;
+      private final Output<FuotaTaskLoRaWANArgs> loRaWAN;
 
-    public Input<FuotaTaskLoRaWANArgs> getLoRaWAN() {
+    public Output<FuotaTaskLoRaWANArgs> getLoRaWAN() {
         return this.loRaWAN;
     }
 
@@ -110,10 +110,10 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<FuotaTaskTagArgs>> tags;
+      private final @Nullable Output<List<FuotaTaskTagArgs>> tags;
 
-    public Input<List<FuotaTaskTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<FuotaTaskTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FuotaTaskArgs(
-        @Nullable Input<String> associateMulticastGroup,
-        @Nullable Input<String> associateWirelessDevice,
-        @Nullable Input<String> description,
-        @Nullable Input<String> disassociateMulticastGroup,
-        @Nullable Input<String> disassociateWirelessDevice,
-        Input<String> firmwareUpdateImage,
-        Input<String> firmwareUpdateRole,
-        Input<FuotaTaskLoRaWANArgs> loRaWAN,
-        @Nullable Input<String> name,
-        @Nullable Input<List<FuotaTaskTagArgs>> tags) {
+        @Nullable Output<String> associateMulticastGroup,
+        @Nullable Output<String> associateWirelessDevice,
+        @Nullable Output<String> description,
+        @Nullable Output<String> disassociateMulticastGroup,
+        @Nullable Output<String> disassociateWirelessDevice,
+        Output<String> firmwareUpdateImage,
+        Output<String> firmwareUpdateRole,
+        Output<FuotaTaskLoRaWANArgs> loRaWAN,
+        @Nullable Output<String> name,
+        @Nullable Output<List<FuotaTaskTagArgs>> tags) {
         this.associateMulticastGroup = associateMulticastGroup;
         this.associateWirelessDevice = associateWirelessDevice;
         this.description = description;
@@ -151,16 +151,16 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FuotaTaskArgs() {
-        this.associateMulticastGroup = Input.empty();
-        this.associateWirelessDevice = Input.empty();
-        this.description = Input.empty();
-        this.disassociateMulticastGroup = Input.empty();
-        this.disassociateWirelessDevice = Input.empty();
-        this.firmwareUpdateImage = Input.empty();
-        this.firmwareUpdateRole = Input.empty();
-        this.loRaWAN = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.associateMulticastGroup = Output.empty();
+        this.associateWirelessDevice = Output.empty();
+        this.description = Output.empty();
+        this.disassociateMulticastGroup = Output.empty();
+        this.disassociateWirelessDevice = Output.empty();
+        this.firmwareUpdateImage = Output.empty();
+        this.firmwareUpdateRole = Output.empty();
+        this.loRaWAN = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associateMulticastGroup;
-        private @Nullable Input<String> associateWirelessDevice;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> disassociateMulticastGroup;
-        private @Nullable Input<String> disassociateWirelessDevice;
-        private Input<String> firmwareUpdateImage;
-        private Input<String> firmwareUpdateRole;
-        private Input<FuotaTaskLoRaWANArgs> loRaWAN;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<FuotaTaskTagArgs>> tags;
+        private @Nullable Output<String> associateMulticastGroup;
+        private @Nullable Output<String> associateWirelessDevice;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> disassociateMulticastGroup;
+        private @Nullable Output<String> disassociateWirelessDevice;
+        private Output<String> firmwareUpdateImage;
+        private Output<String> firmwareUpdateRole;
+        private Output<FuotaTaskLoRaWANArgs> loRaWAN;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<FuotaTaskTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder associateMulticastGroup(@Nullable Input<String> associateMulticastGroup) {
+        public Builder associateMulticastGroup(@Nullable Output<String> associateMulticastGroup) {
             this.associateMulticastGroup = associateMulticastGroup;
             return this;
         }
 
         public Builder associateMulticastGroup(@Nullable String associateMulticastGroup) {
-            this.associateMulticastGroup = Input.ofNullable(associateMulticastGroup);
+            this.associateMulticastGroup = Output.ofNullable(associateMulticastGroup);
             return this;
         }
 
-        public Builder associateWirelessDevice(@Nullable Input<String> associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable Output<String> associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
         public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
-            this.associateWirelessDevice = Input.ofNullable(associateWirelessDevice);
+            this.associateWirelessDevice = Output.ofNullable(associateWirelessDevice);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disassociateMulticastGroup(@Nullable Input<String> disassociateMulticastGroup) {
+        public Builder disassociateMulticastGroup(@Nullable Output<String> disassociateMulticastGroup) {
             this.disassociateMulticastGroup = disassociateMulticastGroup;
             return this;
         }
 
         public Builder disassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
-            this.disassociateMulticastGroup = Input.ofNullable(disassociateMulticastGroup);
+            this.disassociateMulticastGroup = Output.ofNullable(disassociateMulticastGroup);
             return this;
         }
 
-        public Builder disassociateWirelessDevice(@Nullable Input<String> disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable Output<String> disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
         public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
-            this.disassociateWirelessDevice = Input.ofNullable(disassociateWirelessDevice);
+            this.disassociateWirelessDevice = Output.ofNullable(disassociateWirelessDevice);
             return this;
         }
 
-        public Builder firmwareUpdateImage(Input<String> firmwareUpdateImage) {
+        public Builder firmwareUpdateImage(Output<String> firmwareUpdateImage) {
             this.firmwareUpdateImage = Objects.requireNonNull(firmwareUpdateImage);
             return this;
         }
 
         public Builder firmwareUpdateImage(String firmwareUpdateImage) {
-            this.firmwareUpdateImage = Input.of(Objects.requireNonNull(firmwareUpdateImage));
+            this.firmwareUpdateImage = Output.of(Objects.requireNonNull(firmwareUpdateImage));
             return this;
         }
 
-        public Builder firmwareUpdateRole(Input<String> firmwareUpdateRole) {
+        public Builder firmwareUpdateRole(Output<String> firmwareUpdateRole) {
             this.firmwareUpdateRole = Objects.requireNonNull(firmwareUpdateRole);
             return this;
         }
 
         public Builder firmwareUpdateRole(String firmwareUpdateRole) {
-            this.firmwareUpdateRole = Input.of(Objects.requireNonNull(firmwareUpdateRole));
+            this.firmwareUpdateRole = Output.of(Objects.requireNonNull(firmwareUpdateRole));
             return this;
         }
 
-        public Builder loRaWAN(Input<FuotaTaskLoRaWANArgs> loRaWAN) {
+        public Builder loRaWAN(Output<FuotaTaskLoRaWANArgs> loRaWAN) {
             this.loRaWAN = Objects.requireNonNull(loRaWAN);
             return this;
         }
 
         public Builder loRaWAN(FuotaTaskLoRaWANArgs loRaWAN) {
-            this.loRaWAN = Input.of(Objects.requireNonNull(loRaWAN));
+            this.loRaWAN = Output.of(Objects.requireNonNull(loRaWAN));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<FuotaTaskTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<FuotaTaskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<FuotaTaskTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FuotaTaskArgs build() {

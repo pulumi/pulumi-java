@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DestinationsSpecAzureMonitorMetricsArgs;
 import io.pulumi.azurenative.insights.inputs.LogAnalyticsDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="azureMonitorMetrics")
-      private final @Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
+      private final @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
 
-    public Input<DestinationsSpecAzureMonitorMetricsArgs> getAzureMonitorMetrics() {
-        return this.azureMonitorMetrics == null ? Input.empty() : this.azureMonitorMetrics;
+    public Output<DestinationsSpecAzureMonitorMetricsArgs> getAzureMonitorMetrics() {
+        return this.azureMonitorMetrics == null ? Output.empty() : this.azureMonitorMetrics;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="logAnalytics")
-      private final @Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics;
+      private final @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
 
-    public Input<List<LogAnalyticsDestinationArgs>> getLogAnalytics() {
-        return this.logAnalytics == null ? Input.empty() : this.logAnalytics;
+    public Output<List<LogAnalyticsDestinationArgs>> getLogAnalytics() {
+        return this.logAnalytics == null ? Output.empty() : this.logAnalytics;
     }
 
     public DataCollectionRuleDestinationsArgs(
-        @Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics,
-        @Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics) {
+        @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics,
+        @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics) {
         this.azureMonitorMetrics = azureMonitorMetrics;
         this.logAnalytics = logAnalytics;
     }
 
     private DataCollectionRuleDestinationsArgs() {
-        this.azureMonitorMetrics = Input.empty();
-        this.logAnalytics = Input.empty();
+        this.azureMonitorMetrics = Output.empty();
+        this.logAnalytics = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
-        private @Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics;
+        private @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
+        private @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     	      this.logAnalytics = defaults.logAnalytics;
         }
 
-        public Builder azureMonitorMetrics(@Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics) {
+        public Builder azureMonitorMetrics(@Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics) {
             this.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
 
         public Builder azureMonitorMetrics(@Nullable DestinationsSpecAzureMonitorMetricsArgs azureMonitorMetrics) {
-            this.azureMonitorMetrics = Input.ofNullable(azureMonitorMetrics);
+            this.azureMonitorMetrics = Output.ofNullable(azureMonitorMetrics);
             return this;
         }
 
-        public Builder logAnalytics(@Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics) {
+        public Builder logAnalytics(@Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics) {
             this.logAnalytics = logAnalytics;
             return this;
         }
 
         public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationArgs> logAnalytics) {
-            this.logAnalytics = Input.ofNullable(logAnalytics);
+            this.logAnalytics = Output.ofNullable(logAnalytics);
             return this;
         }
         public DataCollectionRuleDestinationsArgs build() {

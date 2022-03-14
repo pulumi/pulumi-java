@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.AggregationTypeEnum;
 import io.pulumi.azurenative.insights.enums.Operator;
 import io.pulumi.azurenative.insights.inputs.MetricDimensionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -31,9 +31,9 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="criterionType", required=true)
-      private final Input<String> criterionType;
+      private final Output<String> criterionType;
 
-    public Input<String> getCriterionType() {
+    public Output<String> getCriterionType() {
         return this.criterionType;
     }
 
@@ -42,10 +42,10 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<List<MetricDimensionArgs>> dimensions;
+      private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
-    public Input<List<MetricDimensionArgs>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<List<MetricDimensionArgs>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -64,10 +64,10 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricNamespace")
-      private final @Nullable Input<String> metricNamespace;
+      private final @Nullable Output<String> metricNamespace;
 
-    public Input<String> getMetricNamespace() {
-        return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
+    public Output<String> getMetricNamespace() {
+        return this.metricNamespace == null ? Output.empty() : this.metricNamespace;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -86,9 +86,9 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,Operator>> operator;
+      private final Output<Either<String,Operator>> operator;
 
-    public Input<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> getOperator() {
         return this.operator;
     }
 
@@ -97,10 +97,10 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipMetricValidation")
-      private final @Nullable Input<Boolean> skipMetricValidation;
+      private final @Nullable Output<Boolean> skipMetricValidation;
 
-    public Input<Boolean> getSkipMetricValidation() {
-        return this.skipMetricValidation == null ? Input.empty() : this.skipMetricValidation;
+    public Output<Boolean> getSkipMetricValidation() {
+        return this.skipMetricValidation == null ? Output.empty() : this.skipMetricValidation;
     }
 
     /**
@@ -108,9 +108,9 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-      private final Input<Double> threshold;
+      private final Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
+    public Output<Double> getThreshold() {
         return this.threshold;
     }
 
@@ -119,22 +119,22 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeAggregation", required=true)
-      private final Input<Either<String,AggregationTypeEnum>> timeAggregation;
+      private final Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
-    public Input<Either<String,AggregationTypeEnum>> getTimeAggregation() {
+    public Output<Either<String,AggregationTypeEnum>> getTimeAggregation() {
         return this.timeAggregation;
     }
 
     public MetricCriteriaArgs(
-        Input<String> criterionType,
-        @Nullable Input<List<MetricDimensionArgs>> dimensions,
-        Input<String> metricName,
-        @Nullable Input<String> metricNamespace,
-        Input<String> name,
-        Input<Either<String,Operator>> operator,
-        @Nullable Input<Boolean> skipMetricValidation,
-        Input<Double> threshold,
-        Input<Either<String,AggregationTypeEnum>> timeAggregation) {
+        Output<String> criterionType,
+        @Nullable Output<List<MetricDimensionArgs>> dimensions,
+        Output<String> metricName,
+        @Nullable Output<String> metricNamespace,
+        Output<String> name,
+        Output<Either<String,Operator>> operator,
+        @Nullable Output<Boolean> skipMetricValidation,
+        Output<Double> threshold,
+        Output<Either<String,AggregationTypeEnum>> timeAggregation) {
         this.criterionType = Objects.requireNonNull(criterionType, "expected parameter 'criterionType' to be non-null");
         this.dimensions = dimensions;
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
@@ -147,15 +147,15 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricCriteriaArgs() {
-        this.criterionType = Input.empty();
-        this.dimensions = Input.empty();
-        this.metricName = Input.empty();
-        this.metricNamespace = Input.empty();
-        this.name = Input.empty();
-        this.operator = Input.empty();
-        this.skipMetricValidation = Input.empty();
-        this.threshold = Input.empty();
-        this.timeAggregation = Input.empty();
+        this.criterionType = Output.empty();
+        this.dimensions = Output.empty();
+        this.metricName = Output.empty();
+        this.metricNamespace = Output.empty();
+        this.name = Output.empty();
+        this.operator = Output.empty();
+        this.skipMetricValidation = Output.empty();
+        this.threshold = Output.empty();
+        this.timeAggregation = Output.empty();
     }
 
     public static Builder builder() {
@@ -167,15 +167,15 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> criterionType;
-        private @Nullable Input<List<MetricDimensionArgs>> dimensions;
-        private Input<String> metricName;
-        private @Nullable Input<String> metricNamespace;
-        private Input<String> name;
-        private Input<Either<String,Operator>> operator;
-        private @Nullable Input<Boolean> skipMetricValidation;
-        private Input<Double> threshold;
-        private Input<Either<String,AggregationTypeEnum>> timeAggregation;
+        private Output<String> criterionType;
+        private @Nullable Output<List<MetricDimensionArgs>> dimensions;
+        private Output<String> metricName;
+        private @Nullable Output<String> metricNamespace;
+        private Output<String> name;
+        private Output<Either<String,Operator>> operator;
+        private @Nullable Output<Boolean> skipMetricValidation;
+        private Output<Double> threshold;
+        private Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
         public Builder() {
     	      // Empty
@@ -194,93 +194,93 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeAggregation = defaults.timeAggregation;
         }
 
-        public Builder criterionType(Input<String> criterionType) {
+        public Builder criterionType(Output<String> criterionType) {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
 
         public Builder criterionType(String criterionType) {
-            this.criterionType = Input.of(Objects.requireNonNull(criterionType));
+            this.criterionType = Output.of(Objects.requireNonNull(criterionType));
             return this;
         }
 
-        public Builder dimensions(@Nullable Input<List<MetricDimensionArgs>> dimensions) {
+        public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Input.ofNullable(metricNamespace);
+            this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder operator(Input<Either<String,Operator>> operator) {
+        public Builder operator(Output<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,Operator> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder skipMetricValidation(@Nullable Input<Boolean> skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
-            this.skipMetricValidation = Input.ofNullable(skipMetricValidation);
+            this.skipMetricValidation = Output.ofNullable(skipMetricValidation);
             return this;
         }
 
-        public Builder threshold(Input<Double> threshold) {
+        public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
         public Builder threshold(Double threshold) {
-            this.threshold = Input.of(Objects.requireNonNull(threshold));
+            this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder timeAggregation(Input<Either<String,AggregationTypeEnum>> timeAggregation) {
+        public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
 
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
-            this.timeAggregation = Input.of(Objects.requireNonNull(timeAggregation));
+            this.timeAggregation = Output.of(Objects.requireNonNull(timeAggregation));
             return this;
         }
         public MetricCriteriaArgs build() {

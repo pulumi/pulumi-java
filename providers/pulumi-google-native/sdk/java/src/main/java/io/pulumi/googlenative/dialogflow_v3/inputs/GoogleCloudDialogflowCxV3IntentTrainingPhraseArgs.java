@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends io.
      * 
      */
     @InputImport(name="parts", required=true)
-      private final Input<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
+      private final Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
 
-    public Input<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> getParts() {
+    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> getParts() {
         return this.parts;
     }
 
@@ -36,22 +36,22 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends io.
      * 
      */
     @InputImport(name="repeatCount")
-      private final @Nullable Input<Integer> repeatCount;
+      private final @Nullable Output<Integer> repeatCount;
 
-    public Input<Integer> getRepeatCount() {
-        return this.repeatCount == null ? Input.empty() : this.repeatCount;
+    public Output<Integer> getRepeatCount() {
+        return this.repeatCount == null ? Output.empty() : this.repeatCount;
     }
 
     public GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs(
-        Input<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts,
-        @Nullable Input<Integer> repeatCount) {
+        Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts,
+        @Nullable Output<Integer> repeatCount) {
         this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
         this.repeatCount = repeatCount;
     }
 
     private GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs() {
-        this.parts = Input.empty();
-        this.repeatCount = Input.empty();
+        this.parts = Output.empty();
+        this.repeatCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends io.
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
-        private @Nullable Input<Integer> repeatCount;
+        private Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
+        private @Nullable Output<Integer> repeatCount;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends io.
     	      this.repeatCount = defaults.repeatCount;
         }
 
-        public Builder parts(Input<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts) {
+        public Builder parts(Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
         public Builder parts(List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs> parts) {
-            this.parts = Input.of(Objects.requireNonNull(parts));
+            this.parts = Output.of(Objects.requireNonNull(parts));
             return this;
         }
 
-        public Builder repeatCount(@Nullable Input<Integer> repeatCount) {
+        public Builder repeatCount(@Nullable Output<Integer> repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }
 
         public Builder repeatCount(@Nullable Integer repeatCount) {
-            this.repeatCount = Input.ofNullable(repeatCount);
+            this.repeatCount = Output.ofNullable(repeatCount);
             return this;
         }
         public GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs build() {

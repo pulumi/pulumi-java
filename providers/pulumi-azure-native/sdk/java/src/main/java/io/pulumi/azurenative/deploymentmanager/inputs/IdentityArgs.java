@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityIds", required=true)
-      private final Input<List<String>> identityIds;
+      private final Output<List<String>> identityIds;
 
-    public Input<List<String>> getIdentityIds() {
+    public Output<List<String>> getIdentityIds() {
         return this.identityIds;
     }
 
@@ -34,22 +34,22 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public IdentityArgs(
-        Input<List<String>> identityIds,
-        Input<String> type) {
+        Output<List<String>> identityIds,
+        Output<String> type) {
         this.identityIds = Objects.requireNonNull(identityIds, "expected parameter 'identityIds' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private IdentityArgs() {
-        this.identityIds = Input.empty();
-        this.type = Input.empty();
+        this.identityIds = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> identityIds;
-        private Input<String> type;
+        private Output<List<String>> identityIds;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder identityIds(Input<List<String>> identityIds) {
+        public Builder identityIds(Output<List<String>> identityIds) {
             this.identityIds = Objects.requireNonNull(identityIds);
             return this;
         }
 
         public Builder identityIds(List<String> identityIds) {
-            this.identityIds = Input.of(Objects.requireNonNull(identityIds));
+            this.identityIds = Output.of(Objects.requireNonNull(identityIds));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IdentityArgs build() {

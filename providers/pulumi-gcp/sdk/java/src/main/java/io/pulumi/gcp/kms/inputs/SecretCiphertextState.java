@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalAuthenticatedData")
-      private final @Nullable Input<String> additionalAuthenticatedData;
+      private final @Nullable Output<String> additionalAuthenticatedData;
 
-    public Input<String> getAdditionalAuthenticatedData() {
-        return this.additionalAuthenticatedData == null ? Input.empty() : this.additionalAuthenticatedData;
+    public Output<String> getAdditionalAuthenticatedData() {
+        return this.additionalAuthenticatedData == null ? Output.empty() : this.additionalAuthenticatedData;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ciphertext")
-      private final @Nullable Input<String> ciphertext;
+      private final @Nullable Output<String> ciphertext;
 
-    public Input<String> getCiphertext() {
-        return this.ciphertext == null ? Input.empty() : this.ciphertext;
+    public Output<String> getCiphertext() {
+        return this.ciphertext == null ? Output.empty() : this.ciphertext;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cryptoKey")
-      private final @Nullable Input<String> cryptoKey;
+      private final @Nullable Output<String> cryptoKey;
 
-    public Input<String> getCryptoKey() {
-        return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
+    public Output<String> getCryptoKey() {
+        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="plaintext")
-      private final @Nullable Input<String> plaintext;
+      private final @Nullable Output<String> plaintext;
 
-    public Input<String> getPlaintext() {
-        return this.plaintext == null ? Input.empty() : this.plaintext;
+    public Output<String> getPlaintext() {
+        return this.plaintext == null ? Output.empty() : this.plaintext;
     }
 
     public SecretCiphertextState(
-        @Nullable Input<String> additionalAuthenticatedData,
-        @Nullable Input<String> ciphertext,
-        @Nullable Input<String> cryptoKey,
-        @Nullable Input<String> plaintext) {
+        @Nullable Output<String> additionalAuthenticatedData,
+        @Nullable Output<String> ciphertext,
+        @Nullable Output<String> cryptoKey,
+        @Nullable Output<String> plaintext) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
         this.ciphertext = ciphertext;
         this.cryptoKey = cryptoKey;
@@ -73,10 +73,10 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     }
 
     private SecretCiphertextState() {
-        this.additionalAuthenticatedData = Input.empty();
-        this.ciphertext = Input.empty();
-        this.cryptoKey = Input.empty();
-        this.plaintext = Input.empty();
+        this.additionalAuthenticatedData = Output.empty();
+        this.ciphertext = Output.empty();
+        this.cryptoKey = Output.empty();
+        this.plaintext = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> additionalAuthenticatedData;
-        private @Nullable Input<String> ciphertext;
-        private @Nullable Input<String> cryptoKey;
-        private @Nullable Input<String> plaintext;
+        private @Nullable Output<String> additionalAuthenticatedData;
+        private @Nullable Output<String> ciphertext;
+        private @Nullable Output<String> cryptoKey;
+        private @Nullable Output<String> plaintext;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder additionalAuthenticatedData(@Nullable Input<String> additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(@Nullable Output<String> additionalAuthenticatedData) {
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
 
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = Input.ofNullable(additionalAuthenticatedData);
+            this.additionalAuthenticatedData = Output.ofNullable(additionalAuthenticatedData);
             return this;
         }
 
-        public Builder ciphertext(@Nullable Input<String> ciphertext) {
+        public Builder ciphertext(@Nullable Output<String> ciphertext) {
             this.ciphertext = ciphertext;
             return this;
         }
 
         public Builder ciphertext(@Nullable String ciphertext) {
-            this.ciphertext = Input.ofNullable(ciphertext);
+            this.ciphertext = Output.ofNullable(ciphertext);
             return this;
         }
 
-        public Builder cryptoKey(@Nullable Input<String> cryptoKey) {
+        public Builder cryptoKey(@Nullable Output<String> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
         public Builder cryptoKey(@Nullable String cryptoKey) {
-            this.cryptoKey = Input.ofNullable(cryptoKey);
+            this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder plaintext(@Nullable Input<String> plaintext) {
+        public Builder plaintext(@Nullable Output<String> plaintext) {
             this.plaintext = plaintext;
             return this;
         }
 
         public Builder plaintext(@Nullable String plaintext) {
-            this.plaintext = Input.ofNullable(plaintext);
+            this.plaintext = Output.ofNullable(plaintext);
             return this;
         }
         public SecretCiphertextState build() {

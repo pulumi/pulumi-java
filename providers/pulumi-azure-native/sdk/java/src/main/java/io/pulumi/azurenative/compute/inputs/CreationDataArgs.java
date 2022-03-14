@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.DiskCreateOption;
 import io.pulumi.azurenative.compute.inputs.ImageDiskReferenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -28,9 +28,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createOption", required=true)
-      private final Input<Either<String,DiskCreateOption>> createOption;
+      private final Output<Either<String,DiskCreateOption>> createOption;
 
-    public Input<Either<String,DiskCreateOption>> getCreateOption() {
+    public Output<Either<String,DiskCreateOption>> getCreateOption() {
         return this.createOption;
     }
 
@@ -39,10 +39,10 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryImageReference")
-      private final @Nullable Input<ImageDiskReferenceArgs> galleryImageReference;
+      private final @Nullable Output<ImageDiskReferenceArgs> galleryImageReference;
 
-    public Input<ImageDiskReferenceArgs> getGalleryImageReference() {
-        return this.galleryImageReference == null ? Input.empty() : this.galleryImageReference;
+    public Output<ImageDiskReferenceArgs> getGalleryImageReference() {
+        return this.galleryImageReference == null ? Output.empty() : this.galleryImageReference;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageReference")
-      private final @Nullable Input<ImageDiskReferenceArgs> imageReference;
+      private final @Nullable Output<ImageDiskReferenceArgs> imageReference;
 
-    public Input<ImageDiskReferenceArgs> getImageReference() {
-        return this.imageReference == null ? Input.empty() : this.imageReference;
+    public Output<ImageDiskReferenceArgs> getImageReference() {
+        return this.imageReference == null ? Output.empty() : this.imageReference;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicalSectorSize")
-      private final @Nullable Input<Integer> logicalSectorSize;
+      private final @Nullable Output<Integer> logicalSectorSize;
 
-    public Input<Integer> getLogicalSectorSize() {
-        return this.logicalSectorSize == null ? Input.empty() : this.logicalSectorSize;
+    public Output<Integer> getLogicalSectorSize() {
+        return this.logicalSectorSize == null ? Output.empty() : this.logicalSectorSize;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceResourceId")
-      private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Output<String> sourceResourceId;
 
-    public Input<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
+    public Output<String> getSourceResourceId() {
+        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceUri")
-      private final @Nullable Input<String> sourceUri;
+      private final @Nullable Output<String> sourceUri;
 
-    public Input<String> getSourceUri() {
-        return this.sourceUri == null ? Input.empty() : this.sourceUri;
+    public Output<String> getSourceUri() {
+        return this.sourceUri == null ? Output.empty() : this.sourceUri;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-      private final @Nullable Input<String> storageAccountId;
+      private final @Nullable Output<String> storageAccountId;
 
-    public Input<String> getStorageAccountId() {
-        return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
+    public Output<String> getStorageAccountId() {
+        return this.storageAccountId == null ? Output.empty() : this.storageAccountId;
     }
 
     /**
@@ -105,21 +105,21 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uploadSizeBytes")
-      private final @Nullable Input<Double> uploadSizeBytes;
+      private final @Nullable Output<Double> uploadSizeBytes;
 
-    public Input<Double> getUploadSizeBytes() {
-        return this.uploadSizeBytes == null ? Input.empty() : this.uploadSizeBytes;
+    public Output<Double> getUploadSizeBytes() {
+        return this.uploadSizeBytes == null ? Output.empty() : this.uploadSizeBytes;
     }
 
     public CreationDataArgs(
-        Input<Either<String,DiskCreateOption>> createOption,
-        @Nullable Input<ImageDiskReferenceArgs> galleryImageReference,
-        @Nullable Input<ImageDiskReferenceArgs> imageReference,
-        @Nullable Input<Integer> logicalSectorSize,
-        @Nullable Input<String> sourceResourceId,
-        @Nullable Input<String> sourceUri,
-        @Nullable Input<String> storageAccountId,
-        @Nullable Input<Double> uploadSizeBytes) {
+        Output<Either<String,DiskCreateOption>> createOption,
+        @Nullable Output<ImageDiskReferenceArgs> galleryImageReference,
+        @Nullable Output<ImageDiskReferenceArgs> imageReference,
+        @Nullable Output<Integer> logicalSectorSize,
+        @Nullable Output<String> sourceResourceId,
+        @Nullable Output<String> sourceUri,
+        @Nullable Output<String> storageAccountId,
+        @Nullable Output<Double> uploadSizeBytes) {
         this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
         this.galleryImageReference = galleryImageReference;
         this.imageReference = imageReference;
@@ -131,14 +131,14 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CreationDataArgs() {
-        this.createOption = Input.empty();
-        this.galleryImageReference = Input.empty();
-        this.imageReference = Input.empty();
-        this.logicalSectorSize = Input.empty();
-        this.sourceResourceId = Input.empty();
-        this.sourceUri = Input.empty();
-        this.storageAccountId = Input.empty();
-        this.uploadSizeBytes = Input.empty();
+        this.createOption = Output.empty();
+        this.galleryImageReference = Output.empty();
+        this.imageReference = Output.empty();
+        this.logicalSectorSize = Output.empty();
+        this.sourceResourceId = Output.empty();
+        this.sourceUri = Output.empty();
+        this.storageAccountId = Output.empty();
+        this.uploadSizeBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,DiskCreateOption>> createOption;
-        private @Nullable Input<ImageDiskReferenceArgs> galleryImageReference;
-        private @Nullable Input<ImageDiskReferenceArgs> imageReference;
-        private @Nullable Input<Integer> logicalSectorSize;
-        private @Nullable Input<String> sourceResourceId;
-        private @Nullable Input<String> sourceUri;
-        private @Nullable Input<String> storageAccountId;
-        private @Nullable Input<Double> uploadSizeBytes;
+        private Output<Either<String,DiskCreateOption>> createOption;
+        private @Nullable Output<ImageDiskReferenceArgs> galleryImageReference;
+        private @Nullable Output<ImageDiskReferenceArgs> imageReference;
+        private @Nullable Output<Integer> logicalSectorSize;
+        private @Nullable Output<String> sourceResourceId;
+        private @Nullable Output<String> sourceUri;
+        private @Nullable Output<String> storageAccountId;
+        private @Nullable Output<Double> uploadSizeBytes;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uploadSizeBytes = defaults.uploadSizeBytes;
         }
 
-        public Builder createOption(Input<Either<String,DiskCreateOption>> createOption) {
+        public Builder createOption(Output<Either<String,DiskCreateOption>> createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
         public Builder createOption(Either<String,DiskCreateOption> createOption) {
-            this.createOption = Input.of(Objects.requireNonNull(createOption));
+            this.createOption = Output.of(Objects.requireNonNull(createOption));
             return this;
         }
 
-        public Builder galleryImageReference(@Nullable Input<ImageDiskReferenceArgs> galleryImageReference) {
+        public Builder galleryImageReference(@Nullable Output<ImageDiskReferenceArgs> galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
 
         public Builder galleryImageReference(@Nullable ImageDiskReferenceArgs galleryImageReference) {
-            this.galleryImageReference = Input.ofNullable(galleryImageReference);
+            this.galleryImageReference = Output.ofNullable(galleryImageReference);
             return this;
         }
 
-        public Builder imageReference(@Nullable Input<ImageDiskReferenceArgs> imageReference) {
+        public Builder imageReference(@Nullable Output<ImageDiskReferenceArgs> imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
         public Builder imageReference(@Nullable ImageDiskReferenceArgs imageReference) {
-            this.imageReference = Input.ofNullable(imageReference);
+            this.imageReference = Output.ofNullable(imageReference);
             return this;
         }
 
-        public Builder logicalSectorSize(@Nullable Input<Integer> logicalSectorSize) {
+        public Builder logicalSectorSize(@Nullable Output<Integer> logicalSectorSize) {
             this.logicalSectorSize = logicalSectorSize;
             return this;
         }
 
         public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
-            this.logicalSectorSize = Input.ofNullable(logicalSectorSize);
+            this.logicalSectorSize = Output.ofNullable(logicalSectorSize);
             return this;
         }
 
-        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Input.ofNullable(sourceResourceId);
+            this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder sourceUri(@Nullable Input<String> sourceUri) {
+        public Builder sourceUri(@Nullable Output<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
         public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Input.ofNullable(sourceUri);
+            this.sourceUri = Output.ofNullable(sourceUri);
             return this;
         }
 
-        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Input.ofNullable(storageAccountId);
+            this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder uploadSizeBytes(@Nullable Input<Double> uploadSizeBytes) {
+        public Builder uploadSizeBytes(@Nullable Output<Double> uploadSizeBytes) {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
         }
 
         public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
-            this.uploadSizeBytes = Input.ofNullable(uploadSizeBytes);
+            this.uploadSizeBytes = Output.ofNullable(uploadSizeBytes);
             return this;
         }
         public CreationDataArgs build() {

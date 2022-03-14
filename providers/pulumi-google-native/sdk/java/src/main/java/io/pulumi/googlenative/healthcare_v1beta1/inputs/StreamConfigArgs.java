@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryDestination")
-      private final @Nullable Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination;
+      private final @Nullable Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination;
 
-    public Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> getBigqueryDestination() {
-        return this.bigqueryDestination == null ? Input.empty() : this.bigqueryDestination;
+    public Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> getBigqueryDestination() {
+        return this.bigqueryDestination == null ? Output.empty() : this.bigqueryDestination;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceTypes")
-      private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Output<List<String>> resourceTypes;
 
-    public Input<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
+    public Output<List<String>> getResourceTypes() {
+        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
     }
 
     public StreamConfigArgs(
-        @Nullable Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination,
-        @Nullable Input<List<String>> resourceTypes) {
+        @Nullable Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination,
+        @Nullable Output<List<String>> resourceTypes) {
         this.bigqueryDestination = bigqueryDestination;
         this.resourceTypes = resourceTypes;
     }
 
     private StreamConfigArgs() {
-        this.bigqueryDestination = Input.empty();
-        this.resourceTypes = Input.empty();
+        this.bigqueryDestination = Output.empty();
+        this.resourceTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination;
-        private @Nullable Input<List<String>> resourceTypes;
+        private @Nullable Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination;
+        private @Nullable Output<List<String>> resourceTypes;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder bigqueryDestination(@Nullable Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(@Nullable Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination) {
             this.bigqueryDestination = bigqueryDestination;
             return this;
         }
 
         public Builder bigqueryDestination(@Nullable GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Input.ofNullable(bigqueryDestination);
+            this.bigqueryDestination = Output.ofNullable(bigqueryDestination);
             return this;
         }
 
-        public Builder resourceTypes(@Nullable Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Input.ofNullable(resourceTypes);
+            this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
         public StreamConfigArgs build() {

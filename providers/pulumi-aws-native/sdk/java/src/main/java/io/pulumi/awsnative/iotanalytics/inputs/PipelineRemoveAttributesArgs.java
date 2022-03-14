@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,39 +16,39 @@ public final class PipelineRemoveAttributesArgs extends io.pulumi.resources.Reso
     public static final PipelineRemoveAttributesArgs Empty = new PipelineRemoveAttributesArgs();
 
     @InputImport(name="attributes", required=true)
-      private final Input<List<String>> attributes;
+      private final Output<List<String>> attributes;
 
-    public Input<List<String>> getAttributes() {
+    public Output<List<String>> getAttributes() {
         return this.attributes;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-      private final @Nullable Input<String> next;
+      private final @Nullable Output<String> next;
 
-    public Input<String> getNext() {
-        return this.next == null ? Input.empty() : this.next;
+    public Output<String> getNext() {
+        return this.next == null ? Output.empty() : this.next;
     }
 
     public PipelineRemoveAttributesArgs(
-        Input<List<String>> attributes,
-        Input<String> name,
-        @Nullable Input<String> next) {
+        Output<List<String>> attributes,
+        Output<String> name,
+        @Nullable Output<String> next) {
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.next = next;
     }
 
     private PipelineRemoveAttributesArgs() {
-        this.attributes = Input.empty();
-        this.name = Input.empty();
-        this.next = Input.empty();
+        this.attributes = Output.empty();
+        this.name = Output.empty();
+        this.next = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class PipelineRemoveAttributesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<List<String>> attributes;
-        private Input<String> name;
-        private @Nullable Input<String> next;
+        private Output<List<String>> attributes;
+        private Output<String> name;
+        private @Nullable Output<String> next;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class PipelineRemoveAttributesArgs extends io.pulumi.resources.Reso
     	      this.next = defaults.next;
         }
 
-        public Builder attributes(Input<List<String>> attributes) {
+        public Builder attributes(Output<List<String>> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
         public Builder attributes(List<String> attributes) {
-            this.attributes = Input.of(Objects.requireNonNull(attributes));
+            this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder next(@Nullable Input<String> next) {
+        public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
 
         public Builder next(@Nullable String next) {
-            this.next = Input.ofNullable(next);
+            this.next = Output.ofNullable(next);
             return this;
         }
         public PipelineRemoveAttributesArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamDeserializerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends io.pulumi.
     public static final DeliveryStreamInputFormatConfigurationArgs Empty = new DeliveryStreamInputFormatConfigurationArgs();
 
     @InputImport(name="deserializer")
-      private final @Nullable Input<DeliveryStreamDeserializerArgs> deserializer;
+      private final @Nullable Output<DeliveryStreamDeserializerArgs> deserializer;
 
-    public Input<DeliveryStreamDeserializerArgs> getDeserializer() {
-        return this.deserializer == null ? Input.empty() : this.deserializer;
+    public Output<DeliveryStreamDeserializerArgs> getDeserializer() {
+        return this.deserializer == null ? Output.empty() : this.deserializer;
     }
 
-    public DeliveryStreamInputFormatConfigurationArgs(@Nullable Input<DeliveryStreamDeserializerArgs> deserializer) {
+    public DeliveryStreamInputFormatConfigurationArgs(@Nullable Output<DeliveryStreamDeserializerArgs> deserializer) {
         this.deserializer = deserializer;
     }
 
     private DeliveryStreamInputFormatConfigurationArgs() {
-        this.deserializer = Input.empty();
+        this.deserializer = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<DeliveryStreamDeserializerArgs> deserializer;
+        private @Nullable Output<DeliveryStreamDeserializerArgs> deserializer;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends io.pulumi.
     	      this.deserializer = defaults.deserializer;
         }
 
-        public Builder deserializer(@Nullable Input<DeliveryStreamDeserializerArgs> deserializer) {
+        public Builder deserializer(@Nullable Output<DeliveryStreamDeserializerArgs> deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
         public Builder deserializer(@Nullable DeliveryStreamDeserializerArgs deserializer) {
-            this.deserializer = Input.ofNullable(deserializer);
+            this.deserializer = Output.ofNullable(deserializer);
             return this;
         }
         public DeliveryStreamInputFormatConfigurationArgs build() {

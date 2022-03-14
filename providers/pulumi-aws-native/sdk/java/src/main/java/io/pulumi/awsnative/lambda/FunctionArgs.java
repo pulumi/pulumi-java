@@ -13,7 +13,7 @@ import io.pulumi.awsnative.lambda.inputs.FunctionImageConfigArgs;
 import io.pulumi.awsnative.lambda.inputs.FunctionTagArgs;
 import io.pulumi.awsnative.lambda.inputs.FunctionTracingConfigArgs;
 import io.pulumi.awsnative.lambda.inputs.FunctionVpcConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     public static final FunctionArgs Empty = new FunctionArgs();
 
     @InputImport(name="architectures")
-      private final @Nullable Input<List<FunctionArchitecturesItem>> architectures;
+      private final @Nullable Output<List<FunctionArchitecturesItem>> architectures;
 
-    public Input<List<FunctionArchitecturesItem>> getArchitectures() {
-        return this.architectures == null ? Input.empty() : this.architectures;
+    public Output<List<FunctionArchitecturesItem>> getArchitectures() {
+        return this.architectures == null ? Output.empty() : this.architectures;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code", required=true)
-      private final Input<FunctionCodeArgs> code;
+      private final Output<FunctionCodeArgs> code;
 
-    public Input<FunctionCodeArgs> getCode() {
+    public Output<FunctionCodeArgs> getCode() {
         return this.code;
     }
 
@@ -49,10 +49,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codeSigningConfigArn")
-      private final @Nullable Input<String> codeSigningConfigArn;
+      private final @Nullable Output<String> codeSigningConfigArn;
 
-    public Input<String> getCodeSigningConfigArn() {
-        return this.codeSigningConfigArn == null ? Input.empty() : this.codeSigningConfigArn;
+    public Output<String> getCodeSigningConfigArn() {
+        return this.codeSigningConfigArn == null ? Output.empty() : this.codeSigningConfigArn;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterConfig")
-      private final @Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig;
+      private final @Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig;
 
-    public Input<FunctionDeadLetterConfigArgs> getDeadLetterConfig() {
-        return this.deadLetterConfig == null ? Input.empty() : this.deadLetterConfig;
+    public Output<FunctionDeadLetterConfigArgs> getDeadLetterConfig() {
+        return this.deadLetterConfig == null ? Output.empty() : this.deadLetterConfig;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<FunctionEnvironmentArgs> environment;
+      private final @Nullable Output<FunctionEnvironmentArgs> environment;
 
-    public Input<FunctionEnvironmentArgs> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<FunctionEnvironmentArgs> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemConfigs")
-      private final @Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
+      private final @Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
 
-    public Input<List<FunctionFileSystemConfigArgs>> getFileSystemConfigs() {
-        return this.fileSystemConfigs == null ? Input.empty() : this.fileSystemConfigs;
+    public Output<List<FunctionFileSystemConfigArgs>> getFileSystemConfigs() {
+        return this.fileSystemConfigs == null ? Output.empty() : this.fileSystemConfigs;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionName")
-      private final @Nullable Input<String> functionName;
+      private final @Nullable Output<String> functionName;
 
-    public Input<String> getFunctionName() {
-        return this.functionName == null ? Input.empty() : this.functionName;
+    public Output<String> getFunctionName() {
+        return this.functionName == null ? Output.empty() : this.functionName;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="handler")
-      private final @Nullable Input<String> handler;
+      private final @Nullable Output<String> handler;
 
-    public Input<String> getHandler() {
-        return this.handler == null ? Input.empty() : this.handler;
+    public Output<String> getHandler() {
+        return this.handler == null ? Output.empty() : this.handler;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageConfig")
-      private final @Nullable Input<FunctionImageConfigArgs> imageConfig;
+      private final @Nullable Output<FunctionImageConfigArgs> imageConfig;
 
-    public Input<FunctionImageConfigArgs> getImageConfig() {
-        return this.imageConfig == null ? Input.empty() : this.imageConfig;
+    public Output<FunctionImageConfigArgs> getImageConfig() {
+        return this.imageConfig == null ? Output.empty() : this.imageConfig;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layers")
-      private final @Nullable Input<List<String>> layers;
+      private final @Nullable Output<List<String>> layers;
 
-    public Input<List<String>> getLayers() {
-        return this.layers == null ? Input.empty() : this.layers;
+    public Output<List<String>> getLayers() {
+        return this.layers == null ? Output.empty() : this.layers;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memorySize")
-      private final @Nullable Input<Integer> memorySize;
+      private final @Nullable Output<Integer> memorySize;
 
-    public Input<Integer> getMemorySize() {
-        return this.memorySize == null ? Input.empty() : this.memorySize;
+    public Output<Integer> getMemorySize() {
+        return this.memorySize == null ? Output.empty() : this.memorySize;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-      private final @Nullable Input<FunctionPackageType> packageType;
+      private final @Nullable Output<FunctionPackageType> packageType;
 
-    public Input<FunctionPackageType> getPackageType() {
-        return this.packageType == null ? Input.empty() : this.packageType;
+    public Output<FunctionPackageType> getPackageType() {
+        return this.packageType == null ? Output.empty() : this.packageType;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedConcurrentExecutions")
-      private final @Nullable Input<Integer> reservedConcurrentExecutions;
+      private final @Nullable Output<Integer> reservedConcurrentExecutions;
 
-    public Input<Integer> getReservedConcurrentExecutions() {
-        return this.reservedConcurrentExecutions == null ? Input.empty() : this.reservedConcurrentExecutions;
+    public Output<Integer> getReservedConcurrentExecutions() {
+        return this.reservedConcurrentExecutions == null ? Output.empty() : this.reservedConcurrentExecutions;
     }
 
     /**
@@ -192,9 +192,9 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -203,10 +203,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime")
-      private final @Nullable Input<String> runtime;
+      private final @Nullable Output<String> runtime;
 
-    public Input<String> getRuntime() {
-        return this.runtime == null ? Input.empty() : this.runtime;
+    public Output<String> getRuntime() {
+        return this.runtime == null ? Output.empty() : this.runtime;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<FunctionTagArgs>> tags;
+      private final @Nullable Output<List<FunctionTagArgs>> tags;
 
-    public Input<List<FunctionTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<FunctionTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracingConfig")
-      private final @Nullable Input<FunctionTracingConfigArgs> tracingConfig;
+      private final @Nullable Output<FunctionTracingConfigArgs> tracingConfig;
 
-    public Input<FunctionTracingConfigArgs> getTracingConfig() {
-        return this.tracingConfig == null ? Input.empty() : this.tracingConfig;
+    public Output<FunctionTracingConfigArgs> getTracingConfig() {
+        return this.tracingConfig == null ? Output.empty() : this.tracingConfig;
     }
 
     /**
@@ -247,34 +247,34 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<FunctionVpcConfigArgs> vpcConfig;
+      private final @Nullable Output<FunctionVpcConfigArgs> vpcConfig;
 
-    public Input<FunctionVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<FunctionVpcConfigArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public FunctionArgs(
-        @Nullable Input<List<FunctionArchitecturesItem>> architectures,
-        Input<FunctionCodeArgs> code,
-        @Nullable Input<String> codeSigningConfigArn,
-        @Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig,
-        @Nullable Input<String> description,
-        @Nullable Input<FunctionEnvironmentArgs> environment,
-        @Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs,
-        @Nullable Input<String> functionName,
-        @Nullable Input<String> handler,
-        @Nullable Input<FunctionImageConfigArgs> imageConfig,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<List<String>> layers,
-        @Nullable Input<Integer> memorySize,
-        @Nullable Input<FunctionPackageType> packageType,
-        @Nullable Input<Integer> reservedConcurrentExecutions,
-        Input<String> role,
-        @Nullable Input<String> runtime,
-        @Nullable Input<List<FunctionTagArgs>> tags,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<FunctionTracingConfigArgs> tracingConfig,
-        @Nullable Input<FunctionVpcConfigArgs> vpcConfig) {
+        @Nullable Output<List<FunctionArchitecturesItem>> architectures,
+        Output<FunctionCodeArgs> code,
+        @Nullable Output<String> codeSigningConfigArn,
+        @Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig,
+        @Nullable Output<String> description,
+        @Nullable Output<FunctionEnvironmentArgs> environment,
+        @Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs,
+        @Nullable Output<String> functionName,
+        @Nullable Output<String> handler,
+        @Nullable Output<FunctionImageConfigArgs> imageConfig,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<List<String>> layers,
+        @Nullable Output<Integer> memorySize,
+        @Nullable Output<FunctionPackageType> packageType,
+        @Nullable Output<Integer> reservedConcurrentExecutions,
+        Output<String> role,
+        @Nullable Output<String> runtime,
+        @Nullable Output<List<FunctionTagArgs>> tags,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<FunctionTracingConfigArgs> tracingConfig,
+        @Nullable Output<FunctionVpcConfigArgs> vpcConfig) {
         this.architectures = architectures;
         this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
         this.codeSigningConfigArn = codeSigningConfigArn;
@@ -299,27 +299,27 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.architectures = Input.empty();
-        this.code = Input.empty();
-        this.codeSigningConfigArn = Input.empty();
-        this.deadLetterConfig = Input.empty();
-        this.description = Input.empty();
-        this.environment = Input.empty();
-        this.fileSystemConfigs = Input.empty();
-        this.functionName = Input.empty();
-        this.handler = Input.empty();
-        this.imageConfig = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.layers = Input.empty();
-        this.memorySize = Input.empty();
-        this.packageType = Input.empty();
-        this.reservedConcurrentExecutions = Input.empty();
-        this.role = Input.empty();
-        this.runtime = Input.empty();
-        this.tags = Input.empty();
-        this.timeout = Input.empty();
-        this.tracingConfig = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.architectures = Output.empty();
+        this.code = Output.empty();
+        this.codeSigningConfigArn = Output.empty();
+        this.deadLetterConfig = Output.empty();
+        this.description = Output.empty();
+        this.environment = Output.empty();
+        this.fileSystemConfigs = Output.empty();
+        this.functionName = Output.empty();
+        this.handler = Output.empty();
+        this.imageConfig = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.layers = Output.empty();
+        this.memorySize = Output.empty();
+        this.packageType = Output.empty();
+        this.reservedConcurrentExecutions = Output.empty();
+        this.role = Output.empty();
+        this.runtime = Output.empty();
+        this.tags = Output.empty();
+        this.timeout = Output.empty();
+        this.tracingConfig = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -331,27 +331,27 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FunctionArchitecturesItem>> architectures;
-        private Input<FunctionCodeArgs> code;
-        private @Nullable Input<String> codeSigningConfigArn;
-        private @Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig;
-        private @Nullable Input<String> description;
-        private @Nullable Input<FunctionEnvironmentArgs> environment;
-        private @Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
-        private @Nullable Input<String> functionName;
-        private @Nullable Input<String> handler;
-        private @Nullable Input<FunctionImageConfigArgs> imageConfig;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<List<String>> layers;
-        private @Nullable Input<Integer> memorySize;
-        private @Nullable Input<FunctionPackageType> packageType;
-        private @Nullable Input<Integer> reservedConcurrentExecutions;
-        private Input<String> role;
-        private @Nullable Input<String> runtime;
-        private @Nullable Input<List<FunctionTagArgs>> tags;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<FunctionTracingConfigArgs> tracingConfig;
-        private @Nullable Input<FunctionVpcConfigArgs> vpcConfig;
+        private @Nullable Output<List<FunctionArchitecturesItem>> architectures;
+        private Output<FunctionCodeArgs> code;
+        private @Nullable Output<String> codeSigningConfigArn;
+        private @Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<FunctionEnvironmentArgs> environment;
+        private @Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
+        private @Nullable Output<String> functionName;
+        private @Nullable Output<String> handler;
+        private @Nullable Output<FunctionImageConfigArgs> imageConfig;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<List<String>> layers;
+        private @Nullable Output<Integer> memorySize;
+        private @Nullable Output<FunctionPackageType> packageType;
+        private @Nullable Output<Integer> reservedConcurrentExecutions;
+        private Output<String> role;
+        private @Nullable Output<String> runtime;
+        private @Nullable Output<List<FunctionTagArgs>> tags;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<FunctionTracingConfigArgs> tracingConfig;
+        private @Nullable Output<FunctionVpcConfigArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -382,213 +382,213 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder architectures(@Nullable Input<List<FunctionArchitecturesItem>> architectures) {
+        public Builder architectures(@Nullable Output<List<FunctionArchitecturesItem>> architectures) {
             this.architectures = architectures;
             return this;
         }
 
         public Builder architectures(@Nullable List<FunctionArchitecturesItem> architectures) {
-            this.architectures = Input.ofNullable(architectures);
+            this.architectures = Output.ofNullable(architectures);
             return this;
         }
 
-        public Builder code(Input<FunctionCodeArgs> code) {
+        public Builder code(Output<FunctionCodeArgs> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
         public Builder code(FunctionCodeArgs code) {
-            this.code = Input.of(Objects.requireNonNull(code));
+            this.code = Output.of(Objects.requireNonNull(code));
             return this;
         }
 
-        public Builder codeSigningConfigArn(@Nullable Input<String> codeSigningConfigArn) {
+        public Builder codeSigningConfigArn(@Nullable Output<String> codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
 
         public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
-            this.codeSigningConfigArn = Input.ofNullable(codeSigningConfigArn);
+            this.codeSigningConfigArn = Output.ofNullable(codeSigningConfigArn);
             return this;
         }
 
-        public Builder deadLetterConfig(@Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
 
         public Builder deadLetterConfig(@Nullable FunctionDeadLetterConfigArgs deadLetterConfig) {
-            this.deadLetterConfig = Input.ofNullable(deadLetterConfig);
+            this.deadLetterConfig = Output.ofNullable(deadLetterConfig);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environment(@Nullable Input<FunctionEnvironmentArgs> environment) {
+        public Builder environment(@Nullable Output<FunctionEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable FunctionEnvironmentArgs environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder fileSystemConfigs(@Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs) {
+        public Builder fileSystemConfigs(@Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs) {
             this.fileSystemConfigs = fileSystemConfigs;
             return this;
         }
 
         public Builder fileSystemConfigs(@Nullable List<FunctionFileSystemConfigArgs> fileSystemConfigs) {
-            this.fileSystemConfigs = Input.ofNullable(fileSystemConfigs);
+            this.fileSystemConfigs = Output.ofNullable(fileSystemConfigs);
             return this;
         }
 
-        public Builder functionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Input.ofNullable(functionName);
+            this.functionName = Output.ofNullable(functionName);
             return this;
         }
 
-        public Builder handler(@Nullable Input<String> handler) {
+        public Builder handler(@Nullable Output<String> handler) {
             this.handler = handler;
             return this;
         }
 
         public Builder handler(@Nullable String handler) {
-            this.handler = Input.ofNullable(handler);
+            this.handler = Output.ofNullable(handler);
             return this;
         }
 
-        public Builder imageConfig(@Nullable Input<FunctionImageConfigArgs> imageConfig) {
+        public Builder imageConfig(@Nullable Output<FunctionImageConfigArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
 
         public Builder imageConfig(@Nullable FunctionImageConfigArgs imageConfig) {
-            this.imageConfig = Input.ofNullable(imageConfig);
+            this.imageConfig = Output.ofNullable(imageConfig);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder layers(@Nullable Input<List<String>> layers) {
+        public Builder layers(@Nullable Output<List<String>> layers) {
             this.layers = layers;
             return this;
         }
 
         public Builder layers(@Nullable List<String> layers) {
-            this.layers = Input.ofNullable(layers);
+            this.layers = Output.ofNullable(layers);
             return this;
         }
 
-        public Builder memorySize(@Nullable Input<Integer> memorySize) {
+        public Builder memorySize(@Nullable Output<Integer> memorySize) {
             this.memorySize = memorySize;
             return this;
         }
 
         public Builder memorySize(@Nullable Integer memorySize) {
-            this.memorySize = Input.ofNullable(memorySize);
+            this.memorySize = Output.ofNullable(memorySize);
             return this;
         }
 
-        public Builder packageType(@Nullable Input<FunctionPackageType> packageType) {
+        public Builder packageType(@Nullable Output<FunctionPackageType> packageType) {
             this.packageType = packageType;
             return this;
         }
 
         public Builder packageType(@Nullable FunctionPackageType packageType) {
-            this.packageType = Input.ofNullable(packageType);
+            this.packageType = Output.ofNullable(packageType);
             return this;
         }
 
-        public Builder reservedConcurrentExecutions(@Nullable Input<Integer> reservedConcurrentExecutions) {
+        public Builder reservedConcurrentExecutions(@Nullable Output<Integer> reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
 
         public Builder reservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
-            this.reservedConcurrentExecutions = Input.ofNullable(reservedConcurrentExecutions);
+            this.reservedConcurrentExecutions = Output.ofNullable(reservedConcurrentExecutions);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder runtime(@Nullable Input<String> runtime) {
+        public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
 
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Input.ofNullable(runtime);
+            this.runtime = Output.ofNullable(runtime);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<FunctionTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<FunctionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<FunctionTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder tracingConfig(@Nullable Input<FunctionTracingConfigArgs> tracingConfig) {
+        public Builder tracingConfig(@Nullable Output<FunctionTracingConfigArgs> tracingConfig) {
             this.tracingConfig = tracingConfig;
             return this;
         }
 
         public Builder tracingConfig(@Nullable FunctionTracingConfigArgs tracingConfig) {
-            this.tracingConfig = Input.ofNullable(tracingConfig);
+            this.tracingConfig = Output.ofNullable(tracingConfig);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<FunctionVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<FunctionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable FunctionVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public FunctionArgs build() {

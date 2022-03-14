@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appSecretSettingName")
-      private final @Nullable Input<String> appSecretSettingName;
+      private final @Nullable Output<String> appSecretSettingName;
 
-    public Input<String> getAppSecretSettingName() {
-        return this.appSecretSettingName == null ? Input.empty() : this.appSecretSettingName;
+    public Output<String> getAppSecretSettingName() {
+        return this.appSecretSettingName == null ? Output.empty() : this.appSecretSettingName;
     }
 
     public AppRegistrationArgs(
-        @Nullable Input<String> appId,
-        @Nullable Input<String> appSecretSettingName) {
+        @Nullable Output<String> appId,
+        @Nullable Output<String> appSecretSettingName) {
         this.appId = appId;
         this.appSecretSettingName = appSecretSettingName;
     }
 
     private AppRegistrationArgs() {
-        this.appId = Input.empty();
-        this.appSecretSettingName = Input.empty();
+        this.appId = Output.empty();
+        this.appSecretSettingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appId;
-        private @Nullable Input<String> appSecretSettingName;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<String> appSecretSettingName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.appSecretSettingName = defaults.appSecretSettingName;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder appSecretSettingName(@Nullable Input<String> appSecretSettingName) {
+        public Builder appSecretSettingName(@Nullable Output<String> appSecretSettingName) {
             this.appSecretSettingName = appSecretSettingName;
             return this;
         }
 
         public Builder appSecretSettingName(@Nullable String appSecretSettingName) {
-            this.appSecretSettingName = Input.ofNullable(appSecretSettingName);
+            this.appSecretSettingName = Output.ofNullable(appSecretSettingName);
             return this;
         }
         public AppRegistrationArgs build() {

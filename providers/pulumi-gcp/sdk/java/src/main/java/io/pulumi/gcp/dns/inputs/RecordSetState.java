@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedZone")
-      private final @Nullable Input<String> managedZone;
+      private final @Nullable Output<String> managedZone;
 
-    public Input<String> getManagedZone() {
-        return this.managedZone == null ? Input.empty() : this.managedZone;
+    public Output<String> getManagedZone() {
+        return this.managedZone == null ? Output.empty() : this.managedZone;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rrdatas")
-      private final @Nullable Input<List<String>> rrdatas;
+      private final @Nullable Output<List<String>> rrdatas;
 
-    public Input<List<String>> getRrdatas() {
-        return this.rrdatas == null ? Input.empty() : this.rrdatas;
+    public Output<List<String>> getRrdatas() {
+        return this.rrdatas == null ? Output.empty() : this.rrdatas;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Integer> ttl;
+      private final @Nullable Output<Integer> ttl;
 
-    public Input<Integer> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Integer> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RecordSetState(
-        @Nullable Input<String> managedZone,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> rrdatas,
-        @Nullable Input<Integer> ttl,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> managedZone,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> rrdatas,
+        @Nullable Output<Integer> ttl,
+        @Nullable Output<String> type) {
         this.managedZone = managedZone;
         this.name = name;
         this.project = project;
@@ -103,12 +103,12 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecordSetState() {
-        this.managedZone = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rrdatas = Input.empty();
-        this.ttl = Input.empty();
-        this.type = Input.empty();
+        this.managedZone = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rrdatas = Output.empty();
+        this.ttl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> managedZone;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> rrdatas;
-        private @Nullable Input<Integer> ttl;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> managedZone;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> rrdatas;
+        private @Nullable Output<Integer> ttl;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder managedZone(@Nullable Input<String> managedZone) {
+        public Builder managedZone(@Nullable Output<String> managedZone) {
             this.managedZone = managedZone;
             return this;
         }
 
         public Builder managedZone(@Nullable String managedZone) {
-            this.managedZone = Input.ofNullable(managedZone);
+            this.managedZone = Output.ofNullable(managedZone);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rrdatas(@Nullable Input<List<String>> rrdatas) {
+        public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
 
         public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Input.ofNullable(rrdatas);
+            this.rrdatas = Output.ofNullable(rrdatas);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RecordSetState build() {

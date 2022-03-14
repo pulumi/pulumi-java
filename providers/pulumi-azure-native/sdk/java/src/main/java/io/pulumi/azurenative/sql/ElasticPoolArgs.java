@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.ElasticPoolLicenseType;
 import io.pulumi.azurenative.sql.inputs.ElasticPoolPerDatabaseSettingsArgs;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -26,10 +26,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticPoolName")
-      private final @Nullable Input<String> elasticPoolName;
+      private final @Nullable Output<String> elasticPoolName;
 
-    public Input<String> getElasticPoolName() {
-        return this.elasticPoolName == null ? Input.empty() : this.elasticPoolName;
+    public Output<String> getElasticPoolName() {
+        return this.elasticPoolName == null ? Output.empty() : this.elasticPoolName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<Either<String,ElasticPoolLicenseType>> licenseType;
+      private final @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
 
-    public Input<Either<String,ElasticPoolLicenseType>> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<Either<String,ElasticPoolLicenseType>> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceConfigurationId")
-      private final @Nullable Input<String> maintenanceConfigurationId;
+      private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Input<String> getMaintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
+    public Output<String> getMaintenanceConfigurationId() {
+        return this.maintenanceConfigurationId == null ? Output.empty() : this.maintenanceConfigurationId;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSizeBytes")
-      private final @Nullable Input<Double> maxSizeBytes;
+      private final @Nullable Output<Double> maxSizeBytes;
 
-    public Input<Double> getMaxSizeBytes() {
-        return this.maxSizeBytes == null ? Input.empty() : this.maxSizeBytes;
+    public Output<Double> getMaxSizeBytes() {
+        return this.maxSizeBytes == null ? Output.empty() : this.maxSizeBytes;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="perDatabaseSettings")
-      private final @Nullable Input<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
+      private final @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
 
-    public Input<ElasticPoolPerDatabaseSettingsArgs> getPerDatabaseSettings() {
-        return this.perDatabaseSettings == null ? Input.empty() : this.perDatabaseSettings;
+    public Output<ElasticPoolPerDatabaseSettingsArgs> getPerDatabaseSettings() {
+        return this.perDatabaseSettings == null ? Output.empty() : this.perDatabaseSettings;
     }
 
     /**
@@ -92,9 +92,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,9 +103,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -116,10 +116,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -138,24 +138,24 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneRedundant")
-      private final @Nullable Input<Boolean> zoneRedundant;
+      private final @Nullable Output<Boolean> zoneRedundant;
 
-    public Input<Boolean> getZoneRedundant() {
-        return this.zoneRedundant == null ? Input.empty() : this.zoneRedundant;
+    public Output<Boolean> getZoneRedundant() {
+        return this.zoneRedundant == null ? Output.empty() : this.zoneRedundant;
     }
 
     public ElasticPoolArgs(
-        @Nullable Input<String> elasticPoolName,
-        @Nullable Input<Either<String,ElasticPoolLicenseType>> licenseType,
-        @Nullable Input<String> location,
-        @Nullable Input<String> maintenanceConfigurationId,
-        @Nullable Input<Double> maxSizeBytes,
-        @Nullable Input<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Boolean> zoneRedundant) {
+        @Nullable Output<String> elasticPoolName,
+        @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType,
+        @Nullable Output<String> location,
+        @Nullable Output<String> maintenanceConfigurationId,
+        @Nullable Output<Double> maxSizeBytes,
+        @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Boolean> zoneRedundant) {
         this.elasticPoolName = elasticPoolName;
         this.licenseType = licenseType;
         this.location = location;
@@ -170,17 +170,17 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ElasticPoolArgs() {
-        this.elasticPoolName = Input.empty();
-        this.licenseType = Input.empty();
-        this.location = Input.empty();
-        this.maintenanceConfigurationId = Input.empty();
-        this.maxSizeBytes = Input.empty();
-        this.perDatabaseSettings = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.zoneRedundant = Input.empty();
+        this.elasticPoolName = Output.empty();
+        this.licenseType = Output.empty();
+        this.location = Output.empty();
+        this.maintenanceConfigurationId = Output.empty();
+        this.maxSizeBytes = Output.empty();
+        this.perDatabaseSettings = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.zoneRedundant = Output.empty();
     }
 
     public static Builder builder() {
@@ -192,17 +192,17 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> elasticPoolName;
-        private @Nullable Input<Either<String,ElasticPoolLicenseType>> licenseType;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> maintenanceConfigurationId;
-        private @Nullable Input<Double> maxSizeBytes;
-        private @Nullable Input<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Boolean> zoneRedundant;
+        private @Nullable Output<String> elasticPoolName;
+        private @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> maintenanceConfigurationId;
+        private @Nullable Output<Double> maxSizeBytes;
+        private @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Boolean> zoneRedundant;
 
         public Builder() {
     	      // Empty
@@ -223,113 +223,113 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder elasticPoolName(@Nullable Input<String> elasticPoolName) {
+        public Builder elasticPoolName(@Nullable Output<String> elasticPoolName) {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
 
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
-            this.elasticPoolName = Input.ofNullable(elasticPoolName);
+            this.elasticPoolName = Output.ofNullable(elasticPoolName);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<Either<String,ElasticPoolLicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable Either<String,ElasticPoolLicenseType> licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
+            this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder maxSizeBytes(@Nullable Input<Double> maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
-            this.maxSizeBytes = Input.ofNullable(maxSizeBytes);
+            this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
             return this;
         }
 
-        public Builder perDatabaseSettings(@Nullable Input<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings) {
+        public Builder perDatabaseSettings(@Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings) {
             this.perDatabaseSettings = perDatabaseSettings;
             return this;
         }
 
         public Builder perDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsArgs perDatabaseSettings) {
-            this.perDatabaseSettings = Input.ofNullable(perDatabaseSettings);
+            this.perDatabaseSettings = Output.ofNullable(perDatabaseSettings);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
-            this.zoneRedundant = Input.ofNullable(zoneRedundant);
+            this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
         }
         public ElasticPoolArgs build() {

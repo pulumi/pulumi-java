@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretGetArgs;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,22 +33,22 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<ServiceTemplateSpecVolumeSecretGetArgs> secret;
+      private final Output<ServiceTemplateSpecVolumeSecretGetArgs> secret;
 
-    public Input<ServiceTemplateSpecVolumeSecretGetArgs> getSecret() {
+    public Output<ServiceTemplateSpecVolumeSecretGetArgs> getSecret() {
         return this.secret;
     }
 
     public ServiceTemplateSpecVolumeGetArgs(
-        Input<String> name,
-        Input<ServiceTemplateSpecVolumeSecretGetArgs> secret) {
+        Output<String> name,
+        Output<ServiceTemplateSpecVolumeSecretGetArgs> secret) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
     }
 
     private ServiceTemplateSpecVolumeGetArgs() {
-        this.name = Input.empty();
-        this.secret = Input.empty();
+        this.name = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<ServiceTemplateSpecVolumeSecretGetArgs> secret;
+        private Output<String> name;
+        private Output<ServiceTemplateSpecVolumeSecretGetArgs> secret;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
     	      this.secret = defaults.secret;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder secret(Input<ServiceTemplateSpecVolumeSecretGetArgs> secret) {
+        public Builder secret(Output<ServiceTemplateSpecVolumeSecretGetArgs> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(ServiceTemplateSpecVolumeSecretGetArgs secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
         public ServiceTemplateSpecVolumeGetArgs build() {

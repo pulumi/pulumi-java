@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationAlarmSeverity;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alarmName", required=true)
-      private final Input<String> alarmName;
+      private final Output<String> alarmName;
 
-    public Input<String> getAlarmName() {
+    public Output<String> getAlarmName() {
         return this.alarmName;
     }
 
@@ -35,22 +35,22 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="severity")
-      private final @Nullable Input<ApplicationAlarmSeverity> severity;
+      private final @Nullable Output<ApplicationAlarmSeverity> severity;
 
-    public Input<ApplicationAlarmSeverity> getSeverity() {
-        return this.severity == null ? Input.empty() : this.severity;
+    public Output<ApplicationAlarmSeverity> getSeverity() {
+        return this.severity == null ? Output.empty() : this.severity;
     }
 
     public ApplicationAlarmArgs(
-        Input<String> alarmName,
-        @Nullable Input<ApplicationAlarmSeverity> severity) {
+        Output<String> alarmName,
+        @Nullable Output<ApplicationAlarmSeverity> severity) {
         this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
         this.severity = severity;
     }
 
     private ApplicationAlarmArgs() {
-        this.alarmName = Input.empty();
-        this.severity = Input.empty();
+        this.alarmName = Output.empty();
+        this.severity = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> alarmName;
-        private @Nullable Input<ApplicationAlarmSeverity> severity;
+        private Output<String> alarmName;
+        private @Nullable Output<ApplicationAlarmSeverity> severity;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
     	      this.severity = defaults.severity;
         }
 
-        public Builder alarmName(Input<String> alarmName) {
+        public Builder alarmName(Output<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Input.of(Objects.requireNonNull(alarmName));
+            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
             return this;
         }
 
-        public Builder severity(@Nullable Input<ApplicationAlarmSeverity> severity) {
+        public Builder severity(@Nullable Output<ApplicationAlarmSeverity> severity) {
             this.severity = severity;
             return this;
         }
 
         public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
-            this.severity = Input.ofNullable(severity);
+            this.severity = Output.ofNullable(severity);
             return this;
         }
         public ApplicationAlarmArgs build() {

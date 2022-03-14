@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<List<String>> keys;
+      private final @Nullable Output<List<String>> keys;
 
-    public Input<List<String>> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<List<String>> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
-    public MongoIndexKeysArgs(@Nullable Input<List<String>> keys) {
+    public MongoIndexKeysArgs(@Nullable Output<List<String>> keys) {
         this.keys = keys;
     }
 
     private MongoIndexKeysArgs() {
-        this.keys = Input.empty();
+        this.keys = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> keys;
+        private @Nullable Output<List<String>> keys;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder keys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
         public MongoIndexKeysArgs build() {

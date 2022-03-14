@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
      * 
      */
     @InputImport(name="certificateAuthorityArns", required=true)
-      private final Input<List<String>> certificateAuthorityArns;
+      private final Output<List<String>> certificateAuthorityArns;
 
-    public Input<List<String>> getCertificateAuthorityArns() {
+    public Output<List<String>> getCertificateAuthorityArns() {
         return this.certificateAuthorityArns;
     }
 
-    public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs(Input<List<String>> certificateAuthorityArns) {
+    public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs(Output<List<String>> certificateAuthorityArns) {
         this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns, "expected parameter 'certificateAuthorityArns' to be non-null");
     }
 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs() {
-        this.certificateAuthorityArns = Input.empty();
+        this.certificateAuthorityArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     }
 
     public static final class Builder {
-        private Input<List<String>> certificateAuthorityArns;
+        private Output<List<String>> certificateAuthorityArns;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
         }
 
-        public Builder certificateAuthorityArns(Input<List<String>> certificateAuthorityArns) {
+        public Builder certificateAuthorityArns(Output<List<String>> certificateAuthorityArns) {
             this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
             return this;
         }
 
         public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
-            this.certificateAuthorityArns = Input.of(Objects.requireNonNull(certificateAuthorityArns));
+            this.certificateAuthorityArns = Output.of(Objects.requireNonNull(certificateAuthorityArns));
             return this;
         }
         public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs build() {

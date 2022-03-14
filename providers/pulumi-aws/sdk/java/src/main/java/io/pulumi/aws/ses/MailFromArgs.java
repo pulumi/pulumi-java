@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="behaviorOnMxFailure")
-      private final @Nullable Input<String> behaviorOnMxFailure;
+      private final @Nullable Output<String> behaviorOnMxFailure;
 
-    public Input<String> getBehaviorOnMxFailure() {
-        return this.behaviorOnMxFailure == null ? Input.empty() : this.behaviorOnMxFailure;
+    public Output<String> getBehaviorOnMxFailure() {
+        return this.behaviorOnMxFailure == null ? Output.empty() : this.behaviorOnMxFailure;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
@@ -41,25 +41,25 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mailFromDomain", required=true)
-      private final Input<String> mailFromDomain;
+      private final Output<String> mailFromDomain;
 
-    public Input<String> getMailFromDomain() {
+    public Output<String> getMailFromDomain() {
         return this.mailFromDomain;
     }
 
     public MailFromArgs(
-        @Nullable Input<String> behaviorOnMxFailure,
-        Input<String> domain,
-        Input<String> mailFromDomain) {
+        @Nullable Output<String> behaviorOnMxFailure,
+        Output<String> domain,
+        Output<String> mailFromDomain) {
         this.behaviorOnMxFailure = behaviorOnMxFailure;
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.mailFromDomain = Objects.requireNonNull(mailFromDomain, "expected parameter 'mailFromDomain' to be non-null");
     }
 
     private MailFromArgs() {
-        this.behaviorOnMxFailure = Input.empty();
-        this.domain = Input.empty();
-        this.mailFromDomain = Input.empty();
+        this.behaviorOnMxFailure = Output.empty();
+        this.domain = Output.empty();
+        this.mailFromDomain = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> behaviorOnMxFailure;
-        private Input<String> domain;
-        private Input<String> mailFromDomain;
+        private @Nullable Output<String> behaviorOnMxFailure;
+        private Output<String> domain;
+        private Output<String> mailFromDomain;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mailFromDomain = defaults.mailFromDomain;
         }
 
-        public Builder behaviorOnMxFailure(@Nullable Input<String> behaviorOnMxFailure) {
+        public Builder behaviorOnMxFailure(@Nullable Output<String> behaviorOnMxFailure) {
             this.behaviorOnMxFailure = behaviorOnMxFailure;
             return this;
         }
 
         public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = Input.ofNullable(behaviorOnMxFailure);
+            this.behaviorOnMxFailure = Output.ofNullable(behaviorOnMxFailure);
             return this;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder mailFromDomain(Input<String> mailFromDomain) {
+        public Builder mailFromDomain(Output<String> mailFromDomain) {
             this.mailFromDomain = Objects.requireNonNull(mailFromDomain);
             return this;
         }
 
         public Builder mailFromDomain(String mailFromDomain) {
-            this.mailFromDomain = Input.of(Objects.requireNonNull(mailFromDomain));
+            this.mailFromDomain = Output.of(Objects.requireNonNull(mailFromDomain));
             return this;
         }
         public MailFromArgs build() {

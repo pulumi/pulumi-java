@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TableOptionsArgs;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="requiredFindingLabelKeys")
-      private final @Nullable Input<List<String>> requiredFindingLabelKeys;
+      private final @Nullable Output<List<String>> requiredFindingLabelKeys;
 
-    public Input<List<String>> getRequiredFindingLabelKeys() {
-        return this.requiredFindingLabelKeys == null ? Input.empty() : this.requiredFindingLabelKeys;
+    public Output<List<String>> getRequiredFindingLabelKeys() {
+        return this.requiredFindingLabelKeys == null ? Output.empty() : this.requiredFindingLabelKeys;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tableOptions")
-      private final @Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
+      private final @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
 
-    public Input<GooglePrivacyDlpV2TableOptionsArgs> getTableOptions() {
-        return this.tableOptions == null ? Input.empty() : this.tableOptions;
+    public Output<GooglePrivacyDlpV2TableOptionsArgs> getTableOptions() {
+        return this.tableOptions == null ? Output.empty() : this.tableOptions;
     }
 
     public GooglePrivacyDlpV2HybridOptionsArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> requiredFindingLabelKeys,
-        @Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> requiredFindingLabelKeys,
+        @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
         this.description = description;
         this.labels = labels;
         this.requiredFindingLabelKeys = requiredFindingLabelKeys;
@@ -77,10 +77,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2HybridOptionsArgs() {
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.requiredFindingLabelKeys = Input.empty();
-        this.tableOptions = Input.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.requiredFindingLabelKeys = Output.empty();
+        this.tableOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> requiredFindingLabelKeys;
-        private @Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> requiredFindingLabelKeys;
+        private @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     	      this.tableOptions = defaults.tableOptions;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder requiredFindingLabelKeys(@Nullable Input<List<String>> requiredFindingLabelKeys) {
+        public Builder requiredFindingLabelKeys(@Nullable Output<List<String>> requiredFindingLabelKeys) {
             this.requiredFindingLabelKeys = requiredFindingLabelKeys;
             return this;
         }
 
         public Builder requiredFindingLabelKeys(@Nullable List<String> requiredFindingLabelKeys) {
-            this.requiredFindingLabelKeys = Input.ofNullable(requiredFindingLabelKeys);
+            this.requiredFindingLabelKeys = Output.ofNullable(requiredFindingLabelKeys);
             return this;
         }
 
-        public Builder tableOptions(@Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
+        public Builder tableOptions(@Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
             this.tableOptions = tableOptions;
             return this;
         }
 
         public Builder tableOptions(@Nullable GooglePrivacyDlpV2TableOptionsArgs tableOptions) {
-            this.tableOptions = Input.ofNullable(tableOptions);
+            this.tableOptions = Output.ofNullable(tableOptions);
             return this;
         }
         public GooglePrivacyDlpV2HybridOptionsArgs build() {

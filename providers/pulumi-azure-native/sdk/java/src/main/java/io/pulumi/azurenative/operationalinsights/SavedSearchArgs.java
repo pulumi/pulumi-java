@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.operationalinsights.inputs.TagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category", required=true)
-      private final Input<String> category;
+      private final Output<String> category;
 
-    public Input<String> getCategory() {
+    public Output<String> getCategory() {
         return this.category;
     }
 
@@ -33,9 +33,9 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -44,10 +44,10 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionAlias")
-      private final @Nullable Input<String> functionAlias;
+      private final @Nullable Output<String> functionAlias;
 
-    public Input<String> getFunctionAlias() {
-        return this.functionAlias == null ? Input.empty() : this.functionAlias;
+    public Output<String> getFunctionAlias() {
+        return this.functionAlias == null ? Output.empty() : this.functionAlias;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionParameters")
-      private final @Nullable Input<String> functionParameters;
+      private final @Nullable Output<String> functionParameters;
 
-    public Input<String> getFunctionParameters() {
-        return this.functionParameters == null ? Input.empty() : this.functionParameters;
+    public Output<String> getFunctionParameters() {
+        return this.functionParameters == null ? Output.empty() : this.functionParameters;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -77,9 +77,9 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,10 +88,10 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="savedSearchId")
-      private final @Nullable Input<String> savedSearchId;
+      private final @Nullable Output<String> savedSearchId;
 
-    public Input<String> getSavedSearchId() {
-        return this.savedSearchId == null ? Input.empty() : this.savedSearchId;
+    public Output<String> getSavedSearchId() {
+        return this.savedSearchId == null ? Output.empty() : this.savedSearchId;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<TagArgs>> tags;
+      private final @Nullable Output<List<TagArgs>> tags;
 
-    public Input<List<TagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Double> version;
+      private final @Nullable Output<Double> version;
 
-    public Input<Double> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Double> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public SavedSearchArgs(
-        Input<String> category,
-        Input<String> displayName,
-        @Nullable Input<String> functionAlias,
-        @Nullable Input<String> functionParameters,
-        Input<String> query,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> savedSearchId,
-        @Nullable Input<List<TagArgs>> tags,
-        @Nullable Input<Double> version,
-        Input<String> workspaceName) {
+        Output<String> category,
+        Output<String> displayName,
+        @Nullable Output<String> functionAlias,
+        @Nullable Output<String> functionParameters,
+        Output<String> query,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> savedSearchId,
+        @Nullable Output<List<TagArgs>> tags,
+        @Nullable Output<Double> version,
+        Output<String> workspaceName) {
         this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.functionAlias = functionAlias;
@@ -151,16 +151,16 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SavedSearchArgs() {
-        this.category = Input.empty();
-        this.displayName = Input.empty();
-        this.functionAlias = Input.empty();
-        this.functionParameters = Input.empty();
-        this.query = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.savedSearchId = Input.empty();
-        this.tags = Input.empty();
-        this.version = Input.empty();
-        this.workspaceName = Input.empty();
+        this.category = Output.empty();
+        this.displayName = Output.empty();
+        this.functionAlias = Output.empty();
+        this.functionParameters = Output.empty();
+        this.query = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.savedSearchId = Output.empty();
+        this.tags = Output.empty();
+        this.version = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> category;
-        private Input<String> displayName;
-        private @Nullable Input<String> functionAlias;
-        private @Nullable Input<String> functionParameters;
-        private Input<String> query;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> savedSearchId;
-        private @Nullable Input<List<TagArgs>> tags;
-        private @Nullable Input<Double> version;
-        private Input<String> workspaceName;
+        private Output<String> category;
+        private Output<String> displayName;
+        private @Nullable Output<String> functionAlias;
+        private @Nullable Output<String> functionParameters;
+        private Output<String> query;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> savedSearchId;
+        private @Nullable Output<List<TagArgs>> tags;
+        private @Nullable Output<Double> version;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder category(Input<String> category) {
+        public Builder category(Output<String> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
         public Builder category(String category) {
-            this.category = Input.of(Objects.requireNonNull(category));
+            this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder functionAlias(@Nullable Input<String> functionAlias) {
+        public Builder functionAlias(@Nullable Output<String> functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
 
         public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Input.ofNullable(functionAlias);
+            this.functionAlias = Output.ofNullable(functionAlias);
             return this;
         }
 
-        public Builder functionParameters(@Nullable Input<String> functionParameters) {
+        public Builder functionParameters(@Nullable Output<String> functionParameters) {
             this.functionParameters = functionParameters;
             return this;
         }
 
         public Builder functionParameters(@Nullable String functionParameters) {
-            this.functionParameters = Input.ofNullable(functionParameters);
+            this.functionParameters = Output.ofNullable(functionParameters);
             return this;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder savedSearchId(@Nullable Input<String> savedSearchId) {
+        public Builder savedSearchId(@Nullable Output<String> savedSearchId) {
             this.savedSearchId = savedSearchId;
             return this;
         }
 
         public Builder savedSearchId(@Nullable String savedSearchId) {
-            this.savedSearchId = Input.ofNullable(savedSearchId);
+            this.savedSearchId = Output.ofNullable(savedSearchId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder version(@Nullable Input<Double> version) {
+        public Builder version(@Nullable Output<Double> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Double version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public SavedSearchArgs build() {

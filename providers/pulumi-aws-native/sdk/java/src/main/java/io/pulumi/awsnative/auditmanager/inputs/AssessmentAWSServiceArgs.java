@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.auditmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
     public static final AssessmentAWSServiceArgs Empty = new AssessmentAWSServiceArgs();
 
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
-    public AssessmentAWSServiceArgs(@Nullable Input<String> serviceName) {
+    public AssessmentAWSServiceArgs(@Nullable Output<String> serviceName) {
         this.serviceName = serviceName;
     }
 
     private AssessmentAWSServiceArgs() {
-        this.serviceName = Input.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> serviceName;
+        private @Nullable Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
         public AssessmentAWSServiceArgs build() {

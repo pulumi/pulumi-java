@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thingTypeName")
-      private final @Nullable Input<String> thingTypeName;
+      private final @Nullable Output<String> thingTypeName;
 
-    public Input<String> getThingTypeName() {
-        return this.thingTypeName == null ? Input.empty() : this.thingTypeName;
+    public Output<String> getThingTypeName() {
+        return this.thingTypeName == null ? Output.empty() : this.thingTypeName;
     }
 
     public ThingArgs(
-        @Nullable Input<Map<String,String>> attributes,
-        @Nullable Input<String> name,
-        @Nullable Input<String> thingTypeName) {
+        @Nullable Output<Map<String,String>> attributes,
+        @Nullable Output<String> name,
+        @Nullable Output<String> thingTypeName) {
         this.attributes = attributes;
         this.name = name;
         this.thingTypeName = thingTypeName;
     }
 
     private ThingArgs() {
-        this.attributes = Input.empty();
-        this.name = Input.empty();
-        this.thingTypeName = Input.empty();
+        this.attributes = Output.empty();
+        this.name = Output.empty();
+        this.thingTypeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributes;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> thingTypeName;
+        private @Nullable Output<Map<String,String>> attributes;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> thingTypeName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thingTypeName = defaults.thingTypeName;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder thingTypeName(@Nullable Input<String> thingTypeName) {
+        public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
             this.thingTypeName = thingTypeName;
             return this;
         }
 
         public Builder thingTypeName(@Nullable String thingTypeName) {
-            this.thingTypeName = Input.ofNullable(thingTypeName);
+            this.thingTypeName = Output.ofNullable(thingTypeName);
             return this;
         }
         public ThingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject")
-      private final @Nullable Input<String> subject;
+      private final @Nullable Output<String> subject;
 
-    public Input<String> getSubject() {
-        return this.subject == null ? Input.empty() : this.subject;
+    public Output<String> getSubject() {
+        return this.subject == null ? Output.empty() : this.subject;
     }
 
     public JwtClaimsArgs(
-        @Nullable Input<String> audience,
-        @Nullable Input<String> issuer,
-        @Nullable Input<String> subject) {
+        @Nullable Output<String> audience,
+        @Nullable Output<String> issuer,
+        @Nullable Output<String> subject) {
         this.audience = audience;
         this.issuer = issuer;
         this.subject = subject;
     }
 
     private JwtClaimsArgs() {
-        this.audience = Input.empty();
-        this.issuer = Input.empty();
-        this.subject = Input.empty();
+        this.audience = Output.empty();
+        this.issuer = Output.empty();
+        this.subject = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audience;
-        private @Nullable Input<String> issuer;
-        private @Nullable Input<String> subject;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<String> issuer;
+        private @Nullable Output<String> subject;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subject = defaults.subject;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
 
-        public Builder subject(@Nullable Input<String> subject) {
+        public Builder subject(@Nullable Output<String> subject) {
             this.subject = subject;
             return this;
         }
 
         public Builder subject(@Nullable String subject) {
-            this.subject = Input.ofNullable(subject);
+            this.subject = Output.ofNullable(subject);
             return this;
         }
         public JwtClaimsArgs build() {

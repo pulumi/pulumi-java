@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.ResourceManagementPrivateLinkArgs;
 import io.pulumi.azurenative.authorization.outputs.ResourceManagementPrivateLinkEndpointConnectionsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -118,18 +117,18 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceManagementPrivateLink(String name, ResourceManagementPrivateLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:ResourceManagementPrivateLink", name, args == null ? ResourceManagementPrivateLinkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:ResourceManagementPrivateLink", name, args == null ? ResourceManagementPrivateLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResourceManagementPrivateLink(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResourceManagementPrivateLink(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:ResourceManagementPrivateLink", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20200501:ResourceManagementPrivateLink").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200501:ResourceManagementPrivateLink").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -143,7 +142,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourceManagementPrivateLink get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResourceManagementPrivateLink get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceManagementPrivateLink(name, id, options);
     }
 }

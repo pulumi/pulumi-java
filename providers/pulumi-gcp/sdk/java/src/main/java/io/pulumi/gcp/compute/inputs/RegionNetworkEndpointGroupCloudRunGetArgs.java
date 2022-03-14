@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     /**
@@ -51,25 +51,25 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="urlMask")
-      private final @Nullable Input<String> urlMask;
+      private final @Nullable Output<String> urlMask;
 
-    public Input<String> getUrlMask() {
-        return this.urlMask == null ? Input.empty() : this.urlMask;
+    public Output<String> getUrlMask() {
+        return this.urlMask == null ? Output.empty() : this.urlMask;
     }
 
     public RegionNetworkEndpointGroupCloudRunGetArgs(
-        @Nullable Input<String> service,
-        @Nullable Input<String> tag,
-        @Nullable Input<String> urlMask) {
+        @Nullable Output<String> service,
+        @Nullable Output<String> tag,
+        @Nullable Output<String> urlMask) {
         this.service = service;
         this.tag = tag;
         this.urlMask = urlMask;
     }
 
     private RegionNetworkEndpointGroupCloudRunGetArgs() {
-        this.service = Input.empty();
-        this.tag = Input.empty();
-        this.urlMask = Input.empty();
+        this.service = Output.empty();
+        this.tag = Output.empty();
+        this.urlMask = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> service;
-        private @Nullable Input<String> tag;
-        private @Nullable Input<String> urlMask;
+        private @Nullable Output<String> service;
+        private @Nullable Output<String> tag;
+        private @Nullable Output<String> urlMask;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
 
-        public Builder urlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
         public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Input.ofNullable(urlMask);
+            this.urlMask = Output.ofNullable(urlMask);
             return this;
         }
         public RegionNetworkEndpointGroupCloudRunGetArgs build() {

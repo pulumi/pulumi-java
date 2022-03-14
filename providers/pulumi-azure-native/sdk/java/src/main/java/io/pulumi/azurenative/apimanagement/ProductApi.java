@@ -9,7 +9,6 @@ import io.pulumi.azurenative.apimanagement.outputs.ApiVersionSetContractDetailsR
 import io.pulumi.azurenative.apimanagement.outputs.AuthenticationSettingsContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.SubscriptionKeyParameterNamesContractResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -354,28 +353,28 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProductApi(String name, ProductApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ProductApi", name, args == null ? ProductApiArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:ProductApi", name, args == null ? ProductApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProductApi(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProductApi(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ProductApi", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ProductApi").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ProductApi").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ProductApi").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ProductApi").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -389,7 +388,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProductApi get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProductApi get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProductApi(name, id, options);
     }
 }

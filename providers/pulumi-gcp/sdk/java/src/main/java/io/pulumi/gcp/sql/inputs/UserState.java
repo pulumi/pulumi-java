@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionPolicy")
-      private final @Nullable Input<String> deletionPolicy;
+      private final @Nullable Output<String> deletionPolicy;
 
-    public Input<String> getDeletionPolicy() {
-        return this.deletionPolicy == null ? Input.empty() : this.deletionPolicy;
+    public Output<String> getDeletionPolicy() {
+        return this.deletionPolicy == null ? Output.empty() : this.deletionPolicy;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public UserState(
-        @Nullable Input<String> deletionPolicy,
-        @Nullable Input<String> host,
-        @Nullable Input<String> instance,
-        @Nullable Input<String> name,
-        @Nullable Input<String> password,
-        @Nullable Input<String> project,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> deletionPolicy,
+        @Nullable Output<String> host,
+        @Nullable Output<String> instance,
+        @Nullable Output<String> name,
+        @Nullable Output<String> password,
+        @Nullable Output<String> project,
+        @Nullable Output<String> type) {
         this.deletionPolicy = deletionPolicy;
         this.host = host;
         this.instance = instance;
@@ -119,13 +119,13 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.deletionPolicy = Input.empty();
-        this.host = Input.empty();
-        this.instance = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.project = Input.empty();
-        this.type = Input.empty();
+        this.deletionPolicy = Output.empty();
+        this.host = Output.empty();
+        this.instance = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.project = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deletionPolicy;
-        private @Nullable Input<String> host;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> deletionPolicy;
+        private @Nullable Output<String> host;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder deletionPolicy(@Nullable Input<String> deletionPolicy) {
+        public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
             this.deletionPolicy = deletionPolicy;
             return this;
         }
 
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Input.ofNullable(deletionPolicy);
+            this.deletionPolicy = Output.ofNullable(deletionPolicy);
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public UserState build() {

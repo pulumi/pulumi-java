@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.CertificateArgs;
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,30 +154,30 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Certificate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Certificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Certificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20160707:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20161010:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Certificate").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Certificate").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Certificate").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Certificate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -192,7 +191,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Certificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Certificate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Certificate(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromSecretRefArgs;
@@ -22,10 +22,10 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="configMapRef")
-      private final @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
+      private final @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
 
-    public Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> getConfigMapRef() {
-        return this.configMapRef == null ? Input.empty() : this.configMapRef;
+    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> getConfigMapRef() {
+        return this.configMapRef == null ? Output.empty() : this.configMapRef;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="secretRef")
-      private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
+      private final @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
 
-    public Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> getSecretRef() {
-        return this.secretRef == null ? Input.empty() : this.secretRef;
+    public Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> getSecretRef() {
+        return this.secretRef == null ? Output.empty() : this.secretRef;
     }
 
     public ServiceTemplateSpecContainerEnvFromArgs(
-        @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef,
-        @Nullable Input<String> prefix,
-        @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef) {
+        @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef,
+        @Nullable Output<String> prefix,
+        @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;
     }
 
     private ServiceTemplateSpecContainerEnvFromArgs() {
-        this.configMapRef = Input.empty();
-        this.prefix = Input.empty();
-        this.secretRef = Input.empty();
+        this.configMapRef = Output.empty();
+        this.prefix = Output.empty();
+        this.secretRef = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
+        private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder configMapRef(@Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef) {
+        public Builder configMapRef(@Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef) {
             this.configMapRef = configMapRef;
             return this;
         }
 
         public Builder configMapRef(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefArgs configMapRef) {
-            this.configMapRef = Input.ofNullable(configMapRef);
+            this.configMapRef = Output.ofNullable(configMapRef);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder secretRef(@Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef) {
+        public Builder secretRef(@Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
         public Builder secretRef(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefArgs secretRef) {
-            this.secretRef = Input.ofNullable(secretRef);
+            this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
         public ServiceTemplateSpecContainerEnvFromArgs build() {

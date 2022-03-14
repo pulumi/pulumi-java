@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.powerbi.inputs.AzureSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,24 +32,24 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="sku")
-      private final @Nullable Input<AzureSkuArgs> sku;
+      private final @Nullable Output<AzureSkuArgs> sku;
 
-    public Input<AzureSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<AzureSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -57,18 +57,18 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workspaceCollectionName")
-      private final @Nullable Input<String> workspaceCollectionName;
+      private final @Nullable Output<String> workspaceCollectionName;
 
-    public Input<String> getWorkspaceCollectionName() {
-        return this.workspaceCollectionName == null ? Input.empty() : this.workspaceCollectionName;
+    public Output<String> getWorkspaceCollectionName() {
+        return this.workspaceCollectionName == null ? Output.empty() : this.workspaceCollectionName;
     }
 
     public WorkspaceCollectionArgs(
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<AzureSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> workspaceCollectionName) {
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<AzureSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> workspaceCollectionName) {
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.sku = sku;
@@ -77,11 +77,11 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkspaceCollectionArgs() {
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceCollectionName = Input.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceCollectionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,11 +93,11 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<AzureSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> workspaceCollectionName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<AzureSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> workspaceCollectionName;
 
         public Builder() {
     	      // Empty
@@ -112,53 +112,53 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
     	      this.workspaceCollectionName = defaults.workspaceCollectionName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<AzureSkuArgs> sku) {
+        public Builder sku(@Nullable Output<AzureSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable AzureSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceCollectionName(@Nullable Input<String> workspaceCollectionName) {
+        public Builder workspaceCollectionName(@Nullable Output<String> workspaceCollectionName) {
             this.workspaceCollectionName = workspaceCollectionName;
             return this;
         }
 
         public Builder workspaceCollectionName(@Nullable String workspaceCollectionName) {
-            this.workspaceCollectionName = Input.ofNullable(workspaceCollectionName);
+            this.workspaceCollectionName = Output.ofNullable(workspaceCollectionName);
             return this;
         }
         public WorkspaceCollectionArgs build() {

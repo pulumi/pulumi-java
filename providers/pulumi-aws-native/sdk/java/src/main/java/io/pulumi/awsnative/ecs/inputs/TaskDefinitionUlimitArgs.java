@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,39 +15,39 @@ public final class TaskDefinitionUlimitArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionUlimitArgs Empty = new TaskDefinitionUlimitArgs();
 
     @InputImport(name="hardLimit", required=true)
-      private final Input<Integer> hardLimit;
+      private final Output<Integer> hardLimit;
 
-    public Input<Integer> getHardLimit() {
+    public Output<Integer> getHardLimit() {
         return this.hardLimit;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="softLimit", required=true)
-      private final Input<Integer> softLimit;
+      private final Output<Integer> softLimit;
 
-    public Input<Integer> getSoftLimit() {
+    public Output<Integer> getSoftLimit() {
         return this.softLimit;
     }
 
     public TaskDefinitionUlimitArgs(
-        Input<Integer> hardLimit,
-        Input<String> name,
-        Input<Integer> softLimit) {
+        Output<Integer> hardLimit,
+        Output<String> name,
+        Output<Integer> softLimit) {
         this.hardLimit = Objects.requireNonNull(hardLimit, "expected parameter 'hardLimit' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.softLimit = Objects.requireNonNull(softLimit, "expected parameter 'softLimit' to be non-null");
     }
 
     private TaskDefinitionUlimitArgs() {
-        this.hardLimit = Input.empty();
-        this.name = Input.empty();
-        this.softLimit = Input.empty();
+        this.hardLimit = Output.empty();
+        this.name = Output.empty();
+        this.softLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class TaskDefinitionUlimitArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Integer> hardLimit;
-        private Input<String> name;
-        private Input<Integer> softLimit;
+        private Output<Integer> hardLimit;
+        private Output<String> name;
+        private Output<Integer> softLimit;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class TaskDefinitionUlimitArgs extends io.pulumi.resources.Resource
     	      this.softLimit = defaults.softLimit;
         }
 
-        public Builder hardLimit(Input<Integer> hardLimit) {
+        public Builder hardLimit(Output<Integer> hardLimit) {
             this.hardLimit = Objects.requireNonNull(hardLimit);
             return this;
         }
 
         public Builder hardLimit(Integer hardLimit) {
-            this.hardLimit = Input.of(Objects.requireNonNull(hardLimit));
+            this.hardLimit = Output.of(Objects.requireNonNull(hardLimit));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder softLimit(Input<Integer> softLimit) {
+        public Builder softLimit(Output<Integer> softLimit) {
             this.softLimit = Objects.requireNonNull(softLimit);
             return this;
         }
 
         public Builder softLimit(Integer softLimit) {
-            this.softLimit = Input.of(Objects.requireNonNull(softLimit));
+            this.softLimit = Output.of(Objects.requireNonNull(softLimit));
             return this;
         }
         public TaskDefinitionUlimitArgs build() {

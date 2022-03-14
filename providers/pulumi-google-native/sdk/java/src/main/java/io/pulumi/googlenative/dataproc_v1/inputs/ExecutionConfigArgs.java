@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkTags")
-      private final @Nullable Input<List<String>> networkTags;
+      private final @Nullable Output<List<String>> networkTags;
 
-    public Input<List<String>> getNetworkTags() {
-        return this.networkTags == null ? Input.empty() : this.networkTags;
+    public Output<List<String>> getNetworkTags() {
+        return this.networkTags == null ? Output.empty() : this.networkTags;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkUri")
-      private final @Nullable Input<String> networkUri;
+      private final @Nullable Output<String> networkUri;
 
-    public Input<String> getNetworkUri() {
-        return this.networkUri == null ? Input.empty() : this.networkUri;
+    public Output<String> getNetworkUri() {
+        return this.networkUri == null ? Output.empty() : this.networkUri;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetworkUri")
-      private final @Nullable Input<String> subnetworkUri;
+      private final @Nullable Output<String> subnetworkUri;
 
-    public Input<String> getSubnetworkUri() {
-        return this.subnetworkUri == null ? Input.empty() : this.subnetworkUri;
+    public Output<String> getSubnetworkUri() {
+        return this.subnetworkUri == null ? Output.empty() : this.subnetworkUri;
     }
 
     public ExecutionConfigArgs(
-        @Nullable Input<String> kmsKey,
-        @Nullable Input<List<String>> networkTags,
-        @Nullable Input<String> networkUri,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> subnetworkUri) {
+        @Nullable Output<String> kmsKey,
+        @Nullable Output<List<String>> networkTags,
+        @Nullable Output<String> networkUri,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> subnetworkUri) {
         this.kmsKey = kmsKey;
         this.networkTags = networkTags;
         this.networkUri = networkUri;
@@ -88,11 +88,11 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ExecutionConfigArgs() {
-        this.kmsKey = Input.empty();
-        this.networkTags = Input.empty();
-        this.networkUri = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.subnetworkUri = Input.empty();
+        this.kmsKey = Output.empty();
+        this.networkTags = Output.empty();
+        this.networkUri = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.subnetworkUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKey;
-        private @Nullable Input<List<String>> networkTags;
-        private @Nullable Input<String> networkUri;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> subnetworkUri;
+        private @Nullable Output<String> kmsKey;
+        private @Nullable Output<List<String>> networkTags;
+        private @Nullable Output<String> networkUri;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> subnetworkUri;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.subnetworkUri = defaults.subnetworkUri;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder networkTags(@Nullable Input<List<String>> networkTags) {
+        public Builder networkTags(@Nullable Output<List<String>> networkTags) {
             this.networkTags = networkTags;
             return this;
         }
 
         public Builder networkTags(@Nullable List<String> networkTags) {
-            this.networkTags = Input.ofNullable(networkTags);
+            this.networkTags = Output.ofNullable(networkTags);
             return this;
         }
 
-        public Builder networkUri(@Nullable Input<String> networkUri) {
+        public Builder networkUri(@Nullable Output<String> networkUri) {
             this.networkUri = networkUri;
             return this;
         }
 
         public Builder networkUri(@Nullable String networkUri) {
-            this.networkUri = Input.ofNullable(networkUri);
+            this.networkUri = Output.ofNullable(networkUri);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder subnetworkUri(@Nullable Input<String> subnetworkUri) {
+        public Builder subnetworkUri(@Nullable Output<String> subnetworkUri) {
             this.subnetworkUri = subnetworkUri;
             return this;
         }
 
         public Builder subnetworkUri(@Nullable String subnetworkUri) {
-            this.subnetworkUri = Input.ofNullable(subnetworkUri);
+            this.subnetworkUri = Output.ofNullable(subnetworkUri);
             return this;
         }
         public ExecutionConfigArgs build() {

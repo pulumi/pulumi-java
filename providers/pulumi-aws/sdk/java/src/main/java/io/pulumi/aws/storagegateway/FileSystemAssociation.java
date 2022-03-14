@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.storagegateway.FileSystemAssociationArgs;
 import io.pulumi.aws.storagegateway.inputs.FileSystemAssociationState;
 import io.pulumi.aws.storagegateway.outputs.FileSystemAssociationCacheAttributes;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,14 +198,14 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileSystemAssociation(String name, FileSystemAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:storagegateway/fileSystemAssociation:FileSystemAssociation", name, args == null ? FileSystemAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:storagegateway/fileSystemAssociation:FileSystemAssociation", name, args == null ? FileSystemAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FileSystemAssociation(String name, Input<String> id, @Nullable FileSystemAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FileSystemAssociation(String name, Output<String> id, @Nullable FileSystemAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:storagegateway/fileSystemAssociation:FileSystemAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -222,7 +221,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FileSystemAssociation get(String name, Input<String> id, @Nullable FileSystemAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FileSystemAssociation get(String name, Output<String> id, @Nullable FileSystemAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FileSystemAssociation(name, id, state, options);
     }
 }

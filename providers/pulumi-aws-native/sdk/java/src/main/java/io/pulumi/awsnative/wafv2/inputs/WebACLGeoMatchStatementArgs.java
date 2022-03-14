@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class WebACLGeoMatchStatementArgs extends io.pulumi.resources.Resou
     public static final WebACLGeoMatchStatementArgs Empty = new WebACLGeoMatchStatementArgs();
 
     @InputImport(name="countryCodes")
-      private final @Nullable Input<List<String>> countryCodes;
+      private final @Nullable Output<List<String>> countryCodes;
 
-    public Input<List<String>> getCountryCodes() {
-        return this.countryCodes == null ? Input.empty() : this.countryCodes;
+    public Output<List<String>> getCountryCodes() {
+        return this.countryCodes == null ? Output.empty() : this.countryCodes;
     }
 
     @InputImport(name="forwardedIPConfig")
-      private final @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+      private final @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Input<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;
+    public Output<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
+        return this.forwardedIPConfig == null ? Output.empty() : this.forwardedIPConfig;
     }
 
     public WebACLGeoMatchStatementArgs(
-        @Nullable Input<List<String>> countryCodes,
-        @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
+        @Nullable Output<List<String>> countryCodes,
+        @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIPConfig = forwardedIPConfig;
     }
 
     private WebACLGeoMatchStatementArgs() {
-        this.countryCodes = Input.empty();
-        this.forwardedIPConfig = Input.empty();
+        this.countryCodes = Output.empty();
+        this.forwardedIPConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class WebACLGeoMatchStatementArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> countryCodes;
-        private @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+        private @Nullable Output<List<String>> countryCodes;
+        private @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class WebACLGeoMatchStatementArgs extends io.pulumi.resources.Resou
     	      this.forwardedIPConfig = defaults.forwardedIPConfig;
         }
 
-        public Builder countryCodes(@Nullable Input<List<String>> countryCodes) {
+        public Builder countryCodes(@Nullable Output<List<String>> countryCodes) {
             this.countryCodes = countryCodes;
             return this;
         }
 
         public Builder countryCodes(@Nullable List<String> countryCodes) {
-            this.countryCodes = Input.ofNullable(countryCodes);
+            this.countryCodes = Output.ofNullable(countryCodes);
             return this;
         }
 
-        public Builder forwardedIPConfig(@Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
         public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
+            this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
         }
         public WebACLGeoMatchStatementArgs build() {

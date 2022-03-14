@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskStorageUsedInBytes")
-      private final @Nullable Input<String> diskStorageUsedInBytes;
+      private final @Nullable Output<String> diskStorageUsedInBytes;
 
-    public Input<String> getDiskStorageUsedInBytes() {
-        return this.diskStorageUsedInBytes == null ? Input.empty() : this.diskStorageUsedInBytes;
+    public Output<String> getDiskStorageUsedInBytes() {
+        return this.diskStorageUsedInBytes == null ? Output.empty() : this.diskStorageUsedInBytes;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="isCollocated")
-      private final @Nullable Input<Boolean> isCollocated;
+      private final @Nullable Output<Boolean> isCollocated;
 
-    public Input<Boolean> getIsCollocated() {
-        return this.isCollocated == null ? Input.empty() : this.isCollocated;
+    public Output<Boolean> getIsCollocated() {
+        return this.isCollocated == null ? Output.empty() : this.isCollocated;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="isPresentOnCloud")
-      private final @Nullable Input<Boolean> isPresentOnCloud;
+      private final @Nullable Output<Boolean> isPresentOnCloud;
 
-    public Input<Boolean> getIsPresentOnCloud() {
-        return this.isPresentOnCloud == null ? Input.empty() : this.isPresentOnCloud;
+    public Output<Boolean> getIsPresentOnCloud() {
+        return this.isPresentOnCloud == null ? Output.empty() : this.isPresentOnCloud;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastBackupStatus")
-      private final @Nullable Input<String> lastBackupStatus;
+      private final @Nullable Output<String> lastBackupStatus;
 
-    public Input<String> getLastBackupStatus() {
-        return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
+    public Output<String> getLastBackupStatus() {
+        return this.lastBackupStatus == null ? Output.empty() : this.lastBackupStatus;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastRefreshedAt")
-      private final @Nullable Input<String> lastRefreshedAt;
+      private final @Nullable Output<String> lastRefreshedAt;
 
-    public Input<String> getLastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
+    public Output<String> getLastRefreshedAt() {
+        return this.lastRefreshedAt == null ? Output.empty() : this.lastRefreshedAt;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-      private final @Nullable Input<String> oldestRecoveryPoint;
+      private final @Nullable Output<String> oldestRecoveryPoint;
 
-    public Input<String> getOldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
+    public Output<String> getOldestRecoveryPoint() {
+        return this.oldestRecoveryPoint == null ? Output.empty() : this.oldestRecoveryPoint;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onPremiseLatestRecoveryPoint")
-      private final @Nullable Input<String> onPremiseLatestRecoveryPoint;
+      private final @Nullable Output<String> onPremiseLatestRecoveryPoint;
 
-    public Input<String> getOnPremiseLatestRecoveryPoint() {
-        return this.onPremiseLatestRecoveryPoint == null ? Input.empty() : this.onPremiseLatestRecoveryPoint;
+    public Output<String> getOnPremiseLatestRecoveryPoint() {
+        return this.onPremiseLatestRecoveryPoint == null ? Output.empty() : this.onPremiseLatestRecoveryPoint;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onPremiseOldestRecoveryPoint")
-      private final @Nullable Input<String> onPremiseOldestRecoveryPoint;
+      private final @Nullable Output<String> onPremiseOldestRecoveryPoint;
 
-    public Input<String> getOnPremiseOldestRecoveryPoint() {
-        return this.onPremiseOldestRecoveryPoint == null ? Input.empty() : this.onPremiseOldestRecoveryPoint;
+    public Output<String> getOnPremiseOldestRecoveryPoint() {
+        return this.onPremiseOldestRecoveryPoint == null ? Output.empty() : this.onPremiseOldestRecoveryPoint;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onPremiseRecoveryPointCount")
-      private final @Nullable Input<Integer> onPremiseRecoveryPointCount;
+      private final @Nullable Output<Integer> onPremiseRecoveryPointCount;
 
-    public Input<Integer> getOnPremiseRecoveryPointCount() {
-        return this.onPremiseRecoveryPointCount == null ? Input.empty() : this.onPremiseRecoveryPointCount;
+    public Output<Integer> getOnPremiseRecoveryPointCount() {
+        return this.onPremiseRecoveryPointCount == null ? Output.empty() : this.onPremiseRecoveryPointCount;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protectableObjectLoadPath")
-      private final @Nullable Input<Map<String,String>> protectableObjectLoadPath;
+      private final @Nullable Output<Map<String,String>> protectableObjectLoadPath;
 
-    public Input<Map<String,String>> getProtectableObjectLoadPath() {
-        return this.protectableObjectLoadPath == null ? Input.empty() : this.protectableObjectLoadPath;
+    public Output<Map<String,String>> getProtectableObjectLoadPath() {
+        return this.protectableObjectLoadPath == null ? Output.empty() : this.protectableObjectLoadPath;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protected")
-      private final @Nullable Input<Boolean> $protected;
+      private final @Nullable Output<Boolean> $protected;
 
-    public Input<Boolean> get$protected() {
-        return this.$protected == null ? Input.empty() : this.$protected;
+    public Output<Boolean> get$protected() {
+        return this.$protected == null ? Output.empty() : this.$protected;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protectionGroupName")
-      private final @Nullable Input<String> protectionGroupName;
+      private final @Nullable Output<String> protectionGroupName;
 
-    public Input<String> getProtectionGroupName() {
-        return this.protectionGroupName == null ? Input.empty() : this.protectionGroupName;
+    public Output<String> getProtectionGroupName() {
+        return this.protectionGroupName == null ? Output.empty() : this.protectionGroupName;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryPointCount")
-      private final @Nullable Input<Integer> recoveryPointCount;
+      private final @Nullable Output<Integer> recoveryPointCount;
 
-    public Input<Integer> getRecoveryPointCount() {
-        return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;
+    public Output<Integer> getRecoveryPointCount() {
+        return this.recoveryPointCount == null ? Output.empty() : this.recoveryPointCount;
     }
 
     /**
@@ -169,27 +169,27 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="totalDiskStorageSizeInBytes")
-      private final @Nullable Input<String> totalDiskStorageSizeInBytes;
+      private final @Nullable Output<String> totalDiskStorageSizeInBytes;
 
-    public Input<String> getTotalDiskStorageSizeInBytes() {
-        return this.totalDiskStorageSizeInBytes == null ? Input.empty() : this.totalDiskStorageSizeInBytes;
+    public Output<String> getTotalDiskStorageSizeInBytes() {
+        return this.totalDiskStorageSizeInBytes == null ? Output.empty() : this.totalDiskStorageSizeInBytes;
     }
 
     public DPMProtectedItemExtendedInfoArgs(
-        @Nullable Input<String> diskStorageUsedInBytes,
-        @Nullable Input<Boolean> isCollocated,
-        @Nullable Input<Boolean> isPresentOnCloud,
-        @Nullable Input<String> lastBackupStatus,
-        @Nullable Input<String> lastRefreshedAt,
-        @Nullable Input<String> oldestRecoveryPoint,
-        @Nullable Input<String> onPremiseLatestRecoveryPoint,
-        @Nullable Input<String> onPremiseOldestRecoveryPoint,
-        @Nullable Input<Integer> onPremiseRecoveryPointCount,
-        @Nullable Input<Map<String,String>> protectableObjectLoadPath,
-        @Nullable Input<Boolean> $protected,
-        @Nullable Input<String> protectionGroupName,
-        @Nullable Input<Integer> recoveryPointCount,
-        @Nullable Input<String> totalDiskStorageSizeInBytes) {
+        @Nullable Output<String> diskStorageUsedInBytes,
+        @Nullable Output<Boolean> isCollocated,
+        @Nullable Output<Boolean> isPresentOnCloud,
+        @Nullable Output<String> lastBackupStatus,
+        @Nullable Output<String> lastRefreshedAt,
+        @Nullable Output<String> oldestRecoveryPoint,
+        @Nullable Output<String> onPremiseLatestRecoveryPoint,
+        @Nullable Output<String> onPremiseOldestRecoveryPoint,
+        @Nullable Output<Integer> onPremiseRecoveryPointCount,
+        @Nullable Output<Map<String,String>> protectableObjectLoadPath,
+        @Nullable Output<Boolean> $protected,
+        @Nullable Output<String> protectionGroupName,
+        @Nullable Output<Integer> recoveryPointCount,
+        @Nullable Output<String> totalDiskStorageSizeInBytes) {
         this.diskStorageUsedInBytes = diskStorageUsedInBytes;
         this.isCollocated = isCollocated;
         this.isPresentOnCloud = isPresentOnCloud;
@@ -207,20 +207,20 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
     }
 
     private DPMProtectedItemExtendedInfoArgs() {
-        this.diskStorageUsedInBytes = Input.empty();
-        this.isCollocated = Input.empty();
-        this.isPresentOnCloud = Input.empty();
-        this.lastBackupStatus = Input.empty();
-        this.lastRefreshedAt = Input.empty();
-        this.oldestRecoveryPoint = Input.empty();
-        this.onPremiseLatestRecoveryPoint = Input.empty();
-        this.onPremiseOldestRecoveryPoint = Input.empty();
-        this.onPremiseRecoveryPointCount = Input.empty();
-        this.protectableObjectLoadPath = Input.empty();
-        this.$protected = Input.empty();
-        this.protectionGroupName = Input.empty();
-        this.recoveryPointCount = Input.empty();
-        this.totalDiskStorageSizeInBytes = Input.empty();
+        this.diskStorageUsedInBytes = Output.empty();
+        this.isCollocated = Output.empty();
+        this.isPresentOnCloud = Output.empty();
+        this.lastBackupStatus = Output.empty();
+        this.lastRefreshedAt = Output.empty();
+        this.oldestRecoveryPoint = Output.empty();
+        this.onPremiseLatestRecoveryPoint = Output.empty();
+        this.onPremiseOldestRecoveryPoint = Output.empty();
+        this.onPremiseRecoveryPointCount = Output.empty();
+        this.protectableObjectLoadPath = Output.empty();
+        this.$protected = Output.empty();
+        this.protectionGroupName = Output.empty();
+        this.recoveryPointCount = Output.empty();
+        this.totalDiskStorageSizeInBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -232,20 +232,20 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskStorageUsedInBytes;
-        private @Nullable Input<Boolean> isCollocated;
-        private @Nullable Input<Boolean> isPresentOnCloud;
-        private @Nullable Input<String> lastBackupStatus;
-        private @Nullable Input<String> lastRefreshedAt;
-        private @Nullable Input<String> oldestRecoveryPoint;
-        private @Nullable Input<String> onPremiseLatestRecoveryPoint;
-        private @Nullable Input<String> onPremiseOldestRecoveryPoint;
-        private @Nullable Input<Integer> onPremiseRecoveryPointCount;
-        private @Nullable Input<Map<String,String>> protectableObjectLoadPath;
-        private @Nullable Input<Boolean> $protected;
-        private @Nullable Input<String> protectionGroupName;
-        private @Nullable Input<Integer> recoveryPointCount;
-        private @Nullable Input<String> totalDiskStorageSizeInBytes;
+        private @Nullable Output<String> diskStorageUsedInBytes;
+        private @Nullable Output<Boolean> isCollocated;
+        private @Nullable Output<Boolean> isPresentOnCloud;
+        private @Nullable Output<String> lastBackupStatus;
+        private @Nullable Output<String> lastRefreshedAt;
+        private @Nullable Output<String> oldestRecoveryPoint;
+        private @Nullable Output<String> onPremiseLatestRecoveryPoint;
+        private @Nullable Output<String> onPremiseOldestRecoveryPoint;
+        private @Nullable Output<Integer> onPremiseRecoveryPointCount;
+        private @Nullable Output<Map<String,String>> protectableObjectLoadPath;
+        private @Nullable Output<Boolean> $protected;
+        private @Nullable Output<String> protectionGroupName;
+        private @Nullable Output<Integer> recoveryPointCount;
+        private @Nullable Output<String> totalDiskStorageSizeInBytes;
 
         public Builder() {
     	      // Empty
@@ -269,143 +269,143 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
     	      this.totalDiskStorageSizeInBytes = defaults.totalDiskStorageSizeInBytes;
         }
 
-        public Builder diskStorageUsedInBytes(@Nullable Input<String> diskStorageUsedInBytes) {
+        public Builder diskStorageUsedInBytes(@Nullable Output<String> diskStorageUsedInBytes) {
             this.diskStorageUsedInBytes = diskStorageUsedInBytes;
             return this;
         }
 
         public Builder diskStorageUsedInBytes(@Nullable String diskStorageUsedInBytes) {
-            this.diskStorageUsedInBytes = Input.ofNullable(diskStorageUsedInBytes);
+            this.diskStorageUsedInBytes = Output.ofNullable(diskStorageUsedInBytes);
             return this;
         }
 
-        public Builder isCollocated(@Nullable Input<Boolean> isCollocated) {
+        public Builder isCollocated(@Nullable Output<Boolean> isCollocated) {
             this.isCollocated = isCollocated;
             return this;
         }
 
         public Builder isCollocated(@Nullable Boolean isCollocated) {
-            this.isCollocated = Input.ofNullable(isCollocated);
+            this.isCollocated = Output.ofNullable(isCollocated);
             return this;
         }
 
-        public Builder isPresentOnCloud(@Nullable Input<Boolean> isPresentOnCloud) {
+        public Builder isPresentOnCloud(@Nullable Output<Boolean> isPresentOnCloud) {
             this.isPresentOnCloud = isPresentOnCloud;
             return this;
         }
 
         public Builder isPresentOnCloud(@Nullable Boolean isPresentOnCloud) {
-            this.isPresentOnCloud = Input.ofNullable(isPresentOnCloud);
+            this.isPresentOnCloud = Output.ofNullable(isPresentOnCloud);
             return this;
         }
 
-        public Builder lastBackupStatus(@Nullable Input<String> lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = Input.ofNullable(lastBackupStatus);
+            this.lastBackupStatus = Output.ofNullable(lastBackupStatus);
             return this;
         }
 
-        public Builder lastRefreshedAt(@Nullable Input<String> lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Input.ofNullable(lastRefreshedAt);
+            this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
             return this;
         }
 
-        public Builder oldestRecoveryPoint(@Nullable Input<String> oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = Input.ofNullable(oldestRecoveryPoint);
+            this.oldestRecoveryPoint = Output.ofNullable(oldestRecoveryPoint);
             return this;
         }
 
-        public Builder onPremiseLatestRecoveryPoint(@Nullable Input<String> onPremiseLatestRecoveryPoint) {
+        public Builder onPremiseLatestRecoveryPoint(@Nullable Output<String> onPremiseLatestRecoveryPoint) {
             this.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
             return this;
         }
 
         public Builder onPremiseLatestRecoveryPoint(@Nullable String onPremiseLatestRecoveryPoint) {
-            this.onPremiseLatestRecoveryPoint = Input.ofNullable(onPremiseLatestRecoveryPoint);
+            this.onPremiseLatestRecoveryPoint = Output.ofNullable(onPremiseLatestRecoveryPoint);
             return this;
         }
 
-        public Builder onPremiseOldestRecoveryPoint(@Nullable Input<String> onPremiseOldestRecoveryPoint) {
+        public Builder onPremiseOldestRecoveryPoint(@Nullable Output<String> onPremiseOldestRecoveryPoint) {
             this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
             return this;
         }
 
         public Builder onPremiseOldestRecoveryPoint(@Nullable String onPremiseOldestRecoveryPoint) {
-            this.onPremiseOldestRecoveryPoint = Input.ofNullable(onPremiseOldestRecoveryPoint);
+            this.onPremiseOldestRecoveryPoint = Output.ofNullable(onPremiseOldestRecoveryPoint);
             return this;
         }
 
-        public Builder onPremiseRecoveryPointCount(@Nullable Input<Integer> onPremiseRecoveryPointCount) {
+        public Builder onPremiseRecoveryPointCount(@Nullable Output<Integer> onPremiseRecoveryPointCount) {
             this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
             return this;
         }
 
         public Builder onPremiseRecoveryPointCount(@Nullable Integer onPremiseRecoveryPointCount) {
-            this.onPremiseRecoveryPointCount = Input.ofNullable(onPremiseRecoveryPointCount);
+            this.onPremiseRecoveryPointCount = Output.ofNullable(onPremiseRecoveryPointCount);
             return this;
         }
 
-        public Builder protectableObjectLoadPath(@Nullable Input<Map<String,String>> protectableObjectLoadPath) {
+        public Builder protectableObjectLoadPath(@Nullable Output<Map<String,String>> protectableObjectLoadPath) {
             this.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
 
         public Builder protectableObjectLoadPath(@Nullable Map<String,String> protectableObjectLoadPath) {
-            this.protectableObjectLoadPath = Input.ofNullable(protectableObjectLoadPath);
+            this.protectableObjectLoadPath = Output.ofNullable(protectableObjectLoadPath);
             return this;
         }
 
-        public Builder $protected(@Nullable Input<Boolean> $protected) {
+        public Builder $protected(@Nullable Output<Boolean> $protected) {
             this.$protected = $protected;
             return this;
         }
 
         public Builder $protected(@Nullable Boolean $protected) {
-            this.$protected = Input.ofNullable($protected);
+            this.$protected = Output.ofNullable($protected);
             return this;
         }
 
-        public Builder protectionGroupName(@Nullable Input<String> protectionGroupName) {
+        public Builder protectionGroupName(@Nullable Output<String> protectionGroupName) {
             this.protectionGroupName = protectionGroupName;
             return this;
         }
 
         public Builder protectionGroupName(@Nullable String protectionGroupName) {
-            this.protectionGroupName = Input.ofNullable(protectionGroupName);
+            this.protectionGroupName = Output.ofNullable(protectionGroupName);
             return this;
         }
 
-        public Builder recoveryPointCount(@Nullable Input<Integer> recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = Input.ofNullable(recoveryPointCount);
+            this.recoveryPointCount = Output.ofNullable(recoveryPointCount);
             return this;
         }
 
-        public Builder totalDiskStorageSizeInBytes(@Nullable Input<String> totalDiskStorageSizeInBytes) {
+        public Builder totalDiskStorageSizeInBytes(@Nullable Output<String> totalDiskStorageSizeInBytes) {
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }
 
         public Builder totalDiskStorageSizeInBytes(@Nullable String totalDiskStorageSizeInBytes) {
-            this.totalDiskStorageSizeInBytes = Input.ofNullable(totalDiskStorageSizeInBytes);
+            this.totalDiskStorageSizeInBytes = Output.ofNullable(totalDiskStorageSizeInBytes);
             return this;
         }
         public DPMProtectedItemExtendedInfoArgs build() {

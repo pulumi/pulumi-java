@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyBooleanPolicyGetArgs;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyListPolicyGetArgs;
@@ -23,10 +23,10 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="booleanPolicy")
-      private final @Nullable Input<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
+      private final @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
 
-    public Input<OrganizationPolicyBooleanPolicyGetArgs> getBooleanPolicy() {
-        return this.booleanPolicy == null ? Input.empty() : this.booleanPolicy;
+    public Output<OrganizationPolicyBooleanPolicyGetArgs> getBooleanPolicy() {
+        return this.booleanPolicy == null ? Output.empty() : this.booleanPolicy;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="constraint")
-      private final @Nullable Input<String> constraint;
+      private final @Nullable Output<String> constraint;
 
-    public Input<String> getConstraint() {
-        return this.constraint == null ? Input.empty() : this.constraint;
+    public Output<String> getConstraint() {
+        return this.constraint == null ? Output.empty() : this.constraint;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="folder")
-      private final @Nullable Input<String> folder;
+      private final @Nullable Output<String> folder;
 
-    public Input<String> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<String> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="listPolicy")
-      private final @Nullable Input<OrganizationPolicyListPolicyGetArgs> listPolicy;
+      private final @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
 
-    public Input<OrganizationPolicyListPolicyGetArgs> getListPolicy() {
-        return this.listPolicy == null ? Input.empty() : this.listPolicy;
+    public Output<OrganizationPolicyListPolicyGetArgs> getListPolicy() {
+        return this.listPolicy == null ? Output.empty() : this.listPolicy;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="restorePolicy")
-      private final @Nullable Input<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
+      private final @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
 
-    public Input<OrganizationPolicyRestorePolicyGetArgs> getRestorePolicy() {
-        return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
+    public Output<OrganizationPolicyRestorePolicyGetArgs> getRestorePolicy() {
+        return this.restorePolicy == null ? Output.empty() : this.restorePolicy;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public OrganizationPolicyState(
-        @Nullable Input<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy,
-        @Nullable Input<String> constraint,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> folder,
-        @Nullable Input<OrganizationPolicyListPolicyGetArgs> listPolicy,
-        @Nullable Input<OrganizationPolicyRestorePolicyGetArgs> restorePolicy,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy,
+        @Nullable Output<String> constraint,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> folder,
+        @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy,
+        @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<Integer> version) {
         this.booleanPolicy = booleanPolicy;
         this.constraint = constraint;
         this.etag = etag;
@@ -127,14 +127,14 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     }
 
     private OrganizationPolicyState() {
-        this.booleanPolicy = Input.empty();
-        this.constraint = Input.empty();
-        this.etag = Input.empty();
-        this.folder = Input.empty();
-        this.listPolicy = Input.empty();
-        this.restorePolicy = Input.empty();
-        this.updateTime = Input.empty();
-        this.version = Input.empty();
+        this.booleanPolicy = Output.empty();
+        this.constraint = Output.empty();
+        this.etag = Output.empty();
+        this.folder = Output.empty();
+        this.listPolicy = Output.empty();
+        this.restorePolicy = Output.empty();
+        this.updateTime = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
-        private @Nullable Input<String> constraint;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> folder;
-        private @Nullable Input<OrganizationPolicyListPolicyGetArgs> listPolicy;
-        private @Nullable Input<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
+        private @Nullable Output<String> constraint;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> folder;
+        private @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
+        private @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder booleanPolicy(@Nullable Input<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy) {
+        public Builder booleanPolicy(@Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy) {
             this.booleanPolicy = booleanPolicy;
             return this;
         }
 
         public Builder booleanPolicy(@Nullable OrganizationPolicyBooleanPolicyGetArgs booleanPolicy) {
-            this.booleanPolicy = Input.ofNullable(booleanPolicy);
+            this.booleanPolicy = Output.ofNullable(booleanPolicy);
             return this;
         }
 
-        public Builder constraint(@Nullable Input<String> constraint) {
+        public Builder constraint(@Nullable Output<String> constraint) {
             this.constraint = constraint;
             return this;
         }
 
         public Builder constraint(@Nullable String constraint) {
-            this.constraint = Input.ofNullable(constraint);
+            this.constraint = Output.ofNullable(constraint);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder folder(@Nullable Input<String> folder) {
+        public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable String folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder listPolicy(@Nullable Input<OrganizationPolicyListPolicyGetArgs> listPolicy) {
+        public Builder listPolicy(@Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
 
         public Builder listPolicy(@Nullable OrganizationPolicyListPolicyGetArgs listPolicy) {
-            this.listPolicy = Input.ofNullable(listPolicy);
+            this.listPolicy = Output.ofNullable(listPolicy);
             return this;
         }
 
-        public Builder restorePolicy(@Nullable Input<OrganizationPolicyRestorePolicyGetArgs> restorePolicy) {
+        public Builder restorePolicy(@Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
         public Builder restorePolicy(@Nullable OrganizationPolicyRestorePolicyGetArgs restorePolicy) {
-            this.restorePolicy = Input.ofNullable(restorePolicy);
+            this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public OrganizationPolicyState build() {

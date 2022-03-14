@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz;
 
 import io.pulumi.azurenative.logz.inputs.MonitoringTagRulesPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorName", required=true)
-      private final Input<String> monitorName;
+      private final Output<String> monitorName;
 
-    public Input<String> getMonitorName() {
+    public Output<String> getMonitorName() {
         return this.monitorName;
     }
 
@@ -31,10 +31,10 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
+      private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
-    public Input<MonitoringTagRulesPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<MonitoringTagRulesPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,24 +42,24 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="ruleSetName")
-      private final @Nullable Input<String> ruleSetName;
+      private final @Nullable Output<String> ruleSetName;
 
-    public Input<String> getRuleSetName() {
-        return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
+    public Output<String> getRuleSetName() {
+        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
     }
 
     public TagRuleArgs(
-        Input<String> monitorName,
-        @Nullable Input<MonitoringTagRulesPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleSetName) {
+        Output<String> monitorName,
+        @Nullable Output<MonitoringTagRulesPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleSetName) {
         this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -67,10 +67,10 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagRuleArgs() {
-        this.monitorName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleSetName = Input.empty();
+        this.monitorName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> monitorName;
-        private @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleSetName;
+        private Output<String> monitorName;
+        private @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleSetName;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder monitorName(Input<String> monitorName) {
+        public Builder monitorName(Output<String> monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
         public Builder monitorName(String monitorName) {
-            this.monitorName = Input.of(Objects.requireNonNull(monitorName));
+            this.monitorName = Output.of(Objects.requireNonNull(monitorName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<MonitoringTagRulesPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<MonitoringTagRulesPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable MonitoringTagRulesPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleSetName(@Nullable Input<String> ruleSetName) {
+        public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
 
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Input.ofNullable(ruleSetName);
+            this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
         }
         public TagRuleArgs build() {

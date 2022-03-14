@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.inputs.EmailPreferencesArgs;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.inputs.ScheduleOptionsArgs;
@@ -20,10 +20,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final TransferConfigArgs Empty = new TransferConfigArgs();
 
     @InputImport(name="authorizationCode")
-      private final @Nullable Input<String> authorizationCode;
+      private final @Nullable Output<String> authorizationCode;
 
-    public Input<String> getAuthorizationCode() {
-        return this.authorizationCode == null ? Input.empty() : this.authorizationCode;
+    public Output<String> getAuthorizationCode() {
+        return this.authorizationCode == null ? Output.empty() : this.authorizationCode;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataRefreshWindowDays")
-      private final @Nullable Input<Integer> dataRefreshWindowDays;
+      private final @Nullable Output<Integer> dataRefreshWindowDays;
 
-    public Input<Integer> getDataRefreshWindowDays() {
-        return this.dataRefreshWindowDays == null ? Input.empty() : this.dataRefreshWindowDays;
+    public Output<Integer> getDataRefreshWindowDays() {
+        return this.dataRefreshWindowDays == null ? Output.empty() : this.dataRefreshWindowDays;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId")
-      private final @Nullable Input<String> dataSourceId;
+      private final @Nullable Output<String> dataSourceId;
 
-    public Input<String> getDataSourceId() {
-        return this.dataSourceId == null ? Input.empty() : this.dataSourceId;
+    public Output<String> getDataSourceId() {
+        return this.dataSourceId == null ? Output.empty() : this.dataSourceId;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationDatasetId")
-      private final @Nullable Input<String> destinationDatasetId;
+      private final @Nullable Output<String> destinationDatasetId;
 
-    public Input<String> getDestinationDatasetId() {
-        return this.destinationDatasetId == null ? Input.empty() : this.destinationDatasetId;
+    public Output<String> getDestinationDatasetId() {
+        return this.destinationDatasetId == null ? Output.empty() : this.destinationDatasetId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -86,17 +86,17 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailPreferences")
-      private final @Nullable Input<EmailPreferencesArgs> emailPreferences;
+      private final @Nullable Output<EmailPreferencesArgs> emailPreferences;
 
-    public Input<EmailPreferencesArgs> getEmailPreferences() {
-        return this.emailPreferences == null ? Input.empty() : this.emailPreferences;
+    public Output<EmailPreferencesArgs> getEmailPreferences() {
+        return this.emailPreferences == null ? Output.empty() : this.emailPreferences;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPubsubTopic")
-      private final @Nullable Input<String> notificationPubsubTopic;
+      private final @Nullable Output<String> notificationPubsubTopic;
 
-    public Input<String> getNotificationPubsubTopic() {
-        return this.notificationPubsubTopic == null ? Input.empty() : this.notificationPubsubTopic;
+    public Output<String> getNotificationPubsubTopic() {
+        return this.notificationPubsubTopic == null ? Output.empty() : this.notificationPubsubTopic;
     }
 
     /**
@@ -126,17 +126,17 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="params")
-      private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Output<Map<String,String>> params;
 
-    public Input<Map<String,String>> getParams() {
-        return this.params == null ? Input.empty() : this.params;
+    public Output<Map<String,String>> getParams() {
+        return this.params == null ? Output.empty() : this.params;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -155,43 +155,43 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleOptions")
-      private final @Nullable Input<ScheduleOptionsArgs> scheduleOptions;
+      private final @Nullable Output<ScheduleOptionsArgs> scheduleOptions;
 
-    public Input<ScheduleOptionsArgs> getScheduleOptions() {
-        return this.scheduleOptions == null ? Input.empty() : this.scheduleOptions;
+    public Output<ScheduleOptionsArgs> getScheduleOptions() {
+        return this.scheduleOptions == null ? Output.empty() : this.scheduleOptions;
     }
 
     @InputImport(name="serviceAccountName")
-      private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Output<String> serviceAccountName;
 
-    public Input<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
+    public Output<String> getServiceAccountName() {
+        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
     }
 
     @InputImport(name="versionInfo")
-      private final @Nullable Input<String> versionInfo;
+      private final @Nullable Output<String> versionInfo;
 
-    public Input<String> getVersionInfo() {
-        return this.versionInfo == null ? Input.empty() : this.versionInfo;
+    public Output<String> getVersionInfo() {
+        return this.versionInfo == null ? Output.empty() : this.versionInfo;
     }
 
     public TransferConfigArgs(
-        @Nullable Input<String> authorizationCode,
-        @Nullable Input<Integer> dataRefreshWindowDays,
-        @Nullable Input<String> dataSourceId,
-        @Nullable Input<String> destinationDatasetId,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<String> displayName,
-        @Nullable Input<EmailPreferencesArgs> emailPreferences,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> notificationPubsubTopic,
-        @Nullable Input<Map<String,String>> params,
-        @Nullable Input<String> project,
-        @Nullable Input<String> schedule,
-        @Nullable Input<ScheduleOptionsArgs> scheduleOptions,
-        @Nullable Input<String> serviceAccountName,
-        @Nullable Input<String> versionInfo) {
+        @Nullable Output<String> authorizationCode,
+        @Nullable Output<Integer> dataRefreshWindowDays,
+        @Nullable Output<String> dataSourceId,
+        @Nullable Output<String> destinationDatasetId,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<String> displayName,
+        @Nullable Output<EmailPreferencesArgs> emailPreferences,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> notificationPubsubTopic,
+        @Nullable Output<Map<String,String>> params,
+        @Nullable Output<String> project,
+        @Nullable Output<String> schedule,
+        @Nullable Output<ScheduleOptionsArgs> scheduleOptions,
+        @Nullable Output<String> serviceAccountName,
+        @Nullable Output<String> versionInfo) {
         this.authorizationCode = authorizationCode;
         this.dataRefreshWindowDays = dataRefreshWindowDays;
         this.dataSourceId = dataSourceId;
@@ -211,22 +211,22 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransferConfigArgs() {
-        this.authorizationCode = Input.empty();
-        this.dataRefreshWindowDays = Input.empty();
-        this.dataSourceId = Input.empty();
-        this.destinationDatasetId = Input.empty();
-        this.disabled = Input.empty();
-        this.displayName = Input.empty();
-        this.emailPreferences = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.notificationPubsubTopic = Input.empty();
-        this.params = Input.empty();
-        this.project = Input.empty();
-        this.schedule = Input.empty();
-        this.scheduleOptions = Input.empty();
-        this.serviceAccountName = Input.empty();
-        this.versionInfo = Input.empty();
+        this.authorizationCode = Output.empty();
+        this.dataRefreshWindowDays = Output.empty();
+        this.dataSourceId = Output.empty();
+        this.destinationDatasetId = Output.empty();
+        this.disabled = Output.empty();
+        this.displayName = Output.empty();
+        this.emailPreferences = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.notificationPubsubTopic = Output.empty();
+        this.params = Output.empty();
+        this.project = Output.empty();
+        this.schedule = Output.empty();
+        this.scheduleOptions = Output.empty();
+        this.serviceAccountName = Output.empty();
+        this.versionInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -238,22 +238,22 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationCode;
-        private @Nullable Input<Integer> dataRefreshWindowDays;
-        private @Nullable Input<String> dataSourceId;
-        private @Nullable Input<String> destinationDatasetId;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<EmailPreferencesArgs> emailPreferences;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> notificationPubsubTopic;
-        private @Nullable Input<Map<String,String>> params;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<ScheduleOptionsArgs> scheduleOptions;
-        private @Nullable Input<String> serviceAccountName;
-        private @Nullable Input<String> versionInfo;
+        private @Nullable Output<String> authorizationCode;
+        private @Nullable Output<Integer> dataRefreshWindowDays;
+        private @Nullable Output<String> dataSourceId;
+        private @Nullable Output<String> destinationDatasetId;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<EmailPreferencesArgs> emailPreferences;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> notificationPubsubTopic;
+        private @Nullable Output<Map<String,String>> params;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<ScheduleOptionsArgs> scheduleOptions;
+        private @Nullable Output<String> serviceAccountName;
+        private @Nullable Output<String> versionInfo;
 
         public Builder() {
     	      // Empty
@@ -279,163 +279,163 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionInfo = defaults.versionInfo;
         }
 
-        public Builder authorizationCode(@Nullable Input<String> authorizationCode) {
+        public Builder authorizationCode(@Nullable Output<String> authorizationCode) {
             this.authorizationCode = authorizationCode;
             return this;
         }
 
         public Builder authorizationCode(@Nullable String authorizationCode) {
-            this.authorizationCode = Input.ofNullable(authorizationCode);
+            this.authorizationCode = Output.ofNullable(authorizationCode);
             return this;
         }
 
-        public Builder dataRefreshWindowDays(@Nullable Input<Integer> dataRefreshWindowDays) {
+        public Builder dataRefreshWindowDays(@Nullable Output<Integer> dataRefreshWindowDays) {
             this.dataRefreshWindowDays = dataRefreshWindowDays;
             return this;
         }
 
         public Builder dataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
-            this.dataRefreshWindowDays = Input.ofNullable(dataRefreshWindowDays);
+            this.dataRefreshWindowDays = Output.ofNullable(dataRefreshWindowDays);
             return this;
         }
 
-        public Builder dataSourceId(@Nullable Input<String> dataSourceId) {
+        public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
 
         public Builder dataSourceId(@Nullable String dataSourceId) {
-            this.dataSourceId = Input.ofNullable(dataSourceId);
+            this.dataSourceId = Output.ofNullable(dataSourceId);
             return this;
         }
 
-        public Builder destinationDatasetId(@Nullable Input<String> destinationDatasetId) {
+        public Builder destinationDatasetId(@Nullable Output<String> destinationDatasetId) {
             this.destinationDatasetId = destinationDatasetId;
             return this;
         }
 
         public Builder destinationDatasetId(@Nullable String destinationDatasetId) {
-            this.destinationDatasetId = Input.ofNullable(destinationDatasetId);
+            this.destinationDatasetId = Output.ofNullable(destinationDatasetId);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder emailPreferences(@Nullable Input<EmailPreferencesArgs> emailPreferences) {
+        public Builder emailPreferences(@Nullable Output<EmailPreferencesArgs> emailPreferences) {
             this.emailPreferences = emailPreferences;
             return this;
         }
 
         public Builder emailPreferences(@Nullable EmailPreferencesArgs emailPreferences) {
-            this.emailPreferences = Input.ofNullable(emailPreferences);
+            this.emailPreferences = Output.ofNullable(emailPreferences);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationPubsubTopic(@Nullable Input<String> notificationPubsubTopic) {
+        public Builder notificationPubsubTopic(@Nullable Output<String> notificationPubsubTopic) {
             this.notificationPubsubTopic = notificationPubsubTopic;
             return this;
         }
 
         public Builder notificationPubsubTopic(@Nullable String notificationPubsubTopic) {
-            this.notificationPubsubTopic = Input.ofNullable(notificationPubsubTopic);
+            this.notificationPubsubTopic = Output.ofNullable(notificationPubsubTopic);
             return this;
         }
 
-        public Builder params(@Nullable Input<Map<String,String>> params) {
+        public Builder params(@Nullable Output<Map<String,String>> params) {
             this.params = params;
             return this;
         }
 
         public Builder params(@Nullable Map<String,String> params) {
-            this.params = Input.ofNullable(params);
+            this.params = Output.ofNullable(params);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder scheduleOptions(@Nullable Input<ScheduleOptionsArgs> scheduleOptions) {
+        public Builder scheduleOptions(@Nullable Output<ScheduleOptionsArgs> scheduleOptions) {
             this.scheduleOptions = scheduleOptions;
             return this;
         }
 
         public Builder scheduleOptions(@Nullable ScheduleOptionsArgs scheduleOptions) {
-            this.scheduleOptions = Input.ofNullable(scheduleOptions);
+            this.scheduleOptions = Output.ofNullable(scheduleOptions);
             return this;
         }
 
-        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Input.ofNullable(serviceAccountName);
+            this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder versionInfo(@Nullable Input<String> versionInfo) {
+        public Builder versionInfo(@Nullable Output<String> versionInfo) {
             this.versionInfo = versionInfo;
             return this;
         }
 
         public Builder versionInfo(@Nullable String versionInfo) {
-            this.versionInfo = Input.ofNullable(versionInfo);
+            this.versionInfo = Output.ofNullable(versionInfo);
             return this;
         }
         public TransferConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.enums.ManagerSkuType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<ManagerSkuType> name;
+      private final Output<ManagerSkuType> name;
 
-    public Input<ManagerSkuType> getName() {
+    public Output<ManagerSkuType> getName() {
         return this.name;
     }
 
-    public ManagerSkuArgs(Input<ManagerSkuType> name) {
+    public ManagerSkuArgs(Output<ManagerSkuType> name) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ManagerSkuArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<ManagerSkuType> name;
+        private Output<ManagerSkuType> name;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(Input<ManagerSkuType> name) {
+        public Builder name(Output<ManagerSkuType> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(ManagerSkuType name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ManagerSkuArgs build() {

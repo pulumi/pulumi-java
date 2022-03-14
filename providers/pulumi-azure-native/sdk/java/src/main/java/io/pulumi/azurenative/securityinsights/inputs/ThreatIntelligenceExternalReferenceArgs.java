@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="externalId")
-      private final @Nullable Input<String> externalId;
+      private final @Nullable Output<String> externalId;
 
-    public Input<String> getExternalId() {
-        return this.externalId == null ? Input.empty() : this.externalId;
+    public Output<String> getExternalId() {
+        return this.externalId == null ? Output.empty() : this.externalId;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="hashes")
-      private final @Nullable Input<Map<String,String>> hashes;
+      private final @Nullable Output<Map<String,String>> hashes;
 
-    public Input<Map<String,String>> getHashes() {
-        return this.hashes == null ? Input.empty() : this.hashes;
+    public Output<Map<String,String>> getHashes() {
+        return this.hashes == null ? Output.empty() : this.hashes;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sourceName")
-      private final @Nullable Input<String> sourceName;
+      private final @Nullable Output<String> sourceName;
 
-    public Input<String> getSourceName() {
-        return this.sourceName == null ? Input.empty() : this.sourceName;
+    public Output<String> getSourceName() {
+        return this.sourceName == null ? Output.empty() : this.sourceName;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public ThreatIntelligenceExternalReferenceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> externalId,
-        @Nullable Input<Map<String,String>> hashes,
-        @Nullable Input<String> sourceName,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> externalId,
+        @Nullable Output<Map<String,String>> hashes,
+        @Nullable Output<String> sourceName,
+        @Nullable Output<String> url) {
         this.description = description;
         this.externalId = externalId;
         this.hashes = hashes;
@@ -88,11 +88,11 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
     }
 
     private ThreatIntelligenceExternalReferenceArgs() {
-        this.description = Input.empty();
-        this.externalId = Input.empty();
-        this.hashes = Input.empty();
-        this.sourceName = Input.empty();
-        this.url = Input.empty();
+        this.description = Output.empty();
+        this.externalId = Output.empty();
+        this.hashes = Output.empty();
+        this.sourceName = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> externalId;
-        private @Nullable Input<Map<String,String>> hashes;
-        private @Nullable Input<String> sourceName;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> externalId;
+        private @Nullable Output<Map<String,String>> hashes;
+        private @Nullable Output<String> sourceName;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
     	      this.url = defaults.url;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder externalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Input.ofNullable(externalId);
+            this.externalId = Output.ofNullable(externalId);
             return this;
         }
 
-        public Builder hashes(@Nullable Input<Map<String,String>> hashes) {
+        public Builder hashes(@Nullable Output<Map<String,String>> hashes) {
             this.hashes = hashes;
             return this;
         }
 
         public Builder hashes(@Nullable Map<String,String> hashes) {
-            this.hashes = Input.ofNullable(hashes);
+            this.hashes = Output.ofNullable(hashes);
             return this;
         }
 
-        public Builder sourceName(@Nullable Input<String> sourceName) {
+        public Builder sourceName(@Nullable Output<String> sourceName) {
             this.sourceName = sourceName;
             return this;
         }
 
         public Builder sourceName(@Nullable String sourceName) {
-            this.sourceName = Input.ofNullable(sourceName);
+            this.sourceName = Output.ofNullable(sourceName);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public ThreatIntelligenceExternalReferenceArgs build() {

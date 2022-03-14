@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filesCount")
-      private final @Nullable Input<Integer> filesCount;
+      private final @Nullable Output<Integer> filesCount;
 
-    public Input<Integer> getFilesCount() {
-        return this.filesCount == null ? Input.empty() : this.filesCount;
+    public Output<Integer> getFilesCount() {
+        return this.filesCount == null ? Output.empty() : this.filesCount;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceUrl")
-      private final @Nullable Input<String> sourceUrl;
+      private final @Nullable Output<String> sourceUrl;
 
-    public Input<String> getSourceUrl() {
-        return this.sourceUrl == null ? Input.empty() : this.sourceUrl;
+    public Output<String> getSourceUrl() {
+        return this.sourceUrl == null ? Output.empty() : this.sourceUrl;
     }
 
     public ZipInfoArgs(
-        @Nullable Input<Integer> filesCount,
-        @Nullable Input<String> sourceUrl) {
+        @Nullable Output<Integer> filesCount,
+        @Nullable Output<String> sourceUrl) {
         this.filesCount = filesCount;
         this.sourceUrl = sourceUrl;
     }
 
     private ZipInfoArgs() {
-        this.filesCount = Input.empty();
-        this.sourceUrl = Input.empty();
+        this.filesCount = Output.empty();
+        this.sourceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> filesCount;
-        private @Nullable Input<String> sourceUrl;
+        private @Nullable Output<Integer> filesCount;
+        private @Nullable Output<String> sourceUrl;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceUrl = defaults.sourceUrl;
         }
 
-        public Builder filesCount(@Nullable Input<Integer> filesCount) {
+        public Builder filesCount(@Nullable Output<Integer> filesCount) {
             this.filesCount = filesCount;
             return this;
         }
 
         public Builder filesCount(@Nullable Integer filesCount) {
-            this.filesCount = Input.ofNullable(filesCount);
+            this.filesCount = Output.ofNullable(filesCount);
             return this;
         }
 
-        public Builder sourceUrl(@Nullable Input<String> sourceUrl) {
+        public Builder sourceUrl(@Nullable Output<String> sourceUrl) {
             this.sourceUrl = sourceUrl;
             return this;
         }
 
         public Builder sourceUrl(@Nullable String sourceUrl) {
-            this.sourceUrl = Input.ofNullable(sourceUrl);
+            this.sourceUrl = Output.ofNullable(sourceUrl);
             return this;
         }
         public ZipInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,29 +18,29 @@ public final class CertificateOtherNameArgs extends io.pulumi.resources.Resource
     public static final CertificateOtherNameArgs Empty = new CertificateOtherNameArgs();
 
     @InputImport(name="typeId", required=true)
-      private final Input<String> typeId;
+      private final Output<String> typeId;
 
-    public Input<String> getTypeId() {
+    public Output<String> getTypeId() {
         return this.typeId;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public CertificateOtherNameArgs(
-        Input<String> typeId,
-        Input<String> value) {
+        Output<String> typeId,
+        Output<String> value) {
         this.typeId = Objects.requireNonNull(typeId, "expected parameter 'typeId' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private CertificateOtherNameArgs() {
-        this.typeId = Input.empty();
-        this.value = Input.empty();
+        this.typeId = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class CertificateOtherNameArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> typeId;
-        private Input<String> value;
+        private Output<String> typeId;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class CertificateOtherNameArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder typeId(Input<String> typeId) {
+        public Builder typeId(Output<String> typeId) {
             this.typeId = Objects.requireNonNull(typeId);
             return this;
         }
 
         public Builder typeId(String typeId) {
-            this.typeId = Input.of(Objects.requireNonNull(typeId));
+            this.typeId = Output.of(Objects.requireNonNull(typeId));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public CertificateOtherNameArgs build() {

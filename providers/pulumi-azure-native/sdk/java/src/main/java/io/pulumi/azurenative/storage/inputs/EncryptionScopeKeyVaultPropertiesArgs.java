@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="keyUri")
-      private final @Nullable Input<String> keyUri;
+      private final @Nullable Output<String> keyUri;
 
-    public Input<String> getKeyUri() {
-        return this.keyUri == null ? Input.empty() : this.keyUri;
+    public Output<String> getKeyUri() {
+        return this.keyUri == null ? Output.empty() : this.keyUri;
     }
 
-    public EncryptionScopeKeyVaultPropertiesArgs(@Nullable Input<String> keyUri) {
+    public EncryptionScopeKeyVaultPropertiesArgs(@Nullable Output<String> keyUri) {
         this.keyUri = keyUri;
     }
 
     private EncryptionScopeKeyVaultPropertiesArgs() {
-        this.keyUri = Input.empty();
+        this.keyUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyUri;
+        private @Nullable Output<String> keyUri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resou
     	      this.keyUri = defaults.keyUri;
         }
 
-        public Builder keyUri(@Nullable Input<String> keyUri) {
+        public Builder keyUri(@Nullable Output<String> keyUri) {
             this.keyUri = keyUri;
             return this;
         }
 
         public Builder keyUri(@Nullable String keyUri) {
-            this.keyUri = Input.ofNullable(keyUri);
+            this.keyUri = Output.ofNullable(keyUri);
             return this;
         }
         public EncryptionScopeKeyVaultPropertiesArgs build() {

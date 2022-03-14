@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applianceModeSupport")
-      private final @Nullable Input<String> applianceModeSupport;
+      private final @Nullable Output<String> applianceModeSupport;
 
-    public Input<String> getApplianceModeSupport() {
-        return this.applianceModeSupport == null ? Input.empty() : this.applianceModeSupport;
+    public Output<String> getApplianceModeSupport() {
+        return this.applianceModeSupport == null ? Output.empty() : this.applianceModeSupport;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dnsSupport")
-      private final @Nullable Input<String> dnsSupport;
+      private final @Nullable Output<String> dnsSupport;
 
-    public Input<String> getDnsSupport() {
-        return this.dnsSupport == null ? Input.empty() : this.dnsSupport;
+    public Output<String> getDnsSupport() {
+        return this.dnsSupport == null ? Output.empty() : this.dnsSupport;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6Support")
-      private final @Nullable Input<String> ipv6Support;
+      private final @Nullable Output<String> ipv6Support;
 
-    public Input<String> getIpv6Support() {
-        return this.ipv6Support == null ? Input.empty() : this.ipv6Support;
+    public Output<String> getIpv6Support() {
+        return this.ipv6Support == null ? Output.empty() : this.ipv6Support;
     }
 
     public OptionsPropertiesArgs(
-        @Nullable Input<String> applianceModeSupport,
-        @Nullable Input<String> dnsSupport,
-        @Nullable Input<String> ipv6Support) {
+        @Nullable Output<String> applianceModeSupport,
+        @Nullable Output<String> dnsSupport,
+        @Nullable Output<String> ipv6Support) {
         this.applianceModeSupport = applianceModeSupport;
         this.dnsSupport = dnsSupport;
         this.ipv6Support = ipv6Support;
     }
 
     private OptionsPropertiesArgs() {
-        this.applianceModeSupport = Input.empty();
-        this.dnsSupport = Input.empty();
-        this.ipv6Support = Input.empty();
+        this.applianceModeSupport = Output.empty();
+        this.dnsSupport = Output.empty();
+        this.ipv6Support = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applianceModeSupport;
-        private @Nullable Input<String> dnsSupport;
-        private @Nullable Input<String> ipv6Support;
+        private @Nullable Output<String> applianceModeSupport;
+        private @Nullable Output<String> dnsSupport;
+        private @Nullable Output<String> ipv6Support;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.ipv6Support = defaults.ipv6Support;
         }
 
-        public Builder applianceModeSupport(@Nullable Input<String> applianceModeSupport) {
+        public Builder applianceModeSupport(@Nullable Output<String> applianceModeSupport) {
             this.applianceModeSupport = applianceModeSupport;
             return this;
         }
 
         public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
-            this.applianceModeSupport = Input.ofNullable(applianceModeSupport);
+            this.applianceModeSupport = Output.ofNullable(applianceModeSupport);
             return this;
         }
 
-        public Builder dnsSupport(@Nullable Input<String> dnsSupport) {
+        public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
         public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Input.ofNullable(dnsSupport);
+            this.dnsSupport = Output.ofNullable(dnsSupport);
             return this;
         }
 
-        public Builder ipv6Support(@Nullable Input<String> ipv6Support) {
+        public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
             this.ipv6Support = ipv6Support;
             return this;
         }
 
         public Builder ipv6Support(@Nullable String ipv6Support) {
-            this.ipv6Support = Input.ofNullable(ipv6Support);
+            this.ipv6Support = Output.ofNullable(ipv6Support);
             return this;
         }
         public OptionsPropertiesArgs build() {

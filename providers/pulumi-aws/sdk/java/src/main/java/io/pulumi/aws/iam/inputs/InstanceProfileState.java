@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createDate")
-      private final @Nullable Input<String> createDate;
+      private final @Nullable Output<String> createDate;
 
-    public Input<String> getCreateDate() {
-        return this.createDate == null ? Input.empty() : this.createDate;
+    public Output<String> getCreateDate() {
+        return this.createDate == null ? Output.empty() : this.createDate;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="uniqueId")
-      private final @Nullable Input<String> uniqueId;
+      private final @Nullable Output<String> uniqueId;
 
-    public Input<String> getUniqueId() {
-        return this.uniqueId == null ? Input.empty() : this.uniqueId;
+    public Output<String> getUniqueId() {
+        return this.uniqueId == null ? Output.empty() : this.uniqueId;
     }
 
     public InstanceProfileState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> createDate,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> path,
-        @Nullable Input<String> role,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> uniqueId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> createDate,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> path,
+        @Nullable Output<String> role,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> uniqueId) {
         this.arn = arn;
         this.createDate = createDate;
         this.name = name;
@@ -136,15 +136,15 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceProfileState() {
-        this.arn = Input.empty();
-        this.createDate = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.path = Input.empty();
-        this.role = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.uniqueId = Input.empty();
+        this.arn = Output.empty();
+        this.createDate = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.path = Output.empty();
+        this.role = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.uniqueId = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> createDate;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> role;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> uniqueId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> createDate;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> role;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> uniqueId;
 
         public Builder() {
     	      // Empty
@@ -183,88 +183,88 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder createDate(@Nullable Input<String> createDate) {
+        public Builder createDate(@Nullable Output<String> createDate) {
             this.createDate = createDate;
             return this;
         }
 
         public Builder createDate(@Nullable String createDate) {
-            this.createDate = Input.ofNullable(createDate);
+            this.createDate = Output.ofNullable(createDate);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder uniqueId(@Nullable Input<String> uniqueId) {
+        public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
 
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Input.ofNullable(uniqueId);
+            this.uniqueId = Output.ofNullable(uniqueId);
             return this;
         }
         public InstanceProfileState build() {

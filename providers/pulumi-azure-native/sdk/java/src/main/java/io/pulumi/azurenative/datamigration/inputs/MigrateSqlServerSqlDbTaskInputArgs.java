@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbDatabaseInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-      private final Input<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
+      private final Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
 
-    public Input<List<MigrateSqlServerSqlDbDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -37,9 +37,9 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-      private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -48,9 +48,9 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-      private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+      private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -61,17 +61,17 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="validationOptions")
-      private final @Nullable Input<MigrationValidationOptionsArgs> validationOptions;
+      private final @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
-    public Input<MigrationValidationOptionsArgs> getValidationOptions() {
-        return this.validationOptions == null ? Input.empty() : this.validationOptions;
+    public Output<MigrationValidationOptionsArgs> getValidationOptions() {
+        return this.validationOptions == null ? Output.empty() : this.validationOptions;
     }
 
     public MigrateSqlServerSqlDbTaskInputArgs(
-        Input<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases,
-        Input<SqlConnectionInfoArgs> sourceConnectionInfo,
-        Input<SqlConnectionInfoArgs> targetConnectionInfo,
-        @Nullable Input<MigrationValidationOptionsArgs> validationOptions) {
+        Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases,
+        Output<SqlConnectionInfoArgs> sourceConnectionInfo,
+        Output<SqlConnectionInfoArgs> targetConnectionInfo,
+        @Nullable Output<MigrationValidationOptionsArgs> validationOptions) {
         this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
@@ -79,10 +79,10 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     }
 
     private MigrateSqlServerSqlDbTaskInputArgs() {
-        this.selectedDatabases = Input.empty();
-        this.sourceConnectionInfo = Input.empty();
-        this.targetConnectionInfo = Input.empty();
-        this.validationOptions = Input.empty();
+        this.selectedDatabases = Output.empty();
+        this.sourceConnectionInfo = Output.empty();
+        this.targetConnectionInfo = Output.empty();
+        this.validationOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
-        private Input<SqlConnectionInfoArgs> sourceConnectionInfo;
-        private Input<SqlConnectionInfoArgs> targetConnectionInfo;
-        private @Nullable Input<MigrationValidationOptionsArgs> validationOptions;
+        private Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
+        private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+        private Output<SqlConnectionInfoArgs> targetConnectionInfo;
+        private @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder selectedDatabases(Input<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbDatabaseInputArgs> selectedDatabases) {
-            this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
+            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder sourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
+            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder targetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
+            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
 
-        public Builder validationOptions(@Nullable Input<MigrationValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Output<MigrationValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
         public Builder validationOptions(@Nullable MigrationValidationOptionsArgs validationOptions) {
-            this.validationOptions = Input.ofNullable(validationOptions);
+            this.validationOptions = Output.ofNullable(validationOptions);
             return this;
         }
         public MigrateSqlServerSqlDbTaskInputArgs build() {

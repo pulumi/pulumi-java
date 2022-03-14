@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rfRegion", required=true)
-      private final Input<String> rfRegion;
+      private final Output<String> rfRegion;
 
-    public Input<String> getRfRegion() {
+    public Output<String> getRfRegion() {
         return this.rfRegion;
     }
 
@@ -30,22 +30,22 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public FuotaTaskLoRaWANArgs(
-        Input<String> rfRegion,
-        @Nullable Input<String> startTime) {
+        Output<String> rfRegion,
+        @Nullable Output<String> startTime) {
         this.rfRegion = Objects.requireNonNull(rfRegion, "expected parameter 'rfRegion' to be non-null");
         this.startTime = startTime;
     }
 
     private FuotaTaskLoRaWANArgs() {
-        this.rfRegion = Input.empty();
-        this.startTime = Input.empty();
+        this.rfRegion = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> rfRegion;
-        private @Nullable Input<String> startTime;
+        private Output<String> rfRegion;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder rfRegion(Input<String> rfRegion) {
+        public Builder rfRegion(Output<String> rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
 
         public Builder rfRegion(String rfRegion) {
-            this.rfRegion = Input.of(Objects.requireNonNull(rfRegion));
+            this.rfRegion = Output.of(Objects.requireNonNull(rfRegion));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public FuotaTaskLoRaWANArgs build() {

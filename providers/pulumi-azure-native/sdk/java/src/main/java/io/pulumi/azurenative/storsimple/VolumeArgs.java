@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.enums.MonitoringStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessControlRecordIds", required=true)
-      private final Input<List<String>> accessControlRecordIds;
+      private final Output<List<String>> accessControlRecordIds;
 
-    public Input<List<String>> getAccessControlRecordIds() {
+    public Output<List<String>> getAccessControlRecordIds() {
         return this.accessControlRecordIds;
     }
 
@@ -36,9 +36,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -47,10 +47,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Kind> kind;
+      private final @Nullable Output<Kind> kind;
 
-    public Input<Kind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Kind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName", required=true)
-      private final Input<String> managerName;
+      private final Output<String> managerName;
 
-    public Input<String> getManagerName() {
+    public Output<String> getManagerName() {
         return this.managerName;
     }
 
@@ -69,9 +69,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoringStatus", required=true)
-      private final Input<MonitoringStatus> monitoringStatus;
+      private final Output<MonitoringStatus> monitoringStatus;
 
-    public Input<MonitoringStatus> getMonitoringStatus() {
+    public Output<MonitoringStatus> getMonitoringStatus() {
         return this.monitoringStatus;
     }
 
@@ -80,9 +80,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,9 +91,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInBytes", required=true)
-      private final Input<Double> sizeInBytes;
+      private final Output<Double> sizeInBytes;
 
-    public Input<Double> getSizeInBytes() {
+    public Output<Double> getSizeInBytes() {
         return this.sizeInBytes;
     }
 
@@ -102,9 +102,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeContainerName", required=true)
-      private final Input<String> volumeContainerName;
+      private final Output<String> volumeContainerName;
 
-    public Input<String> getVolumeContainerName() {
+    public Output<String> getVolumeContainerName() {
         return this.volumeContainerName;
     }
 
@@ -113,10 +113,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName")
-      private final @Nullable Input<String> volumeName;
+      private final @Nullable Output<String> volumeName;
 
-    public Input<String> getVolumeName() {
-        return this.volumeName == null ? Input.empty() : this.volumeName;
+    public Output<String> getVolumeName() {
+        return this.volumeName == null ? Output.empty() : this.volumeName;
     }
 
     /**
@@ -124,9 +124,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeStatus", required=true)
-      private final Input<VolumeStatus> volumeStatus;
+      private final Output<VolumeStatus> volumeStatus;
 
-    public Input<VolumeStatus> getVolumeStatus() {
+    public Output<VolumeStatus> getVolumeStatus() {
         return this.volumeStatus;
     }
 
@@ -135,24 +135,24 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeType", required=true)
-      private final Input<VolumeType> volumeType;
+      private final Output<VolumeType> volumeType;
 
-    public Input<VolumeType> getVolumeType() {
+    public Output<VolumeType> getVolumeType() {
         return this.volumeType;
     }
 
     public VolumeArgs(
-        Input<List<String>> accessControlRecordIds,
-        Input<String> deviceName,
-        @Nullable Input<Kind> kind,
-        Input<String> managerName,
-        Input<MonitoringStatus> monitoringStatus,
-        Input<String> resourceGroupName,
-        Input<Double> sizeInBytes,
-        Input<String> volumeContainerName,
-        @Nullable Input<String> volumeName,
-        Input<VolumeStatus> volumeStatus,
-        Input<VolumeType> volumeType) {
+        Output<List<String>> accessControlRecordIds,
+        Output<String> deviceName,
+        @Nullable Output<Kind> kind,
+        Output<String> managerName,
+        Output<MonitoringStatus> monitoringStatus,
+        Output<String> resourceGroupName,
+        Output<Double> sizeInBytes,
+        Output<String> volumeContainerName,
+        @Nullable Output<String> volumeName,
+        Output<VolumeStatus> volumeStatus,
+        Output<VolumeType> volumeType) {
         this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds, "expected parameter 'accessControlRecordIds' to be non-null");
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.kind = kind;
@@ -167,17 +167,17 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.accessControlRecordIds = Input.empty();
-        this.deviceName = Input.empty();
-        this.kind = Input.empty();
-        this.managerName = Input.empty();
-        this.monitoringStatus = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sizeInBytes = Input.empty();
-        this.volumeContainerName = Input.empty();
-        this.volumeName = Input.empty();
-        this.volumeStatus = Input.empty();
-        this.volumeType = Input.empty();
+        this.accessControlRecordIds = Output.empty();
+        this.deviceName = Output.empty();
+        this.kind = Output.empty();
+        this.managerName = Output.empty();
+        this.monitoringStatus = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sizeInBytes = Output.empty();
+        this.volumeContainerName = Output.empty();
+        this.volumeName = Output.empty();
+        this.volumeStatus = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> accessControlRecordIds;
-        private Input<String> deviceName;
-        private @Nullable Input<Kind> kind;
-        private Input<String> managerName;
-        private Input<MonitoringStatus> monitoringStatus;
-        private Input<String> resourceGroupName;
-        private Input<Double> sizeInBytes;
-        private Input<String> volumeContainerName;
-        private @Nullable Input<String> volumeName;
-        private Input<VolumeStatus> volumeStatus;
-        private Input<VolumeType> volumeType;
+        private Output<List<String>> accessControlRecordIds;
+        private Output<String> deviceName;
+        private @Nullable Output<Kind> kind;
+        private Output<String> managerName;
+        private Output<MonitoringStatus> monitoringStatus;
+        private Output<String> resourceGroupName;
+        private Output<Double> sizeInBytes;
+        private Output<String> volumeContainerName;
+        private @Nullable Output<String> volumeName;
+        private Output<VolumeStatus> volumeStatus;
+        private Output<VolumeType> volumeType;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder accessControlRecordIds(Input<List<String>> accessControlRecordIds) {
+        public Builder accessControlRecordIds(Output<List<String>> accessControlRecordIds) {
             this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds);
             return this;
         }
 
         public Builder accessControlRecordIds(List<String> accessControlRecordIds) {
-            this.accessControlRecordIds = Input.of(Objects.requireNonNull(accessControlRecordIds));
+            this.accessControlRecordIds = Output.of(Objects.requireNonNull(accessControlRecordIds));
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder kind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managerName(Input<String> managerName) {
+        public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Input.of(Objects.requireNonNull(managerName));
+            this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder monitoringStatus(Input<MonitoringStatus> monitoringStatus) {
+        public Builder monitoringStatus(Output<MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
 
         public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
-            this.monitoringStatus = Input.of(Objects.requireNonNull(monitoringStatus));
+            this.monitoringStatus = Output.of(Objects.requireNonNull(monitoringStatus));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sizeInBytes(Input<Double> sizeInBytes) {
+        public Builder sizeInBytes(Output<Double> sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
 
         public Builder sizeInBytes(Double sizeInBytes) {
-            this.sizeInBytes = Input.of(Objects.requireNonNull(sizeInBytes));
+            this.sizeInBytes = Output.of(Objects.requireNonNull(sizeInBytes));
             return this;
         }
 
-        public Builder volumeContainerName(Input<String> volumeContainerName) {
+        public Builder volumeContainerName(Output<String> volumeContainerName) {
             this.volumeContainerName = Objects.requireNonNull(volumeContainerName);
             return this;
         }
 
         public Builder volumeContainerName(String volumeContainerName) {
-            this.volumeContainerName = Input.of(Objects.requireNonNull(volumeContainerName));
+            this.volumeContainerName = Output.of(Objects.requireNonNull(volumeContainerName));
             return this;
         }
 
-        public Builder volumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Input.ofNullable(volumeName);
+            this.volumeName = Output.ofNullable(volumeName);
             return this;
         }
 
-        public Builder volumeStatus(Input<VolumeStatus> volumeStatus) {
+        public Builder volumeStatus(Output<VolumeStatus> volumeStatus) {
             this.volumeStatus = Objects.requireNonNull(volumeStatus);
             return this;
         }
 
         public Builder volumeStatus(VolumeStatus volumeStatus) {
-            this.volumeStatus = Input.of(Objects.requireNonNull(volumeStatus));
+            this.volumeStatus = Output.of(Objects.requireNonNull(volumeStatus));
             return this;
         }
 
-        public Builder volumeType(Input<VolumeType> volumeType) {
+        public Builder volumeType(Output<VolumeType> volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
 
         public Builder volumeType(VolumeType volumeType) {
-            this.volumeType = Input.of(Objects.requireNonNull(volumeType));
+            this.volumeType = Output.of(Objects.requireNonNull(volumeType));
             return this;
         }
         public VolumeArgs build() {

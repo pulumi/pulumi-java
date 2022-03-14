@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="interconnectName")
-      private final @Nullable Input<String> interconnectName;
+      private final @Nullable Output<String> interconnectName;
 
-    public Input<String> getInterconnectName() {
-        return this.interconnectName == null ? Input.empty() : this.interconnectName;
+    public Output<String> getInterconnectName() {
+        return this.interconnectName == null ? Output.empty() : this.interconnectName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="partnerName")
-      private final @Nullable Input<String> partnerName;
+      private final @Nullable Output<String> partnerName;
 
-    public Input<String> getPartnerName() {
-        return this.partnerName == null ? Input.empty() : this.partnerName;
+    public Output<String> getPartnerName() {
+        return this.partnerName == null ? Output.empty() : this.partnerName;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="portalUrl")
-      private final @Nullable Input<String> portalUrl;
+      private final @Nullable Output<String> portalUrl;
 
-    public Input<String> getPortalUrl() {
-        return this.portalUrl == null ? Input.empty() : this.portalUrl;
+    public Output<String> getPortalUrl() {
+        return this.portalUrl == null ? Output.empty() : this.portalUrl;
     }
 
     public InterconnectAttachmentPartnerMetadataArgs(
-        @Nullable Input<String> interconnectName,
-        @Nullable Input<String> partnerName,
-        @Nullable Input<String> portalUrl) {
+        @Nullable Output<String> interconnectName,
+        @Nullable Output<String> partnerName,
+        @Nullable Output<String> portalUrl) {
         this.interconnectName = interconnectName;
         this.partnerName = partnerName;
         this.portalUrl = portalUrl;
     }
 
     private InterconnectAttachmentPartnerMetadataArgs() {
-        this.interconnectName = Input.empty();
-        this.partnerName = Input.empty();
-        this.portalUrl = Input.empty();
+        this.interconnectName = Output.empty();
+        this.partnerName = Output.empty();
+        this.portalUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> interconnectName;
-        private @Nullable Input<String> partnerName;
-        private @Nullable Input<String> portalUrl;
+        private @Nullable Output<String> interconnectName;
+        private @Nullable Output<String> partnerName;
+        private @Nullable Output<String> portalUrl;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
     	      this.portalUrl = defaults.portalUrl;
         }
 
-        public Builder interconnectName(@Nullable Input<String> interconnectName) {
+        public Builder interconnectName(@Nullable Output<String> interconnectName) {
             this.interconnectName = interconnectName;
             return this;
         }
 
         public Builder interconnectName(@Nullable String interconnectName) {
-            this.interconnectName = Input.ofNullable(interconnectName);
+            this.interconnectName = Output.ofNullable(interconnectName);
             return this;
         }
 
-        public Builder partnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Input.ofNullable(partnerName);
+            this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
 
-        public Builder portalUrl(@Nullable Input<String> portalUrl) {
+        public Builder portalUrl(@Nullable Output<String> portalUrl) {
             this.portalUrl = portalUrl;
             return this;
         }
 
         public Builder portalUrl(@Nullable String portalUrl) {
-            this.portalUrl = Input.ofNullable(portalUrl);
+            this.portalUrl = Output.ofNullable(portalUrl);
             return this;
         }
         public InterconnectAttachmentPartnerMetadataArgs build() {

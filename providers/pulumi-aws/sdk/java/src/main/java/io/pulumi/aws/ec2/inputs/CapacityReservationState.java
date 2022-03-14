@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.enums.InstancePlatform;
 import io.pulumi.aws.ec2.enums.InstanceType;
 import io.pulumi.aws.ec2.enums.Tenancy;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ebsOptimized")
-      private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Input<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
+    public Output<Boolean> getEbsOptimized() {
+        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endDate")
-      private final @Nullable Input<String> endDate;
+      private final @Nullable Output<String> endDate;
 
-    public Input<String> getEndDate() {
-        return this.endDate == null ? Input.empty() : this.endDate;
+    public Output<String> getEndDate() {
+        return this.endDate == null ? Output.empty() : this.endDate;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endDateType")
-      private final @Nullable Input<String> endDateType;
+      private final @Nullable Output<String> endDateType;
 
-    public Input<String> getEndDateType() {
-        return this.endDateType == null ? Input.empty() : this.endDateType;
+    public Output<String> getEndDateType() {
+        return this.endDateType == null ? Output.empty() : this.endDateType;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ephemeralStorage")
-      private final @Nullable Input<Boolean> ephemeralStorage;
+      private final @Nullable Output<Boolean> ephemeralStorage;
 
-    public Input<Boolean> getEphemeralStorage() {
-        return this.ephemeralStorage == null ? Input.empty() : this.ephemeralStorage;
+    public Output<Boolean> getEphemeralStorage() {
+        return this.ephemeralStorage == null ? Output.empty() : this.ephemeralStorage;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceMatchCriteria")
-      private final @Nullable Input<String> instanceMatchCriteria;
+      private final @Nullable Output<String> instanceMatchCriteria;
 
-    public Input<String> getInstanceMatchCriteria() {
-        return this.instanceMatchCriteria == null ? Input.empty() : this.instanceMatchCriteria;
+    public Output<String> getInstanceMatchCriteria() {
+        return this.instanceMatchCriteria == null ? Output.empty() : this.instanceMatchCriteria;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instancePlatform")
-      private final @Nullable Input<Either<String,InstancePlatform>> instancePlatform;
+      private final @Nullable Output<Either<String,InstancePlatform>> instancePlatform;
 
-    public Input<Either<String,InstancePlatform>> getInstancePlatform() {
-        return this.instancePlatform == null ? Input.empty() : this.instancePlatform;
+    public Output<Either<String,InstancePlatform>> getInstancePlatform() {
+        return this.instancePlatform == null ? Output.empty() : this.instancePlatform;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<Either<String,InstanceType>> instanceType;
+      private final @Nullable Output<Either<String,InstanceType>> instanceType;
 
-    public Input<Either<String,InstanceType>> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<Either<String,InstanceType>> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="outpostArn")
-      private final @Nullable Input<String> outpostArn;
+      private final @Nullable Output<String> outpostArn;
 
-    public Input<String> getOutpostArn() {
-        return this.outpostArn == null ? Input.empty() : this.outpostArn;
+    public Output<String> getOutpostArn() {
+        return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -158,17 +158,17 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -176,28 +176,28 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenancy")
-      private final @Nullable Input<Either<String,Tenancy>> tenancy;
+      private final @Nullable Output<Either<String,Tenancy>> tenancy;
 
-    public Input<Either<String,Tenancy>> getTenancy() {
-        return this.tenancy == null ? Input.empty() : this.tenancy;
+    public Output<Either<String,Tenancy>> getTenancy() {
+        return this.tenancy == null ? Output.empty() : this.tenancy;
     }
 
     public CapacityReservationState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<Boolean> ebsOptimized,
-        @Nullable Input<String> endDate,
-        @Nullable Input<String> endDateType,
-        @Nullable Input<Boolean> ephemeralStorage,
-        @Nullable Input<Integer> instanceCount,
-        @Nullable Input<String> instanceMatchCriteria,
-        @Nullable Input<Either<String,InstancePlatform>> instancePlatform,
-        @Nullable Input<Either<String,InstanceType>> instanceType,
-        @Nullable Input<String> outpostArn,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Either<String,Tenancy>> tenancy) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<Boolean> ebsOptimized,
+        @Nullable Output<String> endDate,
+        @Nullable Output<String> endDateType,
+        @Nullable Output<Boolean> ephemeralStorage,
+        @Nullable Output<Integer> instanceCount,
+        @Nullable Output<String> instanceMatchCriteria,
+        @Nullable Output<Either<String,InstancePlatform>> instancePlatform,
+        @Nullable Output<Either<String,InstanceType>> instanceType,
+        @Nullable Output<String> outpostArn,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Either<String,Tenancy>> tenancy) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.ebsOptimized = ebsOptimized;
@@ -216,21 +216,21 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
     }
 
     private CapacityReservationState() {
-        this.arn = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.ebsOptimized = Input.empty();
-        this.endDate = Input.empty();
-        this.endDateType = Input.empty();
-        this.ephemeralStorage = Input.empty();
-        this.instanceCount = Input.empty();
-        this.instanceMatchCriteria = Input.empty();
-        this.instancePlatform = Input.empty();
-        this.instanceType = Input.empty();
-        this.outpostArn = Input.empty();
-        this.ownerId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.tenancy = Input.empty();
+        this.arn = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.ebsOptimized = Output.empty();
+        this.endDate = Output.empty();
+        this.endDateType = Output.empty();
+        this.ephemeralStorage = Output.empty();
+        this.instanceCount = Output.empty();
+        this.instanceMatchCriteria = Output.empty();
+        this.instancePlatform = Output.empty();
+        this.instanceType = Output.empty();
+        this.outpostArn = Output.empty();
+        this.ownerId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.tenancy = Output.empty();
     }
 
     public static Builder builder() {
@@ -242,21 +242,21 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<Boolean> ebsOptimized;
-        private @Nullable Input<String> endDate;
-        private @Nullable Input<String> endDateType;
-        private @Nullable Input<Boolean> ephemeralStorage;
-        private @Nullable Input<Integer> instanceCount;
-        private @Nullable Input<String> instanceMatchCriteria;
-        private @Nullable Input<Either<String,InstancePlatform>> instancePlatform;
-        private @Nullable Input<Either<String,InstanceType>> instanceType;
-        private @Nullable Input<String> outpostArn;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Either<String,Tenancy>> tenancy;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<Boolean> ebsOptimized;
+        private @Nullable Output<String> endDate;
+        private @Nullable Output<String> endDateType;
+        private @Nullable Output<Boolean> ephemeralStorage;
+        private @Nullable Output<Integer> instanceCount;
+        private @Nullable Output<String> instanceMatchCriteria;
+        private @Nullable Output<Either<String,InstancePlatform>> instancePlatform;
+        private @Nullable Output<Either<String,InstanceType>> instanceType;
+        private @Nullable Output<String> outpostArn;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Either<String,Tenancy>> tenancy;
 
         public Builder() {
     	      // Empty
@@ -281,153 +281,153 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Input.ofNullable(ebsOptimized);
+            this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder endDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Input.ofNullable(endDate);
+            this.endDate = Output.ofNullable(endDate);
             return this;
         }
 
-        public Builder endDateType(@Nullable Input<String> endDateType) {
+        public Builder endDateType(@Nullable Output<String> endDateType) {
             this.endDateType = endDateType;
             return this;
         }
 
         public Builder endDateType(@Nullable String endDateType) {
-            this.endDateType = Input.ofNullable(endDateType);
+            this.endDateType = Output.ofNullable(endDateType);
             return this;
         }
 
-        public Builder ephemeralStorage(@Nullable Input<Boolean> ephemeralStorage) {
+        public Builder ephemeralStorage(@Nullable Output<Boolean> ephemeralStorage) {
             this.ephemeralStorage = ephemeralStorage;
             return this;
         }
 
         public Builder ephemeralStorage(@Nullable Boolean ephemeralStorage) {
-            this.ephemeralStorage = Input.ofNullable(ephemeralStorage);
+            this.ephemeralStorage = Output.ofNullable(ephemeralStorage);
             return this;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder instanceMatchCriteria(@Nullable Input<String> instanceMatchCriteria) {
+        public Builder instanceMatchCriteria(@Nullable Output<String> instanceMatchCriteria) {
             this.instanceMatchCriteria = instanceMatchCriteria;
             return this;
         }
 
         public Builder instanceMatchCriteria(@Nullable String instanceMatchCriteria) {
-            this.instanceMatchCriteria = Input.ofNullable(instanceMatchCriteria);
+            this.instanceMatchCriteria = Output.ofNullable(instanceMatchCriteria);
             return this;
         }
 
-        public Builder instancePlatform(@Nullable Input<Either<String,InstancePlatform>> instancePlatform) {
+        public Builder instancePlatform(@Nullable Output<Either<String,InstancePlatform>> instancePlatform) {
             this.instancePlatform = instancePlatform;
             return this;
         }
 
         public Builder instancePlatform(@Nullable Either<String,InstancePlatform> instancePlatform) {
-            this.instancePlatform = Input.ofNullable(instancePlatform);
+            this.instancePlatform = Output.ofNullable(instancePlatform);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<Either<String,InstanceType>> instanceType) {
+        public Builder instanceType(@Nullable Output<Either<String,InstanceType>> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable Either<String,InstanceType> instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder outpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Input.ofNullable(outpostArn);
+            this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder tenancy(@Nullable Input<Either<String,Tenancy>> tenancy) {
+        public Builder tenancy(@Nullable Output<Either<String,Tenancy>> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
         public Builder tenancy(@Nullable Either<String,Tenancy> tenancy) {
-            this.tenancy = Input.ofNullable(tenancy);
+            this.tenancy = Output.ofNullable(tenancy);
             return this;
         }
         public CapacityReservationState build() {

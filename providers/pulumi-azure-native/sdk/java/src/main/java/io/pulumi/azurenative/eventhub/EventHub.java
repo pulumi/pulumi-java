@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventhub.EventHubArgs;
 import io.pulumi.azurenative.eventhub.outputs.CaptureDescriptionResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -198,24 +197,24 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventHub(String name, EventHubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventhub:EventHub", name, args == null ? EventHubArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:eventhub:EventHub", name, args == null ? EventHubArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventHub(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventHub(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventhub:EventHub", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20140901:EventHub").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20150801:EventHub").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20170401:EventHub").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20180101preview:EventHub").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20210101preview:EventHub").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20210601preview:EventHub").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20211101:EventHub").build())
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20140901:EventHub").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20150801:EventHub").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20170401:EventHub").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20180101preview:EventHub").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20210101preview:EventHub").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20210601preview:EventHub").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20211101:EventHub").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -229,7 +228,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventHub get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventHub get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventHub(name, id, options);
     }
 }

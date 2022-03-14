@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureSpecMulticlusteringressGetArgs;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class FeatureSpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiclusteringress")
-      private final @Nullable Input<FeatureSpecMulticlusteringressGetArgs> multiclusteringress;
+      private final @Nullable Output<FeatureSpecMulticlusteringressGetArgs> multiclusteringress;
 
-    public Input<FeatureSpecMulticlusteringressGetArgs> getMulticlusteringress() {
-        return this.multiclusteringress == null ? Input.empty() : this.multiclusteringress;
+    public Output<FeatureSpecMulticlusteringressGetArgs> getMulticlusteringress() {
+        return this.multiclusteringress == null ? Output.empty() : this.multiclusteringress;
     }
 
-    public FeatureSpecGetArgs(@Nullable Input<FeatureSpecMulticlusteringressGetArgs> multiclusteringress) {
+    public FeatureSpecGetArgs(@Nullable Output<FeatureSpecMulticlusteringressGetArgs> multiclusteringress) {
         this.multiclusteringress = multiclusteringress;
     }
 
     private FeatureSpecGetArgs() {
-        this.multiclusteringress = Input.empty();
+        this.multiclusteringress = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class FeatureSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FeatureSpecMulticlusteringressGetArgs> multiclusteringress;
+        private @Nullable Output<FeatureSpecMulticlusteringressGetArgs> multiclusteringress;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class FeatureSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder multiclusteringress(@Nullable Input<FeatureSpecMulticlusteringressGetArgs> multiclusteringress) {
+        public Builder multiclusteringress(@Nullable Output<FeatureSpecMulticlusteringressGetArgs> multiclusteringress) {
             this.multiclusteringress = multiclusteringress;
             return this;
         }
 
         public Builder multiclusteringress(@Nullable FeatureSpecMulticlusteringressGetArgs multiclusteringress) {
-            this.multiclusteringress = Input.ofNullable(multiclusteringress);
+            this.multiclusteringress = Output.ofNullable(multiclusteringress);
             return this;
         }
         public FeatureSpecGetArgs build() {

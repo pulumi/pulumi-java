@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicenetworking;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<String> network;
+      private final Output<String> network;
 
-    public Input<String> getNetwork() {
+    public Output<String> getNetwork() {
         return this.network;
     }
 
@@ -32,9 +32,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedPeeringRanges", required=true)
-      private final Input<List<String>> reservedPeeringRanges;
+      private final Output<List<String>> reservedPeeringRanges;
 
-    public Input<List<String>> getReservedPeeringRanges() {
+    public Output<List<String>> getReservedPeeringRanges() {
         return this.reservedPeeringRanges;
     }
 
@@ -45,25 +45,25 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public ConnectionArgs(
-        Input<String> network,
-        Input<List<String>> reservedPeeringRanges,
-        Input<String> service) {
+        Output<String> network,
+        Output<List<String>> reservedPeeringRanges,
+        Output<String> service) {
         this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
         this.reservedPeeringRanges = Objects.requireNonNull(reservedPeeringRanges, "expected parameter 'reservedPeeringRanges' to be non-null");
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private ConnectionArgs() {
-        this.network = Input.empty();
-        this.reservedPeeringRanges = Input.empty();
-        this.service = Input.empty();
+        this.network = Output.empty();
+        this.reservedPeeringRanges = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> network;
-        private Input<List<String>> reservedPeeringRanges;
-        private Input<String> service;
+        private Output<String> network;
+        private Output<List<String>> reservedPeeringRanges;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder network(Input<String> network) {
+        public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(String network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder reservedPeeringRanges(Input<List<String>> reservedPeeringRanges) {
+        public Builder reservedPeeringRanges(Output<List<String>> reservedPeeringRanges) {
             this.reservedPeeringRanges = Objects.requireNonNull(reservedPeeringRanges);
             return this;
         }
 
         public Builder reservedPeeringRanges(List<String> reservedPeeringRanges) {
-            this.reservedPeeringRanges = Input.of(Objects.requireNonNull(reservedPeeringRanges));
+            this.reservedPeeringRanges = Output.of(Objects.requireNonNull(reservedPeeringRanges));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public ConnectionArgs build() {

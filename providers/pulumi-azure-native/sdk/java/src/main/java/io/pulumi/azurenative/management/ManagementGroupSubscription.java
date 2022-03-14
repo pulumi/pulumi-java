@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.management.ManagementGroupSubscriptionArgs;
 import io.pulumi.azurenative.management.outputs.DescendantParentGroupInfoResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,20 +154,20 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagementGroupSubscription(String name, ManagementGroupSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:management:ManagementGroupSubscription", name, args == null ? ManagementGroupSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:management:ManagementGroupSubscription", name, args == null ? ManagementGroupSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagementGroupSubscription(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagementGroupSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:management:ManagementGroupSubscription", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:management/v20200501:ManagementGroupSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20201001:ManagementGroupSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20210401:ManagementGroupSubscription").build())
+                Output.of(Alias.builder().setType("azure-native:management/v20200501:ManagementGroupSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20201001:ManagementGroupSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20210401:ManagementGroupSubscription").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -182,7 +181,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagementGroupSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagementGroupSubscription get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagementGroupSubscription(name, id, options);
     }
 }

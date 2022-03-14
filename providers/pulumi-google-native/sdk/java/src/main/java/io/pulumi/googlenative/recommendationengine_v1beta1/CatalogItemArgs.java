@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1FeatureMapArgs;
@@ -19,9 +19,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     public static final CatalogItemArgs Empty = new CatalogItemArgs();
 
     @InputImport(name="catalogId", required=true)
-      private final Input<String> catalogId;
+      private final Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
+    public Output<String> getCatalogId() {
         return this.catalogId;
     }
 
@@ -30,9 +30,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categoryHierarchies", required=true)
-      private final Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
+      private final Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
 
-    public Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> getCategoryHierarchies() {
+    public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> getCategoryHierarchies() {
         return this.categoryHierarchies;
     }
 
@@ -41,10 +41,10 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -63,10 +63,10 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemAttributes")
-      private final @Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
+      private final @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
-    public Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> getItemAttributes() {
-        return this.itemAttributes == null ? Input.empty() : this.itemAttributes;
+    public Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> getItemAttributes() {
+        return this.itemAttributes == null ? Output.empty() : this.itemAttributes;
     }
 
     /**
@@ -74,17 +74,17 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemGroupId")
-      private final @Nullable Input<String> itemGroupId;
+      private final @Nullable Output<String> itemGroupId;
 
-    public Input<String> getItemGroupId() {
-        return this.itemGroupId == null ? Input.empty() : this.itemGroupId;
+    public Output<String> getItemGroupId() {
+        return this.itemGroupId == null ? Output.empty() : this.itemGroupId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -92,17 +92,17 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productMetadata")
-      private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
+      private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
-    public Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> getProductMetadata() {
-        return this.productMetadata == null ? Input.empty() : this.productMetadata;
+    public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> getProductMetadata() {
+        return this.productMetadata == null ? Output.empty() : this.productMetadata;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -121,24 +121,24 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public CatalogItemArgs(
-        Input<String> catalogId,
-        Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies,
-        @Nullable Input<String> description,
-        Input<String> id,
-        @Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes,
-        @Nullable Input<String> itemGroupId,
-        @Nullable Input<String> location,
-        @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> tags,
-        Input<String> title) {
+        Output<String> catalogId,
+        Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies,
+        @Nullable Output<String> description,
+        Output<String> id,
+        @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes,
+        @Nullable Output<String> itemGroupId,
+        @Nullable Output<String> location,
+        @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> tags,
+        Output<String> title) {
         this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
         this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies, "expected parameter 'categoryHierarchies' to be non-null");
         this.description = description;
@@ -153,17 +153,17 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CatalogItemArgs() {
-        this.catalogId = Input.empty();
-        this.categoryHierarchies = Input.empty();
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.itemAttributes = Input.empty();
-        this.itemGroupId = Input.empty();
-        this.location = Input.empty();
-        this.productMetadata = Input.empty();
-        this.project = Input.empty();
-        this.tags = Input.empty();
-        this.title = Input.empty();
+        this.catalogId = Output.empty();
+        this.categoryHierarchies = Output.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.itemAttributes = Output.empty();
+        this.itemGroupId = Output.empty();
+        this.location = Output.empty();
+        this.productMetadata = Output.empty();
+        this.project = Output.empty();
+        this.tags = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,17 +175,17 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> catalogId;
-        private Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
-        private @Nullable Input<String> description;
-        private Input<String> id;
-        private @Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
-        private @Nullable Input<String> itemGroupId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> tags;
-        private Input<String> title;
+        private Output<String> catalogId;
+        private Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
+        private @Nullable Output<String> description;
+        private Output<String> id;
+        private @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
+        private @Nullable Output<String> itemGroupId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> tags;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -206,113 +206,113 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder catalogId(Input<String> catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Input.of(Objects.requireNonNull(catalogId));
+            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder categoryHierarchies(Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies) {
+        public Builder categoryHierarchies(Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies) {
             this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
             return this;
         }
 
         public Builder categoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs> categoryHierarchies) {
-            this.categoryHierarchies = Input.of(Objects.requireNonNull(categoryHierarchies));
+            this.categoryHierarchies = Output.of(Objects.requireNonNull(categoryHierarchies));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder itemAttributes(@Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes) {
+        public Builder itemAttributes(@Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes) {
             this.itemAttributes = itemAttributes;
             return this;
         }
 
         public Builder itemAttributes(@Nullable GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
-            this.itemAttributes = Input.ofNullable(itemAttributes);
+            this.itemAttributes = Output.ofNullable(itemAttributes);
             return this;
         }
 
-        public Builder itemGroupId(@Nullable Input<String> itemGroupId) {
+        public Builder itemGroupId(@Nullable Output<String> itemGroupId) {
             this.itemGroupId = itemGroupId;
             return this;
         }
 
         public Builder itemGroupId(@Nullable String itemGroupId) {
-            this.itemGroupId = Input.ofNullable(itemGroupId);
+            this.itemGroupId = Output.ofNullable(itemGroupId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder productMetadata(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
+        public Builder productMetadata(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
             this.productMetadata = productMetadata;
             return this;
         }
 
         public Builder productMetadata(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
-            this.productMetadata = Input.ofNullable(productMetadata);
+            this.productMetadata = Output.ofNullable(productMetadata);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public CatalogItemArgs build() {

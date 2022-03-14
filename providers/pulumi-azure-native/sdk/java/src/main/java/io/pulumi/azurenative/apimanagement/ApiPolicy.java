@@ -6,7 +6,6 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiPolicyArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,28 +125,28 @@ public class ApiPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiPolicy(String name, ApiPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiPolicy", name, args == null ? ApiPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:ApiPolicy", name, args == null ? ApiPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -161,7 +160,7 @@ public class ApiPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiPolicy(name, id, options);
     }
 }

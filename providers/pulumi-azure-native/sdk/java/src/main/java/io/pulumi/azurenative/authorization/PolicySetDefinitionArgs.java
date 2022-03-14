@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueArgs;
 import io.pulumi.azurenative.authorization.inputs.PolicyDefinitionGroupArgs;
 import io.pulumi.azurenative.authorization.inputs.PolicyDefinitionReferenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
-    public Input<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyDefinitionGroups")
-      private final @Nullable Input<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
+      private final @Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
 
-    public Input<List<PolicyDefinitionGroupArgs>> getPolicyDefinitionGroups() {
-        return this.policyDefinitionGroups == null ? Input.empty() : this.policyDefinitionGroups;
+    public Output<List<PolicyDefinitionGroupArgs>> getPolicyDefinitionGroups() {
+        return this.policyDefinitionGroups == null ? Output.empty() : this.policyDefinitionGroups;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyDefinitions", required=true)
-      private final Input<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
+      private final Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
 
-    public Input<List<PolicyDefinitionReferenceArgs>> getPolicyDefinitions() {
+    public Output<List<PolicyDefinitionReferenceArgs>> getPolicyDefinitions() {
         return this.policyDefinitions;
     }
 
@@ -93,10 +93,10 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policySetDefinitionName")
-      private final @Nullable Input<String> policySetDefinitionName;
+      private final @Nullable Output<String> policySetDefinitionName;
 
-    public Input<String> getPolicySetDefinitionName() {
-        return this.policySetDefinitionName == null ? Input.empty() : this.policySetDefinitionName;
+    public Output<String> getPolicySetDefinitionName() {
+        return this.policySetDefinitionName == null ? Output.empty() : this.policySetDefinitionName;
     }
 
     /**
@@ -104,21 +104,21 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyType")
-      private final @Nullable Input<Either<String,PolicyType>> policyType;
+      private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Input<Either<String,PolicyType>> getPolicyType() {
-        return this.policyType == null ? Input.empty() : this.policyType;
+    public Output<Either<String,PolicyType>> getPolicyType() {
+        return this.policyType == null ? Output.empty() : this.policyType;
     }
 
     public PolicySetDefinitionArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters,
-        @Nullable Input<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups,
-        Input<List<PolicyDefinitionReferenceArgs>> policyDefinitions,
-        @Nullable Input<String> policySetDefinitionName,
-        @Nullable Input<Either<String,PolicyType>> policyType) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters,
+        @Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups,
+        Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions,
+        @Nullable Output<String> policySetDefinitionName,
+        @Nullable Output<Either<String,PolicyType>> policyType) {
         this.description = description;
         this.displayName = displayName;
         this.metadata = metadata;
@@ -130,14 +130,14 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     private PolicySetDefinitionArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.metadata = Input.empty();
-        this.parameters = Input.empty();
-        this.policyDefinitionGroups = Input.empty();
-        this.policyDefinitions = Input.empty();
-        this.policySetDefinitionName = Input.empty();
-        this.policyType = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.metadata = Output.empty();
+        this.parameters = Output.empty();
+        this.policyDefinitionGroups = Output.empty();
+        this.policyDefinitions = Output.empty();
+        this.policySetDefinitionName = Output.empty();
+        this.policyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,14 +149,14 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
-        private @Nullable Input<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
-        private Input<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
-        private @Nullable Input<String> policySetDefinitionName;
-        private @Nullable Input<Either<String,PolicyType>> policyType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
+        private @Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
+        private Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
+        private @Nullable Output<String> policySetDefinitionName;
+        private @Nullable Output<Either<String,PolicyType>> policyType;
 
         public Builder() {
     	      // Empty
@@ -174,83 +174,83 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     	      this.policyType = defaults.policyType;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policyDefinitionGroups(@Nullable Input<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups) {
+        public Builder policyDefinitionGroups(@Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups) {
             this.policyDefinitionGroups = policyDefinitionGroups;
             return this;
         }
 
         public Builder policyDefinitionGroups(@Nullable List<PolicyDefinitionGroupArgs> policyDefinitionGroups) {
-            this.policyDefinitionGroups = Input.ofNullable(policyDefinitionGroups);
+            this.policyDefinitionGroups = Output.ofNullable(policyDefinitionGroups);
             return this;
         }
 
-        public Builder policyDefinitions(Input<List<PolicyDefinitionReferenceArgs>> policyDefinitions) {
+        public Builder policyDefinitions(Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions) {
             this.policyDefinitions = Objects.requireNonNull(policyDefinitions);
             return this;
         }
 
         public Builder policyDefinitions(List<PolicyDefinitionReferenceArgs> policyDefinitions) {
-            this.policyDefinitions = Input.of(Objects.requireNonNull(policyDefinitions));
+            this.policyDefinitions = Output.of(Objects.requireNonNull(policyDefinitions));
             return this;
         }
 
-        public Builder policySetDefinitionName(@Nullable Input<String> policySetDefinitionName) {
+        public Builder policySetDefinitionName(@Nullable Output<String> policySetDefinitionName) {
             this.policySetDefinitionName = policySetDefinitionName;
             return this;
         }
 
         public Builder policySetDefinitionName(@Nullable String policySetDefinitionName) {
-            this.policySetDefinitionName = Input.ofNullable(policySetDefinitionName);
+            this.policySetDefinitionName = Output.ofNullable(policySetDefinitionName);
             return this;
         }
 
-        public Builder policyType(@Nullable Input<Either<String,PolicyType>> policyType) {
+        public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
 
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Input.ofNullable(policyType);
+            this.policyType = Output.ofNullable(policyType);
             return this;
         }
         public PolicySetDefinitionArgs build() {

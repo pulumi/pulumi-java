@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.enums.PartitionKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,PartitionKind>> kind;
+      private final @Nullable Output<Either<String,PartitionKind>> kind;
 
-    public Input<Either<String,PartitionKind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,PartitionKind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="paths")
-      private final @Nullable Input<List<String>> paths;
+      private final @Nullable Output<List<String>> paths;
 
-    public Input<List<String>> getPaths() {
-        return this.paths == null ? Input.empty() : this.paths;
+    public Output<List<String>> getPaths() {
+        return this.paths == null ? Output.empty() : this.paths;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ContainerPartitionKeyArgs(
-        @Nullable Input<Either<String,PartitionKind>> kind,
-        @Nullable Input<List<String>> paths,
-        @Nullable Input<Integer> version) {
-        this.kind = kind == null ? Input.ofLeft("Hash") : kind;
+        @Nullable Output<Either<String,PartitionKind>> kind,
+        @Nullable Output<List<String>> paths,
+        @Nullable Output<Integer> version) {
+        this.kind = kind == null ? Output.ofLeft("Hash") : kind;
         this.paths = paths;
         this.version = version;
     }
 
     private ContainerPartitionKeyArgs() {
-        this.kind = Input.empty();
-        this.paths = Input.empty();
-        this.version = Input.empty();
+        this.kind = Output.empty();
+        this.paths = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,PartitionKind>> kind;
-        private @Nullable Input<List<String>> paths;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<Either<String,PartitionKind>> kind;
+        private @Nullable Output<List<String>> paths;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder kind(@Nullable Input<Either<String,PartitionKind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,PartitionKind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,PartitionKind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder paths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Input.ofNullable(paths);
+            this.paths = Output.ofNullable(paths);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ContainerPartitionKeyArgs build() {

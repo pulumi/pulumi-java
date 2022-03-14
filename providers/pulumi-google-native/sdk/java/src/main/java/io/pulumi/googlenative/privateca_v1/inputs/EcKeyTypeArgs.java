@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.EcKeyTypeSignatureAlgorithm;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureAlgorithm")
-      private final @Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
+      private final @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
-    public Input<EcKeyTypeSignatureAlgorithm> getSignatureAlgorithm() {
-        return this.signatureAlgorithm == null ? Input.empty() : this.signatureAlgorithm;
+    public Output<EcKeyTypeSignatureAlgorithm> getSignatureAlgorithm() {
+        return this.signatureAlgorithm == null ? Output.empty() : this.signatureAlgorithm;
     }
 
-    public EcKeyTypeArgs(@Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
+    public EcKeyTypeArgs(@Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
     }
 
     private EcKeyTypeArgs() {
-        this.signatureAlgorithm = Input.empty();
+        this.signatureAlgorithm = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
+        private @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder signatureAlgorithm(@Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
         public Builder signatureAlgorithm(@Nullable EcKeyTypeSignatureAlgorithm signatureAlgorithm) {
-            this.signatureAlgorithm = Input.ofNullable(signatureAlgorithm);
+            this.signatureAlgorithm = Output.ofNullable(signatureAlgorithm);
             return this;
         }
         public EcKeyTypeArgs build() {

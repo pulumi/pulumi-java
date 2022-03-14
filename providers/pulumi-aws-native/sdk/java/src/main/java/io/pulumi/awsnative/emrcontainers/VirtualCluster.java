@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.emrcontainers.VirtualClusterArgs;
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterContainerProvider;
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -110,14 +109,14 @@ public class VirtualCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualCluster(String name, VirtualClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:emrcontainers:VirtualCluster", name, args == null ? VirtualClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:emrcontainers:VirtualCluster", name, args == null ? VirtualClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualCluster(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:emrcontainers:VirtualCluster", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -132,7 +131,7 @@ public class VirtualCluster extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualCluster get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualCluster(name, id, options);
     }
 }

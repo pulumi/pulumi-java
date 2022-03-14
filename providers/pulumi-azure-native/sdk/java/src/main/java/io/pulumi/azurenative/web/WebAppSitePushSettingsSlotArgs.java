@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dynamicTagsJson")
-      private final @Nullable Input<String> dynamicTagsJson;
+      private final @Nullable Output<String> dynamicTagsJson;
 
-    public Input<String> getDynamicTagsJson() {
-        return this.dynamicTagsJson == null ? Input.empty() : this.dynamicTagsJson;
+    public Output<String> getDynamicTagsJson() {
+        return this.dynamicTagsJson == null ? Output.empty() : this.dynamicTagsJson;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isPushEnabled", required=true)
-      private final Input<Boolean> isPushEnabled;
+      private final Output<Boolean> isPushEnabled;
 
-    public Input<Boolean> getIsPushEnabled() {
+    public Output<Boolean> getIsPushEnabled() {
         return this.isPushEnabled;
     }
 
@@ -42,10 +42,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -64,9 +64,9 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,9 +75,9 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="slot", required=true)
-      private final Input<String> slot;
+      private final Output<String> slot;
 
-    public Input<String> getSlot() {
+    public Output<String> getSlot() {
         return this.slot;
     }
 
@@ -86,10 +86,10 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tagWhitelistJson")
-      private final @Nullable Input<String> tagWhitelistJson;
+      private final @Nullable Output<String> tagWhitelistJson;
 
-    public Input<String> getTagWhitelistJson() {
-        return this.tagWhitelistJson == null ? Input.empty() : this.tagWhitelistJson;
+    public Output<String> getTagWhitelistJson() {
+        return this.tagWhitelistJson == null ? Output.empty() : this.tagWhitelistJson;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tagsRequiringAuth")
-      private final @Nullable Input<String> tagsRequiringAuth;
+      private final @Nullable Output<String> tagsRequiringAuth;
 
-    public Input<String> getTagsRequiringAuth() {
-        return this.tagsRequiringAuth == null ? Input.empty() : this.tagsRequiringAuth;
+    public Output<String> getTagsRequiringAuth() {
+        return this.tagsRequiringAuth == null ? Output.empty() : this.tagsRequiringAuth;
     }
 
     public WebAppSitePushSettingsSlotArgs(
-        @Nullable Input<String> dynamicTagsJson,
-        Input<Boolean> isPushEnabled,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        Input<String> slot,
-        @Nullable Input<String> tagWhitelistJson,
-        @Nullable Input<String> tagsRequiringAuth) {
+        @Nullable Output<String> dynamicTagsJson,
+        Output<Boolean> isPushEnabled,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        Output<String> slot,
+        @Nullable Output<String> tagWhitelistJson,
+        @Nullable Output<String> tagsRequiringAuth) {
         this.dynamicTagsJson = dynamicTagsJson;
         this.isPushEnabled = Objects.requireNonNull(isPushEnabled, "expected parameter 'isPushEnabled' to be non-null");
         this.kind = kind;
@@ -126,14 +126,14 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
     }
 
     private WebAppSitePushSettingsSlotArgs() {
-        this.dynamicTagsJson = Input.empty();
-        this.isPushEnabled = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.slot = Input.empty();
-        this.tagWhitelistJson = Input.empty();
-        this.tagsRequiringAuth = Input.empty();
+        this.dynamicTagsJson = Output.empty();
+        this.isPushEnabled = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.slot = Output.empty();
+        this.tagWhitelistJson = Output.empty();
+        this.tagsRequiringAuth = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dynamicTagsJson;
-        private Input<Boolean> isPushEnabled;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<String> slot;
-        private @Nullable Input<String> tagWhitelistJson;
-        private @Nullable Input<String> tagsRequiringAuth;
+        private @Nullable Output<String> dynamicTagsJson;
+        private Output<Boolean> isPushEnabled;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<String> slot;
+        private @Nullable Output<String> tagWhitelistJson;
+        private @Nullable Output<String> tagsRequiringAuth;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
     	      this.tagsRequiringAuth = defaults.tagsRequiringAuth;
         }
 
-        public Builder dynamicTagsJson(@Nullable Input<String> dynamicTagsJson) {
+        public Builder dynamicTagsJson(@Nullable Output<String> dynamicTagsJson) {
             this.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
 
         public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
-            this.dynamicTagsJson = Input.ofNullable(dynamicTagsJson);
+            this.dynamicTagsJson = Output.ofNullable(dynamicTagsJson);
             return this;
         }
 
-        public Builder isPushEnabled(Input<Boolean> isPushEnabled) {
+        public Builder isPushEnabled(Output<Boolean> isPushEnabled) {
             this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
             return this;
         }
 
         public Builder isPushEnabled(Boolean isPushEnabled) {
-            this.isPushEnabled = Input.of(Objects.requireNonNull(isPushEnabled));
+            this.isPushEnabled = Output.of(Objects.requireNonNull(isPushEnabled));
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder slot(Input<String> slot) {
+        public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
         public Builder slot(String slot) {
-            this.slot = Input.of(Objects.requireNonNull(slot));
+            this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
         }
 
-        public Builder tagWhitelistJson(@Nullable Input<String> tagWhitelistJson) {
+        public Builder tagWhitelistJson(@Nullable Output<String> tagWhitelistJson) {
             this.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
 
         public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
-            this.tagWhitelistJson = Input.ofNullable(tagWhitelistJson);
+            this.tagWhitelistJson = Output.ofNullable(tagWhitelistJson);
             return this;
         }
 
-        public Builder tagsRequiringAuth(@Nullable Input<String> tagsRequiringAuth) {
+        public Builder tagsRequiringAuth(@Nullable Output<String> tagsRequiringAuth) {
             this.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
 
         public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
-            this.tagsRequiringAuth = Input.ofNullable(tagsRequiringAuth);
+            this.tagsRequiringAuth = Output.ofNullable(tagsRequiringAuth);
             return this;
         }
         public WebAppSitePushSettingsSlotArgs build() {

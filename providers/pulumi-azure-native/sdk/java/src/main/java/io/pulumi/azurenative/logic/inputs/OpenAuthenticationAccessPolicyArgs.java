@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.OpenAuthenticationProviderType;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationPolicyClaimArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="claims")
-      private final @Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims;
+      private final @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
-    public Input<List<OpenAuthenticationPolicyClaimArgs>> getClaims() {
-        return this.claims == null ? Input.empty() : this.claims;
+    public Output<List<OpenAuthenticationPolicyClaimArgs>> getClaims() {
+        return this.claims == null ? Output.empty() : this.claims;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,OpenAuthenticationProviderType>> type;
+      private final @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
 
-    public Input<Either<String,OpenAuthenticationProviderType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,OpenAuthenticationProviderType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public OpenAuthenticationAccessPolicyArgs(
-        @Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims,
-        @Nullable Input<Either<String,OpenAuthenticationProviderType>> type) {
+        @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims,
+        @Nullable Output<Either<String,OpenAuthenticationProviderType>> type) {
         this.claims = claims;
         this.type = type;
     }
 
     private OpenAuthenticationAccessPolicyArgs() {
-        this.claims = Input.empty();
-        this.type = Input.empty();
+        this.claims = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims;
-        private @Nullable Input<Either<String,OpenAuthenticationProviderType>> type;
+        private @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
+        private @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder claims(@Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims) {
+        public Builder claims(@Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims) {
             this.claims = claims;
             return this;
         }
 
         public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimArgs> claims) {
-            this.claims = Input.ofNullable(claims);
+            this.claims = Output.ofNullable(claims);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,OpenAuthenticationProviderType>> type) {
+        public Builder type(@Nullable Output<Either<String,OpenAuthenticationProviderType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,OpenAuthenticationProviderType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public OpenAuthenticationAccessPolicyArgs build() {

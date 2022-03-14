@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigEphemeralStorageConfigArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigGcfsConfigArgs;
@@ -32,10 +32,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bootDiskKmsKey")
-      private final @Nullable Input<String> bootDiskKmsKey;
+      private final @Nullable Output<String> bootDiskKmsKey;
 
-    public Input<String> getBootDiskKmsKey() {
-        return this.bootDiskKmsKey == null ? Input.empty() : this.bootDiskKmsKey;
+    public Output<String> getBootDiskKmsKey() {
+        return this.bootDiskKmsKey == null ? Output.empty() : this.bootDiskKmsKey;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<String> diskType;
+      private final @Nullable Output<String> diskType;
 
-    public Input<String> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<String> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ephemeralStorageConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
 
-    public Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> getEphemeralStorageConfig() {
-        return this.ephemeralStorageConfig == null ? Input.empty() : this.ephemeralStorageConfig;
+    public Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> getEphemeralStorageConfig() {
+        return this.ephemeralStorageConfig == null ? Output.empty() : this.ephemeralStorageConfig;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="gcfsConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
 
-    public Input<ClusterNodePoolNodeConfigGcfsConfigArgs> getGcfsConfig() {
-        return this.gcfsConfig == null ? Input.empty() : this.gcfsConfig;
+    public Output<ClusterNodePoolNodeConfigGcfsConfigArgs> getGcfsConfig() {
+        return this.gcfsConfig == null ? Output.empty() : this.gcfsConfig;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="guestAccelerators")
-      private final @Nullable Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
+      private final @Nullable Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
 
-    public Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> getGuestAccelerators() {
-        return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
+    public Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> getGuestAccelerators() {
+        return this.guestAccelerators == null ? Output.empty() : this.guestAccelerators;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="imageType")
-      private final @Nullable Input<String> imageType;
+      private final @Nullable Output<String> imageType;
 
-    public Input<String> getImageType() {
-        return this.imageType == null ? Input.empty() : this.imageType;
+    public Output<String> getImageType() {
+        return this.imageType == null ? Output.empty() : this.imageType;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kubeletConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
 
-    public Input<ClusterNodePoolNodeConfigKubeletConfigArgs> getKubeletConfig() {
-        return this.kubeletConfig == null ? Input.empty() : this.kubeletConfig;
+    public Output<ClusterNodePoolNodeConfigKubeletConfigArgs> getKubeletConfig() {
+        return this.kubeletConfig == null ? Output.empty() : this.kubeletConfig;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linuxNodeConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
 
-    public Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> getLinuxNodeConfig() {
-        return this.linuxNodeConfig == null ? Input.empty() : this.linuxNodeConfig;
+    public Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> getLinuxNodeConfig() {
+        return this.linuxNodeConfig == null ? Output.empty() : this.linuxNodeConfig;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="localSsdCount")
-      private final @Nullable Input<Integer> localSsdCount;
+      private final @Nullable Output<Integer> localSsdCount;
 
-    public Input<Integer> getLocalSsdCount() {
-        return this.localSsdCount == null ? Input.empty() : this.localSsdCount;
+    public Output<Integer> getLocalSsdCount() {
+        return this.localSsdCount == null ? Output.empty() : this.localSsdCount;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -209,10 +209,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="nodeGroup")
-      private final @Nullable Input<String> nodeGroup;
+      private final @Nullable Output<String> nodeGroup;
 
-    public Input<String> getNodeGroup() {
-        return this.nodeGroup == null ? Input.empty() : this.nodeGroup;
+    public Output<String> getNodeGroup() {
+        return this.nodeGroup == null ? Output.empty() : this.nodeGroup;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="oauthScopes")
-      private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Output<List<String>> oauthScopes;
 
-    public Input<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
+    public Output<List<String>> getOauthScopes() {
+        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
     }
 
     /**
@@ -235,10 +235,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="preemptible")
-      private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Output<Boolean> preemptible;
 
-    public Input<Boolean> getPreemptible() {
-        return this.preemptible == null ? Input.empty() : this.preemptible;
+    public Output<Boolean> getPreemptible() {
+        return this.preemptible == null ? Output.empty() : this.preemptible;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sandboxConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
 
-    public Input<ClusterNodePoolNodeConfigSandboxConfigArgs> getSandboxConfig() {
-        return this.sandboxConfig == null ? Input.empty() : this.sandboxConfig;
+    public Output<ClusterNodePoolNodeConfigSandboxConfigArgs> getSandboxConfig() {
+        return this.sandboxConfig == null ? Output.empty() : this.sandboxConfig;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -270,10 +270,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -283,10 +283,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="spot")
-      private final @Nullable Input<Boolean> spot;
+      private final @Nullable Output<Boolean> spot;
 
-    public Input<Boolean> getSpot() {
-        return this.spot == null ? Input.empty() : this.spot;
+    public Output<Boolean> getSpot() {
+        return this.spot == null ? Output.empty() : this.spot;
     }
 
     /**
@@ -295,10 +295,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -313,10 +313,10 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="taints")
-      private final @Nullable Input<List<ClusterNodePoolNodeConfigTaintArgs>> taints;
+      private final @Nullable Output<List<ClusterNodePoolNodeConfigTaintArgs>> taints;
 
-    public Input<List<ClusterNodePoolNodeConfigTaintArgs>> getTaints() {
-        return this.taints == null ? Input.empty() : this.taints;
+    public Output<List<ClusterNodePoolNodeConfigTaintArgs>> getTaints() {
+        return this.taints == null ? Output.empty() : this.taints;
     }
 
     /**
@@ -325,37 +325,37 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="workloadMetadataConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
 
-    public Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> getWorkloadMetadataConfig() {
-        return this.workloadMetadataConfig == null ? Input.empty() : this.workloadMetadataConfig;
+    public Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> getWorkloadMetadataConfig() {
+        return this.workloadMetadataConfig == null ? Output.empty() : this.workloadMetadataConfig;
     }
 
     public ClusterNodePoolNodeConfigArgs(
-        @Nullable Input<String> bootDiskKmsKey,
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<String> diskType,
-        @Nullable Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig,
-        @Nullable Input<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig,
-        @Nullable Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators,
-        @Nullable Input<String> imageType,
-        @Nullable Input<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig,
-        @Nullable Input<Integer> localSsdCount,
-        @Nullable Input<String> machineType,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<String> nodeGroup,
-        @Nullable Input<List<String>> oauthScopes,
-        @Nullable Input<Boolean> preemptible,
-        @Nullable Input<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Input<Boolean> spot,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<List<ClusterNodePoolNodeConfigTaintArgs>> taints,
-        @Nullable Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig) {
+        @Nullable Output<String> bootDiskKmsKey,
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<String> diskType,
+        @Nullable Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig,
+        @Nullable Output<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig,
+        @Nullable Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators,
+        @Nullable Output<String> imageType,
+        @Nullable Output<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig,
+        @Nullable Output<Integer> localSsdCount,
+        @Nullable Output<String> machineType,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<String> nodeGroup,
+        @Nullable Output<List<String>> oauthScopes,
+        @Nullable Output<Boolean> preemptible,
+        @Nullable Output<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig,
+        @Nullable Output<Boolean> spot,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<List<ClusterNodePoolNodeConfigTaintArgs>> taints,
+        @Nullable Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
@@ -383,30 +383,30 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     }
 
     private ClusterNodePoolNodeConfigArgs() {
-        this.bootDiskKmsKey = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.diskType = Input.empty();
-        this.ephemeralStorageConfig = Input.empty();
-        this.gcfsConfig = Input.empty();
-        this.guestAccelerators = Input.empty();
-        this.imageType = Input.empty();
-        this.kubeletConfig = Input.empty();
-        this.labels = Input.empty();
-        this.linuxNodeConfig = Input.empty();
-        this.localSsdCount = Input.empty();
-        this.machineType = Input.empty();
-        this.metadata = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.nodeGroup = Input.empty();
-        this.oauthScopes = Input.empty();
-        this.preemptible = Input.empty();
-        this.sandboxConfig = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.spot = Input.empty();
-        this.tags = Input.empty();
-        this.taints = Input.empty();
-        this.workloadMetadataConfig = Input.empty();
+        this.bootDiskKmsKey = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.diskType = Output.empty();
+        this.ephemeralStorageConfig = Output.empty();
+        this.gcfsConfig = Output.empty();
+        this.guestAccelerators = Output.empty();
+        this.imageType = Output.empty();
+        this.kubeletConfig = Output.empty();
+        this.labels = Output.empty();
+        this.linuxNodeConfig = Output.empty();
+        this.localSsdCount = Output.empty();
+        this.machineType = Output.empty();
+        this.metadata = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.nodeGroup = Output.empty();
+        this.oauthScopes = Output.empty();
+        this.preemptible = Output.empty();
+        this.sandboxConfig = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.spot = Output.empty();
+        this.tags = Output.empty();
+        this.taints = Output.empty();
+        this.workloadMetadataConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -418,30 +418,30 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bootDiskKmsKey;
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<String> diskType;
-        private @Nullable Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
-        private @Nullable Input<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
-        private @Nullable Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
-        private @Nullable Input<String> imageType;
-        private @Nullable Input<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
-        private @Nullable Input<Integer> localSsdCount;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<String> nodeGroup;
-        private @Nullable Input<List<String>> oauthScopes;
-        private @Nullable Input<Boolean> preemptible;
-        private @Nullable Input<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Input<Boolean> spot;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<List<ClusterNodePoolNodeConfigTaintArgs>> taints;
-        private @Nullable Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
+        private @Nullable Output<String> bootDiskKmsKey;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<String> diskType;
+        private @Nullable Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
+        private @Nullable Output<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
+        private @Nullable Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
+        private @Nullable Output<String> imageType;
+        private @Nullable Output<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
+        private @Nullable Output<Integer> localSsdCount;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<String> nodeGroup;
+        private @Nullable Output<List<String>> oauthScopes;
+        private @Nullable Output<Boolean> preemptible;
+        private @Nullable Output<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private @Nullable Output<Boolean> spot;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<List<ClusterNodePoolNodeConfigTaintArgs>> taints;
+        private @Nullable Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
 
         public Builder() {
     	      // Empty
@@ -475,243 +475,243 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
         }
 
-        public Builder bootDiskKmsKey(@Nullable Input<String> bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable Output<String> bootDiskKmsKey) {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
         public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Input.ofNullable(bootDiskKmsKey);
+            this.bootDiskKmsKey = Output.ofNullable(bootDiskKmsKey);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder ephemeralStorageConfig(@Nullable Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig) {
+        public Builder ephemeralStorageConfig(@Nullable Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig) {
             this.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
 
         public Builder ephemeralStorageConfig(@Nullable ClusterNodePoolNodeConfigEphemeralStorageConfigArgs ephemeralStorageConfig) {
-            this.ephemeralStorageConfig = Input.ofNullable(ephemeralStorageConfig);
+            this.ephemeralStorageConfig = Output.ofNullable(ephemeralStorageConfig);
             return this;
         }
 
-        public Builder gcfsConfig(@Nullable Input<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig) {
+        public Builder gcfsConfig(@Nullable Output<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
 
         public Builder gcfsConfig(@Nullable ClusterNodePoolNodeConfigGcfsConfigArgs gcfsConfig) {
-            this.gcfsConfig = Input.ofNullable(gcfsConfig);
+            this.gcfsConfig = Output.ofNullable(gcfsConfig);
             return this;
         }
 
-        public Builder guestAccelerators(@Nullable Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
         public Builder guestAccelerators(@Nullable List<ClusterNodePoolNodeConfigGuestAcceleratorArgs> guestAccelerators) {
-            this.guestAccelerators = Input.ofNullable(guestAccelerators);
+            this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder imageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Output<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Input.ofNullable(imageType);
+            this.imageType = Output.ofNullable(imageType);
             return this;
         }
 
-        public Builder kubeletConfig(@Nullable Input<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig) {
+        public Builder kubeletConfig(@Nullable Output<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
 
         public Builder kubeletConfig(@Nullable ClusterNodePoolNodeConfigKubeletConfigArgs kubeletConfig) {
-            this.kubeletConfig = Input.ofNullable(kubeletConfig);
+            this.kubeletConfig = Output.ofNullable(kubeletConfig);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder linuxNodeConfig(@Nullable Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig) {
+        public Builder linuxNodeConfig(@Nullable Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig) {
             this.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
 
         public Builder linuxNodeConfig(@Nullable ClusterNodePoolNodeConfigLinuxNodeConfigArgs linuxNodeConfig) {
-            this.linuxNodeConfig = Input.ofNullable(linuxNodeConfig);
+            this.linuxNodeConfig = Output.ofNullable(linuxNodeConfig);
             return this;
         }
 
-        public Builder localSsdCount(@Nullable Input<Integer> localSsdCount) {
+        public Builder localSsdCount(@Nullable Output<Integer> localSsdCount) {
             this.localSsdCount = localSsdCount;
             return this;
         }
 
         public Builder localSsdCount(@Nullable Integer localSsdCount) {
-            this.localSsdCount = Input.ofNullable(localSsdCount);
+            this.localSsdCount = Output.ofNullable(localSsdCount);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder nodeGroup(@Nullable Input<String> nodeGroup) {
+        public Builder nodeGroup(@Nullable Output<String> nodeGroup) {
             this.nodeGroup = nodeGroup;
             return this;
         }
 
         public Builder nodeGroup(@Nullable String nodeGroup) {
-            this.nodeGroup = Input.ofNullable(nodeGroup);
+            this.nodeGroup = Output.ofNullable(nodeGroup);
             return this;
         }
 
-        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Input.ofNullable(oauthScopes);
+            this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Input.ofNullable(preemptible);
+            this.preemptible = Output.ofNullable(preemptible);
             return this;
         }
 
-        public Builder sandboxConfig(@Nullable Input<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig) {
+        public Builder sandboxConfig(@Nullable Output<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
             return this;
         }
 
         public Builder sandboxConfig(@Nullable ClusterNodePoolNodeConfigSandboxConfigArgs sandboxConfig) {
-            this.sandboxConfig = Input.ofNullable(sandboxConfig);
+            this.sandboxConfig = Output.ofNullable(sandboxConfig);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable ClusterNodePoolNodeConfigShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder spot(@Nullable Input<Boolean> spot) {
+        public Builder spot(@Nullable Output<Boolean> spot) {
             this.spot = spot;
             return this;
         }
 
         public Builder spot(@Nullable Boolean spot) {
-            this.spot = Input.ofNullable(spot);
+            this.spot = Output.ofNullable(spot);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder taints(@Nullable Input<List<ClusterNodePoolNodeConfigTaintArgs>> taints) {
+        public Builder taints(@Nullable Output<List<ClusterNodePoolNodeConfigTaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
         public Builder taints(@Nullable List<ClusterNodePoolNodeConfigTaintArgs> taints) {
-            this.taints = Input.ofNullable(taints);
+            this.taints = Output.ofNullable(taints);
             return this;
         }
 
-        public Builder workloadMetadataConfig(@Nullable Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig) {
+        public Builder workloadMetadataConfig(@Nullable Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig) {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }
 
         public Builder workloadMetadataConfig(@Nullable ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs workloadMetadataConfig) {
-            this.workloadMetadataConfig = Input.ofNullable(workloadMetadataConfig);
+            this.workloadMetadataConfig = Output.ofNullable(workloadMetadataConfig);
             return this;
         }
         public ClusterNodePoolNodeConfigArgs build() {

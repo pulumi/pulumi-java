@@ -8,7 +8,6 @@ import io.pulumi.azurenative.signalrservice.SignalRPrivateEndpointConnectionArgs
 import io.pulumi.azurenative.signalrservice.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.signalrservice.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,23 +141,23 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public SignalRPrivateEndpointConnection(String name, SignalRPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:signalrservice:SignalRPrivateEndpointConnection", name, args == null ? SignalRPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:signalrservice:SignalRPrivateEndpointConnection", name, args == null ? SignalRPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SignalRPrivateEndpointConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SignalRPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:signalrservice:SignalRPrivateEndpointConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20200501:SignalRPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20200701preview:SignalRPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20210401preview:SignalRPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20210601preview:SignalRPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20210901preview:SignalRPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20211001:SignalRPrivateEndpointConnection").build())
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20200501:SignalRPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20200701preview:SignalRPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210401preview:SignalRPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210601preview:SignalRPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210901preview:SignalRPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20211001:SignalRPrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -172,7 +171,7 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SignalRPrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SignalRPrivateEndpointConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SignalRPrivateEndpointConnection(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecArgumentMode;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
+      private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
 
-    public Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GoogleCloudDatacatalogV1RoutineSpecArgumentArgs(
-        @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode,
-        @Nullable Input<String> name,
-        @Nullable Input<String> type) {
+        @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode,
+        @Nullable Output<String> name,
+        @Nullable Output<String> type) {
         this.mode = mode;
         this.name = name;
         this.type = type;
     }
 
     private GoogleCloudDatacatalogV1RoutineSpecArgumentArgs() {
-        this.mode = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.mode = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> type;
+        private @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
     	      this.type = defaults.type;
         }
 
-        public Builder mode(@Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode) {
+        public Builder mode(@Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable GoogleCloudDatacatalogV1RoutineSpecArgumentMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudDatacatalogV1RoutineSpecArgumentArgs build() {

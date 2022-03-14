@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class FileSystemBackupPolicyArgs extends io.pulumi.resources.Resour
     public static final FileSystemBackupPolicyArgs Empty = new FileSystemBackupPolicyArgs();
 
     @InputImport(name="status", required=true)
-      private final Input<String> status;
+      private final Output<String> status;
 
-    public Input<String> getStatus() {
+    public Output<String> getStatus() {
         return this.status;
     }
 
-    public FileSystemBackupPolicyArgs(Input<String> status) {
+    public FileSystemBackupPolicyArgs(Output<String> status) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private FileSystemBackupPolicyArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class FileSystemBackupPolicyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> status;
+        private Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class FileSystemBackupPolicyArgs extends io.pulumi.resources.Resour
     	      this.status = defaults.status;
         }
 
-        public Builder status(Input<String> status) {
+        public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(String status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public FileSystemBackupPolicyArgs build() {

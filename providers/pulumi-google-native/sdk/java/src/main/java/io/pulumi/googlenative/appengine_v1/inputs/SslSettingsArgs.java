@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.enums.SslSettingsSslManagementType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId")
-      private final @Nullable Input<String> certificateId;
+      private final @Nullable Output<String> certificateId;
 
-    public Input<String> getCertificateId() {
-        return this.certificateId == null ? Input.empty() : this.certificateId;
+    public Output<String> getCertificateId() {
+        return this.certificateId == null ? Output.empty() : this.certificateId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslManagementType")
-      private final @Nullable Input<SslSettingsSslManagementType> sslManagementType;
+      private final @Nullable Output<SslSettingsSslManagementType> sslManagementType;
 
-    public Input<SslSettingsSslManagementType> getSslManagementType() {
-        return this.sslManagementType == null ? Input.empty() : this.sslManagementType;
+    public Output<SslSettingsSslManagementType> getSslManagementType() {
+        return this.sslManagementType == null ? Output.empty() : this.sslManagementType;
     }
 
     public SslSettingsArgs(
-        @Nullable Input<String> certificateId,
-        @Nullable Input<SslSettingsSslManagementType> sslManagementType) {
+        @Nullable Output<String> certificateId,
+        @Nullable Output<SslSettingsSslManagementType> sslManagementType) {
         this.certificateId = certificateId;
         this.sslManagementType = sslManagementType;
     }
 
     private SslSettingsArgs() {
-        this.certificateId = Input.empty();
-        this.sslManagementType = Input.empty();
+        this.certificateId = Output.empty();
+        this.sslManagementType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateId;
-        private @Nullable Input<SslSettingsSslManagementType> sslManagementType;
+        private @Nullable Output<String> certificateId;
+        private @Nullable Output<SslSettingsSslManagementType> sslManagementType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslManagementType = defaults.sslManagementType;
         }
 
-        public Builder certificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Output<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Input.ofNullable(certificateId);
+            this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
 
-        public Builder sslManagementType(@Nullable Input<SslSettingsSslManagementType> sslManagementType) {
+        public Builder sslManagementType(@Nullable Output<SslSettingsSslManagementType> sslManagementType) {
             this.sslManagementType = sslManagementType;
             return this;
         }
 
         public Builder sslManagementType(@Nullable SslSettingsSslManagementType sslManagementType) {
-            this.sslManagementType = Input.ofNullable(sslManagementType);
+            this.sslManagementType = Output.ofNullable(sslManagementType);
             return this;
         }
         public SslSettingsArgs build() {

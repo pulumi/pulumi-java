@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.BindingResourcePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName", required=true)
-      private final Input<String> appName;
+      private final Output<String> appName;
 
-    public Input<String> getAppName() {
+    public Output<String> getAppName() {
         return this.appName;
     }
 
@@ -31,10 +31,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bindingName")
-      private final @Nullable Input<String> bindingName;
+      private final @Nullable Output<String> bindingName;
 
-    public Input<String> getBindingName() {
-        return this.bindingName == null ? Input.empty() : this.bindingName;
+    public Output<String> getBindingName() {
+        return this.bindingName == null ? Output.empty() : this.bindingName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<BindingResourcePropertiesArgs> properties;
+      private final @Nullable Output<BindingResourcePropertiesArgs> properties;
 
-    public Input<BindingResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<BindingResourcePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public BindingArgs(
-        Input<String> appName,
-        @Nullable Input<String> bindingName,
-        @Nullable Input<BindingResourcePropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        Output<String> appName,
+        @Nullable Output<String> bindingName,
+        @Nullable Output<BindingResourcePropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
         this.bindingName = bindingName;
         this.properties = properties;
@@ -84,11 +84,11 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BindingArgs() {
-        this.appName = Input.empty();
-        this.bindingName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.appName = Output.empty();
+        this.bindingName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appName;
-        private @Nullable Input<String> bindingName;
-        private @Nullable Input<BindingResourcePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private Output<String> appName;
+        private @Nullable Output<String> bindingName;
+        private @Nullable Output<BindingResourcePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder appName(Input<String> appName) {
+        public Builder appName(Output<String> appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
         public Builder appName(String appName) {
-            this.appName = Input.of(Objects.requireNonNull(appName));
+            this.appName = Output.of(Objects.requireNonNull(appName));
             return this;
         }
 
-        public Builder bindingName(@Nullable Input<String> bindingName) {
+        public Builder bindingName(@Nullable Output<String> bindingName) {
             this.bindingName = bindingName;
             return this;
         }
 
         public Builder bindingName(@Nullable String bindingName) {
-            this.bindingName = Input.ofNullable(bindingName);
+            this.bindingName = Output.ofNullable(bindingName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<BindingResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<BindingResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable BindingResourcePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public BindingArgs build() {

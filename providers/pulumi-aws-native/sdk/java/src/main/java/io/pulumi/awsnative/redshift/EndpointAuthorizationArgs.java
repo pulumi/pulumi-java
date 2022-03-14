@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="account", required=true)
-      private final Input<String> account;
+      private final Output<String> account;
 
-    public Input<String> getAccount() {
+    public Output<String> getAccount() {
         return this.account;
     }
 
@@ -32,9 +32,9 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-      private final Input<String> clusterIdentifier;
+      private final Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
+    public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -43,10 +43,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="force")
-      private final @Nullable Input<Boolean> force;
+      private final @Nullable Output<Boolean> force;
 
-    public Input<Boolean> getForce() {
-        return this.force == null ? Input.empty() : this.force;
+    public Output<Boolean> getForce() {
+        return this.force == null ? Output.empty() : this.force;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpcIds")
-      private final @Nullable Input<List<String>> vpcIds;
+      private final @Nullable Output<List<String>> vpcIds;
 
-    public Input<List<String>> getVpcIds() {
-        return this.vpcIds == null ? Input.empty() : this.vpcIds;
+    public Output<List<String>> getVpcIds() {
+        return this.vpcIds == null ? Output.empty() : this.vpcIds;
     }
 
     public EndpointAuthorizationArgs(
-        Input<String> account,
-        Input<String> clusterIdentifier,
-        @Nullable Input<Boolean> force,
-        @Nullable Input<List<String>> vpcIds) {
+        Output<String> account,
+        Output<String> clusterIdentifier,
+        @Nullable Output<Boolean> force,
+        @Nullable Output<List<String>> vpcIds) {
         this.account = Objects.requireNonNull(account, "expected parameter 'account' to be non-null");
         this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
         this.force = force;
@@ -72,10 +72,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     }
 
     private EndpointAuthorizationArgs() {
-        this.account = Input.empty();
-        this.clusterIdentifier = Input.empty();
-        this.force = Input.empty();
-        this.vpcIds = Input.empty();
+        this.account = Output.empty();
+        this.clusterIdentifier = Output.empty();
+        this.force = Output.empty();
+        this.vpcIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> account;
-        private Input<String> clusterIdentifier;
-        private @Nullable Input<Boolean> force;
-        private @Nullable Input<List<String>> vpcIds;
+        private Output<String> account;
+        private Output<String> clusterIdentifier;
+        private @Nullable Output<Boolean> force;
+        private @Nullable Output<List<String>> vpcIds;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     	      this.vpcIds = defaults.vpcIds;
         }
 
-        public Builder account(Input<String> account) {
+        public Builder account(Output<String> account) {
             this.account = Objects.requireNonNull(account);
             return this;
         }
 
         public Builder account(String account) {
-            this.account = Input.of(Objects.requireNonNull(account));
+            this.account = Output.of(Objects.requireNonNull(account));
             return this;
         }
 
-        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
+            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder force(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
 
         public Builder force(@Nullable Boolean force) {
-            this.force = Input.ofNullable(force);
+            this.force = Output.ofNullable(force);
             return this;
         }
 
-        public Builder vpcIds(@Nullable Input<List<String>> vpcIds) {
+        public Builder vpcIds(@Nullable Output<List<String>> vpcIds) {
             this.vpcIds = vpcIds;
             return this;
         }
 
         public Builder vpcIds(@Nullable List<String> vpcIds) {
-            this.vpcIds = Input.ofNullable(vpcIds);
+            this.vpcIds = Output.ofNullable(vpcIds);
             return this;
         }
         public EndpointAuthorizationArgs build() {

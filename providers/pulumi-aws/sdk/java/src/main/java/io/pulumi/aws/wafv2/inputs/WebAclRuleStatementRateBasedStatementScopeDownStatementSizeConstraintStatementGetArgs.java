@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSizeCo
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-      private final Input<String> comparisonOperator;
+      private final Output<String> comparisonOperator;
 
-    public Input<String> getComparisonOperator() {
+    public Output<String> getComparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -34,10 +34,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSizeCo
      * 
      */
     @InputImport(name="fieldToMatch")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> getFieldToMatch() {
+        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSizeCo
      * 
      */
     @InputImport(name="size", required=true)
-      private final Input<Integer> size;
+      private final Output<Integer> size;
 
-    public Input<Integer> getSize() {
+    public Output<Integer> getSize() {
         return this.size;
     }
 
@@ -56,17 +56,17 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSizeCo
      * 
      */
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
+      private final Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
 
-    public Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementGetArgs(
-        Input<String> comparisonOperator,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch,
-        Input<Integer> size,
-        Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations) {
+        Output<String> comparisonOperator,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch,
+        Output<Integer> size,
+        Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations) {
         this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
         this.fieldToMatch = fieldToMatch;
         this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
@@ -74,10 +74,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSizeCo
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementGetArgs() {
-        this.comparisonOperator = Input.empty();
-        this.fieldToMatch = Input.empty();
-        this.size = Input.empty();
-        this.textTransformations = Input.empty();
+        this.comparisonOperator = Output.empty();
+        this.fieldToMatch = Output.empty();
+        this.size = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSizeCo
     }
 
     public static final class Builder {
-        private Input<String> comparisonOperator;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
-        private Input<Integer> size;
-        private Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
+        private Output<String> comparisonOperator;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
+        private Output<Integer> size;
+        private Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSizeCo
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder comparisonOperator(Input<String> comparisonOperator) {
+        public Builder comparisonOperator(Output<String> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
+            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder fieldToMatch(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch) {
+        public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
         public Builder fieldToMatch(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Input.ofNullable(fieldToMatch);
+            this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
 
-        public Builder size(Input<Integer> size) {
+        public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
         public Builder size(Integer size) {
-            this.size = Input.of(Objects.requireNonNull(size));
+            this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementTextTransformationGetArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebAclRuleStatementRateBasedStatementScopeDownStatementSizeConstraintStatementGetArgs build() {

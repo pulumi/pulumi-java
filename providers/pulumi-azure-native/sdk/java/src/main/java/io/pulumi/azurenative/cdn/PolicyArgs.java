@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.inputs.ManagedRuleSetListArgs;
 import io.pulumi.azurenative.cdn.inputs.PolicySettingsArgs;
 import io.pulumi.azurenative.cdn.inputs.RateLimitRuleListArgs;
 import io.pulumi.azurenative.cdn.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRules")
-      private final @Nullable Input<CustomRuleListArgs> customRules;
+      private final @Nullable Output<CustomRuleListArgs> customRules;
 
-    public Input<CustomRuleListArgs> getCustomRules() {
-        return this.customRules == null ? Input.empty() : this.customRules;
+    public Output<CustomRuleListArgs> getCustomRules() {
+        return this.customRules == null ? Output.empty() : this.customRules;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedRules")
-      private final @Nullable Input<ManagedRuleSetListArgs> managedRules;
+      private final @Nullable Output<ManagedRuleSetListArgs> managedRules;
 
-    public Input<ManagedRuleSetListArgs> getManagedRules() {
-        return this.managedRules == null ? Input.empty() : this.managedRules;
+    public Output<ManagedRuleSetListArgs> getManagedRules() {
+        return this.managedRules == null ? Output.empty() : this.managedRules;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policySettings")
-      private final @Nullable Input<PolicySettingsArgs> policySettings;
+      private final @Nullable Output<PolicySettingsArgs> policySettings;
 
-    public Input<PolicySettingsArgs> getPolicySettings() {
-        return this.policySettings == null ? Input.empty() : this.policySettings;
+    public Output<PolicySettingsArgs> getPolicySettings() {
+        return this.policySettings == null ? Output.empty() : this.policySettings;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitRules")
-      private final @Nullable Input<RateLimitRuleListArgs> rateLimitRules;
+      private final @Nullable Output<RateLimitRuleListArgs> rateLimitRules;
 
-    public Input<RateLimitRuleListArgs> getRateLimitRules() {
-        return this.rateLimitRules == null ? Input.empty() : this.rateLimitRules;
+    public Output<RateLimitRuleListArgs> getRateLimitRules() {
+        return this.rateLimitRules == null ? Output.empty() : this.rateLimitRules;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,9 +102,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -113,22 +113,22 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PolicyArgs(
-        @Nullable Input<CustomRuleListArgs> customRules,
-        @Nullable Input<String> location,
-        @Nullable Input<ManagedRuleSetListArgs> managedRules,
-        @Nullable Input<String> policyName,
-        @Nullable Input<PolicySettingsArgs> policySettings,
-        @Nullable Input<RateLimitRuleListArgs> rateLimitRules,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<CustomRuleListArgs> customRules,
+        @Nullable Output<String> location,
+        @Nullable Output<ManagedRuleSetListArgs> managedRules,
+        @Nullable Output<String> policyName,
+        @Nullable Output<PolicySettingsArgs> policySettings,
+        @Nullable Output<RateLimitRuleListArgs> rateLimitRules,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.customRules = customRules;
         this.location = location;
         this.managedRules = managedRules;
@@ -141,15 +141,15 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.customRules = Input.empty();
-        this.location = Input.empty();
-        this.managedRules = Input.empty();
-        this.policyName = Input.empty();
-        this.policySettings = Input.empty();
-        this.rateLimitRules = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.customRules = Output.empty();
+        this.location = Output.empty();
+        this.managedRules = Output.empty();
+        this.policyName = Output.empty();
+        this.policySettings = Output.empty();
+        this.rateLimitRules = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomRuleListArgs> customRules;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ManagedRuleSetListArgs> managedRules;
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<PolicySettingsArgs> policySettings;
-        private @Nullable Input<RateLimitRuleListArgs> rateLimitRules;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<CustomRuleListArgs> customRules;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ManagedRuleSetListArgs> managedRules;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<PolicySettingsArgs> policySettings;
+        private @Nullable Output<RateLimitRuleListArgs> rateLimitRules;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder customRules(@Nullable Input<CustomRuleListArgs> customRules) {
+        public Builder customRules(@Nullable Output<CustomRuleListArgs> customRules) {
             this.customRules = customRules;
             return this;
         }
 
         public Builder customRules(@Nullable CustomRuleListArgs customRules) {
-            this.customRules = Input.ofNullable(customRules);
+            this.customRules = Output.ofNullable(customRules);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedRules(@Nullable Input<ManagedRuleSetListArgs> managedRules) {
+        public Builder managedRules(@Nullable Output<ManagedRuleSetListArgs> managedRules) {
             this.managedRules = managedRules;
             return this;
         }
 
         public Builder managedRules(@Nullable ManagedRuleSetListArgs managedRules) {
-            this.managedRules = Input.ofNullable(managedRules);
+            this.managedRules = Output.ofNullable(managedRules);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder policySettings(@Nullable Input<PolicySettingsArgs> policySettings) {
+        public Builder policySettings(@Nullable Output<PolicySettingsArgs> policySettings) {
             this.policySettings = policySettings;
             return this;
         }
 
         public Builder policySettings(@Nullable PolicySettingsArgs policySettings) {
-            this.policySettings = Input.ofNullable(policySettings);
+            this.policySettings = Output.ofNullable(policySettings);
             return this;
         }
 
-        public Builder rateLimitRules(@Nullable Input<RateLimitRuleListArgs> rateLimitRules) {
+        public Builder rateLimitRules(@Nullable Output<RateLimitRuleListArgs> rateLimitRules) {
             this.rateLimitRules = rateLimitRules;
             return this;
         }
 
         public Builder rateLimitRules(@Nullable RateLimitRuleListArgs rateLimitRules) {
-            this.rateLimitRules = Input.ofNullable(rateLimitRules);
+            this.rateLimitRules = Output.ofNullable(rateLimitRules);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PolicyArgs build() {

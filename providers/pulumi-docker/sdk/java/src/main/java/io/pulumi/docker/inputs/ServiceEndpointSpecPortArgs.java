@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,46 +16,46 @@ public final class ServiceEndpointSpecPortArgs extends io.pulumi.resources.Resou
     public static final ServiceEndpointSpecPortArgs Empty = new ServiceEndpointSpecPortArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     @InputImport(name="publishMode")
-      private final @Nullable Input<String> publishMode;
+      private final @Nullable Output<String> publishMode;
 
-    public Input<String> getPublishMode() {
-        return this.publishMode == null ? Input.empty() : this.publishMode;
+    public Output<String> getPublishMode() {
+        return this.publishMode == null ? Output.empty() : this.publishMode;
     }
 
     @InputImport(name="publishedPort")
-      private final @Nullable Input<Integer> publishedPort;
+      private final @Nullable Output<Integer> publishedPort;
 
-    public Input<Integer> getPublishedPort() {
-        return this.publishedPort == null ? Input.empty() : this.publishedPort;
+    public Output<Integer> getPublishedPort() {
+        return this.publishedPort == null ? Output.empty() : this.publishedPort;
     }
 
     @InputImport(name="targetPort", required=true)
-      private final Input<Integer> targetPort;
+      private final Output<Integer> targetPort;
 
-    public Input<Integer> getTargetPort() {
+    public Output<Integer> getTargetPort() {
         return this.targetPort;
     }
 
     public ServiceEndpointSpecPortArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> protocol,
-        @Nullable Input<String> publishMode,
-        @Nullable Input<Integer> publishedPort,
-        Input<Integer> targetPort) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> protocol,
+        @Nullable Output<String> publishMode,
+        @Nullable Output<Integer> publishedPort,
+        Output<Integer> targetPort) {
         this.name = name;
         this.protocol = protocol;
         this.publishMode = publishMode;
@@ -64,11 +64,11 @@ public final class ServiceEndpointSpecPortArgs extends io.pulumi.resources.Resou
     }
 
     private ServiceEndpointSpecPortArgs() {
-        this.name = Input.empty();
-        this.protocol = Input.empty();
-        this.publishMode = Input.empty();
-        this.publishedPort = Input.empty();
-        this.targetPort = Input.empty();
+        this.name = Output.empty();
+        this.protocol = Output.empty();
+        this.publishMode = Output.empty();
+        this.publishedPort = Output.empty();
+        this.targetPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class ServiceEndpointSpecPortArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<String> publishMode;
-        private @Nullable Input<Integer> publishedPort;
-        private Input<Integer> targetPort;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<String> publishMode;
+        private @Nullable Output<Integer> publishedPort;
+        private Output<Integer> targetPort;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class ServiceEndpointSpecPortArgs extends io.pulumi.resources.Resou
     	      this.targetPort = defaults.targetPort;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder publishMode(@Nullable Input<String> publishMode) {
+        public Builder publishMode(@Nullable Output<String> publishMode) {
             this.publishMode = publishMode;
             return this;
         }
 
         public Builder publishMode(@Nullable String publishMode) {
-            this.publishMode = Input.ofNullable(publishMode);
+            this.publishMode = Output.ofNullable(publishMode);
             return this;
         }
 
-        public Builder publishedPort(@Nullable Input<Integer> publishedPort) {
+        public Builder publishedPort(@Nullable Output<Integer> publishedPort) {
             this.publishedPort = publishedPort;
             return this;
         }
 
         public Builder publishedPort(@Nullable Integer publishedPort) {
-            this.publishedPort = Input.ofNullable(publishedPort);
+            this.publishedPort = Output.ofNullable(publishedPort);
             return this;
         }
 
-        public Builder targetPort(Input<Integer> targetPort) {
+        public Builder targetPort(Output<Integer> targetPort) {
             this.targetPort = Objects.requireNonNull(targetPort);
             return this;
         }
 
         public Builder targetPort(Integer targetPort) {
-            this.targetPort = Input.of(Objects.requireNonNull(targetPort));
+            this.targetPort = Output.of(Objects.requireNonNull(targetPort));
             return this;
         }
         public ServiceEndpointSpecPortArgs build() {

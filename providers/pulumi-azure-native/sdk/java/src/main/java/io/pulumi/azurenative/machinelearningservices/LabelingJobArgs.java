@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelingJobId")
-      private final @Nullable Input<String> labelingJobId;
+      private final @Nullable Output<String> labelingJobId;
 
-    public Input<String> getLabelingJobId() {
-        return this.labelingJobId == null ? Input.empty() : this.labelingJobId;
+    public Output<String> getLabelingJobId() {
+        return this.labelingJobId == null ? Output.empty() : this.labelingJobId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<LabelingJobPropertiesArgs> properties;
+      private final @Nullable Output<LabelingJobPropertiesArgs> properties;
 
-    public Input<LabelingJobPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<LabelingJobPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public LabelingJobArgs(
-        @Nullable Input<String> labelingJobId,
-        @Nullable Input<LabelingJobPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<String> labelingJobId,
+        @Nullable Output<LabelingJobPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.labelingJobId = labelingJobId;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabelingJobArgs() {
-        this.labelingJobId = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.labelingJobId = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> labelingJobId;
-        private @Nullable Input<LabelingJobPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> labelingJobId;
+        private @Nullable Output<LabelingJobPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder labelingJobId(@Nullable Input<String> labelingJobId) {
+        public Builder labelingJobId(@Nullable Output<String> labelingJobId) {
             this.labelingJobId = labelingJobId;
             return this;
         }
 
         public Builder labelingJobId(@Nullable String labelingJobId) {
-            this.labelingJobId = Input.ofNullable(labelingJobId);
+            this.labelingJobId = Output.ofNullable(labelingJobId);
             return this;
         }
 
-        public Builder properties(@Nullable Input<LabelingJobPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<LabelingJobPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable LabelingJobPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public LabelingJobArgs build() {

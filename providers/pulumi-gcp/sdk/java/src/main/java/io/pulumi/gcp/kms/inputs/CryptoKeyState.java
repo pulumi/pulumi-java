@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.CryptoKeyVersionTemplateGetArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destroyScheduledDuration")
-      private final @Nullable Input<String> destroyScheduledDuration;
+      private final @Nullable Output<String> destroyScheduledDuration;
 
-    public Input<String> getDestroyScheduledDuration() {
-        return this.destroyScheduledDuration == null ? Input.empty() : this.destroyScheduledDuration;
+    public Output<String> getDestroyScheduledDuration() {
+        return this.destroyScheduledDuration == null ? Output.empty() : this.destroyScheduledDuration;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importOnly")
-      private final @Nullable Input<Boolean> importOnly;
+      private final @Nullable Output<Boolean> importOnly;
 
-    public Input<Boolean> getImportOnly() {
-        return this.importOnly == null ? Input.empty() : this.importOnly;
+    public Output<Boolean> getImportOnly() {
+        return this.importOnly == null ? Output.empty() : this.importOnly;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyRing")
-      private final @Nullable Input<String> keyRing;
+      private final @Nullable Output<String> keyRing;
 
-    public Input<String> getKeyRing() {
-        return this.keyRing == null ? Input.empty() : this.keyRing;
+    public Output<String> getKeyRing() {
+        return this.keyRing == null ? Output.empty() : this.keyRing;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-      private final @Nullable Input<String> purpose;
+      private final @Nullable Output<String> purpose;
 
-    public Input<String> getPurpose() {
-        return this.purpose == null ? Input.empty() : this.purpose;
+    public Output<String> getPurpose() {
+        return this.purpose == null ? Output.empty() : this.purpose;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationPeriod")
-      private final @Nullable Input<String> rotationPeriod;
+      private final @Nullable Output<String> rotationPeriod;
 
-    public Input<String> getRotationPeriod() {
-        return this.rotationPeriod == null ? Input.empty() : this.rotationPeriod;
+    public Output<String> getRotationPeriod() {
+        return this.rotationPeriod == null ? Output.empty() : this.rotationPeriod;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipInitialVersionCreation")
-      private final @Nullable Input<Boolean> skipInitialVersionCreation;
+      private final @Nullable Output<Boolean> skipInitialVersionCreation;
 
-    public Input<Boolean> getSkipInitialVersionCreation() {
-        return this.skipInitialVersionCreation == null ? Input.empty() : this.skipInitialVersionCreation;
+    public Output<Boolean> getSkipInitialVersionCreation() {
+        return this.skipInitialVersionCreation == null ? Output.empty() : this.skipInitialVersionCreation;
     }
 
     /**
@@ -121,22 +121,22 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionTemplate")
-      private final @Nullable Input<CryptoKeyVersionTemplateGetArgs> versionTemplate;
+      private final @Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate;
 
-    public Input<CryptoKeyVersionTemplateGetArgs> getVersionTemplate() {
-        return this.versionTemplate == null ? Input.empty() : this.versionTemplate;
+    public Output<CryptoKeyVersionTemplateGetArgs> getVersionTemplate() {
+        return this.versionTemplate == null ? Output.empty() : this.versionTemplate;
     }
 
     public CryptoKeyState(
-        @Nullable Input<String> destroyScheduledDuration,
-        @Nullable Input<Boolean> importOnly,
-        @Nullable Input<String> keyRing,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> purpose,
-        @Nullable Input<String> rotationPeriod,
-        @Nullable Input<Boolean> skipInitialVersionCreation,
-        @Nullable Input<CryptoKeyVersionTemplateGetArgs> versionTemplate) {
+        @Nullable Output<String> destroyScheduledDuration,
+        @Nullable Output<Boolean> importOnly,
+        @Nullable Output<String> keyRing,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> purpose,
+        @Nullable Output<String> rotationPeriod,
+        @Nullable Output<Boolean> skipInitialVersionCreation,
+        @Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate) {
         this.destroyScheduledDuration = destroyScheduledDuration;
         this.importOnly = importOnly;
         this.keyRing = keyRing;
@@ -149,15 +149,15 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CryptoKeyState() {
-        this.destroyScheduledDuration = Input.empty();
-        this.importOnly = Input.empty();
-        this.keyRing = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.purpose = Input.empty();
-        this.rotationPeriod = Input.empty();
-        this.skipInitialVersionCreation = Input.empty();
-        this.versionTemplate = Input.empty();
+        this.destroyScheduledDuration = Output.empty();
+        this.importOnly = Output.empty();
+        this.keyRing = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.purpose = Output.empty();
+        this.rotationPeriod = Output.empty();
+        this.skipInitialVersionCreation = Output.empty();
+        this.versionTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -169,15 +169,15 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destroyScheduledDuration;
-        private @Nullable Input<Boolean> importOnly;
-        private @Nullable Input<String> keyRing;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> purpose;
-        private @Nullable Input<String> rotationPeriod;
-        private @Nullable Input<Boolean> skipInitialVersionCreation;
-        private @Nullable Input<CryptoKeyVersionTemplateGetArgs> versionTemplate;
+        private @Nullable Output<String> destroyScheduledDuration;
+        private @Nullable Output<Boolean> importOnly;
+        private @Nullable Output<String> keyRing;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> purpose;
+        private @Nullable Output<String> rotationPeriod;
+        private @Nullable Output<Boolean> skipInitialVersionCreation;
+        private @Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate;
 
         public Builder() {
     	      // Empty
@@ -196,93 +196,93 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.versionTemplate = defaults.versionTemplate;
         }
 
-        public Builder destroyScheduledDuration(@Nullable Input<String> destroyScheduledDuration) {
+        public Builder destroyScheduledDuration(@Nullable Output<String> destroyScheduledDuration) {
             this.destroyScheduledDuration = destroyScheduledDuration;
             return this;
         }
 
         public Builder destroyScheduledDuration(@Nullable String destroyScheduledDuration) {
-            this.destroyScheduledDuration = Input.ofNullable(destroyScheduledDuration);
+            this.destroyScheduledDuration = Output.ofNullable(destroyScheduledDuration);
             return this;
         }
 
-        public Builder importOnly(@Nullable Input<Boolean> importOnly) {
+        public Builder importOnly(@Nullable Output<Boolean> importOnly) {
             this.importOnly = importOnly;
             return this;
         }
 
         public Builder importOnly(@Nullable Boolean importOnly) {
-            this.importOnly = Input.ofNullable(importOnly);
+            this.importOnly = Output.ofNullable(importOnly);
             return this;
         }
 
-        public Builder keyRing(@Nullable Input<String> keyRing) {
+        public Builder keyRing(@Nullable Output<String> keyRing) {
             this.keyRing = keyRing;
             return this;
         }
 
         public Builder keyRing(@Nullable String keyRing) {
-            this.keyRing = Input.ofNullable(keyRing);
+            this.keyRing = Output.ofNullable(keyRing);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder purpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Input.ofNullable(purpose);
+            this.purpose = Output.ofNullable(purpose);
             return this;
         }
 
-        public Builder rotationPeriod(@Nullable Input<String> rotationPeriod) {
+        public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
 
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
-            this.rotationPeriod = Input.ofNullable(rotationPeriod);
+            this.rotationPeriod = Output.ofNullable(rotationPeriod);
             return this;
         }
 
-        public Builder skipInitialVersionCreation(@Nullable Input<Boolean> skipInitialVersionCreation) {
+        public Builder skipInitialVersionCreation(@Nullable Output<Boolean> skipInitialVersionCreation) {
             this.skipInitialVersionCreation = skipInitialVersionCreation;
             return this;
         }
 
         public Builder skipInitialVersionCreation(@Nullable Boolean skipInitialVersionCreation) {
-            this.skipInitialVersionCreation = Input.ofNullable(skipInitialVersionCreation);
+            this.skipInitialVersionCreation = Output.ofNullable(skipInitialVersionCreation);
             return this;
         }
 
-        public Builder versionTemplate(@Nullable Input<CryptoKeyVersionTemplateGetArgs> versionTemplate) {
+        public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate) {
             this.versionTemplate = versionTemplate;
             return this;
         }
 
         public Builder versionTemplate(@Nullable CryptoKeyVersionTemplateGetArgs versionTemplate) {
-            this.versionTemplate = Input.ofNullable(versionTemplate);
+            this.versionTemplate = Output.ofNullable(versionTemplate);
             return this;
         }
         public CryptoKeyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elb", required=true)
-      private final Input<String> elb;
+      private final Output<String> elb;
 
-    public Input<String> getElb() {
+    public Output<String> getElb() {
         return this.elb;
     }
 
@@ -29,22 +29,22 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
     public AttachmentArgs(
-        Input<String> elb,
-        Input<String> instance) {
+        Output<String> elb,
+        Output<String> instance) {
         this.elb = Objects.requireNonNull(elb, "expected parameter 'elb' to be non-null");
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
     }
 
     private AttachmentArgs() {
-        this.elb = Input.empty();
-        this.instance = Input.empty();
+        this.elb = Output.empty();
+        this.instance = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> elb;
-        private Input<String> instance;
+        private Output<String> elb;
+        private Output<String> instance;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.instance = defaults.instance;
         }
 
-        public Builder elb(Input<String> elb) {
+        public Builder elb(Output<String> elb) {
             this.elb = Objects.requireNonNull(elb);
             return this;
         }
 
         public Builder elb(String elb) {
-            this.elb = Input.of(Objects.requireNonNull(elb));
+            this.elb = Output.of(Objects.requireNonNull(elb));
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
         public AttachmentArgs build() {

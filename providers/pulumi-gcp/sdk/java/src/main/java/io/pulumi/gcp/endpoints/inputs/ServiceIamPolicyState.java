@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -31,32 +31,32 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     public ServiceIamPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> serviceName) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> serviceName) {
         this.etag = etag;
         this.policyData = policyData;
         this.serviceName = serviceName;
     }
 
     private ServiceIamPolicyState() {
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
-        this.serviceName = Input.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> serviceName;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
         public ServiceIamPolicyState build() {

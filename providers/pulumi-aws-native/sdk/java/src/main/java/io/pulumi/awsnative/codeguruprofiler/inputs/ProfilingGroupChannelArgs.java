@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codeguruprofiler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
     public static final ProfilingGroupChannelArgs Empty = new ProfilingGroupChannelArgs();
 
     @InputImport(name="channelId")
-      private final @Nullable Input<String> channelId;
+      private final @Nullable Output<String> channelId;
 
-    public Input<String> getChannelId() {
-        return this.channelId == null ? Input.empty() : this.channelId;
+    public Output<String> getChannelId() {
+        return this.channelId == null ? Output.empty() : this.channelId;
     }
 
     @InputImport(name="channelUri", required=true)
-      private final Input<String> channelUri;
+      private final Output<String> channelUri;
 
-    public Input<String> getChannelUri() {
+    public Output<String> getChannelUri() {
         return this.channelUri;
     }
 
     public ProfilingGroupChannelArgs(
-        @Nullable Input<String> channelId,
-        Input<String> channelUri) {
+        @Nullable Output<String> channelId,
+        Output<String> channelUri) {
         this.channelId = channelId;
         this.channelUri = Objects.requireNonNull(channelUri, "expected parameter 'channelUri' to be non-null");
     }
 
     private ProfilingGroupChannelArgs() {
-        this.channelId = Input.empty();
-        this.channelUri = Input.empty();
+        this.channelId = Output.empty();
+        this.channelUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> channelId;
-        private Input<String> channelUri;
+        private @Nullable Output<String> channelId;
+        private Output<String> channelUri;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
     	      this.channelUri = defaults.channelUri;
         }
 
-        public Builder channelId(@Nullable Input<String> channelId) {
+        public Builder channelId(@Nullable Output<String> channelId) {
             this.channelId = channelId;
             return this;
         }
 
         public Builder channelId(@Nullable String channelId) {
-            this.channelId = Input.ofNullable(channelId);
+            this.channelId = Output.ofNullable(channelId);
             return this;
         }
 
-        public Builder channelUri(Input<String> channelUri) {
+        public Builder channelUri(Output<String> channelUri) {
             this.channelUri = Objects.requireNonNull(channelUri);
             return this;
         }
 
         public Builder channelUri(String channelUri) {
-            this.channelUri = Input.of(Objects.requireNonNull(channelUri));
+            this.channelUri = Output.of(Objects.requireNonNull(channelUri));
             return this;
         }
         public ProfilingGroupChannelArgs build() {

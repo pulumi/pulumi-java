@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="outputConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
-    public Input<GooglePrivacyDlpV2OutputStorageConfigArgs> getOutputConfig() {
-        return this.outputConfig == null ? Input.empty() : this.outputConfig;
+    public Output<GooglePrivacyDlpV2OutputStorageConfigArgs> getOutputConfig() {
+        return this.outputConfig == null ? Output.empty() : this.outputConfig;
     }
 
-    public GooglePrivacyDlpV2SaveFindingsArgs(@Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
+    public GooglePrivacyDlpV2SaveFindingsArgs(@Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
         this.outputConfig = outputConfig;
     }
 
     private GooglePrivacyDlpV2SaveFindingsArgs() {
-        this.outputConfig = Input.empty();
+        this.outputConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
+        private @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder outputConfig(@Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
+        public Builder outputConfig(@Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
 
         public Builder outputConfig(@Nullable GooglePrivacyDlpV2OutputStorageConfigArgs outputConfig) {
-            this.outputConfig = Input.ofNullable(outputConfig);
+            this.outputConfig = Output.ofNullable(outputConfig);
             return this;
         }
         public GooglePrivacyDlpV2SaveFindingsArgs build() {

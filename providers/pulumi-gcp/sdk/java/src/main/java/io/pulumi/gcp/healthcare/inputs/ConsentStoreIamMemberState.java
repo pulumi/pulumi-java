@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     public static final ConsentStoreIamMemberState Empty = new ConsentStoreIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
 
-    public Input<ConsentStoreIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ConsentStoreIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="consentStoreId")
-      private final @Nullable Input<String> consentStoreId;
+      private final @Nullable Output<String> consentStoreId;
 
-    public Input<String> getConsentStoreId() {
-        return this.consentStoreId == null ? Input.empty() : this.consentStoreId;
+    public Output<String> getConsentStoreId() {
+        return this.consentStoreId == null ? Output.empty() : this.consentStoreId;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<String> dataset;
+      private final @Nullable Output<String> dataset;
 
-    public Input<String> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<String> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -71,19 +71,19 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public ConsentStoreIamMemberState(
-        @Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> consentStoreId,
-        @Nullable Input<String> dataset,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> member,
-        @Nullable Input<String> role) {
+        @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> consentStoreId,
+        @Nullable Output<String> dataset,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> member,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.consentStoreId = consentStoreId;
         this.dataset = dataset;
@@ -93,12 +93,12 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     }
 
     private ConsentStoreIamMemberState() {
-        this.condition = Input.empty();
-        this.consentStoreId = Input.empty();
-        this.dataset = Input.empty();
-        this.etag = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.consentStoreId = Output.empty();
+        this.dataset = Output.empty();
+        this.etag = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,12 +110,12 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> consentStoreId;
-        private @Nullable Input<String> dataset;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> role;
+        private @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> consentStoreId;
+        private @Nullable Output<String> dataset;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -131,63 +131,63 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ConsentStoreIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder consentStoreId(@Nullable Input<String> consentStoreId) {
+        public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
             this.consentStoreId = consentStoreId;
             return this;
         }
 
         public Builder consentStoreId(@Nullable String consentStoreId) {
-            this.consentStoreId = Input.ofNullable(consentStoreId);
+            this.consentStoreId = Output.ofNullable(consentStoreId);
             return this;
         }
 
-        public Builder dataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public ConsentStoreIamMemberState build() {

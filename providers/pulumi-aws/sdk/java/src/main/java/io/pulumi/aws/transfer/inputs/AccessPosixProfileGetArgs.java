@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.transfer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class AccessPosixProfileGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gid", required=true)
-      private final Input<Integer> gid;
+      private final Output<Integer> gid;
 
-    public Input<Integer> getGid() {
+    public Output<Integer> getGid() {
         return this.gid;
     }
 
@@ -31,10 +31,10 @@ public final class AccessPosixProfileGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secondaryGids")
-      private final @Nullable Input<List<Integer>> secondaryGids;
+      private final @Nullable Output<List<Integer>> secondaryGids;
 
-    public Input<List<Integer>> getSecondaryGids() {
-        return this.secondaryGids == null ? Input.empty() : this.secondaryGids;
+    public Output<List<Integer>> getSecondaryGids() {
+        return this.secondaryGids == null ? Output.empty() : this.secondaryGids;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AccessPosixProfileGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="uid", required=true)
-      private final Input<Integer> uid;
+      private final Output<Integer> uid;
 
-    public Input<Integer> getUid() {
+    public Output<Integer> getUid() {
         return this.uid;
     }
 
     public AccessPosixProfileGetArgs(
-        Input<Integer> gid,
-        @Nullable Input<List<Integer>> secondaryGids,
-        Input<Integer> uid) {
+        Output<Integer> gid,
+        @Nullable Output<List<Integer>> secondaryGids,
+        Output<Integer> uid) {
         this.gid = Objects.requireNonNull(gid, "expected parameter 'gid' to be non-null");
         this.secondaryGids = secondaryGids;
         this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
     }
 
     private AccessPosixProfileGetArgs() {
-        this.gid = Input.empty();
-        this.secondaryGids = Input.empty();
-        this.uid = Input.empty();
+        this.gid = Output.empty();
+        this.secondaryGids = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AccessPosixProfileGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Integer> gid;
-        private @Nullable Input<List<Integer>> secondaryGids;
-        private Input<Integer> uid;
+        private Output<Integer> gid;
+        private @Nullable Output<List<Integer>> secondaryGids;
+        private Output<Integer> uid;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AccessPosixProfileGetArgs extends io.pulumi.resources.Resourc
     	      this.uid = defaults.uid;
         }
 
-        public Builder gid(Input<Integer> gid) {
+        public Builder gid(Output<Integer> gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
         public Builder gid(Integer gid) {
-            this.gid = Input.of(Objects.requireNonNull(gid));
+            this.gid = Output.of(Objects.requireNonNull(gid));
             return this;
         }
 
-        public Builder secondaryGids(@Nullable Input<List<Integer>> secondaryGids) {
+        public Builder secondaryGids(@Nullable Output<List<Integer>> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
 
         public Builder secondaryGids(@Nullable List<Integer> secondaryGids) {
-            this.secondaryGids = Input.ofNullable(secondaryGids);
+            this.secondaryGids = Output.ofNullable(secondaryGids);
             return this;
         }
 
-        public Builder uid(Input<Integer> uid) {
+        public Builder uid(Output<Integer> uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
         public Builder uid(Integer uid) {
-            this.uid = Input.of(Objects.requireNonNull(uid));
+            this.uid = Output.of(Objects.requireNonNull(uid));
             return this;
         }
         public AccessPosixProfileGetArgs build() {

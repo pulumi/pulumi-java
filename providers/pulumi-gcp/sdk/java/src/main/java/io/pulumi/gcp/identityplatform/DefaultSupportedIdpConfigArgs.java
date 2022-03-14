@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -31,9 +31,9 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientSecret", required=true)
-      private final Input<String> clientSecret;
+      private final Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
+    public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
@@ -42,10 +42,10 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="idpId", required=true)
-      private final Input<String> idpId;
+      private final Output<String> idpId;
 
-    public Input<String> getIdpId() {
+    public Output<String> getIdpId() {
         return this.idpId;
     }
 
@@ -75,18 +75,18 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DefaultSupportedIdpConfigArgs(
-        Input<String> clientId,
-        Input<String> clientSecret,
-        @Nullable Input<Boolean> enabled,
-        Input<String> idpId,
-        @Nullable Input<String> project) {
+        Output<String> clientId,
+        Output<String> clientSecret,
+        @Nullable Output<Boolean> enabled,
+        Output<String> idpId,
+        @Nullable Output<String> project) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
         this.enabled = enabled;
@@ -95,11 +95,11 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     }
 
     private DefaultSupportedIdpConfigArgs() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.enabled = Input.empty();
-        this.idpId = Input.empty();
-        this.project = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.enabled = Output.empty();
+        this.idpId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,11 +111,11 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private Input<String> clientSecret;
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> idpId;
-        private @Nullable Input<String> project;
+        private Output<String> clientId;
+        private Output<String> clientSecret;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> idpId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -130,53 +130,53 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     	      this.project = defaults.project;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
+            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder idpId(Input<String> idpId) {
+        public Builder idpId(Output<String> idpId) {
             this.idpId = Objects.requireNonNull(idpId);
             return this;
         }
 
         public Builder idpId(String idpId) {
-            this.idpId = Input.of(Objects.requireNonNull(idpId));
+            this.idpId = Output.of(Objects.requireNonNull(idpId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DefaultSupportedIdpConfigArgs build() {

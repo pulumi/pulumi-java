@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logoutEndpoint")
-      private final @Nullable Input<String> logoutEndpoint;
+      private final @Nullable Output<String> logoutEndpoint;
 
-    public Input<String> getLogoutEndpoint() {
-        return this.logoutEndpoint == null ? Input.empty() : this.logoutEndpoint;
+    public Output<String> getLogoutEndpoint() {
+        return this.logoutEndpoint == null ? Output.empty() : this.logoutEndpoint;
     }
 
-    public LoginRoutesArgs(@Nullable Input<String> logoutEndpoint) {
+    public LoginRoutesArgs(@Nullable Output<String> logoutEndpoint) {
         this.logoutEndpoint = logoutEndpoint;
     }
 
     private LoginRoutesArgs() {
-        this.logoutEndpoint = Input.empty();
+        this.logoutEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logoutEndpoint;
+        private @Nullable Output<String> logoutEndpoint;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logoutEndpoint = defaults.logoutEndpoint;
         }
 
-        public Builder logoutEndpoint(@Nullable Input<String> logoutEndpoint) {
+        public Builder logoutEndpoint(@Nullable Output<String> logoutEndpoint) {
             this.logoutEndpoint = logoutEndpoint;
             return this;
         }
 
         public Builder logoutEndpoint(@Nullable String logoutEndpoint) {
-            this.logoutEndpoint = Input.ofNullable(logoutEndpoint);
+            this.logoutEndpoint = Output.ofNullable(logoutEndpoint);
             return this;
         }
         public LoginRoutesArgs build() {

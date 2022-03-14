@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup;
 
 import io.pulumi.awsnative.backup.inputs.BackupPlanResourceTypeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupPlanArgs Empty = new BackupPlanArgs();
 
     @InputImport(name="backupPlan", required=true)
-      private final Input<BackupPlanResourceTypeArgs> backupPlan;
+      private final Output<BackupPlanResourceTypeArgs> backupPlan;
 
-    public Input<BackupPlanResourceTypeArgs> getBackupPlan() {
+    public Output<BackupPlanResourceTypeArgs> getBackupPlan() {
         return this.backupPlan;
     }
 
     @InputImport(name="backupPlanTags")
-      private final @Nullable Input<Object> backupPlanTags;
+      private final @Nullable Output<Object> backupPlanTags;
 
-    public Input<Object> getBackupPlanTags() {
-        return this.backupPlanTags == null ? Input.empty() : this.backupPlanTags;
+    public Output<Object> getBackupPlanTags() {
+        return this.backupPlanTags == null ? Output.empty() : this.backupPlanTags;
     }
 
     public BackupPlanArgs(
-        Input<BackupPlanResourceTypeArgs> backupPlan,
-        @Nullable Input<Object> backupPlanTags) {
+        Output<BackupPlanResourceTypeArgs> backupPlan,
+        @Nullable Output<Object> backupPlanTags) {
         this.backupPlan = Objects.requireNonNull(backupPlan, "expected parameter 'backupPlan' to be non-null");
         this.backupPlanTags = backupPlanTags;
     }
 
     private BackupPlanArgs() {
-        this.backupPlan = Input.empty();
-        this.backupPlanTags = Input.empty();
+        this.backupPlan = Output.empty();
+        this.backupPlanTags = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<BackupPlanResourceTypeArgs> backupPlan;
-        private @Nullable Input<Object> backupPlanTags;
+        private Output<BackupPlanResourceTypeArgs> backupPlan;
+        private @Nullable Output<Object> backupPlanTags;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.backupPlanTags = defaults.backupPlanTags;
         }
 
-        public Builder backupPlan(Input<BackupPlanResourceTypeArgs> backupPlan) {
+        public Builder backupPlan(Output<BackupPlanResourceTypeArgs> backupPlan) {
             this.backupPlan = Objects.requireNonNull(backupPlan);
             return this;
         }
 
         public Builder backupPlan(BackupPlanResourceTypeArgs backupPlan) {
-            this.backupPlan = Input.of(Objects.requireNonNull(backupPlan));
+            this.backupPlan = Output.of(Objects.requireNonNull(backupPlan));
             return this;
         }
 
-        public Builder backupPlanTags(@Nullable Input<Object> backupPlanTags) {
+        public Builder backupPlanTags(@Nullable Output<Object> backupPlanTags) {
             this.backupPlanTags = backupPlanTags;
             return this;
         }
 
         public Builder backupPlanTags(@Nullable Object backupPlanTags) {
-            this.backupPlanTags = Input.ofNullable(backupPlanTags);
+            this.backupPlanTags = Output.ofNullable(backupPlanTags);
             return this;
         }
         public BackupPlanArgs build() {

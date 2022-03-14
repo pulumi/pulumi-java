@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsSearchDomain")
-      private final @Nullable Input<String> dnsSearchDomain;
+      private final @Nullable Output<String> dnsSearchDomain;
 
-    public Input<String> getDnsSearchDomain() {
-        return this.dnsSearchDomain == null ? Input.empty() : this.dnsSearchDomain;
+    public Output<String> getDnsSearchDomain() {
+        return this.dnsSearchDomain == null ? Output.empty() : this.dnsSearchDomain;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mtu")
-      private final @Nullable Input<Integer> mtu;
+      private final @Nullable Output<Integer> mtu;
 
-    public Input<Integer> getMtu() {
-        return this.mtu == null ? Input.empty() : this.mtu;
+    public Output<Integer> getMtu() {
+        return this.mtu == null ? Output.empty() : this.mtu;
     }
 
     /**
@@ -58,28 +58,28 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ntpServer")
-      private final @Nullable Input<String> ntpServer;
+      private final @Nullable Output<String> ntpServer;
 
-    public Input<String> getNtpServer() {
-        return this.ntpServer == null ? Input.empty() : this.ntpServer;
+    public Output<String> getNtpServer() {
+        return this.ntpServer == null ? Output.empty() : this.ntpServer;
     }
 
     public CacheNetworkSettingsArgs(
-        @Nullable Input<String> dnsSearchDomain,
-        @Nullable Input<List<String>> dnsServers,
-        @Nullable Input<Integer> mtu,
-        @Nullable Input<String> ntpServer) {
+        @Nullable Output<String> dnsSearchDomain,
+        @Nullable Output<List<String>> dnsServers,
+        @Nullable Output<Integer> mtu,
+        @Nullable Output<String> ntpServer) {
         this.dnsSearchDomain = dnsSearchDomain;
         this.dnsServers = dnsServers;
-        this.mtu = mtu == null ? Input.ofNullable(1500) : mtu;
-        this.ntpServer = ntpServer == null ? Input.ofNullable("time.windows.com") : ntpServer;
+        this.mtu = mtu == null ? Output.ofNullable(1500) : mtu;
+        this.ntpServer = ntpServer == null ? Output.ofNullable("time.windows.com") : ntpServer;
     }
 
     private CacheNetworkSettingsArgs() {
-        this.dnsSearchDomain = Input.empty();
-        this.dnsServers = Input.empty();
-        this.mtu = Input.empty();
-        this.ntpServer = Input.empty();
+        this.dnsSearchDomain = Output.empty();
+        this.dnsServers = Output.empty();
+        this.mtu = Output.empty();
+        this.ntpServer = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dnsSearchDomain;
-        private @Nullable Input<List<String>> dnsServers;
-        private @Nullable Input<Integer> mtu;
-        private @Nullable Input<String> ntpServer;
+        private @Nullable Output<String> dnsSearchDomain;
+        private @Nullable Output<List<String>> dnsServers;
+        private @Nullable Output<Integer> mtu;
+        private @Nullable Output<String> ntpServer;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
     	      this.ntpServer = defaults.ntpServer;
         }
 
-        public Builder dnsSearchDomain(@Nullable Input<String> dnsSearchDomain) {
+        public Builder dnsSearchDomain(@Nullable Output<String> dnsSearchDomain) {
             this.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
 
         public Builder dnsSearchDomain(@Nullable String dnsSearchDomain) {
-            this.dnsSearchDomain = Input.ofNullable(dnsSearchDomain);
+            this.dnsSearchDomain = Output.ofNullable(dnsSearchDomain);
             return this;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder mtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Input.ofNullable(mtu);
+            this.mtu = Output.ofNullable(mtu);
             return this;
         }
 
-        public Builder ntpServer(@Nullable Input<String> ntpServer) {
+        public Builder ntpServer(@Nullable Output<String> ntpServer) {
             this.ntpServer = ntpServer;
             return this;
         }
 
         public Builder ntpServer(@Nullable String ntpServer) {
-            this.ntpServer = Input.ofNullable(ntpServer);
+            this.ntpServer = Output.ofNullable(ntpServer);
             return this;
         }
         public CacheNetworkSettingsArgs build() {

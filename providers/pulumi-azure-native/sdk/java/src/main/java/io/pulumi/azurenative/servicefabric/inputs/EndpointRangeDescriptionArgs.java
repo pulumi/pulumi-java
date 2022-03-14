@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="endPort", required=true)
-      private final Input<Integer> endPort;
+      private final Output<Integer> endPort;
 
-    public Input<Integer> getEndPort() {
+    public Output<Integer> getEndPort() {
         return this.endPort;
     }
 
@@ -33,22 +33,22 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="startPort", required=true)
-      private final Input<Integer> startPort;
+      private final Output<Integer> startPort;
 
-    public Input<Integer> getStartPort() {
+    public Output<Integer> getStartPort() {
         return this.startPort;
     }
 
     public EndpointRangeDescriptionArgs(
-        Input<Integer> endPort,
-        Input<Integer> startPort) {
+        Output<Integer> endPort,
+        Output<Integer> startPort) {
         this.endPort = Objects.requireNonNull(endPort, "expected parameter 'endPort' to be non-null");
         this.startPort = Objects.requireNonNull(startPort, "expected parameter 'startPort' to be non-null");
     }
 
     private EndpointRangeDescriptionArgs() {
-        this.endPort = Input.empty();
-        this.startPort = Input.empty();
+        this.endPort = Output.empty();
+        this.startPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<Integer> endPort;
-        private Input<Integer> startPort;
+        private Output<Integer> endPort;
+        private Output<Integer> startPort;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
     	      this.startPort = defaults.startPort;
         }
 
-        public Builder endPort(Input<Integer> endPort) {
+        public Builder endPort(Output<Integer> endPort) {
             this.endPort = Objects.requireNonNull(endPort);
             return this;
         }
 
         public Builder endPort(Integer endPort) {
-            this.endPort = Input.of(Objects.requireNonNull(endPort));
+            this.endPort = Output.of(Objects.requireNonNull(endPort));
             return this;
         }
 
-        public Builder startPort(Input<Integer> startPort) {
+        public Builder startPort(Output<Integer> startPort) {
             this.startPort = Objects.requireNonNull(startPort);
             return this;
         }
 
         public Builder startPort(Integer startPort) {
-            this.startPort = Input.of(Objects.requireNonNull(startPort));
+            this.startPort = Output.of(Objects.requireNonNull(startPort));
             return this;
         }
         public EndpointRangeDescriptionArgs build() {

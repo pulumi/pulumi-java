@@ -1,12 +1,10 @@
 package io.pulumi.serialization.internal;
 
 import com.google.gson.JsonParser;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.InputOutputData;
-import org.junit.jupiter.api.*;
-
 import io.pulumi.deployment.MocksTest;
+import org.junit.jupiter.api.*;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -28,8 +26,8 @@ class ReSerializerTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
-            .setMockGlobalInstance();
+                .setMocks(new MocksTest.MyMocks())
+                .setMockGlobalInstance();
     }
 
     @AfterAll
@@ -103,10 +101,10 @@ class ReSerializerTest {
     }
 
     @TestFactory
-    Stream<DynamicTest> testSerializeDeserializeInputOutput() {
+    Stream<DynamicTest> testSerializeDeserializeOutput() {
         return Stream.of(
-                dynamicTest("simple input", () ->
-                        assertThat(reSerialize(Input.of("test"))).isEqualTo("test")
+                dynamicTest("simple output", () ->
+                        assertThat(reSerialize(Output.of("test"))).isEqualTo("test")
                 ),
                 dynamicTest("secret output", () ->
                         assertThat(reSerialize(Output.ofSecret("password"))).isEqualTo("password")

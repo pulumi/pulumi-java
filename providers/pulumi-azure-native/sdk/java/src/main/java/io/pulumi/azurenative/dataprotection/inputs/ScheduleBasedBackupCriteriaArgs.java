@@ -9,7 +9,7 @@ import io.pulumi.azurenative.dataprotection.enums.Month;
 import io.pulumi.azurenative.dataprotection.enums.WeekNumber;
 import io.pulumi.azurenative.dataprotection.inputs.DayArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -31,10 +31,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="absoluteCriteria")
-      private final @Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
+      private final @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
 
-    public Input<List<Either<String,AbsoluteMarker>>> getAbsoluteCriteria() {
-        return this.absoluteCriteria == null ? Input.empty() : this.absoluteCriteria;
+    public Output<List<Either<String,AbsoluteMarker>>> getAbsoluteCriteria() {
+        return this.absoluteCriteria == null ? Output.empty() : this.absoluteCriteria;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="daysOfMonth")
-      private final @Nullable Input<List<DayArgs>> daysOfMonth;
+      private final @Nullable Output<List<DayArgs>> daysOfMonth;
 
-    public Input<List<DayArgs>> getDaysOfMonth() {
-        return this.daysOfMonth == null ? Input.empty() : this.daysOfMonth;
+    public Output<List<DayArgs>> getDaysOfMonth() {
+        return this.daysOfMonth == null ? Output.empty() : this.daysOfMonth;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="daysOfTheWeek")
-      private final @Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek;
+      private final @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
 
-    public Input<List<Either<String,DayOfWeek>>> getDaysOfTheWeek() {
-        return this.daysOfTheWeek == null ? Input.empty() : this.daysOfTheWeek;
+    public Output<List<Either<String,DayOfWeek>>> getDaysOfTheWeek() {
+        return this.daysOfTheWeek == null ? Output.empty() : this.daysOfTheWeek;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="monthsOfYear")
-      private final @Nullable Input<List<Either<String,Month>>> monthsOfYear;
+      private final @Nullable Output<List<Either<String,Month>>> monthsOfYear;
 
-    public Input<List<Either<String,Month>>> getMonthsOfYear() {
-        return this.monthsOfYear == null ? Input.empty() : this.monthsOfYear;
+    public Output<List<Either<String,Month>>> getMonthsOfYear() {
+        return this.monthsOfYear == null ? Output.empty() : this.monthsOfYear;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
@@ -87,10 +87,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scheduleTimes")
-      private final @Nullable Input<List<String>> scheduleTimes;
+      private final @Nullable Output<List<String>> scheduleTimes;
 
-    public Input<List<String>> getScheduleTimes() {
-        return this.scheduleTimes == null ? Input.empty() : this.scheduleTimes;
+    public Output<List<String>> getScheduleTimes() {
+        return this.scheduleTimes == null ? Output.empty() : this.scheduleTimes;
     }
 
     /**
@@ -98,20 +98,20 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="weeksOfTheMonth")
-      private final @Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth;
+      private final @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
 
-    public Input<List<Either<String,WeekNumber>>> getWeeksOfTheMonth() {
-        return this.weeksOfTheMonth == null ? Input.empty() : this.weeksOfTheMonth;
+    public Output<List<Either<String,WeekNumber>>> getWeeksOfTheMonth() {
+        return this.weeksOfTheMonth == null ? Output.empty() : this.weeksOfTheMonth;
     }
 
     public ScheduleBasedBackupCriteriaArgs(
-        @Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria,
-        @Nullable Input<List<DayArgs>> daysOfMonth,
-        @Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek,
-        @Nullable Input<List<Either<String,Month>>> monthsOfYear,
-        Input<String> objectType,
-        @Nullable Input<List<String>> scheduleTimes,
-        @Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
+        @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria,
+        @Nullable Output<List<DayArgs>> daysOfMonth,
+        @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek,
+        @Nullable Output<List<Either<String,Month>>> monthsOfYear,
+        Output<String> objectType,
+        @Nullable Output<List<String>> scheduleTimes,
+        @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
         this.absoluteCriteria = absoluteCriteria;
         this.daysOfMonth = daysOfMonth;
         this.daysOfTheWeek = daysOfTheWeek;
@@ -122,13 +122,13 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
     }
 
     private ScheduleBasedBackupCriteriaArgs() {
-        this.absoluteCriteria = Input.empty();
-        this.daysOfMonth = Input.empty();
-        this.daysOfTheWeek = Input.empty();
-        this.monthsOfYear = Input.empty();
-        this.objectType = Input.empty();
-        this.scheduleTimes = Input.empty();
-        this.weeksOfTheMonth = Input.empty();
+        this.absoluteCriteria = Output.empty();
+        this.daysOfMonth = Output.empty();
+        this.daysOfTheWeek = Output.empty();
+        this.monthsOfYear = Output.empty();
+        this.objectType = Output.empty();
+        this.scheduleTimes = Output.empty();
+        this.weeksOfTheMonth = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,13 +140,13 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
-        private @Nullable Input<List<DayArgs>> daysOfMonth;
-        private @Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek;
-        private @Nullable Input<List<Either<String,Month>>> monthsOfYear;
-        private Input<String> objectType;
-        private @Nullable Input<List<String>> scheduleTimes;
-        private @Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth;
+        private @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
+        private @Nullable Output<List<DayArgs>> daysOfMonth;
+        private @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
+        private @Nullable Output<List<Either<String,Month>>> monthsOfYear;
+        private Output<String> objectType;
+        private @Nullable Output<List<String>> scheduleTimes;
+        private @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
 
         public Builder() {
     	      // Empty
@@ -163,73 +163,73 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
     	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
         }
 
-        public Builder absoluteCriteria(@Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria) {
+        public Builder absoluteCriteria(@Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria) {
             this.absoluteCriteria = absoluteCriteria;
             return this;
         }
 
         public Builder absoluteCriteria(@Nullable List<Either<String,AbsoluteMarker>> absoluteCriteria) {
-            this.absoluteCriteria = Input.ofNullable(absoluteCriteria);
+            this.absoluteCriteria = Output.ofNullable(absoluteCriteria);
             return this;
         }
 
-        public Builder daysOfMonth(@Nullable Input<List<DayArgs>> daysOfMonth) {
+        public Builder daysOfMonth(@Nullable Output<List<DayArgs>> daysOfMonth) {
             this.daysOfMonth = daysOfMonth;
             return this;
         }
 
         public Builder daysOfMonth(@Nullable List<DayArgs> daysOfMonth) {
-            this.daysOfMonth = Input.ofNullable(daysOfMonth);
+            this.daysOfMonth = Output.ofNullable(daysOfMonth);
             return this;
         }
 
-        public Builder daysOfTheWeek(@Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek) {
+        public Builder daysOfTheWeek(@Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
         public Builder daysOfTheWeek(@Nullable List<Either<String,DayOfWeek>> daysOfTheWeek) {
-            this.daysOfTheWeek = Input.ofNullable(daysOfTheWeek);
+            this.daysOfTheWeek = Output.ofNullable(daysOfTheWeek);
             return this;
         }
 
-        public Builder monthsOfYear(@Nullable Input<List<Either<String,Month>>> monthsOfYear) {
+        public Builder monthsOfYear(@Nullable Output<List<Either<String,Month>>> monthsOfYear) {
             this.monthsOfYear = monthsOfYear;
             return this;
         }
 
         public Builder monthsOfYear(@Nullable List<Either<String,Month>> monthsOfYear) {
-            this.monthsOfYear = Input.ofNullable(monthsOfYear);
+            this.monthsOfYear = Output.ofNullable(monthsOfYear);
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder scheduleTimes(@Nullable Input<List<String>> scheduleTimes) {
+        public Builder scheduleTimes(@Nullable Output<List<String>> scheduleTimes) {
             this.scheduleTimes = scheduleTimes;
             return this;
         }
 
         public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
-            this.scheduleTimes = Input.ofNullable(scheduleTimes);
+            this.scheduleTimes = Output.ofNullable(scheduleTimes);
             return this;
         }
 
-        public Builder weeksOfTheMonth(@Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
+        public Builder weeksOfTheMonth(@Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
 
         public Builder weeksOfTheMonth(@Nullable List<Either<String,WeekNumber>> weeksOfTheMonth) {
-            this.weeksOfTheMonth = Input.ofNullable(weeksOfTheMonth);
+            this.weeksOfTheMonth = Output.ofNullable(weeksOfTheMonth);
             return this;
         }
         public ScheduleBasedBackupCriteriaArgs build() {

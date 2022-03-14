@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncGitArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
      * 
      */
     @InputImport(name="git")
-      private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
+      private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
 
-    public Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> getGit() {
-        return this.git == null ? Input.empty() : this.git;
+    public Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> getGit() {
+        return this.git == null ? Output.empty() : this.git;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
      * 
      */
     @InputImport(name="sourceFormat")
-      private final @Nullable Input<String> sourceFormat;
+      private final @Nullable Output<String> sourceFormat;
 
-    public Input<String> getSourceFormat() {
-        return this.sourceFormat == null ? Input.empty() : this.sourceFormat;
+    public Output<String> getSourceFormat() {
+        return this.sourceFormat == null ? Output.empty() : this.sourceFormat;
     }
 
     public FeatureMembershipConfigmanagementConfigSyncArgs(
-        @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git,
-        @Nullable Input<String> sourceFormat) {
+        @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git,
+        @Nullable Output<String> sourceFormat) {
         this.git = git;
         this.sourceFormat = sourceFormat;
     }
 
     private FeatureMembershipConfigmanagementConfigSyncArgs() {
-        this.git = Input.empty();
-        this.sourceFormat = Input.empty();
+        this.git = Output.empty();
+        this.sourceFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
-        private @Nullable Input<String> sourceFormat;
+        private @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
+        private @Nullable Output<String> sourceFormat;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     	      this.sourceFormat = defaults.sourceFormat;
         }
 
-        public Builder git(@Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git) {
+        public Builder git(@Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git) {
             this.git = git;
             return this;
         }
 
         public Builder git(@Nullable FeatureMembershipConfigmanagementConfigSyncGitArgs git) {
-            this.git = Input.ofNullable(git);
+            this.git = Output.ofNullable(git);
             return this;
         }
 
-        public Builder sourceFormat(@Nullable Input<String> sourceFormat) {
+        public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
 
         public Builder sourceFormat(@Nullable String sourceFormat) {
-            this.sourceFormat = Input.ofNullable(sourceFormat);
+            this.sourceFormat = Output.ofNullable(sourceFormat);
             return this;
         }
         public FeatureMembershipConfigmanagementConfigSyncArgs build() {

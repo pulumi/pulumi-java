@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterClientAuthenticationType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
     public static final ConnectorKafkaClusterClientAuthenticationArgs Empty = new ConnectorKafkaClusterClientAuthenticationArgs();
 
     @InputImport(name="authenticationType", required=true)
-      private final Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
+      private final Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
 
-    public Input<ConnectorKafkaClusterClientAuthenticationType> getAuthenticationType() {
+    public Output<ConnectorKafkaClusterClientAuthenticationType> getAuthenticationType() {
         return this.authenticationType;
     }
 
-    public ConnectorKafkaClusterClientAuthenticationArgs(Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
+    public ConnectorKafkaClusterClientAuthenticationArgs(Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
     }
 
     private ConnectorKafkaClusterClientAuthenticationArgs() {
-        this.authenticationType = Input.empty();
+        this.authenticationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
+        private Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
     	      this.authenticationType = defaults.authenticationType;
         }
 
-        public Builder authenticationType(Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
+        public Builder authenticationType(Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(ConnectorKafkaClusterClientAuthenticationType authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
         public ConnectorKafkaClusterClientAuthenticationArgs build() {

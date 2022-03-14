@@ -7,7 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.DefaultAction;
 import io.pulumi.azurenative.eventhub.inputs.NWRuleSetIpRulesArgs;
 import io.pulumi.azurenative.eventhub.inputs.NWRuleSetVirtualNetworkRulesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultAction")
-      private final @Nullable Input<Either<String,DefaultAction>> defaultAction;
+      private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
-    public Input<Either<String,DefaultAction>> getDefaultAction() {
-        return this.defaultAction == null ? Input.empty() : this.defaultAction;
+    public Output<Either<String,DefaultAction>> getDefaultAction() {
+        return this.defaultAction == null ? Output.empty() : this.defaultAction;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ipRules")
-      private final @Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules;
+      private final @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
 
-    public Input<List<NWRuleSetIpRulesArgs>> getIpRules() {
-        return this.ipRules == null ? Input.empty() : this.ipRules;
+    public Output<List<NWRuleSetIpRulesArgs>> getIpRules() {
+        return this.ipRules == null ? Output.empty() : this.ipRules;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -57,9 +57,9 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,18 +68,18 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualNetworkRules")
-      private final @Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
+      private final @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
-    public Input<List<NWRuleSetVirtualNetworkRulesArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
+    public Output<List<NWRuleSetVirtualNetworkRulesArgs>> getVirtualNetworkRules() {
+        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
     }
 
     public NamespaceNetworkRuleSetArgs(
-        @Nullable Input<Either<String,DefaultAction>> defaultAction,
-        @Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
+        @Nullable Output<Either<String,DefaultAction>> defaultAction,
+        @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
@@ -88,11 +88,11 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     }
 
     private NamespaceNetworkRuleSetArgs() {
-        this.defaultAction = Input.empty();
-        this.ipRules = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.virtualNetworkRules = Input.empty();
+        this.defaultAction = Output.empty();
+        this.ipRules = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.virtualNetworkRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DefaultAction>> defaultAction;
-        private @Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
+        private @Nullable Output<Either<String,DefaultAction>> defaultAction;
+        private @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder defaultAction(@Nullable Input<Either<String,DefaultAction>> defaultAction) {
+        public Builder defaultAction(@Nullable Output<Either<String,DefaultAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
         public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
-            this.defaultAction = Input.ofNullable(defaultAction);
+            this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
 
-        public Builder ipRules(@Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules) {
+        public Builder ipRules(@Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
         public Builder ipRules(@Nullable List<NWRuleSetIpRulesArgs> ipRules) {
-            this.ipRules = Input.ofNullable(ipRules);
+            this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder virtualNetworkRules(@Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
         public Builder virtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
         public NamespaceNetworkRuleSetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.NetworkPolicyProvider;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider")
-      private final @Nullable Input<NetworkPolicyProvider> provider;
+      private final @Nullable Output<NetworkPolicyProvider> provider;
 
-    public Input<NetworkPolicyProvider> getProvider() {
-        return this.provider == null ? Input.empty() : this.provider;
+    public Output<NetworkPolicyProvider> getProvider() {
+        return this.provider == null ? Output.empty() : this.provider;
     }
 
     public NetworkPolicyArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<NetworkPolicyProvider> provider) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<NetworkPolicyProvider> provider) {
         this.enabled = enabled;
         this.provider = provider;
     }
 
     private NetworkPolicyArgs() {
-        this.enabled = Input.empty();
-        this.provider = Input.empty();
+        this.enabled = Output.empty();
+        this.provider = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<NetworkPolicyProvider> provider;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<NetworkPolicyProvider> provider;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.provider = defaults.provider;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder provider(@Nullable Input<NetworkPolicyProvider> provider) {
+        public Builder provider(@Nullable Output<NetworkPolicyProvider> provider) {
             this.provider = provider;
             return this;
         }
 
         public Builder provider(@Nullable NetworkPolicyProvider provider) {
-            this.provider = Input.ofNullable(provider);
+            this.provider = Output.ofNullable(provider);
             return this;
         }
         public NetworkPolicyArgs build() {

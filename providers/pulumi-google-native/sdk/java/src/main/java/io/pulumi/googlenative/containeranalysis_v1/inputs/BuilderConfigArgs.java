@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class BuilderConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final BuilderConfigArgs Empty = new BuilderConfigArgs();
 
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
-    public BuilderConfigArgs(@Nullable Input<String> id) {
+    public BuilderConfigArgs(@Nullable Output<String> id) {
         this.id = id;
     }
 
     private BuilderConfigArgs() {
-        this.id = Input.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class BuilderConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
+        private @Nullable Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class BuilderConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.id = defaults.id;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
         public BuilderConfigArgs build() {

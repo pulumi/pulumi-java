@@ -11,7 +11,6 @@ import io.pulumi.aws.appsync.outputs.DataSourceElasticsearchConfig;
 import io.pulumi.aws.appsync.outputs.DataSourceHttpConfig;
 import io.pulumi.aws.appsync.outputs.DataSourceLambdaConfig;
 import io.pulumi.aws.appsync.outputs.DataSourceRelationalDatabaseConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -227,14 +226,14 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataSource(String name, DataSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/dataSource:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appsync/dataSource:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DataSource(String name, Input<String> id, @Nullable DataSourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DataSource(String name, Output<String> id, @Nullable DataSourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appsync/dataSource:DataSource", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -250,7 +249,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataSource get(String name, Input<String> id, @Nullable DataSourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DataSource get(String name, Output<String> id, @Nullable DataSourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataSource(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pythonVersion")
-      private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Output<String> pythonVersion;
 
-    public Input<String> getPythonVersion() {
-        return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
+    public Output<String> getPythonVersion() {
+        return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptLocation", required=true)
-      private final Input<String> scriptLocation;
+      private final Output<String> scriptLocation;
 
-    public Input<String> getScriptLocation() {
+    public Output<String> getScriptLocation() {
         return this.scriptLocation;
     }
 
     public JobCommandArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> pythonVersion,
-        Input<String> scriptLocation) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> pythonVersion,
+        Output<String> scriptLocation) {
         this.name = name;
         this.pythonVersion = pythonVersion;
         this.scriptLocation = Objects.requireNonNull(scriptLocation, "expected parameter 'scriptLocation' to be non-null");
     }
 
     private JobCommandArgs() {
-        this.name = Input.empty();
-        this.pythonVersion = Input.empty();
-        this.scriptLocation = Input.empty();
+        this.name = Output.empty();
+        this.pythonVersion = Output.empty();
+        this.scriptLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> pythonVersion;
-        private Input<String> scriptLocation;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> pythonVersion;
+        private Output<String> scriptLocation;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scriptLocation = defaults.scriptLocation;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pythonVersion(@Nullable Input<String> pythonVersion) {
+        public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
         public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Input.ofNullable(pythonVersion);
+            this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
 
-        public Builder scriptLocation(Input<String> scriptLocation) {
+        public Builder scriptLocation(Output<String> scriptLocation) {
             this.scriptLocation = Objects.requireNonNull(scriptLocation);
             return this;
         }
 
         public Builder scriptLocation(String scriptLocation) {
-            this.scriptLocation = Input.of(Objects.requireNonNull(scriptLocation));
+            this.scriptLocation = Output.of(Objects.requireNonNull(scriptLocation));
             return this;
         }
         public JobCommandArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="overrideDynamicGroup")
-      private final @Nullable Input<Boolean> overrideDynamicGroup;
+      private final @Nullable Output<Boolean> overrideDynamicGroup;
 
-    public Input<Boolean> getOverrideDynamicGroup() {
-        return this.overrideDynamicGroup == null ? Input.empty() : this.overrideDynamicGroup;
+    public Output<Boolean> getOverrideDynamicGroup() {
+        return this.overrideDynamicGroup == null ? Output.empty() : this.overrideDynamicGroup;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="thingGroupName")
-      private final @Nullable Input<String> thingGroupName;
+      private final @Nullable Output<String> thingGroupName;
 
-    public Input<String> getThingGroupName() {
-        return this.thingGroupName == null ? Input.empty() : this.thingGroupName;
+    public Output<String> getThingGroupName() {
+        return this.thingGroupName == null ? Output.empty() : this.thingGroupName;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="thingName")
-      private final @Nullable Input<String> thingName;
+      private final @Nullable Output<String> thingName;
 
-    public Input<String> getThingName() {
-        return this.thingName == null ? Input.empty() : this.thingName;
+    public Output<String> getThingName() {
+        return this.thingName == null ? Output.empty() : this.thingName;
     }
 
     public ThingGroupMembershipState(
-        @Nullable Input<Boolean> overrideDynamicGroup,
-        @Nullable Input<String> thingGroupName,
-        @Nullable Input<String> thingName) {
+        @Nullable Output<Boolean> overrideDynamicGroup,
+        @Nullable Output<String> thingGroupName,
+        @Nullable Output<String> thingName) {
         this.overrideDynamicGroup = overrideDynamicGroup;
         this.thingGroupName = thingGroupName;
         this.thingName = thingName;
     }
 
     private ThingGroupMembershipState() {
-        this.overrideDynamicGroup = Input.empty();
-        this.thingGroupName = Input.empty();
-        this.thingName = Input.empty();
+        this.overrideDynamicGroup = Output.empty();
+        this.thingGroupName = Output.empty();
+        this.thingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> overrideDynamicGroup;
-        private @Nullable Input<String> thingGroupName;
-        private @Nullable Input<String> thingName;
+        private @Nullable Output<Boolean> overrideDynamicGroup;
+        private @Nullable Output<String> thingGroupName;
+        private @Nullable Output<String> thingName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
     	      this.thingName = defaults.thingName;
         }
 
-        public Builder overrideDynamicGroup(@Nullable Input<Boolean> overrideDynamicGroup) {
+        public Builder overrideDynamicGroup(@Nullable Output<Boolean> overrideDynamicGroup) {
             this.overrideDynamicGroup = overrideDynamicGroup;
             return this;
         }
 
         public Builder overrideDynamicGroup(@Nullable Boolean overrideDynamicGroup) {
-            this.overrideDynamicGroup = Input.ofNullable(overrideDynamicGroup);
+            this.overrideDynamicGroup = Output.ofNullable(overrideDynamicGroup);
             return this;
         }
 
-        public Builder thingGroupName(@Nullable Input<String> thingGroupName) {
+        public Builder thingGroupName(@Nullable Output<String> thingGroupName) {
             this.thingGroupName = thingGroupName;
             return this;
         }
 
         public Builder thingGroupName(@Nullable String thingGroupName) {
-            this.thingGroupName = Input.ofNullable(thingGroupName);
+            this.thingGroupName = Output.ofNullable(thingGroupName);
             return this;
         }
 
-        public Builder thingName(@Nullable Input<String> thingName) {
+        public Builder thingName(@Nullable Output<String> thingName) {
             this.thingName = thingName;
             return this;
         }
 
         public Builder thingName(@Nullable String thingName) {
-            this.thingName = Input.ofNullable(thingName);
+            this.thingName = Output.ofNullable(thingName);
             return this;
         }
         public ThingGroupMembershipState build() {

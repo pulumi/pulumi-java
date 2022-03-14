@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="bytesLimitPerFile")
-      private final @Nullable Input<Integer> bytesLimitPerFile;
+      private final @Nullable Output<Integer> bytesLimitPerFile;
 
-    public Input<Integer> getBytesLimitPerFile() {
-        return this.bytesLimitPerFile == null ? Input.empty() : this.bytesLimitPerFile;
+    public Output<Integer> getBytesLimitPerFile() {
+        return this.bytesLimitPerFile == null ? Output.empty() : this.bytesLimitPerFile;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="bytesLimitPerFilePercent")
-      private final @Nullable Input<Integer> bytesLimitPerFilePercent;
+      private final @Nullable Output<Integer> bytesLimitPerFilePercent;
 
-    public Input<Integer> getBytesLimitPerFilePercent() {
-        return this.bytesLimitPerFilePercent == null ? Input.empty() : this.bytesLimitPerFilePercent;
+    public Output<Integer> getBytesLimitPerFilePercent() {
+        return this.bytesLimitPerFilePercent == null ? Output.empty() : this.bytesLimitPerFilePercent;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="fileSet", required=true)
-      private final Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet;
+      private final Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet;
 
-    public Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> getFileSet() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> getFileSet() {
         return this.fileSet;
     }
 
@@ -61,10 +61,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="fileTypes")
-      private final @Nullable Input<List<String>> fileTypes;
+      private final @Nullable Output<List<String>> fileTypes;
 
-    public Input<List<String>> getFileTypes() {
-        return this.fileTypes == null ? Input.empty() : this.fileTypes;
+    public Output<List<String>> getFileTypes() {
+        return this.fileTypes == null ? Output.empty() : this.fileTypes;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="filesLimitPercent")
-      private final @Nullable Input<Integer> filesLimitPercent;
+      private final @Nullable Output<Integer> filesLimitPercent;
 
-    public Input<Integer> getFilesLimitPercent() {
-        return this.filesLimitPercent == null ? Input.empty() : this.filesLimitPercent;
+    public Output<Integer> getFilesLimitPercent() {
+        return this.filesLimitPercent == null ? Output.empty() : this.filesLimitPercent;
     }
 
     /**
@@ -86,19 +86,19 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="sampleMethod")
-      private final @Nullable Input<String> sampleMethod;
+      private final @Nullable Output<String> sampleMethod;
 
-    public Input<String> getSampleMethod() {
-        return this.sampleMethod == null ? Input.empty() : this.sampleMethod;
+    public Output<String> getSampleMethod() {
+        return this.sampleMethod == null ? Output.empty() : this.sampleMethod;
     }
 
     public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs(
-        @Nullable Input<Integer> bytesLimitPerFile,
-        @Nullable Input<Integer> bytesLimitPerFilePercent,
-        Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet,
-        @Nullable Input<List<String>> fileTypes,
-        @Nullable Input<Integer> filesLimitPercent,
-        @Nullable Input<String> sampleMethod) {
+        @Nullable Output<Integer> bytesLimitPerFile,
+        @Nullable Output<Integer> bytesLimitPerFilePercent,
+        Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet,
+        @Nullable Output<List<String>> fileTypes,
+        @Nullable Output<Integer> filesLimitPercent,
+        @Nullable Output<String> sampleMethod) {
         this.bytesLimitPerFile = bytesLimitPerFile;
         this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
         this.fileSet = Objects.requireNonNull(fileSet, "expected parameter 'fileSet' to be non-null");
@@ -108,12 +108,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs() {
-        this.bytesLimitPerFile = Input.empty();
-        this.bytesLimitPerFilePercent = Input.empty();
-        this.fileSet = Input.empty();
-        this.fileTypes = Input.empty();
-        this.filesLimitPercent = Input.empty();
-        this.sampleMethod = Input.empty();
+        this.bytesLimitPerFile = Output.empty();
+        this.bytesLimitPerFilePercent = Output.empty();
+        this.fileSet = Output.empty();
+        this.fileTypes = Output.empty();
+        this.filesLimitPercent = Output.empty();
+        this.sampleMethod = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,12 +125,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bytesLimitPerFile;
-        private @Nullable Input<Integer> bytesLimitPerFilePercent;
-        private Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet;
-        private @Nullable Input<List<String>> fileTypes;
-        private @Nullable Input<Integer> filesLimitPercent;
-        private @Nullable Input<String> sampleMethod;
+        private @Nullable Output<Integer> bytesLimitPerFile;
+        private @Nullable Output<Integer> bytesLimitPerFilePercent;
+        private Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet;
+        private @Nullable Output<List<String>> fileTypes;
+        private @Nullable Output<Integer> filesLimitPercent;
+        private @Nullable Output<String> sampleMethod;
 
         public Builder() {
     	      // Empty
@@ -146,63 +146,63 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     	      this.sampleMethod = defaults.sampleMethod;
         }
 
-        public Builder bytesLimitPerFile(@Nullable Input<Integer> bytesLimitPerFile) {
+        public Builder bytesLimitPerFile(@Nullable Output<Integer> bytesLimitPerFile) {
             this.bytesLimitPerFile = bytesLimitPerFile;
             return this;
         }
 
         public Builder bytesLimitPerFile(@Nullable Integer bytesLimitPerFile) {
-            this.bytesLimitPerFile = Input.ofNullable(bytesLimitPerFile);
+            this.bytesLimitPerFile = Output.ofNullable(bytesLimitPerFile);
             return this;
         }
 
-        public Builder bytesLimitPerFilePercent(@Nullable Input<Integer> bytesLimitPerFilePercent) {
+        public Builder bytesLimitPerFilePercent(@Nullable Output<Integer> bytesLimitPerFilePercent) {
             this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
             return this;
         }
 
         public Builder bytesLimitPerFilePercent(@Nullable Integer bytesLimitPerFilePercent) {
-            this.bytesLimitPerFilePercent = Input.ofNullable(bytesLimitPerFilePercent);
+            this.bytesLimitPerFilePercent = Output.ofNullable(bytesLimitPerFilePercent);
             return this;
         }
 
-        public Builder fileSet(Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet) {
+        public Builder fileSet(Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet) {
             this.fileSet = Objects.requireNonNull(fileSet);
             return this;
         }
 
         public Builder fileSet(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs fileSet) {
-            this.fileSet = Input.of(Objects.requireNonNull(fileSet));
+            this.fileSet = Output.of(Objects.requireNonNull(fileSet));
             return this;
         }
 
-        public Builder fileTypes(@Nullable Input<List<String>> fileTypes) {
+        public Builder fileTypes(@Nullable Output<List<String>> fileTypes) {
             this.fileTypes = fileTypes;
             return this;
         }
 
         public Builder fileTypes(@Nullable List<String> fileTypes) {
-            this.fileTypes = Input.ofNullable(fileTypes);
+            this.fileTypes = Output.ofNullable(fileTypes);
             return this;
         }
 
-        public Builder filesLimitPercent(@Nullable Input<Integer> filesLimitPercent) {
+        public Builder filesLimitPercent(@Nullable Output<Integer> filesLimitPercent) {
             this.filesLimitPercent = filesLimitPercent;
             return this;
         }
 
         public Builder filesLimitPercent(@Nullable Integer filesLimitPercent) {
-            this.filesLimitPercent = Input.ofNullable(filesLimitPercent);
+            this.filesLimitPercent = Output.ofNullable(filesLimitPercent);
             return this;
         }
 
-        public Builder sampleMethod(@Nullable Input<String> sampleMethod) {
+        public Builder sampleMethod(@Nullable Output<String> sampleMethod) {
             this.sampleMethod = sampleMethod;
             return this;
         }
 
         public Builder sampleMethod(@Nullable String sampleMethod) {
-            this.sampleMethod = Input.ofNullable(sampleMethod);
+            this.sampleMethod = Output.ofNullable(sampleMethod);
             return this;
         }
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs build() {

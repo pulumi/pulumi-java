@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointInterclusterArgs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointManagementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interclusters")
-      private final @Nullable Input<List<OntapFileSystemEndpointInterclusterArgs>> interclusters;
+      private final @Nullable Output<List<OntapFileSystemEndpointInterclusterArgs>> interclusters;
 
-    public Input<List<OntapFileSystemEndpointInterclusterArgs>> getInterclusters() {
-        return this.interclusters == null ? Input.empty() : this.interclusters;
+    public Output<List<OntapFileSystemEndpointInterclusterArgs>> getInterclusters() {
+        return this.interclusters == null ? Output.empty() : this.interclusters;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="managements")
-      private final @Nullable Input<List<OntapFileSystemEndpointManagementArgs>> managements;
+      private final @Nullable Output<List<OntapFileSystemEndpointManagementArgs>> managements;
 
-    public Input<List<OntapFileSystemEndpointManagementArgs>> getManagements() {
-        return this.managements == null ? Input.empty() : this.managements;
+    public Output<List<OntapFileSystemEndpointManagementArgs>> getManagements() {
+        return this.managements == null ? Output.empty() : this.managements;
     }
 
     public OntapFileSystemEndpointArgs(
-        @Nullable Input<List<OntapFileSystemEndpointInterclusterArgs>> interclusters,
-        @Nullable Input<List<OntapFileSystemEndpointManagementArgs>> managements) {
+        @Nullable Output<List<OntapFileSystemEndpointInterclusterArgs>> interclusters,
+        @Nullable Output<List<OntapFileSystemEndpointManagementArgs>> managements) {
         this.interclusters = interclusters;
         this.managements = managements;
     }
 
     private OntapFileSystemEndpointArgs() {
-        this.interclusters = Input.empty();
-        this.managements = Input.empty();
+        this.interclusters = Output.empty();
+        this.managements = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OntapFileSystemEndpointInterclusterArgs>> interclusters;
-        private @Nullable Input<List<OntapFileSystemEndpointManagementArgs>> managements;
+        private @Nullable Output<List<OntapFileSystemEndpointInterclusterArgs>> interclusters;
+        private @Nullable Output<List<OntapFileSystemEndpointManagementArgs>> managements;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
     	      this.managements = defaults.managements;
         }
 
-        public Builder interclusters(@Nullable Input<List<OntapFileSystemEndpointInterclusterArgs>> interclusters) {
+        public Builder interclusters(@Nullable Output<List<OntapFileSystemEndpointInterclusterArgs>> interclusters) {
             this.interclusters = interclusters;
             return this;
         }
 
         public Builder interclusters(@Nullable List<OntapFileSystemEndpointInterclusterArgs> interclusters) {
-            this.interclusters = Input.ofNullable(interclusters);
+            this.interclusters = Output.ofNullable(interclusters);
             return this;
         }
 
-        public Builder managements(@Nullable Input<List<OntapFileSystemEndpointManagementArgs>> managements) {
+        public Builder managements(@Nullable Output<List<OntapFileSystemEndpointManagementArgs>> managements) {
             this.managements = managements;
             return this;
         }
 
         public Builder managements(@Nullable List<OntapFileSystemEndpointManagementArgs> managements) {
-            this.managements = Input.ofNullable(managements);
+            this.managements = Output.ofNullable(managements);
             return this;
         }
         public OntapFileSystemEndpointArgs build() {

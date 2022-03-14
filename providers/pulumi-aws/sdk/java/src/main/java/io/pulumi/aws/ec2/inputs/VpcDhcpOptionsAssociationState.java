@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dhcpOptionsId")
-      private final @Nullable Input<String> dhcpOptionsId;
+      private final @Nullable Output<String> dhcpOptionsId;
 
-    public Input<String> getDhcpOptionsId() {
-        return this.dhcpOptionsId == null ? Input.empty() : this.dhcpOptionsId;
+    public Output<String> getDhcpOptionsId() {
+        return this.dhcpOptionsId == null ? Output.empty() : this.dhcpOptionsId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public VpcDhcpOptionsAssociationState(
-        @Nullable Input<String> dhcpOptionsId,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> dhcpOptionsId,
+        @Nullable Output<String> vpcId) {
         this.dhcpOptionsId = dhcpOptionsId;
         this.vpcId = vpcId;
     }
 
     private VpcDhcpOptionsAssociationState() {
-        this.dhcpOptionsId = Input.empty();
-        this.vpcId = Input.empty();
+        this.dhcpOptionsId = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dhcpOptionsId;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> dhcpOptionsId;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder dhcpOptionsId(@Nullable Input<String> dhcpOptionsId) {
+        public Builder dhcpOptionsId(@Nullable Output<String> dhcpOptionsId) {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
-            this.dhcpOptionsId = Input.ofNullable(dhcpOptionsId);
+            this.dhcpOptionsId = Output.ofNullable(dhcpOptionsId);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public VpcDhcpOptionsAssociationState build() {

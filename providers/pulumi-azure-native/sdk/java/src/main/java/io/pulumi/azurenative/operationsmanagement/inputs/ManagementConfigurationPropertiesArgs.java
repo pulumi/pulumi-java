@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ArmTemplateParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<List<ArmTemplateParameterArgs>> parameters;
+      private final Output<List<ArmTemplateParameterArgs>> parameters;
 
-    public Input<List<ArmTemplateParameterArgs>> getParameters() {
+    public Output<List<ArmTemplateParameterArgs>> getParameters() {
         return this.parameters;
     }
 
@@ -48,9 +48,9 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-      private final Input<String> parentResourceType;
+      private final Output<String> parentResourceType;
 
-    public Input<String> getParentResourceType() {
+    public Output<String> getParentResourceType() {
         return this.parentResourceType;
     }
 
@@ -59,17 +59,17 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="template", required=true)
-      private final Input<Object> template;
+      private final Output<Object> template;
 
-    public Input<Object> getTemplate() {
+    public Output<Object> getTemplate() {
         return this.template;
     }
 
     public ManagementConfigurationPropertiesArgs(
-        @Nullable Input<String> applicationId,
-        Input<List<ArmTemplateParameterArgs>> parameters,
-        Input<String> parentResourceType,
-        Input<Object> template) {
+        @Nullable Output<String> applicationId,
+        Output<List<ArmTemplateParameterArgs>> parameters,
+        Output<String> parentResourceType,
+        Output<Object> template) {
         this.applicationId = applicationId;
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.parentResourceType = Objects.requireNonNull(parentResourceType, "expected parameter 'parentResourceType' to be non-null");
@@ -77,10 +77,10 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
     }
 
     private ManagementConfigurationPropertiesArgs() {
-        this.applicationId = Input.empty();
-        this.parameters = Input.empty();
-        this.parentResourceType = Input.empty();
-        this.template = Input.empty();
+        this.applicationId = Output.empty();
+        this.parameters = Output.empty();
+        this.parentResourceType = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private Input<List<ArmTemplateParameterArgs>> parameters;
-        private Input<String> parentResourceType;
-        private Input<Object> template;
+        private @Nullable Output<String> applicationId;
+        private Output<List<ArmTemplateParameterArgs>> parameters;
+        private Output<String> parentResourceType;
+        private Output<Object> template;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
     	      this.template = defaults.template;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder parameters(Input<List<ArmTemplateParameterArgs>> parameters) {
+        public Builder parameters(Output<List<ArmTemplateParameterArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(List<ArmTemplateParameterArgs> parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder parentResourceType(Input<String> parentResourceType) {
+        public Builder parentResourceType(Output<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Input.of(Objects.requireNonNull(parentResourceType));
+            this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
 
-        public Builder template(Input<Object> template) {
+        public Builder template(Output<Object> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
         public Builder template(Object template) {
-            this.template = Input.of(Objects.requireNonNull(template));
+            this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
         public ManagementConfigurationPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -41,10 +41,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="privateLinkServiceName")
-      private final @Nullable Input<String> privateLinkServiceName;
+      private final @Nullable Output<String> privateLinkServiceName;
 
-    public Input<String> getPrivateLinkServiceName() {
-        return this.privateLinkServiceName == null ? Input.empty() : this.privateLinkServiceName;
+    public Output<String> getPrivateLinkServiceName() {
+        return this.privateLinkServiceName == null ? Output.empty() : this.privateLinkServiceName;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="stage", required=true)
-      private final Input<String> stage;
+      private final Output<String> stage;
 
-    public Input<String> getStage() {
+    public Output<String> getStage() {
         return this.stage;
     }
 
@@ -86,20 +86,20 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="warehouse", required=true)
-      private final Input<String> warehouse;
+      private final Output<String> warehouse;
 
-    public Input<String> getWarehouse() {
+    public Output<String> getWarehouse() {
         return this.warehouse;
     }
 
     public ConnectorProfileSnowflakeConnectorProfilePropertiesArgs(
-        @Nullable Input<String> accountName,
-        Input<String> bucketName,
-        @Nullable Input<String> bucketPrefix,
-        @Nullable Input<String> privateLinkServiceName,
-        @Nullable Input<String> region,
-        Input<String> stage,
-        Input<String> warehouse) {
+        @Nullable Output<String> accountName,
+        Output<String> bucketName,
+        @Nullable Output<String> bucketPrefix,
+        @Nullable Output<String> privateLinkServiceName,
+        @Nullable Output<String> region,
+        Output<String> stage,
+        Output<String> warehouse) {
         this.accountName = accountName;
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.bucketPrefix = bucketPrefix;
@@ -110,13 +110,13 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     }
 
     private ConnectorProfileSnowflakeConnectorProfilePropertiesArgs() {
-        this.accountName = Input.empty();
-        this.bucketName = Input.empty();
-        this.bucketPrefix = Input.empty();
-        this.privateLinkServiceName = Input.empty();
-        this.region = Input.empty();
-        this.stage = Input.empty();
-        this.warehouse = Input.empty();
+        this.accountName = Output.empty();
+        this.bucketName = Output.empty();
+        this.bucketPrefix = Output.empty();
+        this.privateLinkServiceName = Output.empty();
+        this.region = Output.empty();
+        this.stage = Output.empty();
+        this.warehouse = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private Input<String> bucketName;
-        private @Nullable Input<String> bucketPrefix;
-        private @Nullable Input<String> privateLinkServiceName;
-        private @Nullable Input<String> region;
-        private Input<String> stage;
-        private Input<String> warehouse;
+        private @Nullable Output<String> accountName;
+        private Output<String> bucketName;
+        private @Nullable Output<String> bucketPrefix;
+        private @Nullable Output<String> privateLinkServiceName;
+        private @Nullable Output<String> region;
+        private Output<String> stage;
+        private Output<String> warehouse;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     	      this.warehouse = defaults.warehouse;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder privateLinkServiceName(@Nullable Input<String> privateLinkServiceName) {
+        public Builder privateLinkServiceName(@Nullable Output<String> privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
 
         public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
-            this.privateLinkServiceName = Input.ofNullable(privateLinkServiceName);
+            this.privateLinkServiceName = Output.ofNullable(privateLinkServiceName);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder stage(Input<String> stage) {
+        public Builder stage(Output<String> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
         public Builder stage(String stage) {
-            this.stage = Input.of(Objects.requireNonNull(stage));
+            this.stage = Output.of(Objects.requireNonNull(stage));
             return this;
         }
 
-        public Builder warehouse(Input<String> warehouse) {
+        public Builder warehouse(Output<String> warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
 
         public Builder warehouse(String warehouse) {
-            this.warehouse = Input.of(Objects.requireNonNull(warehouse));
+            this.warehouse = Output.of(Objects.requireNonNull(warehouse));
             return this;
         }
         public ConnectorProfileSnowflakeConnectorProfilePropertiesArgs build() {

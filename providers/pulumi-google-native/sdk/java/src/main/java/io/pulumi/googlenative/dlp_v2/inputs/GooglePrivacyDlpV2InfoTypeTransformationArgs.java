@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
      * 
      */
     @InputImport(name="infoTypes")
-      private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+      private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Input<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
-        return this.infoTypes == null ? Input.empty() : this.infoTypes;
+    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
+        return this.infoTypes == null ? Output.empty() : this.infoTypes;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
      * 
      */
     @InputImport(name="primitiveTransformation", required=true)
-      private final Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
+      private final Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
-    public Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> getPrimitiveTransformation() {
+    public Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> getPrimitiveTransformation() {
         return this.primitiveTransformation;
     }
 
     public GooglePrivacyDlpV2InfoTypeTransformationArgs(
-        @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes,
-        Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
+        @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes,
+        Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
         this.infoTypes = infoTypes;
         this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation, "expected parameter 'primitiveTransformation' to be non-null");
     }
 
     private GooglePrivacyDlpV2InfoTypeTransformationArgs() {
-        this.infoTypes = Input.empty();
-        this.primitiveTransformation = Input.empty();
+        this.infoTypes = Output.empty();
+        this.primitiveTransformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
-        private Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
+        private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+        private Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
     	      this.primitiveTransformation = defaults.primitiveTransformation;
         }
 
-        public Builder infoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
         public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
-            this.infoTypes = Input.ofNullable(infoTypes);
+            this.infoTypes = Output.ofNullable(infoTypes);
             return this;
         }
 
-        public Builder primitiveTransformation(Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
+        public Builder primitiveTransformation(Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }
 
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
-            this.primitiveTransformation = Input.of(Objects.requireNonNull(primitiveTransformation));
+            this.primitiveTransformation = Output.of(Objects.requireNonNull(primitiveTransformation));
             return this;
         }
         public GooglePrivacyDlpV2InfoTypeTransformationArgs build() {

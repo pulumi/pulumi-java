@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="containerArguments")
-      private final @Nullable Input<List<String>> containerArguments;
+      private final @Nullable Output<List<String>> containerArguments;
 
-    public Input<List<String>> getContainerArguments() {
-        return this.containerArguments == null ? Input.empty() : this.containerArguments;
+    public Output<List<String>> getContainerArguments() {
+        return this.containerArguments == null ? Output.empty() : this.containerArguments;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="containerEntrypoint")
-      private final @Nullable Input<List<String>> containerEntrypoint;
+      private final @Nullable Output<List<String>> containerEntrypoint;
 
-    public Input<List<String>> getContainerEntrypoint() {
-        return this.containerEntrypoint == null ? Input.empty() : this.containerEntrypoint;
+    public Output<List<String>> getContainerEntrypoint() {
+        return this.containerEntrypoint == null ? Output.empty() : this.containerEntrypoint;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="imageUri", required=true)
-      private final Input<String> imageUri;
+      private final Output<String> imageUri;
 
-    public Input<String> getImageUri() {
+    public Output<String> getImageUri() {
         return this.imageUri;
     }
 
@@ -57,10 +57,10 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="postAnalyticsProcessorSourceUri")
-      private final @Nullable Input<String> postAnalyticsProcessorSourceUri;
+      private final @Nullable Output<String> postAnalyticsProcessorSourceUri;
 
-    public Input<String> getPostAnalyticsProcessorSourceUri() {
-        return this.postAnalyticsProcessorSourceUri == null ? Input.empty() : this.postAnalyticsProcessorSourceUri;
+    public Output<String> getPostAnalyticsProcessorSourceUri() {
+        return this.postAnalyticsProcessorSourceUri == null ? Output.empty() : this.postAnalyticsProcessorSourceUri;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="recordPreprocessorSourceUri")
-      private final @Nullable Input<String> recordPreprocessorSourceUri;
+      private final @Nullable Output<String> recordPreprocessorSourceUri;
 
-    public Input<String> getRecordPreprocessorSourceUri() {
-        return this.recordPreprocessorSourceUri == null ? Input.empty() : this.recordPreprocessorSourceUri;
+    public Output<String> getRecordPreprocessorSourceUri() {
+        return this.recordPreprocessorSourceUri == null ? Output.empty() : this.recordPreprocessorSourceUri;
     }
 
     public MonitoringScheduleMonitoringAppSpecificationArgs(
-        @Nullable Input<List<String>> containerArguments,
-        @Nullable Input<List<String>> containerEntrypoint,
-        Input<String> imageUri,
-        @Nullable Input<String> postAnalyticsProcessorSourceUri,
-        @Nullable Input<String> recordPreprocessorSourceUri) {
+        @Nullable Output<List<String>> containerArguments,
+        @Nullable Output<List<String>> containerEntrypoint,
+        Output<String> imageUri,
+        @Nullable Output<String> postAnalyticsProcessorSourceUri,
+        @Nullable Output<String> recordPreprocessorSourceUri) {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
         this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
@@ -88,11 +88,11 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     }
 
     private MonitoringScheduleMonitoringAppSpecificationArgs() {
-        this.containerArguments = Input.empty();
-        this.containerEntrypoint = Input.empty();
-        this.imageUri = Input.empty();
-        this.postAnalyticsProcessorSourceUri = Input.empty();
-        this.recordPreprocessorSourceUri = Input.empty();
+        this.containerArguments = Output.empty();
+        this.containerEntrypoint = Output.empty();
+        this.imageUri = Output.empty();
+        this.postAnalyticsProcessorSourceUri = Output.empty();
+        this.recordPreprocessorSourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> containerArguments;
-        private @Nullable Input<List<String>> containerEntrypoint;
-        private Input<String> imageUri;
-        private @Nullable Input<String> postAnalyticsProcessorSourceUri;
-        private @Nullable Input<String> recordPreprocessorSourceUri;
+        private @Nullable Output<List<String>> containerArguments;
+        private @Nullable Output<List<String>> containerEntrypoint;
+        private Output<String> imageUri;
+        private @Nullable Output<String> postAnalyticsProcessorSourceUri;
+        private @Nullable Output<String> recordPreprocessorSourceUri;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     	      this.recordPreprocessorSourceUri = defaults.recordPreprocessorSourceUri;
         }
 
-        public Builder containerArguments(@Nullable Input<List<String>> containerArguments) {
+        public Builder containerArguments(@Nullable Output<List<String>> containerArguments) {
             this.containerArguments = containerArguments;
             return this;
         }
 
         public Builder containerArguments(@Nullable List<String> containerArguments) {
-            this.containerArguments = Input.ofNullable(containerArguments);
+            this.containerArguments = Output.ofNullable(containerArguments);
             return this;
         }
 
-        public Builder containerEntrypoint(@Nullable Input<List<String>> containerEntrypoint) {
+        public Builder containerEntrypoint(@Nullable Output<List<String>> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
 
         public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
-            this.containerEntrypoint = Input.ofNullable(containerEntrypoint);
+            this.containerEntrypoint = Output.ofNullable(containerEntrypoint);
             return this;
         }
 
-        public Builder imageUri(Input<String> imageUri) {
+        public Builder imageUri(Output<String> imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
         public Builder imageUri(String imageUri) {
-            this.imageUri = Input.of(Objects.requireNonNull(imageUri));
+            this.imageUri = Output.of(Objects.requireNonNull(imageUri));
             return this;
         }
 
-        public Builder postAnalyticsProcessorSourceUri(@Nullable Input<String> postAnalyticsProcessorSourceUri) {
+        public Builder postAnalyticsProcessorSourceUri(@Nullable Output<String> postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
 
         public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
-            this.postAnalyticsProcessorSourceUri = Input.ofNullable(postAnalyticsProcessorSourceUri);
+            this.postAnalyticsProcessorSourceUri = Output.ofNullable(postAnalyticsProcessorSourceUri);
             return this;
         }
 
-        public Builder recordPreprocessorSourceUri(@Nullable Input<String> recordPreprocessorSourceUri) {
+        public Builder recordPreprocessorSourceUri(@Nullable Output<String> recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
 
         public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
-            this.recordPreprocessorSourceUri = Input.ofNullable(recordPreprocessorSourceUri);
+            this.recordPreprocessorSourceUri = Output.ofNullable(recordPreprocessorSourceUri);
             return this;
         }
         public MonitoringScheduleMonitoringAppSpecificationArgs build() {

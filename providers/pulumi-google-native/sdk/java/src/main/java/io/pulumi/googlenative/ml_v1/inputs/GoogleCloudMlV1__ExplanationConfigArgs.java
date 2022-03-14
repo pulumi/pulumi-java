@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__IntegratedGradientsAttributionArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__SampledShapleyAttributionArgs;
@@ -25,10 +25,10 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="integratedGradientsAttribution")
-      private final @Nullable Input<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution;
+      private final @Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution;
 
-    public Input<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> getIntegratedGradientsAttribution() {
-        return this.integratedGradientsAttribution == null ? Input.empty() : this.integratedGradientsAttribution;
+    public Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> getIntegratedGradientsAttribution() {
+        return this.integratedGradientsAttribution == null ? Output.empty() : this.integratedGradientsAttribution;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sampledShapleyAttribution")
-      private final @Nullable Input<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution;
+      private final @Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution;
 
-    public Input<GoogleCloudMlV1__SampledShapleyAttributionArgs> getSampledShapleyAttribution() {
-        return this.sampledShapleyAttribution == null ? Input.empty() : this.sampledShapleyAttribution;
+    public Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> getSampledShapleyAttribution() {
+        return this.sampledShapleyAttribution == null ? Output.empty() : this.sampledShapleyAttribution;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="xraiAttribution")
-      private final @Nullable Input<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution;
+      private final @Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution;
 
-    public Input<GoogleCloudMlV1__XraiAttributionArgs> getXraiAttribution() {
-        return this.xraiAttribution == null ? Input.empty() : this.xraiAttribution;
+    public Output<GoogleCloudMlV1__XraiAttributionArgs> getXraiAttribution() {
+        return this.xraiAttribution == null ? Output.empty() : this.xraiAttribution;
     }
 
     public GoogleCloudMlV1__ExplanationConfigArgs(
-        @Nullable Input<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution,
-        @Nullable Input<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution,
-        @Nullable Input<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
+        @Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution,
+        @Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution,
+        @Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
         this.integratedGradientsAttribution = integratedGradientsAttribution;
         this.sampledShapleyAttribution = sampledShapleyAttribution;
         this.xraiAttribution = xraiAttribution;
     }
 
     private GoogleCloudMlV1__ExplanationConfigArgs() {
-        this.integratedGradientsAttribution = Input.empty();
-        this.sampledShapleyAttribution = Input.empty();
-        this.xraiAttribution = Input.empty();
+        this.integratedGradientsAttribution = Output.empty();
+        this.sampledShapleyAttribution = Output.empty();
+        this.xraiAttribution = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution;
-        private @Nullable Input<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution;
-        private @Nullable Input<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution;
+        private @Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution;
+        private @Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution;
+        private @Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
     	      this.xraiAttribution = defaults.xraiAttribution;
         }
 
-        public Builder integratedGradientsAttribution(@Nullable Input<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution) {
+        public Builder integratedGradientsAttribution(@Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution) {
             this.integratedGradientsAttribution = integratedGradientsAttribution;
             return this;
         }
 
         public Builder integratedGradientsAttribution(@Nullable GoogleCloudMlV1__IntegratedGradientsAttributionArgs integratedGradientsAttribution) {
-            this.integratedGradientsAttribution = Input.ofNullable(integratedGradientsAttribution);
+            this.integratedGradientsAttribution = Output.ofNullable(integratedGradientsAttribution);
             return this;
         }
 
-        public Builder sampledShapleyAttribution(@Nullable Input<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution) {
+        public Builder sampledShapleyAttribution(@Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution) {
             this.sampledShapleyAttribution = sampledShapleyAttribution;
             return this;
         }
 
         public Builder sampledShapleyAttribution(@Nullable GoogleCloudMlV1__SampledShapleyAttributionArgs sampledShapleyAttribution) {
-            this.sampledShapleyAttribution = Input.ofNullable(sampledShapleyAttribution);
+            this.sampledShapleyAttribution = Output.ofNullable(sampledShapleyAttribution);
             return this;
         }
 
-        public Builder xraiAttribution(@Nullable Input<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
+        public Builder xraiAttribution(@Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
             this.xraiAttribution = xraiAttribution;
             return this;
         }
 
         public Builder xraiAttribution(@Nullable GoogleCloudMlV1__XraiAttributionArgs xraiAttribution) {
-            this.xraiAttribution = Input.ofNullable(xraiAttribution);
+            this.xraiAttribution = Output.ofNullable(xraiAttribution);
             return this;
         }
         public GoogleCloudMlV1__ExplanationConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codeartifact;
 
 import io.pulumi.awsnative.codeartifact.inputs.DomainTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsPolicyDocument")
-      private final @Nullable Input<Object> permissionsPolicyDocument;
+      private final @Nullable Output<Object> permissionsPolicyDocument;
 
-    public Input<Object> getPermissionsPolicyDocument() {
-        return this.permissionsPolicyDocument == null ? Input.empty() : this.permissionsPolicyDocument;
+    public Output<Object> getPermissionsPolicyDocument() {
+        return this.permissionsPolicyDocument == null ? Output.empty() : this.permissionsPolicyDocument;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DomainTagArgs>> tags;
+      private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Input<List<DomainTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DomainTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DomainArgs(
-        @Nullable Input<String> domainName,
-        @Nullable Input<Object> permissionsPolicyDocument,
-        @Nullable Input<List<DomainTagArgs>> tags) {
+        @Nullable Output<String> domainName,
+        @Nullable Output<Object> permissionsPolicyDocument,
+        @Nullable Output<List<DomainTagArgs>> tags) {
         this.domainName = domainName;
         this.permissionsPolicyDocument = permissionsPolicyDocument;
         this.tags = tags;
     }
 
     private DomainArgs() {
-        this.domainName = Input.empty();
-        this.permissionsPolicyDocument = Input.empty();
-        this.tags = Input.empty();
+        this.domainName = Output.empty();
+        this.permissionsPolicyDocument = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<Object> permissionsPolicyDocument;
-        private @Nullable Input<List<DomainTagArgs>> tags;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<Object> permissionsPolicyDocument;
+        private @Nullable Output<List<DomainTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder permissionsPolicyDocument(@Nullable Input<Object> permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Output<Object> permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
         public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
-            this.permissionsPolicyDocument = Input.ofNullable(permissionsPolicyDocument);
+            this.permissionsPolicyDocument = Output.ofNullable(permissionsPolicyDocument);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DomainTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DomainArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicies")
-      private final @Nullable Input<String> accessPolicies;
+      private final @Nullable Output<String> accessPolicies;
 
-    public Input<String> getAccessPolicies() {
-        return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
+    public Output<String> getAccessPolicies() {
+        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     public DomainPolicyState(
-        @Nullable Input<String> accessPolicies,
-        @Nullable Input<String> domainName) {
+        @Nullable Output<String> accessPolicies,
+        @Nullable Output<String> domainName) {
         this.accessPolicies = accessPolicies;
         this.domainName = domainName;
     }
 
     private DomainPolicyState() {
-        this.accessPolicies = Input.empty();
-        this.domainName = Input.empty();
+        this.accessPolicies = Output.empty();
+        this.domainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessPolicies;
-        private @Nullable Input<String> domainName;
+        private @Nullable Output<String> accessPolicies;
+        private @Nullable Output<String> domainName;
 
         public Builder() {
     	      // Empty
@@ -70,18 +70,18 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder accessPolicies(@Nullable Input<String> accessPolicies) {
+        public Builder accessPolicies(@Nullable Output<String> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
         public DomainPolicyState build() {

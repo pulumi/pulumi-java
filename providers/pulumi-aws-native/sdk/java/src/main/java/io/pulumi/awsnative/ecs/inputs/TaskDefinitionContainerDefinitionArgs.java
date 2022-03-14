@@ -19,7 +19,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionSecretArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionSystemControlArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionUlimitArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionVolumeFromArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,66 +39,66 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
     public static final TaskDefinitionContainerDefinitionArgs Empty = new TaskDefinitionContainerDefinitionArgs();
 
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
     @InputImport(name="cpu")
-      private final @Nullable Input<Integer> cpu;
+      private final @Nullable Output<Integer> cpu;
 
-    public Input<Integer> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Integer> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
 
-    public Input<List<TaskDefinitionContainerDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<TaskDefinitionContainerDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     @InputImport(name="disableNetworking")
-      private final @Nullable Input<Boolean> disableNetworking;
+      private final @Nullable Output<Boolean> disableNetworking;
 
-    public Input<Boolean> getDisableNetworking() {
-        return this.disableNetworking == null ? Input.empty() : this.disableNetworking;
+    public Output<Boolean> getDisableNetworking() {
+        return this.disableNetworking == null ? Output.empty() : this.disableNetworking;
     }
 
     @InputImport(name="dnsSearchDomains")
-      private final @Nullable Input<List<String>> dnsSearchDomains;
+      private final @Nullable Output<List<String>> dnsSearchDomains;
 
-    public Input<List<String>> getDnsSearchDomains() {
-        return this.dnsSearchDomains == null ? Input.empty() : this.dnsSearchDomains;
+    public Output<List<String>> getDnsSearchDomains() {
+        return this.dnsSearchDomains == null ? Output.empty() : this.dnsSearchDomains;
     }
 
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     @InputImport(name="dockerLabels")
-      private final @Nullable Input<Object> dockerLabels;
+      private final @Nullable Output<Object> dockerLabels;
 
-    public Input<Object> getDockerLabels() {
-        return this.dockerLabels == null ? Input.empty() : this.dockerLabels;
+    public Output<Object> getDockerLabels() {
+        return this.dockerLabels == null ? Output.empty() : this.dockerLabels;
     }
 
     @InputImport(name="dockerSecurityOptions")
-      private final @Nullable Input<List<String>> dockerSecurityOptions;
+      private final @Nullable Output<List<String>> dockerSecurityOptions;
 
-    public Input<List<String>> getDockerSecurityOptions() {
-        return this.dockerSecurityOptions == null ? Input.empty() : this.dockerSecurityOptions;
+    public Output<List<String>> getDockerSecurityOptions() {
+        return this.dockerSecurityOptions == null ? Output.empty() : this.dockerSecurityOptions;
     }
 
     @InputImport(name="entryPoint")
-      private final @Nullable Input<List<String>> entryPoint;
+      private final @Nullable Output<List<String>> entryPoint;
 
-    public Input<List<String>> getEntryPoint() {
-        return this.entryPoint == null ? Input.empty() : this.entryPoint;
+    public Output<List<String>> getEntryPoint() {
+        return this.entryPoint == null ? Output.empty() : this.entryPoint;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<List<TaskDefinitionKeyValuePairArgs>> environment;
+      private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
 
-    public Input<List<TaskDefinitionKeyValuePairArgs>> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<List<TaskDefinitionKeyValuePairArgs>> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -117,45 +117,45 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="environmentFiles")
-      private final @Nullable Input<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
+      private final @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
 
-    public Input<List<TaskDefinitionEnvironmentFileArgs>> getEnvironmentFiles() {
-        return this.environmentFiles == null ? Input.empty() : this.environmentFiles;
+    public Output<List<TaskDefinitionEnvironmentFileArgs>> getEnvironmentFiles() {
+        return this.environmentFiles == null ? Output.empty() : this.environmentFiles;
     }
 
     @InputImport(name="essential")
-      private final @Nullable Input<Boolean> essential;
+      private final @Nullable Output<Boolean> essential;
 
-    public Input<Boolean> getEssential() {
-        return this.essential == null ? Input.empty() : this.essential;
+    public Output<Boolean> getEssential() {
+        return this.essential == null ? Output.empty() : this.essential;
     }
 
     @InputImport(name="extraHosts")
-      private final @Nullable Input<List<TaskDefinitionHostEntryArgs>> extraHosts;
+      private final @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts;
 
-    public Input<List<TaskDefinitionHostEntryArgs>> getExtraHosts() {
-        return this.extraHosts == null ? Input.empty() : this.extraHosts;
+    public Output<List<TaskDefinitionHostEntryArgs>> getExtraHosts() {
+        return this.extraHosts == null ? Output.empty() : this.extraHosts;
     }
 
     @InputImport(name="firelensConfiguration")
-      private final @Nullable Input<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
+      private final @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
 
-    public Input<TaskDefinitionFirelensConfigurationArgs> getFirelensConfiguration() {
-        return this.firelensConfiguration == null ? Input.empty() : this.firelensConfiguration;
+    public Output<TaskDefinitionFirelensConfigurationArgs> getFirelensConfiguration() {
+        return this.firelensConfiguration == null ? Output.empty() : this.firelensConfiguration;
     }
 
     @InputImport(name="healthCheck")
-      private final @Nullable Input<TaskDefinitionHealthCheckArgs> healthCheck;
+      private final @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck;
 
-    public Input<TaskDefinitionHealthCheckArgs> getHealthCheck() {
-        return this.healthCheck == null ? Input.empty() : this.healthCheck;
+    public Output<TaskDefinitionHealthCheckArgs> getHealthCheck() {
+        return this.healthCheck == null ? Output.empty() : this.healthCheck;
     }
 
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -163,38 +163,38 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     @InputImport(name="interactive")
-      private final @Nullable Input<Boolean> interactive;
+      private final @Nullable Output<Boolean> interactive;
 
-    public Input<Boolean> getInteractive() {
-        return this.interactive == null ? Input.empty() : this.interactive;
+    public Output<Boolean> getInteractive() {
+        return this.interactive == null ? Output.empty() : this.interactive;
     }
 
     @InputImport(name="links")
-      private final @Nullable Input<List<String>> links;
+      private final @Nullable Output<List<String>> links;
 
-    public Input<List<String>> getLinks() {
-        return this.links == null ? Input.empty() : this.links;
+    public Output<List<String>> getLinks() {
+        return this.links == null ? Output.empty() : this.links;
     }
 
     @InputImport(name="linuxParameters")
-      private final @Nullable Input<TaskDefinitionLinuxParametersArgs> linuxParameters;
+      private final @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters;
 
-    public Input<TaskDefinitionLinuxParametersArgs> getLinuxParameters() {
-        return this.linuxParameters == null ? Input.empty() : this.linuxParameters;
+    public Output<TaskDefinitionLinuxParametersArgs> getLinuxParameters() {
+        return this.linuxParameters == null ? Output.empty() : this.linuxParameters;
     }
 
     @InputImport(name="logConfiguration")
-      private final @Nullable Input<TaskDefinitionLogConfigurationArgs> logConfiguration;
+      private final @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration;
 
-    public Input<TaskDefinitionLogConfigurationArgs> getLogConfiguration() {
-        return this.logConfiguration == null ? Input.empty() : this.logConfiguration;
+    public Output<TaskDefinitionLogConfigurationArgs> getLogConfiguration() {
+        return this.logConfiguration == null ? Output.empty() : this.logConfiguration;
     }
 
     /**
@@ -202,24 +202,24 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<Integer> memory;
+      private final @Nullable Output<Integer> memory;
 
-    public Input<Integer> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<Integer> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     @InputImport(name="memoryReservation")
-      private final @Nullable Input<Integer> memoryReservation;
+      private final @Nullable Output<Integer> memoryReservation;
 
-    public Input<Integer> getMemoryReservation() {
-        return this.memoryReservation == null ? Input.empty() : this.memoryReservation;
+    public Output<Integer> getMemoryReservation() {
+        return this.memoryReservation == null ? Output.empty() : this.memoryReservation;
     }
 
     @InputImport(name="mountPoints")
-      private final @Nullable Input<List<TaskDefinitionMountPointArgs>> mountPoints;
+      private final @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints;
 
-    public Input<List<TaskDefinitionMountPointArgs>> getMountPoints() {
-        return this.mountPoints == null ? Input.empty() : this.mountPoints;
+    public Output<List<TaskDefinitionMountPointArgs>> getMountPoints() {
+        return this.mountPoints == null ? Output.empty() : this.mountPoints;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -238,143 +238,143 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="portMappings")
-      private final @Nullable Input<List<TaskDefinitionPortMappingArgs>> portMappings;
+      private final @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;
 
-    public Input<List<TaskDefinitionPortMappingArgs>> getPortMappings() {
-        return this.portMappings == null ? Input.empty() : this.portMappings;
+    public Output<List<TaskDefinitionPortMappingArgs>> getPortMappings() {
+        return this.portMappings == null ? Output.empty() : this.portMappings;
     }
 
     @InputImport(name="privileged")
-      private final @Nullable Input<Boolean> privileged;
+      private final @Nullable Output<Boolean> privileged;
 
-    public Input<Boolean> getPrivileged() {
-        return this.privileged == null ? Input.empty() : this.privileged;
+    public Output<Boolean> getPrivileged() {
+        return this.privileged == null ? Output.empty() : this.privileged;
     }
 
     @InputImport(name="pseudoTerminal")
-      private final @Nullable Input<Boolean> pseudoTerminal;
+      private final @Nullable Output<Boolean> pseudoTerminal;
 
-    public Input<Boolean> getPseudoTerminal() {
-        return this.pseudoTerminal == null ? Input.empty() : this.pseudoTerminal;
+    public Output<Boolean> getPseudoTerminal() {
+        return this.pseudoTerminal == null ? Output.empty() : this.pseudoTerminal;
     }
 
     @InputImport(name="readonlyRootFilesystem")
-      private final @Nullable Input<Boolean> readonlyRootFilesystem;
+      private final @Nullable Output<Boolean> readonlyRootFilesystem;
 
-    public Input<Boolean> getReadonlyRootFilesystem() {
-        return this.readonlyRootFilesystem == null ? Input.empty() : this.readonlyRootFilesystem;
+    public Output<Boolean> getReadonlyRootFilesystem() {
+        return this.readonlyRootFilesystem == null ? Output.empty() : this.readonlyRootFilesystem;
     }
 
     @InputImport(name="repositoryCredentials")
-      private final @Nullable Input<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
+      private final @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
 
-    public Input<TaskDefinitionRepositoryCredentialsArgs> getRepositoryCredentials() {
-        return this.repositoryCredentials == null ? Input.empty() : this.repositoryCredentials;
+    public Output<TaskDefinitionRepositoryCredentialsArgs> getRepositoryCredentials() {
+        return this.repositoryCredentials == null ? Output.empty() : this.repositoryCredentials;
     }
 
     @InputImport(name="resourceRequirements")
-      private final @Nullable Input<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
+      private final @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
 
-    public Input<List<TaskDefinitionResourceRequirementArgs>> getResourceRequirements() {
-        return this.resourceRequirements == null ? Input.empty() : this.resourceRequirements;
+    public Output<List<TaskDefinitionResourceRequirementArgs>> getResourceRequirements() {
+        return this.resourceRequirements == null ? Output.empty() : this.resourceRequirements;
     }
 
     @InputImport(name="secrets")
-      private final @Nullable Input<List<TaskDefinitionSecretArgs>> secrets;
+      private final @Nullable Output<List<TaskDefinitionSecretArgs>> secrets;
 
-    public Input<List<TaskDefinitionSecretArgs>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<TaskDefinitionSecretArgs>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     @InputImport(name="startTimeout")
-      private final @Nullable Input<Integer> startTimeout;
+      private final @Nullable Output<Integer> startTimeout;
 
-    public Input<Integer> getStartTimeout() {
-        return this.startTimeout == null ? Input.empty() : this.startTimeout;
+    public Output<Integer> getStartTimeout() {
+        return this.startTimeout == null ? Output.empty() : this.startTimeout;
     }
 
     @InputImport(name="stopTimeout")
-      private final @Nullable Input<Integer> stopTimeout;
+      private final @Nullable Output<Integer> stopTimeout;
 
-    public Input<Integer> getStopTimeout() {
-        return this.stopTimeout == null ? Input.empty() : this.stopTimeout;
+    public Output<Integer> getStopTimeout() {
+        return this.stopTimeout == null ? Output.empty() : this.stopTimeout;
     }
 
     @InputImport(name="systemControls")
-      private final @Nullable Input<List<TaskDefinitionSystemControlArgs>> systemControls;
+      private final @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls;
 
-    public Input<List<TaskDefinitionSystemControlArgs>> getSystemControls() {
-        return this.systemControls == null ? Input.empty() : this.systemControls;
+    public Output<List<TaskDefinitionSystemControlArgs>> getSystemControls() {
+        return this.systemControls == null ? Output.empty() : this.systemControls;
     }
 
     @InputImport(name="ulimits")
-      private final @Nullable Input<List<TaskDefinitionUlimitArgs>> ulimits;
+      private final @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits;
 
-    public Input<List<TaskDefinitionUlimitArgs>> getUlimits() {
-        return this.ulimits == null ? Input.empty() : this.ulimits;
+    public Output<List<TaskDefinitionUlimitArgs>> getUlimits() {
+        return this.ulimits == null ? Output.empty() : this.ulimits;
     }
 
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     @InputImport(name="volumesFrom")
-      private final @Nullable Input<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
+      private final @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
 
-    public Input<List<TaskDefinitionVolumeFromArgs>> getVolumesFrom() {
-        return this.volumesFrom == null ? Input.empty() : this.volumesFrom;
+    public Output<List<TaskDefinitionVolumeFromArgs>> getVolumesFrom() {
+        return this.volumesFrom == null ? Output.empty() : this.volumesFrom;
     }
 
     @InputImport(name="workingDirectory")
-      private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Output<String> workingDirectory;
 
-    public Input<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
+    public Output<String> getWorkingDirectory() {
+        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
     }
 
     public TaskDefinitionContainerDefinitionArgs(
-        @Nullable Input<List<String>> command,
-        @Nullable Input<Integer> cpu,
-        @Nullable Input<List<TaskDefinitionContainerDependencyArgs>> dependsOn,
-        @Nullable Input<Boolean> disableNetworking,
-        @Nullable Input<List<String>> dnsSearchDomains,
-        @Nullable Input<List<String>> dnsServers,
-        @Nullable Input<Object> dockerLabels,
-        @Nullable Input<List<String>> dockerSecurityOptions,
-        @Nullable Input<List<String>> entryPoint,
-        @Nullable Input<List<TaskDefinitionKeyValuePairArgs>> environment,
-        @Nullable Input<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles,
-        @Nullable Input<Boolean> essential,
-        @Nullable Input<List<TaskDefinitionHostEntryArgs>> extraHosts,
-        @Nullable Input<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration,
-        @Nullable Input<TaskDefinitionHealthCheckArgs> healthCheck,
-        @Nullable Input<String> hostname,
-        @Nullable Input<String> image,
-        @Nullable Input<Boolean> interactive,
-        @Nullable Input<List<String>> links,
-        @Nullable Input<TaskDefinitionLinuxParametersArgs> linuxParameters,
-        @Nullable Input<TaskDefinitionLogConfigurationArgs> logConfiguration,
-        @Nullable Input<Integer> memory,
-        @Nullable Input<Integer> memoryReservation,
-        @Nullable Input<List<TaskDefinitionMountPointArgs>> mountPoints,
-        @Nullable Input<String> name,
-        @Nullable Input<List<TaskDefinitionPortMappingArgs>> portMappings,
-        @Nullable Input<Boolean> privileged,
-        @Nullable Input<Boolean> pseudoTerminal,
-        @Nullable Input<Boolean> readonlyRootFilesystem,
-        @Nullable Input<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials,
-        @Nullable Input<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements,
-        @Nullable Input<List<TaskDefinitionSecretArgs>> secrets,
-        @Nullable Input<Integer> startTimeout,
-        @Nullable Input<Integer> stopTimeout,
-        @Nullable Input<List<TaskDefinitionSystemControlArgs>> systemControls,
-        @Nullable Input<List<TaskDefinitionUlimitArgs>> ulimits,
-        @Nullable Input<String> user,
-        @Nullable Input<List<TaskDefinitionVolumeFromArgs>> volumesFrom,
-        @Nullable Input<String> workingDirectory) {
+        @Nullable Output<List<String>> command,
+        @Nullable Output<Integer> cpu,
+        @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn,
+        @Nullable Output<Boolean> disableNetworking,
+        @Nullable Output<List<String>> dnsSearchDomains,
+        @Nullable Output<List<String>> dnsServers,
+        @Nullable Output<Object> dockerLabels,
+        @Nullable Output<List<String>> dockerSecurityOptions,
+        @Nullable Output<List<String>> entryPoint,
+        @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment,
+        @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles,
+        @Nullable Output<Boolean> essential,
+        @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts,
+        @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration,
+        @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck,
+        @Nullable Output<String> hostname,
+        @Nullable Output<String> image,
+        @Nullable Output<Boolean> interactive,
+        @Nullable Output<List<String>> links,
+        @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters,
+        @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration,
+        @Nullable Output<Integer> memory,
+        @Nullable Output<Integer> memoryReservation,
+        @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints,
+        @Nullable Output<String> name,
+        @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings,
+        @Nullable Output<Boolean> privileged,
+        @Nullable Output<Boolean> pseudoTerminal,
+        @Nullable Output<Boolean> readonlyRootFilesystem,
+        @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials,
+        @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements,
+        @Nullable Output<List<TaskDefinitionSecretArgs>> secrets,
+        @Nullable Output<Integer> startTimeout,
+        @Nullable Output<Integer> stopTimeout,
+        @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls,
+        @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits,
+        @Nullable Output<String> user,
+        @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom,
+        @Nullable Output<String> workingDirectory) {
         this.command = command;
         this.cpu = cpu;
         this.dependsOn = dependsOn;
@@ -417,45 +417,45 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
     }
 
     private TaskDefinitionContainerDefinitionArgs() {
-        this.command = Input.empty();
-        this.cpu = Input.empty();
-        this.dependsOn = Input.empty();
-        this.disableNetworking = Input.empty();
-        this.dnsSearchDomains = Input.empty();
-        this.dnsServers = Input.empty();
-        this.dockerLabels = Input.empty();
-        this.dockerSecurityOptions = Input.empty();
-        this.entryPoint = Input.empty();
-        this.environment = Input.empty();
-        this.environmentFiles = Input.empty();
-        this.essential = Input.empty();
-        this.extraHosts = Input.empty();
-        this.firelensConfiguration = Input.empty();
-        this.healthCheck = Input.empty();
-        this.hostname = Input.empty();
-        this.image = Input.empty();
-        this.interactive = Input.empty();
-        this.links = Input.empty();
-        this.linuxParameters = Input.empty();
-        this.logConfiguration = Input.empty();
-        this.memory = Input.empty();
-        this.memoryReservation = Input.empty();
-        this.mountPoints = Input.empty();
-        this.name = Input.empty();
-        this.portMappings = Input.empty();
-        this.privileged = Input.empty();
-        this.pseudoTerminal = Input.empty();
-        this.readonlyRootFilesystem = Input.empty();
-        this.repositoryCredentials = Input.empty();
-        this.resourceRequirements = Input.empty();
-        this.secrets = Input.empty();
-        this.startTimeout = Input.empty();
-        this.stopTimeout = Input.empty();
-        this.systemControls = Input.empty();
-        this.ulimits = Input.empty();
-        this.user = Input.empty();
-        this.volumesFrom = Input.empty();
-        this.workingDirectory = Input.empty();
+        this.command = Output.empty();
+        this.cpu = Output.empty();
+        this.dependsOn = Output.empty();
+        this.disableNetworking = Output.empty();
+        this.dnsSearchDomains = Output.empty();
+        this.dnsServers = Output.empty();
+        this.dockerLabels = Output.empty();
+        this.dockerSecurityOptions = Output.empty();
+        this.entryPoint = Output.empty();
+        this.environment = Output.empty();
+        this.environmentFiles = Output.empty();
+        this.essential = Output.empty();
+        this.extraHosts = Output.empty();
+        this.firelensConfiguration = Output.empty();
+        this.healthCheck = Output.empty();
+        this.hostname = Output.empty();
+        this.image = Output.empty();
+        this.interactive = Output.empty();
+        this.links = Output.empty();
+        this.linuxParameters = Output.empty();
+        this.logConfiguration = Output.empty();
+        this.memory = Output.empty();
+        this.memoryReservation = Output.empty();
+        this.mountPoints = Output.empty();
+        this.name = Output.empty();
+        this.portMappings = Output.empty();
+        this.privileged = Output.empty();
+        this.pseudoTerminal = Output.empty();
+        this.readonlyRootFilesystem = Output.empty();
+        this.repositoryCredentials = Output.empty();
+        this.resourceRequirements = Output.empty();
+        this.secrets = Output.empty();
+        this.startTimeout = Output.empty();
+        this.stopTimeout = Output.empty();
+        this.systemControls = Output.empty();
+        this.ulimits = Output.empty();
+        this.user = Output.empty();
+        this.volumesFrom = Output.empty();
+        this.workingDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -467,45 +467,45 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> command;
-        private @Nullable Input<Integer> cpu;
-        private @Nullable Input<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
-        private @Nullable Input<Boolean> disableNetworking;
-        private @Nullable Input<List<String>> dnsSearchDomains;
-        private @Nullable Input<List<String>> dnsServers;
-        private @Nullable Input<Object> dockerLabels;
-        private @Nullable Input<List<String>> dockerSecurityOptions;
-        private @Nullable Input<List<String>> entryPoint;
-        private @Nullable Input<List<TaskDefinitionKeyValuePairArgs>> environment;
-        private @Nullable Input<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
-        private @Nullable Input<Boolean> essential;
-        private @Nullable Input<List<TaskDefinitionHostEntryArgs>> extraHosts;
-        private @Nullable Input<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
-        private @Nullable Input<TaskDefinitionHealthCheckArgs> healthCheck;
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<String> image;
-        private @Nullable Input<Boolean> interactive;
-        private @Nullable Input<List<String>> links;
-        private @Nullable Input<TaskDefinitionLinuxParametersArgs> linuxParameters;
-        private @Nullable Input<TaskDefinitionLogConfigurationArgs> logConfiguration;
-        private @Nullable Input<Integer> memory;
-        private @Nullable Input<Integer> memoryReservation;
-        private @Nullable Input<List<TaskDefinitionMountPointArgs>> mountPoints;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<TaskDefinitionPortMappingArgs>> portMappings;
-        private @Nullable Input<Boolean> privileged;
-        private @Nullable Input<Boolean> pseudoTerminal;
-        private @Nullable Input<Boolean> readonlyRootFilesystem;
-        private @Nullable Input<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
-        private @Nullable Input<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
-        private @Nullable Input<List<TaskDefinitionSecretArgs>> secrets;
-        private @Nullable Input<Integer> startTimeout;
-        private @Nullable Input<Integer> stopTimeout;
-        private @Nullable Input<List<TaskDefinitionSystemControlArgs>> systemControls;
-        private @Nullable Input<List<TaskDefinitionUlimitArgs>> ulimits;
-        private @Nullable Input<String> user;
-        private @Nullable Input<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
-        private @Nullable Input<String> workingDirectory;
+        private @Nullable Output<List<String>> command;
+        private @Nullable Output<Integer> cpu;
+        private @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
+        private @Nullable Output<Boolean> disableNetworking;
+        private @Nullable Output<List<String>> dnsSearchDomains;
+        private @Nullable Output<List<String>> dnsServers;
+        private @Nullable Output<Object> dockerLabels;
+        private @Nullable Output<List<String>> dockerSecurityOptions;
+        private @Nullable Output<List<String>> entryPoint;
+        private @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
+        private @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
+        private @Nullable Output<Boolean> essential;
+        private @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts;
+        private @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
+        private @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<String> image;
+        private @Nullable Output<Boolean> interactive;
+        private @Nullable Output<List<String>> links;
+        private @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters;
+        private @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration;
+        private @Nullable Output<Integer> memory;
+        private @Nullable Output<Integer> memoryReservation;
+        private @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;
+        private @Nullable Output<Boolean> privileged;
+        private @Nullable Output<Boolean> pseudoTerminal;
+        private @Nullable Output<Boolean> readonlyRootFilesystem;
+        private @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
+        private @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
+        private @Nullable Output<List<TaskDefinitionSecretArgs>> secrets;
+        private @Nullable Output<Integer> startTimeout;
+        private @Nullable Output<Integer> stopTimeout;
+        private @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls;
+        private @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits;
+        private @Nullable Output<String> user;
+        private @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
+        private @Nullable Output<String> workingDirectory;
 
         public Builder() {
     	      // Empty
@@ -554,393 +554,393 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
 
-        public Builder cpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Output<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<TaskDefinitionContainerDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<TaskDefinitionContainerDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder disableNetworking(@Nullable Input<Boolean> disableNetworking) {
+        public Builder disableNetworking(@Nullable Output<Boolean> disableNetworking) {
             this.disableNetworking = disableNetworking;
             return this;
         }
 
         public Builder disableNetworking(@Nullable Boolean disableNetworking) {
-            this.disableNetworking = Input.ofNullable(disableNetworking);
+            this.disableNetworking = Output.ofNullable(disableNetworking);
             return this;
         }
 
-        public Builder dnsSearchDomains(@Nullable Input<List<String>> dnsSearchDomains) {
+        public Builder dnsSearchDomains(@Nullable Output<List<String>> dnsSearchDomains) {
             this.dnsSearchDomains = dnsSearchDomains;
             return this;
         }
 
         public Builder dnsSearchDomains(@Nullable List<String> dnsSearchDomains) {
-            this.dnsSearchDomains = Input.ofNullable(dnsSearchDomains);
+            this.dnsSearchDomains = Output.ofNullable(dnsSearchDomains);
             return this;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder dockerLabels(@Nullable Input<Object> dockerLabels) {
+        public Builder dockerLabels(@Nullable Output<Object> dockerLabels) {
             this.dockerLabels = dockerLabels;
             return this;
         }
 
         public Builder dockerLabels(@Nullable Object dockerLabels) {
-            this.dockerLabels = Input.ofNullable(dockerLabels);
+            this.dockerLabels = Output.ofNullable(dockerLabels);
             return this;
         }
 
-        public Builder dockerSecurityOptions(@Nullable Input<List<String>> dockerSecurityOptions) {
+        public Builder dockerSecurityOptions(@Nullable Output<List<String>> dockerSecurityOptions) {
             this.dockerSecurityOptions = dockerSecurityOptions;
             return this;
         }
 
         public Builder dockerSecurityOptions(@Nullable List<String> dockerSecurityOptions) {
-            this.dockerSecurityOptions = Input.ofNullable(dockerSecurityOptions);
+            this.dockerSecurityOptions = Output.ofNullable(dockerSecurityOptions);
             return this;
         }
 
-        public Builder entryPoint(@Nullable Input<List<String>> entryPoint) {
+        public Builder entryPoint(@Nullable Output<List<String>> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
 
         public Builder entryPoint(@Nullable List<String> entryPoint) {
-            this.entryPoint = Input.ofNullable(entryPoint);
+            this.entryPoint = Output.ofNullable(entryPoint);
             return this;
         }
 
-        public Builder environment(@Nullable Input<List<TaskDefinitionKeyValuePairArgs>> environment) {
+        public Builder environment(@Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable List<TaskDefinitionKeyValuePairArgs> environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder environmentFiles(@Nullable Input<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles) {
+        public Builder environmentFiles(@Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles) {
             this.environmentFiles = environmentFiles;
             return this;
         }
 
         public Builder environmentFiles(@Nullable List<TaskDefinitionEnvironmentFileArgs> environmentFiles) {
-            this.environmentFiles = Input.ofNullable(environmentFiles);
+            this.environmentFiles = Output.ofNullable(environmentFiles);
             return this;
         }
 
-        public Builder essential(@Nullable Input<Boolean> essential) {
+        public Builder essential(@Nullable Output<Boolean> essential) {
             this.essential = essential;
             return this;
         }
 
         public Builder essential(@Nullable Boolean essential) {
-            this.essential = Input.ofNullable(essential);
+            this.essential = Output.ofNullable(essential);
             return this;
         }
 
-        public Builder extraHosts(@Nullable Input<List<TaskDefinitionHostEntryArgs>> extraHosts) {
+        public Builder extraHosts(@Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
 
         public Builder extraHosts(@Nullable List<TaskDefinitionHostEntryArgs> extraHosts) {
-            this.extraHosts = Input.ofNullable(extraHosts);
+            this.extraHosts = Output.ofNullable(extraHosts);
             return this;
         }
 
-        public Builder firelensConfiguration(@Nullable Input<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration) {
+        public Builder firelensConfiguration(@Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration) {
             this.firelensConfiguration = firelensConfiguration;
             return this;
         }
 
         public Builder firelensConfiguration(@Nullable TaskDefinitionFirelensConfigurationArgs firelensConfiguration) {
-            this.firelensConfiguration = Input.ofNullable(firelensConfiguration);
+            this.firelensConfiguration = Output.ofNullable(firelensConfiguration);
             return this;
         }
 
-        public Builder healthCheck(@Nullable Input<TaskDefinitionHealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
         public Builder healthCheck(@Nullable TaskDefinitionHealthCheckArgs healthCheck) {
-            this.healthCheck = Input.ofNullable(healthCheck);
+            this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder interactive(@Nullable Input<Boolean> interactive) {
+        public Builder interactive(@Nullable Output<Boolean> interactive) {
             this.interactive = interactive;
             return this;
         }
 
         public Builder interactive(@Nullable Boolean interactive) {
-            this.interactive = Input.ofNullable(interactive);
+            this.interactive = Output.ofNullable(interactive);
             return this;
         }
 
-        public Builder links(@Nullable Input<List<String>> links) {
+        public Builder links(@Nullable Output<List<String>> links) {
             this.links = links;
             return this;
         }
 
         public Builder links(@Nullable List<String> links) {
-            this.links = Input.ofNullable(links);
+            this.links = Output.ofNullable(links);
             return this;
         }
 
-        public Builder linuxParameters(@Nullable Input<TaskDefinitionLinuxParametersArgs> linuxParameters) {
+        public Builder linuxParameters(@Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters) {
             this.linuxParameters = linuxParameters;
             return this;
         }
 
         public Builder linuxParameters(@Nullable TaskDefinitionLinuxParametersArgs linuxParameters) {
-            this.linuxParameters = Input.ofNullable(linuxParameters);
+            this.linuxParameters = Output.ofNullable(linuxParameters);
             return this;
         }
 
-        public Builder logConfiguration(@Nullable Input<TaskDefinitionLogConfigurationArgs> logConfiguration) {
+        public Builder logConfiguration(@Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
 
         public Builder logConfiguration(@Nullable TaskDefinitionLogConfigurationArgs logConfiguration) {
-            this.logConfiguration = Input.ofNullable(logConfiguration);
+            this.logConfiguration = Output.ofNullable(logConfiguration);
             return this;
         }
 
-        public Builder memory(@Nullable Input<Integer> memory) {
+        public Builder memory(@Nullable Output<Integer> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable Integer memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
 
-        public Builder memoryReservation(@Nullable Input<Integer> memoryReservation) {
+        public Builder memoryReservation(@Nullable Output<Integer> memoryReservation) {
             this.memoryReservation = memoryReservation;
             return this;
         }
 
         public Builder memoryReservation(@Nullable Integer memoryReservation) {
-            this.memoryReservation = Input.ofNullable(memoryReservation);
+            this.memoryReservation = Output.ofNullable(memoryReservation);
             return this;
         }
 
-        public Builder mountPoints(@Nullable Input<List<TaskDefinitionMountPointArgs>> mountPoints) {
+        public Builder mountPoints(@Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }
 
         public Builder mountPoints(@Nullable List<TaskDefinitionMountPointArgs> mountPoints) {
-            this.mountPoints = Input.ofNullable(mountPoints);
+            this.mountPoints = Output.ofNullable(mountPoints);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder portMappings(@Nullable Input<List<TaskDefinitionPortMappingArgs>> portMappings) {
+        public Builder portMappings(@Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings) {
             this.portMappings = portMappings;
             return this;
         }
 
         public Builder portMappings(@Nullable List<TaskDefinitionPortMappingArgs> portMappings) {
-            this.portMappings = Input.ofNullable(portMappings);
+            this.portMappings = Output.ofNullable(portMappings);
             return this;
         }
 
-        public Builder privileged(@Nullable Input<Boolean> privileged) {
+        public Builder privileged(@Nullable Output<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
 
         public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Input.ofNullable(privileged);
+            this.privileged = Output.ofNullable(privileged);
             return this;
         }
 
-        public Builder pseudoTerminal(@Nullable Input<Boolean> pseudoTerminal) {
+        public Builder pseudoTerminal(@Nullable Output<Boolean> pseudoTerminal) {
             this.pseudoTerminal = pseudoTerminal;
             return this;
         }
 
         public Builder pseudoTerminal(@Nullable Boolean pseudoTerminal) {
-            this.pseudoTerminal = Input.ofNullable(pseudoTerminal);
+            this.pseudoTerminal = Output.ofNullable(pseudoTerminal);
             return this;
         }
 
-        public Builder readonlyRootFilesystem(@Nullable Input<Boolean> readonlyRootFilesystem) {
+        public Builder readonlyRootFilesystem(@Nullable Output<Boolean> readonlyRootFilesystem) {
             this.readonlyRootFilesystem = readonlyRootFilesystem;
             return this;
         }
 
         public Builder readonlyRootFilesystem(@Nullable Boolean readonlyRootFilesystem) {
-            this.readonlyRootFilesystem = Input.ofNullable(readonlyRootFilesystem);
+            this.readonlyRootFilesystem = Output.ofNullable(readonlyRootFilesystem);
             return this;
         }
 
-        public Builder repositoryCredentials(@Nullable Input<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials) {
+        public Builder repositoryCredentials(@Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials) {
             this.repositoryCredentials = repositoryCredentials;
             return this;
         }
 
         public Builder repositoryCredentials(@Nullable TaskDefinitionRepositoryCredentialsArgs repositoryCredentials) {
-            this.repositoryCredentials = Input.ofNullable(repositoryCredentials);
+            this.repositoryCredentials = Output.ofNullable(repositoryCredentials);
             return this;
         }
 
-        public Builder resourceRequirements(@Nullable Input<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements) {
+        public Builder resourceRequirements(@Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
 
         public Builder resourceRequirements(@Nullable List<TaskDefinitionResourceRequirementArgs> resourceRequirements) {
-            this.resourceRequirements = Input.ofNullable(resourceRequirements);
+            this.resourceRequirements = Output.ofNullable(resourceRequirements);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<List<TaskDefinitionSecretArgs>> secrets) {
+        public Builder secrets(@Nullable Output<List<TaskDefinitionSecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<TaskDefinitionSecretArgs> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
 
-        public Builder startTimeout(@Nullable Input<Integer> startTimeout) {
+        public Builder startTimeout(@Nullable Output<Integer> startTimeout) {
             this.startTimeout = startTimeout;
             return this;
         }
 
         public Builder startTimeout(@Nullable Integer startTimeout) {
-            this.startTimeout = Input.ofNullable(startTimeout);
+            this.startTimeout = Output.ofNullable(startTimeout);
             return this;
         }
 
-        public Builder stopTimeout(@Nullable Input<Integer> stopTimeout) {
+        public Builder stopTimeout(@Nullable Output<Integer> stopTimeout) {
             this.stopTimeout = stopTimeout;
             return this;
         }
 
         public Builder stopTimeout(@Nullable Integer stopTimeout) {
-            this.stopTimeout = Input.ofNullable(stopTimeout);
+            this.stopTimeout = Output.ofNullable(stopTimeout);
             return this;
         }
 
-        public Builder systemControls(@Nullable Input<List<TaskDefinitionSystemControlArgs>> systemControls) {
+        public Builder systemControls(@Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls) {
             this.systemControls = systemControls;
             return this;
         }
 
         public Builder systemControls(@Nullable List<TaskDefinitionSystemControlArgs> systemControls) {
-            this.systemControls = Input.ofNullable(systemControls);
+            this.systemControls = Output.ofNullable(systemControls);
             return this;
         }
 
-        public Builder ulimits(@Nullable Input<List<TaskDefinitionUlimitArgs>> ulimits) {
+        public Builder ulimits(@Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
 
         public Builder ulimits(@Nullable List<TaskDefinitionUlimitArgs> ulimits) {
-            this.ulimits = Input.ofNullable(ulimits);
+            this.ulimits = Output.ofNullable(ulimits);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
 
-        public Builder volumesFrom(@Nullable Input<List<TaskDefinitionVolumeFromArgs>> volumesFrom) {
+        public Builder volumesFrom(@Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom) {
             this.volumesFrom = volumesFrom;
             return this;
         }
 
         public Builder volumesFrom(@Nullable List<TaskDefinitionVolumeFromArgs> volumesFrom) {
-            this.volumesFrom = Input.ofNullable(volumesFrom);
+            this.volumesFrom = Output.ofNullable(volumesFrom);
             return this;
         }
 
-        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Input.ofNullable(workingDirectory);
+            this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
         }
         public TaskDefinitionContainerDefinitionArgs build() {

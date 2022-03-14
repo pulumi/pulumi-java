@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.CreateMode;
 import io.pulumi.azurenative.synapse.enums.StorageAccountType;
 import io.pulumi.azurenative.synapse.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createMode")
-      private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Input<Either<String,CreateMode>> getCreateMode() {
-        return this.createMode == null ? Input.empty() : this.createMode;
+    public Output<Either<String,CreateMode>> getCreateMode() {
+        return this.createMode == null ? Output.empty() : this.createMode;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-      private final @Nullable Input<String> creationDate;
+      private final @Nullable Output<String> creationDate;
 
-    public Input<String> getCreationDate() {
-        return this.creationDate == null ? Input.empty() : this.creationDate;
+    public Output<String> getCreationDate() {
+        return this.creationDate == null ? Output.empty() : this.creationDate;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSizeBytes")
-      private final @Nullable Input<Double> maxSizeBytes;
+      private final @Nullable Output<Double> maxSizeBytes;
 
-    public Input<Double> getMaxSizeBytes() {
-        return this.maxSizeBytes == null ? Input.empty() : this.maxSizeBytes;
+    public Output<Double> getMaxSizeBytes() {
+        return this.maxSizeBytes == null ? Output.empty() : this.maxSizeBytes;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoverableDatabaseId")
-      private final @Nullable Input<String> recoverableDatabaseId;
+      private final @Nullable Output<String> recoverableDatabaseId;
 
-    public Input<String> getRecoverableDatabaseId() {
-        return this.recoverableDatabaseId == null ? Input.empty() : this.recoverableDatabaseId;
+    public Output<String> getRecoverableDatabaseId() {
+        return this.recoverableDatabaseId == null ? Output.empty() : this.recoverableDatabaseId;
     }
 
     /**
@@ -110,9 +110,9 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -121,10 +121,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePointInTime")
-      private final @Nullable Input<String> restorePointInTime;
+      private final @Nullable Output<String> restorePointInTime;
 
-    public Input<String> getRestorePointInTime() {
-        return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
+    public Output<String> getRestorePointInTime() {
+        return this.restorePointInTime == null ? Output.empty() : this.restorePointInTime;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabaseId")
-      private final @Nullable Input<String> sourceDatabaseId;
+      private final @Nullable Output<String> sourceDatabaseId;
 
-    public Input<String> getSourceDatabaseId() {
-        return this.sourceDatabaseId == null ? Input.empty() : this.sourceDatabaseId;
+    public Output<String> getSourceDatabaseId() {
+        return this.sourceDatabaseId == null ? Output.empty() : this.sourceDatabaseId;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlPoolName")
-      private final @Nullable Input<String> sqlPoolName;
+      private final @Nullable Output<String> sqlPoolName;
 
-    public Input<String> getSqlPoolName() {
-        return this.sqlPoolName == null ? Input.empty() : this.sqlPoolName;
+    public Output<String> getSqlPoolName() {
+        return this.sqlPoolName == null ? Output.empty() : this.sqlPoolName;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountType")
-      private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+      private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Input<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -198,29 +198,29 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public SqlPoolArgs(
-        @Nullable Input<String> collation,
-        @Nullable Input<Either<String,CreateMode>> createMode,
-        @Nullable Input<String> creationDate,
-        @Nullable Input<String> location,
-        @Nullable Input<Double> maxSizeBytes,
-        @Nullable Input<String> provisioningState,
-        @Nullable Input<String> recoverableDatabaseId,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> restorePointInTime,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<String> sourceDatabaseId,
-        @Nullable Input<String> sqlPoolName,
-        @Nullable Input<String> status,
-        @Nullable Input<Either<String,StorageAccountType>> storageAccountType,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workspaceName) {
+        @Nullable Output<String> collation,
+        @Nullable Output<Either<String,CreateMode>> createMode,
+        @Nullable Output<String> creationDate,
+        @Nullable Output<String> location,
+        @Nullable Output<Double> maxSizeBytes,
+        @Nullable Output<String> provisioningState,
+        @Nullable Output<String> recoverableDatabaseId,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> restorePointInTime,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<String> sourceDatabaseId,
+        @Nullable Output<String> sqlPoolName,
+        @Nullable Output<String> status,
+        @Nullable Output<Either<String,StorageAccountType>> storageAccountType,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workspaceName) {
         this.collation = collation;
         this.createMode = createMode;
         this.creationDate = creationDate;
@@ -240,22 +240,22 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlPoolArgs() {
-        this.collation = Input.empty();
-        this.createMode = Input.empty();
-        this.creationDate = Input.empty();
-        this.location = Input.empty();
-        this.maxSizeBytes = Input.empty();
-        this.provisioningState = Input.empty();
-        this.recoverableDatabaseId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.restorePointInTime = Input.empty();
-        this.sku = Input.empty();
-        this.sourceDatabaseId = Input.empty();
-        this.sqlPoolName = Input.empty();
-        this.status = Input.empty();
-        this.storageAccountType = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.collation = Output.empty();
+        this.createMode = Output.empty();
+        this.creationDate = Output.empty();
+        this.location = Output.empty();
+        this.maxSizeBytes = Output.empty();
+        this.provisioningState = Output.empty();
+        this.recoverableDatabaseId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.restorePointInTime = Output.empty();
+        this.sku = Output.empty();
+        this.sourceDatabaseId = Output.empty();
+        this.sqlPoolName = Output.empty();
+        this.status = Output.empty();
+        this.storageAccountType = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -267,22 +267,22 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collation;
-        private @Nullable Input<Either<String,CreateMode>> createMode;
-        private @Nullable Input<String> creationDate;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Double> maxSizeBytes;
-        private @Nullable Input<String> provisioningState;
-        private @Nullable Input<String> recoverableDatabaseId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> restorePointInTime;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<String> sourceDatabaseId;
-        private @Nullable Input<String> sqlPoolName;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> collation;
+        private @Nullable Output<Either<String,CreateMode>> createMode;
+        private @Nullable Output<String> creationDate;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Double> maxSizeBytes;
+        private @Nullable Output<String> provisioningState;
+        private @Nullable Output<String> recoverableDatabaseId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> restorePointInTime;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<String> sourceDatabaseId;
+        private @Nullable Output<String> sqlPoolName;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -308,163 +308,163 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder createMode(@Nullable Input<Either<String,CreateMode>> createMode) {
+        public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Input.ofNullable(createMode);
+            this.createMode = Output.ofNullable(createMode);
             return this;
         }
 
-        public Builder creationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Input.ofNullable(creationDate);
+            this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maxSizeBytes(@Nullable Input<Double> maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
-            this.maxSizeBytes = Input.ofNullable(maxSizeBytes);
+            this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder recoverableDatabaseId(@Nullable Input<String> recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
 
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
-            this.recoverableDatabaseId = Input.ofNullable(recoverableDatabaseId);
+            this.recoverableDatabaseId = Output.ofNullable(recoverableDatabaseId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder restorePointInTime(@Nullable Input<String> restorePointInTime) {
+        public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Input.ofNullable(restorePointInTime);
+            this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder sourceDatabaseId(@Nullable Input<String> sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
 
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
-            this.sourceDatabaseId = Input.ofNullable(sourceDatabaseId);
+            this.sourceDatabaseId = Output.ofNullable(sourceDatabaseId);
             return this;
         }
 
-        public Builder sqlPoolName(@Nullable Input<String> sqlPoolName) {
+        public Builder sqlPoolName(@Nullable Output<String> sqlPoolName) {
             this.sqlPoolName = sqlPoolName;
             return this;
         }
 
         public Builder sqlPoolName(@Nullable String sqlPoolName) {
-            this.sqlPoolName = Input.ofNullable(sqlPoolName);
+            this.sqlPoolName = Output.ofNullable(sqlPoolName);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Input.ofNullable(storageAccountType);
+            this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public SqlPoolArgs build() {

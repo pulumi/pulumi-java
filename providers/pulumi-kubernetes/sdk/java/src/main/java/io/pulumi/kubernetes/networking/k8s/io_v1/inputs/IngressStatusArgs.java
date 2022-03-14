@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancer")
-      private final @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
+      private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
-    public Input<LoadBalancerStatusArgs> getLoadBalancer() {
-        return this.loadBalancer == null ? Input.empty() : this.loadBalancer;
+    public Output<LoadBalancerStatusArgs> getLoadBalancer() {
+        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
     }
 
-    public IngressStatusArgs(@Nullable Input<LoadBalancerStatusArgs> loadBalancer) {
+    public IngressStatusArgs(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
         this.loadBalancer = loadBalancer;
     }
 
     private IngressStatusArgs() {
-        this.loadBalancer = Input.empty();
+        this.loadBalancer = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
+        private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.loadBalancer = defaults.loadBalancer;
         }
 
-        public Builder loadBalancer(@Nullable Input<LoadBalancerStatusArgs> loadBalancer) {
+        public Builder loadBalancer(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
 
         public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
-            this.loadBalancer = Input.ofNullable(loadBalancer);
+            this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
         }
         public IngressStatusArgs build() {

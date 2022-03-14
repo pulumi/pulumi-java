@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner;
 
 import io.pulumi.awsnative.apprunner.inputs.VpcConnectorTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets", required=true)
-      private final Input<List<String>> subnets;
+      private final Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
+    public Output<List<String>> getSubnets() {
         return this.subnets;
     }
 
@@ -43,10 +43,10 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<VpcConnectorTagArgs>> tags;
+      private final @Nullable Output<List<VpcConnectorTagArgs>> tags;
 
-    public Input<List<VpcConnectorTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<VpcConnectorTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConnectorName")
-      private final @Nullable Input<String> vpcConnectorName;
+      private final @Nullable Output<String> vpcConnectorName;
 
-    public Input<String> getVpcConnectorName() {
-        return this.vpcConnectorName == null ? Input.empty() : this.vpcConnectorName;
+    public Output<String> getVpcConnectorName() {
+        return this.vpcConnectorName == null ? Output.empty() : this.vpcConnectorName;
     }
 
     public VpcConnectorArgs(
-        @Nullable Input<List<String>> securityGroups,
-        Input<List<String>> subnets,
-        @Nullable Input<List<VpcConnectorTagArgs>> tags,
-        @Nullable Input<String> vpcConnectorName) {
+        @Nullable Output<List<String>> securityGroups,
+        Output<List<String>> subnets,
+        @Nullable Output<List<VpcConnectorTagArgs>> tags,
+        @Nullable Output<String> vpcConnectorName) {
         this.securityGroups = securityGroups;
         this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
         this.tags = tags;
@@ -72,10 +72,10 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcConnectorArgs() {
-        this.securityGroups = Input.empty();
-        this.subnets = Input.empty();
-        this.tags = Input.empty();
-        this.vpcConnectorName = Input.empty();
+        this.securityGroups = Output.empty();
+        this.subnets = Output.empty();
+        this.tags = Output.empty();
+        this.vpcConnectorName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> securityGroups;
-        private Input<List<String>> subnets;
-        private @Nullable Input<List<VpcConnectorTagArgs>> tags;
-        private @Nullable Input<String> vpcConnectorName;
+        private @Nullable Output<List<String>> securityGroups;
+        private Output<List<String>> subnets;
+        private @Nullable Output<List<VpcConnectorTagArgs>> tags;
+        private @Nullable Output<String> vpcConnectorName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConnectorName = defaults.vpcConnectorName;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnets(Input<List<String>> subnets) {
+        public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
         public Builder subnets(List<String> subnets) {
-            this.subnets = Input.of(Objects.requireNonNull(subnets));
+            this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<VpcConnectorTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<VpcConnectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<VpcConnectorTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcConnectorName(@Nullable Input<String> vpcConnectorName) {
+        public Builder vpcConnectorName(@Nullable Output<String> vpcConnectorName) {
             this.vpcConnectorName = vpcConnectorName;
             return this;
         }
 
         public Builder vpcConnectorName(@Nullable String vpcConnectorName) {
-            this.vpcConnectorName = Input.ofNullable(vpcConnectorName);
+            this.vpcConnectorName = Output.ofNullable(vpcConnectorName);
             return this;
         }
         public VpcConnectorArgs build() {

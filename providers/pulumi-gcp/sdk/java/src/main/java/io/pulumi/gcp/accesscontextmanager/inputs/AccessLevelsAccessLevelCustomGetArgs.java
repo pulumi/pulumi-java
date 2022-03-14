@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelCustomExprGetArgs;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class AccessLevelsAccessLevelCustomGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="expr", required=true)
-      private final Input<AccessLevelsAccessLevelCustomExprGetArgs> expr;
+      private final Output<AccessLevelsAccessLevelCustomExprGetArgs> expr;
 
-    public Input<AccessLevelsAccessLevelCustomExprGetArgs> getExpr() {
+    public Output<AccessLevelsAccessLevelCustomExprGetArgs> getExpr() {
         return this.expr;
     }
 
-    public AccessLevelsAccessLevelCustomGetArgs(Input<AccessLevelsAccessLevelCustomExprGetArgs> expr) {
+    public AccessLevelsAccessLevelCustomGetArgs(Output<AccessLevelsAccessLevelCustomExprGetArgs> expr) {
         this.expr = Objects.requireNonNull(expr, "expected parameter 'expr' to be non-null");
     }
 
     private AccessLevelsAccessLevelCustomGetArgs() {
-        this.expr = Input.empty();
+        this.expr = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class AccessLevelsAccessLevelCustomGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<AccessLevelsAccessLevelCustomExprGetArgs> expr;
+        private Output<AccessLevelsAccessLevelCustomExprGetArgs> expr;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class AccessLevelsAccessLevelCustomGetArgs extends io.pulumi.resour
     	      this.expr = defaults.expr;
         }
 
-        public Builder expr(Input<AccessLevelsAccessLevelCustomExprGetArgs> expr) {
+        public Builder expr(Output<AccessLevelsAccessLevelCustomExprGetArgs> expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
 
         public Builder expr(AccessLevelsAccessLevelCustomExprGetArgs expr) {
-            this.expr = Input.of(Objects.requireNonNull(expr));
+            this.expr = Output.of(Objects.requireNonNull(expr));
             return this;
         }
         public AccessLevelsAccessLevelCustomGetArgs build() {

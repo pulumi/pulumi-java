@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="artifactName")
-      private final @Nullable Input<String> artifactName;
+      private final @Nullable Output<String> artifactName;
 
-    public Input<String> getArtifactName() {
-        return this.artifactName == null ? Input.empty() : this.artifactName;
+    public Output<String> getArtifactName() {
+        return this.artifactName == null ? Output.empty() : this.artifactName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="blueprintName", required=true)
-      private final Input<String> blueprintName;
+      private final Output<String> blueprintName;
 
-    public Input<String> getBlueprintName() {
+    public Output<String> getBlueprintName() {
         return this.blueprintName;
     }
 
@@ -44,10 +44,10 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<String>> dependsOn;
+      private final @Nullable Output<List<String>> dependsOn;
 
-    public Input<List<String>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<String>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -89,9 +89,9 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<Map<String,ParameterValueArgs>> parameters;
+      private final Output<Map<String,ParameterValueArgs>> parameters;
 
-    public Input<Map<String,ParameterValueArgs>> getParameters() {
+    public Output<Map<String,ParameterValueArgs>> getParameters() {
         return this.parameters;
     }
 
@@ -100,9 +100,9 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="policyDefinitionId", required=true)
-      private final Input<String> policyDefinitionId;
+      private final Output<String> policyDefinitionId;
 
-    public Input<String> getPolicyDefinitionId() {
+    public Output<String> getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
 
@@ -111,10 +111,10 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<String> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceScope", required=true)
-      private final Input<String> resourceScope;
+      private final Output<String> resourceScope;
 
-    public Input<String> getResourceScope() {
+    public Output<String> getResourceScope() {
         return this.resourceScope;
     }
 
     public PolicyAssignmentArtifactArgs(
-        @Nullable Input<String> artifactName,
-        Input<String> blueprintName,
-        @Nullable Input<List<String>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> kind,
-        Input<Map<String,ParameterValueArgs>> parameters,
-        Input<String> policyDefinitionId,
-        @Nullable Input<String> resourceGroup,
-        Input<String> resourceScope) {
+        @Nullable Output<String> artifactName,
+        Output<String> blueprintName,
+        @Nullable Output<List<String>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> kind,
+        Output<Map<String,ParameterValueArgs>> parameters,
+        Output<String> policyDefinitionId,
+        @Nullable Output<String> resourceGroup,
+        Output<String> resourceScope) {
         this.artifactName = artifactName;
         this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
         this.dependsOn = dependsOn;
@@ -152,16 +152,16 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
     }
 
     private PolicyAssignmentArtifactArgs() {
-        this.artifactName = Input.empty();
-        this.blueprintName = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.kind = Input.empty();
-        this.parameters = Input.empty();
-        this.policyDefinitionId = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.resourceScope = Input.empty();
+        this.artifactName = Output.empty();
+        this.blueprintName = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.kind = Output.empty();
+        this.parameters = Output.empty();
+        this.policyDefinitionId = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.resourceScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactName;
-        private Input<String> blueprintName;
-        private @Nullable Input<List<String>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> kind;
-        private Input<Map<String,ParameterValueArgs>> parameters;
-        private Input<String> policyDefinitionId;
-        private @Nullable Input<String> resourceGroup;
-        private Input<String> resourceScope;
+        private @Nullable Output<String> artifactName;
+        private Output<String> blueprintName;
+        private @Nullable Output<List<String>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> kind;
+        private Output<Map<String,ParameterValueArgs>> parameters;
+        private Output<String> policyDefinitionId;
+        private @Nullable Output<String> resourceGroup;
+        private Output<String> resourceScope;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
     	      this.resourceScope = defaults.resourceScope;
         }
 
-        public Builder artifactName(@Nullable Input<String> artifactName) {
+        public Builder artifactName(@Nullable Output<String> artifactName) {
             this.artifactName = artifactName;
             return this;
         }
 
         public Builder artifactName(@Nullable String artifactName) {
-            this.artifactName = Input.ofNullable(artifactName);
+            this.artifactName = Output.ofNullable(artifactName);
             return this;
         }
 
-        public Builder blueprintName(Input<String> blueprintName) {
+        public Builder blueprintName(Output<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
 
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Input.of(Objects.requireNonNull(blueprintName));
+            this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<String>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<String> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder parameters(Input<Map<String,ParameterValueArgs>> parameters) {
+        public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder policyDefinitionId(Input<String> policyDefinitionId) {
+        public Builder policyDefinitionId(Output<String> policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
 
         public Builder policyDefinitionId(String policyDefinitionId) {
-            this.policyDefinitionId = Input.of(Objects.requireNonNull(policyDefinitionId));
+            this.policyDefinitionId = Output.of(Objects.requireNonNull(policyDefinitionId));
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder resourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
+            this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
         }
         public PolicyAssignmentArtifactArgs build() {

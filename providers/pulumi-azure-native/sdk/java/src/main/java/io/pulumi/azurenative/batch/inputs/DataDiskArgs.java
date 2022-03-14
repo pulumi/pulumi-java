@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.CachingType;
 import io.pulumi.azurenative.batch.enums.StorageAccountType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -31,16 +31,16 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caching")
-      private final @Nullable Input<CachingType> caching;
+      private final @Nullable Output<CachingType> caching;
 
-    public Input<CachingType> getCaching() {
-        return this.caching == null ? Input.empty() : this.caching;
+    public Output<CachingType> getCaching() {
+        return this.caching == null ? Output.empty() : this.caching;
     }
 
     @InputImport(name="diskSizeGB", required=true)
-      private final Input<Integer> diskSizeGB;
+      private final Output<Integer> diskSizeGB;
 
-    public Input<Integer> getDiskSizeGB() {
+    public Output<Integer> getDiskSizeGB() {
         return this.diskSizeGB;
     }
 
@@ -49,9 +49,9 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lun", required=true)
-      private final Input<Integer> lun;
+      private final Output<Integer> lun;
 
-    public Input<Integer> getLun() {
+    public Output<Integer> getLun() {
         return this.lun;
     }
 
@@ -63,17 +63,17 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountType")
-      private final @Nullable Input<StorageAccountType> storageAccountType;
+      private final @Nullable Output<StorageAccountType> storageAccountType;
 
-    public Input<StorageAccountType> getStorageAccountType() {
-        return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
+    public Output<StorageAccountType> getStorageAccountType() {
+        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
     }
 
     public DataDiskArgs(
-        @Nullable Input<CachingType> caching,
-        Input<Integer> diskSizeGB,
-        Input<Integer> lun,
-        @Nullable Input<StorageAccountType> storageAccountType) {
+        @Nullable Output<CachingType> caching,
+        Output<Integer> diskSizeGB,
+        Output<Integer> lun,
+        @Nullable Output<StorageAccountType> storageAccountType) {
         this.caching = caching;
         this.diskSizeGB = Objects.requireNonNull(diskSizeGB, "expected parameter 'diskSizeGB' to be non-null");
         this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
@@ -81,10 +81,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataDiskArgs() {
-        this.caching = Input.empty();
-        this.diskSizeGB = Input.empty();
-        this.lun = Input.empty();
-        this.storageAccountType = Input.empty();
+        this.caching = Output.empty();
+        this.diskSizeGB = Output.empty();
+        this.lun = Output.empty();
+        this.storageAccountType = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,10 +96,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CachingType> caching;
-        private Input<Integer> diskSizeGB;
-        private Input<Integer> lun;
-        private @Nullable Input<StorageAccountType> storageAccountType;
+        private @Nullable Output<CachingType> caching;
+        private Output<Integer> diskSizeGB;
+        private Output<Integer> lun;
+        private @Nullable Output<StorageAccountType> storageAccountType;
 
         public Builder() {
     	      // Empty
@@ -113,43 +113,43 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder caching(@Nullable Input<CachingType> caching) {
+        public Builder caching(@Nullable Output<CachingType> caching) {
             this.caching = caching;
             return this;
         }
 
         public Builder caching(@Nullable CachingType caching) {
-            this.caching = Input.ofNullable(caching);
+            this.caching = Output.ofNullable(caching);
             return this;
         }
 
-        public Builder diskSizeGB(Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(Output<Integer> diskSizeGB) {
             this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
             return this;
         }
 
         public Builder diskSizeGB(Integer diskSizeGB) {
-            this.diskSizeGB = Input.of(Objects.requireNonNull(diskSizeGB));
+            this.diskSizeGB = Output.of(Objects.requireNonNull(diskSizeGB));
             return this;
         }
 
-        public Builder lun(Input<Integer> lun) {
+        public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
         public Builder lun(Integer lun) {
-            this.lun = Input.of(Objects.requireNonNull(lun));
+            this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
 
-        public Builder storageAccountType(@Nullable Input<StorageAccountType> storageAccountType) {
+        public Builder storageAccountType(@Nullable Output<StorageAccountType> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
         public Builder storageAccountType(@Nullable StorageAccountType storageAccountType) {
-            this.storageAccountType = Input.ofNullable(storageAccountType);
+            this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
         public DataDiskArgs build() {

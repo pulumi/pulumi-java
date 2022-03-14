@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.enums.PipelineState;
 import io.pulumi.googlenative.datapipelines_v1.enums.PipelineType;
@@ -24,17 +24,17 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineSources")
-      private final @Nullable Input<Map<String,String>> pipelineSources;
+      private final @Nullable Output<Map<String,String>> pipelineSources;
 
-    public Input<Map<String,String>> getPipelineSources() {
-        return this.pipelineSources == null ? Input.empty() : this.pipelineSources;
+    public Output<Map<String,String>> getPipelineSources() {
+        return this.pipelineSources == null ? Output.empty() : this.pipelineSources;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleInfo")
-      private final @Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
+      private final @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
 
-    public Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> getScheduleInfo() {
-        return this.scheduleInfo == null ? Input.empty() : this.scheduleInfo;
+    public Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> getScheduleInfo() {
+        return this.scheduleInfo == null ? Output.empty() : this.scheduleInfo;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulerServiceAccountEmail")
-      private final @Nullable Input<String> schedulerServiceAccountEmail;
+      private final @Nullable Output<String> schedulerServiceAccountEmail;
 
-    public Input<String> getSchedulerServiceAccountEmail() {
-        return this.schedulerServiceAccountEmail == null ? Input.empty() : this.schedulerServiceAccountEmail;
+    public Output<String> getSchedulerServiceAccountEmail() {
+        return this.schedulerServiceAccountEmail == null ? Output.empty() : this.schedulerServiceAccountEmail;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<PipelineState> state;
+      private final Output<PipelineState> state;
 
-    public Input<PipelineState> getState() {
+    public Output<PipelineState> getState() {
         return this.state;
     }
 
@@ -104,9 +104,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<PipelineType> type;
+      private final Output<PipelineType> type;
 
-    public Input<PipelineType> getType() {
+    public Output<PipelineType> getType() {
         return this.type;
     }
 
@@ -115,23 +115,23 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workload")
-      private final @Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
+      private final @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
 
-    public Input<GoogleCloudDatapipelinesV1WorkloadArgs> getWorkload() {
-        return this.workload == null ? Input.empty() : this.workload;
+    public Output<GoogleCloudDatapipelinesV1WorkloadArgs> getWorkload() {
+        return this.workload == null ? Output.empty() : this.workload;
     }
 
     public PipelineArgs(
-        Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> pipelineSources,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo,
-        @Nullable Input<String> schedulerServiceAccountEmail,
-        Input<PipelineState> state,
-        Input<PipelineType> type,
-        @Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
+        Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> pipelineSources,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo,
+        @Nullable Output<String> schedulerServiceAccountEmail,
+        Output<PipelineState> state,
+        Output<PipelineType> type,
+        @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.location = location;
         this.name = name;
@@ -145,16 +145,16 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.pipelineSources = Input.empty();
-        this.project = Input.empty();
-        this.scheduleInfo = Input.empty();
-        this.schedulerServiceAccountEmail = Input.empty();
-        this.state = Input.empty();
-        this.type = Input.empty();
-        this.workload = Input.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.pipelineSources = Output.empty();
+        this.project = Output.empty();
+        this.scheduleInfo = Output.empty();
+        this.schedulerServiceAccountEmail = Output.empty();
+        this.state = Output.empty();
+        this.type = Output.empty();
+        this.workload = Output.empty();
     }
 
     public static Builder builder() {
@@ -166,16 +166,16 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> pipelineSources;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
-        private @Nullable Input<String> schedulerServiceAccountEmail;
-        private Input<PipelineState> state;
-        private Input<PipelineType> type;
-        private @Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
+        private Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> pipelineSources;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
+        private @Nullable Output<String> schedulerServiceAccountEmail;
+        private Output<PipelineState> state;
+        private Output<PipelineType> type;
+        private @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
 
         public Builder() {
     	      // Empty
@@ -195,103 +195,103 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workload = defaults.workload;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pipelineSources(@Nullable Input<Map<String,String>> pipelineSources) {
+        public Builder pipelineSources(@Nullable Output<Map<String,String>> pipelineSources) {
             this.pipelineSources = pipelineSources;
             return this;
         }
 
         public Builder pipelineSources(@Nullable Map<String,String> pipelineSources) {
-            this.pipelineSources = Input.ofNullable(pipelineSources);
+            this.pipelineSources = Output.ofNullable(pipelineSources);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder scheduleInfo(@Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo) {
+        public Builder scheduleInfo(@Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo) {
             this.scheduleInfo = scheduleInfo;
             return this;
         }
 
         public Builder scheduleInfo(@Nullable GoogleCloudDatapipelinesV1ScheduleSpecArgs scheduleInfo) {
-            this.scheduleInfo = Input.ofNullable(scheduleInfo);
+            this.scheduleInfo = Output.ofNullable(scheduleInfo);
             return this;
         }
 
-        public Builder schedulerServiceAccountEmail(@Nullable Input<String> schedulerServiceAccountEmail) {
+        public Builder schedulerServiceAccountEmail(@Nullable Output<String> schedulerServiceAccountEmail) {
             this.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
             return this;
         }
 
         public Builder schedulerServiceAccountEmail(@Nullable String schedulerServiceAccountEmail) {
-            this.schedulerServiceAccountEmail = Input.ofNullable(schedulerServiceAccountEmail);
+            this.schedulerServiceAccountEmail = Output.ofNullable(schedulerServiceAccountEmail);
             return this;
         }
 
-        public Builder state(Input<PipelineState> state) {
+        public Builder state(Output<PipelineState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(PipelineState state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder type(Input<PipelineType> type) {
+        public Builder type(Output<PipelineType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(PipelineType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder workload(@Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
+        public Builder workload(@Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
             this.workload = workload;
             return this;
         }
 
         public Builder workload(@Nullable GoogleCloudDatapipelinesV1WorkloadArgs workload) {
-            this.workload = Input.ofNullable(workload);
+            this.workload = Output.ofNullable(workload);
             return this;
         }
         public PipelineArgs build() {

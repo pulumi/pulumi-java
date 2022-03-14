@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="auditIntervalSeconds")
-      private final @Nullable Input<String> auditIntervalSeconds;
+      private final @Nullable Output<String> auditIntervalSeconds;
 
-    public Input<String> getAuditIntervalSeconds() {
-        return this.auditIntervalSeconds == null ? Input.empty() : this.auditIntervalSeconds;
+    public Output<String> getAuditIntervalSeconds() {
+        return this.auditIntervalSeconds == null ? Output.empty() : this.auditIntervalSeconds;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="exemptableNamespaces")
-      private final @Nullable Input<List<String>> exemptableNamespaces;
+      private final @Nullable Output<List<String>> exemptableNamespaces;
 
-    public Input<List<String>> getExemptableNamespaces() {
-        return this.exemptableNamespaces == null ? Input.empty() : this.exemptableNamespaces;
+    public Output<List<String>> getExemptableNamespaces() {
+        return this.exemptableNamespaces == null ? Output.empty() : this.exemptableNamespaces;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="logDeniesEnabled")
-      private final @Nullable Input<Boolean> logDeniesEnabled;
+      private final @Nullable Output<Boolean> logDeniesEnabled;
 
-    public Input<Boolean> getLogDeniesEnabled() {
-        return this.logDeniesEnabled == null ? Input.empty() : this.logDeniesEnabled;
+    public Output<Boolean> getLogDeniesEnabled() {
+        return this.logDeniesEnabled == null ? Output.empty() : this.logDeniesEnabled;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="referentialRulesEnabled")
-      private final @Nullable Input<Boolean> referentialRulesEnabled;
+      private final @Nullable Output<Boolean> referentialRulesEnabled;
 
-    public Input<Boolean> getReferentialRulesEnabled() {
-        return this.referentialRulesEnabled == null ? Input.empty() : this.referentialRulesEnabled;
+    public Output<Boolean> getReferentialRulesEnabled() {
+        return this.referentialRulesEnabled == null ? Output.empty() : this.referentialRulesEnabled;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="templateLibraryInstalled")
-      private final @Nullable Input<Boolean> templateLibraryInstalled;
+      private final @Nullable Output<Boolean> templateLibraryInstalled;
 
-    public Input<Boolean> getTemplateLibraryInstalled() {
-        return this.templateLibraryInstalled == null ? Input.empty() : this.templateLibraryInstalled;
+    public Output<Boolean> getTemplateLibraryInstalled() {
+        return this.templateLibraryInstalled == null ? Output.empty() : this.templateLibraryInstalled;
     }
 
     public FeatureMembershipConfigmanagementPolicyControllerArgs(
-        @Nullable Input<String> auditIntervalSeconds,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<String>> exemptableNamespaces,
-        @Nullable Input<Boolean> logDeniesEnabled,
-        @Nullable Input<Boolean> referentialRulesEnabled,
-        @Nullable Input<Boolean> templateLibraryInstalled) {
+        @Nullable Output<String> auditIntervalSeconds,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<String>> exemptableNamespaces,
+        @Nullable Output<Boolean> logDeniesEnabled,
+        @Nullable Output<Boolean> referentialRulesEnabled,
+        @Nullable Output<Boolean> templateLibraryInstalled) {
         this.auditIntervalSeconds = auditIntervalSeconds;
         this.enabled = enabled;
         this.exemptableNamespaces = exemptableNamespaces;
@@ -98,12 +98,12 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     }
 
     private FeatureMembershipConfigmanagementPolicyControllerArgs() {
-        this.auditIntervalSeconds = Input.empty();
-        this.enabled = Input.empty();
-        this.exemptableNamespaces = Input.empty();
-        this.logDeniesEnabled = Input.empty();
-        this.referentialRulesEnabled = Input.empty();
-        this.templateLibraryInstalled = Input.empty();
+        this.auditIntervalSeconds = Output.empty();
+        this.enabled = Output.empty();
+        this.exemptableNamespaces = Output.empty();
+        this.logDeniesEnabled = Output.empty();
+        this.referentialRulesEnabled = Output.empty();
+        this.templateLibraryInstalled = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> auditIntervalSeconds;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<String>> exemptableNamespaces;
-        private @Nullable Input<Boolean> logDeniesEnabled;
-        private @Nullable Input<Boolean> referentialRulesEnabled;
-        private @Nullable Input<Boolean> templateLibraryInstalled;
+        private @Nullable Output<String> auditIntervalSeconds;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<String>> exemptableNamespaces;
+        private @Nullable Output<Boolean> logDeniesEnabled;
+        private @Nullable Output<Boolean> referentialRulesEnabled;
+        private @Nullable Output<Boolean> templateLibraryInstalled;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     	      this.templateLibraryInstalled = defaults.templateLibraryInstalled;
         }
 
-        public Builder auditIntervalSeconds(@Nullable Input<String> auditIntervalSeconds) {
+        public Builder auditIntervalSeconds(@Nullable Output<String> auditIntervalSeconds) {
             this.auditIntervalSeconds = auditIntervalSeconds;
             return this;
         }
 
         public Builder auditIntervalSeconds(@Nullable String auditIntervalSeconds) {
-            this.auditIntervalSeconds = Input.ofNullable(auditIntervalSeconds);
+            this.auditIntervalSeconds = Output.ofNullable(auditIntervalSeconds);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder exemptableNamespaces(@Nullable Input<List<String>> exemptableNamespaces) {
+        public Builder exemptableNamespaces(@Nullable Output<List<String>> exemptableNamespaces) {
             this.exemptableNamespaces = exemptableNamespaces;
             return this;
         }
 
         public Builder exemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
-            this.exemptableNamespaces = Input.ofNullable(exemptableNamespaces);
+            this.exemptableNamespaces = Output.ofNullable(exemptableNamespaces);
             return this;
         }
 
-        public Builder logDeniesEnabled(@Nullable Input<Boolean> logDeniesEnabled) {
+        public Builder logDeniesEnabled(@Nullable Output<Boolean> logDeniesEnabled) {
             this.logDeniesEnabled = logDeniesEnabled;
             return this;
         }
 
         public Builder logDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
-            this.logDeniesEnabled = Input.ofNullable(logDeniesEnabled);
+            this.logDeniesEnabled = Output.ofNullable(logDeniesEnabled);
             return this;
         }
 
-        public Builder referentialRulesEnabled(@Nullable Input<Boolean> referentialRulesEnabled) {
+        public Builder referentialRulesEnabled(@Nullable Output<Boolean> referentialRulesEnabled) {
             this.referentialRulesEnabled = referentialRulesEnabled;
             return this;
         }
 
         public Builder referentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
-            this.referentialRulesEnabled = Input.ofNullable(referentialRulesEnabled);
+            this.referentialRulesEnabled = Output.ofNullable(referentialRulesEnabled);
             return this;
         }
 
-        public Builder templateLibraryInstalled(@Nullable Input<Boolean> templateLibraryInstalled) {
+        public Builder templateLibraryInstalled(@Nullable Output<Boolean> templateLibraryInstalled) {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
 
         public Builder templateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
-            this.templateLibraryInstalled = Input.ofNullable(templateLibraryInstalled);
+            this.templateLibraryInstalled = Output.ofNullable(templateLibraryInstalled);
             return this;
         }
         public FeatureMembershipConfigmanagementPolicyControllerArgs build() {

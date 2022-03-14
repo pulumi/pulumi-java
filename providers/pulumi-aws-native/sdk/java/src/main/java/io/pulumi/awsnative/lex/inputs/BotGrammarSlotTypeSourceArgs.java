@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-      private final Input<String> s3BucketName;
+      private final Output<String> s3BucketName;
 
-    public Input<String> getS3BucketName() {
+    public Output<String> getS3BucketName() {
         return this.s3BucketName;
     }
 
@@ -45,25 +45,25 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="s3ObjectKey", required=true)
-      private final Input<String> s3ObjectKey;
+      private final Output<String> s3ObjectKey;
 
-    public Input<String> getS3ObjectKey() {
+    public Output<String> getS3ObjectKey() {
         return this.s3ObjectKey;
     }
 
     public BotGrammarSlotTypeSourceArgs(
-        @Nullable Input<String> kmsKeyArn,
-        Input<String> s3BucketName,
-        Input<String> s3ObjectKey) {
+        @Nullable Output<String> kmsKeyArn,
+        Output<String> s3BucketName,
+        Output<String> s3ObjectKey) {
         this.kmsKeyArn = kmsKeyArn;
         this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
         this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey, "expected parameter 's3ObjectKey' to be non-null");
     }
 
     private BotGrammarSlotTypeSourceArgs() {
-        this.kmsKeyArn = Input.empty();
-        this.s3BucketName = Input.empty();
-        this.s3ObjectKey = Input.empty();
+        this.kmsKeyArn = Output.empty();
+        this.s3BucketName = Output.empty();
+        this.s3ObjectKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyArn;
-        private Input<String> s3BucketName;
-        private Input<String> s3ObjectKey;
+        private @Nullable Output<String> kmsKeyArn;
+        private Output<String> s3BucketName;
+        private Output<String> s3ObjectKey;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
     	      this.s3ObjectKey = defaults.s3ObjectKey;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder s3BucketName(Input<String> s3BucketName) {
+        public Builder s3BucketName(Output<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Input.of(Objects.requireNonNull(s3BucketName));
+            this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
 
-        public Builder s3ObjectKey(Input<String> s3ObjectKey) {
+        public Builder s3ObjectKey(Output<String> s3ObjectKey) {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }
 
         public Builder s3ObjectKey(String s3ObjectKey) {
-            this.s3ObjectKey = Input.of(Objects.requireNonNull(s3ObjectKey));
+            this.s3ObjectKey = Output.of(Objects.requireNonNull(s3ObjectKey));
             return this;
         }
         public BotGrammarSlotTypeSourceArgs build() {

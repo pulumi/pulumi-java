@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.FileContentBufferArgs;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dbs")
-      private final @Nullable Input<List<FileContentBufferArgs>> dbs;
+      private final @Nullable Output<List<FileContentBufferArgs>> dbs;
 
-    public Input<List<FileContentBufferArgs>> getDbs() {
-        return this.dbs == null ? Input.empty() : this.dbs;
+    public Output<List<FileContentBufferArgs>> getDbs() {
+        return this.dbs == null ? Output.empty() : this.dbs;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dbxs")
-      private final @Nullable Input<List<FileContentBufferArgs>> dbxs;
+      private final @Nullable Output<List<FileContentBufferArgs>> dbxs;
 
-    public Input<List<FileContentBufferArgs>> getDbxs() {
-        return this.dbxs == null ? Input.empty() : this.dbxs;
+    public Output<List<FileContentBufferArgs>> getDbxs() {
+        return this.dbxs == null ? Output.empty() : this.dbxs;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keks")
-      private final @Nullable Input<List<FileContentBufferArgs>> keks;
+      private final @Nullable Output<List<FileContentBufferArgs>> keks;
 
-    public Input<List<FileContentBufferArgs>> getKeks() {
-        return this.keks == null ? Input.empty() : this.keks;
+    public Output<List<FileContentBufferArgs>> getKeks() {
+        return this.keks == null ? Output.empty() : this.keks;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pk")
-      private final @Nullable Input<FileContentBufferArgs> pk;
+      private final @Nullable Output<FileContentBufferArgs> pk;
 
-    public Input<FileContentBufferArgs> getPk() {
-        return this.pk == null ? Input.empty() : this.pk;
+    public Output<FileContentBufferArgs> getPk() {
+        return this.pk == null ? Output.empty() : this.pk;
     }
 
     public InitialStateConfigArgs(
-        @Nullable Input<List<FileContentBufferArgs>> dbs,
-        @Nullable Input<List<FileContentBufferArgs>> dbxs,
-        @Nullable Input<List<FileContentBufferArgs>> keks,
-        @Nullable Input<FileContentBufferArgs> pk) {
+        @Nullable Output<List<FileContentBufferArgs>> dbs,
+        @Nullable Output<List<FileContentBufferArgs>> dbxs,
+        @Nullable Output<List<FileContentBufferArgs>> keks,
+        @Nullable Output<FileContentBufferArgs> pk) {
         this.dbs = dbs;
         this.dbxs = dbxs;
         this.keks = keks;
@@ -75,10 +75,10 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InitialStateConfigArgs() {
-        this.dbs = Input.empty();
-        this.dbxs = Input.empty();
-        this.keks = Input.empty();
-        this.pk = Input.empty();
+        this.dbs = Output.empty();
+        this.dbxs = Output.empty();
+        this.keks = Output.empty();
+        this.pk = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FileContentBufferArgs>> dbs;
-        private @Nullable Input<List<FileContentBufferArgs>> dbxs;
-        private @Nullable Input<List<FileContentBufferArgs>> keks;
-        private @Nullable Input<FileContentBufferArgs> pk;
+        private @Nullable Output<List<FileContentBufferArgs>> dbs;
+        private @Nullable Output<List<FileContentBufferArgs>> dbxs;
+        private @Nullable Output<List<FileContentBufferArgs>> keks;
+        private @Nullable Output<FileContentBufferArgs> pk;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.pk = defaults.pk;
         }
 
-        public Builder dbs(@Nullable Input<List<FileContentBufferArgs>> dbs) {
+        public Builder dbs(@Nullable Output<List<FileContentBufferArgs>> dbs) {
             this.dbs = dbs;
             return this;
         }
 
         public Builder dbs(@Nullable List<FileContentBufferArgs> dbs) {
-            this.dbs = Input.ofNullable(dbs);
+            this.dbs = Output.ofNullable(dbs);
             return this;
         }
 
-        public Builder dbxs(@Nullable Input<List<FileContentBufferArgs>> dbxs) {
+        public Builder dbxs(@Nullable Output<List<FileContentBufferArgs>> dbxs) {
             this.dbxs = dbxs;
             return this;
         }
 
         public Builder dbxs(@Nullable List<FileContentBufferArgs> dbxs) {
-            this.dbxs = Input.ofNullable(dbxs);
+            this.dbxs = Output.ofNullable(dbxs);
             return this;
         }
 
-        public Builder keks(@Nullable Input<List<FileContentBufferArgs>> keks) {
+        public Builder keks(@Nullable Output<List<FileContentBufferArgs>> keks) {
             this.keks = keks;
             return this;
         }
 
         public Builder keks(@Nullable List<FileContentBufferArgs> keks) {
-            this.keks = Input.ofNullable(keks);
+            this.keks = Output.ofNullable(keks);
             return this;
         }
 
-        public Builder pk(@Nullable Input<FileContentBufferArgs> pk) {
+        public Builder pk(@Nullable Output<FileContentBufferArgs> pk) {
             this.pk = pk;
             return this;
         }
 
         public Builder pk(@Nullable FileContentBufferArgs pk) {
-            this.pk = Input.ofNullable(pk);
+            this.pk = Output.ofNullable(pk);
             return this;
         }
         public InitialStateConfigArgs build() {

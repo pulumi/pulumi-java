@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
      * 
      */
     @InputImport(name="hostRedirect")
-      private final @Nullable Input<String> hostRedirect;
+      private final @Nullable Output<String> hostRedirect;
 
-    public Input<String> getHostRedirect() {
-        return this.hostRedirect == null ? Input.empty() : this.hostRedirect;
+    public Output<String> getHostRedirect() {
+        return this.hostRedirect == null ? Output.empty() : this.hostRedirect;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
      * 
      */
     @InputImport(name="httpsRedirect")
-      private final @Nullable Input<Boolean> httpsRedirect;
+      private final @Nullable Output<Boolean> httpsRedirect;
 
-    public Input<Boolean> getHttpsRedirect() {
-        return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
+    public Output<Boolean> getHttpsRedirect() {
+        return this.httpsRedirect == null ? Output.empty() : this.httpsRedirect;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
      * 
      */
     @InputImport(name="pathRedirect")
-      private final @Nullable Input<String> pathRedirect;
+      private final @Nullable Output<String> pathRedirect;
 
-    public Input<String> getPathRedirect() {
-        return this.pathRedirect == null ? Input.empty() : this.pathRedirect;
+    public Output<String> getPathRedirect() {
+        return this.pathRedirect == null ? Output.empty() : this.pathRedirect;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
      * 
      */
     @InputImport(name="prefixRedirect")
-      private final @Nullable Input<String> prefixRedirect;
+      private final @Nullable Output<String> prefixRedirect;
 
-    public Input<String> getPrefixRedirect() {
-        return this.prefixRedirect == null ? Input.empty() : this.prefixRedirect;
+    public Output<String> getPrefixRedirect() {
+        return this.prefixRedirect == null ? Output.empty() : this.prefixRedirect;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
      * 
      */
     @InputImport(name="redirectResponseCode")
-      private final @Nullable Input<String> redirectResponseCode;
+      private final @Nullable Output<String> redirectResponseCode;
 
-    public Input<String> getRedirectResponseCode() {
-        return this.redirectResponseCode == null ? Input.empty() : this.redirectResponseCode;
+    public Output<String> getRedirectResponseCode() {
+        return this.redirectResponseCode == null ? Output.empty() : this.redirectResponseCode;
     }
 
     /**
@@ -97,19 +97,19 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
      * 
      */
     @InputImport(name="stripQuery", required=true)
-      private final Input<Boolean> stripQuery;
+      private final Output<Boolean> stripQuery;
 
-    public Input<Boolean> getStripQuery() {
+    public Output<Boolean> getStripQuery() {
         return this.stripQuery;
     }
 
     public RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs(
-        @Nullable Input<String> hostRedirect,
-        @Nullable Input<Boolean> httpsRedirect,
-        @Nullable Input<String> pathRedirect,
-        @Nullable Input<String> prefixRedirect,
-        @Nullable Input<String> redirectResponseCode,
-        Input<Boolean> stripQuery) {
+        @Nullable Output<String> hostRedirect,
+        @Nullable Output<Boolean> httpsRedirect,
+        @Nullable Output<String> pathRedirect,
+        @Nullable Output<String> prefixRedirect,
+        @Nullable Output<String> redirectResponseCode,
+        Output<Boolean> stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;
@@ -119,12 +119,12 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
     }
 
     private RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs() {
-        this.hostRedirect = Input.empty();
-        this.httpsRedirect = Input.empty();
-        this.pathRedirect = Input.empty();
-        this.prefixRedirect = Input.empty();
-        this.redirectResponseCode = Input.empty();
-        this.stripQuery = Input.empty();
+        this.hostRedirect = Output.empty();
+        this.httpsRedirect = Output.empty();
+        this.pathRedirect = Output.empty();
+        this.prefixRedirect = Output.empty();
+        this.redirectResponseCode = Output.empty();
+        this.stripQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,12 +136,12 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostRedirect;
-        private @Nullable Input<Boolean> httpsRedirect;
-        private @Nullable Input<String> pathRedirect;
-        private @Nullable Input<String> prefixRedirect;
-        private @Nullable Input<String> redirectResponseCode;
-        private Input<Boolean> stripQuery;
+        private @Nullable Output<String> hostRedirect;
+        private @Nullable Output<Boolean> httpsRedirect;
+        private @Nullable Output<String> pathRedirect;
+        private @Nullable Output<String> prefixRedirect;
+        private @Nullable Output<String> redirectResponseCode;
+        private Output<Boolean> stripQuery;
 
         public Builder() {
     	      // Empty
@@ -157,63 +157,63 @@ public final class RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs extends io.
     	      this.stripQuery = defaults.stripQuery;
         }
 
-        public Builder hostRedirect(@Nullable Input<String> hostRedirect) {
+        public Builder hostRedirect(@Nullable Output<String> hostRedirect) {
             this.hostRedirect = hostRedirect;
             return this;
         }
 
         public Builder hostRedirect(@Nullable String hostRedirect) {
-            this.hostRedirect = Input.ofNullable(hostRedirect);
+            this.hostRedirect = Output.ofNullable(hostRedirect);
             return this;
         }
 
-        public Builder httpsRedirect(@Nullable Input<Boolean> httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Output<Boolean> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
         public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
-            this.httpsRedirect = Input.ofNullable(httpsRedirect);
+            this.httpsRedirect = Output.ofNullable(httpsRedirect);
             return this;
         }
 
-        public Builder pathRedirect(@Nullable Input<String> pathRedirect) {
+        public Builder pathRedirect(@Nullable Output<String> pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
 
         public Builder pathRedirect(@Nullable String pathRedirect) {
-            this.pathRedirect = Input.ofNullable(pathRedirect);
+            this.pathRedirect = Output.ofNullable(pathRedirect);
             return this;
         }
 
-        public Builder prefixRedirect(@Nullable Input<String> prefixRedirect) {
+        public Builder prefixRedirect(@Nullable Output<String> prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
 
         public Builder prefixRedirect(@Nullable String prefixRedirect) {
-            this.prefixRedirect = Input.ofNullable(prefixRedirect);
+            this.prefixRedirect = Output.ofNullable(prefixRedirect);
             return this;
         }
 
-        public Builder redirectResponseCode(@Nullable Input<String> redirectResponseCode) {
+        public Builder redirectResponseCode(@Nullable Output<String> redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
 
         public Builder redirectResponseCode(@Nullable String redirectResponseCode) {
-            this.redirectResponseCode = Input.ofNullable(redirectResponseCode);
+            this.redirectResponseCode = Output.ofNullable(redirectResponseCode);
             return this;
         }
 
-        public Builder stripQuery(Input<Boolean> stripQuery) {
+        public Builder stripQuery(Output<Boolean> stripQuery) {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }
 
         public Builder stripQuery(Boolean stripQuery) {
-            this.stripQuery = Input.of(Objects.requireNonNull(stripQuery));
+            this.stripQuery = Output.of(Objects.requireNonNull(stripQuery));
             return this;
         }
         public RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs build() {

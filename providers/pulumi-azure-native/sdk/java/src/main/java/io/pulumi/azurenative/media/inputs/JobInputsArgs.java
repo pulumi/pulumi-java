@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.JobInputAssetArgs;
 import io.pulumi.azurenative.media.inputs.JobInputClipArgs;
 import io.pulumi.azurenative.media.inputs.JobInputHttpArgs;
 import io.pulumi.azurenative.media.inputs.JobInputSequenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<List<Object>> inputs;
+      private final @Nullable Output<List<Object>> inputs;
 
-    public Input<List<Object>> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<List<Object>> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -41,22 +41,22 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public JobInputsArgs(
-        @Nullable Input<List<Object>> inputs,
-        Input<String> odataType) {
+        @Nullable Output<List<Object>> inputs,
+        Output<String> odataType) {
         this.inputs = inputs;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private JobInputsArgs() {
-        this.inputs = Input.empty();
-        this.odataType = Input.empty();
+        this.inputs = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,8 +68,8 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> inputs;
-        private Input<String> odataType;
+        private @Nullable Output<List<Object>> inputs;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -81,23 +81,23 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder inputs(@Nullable Input<List<Object>> inputs) {
+        public Builder inputs(@Nullable Output<List<Object>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public JobInputsArgs build() {

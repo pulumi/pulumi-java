@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
      * 
      */
     @InputImport(name="intervalSec")
-      private final @Nullable Input<Integer> intervalSec;
+      private final @Nullable Output<Integer> intervalSec;
 
-    public Input<Integer> getIntervalSec() {
-        return this.intervalSec == null ? Input.empty() : this.intervalSec;
+    public Output<Integer> getIntervalSec() {
+        return this.intervalSec == null ? Output.empty() : this.intervalSec;
     }
 
     public SecurityPolicyRuleRateLimitOptionsThresholdArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<Integer> intervalSec) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<Integer> intervalSec) {
         this.count = count;
         this.intervalSec = intervalSec;
     }
 
     private SecurityPolicyRuleRateLimitOptionsThresholdArgs() {
-        this.count = Input.empty();
-        this.intervalSec = Input.empty();
+        this.count = Output.empty();
+        this.intervalSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<Integer> intervalSec;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<Integer> intervalSec;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
     	      this.intervalSec = defaults.intervalSec;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder intervalSec(@Nullable Input<Integer> intervalSec) {
+        public Builder intervalSec(@Nullable Output<Integer> intervalSec) {
             this.intervalSec = intervalSec;
             return this;
         }
 
         public Builder intervalSec(@Nullable Integer intervalSec) {
-            this.intervalSec = Input.ofNullable(intervalSec);
+            this.intervalSec = Output.ofNullable(intervalSec);
             return this;
         }
         public SecurityPolicyRuleRateLimitOptionsThresholdArgs build() {

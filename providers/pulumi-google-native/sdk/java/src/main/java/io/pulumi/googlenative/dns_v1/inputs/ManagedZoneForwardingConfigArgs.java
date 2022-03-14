@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZoneForwardingConfigNameServerTargetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     public static final ManagedZoneForwardingConfigArgs Empty = new ManagedZoneForwardingConfigArgs();
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -28,22 +28,22 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetNameServers")
-      private final @Nullable Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
+      private final @Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
 
-    public Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> getTargetNameServers() {
-        return this.targetNameServers == null ? Input.empty() : this.targetNameServers;
+    public Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> getTargetNameServers() {
+        return this.targetNameServers == null ? Output.empty() : this.targetNameServers;
     }
 
     public ManagedZoneForwardingConfigArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
+        @Nullable Output<String> kind,
+        @Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }
 
     private ManagedZoneForwardingConfigArgs() {
-        this.kind = Input.empty();
-        this.targetNameServers = Input.empty();
+        this.kind = Output.empty();
+        this.targetNameServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder targetNameServers(@Nullable Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
+        public Builder targetNameServers(@Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
             this.targetNameServers = targetNameServers;
             return this;
         }
 
         public Builder targetNameServers(@Nullable List<ManagedZoneForwardingConfigNameServerTargetArgs> targetNameServers) {
-            this.targetNameServers = Input.ofNullable(targetNameServers);
+            this.targetNameServers = Output.ofNullable(targetNameServers);
             return this;
         }
         public ManagedZoneForwardingConfigArgs build() {

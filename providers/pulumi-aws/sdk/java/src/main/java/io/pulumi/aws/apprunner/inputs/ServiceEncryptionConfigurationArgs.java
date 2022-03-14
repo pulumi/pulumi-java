@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKey", required=true)
-      private final Input<String> kmsKey;
+      private final Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
+    public Output<String> getKmsKey() {
         return this.kmsKey;
     }
 
-    public ServiceEncryptionConfigurationArgs(Input<String> kmsKey) {
+    public ServiceEncryptionConfigurationArgs(Output<String> kmsKey) {
         this.kmsKey = Objects.requireNonNull(kmsKey, "expected parameter 'kmsKey' to be non-null");
     }
 
     private ServiceEncryptionConfigurationArgs() {
-        this.kmsKey = Input.empty();
+        this.kmsKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> kmsKey;
+        private Output<String> kmsKey;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder kmsKey(Input<String> kmsKey) {
+        public Builder kmsKey(Output<String> kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
 
         public Builder kmsKey(String kmsKey) {
-            this.kmsKey = Input.of(Objects.requireNonNull(kmsKey));
+            this.kmsKey = Output.of(Objects.requireNonNull(kmsKey));
             return this;
         }
         public ServiceEncryptionConfigurationArgs build() {

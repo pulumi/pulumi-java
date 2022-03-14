@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -25,10 +25,10 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReadySeconds")
-      private final @Nullable Input<Integer> minReadySeconds;
+      private final @Nullable Output<Integer> minReadySeconds;
 
-    public Input<Integer> getMinReadySeconds() {
-        return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
+    public Output<Integer> getMinReadySeconds() {
+        return this.minReadySeconds == null ? Output.empty() : this.minReadySeconds;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas")
-      private final @Nullable Input<Integer> replicas;
+      private final @Nullable Output<Integer> replicas;
 
-    public Input<Integer> getReplicas() {
-        return this.replicas == null ? Input.empty() : this.replicas;
+    public Output<Integer> getReplicas() {
+        return this.replicas == null ? Output.empty() : this.replicas;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector", required=true)
-      private final Input<LabelSelectorArgs> selector;
+      private final Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> getSelector() {
         return this.selector;
     }
 
@@ -58,17 +58,17 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<PodTemplateSpecArgs> template;
+      private final @Nullable Output<PodTemplateSpecArgs> template;
 
-    public Input<PodTemplateSpecArgs> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<PodTemplateSpecArgs> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     public ReplicaSetSpecArgs(
-        @Nullable Input<Integer> minReadySeconds,
-        @Nullable Input<Integer> replicas,
-        Input<LabelSelectorArgs> selector,
-        @Nullable Input<PodTemplateSpecArgs> template) {
+        @Nullable Output<Integer> minReadySeconds,
+        @Nullable Output<Integer> replicas,
+        Output<LabelSelectorArgs> selector,
+        @Nullable Output<PodTemplateSpecArgs> template) {
         this.minReadySeconds = minReadySeconds;
         this.replicas = replicas;
         this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
@@ -76,10 +76,10 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaSetSpecArgs() {
-        this.minReadySeconds = Input.empty();
-        this.replicas = Input.empty();
-        this.selector = Input.empty();
-        this.template = Input.empty();
+        this.minReadySeconds = Output.empty();
+        this.replicas = Output.empty();
+        this.selector = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> minReadySeconds;
-        private @Nullable Input<Integer> replicas;
-        private Input<LabelSelectorArgs> selector;
-        private @Nullable Input<PodTemplateSpecArgs> template;
+        private @Nullable Output<Integer> minReadySeconds;
+        private @Nullable Output<Integer> replicas;
+        private Output<LabelSelectorArgs> selector;
+        private @Nullable Output<PodTemplateSpecArgs> template;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder minReadySeconds(@Nullable Input<Integer> minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Output<Integer> minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Input.ofNullable(minReadySeconds);
+            this.minReadySeconds = Output.ofNullable(minReadySeconds);
             return this;
         }
 
-        public Builder replicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Input.ofNullable(replicas);
+            this.replicas = Output.ofNullable(replicas);
             return this;
         }
 
-        public Builder selector(Input<LabelSelectorArgs> selector) {
+        public Builder selector(Output<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
         public Builder selector(LabelSelectorArgs selector) {
-            this.selector = Input.of(Objects.requireNonNull(selector));
+            this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder template(@Nullable Input<PodTemplateSpecArgs> template) {
+        public Builder template(@Nullable Output<PodTemplateSpecArgs> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable PodTemplateSpecArgs template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
         public ReplicaSetSpecArgs build() {

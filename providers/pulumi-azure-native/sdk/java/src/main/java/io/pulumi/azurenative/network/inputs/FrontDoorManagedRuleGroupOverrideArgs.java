@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleOverrideArgs;
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
+      private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
-    public Input<List<ManagedRuleExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="ruleGroupName", required=true)
-      private final Input<String> ruleGroupName;
+      private final Output<String> ruleGroupName;
 
-    public Input<String> getRuleGroupName() {
+    public Output<String> getRuleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -48,25 +48,25 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<FrontDoorManagedRuleOverrideArgs>> rules;
+      private final @Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules;
 
-    public Input<List<FrontDoorManagedRuleOverrideArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<FrontDoorManagedRuleOverrideArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public FrontDoorManagedRuleGroupOverrideArgs(
-        @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions,
-        Input<String> ruleGroupName,
-        @Nullable Input<List<FrontDoorManagedRuleOverrideArgs>> rules) {
+        @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions,
+        Output<String> ruleGroupName,
+        @Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules) {
         this.exclusions = exclusions;
         this.ruleGroupName = Objects.requireNonNull(ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
         this.rules = rules;
     }
 
     private FrontDoorManagedRuleGroupOverrideArgs() {
-        this.exclusions = Input.empty();
-        this.ruleGroupName = Input.empty();
-        this.rules = Input.empty();
+        this.exclusions = Output.empty();
+        this.ruleGroupName = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
-        private Input<String> ruleGroupName;
-        private @Nullable Input<List<FrontDoorManagedRuleOverrideArgs>> rules;
+        private @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
+        private Output<String> ruleGroupName;
+        private @Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
     	      this.rules = defaults.rules;
         }
 
-        public Builder exclusions(@Nullable Input<List<ManagedRuleExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<ManagedRuleExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder ruleGroupName(Input<String> ruleGroupName) {
+        public Builder ruleGroupName(Output<String> ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
         public Builder ruleGroupName(String ruleGroupName) {
-            this.ruleGroupName = Input.of(Objects.requireNonNull(ruleGroupName));
+            this.ruleGroupName = Output.of(Objects.requireNonNull(ruleGroupName));
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<FrontDoorManagedRuleOverrideArgs>> rules) {
+        public Builder rules(@Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public FrontDoorManagedRuleGroupOverrideArgs build() {

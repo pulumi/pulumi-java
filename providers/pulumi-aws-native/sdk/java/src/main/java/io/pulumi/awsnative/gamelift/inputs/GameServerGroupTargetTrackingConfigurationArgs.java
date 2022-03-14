@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
     public static final GameServerGroupTargetTrackingConfigurationArgs Empty = new GameServerGroupTargetTrackingConfigurationArgs();
 
     @InputImport(name="targetValue", required=true)
-      private final Input<Double> targetValue;
+      private final Output<Double> targetValue;
 
-    public Input<Double> getTargetValue() {
+    public Output<Double> getTargetValue() {
         return this.targetValue;
     }
 
-    public GameServerGroupTargetTrackingConfigurationArgs(Input<Double> targetValue) {
+    public GameServerGroupTargetTrackingConfigurationArgs(Output<Double> targetValue) {
         this.targetValue = Objects.requireNonNull(targetValue, "expected parameter 'targetValue' to be non-null");
     }
 
     private GameServerGroupTargetTrackingConfigurationArgs() {
-        this.targetValue = Input.empty();
+        this.targetValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<Double> targetValue;
+        private Output<Double> targetValue;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder targetValue(Input<Double> targetValue) {
+        public Builder targetValue(Output<Double> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
 
         public Builder targetValue(Double targetValue) {
-            this.targetValue = Input.of(Objects.requireNonNull(targetValue));
+            this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
         }
         public GameServerGroupTargetTrackingConfigurationArgs build() {

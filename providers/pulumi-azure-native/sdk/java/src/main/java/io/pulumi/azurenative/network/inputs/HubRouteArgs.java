@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationType", required=true)
-      private final Input<String> destinationType;
+      private final Output<String> destinationType;
 
-    public Input<String> getDestinationType() {
+    public Output<String> getDestinationType() {
         return this.destinationType;
     }
 
@@ -34,9 +34,9 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations", required=true)
-      private final Input<List<String>> destinations;
+      private final Output<List<String>> destinations;
 
-    public Input<List<String>> getDestinations() {
+    public Output<List<String>> getDestinations() {
         return this.destinations;
     }
 
@@ -45,9 +45,9 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -56,9 +56,9 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHop", required=true)
-      private final Input<String> nextHop;
+      private final Output<String> nextHop;
 
-    public Input<String> getNextHop() {
+    public Output<String> getNextHop() {
         return this.nextHop;
     }
 
@@ -67,18 +67,18 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopType", required=true)
-      private final Input<String> nextHopType;
+      private final Output<String> nextHopType;
 
-    public Input<String> getNextHopType() {
+    public Output<String> getNextHopType() {
         return this.nextHopType;
     }
 
     public HubRouteArgs(
-        Input<String> destinationType,
-        Input<List<String>> destinations,
-        Input<String> name,
-        Input<String> nextHop,
-        Input<String> nextHopType) {
+        Output<String> destinationType,
+        Output<List<String>> destinations,
+        Output<String> name,
+        Output<String> nextHop,
+        Output<String> nextHopType) {
         this.destinationType = Objects.requireNonNull(destinationType, "expected parameter 'destinationType' to be non-null");
         this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -87,11 +87,11 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubRouteArgs() {
-        this.destinationType = Input.empty();
-        this.destinations = Input.empty();
-        this.name = Input.empty();
-        this.nextHop = Input.empty();
-        this.nextHopType = Input.empty();
+        this.destinationType = Output.empty();
+        this.destinations = Output.empty();
+        this.name = Output.empty();
+        this.nextHop = Output.empty();
+        this.nextHopType = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> destinationType;
-        private Input<List<String>> destinations;
-        private Input<String> name;
-        private Input<String> nextHop;
-        private Input<String> nextHopType;
+        private Output<String> destinationType;
+        private Output<List<String>> destinations;
+        private Output<String> name;
+        private Output<String> nextHop;
+        private Output<String> nextHopType;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nextHopType = defaults.nextHopType;
         }
 
-        public Builder destinationType(Input<String> destinationType) {
+        public Builder destinationType(Output<String> destinationType) {
             this.destinationType = Objects.requireNonNull(destinationType);
             return this;
         }
 
         public Builder destinationType(String destinationType) {
-            this.destinationType = Input.of(Objects.requireNonNull(destinationType));
+            this.destinationType = Output.of(Objects.requireNonNull(destinationType));
             return this;
         }
 
-        public Builder destinations(Input<List<String>> destinations) {
+        public Builder destinations(Output<List<String>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
         public Builder destinations(List<String> destinations) {
-            this.destinations = Input.of(Objects.requireNonNull(destinations));
+            this.destinations = Output.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder nextHop(Input<String> nextHop) {
+        public Builder nextHop(Output<String> nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
         public Builder nextHop(String nextHop) {
-            this.nextHop = Input.of(Objects.requireNonNull(nextHop));
+            this.nextHop = Output.of(Objects.requireNonNull(nextHop));
             return this;
         }
 
-        public Builder nextHopType(Input<String> nextHopType) {
+        public Builder nextHopType(Output<String> nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
 
         public Builder nextHopType(String nextHopType) {
-            this.nextHopType = Input.of(Objects.requireNonNull(nextHopType));
+            this.nextHopType = Output.of(Objects.requireNonNull(nextHopType));
             return this;
         }
         public HubRouteArgs build() {

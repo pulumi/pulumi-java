@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
-    public AccessPointVpcConfigurationArgs(@Nullable Input<String> vpcId) {
+    public AccessPointVpcConfigurationArgs(@Nullable Output<String> vpcId) {
         this.vpcId = vpcId;
     }
 
     private AccessPointVpcConfigurationArgs() {
-        this.vpcId = Input.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public AccessPointVpcConfigurationArgs build() {

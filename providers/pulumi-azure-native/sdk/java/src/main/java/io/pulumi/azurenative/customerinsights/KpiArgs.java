@@ -9,7 +9,7 @@ import io.pulumi.azurenative.customerinsights.enums.KpiFunctions;
 import io.pulumi.azurenative.customerinsights.inputs.KpiAliasArgs;
 import io.pulumi.azurenative.customerinsights.inputs.KpiExtractArgs;
 import io.pulumi.azurenative.customerinsights.inputs.KpiThresholdsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliases")
-      private final @Nullable Input<List<KpiAliasArgs>> aliases;
+      private final @Nullable Output<List<KpiAliasArgs>> aliases;
 
-    public Input<List<KpiAliasArgs>> getAliases() {
-        return this.aliases == null ? Input.empty() : this.aliases;
+    public Output<List<KpiAliasArgs>> getAliases() {
+        return this.aliases == null ? Output.empty() : this.aliases;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="calculationWindow", required=true)
-      private final Input<CalculationWindowTypes> calculationWindow;
+      private final Output<CalculationWindowTypes> calculationWindow;
 
-    public Input<CalculationWindowTypes> getCalculationWindow() {
+    public Output<CalculationWindowTypes> getCalculationWindow() {
         return this.calculationWindow;
     }
 
@@ -49,10 +49,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="calculationWindowFieldName")
-      private final @Nullable Input<String> calculationWindowFieldName;
+      private final @Nullable Output<String> calculationWindowFieldName;
 
-    public Input<String> getCalculationWindowFieldName() {
-        return this.calculationWindowFieldName == null ? Input.empty() : this.calculationWindowFieldName;
+    public Output<String> getCalculationWindowFieldName() {
+        return this.calculationWindowFieldName == null ? Output.empty() : this.calculationWindowFieldName;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Output<Map<String,String>> description;
 
-    public Input<Map<String,String>> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<Map<String,String>> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityType", required=true)
-      private final Input<EntityTypes> entityType;
+      private final Output<EntityTypes> entityType;
 
-    public Input<EntityTypes> getEntityType() {
+    public Output<EntityTypes> getEntityType() {
         return this.entityType;
     }
 
@@ -93,9 +93,9 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityTypeName", required=true)
-      private final Input<String> entityTypeName;
+      private final Output<String> entityTypeName;
 
-    public Input<String> getEntityTypeName() {
+    public Output<String> getEntityTypeName() {
         return this.entityTypeName;
     }
 
@@ -104,9 +104,9 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
@@ -115,10 +115,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extracts")
-      private final @Nullable Input<List<KpiExtractArgs>> extracts;
+      private final @Nullable Output<List<KpiExtractArgs>> extracts;
 
-    public Input<List<KpiExtractArgs>> getExtracts() {
-        return this.extracts == null ? Input.empty() : this.extracts;
+    public Output<List<KpiExtractArgs>> getExtracts() {
+        return this.extracts == null ? Output.empty() : this.extracts;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -137,9 +137,9 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="function", required=true)
-      private final Input<KpiFunctions> function;
+      private final Output<KpiFunctions> function;
 
-    public Input<KpiFunctions> getFunction() {
+    public Output<KpiFunctions> getFunction() {
         return this.function;
     }
 
@@ -148,10 +148,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupBy")
-      private final @Nullable Input<List<String>> groupBy;
+      private final @Nullable Output<List<String>> groupBy;
 
-    public Input<List<String>> getGroupBy() {
-        return this.groupBy == null ? Input.empty() : this.groupBy;
+    public Output<List<String>> getGroupBy() {
+        return this.groupBy == null ? Output.empty() : this.groupBy;
     }
 
     /**
@@ -159,9 +159,9 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -170,10 +170,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kpiName")
-      private final @Nullable Input<String> kpiName;
+      private final @Nullable Output<String> kpiName;
 
-    public Input<String> getKpiName() {
-        return this.kpiName == null ? Input.empty() : this.kpiName;
+    public Output<String> getKpiName() {
+        return this.kpiName == null ? Output.empty() : this.kpiName;
     }
 
     /**
@@ -181,9 +181,9 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -192,10 +192,10 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresHolds")
-      private final @Nullable Input<KpiThresholdsArgs> thresHolds;
+      private final @Nullable Output<KpiThresholdsArgs> thresHolds;
 
-    public Input<KpiThresholdsArgs> getThresHolds() {
-        return this.thresHolds == null ? Input.empty() : this.thresHolds;
+    public Output<KpiThresholdsArgs> getThresHolds() {
+        return this.thresHolds == null ? Output.empty() : this.thresHolds;
     }
 
     /**
@@ -203,30 +203,30 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     public KpiArgs(
-        @Nullable Input<List<KpiAliasArgs>> aliases,
-        Input<CalculationWindowTypes> calculationWindow,
-        @Nullable Input<String> calculationWindowFieldName,
-        @Nullable Input<Map<String,String>> description,
-        @Nullable Input<Map<String,String>> displayName,
-        Input<EntityTypes> entityType,
-        Input<String> entityTypeName,
-        Input<String> expression,
-        @Nullable Input<List<KpiExtractArgs>> extracts,
-        @Nullable Input<String> filter,
-        Input<KpiFunctions> function,
-        @Nullable Input<List<String>> groupBy,
-        Input<String> hubName,
-        @Nullable Input<String> kpiName,
-        Input<String> resourceGroupName,
-        @Nullable Input<KpiThresholdsArgs> thresHolds,
-        @Nullable Input<String> unit) {
+        @Nullable Output<List<KpiAliasArgs>> aliases,
+        Output<CalculationWindowTypes> calculationWindow,
+        @Nullable Output<String> calculationWindowFieldName,
+        @Nullable Output<Map<String,String>> description,
+        @Nullable Output<Map<String,String>> displayName,
+        Output<EntityTypes> entityType,
+        Output<String> entityTypeName,
+        Output<String> expression,
+        @Nullable Output<List<KpiExtractArgs>> extracts,
+        @Nullable Output<String> filter,
+        Output<KpiFunctions> function,
+        @Nullable Output<List<String>> groupBy,
+        Output<String> hubName,
+        @Nullable Output<String> kpiName,
+        Output<String> resourceGroupName,
+        @Nullable Output<KpiThresholdsArgs> thresHolds,
+        @Nullable Output<String> unit) {
         this.aliases = aliases;
         this.calculationWindow = Objects.requireNonNull(calculationWindow, "expected parameter 'calculationWindow' to be non-null");
         this.calculationWindowFieldName = calculationWindowFieldName;
@@ -247,23 +247,23 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KpiArgs() {
-        this.aliases = Input.empty();
-        this.calculationWindow = Input.empty();
-        this.calculationWindowFieldName = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.entityType = Input.empty();
-        this.entityTypeName = Input.empty();
-        this.expression = Input.empty();
-        this.extracts = Input.empty();
-        this.filter = Input.empty();
-        this.function = Input.empty();
-        this.groupBy = Input.empty();
-        this.hubName = Input.empty();
-        this.kpiName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.thresHolds = Input.empty();
-        this.unit = Input.empty();
+        this.aliases = Output.empty();
+        this.calculationWindow = Output.empty();
+        this.calculationWindowFieldName = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.entityType = Output.empty();
+        this.entityTypeName = Output.empty();
+        this.expression = Output.empty();
+        this.extracts = Output.empty();
+        this.filter = Output.empty();
+        this.function = Output.empty();
+        this.groupBy = Output.empty();
+        this.hubName = Output.empty();
+        this.kpiName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.thresHolds = Output.empty();
+        this.unit = Output.empty();
     }
 
     public static Builder builder() {
@@ -275,23 +275,23 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<KpiAliasArgs>> aliases;
-        private Input<CalculationWindowTypes> calculationWindow;
-        private @Nullable Input<String> calculationWindowFieldName;
-        private @Nullable Input<Map<String,String>> description;
-        private @Nullable Input<Map<String,String>> displayName;
-        private Input<EntityTypes> entityType;
-        private Input<String> entityTypeName;
-        private Input<String> expression;
-        private @Nullable Input<List<KpiExtractArgs>> extracts;
-        private @Nullable Input<String> filter;
-        private Input<KpiFunctions> function;
-        private @Nullable Input<List<String>> groupBy;
-        private Input<String> hubName;
-        private @Nullable Input<String> kpiName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<KpiThresholdsArgs> thresHolds;
-        private @Nullable Input<String> unit;
+        private @Nullable Output<List<KpiAliasArgs>> aliases;
+        private Output<CalculationWindowTypes> calculationWindow;
+        private @Nullable Output<String> calculationWindowFieldName;
+        private @Nullable Output<Map<String,String>> description;
+        private @Nullable Output<Map<String,String>> displayName;
+        private Output<EntityTypes> entityType;
+        private Output<String> entityTypeName;
+        private Output<String> expression;
+        private @Nullable Output<List<KpiExtractArgs>> extracts;
+        private @Nullable Output<String> filter;
+        private Output<KpiFunctions> function;
+        private @Nullable Output<List<String>> groupBy;
+        private Output<String> hubName;
+        private @Nullable Output<String> kpiName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<KpiThresholdsArgs> thresHolds;
+        private @Nullable Output<String> unit;
 
         public Builder() {
     	      // Empty
@@ -318,173 +318,173 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unit = defaults.unit;
         }
 
-        public Builder aliases(@Nullable Input<List<KpiAliasArgs>> aliases) {
+        public Builder aliases(@Nullable Output<List<KpiAliasArgs>> aliases) {
             this.aliases = aliases;
             return this;
         }
 
         public Builder aliases(@Nullable List<KpiAliasArgs> aliases) {
-            this.aliases = Input.ofNullable(aliases);
+            this.aliases = Output.ofNullable(aliases);
             return this;
         }
 
-        public Builder calculationWindow(Input<CalculationWindowTypes> calculationWindow) {
+        public Builder calculationWindow(Output<CalculationWindowTypes> calculationWindow) {
             this.calculationWindow = Objects.requireNonNull(calculationWindow);
             return this;
         }
 
         public Builder calculationWindow(CalculationWindowTypes calculationWindow) {
-            this.calculationWindow = Input.of(Objects.requireNonNull(calculationWindow));
+            this.calculationWindow = Output.of(Objects.requireNonNull(calculationWindow));
             return this;
         }
 
-        public Builder calculationWindowFieldName(@Nullable Input<String> calculationWindowFieldName) {
+        public Builder calculationWindowFieldName(@Nullable Output<String> calculationWindowFieldName) {
             this.calculationWindowFieldName = calculationWindowFieldName;
             return this;
         }
 
         public Builder calculationWindowFieldName(@Nullable String calculationWindowFieldName) {
-            this.calculationWindowFieldName = Input.ofNullable(calculationWindowFieldName);
+            this.calculationWindowFieldName = Output.ofNullable(calculationWindowFieldName);
             return this;
         }
 
-        public Builder description(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder entityType(Input<EntityTypes> entityType) {
+        public Builder entityType(Output<EntityTypes> entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
         public Builder entityType(EntityTypes entityType) {
-            this.entityType = Input.of(Objects.requireNonNull(entityType));
+            this.entityType = Output.of(Objects.requireNonNull(entityType));
             return this;
         }
 
-        public Builder entityTypeName(Input<String> entityTypeName) {
+        public Builder entityTypeName(Output<String> entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
 
         public Builder entityTypeName(String entityTypeName) {
-            this.entityTypeName = Input.of(Objects.requireNonNull(entityTypeName));
+            this.entityTypeName = Output.of(Objects.requireNonNull(entityTypeName));
             return this;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder extracts(@Nullable Input<List<KpiExtractArgs>> extracts) {
+        public Builder extracts(@Nullable Output<List<KpiExtractArgs>> extracts) {
             this.extracts = extracts;
             return this;
         }
 
         public Builder extracts(@Nullable List<KpiExtractArgs> extracts) {
-            this.extracts = Input.ofNullable(extracts);
+            this.extracts = Output.ofNullable(extracts);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder function(Input<KpiFunctions> function) {
+        public Builder function(Output<KpiFunctions> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
         public Builder function(KpiFunctions function) {
-            this.function = Input.of(Objects.requireNonNull(function));
+            this.function = Output.of(Objects.requireNonNull(function));
             return this;
         }
 
-        public Builder groupBy(@Nullable Input<List<String>> groupBy) {
+        public Builder groupBy(@Nullable Output<List<String>> groupBy) {
             this.groupBy = groupBy;
             return this;
         }
 
         public Builder groupBy(@Nullable List<String> groupBy) {
-            this.groupBy = Input.ofNullable(groupBy);
+            this.groupBy = Output.ofNullable(groupBy);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder kpiName(@Nullable Input<String> kpiName) {
+        public Builder kpiName(@Nullable Output<String> kpiName) {
             this.kpiName = kpiName;
             return this;
         }
 
         public Builder kpiName(@Nullable String kpiName) {
-            this.kpiName = Input.ofNullable(kpiName);
+            this.kpiName = Output.ofNullable(kpiName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder thresHolds(@Nullable Input<KpiThresholdsArgs> thresHolds) {
+        public Builder thresHolds(@Nullable Output<KpiThresholdsArgs> thresHolds) {
             this.thresHolds = thresHolds;
             return this;
         }
 
         public Builder thresHolds(@Nullable KpiThresholdsArgs thresHolds) {
-            this.thresHolds = Input.ofNullable(thresHolds);
+            this.thresHolds = Output.ofNullable(thresHolds);
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
         public KpiArgs build() {

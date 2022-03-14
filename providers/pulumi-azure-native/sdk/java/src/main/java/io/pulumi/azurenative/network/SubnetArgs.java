@@ -13,7 +13,7 @@ import io.pulumi.azurenative.network.inputs.ServiceEndpointPolicyArgs;
 import io.pulumi.azurenative.network.inputs.ServiceEndpointPropertiesFormatArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -30,10 +30,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefix")
-      private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Output<String> addressPrefix;
 
-    public Input<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
+    public Output<String> getAddressPrefix() {
+        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefixes")
-      private final @Nullable Input<List<String>> addressPrefixes;
+      private final @Nullable Output<List<String>> addressPrefixes;
 
-    public Input<List<String>> getAddressPrefixes() {
-        return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
+    public Output<List<String>> getAddressPrefixes() {
+        return this.addressPrefixes == null ? Output.empty() : this.addressPrefixes;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationGatewayIpConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
 
-    public Input<List<ApplicationGatewayIPConfigurationArgs>> getApplicationGatewayIpConfigurations() {
-        return this.applicationGatewayIpConfigurations == null ? Input.empty() : this.applicationGatewayIpConfigurations;
+    public Output<List<ApplicationGatewayIPConfigurationArgs>> getApplicationGatewayIpConfigurations() {
+        return this.applicationGatewayIpConfigurations == null ? Output.empty() : this.applicationGatewayIpConfigurations;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delegations")
-      private final @Nullable Input<List<DelegationArgs>> delegations;
+      private final @Nullable Output<List<DelegationArgs>> delegations;
 
-    public Input<List<DelegationArgs>> getDelegations() {
-        return this.delegations == null ? Input.empty() : this.delegations;
+    public Output<List<DelegationArgs>> getDelegations() {
+        return this.delegations == null ? Output.empty() : this.delegations;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocations")
-      private final @Nullable Input<List<SubResourceArgs>> ipAllocations;
+      private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
-    public Input<List<SubResourceArgs>> getIpAllocations() {
-        return this.ipAllocations == null ? Input.empty() : this.ipAllocations;
+    public Output<List<SubResourceArgs>> getIpAllocations() {
+        return this.ipAllocations == null ? Output.empty() : this.ipAllocations;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natGateway")
-      private final @Nullable Input<SubResourceArgs> natGateway;
+      private final @Nullable Output<SubResourceArgs> natGateway;
 
-    public Input<SubResourceArgs> getNatGateway() {
-        return this.natGateway == null ? Input.empty() : this.natGateway;
+    public Output<SubResourceArgs> getNatGateway() {
+        return this.natGateway == null ? Output.empty() : this.natGateway;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkSecurityGroup")
-      private final @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
+      private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
-    public Input<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
+    public Output<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
+        return this.networkSecurityGroup == null ? Output.empty() : this.networkSecurityGroup;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateEndpointNetworkPolicies")
-      private final @Nullable Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
+      private final @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
 
-    public Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> getPrivateEndpointNetworkPolicies() {
-        return this.privateEndpointNetworkPolicies == null ? Input.empty() : this.privateEndpointNetworkPolicies;
+    public Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> getPrivateEndpointNetworkPolicies() {
+        return this.privateEndpointNetworkPolicies == null ? Output.empty() : this.privateEndpointNetworkPolicies;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkServiceNetworkPolicies")
-      private final @Nullable Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
+      private final @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
 
-    public Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> getPrivateLinkServiceNetworkPolicies() {
-        return this.privateLinkServiceNetworkPolicies == null ? Input.empty() : this.privateLinkServiceNetworkPolicies;
+    public Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> getPrivateLinkServiceNetworkPolicies() {
+        return this.privateLinkServiceNetworkPolicies == null ? Output.empty() : this.privateLinkServiceNetworkPolicies;
     }
 
     /**
@@ -151,9 +151,9 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -162,10 +162,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTable")
-      private final @Nullable Input<RouteTableArgs> routeTable;
+      private final @Nullable Output<RouteTableArgs> routeTable;
 
-    public Input<RouteTableArgs> getRouteTable() {
-        return this.routeTable == null ? Input.empty() : this.routeTable;
+    public Output<RouteTableArgs> getRouteTable() {
+        return this.routeTable == null ? Output.empty() : this.routeTable;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceEndpointPolicies")
-      private final @Nullable Input<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
+      private final @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
 
-    public Input<List<ServiceEndpointPolicyArgs>> getServiceEndpointPolicies() {
-        return this.serviceEndpointPolicies == null ? Input.empty() : this.serviceEndpointPolicies;
+    public Output<List<ServiceEndpointPolicyArgs>> getServiceEndpointPolicies() {
+        return this.serviceEndpointPolicies == null ? Output.empty() : this.serviceEndpointPolicies;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceEndpoints")
-      private final @Nullable Input<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
+      private final @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
 
-    public Input<List<ServiceEndpointPropertiesFormatArgs>> getServiceEndpoints() {
-        return this.serviceEndpoints == null ? Input.empty() : this.serviceEndpoints;
+    public Output<List<ServiceEndpointPropertiesFormatArgs>> getServiceEndpoints() {
+        return this.serviceEndpoints == null ? Output.empty() : this.serviceEndpoints;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetName")
-      private final @Nullable Input<String> subnetName;
+      private final @Nullable Output<String> subnetName;
 
-    public Input<String> getSubnetName() {
-        return this.subnetName == null ? Input.empty() : this.subnetName;
+    public Output<String> getSubnetName() {
+        return this.subnetName == null ? Output.empty() : this.subnetName;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -217,31 +217,31 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkName", required=true)
-      private final Input<String> virtualNetworkName;
+      private final Output<String> virtualNetworkName;
 
-    public Input<String> getVirtualNetworkName() {
+    public Output<String> getVirtualNetworkName() {
         return this.virtualNetworkName;
     }
 
     public SubnetArgs(
-        @Nullable Input<String> addressPrefix,
-        @Nullable Input<List<String>> addressPrefixes,
-        @Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations,
-        @Nullable Input<List<DelegationArgs>> delegations,
-        @Nullable Input<String> id,
-        @Nullable Input<List<SubResourceArgs>> ipAllocations,
-        @Nullable Input<String> name,
-        @Nullable Input<SubResourceArgs> natGateway,
-        @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup,
-        @Nullable Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies,
-        @Nullable Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies,
-        Input<String> resourceGroupName,
-        @Nullable Input<RouteTableArgs> routeTable,
-        @Nullable Input<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies,
-        @Nullable Input<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints,
-        @Nullable Input<String> subnetName,
-        @Nullable Input<String> type,
-        Input<String> virtualNetworkName) {
+        @Nullable Output<String> addressPrefix,
+        @Nullable Output<List<String>> addressPrefixes,
+        @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations,
+        @Nullable Output<List<DelegationArgs>> delegations,
+        @Nullable Output<String> id,
+        @Nullable Output<List<SubResourceArgs>> ipAllocations,
+        @Nullable Output<String> name,
+        @Nullable Output<SubResourceArgs> natGateway,
+        @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup,
+        @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies,
+        @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies,
+        Output<String> resourceGroupName,
+        @Nullable Output<RouteTableArgs> routeTable,
+        @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies,
+        @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints,
+        @Nullable Output<String> subnetName,
+        @Nullable Output<String> type,
+        Output<String> virtualNetworkName) {
         this.addressPrefix = addressPrefix;
         this.addressPrefixes = addressPrefixes;
         this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
@@ -251,8 +251,8 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         this.name = name;
         this.natGateway = natGateway;
         this.networkSecurityGroup = networkSecurityGroup;
-        this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies == null ? Input.ofLeft("Enabled") : privateEndpointNetworkPolicies;
-        this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies == null ? Input.ofLeft("Enabled") : privateLinkServiceNetworkPolicies;
+        this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies == null ? Output.ofLeft("Enabled") : privateEndpointNetworkPolicies;
+        this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies == null ? Output.ofLeft("Enabled") : privateLinkServiceNetworkPolicies;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.routeTable = routeTable;
         this.serviceEndpointPolicies = serviceEndpointPolicies;
@@ -263,24 +263,24 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetArgs() {
-        this.addressPrefix = Input.empty();
-        this.addressPrefixes = Input.empty();
-        this.applicationGatewayIpConfigurations = Input.empty();
-        this.delegations = Input.empty();
-        this.id = Input.empty();
-        this.ipAllocations = Input.empty();
-        this.name = Input.empty();
-        this.natGateway = Input.empty();
-        this.networkSecurityGroup = Input.empty();
-        this.privateEndpointNetworkPolicies = Input.empty();
-        this.privateLinkServiceNetworkPolicies = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routeTable = Input.empty();
-        this.serviceEndpointPolicies = Input.empty();
-        this.serviceEndpoints = Input.empty();
-        this.subnetName = Input.empty();
-        this.type = Input.empty();
-        this.virtualNetworkName = Input.empty();
+        this.addressPrefix = Output.empty();
+        this.addressPrefixes = Output.empty();
+        this.applicationGatewayIpConfigurations = Output.empty();
+        this.delegations = Output.empty();
+        this.id = Output.empty();
+        this.ipAllocations = Output.empty();
+        this.name = Output.empty();
+        this.natGateway = Output.empty();
+        this.networkSecurityGroup = Output.empty();
+        this.privateEndpointNetworkPolicies = Output.empty();
+        this.privateLinkServiceNetworkPolicies = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routeTable = Output.empty();
+        this.serviceEndpointPolicies = Output.empty();
+        this.serviceEndpoints = Output.empty();
+        this.subnetName = Output.empty();
+        this.type = Output.empty();
+        this.virtualNetworkName = Output.empty();
     }
 
     public static Builder builder() {
@@ -292,24 +292,24 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressPrefix;
-        private @Nullable Input<List<String>> addressPrefixes;
-        private @Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
-        private @Nullable Input<List<DelegationArgs>> delegations;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<SubResourceArgs>> ipAllocations;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SubResourceArgs> natGateway;
-        private @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
-        private @Nullable Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
-        private @Nullable Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<RouteTableArgs> routeTable;
-        private @Nullable Input<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
-        private @Nullable Input<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
-        private @Nullable Input<String> subnetName;
-        private @Nullable Input<String> type;
-        private Input<String> virtualNetworkName;
+        private @Nullable Output<String> addressPrefix;
+        private @Nullable Output<List<String>> addressPrefixes;
+        private @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
+        private @Nullable Output<List<DelegationArgs>> delegations;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<SubResourceArgs>> ipAllocations;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SubResourceArgs> natGateway;
+        private @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
+        private @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
+        private @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<RouteTableArgs> routeTable;
+        private @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
+        private @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
+        private @Nullable Output<String> subnetName;
+        private @Nullable Output<String> type;
+        private Output<String> virtualNetworkName;
 
         public Builder() {
     	      // Empty
@@ -337,183 +337,183 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkName = defaults.virtualNetworkName;
         }
 
-        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Input.ofNullable(addressPrefix);
+            this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder addressPrefixes(@Nullable Input<List<String>> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Input.ofNullable(addressPrefixes);
+            this.addressPrefixes = Output.ofNullable(addressPrefixes);
             return this;
         }
 
-        public Builder applicationGatewayIpConfigurations(@Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations) {
+        public Builder applicationGatewayIpConfigurations(@Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations) {
             this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
 
         public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationArgs> applicationGatewayIpConfigurations) {
-            this.applicationGatewayIpConfigurations = Input.ofNullable(applicationGatewayIpConfigurations);
+            this.applicationGatewayIpConfigurations = Output.ofNullable(applicationGatewayIpConfigurations);
             return this;
         }
 
-        public Builder delegations(@Nullable Input<List<DelegationArgs>> delegations) {
+        public Builder delegations(@Nullable Output<List<DelegationArgs>> delegations) {
             this.delegations = delegations;
             return this;
         }
 
         public Builder delegations(@Nullable List<DelegationArgs> delegations) {
-            this.delegations = Input.ofNullable(delegations);
+            this.delegations = Output.ofNullable(delegations);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipAllocations(@Nullable Input<List<SubResourceArgs>> ipAllocations) {
+        public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
 
         public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
-            this.ipAllocations = Input.ofNullable(ipAllocations);
+            this.ipAllocations = Output.ofNullable(ipAllocations);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder natGateway(@Nullable Input<SubResourceArgs> natGateway) {
+        public Builder natGateway(@Nullable Output<SubResourceArgs> natGateway) {
             this.natGateway = natGateway;
             return this;
         }
 
         public Builder natGateway(@Nullable SubResourceArgs natGateway) {
-            this.natGateway = Input.ofNullable(natGateway);
+            this.natGateway = Output.ofNullable(natGateway);
             return this;
         }
 
-        public Builder networkSecurityGroup(@Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Input.ofNullable(networkSecurityGroup);
+            this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
             return this;
         }
 
-        public Builder privateEndpointNetworkPolicies(@Nullable Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies) {
+        public Builder privateEndpointNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies) {
             this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
 
         public Builder privateEndpointNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateEndpointNetworkPolicies> privateEndpointNetworkPolicies) {
-            this.privateEndpointNetworkPolicies = Input.ofNullable(privateEndpointNetworkPolicies);
+            this.privateEndpointNetworkPolicies = Output.ofNullable(privateEndpointNetworkPolicies);
             return this;
         }
 
-        public Builder privateLinkServiceNetworkPolicies(@Nullable Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
+        public Builder privateLinkServiceNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
             this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
 
         public Builder privateLinkServiceNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
-            this.privateLinkServiceNetworkPolicies = Input.ofNullable(privateLinkServiceNetworkPolicies);
+            this.privateLinkServiceNetworkPolicies = Output.ofNullable(privateLinkServiceNetworkPolicies);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routeTable(@Nullable Input<RouteTableArgs> routeTable) {
+        public Builder routeTable(@Nullable Output<RouteTableArgs> routeTable) {
             this.routeTable = routeTable;
             return this;
         }
 
         public Builder routeTable(@Nullable RouteTableArgs routeTable) {
-            this.routeTable = Input.ofNullable(routeTable);
+            this.routeTable = Output.ofNullable(routeTable);
             return this;
         }
 
-        public Builder serviceEndpointPolicies(@Nullable Input<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies) {
+        public Builder serviceEndpointPolicies(@Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies) {
             this.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
 
         public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyArgs> serviceEndpointPolicies) {
-            this.serviceEndpointPolicies = Input.ofNullable(serviceEndpointPolicies);
+            this.serviceEndpointPolicies = Output.ofNullable(serviceEndpointPolicies);
             return this;
         }
 
-        public Builder serviceEndpoints(@Nullable Input<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
 
         public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatArgs> serviceEndpoints) {
-            this.serviceEndpoints = Input.ofNullable(serviceEndpoints);
+            this.serviceEndpoints = Output.ofNullable(serviceEndpoints);
             return this;
         }
 
-        public Builder subnetName(@Nullable Input<String> subnetName) {
+        public Builder subnetName(@Nullable Output<String> subnetName) {
             this.subnetName = subnetName;
             return this;
         }
 
         public Builder subnetName(@Nullable String subnetName) {
-            this.subnetName = Input.ofNullable(subnetName);
+            this.subnetName = Output.ofNullable(subnetName);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder virtualNetworkName(Input<String> virtualNetworkName) {
+        public Builder virtualNetworkName(Output<String> virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }
 
         public Builder virtualNetworkName(String virtualNetworkName) {
-            this.virtualNetworkName = Input.of(Objects.requireNonNull(virtualNetworkName));
+            this.virtualNetworkName = Output.of(Objects.requireNonNull(virtualNetworkName));
             return this;
         }
         public SubnetArgs build() {

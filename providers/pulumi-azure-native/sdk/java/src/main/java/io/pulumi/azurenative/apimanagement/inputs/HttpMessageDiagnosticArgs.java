@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.BodyDiagnosticSettingsArgs;
 import io.pulumi.azurenative.apimanagement.inputs.DataMaskingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<BodyDiagnosticSettingsArgs> body;
+      private final @Nullable Output<BodyDiagnosticSettingsArgs> body;
 
-    public Input<BodyDiagnosticSettingsArgs> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<BodyDiagnosticSettingsArgs> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataMasking")
-      private final @Nullable Input<DataMaskingArgs> dataMasking;
+      private final @Nullable Output<DataMaskingArgs> dataMasking;
 
-    public Input<DataMaskingArgs> getDataMasking() {
-        return this.dataMasking == null ? Input.empty() : this.dataMasking;
+    public Output<DataMaskingArgs> getDataMasking() {
+        return this.dataMasking == null ? Output.empty() : this.dataMasking;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<String>> headers;
+      private final @Nullable Output<List<String>> headers;
 
-    public Input<List<String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     public HttpMessageDiagnosticArgs(
-        @Nullable Input<BodyDiagnosticSettingsArgs> body,
-        @Nullable Input<DataMaskingArgs> dataMasking,
-        @Nullable Input<List<String>> headers) {
+        @Nullable Output<BodyDiagnosticSettingsArgs> body,
+        @Nullable Output<DataMaskingArgs> dataMasking,
+        @Nullable Output<List<String>> headers) {
         this.body = body;
         this.dataMasking = dataMasking;
         this.headers = headers;
     }
 
     private HttpMessageDiagnosticArgs() {
-        this.body = Input.empty();
-        this.dataMasking = Input.empty();
-        this.headers = Input.empty();
+        this.body = Output.empty();
+        this.dataMasking = Output.empty();
+        this.headers = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<BodyDiagnosticSettingsArgs> body;
-        private @Nullable Input<DataMaskingArgs> dataMasking;
-        private @Nullable Input<List<String>> headers;
+        private @Nullable Output<BodyDiagnosticSettingsArgs> body;
+        private @Nullable Output<DataMaskingArgs> dataMasking;
+        private @Nullable Output<List<String>> headers;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     	      this.headers = defaults.headers;
         }
 
-        public Builder body(@Nullable Input<BodyDiagnosticSettingsArgs> body) {
+        public Builder body(@Nullable Output<BodyDiagnosticSettingsArgs> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable BodyDiagnosticSettingsArgs body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder dataMasking(@Nullable Input<DataMaskingArgs> dataMasking) {
+        public Builder dataMasking(@Nullable Output<DataMaskingArgs> dataMasking) {
             this.dataMasking = dataMasking;
             return this;
         }
 
         public Builder dataMasking(@Nullable DataMaskingArgs dataMasking) {
-            this.dataMasking = Input.ofNullable(dataMasking);
+            this.dataMasking = Output.ofNullable(dataMasking);
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<String>> headers) {
+        public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
         public HttpMessageDiagnosticArgs build() {

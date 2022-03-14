@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.ErrorManagementTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errorLimit")
-      private final @Nullable Input<Integer> errorLimit;
+      private final @Nullable Output<Integer> errorLimit;
 
-    public Input<Integer> getErrorLimit() {
-        return this.errorLimit == null ? Input.empty() : this.errorLimit;
+    public Output<Integer> getErrorLimit() {
+        return this.errorLimit == null ? Output.empty() : this.errorLimit;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errorManagementType", required=true)
-      private final Input<ErrorManagementTypes> errorManagementType;
+      private final Output<ErrorManagementTypes> errorManagementType;
 
-    public Input<ErrorManagementTypes> getErrorManagementType() {
+    public Output<ErrorManagementTypes> getErrorManagementType() {
         return this.errorManagementType;
     }
 
     public ConnectorMappingErrorManagementArgs(
-        @Nullable Input<Integer> errorLimit,
-        Input<ErrorManagementTypes> errorManagementType) {
+        @Nullable Output<Integer> errorLimit,
+        Output<ErrorManagementTypes> errorManagementType) {
         this.errorLimit = errorLimit;
         this.errorManagementType = Objects.requireNonNull(errorManagementType, "expected parameter 'errorManagementType' to be non-null");
     }
 
     private ConnectorMappingErrorManagementArgs() {
-        this.errorLimit = Input.empty();
-        this.errorManagementType = Input.empty();
+        this.errorLimit = Output.empty();
+        this.errorManagementType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> errorLimit;
-        private Input<ErrorManagementTypes> errorManagementType;
+        private @Nullable Output<Integer> errorLimit;
+        private Output<ErrorManagementTypes> errorManagementType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
     	      this.errorManagementType = defaults.errorManagementType;
         }
 
-        public Builder errorLimit(@Nullable Input<Integer> errorLimit) {
+        public Builder errorLimit(@Nullable Output<Integer> errorLimit) {
             this.errorLimit = errorLimit;
             return this;
         }
 
         public Builder errorLimit(@Nullable Integer errorLimit) {
-            this.errorLimit = Input.ofNullable(errorLimit);
+            this.errorLimit = Output.ofNullable(errorLimit);
             return this;
         }
 
-        public Builder errorManagementType(Input<ErrorManagementTypes> errorManagementType) {
+        public Builder errorManagementType(Output<ErrorManagementTypes> errorManagementType) {
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
         }
 
         public Builder errorManagementType(ErrorManagementTypes errorManagementType) {
-            this.errorManagementType = Input.of(Objects.requireNonNull(errorManagementType));
+            this.errorManagementType = Output.of(Objects.requireNonNull(errorManagementType));
             return this;
         }
         public ConnectorMappingErrorManagementArgs build() {

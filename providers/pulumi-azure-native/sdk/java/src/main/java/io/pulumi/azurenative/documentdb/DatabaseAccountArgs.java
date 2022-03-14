@@ -19,7 +19,7 @@ import io.pulumi.azurenative.documentdb.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.documentdb.inputs.PeriodicModeBackupPolicyArgs;
 import io.pulumi.azurenative.documentdb.inputs.VirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,10 +38,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="apiProperties")
-      private final @Nullable Input<ApiPropertiesArgs> apiProperties;
+      private final @Nullable Output<ApiPropertiesArgs> apiProperties;
 
-    public Input<ApiPropertiesArgs> getApiProperties() {
-        return this.apiProperties == null ? Input.empty() : this.apiProperties;
+    public Output<ApiPropertiesArgs> getApiProperties() {
+        return this.apiProperties == null ? Output.empty() : this.apiProperties;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backupPolicy")
-      private final @Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
+      private final @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
 
-    public Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> getBackupPolicy() {
-        return this.backupPolicy == null ? Input.empty() : this.backupPolicy;
+    public Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> getBackupPolicy() {
+        return this.backupPolicy == null ? Output.empty() : this.backupPolicy;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="capabilities")
-      private final @Nullable Input<List<CapabilityArgs>> capabilities;
+      private final @Nullable Output<List<CapabilityArgs>> capabilities;
 
-    public Input<List<CapabilityArgs>> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<List<CapabilityArgs>> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="connectorOffer")
-      private final @Nullable Input<Either<String,ConnectorOffer>> connectorOffer;
+      private final @Nullable Output<Either<String,ConnectorOffer>> connectorOffer;
 
-    public Input<Either<String,ConnectorOffer>> getConnectorOffer() {
-        return this.connectorOffer == null ? Input.empty() : this.connectorOffer;
+    public Output<Either<String,ConnectorOffer>> getConnectorOffer() {
+        return this.connectorOffer == null ? Output.empty() : this.connectorOffer;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consistencyPolicy")
-      private final @Nullable Input<ConsistencyPolicyArgs> consistencyPolicy;
+      private final @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy;
 
-    public Input<ConsistencyPolicyArgs> getConsistencyPolicy() {
-        return this.consistencyPolicy == null ? Input.empty() : this.consistencyPolicy;
+    public Output<ConsistencyPolicyArgs> getConsistencyPolicy() {
+        return this.consistencyPolicy == null ? Output.empty() : this.consistencyPolicy;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cors")
-      private final @Nullable Input<List<CorsPolicyArgs>> cors;
+      private final @Nullable Output<List<CorsPolicyArgs>> cors;
 
-    public Input<List<CorsPolicyArgs>> getCors() {
-        return this.cors == null ? Input.empty() : this.cors;
+    public Output<List<CorsPolicyArgs>> getCors() {
+        return this.cors == null ? Output.empty() : this.cors;
     }
 
     /**
@@ -115,9 +115,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="databaseAccountOfferType", required=true)
-      private final Input<DatabaseAccountOfferType> databaseAccountOfferType;
+      private final Output<DatabaseAccountOfferType> databaseAccountOfferType;
 
-    public Input<DatabaseAccountOfferType> getDatabaseAccountOfferType() {
+    public Output<DatabaseAccountOfferType> getDatabaseAccountOfferType() {
         return this.databaseAccountOfferType;
     }
 
@@ -126,10 +126,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultIdentity")
-      private final @Nullable Input<String> defaultIdentity;
+      private final @Nullable Output<String> defaultIdentity;
 
-    public Input<String> getDefaultIdentity() {
-        return this.defaultIdentity == null ? Input.empty() : this.defaultIdentity;
+    public Output<String> getDefaultIdentity() {
+        return this.defaultIdentity == null ? Output.empty() : this.defaultIdentity;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableKeyBasedMetadataWriteAccess")
-      private final @Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess;
+      private final @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess;
 
-    public Input<Boolean> getDisableKeyBasedMetadataWriteAccess() {
-        return this.disableKeyBasedMetadataWriteAccess == null ? Input.empty() : this.disableKeyBasedMetadataWriteAccess;
+    public Output<Boolean> getDisableKeyBasedMetadataWriteAccess() {
+        return this.disableKeyBasedMetadataWriteAccess == null ? Output.empty() : this.disableKeyBasedMetadataWriteAccess;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableAnalyticalStorage")
-      private final @Nullable Input<Boolean> enableAnalyticalStorage;
+      private final @Nullable Output<Boolean> enableAnalyticalStorage;
 
-    public Input<Boolean> getEnableAnalyticalStorage() {
-        return this.enableAnalyticalStorage == null ? Input.empty() : this.enableAnalyticalStorage;
+    public Output<Boolean> getEnableAnalyticalStorage() {
+        return this.enableAnalyticalStorage == null ? Output.empty() : this.enableAnalyticalStorage;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableAutomaticFailover")
-      private final @Nullable Input<Boolean> enableAutomaticFailover;
+      private final @Nullable Output<Boolean> enableAutomaticFailover;
 
-    public Input<Boolean> getEnableAutomaticFailover() {
-        return this.enableAutomaticFailover == null ? Input.empty() : this.enableAutomaticFailover;
+    public Output<Boolean> getEnableAutomaticFailover() {
+        return this.enableAutomaticFailover == null ? Output.empty() : this.enableAutomaticFailover;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableCassandraConnector")
-      private final @Nullable Input<Boolean> enableCassandraConnector;
+      private final @Nullable Output<Boolean> enableCassandraConnector;
 
-    public Input<Boolean> getEnableCassandraConnector() {
-        return this.enableCassandraConnector == null ? Input.empty() : this.enableCassandraConnector;
+    public Output<Boolean> getEnableCassandraConnector() {
+        return this.enableCassandraConnector == null ? Output.empty() : this.enableCassandraConnector;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableFreeTier")
-      private final @Nullable Input<Boolean> enableFreeTier;
+      private final @Nullable Output<Boolean> enableFreeTier;
 
-    public Input<Boolean> getEnableFreeTier() {
-        return this.enableFreeTier == null ? Input.empty() : this.enableFreeTier;
+    public Output<Boolean> getEnableFreeTier() {
+        return this.enableFreeTier == null ? Output.empty() : this.enableFreeTier;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableMultipleWriteLocations")
-      private final @Nullable Input<Boolean> enableMultipleWriteLocations;
+      private final @Nullable Output<Boolean> enableMultipleWriteLocations;
 
-    public Input<Boolean> getEnableMultipleWriteLocations() {
-        return this.enableMultipleWriteLocations == null ? Input.empty() : this.enableMultipleWriteLocations;
+    public Output<Boolean> getEnableMultipleWriteLocations() {
+        return this.enableMultipleWriteLocations == null ? Output.empty() : this.enableMultipleWriteLocations;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipRules")
-      private final @Nullable Input<List<IpAddressOrRangeArgs>> ipRules;
+      private final @Nullable Output<List<IpAddressOrRangeArgs>> ipRules;
 
-    public Input<List<IpAddressOrRangeArgs>> getIpRules() {
-        return this.ipRules == null ? Input.empty() : this.ipRules;
+    public Output<List<IpAddressOrRangeArgs>> getIpRules() {
+        return this.ipRules == null ? Output.empty() : this.ipRules;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isVirtualNetworkFilterEnabled")
-      private final @Nullable Input<Boolean> isVirtualNetworkFilterEnabled;
+      private final @Nullable Output<Boolean> isVirtualNetworkFilterEnabled;
 
-    public Input<Boolean> getIsVirtualNetworkFilterEnabled() {
-        return this.isVirtualNetworkFilterEnabled == null ? Input.empty() : this.isVirtualNetworkFilterEnabled;
+    public Output<Boolean> getIsVirtualNetworkFilterEnabled() {
+        return this.isVirtualNetworkFilterEnabled == null ? Output.empty() : this.isVirtualNetworkFilterEnabled;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyVaultKeyUri")
-      private final @Nullable Input<String> keyVaultKeyUri;
+      private final @Nullable Output<String> keyVaultKeyUri;
 
-    public Input<String> getKeyVaultKeyUri() {
-        return this.keyVaultKeyUri == null ? Input.empty() : this.keyVaultKeyUri;
+    public Output<String> getKeyVaultKeyUri() {
+        return this.keyVaultKeyUri == null ? Output.empty() : this.keyVaultKeyUri;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,DatabaseAccountKind>> kind;
+      private final @Nullable Output<Either<String,DatabaseAccountKind>> kind;
 
-    public Input<Either<String,DatabaseAccountKind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,DatabaseAccountKind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -258,10 +258,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -269,9 +269,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="locations", required=true)
-      private final Input<List<LocationArgs>> locations;
+      private final Output<List<LocationArgs>> locations;
 
-    public Input<List<LocationArgs>> getLocations() {
+    public Output<List<LocationArgs>> getLocations() {
         return this.locations;
     }
 
@@ -280,10 +280,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkAclBypass")
-      private final @Nullable Input<NetworkAclBypass> networkAclBypass;
+      private final @Nullable Output<NetworkAclBypass> networkAclBypass;
 
-    public Input<NetworkAclBypass> getNetworkAclBypass() {
-        return this.networkAclBypass == null ? Input.empty() : this.networkAclBypass;
+    public Output<NetworkAclBypass> getNetworkAclBypass() {
+        return this.networkAclBypass == null ? Output.empty() : this.networkAclBypass;
     }
 
     /**
@@ -291,10 +291,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkAclBypassResourceIds")
-      private final @Nullable Input<List<String>> networkAclBypassResourceIds;
+      private final @Nullable Output<List<String>> networkAclBypassResourceIds;
 
-    public Input<List<String>> getNetworkAclBypassResourceIds() {
-        return this.networkAclBypassResourceIds == null ? Input.empty() : this.networkAclBypassResourceIds;
+    public Output<List<String>> getNetworkAclBypassResourceIds() {
+        return this.networkAclBypassResourceIds == null ? Output.empty() : this.networkAclBypassResourceIds;
     }
 
     /**
@@ -302,10 +302,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -313,9 +313,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -324,10 +324,10 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -335,41 +335,41 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="virtualNetworkRules")
-      private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+      private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Input<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
+    public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
+        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
     }
 
     public DatabaseAccountArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<ApiPropertiesArgs> apiProperties,
-        @Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy,
-        @Nullable Input<List<CapabilityArgs>> capabilities,
-        @Nullable Input<Either<String,ConnectorOffer>> connectorOffer,
-        @Nullable Input<ConsistencyPolicyArgs> consistencyPolicy,
-        @Nullable Input<List<CorsPolicyArgs>> cors,
-        Input<DatabaseAccountOfferType> databaseAccountOfferType,
-        @Nullable Input<String> defaultIdentity,
-        @Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess,
-        @Nullable Input<Boolean> enableAnalyticalStorage,
-        @Nullable Input<Boolean> enableAutomaticFailover,
-        @Nullable Input<Boolean> enableCassandraConnector,
-        @Nullable Input<Boolean> enableFreeTier,
-        @Nullable Input<Boolean> enableMultipleWriteLocations,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<List<IpAddressOrRangeArgs>> ipRules,
-        @Nullable Input<Boolean> isVirtualNetworkFilterEnabled,
-        @Nullable Input<String> keyVaultKeyUri,
-        @Nullable Input<Either<String,DatabaseAccountKind>> kind,
-        @Nullable Input<String> location,
-        Input<List<LocationArgs>> locations,
-        @Nullable Input<NetworkAclBypass> networkAclBypass,
-        @Nullable Input<List<String>> networkAclBypassResourceIds,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<ApiPropertiesArgs> apiProperties,
+        @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy,
+        @Nullable Output<List<CapabilityArgs>> capabilities,
+        @Nullable Output<Either<String,ConnectorOffer>> connectorOffer,
+        @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy,
+        @Nullable Output<List<CorsPolicyArgs>> cors,
+        Output<DatabaseAccountOfferType> databaseAccountOfferType,
+        @Nullable Output<String> defaultIdentity,
+        @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess,
+        @Nullable Output<Boolean> enableAnalyticalStorage,
+        @Nullable Output<Boolean> enableAutomaticFailover,
+        @Nullable Output<Boolean> enableCassandraConnector,
+        @Nullable Output<Boolean> enableFreeTier,
+        @Nullable Output<Boolean> enableMultipleWriteLocations,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<List<IpAddressOrRangeArgs>> ipRules,
+        @Nullable Output<Boolean> isVirtualNetworkFilterEnabled,
+        @Nullable Output<String> keyVaultKeyUri,
+        @Nullable Output<Either<String,DatabaseAccountKind>> kind,
+        @Nullable Output<String> location,
+        Output<List<LocationArgs>> locations,
+        @Nullable Output<NetworkAclBypass> networkAclBypass,
+        @Nullable Output<List<String>> networkAclBypassResourceIds,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
         this.accountName = accountName;
         this.apiProperties = apiProperties;
         this.backupPolicy = backupPolicy;
@@ -389,7 +389,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         this.ipRules = ipRules;
         this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
         this.keyVaultKeyUri = keyVaultKeyUri;
-        this.kind = kind == null ? Input.ofLeft("GlobalDocumentDB") : kind;
+        this.kind = kind == null ? Output.ofLeft("GlobalDocumentDB") : kind;
         this.location = location;
         this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
         this.networkAclBypass = networkAclBypass;
@@ -401,34 +401,34 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DatabaseAccountArgs() {
-        this.accountName = Input.empty();
-        this.apiProperties = Input.empty();
-        this.backupPolicy = Input.empty();
-        this.capabilities = Input.empty();
-        this.connectorOffer = Input.empty();
-        this.consistencyPolicy = Input.empty();
-        this.cors = Input.empty();
-        this.databaseAccountOfferType = Input.empty();
-        this.defaultIdentity = Input.empty();
-        this.disableKeyBasedMetadataWriteAccess = Input.empty();
-        this.enableAnalyticalStorage = Input.empty();
-        this.enableAutomaticFailover = Input.empty();
-        this.enableCassandraConnector = Input.empty();
-        this.enableFreeTier = Input.empty();
-        this.enableMultipleWriteLocations = Input.empty();
-        this.identity = Input.empty();
-        this.ipRules = Input.empty();
-        this.isVirtualNetworkFilterEnabled = Input.empty();
-        this.keyVaultKeyUri = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.locations = Input.empty();
-        this.networkAclBypass = Input.empty();
-        this.networkAclBypassResourceIds = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.virtualNetworkRules = Input.empty();
+        this.accountName = Output.empty();
+        this.apiProperties = Output.empty();
+        this.backupPolicy = Output.empty();
+        this.capabilities = Output.empty();
+        this.connectorOffer = Output.empty();
+        this.consistencyPolicy = Output.empty();
+        this.cors = Output.empty();
+        this.databaseAccountOfferType = Output.empty();
+        this.defaultIdentity = Output.empty();
+        this.disableKeyBasedMetadataWriteAccess = Output.empty();
+        this.enableAnalyticalStorage = Output.empty();
+        this.enableAutomaticFailover = Output.empty();
+        this.enableCassandraConnector = Output.empty();
+        this.enableFreeTier = Output.empty();
+        this.enableMultipleWriteLocations = Output.empty();
+        this.identity = Output.empty();
+        this.ipRules = Output.empty();
+        this.isVirtualNetworkFilterEnabled = Output.empty();
+        this.keyVaultKeyUri = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.locations = Output.empty();
+        this.networkAclBypass = Output.empty();
+        this.networkAclBypassResourceIds = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.virtualNetworkRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -440,34 +440,34 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<ApiPropertiesArgs> apiProperties;
-        private @Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
-        private @Nullable Input<List<CapabilityArgs>> capabilities;
-        private @Nullable Input<Either<String,ConnectorOffer>> connectorOffer;
-        private @Nullable Input<ConsistencyPolicyArgs> consistencyPolicy;
-        private @Nullable Input<List<CorsPolicyArgs>> cors;
-        private Input<DatabaseAccountOfferType> databaseAccountOfferType;
-        private @Nullable Input<String> defaultIdentity;
-        private @Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess;
-        private @Nullable Input<Boolean> enableAnalyticalStorage;
-        private @Nullable Input<Boolean> enableAutomaticFailover;
-        private @Nullable Input<Boolean> enableCassandraConnector;
-        private @Nullable Input<Boolean> enableFreeTier;
-        private @Nullable Input<Boolean> enableMultipleWriteLocations;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<List<IpAddressOrRangeArgs>> ipRules;
-        private @Nullable Input<Boolean> isVirtualNetworkFilterEnabled;
-        private @Nullable Input<String> keyVaultKeyUri;
-        private @Nullable Input<Either<String,DatabaseAccountKind>> kind;
-        private @Nullable Input<String> location;
-        private Input<List<LocationArgs>> locations;
-        private @Nullable Input<NetworkAclBypass> networkAclBypass;
-        private @Nullable Input<List<String>> networkAclBypassResourceIds;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<ApiPropertiesArgs> apiProperties;
+        private @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
+        private @Nullable Output<List<CapabilityArgs>> capabilities;
+        private @Nullable Output<Either<String,ConnectorOffer>> connectorOffer;
+        private @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy;
+        private @Nullable Output<List<CorsPolicyArgs>> cors;
+        private Output<DatabaseAccountOfferType> databaseAccountOfferType;
+        private @Nullable Output<String> defaultIdentity;
+        private @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess;
+        private @Nullable Output<Boolean> enableAnalyticalStorage;
+        private @Nullable Output<Boolean> enableAutomaticFailover;
+        private @Nullable Output<Boolean> enableCassandraConnector;
+        private @Nullable Output<Boolean> enableFreeTier;
+        private @Nullable Output<Boolean> enableMultipleWriteLocations;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<List<IpAddressOrRangeArgs>> ipRules;
+        private @Nullable Output<Boolean> isVirtualNetworkFilterEnabled;
+        private @Nullable Output<String> keyVaultKeyUri;
+        private @Nullable Output<Either<String,DatabaseAccountKind>> kind;
+        private @Nullable Output<String> location;
+        private Output<List<LocationArgs>> locations;
+        private @Nullable Output<NetworkAclBypass> networkAclBypass;
+        private @Nullable Output<List<String>> networkAclBypassResourceIds;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
         public Builder() {
     	      // Empty
@@ -505,283 +505,283 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder apiProperties(@Nullable Input<ApiPropertiesArgs> apiProperties) {
+        public Builder apiProperties(@Nullable Output<ApiPropertiesArgs> apiProperties) {
             this.apiProperties = apiProperties;
             return this;
         }
 
         public Builder apiProperties(@Nullable ApiPropertiesArgs apiProperties) {
-            this.apiProperties = Input.ofNullable(apiProperties);
+            this.apiProperties = Output.ofNullable(apiProperties);
             return this;
         }
 
-        public Builder backupPolicy(@Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy) {
+        public Builder backupPolicy(@Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
 
         public Builder backupPolicy(@Nullable Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs> backupPolicy) {
-            this.backupPolicy = Input.ofNullable(backupPolicy);
+            this.backupPolicy = Output.ofNullable(backupPolicy);
             return this;
         }
 
-        public Builder capabilities(@Nullable Input<List<CapabilityArgs>> capabilities) {
+        public Builder capabilities(@Nullable Output<List<CapabilityArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder connectorOffer(@Nullable Input<Either<String,ConnectorOffer>> connectorOffer) {
+        public Builder connectorOffer(@Nullable Output<Either<String,ConnectorOffer>> connectorOffer) {
             this.connectorOffer = connectorOffer;
             return this;
         }
 
         public Builder connectorOffer(@Nullable Either<String,ConnectorOffer> connectorOffer) {
-            this.connectorOffer = Input.ofNullable(connectorOffer);
+            this.connectorOffer = Output.ofNullable(connectorOffer);
             return this;
         }
 
-        public Builder consistencyPolicy(@Nullable Input<ConsistencyPolicyArgs> consistencyPolicy) {
+        public Builder consistencyPolicy(@Nullable Output<ConsistencyPolicyArgs> consistencyPolicy) {
             this.consistencyPolicy = consistencyPolicy;
             return this;
         }
 
         public Builder consistencyPolicy(@Nullable ConsistencyPolicyArgs consistencyPolicy) {
-            this.consistencyPolicy = Input.ofNullable(consistencyPolicy);
+            this.consistencyPolicy = Output.ofNullable(consistencyPolicy);
             return this;
         }
 
-        public Builder cors(@Nullable Input<List<CorsPolicyArgs>> cors) {
+        public Builder cors(@Nullable Output<List<CorsPolicyArgs>> cors) {
             this.cors = cors;
             return this;
         }
 
         public Builder cors(@Nullable List<CorsPolicyArgs> cors) {
-            this.cors = Input.ofNullable(cors);
+            this.cors = Output.ofNullable(cors);
             return this;
         }
 
-        public Builder databaseAccountOfferType(Input<DatabaseAccountOfferType> databaseAccountOfferType) {
+        public Builder databaseAccountOfferType(Output<DatabaseAccountOfferType> databaseAccountOfferType) {
             this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType);
             return this;
         }
 
         public Builder databaseAccountOfferType(DatabaseAccountOfferType databaseAccountOfferType) {
-            this.databaseAccountOfferType = Input.of(Objects.requireNonNull(databaseAccountOfferType));
+            this.databaseAccountOfferType = Output.of(Objects.requireNonNull(databaseAccountOfferType));
             return this;
         }
 
-        public Builder defaultIdentity(@Nullable Input<String> defaultIdentity) {
+        public Builder defaultIdentity(@Nullable Output<String> defaultIdentity) {
             this.defaultIdentity = defaultIdentity;
             return this;
         }
 
         public Builder defaultIdentity(@Nullable String defaultIdentity) {
-            this.defaultIdentity = Input.ofNullable(defaultIdentity);
+            this.defaultIdentity = Output.ofNullable(defaultIdentity);
             return this;
         }
 
-        public Builder disableKeyBasedMetadataWriteAccess(@Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess) {
+        public Builder disableKeyBasedMetadataWriteAccess(@Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess) {
             this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
             return this;
         }
 
         public Builder disableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
-            this.disableKeyBasedMetadataWriteAccess = Input.ofNullable(disableKeyBasedMetadataWriteAccess);
+            this.disableKeyBasedMetadataWriteAccess = Output.ofNullable(disableKeyBasedMetadataWriteAccess);
             return this;
         }
 
-        public Builder enableAnalyticalStorage(@Nullable Input<Boolean> enableAnalyticalStorage) {
+        public Builder enableAnalyticalStorage(@Nullable Output<Boolean> enableAnalyticalStorage) {
             this.enableAnalyticalStorage = enableAnalyticalStorage;
             return this;
         }
 
         public Builder enableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
-            this.enableAnalyticalStorage = Input.ofNullable(enableAnalyticalStorage);
+            this.enableAnalyticalStorage = Output.ofNullable(enableAnalyticalStorage);
             return this;
         }
 
-        public Builder enableAutomaticFailover(@Nullable Input<Boolean> enableAutomaticFailover) {
+        public Builder enableAutomaticFailover(@Nullable Output<Boolean> enableAutomaticFailover) {
             this.enableAutomaticFailover = enableAutomaticFailover;
             return this;
         }
 
         public Builder enableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
-            this.enableAutomaticFailover = Input.ofNullable(enableAutomaticFailover);
+            this.enableAutomaticFailover = Output.ofNullable(enableAutomaticFailover);
             return this;
         }
 
-        public Builder enableCassandraConnector(@Nullable Input<Boolean> enableCassandraConnector) {
+        public Builder enableCassandraConnector(@Nullable Output<Boolean> enableCassandraConnector) {
             this.enableCassandraConnector = enableCassandraConnector;
             return this;
         }
 
         public Builder enableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
-            this.enableCassandraConnector = Input.ofNullable(enableCassandraConnector);
+            this.enableCassandraConnector = Output.ofNullable(enableCassandraConnector);
             return this;
         }
 
-        public Builder enableFreeTier(@Nullable Input<Boolean> enableFreeTier) {
+        public Builder enableFreeTier(@Nullable Output<Boolean> enableFreeTier) {
             this.enableFreeTier = enableFreeTier;
             return this;
         }
 
         public Builder enableFreeTier(@Nullable Boolean enableFreeTier) {
-            this.enableFreeTier = Input.ofNullable(enableFreeTier);
+            this.enableFreeTier = Output.ofNullable(enableFreeTier);
             return this;
         }
 
-        public Builder enableMultipleWriteLocations(@Nullable Input<Boolean> enableMultipleWriteLocations) {
+        public Builder enableMultipleWriteLocations(@Nullable Output<Boolean> enableMultipleWriteLocations) {
             this.enableMultipleWriteLocations = enableMultipleWriteLocations;
             return this;
         }
 
         public Builder enableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
-            this.enableMultipleWriteLocations = Input.ofNullable(enableMultipleWriteLocations);
+            this.enableMultipleWriteLocations = Output.ofNullable(enableMultipleWriteLocations);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder ipRules(@Nullable Input<List<IpAddressOrRangeArgs>> ipRules) {
+        public Builder ipRules(@Nullable Output<List<IpAddressOrRangeArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
         public Builder ipRules(@Nullable List<IpAddressOrRangeArgs> ipRules) {
-            this.ipRules = Input.ofNullable(ipRules);
+            this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
 
-        public Builder isVirtualNetworkFilterEnabled(@Nullable Input<Boolean> isVirtualNetworkFilterEnabled) {
+        public Builder isVirtualNetworkFilterEnabled(@Nullable Output<Boolean> isVirtualNetworkFilterEnabled) {
             this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
             return this;
         }
 
         public Builder isVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
-            this.isVirtualNetworkFilterEnabled = Input.ofNullable(isVirtualNetworkFilterEnabled);
+            this.isVirtualNetworkFilterEnabled = Output.ofNullable(isVirtualNetworkFilterEnabled);
             return this;
         }
 
-        public Builder keyVaultKeyUri(@Nullable Input<String> keyVaultKeyUri) {
+        public Builder keyVaultKeyUri(@Nullable Output<String> keyVaultKeyUri) {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
         public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
-            this.keyVaultKeyUri = Input.ofNullable(keyVaultKeyUri);
+            this.keyVaultKeyUri = Output.ofNullable(keyVaultKeyUri);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,DatabaseAccountKind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,DatabaseAccountKind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,DatabaseAccountKind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder locations(Input<List<LocationArgs>> locations) {
+        public Builder locations(Output<List<LocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
         public Builder locations(List<LocationArgs> locations) {
-            this.locations = Input.of(Objects.requireNonNull(locations));
+            this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder networkAclBypass(@Nullable Input<NetworkAclBypass> networkAclBypass) {
+        public Builder networkAclBypass(@Nullable Output<NetworkAclBypass> networkAclBypass) {
             this.networkAclBypass = networkAclBypass;
             return this;
         }
 
         public Builder networkAclBypass(@Nullable NetworkAclBypass networkAclBypass) {
-            this.networkAclBypass = Input.ofNullable(networkAclBypass);
+            this.networkAclBypass = Output.ofNullable(networkAclBypass);
             return this;
         }
 
-        public Builder networkAclBypassResourceIds(@Nullable Input<List<String>> networkAclBypassResourceIds) {
+        public Builder networkAclBypassResourceIds(@Nullable Output<List<String>> networkAclBypassResourceIds) {
             this.networkAclBypassResourceIds = networkAclBypassResourceIds;
             return this;
         }
 
         public Builder networkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
-            this.networkAclBypassResourceIds = Input.ofNullable(networkAclBypassResourceIds);
+            this.networkAclBypassResourceIds = Output.ofNullable(networkAclBypassResourceIds);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
         public DatabaseAccountArgs build() {

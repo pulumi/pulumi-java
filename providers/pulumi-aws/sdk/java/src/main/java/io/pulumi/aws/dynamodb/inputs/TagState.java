@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceArn")
-      private final @Nullable Input<String> resourceArn;
+      private final @Nullable Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
-        return this.resourceArn == null ? Input.empty() : this.resourceArn;
+    public Output<String> getResourceArn() {
+        return this.resourceArn == null ? Output.empty() : this.resourceArn;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public TagState(
-        @Nullable Input<String> key,
-        @Nullable Input<String> resourceArn,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> key,
+        @Nullable Output<String> resourceArn,
+        @Nullable Output<String> value) {
         this.key = key;
         this.resourceArn = resourceArn;
         this.value = value;
     }
 
     private TagState() {
-        this.key = Input.empty();
-        this.resourceArn = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.resourceArn = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> resourceArn;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> resourceArn;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder resourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Input.ofNullable(resourceArn);
+            this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public TagState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DateArgs;
 import java.lang.Boolean;
@@ -22,54 +22,54 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     public static final ValueArgs Empty = new ValueArgs();
 
     @InputImport(name="booleanValue")
-      private final @Nullable Input<Boolean> booleanValue;
+      private final @Nullable Output<Boolean> booleanValue;
 
-    public Input<Boolean> getBooleanValue() {
-        return this.booleanValue == null ? Input.empty() : this.booleanValue;
+    public Output<Boolean> getBooleanValue() {
+        return this.booleanValue == null ? Output.empty() : this.booleanValue;
     }
 
     @InputImport(name="dateValue")
-      private final @Nullable Input<DateArgs> dateValue;
+      private final @Nullable Output<DateArgs> dateValue;
 
-    public Input<DateArgs> getDateValue() {
-        return this.dateValue == null ? Input.empty() : this.dateValue;
+    public Output<DateArgs> getDateValue() {
+        return this.dateValue == null ? Output.empty() : this.dateValue;
     }
 
     @InputImport(name="doubleValue")
-      private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Output<Double> doubleValue;
 
-    public Input<Double> getDoubleValue() {
-        return this.doubleValue == null ? Input.empty() : this.doubleValue;
+    public Output<Double> getDoubleValue() {
+        return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
     @InputImport(name="integerValue")
-      private final @Nullable Input<String> integerValue;
+      private final @Nullable Output<String> integerValue;
 
-    public Input<String> getIntegerValue() {
-        return this.integerValue == null ? Input.empty() : this.integerValue;
+    public Output<String> getIntegerValue() {
+        return this.integerValue == null ? Output.empty() : this.integerValue;
     }
 
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     @InputImport(name="timestampValue")
-      private final @Nullable Input<String> timestampValue;
+      private final @Nullable Output<String> timestampValue;
 
-    public Input<String> getTimestampValue() {
-        return this.timestampValue == null ? Input.empty() : this.timestampValue;
+    public Output<String> getTimestampValue() {
+        return this.timestampValue == null ? Output.empty() : this.timestampValue;
     }
 
     public ValueArgs(
-        @Nullable Input<Boolean> booleanValue,
-        @Nullable Input<DateArgs> dateValue,
-        @Nullable Input<Double> doubleValue,
-        @Nullable Input<String> integerValue,
-        @Nullable Input<String> stringValue,
-        @Nullable Input<String> timestampValue) {
+        @Nullable Output<Boolean> booleanValue,
+        @Nullable Output<DateArgs> dateValue,
+        @Nullable Output<Double> doubleValue,
+        @Nullable Output<String> integerValue,
+        @Nullable Output<String> stringValue,
+        @Nullable Output<String> timestampValue) {
         this.booleanValue = booleanValue;
         this.dateValue = dateValue;
         this.doubleValue = doubleValue;
@@ -79,12 +79,12 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ValueArgs() {
-        this.booleanValue = Input.empty();
-        this.dateValue = Input.empty();
-        this.doubleValue = Input.empty();
-        this.integerValue = Input.empty();
-        this.stringValue = Input.empty();
-        this.timestampValue = Input.empty();
+        this.booleanValue = Output.empty();
+        this.dateValue = Output.empty();
+        this.doubleValue = Output.empty();
+        this.integerValue = Output.empty();
+        this.stringValue = Output.empty();
+        this.timestampValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,12 +96,12 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> booleanValue;
-        private @Nullable Input<DateArgs> dateValue;
-        private @Nullable Input<Double> doubleValue;
-        private @Nullable Input<String> integerValue;
-        private @Nullable Input<String> stringValue;
-        private @Nullable Input<String> timestampValue;
+        private @Nullable Output<Boolean> booleanValue;
+        private @Nullable Output<DateArgs> dateValue;
+        private @Nullable Output<Double> doubleValue;
+        private @Nullable Output<String> integerValue;
+        private @Nullable Output<String> stringValue;
+        private @Nullable Output<String> timestampValue;
 
         public Builder() {
     	      // Empty
@@ -117,63 +117,63 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder booleanValue(@Nullable Input<Boolean> booleanValue) {
+        public Builder booleanValue(@Nullable Output<Boolean> booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
         public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = Input.ofNullable(booleanValue);
+            this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
 
-        public Builder dateValue(@Nullable Input<DateArgs> dateValue) {
+        public Builder dateValue(@Nullable Output<DateArgs> dateValue) {
             this.dateValue = dateValue;
             return this;
         }
 
         public Builder dateValue(@Nullable DateArgs dateValue) {
-            this.dateValue = Input.ofNullable(dateValue);
+            this.dateValue = Output.ofNullable(dateValue);
             return this;
         }
 
-        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Input.ofNullable(doubleValue);
+            this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder integerValue(@Nullable Input<String> integerValue) {
+        public Builder integerValue(@Nullable Output<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
 
         public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = Input.ofNullable(integerValue);
+            this.integerValue = Output.ofNullable(integerValue);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
 
-        public Builder timestampValue(@Nullable Input<String> timestampValue) {
+        public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
 
         public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Input.ofNullable(timestampValue);
+            this.timestampValue = Output.ofNullable(timestampValue);
             return this;
         }
         public ValueArgs build() {

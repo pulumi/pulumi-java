@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ClientInfoArgs;
 import io.pulumi.googlenative.testing_v1.inputs.EnvironmentMatrixArgs;
@@ -25,10 +25,10 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientInfo")
-      private final @Nullable Input<ClientInfoArgs> clientInfo;
+      private final @Nullable Output<ClientInfoArgs> clientInfo;
 
-    public Input<ClientInfoArgs> getClientInfo() {
-        return this.clientInfo == null ? Input.empty() : this.clientInfo;
+    public Output<ClientInfoArgs> getClientInfo() {
+        return this.clientInfo == null ? Output.empty() : this.clientInfo;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentMatrix", required=true)
-      private final Input<EnvironmentMatrixArgs> environmentMatrix;
+      private final Output<EnvironmentMatrixArgs> environmentMatrix;
 
-    public Input<EnvironmentMatrixArgs> getEnvironmentMatrix() {
+    public Output<EnvironmentMatrixArgs> getEnvironmentMatrix() {
         return this.environmentMatrix;
     }
 
@@ -47,10 +47,10 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failFast")
-      private final @Nullable Input<Boolean> failFast;
+      private final @Nullable Output<Boolean> failFast;
 
-    public Input<Boolean> getFailFast() {
-        return this.failFast == null ? Input.empty() : this.failFast;
+    public Output<Boolean> getFailFast() {
+        return this.failFast == null ? Output.empty() : this.failFast;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flakyTestAttempts")
-      private final @Nullable Input<Integer> flakyTestAttempts;
+      private final @Nullable Output<Integer> flakyTestAttempts;
 
-    public Input<Integer> getFlakyTestAttempts() {
-        return this.flakyTestAttempts == null ? Input.empty() : this.flakyTestAttempts;
+    public Output<Integer> getFlakyTestAttempts() {
+        return this.flakyTestAttempts == null ? Output.empty() : this.flakyTestAttempts;
     }
 
     /**
@@ -69,17 +69,17 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resultStorage", required=true)
-      private final Input<ResultStorageArgs> resultStorage;
+      private final Output<ResultStorageArgs> resultStorage;
 
-    public Input<ResultStorageArgs> getResultStorage() {
+    public Output<ResultStorageArgs> getResultStorage() {
         return this.resultStorage;
     }
 
@@ -98,21 +98,21 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testSpecification", required=true)
-      private final Input<TestSpecificationArgs> testSpecification;
+      private final Output<TestSpecificationArgs> testSpecification;
 
-    public Input<TestSpecificationArgs> getTestSpecification() {
+    public Output<TestSpecificationArgs> getTestSpecification() {
         return this.testSpecification;
     }
 
     public TestMatrixArgs(
-        @Nullable Input<ClientInfoArgs> clientInfo,
-        Input<EnvironmentMatrixArgs> environmentMatrix,
-        @Nullable Input<Boolean> failFast,
-        @Nullable Input<Integer> flakyTestAttempts,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        Input<ResultStorageArgs> resultStorage,
-        Input<TestSpecificationArgs> testSpecification) {
+        @Nullable Output<ClientInfoArgs> clientInfo,
+        Output<EnvironmentMatrixArgs> environmentMatrix,
+        @Nullable Output<Boolean> failFast,
+        @Nullable Output<Integer> flakyTestAttempts,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        Output<ResultStorageArgs> resultStorage,
+        Output<TestSpecificationArgs> testSpecification) {
         this.clientInfo = clientInfo;
         this.environmentMatrix = Objects.requireNonNull(environmentMatrix, "expected parameter 'environmentMatrix' to be non-null");
         this.failFast = failFast;
@@ -124,14 +124,14 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestMatrixArgs() {
-        this.clientInfo = Input.empty();
-        this.environmentMatrix = Input.empty();
-        this.failFast = Input.empty();
-        this.flakyTestAttempts = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.resultStorage = Input.empty();
-        this.testSpecification = Input.empty();
+        this.clientInfo = Output.empty();
+        this.environmentMatrix = Output.empty();
+        this.failFast = Output.empty();
+        this.flakyTestAttempts = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.resultStorage = Output.empty();
+        this.testSpecification = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ClientInfoArgs> clientInfo;
-        private Input<EnvironmentMatrixArgs> environmentMatrix;
-        private @Nullable Input<Boolean> failFast;
-        private @Nullable Input<Integer> flakyTestAttempts;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private Input<ResultStorageArgs> resultStorage;
-        private Input<TestSpecificationArgs> testSpecification;
+        private @Nullable Output<ClientInfoArgs> clientInfo;
+        private Output<EnvironmentMatrixArgs> environmentMatrix;
+        private @Nullable Output<Boolean> failFast;
+        private @Nullable Output<Integer> flakyTestAttempts;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private Output<ResultStorageArgs> resultStorage;
+        private Output<TestSpecificationArgs> testSpecification;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testSpecification = defaults.testSpecification;
         }
 
-        public Builder clientInfo(@Nullable Input<ClientInfoArgs> clientInfo) {
+        public Builder clientInfo(@Nullable Output<ClientInfoArgs> clientInfo) {
             this.clientInfo = clientInfo;
             return this;
         }
 
         public Builder clientInfo(@Nullable ClientInfoArgs clientInfo) {
-            this.clientInfo = Input.ofNullable(clientInfo);
+            this.clientInfo = Output.ofNullable(clientInfo);
             return this;
         }
 
-        public Builder environmentMatrix(Input<EnvironmentMatrixArgs> environmentMatrix) {
+        public Builder environmentMatrix(Output<EnvironmentMatrixArgs> environmentMatrix) {
             this.environmentMatrix = Objects.requireNonNull(environmentMatrix);
             return this;
         }
 
         public Builder environmentMatrix(EnvironmentMatrixArgs environmentMatrix) {
-            this.environmentMatrix = Input.of(Objects.requireNonNull(environmentMatrix));
+            this.environmentMatrix = Output.of(Objects.requireNonNull(environmentMatrix));
             return this;
         }
 
-        public Builder failFast(@Nullable Input<Boolean> failFast) {
+        public Builder failFast(@Nullable Output<Boolean> failFast) {
             this.failFast = failFast;
             return this;
         }
 
         public Builder failFast(@Nullable Boolean failFast) {
-            this.failFast = Input.ofNullable(failFast);
+            this.failFast = Output.ofNullable(failFast);
             return this;
         }
 
-        public Builder flakyTestAttempts(@Nullable Input<Integer> flakyTestAttempts) {
+        public Builder flakyTestAttempts(@Nullable Output<Integer> flakyTestAttempts) {
             this.flakyTestAttempts = flakyTestAttempts;
             return this;
         }
 
         public Builder flakyTestAttempts(@Nullable Integer flakyTestAttempts) {
-            this.flakyTestAttempts = Input.ofNullable(flakyTestAttempts);
+            this.flakyTestAttempts = Output.ofNullable(flakyTestAttempts);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder resultStorage(Input<ResultStorageArgs> resultStorage) {
+        public Builder resultStorage(Output<ResultStorageArgs> resultStorage) {
             this.resultStorage = Objects.requireNonNull(resultStorage);
             return this;
         }
 
         public Builder resultStorage(ResultStorageArgs resultStorage) {
-            this.resultStorage = Input.of(Objects.requireNonNull(resultStorage));
+            this.resultStorage = Output.of(Objects.requireNonNull(resultStorage));
             return this;
         }
 
-        public Builder testSpecification(Input<TestSpecificationArgs> testSpecification) {
+        public Builder testSpecification(Output<TestSpecificationArgs> testSpecification) {
             this.testSpecification = Objects.requireNonNull(testSpecification);
             return this;
         }
 
         public Builder testSpecification(TestSpecificationArgs testSpecification) {
-            this.testSpecification = Input.of(Objects.requireNonNull(testSpecification));
+            this.testSpecification = Output.of(Objects.requireNonNull(testSpecification));
             return this;
         }
         public TestMatrixArgs build() {

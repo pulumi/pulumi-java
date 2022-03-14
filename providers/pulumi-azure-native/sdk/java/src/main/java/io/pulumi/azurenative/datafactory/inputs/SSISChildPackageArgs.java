@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageContent", required=true)
-      private final Input<Object> packageContent;
+      private final Output<Object> packageContent;
 
-    public Input<Object> getPackageContent() {
+    public Output<Object> getPackageContent() {
         return this.packageContent;
     }
 
@@ -35,10 +35,10 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageLastModifiedDate")
-      private final @Nullable Input<String> packageLastModifiedDate;
+      private final @Nullable Output<String> packageLastModifiedDate;
 
-    public Input<String> getPackageLastModifiedDate() {
-        return this.packageLastModifiedDate == null ? Input.empty() : this.packageLastModifiedDate;
+    public Output<String> getPackageLastModifiedDate() {
+        return this.packageLastModifiedDate == null ? Output.empty() : this.packageLastModifiedDate;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageName")
-      private final @Nullable Input<String> packageName;
+      private final @Nullable Output<String> packageName;
 
-    public Input<String> getPackageName() {
-        return this.packageName == null ? Input.empty() : this.packageName;
+    public Output<String> getPackageName() {
+        return this.packageName == null ? Output.empty() : this.packageName;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packagePath", required=true)
-      private final Input<Object> packagePath;
+      private final Output<Object> packagePath;
 
-    public Input<Object> getPackagePath() {
+    public Output<Object> getPackagePath() {
         return this.packagePath;
     }
 
     public SSISChildPackageArgs(
-        Input<Object> packageContent,
-        @Nullable Input<String> packageLastModifiedDate,
-        @Nullable Input<String> packageName,
-        Input<Object> packagePath) {
+        Output<Object> packageContent,
+        @Nullable Output<String> packageLastModifiedDate,
+        @Nullable Output<String> packageName,
+        Output<Object> packagePath) {
         this.packageContent = Objects.requireNonNull(packageContent, "expected parameter 'packageContent' to be non-null");
         this.packageLastModifiedDate = packageLastModifiedDate;
         this.packageName = packageName;
@@ -75,10 +75,10 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SSISChildPackageArgs() {
-        this.packageContent = Input.empty();
-        this.packageLastModifiedDate = Input.empty();
-        this.packageName = Input.empty();
-        this.packagePath = Input.empty();
+        this.packageContent = Output.empty();
+        this.packageLastModifiedDate = Output.empty();
+        this.packageName = Output.empty();
+        this.packagePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Object> packageContent;
-        private @Nullable Input<String> packageLastModifiedDate;
-        private @Nullable Input<String> packageName;
-        private Input<Object> packagePath;
+        private Output<Object> packageContent;
+        private @Nullable Output<String> packageLastModifiedDate;
+        private @Nullable Output<String> packageName;
+        private Output<Object> packagePath;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     	      this.packagePath = defaults.packagePath;
         }
 
-        public Builder packageContent(Input<Object> packageContent) {
+        public Builder packageContent(Output<Object> packageContent) {
             this.packageContent = Objects.requireNonNull(packageContent);
             return this;
         }
 
         public Builder packageContent(Object packageContent) {
-            this.packageContent = Input.of(Objects.requireNonNull(packageContent));
+            this.packageContent = Output.of(Objects.requireNonNull(packageContent));
             return this;
         }
 
-        public Builder packageLastModifiedDate(@Nullable Input<String> packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable Output<String> packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
-            this.packageLastModifiedDate = Input.ofNullable(packageLastModifiedDate);
+            this.packageLastModifiedDate = Output.ofNullable(packageLastModifiedDate);
             return this;
         }
 
-        public Builder packageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Input.ofNullable(packageName);
+            this.packageName = Output.ofNullable(packageName);
             return this;
         }
 
-        public Builder packagePath(Input<Object> packagePath) {
+        public Builder packagePath(Output<Object> packagePath) {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }
 
         public Builder packagePath(Object packagePath) {
-            this.packagePath = Input.of(Objects.requireNonNull(packagePath));
+            this.packagePath = Output.of(Objects.requireNonNull(packagePath));
             return this;
         }
         public SSISChildPackageArgs build() {

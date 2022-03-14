@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<String>> ports;
+      private final @Nullable Output<List<String>> ports;
 
-    public Input<List<String>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<String>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
-    public TrafficPortSelectorArgs(@Nullable Input<List<String>> ports) {
+    public TrafficPortSelectorArgs(@Nullable Output<List<String>> ports) {
         this.ports = ports;
     }
 
     private TrafficPortSelectorArgs() {
-        this.ports = Input.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ports;
+        private @Nullable Output<List<String>> ports;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
     	      this.ports = defaults.ports;
         }
 
-        public Builder ports(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public TrafficPortSelectorArgs build() {

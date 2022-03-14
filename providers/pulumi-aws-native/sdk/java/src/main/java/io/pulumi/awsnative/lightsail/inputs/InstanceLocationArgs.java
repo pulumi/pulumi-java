@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="regionName")
-      private final @Nullable Input<String> regionName;
+      private final @Nullable Output<String> regionName;
 
-    public Input<String> getRegionName() {
-        return this.regionName == null ? Input.empty() : this.regionName;
+    public Output<String> getRegionName() {
+        return this.regionName == null ? Output.empty() : this.regionName;
     }
 
     public InstanceLocationArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> regionName) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> regionName) {
         this.availabilityZone = availabilityZone;
         this.regionName = regionName;
     }
 
     private InstanceLocationArgs() {
-        this.availabilityZone = Input.empty();
-        this.regionName = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.regionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> regionName;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> regionName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder regionName(@Nullable Input<String> regionName) {
+        public Builder regionName(@Nullable Output<String> regionName) {
             this.regionName = regionName;
             return this;
         }
 
         public Builder regionName(@Nullable String regionName) {
-            this.regionName = Input.ofNullable(regionName);
+            this.regionName = Output.ofNullable(regionName);
             return this;
         }
         public InstanceLocationArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.LoggerArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -172,30 +171,30 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Logger(String name, LoggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Logger", name, args == null ? LoggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:Logger", name, args == null ? LoggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Logger(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Logger(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Logger", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20160707:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20161010:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Logger").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Logger").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Logger").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Logger").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -209,7 +208,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Logger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Logger get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Logger(name, id, options);
     }
 }

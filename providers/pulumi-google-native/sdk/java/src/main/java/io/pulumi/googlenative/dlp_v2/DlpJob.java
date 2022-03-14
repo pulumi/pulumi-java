@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.dlp_v2;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -202,14 +201,14 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DlpJob(String name, @Nullable DlpJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dlp/v2:DlpJob", name, args == null ? DlpJobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:dlp/v2:DlpJob", name, args == null ? DlpJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DlpJob(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DlpJob(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dlp/v2:DlpJob", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -224,7 +223,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DlpJob get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DlpJob get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DlpJob(name, id, options);
     }
 }

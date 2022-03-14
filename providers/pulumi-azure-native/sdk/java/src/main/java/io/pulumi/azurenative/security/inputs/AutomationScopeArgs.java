@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopePath")
-      private final @Nullable Input<String> scopePath;
+      private final @Nullable Output<String> scopePath;
 
-    public Input<String> getScopePath() {
-        return this.scopePath == null ? Input.empty() : this.scopePath;
+    public Output<String> getScopePath() {
+        return this.scopePath == null ? Output.empty() : this.scopePath;
     }
 
     public AutomationScopeArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> scopePath) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> scopePath) {
         this.description = description;
         this.scopePath = scopePath;
     }
 
     private AutomationScopeArgs() {
-        this.description = Input.empty();
-        this.scopePath = Input.empty();
+        this.description = Output.empty();
+        this.scopePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> scopePath;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> scopePath;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scopePath = defaults.scopePath;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder scopePath(@Nullable Input<String> scopePath) {
+        public Builder scopePath(@Nullable Output<String> scopePath) {
             this.scopePath = scopePath;
             return this;
         }
 
         public Builder scopePath(@Nullable String scopePath) {
-            this.scopePath = Input.ofNullable(scopePath);
+            this.scopePath = Output.ofNullable(scopePath);
             return this;
         }
         public AutomationScopeArgs build() {

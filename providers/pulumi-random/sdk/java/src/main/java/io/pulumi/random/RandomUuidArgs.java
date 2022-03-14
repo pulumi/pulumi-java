@@ -3,7 +3,7 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -21,18 +21,18 @@ public final class RandomUuidArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
-    public RandomUuidArgs(@Nullable Input<Map<String,Object>> keepers) {
+    public RandomUuidArgs(@Nullable Output<Map<String,Object>> keepers) {
         this.keepers = keepers;
     }
 
     private RandomUuidArgs() {
-        this.keepers = Input.empty();
+        this.keepers = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class RandomUuidArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> keepers;
+        private @Nullable Output<Map<String,Object>> keepers;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class RandomUuidArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keepers = defaults.keepers;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
         public RandomUuidArgs build() {

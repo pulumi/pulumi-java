@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ImageGuestOsFeatureArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
-    public ImageGuestOsFeatureArgs(Input<String> type) {
+    public ImageGuestOsFeatureArgs(Output<String> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ImageGuestOsFeatureArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ImageGuestOsFeatureArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> type;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ImageGuestOsFeatureArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageGuestOsFeatureArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingGetArgs;
 import io.pulumi.aws.backup.inputs.PlanRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedBackupSettings")
-      private final @Nullable Input<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
+      private final @Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
 
-    public Input<List<PlanAdvancedBackupSettingGetArgs>> getAdvancedBackupSettings() {
-        return this.advancedBackupSettings == null ? Input.empty() : this.advancedBackupSettings;
+    public Output<List<PlanAdvancedBackupSettingGetArgs>> getAdvancedBackupSettings() {
+        return this.advancedBackupSettings == null ? Output.empty() : this.advancedBackupSettings;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<PlanRuleGetArgs>> rules;
+      private final @Nullable Output<List<PlanRuleGetArgs>> rules;
 
-    public Input<List<PlanRuleGetArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<PlanRuleGetArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public PlanState(
-        @Nullable Input<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<List<PlanRuleGetArgs>> rules,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<List<PlanRuleGetArgs>> rules,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> version) {
         this.advancedBackupSettings = advancedBackupSettings;
         this.arn = arn;
         this.name = name;
@@ -113,13 +113,13 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlanState() {
-        this.advancedBackupSettings = Input.empty();
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.rules = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.version = Input.empty();
+        this.advancedBackupSettings = Output.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.rules = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PlanRuleGetArgs>> rules;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PlanRuleGetArgs>> rules;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder advancedBackupSettings(@Nullable Input<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings) {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
 
         public Builder advancedBackupSettings(@Nullable List<PlanAdvancedBackupSettingGetArgs> advancedBackupSettings) {
-            this.advancedBackupSettings = Input.ofNullable(advancedBackupSettings);
+            this.advancedBackupSettings = Output.ofNullable(advancedBackupSettings);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<PlanRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<PlanRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<PlanRuleGetArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public PlanState build() {

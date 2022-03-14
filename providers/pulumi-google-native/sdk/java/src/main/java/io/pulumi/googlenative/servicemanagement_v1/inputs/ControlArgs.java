@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<String> environment;
+      private final @Nullable Output<String> environment;
 
-    public Input<String> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<String> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
-    public ControlArgs(@Nullable Input<String> environment) {
+    public ControlArgs(@Nullable Output<String> environment) {
         this.environment = environment;
     }
 
     private ControlArgs() {
-        this.environment = Input.empty();
+        this.environment = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> environment;
+        private @Nullable Output<String> environment;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.environment = defaults.environment;
         }
 
-        public Builder environment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable String environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
         public ControlArgs build() {

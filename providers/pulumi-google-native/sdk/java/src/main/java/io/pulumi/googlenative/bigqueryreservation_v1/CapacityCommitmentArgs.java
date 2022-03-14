@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigqueryreservation_v1.enums.CapacityCommitmentPlan;
 import io.pulumi.googlenative.bigqueryreservation_v1.enums.CapacityCommitmentRenewalPlan;
@@ -17,24 +17,24 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     public static final CapacityCommitmentArgs Empty = new CapacityCommitmentArgs();
 
     @InputImport(name="capacityCommitmentId")
-      private final @Nullable Input<String> capacityCommitmentId;
+      private final @Nullable Output<String> capacityCommitmentId;
 
-    public Input<String> getCapacityCommitmentId() {
-        return this.capacityCommitmentId == null ? Input.empty() : this.capacityCommitmentId;
+    public Output<String> getCapacityCommitmentId() {
+        return this.capacityCommitmentId == null ? Output.empty() : this.capacityCommitmentId;
     }
 
     @InputImport(name="enforceSingleAdminProjectPerOrg")
-      private final @Nullable Input<String> enforceSingleAdminProjectPerOrg;
+      private final @Nullable Output<String> enforceSingleAdminProjectPerOrg;
 
-    public Input<String> getEnforceSingleAdminProjectPerOrg() {
-        return this.enforceSingleAdminProjectPerOrg == null ? Input.empty() : this.enforceSingleAdminProjectPerOrg;
+    public Output<String> getEnforceSingleAdminProjectPerOrg() {
+        return this.enforceSingleAdminProjectPerOrg == null ? Output.empty() : this.enforceSingleAdminProjectPerOrg;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -42,17 +42,17 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<CapacityCommitmentPlan> plan;
+      private final @Nullable Output<CapacityCommitmentPlan> plan;
 
-    public Input<CapacityCommitmentPlan> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<CapacityCommitmentPlan> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="renewalPlan")
-      private final @Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan;
+      private final @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
 
-    public Input<CapacityCommitmentRenewalPlan> getRenewalPlan() {
-        return this.renewalPlan == null ? Input.empty() : this.renewalPlan;
+    public Output<CapacityCommitmentRenewalPlan> getRenewalPlan() {
+        return this.renewalPlan == null ? Output.empty() : this.renewalPlan;
     }
 
     /**
@@ -71,20 +71,20 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="slotCount")
-      private final @Nullable Input<String> slotCount;
+      private final @Nullable Output<String> slotCount;
 
-    public Input<String> getSlotCount() {
-        return this.slotCount == null ? Input.empty() : this.slotCount;
+    public Output<String> getSlotCount() {
+        return this.slotCount == null ? Output.empty() : this.slotCount;
     }
 
     public CapacityCommitmentArgs(
-        @Nullable Input<String> capacityCommitmentId,
-        @Nullable Input<String> enforceSingleAdminProjectPerOrg,
-        @Nullable Input<String> location,
-        @Nullable Input<CapacityCommitmentPlan> plan,
-        @Nullable Input<String> project,
-        @Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan,
-        @Nullable Input<String> slotCount) {
+        @Nullable Output<String> capacityCommitmentId,
+        @Nullable Output<String> enforceSingleAdminProjectPerOrg,
+        @Nullable Output<String> location,
+        @Nullable Output<CapacityCommitmentPlan> plan,
+        @Nullable Output<String> project,
+        @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan,
+        @Nullable Output<String> slotCount) {
         this.capacityCommitmentId = capacityCommitmentId;
         this.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
         this.location = location;
@@ -95,13 +95,13 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CapacityCommitmentArgs() {
-        this.capacityCommitmentId = Input.empty();
-        this.enforceSingleAdminProjectPerOrg = Input.empty();
-        this.location = Input.empty();
-        this.plan = Input.empty();
-        this.project = Input.empty();
-        this.renewalPlan = Input.empty();
-        this.slotCount = Input.empty();
+        this.capacityCommitmentId = Output.empty();
+        this.enforceSingleAdminProjectPerOrg = Output.empty();
+        this.location = Output.empty();
+        this.plan = Output.empty();
+        this.project = Output.empty();
+        this.renewalPlan = Output.empty();
+        this.slotCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,13 +113,13 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> capacityCommitmentId;
-        private @Nullable Input<String> enforceSingleAdminProjectPerOrg;
-        private @Nullable Input<String> location;
-        private @Nullable Input<CapacityCommitmentPlan> plan;
-        private @Nullable Input<String> project;
-        private @Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan;
-        private @Nullable Input<String> slotCount;
+        private @Nullable Output<String> capacityCommitmentId;
+        private @Nullable Output<String> enforceSingleAdminProjectPerOrg;
+        private @Nullable Output<String> location;
+        private @Nullable Output<CapacityCommitmentPlan> plan;
+        private @Nullable Output<String> project;
+        private @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
+        private @Nullable Output<String> slotCount;
 
         public Builder() {
     	      // Empty
@@ -136,73 +136,73 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     	      this.slotCount = defaults.slotCount;
         }
 
-        public Builder capacityCommitmentId(@Nullable Input<String> capacityCommitmentId) {
+        public Builder capacityCommitmentId(@Nullable Output<String> capacityCommitmentId) {
             this.capacityCommitmentId = capacityCommitmentId;
             return this;
         }
 
         public Builder capacityCommitmentId(@Nullable String capacityCommitmentId) {
-            this.capacityCommitmentId = Input.ofNullable(capacityCommitmentId);
+            this.capacityCommitmentId = Output.ofNullable(capacityCommitmentId);
             return this;
         }
 
-        public Builder enforceSingleAdminProjectPerOrg(@Nullable Input<String> enforceSingleAdminProjectPerOrg) {
+        public Builder enforceSingleAdminProjectPerOrg(@Nullable Output<String> enforceSingleAdminProjectPerOrg) {
             this.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
             return this;
         }
 
         public Builder enforceSingleAdminProjectPerOrg(@Nullable String enforceSingleAdminProjectPerOrg) {
-            this.enforceSingleAdminProjectPerOrg = Input.ofNullable(enforceSingleAdminProjectPerOrg);
+            this.enforceSingleAdminProjectPerOrg = Output.ofNullable(enforceSingleAdminProjectPerOrg);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder plan(@Nullable Input<CapacityCommitmentPlan> plan) {
+        public Builder plan(@Nullable Output<CapacityCommitmentPlan> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable CapacityCommitmentPlan plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder renewalPlan(@Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan) {
+        public Builder renewalPlan(@Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan) {
             this.renewalPlan = renewalPlan;
             return this;
         }
 
         public Builder renewalPlan(@Nullable CapacityCommitmentRenewalPlan renewalPlan) {
-            this.renewalPlan = Input.ofNullable(renewalPlan);
+            this.renewalPlan = Output.ofNullable(renewalPlan);
             return this;
         }
 
-        public Builder slotCount(@Nullable Input<String> slotCount) {
+        public Builder slotCount(@Nullable Output<String> slotCount) {
             this.slotCount = slotCount;
             return this;
         }
 
         public Builder slotCount(@Nullable String slotCount) {
-            this.slotCount = Input.ofNullable(slotCount);
+            this.slotCount = Output.ofNullable(slotCount);
             return this;
         }
         public CapacityCommitmentArgs build() {

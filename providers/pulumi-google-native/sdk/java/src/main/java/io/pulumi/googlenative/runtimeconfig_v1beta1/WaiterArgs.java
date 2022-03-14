@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.EndConditionArgs;
 import java.lang.String;
@@ -16,9 +16,9 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     public static final WaiterArgs Empty = new WaiterArgs();
 
     @InputImport(name="configId", required=true)
-      private final Input<String> configId;
+      private final Output<String> configId;
 
-    public Input<String> getConfigId() {
+    public Output<String> getConfigId() {
         return this.configId;
     }
 
@@ -27,10 +27,10 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failure")
-      private final @Nullable Input<EndConditionArgs> failure;
+      private final @Nullable Output<EndConditionArgs> failure;
 
-    public Input<EndConditionArgs> getFailure() {
-        return this.failure == null ? Input.empty() : this.failure;
+    public Output<EndConditionArgs> getFailure() {
+        return this.failure == null ? Output.empty() : this.failure;
     }
 
     /**
@@ -38,24 +38,24 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="success")
-      private final @Nullable Input<EndConditionArgs> success;
+      private final @Nullable Output<EndConditionArgs> success;
 
-    public Input<EndConditionArgs> getSuccess() {
-        return this.success == null ? Input.empty() : this.success;
+    public Output<EndConditionArgs> getSuccess() {
+        return this.success == null ? Output.empty() : this.success;
     }
 
     /**
@@ -74,20 +74,20 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public WaiterArgs(
-        Input<String> configId,
-        @Nullable Input<EndConditionArgs> failure,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<EndConditionArgs> success,
-        @Nullable Input<String> timeout) {
+        Output<String> configId,
+        @Nullable Output<EndConditionArgs> failure,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<EndConditionArgs> success,
+        @Nullable Output<String> timeout) {
         this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
         this.failure = failure;
         this.name = name;
@@ -98,13 +98,13 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WaiterArgs() {
-        this.configId = Input.empty();
-        this.failure = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.success = Input.empty();
-        this.timeout = Input.empty();
+        this.configId = Output.empty();
+        this.failure = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.success = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,13 +116,13 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> configId;
-        private @Nullable Input<EndConditionArgs> failure;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<EndConditionArgs> success;
-        private @Nullable Input<String> timeout;
+        private Output<String> configId;
+        private @Nullable Output<EndConditionArgs> failure;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<EndConditionArgs> success;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -139,73 +139,73 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder configId(Input<String> configId) {
+        public Builder configId(Output<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
         public Builder configId(String configId) {
-            this.configId = Input.of(Objects.requireNonNull(configId));
+            this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder failure(@Nullable Input<EndConditionArgs> failure) {
+        public Builder failure(@Nullable Output<EndConditionArgs> failure) {
             this.failure = failure;
             return this;
         }
 
         public Builder failure(@Nullable EndConditionArgs failure) {
-            this.failure = Input.ofNullable(failure);
+            this.failure = Output.ofNullable(failure);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder success(@Nullable Input<EndConditionArgs> success) {
+        public Builder success(@Nullable Output<EndConditionArgs> success) {
             this.success = success;
             return this;
         }
 
         public Builder success(@Nullable EndConditionArgs success) {
-            this.success = Input.ofNullable(success);
+            this.success = Output.ofNullable(success);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public WaiterArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionCountCustomRequestHandlingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class RuleGroupRuleActionCountArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="customRequestHandling")
-      private final @Nullable Input<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling;
+      private final @Nullable Output<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling;
 
-    public Input<RuleGroupRuleActionCountCustomRequestHandlingArgs> getCustomRequestHandling() {
-        return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;
+    public Output<RuleGroupRuleActionCountCustomRequestHandlingArgs> getCustomRequestHandling() {
+        return this.customRequestHandling == null ? Output.empty() : this.customRequestHandling;
     }
 
-    public RuleGroupRuleActionCountArgs(@Nullable Input<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling) {
+    public RuleGroupRuleActionCountArgs(@Nullable Output<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
     private RuleGroupRuleActionCountArgs() {
-        this.customRequestHandling = Input.empty();
+        this.customRequestHandling = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionCountArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling;
+        private @Nullable Output<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RuleGroupRuleActionCountArgs extends io.pulumi.resources.Reso
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder customRequestHandling(@Nullable Input<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling) {
+        public Builder customRequestHandling(@Nullable Output<RuleGroupRuleActionCountCustomRequestHandlingArgs> customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
 
         public Builder customRequestHandling(@Nullable RuleGroupRuleActionCountCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Input.ofNullable(customRequestHandling);
+            this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
         }
         public RuleGroupRuleActionCountArgs build() {

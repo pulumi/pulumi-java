@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.KnownPerfCounterDataSourceStreams;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="counterSpecifiers")
-      private final @Nullable Input<List<String>> counterSpecifiers;
+      private final @Nullable Output<List<String>> counterSpecifiers;
 
-    public Input<List<String>> getCounterSpecifiers() {
-        return this.counterSpecifiers == null ? Input.empty() : this.counterSpecifiers;
+    public Output<List<String>> getCounterSpecifiers() {
+        return this.counterSpecifiers == null ? Output.empty() : this.counterSpecifiers;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="samplingFrequencyInSeconds")
-      private final @Nullable Input<Integer> samplingFrequencyInSeconds;
+      private final @Nullable Output<Integer> samplingFrequencyInSeconds;
 
-    public Input<Integer> getSamplingFrequencyInSeconds() {
-        return this.samplingFrequencyInSeconds == null ? Input.empty() : this.samplingFrequencyInSeconds;
+    public Output<Integer> getSamplingFrequencyInSeconds() {
+        return this.samplingFrequencyInSeconds == null ? Output.empty() : this.samplingFrequencyInSeconds;
     }
 
     /**
@@ -65,17 +65,17 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="streams")
-      private final @Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
+      private final @Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
 
-    public Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> getStreams() {
-        return this.streams == null ? Input.empty() : this.streams;
+    public Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> getStreams() {
+        return this.streams == null ? Output.empty() : this.streams;
     }
 
     public PerfCounterDataSourceArgs(
-        @Nullable Input<List<String>> counterSpecifiers,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> samplingFrequencyInSeconds,
-        @Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
+        @Nullable Output<List<String>> counterSpecifiers,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> samplingFrequencyInSeconds,
+        @Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
         this.counterSpecifiers = counterSpecifiers;
         this.name = name;
         this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
@@ -83,10 +83,10 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private PerfCounterDataSourceArgs() {
-        this.counterSpecifiers = Input.empty();
-        this.name = Input.empty();
-        this.samplingFrequencyInSeconds = Input.empty();
-        this.streams = Input.empty();
+        this.counterSpecifiers = Output.empty();
+        this.name = Output.empty();
+        this.samplingFrequencyInSeconds = Output.empty();
+        this.streams = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,10 +98,10 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> counterSpecifiers;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> samplingFrequencyInSeconds;
-        private @Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
+        private @Nullable Output<List<String>> counterSpecifiers;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> samplingFrequencyInSeconds;
+        private @Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
 
         public Builder() {
     	      // Empty
@@ -115,43 +115,43 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
     	      this.streams = defaults.streams;
         }
 
-        public Builder counterSpecifiers(@Nullable Input<List<String>> counterSpecifiers) {
+        public Builder counterSpecifiers(@Nullable Output<List<String>> counterSpecifiers) {
             this.counterSpecifiers = counterSpecifiers;
             return this;
         }
 
         public Builder counterSpecifiers(@Nullable List<String> counterSpecifiers) {
-            this.counterSpecifiers = Input.ofNullable(counterSpecifiers);
+            this.counterSpecifiers = Output.ofNullable(counterSpecifiers);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder samplingFrequencyInSeconds(@Nullable Input<Integer> samplingFrequencyInSeconds) {
+        public Builder samplingFrequencyInSeconds(@Nullable Output<Integer> samplingFrequencyInSeconds) {
             this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
             return this;
         }
 
         public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
-            this.samplingFrequencyInSeconds = Input.ofNullable(samplingFrequencyInSeconds);
+            this.samplingFrequencyInSeconds = Output.ofNullable(samplingFrequencyInSeconds);
             return this;
         }
 
-        public Builder streams(@Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
+        public Builder streams(@Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
         public Builder streams(@Nullable List<Either<String,KnownPerfCounterDataSourceStreams>> streams) {
-            this.streams = Input.ofNullable(streams);
+            this.streams = Output.ofNullable(streams);
             return this;
         }
         public PerfCounterDataSourceArgs build() {

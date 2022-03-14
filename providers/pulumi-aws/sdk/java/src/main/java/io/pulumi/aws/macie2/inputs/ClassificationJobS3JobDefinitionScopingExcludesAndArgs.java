@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndArgs extend
      * 
      */
     @InputImport(name="simpleScopeTerm")
-      private final @Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm;
+      private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm;
 
-    public Input<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> getSimpleScopeTerm() {
-        return this.simpleScopeTerm == null ? Input.empty() : this.simpleScopeTerm;
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> getSimpleScopeTerm() {
+        return this.simpleScopeTerm == null ? Output.empty() : this.simpleScopeTerm;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndArgs extend
      * 
      */
     @InputImport(name="tagScopeTerm")
-      private final @Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm;
+      private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm;
 
-    public Input<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> getTagScopeTerm() {
-        return this.tagScopeTerm == null ? Input.empty() : this.tagScopeTerm;
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> getTagScopeTerm() {
+        return this.tagScopeTerm == null ? Output.empty() : this.tagScopeTerm;
     }
 
     public ClassificationJobS3JobDefinitionScopingExcludesAndArgs(
-        @Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm,
-        @Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm) {
+        @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm,
+        @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm) {
         this.simpleScopeTerm = simpleScopeTerm;
         this.tagScopeTerm = tagScopeTerm;
     }
 
     private ClassificationJobS3JobDefinitionScopingExcludesAndArgs() {
-        this.simpleScopeTerm = Input.empty();
-        this.tagScopeTerm = Input.empty();
+        this.simpleScopeTerm = Output.empty();
+        this.tagScopeTerm = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm;
-        private @Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm;
+        private @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm;
+        private @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndArgs extend
     	      this.tagScopeTerm = defaults.tagScopeTerm;
         }
 
-        public Builder simpleScopeTerm(@Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm) {
+        public Builder simpleScopeTerm(@Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm) {
             this.simpleScopeTerm = simpleScopeTerm;
             return this;
         }
 
         public Builder simpleScopeTerm(@Nullable ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs simpleScopeTerm) {
-            this.simpleScopeTerm = Input.ofNullable(simpleScopeTerm);
+            this.simpleScopeTerm = Output.ofNullable(simpleScopeTerm);
             return this;
         }
 
-        public Builder tagScopeTerm(@Nullable Input<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm) {
+        public Builder tagScopeTerm(@Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm) {
             this.tagScopeTerm = tagScopeTerm;
             return this;
         }
 
         public Builder tagScopeTerm(@Nullable ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs tagScopeTerm) {
-            this.tagScopeTerm = Input.ofNullable(tagScopeTerm);
+            this.tagScopeTerm = Output.ofNullable(tagScopeTerm);
             return this;
         }
         public ClassificationJobS3JobDefinitionScopingExcludesAndArgs build() {

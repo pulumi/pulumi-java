@@ -8,7 +8,6 @@ import io.pulumi.azurenative.apimanagement.DiagnosticArgs;
 import io.pulumi.azurenative.apimanagement.outputs.PipelineDiagnosticSettingsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.SamplingSettingsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -227,28 +226,28 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Diagnostic(String name, DiagnosticArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Diagnostic", name, args == null ? DiagnosticArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:Diagnostic", name, args == null ? DiagnosticArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Diagnostic(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Diagnostic(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Diagnostic", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Diagnostic").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Diagnostic").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Diagnostic").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Diagnostic").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -262,7 +261,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Diagnostic get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Diagnostic get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Diagnostic(name, id, options);
     }
 }

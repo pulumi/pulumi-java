@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,18 +21,18 @@ public final class AliasRoutingConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="additionalVersionWeights")
-      private final @Nullable Input<Map<String,Double>> additionalVersionWeights;
+      private final @Nullable Output<Map<String,Double>> additionalVersionWeights;
 
-    public Input<Map<String,Double>> getAdditionalVersionWeights() {
-        return this.additionalVersionWeights == null ? Input.empty() : this.additionalVersionWeights;
+    public Output<Map<String,Double>> getAdditionalVersionWeights() {
+        return this.additionalVersionWeights == null ? Output.empty() : this.additionalVersionWeights;
     }
 
-    public AliasRoutingConfigGetArgs(@Nullable Input<Map<String,Double>> additionalVersionWeights) {
+    public AliasRoutingConfigGetArgs(@Nullable Output<Map<String,Double>> additionalVersionWeights) {
         this.additionalVersionWeights = additionalVersionWeights;
     }
 
     private AliasRoutingConfigGetArgs() {
-        this.additionalVersionWeights = Input.empty();
+        this.additionalVersionWeights = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class AliasRoutingConfigGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Double>> additionalVersionWeights;
+        private @Nullable Output<Map<String,Double>> additionalVersionWeights;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class AliasRoutingConfigGetArgs extends io.pulumi.resources.Resourc
     	      this.additionalVersionWeights = defaults.additionalVersionWeights;
         }
 
-        public Builder additionalVersionWeights(@Nullable Input<Map<String,Double>> additionalVersionWeights) {
+        public Builder additionalVersionWeights(@Nullable Output<Map<String,Double>> additionalVersionWeights) {
             this.additionalVersionWeights = additionalVersionWeights;
             return this;
         }
 
         public Builder additionalVersionWeights(@Nullable Map<String,Double> additionalVersionWeights) {
-            this.additionalVersionWeights = Input.ofNullable(additionalVersionWeights);
+            this.additionalVersionWeights = Output.ofNullable(additionalVersionWeights);
             return this;
         }
         public AliasRoutingConfigGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ModeValueInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="modeValuesInfo")
-      private final @Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo;
+      private final @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
 
-    public Input<Map<String,ModeValueInfoArgs>> getModeValuesInfo() {
-        return this.modeValuesInfo == null ? Input.empty() : this.modeValuesInfo;
+    public Output<Map<String,ModeValueInfoArgs>> getModeValuesInfo() {
+        return this.modeValuesInfo == null ? Output.empty() : this.modeValuesInfo;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameterType")
-      private final @Nullable Input<String> parameterType;
+      private final @Nullable Output<String> parameterType;
 
-    public Input<String> getParameterType() {
-        return this.parameterType == null ? Input.empty() : this.parameterType;
+    public Output<String> getParameterType() {
+        return this.parameterType == null ? Output.empty() : this.parameterType;
     }
 
     public ModuleAssetParameterArgs(
-        @Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parameterType) {
+        @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parameterType) {
         this.modeValuesInfo = modeValuesInfo;
         this.name = name;
         this.parameterType = parameterType;
     }
 
     private ModuleAssetParameterArgs() {
-        this.modeValuesInfo = Input.empty();
-        this.name = Input.empty();
-        this.parameterType = Input.empty();
+        this.modeValuesInfo = Output.empty();
+        this.name = Output.empty();
+        this.parameterType = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parameterType;
+        private @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parameterType;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
     	      this.parameterType = defaults.parameterType;
         }
 
-        public Builder modeValuesInfo(@Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo) {
+        public Builder modeValuesInfo(@Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo) {
             this.modeValuesInfo = modeValuesInfo;
             return this;
         }
 
         public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoArgs> modeValuesInfo) {
-            this.modeValuesInfo = Input.ofNullable(modeValuesInfo);
+            this.modeValuesInfo = Output.ofNullable(modeValuesInfo);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameterType(@Nullable Input<String> parameterType) {
+        public Builder parameterType(@Nullable Output<String> parameterType) {
             this.parameterType = parameterType;
             return this;
         }
 
         public Builder parameterType(@Nullable String parameterType) {
-            this.parameterType = Input.ofNullable(parameterType);
+            this.parameterType = Output.ofNullable(parameterType);
             return this;
         }
         public ModuleAssetParameterArgs build() {

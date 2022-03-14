@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="webBackendService")
-      private final @Nullable Input<String> webBackendService;
+      private final @Nullable Output<String> webBackendService;
 
-    public Input<String> getWebBackendService() {
-        return this.webBackendService == null ? Input.empty() : this.webBackendService;
+    public Output<String> getWebBackendService() {
+        return this.webBackendService == null ? Output.empty() : this.webBackendService;
     }
 
     public WebBackendServiceIamPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> project,
-        @Nullable Input<String> webBackendService) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> project,
+        @Nullable Output<String> webBackendService) {
         this.etag = etag;
         this.policyData = policyData;
         this.project = project;
@@ -72,10 +72,10 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
     }
 
     private WebBackendServiceIamPolicyState() {
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.webBackendService = Input.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.webBackendService = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> webBackendService;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> webBackendService;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
     	      this.webBackendService = defaults.webBackendService;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder webBackendService(@Nullable Input<String> webBackendService) {
+        public Builder webBackendService(@Nullable Output<String> webBackendService) {
             this.webBackendService = webBackendService;
             return this;
         }
 
         public Builder webBackendService(@Nullable String webBackendService) {
-            this.webBackendService = Input.ofNullable(webBackendService);
+            this.webBackendService = Output.ofNullable(webBackendService);
             return this;
         }
         public WebBackendServiceIamPolicyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="oauth2ClientId")
-      private final @Nullable Input<String> oauth2ClientId;
+      private final @Nullable Output<String> oauth2ClientId;
 
-    public Input<String> getOauth2ClientId() {
-        return this.oauth2ClientId == null ? Input.empty() : this.oauth2ClientId;
+    public Output<String> getOauth2ClientId() {
+        return this.oauth2ClientId == null ? Output.empty() : this.oauth2ClientId;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="oauth2ClientSecret")
-      private final @Nullable Input<String> oauth2ClientSecret;
+      private final @Nullable Output<String> oauth2ClientSecret;
 
-    public Input<String> getOauth2ClientSecret() {
-        return this.oauth2ClientSecret == null ? Input.empty() : this.oauth2ClientSecret;
+    public Output<String> getOauth2ClientSecret() {
+        return this.oauth2ClientSecret == null ? Output.empty() : this.oauth2ClientSecret;
     }
 
     public IdentityAwareProxyArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> oauth2ClientId,
-        @Nullable Input<String> oauth2ClientSecret) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> oauth2ClientId,
+        @Nullable Output<String> oauth2ClientSecret) {
         this.enabled = enabled;
         this.oauth2ClientId = oauth2ClientId;
         this.oauth2ClientSecret = oauth2ClientSecret;
     }
 
     private IdentityAwareProxyArgs() {
-        this.enabled = Input.empty();
-        this.oauth2ClientId = Input.empty();
-        this.oauth2ClientSecret = Input.empty();
+        this.enabled = Output.empty();
+        this.oauth2ClientId = Output.empty();
+        this.oauth2ClientSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> oauth2ClientId;
-        private @Nullable Input<String> oauth2ClientSecret;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> oauth2ClientId;
+        private @Nullable Output<String> oauth2ClientSecret;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class IdentityAwareProxyArgs extends io.pulumi.resources.ResourceAr
     	      this.oauth2ClientSecret = defaults.oauth2ClientSecret;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder oauth2ClientId(@Nullable Input<String> oauth2ClientId) {
+        public Builder oauth2ClientId(@Nullable Output<String> oauth2ClientId) {
             this.oauth2ClientId = oauth2ClientId;
             return this;
         }
 
         public Builder oauth2ClientId(@Nullable String oauth2ClientId) {
-            this.oauth2ClientId = Input.ofNullable(oauth2ClientId);
+            this.oauth2ClientId = Output.ofNullable(oauth2ClientId);
             return this;
         }
 
-        public Builder oauth2ClientSecret(@Nullable Input<String> oauth2ClientSecret) {
+        public Builder oauth2ClientSecret(@Nullable Output<String> oauth2ClientSecret) {
             this.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
 
         public Builder oauth2ClientSecret(@Nullable String oauth2ClientSecret) {
-            this.oauth2ClientSecret = Input.ofNullable(oauth2ClientSecret);
+            this.oauth2ClientSecret = Output.ofNullable(oauth2ClientSecret);
             return this;
         }
         public IdentityAwareProxyArgs build() {

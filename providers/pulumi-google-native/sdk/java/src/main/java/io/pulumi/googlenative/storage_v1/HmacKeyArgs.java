@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     public static final HmacKeyArgs Empty = new HmacKeyArgs();
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="serviceAccountEmail", required=true)
-      private final Input<String> serviceAccountEmail;
+      private final Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
+    public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     @InputImport(name="userProject")
-      private final @Nullable Input<String> userProject;
+      private final @Nullable Output<String> userProject;
 
-    public Input<String> getUserProject() {
-        return this.userProject == null ? Input.empty() : this.userProject;
+    public Output<String> getUserProject() {
+        return this.userProject == null ? Output.empty() : this.userProject;
     }
 
     public HmacKeyArgs(
-        @Nullable Input<String> project,
-        Input<String> serviceAccountEmail,
-        @Nullable Input<String> userProject) {
+        @Nullable Output<String> project,
+        Output<String> serviceAccountEmail,
+        @Nullable Output<String> userProject) {
         this.project = project;
         this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
         this.userProject = userProject;
     }
 
     private HmacKeyArgs() {
-        this.project = Input.empty();
-        this.serviceAccountEmail = Input.empty();
-        this.userProject = Input.empty();
+        this.project = Output.empty();
+        this.serviceAccountEmail = Output.empty();
+        this.userProject = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> project;
-        private Input<String> serviceAccountEmail;
-        private @Nullable Input<String> userProject;
+        private @Nullable Output<String> project;
+        private Output<String> serviceAccountEmail;
+        private @Nullable Output<String> userProject;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceAccountEmail(Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.of(Objects.requireNonNull(serviceAccountEmail));
+            this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }
 
-        public Builder userProject(@Nullable Input<String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
 
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = Input.ofNullable(userProject);
+            this.userProject = Output.ofNullable(userProject);
             return this;
         }
         public HmacKeyArgs build() {

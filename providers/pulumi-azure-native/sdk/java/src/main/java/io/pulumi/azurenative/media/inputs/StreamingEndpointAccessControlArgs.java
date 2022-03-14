@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.AkamaiAccessControlArgs;
 import io.pulumi.azurenative.media.inputs.IPAccessControlArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="akamai")
-      private final @Nullable Input<AkamaiAccessControlArgs> akamai;
+      private final @Nullable Output<AkamaiAccessControlArgs> akamai;
 
-    public Input<AkamaiAccessControlArgs> getAkamai() {
-        return this.akamai == null ? Input.empty() : this.akamai;
+    public Output<AkamaiAccessControlArgs> getAkamai() {
+        return this.akamai == null ? Output.empty() : this.akamai;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<IPAccessControlArgs> ip;
+      private final @Nullable Output<IPAccessControlArgs> ip;
 
-    public Input<IPAccessControlArgs> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<IPAccessControlArgs> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     public StreamingEndpointAccessControlArgs(
-        @Nullable Input<AkamaiAccessControlArgs> akamai,
-        @Nullable Input<IPAccessControlArgs> ip) {
+        @Nullable Output<AkamaiAccessControlArgs> akamai,
+        @Nullable Output<IPAccessControlArgs> ip) {
         this.akamai = akamai;
         this.ip = ip;
     }
 
     private StreamingEndpointAccessControlArgs() {
-        this.akamai = Input.empty();
-        this.ip = Input.empty();
+        this.akamai = Output.empty();
+        this.ip = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AkamaiAccessControlArgs> akamai;
-        private @Nullable Input<IPAccessControlArgs> ip;
+        private @Nullable Output<AkamaiAccessControlArgs> akamai;
+        private @Nullable Output<IPAccessControlArgs> ip;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
     	      this.ip = defaults.ip;
         }
 
-        public Builder akamai(@Nullable Input<AkamaiAccessControlArgs> akamai) {
+        public Builder akamai(@Nullable Output<AkamaiAccessControlArgs> akamai) {
             this.akamai = akamai;
             return this;
         }
 
         public Builder akamai(@Nullable AkamaiAccessControlArgs akamai) {
-            this.akamai = Input.ofNullable(akamai);
+            this.akamai = Output.ofNullable(akamai);
             return this;
         }
 
-        public Builder ip(@Nullable Input<IPAccessControlArgs> ip) {
+        public Builder ip(@Nullable Output<IPAccessControlArgs> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable IPAccessControlArgs ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
         public StreamingEndpointAccessControlArgs build() {

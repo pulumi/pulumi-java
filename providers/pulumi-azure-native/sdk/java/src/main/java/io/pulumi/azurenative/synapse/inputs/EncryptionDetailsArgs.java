@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.CustomerManagedKeyDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cmk")
-      private final @Nullable Input<CustomerManagedKeyDetailsArgs> cmk;
+      private final @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
 
-    public Input<CustomerManagedKeyDetailsArgs> getCmk() {
-        return this.cmk == null ? Input.empty() : this.cmk;
+    public Output<CustomerManagedKeyDetailsArgs> getCmk() {
+        return this.cmk == null ? Output.empty() : this.cmk;
     }
 
-    public EncryptionDetailsArgs(@Nullable Input<CustomerManagedKeyDetailsArgs> cmk) {
+    public EncryptionDetailsArgs(@Nullable Output<CustomerManagedKeyDetailsArgs> cmk) {
         this.cmk = cmk;
     }
 
     private EncryptionDetailsArgs() {
-        this.cmk = Input.empty();
+        this.cmk = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomerManagedKeyDetailsArgs> cmk;
+        private @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.cmk = defaults.cmk;
         }
 
-        public Builder cmk(@Nullable Input<CustomerManagedKeyDetailsArgs> cmk) {
+        public Builder cmk(@Nullable Output<CustomerManagedKeyDetailsArgs> cmk) {
             this.cmk = cmk;
             return this;
         }
 
         public Builder cmk(@Nullable CustomerManagedKeyDetailsArgs cmk) {
-            this.cmk = Input.ofNullable(cmk);
+            this.cmk = Output.ofNullable(cmk);
             return this;
         }
         public EncryptionDetailsArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.azurenative.databoxedge.outputs.PeriodicTimerSourceInfoResponse
 import io.pulumi.azurenative.databoxedge.outputs.RoleSinkInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -173,10 +172,10 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PeriodicTimerEventTrigger(String name, PeriodicTimerEventTriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:PeriodicTimerEventTrigger", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:databoxedge:PeriodicTimerEventTrigger", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private PeriodicTimerEventTrigger(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PeriodicTimerEventTrigger(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:PeriodicTimerEventTrigger", name, null, makeResourceOptions(options, id));
     }
 
@@ -187,21 +186,21 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190301:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190701:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190801:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20201201:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601:PeriodicTimerEventTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:PeriodicTimerEventTrigger").build())
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190301:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190701:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190801:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:PeriodicTimerEventTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:PeriodicTimerEventTrigger").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -215,7 +214,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PeriodicTimerEventTrigger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PeriodicTimerEventTrigger get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PeriodicTimerEventTrigger(name, id, options);
     }
 }

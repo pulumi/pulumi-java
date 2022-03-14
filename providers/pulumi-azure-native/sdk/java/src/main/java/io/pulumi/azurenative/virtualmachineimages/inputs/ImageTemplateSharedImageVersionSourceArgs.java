@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="imageVersionId", required=true)
-      private final Input<String> imageVersionId;
+      private final Output<String> imageVersionId;
 
-    public Input<String> getImageVersionId() {
+    public Output<String> getImageVersionId() {
         return this.imageVersionId;
     }
 
@@ -34,22 +34,22 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ImageTemplateSharedImageVersionSourceArgs(
-        Input<String> imageVersionId,
-        Input<String> type) {
+        Output<String> imageVersionId,
+        Output<String> type) {
         this.imageVersionId = Objects.requireNonNull(imageVersionId, "expected parameter 'imageVersionId' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ImageTemplateSharedImageVersionSourceArgs() {
-        this.imageVersionId = Input.empty();
-        this.type = Input.empty();
+        this.imageVersionId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> imageVersionId;
-        private Input<String> type;
+        private Output<String> imageVersionId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder imageVersionId(Input<String> imageVersionId) {
+        public Builder imageVersionId(Output<String> imageVersionId) {
             this.imageVersionId = Objects.requireNonNull(imageVersionId);
             return this;
         }
 
         public Builder imageVersionId(String imageVersionId) {
-            this.imageVersionId = Input.of(Objects.requireNonNull(imageVersionId));
+            this.imageVersionId = Output.of(Objects.requireNonNull(imageVersionId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageTemplateSharedImageVersionSourceArgs build() {

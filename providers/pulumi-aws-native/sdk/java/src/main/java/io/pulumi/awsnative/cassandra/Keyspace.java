@@ -6,7 +6,6 @@ package io.pulumi.awsnative.cassandra;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cassandra.KeyspaceArgs;
 import io.pulumi.awsnative.cassandra.outputs.KeyspaceTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -81,14 +80,14 @@ public class Keyspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Keyspace(String name, @Nullable KeyspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cassandra:Keyspace", name, args == null ? KeyspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:cassandra:Keyspace", name, args == null ? KeyspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Keyspace(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Keyspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:cassandra:Keyspace", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -103,7 +102,7 @@ public class Keyspace extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Keyspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Keyspace get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Keyspace(name, id, options);
     }
 }

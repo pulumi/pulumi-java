@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="standardsArn")
-      private final @Nullable Input<String> standardsArn;
+      private final @Nullable Output<String> standardsArn;
 
-    public Input<String> getStandardsArn() {
-        return this.standardsArn == null ? Input.empty() : this.standardsArn;
+    public Output<String> getStandardsArn() {
+        return this.standardsArn == null ? Output.empty() : this.standardsArn;
     }
 
-    public StandardsSubscriptionState(@Nullable Input<String> standardsArn) {
+    public StandardsSubscriptionState(@Nullable Output<String> standardsArn) {
         this.standardsArn = standardsArn;
     }
 
     private StandardsSubscriptionState() {
-        this.standardsArn = Input.empty();
+        this.standardsArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> standardsArn;
+        private @Nullable Output<String> standardsArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
     	      this.standardsArn = defaults.standardsArn;
         }
 
-        public Builder standardsArn(@Nullable Input<String> standardsArn) {
+        public Builder standardsArn(@Nullable Output<String> standardsArn) {
             this.standardsArn = standardsArn;
             return this;
         }
 
         public Builder standardsArn(@Nullable String standardsArn) {
-            this.standardsArn = Input.ofNullable(standardsArn);
+            this.standardsArn = Output.ofNullable(standardsArn);
             return this;
         }
         public StandardsSubscriptionState build() {

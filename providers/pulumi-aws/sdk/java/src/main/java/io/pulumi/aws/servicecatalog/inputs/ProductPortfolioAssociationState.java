@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="portfolioId")
-      private final @Nullable Input<String> portfolioId;
+      private final @Nullable Output<String> portfolioId;
 
-    public Input<String> getPortfolioId() {
-        return this.portfolioId == null ? Input.empty() : this.portfolioId;
+    public Output<String> getPortfolioId() {
+        return this.portfolioId == null ? Output.empty() : this.portfolioId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="productId")
-      private final @Nullable Input<String> productId;
+      private final @Nullable Output<String> productId;
 
-    public Input<String> getProductId() {
-        return this.productId == null ? Input.empty() : this.productId;
+    public Output<String> getProductId() {
+        return this.productId == null ? Output.empty() : this.productId;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourcePortfolioId")
-      private final @Nullable Input<String> sourcePortfolioId;
+      private final @Nullable Output<String> sourcePortfolioId;
 
-    public Input<String> getSourcePortfolioId() {
-        return this.sourcePortfolioId == null ? Input.empty() : this.sourcePortfolioId;
+    public Output<String> getSourcePortfolioId() {
+        return this.sourcePortfolioId == null ? Output.empty() : this.sourcePortfolioId;
     }
 
     public ProductPortfolioAssociationState(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<String> portfolioId,
-        @Nullable Input<String> productId,
-        @Nullable Input<String> sourcePortfolioId) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<String> portfolioId,
+        @Nullable Output<String> productId,
+        @Nullable Output<String> sourcePortfolioId) {
         this.acceptLanguage = acceptLanguage;
         this.portfolioId = portfolioId;
         this.productId = productId;
@@ -70,10 +70,10 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     }
 
     private ProductPortfolioAssociationState() {
-        this.acceptLanguage = Input.empty();
-        this.portfolioId = Input.empty();
-        this.productId = Input.empty();
-        this.sourcePortfolioId = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.portfolioId = Output.empty();
+        this.productId = Output.empty();
+        this.sourcePortfolioId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<String> portfolioId;
-        private @Nullable Input<String> productId;
-        private @Nullable Input<String> sourcePortfolioId;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<String> portfolioId;
+        private @Nullable Output<String> productId;
+        private @Nullable Output<String> sourcePortfolioId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     	      this.sourcePortfolioId = defaults.sourcePortfolioId;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder portfolioId(@Nullable Input<String> portfolioId) {
+        public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
 
         public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Input.ofNullable(portfolioId);
+            this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
 
-        public Builder productId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
 
         public Builder productId(@Nullable String productId) {
-            this.productId = Input.ofNullable(productId);
+            this.productId = Output.ofNullable(productId);
             return this;
         }
 
-        public Builder sourcePortfolioId(@Nullable Input<String> sourcePortfolioId) {
+        public Builder sourcePortfolioId(@Nullable Output<String> sourcePortfolioId) {
             this.sourcePortfolioId = sourcePortfolioId;
             return this;
         }
 
         public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
-            this.sourcePortfolioId = Input.ofNullable(sourcePortfolioId);
+            this.sourcePortfolioId = Output.ofNullable(sourcePortfolioId);
             return this;
         }
         public ProductPortfolioAssociationState build() {

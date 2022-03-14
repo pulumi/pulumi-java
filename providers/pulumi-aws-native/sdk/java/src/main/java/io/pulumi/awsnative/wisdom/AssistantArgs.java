@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wisdom;
 import io.pulumi.awsnative.wisdom.enums.AssistantType;
 import io.pulumi.awsnative.wisdom.inputs.AssistantServerSideEncryptionConfigurationArgs;
 import io.pulumi.awsnative.wisdom.inputs.AssistantTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,46 +19,46 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssistantArgs Empty = new AssistantArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="serverSideEncryptionConfiguration")
-      private final @Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+      private final @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Input<AssistantServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Input.empty() : this.serverSideEncryptionConfiguration;
+    public Output<AssistantServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
+        return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<AssistantTagArgs>> tags;
+      private final @Nullable Output<List<AssistantTagArgs>> tags;
 
-    public Input<List<AssistantTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AssistantTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<AssistantType> type;
+      private final Output<AssistantType> type;
 
-    public Input<AssistantType> getType() {
+    public Output<AssistantType> getType() {
         return this.type;
     }
 
     public AssistantArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
-        @Nullable Input<List<AssistantTagArgs>> tags,
-        Input<AssistantType> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
+        @Nullable Output<List<AssistantTagArgs>> tags,
+        Output<AssistantType> type) {
         this.description = description;
         this.name = name;
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
@@ -67,11 +67,11 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssistantArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.serverSideEncryptionConfiguration = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.serverSideEncryptionConfiguration = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,11 +83,11 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
-        private @Nullable Input<List<AssistantTagArgs>> tags;
-        private Input<AssistantType> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+        private @Nullable Output<List<AssistantTagArgs>> tags;
+        private Output<AssistantType> type;
 
         public Builder() {
     	      // Empty
@@ -102,53 +102,53 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder serverSideEncryptionConfiguration(@Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
         public Builder serverSideEncryptionConfiguration(@Nullable AssistantServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Input.ofNullable(serverSideEncryptionConfiguration);
+            this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AssistantTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AssistantTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AssistantTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<AssistantType> type) {
+        public Builder type(Output<AssistantType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(AssistantType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AssistantArgs build() {

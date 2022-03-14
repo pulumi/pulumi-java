@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.CommissionedState;
 import io.pulumi.azurenative.network.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidr")
-      private final @Nullable Input<String> cidr;
+      private final @Nullable Output<String> cidr;
 
-    public Input<String> getCidr() {
-        return this.cidr == null ? Input.empty() : this.cidr;
+    public Output<String> getCidr() {
+        return this.cidr == null ? Output.empty() : this.cidr;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commissionedState")
-      private final @Nullable Input<Either<String,CommissionedState>> commissionedState;
+      private final @Nullable Output<Either<String,CommissionedState>> commissionedState;
 
-    public Input<Either<String,CommissionedState>> getCommissionedState() {
-        return this.commissionedState == null ? Input.empty() : this.commissionedState;
+    public Output<Either<String,CommissionedState>> getCommissionedState() {
+        return this.commissionedState == null ? Output.empty() : this.commissionedState;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customIpPrefixName")
-      private final @Nullable Input<String> customIpPrefixName;
+      private final @Nullable Output<String> customIpPrefixName;
 
-    public Input<String> getCustomIpPrefixName() {
-        return this.customIpPrefixName == null ? Input.empty() : this.customIpPrefixName;
+    public Output<String> getCustomIpPrefixName() {
+        return this.customIpPrefixName == null ? Output.empty() : this.customIpPrefixName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,10 +101,10 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public CustomIPPrefixArgs(
-        @Nullable Input<String> cidr,
-        @Nullable Input<Either<String,CommissionedState>> commissionedState,
-        @Nullable Input<String> customIpPrefixName,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<String> cidr,
+        @Nullable Output<Either<String,CommissionedState>> commissionedState,
+        @Nullable Output<String> customIpPrefixName,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> zones) {
         this.cidr = cidr;
         this.commissionedState = commissionedState;
         this.customIpPrefixName = customIpPrefixName;
@@ -140,15 +140,15 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomIPPrefixArgs() {
-        this.cidr = Input.empty();
-        this.commissionedState = Input.empty();
-        this.customIpPrefixName = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.zones = Input.empty();
+        this.cidr = Output.empty();
+        this.commissionedState = Output.empty();
+        this.customIpPrefixName = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cidr;
-        private @Nullable Input<Either<String,CommissionedState>> commissionedState;
-        private @Nullable Input<String> customIpPrefixName;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<String> cidr;
+        private @Nullable Output<Either<String,CommissionedState>> commissionedState;
+        private @Nullable Output<String> customIpPrefixName;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder cidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Output<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Input.ofNullable(cidr);
+            this.cidr = Output.ofNullable(cidr);
             return this;
         }
 
-        public Builder commissionedState(@Nullable Input<Either<String,CommissionedState>> commissionedState) {
+        public Builder commissionedState(@Nullable Output<Either<String,CommissionedState>> commissionedState) {
             this.commissionedState = commissionedState;
             return this;
         }
 
         public Builder commissionedState(@Nullable Either<String,CommissionedState> commissionedState) {
-            this.commissionedState = Input.ofNullable(commissionedState);
+            this.commissionedState = Output.ofNullable(commissionedState);
             return this;
         }
 
-        public Builder customIpPrefixName(@Nullable Input<String> customIpPrefixName) {
+        public Builder customIpPrefixName(@Nullable Output<String> customIpPrefixName) {
             this.customIpPrefixName = customIpPrefixName;
             return this;
         }
 
         public Builder customIpPrefixName(@Nullable String customIpPrefixName) {
-            this.customIpPrefixName = Input.ofNullable(customIpPrefixName);
+            this.customIpPrefixName = Output.ofNullable(customIpPrefixName);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public CustomIPPrefixArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
     public static final SizeConstraintSetState Empty = new SizeConstraintSetState();
 
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -39,25 +39,25 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sizeConstraints")
-      private final @Nullable Input<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
+      private final @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
 
-    public Input<List<SizeConstraintSetSizeConstraintGetArgs>> getSizeConstraints() {
-        return this.sizeConstraints == null ? Input.empty() : this.sizeConstraints;
+    public Output<List<SizeConstraintSetSizeConstraintGetArgs>> getSizeConstraints() {
+        return this.sizeConstraints == null ? Output.empty() : this.sizeConstraints;
     }
 
     public SizeConstraintSetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
         this.arn = arn;
         this.name = name;
         this.sizeConstraints = sizeConstraints;
     }
 
     private SizeConstraintSetState() {
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.sizeConstraints = Input.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.sizeConstraints = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
     	      this.sizeConstraints = defaults.sizeConstraints;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sizeConstraints(@Nullable Input<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
+        public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
             this.sizeConstraints = sizeConstraints;
             return this;
         }
 
         public Builder sizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintGetArgs> sizeConstraints) {
-            this.sizeConstraints = Input.ofNullable(sizeConstraints);
+            this.sizeConstraints = Output.ofNullable(sizeConstraints);
             return this;
         }
         public SizeConstraintSetState build() {

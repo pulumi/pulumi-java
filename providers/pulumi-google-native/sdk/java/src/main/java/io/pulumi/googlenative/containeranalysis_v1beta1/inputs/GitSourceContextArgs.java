@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="revisionId")
-      private final @Nullable Input<String> revisionId;
+      private final @Nullable Output<String> revisionId;
 
-    public Input<String> getRevisionId() {
-        return this.revisionId == null ? Input.empty() : this.revisionId;
+    public Output<String> getRevisionId() {
+        return this.revisionId == null ? Output.empty() : this.revisionId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public GitSourceContextArgs(
-        @Nullable Input<String> revisionId,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> revisionId,
+        @Nullable Output<String> url) {
         this.revisionId = revisionId;
         this.url = url;
     }
 
     private GitSourceContextArgs() {
-        this.revisionId = Input.empty();
-        this.url = Input.empty();
+        this.revisionId = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> revisionId;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> revisionId;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
     	      this.url = defaults.url;
         }
 
-        public Builder revisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Input.ofNullable(revisionId);
+            this.revisionId = Output.ofNullable(revisionId);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public GitSourceContextArgs build() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.storagecache.inputs.CacheNetworkSettingsArgs;
 import io.pulumi.azurenative.storagecache.inputs.CacheSecuritySettingsArgs;
 import io.pulumi.azurenative.storagecache.inputs.CacheSkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheName")
-      private final @Nullable Input<String> cacheName;
+      private final @Nullable Output<String> cacheName;
 
-    public Input<String> getCacheName() {
-        return this.cacheName == null ? Input.empty() : this.cacheName;
+    public Output<String> getCacheName() {
+        return this.cacheName == null ? Output.empty() : this.cacheName;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheSizeGB")
-      private final @Nullable Input<Integer> cacheSizeGB;
+      private final @Nullable Output<Integer> cacheSizeGB;
 
-    public Input<Integer> getCacheSizeGB() {
-        return this.cacheSizeGB == null ? Input.empty() : this.cacheSizeGB;
+    public Output<Integer> getCacheSizeGB() {
+        return this.cacheSizeGB == null ? Output.empty() : this.cacheSizeGB;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryServicesSettings")
-      private final @Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings;
+      private final @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings;
 
-    public Input<CacheDirectorySettingsArgs> getDirectoryServicesSettings() {
-        return this.directoryServicesSettings == null ? Input.empty() : this.directoryServicesSettings;
+    public Output<CacheDirectorySettingsArgs> getDirectoryServicesSettings() {
+        return this.directoryServicesSettings == null ? Output.empty() : this.directoryServicesSettings;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSettings")
-      private final @Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings;
+      private final @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings;
 
-    public Input<CacheEncryptionSettingsArgs> getEncryptionSettings() {
-        return this.encryptionSettings == null ? Input.empty() : this.encryptionSettings;
+    public Output<CacheEncryptionSettingsArgs> getEncryptionSettings() {
+        return this.encryptionSettings == null ? Output.empty() : this.encryptionSettings;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<CacheIdentityArgs> identity;
+      private final @Nullable Output<CacheIdentityArgs> identity;
 
-    public Input<CacheIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<CacheIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkSettings")
-      private final @Nullable Input<CacheNetworkSettingsArgs> networkSettings;
+      private final @Nullable Output<CacheNetworkSettingsArgs> networkSettings;
 
-    public Input<CacheNetworkSettingsArgs> getNetworkSettings() {
-        return this.networkSettings == null ? Input.empty() : this.networkSettings;
+    public Output<CacheNetworkSettingsArgs> getNetworkSettings() {
+        return this.networkSettings == null ? Output.empty() : this.networkSettings;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
-    public Input<Either<String,ProvisioningStateType>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningStateType>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -117,9 +117,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,10 +128,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securitySettings")
-      private final @Nullable Input<CacheSecuritySettingsArgs> securitySettings;
+      private final @Nullable Output<CacheSecuritySettingsArgs> securitySettings;
 
-    public Input<CacheSecuritySettingsArgs> getSecuritySettings() {
-        return this.securitySettings == null ? Input.empty() : this.securitySettings;
+    public Output<CacheSecuritySettingsArgs> getSecuritySettings() {
+        return this.securitySettings == null ? Output.empty() : this.securitySettings;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<CacheSkuArgs> sku;
+      private final @Nullable Output<CacheSkuArgs> sku;
 
-    public Input<CacheSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<CacheSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<String> subnet;
+      private final @Nullable Output<String> subnet;
 
-    public Input<String> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<String> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -161,26 +161,26 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CacheArgs(
-        @Nullable Input<String> cacheName,
-        @Nullable Input<Integer> cacheSizeGB,
-        @Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings,
-        @Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings,
-        @Nullable Input<CacheIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<CacheNetworkSettingsArgs> networkSettings,
-        @Nullable Input<Either<String,ProvisioningStateType>> provisioningState,
-        Input<String> resourceGroupName,
-        @Nullable Input<CacheSecuritySettingsArgs> securitySettings,
-        @Nullable Input<CacheSkuArgs> sku,
-        @Nullable Input<String> subnet,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> cacheName,
+        @Nullable Output<Integer> cacheSizeGB,
+        @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings,
+        @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings,
+        @Nullable Output<CacheIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<CacheNetworkSettingsArgs> networkSettings,
+        @Nullable Output<Either<String,ProvisioningStateType>> provisioningState,
+        Output<String> resourceGroupName,
+        @Nullable Output<CacheSecuritySettingsArgs> securitySettings,
+        @Nullable Output<CacheSkuArgs> sku,
+        @Nullable Output<String> subnet,
+        @Nullable Output<Map<String,String>> tags) {
         this.cacheName = cacheName;
         this.cacheSizeGB = cacheSizeGB;
         this.directoryServicesSettings = directoryServicesSettings;
@@ -197,19 +197,19 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CacheArgs() {
-        this.cacheName = Input.empty();
-        this.cacheSizeGB = Input.empty();
-        this.directoryServicesSettings = Input.empty();
-        this.encryptionSettings = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.networkSettings = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securitySettings = Input.empty();
-        this.sku = Input.empty();
-        this.subnet = Input.empty();
-        this.tags = Input.empty();
+        this.cacheName = Output.empty();
+        this.cacheSizeGB = Output.empty();
+        this.directoryServicesSettings = Output.empty();
+        this.encryptionSettings = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.networkSettings = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securitySettings = Output.empty();
+        this.sku = Output.empty();
+        this.subnet = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -221,19 +221,19 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cacheName;
-        private @Nullable Input<Integer> cacheSizeGB;
-        private @Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings;
-        private @Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings;
-        private @Nullable Input<CacheIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<CacheNetworkSettingsArgs> networkSettings;
-        private @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<CacheSecuritySettingsArgs> securitySettings;
-        private @Nullable Input<CacheSkuArgs> sku;
-        private @Nullable Input<String> subnet;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> cacheName;
+        private @Nullable Output<Integer> cacheSizeGB;
+        private @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings;
+        private @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings;
+        private @Nullable Output<CacheIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<CacheNetworkSettingsArgs> networkSettings;
+        private @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<CacheSecuritySettingsArgs> securitySettings;
+        private @Nullable Output<CacheSkuArgs> sku;
+        private @Nullable Output<String> subnet;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -256,133 +256,133 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder cacheName(@Nullable Input<String> cacheName) {
+        public Builder cacheName(@Nullable Output<String> cacheName) {
             this.cacheName = cacheName;
             return this;
         }
 
         public Builder cacheName(@Nullable String cacheName) {
-            this.cacheName = Input.ofNullable(cacheName);
+            this.cacheName = Output.ofNullable(cacheName);
             return this;
         }
 
-        public Builder cacheSizeGB(@Nullable Input<Integer> cacheSizeGB) {
+        public Builder cacheSizeGB(@Nullable Output<Integer> cacheSizeGB) {
             this.cacheSizeGB = cacheSizeGB;
             return this;
         }
 
         public Builder cacheSizeGB(@Nullable Integer cacheSizeGB) {
-            this.cacheSizeGB = Input.ofNullable(cacheSizeGB);
+            this.cacheSizeGB = Output.ofNullable(cacheSizeGB);
             return this;
         }
 
-        public Builder directoryServicesSettings(@Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings) {
+        public Builder directoryServicesSettings(@Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings) {
             this.directoryServicesSettings = directoryServicesSettings;
             return this;
         }
 
         public Builder directoryServicesSettings(@Nullable CacheDirectorySettingsArgs directoryServicesSettings) {
-            this.directoryServicesSettings = Input.ofNullable(directoryServicesSettings);
+            this.directoryServicesSettings = Output.ofNullable(directoryServicesSettings);
             return this;
         }
 
-        public Builder encryptionSettings(@Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings) {
+        public Builder encryptionSettings(@Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
         public Builder encryptionSettings(@Nullable CacheEncryptionSettingsArgs encryptionSettings) {
-            this.encryptionSettings = Input.ofNullable(encryptionSettings);
+            this.encryptionSettings = Output.ofNullable(encryptionSettings);
             return this;
         }
 
-        public Builder identity(@Nullable Input<CacheIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<CacheIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable CacheIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkSettings(@Nullable Input<CacheNetworkSettingsArgs> networkSettings) {
+        public Builder networkSettings(@Nullable Output<CacheNetworkSettingsArgs> networkSettings) {
             this.networkSettings = networkSettings;
             return this;
         }
 
         public Builder networkSettings(@Nullable CacheNetworkSettingsArgs networkSettings) {
-            this.networkSettings = Input.ofNullable(networkSettings);
+            this.networkSettings = Output.ofNullable(networkSettings);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningStateType>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securitySettings(@Nullable Input<CacheSecuritySettingsArgs> securitySettings) {
+        public Builder securitySettings(@Nullable Output<CacheSecuritySettingsArgs> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
         public Builder securitySettings(@Nullable CacheSecuritySettingsArgs securitySettings) {
-            this.securitySettings = Input.ofNullable(securitySettings);
+            this.securitySettings = Output.ofNullable(securitySettings);
             return this;
         }
 
-        public Builder sku(@Nullable Input<CacheSkuArgs> sku) {
+        public Builder sku(@Nullable Output<CacheSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable CacheSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CacheArgs build() {

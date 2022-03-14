@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobScheduleFrequencyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customDataIdentifierIds")
-      private final @Nullable Input<List<String>> customDataIdentifierIds;
+      private final @Nullable Output<List<String>> customDataIdentifierIds;
 
-    public Input<List<String>> getCustomDataIdentifierIds() {
-        return this.customDataIdentifierIds == null ? Input.empty() : this.customDataIdentifierIds;
+    public Output<List<String>> getCustomDataIdentifierIds() {
+        return this.customDataIdentifierIds == null ? Output.empty() : this.customDataIdentifierIds;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="initialRun")
-      private final @Nullable Input<Boolean> initialRun;
+      private final @Nullable Output<Boolean> initialRun;
 
-    public Input<Boolean> getInitialRun() {
-        return this.initialRun == null ? Input.empty() : this.initialRun;
+    public Output<Boolean> getInitialRun() {
+        return this.initialRun == null ? Output.empty() : this.initialRun;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="jobStatus")
-      private final @Nullable Input<String> jobStatus;
+      private final @Nullable Output<String> jobStatus;
 
-    public Input<String> getJobStatus() {
-        return this.jobStatus == null ? Input.empty() : this.jobStatus;
+    public Output<String> getJobStatus() {
+        return this.jobStatus == null ? Output.empty() : this.jobStatus;
     }
 
     /**
@@ -69,17 +69,17 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="jobType", required=true)
-      private final Input<String> jobType;
+      private final Output<String> jobType;
 
-    public Input<String> getJobType() {
+    public Output<String> getJobType() {
         return this.jobType;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3JobDefinition", required=true)
-      private final Input<ClassificationJobS3JobDefinitionArgs> s3JobDefinition;
+      private final Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition;
 
-    public Input<ClassificationJobS3JobDefinitionArgs> getS3JobDefinition() {
+    public Output<ClassificationJobS3JobDefinitionArgs> getS3JobDefinition() {
         return this.s3JobDefinition;
     }
 
@@ -109,10 +109,10 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="samplingPercentage")
-      private final @Nullable Input<Integer> samplingPercentage;
+      private final @Nullable Output<Integer> samplingPercentage;
 
-    public Input<Integer> getSamplingPercentage() {
-        return this.samplingPercentage == null ? Input.empty() : this.samplingPercentage;
+    public Output<Integer> getSamplingPercentage() {
+        return this.samplingPercentage == null ? Output.empty() : this.samplingPercentage;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduleFrequency")
-      private final @Nullable Input<ClassificationJobScheduleFrequencyArgs> scheduleFrequency;
+      private final @Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency;
 
-    public Input<ClassificationJobScheduleFrequencyArgs> getScheduleFrequency() {
-        return this.scheduleFrequency == null ? Input.empty() : this.scheduleFrequency;
+    public Output<ClassificationJobScheduleFrequencyArgs> getScheduleFrequency() {
+        return this.scheduleFrequency == null ? Output.empty() : this.scheduleFrequency;
     }
 
     /**
@@ -131,24 +131,24 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClassificationJobArgs(
-        @Nullable Input<List<String>> customDataIdentifierIds,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> initialRun,
-        @Nullable Input<String> jobStatus,
-        Input<String> jobType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        Input<ClassificationJobS3JobDefinitionArgs> s3JobDefinition,
-        @Nullable Input<Integer> samplingPercentage,
-        @Nullable Input<ClassificationJobScheduleFrequencyArgs> scheduleFrequency,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<String>> customDataIdentifierIds,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> initialRun,
+        @Nullable Output<String> jobStatus,
+        Output<String> jobType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition,
+        @Nullable Output<Integer> samplingPercentage,
+        @Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency,
+        @Nullable Output<Map<String,String>> tags) {
         this.customDataIdentifierIds = customDataIdentifierIds;
         this.description = description;
         this.initialRun = initialRun;
@@ -163,17 +163,17 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ClassificationJobArgs() {
-        this.customDataIdentifierIds = Input.empty();
-        this.description = Input.empty();
-        this.initialRun = Input.empty();
-        this.jobStatus = Input.empty();
-        this.jobType = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.s3JobDefinition = Input.empty();
-        this.samplingPercentage = Input.empty();
-        this.scheduleFrequency = Input.empty();
-        this.tags = Input.empty();
+        this.customDataIdentifierIds = Output.empty();
+        this.description = Output.empty();
+        this.initialRun = Output.empty();
+        this.jobStatus = Output.empty();
+        this.jobType = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.s3JobDefinition = Output.empty();
+        this.samplingPercentage = Output.empty();
+        this.scheduleFrequency = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,17 +185,17 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> customDataIdentifierIds;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> initialRun;
-        private @Nullable Input<String> jobStatus;
-        private Input<String> jobType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private Input<ClassificationJobS3JobDefinitionArgs> s3JobDefinition;
-        private @Nullable Input<Integer> samplingPercentage;
-        private @Nullable Input<ClassificationJobScheduleFrequencyArgs> scheduleFrequency;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<String>> customDataIdentifierIds;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> initialRun;
+        private @Nullable Output<String> jobStatus;
+        private Output<String> jobType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition;
+        private @Nullable Output<Integer> samplingPercentage;
+        private @Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -216,113 +216,113 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder customDataIdentifierIds(@Nullable Input<List<String>> customDataIdentifierIds) {
+        public Builder customDataIdentifierIds(@Nullable Output<List<String>> customDataIdentifierIds) {
             this.customDataIdentifierIds = customDataIdentifierIds;
             return this;
         }
 
         public Builder customDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
-            this.customDataIdentifierIds = Input.ofNullable(customDataIdentifierIds);
+            this.customDataIdentifierIds = Output.ofNullable(customDataIdentifierIds);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder initialRun(@Nullable Input<Boolean> initialRun) {
+        public Builder initialRun(@Nullable Output<Boolean> initialRun) {
             this.initialRun = initialRun;
             return this;
         }
 
         public Builder initialRun(@Nullable Boolean initialRun) {
-            this.initialRun = Input.ofNullable(initialRun);
+            this.initialRun = Output.ofNullable(initialRun);
             return this;
         }
 
-        public Builder jobStatus(@Nullable Input<String> jobStatus) {
+        public Builder jobStatus(@Nullable Output<String> jobStatus) {
             this.jobStatus = jobStatus;
             return this;
         }
 
         public Builder jobStatus(@Nullable String jobStatus) {
-            this.jobStatus = Input.ofNullable(jobStatus);
+            this.jobStatus = Output.ofNullable(jobStatus);
             return this;
         }
 
-        public Builder jobType(Input<String> jobType) {
+        public Builder jobType(Output<String> jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
 
         public Builder jobType(String jobType) {
-            this.jobType = Input.of(Objects.requireNonNull(jobType));
+            this.jobType = Output.of(Objects.requireNonNull(jobType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder s3JobDefinition(Input<ClassificationJobS3JobDefinitionArgs> s3JobDefinition) {
+        public Builder s3JobDefinition(Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition) {
             this.s3JobDefinition = Objects.requireNonNull(s3JobDefinition);
             return this;
         }
 
         public Builder s3JobDefinition(ClassificationJobS3JobDefinitionArgs s3JobDefinition) {
-            this.s3JobDefinition = Input.of(Objects.requireNonNull(s3JobDefinition));
+            this.s3JobDefinition = Output.of(Objects.requireNonNull(s3JobDefinition));
             return this;
         }
 
-        public Builder samplingPercentage(@Nullable Input<Integer> samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Output<Integer> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
         public Builder samplingPercentage(@Nullable Integer samplingPercentage) {
-            this.samplingPercentage = Input.ofNullable(samplingPercentage);
+            this.samplingPercentage = Output.ofNullable(samplingPercentage);
             return this;
         }
 
-        public Builder scheduleFrequency(@Nullable Input<ClassificationJobScheduleFrequencyArgs> scheduleFrequency) {
+        public Builder scheduleFrequency(@Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency) {
             this.scheduleFrequency = scheduleFrequency;
             return this;
         }
 
         public Builder scheduleFrequency(@Nullable ClassificationJobScheduleFrequencyArgs scheduleFrequency) {
-            this.scheduleFrequency = Input.ofNullable(scheduleFrequency);
+            this.scheduleFrequency = Output.ofNullable(scheduleFrequency);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClassificationJobArgs build() {

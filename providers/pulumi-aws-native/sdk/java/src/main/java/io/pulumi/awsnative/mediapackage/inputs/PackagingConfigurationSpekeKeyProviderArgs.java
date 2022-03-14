@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     public static final PackagingConfigurationSpekeKeyProviderArgs Empty = new PackagingConfigurationSpekeKeyProviderArgs();
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -30,9 +30,9 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
      * 
      */
     @InputImport(name="systemIds", required=true)
-      private final Input<List<String>> systemIds;
+      private final Output<List<String>> systemIds;
 
-    public Input<List<String>> getSystemIds() {
+    public Output<List<String>> getSystemIds() {
         return this.systemIds;
     }
 
@@ -41,25 +41,25 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public PackagingConfigurationSpekeKeyProviderArgs(
-        Input<String> roleArn,
-        Input<List<String>> systemIds,
-        Input<String> url) {
+        Output<String> roleArn,
+        Output<List<String>> systemIds,
+        Output<String> url) {
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.systemIds = Objects.requireNonNull(systemIds, "expected parameter 'systemIds' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private PackagingConfigurationSpekeKeyProviderArgs() {
-        this.roleArn = Input.empty();
-        this.systemIds = Input.empty();
-        this.url = Input.empty();
+        this.roleArn = Output.empty();
+        this.systemIds = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> roleArn;
-        private Input<List<String>> systemIds;
-        private Input<String> url;
+        private Output<String> roleArn;
+        private Output<List<String>> systemIds;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     	      this.url = defaults.url;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder systemIds(Input<List<String>> systemIds) {
+        public Builder systemIds(Output<List<String>> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
 
         public Builder systemIds(List<String> systemIds) {
-            this.systemIds = Input.of(Objects.requireNonNull(systemIds));
+            this.systemIds = Output.of(Objects.requireNonNull(systemIds));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public PackagingConfigurationSpekeKeyProviderArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="drainingTimeoutSec")
-      private final @Nullable Input<Integer> drainingTimeoutSec;
+      private final @Nullable Output<Integer> drainingTimeoutSec;
 
-    public Input<Integer> getDrainingTimeoutSec() {
-        return this.drainingTimeoutSec == null ? Input.empty() : this.drainingTimeoutSec;
+    public Output<Integer> getDrainingTimeoutSec() {
+        return this.drainingTimeoutSec == null ? Output.empty() : this.drainingTimeoutSec;
     }
 
-    public ConnectionDrainingArgs(@Nullable Input<Integer> drainingTimeoutSec) {
+    public ConnectionDrainingArgs(@Nullable Output<Integer> drainingTimeoutSec) {
         this.drainingTimeoutSec = drainingTimeoutSec;
     }
 
     private ConnectionDrainingArgs() {
-        this.drainingTimeoutSec = Input.empty();
+        this.drainingTimeoutSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> drainingTimeoutSec;
+        private @Nullable Output<Integer> drainingTimeoutSec;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
     	      this.drainingTimeoutSec = defaults.drainingTimeoutSec;
         }
 
-        public Builder drainingTimeoutSec(@Nullable Input<Integer> drainingTimeoutSec) {
+        public Builder drainingTimeoutSec(@Nullable Output<Integer> drainingTimeoutSec) {
             this.drainingTimeoutSec = drainingTimeoutSec;
             return this;
         }
 
         public Builder drainingTimeoutSec(@Nullable Integer drainingTimeoutSec) {
-            this.drainingTimeoutSec = Input.ofNullable(drainingTimeoutSec);
+            this.drainingTimeoutSec = Output.ofNullable(drainingTimeoutSec);
             return this;
         }
         public ConnectionDrainingArgs build() {

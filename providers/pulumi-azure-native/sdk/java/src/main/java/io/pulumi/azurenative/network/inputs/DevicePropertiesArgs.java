@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceModel")
-      private final @Nullable Input<String> deviceModel;
+      private final @Nullable Output<String> deviceModel;
 
-    public Input<String> getDeviceModel() {
-        return this.deviceModel == null ? Input.empty() : this.deviceModel;
+    public Output<String> getDeviceModel() {
+        return this.deviceModel == null ? Output.empty() : this.deviceModel;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceVendor")
-      private final @Nullable Input<String> deviceVendor;
+      private final @Nullable Output<String> deviceVendor;
 
-    public Input<String> getDeviceVendor() {
-        return this.deviceVendor == null ? Input.empty() : this.deviceVendor;
+    public Output<String> getDeviceVendor() {
+        return this.deviceVendor == null ? Output.empty() : this.deviceVendor;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="linkSpeedInMbps")
-      private final @Nullable Input<Integer> linkSpeedInMbps;
+      private final @Nullable Output<Integer> linkSpeedInMbps;
 
-    public Input<Integer> getLinkSpeedInMbps() {
-        return this.linkSpeedInMbps == null ? Input.empty() : this.linkSpeedInMbps;
+    public Output<Integer> getLinkSpeedInMbps() {
+        return this.linkSpeedInMbps == null ? Output.empty() : this.linkSpeedInMbps;
     }
 
     public DevicePropertiesArgs(
-        @Nullable Input<String> deviceModel,
-        @Nullable Input<String> deviceVendor,
-        @Nullable Input<Integer> linkSpeedInMbps) {
+        @Nullable Output<String> deviceModel,
+        @Nullable Output<String> deviceVendor,
+        @Nullable Output<Integer> linkSpeedInMbps) {
         this.deviceModel = deviceModel;
         this.deviceVendor = deviceVendor;
         this.linkSpeedInMbps = linkSpeedInMbps;
     }
 
     private DevicePropertiesArgs() {
-        this.deviceModel = Input.empty();
-        this.deviceVendor = Input.empty();
-        this.linkSpeedInMbps = Input.empty();
+        this.deviceModel = Output.empty();
+        this.deviceVendor = Output.empty();
+        this.linkSpeedInMbps = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deviceModel;
-        private @Nullable Input<String> deviceVendor;
-        private @Nullable Input<Integer> linkSpeedInMbps;
+        private @Nullable Output<String> deviceModel;
+        private @Nullable Output<String> deviceVendor;
+        private @Nullable Output<Integer> linkSpeedInMbps;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
         }
 
-        public Builder deviceModel(@Nullable Input<String> deviceModel) {
+        public Builder deviceModel(@Nullable Output<String> deviceModel) {
             this.deviceModel = deviceModel;
             return this;
         }
 
         public Builder deviceModel(@Nullable String deviceModel) {
-            this.deviceModel = Input.ofNullable(deviceModel);
+            this.deviceModel = Output.ofNullable(deviceModel);
             return this;
         }
 
-        public Builder deviceVendor(@Nullable Input<String> deviceVendor) {
+        public Builder deviceVendor(@Nullable Output<String> deviceVendor) {
             this.deviceVendor = deviceVendor;
             return this;
         }
 
         public Builder deviceVendor(@Nullable String deviceVendor) {
-            this.deviceVendor = Input.ofNullable(deviceVendor);
+            this.deviceVendor = Output.ofNullable(deviceVendor);
             return this;
         }
 
-        public Builder linkSpeedInMbps(@Nullable Input<Integer> linkSpeedInMbps) {
+        public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
 
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
-            this.linkSpeedInMbps = Input.ofNullable(linkSpeedInMbps);
+            this.linkSpeedInMbps = Output.ofNullable(linkSpeedInMbps);
             return this;
         }
         public DevicePropertiesArgs build() {

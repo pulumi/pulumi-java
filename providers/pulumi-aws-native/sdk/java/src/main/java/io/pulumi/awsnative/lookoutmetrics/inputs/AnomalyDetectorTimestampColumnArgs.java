@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class AnomalyDetectorTimestampColumnArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="columnFormat")
-      private final @Nullable Input<String> columnFormat;
+      private final @Nullable Output<String> columnFormat;
 
-    public Input<String> getColumnFormat() {
-        return this.columnFormat == null ? Input.empty() : this.columnFormat;
+    public Output<String> getColumnFormat() {
+        return this.columnFormat == null ? Output.empty() : this.columnFormat;
     }
 
     @InputImport(name="columnName")
-      private final @Nullable Input<String> columnName;
+      private final @Nullable Output<String> columnName;
 
-    public Input<String> getColumnName() {
-        return this.columnName == null ? Input.empty() : this.columnName;
+    public Output<String> getColumnName() {
+        return this.columnName == null ? Output.empty() : this.columnName;
     }
 
     public AnomalyDetectorTimestampColumnArgs(
-        @Nullable Input<String> columnFormat,
-        @Nullable Input<String> columnName) {
+        @Nullable Output<String> columnFormat,
+        @Nullable Output<String> columnName) {
         this.columnFormat = columnFormat;
         this.columnName = columnName;
     }
 
     private AnomalyDetectorTimestampColumnArgs() {
-        this.columnFormat = Input.empty();
-        this.columnName = Input.empty();
+        this.columnFormat = Output.empty();
+        this.columnName = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class AnomalyDetectorTimestampColumnArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> columnFormat;
-        private @Nullable Input<String> columnName;
+        private @Nullable Output<String> columnFormat;
+        private @Nullable Output<String> columnName;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class AnomalyDetectorTimestampColumnArgs extends io.pulumi.resource
     	      this.columnName = defaults.columnName;
         }
 
-        public Builder columnFormat(@Nullable Input<String> columnFormat) {
+        public Builder columnFormat(@Nullable Output<String> columnFormat) {
             this.columnFormat = columnFormat;
             return this;
         }
 
         public Builder columnFormat(@Nullable String columnFormat) {
-            this.columnFormat = Input.ofNullable(columnFormat);
+            this.columnFormat = Output.ofNullable(columnFormat);
             return this;
         }
 
-        public Builder columnName(@Nullable Input<String> columnName) {
+        public Builder columnName(@Nullable Output<String> columnName) {
             this.columnName = columnName;
             return this;
         }
 
         public Builder columnName(@Nullable String columnName) {
-            this.columnName = Input.ofNullable(columnName);
+            this.columnName = Output.ofNullable(columnName);
             return this;
         }
         public AnomalyDetectorTimestampColumnArgs build() {

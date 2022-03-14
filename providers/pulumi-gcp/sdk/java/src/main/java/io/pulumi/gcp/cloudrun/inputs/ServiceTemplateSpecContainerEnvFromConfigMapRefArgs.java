@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends i
      * 
      */
     @InputImport(name="localObjectReference")
-      private final @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
+      private final @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
 
-    public Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> getLocalObjectReference() {
-        return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
+    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> getLocalObjectReference() {
+        return this.localObjectReference == null ? Output.empty() : this.localObjectReference;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends i
      * 
      */
     @InputImport(name="optional")
-      private final @Nullable Input<Boolean> optional;
+      private final @Nullable Output<Boolean> optional;
 
-    public Input<Boolean> getOptional() {
-        return this.optional == null ? Input.empty() : this.optional;
+    public Output<Boolean> getOptional() {
+        return this.optional == null ? Output.empty() : this.optional;
     }
 
     public ServiceTemplateSpecContainerEnvFromConfigMapRefArgs(
-        @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference,
-        @Nullable Input<Boolean> optional) {
+        @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference,
+        @Nullable Output<Boolean> optional) {
         this.localObjectReference = localObjectReference;
         this.optional = optional;
     }
 
     private ServiceTemplateSpecContainerEnvFromConfigMapRefArgs() {
-        this.localObjectReference = Input.empty();
-        this.optional = Input.empty();
+        this.localObjectReference = Output.empty();
+        this.optional = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
-        private @Nullable Input<Boolean> optional;
+        private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
+        private @Nullable Output<Boolean> optional;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends i
     	      this.optional = defaults.optional;
         }
 
-        public Builder localObjectReference(@Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference) {
+        public Builder localObjectReference(@Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
         public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs localObjectReference) {
-            this.localObjectReference = Input.ofNullable(localObjectReference);
+            this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
 
-        public Builder optional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Input.ofNullable(optional);
+            this.optional = Output.ofNullable(optional);
             return this;
         }
         public ServiceTemplateSpecContainerEnvFromConfigMapRefArgs build() {

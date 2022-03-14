@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ResourceRangeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<ResourceRangeArgs> memory;
+      private final @Nullable Output<ResourceRangeArgs> memory;
 
-    public Input<ResourceRangeArgs> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<ResourceRangeArgs> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="vCPUs")
-      private final @Nullable Input<ResourceRangeArgs> vCPUs;
+      private final @Nullable Output<ResourceRangeArgs> vCPUs;
 
-    public Input<ResourceRangeArgs> getVCPUs() {
-        return this.vCPUs == null ? Input.empty() : this.vCPUs;
+    public Output<ResourceRangeArgs> getVCPUs() {
+        return this.vCPUs == null ? Output.empty() : this.vCPUs;
     }
 
     public RecommendedMachineConfigurationArgs(
-        @Nullable Input<ResourceRangeArgs> memory,
-        @Nullable Input<ResourceRangeArgs> vCPUs) {
+        @Nullable Output<ResourceRangeArgs> memory,
+        @Nullable Output<ResourceRangeArgs> vCPUs) {
         this.memory = memory;
         this.vCPUs = vCPUs;
     }
 
     private RecommendedMachineConfigurationArgs() {
-        this.memory = Input.empty();
-        this.vCPUs = Input.empty();
+        this.memory = Output.empty();
+        this.vCPUs = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceRangeArgs> memory;
-        private @Nullable Input<ResourceRangeArgs> vCPUs;
+        private @Nullable Output<ResourceRangeArgs> memory;
+        private @Nullable Output<ResourceRangeArgs> vCPUs;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
     	      this.vCPUs = defaults.vCPUs;
         }
 
-        public Builder memory(@Nullable Input<ResourceRangeArgs> memory) {
+        public Builder memory(@Nullable Output<ResourceRangeArgs> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable ResourceRangeArgs memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
 
-        public Builder vCPUs(@Nullable Input<ResourceRangeArgs> vCPUs) {
+        public Builder vCPUs(@Nullable Output<ResourceRangeArgs> vCPUs) {
             this.vCPUs = vCPUs;
             return this;
         }
 
         public Builder vCPUs(@Nullable ResourceRangeArgs vCPUs) {
-            this.vCPUs = Input.ofNullable(vCPUs);
+            this.vCPUs = Output.ofNullable(vCPUs);
             return this;
         }
         public RecommendedMachineConfigurationArgs build() {

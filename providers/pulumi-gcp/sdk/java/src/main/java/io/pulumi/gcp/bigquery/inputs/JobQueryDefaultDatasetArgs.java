@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -30,22 +30,22 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     public JobQueryDefaultDatasetArgs(
-        Input<String> datasetId,
-        @Nullable Input<String> projectId) {
+        Output<String> datasetId,
+        @Nullable Output<String> projectId) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.projectId = projectId;
     }
 
     private JobQueryDefaultDatasetArgs() {
-        this.datasetId = Input.empty();
-        this.projectId = Input.empty();
+        this.datasetId = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
-        private @Nullable Input<String> projectId;
+        private Output<String> datasetId;
+        private @Nullable Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
         public JobQueryDefaultDatasetArgs build() {

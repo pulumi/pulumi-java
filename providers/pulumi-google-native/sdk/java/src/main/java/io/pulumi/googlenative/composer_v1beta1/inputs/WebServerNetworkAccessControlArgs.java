@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.inputs.AllowedIpRangeArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="allowedIpRanges")
-      private final @Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges;
+      private final @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
 
-    public Input<List<AllowedIpRangeArgs>> getAllowedIpRanges() {
-        return this.allowedIpRanges == null ? Input.empty() : this.allowedIpRanges;
+    public Output<List<AllowedIpRangeArgs>> getAllowedIpRanges() {
+        return this.allowedIpRanges == null ? Output.empty() : this.allowedIpRanges;
     }
 
-    public WebServerNetworkAccessControlArgs(@Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges) {
+    public WebServerNetworkAccessControlArgs(@Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
     }
 
     private WebServerNetworkAccessControlArgs() {
-        this.allowedIpRanges = Input.empty();
+        this.allowedIpRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges;
+        private @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder allowedIpRanges(@Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges) {
+        public Builder allowedIpRanges(@Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges) {
             this.allowedIpRanges = allowedIpRanges;
             return this;
         }
 
         public Builder allowedIpRanges(@Nullable List<AllowedIpRangeArgs> allowedIpRanges) {
-            this.allowedIpRanges = Input.ofNullable(allowedIpRanges);
+            this.allowedIpRanges = Output.ofNullable(allowedIpRanges);
             return this;
         }
         public WebServerNetworkAccessControlArgs build() {

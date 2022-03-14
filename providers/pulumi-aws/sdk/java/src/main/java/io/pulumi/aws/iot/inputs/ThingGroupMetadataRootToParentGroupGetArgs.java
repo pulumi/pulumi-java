@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ThingGroupMetadataRootToParentGroupGetArgs extends io.pulumi.
     public static final ThingGroupMetadataRootToParentGroupGetArgs Empty = new ThingGroupMetadataRootToParentGroupGetArgs();
 
     @InputImport(name="groupArn")
-      private final @Nullable Input<String> groupArn;
+      private final @Nullable Output<String> groupArn;
 
-    public Input<String> getGroupArn() {
-        return this.groupArn == null ? Input.empty() : this.groupArn;
+    public Output<String> getGroupArn() {
+        return this.groupArn == null ? Output.empty() : this.groupArn;
     }
 
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     public ThingGroupMetadataRootToParentGroupGetArgs(
-        @Nullable Input<String> groupArn,
-        @Nullable Input<String> groupName) {
+        @Nullable Output<String> groupArn,
+        @Nullable Output<String> groupName) {
         this.groupArn = groupArn;
         this.groupName = groupName;
     }
 
     private ThingGroupMetadataRootToParentGroupGetArgs() {
-        this.groupArn = Input.empty();
-        this.groupName = Input.empty();
+        this.groupArn = Output.empty();
+        this.groupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ThingGroupMetadataRootToParentGroupGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupArn;
-        private @Nullable Input<String> groupName;
+        private @Nullable Output<String> groupArn;
+        private @Nullable Output<String> groupName;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ThingGroupMetadataRootToParentGroupGetArgs extends io.pulumi.
     	      this.groupName = defaults.groupName;
         }
 
-        public Builder groupArn(@Nullable Input<String> groupArn) {
+        public Builder groupArn(@Nullable Output<String> groupArn) {
             this.groupArn = groupArn;
             return this;
         }
 
         public Builder groupArn(@Nullable String groupArn) {
-            this.groupArn = Input.ofNullable(groupArn);
+            this.groupArn = Output.ofNullable(groupArn);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
         public ThingGroupMetadataRootToParentGroupGetArgs build() {

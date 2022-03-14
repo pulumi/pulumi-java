@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileArgs;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
      * 
      */
     @InputImport(name="fileDescriptorSet")
-      private final @Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet;
+      private final @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet;
 
-    public Input<ApigatewayApiConfigFileArgs> getFileDescriptorSet() {
-        return this.fileDescriptorSet == null ? Input.empty() : this.fileDescriptorSet;
+    public Output<ApigatewayApiConfigFileArgs> getFileDescriptorSet() {
+        return this.fileDescriptorSet == null ? Output.empty() : this.fileDescriptorSet;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<List<ApigatewayApiConfigFileArgs>> source;
+      private final @Nullable Output<List<ApigatewayApiConfigFileArgs>> source;
 
-    public Input<List<ApigatewayApiConfigFileArgs>> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<List<ApigatewayApiConfigFileArgs>> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public ApigatewayApiConfigGrpcServiceDefinitionArgs(
-        @Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet,
-        @Nullable Input<List<ApigatewayApiConfigFileArgs>> source) {
+        @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet,
+        @Nullable Output<List<ApigatewayApiConfigFileArgs>> source) {
         this.fileDescriptorSet = fileDescriptorSet;
         this.source = source;
     }
 
     private ApigatewayApiConfigGrpcServiceDefinitionArgs() {
-        this.fileDescriptorSet = Input.empty();
-        this.source = Input.empty();
+        this.fileDescriptorSet = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet;
-        private @Nullable Input<List<ApigatewayApiConfigFileArgs>> source;
+        private @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet;
+        private @Nullable Output<List<ApigatewayApiConfigFileArgs>> source;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
     	      this.source = defaults.source;
         }
 
-        public Builder fileDescriptorSet(@Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet) {
+        public Builder fileDescriptorSet(@Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet) {
             this.fileDescriptorSet = fileDescriptorSet;
             return this;
         }
 
         public Builder fileDescriptorSet(@Nullable ApigatewayApiConfigFileArgs fileDescriptorSet) {
-            this.fileDescriptorSet = Input.ofNullable(fileDescriptorSet);
+            this.fileDescriptorSet = Output.ofNullable(fileDescriptorSet);
             return this;
         }
 
-        public Builder source(@Nullable Input<List<ApigatewayApiConfigFileArgs>> source) {
+        public Builder source(@Nullable Output<List<ApigatewayApiConfigFileArgs>> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable List<ApigatewayApiConfigFileArgs> source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public ApigatewayApiConfigGrpcServiceDefinitionArgs build() {

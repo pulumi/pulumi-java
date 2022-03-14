@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @InputImport(name="identities")
-      private final @Nullable Input<List<String>> identities;
+      private final @Nullable Output<List<String>> identities;
 
-    public Input<List<String>> getIdentities() {
-        return this.identities == null ? Input.empty() : this.identities;
+    public Output<List<String>> getIdentities() {
+        return this.identities == null ? Output.empty() : this.identities;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @InputImport(name="identityType")
-      private final @Nullable Input<String> identityType;
+      private final @Nullable Output<String> identityType;
 
-    public Input<String> getIdentityType() {
-        return this.identityType == null ? Input.empty() : this.identityType;
+    public Output<String> getIdentityType() {
+        return this.identityType == null ? Output.empty() : this.identityType;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources;
+      private final @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources;
 
-    public Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs(
-        @Nullable Input<List<String>> identities,
-        @Nullable Input<String> identityType,
-        @Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources) {
+        @Nullable Output<List<String>> identities,
+        @Nullable Output<String> identityType,
+        @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;
     }
 
     private ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs() {
-        this.identities = Input.empty();
-        this.identityType = Input.empty();
-        this.sources = Input.empty();
+        this.identities = Output.empty();
+        this.identityType = Output.empty();
+        this.sources = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> identities;
-        private @Nullable Input<String> identityType;
-        private @Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources;
+        private @Nullable Output<List<String>> identities;
+        private @Nullable Output<String> identityType;
+        private @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     	      this.sources = defaults.sources;
         }
 
-        public Builder identities(@Nullable Input<List<String>> identities) {
+        public Builder identities(@Nullable Output<List<String>> identities) {
             this.identities = identities;
             return this;
         }
 
         public Builder identities(@Nullable List<String> identities) {
-            this.identities = Input.ofNullable(identities);
+            this.identities = Output.ofNullable(identities);
             return this;
         }
 
-        public Builder identityType(@Nullable Input<String> identityType) {
+        public Builder identityType(@Nullable Output<String> identityType) {
             this.identityType = identityType;
             return this;
         }
 
         public Builder identityType(@Nullable String identityType) {
-            this.identityType = Input.ofNullable(identityType);
+            this.identityType = Output.ofNullable(identityType);
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources) {
+        public Builder sources(@Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
         public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterArgs;
@@ -25,9 +25,9 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="bitbucketServerConfigResource", required=true)
-      private final Input<String> bitbucketServerConfigResource;
+      private final Output<String> bitbucketServerConfigResource;
 
-    public Input<String> getBitbucketServerConfigResource() {
+    public Output<String> getBitbucketServerConfigResource() {
         return this.bitbucketServerConfigResource;
     }
 
@@ -36,9 +36,9 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="projectKey", required=true)
-      private final Input<String> projectKey;
+      private final Output<String> projectKey;
 
-    public Input<String> getProjectKey() {
+    public Output<String> getProjectKey() {
         return this.projectKey;
     }
 
@@ -47,10 +47,10 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pullRequest")
-      private final @Nullable Input<PullRequestFilterArgs> pullRequest;
+      private final @Nullable Output<PullRequestFilterArgs> pullRequest;
 
-    public Input<PullRequestFilterArgs> getPullRequest() {
-        return this.pullRequest == null ? Input.empty() : this.pullRequest;
+    public Output<PullRequestFilterArgs> getPullRequest() {
+        return this.pullRequest == null ? Output.empty() : this.pullRequest;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="push")
-      private final @Nullable Input<PushFilterArgs> push;
+      private final @Nullable Output<PushFilterArgs> push;
 
-    public Input<PushFilterArgs> getPush() {
-        return this.push == null ? Input.empty() : this.push;
+    public Output<PushFilterArgs> getPush() {
+        return this.push == null ? Output.empty() : this.push;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="repoSlug", required=true)
-      private final Input<String> repoSlug;
+      private final Output<String> repoSlug;
 
-    public Input<String> getRepoSlug() {
+    public Output<String> getRepoSlug() {
         return this.repoSlug;
     }
 
     public BitbucketServerTriggerConfigArgs(
-        Input<String> bitbucketServerConfigResource,
-        Input<String> projectKey,
-        @Nullable Input<PullRequestFilterArgs> pullRequest,
-        @Nullable Input<PushFilterArgs> push,
-        Input<String> repoSlug) {
+        Output<String> bitbucketServerConfigResource,
+        Output<String> projectKey,
+        @Nullable Output<PullRequestFilterArgs> pullRequest,
+        @Nullable Output<PushFilterArgs> push,
+        Output<String> repoSlug) {
         this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource, "expected parameter 'bitbucketServerConfigResource' to be non-null");
         this.projectKey = Objects.requireNonNull(projectKey, "expected parameter 'projectKey' to be non-null");
         this.pullRequest = pullRequest;
@@ -89,11 +89,11 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     }
 
     private BitbucketServerTriggerConfigArgs() {
-        this.bitbucketServerConfigResource = Input.empty();
-        this.projectKey = Input.empty();
-        this.pullRequest = Input.empty();
-        this.push = Input.empty();
-        this.repoSlug = Input.empty();
+        this.bitbucketServerConfigResource = Output.empty();
+        this.projectKey = Output.empty();
+        this.pullRequest = Output.empty();
+        this.push = Output.empty();
+        this.repoSlug = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> bitbucketServerConfigResource;
-        private Input<String> projectKey;
-        private @Nullable Input<PullRequestFilterArgs> pullRequest;
-        private @Nullable Input<PushFilterArgs> push;
-        private Input<String> repoSlug;
+        private Output<String> bitbucketServerConfigResource;
+        private Output<String> projectKey;
+        private @Nullable Output<PullRequestFilterArgs> pullRequest;
+        private @Nullable Output<PushFilterArgs> push;
+        private Output<String> repoSlug;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     	      this.repoSlug = defaults.repoSlug;
         }
 
-        public Builder bitbucketServerConfigResource(Input<String> bitbucketServerConfigResource) {
+        public Builder bitbucketServerConfigResource(Output<String> bitbucketServerConfigResource) {
             this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource);
             return this;
         }
 
         public Builder bitbucketServerConfigResource(String bitbucketServerConfigResource) {
-            this.bitbucketServerConfigResource = Input.of(Objects.requireNonNull(bitbucketServerConfigResource));
+            this.bitbucketServerConfigResource = Output.of(Objects.requireNonNull(bitbucketServerConfigResource));
             return this;
         }
 
-        public Builder projectKey(Input<String> projectKey) {
+        public Builder projectKey(Output<String> projectKey) {
             this.projectKey = Objects.requireNonNull(projectKey);
             return this;
         }
 
         public Builder projectKey(String projectKey) {
-            this.projectKey = Input.of(Objects.requireNonNull(projectKey));
+            this.projectKey = Output.of(Objects.requireNonNull(projectKey));
             return this;
         }
 
-        public Builder pullRequest(@Nullable Input<PullRequestFilterArgs> pullRequest) {
+        public Builder pullRequest(@Nullable Output<PullRequestFilterArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
 
         public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
-            this.pullRequest = Input.ofNullable(pullRequest);
+            this.pullRequest = Output.ofNullable(pullRequest);
             return this;
         }
 
-        public Builder push(@Nullable Input<PushFilterArgs> push) {
+        public Builder push(@Nullable Output<PushFilterArgs> push) {
             this.push = push;
             return this;
         }
 
         public Builder push(@Nullable PushFilterArgs push) {
-            this.push = Input.ofNullable(push);
+            this.push = Output.ofNullable(push);
             return this;
         }
 
-        public Builder repoSlug(Input<String> repoSlug) {
+        public Builder repoSlug(Output<String> repoSlug) {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
 
         public Builder repoSlug(String repoSlug) {
-            this.repoSlug = Input.of(Objects.requireNonNull(repoSlug));
+            this.repoSlug = Output.of(Objects.requireNonNull(repoSlug));
             return this;
         }
         public BitbucketServerTriggerConfigArgs build() {

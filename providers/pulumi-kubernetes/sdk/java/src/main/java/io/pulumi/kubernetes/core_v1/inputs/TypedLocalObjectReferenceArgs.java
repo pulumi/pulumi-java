@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiGroup")
-      private final @Nullable Input<String> apiGroup;
+      private final @Nullable Output<String> apiGroup;
 
-    public Input<String> getApiGroup() {
-        return this.apiGroup == null ? Input.empty() : this.apiGroup;
+    public Output<String> getApiGroup() {
+        return this.apiGroup == null ? Output.empty() : this.apiGroup;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -45,25 +45,25 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public TypedLocalObjectReferenceArgs(
-        @Nullable Input<String> apiGroup,
-        Input<String> kind,
-        Input<String> name) {
+        @Nullable Output<String> apiGroup,
+        Output<String> kind,
+        Output<String> name) {
         this.apiGroup = apiGroup;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private TypedLocalObjectReferenceArgs() {
-        this.apiGroup = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
+        this.apiGroup = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiGroup;
-        private Input<String> kind;
-        private Input<String> name;
+        private @Nullable Output<String> apiGroup;
+        private Output<String> kind;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder apiGroup(@Nullable Input<String> apiGroup) {
+        public Builder apiGroup(@Nullable Output<String> apiGroup) {
             this.apiGroup = apiGroup;
             return this;
         }
 
         public Builder apiGroup(@Nullable String apiGroup) {
-            this.apiGroup = Input.ofNullable(apiGroup);
+            this.apiGroup = Output.ofNullable(apiGroup);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public TypedLocalObjectReferenceArgs build() {

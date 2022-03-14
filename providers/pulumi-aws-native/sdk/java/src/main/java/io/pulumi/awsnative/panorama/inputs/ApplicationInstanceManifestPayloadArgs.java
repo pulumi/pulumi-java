@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.panorama.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ApplicationInstanceManifestPayloadArgs extends io.pulumi.reso
     public static final ApplicationInstanceManifestPayloadArgs Empty = new ApplicationInstanceManifestPayloadArgs();
 
     @InputImport(name="payloadData")
-      private final @Nullable Input<String> payloadData;
+      private final @Nullable Output<String> payloadData;
 
-    public Input<String> getPayloadData() {
-        return this.payloadData == null ? Input.empty() : this.payloadData;
+    public Output<String> getPayloadData() {
+        return this.payloadData == null ? Output.empty() : this.payloadData;
     }
 
-    public ApplicationInstanceManifestPayloadArgs(@Nullable Input<String> payloadData) {
+    public ApplicationInstanceManifestPayloadArgs(@Nullable Output<String> payloadData) {
         this.payloadData = payloadData;
     }
 
     private ApplicationInstanceManifestPayloadArgs() {
-        this.payloadData = Input.empty();
+        this.payloadData = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ApplicationInstanceManifestPayloadArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> payloadData;
+        private @Nullable Output<String> payloadData;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ApplicationInstanceManifestPayloadArgs extends io.pulumi.reso
     	      this.payloadData = defaults.payloadData;
         }
 
-        public Builder payloadData(@Nullable Input<String> payloadData) {
+        public Builder payloadData(@Nullable Output<String> payloadData) {
             this.payloadData = payloadData;
             return this;
         }
 
         public Builder payloadData(@Nullable String payloadData) {
-            this.payloadData = Input.ofNullable(payloadData);
+            this.payloadData = Output.ofNullable(payloadData);
             return this;
         }
         public ApplicationInstanceManifestPayloadArgs build() {

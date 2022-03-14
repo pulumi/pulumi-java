@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.aws.transfer.inputs.ServerEndpointDetailsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-      private final @Nullable Input<String> directoryId;
+      private final @Nullable Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
-        return this.directoryId == null ? Input.empty() : this.directoryId;
+    public Output<String> getDirectoryId() {
+        return this.directoryId == null ? Output.empty() : this.directoryId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointDetails")
-      private final @Nullable Input<ServerEndpointDetailsGetArgs> endpointDetails;
+      private final @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails;
 
-    public Input<ServerEndpointDetailsGetArgs> getEndpointDetails() {
-        return this.endpointDetails == null ? Input.empty() : this.endpointDetails;
+    public Output<ServerEndpointDetailsGetArgs> getEndpointDetails() {
+        return this.endpointDetails == null ? Output.empty() : this.endpointDetails;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType")
-      private final @Nullable Input<String> endpointType;
+      private final @Nullable Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
-        return this.endpointType == null ? Input.empty() : this.endpointType;
+    public Output<String> getEndpointType() {
+        return this.endpointType == null ? Output.empty() : this.endpointType;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="function")
-      private final @Nullable Input<String> function;
+      private final @Nullable Output<String> function;
 
-    public Input<String> getFunction() {
-        return this.function == null ? Input.empty() : this.function;
+    public Output<String> getFunction() {
+        return this.function == null ? Output.empty() : this.function;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostKey")
-      private final @Nullable Input<String> hostKey;
+      private final @Nullable Output<String> hostKey;
 
-    public Input<String> getHostKey() {
-        return this.hostKey == null ? Input.empty() : this.hostKey;
+    public Output<String> getHostKey() {
+        return this.hostKey == null ? Output.empty() : this.hostKey;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostKeyFingerprint")
-      private final @Nullable Input<String> hostKeyFingerprint;
+      private final @Nullable Output<String> hostKeyFingerprint;
 
-    public Input<String> getHostKeyFingerprint() {
-        return this.hostKeyFingerprint == null ? Input.empty() : this.hostKeyFingerprint;
+    public Output<String> getHostKeyFingerprint() {
+        return this.hostKeyFingerprint == null ? Output.empty() : this.hostKeyFingerprint;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityProviderType")
-      private final @Nullable Input<String> identityProviderType;
+      private final @Nullable Output<String> identityProviderType;
 
-    public Input<String> getIdentityProviderType() {
-        return this.identityProviderType == null ? Input.empty() : this.identityProviderType;
+    public Output<String> getIdentityProviderType() {
+        return this.identityProviderType == null ? Output.empty() : this.identityProviderType;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invocationRole")
-      private final @Nullable Input<String> invocationRole;
+      private final @Nullable Output<String> invocationRole;
 
-    public Input<String> getInvocationRole() {
-        return this.invocationRole == null ? Input.empty() : this.invocationRole;
+    public Output<String> getInvocationRole() {
+        return this.invocationRole == null ? Output.empty() : this.invocationRole;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingRole")
-      private final @Nullable Input<String> loggingRole;
+      private final @Nullable Output<String> loggingRole;
 
-    public Input<String> getLoggingRole() {
-        return this.loggingRole == null ? Input.empty() : this.loggingRole;
+    public Output<String> getLoggingRole() {
+        return this.loggingRole == null ? Output.empty() : this.loggingRole;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocols")
-      private final @Nullable Input<List<String>> protocols;
+      private final @Nullable Output<List<String>> protocols;
 
-    public Input<List<String>> getProtocols() {
-        return this.protocols == null ? Input.empty() : this.protocols;
+    public Output<List<String>> getProtocols() {
+        return this.protocols == null ? Output.empty() : this.protocols;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPolicyName")
-      private final @Nullable Input<String> securityPolicyName;
+      private final @Nullable Output<String> securityPolicyName;
 
-    public Input<String> getSecurityPolicyName() {
-        return this.securityPolicyName == null ? Input.empty() : this.securityPolicyName;
+    public Output<String> getSecurityPolicyName() {
+        return this.securityPolicyName == null ? Output.empty() : this.securityPolicyName;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -224,32 +224,32 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public ServerState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> certificate,
-        @Nullable Input<String> directoryId,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<ServerEndpointDetailsGetArgs> endpointDetails,
-        @Nullable Input<String> endpointType,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<String> function,
-        @Nullable Input<String> hostKey,
-        @Nullable Input<String> hostKeyFingerprint,
-        @Nullable Input<String> identityProviderType,
-        @Nullable Input<String> invocationRole,
-        @Nullable Input<String> loggingRole,
-        @Nullable Input<List<String>> protocols,
-        @Nullable Input<String> securityPolicyName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> certificate,
+        @Nullable Output<String> directoryId,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails,
+        @Nullable Output<String> endpointType,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<String> function,
+        @Nullable Output<String> hostKey,
+        @Nullable Output<String> hostKeyFingerprint,
+        @Nullable Output<String> identityProviderType,
+        @Nullable Output<String> invocationRole,
+        @Nullable Output<String> loggingRole,
+        @Nullable Output<List<String>> protocols,
+        @Nullable Output<String> securityPolicyName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> url) {
         this.arn = arn;
         this.certificate = certificate;
         this.directoryId = directoryId;
@@ -272,25 +272,25 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerState() {
-        this.arn = Input.empty();
-        this.certificate = Input.empty();
-        this.directoryId = Input.empty();
-        this.domain = Input.empty();
-        this.endpoint = Input.empty();
-        this.endpointDetails = Input.empty();
-        this.endpointType = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.function = Input.empty();
-        this.hostKey = Input.empty();
-        this.hostKeyFingerprint = Input.empty();
-        this.identityProviderType = Input.empty();
-        this.invocationRole = Input.empty();
-        this.loggingRole = Input.empty();
-        this.protocols = Input.empty();
-        this.securityPolicyName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.url = Input.empty();
+        this.arn = Output.empty();
+        this.certificate = Output.empty();
+        this.directoryId = Output.empty();
+        this.domain = Output.empty();
+        this.endpoint = Output.empty();
+        this.endpointDetails = Output.empty();
+        this.endpointType = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.function = Output.empty();
+        this.hostKey = Output.empty();
+        this.hostKeyFingerprint = Output.empty();
+        this.identityProviderType = Output.empty();
+        this.invocationRole = Output.empty();
+        this.loggingRole = Output.empty();
+        this.protocols = Output.empty();
+        this.securityPolicyName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -302,25 +302,25 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<String> directoryId;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<ServerEndpointDetailsGetArgs> endpointDetails;
-        private @Nullable Input<String> endpointType;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<String> function;
-        private @Nullable Input<String> hostKey;
-        private @Nullable Input<String> hostKeyFingerprint;
-        private @Nullable Input<String> identityProviderType;
-        private @Nullable Input<String> invocationRole;
-        private @Nullable Input<String> loggingRole;
-        private @Nullable Input<List<String>> protocols;
-        private @Nullable Input<String> securityPolicyName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<String> directoryId;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails;
+        private @Nullable Output<String> endpointType;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<String> function;
+        private @Nullable Output<String> hostKey;
+        private @Nullable Output<String> hostKeyFingerprint;
+        private @Nullable Output<String> identityProviderType;
+        private @Nullable Output<String> invocationRole;
+        private @Nullable Output<String> loggingRole;
+        private @Nullable Output<List<String>> protocols;
+        private @Nullable Output<String> securityPolicyName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -349,193 +349,193 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder directoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Input.ofNullable(directoryId);
+            this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder endpointDetails(@Nullable Input<ServerEndpointDetailsGetArgs> endpointDetails) {
+        public Builder endpointDetails(@Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails) {
             this.endpointDetails = endpointDetails;
             return this;
         }
 
         public Builder endpointDetails(@Nullable ServerEndpointDetailsGetArgs endpointDetails) {
-            this.endpointDetails = Input.ofNullable(endpointDetails);
+            this.endpointDetails = Output.ofNullable(endpointDetails);
             return this;
         }
 
-        public Builder endpointType(@Nullable Input<String> endpointType) {
+        public Builder endpointType(@Nullable Output<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
         public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = Input.ofNullable(endpointType);
+            this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder function(@Nullable Input<String> function) {
+        public Builder function(@Nullable Output<String> function) {
             this.function = function;
             return this;
         }
 
         public Builder function(@Nullable String function) {
-            this.function = Input.ofNullable(function);
+            this.function = Output.ofNullable(function);
             return this;
         }
 
-        public Builder hostKey(@Nullable Input<String> hostKey) {
+        public Builder hostKey(@Nullable Output<String> hostKey) {
             this.hostKey = hostKey;
             return this;
         }
 
         public Builder hostKey(@Nullable String hostKey) {
-            this.hostKey = Input.ofNullable(hostKey);
+            this.hostKey = Output.ofNullable(hostKey);
             return this;
         }
 
-        public Builder hostKeyFingerprint(@Nullable Input<String> hostKeyFingerprint) {
+        public Builder hostKeyFingerprint(@Nullable Output<String> hostKeyFingerprint) {
             this.hostKeyFingerprint = hostKeyFingerprint;
             return this;
         }
 
         public Builder hostKeyFingerprint(@Nullable String hostKeyFingerprint) {
-            this.hostKeyFingerprint = Input.ofNullable(hostKeyFingerprint);
+            this.hostKeyFingerprint = Output.ofNullable(hostKeyFingerprint);
             return this;
         }
 
-        public Builder identityProviderType(@Nullable Input<String> identityProviderType) {
+        public Builder identityProviderType(@Nullable Output<String> identityProviderType) {
             this.identityProviderType = identityProviderType;
             return this;
         }
 
         public Builder identityProviderType(@Nullable String identityProviderType) {
-            this.identityProviderType = Input.ofNullable(identityProviderType);
+            this.identityProviderType = Output.ofNullable(identityProviderType);
             return this;
         }
 
-        public Builder invocationRole(@Nullable Input<String> invocationRole) {
+        public Builder invocationRole(@Nullable Output<String> invocationRole) {
             this.invocationRole = invocationRole;
             return this;
         }
 
         public Builder invocationRole(@Nullable String invocationRole) {
-            this.invocationRole = Input.ofNullable(invocationRole);
+            this.invocationRole = Output.ofNullable(invocationRole);
             return this;
         }
 
-        public Builder loggingRole(@Nullable Input<String> loggingRole) {
+        public Builder loggingRole(@Nullable Output<String> loggingRole) {
             this.loggingRole = loggingRole;
             return this;
         }
 
         public Builder loggingRole(@Nullable String loggingRole) {
-            this.loggingRole = Input.ofNullable(loggingRole);
+            this.loggingRole = Output.ofNullable(loggingRole);
             return this;
         }
 
-        public Builder protocols(@Nullable Input<List<String>> protocols) {
+        public Builder protocols(@Nullable Output<List<String>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
         public Builder protocols(@Nullable List<String> protocols) {
-            this.protocols = Input.ofNullable(protocols);
+            this.protocols = Output.ofNullable(protocols);
             return this;
         }
 
-        public Builder securityPolicyName(@Nullable Input<String> securityPolicyName) {
+        public Builder securityPolicyName(@Nullable Output<String> securityPolicyName) {
             this.securityPolicyName = securityPolicyName;
             return this;
         }
 
         public Builder securityPolicyName(@Nullable String securityPolicyName) {
-            this.securityPolicyName = Input.ofNullable(securityPolicyName);
+            this.securityPolicyName = Output.ofNullable(securityPolicyName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public ServerState build() {

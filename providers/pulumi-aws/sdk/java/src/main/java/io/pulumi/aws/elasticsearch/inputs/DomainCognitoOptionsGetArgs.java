@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="identityPoolId", required=true)
-      private final Input<String> identityPoolId;
+      private final Output<String> identityPoolId;
 
-    public Input<String> getIdentityPoolId() {
+    public Output<String> getIdentityPoolId() {
         return this.identityPoolId;
     }
 
@@ -42,9 +42,9 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -53,17 +53,17 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userPoolId", required=true)
-      private final Input<String> userPoolId;
+      private final Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
+    public Output<String> getUserPoolId() {
         return this.userPoolId;
     }
 
     public DomainCognitoOptionsGetArgs(
-        @Nullable Input<Boolean> enabled,
-        Input<String> identityPoolId,
-        Input<String> roleArn,
-        Input<String> userPoolId) {
+        @Nullable Output<Boolean> enabled,
+        Output<String> identityPoolId,
+        Output<String> roleArn,
+        Output<String> userPoolId) {
         this.enabled = enabled;
         this.identityPoolId = Objects.requireNonNull(identityPoolId, "expected parameter 'identityPoolId' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
@@ -71,10 +71,10 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     }
 
     private DomainCognitoOptionsGetArgs() {
-        this.enabled = Input.empty();
-        this.identityPoolId = Input.empty();
-        this.roleArn = Input.empty();
-        this.userPoolId = Input.empty();
+        this.enabled = Output.empty();
+        this.identityPoolId = Output.empty();
+        this.roleArn = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> identityPoolId;
-        private Input<String> roleArn;
-        private Input<String> userPoolId;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> identityPoolId;
+        private Output<String> roleArn;
+        private Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder identityPoolId(Input<String> identityPoolId) {
+        public Builder identityPoolId(Output<String> identityPoolId) {
             this.identityPoolId = Objects.requireNonNull(identityPoolId);
             return this;
         }
 
         public Builder identityPoolId(String identityPoolId) {
-            this.identityPoolId = Input.of(Objects.requireNonNull(identityPoolId));
+            this.identityPoolId = Output.of(Objects.requireNonNull(identityPoolId));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder userPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
+            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
         }
         public DomainCognitoOptionsGetArgs build() {

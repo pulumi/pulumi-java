@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,18 +21,18 @@ public final class ClusterNodeConfigLinuxNodeConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sysctls", required=true)
-      private final Input<Map<String,String>> sysctls;
+      private final Output<Map<String,String>> sysctls;
 
-    public Input<Map<String,String>> getSysctls() {
+    public Output<Map<String,String>> getSysctls() {
         return this.sysctls;
     }
 
-    public ClusterNodeConfigLinuxNodeConfigArgs(Input<Map<String,String>> sysctls) {
+    public ClusterNodeConfigLinuxNodeConfigArgs(Output<Map<String,String>> sysctls) {
         this.sysctls = Objects.requireNonNull(sysctls, "expected parameter 'sysctls' to be non-null");
     }
 
     private ClusterNodeConfigLinuxNodeConfigArgs() {
-        this.sysctls = Input.empty();
+        this.sysctls = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class ClusterNodeConfigLinuxNodeConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> sysctls;
+        private Output<Map<String,String>> sysctls;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class ClusterNodeConfigLinuxNodeConfigArgs extends io.pulumi.resour
     	      this.sysctls = defaults.sysctls;
         }
 
-        public Builder sysctls(Input<Map<String,String>> sysctls) {
+        public Builder sysctls(Output<Map<String,String>> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
 
         public Builder sysctls(Map<String,String> sysctls) {
-            this.sysctls = Input.of(Objects.requireNonNull(sysctls));
+            this.sysctls = Output.of(Objects.requireNonNull(sysctls));
             return this;
         }
         public ClusterNodeConfigLinuxNodeConfigArgs build() {

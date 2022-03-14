@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
      * 
      */
     @InputImport(name="maxValue")
-      private final @Nullable Input<Double> maxValue;
+      private final @Nullable Output<Double> maxValue;
 
-    public Input<Double> getMaxValue() {
-        return this.maxValue == null ? Input.empty() : this.maxValue;
+    public Output<Double> getMaxValue() {
+        return this.maxValue == null ? Output.empty() : this.maxValue;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
      * 
      */
     @InputImport(name="minValue")
-      private final @Nullable Input<Double> minValue;
+      private final @Nullable Output<Double> minValue;
 
-    public Input<Double> getMinValue() {
-        return this.minValue == null ? Input.empty() : this.minValue;
+    public Output<Double> getMinValue() {
+        return this.minValue == null ? Output.empty() : this.minValue;
     }
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(
-        @Nullable Input<Double> maxValue,
-        @Nullable Input<Double> minValue) {
+        @Nullable Output<Double> maxValue,
+        @Nullable Output<Double> minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }
 
     private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs() {
-        this.maxValue = Input.empty();
-        this.minValue = Input.empty();
+        this.maxValue = Output.empty();
+        this.minValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> maxValue;
-        private @Nullable Input<Double> minValue;
+        private @Nullable Output<Double> maxValue;
+        private @Nullable Output<Double> minValue;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
     	      this.minValue = defaults.minValue;
         }
 
-        public Builder maxValue(@Nullable Input<Double> maxValue) {
+        public Builder maxValue(@Nullable Output<Double> maxValue) {
             this.maxValue = maxValue;
             return this;
         }
 
         public Builder maxValue(@Nullable Double maxValue) {
-            this.maxValue = Input.ofNullable(maxValue);
+            this.maxValue = Output.ofNullable(maxValue);
             return this;
         }
 
-        public Builder minValue(@Nullable Input<Double> minValue) {
+        public Builder minValue(@Nullable Output<Double> minValue) {
             this.minValue = minValue;
             return this;
         }
 
         public Builder minValue(@Nullable Double minValue) {
-            this.minValue = Input.ofNullable(minValue);
+            this.minValue = Output.ofNullable(minValue);
             return this;
         }
         public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs build() {

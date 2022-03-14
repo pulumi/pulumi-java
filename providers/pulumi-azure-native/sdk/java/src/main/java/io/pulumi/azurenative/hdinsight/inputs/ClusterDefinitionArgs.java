@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blueprint")
-      private final @Nullable Input<String> blueprint;
+      private final @Nullable Output<String> blueprint;
 
-    public Input<String> getBlueprint() {
-        return this.blueprint == null ? Input.empty() : this.blueprint;
+    public Output<String> getBlueprint() {
+        return this.blueprint == null ? Output.empty() : this.blueprint;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="componentVersion")
-      private final @Nullable Input<Map<String,String>> componentVersion;
+      private final @Nullable Output<Map<String,String>> componentVersion;
 
-    public Input<Map<String,String>> getComponentVersion() {
-        return this.componentVersion == null ? Input.empty() : this.componentVersion;
+    public Output<Map<String,String>> getComponentVersion() {
+        return this.componentVersion == null ? Output.empty() : this.componentVersion;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configurations")
-      private final @Nullable Input<Object> configurations;
+      private final @Nullable Output<Object> configurations;
 
-    public Input<Object> getConfigurations() {
-        return this.configurations == null ? Input.empty() : this.configurations;
+    public Output<Object> getConfigurations() {
+        return this.configurations == null ? Output.empty() : this.configurations;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public ClusterDefinitionArgs(
-        @Nullable Input<String> blueprint,
-        @Nullable Input<Map<String,String>> componentVersion,
-        @Nullable Input<Object> configurations,
-        @Nullable Input<String> kind) {
+        @Nullable Output<String> blueprint,
+        @Nullable Output<Map<String,String>> componentVersion,
+        @Nullable Output<Object> configurations,
+        @Nullable Output<String> kind) {
         this.blueprint = blueprint;
         this.componentVersion = componentVersion;
         this.configurations = configurations;
@@ -76,10 +76,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ClusterDefinitionArgs() {
-        this.blueprint = Input.empty();
-        this.componentVersion = Input.empty();
-        this.configurations = Input.empty();
-        this.kind = Input.empty();
+        this.blueprint = Output.empty();
+        this.componentVersion = Output.empty();
+        this.configurations = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> blueprint;
-        private @Nullable Input<Map<String,String>> componentVersion;
-        private @Nullable Input<Object> configurations;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<String> blueprint;
+        private @Nullable Output<Map<String,String>> componentVersion;
+        private @Nullable Output<Object> configurations;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     	      this.kind = defaults.kind;
         }
 
-        public Builder blueprint(@Nullable Input<String> blueprint) {
+        public Builder blueprint(@Nullable Output<String> blueprint) {
             this.blueprint = blueprint;
             return this;
         }
 
         public Builder blueprint(@Nullable String blueprint) {
-            this.blueprint = Input.ofNullable(blueprint);
+            this.blueprint = Output.ofNullable(blueprint);
             return this;
         }
 
-        public Builder componentVersion(@Nullable Input<Map<String,String>> componentVersion) {
+        public Builder componentVersion(@Nullable Output<Map<String,String>> componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
         public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
-            this.componentVersion = Input.ofNullable(componentVersion);
+            this.componentVersion = Output.ofNullable(componentVersion);
             return this;
         }
 
-        public Builder configurations(@Nullable Input<Object> configurations) {
+        public Builder configurations(@Nullable Output<Object> configurations) {
             this.configurations = configurations;
             return this;
         }
 
         public Builder configurations(@Nullable Object configurations) {
-            this.configurations = Input.ofNullable(configurations);
+            this.configurations = Output.ofNullable(configurations);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public ClusterDefinitionArgs build() {

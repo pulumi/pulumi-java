@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.artifactregistry;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -187,14 +186,14 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RepositoryIamMember(String name, RepositoryIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:artifactregistry/repositoryIamMember:RepositoryIamMember", name, args == null ? RepositoryIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:artifactregistry/repositoryIamMember:RepositoryIamMember", name, args == null ? RepositoryIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RepositoryIamMember(String name, Input<String> id, @Nullable RepositoryIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RepositoryIamMember(String name, Output<String> id, @Nullable RepositoryIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:artifactregistry/repositoryIamMember:RepositoryIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -210,7 +209,7 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RepositoryIamMember get(String name, Input<String> id, @Nullable RepositoryIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RepositoryIamMember get(String name, Output<String> id, @Nullable RepositoryIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RepositoryIamMember(name, id, state, options);
     }
 }

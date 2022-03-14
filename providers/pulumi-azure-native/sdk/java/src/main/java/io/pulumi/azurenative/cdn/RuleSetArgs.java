@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -30,9 +30,9 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,25 +41,25 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSetName")
-      private final @Nullable Input<String> ruleSetName;
+      private final @Nullable Output<String> ruleSetName;
 
-    public Input<String> getRuleSetName() {
-        return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
+    public Output<String> getRuleSetName() {
+        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
     }
 
     public RuleSetArgs(
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleSetName) {
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleSetName) {
         this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.ruleSetName = ruleSetName;
     }
 
     private RuleSetArgs() {
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleSetName = Input.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleSetName;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleSetName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleSetName(@Nullable Input<String> ruleSetName) {
+        public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
 
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Input.ofNullable(ruleSetName);
+            this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
         }
         public RuleSetArgs build() {

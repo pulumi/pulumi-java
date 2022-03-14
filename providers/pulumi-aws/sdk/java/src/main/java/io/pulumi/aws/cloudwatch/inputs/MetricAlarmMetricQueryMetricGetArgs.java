@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Input<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<Map<String,String>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -45,10 +45,10 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="period", required=true)
-      private final Input<Integer> period;
+      private final Output<Integer> period;
 
-    public Input<Integer> getPeriod() {
+    public Output<Integer> getPeriod() {
         return this.period;
     }
 
@@ -68,9 +68,9 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="stat", required=true)
-      private final Input<String> stat;
+      private final Output<String> stat;
 
-    public Input<String> getStat() {
+    public Output<String> getStat() {
         return this.stat;
     }
 
@@ -79,19 +79,19 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     public MetricAlarmMetricQueryMetricGetArgs(
-        @Nullable Input<Map<String,String>> dimensions,
-        Input<String> metricName,
-        @Nullable Input<String> namespace,
-        Input<Integer> period,
-        Input<String> stat,
-        @Nullable Input<String> unit) {
+        @Nullable Output<Map<String,String>> dimensions,
+        Output<String> metricName,
+        @Nullable Output<String> namespace,
+        Output<Integer> period,
+        Output<String> stat,
+        @Nullable Output<String> unit) {
         this.dimensions = dimensions;
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
         this.namespace = namespace;
@@ -101,12 +101,12 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     }
 
     private MetricAlarmMetricQueryMetricGetArgs() {
-        this.dimensions = Input.empty();
-        this.metricName = Input.empty();
-        this.namespace = Input.empty();
-        this.period = Input.empty();
-        this.stat = Input.empty();
-        this.unit = Input.empty();
+        this.dimensions = Output.empty();
+        this.metricName = Output.empty();
+        this.namespace = Output.empty();
+        this.period = Output.empty();
+        this.stat = Output.empty();
+        this.unit = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> dimensions;
-        private Input<String> metricName;
-        private @Nullable Input<String> namespace;
-        private Input<Integer> period;
-        private Input<String> stat;
-        private @Nullable Input<String> unit;
+        private @Nullable Output<Map<String,String>> dimensions;
+        private Output<String> metricName;
+        private @Nullable Output<String> namespace;
+        private Output<Integer> period;
+        private Output<String> stat;
+        private @Nullable Output<String> unit;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     	      this.unit = defaults.unit;
         }
 
-        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder period(Input<Integer> period) {
+        public Builder period(Output<Integer> period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
 
         public Builder period(Integer period) {
-            this.period = Input.of(Objects.requireNonNull(period));
+            this.period = Output.of(Objects.requireNonNull(period));
             return this;
         }
 
-        public Builder stat(Input<String> stat) {
+        public Builder stat(Output<String> stat) {
             this.stat = Objects.requireNonNull(stat);
             return this;
         }
 
         public Builder stat(String stat) {
-            this.stat = Input.of(Objects.requireNonNull(stat));
+            this.stat = Output.of(Objects.requireNonNull(stat));
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
         public MetricAlarmMetricQueryMetricGetArgs build() {

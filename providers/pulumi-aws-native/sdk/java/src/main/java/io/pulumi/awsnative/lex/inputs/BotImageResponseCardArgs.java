@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotButtonArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="buttons")
-      private final @Nullable Input<List<BotButtonArgs>> buttons;
+      private final @Nullable Output<List<BotButtonArgs>> buttons;
 
-    public Input<List<BotButtonArgs>> getButtons() {
-        return this.buttons == null ? Input.empty() : this.buttons;
+    public Output<List<BotButtonArgs>> getButtons() {
+        return this.buttons == null ? Output.empty() : this.buttons;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="imageUrl")
-      private final @Nullable Input<String> imageUrl;
+      private final @Nullable Output<String> imageUrl;
 
-    public Input<String> getImageUrl() {
-        return this.imageUrl == null ? Input.empty() : this.imageUrl;
+    public Output<String> getImageUrl() {
+        return this.imageUrl == null ? Output.empty() : this.imageUrl;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subtitle")
-      private final @Nullable Input<String> subtitle;
+      private final @Nullable Output<String> subtitle;
 
-    public Input<String> getSubtitle() {
-        return this.subtitle == null ? Input.empty() : this.subtitle;
+    public Output<String> getSubtitle() {
+        return this.subtitle == null ? Output.empty() : this.subtitle;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public BotImageResponseCardArgs(
-        @Nullable Input<List<BotButtonArgs>> buttons,
-        @Nullable Input<String> imageUrl,
-        @Nullable Input<String> subtitle,
-        Input<String> title) {
+        @Nullable Output<List<BotButtonArgs>> buttons,
+        @Nullable Output<String> imageUrl,
+        @Nullable Output<String> subtitle,
+        Output<String> title) {
         this.buttons = buttons;
         this.imageUrl = imageUrl;
         this.subtitle = subtitle;
@@ -76,10 +76,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     }
 
     private BotImageResponseCardArgs() {
-        this.buttons = Input.empty();
-        this.imageUrl = Input.empty();
-        this.subtitle = Input.empty();
-        this.title = Input.empty();
+        this.buttons = Output.empty();
+        this.imageUrl = Output.empty();
+        this.subtitle = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BotButtonArgs>> buttons;
-        private @Nullable Input<String> imageUrl;
-        private @Nullable Input<String> subtitle;
-        private Input<String> title;
+        private @Nullable Output<List<BotButtonArgs>> buttons;
+        private @Nullable Output<String> imageUrl;
+        private @Nullable Output<String> subtitle;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     	      this.title = defaults.title;
         }
 
-        public Builder buttons(@Nullable Input<List<BotButtonArgs>> buttons) {
+        public Builder buttons(@Nullable Output<List<BotButtonArgs>> buttons) {
             this.buttons = buttons;
             return this;
         }
 
         public Builder buttons(@Nullable List<BotButtonArgs> buttons) {
-            this.buttons = Input.ofNullable(buttons);
+            this.buttons = Output.ofNullable(buttons);
             return this;
         }
 
-        public Builder imageUrl(@Nullable Input<String> imageUrl) {
+        public Builder imageUrl(@Nullable Output<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
         public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = Input.ofNullable(imageUrl);
+            this.imageUrl = Output.ofNullable(imageUrl);
             return this;
         }
 
-        public Builder subtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Input.ofNullable(subtitle);
+            this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public BotImageResponseCardArgs build() {

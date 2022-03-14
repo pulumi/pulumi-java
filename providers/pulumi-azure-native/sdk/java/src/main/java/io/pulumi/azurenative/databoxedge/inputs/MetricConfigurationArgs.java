@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricCounterSetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="counterSets", required=true)
-      private final Input<List<MetricCounterSetArgs>> counterSets;
+      private final Output<List<MetricCounterSetArgs>> counterSets;
 
-    public Input<List<MetricCounterSetArgs>> getCounterSets() {
+    public Output<List<MetricCounterSetArgs>> getCounterSets() {
         return this.counterSets;
     }
 
@@ -36,10 +36,10 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mdmAccount")
-      private final @Nullable Input<String> mdmAccount;
+      private final @Nullable Output<String> mdmAccount;
 
-    public Input<String> getMdmAccount() {
-        return this.mdmAccount == null ? Input.empty() : this.mdmAccount;
+    public Output<String> getMdmAccount() {
+        return this.mdmAccount == null ? Output.empty() : this.mdmAccount;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metricNameSpace")
-      private final @Nullable Input<String> metricNameSpace;
+      private final @Nullable Output<String> metricNameSpace;
 
-    public Input<String> getMetricNameSpace() {
-        return this.metricNameSpace == null ? Input.empty() : this.metricNameSpace;
+    public Output<String> getMetricNameSpace() {
+        return this.metricNameSpace == null ? Output.empty() : this.metricNameSpace;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public MetricConfigurationArgs(
-        Input<List<MetricCounterSetArgs>> counterSets,
-        @Nullable Input<String> mdmAccount,
-        @Nullable Input<String> metricNameSpace,
-        Input<String> resourceId) {
+        Output<List<MetricCounterSetArgs>> counterSets,
+        @Nullable Output<String> mdmAccount,
+        @Nullable Output<String> metricNameSpace,
+        Output<String> resourceId) {
         this.counterSets = Objects.requireNonNull(counterSets, "expected parameter 'counterSets' to be non-null");
         this.mdmAccount = mdmAccount;
         this.metricNameSpace = metricNameSpace;
@@ -76,10 +76,10 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private MetricConfigurationArgs() {
-        this.counterSets = Input.empty();
-        this.mdmAccount = Input.empty();
-        this.metricNameSpace = Input.empty();
-        this.resourceId = Input.empty();
+        this.counterSets = Output.empty();
+        this.mdmAccount = Output.empty();
+        this.metricNameSpace = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<List<MetricCounterSetArgs>> counterSets;
-        private @Nullable Input<String> mdmAccount;
-        private @Nullable Input<String> metricNameSpace;
-        private Input<String> resourceId;
+        private Output<List<MetricCounterSetArgs>> counterSets;
+        private @Nullable Output<String> mdmAccount;
+        private @Nullable Output<String> metricNameSpace;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder counterSets(Input<List<MetricCounterSetArgs>> counterSets) {
+        public Builder counterSets(Output<List<MetricCounterSetArgs>> counterSets) {
             this.counterSets = Objects.requireNonNull(counterSets);
             return this;
         }
 
         public Builder counterSets(List<MetricCounterSetArgs> counterSets) {
-            this.counterSets = Input.of(Objects.requireNonNull(counterSets));
+            this.counterSets = Output.of(Objects.requireNonNull(counterSets));
             return this;
         }
 
-        public Builder mdmAccount(@Nullable Input<String> mdmAccount) {
+        public Builder mdmAccount(@Nullable Output<String> mdmAccount) {
             this.mdmAccount = mdmAccount;
             return this;
         }
 
         public Builder mdmAccount(@Nullable String mdmAccount) {
-            this.mdmAccount = Input.ofNullable(mdmAccount);
+            this.mdmAccount = Output.ofNullable(mdmAccount);
             return this;
         }
 
-        public Builder metricNameSpace(@Nullable Input<String> metricNameSpace) {
+        public Builder metricNameSpace(@Nullable Output<String> metricNameSpace) {
             this.metricNameSpace = metricNameSpace;
             return this;
         }
 
         public Builder metricNameSpace(@Nullable String metricNameSpace) {
-            this.metricNameSpace = Input.ofNullable(metricNameSpace);
+            this.metricNameSpace = Output.ofNullable(metricNameSpace);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public MetricConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -31,9 +31,9 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -43,10 +43,10 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
@@ -65,18 +65,18 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="versionId", required=true)
-      private final Input<String> versionId;
+      private final Output<String> versionId;
 
-    public Input<String> getVersionId() {
+    public Output<String> getVersionId() {
         return this.versionId;
     }
 
     public AppEngineVersionIamPolicyArgs(
-        Input<String> appId,
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        Input<String> service,
-        Input<String> versionId) {
+        Output<String> appId,
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        Output<String> service,
+        Output<String> versionId) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
@@ -85,11 +85,11 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
     }
 
     private AppEngineVersionIamPolicyArgs() {
-        this.appId = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
-        this.versionId = Input.empty();
+        this.appId = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
+        this.versionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private Input<String> service;
-        private Input<String> versionId;
+        private Output<String> appId;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private Output<String> service;
+        private Output<String> versionId;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AppEngineVersionIamPolicyArgs extends io.pulumi.resources.Res
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
 
-        public Builder versionId(Input<String> versionId) {
+        public Builder versionId(Output<String> versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
 
         public Builder versionId(String versionId) {
-            this.versionId = Input.of(Objects.requireNonNull(versionId));
+            this.versionId = Output.of(Objects.requireNonNull(versionId));
             return this;
         }
         public AppEngineVersionIamPolicyArgs build() {

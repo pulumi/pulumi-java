@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkingMode")
-      private final @Nullable Input<String> linkingMode;
+      private final @Nullable Output<String> linkingMode;
 
-    public Input<String> getLinkingMode() {
-        return this.linkingMode == null ? Input.empty() : this.linkingMode;
+    public Output<String> getLinkingMode() {
+        return this.linkingMode == null ? Output.empty() : this.linkingMode;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="specifiedRegions")
-      private final @Nullable Input<List<String>> specifiedRegions;
+      private final @Nullable Output<List<String>> specifiedRegions;
 
-    public Input<List<String>> getSpecifiedRegions() {
-        return this.specifiedRegions == null ? Input.empty() : this.specifiedRegions;
+    public Output<List<String>> getSpecifiedRegions() {
+        return this.specifiedRegions == null ? Output.empty() : this.specifiedRegions;
     }
 
     public FindingAggregatorState(
-        @Nullable Input<String> linkingMode,
-        @Nullable Input<List<String>> specifiedRegions) {
+        @Nullable Output<String> linkingMode,
+        @Nullable Output<List<String>> specifiedRegions) {
         this.linkingMode = linkingMode;
         this.specifiedRegions = specifiedRegions;
     }
 
     private FindingAggregatorState() {
-        this.linkingMode = Input.empty();
-        this.specifiedRegions = Input.empty();
+        this.linkingMode = Output.empty();
+        this.specifiedRegions = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> linkingMode;
-        private @Nullable Input<List<String>> specifiedRegions;
+        private @Nullable Output<String> linkingMode;
+        private @Nullable Output<List<String>> specifiedRegions;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
     	      this.specifiedRegions = defaults.specifiedRegions;
         }
 
-        public Builder linkingMode(@Nullable Input<String> linkingMode) {
+        public Builder linkingMode(@Nullable Output<String> linkingMode) {
             this.linkingMode = linkingMode;
             return this;
         }
 
         public Builder linkingMode(@Nullable String linkingMode) {
-            this.linkingMode = Input.ofNullable(linkingMode);
+            this.linkingMode = Output.ofNullable(linkingMode);
             return this;
         }
 
-        public Builder specifiedRegions(@Nullable Input<List<String>> specifiedRegions) {
+        public Builder specifiedRegions(@Nullable Output<List<String>> specifiedRegions) {
             this.specifiedRegions = specifiedRegions;
             return this;
         }
 
         public Builder specifiedRegions(@Nullable List<String> specifiedRegions) {
-            this.specifiedRegions = Input.ofNullable(specifiedRegions);
+            this.specifiedRegions = Output.ofNullable(specifiedRegions);
             return this;
         }
         public FindingAggregatorState build() {

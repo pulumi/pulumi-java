@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishMibPerSec")
-      private final @Nullable Input<Integer> publishMibPerSec;
+      private final @Nullable Output<Integer> publishMibPerSec;
 
-    public Input<Integer> getPublishMibPerSec() {
-        return this.publishMibPerSec == null ? Input.empty() : this.publishMibPerSec;
+    public Output<Integer> getPublishMibPerSec() {
+        return this.publishMibPerSec == null ? Output.empty() : this.publishMibPerSec;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscribeMibPerSec")
-      private final @Nullable Input<Integer> subscribeMibPerSec;
+      private final @Nullable Output<Integer> subscribeMibPerSec;
 
-    public Input<Integer> getSubscribeMibPerSec() {
-        return this.subscribeMibPerSec == null ? Input.empty() : this.subscribeMibPerSec;
+    public Output<Integer> getSubscribeMibPerSec() {
+        return this.subscribeMibPerSec == null ? Output.empty() : this.subscribeMibPerSec;
     }
 
     public CapacityArgs(
-        @Nullable Input<Integer> publishMibPerSec,
-        @Nullable Input<Integer> subscribeMibPerSec) {
+        @Nullable Output<Integer> publishMibPerSec,
+        @Nullable Output<Integer> subscribeMibPerSec) {
         this.publishMibPerSec = publishMibPerSec;
         this.subscribeMibPerSec = subscribeMibPerSec;
     }
 
     private CapacityArgs() {
-        this.publishMibPerSec = Input.empty();
-        this.subscribeMibPerSec = Input.empty();
+        this.publishMibPerSec = Output.empty();
+        this.subscribeMibPerSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> publishMibPerSec;
-        private @Nullable Input<Integer> subscribeMibPerSec;
+        private @Nullable Output<Integer> publishMibPerSec;
+        private @Nullable Output<Integer> subscribeMibPerSec;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscribeMibPerSec = defaults.subscribeMibPerSec;
         }
 
-        public Builder publishMibPerSec(@Nullable Input<Integer> publishMibPerSec) {
+        public Builder publishMibPerSec(@Nullable Output<Integer> publishMibPerSec) {
             this.publishMibPerSec = publishMibPerSec;
             return this;
         }
 
         public Builder publishMibPerSec(@Nullable Integer publishMibPerSec) {
-            this.publishMibPerSec = Input.ofNullable(publishMibPerSec);
+            this.publishMibPerSec = Output.ofNullable(publishMibPerSec);
             return this;
         }
 
-        public Builder subscribeMibPerSec(@Nullable Input<Integer> subscribeMibPerSec) {
+        public Builder subscribeMibPerSec(@Nullable Output<Integer> subscribeMibPerSec) {
             this.subscribeMibPerSec = subscribeMibPerSec;
             return this;
         }
 
         public Builder subscribeMibPerSec(@Nullable Integer subscribeMibPerSec) {
-            this.subscribeMibPerSec = Input.ofNullable(subscribeMibPerSec);
+            this.subscribeMibPerSec = Output.ofNullable(subscribeMibPerSec);
             return this;
         }
         public CapacityArgs build() {

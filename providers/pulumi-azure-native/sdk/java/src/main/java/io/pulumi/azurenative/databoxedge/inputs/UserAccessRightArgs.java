@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.enums.ShareAccessType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessType", required=true)
-      private final Input<Either<String,ShareAccessType>> accessType;
+      private final Output<Either<String,ShareAccessType>> accessType;
 
-    public Input<Either<String,ShareAccessType>> getAccessType() {
+    public Output<Either<String,ShareAccessType>> getAccessType() {
         return this.accessType;
     }
 
@@ -35,22 +35,22 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public UserAccessRightArgs(
-        Input<Either<String,ShareAccessType>> accessType,
-        Input<String> userId) {
+        Output<Either<String,ShareAccessType>> accessType,
+        Output<String> userId) {
         this.accessType = Objects.requireNonNull(accessType, "expected parameter 'accessType' to be non-null");
         this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
     }
 
     private UserAccessRightArgs() {
-        this.accessType = Input.empty();
-        this.userId = Input.empty();
+        this.accessType = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Either<String,ShareAccessType>> accessType;
-        private Input<String> userId;
+        private Output<Either<String,ShareAccessType>> accessType;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userId = defaults.userId;
         }
 
-        public Builder accessType(Input<Either<String,ShareAccessType>> accessType) {
+        public Builder accessType(Output<Either<String,ShareAccessType>> accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
         public Builder accessType(Either<String,ShareAccessType> accessType) {
-            this.accessType = Input.of(Objects.requireNonNull(accessType));
+            this.accessType = Output.of(Objects.requireNonNull(accessType));
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public UserAccessRightArgs build() {

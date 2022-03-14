@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class HostedZoneQueryLoggingConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudWatchLogsLogGroupArn", required=true)
-      private final Input<String> cloudWatchLogsLogGroupArn;
+      private final Output<String> cloudWatchLogsLogGroupArn;
 
-    public Input<String> getCloudWatchLogsLogGroupArn() {
+    public Output<String> getCloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
     }
 
-    public HostedZoneQueryLoggingConfigArgs(Input<String> cloudWatchLogsLogGroupArn) {
+    public HostedZoneQueryLoggingConfigArgs(Output<String> cloudWatchLogsLogGroupArn) {
         this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn, "expected parameter 'cloudWatchLogsLogGroupArn' to be non-null");
     }
 
     private HostedZoneQueryLoggingConfigArgs() {
-        this.cloudWatchLogsLogGroupArn = Input.empty();
+        this.cloudWatchLogsLogGroupArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class HostedZoneQueryLoggingConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> cloudWatchLogsLogGroupArn;
+        private Output<String> cloudWatchLogsLogGroupArn;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class HostedZoneQueryLoggingConfigArgs extends io.pulumi.resources.
     	      this.cloudWatchLogsLogGroupArn = defaults.cloudWatchLogsLogGroupArn;
         }
 
-        public Builder cloudWatchLogsLogGroupArn(Input<String> cloudWatchLogsLogGroupArn) {
+        public Builder cloudWatchLogsLogGroupArn(Output<String> cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
             return this;
         }
 
         public Builder cloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
-            this.cloudWatchLogsLogGroupArn = Input.of(Objects.requireNonNull(cloudWatchLogsLogGroupArn));
+            this.cloudWatchLogsLogGroupArn = Output.of(Objects.requireNonNull(cloudWatchLogsLogGroupArn));
             return this;
         }
         public HostedZoneQueryLoggingConfigArgs build() {

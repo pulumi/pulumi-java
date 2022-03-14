@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.BackendServiceConsistentHashHttpCookieTtlArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl;
+      private final @Nullable Output<BackendServiceConsistentHashHttpCookieTtlArgs> ttl;
 
-    public Input<BackendServiceConsistentHashHttpCookieTtlArgs> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<BackendServiceConsistentHashHttpCookieTtlArgs> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public BackendServiceConsistentHashHttpCookieArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> path,
-        @Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> path,
+        @Nullable Output<BackendServiceConsistentHashHttpCookieTtlArgs> ttl) {
         this.name = name;
         this.path = path;
         this.ttl = ttl;
     }
 
     private BackendServiceConsistentHashHttpCookieArgs() {
-        this.name = Input.empty();
-        this.path = Input.empty();
-        this.ttl = Input.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> path;
-        private @Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> path;
+        private @Nullable Output<BackendServiceConsistentHashHttpCookieTtlArgs> ttl;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl) {
+        public Builder ttl(@Nullable Output<BackendServiceConsistentHashHttpCookieTtlArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable BackendServiceConsistentHashHttpCookieTtlArgs ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public BackendServiceConsistentHashHttpCookieArgs build() {

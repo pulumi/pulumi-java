@@ -10,7 +10,6 @@ import io.pulumi.aws.lambda.outputs.EventSourceMappingDestinationConfig;
 import io.pulumi.aws.lambda.outputs.EventSourceMappingFilterCriteria;
 import io.pulumi.aws.lambda.outputs.EventSourceMappingSelfManagedEventSource;
 import io.pulumi.aws.lambda.outputs.EventSourceMappingSourceAccessConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -386,14 +385,14 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventSourceMapping(String name, EventSourceMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lambda/eventSourceMapping:EventSourceMapping", name, args == null ? EventSourceMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:lambda/eventSourceMapping:EventSourceMapping", name, args == null ? EventSourceMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventSourceMapping(String name, Input<String> id, @Nullable EventSourceMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventSourceMapping(String name, Output<String> id, @Nullable EventSourceMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:lambda/eventSourceMapping:EventSourceMapping", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -409,7 +408,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventSourceMapping get(String name, Input<String> id, @Nullable EventSourceMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventSourceMapping get(String name, Output<String> id, @Nullable EventSourceMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventSourceMapping(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
@@ -16,10 +16,10 @@ public final class ProviderDefaultTagsArgs {
      * A group of tags to set across all resources.
      * 
      */
-    private final @Nullable Input<Map<String,String>> tags;
+    private final @Nullable Output<Map<String,String>> tags;
 
     @OutputCustomType.Constructor
-    private ProviderDefaultTagsArgs(@OutputCustomType.Parameter("tags") @Nullable Input<Map<String,String>> tags) {
+    private ProviderDefaultTagsArgs(@OutputCustomType.Parameter("tags") @Nullable Output<Map<String,String>> tags) {
         this.tags = tags;
     }
 
@@ -27,7 +27,7 @@ public final class ProviderDefaultTagsArgs {
      * A group of tags to set across all resources.
      * 
     */
-    public @Nullable Input<Map<String,String>> getTags() {
+    public @Nullable Output<Map<String,String>> getTags() {
         return this.tags;
     }
 
@@ -40,7 +40,7 @@ public final class ProviderDefaultTagsArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -51,7 +51,7 @@ public final class ProviderDefaultTagsArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3;
 
 import io.pulumi.aws.s3.inputs.ObjectCopyGrantArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acl")
-      private final @Nullable Input<String> acl;
+      private final @Nullable Output<String> acl;
 
-    public Input<String> getAcl() {
-        return this.acl == null ? Input.empty() : this.acl;
+    public Output<String> getAcl() {
+        return this.acl == null ? Output.empty() : this.acl;
     }
 
     /**
@@ -34,17 +34,17 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="bucketKeyEnabled")
-      private final @Nullable Input<Boolean> bucketKeyEnabled;
+      private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Input<Boolean> getBucketKeyEnabled() {
-        return this.bucketKeyEnabled == null ? Input.empty() : this.bucketKeyEnabled;
+    public Output<Boolean> getBucketKeyEnabled() {
+        return this.bucketKeyEnabled == null ? Output.empty() : this.bucketKeyEnabled;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheControl")
-      private final @Nullable Input<String> cacheControl;
+      private final @Nullable Output<String> cacheControl;
 
-    public Input<String> getCacheControl() {
-        return this.cacheControl == null ? Input.empty() : this.cacheControl;
+    public Output<String> getCacheControl() {
+        return this.cacheControl == null ? Output.empty() : this.cacheControl;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentDisposition")
-      private final @Nullable Input<String> contentDisposition;
+      private final @Nullable Output<String> contentDisposition;
 
-    public Input<String> getContentDisposition() {
-        return this.contentDisposition == null ? Input.empty() : this.contentDisposition;
+    public Output<String> getContentDisposition() {
+        return this.contentDisposition == null ? Output.empty() : this.contentDisposition;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentEncoding")
-      private final @Nullable Input<String> contentEncoding;
+      private final @Nullable Output<String> contentEncoding;
 
-    public Input<String> getContentEncoding() {
-        return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
+    public Output<String> getContentEncoding() {
+        return this.contentEncoding == null ? Output.empty() : this.contentEncoding;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLanguage")
-      private final @Nullable Input<String> contentLanguage;
+      private final @Nullable Output<String> contentLanguage;
 
-    public Input<String> getContentLanguage() {
-        return this.contentLanguage == null ? Input.empty() : this.contentLanguage;
+    public Output<String> getContentLanguage() {
+        return this.contentLanguage == null ? Output.empty() : this.contentLanguage;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfMatch")
-      private final @Nullable Input<String> copyIfMatch;
+      private final @Nullable Output<String> copyIfMatch;
 
-    public Input<String> getCopyIfMatch() {
-        return this.copyIfMatch == null ? Input.empty() : this.copyIfMatch;
+    public Output<String> getCopyIfMatch() {
+        return this.copyIfMatch == null ? Output.empty() : this.copyIfMatch;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfModifiedSince")
-      private final @Nullable Input<String> copyIfModifiedSince;
+      private final @Nullable Output<String> copyIfModifiedSince;
 
-    public Input<String> getCopyIfModifiedSince() {
-        return this.copyIfModifiedSince == null ? Input.empty() : this.copyIfModifiedSince;
+    public Output<String> getCopyIfModifiedSince() {
+        return this.copyIfModifiedSince == null ? Output.empty() : this.copyIfModifiedSince;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfNoneMatch")
-      private final @Nullable Input<String> copyIfNoneMatch;
+      private final @Nullable Output<String> copyIfNoneMatch;
 
-    public Input<String> getCopyIfNoneMatch() {
-        return this.copyIfNoneMatch == null ? Input.empty() : this.copyIfNoneMatch;
+    public Output<String> getCopyIfNoneMatch() {
+        return this.copyIfNoneMatch == null ? Output.empty() : this.copyIfNoneMatch;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfUnmodifiedSince")
-      private final @Nullable Input<String> copyIfUnmodifiedSince;
+      private final @Nullable Output<String> copyIfUnmodifiedSince;
 
-    public Input<String> getCopyIfUnmodifiedSince() {
-        return this.copyIfUnmodifiedSince == null ? Input.empty() : this.copyIfUnmodifiedSince;
+    public Output<String> getCopyIfUnmodifiedSince() {
+        return this.copyIfUnmodifiedSince == null ? Output.empty() : this.copyIfUnmodifiedSince;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerAlgorithm")
-      private final @Nullable Input<String> customerAlgorithm;
+      private final @Nullable Output<String> customerAlgorithm;
 
-    public Input<String> getCustomerAlgorithm() {
-        return this.customerAlgorithm == null ? Input.empty() : this.customerAlgorithm;
+    public Output<String> getCustomerAlgorithm() {
+        return this.customerAlgorithm == null ? Output.empty() : this.customerAlgorithm;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerKey")
-      private final @Nullable Input<String> customerKey;
+      private final @Nullable Output<String> customerKey;
 
-    public Input<String> getCustomerKey() {
-        return this.customerKey == null ? Input.empty() : this.customerKey;
+    public Output<String> getCustomerKey() {
+        return this.customerKey == null ? Output.empty() : this.customerKey;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerKeyMd5")
-      private final @Nullable Input<String> customerKeyMd5;
+      private final @Nullable Output<String> customerKeyMd5;
 
-    public Input<String> getCustomerKeyMd5() {
-        return this.customerKeyMd5 == null ? Input.empty() : this.customerKeyMd5;
+    public Output<String> getCustomerKeyMd5() {
+        return this.customerKeyMd5 == null ? Output.empty() : this.customerKeyMd5;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedBucketOwner")
-      private final @Nullable Input<String> expectedBucketOwner;
+      private final @Nullable Output<String> expectedBucketOwner;
 
-    public Input<String> getExpectedBucketOwner() {
-        return this.expectedBucketOwner == null ? Input.empty() : this.expectedBucketOwner;
+    public Output<String> getExpectedBucketOwner() {
+        return this.expectedBucketOwner == null ? Output.empty() : this.expectedBucketOwner;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedSourceBucketOwner")
-      private final @Nullable Input<String> expectedSourceBucketOwner;
+      private final @Nullable Output<String> expectedSourceBucketOwner;
 
-    public Input<String> getExpectedSourceBucketOwner() {
-        return this.expectedSourceBucketOwner == null ? Input.empty() : this.expectedSourceBucketOwner;
+    public Output<String> getExpectedSourceBucketOwner() {
+        return this.expectedSourceBucketOwner == null ? Output.empty() : this.expectedSourceBucketOwner;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expires")
-      private final @Nullable Input<String> expires;
+      private final @Nullable Output<String> expires;
 
-    public Input<String> getExpires() {
-        return this.expires == null ? Input.empty() : this.expires;
+    public Output<String> getExpires() {
+        return this.expires == null ? Output.empty() : this.expires;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -228,10 +228,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grants")
-      private final @Nullable Input<List<ObjectCopyGrantArgs>> grants;
+      private final @Nullable Output<List<ObjectCopyGrantArgs>> grants;
 
-    public Input<List<ObjectCopyGrantArgs>> getGrants() {
-        return this.grants == null ? Input.empty() : this.grants;
+    public Output<List<ObjectCopyGrantArgs>> getGrants() {
+        return this.grants == null ? Output.empty() : this.grants;
     }
 
     /**
@@ -239,9 +239,9 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -250,10 +250,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsEncryptionContext")
-      private final @Nullable Input<String> kmsEncryptionContext;
+      private final @Nullable Output<String> kmsEncryptionContext;
 
-    public Input<String> getKmsEncryptionContext() {
-        return this.kmsEncryptionContext == null ? Input.empty() : this.kmsEncryptionContext;
+    public Output<String> getKmsEncryptionContext() {
+        return this.kmsEncryptionContext == null ? Output.empty() : this.kmsEncryptionContext;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -283,10 +283,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataDirective")
-      private final @Nullable Input<String> metadataDirective;
+      private final @Nullable Output<String> metadataDirective;
 
-    public Input<String> getMetadataDirective() {
-        return this.metadataDirective == null ? Input.empty() : this.metadataDirective;
+    public Output<String> getMetadataDirective() {
+        return this.metadataDirective == null ? Output.empty() : this.metadataDirective;
     }
 
     /**
@@ -294,10 +294,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockLegalHoldStatus")
-      private final @Nullable Input<String> objectLockLegalHoldStatus;
+      private final @Nullable Output<String> objectLockLegalHoldStatus;
 
-    public Input<String> getObjectLockLegalHoldStatus() {
-        return this.objectLockLegalHoldStatus == null ? Input.empty() : this.objectLockLegalHoldStatus;
+    public Output<String> getObjectLockLegalHoldStatus() {
+        return this.objectLockLegalHoldStatus == null ? Output.empty() : this.objectLockLegalHoldStatus;
     }
 
     /**
@@ -305,10 +305,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockMode")
-      private final @Nullable Input<String> objectLockMode;
+      private final @Nullable Output<String> objectLockMode;
 
-    public Input<String> getObjectLockMode() {
-        return this.objectLockMode == null ? Input.empty() : this.objectLockMode;
+    public Output<String> getObjectLockMode() {
+        return this.objectLockMode == null ? Output.empty() : this.objectLockMode;
     }
 
     /**
@@ -316,10 +316,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockRetainUntilDate")
-      private final @Nullable Input<String> objectLockRetainUntilDate;
+      private final @Nullable Output<String> objectLockRetainUntilDate;
 
-    public Input<String> getObjectLockRetainUntilDate() {
-        return this.objectLockRetainUntilDate == null ? Input.empty() : this.objectLockRetainUntilDate;
+    public Output<String> getObjectLockRetainUntilDate() {
+        return this.objectLockRetainUntilDate == null ? Output.empty() : this.objectLockRetainUntilDate;
     }
 
     /**
@@ -327,10 +327,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestPayer")
-      private final @Nullable Input<String> requestPayer;
+      private final @Nullable Output<String> requestPayer;
 
-    public Input<String> getRequestPayer() {
-        return this.requestPayer == null ? Input.empty() : this.requestPayer;
+    public Output<String> getRequestPayer() {
+        return this.requestPayer == null ? Output.empty() : this.requestPayer;
     }
 
     /**
@@ -338,10 +338,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryption")
-      private final @Nullable Input<String> serverSideEncryption;
+      private final @Nullable Output<String> serverSideEncryption;
 
-    public Input<String> getServerSideEncryption() {
-        return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
+    public Output<String> getServerSideEncryption() {
+        return this.serverSideEncryption == null ? Output.empty() : this.serverSideEncryption;
     }
 
     /**
@@ -349,9 +349,9 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
@@ -360,10 +360,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceCustomerAlgorithm")
-      private final @Nullable Input<String> sourceCustomerAlgorithm;
+      private final @Nullable Output<String> sourceCustomerAlgorithm;
 
-    public Input<String> getSourceCustomerAlgorithm() {
-        return this.sourceCustomerAlgorithm == null ? Input.empty() : this.sourceCustomerAlgorithm;
+    public Output<String> getSourceCustomerAlgorithm() {
+        return this.sourceCustomerAlgorithm == null ? Output.empty() : this.sourceCustomerAlgorithm;
     }
 
     /**
@@ -371,10 +371,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceCustomerKey")
-      private final @Nullable Input<String> sourceCustomerKey;
+      private final @Nullable Output<String> sourceCustomerKey;
 
-    public Input<String> getSourceCustomerKey() {
-        return this.sourceCustomerKey == null ? Input.empty() : this.sourceCustomerKey;
+    public Output<String> getSourceCustomerKey() {
+        return this.sourceCustomerKey == null ? Output.empty() : this.sourceCustomerKey;
     }
 
     /**
@@ -382,10 +382,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceCustomerKeyMd5")
-      private final @Nullable Input<String> sourceCustomerKeyMd5;
+      private final @Nullable Output<String> sourceCustomerKeyMd5;
 
-    public Input<String> getSourceCustomerKeyMd5() {
-        return this.sourceCustomerKeyMd5 == null ? Input.empty() : this.sourceCustomerKeyMd5;
+    public Output<String> getSourceCustomerKeyMd5() {
+        return this.sourceCustomerKeyMd5 == null ? Output.empty() : this.sourceCustomerKeyMd5;
     }
 
     /**
@@ -393,10 +393,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<String> storageClass;
+      private final @Nullable Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<String> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     /**
@@ -404,10 +404,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taggingDirective")
-      private final @Nullable Input<String> taggingDirective;
+      private final @Nullable Output<String> taggingDirective;
 
-    public Input<String> getTaggingDirective() {
-        return this.taggingDirective == null ? Input.empty() : this.taggingDirective;
+    public Output<String> getTaggingDirective() {
+        return this.taggingDirective == null ? Output.empty() : this.taggingDirective;
     }
 
     /**
@@ -415,10 +415,10 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -426,51 +426,51 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="websiteRedirect")
-      private final @Nullable Input<String> websiteRedirect;
+      private final @Nullable Output<String> websiteRedirect;
 
-    public Input<String> getWebsiteRedirect() {
-        return this.websiteRedirect == null ? Input.empty() : this.websiteRedirect;
+    public Output<String> getWebsiteRedirect() {
+        return this.websiteRedirect == null ? Output.empty() : this.websiteRedirect;
     }
 
     public ObjectCopyArgs(
-        @Nullable Input<String> acl,
-        Input<String> bucket,
-        @Nullable Input<Boolean> bucketKeyEnabled,
-        @Nullable Input<String> cacheControl,
-        @Nullable Input<String> contentDisposition,
-        @Nullable Input<String> contentEncoding,
-        @Nullable Input<String> contentLanguage,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> copyIfMatch,
-        @Nullable Input<String> copyIfModifiedSince,
-        @Nullable Input<String> copyIfNoneMatch,
-        @Nullable Input<String> copyIfUnmodifiedSince,
-        @Nullable Input<String> customerAlgorithm,
-        @Nullable Input<String> customerKey,
-        @Nullable Input<String> customerKeyMd5,
-        @Nullable Input<String> expectedBucketOwner,
-        @Nullable Input<String> expectedSourceBucketOwner,
-        @Nullable Input<String> expires,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<List<ObjectCopyGrantArgs>> grants,
-        Input<String> key,
-        @Nullable Input<String> kmsEncryptionContext,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> metadataDirective,
-        @Nullable Input<String> objectLockLegalHoldStatus,
-        @Nullable Input<String> objectLockMode,
-        @Nullable Input<String> objectLockRetainUntilDate,
-        @Nullable Input<String> requestPayer,
-        @Nullable Input<String> serverSideEncryption,
-        Input<String> source,
-        @Nullable Input<String> sourceCustomerAlgorithm,
-        @Nullable Input<String> sourceCustomerKey,
-        @Nullable Input<String> sourceCustomerKeyMd5,
-        @Nullable Input<String> storageClass,
-        @Nullable Input<String> taggingDirective,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> websiteRedirect) {
+        @Nullable Output<String> acl,
+        Output<String> bucket,
+        @Nullable Output<Boolean> bucketKeyEnabled,
+        @Nullable Output<String> cacheControl,
+        @Nullable Output<String> contentDisposition,
+        @Nullable Output<String> contentEncoding,
+        @Nullable Output<String> contentLanguage,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> copyIfMatch,
+        @Nullable Output<String> copyIfModifiedSince,
+        @Nullable Output<String> copyIfNoneMatch,
+        @Nullable Output<String> copyIfUnmodifiedSince,
+        @Nullable Output<String> customerAlgorithm,
+        @Nullable Output<String> customerKey,
+        @Nullable Output<String> customerKeyMd5,
+        @Nullable Output<String> expectedBucketOwner,
+        @Nullable Output<String> expectedSourceBucketOwner,
+        @Nullable Output<String> expires,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<List<ObjectCopyGrantArgs>> grants,
+        Output<String> key,
+        @Nullable Output<String> kmsEncryptionContext,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> metadataDirective,
+        @Nullable Output<String> objectLockLegalHoldStatus,
+        @Nullable Output<String> objectLockMode,
+        @Nullable Output<String> objectLockRetainUntilDate,
+        @Nullable Output<String> requestPayer,
+        @Nullable Output<String> serverSideEncryption,
+        Output<String> source,
+        @Nullable Output<String> sourceCustomerAlgorithm,
+        @Nullable Output<String> sourceCustomerKey,
+        @Nullable Output<String> sourceCustomerKeyMd5,
+        @Nullable Output<String> storageClass,
+        @Nullable Output<String> taggingDirective,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> websiteRedirect) {
         this.acl = acl;
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.bucketKeyEnabled = bucketKeyEnabled;
@@ -512,44 +512,44 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectCopyArgs() {
-        this.acl = Input.empty();
-        this.bucket = Input.empty();
-        this.bucketKeyEnabled = Input.empty();
-        this.cacheControl = Input.empty();
-        this.contentDisposition = Input.empty();
-        this.contentEncoding = Input.empty();
-        this.contentLanguage = Input.empty();
-        this.contentType = Input.empty();
-        this.copyIfMatch = Input.empty();
-        this.copyIfModifiedSince = Input.empty();
-        this.copyIfNoneMatch = Input.empty();
-        this.copyIfUnmodifiedSince = Input.empty();
-        this.customerAlgorithm = Input.empty();
-        this.customerKey = Input.empty();
-        this.customerKeyMd5 = Input.empty();
-        this.expectedBucketOwner = Input.empty();
-        this.expectedSourceBucketOwner = Input.empty();
-        this.expires = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.grants = Input.empty();
-        this.key = Input.empty();
-        this.kmsEncryptionContext = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.metadata = Input.empty();
-        this.metadataDirective = Input.empty();
-        this.objectLockLegalHoldStatus = Input.empty();
-        this.objectLockMode = Input.empty();
-        this.objectLockRetainUntilDate = Input.empty();
-        this.requestPayer = Input.empty();
-        this.serverSideEncryption = Input.empty();
-        this.source = Input.empty();
-        this.sourceCustomerAlgorithm = Input.empty();
-        this.sourceCustomerKey = Input.empty();
-        this.sourceCustomerKeyMd5 = Input.empty();
-        this.storageClass = Input.empty();
-        this.taggingDirective = Input.empty();
-        this.tags = Input.empty();
-        this.websiteRedirect = Input.empty();
+        this.acl = Output.empty();
+        this.bucket = Output.empty();
+        this.bucketKeyEnabled = Output.empty();
+        this.cacheControl = Output.empty();
+        this.contentDisposition = Output.empty();
+        this.contentEncoding = Output.empty();
+        this.contentLanguage = Output.empty();
+        this.contentType = Output.empty();
+        this.copyIfMatch = Output.empty();
+        this.copyIfModifiedSince = Output.empty();
+        this.copyIfNoneMatch = Output.empty();
+        this.copyIfUnmodifiedSince = Output.empty();
+        this.customerAlgorithm = Output.empty();
+        this.customerKey = Output.empty();
+        this.customerKeyMd5 = Output.empty();
+        this.expectedBucketOwner = Output.empty();
+        this.expectedSourceBucketOwner = Output.empty();
+        this.expires = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.grants = Output.empty();
+        this.key = Output.empty();
+        this.kmsEncryptionContext = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.metadata = Output.empty();
+        this.metadataDirective = Output.empty();
+        this.objectLockLegalHoldStatus = Output.empty();
+        this.objectLockMode = Output.empty();
+        this.objectLockRetainUntilDate = Output.empty();
+        this.requestPayer = Output.empty();
+        this.serverSideEncryption = Output.empty();
+        this.source = Output.empty();
+        this.sourceCustomerAlgorithm = Output.empty();
+        this.sourceCustomerKey = Output.empty();
+        this.sourceCustomerKeyMd5 = Output.empty();
+        this.storageClass = Output.empty();
+        this.taggingDirective = Output.empty();
+        this.tags = Output.empty();
+        this.websiteRedirect = Output.empty();
     }
 
     public static Builder builder() {
@@ -561,44 +561,44 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acl;
-        private Input<String> bucket;
-        private @Nullable Input<Boolean> bucketKeyEnabled;
-        private @Nullable Input<String> cacheControl;
-        private @Nullable Input<String> contentDisposition;
-        private @Nullable Input<String> contentEncoding;
-        private @Nullable Input<String> contentLanguage;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> copyIfMatch;
-        private @Nullable Input<String> copyIfModifiedSince;
-        private @Nullable Input<String> copyIfNoneMatch;
-        private @Nullable Input<String> copyIfUnmodifiedSince;
-        private @Nullable Input<String> customerAlgorithm;
-        private @Nullable Input<String> customerKey;
-        private @Nullable Input<String> customerKeyMd5;
-        private @Nullable Input<String> expectedBucketOwner;
-        private @Nullable Input<String> expectedSourceBucketOwner;
-        private @Nullable Input<String> expires;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<List<ObjectCopyGrantArgs>> grants;
-        private Input<String> key;
-        private @Nullable Input<String> kmsEncryptionContext;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> metadataDirective;
-        private @Nullable Input<String> objectLockLegalHoldStatus;
-        private @Nullable Input<String> objectLockMode;
-        private @Nullable Input<String> objectLockRetainUntilDate;
-        private @Nullable Input<String> requestPayer;
-        private @Nullable Input<String> serverSideEncryption;
-        private Input<String> source;
-        private @Nullable Input<String> sourceCustomerAlgorithm;
-        private @Nullable Input<String> sourceCustomerKey;
-        private @Nullable Input<String> sourceCustomerKeyMd5;
-        private @Nullable Input<String> storageClass;
-        private @Nullable Input<String> taggingDirective;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> websiteRedirect;
+        private @Nullable Output<String> acl;
+        private Output<String> bucket;
+        private @Nullable Output<Boolean> bucketKeyEnabled;
+        private @Nullable Output<String> cacheControl;
+        private @Nullable Output<String> contentDisposition;
+        private @Nullable Output<String> contentEncoding;
+        private @Nullable Output<String> contentLanguage;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> copyIfMatch;
+        private @Nullable Output<String> copyIfModifiedSince;
+        private @Nullable Output<String> copyIfNoneMatch;
+        private @Nullable Output<String> copyIfUnmodifiedSince;
+        private @Nullable Output<String> customerAlgorithm;
+        private @Nullable Output<String> customerKey;
+        private @Nullable Output<String> customerKeyMd5;
+        private @Nullable Output<String> expectedBucketOwner;
+        private @Nullable Output<String> expectedSourceBucketOwner;
+        private @Nullable Output<String> expires;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<List<ObjectCopyGrantArgs>> grants;
+        private Output<String> key;
+        private @Nullable Output<String> kmsEncryptionContext;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> metadataDirective;
+        private @Nullable Output<String> objectLockLegalHoldStatus;
+        private @Nullable Output<String> objectLockMode;
+        private @Nullable Output<String> objectLockRetainUntilDate;
+        private @Nullable Output<String> requestPayer;
+        private @Nullable Output<String> serverSideEncryption;
+        private Output<String> source;
+        private @Nullable Output<String> sourceCustomerAlgorithm;
+        private @Nullable Output<String> sourceCustomerKey;
+        private @Nullable Output<String> sourceCustomerKeyMd5;
+        private @Nullable Output<String> storageClass;
+        private @Nullable Output<String> taggingDirective;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> websiteRedirect;
 
         public Builder() {
     	      // Empty
@@ -646,383 +646,383 @@ public final class ObjectCopyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.websiteRedirect = defaults.websiteRedirect;
         }
 
-        public Builder acl(@Nullable Input<String> acl) {
+        public Builder acl(@Nullable Output<String> acl) {
             this.acl = acl;
             return this;
         }
 
         public Builder acl(@Nullable String acl) {
-            this.acl = Input.ofNullable(acl);
+            this.acl = Output.ofNullable(acl);
             return this;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder bucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Output<Boolean> bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
 
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
-            this.bucketKeyEnabled = Input.ofNullable(bucketKeyEnabled);
+            this.bucketKeyEnabled = Output.ofNullable(bucketKeyEnabled);
             return this;
         }
 
-        public Builder cacheControl(@Nullable Input<String> cacheControl) {
+        public Builder cacheControl(@Nullable Output<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
 
         public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = Input.ofNullable(cacheControl);
+            this.cacheControl = Output.ofNullable(cacheControl);
             return this;
         }
 
-        public Builder contentDisposition(@Nullable Input<String> contentDisposition) {
+        public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
 
         public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = Input.ofNullable(contentDisposition);
+            this.contentDisposition = Output.ofNullable(contentDisposition);
             return this;
         }
 
-        public Builder contentEncoding(@Nullable Input<String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Input.ofNullable(contentEncoding);
+            this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
         }
 
-        public Builder contentLanguage(@Nullable Input<String> contentLanguage) {
+        public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
 
         public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = Input.ofNullable(contentLanguage);
+            this.contentLanguage = Output.ofNullable(contentLanguage);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder copyIfMatch(@Nullable Input<String> copyIfMatch) {
+        public Builder copyIfMatch(@Nullable Output<String> copyIfMatch) {
             this.copyIfMatch = copyIfMatch;
             return this;
         }
 
         public Builder copyIfMatch(@Nullable String copyIfMatch) {
-            this.copyIfMatch = Input.ofNullable(copyIfMatch);
+            this.copyIfMatch = Output.ofNullable(copyIfMatch);
             return this;
         }
 
-        public Builder copyIfModifiedSince(@Nullable Input<String> copyIfModifiedSince) {
+        public Builder copyIfModifiedSince(@Nullable Output<String> copyIfModifiedSince) {
             this.copyIfModifiedSince = copyIfModifiedSince;
             return this;
         }
 
         public Builder copyIfModifiedSince(@Nullable String copyIfModifiedSince) {
-            this.copyIfModifiedSince = Input.ofNullable(copyIfModifiedSince);
+            this.copyIfModifiedSince = Output.ofNullable(copyIfModifiedSince);
             return this;
         }
 
-        public Builder copyIfNoneMatch(@Nullable Input<String> copyIfNoneMatch) {
+        public Builder copyIfNoneMatch(@Nullable Output<String> copyIfNoneMatch) {
             this.copyIfNoneMatch = copyIfNoneMatch;
             return this;
         }
 
         public Builder copyIfNoneMatch(@Nullable String copyIfNoneMatch) {
-            this.copyIfNoneMatch = Input.ofNullable(copyIfNoneMatch);
+            this.copyIfNoneMatch = Output.ofNullable(copyIfNoneMatch);
             return this;
         }
 
-        public Builder copyIfUnmodifiedSince(@Nullable Input<String> copyIfUnmodifiedSince) {
+        public Builder copyIfUnmodifiedSince(@Nullable Output<String> copyIfUnmodifiedSince) {
             this.copyIfUnmodifiedSince = copyIfUnmodifiedSince;
             return this;
         }
 
         public Builder copyIfUnmodifiedSince(@Nullable String copyIfUnmodifiedSince) {
-            this.copyIfUnmodifiedSince = Input.ofNullable(copyIfUnmodifiedSince);
+            this.copyIfUnmodifiedSince = Output.ofNullable(copyIfUnmodifiedSince);
             return this;
         }
 
-        public Builder customerAlgorithm(@Nullable Input<String> customerAlgorithm) {
+        public Builder customerAlgorithm(@Nullable Output<String> customerAlgorithm) {
             this.customerAlgorithm = customerAlgorithm;
             return this;
         }
 
         public Builder customerAlgorithm(@Nullable String customerAlgorithm) {
-            this.customerAlgorithm = Input.ofNullable(customerAlgorithm);
+            this.customerAlgorithm = Output.ofNullable(customerAlgorithm);
             return this;
         }
 
-        public Builder customerKey(@Nullable Input<String> customerKey) {
+        public Builder customerKey(@Nullable Output<String> customerKey) {
             this.customerKey = customerKey;
             return this;
         }
 
         public Builder customerKey(@Nullable String customerKey) {
-            this.customerKey = Input.ofNullable(customerKey);
+            this.customerKey = Output.ofNullable(customerKey);
             return this;
         }
 
-        public Builder customerKeyMd5(@Nullable Input<String> customerKeyMd5) {
+        public Builder customerKeyMd5(@Nullable Output<String> customerKeyMd5) {
             this.customerKeyMd5 = customerKeyMd5;
             return this;
         }
 
         public Builder customerKeyMd5(@Nullable String customerKeyMd5) {
-            this.customerKeyMd5 = Input.ofNullable(customerKeyMd5);
+            this.customerKeyMd5 = Output.ofNullable(customerKeyMd5);
             return this;
         }
 
-        public Builder expectedBucketOwner(@Nullable Input<String> expectedBucketOwner) {
+        public Builder expectedBucketOwner(@Nullable Output<String> expectedBucketOwner) {
             this.expectedBucketOwner = expectedBucketOwner;
             return this;
         }
 
         public Builder expectedBucketOwner(@Nullable String expectedBucketOwner) {
-            this.expectedBucketOwner = Input.ofNullable(expectedBucketOwner);
+            this.expectedBucketOwner = Output.ofNullable(expectedBucketOwner);
             return this;
         }
 
-        public Builder expectedSourceBucketOwner(@Nullable Input<String> expectedSourceBucketOwner) {
+        public Builder expectedSourceBucketOwner(@Nullable Output<String> expectedSourceBucketOwner) {
             this.expectedSourceBucketOwner = expectedSourceBucketOwner;
             return this;
         }
 
         public Builder expectedSourceBucketOwner(@Nullable String expectedSourceBucketOwner) {
-            this.expectedSourceBucketOwner = Input.ofNullable(expectedSourceBucketOwner);
+            this.expectedSourceBucketOwner = Output.ofNullable(expectedSourceBucketOwner);
             return this;
         }
 
-        public Builder expires(@Nullable Input<String> expires) {
+        public Builder expires(@Nullable Output<String> expires) {
             this.expires = expires;
             return this;
         }
 
         public Builder expires(@Nullable String expires) {
-            this.expires = Input.ofNullable(expires);
+            this.expires = Output.ofNullable(expires);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder grants(@Nullable Input<List<ObjectCopyGrantArgs>> grants) {
+        public Builder grants(@Nullable Output<List<ObjectCopyGrantArgs>> grants) {
             this.grants = grants;
             return this;
         }
 
         public Builder grants(@Nullable List<ObjectCopyGrantArgs> grants) {
-            this.grants = Input.ofNullable(grants);
+            this.grants = Output.ofNullable(grants);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder kmsEncryptionContext(@Nullable Input<String> kmsEncryptionContext) {
+        public Builder kmsEncryptionContext(@Nullable Output<String> kmsEncryptionContext) {
             this.kmsEncryptionContext = kmsEncryptionContext;
             return this;
         }
 
         public Builder kmsEncryptionContext(@Nullable String kmsEncryptionContext) {
-            this.kmsEncryptionContext = Input.ofNullable(kmsEncryptionContext);
+            this.kmsEncryptionContext = Output.ofNullable(kmsEncryptionContext);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder metadataDirective(@Nullable Input<String> metadataDirective) {
+        public Builder metadataDirective(@Nullable Output<String> metadataDirective) {
             this.metadataDirective = metadataDirective;
             return this;
         }
 
         public Builder metadataDirective(@Nullable String metadataDirective) {
-            this.metadataDirective = Input.ofNullable(metadataDirective);
+            this.metadataDirective = Output.ofNullable(metadataDirective);
             return this;
         }
 
-        public Builder objectLockLegalHoldStatus(@Nullable Input<String> objectLockLegalHoldStatus) {
+        public Builder objectLockLegalHoldStatus(@Nullable Output<String> objectLockLegalHoldStatus) {
             this.objectLockLegalHoldStatus = objectLockLegalHoldStatus;
             return this;
         }
 
         public Builder objectLockLegalHoldStatus(@Nullable String objectLockLegalHoldStatus) {
-            this.objectLockLegalHoldStatus = Input.ofNullable(objectLockLegalHoldStatus);
+            this.objectLockLegalHoldStatus = Output.ofNullable(objectLockLegalHoldStatus);
             return this;
         }
 
-        public Builder objectLockMode(@Nullable Input<String> objectLockMode) {
+        public Builder objectLockMode(@Nullable Output<String> objectLockMode) {
             this.objectLockMode = objectLockMode;
             return this;
         }
 
         public Builder objectLockMode(@Nullable String objectLockMode) {
-            this.objectLockMode = Input.ofNullable(objectLockMode);
+            this.objectLockMode = Output.ofNullable(objectLockMode);
             return this;
         }
 
-        public Builder objectLockRetainUntilDate(@Nullable Input<String> objectLockRetainUntilDate) {
+        public Builder objectLockRetainUntilDate(@Nullable Output<String> objectLockRetainUntilDate) {
             this.objectLockRetainUntilDate = objectLockRetainUntilDate;
             return this;
         }
 
         public Builder objectLockRetainUntilDate(@Nullable String objectLockRetainUntilDate) {
-            this.objectLockRetainUntilDate = Input.ofNullable(objectLockRetainUntilDate);
+            this.objectLockRetainUntilDate = Output.ofNullable(objectLockRetainUntilDate);
             return this;
         }
 
-        public Builder requestPayer(@Nullable Input<String> requestPayer) {
+        public Builder requestPayer(@Nullable Output<String> requestPayer) {
             this.requestPayer = requestPayer;
             return this;
         }
 
         public Builder requestPayer(@Nullable String requestPayer) {
-            this.requestPayer = Input.ofNullable(requestPayer);
+            this.requestPayer = Output.ofNullable(requestPayer);
             return this;
         }
 
-        public Builder serverSideEncryption(@Nullable Input<String> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Output<String> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
         public Builder serverSideEncryption(@Nullable String serverSideEncryption) {
-            this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
+            this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder sourceCustomerAlgorithm(@Nullable Input<String> sourceCustomerAlgorithm) {
+        public Builder sourceCustomerAlgorithm(@Nullable Output<String> sourceCustomerAlgorithm) {
             this.sourceCustomerAlgorithm = sourceCustomerAlgorithm;
             return this;
         }
 
         public Builder sourceCustomerAlgorithm(@Nullable String sourceCustomerAlgorithm) {
-            this.sourceCustomerAlgorithm = Input.ofNullable(sourceCustomerAlgorithm);
+            this.sourceCustomerAlgorithm = Output.ofNullable(sourceCustomerAlgorithm);
             return this;
         }
 
-        public Builder sourceCustomerKey(@Nullable Input<String> sourceCustomerKey) {
+        public Builder sourceCustomerKey(@Nullable Output<String> sourceCustomerKey) {
             this.sourceCustomerKey = sourceCustomerKey;
             return this;
         }
 
         public Builder sourceCustomerKey(@Nullable String sourceCustomerKey) {
-            this.sourceCustomerKey = Input.ofNullable(sourceCustomerKey);
+            this.sourceCustomerKey = Output.ofNullable(sourceCustomerKey);
             return this;
         }
 
-        public Builder sourceCustomerKeyMd5(@Nullable Input<String> sourceCustomerKeyMd5) {
+        public Builder sourceCustomerKeyMd5(@Nullable Output<String> sourceCustomerKeyMd5) {
             this.sourceCustomerKeyMd5 = sourceCustomerKeyMd5;
             return this;
         }
 
         public Builder sourceCustomerKeyMd5(@Nullable String sourceCustomerKeyMd5) {
-            this.sourceCustomerKeyMd5 = Input.ofNullable(sourceCustomerKeyMd5);
+            this.sourceCustomerKeyMd5 = Output.ofNullable(sourceCustomerKeyMd5);
             return this;
         }
 
-        public Builder storageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
 
-        public Builder taggingDirective(@Nullable Input<String> taggingDirective) {
+        public Builder taggingDirective(@Nullable Output<String> taggingDirective) {
             this.taggingDirective = taggingDirective;
             return this;
         }
 
         public Builder taggingDirective(@Nullable String taggingDirective) {
-            this.taggingDirective = Input.ofNullable(taggingDirective);
+            this.taggingDirective = Output.ofNullable(taggingDirective);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder websiteRedirect(@Nullable Input<String> websiteRedirect) {
+        public Builder websiteRedirect(@Nullable Output<String> websiteRedirect) {
             this.websiteRedirect = websiteRedirect;
             return this;
         }
 
         public Builder websiteRedirect(@Nullable String websiteRedirect) {
-            this.websiteRedirect = Input.ofNullable(websiteRedirect);
+            this.websiteRedirect = Output.ofNullable(websiteRedirect);
             return this;
         }
         public ObjectCopyArgs build() {

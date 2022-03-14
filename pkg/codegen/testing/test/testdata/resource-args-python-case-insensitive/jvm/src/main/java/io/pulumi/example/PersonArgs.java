@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.inputs.PetArgs;
 import java.lang.String;
@@ -17,29 +17,29 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     public static final PersonArgs Empty = new PersonArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="pets")
-      private final @Nullable Input<List<PetArgs>> pets;
+      private final @Nullable Output<List<PetArgs>> pets;
 
-    public Input<List<PetArgs>> getPets() {
-        return this.pets == null ? Input.empty() : this.pets;
+    public Output<List<PetArgs>> getPets() {
+        return this.pets == null ? Output.empty() : this.pets;
     }
 
     public PersonArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<PetArgs>> pets) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<PetArgs>> pets) {
         this.name = name;
         this.pets = pets;
     }
 
     private PersonArgs() {
-        this.name = Input.empty();
-        this.pets = Input.empty();
+        this.name = Output.empty();
+        this.pets = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PetArgs>> pets;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PetArgs>> pets;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pets = defaults.pets;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pets(@Nullable Input<List<PetArgs>> pets) {
+        public Builder pets(@Nullable Output<List<PetArgs>> pets) {
             this.pets = pets;
             return this;
         }
 
         public Builder pets(@Nullable List<PetArgs> pets) {
-            this.pets = Input.ofNullable(pets);
+            this.pets = Output.ofNullable(pets);
             return this;
         }
         public PersonArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.azurenative.eventgrid.enums.IpActionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<Either<String,IpActionType>> action;
+      private final @Nullable Output<Either<String,IpActionType>> action;
 
-    public Input<Either<String,IpActionType>> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<Either<String,IpActionType>> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipMask")
-      private final @Nullable Input<String> ipMask;
+      private final @Nullable Output<String> ipMask;
 
-    public Input<String> getIpMask() {
-        return this.ipMask == null ? Input.empty() : this.ipMask;
+    public Output<String> getIpMask() {
+        return this.ipMask == null ? Output.empty() : this.ipMask;
     }
 
     public InboundIpRuleArgs(
-        @Nullable Input<Either<String,IpActionType>> action,
-        @Nullable Input<String> ipMask) {
+        @Nullable Output<Either<String,IpActionType>> action,
+        @Nullable Output<String> ipMask) {
         this.action = action;
         this.ipMask = ipMask;
     }
 
     private InboundIpRuleArgs() {
-        this.action = Input.empty();
-        this.ipMask = Input.empty();
+        this.action = Output.empty();
+        this.ipMask = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,IpActionType>> action;
-        private @Nullable Input<String> ipMask;
+        private @Nullable Output<Either<String,IpActionType>> action;
+        private @Nullable Output<String> ipMask;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder action(@Nullable Input<Either<String,IpActionType>> action) {
+        public Builder action(@Nullable Output<Either<String,IpActionType>> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable Either<String,IpActionType> action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder ipMask(@Nullable Input<String> ipMask) {
+        public Builder ipMask(@Nullable Output<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
 
         public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Input.ofNullable(ipMask);
+            this.ipMask = Output.ofNullable(ipMask);
             return this;
         }
         public InboundIpRuleArgs build() {

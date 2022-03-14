@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.azurenative.devtestlab.inputs.LabAnnouncementPropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.LabSupportPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="announcement")
-      private final @Nullable Input<LabAnnouncementPropertiesArgs> announcement;
+      private final @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
 
-    public Input<LabAnnouncementPropertiesArgs> getAnnouncement() {
-        return this.announcement == null ? Input.empty() : this.announcement;
+    public Output<LabAnnouncementPropertiesArgs> getAnnouncement() {
+        return this.announcement == null ? Output.empty() : this.announcement;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentPermission")
-      private final @Nullable Input<Either<String,EnvironmentPermission>> environmentPermission;
+      private final @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
 
-    public Input<Either<String,EnvironmentPermission>> getEnvironmentPermission() {
-        return this.environmentPermission == null ? Input.empty() : this.environmentPermission;
+    public Output<Either<String,EnvironmentPermission>> getEnvironmentPermission() {
+        return this.environmentPermission == null ? Output.empty() : this.environmentPermission;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedProperties")
-      private final @Nullable Input<Map<String,String>> extendedProperties;
+      private final @Nullable Output<Map<String,String>> extendedProperties;
 
-    public Input<Map<String,String>> getExtendedProperties() {
-        return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
+    public Output<Map<String,String>> getExtendedProperties() {
+        return this.extendedProperties == null ? Output.empty() : this.extendedProperties;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labStorageType")
-      private final @Nullable Input<Either<String,StorageType>> labStorageType;
+      private final @Nullable Output<Either<String,StorageType>> labStorageType;
 
-    public Input<Either<String,StorageType>> getLabStorageType() {
-        return this.labStorageType == null ? Input.empty() : this.labStorageType;
+    public Output<Either<String,StorageType>> getLabStorageType() {
+        return this.labStorageType == null ? Output.empty() : this.labStorageType;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mandatoryArtifactsResourceIdsLinux")
-      private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux;
+      private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
 
-    public Input<List<String>> getMandatoryArtifactsResourceIdsLinux() {
-        return this.mandatoryArtifactsResourceIdsLinux == null ? Input.empty() : this.mandatoryArtifactsResourceIdsLinux;
+    public Output<List<String>> getMandatoryArtifactsResourceIdsLinux() {
+        return this.mandatoryArtifactsResourceIdsLinux == null ? Output.empty() : this.mandatoryArtifactsResourceIdsLinux;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mandatoryArtifactsResourceIdsWindows")
-      private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows;
+      private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
 
-    public Input<List<String>> getMandatoryArtifactsResourceIdsWindows() {
-        return this.mandatoryArtifactsResourceIdsWindows == null ? Input.empty() : this.mandatoryArtifactsResourceIdsWindows;
+    public Output<List<String>> getMandatoryArtifactsResourceIdsWindows() {
+        return this.mandatoryArtifactsResourceIdsWindows == null ? Output.empty() : this.mandatoryArtifactsResourceIdsWindows;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="premiumDataDisks")
-      private final @Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks;
+      private final @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
 
-    public Input<Either<String,PremiumDataDisk>> getPremiumDataDisks() {
-        return this.premiumDataDisks == null ? Input.empty() : this.premiumDataDisks;
+    public Output<Either<String,PremiumDataDisk>> getPremiumDataDisks() {
+        return this.premiumDataDisks == null ? Output.empty() : this.premiumDataDisks;
     }
 
     /**
@@ -128,9 +128,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,10 +139,10 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="support")
-      private final @Nullable Input<LabSupportPropertiesArgs> support;
+      private final @Nullable Output<LabSupportPropertiesArgs> support;
 
-    public Input<LabSupportPropertiesArgs> getSupport() {
-        return this.support == null ? Input.empty() : this.support;
+    public Output<LabSupportPropertiesArgs> getSupport() {
+        return this.support == null ? Output.empty() : this.support;
     }
 
     /**
@@ -150,29 +150,29 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LabArgs(
-        @Nullable Input<LabAnnouncementPropertiesArgs> announcement,
-        @Nullable Input<Either<String,EnvironmentPermission>> environmentPermission,
-        @Nullable Input<Map<String,String>> extendedProperties,
-        @Nullable Input<Either<String,StorageType>> labStorageType,
-        @Nullable Input<String> location,
-        @Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux,
-        @Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks,
-        Input<String> resourceGroupName,
-        @Nullable Input<LabSupportPropertiesArgs> support,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<LabAnnouncementPropertiesArgs> announcement,
+        @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission,
+        @Nullable Output<Map<String,String>> extendedProperties,
+        @Nullable Output<Either<String,StorageType>> labStorageType,
+        @Nullable Output<String> location,
+        @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux,
+        @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks,
+        Output<String> resourceGroupName,
+        @Nullable Output<LabSupportPropertiesArgs> support,
+        @Nullable Output<Map<String,String>> tags) {
         this.announcement = announcement;
         this.environmentPermission = environmentPermission;
         this.extendedProperties = extendedProperties;
-        this.labStorageType = labStorageType == null ? Input.ofLeft("Premium") : labStorageType;
+        this.labStorageType = labStorageType == null ? Output.ofLeft("Premium") : labStorageType;
         this.location = location;
         this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
         this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
@@ -184,18 +184,18 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabArgs() {
-        this.announcement = Input.empty();
-        this.environmentPermission = Input.empty();
-        this.extendedProperties = Input.empty();
-        this.labStorageType = Input.empty();
-        this.location = Input.empty();
-        this.mandatoryArtifactsResourceIdsLinux = Input.empty();
-        this.mandatoryArtifactsResourceIdsWindows = Input.empty();
-        this.name = Input.empty();
-        this.premiumDataDisks = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.support = Input.empty();
-        this.tags = Input.empty();
+        this.announcement = Output.empty();
+        this.environmentPermission = Output.empty();
+        this.extendedProperties = Output.empty();
+        this.labStorageType = Output.empty();
+        this.location = Output.empty();
+        this.mandatoryArtifactsResourceIdsLinux = Output.empty();
+        this.mandatoryArtifactsResourceIdsWindows = Output.empty();
+        this.name = Output.empty();
+        this.premiumDataDisks = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.support = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -207,18 +207,18 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<LabAnnouncementPropertiesArgs> announcement;
-        private @Nullable Input<Either<String,EnvironmentPermission>> environmentPermission;
-        private @Nullable Input<Map<String,String>> extendedProperties;
-        private @Nullable Input<Either<String,StorageType>> labStorageType;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux;
-        private @Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<LabSupportPropertiesArgs> support;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
+        private @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
+        private @Nullable Output<Map<String,String>> extendedProperties;
+        private @Nullable Output<Either<String,StorageType>> labStorageType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
+        private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<LabSupportPropertiesArgs> support;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -240,123 +240,123 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder announcement(@Nullable Input<LabAnnouncementPropertiesArgs> announcement) {
+        public Builder announcement(@Nullable Output<LabAnnouncementPropertiesArgs> announcement) {
             this.announcement = announcement;
             return this;
         }
 
         public Builder announcement(@Nullable LabAnnouncementPropertiesArgs announcement) {
-            this.announcement = Input.ofNullable(announcement);
+            this.announcement = Output.ofNullable(announcement);
             return this;
         }
 
-        public Builder environmentPermission(@Nullable Input<Either<String,EnvironmentPermission>> environmentPermission) {
+        public Builder environmentPermission(@Nullable Output<Either<String,EnvironmentPermission>> environmentPermission) {
             this.environmentPermission = environmentPermission;
             return this;
         }
 
         public Builder environmentPermission(@Nullable Either<String,EnvironmentPermission> environmentPermission) {
-            this.environmentPermission = Input.ofNullable(environmentPermission);
+            this.environmentPermission = Output.ofNullable(environmentPermission);
             return this;
         }
 
-        public Builder extendedProperties(@Nullable Input<Map<String,String>> extendedProperties) {
+        public Builder extendedProperties(@Nullable Output<Map<String,String>> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
         public Builder extendedProperties(@Nullable Map<String,String> extendedProperties) {
-            this.extendedProperties = Input.ofNullable(extendedProperties);
+            this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
 
-        public Builder labStorageType(@Nullable Input<Either<String,StorageType>> labStorageType) {
+        public Builder labStorageType(@Nullable Output<Either<String,StorageType>> labStorageType) {
             this.labStorageType = labStorageType;
             return this;
         }
 
         public Builder labStorageType(@Nullable Either<String,StorageType> labStorageType) {
-            this.labStorageType = Input.ofNullable(labStorageType);
+            this.labStorageType = Output.ofNullable(labStorageType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mandatoryArtifactsResourceIdsLinux(@Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux) {
+        public Builder mandatoryArtifactsResourceIdsLinux(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux) {
             this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
             return this;
         }
 
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
-            this.mandatoryArtifactsResourceIdsLinux = Input.ofNullable(mandatoryArtifactsResourceIdsLinux);
+            this.mandatoryArtifactsResourceIdsLinux = Output.ofNullable(mandatoryArtifactsResourceIdsLinux);
             return this;
         }
 
-        public Builder mandatoryArtifactsResourceIdsWindows(@Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows) {
+        public Builder mandatoryArtifactsResourceIdsWindows(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows) {
             this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
             return this;
         }
 
         public Builder mandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
-            this.mandatoryArtifactsResourceIdsWindows = Input.ofNullable(mandatoryArtifactsResourceIdsWindows);
+            this.mandatoryArtifactsResourceIdsWindows = Output.ofNullable(mandatoryArtifactsResourceIdsWindows);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder premiumDataDisks(@Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks) {
+        public Builder premiumDataDisks(@Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks) {
             this.premiumDataDisks = premiumDataDisks;
             return this;
         }
 
         public Builder premiumDataDisks(@Nullable Either<String,PremiumDataDisk> premiumDataDisks) {
-            this.premiumDataDisks = Input.ofNullable(premiumDataDisks);
+            this.premiumDataDisks = Output.ofNullable(premiumDataDisks);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder support(@Nullable Input<LabSupportPropertiesArgs> support) {
+        public Builder support(@Nullable Output<LabSupportPropertiesArgs> support) {
             this.support = support;
             return this;
         }
 
         public Builder support(@Nullable LabSupportPropertiesArgs support) {
-            this.support = Input.ofNullable(support);
+            this.support = Output.ofNullable(support);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LabArgs build() {

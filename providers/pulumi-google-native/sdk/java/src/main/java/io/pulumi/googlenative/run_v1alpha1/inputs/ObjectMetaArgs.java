@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.OwnerReferenceArgs;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionGracePeriodSeconds")
-      private final @Nullable Input<Integer> deletionGracePeriodSeconds;
+      private final @Nullable Output<Integer> deletionGracePeriodSeconds;
 
-    public Input<Integer> getDeletionGracePeriodSeconds() {
-        return this.deletionGracePeriodSeconds == null ? Input.empty() : this.deletionGracePeriodSeconds;
+    public Output<Integer> getDeletionGracePeriodSeconds() {
+        return this.deletionGracePeriodSeconds == null ? Output.empty() : this.deletionGracePeriodSeconds;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionTimestamp")
-      private final @Nullable Input<String> deletionTimestamp;
+      private final @Nullable Output<String> deletionTimestamp;
 
-    public Input<String> getDeletionTimestamp() {
-        return this.deletionTimestamp == null ? Input.empty() : this.deletionTimestamp;
+    public Output<String> getDeletionTimestamp() {
+        return this.deletionTimestamp == null ? Output.empty() : this.deletionTimestamp;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalizers")
-      private final @Nullable Input<List<String>> finalizers;
+      private final @Nullable Output<List<String>> finalizers;
 
-    public Input<List<String>> getFinalizers() {
-        return this.finalizers == null ? Input.empty() : this.finalizers;
+    public Output<List<String>> getFinalizers() {
+        return this.finalizers == null ? Output.empty() : this.finalizers;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generateName")
-      private final @Nullable Input<String> generateName;
+      private final @Nullable Output<String> generateName;
 
-    public Input<String> getGenerateName() {
-        return this.generateName == null ? Input.empty() : this.generateName;
+    public Output<String> getGenerateName() {
+        return this.generateName == null ? Output.empty() : this.generateName;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generation")
-      private final @Nullable Input<Integer> generation;
+      private final @Nullable Output<Integer> generation;
 
-    public Input<Integer> getGeneration() {
-        return this.generation == null ? Input.empty() : this.generation;
+    public Output<Integer> getGeneration() {
+        return this.generation == null ? Output.empty() : this.generation;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerReferences")
-      private final @Nullable Input<List<OwnerReferenceArgs>> ownerReferences;
+      private final @Nullable Output<List<OwnerReferenceArgs>> ownerReferences;
 
-    public Input<List<OwnerReferenceArgs>> getOwnerReferences() {
-        return this.ownerReferences == null ? Input.empty() : this.ownerReferences;
+    public Output<List<OwnerReferenceArgs>> getOwnerReferences() {
+        return this.ownerReferences == null ? Output.empty() : this.ownerReferences;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceVersion")
-      private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Output<String> resourceVersion;
 
-    public Input<String> getResourceVersion() {
-        return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
+    public Output<String> getResourceVersion() {
+        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -181,28 +181,28 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public ObjectMetaArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<Integer> deletionGracePeriodSeconds,
-        @Nullable Input<String> deletionTimestamp,
-        @Nullable Input<List<String>> finalizers,
-        @Nullable Input<String> generateName,
-        @Nullable Input<Integer> generation,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<List<OwnerReferenceArgs>> ownerReferences,
-        @Nullable Input<String> resourceVersion,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> uid) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<Integer> deletionGracePeriodSeconds,
+        @Nullable Output<String> deletionTimestamp,
+        @Nullable Output<List<String>> finalizers,
+        @Nullable Output<String> generateName,
+        @Nullable Output<Integer> generation,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<List<OwnerReferenceArgs>> ownerReferences,
+        @Nullable Output<String> resourceVersion,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> uid) {
         this.annotations = annotations;
         this.clusterName = clusterName;
         this.creationTimestamp = creationTimestamp;
@@ -221,21 +221,21 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectMetaArgs() {
-        this.annotations = Input.empty();
-        this.clusterName = Input.empty();
-        this.creationTimestamp = Input.empty();
-        this.deletionGracePeriodSeconds = Input.empty();
-        this.deletionTimestamp = Input.empty();
-        this.finalizers = Input.empty();
-        this.generateName = Input.empty();
-        this.generation = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.ownerReferences = Input.empty();
-        this.resourceVersion = Input.empty();
-        this.selfLink = Input.empty();
-        this.uid = Input.empty();
+        this.annotations = Output.empty();
+        this.clusterName = Output.empty();
+        this.creationTimestamp = Output.empty();
+        this.deletionGracePeriodSeconds = Output.empty();
+        this.deletionTimestamp = Output.empty();
+        this.finalizers = Output.empty();
+        this.generateName = Output.empty();
+        this.generation = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.ownerReferences = Output.empty();
+        this.resourceVersion = Output.empty();
+        this.selfLink = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -247,21 +247,21 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<Integer> deletionGracePeriodSeconds;
-        private @Nullable Input<String> deletionTimestamp;
-        private @Nullable Input<List<String>> finalizers;
-        private @Nullable Input<String> generateName;
-        private @Nullable Input<Integer> generation;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<List<OwnerReferenceArgs>> ownerReferences;
-        private @Nullable Input<String> resourceVersion;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> uid;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<Integer> deletionGracePeriodSeconds;
+        private @Nullable Output<String> deletionTimestamp;
+        private @Nullable Output<List<String>> finalizers;
+        private @Nullable Output<String> generateName;
+        private @Nullable Output<Integer> generation;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<List<OwnerReferenceArgs>> ownerReferences;
+        private @Nullable Output<String> resourceVersion;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -286,153 +286,153 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder deletionGracePeriodSeconds(@Nullable Input<Integer> deletionGracePeriodSeconds) {
+        public Builder deletionGracePeriodSeconds(@Nullable Output<Integer> deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
             return this;
         }
 
         public Builder deletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
-            this.deletionGracePeriodSeconds = Input.ofNullable(deletionGracePeriodSeconds);
+            this.deletionGracePeriodSeconds = Output.ofNullable(deletionGracePeriodSeconds);
             return this;
         }
 
-        public Builder deletionTimestamp(@Nullable Input<String> deletionTimestamp) {
+        public Builder deletionTimestamp(@Nullable Output<String> deletionTimestamp) {
             this.deletionTimestamp = deletionTimestamp;
             return this;
         }
 
         public Builder deletionTimestamp(@Nullable String deletionTimestamp) {
-            this.deletionTimestamp = Input.ofNullable(deletionTimestamp);
+            this.deletionTimestamp = Output.ofNullable(deletionTimestamp);
             return this;
         }
 
-        public Builder finalizers(@Nullable Input<List<String>> finalizers) {
+        public Builder finalizers(@Nullable Output<List<String>> finalizers) {
             this.finalizers = finalizers;
             return this;
         }
 
         public Builder finalizers(@Nullable List<String> finalizers) {
-            this.finalizers = Input.ofNullable(finalizers);
+            this.finalizers = Output.ofNullable(finalizers);
             return this;
         }
 
-        public Builder generateName(@Nullable Input<String> generateName) {
+        public Builder generateName(@Nullable Output<String> generateName) {
             this.generateName = generateName;
             return this;
         }
 
         public Builder generateName(@Nullable String generateName) {
-            this.generateName = Input.ofNullable(generateName);
+            this.generateName = Output.ofNullable(generateName);
             return this;
         }
 
-        public Builder generation(@Nullable Input<Integer> generation) {
+        public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
 
         public Builder generation(@Nullable Integer generation) {
-            this.generation = Input.ofNullable(generation);
+            this.generation = Output.ofNullable(generation);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder ownerReferences(@Nullable Input<List<OwnerReferenceArgs>> ownerReferences) {
+        public Builder ownerReferences(@Nullable Output<List<OwnerReferenceArgs>> ownerReferences) {
             this.ownerReferences = ownerReferences;
             return this;
         }
 
         public Builder ownerReferences(@Nullable List<OwnerReferenceArgs> ownerReferences) {
-            this.ownerReferences = Input.ofNullable(ownerReferences);
+            this.ownerReferences = Output.ofNullable(ownerReferences);
             return this;
         }
 
-        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Input.ofNullable(resourceVersion);
+            this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public ObjectMetaArgs build() {

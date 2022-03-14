@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionProperties")
-      private final @Nullable Input<Object> connectionProperties;
+      private final @Nullable Output<Object> connectionProperties;
 
-    public Input<Object> getConnectionProperties() {
-        return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
+    public Output<Object> getConnectionProperties() {
+        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerKey")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerKey() {
-        return this.consumerKey == null ? Input.empty() : this.consumerKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerKey() {
+        return this.consumerKey == null ? Output.empty() : this.consumerKey;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<Object> host;
+      private final @Nullable Output<Object> host;
 
-    public Input<Object> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<Object> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -132,9 +132,9 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -143,10 +143,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-      private final @Nullable Input<Object> useEncryptedEndpoints;
+      private final @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Input<Object> getUseEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
+    public Output<Object> getUseEncryptedEndpoints() {
+        return this.useEncryptedEndpoints == null ? Output.empty() : this.useEncryptedEndpoints;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useHostVerification")
-      private final @Nullable Input<Object> useHostVerification;
+      private final @Nullable Output<Object> useHostVerification;
 
-    public Input<Object> getUseHostVerification() {
-        return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
+    public Output<Object> getUseHostVerification() {
+        return this.useHostVerification == null ? Output.empty() : this.useHostVerification;
     }
 
     /**
@@ -165,26 +165,26 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="usePeerVerification")
-      private final @Nullable Input<Object> usePeerVerification;
+      private final @Nullable Output<Object> usePeerVerification;
 
-    public Input<Object> getUsePeerVerification() {
-        return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
+    public Output<Object> getUsePeerVerification() {
+        return this.usePeerVerification == null ? Output.empty() : this.usePeerVerification;
     }
 
     public XeroLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<Object> connectionProperties,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> host,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey,
-        Input<String> type,
-        @Nullable Input<Object> useEncryptedEndpoints,
-        @Nullable Input<Object> useHostVerification,
-        @Nullable Input<Object> usePeerVerification) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<Object> connectionProperties,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> host,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey,
+        Output<String> type,
+        @Nullable Output<Object> useEncryptedEndpoints,
+        @Nullable Output<Object> useHostVerification,
+        @Nullable Output<Object> usePeerVerification) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.connectionProperties = connectionProperties;
@@ -201,19 +201,19 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private XeroLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.connectVia = Input.empty();
-        this.connectionProperties = Input.empty();
-        this.consumerKey = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.host = Input.empty();
-        this.parameters = Input.empty();
-        this.privateKey = Input.empty();
-        this.type = Input.empty();
-        this.useEncryptedEndpoints = Input.empty();
-        this.useHostVerification = Input.empty();
-        this.usePeerVerification = Input.empty();
+        this.annotations = Output.empty();
+        this.connectVia = Output.empty();
+        this.connectionProperties = Output.empty();
+        this.consumerKey = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.host = Output.empty();
+        this.parameters = Output.empty();
+        this.privateKey = Output.empty();
+        this.type = Output.empty();
+        this.useEncryptedEndpoints = Output.empty();
+        this.useHostVerification = Output.empty();
+        this.usePeerVerification = Output.empty();
     }
 
     public static Builder builder() {
@@ -225,19 +225,19 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<Object> connectionProperties;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> host;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
-        private Input<String> type;
-        private @Nullable Input<Object> useEncryptedEndpoints;
-        private @Nullable Input<Object> useHostVerification;
-        private @Nullable Input<Object> usePeerVerification;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<Object> connectionProperties;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> host;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
+        private Output<String> type;
+        private @Nullable Output<Object> useEncryptedEndpoints;
+        private @Nullable Output<Object> useHostVerification;
+        private @Nullable Output<Object> usePeerVerification;
 
         public Builder() {
     	      // Empty
@@ -260,133 +260,133 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     	      this.usePeerVerification = defaults.usePeerVerification;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder connectionProperties(@Nullable Input<Object> connectionProperties) {
+        public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
         public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Input.ofNullable(connectionProperties);
+            this.connectionProperties = Output.ofNullable(connectionProperties);
             return this;
         }
 
-        public Builder consumerKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey) {
+        public Builder consumerKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
         public Builder consumerKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerKey) {
-            this.consumerKey = Input.ofNullable(consumerKey);
+            this.consumerKey = Output.ofNullable(consumerKey);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder host(@Nullable Input<Object> host) {
+        public Builder host(@Nullable Output<Object> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable Object host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey) {
+        public Builder privateKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder useEncryptedEndpoints(@Nullable Input<Object> useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Input.ofNullable(useEncryptedEndpoints);
+            this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
             return this;
         }
 
-        public Builder useHostVerification(@Nullable Input<Object> useHostVerification) {
+        public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
 
         public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = Input.ofNullable(useHostVerification);
+            this.useHostVerification = Output.ofNullable(useHostVerification);
             return this;
         }
 
-        public Builder usePeerVerification(@Nullable Input<Object> usePeerVerification) {
+        public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
 
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = Input.ofNullable(usePeerVerification);
+            this.usePeerVerification = Output.ofNullable(usePeerVerification);
             return this;
         }
         public XeroLinkedServiceArgs build() {

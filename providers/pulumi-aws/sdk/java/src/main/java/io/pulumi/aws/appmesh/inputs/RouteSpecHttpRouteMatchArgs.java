@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteMatchHeaderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
+      private final @Nullable Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
 
-    public Input<List<RouteSpecHttpRouteMatchHeaderArgs>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<RouteSpecHttpRouteMatchHeaderArgs>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<String> method;
+      private final @Nullable Output<String> method;
 
-    public Input<String> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<String> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="prefix", required=true)
-      private final Input<String> prefix;
+      private final Output<String> prefix;
 
-    public Input<String> getPrefix() {
+    public Output<String> getPrefix() {
         return this.prefix;
     }
 
@@ -55,17 +55,17 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scheme")
-      private final @Nullable Input<String> scheme;
+      private final @Nullable Output<String> scheme;
 
-    public Input<String> getScheme() {
-        return this.scheme == null ? Input.empty() : this.scheme;
+    public Output<String> getScheme() {
+        return this.scheme == null ? Output.empty() : this.scheme;
     }
 
     public RouteSpecHttpRouteMatchArgs(
-        @Nullable Input<List<RouteSpecHttpRouteMatchHeaderArgs>> headers,
-        @Nullable Input<String> method,
-        Input<String> prefix,
-        @Nullable Input<String> scheme) {
+        @Nullable Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers,
+        @Nullable Output<String> method,
+        Output<String> prefix,
+        @Nullable Output<String> scheme) {
         this.headers = headers;
         this.method = method;
         this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
@@ -73,10 +73,10 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
     }
 
     private RouteSpecHttpRouteMatchArgs() {
-        this.headers = Input.empty();
-        this.method = Input.empty();
-        this.prefix = Input.empty();
-        this.scheme = Input.empty();
+        this.headers = Output.empty();
+        this.method = Output.empty();
+        this.prefix = Output.empty();
+        this.scheme = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
-        private @Nullable Input<String> method;
-        private Input<String> prefix;
-        private @Nullable Input<String> scheme;
+        private @Nullable Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
+        private @Nullable Output<String> method;
+        private Output<String> prefix;
+        private @Nullable Output<String> scheme;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder headers(@Nullable Input<List<RouteSpecHttpRouteMatchHeaderArgs>> headers) {
+        public Builder headers(@Nullable Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<RouteSpecHttpRouteMatchHeaderArgs> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder method(@Nullable Input<String> method) {
+        public Builder method(@Nullable Output<String> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable String method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder prefix(Input<String> prefix) {
+        public Builder prefix(Output<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
         public Builder prefix(String prefix) {
-            this.prefix = Input.of(Objects.requireNonNull(prefix));
+            this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
         }
 
-        public Builder scheme(@Nullable Input<String> scheme) {
+        public Builder scheme(@Nullable Output<String> scheme) {
             this.scheme = scheme;
             return this;
         }
 
         public Builder scheme(@Nullable String scheme) {
-            this.scheme = Input.ofNullable(scheme);
+            this.scheme = Output.ofNullable(scheme);
             return this;
         }
         public RouteSpecHttpRouteMatchArgs build() {

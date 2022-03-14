@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<String> resource;
+      private final @Nullable Output<String> resource;
 
-    public Input<String> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<String> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subresource")
-      private final @Nullable Input<String> subresource;
+      private final @Nullable Output<String> subresource;
 
-    public Input<String> getSubresource() {
-        return this.subresource == null ? Input.empty() : this.subresource;
+    public Output<String> getSubresource() {
+        return this.subresource == null ? Output.empty() : this.subresource;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="verb")
-      private final @Nullable Input<String> verb;
+      private final @Nullable Output<String> verb;
 
-    public Input<String> getVerb() {
-        return this.verb == null ? Input.empty() : this.verb;
+    public Output<String> getVerb() {
+        return this.verb == null ? Output.empty() : this.verb;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ResourceAttributesArgs(
-        @Nullable Input<String> group,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> resource,
-        @Nullable Input<String> subresource,
-        @Nullable Input<String> verb,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> group,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> resource,
+        @Nullable Output<String> subresource,
+        @Nullable Output<String> verb,
+        @Nullable Output<String> version) {
         this.group = group;
         this.name = name;
         this.namespace = namespace;
@@ -113,13 +113,13 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourceAttributesArgs() {
-        this.group = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.resource = Input.empty();
-        this.subresource = Input.empty();
-        this.verb = Input.empty();
-        this.version = Input.empty();
+        this.group = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.resource = Output.empty();
+        this.subresource = Output.empty();
+        this.verb = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> group;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> resource;
-        private @Nullable Input<String> subresource;
-        private @Nullable Input<String> verb;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> group;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> resource;
+        private @Nullable Output<String> subresource;
+        private @Nullable Output<String> verb;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder resource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
 
-        public Builder subresource(@Nullable Input<String> subresource) {
+        public Builder subresource(@Nullable Output<String> subresource) {
             this.subresource = subresource;
             return this;
         }
 
         public Builder subresource(@Nullable String subresource) {
-            this.subresource = Input.ofNullable(subresource);
+            this.subresource = Output.ofNullable(subresource);
             return this;
         }
 
-        public Builder verb(@Nullable Input<String> verb) {
+        public Builder verb(@Nullable Output<String> verb) {
             this.verb = verb;
             return this;
         }
 
         public Builder verb(@Nullable String verb) {
-            this.verb = Input.ofNullable(verb);
+            this.verb = Output.ofNullable(verb);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ResourceAttributesArgs build() {

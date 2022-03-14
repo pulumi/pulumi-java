@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="identifyingFields")
-      private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
+      private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
-    public Input<List<GooglePrivacyDlpV2FieldIdArgs>> getIdentifyingFields() {
-        return this.identifyingFields == null ? Input.empty() : this.identifyingFields;
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getIdentifyingFields() {
+        return this.identifyingFields == null ? Output.empty() : this.identifyingFields;
     }
 
-    public GooglePrivacyDlpV2TableOptionsArgs(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
+    public GooglePrivacyDlpV2TableOptionsArgs(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
         this.identifyingFields = identifyingFields;
     }
 
     private GooglePrivacyDlpV2TableOptionsArgs() {
-        this.identifyingFields = Input.empty();
+        this.identifyingFields = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
+        private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
     	      this.identifyingFields = defaults.identifyingFields;
         }
 
-        public Builder identifyingFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
+        public Builder identifyingFields(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
             this.identifyingFields = identifyingFields;
             return this;
         }
 
         public Builder identifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
-            this.identifyingFields = Input.ofNullable(identifyingFields);
+            this.identifyingFields = Output.ofNullable(identifyingFields);
             return this;
         }
         public GooglePrivacyDlpV2TableOptionsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="listenerArn")
-      private final @Nullable Input<String> listenerArn;
+      private final @Nullable Output<String> listenerArn;
 
-    public Input<String> getListenerArn() {
-        return this.listenerArn == null ? Input.empty() : this.listenerArn;
+    public Output<String> getListenerArn() {
+        return this.listenerArn == null ? Output.empty() : this.listenerArn;
     }
 
     public ListenerCertificateState(
-        @Nullable Input<String> certificateArn,
-        @Nullable Input<String> listenerArn) {
+        @Nullable Output<String> certificateArn,
+        @Nullable Output<String> listenerArn) {
         this.certificateArn = certificateArn;
         this.listenerArn = listenerArn;
     }
 
     private ListenerCertificateState() {
-        this.certificateArn = Input.empty();
-        this.listenerArn = Input.empty();
+        this.certificateArn = Output.empty();
+        this.listenerArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateArn;
-        private @Nullable Input<String> listenerArn;
+        private @Nullable Output<String> certificateArn;
+        private @Nullable Output<String> listenerArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
     	      this.listenerArn = defaults.listenerArn;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder listenerArn(@Nullable Input<String> listenerArn) {
+        public Builder listenerArn(@Nullable Output<String> listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
 
         public Builder listenerArn(@Nullable String listenerArn) {
-            this.listenerArn = Input.ofNullable(listenerArn);
+            this.listenerArn = Output.ofNullable(listenerArn);
             return this;
         }
         public ListenerCertificateState build() {

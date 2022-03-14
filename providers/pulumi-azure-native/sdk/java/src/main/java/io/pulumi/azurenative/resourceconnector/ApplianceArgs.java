@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resourceconnector.enums.Distro;
 import io.pulumi.azurenative.resourceconnector.inputs.AppliancePropertiesInfrastructureConfigArgs;
 import io.pulumi.azurenative.resourceconnector.inputs.IdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distro")
-      private final @Nullable Input<Either<String,Distro>> distro;
+      private final @Nullable Output<Either<String,Distro>> distro;
 
-    public Input<Either<String,Distro>> getDistro() {
-        return this.distro == null ? Input.empty() : this.distro;
+    public Output<Either<String,Distro>> getDistro() {
+        return this.distro == null ? Output.empty() : this.distro;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="infrastructureConfig")
-      private final @Nullable Input<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
+      private final @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
 
-    public Input<AppliancePropertiesInfrastructureConfigArgs> getInfrastructureConfig() {
-        return this.infrastructureConfig == null ? Input.empty() : this.infrastructureConfig;
+    public Output<AppliancePropertiesInfrastructureConfigArgs> getInfrastructureConfig() {
+        return this.infrastructureConfig == null ? Output.empty() : this.infrastructureConfig;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,10 +90,10 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -101,22 +101,22 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ApplianceArgs(
-        @Nullable Input<Either<String,Distro>> distro,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig,
-        @Nullable Input<String> location,
-        @Nullable Input<String> publicKey,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags) {
-        this.distro = distro == null ? Input.ofLeft("AKSEdge") : distro;
+        @Nullable Output<Either<String,Distro>> distro,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig,
+        @Nullable Output<String> location,
+        @Nullable Output<String> publicKey,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags) {
+        this.distro = distro == null ? Output.ofLeft("AKSEdge") : distro;
         this.identity = identity;
         this.infrastructureConfig = infrastructureConfig;
         this.location = location;
@@ -127,14 +127,14 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplianceArgs() {
-        this.distro = Input.empty();
-        this.identity = Input.empty();
-        this.infrastructureConfig = Input.empty();
-        this.location = Input.empty();
-        this.publicKey = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
+        this.distro = Output.empty();
+        this.identity = Output.empty();
+        this.infrastructureConfig = Output.empty();
+        this.location = Output.empty();
+        this.publicKey = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Distro>> distro;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> publicKey;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,Distro>> distro;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> publicKey;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder distro(@Nullable Input<Either<String,Distro>> distro) {
+        public Builder distro(@Nullable Output<Either<String,Distro>> distro) {
             this.distro = distro;
             return this;
         }
 
         public Builder distro(@Nullable Either<String,Distro> distro) {
-            this.distro = Input.ofNullable(distro);
+            this.distro = Output.ofNullable(distro);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder infrastructureConfig(@Nullable Input<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig) {
+        public Builder infrastructureConfig(@Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig) {
             this.infrastructureConfig = infrastructureConfig;
             return this;
         }
 
         public Builder infrastructureConfig(@Nullable AppliancePropertiesInfrastructureConfigArgs infrastructureConfig) {
-            this.infrastructureConfig = Input.ofNullable(infrastructureConfig);
+            this.infrastructureConfig = Output.ofNullable(infrastructureConfig);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ApplianceArgs build() {

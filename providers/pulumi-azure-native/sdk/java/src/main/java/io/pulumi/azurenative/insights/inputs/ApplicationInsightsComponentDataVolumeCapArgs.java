@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="cap")
-      private final @Nullable Input<Double> cap;
+      private final @Nullable Output<Double> cap;
 
-    public Input<Double> getCap() {
-        return this.cap == null ? Input.empty() : this.cap;
+    public Output<Double> getCap() {
+        return this.cap == null ? Output.empty() : this.cap;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="stopSendNotificationWhenHitCap")
-      private final @Nullable Input<Boolean> stopSendNotificationWhenHitCap;
+      private final @Nullable Output<Boolean> stopSendNotificationWhenHitCap;
 
-    public Input<Boolean> getStopSendNotificationWhenHitCap() {
-        return this.stopSendNotificationWhenHitCap == null ? Input.empty() : this.stopSendNotificationWhenHitCap;
+    public Output<Boolean> getStopSendNotificationWhenHitCap() {
+        return this.stopSendNotificationWhenHitCap == null ? Output.empty() : this.stopSendNotificationWhenHitCap;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="stopSendNotificationWhenHitThreshold")
-      private final @Nullable Input<Boolean> stopSendNotificationWhenHitThreshold;
+      private final @Nullable Output<Boolean> stopSendNotificationWhenHitThreshold;
 
-    public Input<Boolean> getStopSendNotificationWhenHitThreshold() {
-        return this.stopSendNotificationWhenHitThreshold == null ? Input.empty() : this.stopSendNotificationWhenHitThreshold;
+    public Output<Boolean> getStopSendNotificationWhenHitThreshold() {
+        return this.stopSendNotificationWhenHitThreshold == null ? Output.empty() : this.stopSendNotificationWhenHitThreshold;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="warningThreshold")
-      private final @Nullable Input<Integer> warningThreshold;
+      private final @Nullable Output<Integer> warningThreshold;
 
-    public Input<Integer> getWarningThreshold() {
-        return this.warningThreshold == null ? Input.empty() : this.warningThreshold;
+    public Output<Integer> getWarningThreshold() {
+        return this.warningThreshold == null ? Output.empty() : this.warningThreshold;
     }
 
     public ApplicationInsightsComponentDataVolumeCapArgs(
-        @Nullable Input<Double> cap,
-        @Nullable Input<Boolean> stopSendNotificationWhenHitCap,
-        @Nullable Input<Boolean> stopSendNotificationWhenHitThreshold,
-        @Nullable Input<Integer> warningThreshold) {
+        @Nullable Output<Double> cap,
+        @Nullable Output<Boolean> stopSendNotificationWhenHitCap,
+        @Nullable Output<Boolean> stopSendNotificationWhenHitThreshold,
+        @Nullable Output<Integer> warningThreshold) {
         this.cap = cap;
         this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
         this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
@@ -76,10 +76,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
     }
 
     private ApplicationInsightsComponentDataVolumeCapArgs() {
-        this.cap = Input.empty();
-        this.stopSendNotificationWhenHitCap = Input.empty();
-        this.stopSendNotificationWhenHitThreshold = Input.empty();
-        this.warningThreshold = Input.empty();
+        this.cap = Output.empty();
+        this.stopSendNotificationWhenHitCap = Output.empty();
+        this.stopSendNotificationWhenHitThreshold = Output.empty();
+        this.warningThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cap;
-        private @Nullable Input<Boolean> stopSendNotificationWhenHitCap;
-        private @Nullable Input<Boolean> stopSendNotificationWhenHitThreshold;
-        private @Nullable Input<Integer> warningThreshold;
+        private @Nullable Output<Double> cap;
+        private @Nullable Output<Boolean> stopSendNotificationWhenHitCap;
+        private @Nullable Output<Boolean> stopSendNotificationWhenHitThreshold;
+        private @Nullable Output<Integer> warningThreshold;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
     	      this.warningThreshold = defaults.warningThreshold;
         }
 
-        public Builder cap(@Nullable Input<Double> cap) {
+        public Builder cap(@Nullable Output<Double> cap) {
             this.cap = cap;
             return this;
         }
 
         public Builder cap(@Nullable Double cap) {
-            this.cap = Input.ofNullable(cap);
+            this.cap = Output.ofNullable(cap);
             return this;
         }
 
-        public Builder stopSendNotificationWhenHitCap(@Nullable Input<Boolean> stopSendNotificationWhenHitCap) {
+        public Builder stopSendNotificationWhenHitCap(@Nullable Output<Boolean> stopSendNotificationWhenHitCap) {
             this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
 
         public Builder stopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
-            this.stopSendNotificationWhenHitCap = Input.ofNullable(stopSendNotificationWhenHitCap);
+            this.stopSendNotificationWhenHitCap = Output.ofNullable(stopSendNotificationWhenHitCap);
             return this;
         }
 
-        public Builder stopSendNotificationWhenHitThreshold(@Nullable Input<Boolean> stopSendNotificationWhenHitThreshold) {
+        public Builder stopSendNotificationWhenHitThreshold(@Nullable Output<Boolean> stopSendNotificationWhenHitThreshold) {
             this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
 
         public Builder stopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
-            this.stopSendNotificationWhenHitThreshold = Input.ofNullable(stopSendNotificationWhenHitThreshold);
+            this.stopSendNotificationWhenHitThreshold = Output.ofNullable(stopSendNotificationWhenHitThreshold);
             return this;
         }
 
-        public Builder warningThreshold(@Nullable Input<Integer> warningThreshold) {
+        public Builder warningThreshold(@Nullable Output<Integer> warningThreshold) {
             this.warningThreshold = warningThreshold;
             return this;
         }
 
         public Builder warningThreshold(@Nullable Integer warningThreshold) {
-            this.warningThreshold = Input.ofNullable(warningThreshold);
+            this.warningThreshold = Output.ofNullable(warningThreshold);
             return this;
         }
         public ApplicationInsightsComponentDataVolumeCapArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<String> environment;
+      private final @Nullable Output<String> environment;
 
-    public Input<String> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<String> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public InstanceAttachmentState(
-        @Nullable Input<String> environment,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> environment,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> name) {
         this.environment = environment;
         this.instanceId = instanceId;
         this.name = name;
     }
 
     private InstanceAttachmentState() {
-        this.environment = Input.empty();
-        this.instanceId = Input.empty();
-        this.name = Input.empty();
+        this.environment = Output.empty();
+        this.instanceId = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> environment;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> environment;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder environment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable String environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public InstanceAttachmentState build() {

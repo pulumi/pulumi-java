@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="exactMatch")
-      private final @Nullable Input<String> exactMatch;
+      private final @Nullable Output<String> exactMatch;
 
-    public Input<String> getExactMatch() {
-        return this.exactMatch == null ? Input.empty() : this.exactMatch;
+    public Output<String> getExactMatch() {
+        return this.exactMatch == null ? Output.empty() : this.exactMatch;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="presentMatch")
-      private final @Nullable Input<Boolean> presentMatch;
+      private final @Nullable Output<Boolean> presentMatch;
 
-    public Input<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Input.empty() : this.presentMatch;
+    public Output<Boolean> getPresentMatch() {
+        return this.presentMatch == null ? Output.empty() : this.presentMatch;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="regexMatch")
-      private final @Nullable Input<String> regexMatch;
+      private final @Nullable Output<String> regexMatch;
 
-    public Input<String> getRegexMatch() {
-        return this.regexMatch == null ? Input.empty() : this.regexMatch;
+    public Output<String> getRegexMatch() {
+        return this.regexMatch == null ? Output.empty() : this.regexMatch;
     }
 
     public HttpQueryParameterMatchArgs(
-        @Nullable Input<String> exactMatch,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> presentMatch,
-        @Nullable Input<String> regexMatch) {
+        @Nullable Output<String> exactMatch,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> presentMatch,
+        @Nullable Output<String> regexMatch) {
         this.exactMatch = exactMatch;
         this.name = name;
         this.presentMatch = presentMatch;
@@ -75,10 +75,10 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     }
 
     private HttpQueryParameterMatchArgs() {
-        this.exactMatch = Input.empty();
-        this.name = Input.empty();
-        this.presentMatch = Input.empty();
-        this.regexMatch = Input.empty();
+        this.exactMatch = Output.empty();
+        this.name = Output.empty();
+        this.presentMatch = Output.empty();
+        this.regexMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exactMatch;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> presentMatch;
-        private @Nullable Input<String> regexMatch;
+        private @Nullable Output<String> exactMatch;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> presentMatch;
+        private @Nullable Output<String> regexMatch;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     	      this.regexMatch = defaults.regexMatch;
         }
 
-        public Builder exactMatch(@Nullable Input<String> exactMatch) {
+        public Builder exactMatch(@Nullable Output<String> exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Input.ofNullable(exactMatch);
+            this.exactMatch = Output.ofNullable(exactMatch);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder presentMatch(@Nullable Input<Boolean> presentMatch) {
+        public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Input.ofNullable(presentMatch);
+            this.presentMatch = Output.ofNullable(presentMatch);
             return this;
         }
 
-        public Builder regexMatch(@Nullable Input<String> regexMatch) {
+        public Builder regexMatch(@Nullable Output<String> regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }
 
         public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Input.ofNullable(regexMatch);
+            this.regexMatch = Output.ofNullable(regexMatch);
             return this;
         }
         public HttpQueryParameterMatchArgs build() {

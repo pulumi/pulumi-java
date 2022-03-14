@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusGetArgs;
@@ -22,10 +22,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="perimeterType")
-      private final @Nullable Input<String> perimeterType;
+      private final @Nullable Output<String> perimeterType;
 
-    public Input<String> getPerimeterType() {
-        return this.perimeterType == null ? Input.empty() : this.perimeterType;
+    public Output<String> getPerimeterType() {
+        return this.perimeterType == null ? Output.empty() : this.perimeterType;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<ServicePerimeterSpecGetArgs> spec;
+      private final @Nullable Output<ServicePerimeterSpecGetArgs> spec;
 
-    public Input<ServicePerimeterSpecGetArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<ServicePerimeterSpecGetArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<ServicePerimeterStatusGetArgs> status;
+      private final @Nullable Output<ServicePerimeterStatusGetArgs> status;
 
-    public Input<ServicePerimeterStatusGetArgs> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<ServicePerimeterStatusGetArgs> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -155,23 +155,23 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useExplicitDryRunSpec")
-      private final @Nullable Input<Boolean> useExplicitDryRunSpec;
+      private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
-    public Input<Boolean> getUseExplicitDryRunSpec() {
-        return this.useExplicitDryRunSpec == null ? Input.empty() : this.useExplicitDryRunSpec;
+    public Output<Boolean> getUseExplicitDryRunSpec() {
+        return this.useExplicitDryRunSpec == null ? Output.empty() : this.useExplicitDryRunSpec;
     }
 
     public ServicePerimeterState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> perimeterType,
-        @Nullable Input<ServicePerimeterSpecGetArgs> spec,
-        @Nullable Input<ServicePerimeterStatusGetArgs> status,
-        @Nullable Input<String> title,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<Boolean> useExplicitDryRunSpec) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> perimeterType,
+        @Nullable Output<ServicePerimeterSpecGetArgs> spec,
+        @Nullable Output<ServicePerimeterStatusGetArgs> status,
+        @Nullable Output<String> title,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<Boolean> useExplicitDryRunSpec) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;
@@ -185,16 +185,16 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     }
 
     private ServicePerimeterState() {
-        this.createTime = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.perimeterType = Input.empty();
-        this.spec = Input.empty();
-        this.status = Input.empty();
-        this.title = Input.empty();
-        this.updateTime = Input.empty();
-        this.useExplicitDryRunSpec = Input.empty();
+        this.createTime = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.perimeterType = Output.empty();
+        this.spec = Output.empty();
+        this.status = Output.empty();
+        this.title = Output.empty();
+        this.updateTime = Output.empty();
+        this.useExplicitDryRunSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -206,16 +206,16 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> perimeterType;
-        private @Nullable Input<ServicePerimeterSpecGetArgs> spec;
-        private @Nullable Input<ServicePerimeterStatusGetArgs> status;
-        private @Nullable Input<String> title;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<Boolean> useExplicitDryRunSpec;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> perimeterType;
+        private @Nullable Output<ServicePerimeterSpecGetArgs> spec;
+        private @Nullable Output<ServicePerimeterStatusGetArgs> status;
+        private @Nullable Output<String> title;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<Boolean> useExplicitDryRunSpec;
 
         public Builder() {
     	      // Empty
@@ -235,103 +235,103 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     	      this.useExplicitDryRunSpec = defaults.useExplicitDryRunSpec;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder perimeterType(@Nullable Input<String> perimeterType) {
+        public Builder perimeterType(@Nullable Output<String> perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
 
         public Builder perimeterType(@Nullable String perimeterType) {
-            this.perimeterType = Input.ofNullable(perimeterType);
+            this.perimeterType = Output.ofNullable(perimeterType);
             return this;
         }
 
-        public Builder spec(@Nullable Input<ServicePerimeterSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<ServicePerimeterSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable ServicePerimeterSpecGetArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
 
-        public Builder status(@Nullable Input<ServicePerimeterStatusGetArgs> status) {
+        public Builder status(@Nullable Output<ServicePerimeterStatusGetArgs> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable ServicePerimeterStatusGetArgs status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder useExplicitDryRunSpec(@Nullable Input<Boolean> useExplicitDryRunSpec) {
+        public Builder useExplicitDryRunSpec(@Nullable Output<Boolean> useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
 
         public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
-            this.useExplicitDryRunSpec = Input.ofNullable(useExplicitDryRunSpec);
+            this.useExplicitDryRunSpec = Output.ofNullable(useExplicitDryRunSpec);
             return this;
         }
         public ServicePerimeterState build() {

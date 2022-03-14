@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="componentArn")
-      private final @Nullable Input<String> componentArn;
+      private final @Nullable Output<String> componentArn;
 
-    public Input<String> getComponentArn() {
-        return this.componentArn == null ? Input.empty() : this.componentArn;
+    public Output<String> getComponentArn() {
+        return this.componentArn == null ? Output.empty() : this.componentArn;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ImageRecipeComponentParameterArgs>> parameters;
+      private final @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
 
-    public Input<List<ImageRecipeComponentParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ImageRecipeComponentParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public ImageRecipeComponentConfigurationArgs(
-        @Nullable Input<String> componentArn,
-        @Nullable Input<List<ImageRecipeComponentParameterArgs>> parameters) {
+        @Nullable Output<String> componentArn,
+        @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
         this.componentArn = componentArn;
         this.parameters = parameters;
     }
 
     private ImageRecipeComponentConfigurationArgs() {
-        this.componentArn = Input.empty();
-        this.parameters = Input.empty();
+        this.componentArn = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> componentArn;
-        private @Nullable Input<List<ImageRecipeComponentParameterArgs>> parameters;
+        private @Nullable Output<String> componentArn;
+        private @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder componentArn(@Nullable Input<String> componentArn) {
+        public Builder componentArn(@Nullable Output<String> componentArn) {
             this.componentArn = componentArn;
             return this;
         }
 
         public Builder componentArn(@Nullable String componentArn) {
-            this.componentArn = Input.ofNullable(componentArn);
+            this.componentArn = Output.ofNullable(componentArn);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ImageRecipeComponentParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ImageRecipeComponentParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public ImageRecipeComponentConfigurationArgs build() {

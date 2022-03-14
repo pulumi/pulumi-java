@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceArn")
-      private final @Nullable Input<String> resourceArn;
+      private final @Nullable Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
-        return this.resourceArn == null ? Input.empty() : this.resourceArn;
+    public Output<String> getResourceArn() {
+        return this.resourceArn == null ? Output.empty() : this.resourceArn;
     }
 
     public ResourcePolicyState(
-        @Nullable Input<String> policy,
-        @Nullable Input<String> resourceArn) {
+        @Nullable Output<String> policy,
+        @Nullable Output<String> resourceArn) {
         this.policy = policy;
         this.resourceArn = resourceArn;
     }
 
     private ResourcePolicyState() {
-        this.policy = Input.empty();
-        this.resourceArn = Input.empty();
+        this.policy = Output.empty();
+        this.resourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> resourceArn;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> resourceArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder resourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Input.ofNullable(resourceArn);
+            this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
         public ResourcePolicyState build() {

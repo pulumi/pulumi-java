@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,46 +17,46 @@ public final class ServiceTaskSpecContainerSpecHealthcheckGetArgs extends io.pul
     public static final ServiceTaskSpecContainerSpecHealthcheckGetArgs Empty = new ServiceTaskSpecContainerSpecHealthcheckGetArgs();
 
     @InputImport(name="interval")
-      private final @Nullable Input<String> interval;
+      private final @Nullable Output<String> interval;
 
-    public Input<String> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<String> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     @InputImport(name="retries")
-      private final @Nullable Input<Integer> retries;
+      private final @Nullable Output<Integer> retries;
 
-    public Input<Integer> getRetries() {
-        return this.retries == null ? Input.empty() : this.retries;
+    public Output<Integer> getRetries() {
+        return this.retries == null ? Output.empty() : this.retries;
     }
 
     @InputImport(name="startPeriod")
-      private final @Nullable Input<String> startPeriod;
+      private final @Nullable Output<String> startPeriod;
 
-    public Input<String> getStartPeriod() {
-        return this.startPeriod == null ? Input.empty() : this.startPeriod;
+    public Output<String> getStartPeriod() {
+        return this.startPeriod == null ? Output.empty() : this.startPeriod;
     }
 
     @InputImport(name="tests", required=true)
-      private final Input<List<String>> tests;
+      private final Output<List<String>> tests;
 
-    public Input<List<String>> getTests() {
+    public Output<List<String>> getTests() {
         return this.tests;
     }
 
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public ServiceTaskSpecContainerSpecHealthcheckGetArgs(
-        @Nullable Input<String> interval,
-        @Nullable Input<Integer> retries,
-        @Nullable Input<String> startPeriod,
-        Input<List<String>> tests,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<String> interval,
+        @Nullable Output<Integer> retries,
+        @Nullable Output<String> startPeriod,
+        Output<List<String>> tests,
+        @Nullable Output<String> timeout) {
         this.interval = interval;
         this.retries = retries;
         this.startPeriod = startPeriod;
@@ -65,11 +65,11 @@ public final class ServiceTaskSpecContainerSpecHealthcheckGetArgs extends io.pul
     }
 
     private ServiceTaskSpecContainerSpecHealthcheckGetArgs() {
-        this.interval = Input.empty();
-        this.retries = Input.empty();
-        this.startPeriod = Input.empty();
-        this.tests = Input.empty();
-        this.timeout = Input.empty();
+        this.interval = Output.empty();
+        this.retries = Output.empty();
+        this.startPeriod = Output.empty();
+        this.tests = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class ServiceTaskSpecContainerSpecHealthcheckGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> interval;
-        private @Nullable Input<Integer> retries;
-        private @Nullable Input<String> startPeriod;
-        private Input<List<String>> tests;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<String> interval;
+        private @Nullable Output<Integer> retries;
+        private @Nullable Output<String> startPeriod;
+        private Output<List<String>> tests;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class ServiceTaskSpecContainerSpecHealthcheckGetArgs extends io.pul
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder interval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable String interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder retries(@Nullable Input<Integer> retries) {
+        public Builder retries(@Nullable Output<Integer> retries) {
             this.retries = retries;
             return this;
         }
 
         public Builder retries(@Nullable Integer retries) {
-            this.retries = Input.ofNullable(retries);
+            this.retries = Output.ofNullable(retries);
             return this;
         }
 
-        public Builder startPeriod(@Nullable Input<String> startPeriod) {
+        public Builder startPeriod(@Nullable Output<String> startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
 
         public Builder startPeriod(@Nullable String startPeriod) {
-            this.startPeriod = Input.ofNullable(startPeriod);
+            this.startPeriod = Output.ofNullable(startPeriod);
             return this;
         }
 
-        public Builder tests(Input<List<String>> tests) {
+        public Builder tests(Output<List<String>> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
 
         public Builder tests(List<String> tests) {
-            this.tests = Input.of(Objects.requireNonNull(tests));
+            this.tests = Output.of(Objects.requireNonNull(tests));
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public ServiceTaskSpecContainerSpecHealthcheckGetArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.servicebus;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicebus.TopicAuthorizationRuleArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,24 +111,24 @@ public class TopicAuthorizationRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicAuthorizationRule(String name, TopicAuthorizationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicebus:TopicAuthorizationRule", name, args == null ? TopicAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:servicebus:TopicAuthorizationRule", name, args == null ? TopicAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TopicAuthorizationRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TopicAuthorizationRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicebus:TopicAuthorizationRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:servicebus/v20140901:TopicAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:servicebus/v20150801:TopicAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:servicebus/v20170401:TopicAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:servicebus/v20180101preview:TopicAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:servicebus/v20210101preview:TopicAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:servicebus/v20210601preview:TopicAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:servicebus/v20211101:TopicAuthorizationRule").build())
+                Output.of(Alias.builder().setType("azure-native:servicebus/v20140901:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:servicebus/v20150801:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:servicebus/v20170401:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:servicebus/v20180101preview:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:servicebus/v20210101preview:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:servicebus/v20210601preview:TopicAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:servicebus/v20211101:TopicAuthorizationRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -143,7 +142,7 @@ public class TopicAuthorizationRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TopicAuthorizationRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TopicAuthorizationRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TopicAuthorizationRule(name, id, options);
     }
 }

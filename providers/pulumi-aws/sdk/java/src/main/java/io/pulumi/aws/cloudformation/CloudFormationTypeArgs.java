@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation;
 
 import io.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="executionRoleArn")
-      private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
+    public Output<String> getExecutionRoleArn() {
+        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<CloudFormationTypeLoggingConfigArgs> loggingConfig;
+      private final @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
 
-    public Input<CloudFormationTypeLoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<CloudFormationTypeLoggingConfigArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schemaHandlerPackage", required=true)
-      private final Input<String> schemaHandlerPackage;
+      private final Output<String> schemaHandlerPackage;
 
-    public Input<String> getSchemaHandlerPackage() {
+    public Output<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
 
@@ -53,10 +53,10 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="typeName", required=true)
-      private final Input<String> typeName;
+      private final Output<String> typeName;
 
-    public Input<String> getTypeName() {
+    public Output<String> getTypeName() {
         return this.typeName;
     }
 
     public CloudFormationTypeArgs(
-        @Nullable Input<String> executionRoleArn,
-        @Nullable Input<CloudFormationTypeLoggingConfigArgs> loggingConfig,
-        Input<String> schemaHandlerPackage,
-        @Nullable Input<String> type,
-        Input<String> typeName) {
+        @Nullable Output<String> executionRoleArn,
+        @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig,
+        Output<String> schemaHandlerPackage,
+        @Nullable Output<String> type,
+        Output<String> typeName) {
         this.executionRoleArn = executionRoleArn;
         this.loggingConfig = loggingConfig;
         this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage, "expected parameter 'schemaHandlerPackage' to be non-null");
@@ -84,11 +84,11 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CloudFormationTypeArgs() {
-        this.executionRoleArn = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.schemaHandlerPackage = Input.empty();
-        this.type = Input.empty();
-        this.typeName = Input.empty();
+        this.executionRoleArn = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.schemaHandlerPackage = Output.empty();
+        this.type = Output.empty();
+        this.typeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> executionRoleArn;
-        private @Nullable Input<CloudFormationTypeLoggingConfigArgs> loggingConfig;
-        private Input<String> schemaHandlerPackage;
-        private @Nullable Input<String> type;
-        private Input<String> typeName;
+        private @Nullable Output<String> executionRoleArn;
+        private @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
+        private Output<String> schemaHandlerPackage;
+        private @Nullable Output<String> type;
+        private Output<String> typeName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Input.ofNullable(executionRoleArn);
+            this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<CloudFormationTypeLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder schemaHandlerPackage(Input<String> schemaHandlerPackage) {
+        public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
             return this;
         }
 
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
-            this.schemaHandlerPackage = Input.of(Objects.requireNonNull(schemaHandlerPackage));
+            this.schemaHandlerPackage = Output.of(Objects.requireNonNull(schemaHandlerPackage));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeName(Input<String> typeName) {
+        public Builder typeName(Output<String> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
 
         public Builder typeName(String typeName) {
-            this.typeName = Input.of(Objects.requireNonNull(typeName));
+            this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
         }
         public CloudFormationTypeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="errorCachingMinTtl")
-      private final @Nullable Input<Integer> errorCachingMinTtl;
+      private final @Nullable Output<Integer> errorCachingMinTtl;
 
-    public Input<Integer> getErrorCachingMinTtl() {
-        return this.errorCachingMinTtl == null ? Input.empty() : this.errorCachingMinTtl;
+    public Output<Integer> getErrorCachingMinTtl() {
+        return this.errorCachingMinTtl == null ? Output.empty() : this.errorCachingMinTtl;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="errorCode", required=true)
-      private final Input<Integer> errorCode;
+      private final Output<Integer> errorCode;
 
-    public Input<Integer> getErrorCode() {
+    public Output<Integer> getErrorCode() {
         return this.errorCode;
     }
 
@@ -46,10 +46,10 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="responseCode")
-      private final @Nullable Input<Integer> responseCode;
+      private final @Nullable Output<Integer> responseCode;
 
-    public Input<Integer> getResponseCode() {
-        return this.responseCode == null ? Input.empty() : this.responseCode;
+    public Output<Integer> getResponseCode() {
+        return this.responseCode == null ? Output.empty() : this.responseCode;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="responsePagePath")
-      private final @Nullable Input<String> responsePagePath;
+      private final @Nullable Output<String> responsePagePath;
 
-    public Input<String> getResponsePagePath() {
-        return this.responsePagePath == null ? Input.empty() : this.responsePagePath;
+    public Output<String> getResponsePagePath() {
+        return this.responsePagePath == null ? Output.empty() : this.responsePagePath;
     }
 
     public DistributionCustomErrorResponseGetArgs(
-        @Nullable Input<Integer> errorCachingMinTtl,
-        Input<Integer> errorCode,
-        @Nullable Input<Integer> responseCode,
-        @Nullable Input<String> responsePagePath) {
+        @Nullable Output<Integer> errorCachingMinTtl,
+        Output<Integer> errorCode,
+        @Nullable Output<Integer> responseCode,
+        @Nullable Output<String> responsePagePath) {
         this.errorCachingMinTtl = errorCachingMinTtl;
         this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
         this.responseCode = responseCode;
@@ -76,10 +76,10 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
     }
 
     private DistributionCustomErrorResponseGetArgs() {
-        this.errorCachingMinTtl = Input.empty();
-        this.errorCode = Input.empty();
-        this.responseCode = Input.empty();
-        this.responsePagePath = Input.empty();
+        this.errorCachingMinTtl = Output.empty();
+        this.errorCode = Output.empty();
+        this.responseCode = Output.empty();
+        this.responsePagePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> errorCachingMinTtl;
-        private Input<Integer> errorCode;
-        private @Nullable Input<Integer> responseCode;
-        private @Nullable Input<String> responsePagePath;
+        private @Nullable Output<Integer> errorCachingMinTtl;
+        private Output<Integer> errorCode;
+        private @Nullable Output<Integer> responseCode;
+        private @Nullable Output<String> responsePagePath;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
     	      this.responsePagePath = defaults.responsePagePath;
         }
 
-        public Builder errorCachingMinTtl(@Nullable Input<Integer> errorCachingMinTtl) {
+        public Builder errorCachingMinTtl(@Nullable Output<Integer> errorCachingMinTtl) {
             this.errorCachingMinTtl = errorCachingMinTtl;
             return this;
         }
 
         public Builder errorCachingMinTtl(@Nullable Integer errorCachingMinTtl) {
-            this.errorCachingMinTtl = Input.ofNullable(errorCachingMinTtl);
+            this.errorCachingMinTtl = Output.ofNullable(errorCachingMinTtl);
             return this;
         }
 
-        public Builder errorCode(Input<Integer> errorCode) {
+        public Builder errorCode(Output<Integer> errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
         public Builder errorCode(Integer errorCode) {
-            this.errorCode = Input.of(Objects.requireNonNull(errorCode));
+            this.errorCode = Output.of(Objects.requireNonNull(errorCode));
             return this;
         }
 
-        public Builder responseCode(@Nullable Input<Integer> responseCode) {
+        public Builder responseCode(@Nullable Output<Integer> responseCode) {
             this.responseCode = responseCode;
             return this;
         }
 
         public Builder responseCode(@Nullable Integer responseCode) {
-            this.responseCode = Input.ofNullable(responseCode);
+            this.responseCode = Output.ofNullable(responseCode);
             return this;
         }
 
-        public Builder responsePagePath(@Nullable Input<String> responsePagePath) {
+        public Builder responsePagePath(@Nullable Output<String> responsePagePath) {
             this.responsePagePath = responsePagePath;
             return this;
         }
 
         public Builder responsePagePath(@Nullable String responsePagePath) {
-            this.responsePagePath = Input.ofNullable(responsePagePath);
+            this.responsePagePath = Output.ofNullable(responsePagePath);
             return this;
         }
         public DistributionCustomErrorResponseGetArgs build() {

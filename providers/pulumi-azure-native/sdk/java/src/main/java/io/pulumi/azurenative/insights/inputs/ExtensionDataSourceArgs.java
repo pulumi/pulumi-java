@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.KnownExtensionDataSourceStreams;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -28,9 +28,9 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="extensionName", required=true)
-      private final Input<String> extensionName;
+      private final Output<String> extensionName;
 
-    public Input<String> getExtensionName() {
+    public Output<String> getExtensionName() {
         return this.extensionName;
     }
 
@@ -39,10 +39,10 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="extensionSettings")
-      private final @Nullable Input<Object> extensionSettings;
+      private final @Nullable Output<Object> extensionSettings;
 
-    public Input<Object> getExtensionSettings() {
-        return this.extensionSettings == null ? Input.empty() : this.extensionSettings;
+    public Output<Object> getExtensionSettings() {
+        return this.extensionSettings == null ? Output.empty() : this.extensionSettings;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="inputDataSources")
-      private final @Nullable Input<List<String>> inputDataSources;
+      private final @Nullable Output<List<String>> inputDataSources;
 
-    public Input<List<String>> getInputDataSources() {
-        return this.inputDataSources == null ? Input.empty() : this.inputDataSources;
+    public Output<List<String>> getInputDataSources() {
+        return this.inputDataSources == null ? Output.empty() : this.inputDataSources;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -74,18 +74,18 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="streams")
-      private final @Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
+      private final @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 
-    public Input<List<Either<String,KnownExtensionDataSourceStreams>>> getStreams() {
-        return this.streams == null ? Input.empty() : this.streams;
+    public Output<List<Either<String,KnownExtensionDataSourceStreams>>> getStreams() {
+        return this.streams == null ? Output.empty() : this.streams;
     }
 
     public ExtensionDataSourceArgs(
-        Input<String> extensionName,
-        @Nullable Input<Object> extensionSettings,
-        @Nullable Input<List<String>> inputDataSources,
-        @Nullable Input<String> name,
-        @Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
+        Output<String> extensionName,
+        @Nullable Output<Object> extensionSettings,
+        @Nullable Output<List<String>> inputDataSources,
+        @Nullable Output<String> name,
+        @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
         this.extensionName = Objects.requireNonNull(extensionName, "expected parameter 'extensionName' to be non-null");
         this.extensionSettings = extensionSettings;
         this.inputDataSources = inputDataSources;
@@ -94,11 +94,11 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ExtensionDataSourceArgs() {
-        this.extensionName = Input.empty();
-        this.extensionSettings = Input.empty();
-        this.inputDataSources = Input.empty();
-        this.name = Input.empty();
-        this.streams = Input.empty();
+        this.extensionName = Output.empty();
+        this.extensionSettings = Output.empty();
+        this.inputDataSources = Output.empty();
+        this.name = Output.empty();
+        this.streams = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,11 +110,11 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> extensionName;
-        private @Nullable Input<Object> extensionSettings;
-        private @Nullable Input<List<String>> inputDataSources;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
+        private Output<String> extensionName;
+        private @Nullable Output<Object> extensionSettings;
+        private @Nullable Output<List<String>> inputDataSources;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 
         public Builder() {
     	      // Empty
@@ -129,53 +129,53 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     	      this.streams = defaults.streams;
         }
 
-        public Builder extensionName(Input<String> extensionName) {
+        public Builder extensionName(Output<String> extensionName) {
             this.extensionName = Objects.requireNonNull(extensionName);
             return this;
         }
 
         public Builder extensionName(String extensionName) {
-            this.extensionName = Input.of(Objects.requireNonNull(extensionName));
+            this.extensionName = Output.of(Objects.requireNonNull(extensionName));
             return this;
         }
 
-        public Builder extensionSettings(@Nullable Input<Object> extensionSettings) {
+        public Builder extensionSettings(@Nullable Output<Object> extensionSettings) {
             this.extensionSettings = extensionSettings;
             return this;
         }
 
         public Builder extensionSettings(@Nullable Object extensionSettings) {
-            this.extensionSettings = Input.ofNullable(extensionSettings);
+            this.extensionSettings = Output.ofNullable(extensionSettings);
             return this;
         }
 
-        public Builder inputDataSources(@Nullable Input<List<String>> inputDataSources) {
+        public Builder inputDataSources(@Nullable Output<List<String>> inputDataSources) {
             this.inputDataSources = inputDataSources;
             return this;
         }
 
         public Builder inputDataSources(@Nullable List<String> inputDataSources) {
-            this.inputDataSources = Input.ofNullable(inputDataSources);
+            this.inputDataSources = Output.ofNullable(inputDataSources);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder streams(@Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
+        public Builder streams(@Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
         public Builder streams(@Nullable List<Either<String,KnownExtensionDataSourceStreams>> streams) {
-            this.streams = Input.ofNullable(streams);
+            this.streams = Output.ofNullable(streams);
             return this;
         }
         public ExtensionDataSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoveryreadiness;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessCheckName", required=true)
-      private final Input<String> readinessCheckName;
+      private final Output<String> readinessCheckName;
 
-    public Input<String> getReadinessCheckName() {
+    public Output<String> getReadinessCheckName() {
         return this.readinessCheckName;
     }
 
@@ -31,9 +31,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetName", required=true)
-      private final Input<String> resourceSetName;
+      private final Output<String> resourceSetName;
 
-    public Input<String> getResourceSetName() {
+    public Output<String> getResourceSetName() {
         return this.resourceSetName;
     }
 
@@ -42,25 +42,25 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ReadinessCheckArgs(
-        Input<String> readinessCheckName,
-        Input<String> resourceSetName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> readinessCheckName,
+        Output<String> resourceSetName,
+        @Nullable Output<Map<String,String>> tags) {
         this.readinessCheckName = Objects.requireNonNull(readinessCheckName, "expected parameter 'readinessCheckName' to be non-null");
         this.resourceSetName = Objects.requireNonNull(resourceSetName, "expected parameter 'resourceSetName' to be non-null");
         this.tags = tags;
     }
 
     private ReadinessCheckArgs() {
-        this.readinessCheckName = Input.empty();
-        this.resourceSetName = Input.empty();
-        this.tags = Input.empty();
+        this.readinessCheckName = Output.empty();
+        this.resourceSetName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> readinessCheckName;
-        private Input<String> resourceSetName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> readinessCheckName;
+        private Output<String> resourceSetName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder readinessCheckName(Input<String> readinessCheckName) {
+        public Builder readinessCheckName(Output<String> readinessCheckName) {
             this.readinessCheckName = Objects.requireNonNull(readinessCheckName);
             return this;
         }
 
         public Builder readinessCheckName(String readinessCheckName) {
-            this.readinessCheckName = Input.of(Objects.requireNonNull(readinessCheckName));
+            this.readinessCheckName = Output.of(Objects.requireNonNull(readinessCheckName));
             return this;
         }
 
-        public Builder resourceSetName(Input<String> resourceSetName) {
+        public Builder resourceSetName(Output<String> resourceSetName) {
             this.resourceSetName = Objects.requireNonNull(resourceSetName);
             return this;
         }
 
         public Builder resourceSetName(String resourceSetName) {
-            this.resourceSetName = Input.of(Objects.requireNonNull(resourceSetName));
+            this.resourceSetName = Output.of(Objects.requireNonNull(resourceSetName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ReadinessCheckArgs build() {

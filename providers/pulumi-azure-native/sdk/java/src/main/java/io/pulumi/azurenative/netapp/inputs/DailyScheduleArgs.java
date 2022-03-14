@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hour")
-      private final @Nullable Input<Integer> hour;
+      private final @Nullable Output<Integer> hour;
 
-    public Input<Integer> getHour() {
-        return this.hour == null ? Input.empty() : this.hour;
+    public Output<Integer> getHour() {
+        return this.hour == null ? Output.empty() : this.hour;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minute")
-      private final @Nullable Input<Integer> minute;
+      private final @Nullable Output<Integer> minute;
 
-    public Input<Integer> getMinute() {
-        return this.minute == null ? Input.empty() : this.minute;
+    public Output<Integer> getMinute() {
+        return this.minute == null ? Output.empty() : this.minute;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotsToKeep")
-      private final @Nullable Input<Integer> snapshotsToKeep;
+      private final @Nullable Output<Integer> snapshotsToKeep;
 
-    public Input<Integer> getSnapshotsToKeep() {
-        return this.snapshotsToKeep == null ? Input.empty() : this.snapshotsToKeep;
+    public Output<Integer> getSnapshotsToKeep() {
+        return this.snapshotsToKeep == null ? Output.empty() : this.snapshotsToKeep;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usedBytes")
-      private final @Nullable Input<Double> usedBytes;
+      private final @Nullable Output<Double> usedBytes;
 
-    public Input<Double> getUsedBytes() {
-        return this.usedBytes == null ? Input.empty() : this.usedBytes;
+    public Output<Double> getUsedBytes() {
+        return this.usedBytes == null ? Output.empty() : this.usedBytes;
     }
 
     public DailyScheduleArgs(
-        @Nullable Input<Integer> hour,
-        @Nullable Input<Integer> minute,
-        @Nullable Input<Integer> snapshotsToKeep,
-        @Nullable Input<Double> usedBytes) {
+        @Nullable Output<Integer> hour,
+        @Nullable Output<Integer> minute,
+        @Nullable Output<Integer> snapshotsToKeep,
+        @Nullable Output<Double> usedBytes) {
         this.hour = hour;
         this.minute = minute;
         this.snapshotsToKeep = snapshotsToKeep;
@@ -75,10 +75,10 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DailyScheduleArgs() {
-        this.hour = Input.empty();
-        this.minute = Input.empty();
-        this.snapshotsToKeep = Input.empty();
-        this.usedBytes = Input.empty();
+        this.hour = Output.empty();
+        this.minute = Output.empty();
+        this.snapshotsToKeep = Output.empty();
+        this.usedBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> hour;
-        private @Nullable Input<Integer> minute;
-        private @Nullable Input<Integer> snapshotsToKeep;
-        private @Nullable Input<Double> usedBytes;
+        private @Nullable Output<Integer> hour;
+        private @Nullable Output<Integer> minute;
+        private @Nullable Output<Integer> snapshotsToKeep;
+        private @Nullable Output<Double> usedBytes;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usedBytes = defaults.usedBytes;
         }
 
-        public Builder hour(@Nullable Input<Integer> hour) {
+        public Builder hour(@Nullable Output<Integer> hour) {
             this.hour = hour;
             return this;
         }
 
         public Builder hour(@Nullable Integer hour) {
-            this.hour = Input.ofNullable(hour);
+            this.hour = Output.ofNullable(hour);
             return this;
         }
 
-        public Builder minute(@Nullable Input<Integer> minute) {
+        public Builder minute(@Nullable Output<Integer> minute) {
             this.minute = minute;
             return this;
         }
 
         public Builder minute(@Nullable Integer minute) {
-            this.minute = Input.ofNullable(minute);
+            this.minute = Output.ofNullable(minute);
             return this;
         }
 
-        public Builder snapshotsToKeep(@Nullable Input<Integer> snapshotsToKeep) {
+        public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
-            this.snapshotsToKeep = Input.ofNullable(snapshotsToKeep);
+            this.snapshotsToKeep = Output.ofNullable(snapshotsToKeep);
             return this;
         }
 
-        public Builder usedBytes(@Nullable Input<Double> usedBytes) {
+        public Builder usedBytes(@Nullable Output<Double> usedBytes) {
             this.usedBytes = usedBytes;
             return this;
         }
 
         public Builder usedBytes(@Nullable Double usedBytes) {
-            this.usedBytes = Input.ofNullable(usedBytes);
+            this.usedBytes = Output.ofNullable(usedBytes);
             return this;
         }
         public DailyScheduleArgs build() {

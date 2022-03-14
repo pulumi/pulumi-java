@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DiskExclusionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskExclusionProperties")
-      private final @Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties;
+      private final @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
 
-    public Input<DiskExclusionPropertiesArgs> getDiskExclusionProperties() {
-        return this.diskExclusionProperties == null ? Input.empty() : this.diskExclusionProperties;
+    public Output<DiskExclusionPropertiesArgs> getDiskExclusionProperties() {
+        return this.diskExclusionProperties == null ? Output.empty() : this.diskExclusionProperties;
     }
 
-    public ExtendedPropertiesArgs(@Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties) {
+    public ExtendedPropertiesArgs(@Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties) {
         this.diskExclusionProperties = diskExclusionProperties;
     }
 
     private ExtendedPropertiesArgs() {
-        this.diskExclusionProperties = Input.empty();
+        this.diskExclusionProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties;
+        private @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.diskExclusionProperties = defaults.diskExclusionProperties;
         }
 
-        public Builder diskExclusionProperties(@Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties) {
+        public Builder diskExclusionProperties(@Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties) {
             this.diskExclusionProperties = diskExclusionProperties;
             return this;
         }
 
         public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesArgs diskExclusionProperties) {
-            this.diskExclusionProperties = Input.ofNullable(diskExclusionProperties);
+            this.diskExclusionProperties = Output.ofNullable(diskExclusionProperties);
             return this;
         }
         public ExtendedPropertiesArgs build() {

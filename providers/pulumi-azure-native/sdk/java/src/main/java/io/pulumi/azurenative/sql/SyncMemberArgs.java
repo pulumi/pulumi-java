@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.SyncDirection;
 import io.pulumi.azurenative.sql.enums.SyncMemberDbType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -34,10 +34,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-      private final @Nullable Input<Either<String,SyncMemberDbType>> databaseType;
+      private final @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
 
-    public Input<Either<String,SyncMemberDbType>> getDatabaseType() {
-        return this.databaseType == null ? Input.empty() : this.databaseType;
+    public Output<Either<String,SyncMemberDbType>> getDatabaseType() {
+        return this.databaseType == null ? Output.empty() : this.databaseType;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,9 +67,9 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -78,10 +78,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerDatabaseId")
-      private final @Nullable Input<String> sqlServerDatabaseId;
+      private final @Nullable Output<String> sqlServerDatabaseId;
 
-    public Input<String> getSqlServerDatabaseId() {
-        return this.sqlServerDatabaseId == null ? Input.empty() : this.sqlServerDatabaseId;
+    public Output<String> getSqlServerDatabaseId() {
+        return this.sqlServerDatabaseId == null ? Output.empty() : this.sqlServerDatabaseId;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncAgentId")
-      private final @Nullable Input<String> syncAgentId;
+      private final @Nullable Output<String> syncAgentId;
 
-    public Input<String> getSyncAgentId() {
-        return this.syncAgentId == null ? Input.empty() : this.syncAgentId;
+    public Output<String> getSyncAgentId() {
+        return this.syncAgentId == null ? Output.empty() : this.syncAgentId;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncDirection")
-      private final @Nullable Input<Either<String,SyncDirection>> syncDirection;
+      private final @Nullable Output<Either<String,SyncDirection>> syncDirection;
 
-    public Input<Either<String,SyncDirection>> getSyncDirection() {
-        return this.syncDirection == null ? Input.empty() : this.syncDirection;
+    public Output<Either<String,SyncDirection>> getSyncDirection() {
+        return this.syncDirection == null ? Output.empty() : this.syncDirection;
     }
 
     /**
@@ -111,9 +111,9 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-      private final Input<String> syncGroupName;
+      private final Output<String> syncGroupName;
 
-    public Input<String> getSyncGroupName() {
+    public Output<String> getSyncGroupName() {
         return this.syncGroupName;
     }
 
@@ -122,10 +122,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMemberAzureDatabaseResourceId")
-      private final @Nullable Input<String> syncMemberAzureDatabaseResourceId;
+      private final @Nullable Output<String> syncMemberAzureDatabaseResourceId;
 
-    public Input<String> getSyncMemberAzureDatabaseResourceId() {
-        return this.syncMemberAzureDatabaseResourceId == null ? Input.empty() : this.syncMemberAzureDatabaseResourceId;
+    public Output<String> getSyncMemberAzureDatabaseResourceId() {
+        return this.syncMemberAzureDatabaseResourceId == null ? Output.empty() : this.syncMemberAzureDatabaseResourceId;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMemberName")
-      private final @Nullable Input<String> syncMemberName;
+      private final @Nullable Output<String> syncMemberName;
 
-    public Input<String> getSyncMemberName() {
-        return this.syncMemberName == null ? Input.empty() : this.syncMemberName;
+    public Output<String> getSyncMemberName() {
+        return this.syncMemberName == null ? Output.empty() : this.syncMemberName;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usePrivateLinkConnection")
-      private final @Nullable Input<Boolean> usePrivateLinkConnection;
+      private final @Nullable Output<Boolean> usePrivateLinkConnection;
 
-    public Input<Boolean> getUsePrivateLinkConnection() {
-        return this.usePrivateLinkConnection == null ? Input.empty() : this.usePrivateLinkConnection;
+    public Output<Boolean> getUsePrivateLinkConnection() {
+        return this.usePrivateLinkConnection == null ? Output.empty() : this.usePrivateLinkConnection;
     }
 
     /**
@@ -155,26 +155,26 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public SyncMemberArgs(
-        Input<String> databaseName,
-        @Nullable Input<Either<String,SyncMemberDbType>> databaseType,
-        @Nullable Input<String> password,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<String> sqlServerDatabaseId,
-        @Nullable Input<String> syncAgentId,
-        @Nullable Input<Either<String,SyncDirection>> syncDirection,
-        Input<String> syncGroupName,
-        @Nullable Input<String> syncMemberAzureDatabaseResourceId,
-        @Nullable Input<String> syncMemberName,
-        @Nullable Input<Boolean> usePrivateLinkConnection,
-        @Nullable Input<String> userName) {
+        Output<String> databaseName,
+        @Nullable Output<Either<String,SyncMemberDbType>> databaseType,
+        @Nullable Output<String> password,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<String> sqlServerDatabaseId,
+        @Nullable Output<String> syncAgentId,
+        @Nullable Output<Either<String,SyncDirection>> syncDirection,
+        Output<String> syncGroupName,
+        @Nullable Output<String> syncMemberAzureDatabaseResourceId,
+        @Nullable Output<String> syncMemberName,
+        @Nullable Output<Boolean> usePrivateLinkConnection,
+        @Nullable Output<String> userName) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.databaseType = databaseType;
         this.password = password;
@@ -191,19 +191,19 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SyncMemberArgs() {
-        this.databaseName = Input.empty();
-        this.databaseType = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.sqlServerDatabaseId = Input.empty();
-        this.syncAgentId = Input.empty();
-        this.syncDirection = Input.empty();
-        this.syncGroupName = Input.empty();
-        this.syncMemberAzureDatabaseResourceId = Input.empty();
-        this.syncMemberName = Input.empty();
-        this.usePrivateLinkConnection = Input.empty();
-        this.userName = Input.empty();
+        this.databaseName = Output.empty();
+        this.databaseType = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.sqlServerDatabaseId = Output.empty();
+        this.syncAgentId = Output.empty();
+        this.syncDirection = Output.empty();
+        this.syncGroupName = Output.empty();
+        this.syncMemberAzureDatabaseResourceId = Output.empty();
+        this.syncMemberName = Output.empty();
+        this.usePrivateLinkConnection = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -215,19 +215,19 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private @Nullable Input<Either<String,SyncMemberDbType>> databaseType;
-        private @Nullable Input<String> password;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<String> sqlServerDatabaseId;
-        private @Nullable Input<String> syncAgentId;
-        private @Nullable Input<Either<String,SyncDirection>> syncDirection;
-        private Input<String> syncGroupName;
-        private @Nullable Input<String> syncMemberAzureDatabaseResourceId;
-        private @Nullable Input<String> syncMemberName;
-        private @Nullable Input<Boolean> usePrivateLinkConnection;
-        private @Nullable Input<String> userName;
+        private Output<String> databaseName;
+        private @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
+        private @Nullable Output<String> password;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<String> sqlServerDatabaseId;
+        private @Nullable Output<String> syncAgentId;
+        private @Nullable Output<Either<String,SyncDirection>> syncDirection;
+        private Output<String> syncGroupName;
+        private @Nullable Output<String> syncMemberAzureDatabaseResourceId;
+        private @Nullable Output<String> syncMemberName;
+        private @Nullable Output<Boolean> usePrivateLinkConnection;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -250,133 +250,133 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder databaseType(@Nullable Input<Either<String,SyncMemberDbType>> databaseType) {
+        public Builder databaseType(@Nullable Output<Either<String,SyncMemberDbType>> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
         public Builder databaseType(@Nullable Either<String,SyncMemberDbType> databaseType) {
-            this.databaseType = Input.ofNullable(databaseType);
+            this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder sqlServerDatabaseId(@Nullable Input<String> sqlServerDatabaseId) {
+        public Builder sqlServerDatabaseId(@Nullable Output<String> sqlServerDatabaseId) {
             this.sqlServerDatabaseId = sqlServerDatabaseId;
             return this;
         }
 
         public Builder sqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
-            this.sqlServerDatabaseId = Input.ofNullable(sqlServerDatabaseId);
+            this.sqlServerDatabaseId = Output.ofNullable(sqlServerDatabaseId);
             return this;
         }
 
-        public Builder syncAgentId(@Nullable Input<String> syncAgentId) {
+        public Builder syncAgentId(@Nullable Output<String> syncAgentId) {
             this.syncAgentId = syncAgentId;
             return this;
         }
 
         public Builder syncAgentId(@Nullable String syncAgentId) {
-            this.syncAgentId = Input.ofNullable(syncAgentId);
+            this.syncAgentId = Output.ofNullable(syncAgentId);
             return this;
         }
 
-        public Builder syncDirection(@Nullable Input<Either<String,SyncDirection>> syncDirection) {
+        public Builder syncDirection(@Nullable Output<Either<String,SyncDirection>> syncDirection) {
             this.syncDirection = syncDirection;
             return this;
         }
 
         public Builder syncDirection(@Nullable Either<String,SyncDirection> syncDirection) {
-            this.syncDirection = Input.ofNullable(syncDirection);
+            this.syncDirection = Output.ofNullable(syncDirection);
             return this;
         }
 
-        public Builder syncGroupName(Input<String> syncGroupName) {
+        public Builder syncGroupName(Output<String> syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
 
         public Builder syncGroupName(String syncGroupName) {
-            this.syncGroupName = Input.of(Objects.requireNonNull(syncGroupName));
+            this.syncGroupName = Output.of(Objects.requireNonNull(syncGroupName));
             return this;
         }
 
-        public Builder syncMemberAzureDatabaseResourceId(@Nullable Input<String> syncMemberAzureDatabaseResourceId) {
+        public Builder syncMemberAzureDatabaseResourceId(@Nullable Output<String> syncMemberAzureDatabaseResourceId) {
             this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
             return this;
         }
 
         public Builder syncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
-            this.syncMemberAzureDatabaseResourceId = Input.ofNullable(syncMemberAzureDatabaseResourceId);
+            this.syncMemberAzureDatabaseResourceId = Output.ofNullable(syncMemberAzureDatabaseResourceId);
             return this;
         }
 
-        public Builder syncMemberName(@Nullable Input<String> syncMemberName) {
+        public Builder syncMemberName(@Nullable Output<String> syncMemberName) {
             this.syncMemberName = syncMemberName;
             return this;
         }
 
         public Builder syncMemberName(@Nullable String syncMemberName) {
-            this.syncMemberName = Input.ofNullable(syncMemberName);
+            this.syncMemberName = Output.ofNullable(syncMemberName);
             return this;
         }
 
-        public Builder usePrivateLinkConnection(@Nullable Input<Boolean> usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Output<Boolean> usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
 
         public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
-            this.usePrivateLinkConnection = Input.ofNullable(usePrivateLinkConnection);
+            this.usePrivateLinkConnection = Output.ofNullable(usePrivateLinkConnection);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public SyncMemberArgs build() {

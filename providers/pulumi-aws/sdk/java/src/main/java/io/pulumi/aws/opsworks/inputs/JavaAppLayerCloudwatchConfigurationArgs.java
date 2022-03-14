@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.JavaAppLayerCloudwatchConfigurationLogStreamArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class JavaAppLayerCloudwatchConfigurationArgs extends io.pulumi.res
     public static final JavaAppLayerCloudwatchConfigurationArgs Empty = new JavaAppLayerCloudwatchConfigurationArgs();
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="logStreams")
-      private final @Nullable Input<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
+      private final @Nullable Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
-    public Input<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> getLogStreams() {
-        return this.logStreams == null ? Input.empty() : this.logStreams;
+    public Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> getLogStreams() {
+        return this.logStreams == null ? Output.empty() : this.logStreams;
     }
 
     public JavaAppLayerCloudwatchConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }
 
     private JavaAppLayerCloudwatchConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.logStreams = Input.empty();
+        this.enabled = Output.empty();
+        this.logStreams = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class JavaAppLayerCloudwatchConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class JavaAppLayerCloudwatchConfigurationArgs extends io.pulumi.res
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder logStreams(@Nullable Input<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
+        public Builder logStreams(@Nullable Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
 
         public Builder logStreams(@Nullable List<JavaAppLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
-            this.logStreams = Input.ofNullable(logStreams);
+            this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
         public JavaAppLayerCloudwatchConfigurationArgs build() {

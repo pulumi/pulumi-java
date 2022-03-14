@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.StorageAccountArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageaccounts")
-      private final @Nullable Input<List<StorageAccountArgs>> storageaccounts;
+      private final @Nullable Output<List<StorageAccountArgs>> storageaccounts;
 
-    public Input<List<StorageAccountArgs>> getStorageaccounts() {
-        return this.storageaccounts == null ? Input.empty() : this.storageaccounts;
+    public Output<List<StorageAccountArgs>> getStorageaccounts() {
+        return this.storageaccounts == null ? Output.empty() : this.storageaccounts;
     }
 
-    public StorageProfileArgs(@Nullable Input<List<StorageAccountArgs>> storageaccounts) {
+    public StorageProfileArgs(@Nullable Output<List<StorageAccountArgs>> storageaccounts) {
         this.storageaccounts = storageaccounts;
     }
 
     private StorageProfileArgs() {
-        this.storageaccounts = Input.empty();
+        this.storageaccounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StorageAccountArgs>> storageaccounts;
+        private @Nullable Output<List<StorageAccountArgs>> storageaccounts;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageaccounts = defaults.storageaccounts;
         }
 
-        public Builder storageaccounts(@Nullable Input<List<StorageAccountArgs>> storageaccounts) {
+        public Builder storageaccounts(@Nullable Output<List<StorageAccountArgs>> storageaccounts) {
             this.storageaccounts = storageaccounts;
             return this;
         }
 
         public Builder storageaccounts(@Nullable List<StorageAccountArgs> storageaccounts) {
-            this.storageaccounts = Input.ofNullable(storageaccounts);
+            this.storageaccounts = Output.ofNullable(storageaccounts);
             return this;
         }
         public StorageProfileArgs build() {

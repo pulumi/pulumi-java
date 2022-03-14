@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheId")
-      private final @Nullable Input<String> cacheId;
+      private final @Nullable Output<String> cacheId;
 
-    public Input<String> getCacheId() {
-        return this.cacheId == null ? Input.empty() : this.cacheId;
+    public Output<String> getCacheId() {
+        return this.cacheId == null ? Output.empty() : this.cacheId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionString", required=true)
-      private final Input<String> connectionString;
+      private final Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
+    public Output<String> getConnectionString() {
         return this.connectionString;
     }
 
@@ -41,10 +41,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,10 +63,10 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -85,20 +85,20 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useFromLocation", required=true)
-      private final Input<String> useFromLocation;
+      private final Output<String> useFromLocation;
 
-    public Input<String> getUseFromLocation() {
+    public Output<String> getUseFromLocation() {
         return this.useFromLocation;
     }
 
     public CacheArgs(
-        @Nullable Input<String> cacheId,
-        Input<String> connectionString,
-        @Nullable Input<String> description,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceId,
-        Input<String> serviceName,
-        Input<String> useFromLocation) {
+        @Nullable Output<String> cacheId,
+        Output<String> connectionString,
+        @Nullable Output<String> description,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceId,
+        Output<String> serviceName,
+        Output<String> useFromLocation) {
         this.cacheId = cacheId;
         this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
         this.description = description;
@@ -109,13 +109,13 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CacheArgs() {
-        this.cacheId = Input.empty();
-        this.connectionString = Input.empty();
-        this.description = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceId = Input.empty();
-        this.serviceName = Input.empty();
-        this.useFromLocation = Input.empty();
+        this.cacheId = Output.empty();
+        this.connectionString = Output.empty();
+        this.description = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceId = Output.empty();
+        this.serviceName = Output.empty();
+        this.useFromLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cacheId;
-        private Input<String> connectionString;
-        private @Nullable Input<String> description;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceId;
-        private Input<String> serviceName;
-        private Input<String> useFromLocation;
+        private @Nullable Output<String> cacheId;
+        private Output<String> connectionString;
+        private @Nullable Output<String> description;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceId;
+        private Output<String> serviceName;
+        private Output<String> useFromLocation;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useFromLocation = defaults.useFromLocation;
         }
 
-        public Builder cacheId(@Nullable Input<String> cacheId) {
+        public Builder cacheId(@Nullable Output<String> cacheId) {
             this.cacheId = cacheId;
             return this;
         }
 
         public Builder cacheId(@Nullable String cacheId) {
-            this.cacheId = Input.ofNullable(cacheId);
+            this.cacheId = Output.ofNullable(cacheId);
             return this;
         }
 
-        public Builder connectionString(Input<String> connectionString) {
+        public Builder connectionString(Output<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
         public Builder connectionString(String connectionString) {
-            this.connectionString = Input.of(Objects.requireNonNull(connectionString));
+            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder useFromLocation(Input<String> useFromLocation) {
+        public Builder useFromLocation(Output<String> useFromLocation) {
             this.useFromLocation = Objects.requireNonNull(useFromLocation);
             return this;
         }
 
         public Builder useFromLocation(String useFromLocation) {
-            this.useFromLocation = Input.of(Objects.requireNonNull(useFromLocation));
+            this.useFromLocation = Output.of(Objects.requireNonNull(useFromLocation));
             return this;
         }
         public CacheArgs build() {

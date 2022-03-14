@@ -13,7 +13,7 @@ import io.pulumi.azurenative.synapse.inputs.PurviewConfigurationArgs;
 import io.pulumi.azurenative.synapse.inputs.VirtualNetworkProfileArgs;
 import io.pulumi.azurenative.synapse.inputs.WorkspaceRepositoryConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -31,10 +31,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectivityEndpoints")
-      private final @Nullable Input<Map<String,String>> connectivityEndpoints;
+      private final @Nullable Output<Map<String,String>> connectivityEndpoints;
 
-    public Input<Map<String,String>> getConnectivityEndpoints() {
-        return this.connectivityEndpoints == null ? Input.empty() : this.connectivityEndpoints;
+    public Output<Map<String,String>> getConnectivityEndpoints() {
+        return this.connectivityEndpoints == null ? Output.empty() : this.connectivityEndpoints;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDataLakeStorage")
-      private final @Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
+      private final @Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
 
-    public Input<DataLakeStorageAccountDetailsArgs> getDefaultDataLakeStorage() {
-        return this.defaultDataLakeStorage == null ? Input.empty() : this.defaultDataLakeStorage;
+    public Output<DataLakeStorageAccountDetailsArgs> getDefaultDataLakeStorage() {
+        return this.defaultDataLakeStorage == null ? Output.empty() : this.defaultDataLakeStorage;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<EncryptionDetailsArgs> encryption;
+      private final @Nullable Output<EncryptionDetailsArgs> encryption;
 
-    public Input<EncryptionDetailsArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<EncryptionDetailsArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedIdentityArgs> identity;
+      private final @Nullable Output<ManagedIdentityArgs> identity;
 
-    public Input<ManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedResourceGroupName")
-      private final @Nullable Input<String> managedResourceGroupName;
+      private final @Nullable Output<String> managedResourceGroupName;
 
-    public Input<String> getManagedResourceGroupName() {
-        return this.managedResourceGroupName == null ? Input.empty() : this.managedResourceGroupName;
+    public Output<String> getManagedResourceGroupName() {
+        return this.managedResourceGroupName == null ? Output.empty() : this.managedResourceGroupName;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedVirtualNetwork")
-      private final @Nullable Input<String> managedVirtualNetwork;
+      private final @Nullable Output<String> managedVirtualNetwork;
 
-    public Input<String> getManagedVirtualNetwork() {
-        return this.managedVirtualNetwork == null ? Input.empty() : this.managedVirtualNetwork;
+    public Output<String> getManagedVirtualNetwork() {
+        return this.managedVirtualNetwork == null ? Output.empty() : this.managedVirtualNetwork;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedVirtualNetworkSettings")
-      private final @Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
+      private final @Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
 
-    public Input<ManagedVirtualNetworkSettingsArgs> getManagedVirtualNetworkSettings() {
-        return this.managedVirtualNetworkSettings == null ? Input.empty() : this.managedVirtualNetworkSettings;
+    public Output<ManagedVirtualNetworkSettingsArgs> getManagedVirtualNetworkSettings() {
+        return this.managedVirtualNetworkSettings == null ? Output.empty() : this.managedVirtualNetworkSettings;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateEndpointConnections")
-      private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+      private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
+    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+        return this.privateEndpointConnections == null ? Output.empty() : this.privateEndpointConnections;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,WorkspacePublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,WorkspacePublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purviewConfiguration")
-      private final @Nullable Input<PurviewConfigurationArgs> purviewConfiguration;
+      private final @Nullable Output<PurviewConfigurationArgs> purviewConfiguration;
 
-    public Input<PurviewConfigurationArgs> getPurviewConfiguration() {
-        return this.purviewConfiguration == null ? Input.empty() : this.purviewConfiguration;
+    public Output<PurviewConfigurationArgs> getPurviewConfiguration() {
+        return this.purviewConfiguration == null ? Output.empty() : this.purviewConfiguration;
     }
 
     /**
@@ -152,9 +152,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -163,10 +163,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlAdministratorLogin")
-      private final @Nullable Input<String> sqlAdministratorLogin;
+      private final @Nullable Output<String> sqlAdministratorLogin;
 
-    public Input<String> getSqlAdministratorLogin() {
-        return this.sqlAdministratorLogin == null ? Input.empty() : this.sqlAdministratorLogin;
+    public Output<String> getSqlAdministratorLogin() {
+        return this.sqlAdministratorLogin == null ? Output.empty() : this.sqlAdministratorLogin;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlAdministratorLoginPassword")
-      private final @Nullable Input<String> sqlAdministratorLoginPassword;
+      private final @Nullable Output<String> sqlAdministratorLoginPassword;
 
-    public Input<String> getSqlAdministratorLoginPassword() {
-        return this.sqlAdministratorLoginPassword == null ? Input.empty() : this.sqlAdministratorLoginPassword;
+    public Output<String> getSqlAdministratorLoginPassword() {
+        return this.sqlAdministratorLoginPassword == null ? Output.empty() : this.sqlAdministratorLoginPassword;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkProfile")
-      private final @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
+      private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
-    public Input<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
-        return this.virtualNetworkProfile == null ? Input.empty() : this.virtualNetworkProfile;
+    public Output<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
+        return this.virtualNetworkProfile == null ? Output.empty() : this.virtualNetworkProfile;
     }
 
     /**
@@ -207,10 +207,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-      private final @Nullable Input<String> workspaceName;
+      private final @Nullable Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
-        return this.workspaceName == null ? Input.empty() : this.workspaceName;
+    public Output<String> getWorkspaceName() {
+        return this.workspaceName == null ? Output.empty() : this.workspaceName;
     }
 
     /**
@@ -218,31 +218,31 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceRepositoryConfiguration")
-      private final @Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
+      private final @Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
 
-    public Input<WorkspaceRepositoryConfigurationArgs> getWorkspaceRepositoryConfiguration() {
-        return this.workspaceRepositoryConfiguration == null ? Input.empty() : this.workspaceRepositoryConfiguration;
+    public Output<WorkspaceRepositoryConfigurationArgs> getWorkspaceRepositoryConfiguration() {
+        return this.workspaceRepositoryConfiguration == null ? Output.empty() : this.workspaceRepositoryConfiguration;
     }
 
     public WorkspaceArgs(
-        @Nullable Input<Map<String,String>> connectivityEndpoints,
-        @Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage,
-        @Nullable Input<EncryptionDetailsArgs> encryption,
-        @Nullable Input<ManagedIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedResourceGroupName,
-        @Nullable Input<String> managedVirtualNetwork,
-        @Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings,
-        @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
-        @Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Input<PurviewConfigurationArgs> purviewConfiguration,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sqlAdministratorLogin,
-        @Nullable Input<String> sqlAdministratorLoginPassword,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile,
-        @Nullable Input<String> workspaceName,
-        @Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
+        @Nullable Output<Map<String,String>> connectivityEndpoints,
+        @Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage,
+        @Nullable Output<EncryptionDetailsArgs> encryption,
+        @Nullable Output<ManagedIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedResourceGroupName,
+        @Nullable Output<String> managedVirtualNetwork,
+        @Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings,
+        @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
+        @Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess,
+        @Nullable Output<PurviewConfigurationArgs> purviewConfiguration,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sqlAdministratorLogin,
+        @Nullable Output<String> sqlAdministratorLoginPassword,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile,
+        @Nullable Output<String> workspaceName,
+        @Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
         this.connectivityEndpoints = connectivityEndpoints;
         this.defaultDataLakeStorage = defaultDataLakeStorage;
         this.encryption = encryption;
@@ -264,24 +264,24 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.connectivityEndpoints = Input.empty();
-        this.defaultDataLakeStorage = Input.empty();
-        this.encryption = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.managedResourceGroupName = Input.empty();
-        this.managedVirtualNetwork = Input.empty();
-        this.managedVirtualNetworkSettings = Input.empty();
-        this.privateEndpointConnections = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.purviewConfiguration = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sqlAdministratorLogin = Input.empty();
-        this.sqlAdministratorLoginPassword = Input.empty();
-        this.tags = Input.empty();
-        this.virtualNetworkProfile = Input.empty();
-        this.workspaceName = Input.empty();
-        this.workspaceRepositoryConfiguration = Input.empty();
+        this.connectivityEndpoints = Output.empty();
+        this.defaultDataLakeStorage = Output.empty();
+        this.encryption = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.managedResourceGroupName = Output.empty();
+        this.managedVirtualNetwork = Output.empty();
+        this.managedVirtualNetworkSettings = Output.empty();
+        this.privateEndpointConnections = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.purviewConfiguration = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sqlAdministratorLogin = Output.empty();
+        this.sqlAdministratorLoginPassword = Output.empty();
+        this.tags = Output.empty();
+        this.virtualNetworkProfile = Output.empty();
+        this.workspaceName = Output.empty();
+        this.workspaceRepositoryConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -293,24 +293,24 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> connectivityEndpoints;
-        private @Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
-        private @Nullable Input<EncryptionDetailsArgs> encryption;
-        private @Nullable Input<ManagedIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedResourceGroupName;
-        private @Nullable Input<String> managedVirtualNetwork;
-        private @Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
-        private @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
-        private @Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Input<PurviewConfigurationArgs> purviewConfiguration;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sqlAdministratorLogin;
-        private @Nullable Input<String> sqlAdministratorLoginPassword;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
-        private @Nullable Input<String> workspaceName;
-        private @Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
+        private @Nullable Output<Map<String,String>> connectivityEndpoints;
+        private @Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
+        private @Nullable Output<EncryptionDetailsArgs> encryption;
+        private @Nullable Output<ManagedIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedResourceGroupName;
+        private @Nullable Output<String> managedVirtualNetwork;
+        private @Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
+        private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private @Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
+        private @Nullable Output<PurviewConfigurationArgs> purviewConfiguration;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sqlAdministratorLogin;
+        private @Nullable Output<String> sqlAdministratorLoginPassword;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
+        private @Nullable Output<String> workspaceName;
+        private @Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
 
         public Builder() {
     	      // Empty
@@ -338,183 +338,183 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceRepositoryConfiguration = defaults.workspaceRepositoryConfiguration;
         }
 
-        public Builder connectivityEndpoints(@Nullable Input<Map<String,String>> connectivityEndpoints) {
+        public Builder connectivityEndpoints(@Nullable Output<Map<String,String>> connectivityEndpoints) {
             this.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
 
         public Builder connectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
-            this.connectivityEndpoints = Input.ofNullable(connectivityEndpoints);
+            this.connectivityEndpoints = Output.ofNullable(connectivityEndpoints);
             return this;
         }
 
-        public Builder defaultDataLakeStorage(@Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage) {
+        public Builder defaultDataLakeStorage(@Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage) {
             this.defaultDataLakeStorage = defaultDataLakeStorage;
             return this;
         }
 
         public Builder defaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsArgs defaultDataLakeStorage) {
-            this.defaultDataLakeStorage = Input.ofNullable(defaultDataLakeStorage);
+            this.defaultDataLakeStorage = Output.ofNullable(defaultDataLakeStorage);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<EncryptionDetailsArgs> encryption) {
+        public Builder encryption(@Nullable Output<EncryptionDetailsArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable EncryptionDetailsArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedResourceGroupName(@Nullable Input<String> managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable Output<String> managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
 
         public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
-            this.managedResourceGroupName = Input.ofNullable(managedResourceGroupName);
+            this.managedResourceGroupName = Output.ofNullable(managedResourceGroupName);
             return this;
         }
 
-        public Builder managedVirtualNetwork(@Nullable Input<String> managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable Output<String> managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
 
         public Builder managedVirtualNetwork(@Nullable String managedVirtualNetwork) {
-            this.managedVirtualNetwork = Input.ofNullable(managedVirtualNetwork);
+            this.managedVirtualNetwork = Output.ofNullable(managedVirtualNetwork);
             return this;
         }
 
-        public Builder managedVirtualNetworkSettings(@Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings) {
+        public Builder managedVirtualNetworkSettings(@Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings) {
             this.managedVirtualNetworkSettings = managedVirtualNetworkSettings;
             return this;
         }
 
         public Builder managedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsArgs managedVirtualNetworkSettings) {
-            this.managedVirtualNetworkSettings = Input.ofNullable(managedVirtualNetworkSettings);
+            this.managedVirtualNetworkSettings = Output.ofNullable(managedVirtualNetworkSettings);
             return this;
         }
 
-        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
+            this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,WorkspacePublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder purviewConfiguration(@Nullable Input<PurviewConfigurationArgs> purviewConfiguration) {
+        public Builder purviewConfiguration(@Nullable Output<PurviewConfigurationArgs> purviewConfiguration) {
             this.purviewConfiguration = purviewConfiguration;
             return this;
         }
 
         public Builder purviewConfiguration(@Nullable PurviewConfigurationArgs purviewConfiguration) {
-            this.purviewConfiguration = Input.ofNullable(purviewConfiguration);
+            this.purviewConfiguration = Output.ofNullable(purviewConfiguration);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sqlAdministratorLogin(@Nullable Input<String> sqlAdministratorLogin) {
+        public Builder sqlAdministratorLogin(@Nullable Output<String> sqlAdministratorLogin) {
             this.sqlAdministratorLogin = sqlAdministratorLogin;
             return this;
         }
 
         public Builder sqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
-            this.sqlAdministratorLogin = Input.ofNullable(sqlAdministratorLogin);
+            this.sqlAdministratorLogin = Output.ofNullable(sqlAdministratorLogin);
             return this;
         }
 
-        public Builder sqlAdministratorLoginPassword(@Nullable Input<String> sqlAdministratorLoginPassword) {
+        public Builder sqlAdministratorLoginPassword(@Nullable Output<String> sqlAdministratorLoginPassword) {
             this.sqlAdministratorLoginPassword = sqlAdministratorLoginPassword;
             return this;
         }
 
         public Builder sqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
-            this.sqlAdministratorLoginPassword = Input.ofNullable(sqlAdministratorLoginPassword);
+            this.sqlAdministratorLoginPassword = Output.ofNullable(sqlAdministratorLoginPassword);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualNetworkProfile(@Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile) {
+        public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
 
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
-            this.virtualNetworkProfile = Input.ofNullable(virtualNetworkProfile);
+            this.virtualNetworkProfile = Output.ofNullable(virtualNetworkProfile);
             return this;
         }
 
-        public Builder workspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Input.ofNullable(workspaceName);
+            this.workspaceName = Output.ofNullable(workspaceName);
             return this;
         }
 
-        public Builder workspaceRepositoryConfiguration(@Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
+        public Builder workspaceRepositoryConfiguration(@Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
             this.workspaceRepositoryConfiguration = workspaceRepositoryConfiguration;
             return this;
         }
 
         public Builder workspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationArgs workspaceRepositoryConfiguration) {
-            this.workspaceRepositoryConfiguration = Input.ofNullable(workspaceRepositoryConfiguration);
+            this.workspaceRepositoryConfiguration = Output.ofNullable(workspaceRepositoryConfiguration);
             return this;
         }
         public WorkspaceArgs build() {

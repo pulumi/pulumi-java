@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.CloudServiceConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.VirtualMachineConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cloudServiceConfiguration")
-      private final @Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration;
+      private final @Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration;
 
-    public Input<CloudServiceConfigurationArgs> getCloudServiceConfiguration() {
-        return this.cloudServiceConfiguration == null ? Input.empty() : this.cloudServiceConfiguration;
+    public Output<CloudServiceConfigurationArgs> getCloudServiceConfiguration() {
+        return this.cloudServiceConfiguration == null ? Output.empty() : this.cloudServiceConfiguration;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualMachineConfiguration")
-      private final @Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
+      private final @Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 
-    public Input<VirtualMachineConfigurationArgs> getVirtualMachineConfiguration() {
-        return this.virtualMachineConfiguration == null ? Input.empty() : this.virtualMachineConfiguration;
+    public Output<VirtualMachineConfigurationArgs> getVirtualMachineConfiguration() {
+        return this.virtualMachineConfiguration == null ? Output.empty() : this.virtualMachineConfiguration;
     }
 
     public DeploymentConfigurationArgs(
-        @Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration,
-        @Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
+        @Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration,
+        @Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
         this.cloudServiceConfiguration = cloudServiceConfiguration;
         this.virtualMachineConfiguration = virtualMachineConfiguration;
     }
 
     private DeploymentConfigurationArgs() {
-        this.cloudServiceConfiguration = Input.empty();
-        this.virtualMachineConfiguration = Input.empty();
+        this.cloudServiceConfiguration = Output.empty();
+        this.virtualMachineConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration;
-        private @Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
+        private @Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration;
+        private @Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     	      this.virtualMachineConfiguration = defaults.virtualMachineConfiguration;
         }
 
-        public Builder cloudServiceConfiguration(@Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration) {
+        public Builder cloudServiceConfiguration(@Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration) {
             this.cloudServiceConfiguration = cloudServiceConfiguration;
             return this;
         }
 
         public Builder cloudServiceConfiguration(@Nullable CloudServiceConfigurationArgs cloudServiceConfiguration) {
-            this.cloudServiceConfiguration = Input.ofNullable(cloudServiceConfiguration);
+            this.cloudServiceConfiguration = Output.ofNullable(cloudServiceConfiguration);
             return this;
         }
 
-        public Builder virtualMachineConfiguration(@Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
+        public Builder virtualMachineConfiguration(@Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
             this.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }
 
         public Builder virtualMachineConfiguration(@Nullable VirtualMachineConfigurationArgs virtualMachineConfiguration) {
-            this.virtualMachineConfiguration = Input.ofNullable(virtualMachineConfiguration);
+            this.virtualMachineConfiguration = Output.ofNullable(virtualMachineConfiguration);
             return this;
         }
         public DeploymentConfigurationArgs build() {

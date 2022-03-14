@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreEncryptionKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptionKey")
-      private final @Nullable Input<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey;
+      private final @Nullable Output<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey;
 
-    public Input<PipelineArtifactStoreEncryptionKeyArgs> getEncryptionKey() {
-        return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
+    public Output<PipelineArtifactStoreEncryptionKeyArgs> getEncryptionKey() {
+        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -42,10 +42,10 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public PipelineArtifactStoreArgs(
-        @Nullable Input<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey,
-        Input<String> location,
-        @Nullable Input<String> region,
-        Input<String> type) {
+        @Nullable Output<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey,
+        Output<String> location,
+        @Nullable Output<String> region,
+        Output<String> type) {
         this.encryptionKey = encryptionKey;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.region = region;
@@ -71,10 +71,10 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
     }
 
     private PipelineArtifactStoreArgs() {
-        this.encryptionKey = Input.empty();
-        this.location = Input.empty();
-        this.region = Input.empty();
-        this.type = Input.empty();
+        this.encryptionKey = Output.empty();
+        this.location = Output.empty();
+        this.region = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey;
-        private Input<String> location;
-        private @Nullable Input<String> region;
-        private Input<String> type;
+        private @Nullable Output<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey;
+        private Output<String> location;
+        private @Nullable Output<String> region;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder encryptionKey(@Nullable Input<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey) {
+        public Builder encryptionKey(@Nullable Output<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
         public Builder encryptionKey(@Nullable PipelineArtifactStoreEncryptionKeyArgs encryptionKey) {
-            this.encryptionKey = Input.ofNullable(encryptionKey);
+            this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public PipelineArtifactStoreArgs build() {

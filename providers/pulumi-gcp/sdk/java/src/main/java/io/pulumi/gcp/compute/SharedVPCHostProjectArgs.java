@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
-    public SharedVPCHostProjectArgs(Input<String> project) {
+    public SharedVPCHostProjectArgs(Output<String> project) {
         this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
     }
 
     private SharedVPCHostProjectArgs() {
-        this.project = Input.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> project;
+        private Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
     	      this.project = defaults.project;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
         public SharedVPCHostProjectArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="trigger")
-      private final @Nullable Input<TriggerArgs> trigger;
+      private final @Nullable Output<TriggerArgs> trigger;
 
-    public Input<TriggerArgs> getTrigger() {
-        return this.trigger == null ? Input.empty() : this.trigger;
+    public Output<TriggerArgs> getTrigger() {
+        return this.trigger == null ? Output.empty() : this.trigger;
     }
 
     public MonitoringQueryLanguageConditionArgs(
-        @Nullable Input<String> duration,
-        @Nullable Input<String> query,
-        @Nullable Input<TriggerArgs> trigger) {
+        @Nullable Output<String> duration,
+        @Nullable Output<String> query,
+        @Nullable Output<TriggerArgs> trigger) {
         this.duration = duration;
         this.query = query;
         this.trigger = trigger;
     }
 
     private MonitoringQueryLanguageConditionArgs() {
-        this.duration = Input.empty();
-        this.query = Input.empty();
-        this.trigger = Input.empty();
+        this.duration = Output.empty();
+        this.query = Output.empty();
+        this.trigger = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> duration;
-        private @Nullable Input<String> query;
-        private @Nullable Input<TriggerArgs> trigger;
+        private @Nullable Output<String> duration;
+        private @Nullable Output<String> query;
+        private @Nullable Output<TriggerArgs> trigger;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder trigger(@Nullable Input<TriggerArgs> trigger) {
+        public Builder trigger(@Nullable Output<TriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
         public Builder trigger(@Nullable TriggerArgs trigger) {
-            this.trigger = Input.ofNullable(trigger);
+            this.trigger = Output.ofNullable(trigger);
             return this;
         }
         public MonitoringQueryLanguageConditionArgs build() {

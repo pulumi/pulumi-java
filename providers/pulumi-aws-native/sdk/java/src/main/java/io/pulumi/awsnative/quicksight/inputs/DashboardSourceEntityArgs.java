@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DashboardSourceTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
     public static final DashboardSourceEntityArgs Empty = new DashboardSourceEntityArgs();
 
     @InputImport(name="sourceTemplate")
-      private final @Nullable Input<DashboardSourceTemplateArgs> sourceTemplate;
+      private final @Nullable Output<DashboardSourceTemplateArgs> sourceTemplate;
 
-    public Input<DashboardSourceTemplateArgs> getSourceTemplate() {
-        return this.sourceTemplate == null ? Input.empty() : this.sourceTemplate;
+    public Output<DashboardSourceTemplateArgs> getSourceTemplate() {
+        return this.sourceTemplate == null ? Output.empty() : this.sourceTemplate;
     }
 
-    public DashboardSourceEntityArgs(@Nullable Input<DashboardSourceTemplateArgs> sourceTemplate) {
+    public DashboardSourceEntityArgs(@Nullable Output<DashboardSourceTemplateArgs> sourceTemplate) {
         this.sourceTemplate = sourceTemplate;
     }
 
     private DashboardSourceEntityArgs() {
-        this.sourceTemplate = Input.empty();
+        this.sourceTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<DashboardSourceTemplateArgs> sourceTemplate;
+        private @Nullable Output<DashboardSourceTemplateArgs> sourceTemplate;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder sourceTemplate(@Nullable Input<DashboardSourceTemplateArgs> sourceTemplate) {
+        public Builder sourceTemplate(@Nullable Output<DashboardSourceTemplateArgs> sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
 
         public Builder sourceTemplate(@Nullable DashboardSourceTemplateArgs sourceTemplate) {
-            this.sourceTemplate = Input.ofNullable(sourceTemplate);
+            this.sourceTemplate = Output.ofNullable(sourceTemplate);
             return this;
         }
         public DashboardSourceEntityArgs build() {

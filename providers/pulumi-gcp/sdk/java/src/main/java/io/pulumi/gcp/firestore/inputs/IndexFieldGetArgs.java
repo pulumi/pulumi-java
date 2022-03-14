@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firestore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arrayConfig")
-      private final @Nullable Input<String> arrayConfig;
+      private final @Nullable Output<String> arrayConfig;
 
-    public Input<String> getArrayConfig() {
-        return this.arrayConfig == null ? Input.empty() : this.arrayConfig;
+    public Output<String> getArrayConfig() {
+        return this.arrayConfig == null ? Output.empty() : this.arrayConfig;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldPath")
-      private final @Nullable Input<String> fieldPath;
+      private final @Nullable Output<String> fieldPath;
 
-    public Input<String> getFieldPath() {
-        return this.fieldPath == null ? Input.empty() : this.fieldPath;
+    public Output<String> getFieldPath() {
+        return this.fieldPath == null ? Output.empty() : this.fieldPath;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order")
-      private final @Nullable Input<String> order;
+      private final @Nullable Output<String> order;
 
-    public Input<String> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<String> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     public IndexFieldGetArgs(
-        @Nullable Input<String> arrayConfig,
-        @Nullable Input<String> fieldPath,
-        @Nullable Input<String> order) {
+        @Nullable Output<String> arrayConfig,
+        @Nullable Output<String> fieldPath,
+        @Nullable Output<String> order) {
         this.arrayConfig = arrayConfig;
         this.fieldPath = fieldPath;
         this.order = order;
     }
 
     private IndexFieldGetArgs() {
-        this.arrayConfig = Input.empty();
-        this.fieldPath = Input.empty();
-        this.order = Input.empty();
+        this.arrayConfig = Output.empty();
+        this.fieldPath = Output.empty();
+        this.order = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arrayConfig;
-        private @Nullable Input<String> fieldPath;
-        private @Nullable Input<String> order;
+        private @Nullable Output<String> arrayConfig;
+        private @Nullable Output<String> fieldPath;
+        private @Nullable Output<String> order;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.order = defaults.order;
         }
 
-        public Builder arrayConfig(@Nullable Input<String> arrayConfig) {
+        public Builder arrayConfig(@Nullable Output<String> arrayConfig) {
             this.arrayConfig = arrayConfig;
             return this;
         }
 
         public Builder arrayConfig(@Nullable String arrayConfig) {
-            this.arrayConfig = Input.ofNullable(arrayConfig);
+            this.arrayConfig = Output.ofNullable(arrayConfig);
             return this;
         }
 
-        public Builder fieldPath(@Nullable Input<String> fieldPath) {
+        public Builder fieldPath(@Nullable Output<String> fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
         public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Input.ofNullable(fieldPath);
+            this.fieldPath = Output.ofNullable(fieldPath);
             return this;
         }
 
-        public Builder order(@Nullable Input<String> order) {
+        public Builder order(@Nullable Output<String> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable String order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
         public IndexFieldGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class PipelineDatastoreArgs extends io.pulumi.resources.ResourceArg
     public static final PipelineDatastoreArgs Empty = new PipelineDatastoreArgs();
 
     @InputImport(name="datastoreName", required=true)
-      private final Input<String> datastoreName;
+      private final Output<String> datastoreName;
 
-    public Input<String> getDatastoreName() {
+    public Output<String> getDatastoreName() {
         return this.datastoreName;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PipelineDatastoreArgs(
-        Input<String> datastoreName,
-        Input<String> name) {
+        Output<String> datastoreName,
+        Output<String> name) {
         this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private PipelineDatastoreArgs() {
-        this.datastoreName = Input.empty();
-        this.name = Input.empty();
+        this.datastoreName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class PipelineDatastoreArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> datastoreName;
-        private Input<String> name;
+        private Output<String> datastoreName;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class PipelineDatastoreArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder datastoreName(Input<String> datastoreName) {
+        public Builder datastoreName(Output<String> datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Input.of(Objects.requireNonNull(datastoreName));
+            this.datastoreName = Output.of(Objects.requireNonNull(datastoreName));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PipelineDatastoreArgs build() {

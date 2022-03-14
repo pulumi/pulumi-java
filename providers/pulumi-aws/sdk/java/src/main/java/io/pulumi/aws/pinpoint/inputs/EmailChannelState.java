@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pinpoint.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationSet")
-      private final @Nullable Input<String> configurationSet;
+      private final @Nullable Output<String> configurationSet;
 
-    public Input<String> getConfigurationSet() {
-        return this.configurationSet == null ? Input.empty() : this.configurationSet;
+    public Output<String> getConfigurationSet() {
+        return this.configurationSet == null ? Output.empty() : this.configurationSet;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromAddress")
-      private final @Nullable Input<String> fromAddress;
+      private final @Nullable Output<String> fromAddress;
 
-    public Input<String> getFromAddress() {
-        return this.fromAddress == null ? Input.empty() : this.fromAddress;
+    public Output<String> getFromAddress() {
+        return this.fromAddress == null ? Output.empty() : this.fromAddress;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<String> identity;
+      private final @Nullable Output<String> identity;
 
-    public Input<String> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<String> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messagesPerSecond")
-      private final @Nullable Input<Integer> messagesPerSecond;
+      private final @Nullable Output<Integer> messagesPerSecond;
 
-    public Input<Integer> getMessagesPerSecond() {
-        return this.messagesPerSecond == null ? Input.empty() : this.messagesPerSecond;
+    public Output<Integer> getMessagesPerSecond() {
+        return this.messagesPerSecond == null ? Output.empty() : this.messagesPerSecond;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public EmailChannelState(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> configurationSet,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> fromAddress,
-        @Nullable Input<String> identity,
-        @Nullable Input<Integer> messagesPerSecond,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> configurationSet,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> fromAddress,
+        @Nullable Output<String> identity,
+        @Nullable Output<Integer> messagesPerSecond,
+        @Nullable Output<String> roleArn) {
         this.applicationId = applicationId;
         this.configurationSet = configurationSet;
         this.enabled = enabled;
@@ -111,13 +111,13 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EmailChannelState() {
-        this.applicationId = Input.empty();
-        this.configurationSet = Input.empty();
-        this.enabled = Input.empty();
-        this.fromAddress = Input.empty();
-        this.identity = Input.empty();
-        this.messagesPerSecond = Input.empty();
-        this.roleArn = Input.empty();
+        this.applicationId = Output.empty();
+        this.configurationSet = Output.empty();
+        this.enabled = Output.empty();
+        this.fromAddress = Output.empty();
+        this.identity = Output.empty();
+        this.messagesPerSecond = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> configurationSet;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> fromAddress;
-        private @Nullable Input<String> identity;
-        private @Nullable Input<Integer> messagesPerSecond;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> configurationSet;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> fromAddress;
+        private @Nullable Output<String> identity;
+        private @Nullable Output<Integer> messagesPerSecond;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder configurationSet(@Nullable Input<String> configurationSet) {
+        public Builder configurationSet(@Nullable Output<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
         public Builder configurationSet(@Nullable String configurationSet) {
-            this.configurationSet = Input.ofNullable(configurationSet);
+            this.configurationSet = Output.ofNullable(configurationSet);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder fromAddress(@Nullable Input<String> fromAddress) {
+        public Builder fromAddress(@Nullable Output<String> fromAddress) {
             this.fromAddress = fromAddress;
             return this;
         }
 
         public Builder fromAddress(@Nullable String fromAddress) {
-            this.fromAddress = Input.ofNullable(fromAddress);
+            this.fromAddress = Output.ofNullable(fromAddress);
             return this;
         }
 
-        public Builder identity(@Nullable Input<String> identity) {
+        public Builder identity(@Nullable Output<String> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable String identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder messagesPerSecond(@Nullable Input<Integer> messagesPerSecond) {
+        public Builder messagesPerSecond(@Nullable Output<Integer> messagesPerSecond) {
             this.messagesPerSecond = messagesPerSecond;
             return this;
         }
 
         public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
-            this.messagesPerSecond = Input.ofNullable(messagesPerSecond);
+            this.messagesPerSecond = Output.ofNullable(messagesPerSecond);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public EmailChannelState build() {

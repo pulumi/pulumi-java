@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -26,32 +26,32 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-      private final @Nullable Input<String> orgId;
+      private final @Nullable Output<String> orgId;
 
-    public Input<String> getOrgId() {
-        return this.orgId == null ? Input.empty() : this.orgId;
+    public Output<String> getOrgId() {
+        return this.orgId == null ? Output.empty() : this.orgId;
     }
 
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     public IAMPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> orgId,
-        @Nullable Input<String> policyData) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> orgId,
+        @Nullable Output<String> policyData) {
         this.etag = etag;
         this.orgId = orgId;
         this.policyData = policyData;
     }
 
     private IAMPolicyState() {
-        this.etag = Input.empty();
-        this.orgId = Input.empty();
-        this.policyData = Input.empty();
+        this.etag = Output.empty();
+        this.orgId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> orgId;
-        private @Nullable Input<String> policyData;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> orgId;
+        private @Nullable Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder orgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Input.ofNullable(orgId);
+            this.orgId = Output.ofNullable(orgId);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
         public IAMPolicyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -17,118 +17,118 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
     public static final DeviceProfileLoRaWANDeviceProfileArgs Empty = new DeviceProfileLoRaWANDeviceProfileArgs();
 
     @InputImport(name="classBTimeout")
-      private final @Nullable Input<Integer> classBTimeout;
+      private final @Nullable Output<Integer> classBTimeout;
 
-    public Input<Integer> getClassBTimeout() {
-        return this.classBTimeout == null ? Input.empty() : this.classBTimeout;
+    public Output<Integer> getClassBTimeout() {
+        return this.classBTimeout == null ? Output.empty() : this.classBTimeout;
     }
 
     @InputImport(name="classCTimeout")
-      private final @Nullable Input<Integer> classCTimeout;
+      private final @Nullable Output<Integer> classCTimeout;
 
-    public Input<Integer> getClassCTimeout() {
-        return this.classCTimeout == null ? Input.empty() : this.classCTimeout;
+    public Output<Integer> getClassCTimeout() {
+        return this.classCTimeout == null ? Output.empty() : this.classCTimeout;
     }
 
     @InputImport(name="macVersion")
-      private final @Nullable Input<String> macVersion;
+      private final @Nullable Output<String> macVersion;
 
-    public Input<String> getMacVersion() {
-        return this.macVersion == null ? Input.empty() : this.macVersion;
+    public Output<String> getMacVersion() {
+        return this.macVersion == null ? Output.empty() : this.macVersion;
     }
 
     @InputImport(name="maxDutyCycle")
-      private final @Nullable Input<Integer> maxDutyCycle;
+      private final @Nullable Output<Integer> maxDutyCycle;
 
-    public Input<Integer> getMaxDutyCycle() {
-        return this.maxDutyCycle == null ? Input.empty() : this.maxDutyCycle;
+    public Output<Integer> getMaxDutyCycle() {
+        return this.maxDutyCycle == null ? Output.empty() : this.maxDutyCycle;
     }
 
     @InputImport(name="maxEirp")
-      private final @Nullable Input<Integer> maxEirp;
+      private final @Nullable Output<Integer> maxEirp;
 
-    public Input<Integer> getMaxEirp() {
-        return this.maxEirp == null ? Input.empty() : this.maxEirp;
+    public Output<Integer> getMaxEirp() {
+        return this.maxEirp == null ? Output.empty() : this.maxEirp;
     }
 
     @InputImport(name="pingSlotDr")
-      private final @Nullable Input<Integer> pingSlotDr;
+      private final @Nullable Output<Integer> pingSlotDr;
 
-    public Input<Integer> getPingSlotDr() {
-        return this.pingSlotDr == null ? Input.empty() : this.pingSlotDr;
+    public Output<Integer> getPingSlotDr() {
+        return this.pingSlotDr == null ? Output.empty() : this.pingSlotDr;
     }
 
     @InputImport(name="pingSlotFreq")
-      private final @Nullable Input<Integer> pingSlotFreq;
+      private final @Nullable Output<Integer> pingSlotFreq;
 
-    public Input<Integer> getPingSlotFreq() {
-        return this.pingSlotFreq == null ? Input.empty() : this.pingSlotFreq;
+    public Output<Integer> getPingSlotFreq() {
+        return this.pingSlotFreq == null ? Output.empty() : this.pingSlotFreq;
     }
 
     @InputImport(name="pingSlotPeriod")
-      private final @Nullable Input<Integer> pingSlotPeriod;
+      private final @Nullable Output<Integer> pingSlotPeriod;
 
-    public Input<Integer> getPingSlotPeriod() {
-        return this.pingSlotPeriod == null ? Input.empty() : this.pingSlotPeriod;
+    public Output<Integer> getPingSlotPeriod() {
+        return this.pingSlotPeriod == null ? Output.empty() : this.pingSlotPeriod;
     }
 
     @InputImport(name="regParamsRevision")
-      private final @Nullable Input<String> regParamsRevision;
+      private final @Nullable Output<String> regParamsRevision;
 
-    public Input<String> getRegParamsRevision() {
-        return this.regParamsRevision == null ? Input.empty() : this.regParamsRevision;
+    public Output<String> getRegParamsRevision() {
+        return this.regParamsRevision == null ? Output.empty() : this.regParamsRevision;
     }
 
     @InputImport(name="rfRegion")
-      private final @Nullable Input<String> rfRegion;
+      private final @Nullable Output<String> rfRegion;
 
-    public Input<String> getRfRegion() {
-        return this.rfRegion == null ? Input.empty() : this.rfRegion;
+    public Output<String> getRfRegion() {
+        return this.rfRegion == null ? Output.empty() : this.rfRegion;
     }
 
     @InputImport(name="supports32BitFCnt")
-      private final @Nullable Input<Boolean> supports32BitFCnt;
+      private final @Nullable Output<Boolean> supports32BitFCnt;
 
-    public Input<Boolean> getSupports32BitFCnt() {
-        return this.supports32BitFCnt == null ? Input.empty() : this.supports32BitFCnt;
+    public Output<Boolean> getSupports32BitFCnt() {
+        return this.supports32BitFCnt == null ? Output.empty() : this.supports32BitFCnt;
     }
 
     @InputImport(name="supportsClassB")
-      private final @Nullable Input<Boolean> supportsClassB;
+      private final @Nullable Output<Boolean> supportsClassB;
 
-    public Input<Boolean> getSupportsClassB() {
-        return this.supportsClassB == null ? Input.empty() : this.supportsClassB;
+    public Output<Boolean> getSupportsClassB() {
+        return this.supportsClassB == null ? Output.empty() : this.supportsClassB;
     }
 
     @InputImport(name="supportsClassC")
-      private final @Nullable Input<Boolean> supportsClassC;
+      private final @Nullable Output<Boolean> supportsClassC;
 
-    public Input<Boolean> getSupportsClassC() {
-        return this.supportsClassC == null ? Input.empty() : this.supportsClassC;
+    public Output<Boolean> getSupportsClassC() {
+        return this.supportsClassC == null ? Output.empty() : this.supportsClassC;
     }
 
     @InputImport(name="supportsJoin")
-      private final @Nullable Input<Boolean> supportsJoin;
+      private final @Nullable Output<Boolean> supportsJoin;
 
-    public Input<Boolean> getSupportsJoin() {
-        return this.supportsJoin == null ? Input.empty() : this.supportsJoin;
+    public Output<Boolean> getSupportsJoin() {
+        return this.supportsJoin == null ? Output.empty() : this.supportsJoin;
     }
 
     public DeviceProfileLoRaWANDeviceProfileArgs(
-        @Nullable Input<Integer> classBTimeout,
-        @Nullable Input<Integer> classCTimeout,
-        @Nullable Input<String> macVersion,
-        @Nullable Input<Integer> maxDutyCycle,
-        @Nullable Input<Integer> maxEirp,
-        @Nullable Input<Integer> pingSlotDr,
-        @Nullable Input<Integer> pingSlotFreq,
-        @Nullable Input<Integer> pingSlotPeriod,
-        @Nullable Input<String> regParamsRevision,
-        @Nullable Input<String> rfRegion,
-        @Nullable Input<Boolean> supports32BitFCnt,
-        @Nullable Input<Boolean> supportsClassB,
-        @Nullable Input<Boolean> supportsClassC,
-        @Nullable Input<Boolean> supportsJoin) {
+        @Nullable Output<Integer> classBTimeout,
+        @Nullable Output<Integer> classCTimeout,
+        @Nullable Output<String> macVersion,
+        @Nullable Output<Integer> maxDutyCycle,
+        @Nullable Output<Integer> maxEirp,
+        @Nullable Output<Integer> pingSlotDr,
+        @Nullable Output<Integer> pingSlotFreq,
+        @Nullable Output<Integer> pingSlotPeriod,
+        @Nullable Output<String> regParamsRevision,
+        @Nullable Output<String> rfRegion,
+        @Nullable Output<Boolean> supports32BitFCnt,
+        @Nullable Output<Boolean> supportsClassB,
+        @Nullable Output<Boolean> supportsClassC,
+        @Nullable Output<Boolean> supportsJoin) {
         this.classBTimeout = classBTimeout;
         this.classCTimeout = classCTimeout;
         this.macVersion = macVersion;
@@ -146,20 +146,20 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
     }
 
     private DeviceProfileLoRaWANDeviceProfileArgs() {
-        this.classBTimeout = Input.empty();
-        this.classCTimeout = Input.empty();
-        this.macVersion = Input.empty();
-        this.maxDutyCycle = Input.empty();
-        this.maxEirp = Input.empty();
-        this.pingSlotDr = Input.empty();
-        this.pingSlotFreq = Input.empty();
-        this.pingSlotPeriod = Input.empty();
-        this.regParamsRevision = Input.empty();
-        this.rfRegion = Input.empty();
-        this.supports32BitFCnt = Input.empty();
-        this.supportsClassB = Input.empty();
-        this.supportsClassC = Input.empty();
-        this.supportsJoin = Input.empty();
+        this.classBTimeout = Output.empty();
+        this.classCTimeout = Output.empty();
+        this.macVersion = Output.empty();
+        this.maxDutyCycle = Output.empty();
+        this.maxEirp = Output.empty();
+        this.pingSlotDr = Output.empty();
+        this.pingSlotFreq = Output.empty();
+        this.pingSlotPeriod = Output.empty();
+        this.regParamsRevision = Output.empty();
+        this.rfRegion = Output.empty();
+        this.supports32BitFCnt = Output.empty();
+        this.supportsClassB = Output.empty();
+        this.supportsClassC = Output.empty();
+        this.supportsJoin = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,20 +171,20 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> classBTimeout;
-        private @Nullable Input<Integer> classCTimeout;
-        private @Nullable Input<String> macVersion;
-        private @Nullable Input<Integer> maxDutyCycle;
-        private @Nullable Input<Integer> maxEirp;
-        private @Nullable Input<Integer> pingSlotDr;
-        private @Nullable Input<Integer> pingSlotFreq;
-        private @Nullable Input<Integer> pingSlotPeriod;
-        private @Nullable Input<String> regParamsRevision;
-        private @Nullable Input<String> rfRegion;
-        private @Nullable Input<Boolean> supports32BitFCnt;
-        private @Nullable Input<Boolean> supportsClassB;
-        private @Nullable Input<Boolean> supportsClassC;
-        private @Nullable Input<Boolean> supportsJoin;
+        private @Nullable Output<Integer> classBTimeout;
+        private @Nullable Output<Integer> classCTimeout;
+        private @Nullable Output<String> macVersion;
+        private @Nullable Output<Integer> maxDutyCycle;
+        private @Nullable Output<Integer> maxEirp;
+        private @Nullable Output<Integer> pingSlotDr;
+        private @Nullable Output<Integer> pingSlotFreq;
+        private @Nullable Output<Integer> pingSlotPeriod;
+        private @Nullable Output<String> regParamsRevision;
+        private @Nullable Output<String> rfRegion;
+        private @Nullable Output<Boolean> supports32BitFCnt;
+        private @Nullable Output<Boolean> supportsClassB;
+        private @Nullable Output<Boolean> supportsClassC;
+        private @Nullable Output<Boolean> supportsJoin;
 
         public Builder() {
     	      // Empty
@@ -208,143 +208,143 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
     	      this.supportsJoin = defaults.supportsJoin;
         }
 
-        public Builder classBTimeout(@Nullable Input<Integer> classBTimeout) {
+        public Builder classBTimeout(@Nullable Output<Integer> classBTimeout) {
             this.classBTimeout = classBTimeout;
             return this;
         }
 
         public Builder classBTimeout(@Nullable Integer classBTimeout) {
-            this.classBTimeout = Input.ofNullable(classBTimeout);
+            this.classBTimeout = Output.ofNullable(classBTimeout);
             return this;
         }
 
-        public Builder classCTimeout(@Nullable Input<Integer> classCTimeout) {
+        public Builder classCTimeout(@Nullable Output<Integer> classCTimeout) {
             this.classCTimeout = classCTimeout;
             return this;
         }
 
         public Builder classCTimeout(@Nullable Integer classCTimeout) {
-            this.classCTimeout = Input.ofNullable(classCTimeout);
+            this.classCTimeout = Output.ofNullable(classCTimeout);
             return this;
         }
 
-        public Builder macVersion(@Nullable Input<String> macVersion) {
+        public Builder macVersion(@Nullable Output<String> macVersion) {
             this.macVersion = macVersion;
             return this;
         }
 
         public Builder macVersion(@Nullable String macVersion) {
-            this.macVersion = Input.ofNullable(macVersion);
+            this.macVersion = Output.ofNullable(macVersion);
             return this;
         }
 
-        public Builder maxDutyCycle(@Nullable Input<Integer> maxDutyCycle) {
+        public Builder maxDutyCycle(@Nullable Output<Integer> maxDutyCycle) {
             this.maxDutyCycle = maxDutyCycle;
             return this;
         }
 
         public Builder maxDutyCycle(@Nullable Integer maxDutyCycle) {
-            this.maxDutyCycle = Input.ofNullable(maxDutyCycle);
+            this.maxDutyCycle = Output.ofNullable(maxDutyCycle);
             return this;
         }
 
-        public Builder maxEirp(@Nullable Input<Integer> maxEirp) {
+        public Builder maxEirp(@Nullable Output<Integer> maxEirp) {
             this.maxEirp = maxEirp;
             return this;
         }
 
         public Builder maxEirp(@Nullable Integer maxEirp) {
-            this.maxEirp = Input.ofNullable(maxEirp);
+            this.maxEirp = Output.ofNullable(maxEirp);
             return this;
         }
 
-        public Builder pingSlotDr(@Nullable Input<Integer> pingSlotDr) {
+        public Builder pingSlotDr(@Nullable Output<Integer> pingSlotDr) {
             this.pingSlotDr = pingSlotDr;
             return this;
         }
 
         public Builder pingSlotDr(@Nullable Integer pingSlotDr) {
-            this.pingSlotDr = Input.ofNullable(pingSlotDr);
+            this.pingSlotDr = Output.ofNullable(pingSlotDr);
             return this;
         }
 
-        public Builder pingSlotFreq(@Nullable Input<Integer> pingSlotFreq) {
+        public Builder pingSlotFreq(@Nullable Output<Integer> pingSlotFreq) {
             this.pingSlotFreq = pingSlotFreq;
             return this;
         }
 
         public Builder pingSlotFreq(@Nullable Integer pingSlotFreq) {
-            this.pingSlotFreq = Input.ofNullable(pingSlotFreq);
+            this.pingSlotFreq = Output.ofNullable(pingSlotFreq);
             return this;
         }
 
-        public Builder pingSlotPeriod(@Nullable Input<Integer> pingSlotPeriod) {
+        public Builder pingSlotPeriod(@Nullable Output<Integer> pingSlotPeriod) {
             this.pingSlotPeriod = pingSlotPeriod;
             return this;
         }
 
         public Builder pingSlotPeriod(@Nullable Integer pingSlotPeriod) {
-            this.pingSlotPeriod = Input.ofNullable(pingSlotPeriod);
+            this.pingSlotPeriod = Output.ofNullable(pingSlotPeriod);
             return this;
         }
 
-        public Builder regParamsRevision(@Nullable Input<String> regParamsRevision) {
+        public Builder regParamsRevision(@Nullable Output<String> regParamsRevision) {
             this.regParamsRevision = regParamsRevision;
             return this;
         }
 
         public Builder regParamsRevision(@Nullable String regParamsRevision) {
-            this.regParamsRevision = Input.ofNullable(regParamsRevision);
+            this.regParamsRevision = Output.ofNullable(regParamsRevision);
             return this;
         }
 
-        public Builder rfRegion(@Nullable Input<String> rfRegion) {
+        public Builder rfRegion(@Nullable Output<String> rfRegion) {
             this.rfRegion = rfRegion;
             return this;
         }
 
         public Builder rfRegion(@Nullable String rfRegion) {
-            this.rfRegion = Input.ofNullable(rfRegion);
+            this.rfRegion = Output.ofNullable(rfRegion);
             return this;
         }
 
-        public Builder supports32BitFCnt(@Nullable Input<Boolean> supports32BitFCnt) {
+        public Builder supports32BitFCnt(@Nullable Output<Boolean> supports32BitFCnt) {
             this.supports32BitFCnt = supports32BitFCnt;
             return this;
         }
 
         public Builder supports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
-            this.supports32BitFCnt = Input.ofNullable(supports32BitFCnt);
+            this.supports32BitFCnt = Output.ofNullable(supports32BitFCnt);
             return this;
         }
 
-        public Builder supportsClassB(@Nullable Input<Boolean> supportsClassB) {
+        public Builder supportsClassB(@Nullable Output<Boolean> supportsClassB) {
             this.supportsClassB = supportsClassB;
             return this;
         }
 
         public Builder supportsClassB(@Nullable Boolean supportsClassB) {
-            this.supportsClassB = Input.ofNullable(supportsClassB);
+            this.supportsClassB = Output.ofNullable(supportsClassB);
             return this;
         }
 
-        public Builder supportsClassC(@Nullable Input<Boolean> supportsClassC) {
+        public Builder supportsClassC(@Nullable Output<Boolean> supportsClassC) {
             this.supportsClassC = supportsClassC;
             return this;
         }
 
         public Builder supportsClassC(@Nullable Boolean supportsClassC) {
-            this.supportsClassC = Input.ofNullable(supportsClassC);
+            this.supportsClassC = Output.ofNullable(supportsClassC);
             return this;
         }
 
-        public Builder supportsJoin(@Nullable Input<Boolean> supportsJoin) {
+        public Builder supportsJoin(@Nullable Output<Boolean> supportsJoin) {
             this.supportsJoin = supportsJoin;
             return this;
         }
 
         public Builder supportsJoin(@Nullable Boolean supportsJoin) {
-            this.supportsJoin = Input.ofNullable(supportsJoin);
+            this.supportsJoin = Output.ofNullable(supportsJoin);
             return this;
         }
         public DeviceProfileLoRaWANDeviceProfileArgs build() {

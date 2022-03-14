@@ -4,7 +4,7 @@
 package io.pulumi.aws.lb;
 
 import io.pulumi.aws.lb.inputs.ListenerDefaultActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alpnPolicy")
-      private final @Nullable Input<String> alpnPolicy;
+      private final @Nullable Output<String> alpnPolicy;
 
-    public Input<String> getAlpnPolicy() {
-        return this.alpnPolicy == null ? Input.empty() : this.alpnPolicy;
+    public Output<String> getAlpnPolicy() {
+        return this.alpnPolicy == null ? Output.empty() : this.alpnPolicy;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultActions", required=true)
-      private final Input<List<ListenerDefaultActionArgs>> defaultActions;
+      private final Output<List<ListenerDefaultActionArgs>> defaultActions;
 
-    public Input<List<ListenerDefaultActionArgs>> getDefaultActions() {
+    public Output<List<ListenerDefaultActionArgs>> getDefaultActions() {
         return this.defaultActions;
     }
 
@@ -56,9 +56,9 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerArn", required=true)
-      private final Input<String> loadBalancerArn;
+      private final Output<String> loadBalancerArn;
 
-    public Input<String> getLoadBalancerArn() {
+    public Output<String> getLoadBalancerArn() {
         return this.loadBalancerArn;
     }
 
@@ -67,10 +67,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslPolicy")
-      private final @Nullable Input<String> sslPolicy;
+      private final @Nullable Output<String> sslPolicy;
 
-    public Input<String> getSslPolicy() {
-        return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
+    public Output<String> getSslPolicy() {
+        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ListenerArgs(
-        @Nullable Input<String> alpnPolicy,
-        @Nullable Input<String> certificateArn,
-        Input<List<ListenerDefaultActionArgs>> defaultActions,
-        Input<String> loadBalancerArn,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> protocol,
-        @Nullable Input<String> sslPolicy,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> alpnPolicy,
+        @Nullable Output<String> certificateArn,
+        Output<List<ListenerDefaultActionArgs>> defaultActions,
+        Output<String> loadBalancerArn,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> protocol,
+        @Nullable Output<String> sslPolicy,
+        @Nullable Output<Map<String,String>> tags) {
         this.alpnPolicy = alpnPolicy;
         this.certificateArn = certificateArn;
         this.defaultActions = Objects.requireNonNull(defaultActions, "expected parameter 'defaultActions' to be non-null");
@@ -126,14 +126,14 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerArgs() {
-        this.alpnPolicy = Input.empty();
-        this.certificateArn = Input.empty();
-        this.defaultActions = Input.empty();
-        this.loadBalancerArn = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
-        this.sslPolicy = Input.empty();
-        this.tags = Input.empty();
+        this.alpnPolicy = Output.empty();
+        this.certificateArn = Output.empty();
+        this.defaultActions = Output.empty();
+        this.loadBalancerArn = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
+        this.sslPolicy = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alpnPolicy;
-        private @Nullable Input<String> certificateArn;
-        private Input<List<ListenerDefaultActionArgs>> defaultActions;
-        private Input<String> loadBalancerArn;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<String> sslPolicy;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> alpnPolicy;
+        private @Nullable Output<String> certificateArn;
+        private Output<List<ListenerDefaultActionArgs>> defaultActions;
+        private Output<String> loadBalancerArn;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<String> sslPolicy;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder alpnPolicy(@Nullable Input<String> alpnPolicy) {
+        public Builder alpnPolicy(@Nullable Output<String> alpnPolicy) {
             this.alpnPolicy = alpnPolicy;
             return this;
         }
 
         public Builder alpnPolicy(@Nullable String alpnPolicy) {
-            this.alpnPolicy = Input.ofNullable(alpnPolicy);
+            this.alpnPolicy = Output.ofNullable(alpnPolicy);
             return this;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder defaultActions(Input<List<ListenerDefaultActionArgs>> defaultActions) {
+        public Builder defaultActions(Output<List<ListenerDefaultActionArgs>> defaultActions) {
             this.defaultActions = Objects.requireNonNull(defaultActions);
             return this;
         }
 
         public Builder defaultActions(List<ListenerDefaultActionArgs> defaultActions) {
-            this.defaultActions = Input.of(Objects.requireNonNull(defaultActions));
+            this.defaultActions = Output.of(Objects.requireNonNull(defaultActions));
             return this;
         }
 
-        public Builder loadBalancerArn(Input<String> loadBalancerArn) {
+        public Builder loadBalancerArn(Output<String> loadBalancerArn) {
             this.loadBalancerArn = Objects.requireNonNull(loadBalancerArn);
             return this;
         }
 
         public Builder loadBalancerArn(String loadBalancerArn) {
-            this.loadBalancerArn = Input.of(Objects.requireNonNull(loadBalancerArn));
+            this.loadBalancerArn = Output.of(Objects.requireNonNull(loadBalancerArn));
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
         public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Input.ofNullable(sslPolicy);
+            this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ListenerArgs build() {

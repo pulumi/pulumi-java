@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.SolutionPlanArgs;
 import io.pulumi.azurenative.operationsmanagement.inputs.SolutionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<SolutionPlanArgs> plan;
+      private final @Nullable Output<SolutionPlanArgs> plan;
 
-    public Input<SolutionPlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<SolutionPlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<SolutionPropertiesArgs> properties;
+      private final @Nullable Output<SolutionPropertiesArgs> properties;
 
-    public Input<SolutionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<SolutionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionName")
-      private final @Nullable Input<String> solutionName;
+      private final @Nullable Output<String> solutionName;
 
-    public Input<String> getSolutionName() {
-        return this.solutionName == null ? Input.empty() : this.solutionName;
+    public Output<String> getSolutionName() {
+        return this.solutionName == null ? Output.empty() : this.solutionName;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SolutionArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<SolutionPlanArgs> plan,
-        @Nullable Input<SolutionPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> solutionName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<SolutionPlanArgs> plan,
+        @Nullable Output<SolutionPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> solutionName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.plan = plan;
         this.properties = properties;
@@ -99,12 +99,12 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SolutionArgs() {
-        this.location = Input.empty();
-        this.plan = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.solutionName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.plan = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.solutionName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<SolutionPlanArgs> plan;
-        private @Nullable Input<SolutionPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> solutionName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<SolutionPlanArgs> plan;
+        private @Nullable Output<SolutionPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> solutionName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder plan(@Nullable Input<SolutionPlanArgs> plan) {
+        public Builder plan(@Nullable Output<SolutionPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable SolutionPlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder properties(@Nullable Input<SolutionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<SolutionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable SolutionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder solutionName(@Nullable Input<String> solutionName) {
+        public Builder solutionName(@Nullable Output<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
 
         public Builder solutionName(@Nullable String solutionName) {
-            this.solutionName = Input.ofNullable(solutionName);
+            this.solutionName = Output.ofNullable(solutionName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SolutionArgs build() {

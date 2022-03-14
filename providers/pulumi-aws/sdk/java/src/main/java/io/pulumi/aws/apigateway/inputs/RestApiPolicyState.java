@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId")
-      private final @Nullable Input<String> restApiId;
+      private final @Nullable Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
-        return this.restApiId == null ? Input.empty() : this.restApiId;
+    public Output<String> getRestApiId() {
+        return this.restApiId == null ? Output.empty() : this.restApiId;
     }
 
     public RestApiPolicyState(
-        @Nullable Input<String> policy,
-        @Nullable Input<String> restApiId) {
+        @Nullable Output<String> policy,
+        @Nullable Output<String> restApiId) {
         this.policy = policy;
         this.restApiId = restApiId;
     }
 
     private RestApiPolicyState() {
-        this.policy = Input.empty();
-        this.restApiId = Input.empty();
+        this.policy = Output.empty();
+        this.restApiId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> restApiId;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> restApiId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder restApiId(@Nullable Input<String> restApiId) {
+        public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Input.ofNullable(restApiId);
+            this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
         public RestApiPolicyState build() {

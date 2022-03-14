@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.SubscriptionState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowTracing")
-      private final @Nullable Input<Boolean> allowTracing;
+      private final @Nullable Output<Boolean> allowTracing;
 
-    public Input<Boolean> getAllowTracing() {
-        return this.allowTracing == null ? Input.empty() : this.allowTracing;
+    public Output<Boolean> getAllowTracing() {
+        return this.allowTracing == null ? Output.empty() : this.allowTracing;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType")
-      private final @Nullable Input<String> appType;
+      private final @Nullable Output<String> appType;
 
-    public Input<String> getAppType() {
-        return this.appType == null ? Input.empty() : this.appType;
+    public Output<String> getAppType() {
+        return this.appType == null ? Output.empty() : this.appType;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -56,10 +56,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notify")
-      private final @Nullable Input<Boolean> notify;
+      private final @Nullable Output<Boolean> notify;
 
-    public Input<Boolean> getNotify() {
-        return this.notify == null ? Input.empty() : this.notify;
+    public Output<Boolean> getNotify() {
+        return this.notify == null ? Output.empty() : this.notify;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKey")
-      private final @Nullable Input<String> primaryKey;
+      private final @Nullable Output<String> primaryKey;
 
-    public Input<String> getPrimaryKey() {
-        return this.primaryKey == null ? Input.empty() : this.primaryKey;
+    public Output<String> getPrimaryKey() {
+        return this.primaryKey == null ? Output.empty() : this.primaryKey;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,9 +100,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -111,10 +111,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryKey")
-      private final @Nullable Input<String> secondaryKey;
+      private final @Nullable Output<String> secondaryKey;
 
-    public Input<String> getSecondaryKey() {
-        return this.secondaryKey == null ? Input.empty() : this.secondaryKey;
+    public Output<String> getSecondaryKey() {
+        return this.secondaryKey == null ? Output.empty() : this.secondaryKey;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -133,10 +133,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sid")
-      private final @Nullable Input<String> sid;
+      private final @Nullable Output<String> sid;
 
-    public Input<String> getSid() {
-        return this.sid == null ? Input.empty() : this.sid;
+    public Output<String> getSid() {
+        return this.sid == null ? Output.empty() : this.sid;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<SubscriptionState> state;
+      private final @Nullable Output<SubscriptionState> state;
 
-    public Input<SubscriptionState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<SubscriptionState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public SubscriptionArgs(
-        @Nullable Input<Boolean> allowTracing,
-        @Nullable Input<String> appType,
-        Input<String> displayName,
-        @Nullable Input<Boolean> notify,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> primaryKey,
-        Input<String> resourceGroupName,
-        Input<String> scope,
-        @Nullable Input<String> secondaryKey,
-        Input<String> serviceName,
-        @Nullable Input<String> sid,
-        @Nullable Input<SubscriptionState> state) {
+        @Nullable Output<Boolean> allowTracing,
+        @Nullable Output<String> appType,
+        Output<String> displayName,
+        @Nullable Output<Boolean> notify,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> primaryKey,
+        Output<String> resourceGroupName,
+        Output<String> scope,
+        @Nullable Output<String> secondaryKey,
+        Output<String> serviceName,
+        @Nullable Output<String> sid,
+        @Nullable Output<SubscriptionState> state) {
         this.allowTracing = allowTracing;
         this.appType = appType;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -178,18 +178,18 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.allowTracing = Input.empty();
-        this.appType = Input.empty();
-        this.displayName = Input.empty();
-        this.notify = Input.empty();
-        this.ownerId = Input.empty();
-        this.primaryKey = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scope = Input.empty();
-        this.secondaryKey = Input.empty();
-        this.serviceName = Input.empty();
-        this.sid = Input.empty();
-        this.state = Input.empty();
+        this.allowTracing = Output.empty();
+        this.appType = Output.empty();
+        this.displayName = Output.empty();
+        this.notify = Output.empty();
+        this.ownerId = Output.empty();
+        this.primaryKey = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scope = Output.empty();
+        this.secondaryKey = Output.empty();
+        this.serviceName = Output.empty();
+        this.sid = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowTracing;
-        private @Nullable Input<String> appType;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> notify;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> primaryKey;
-        private Input<String> resourceGroupName;
-        private Input<String> scope;
-        private @Nullable Input<String> secondaryKey;
-        private Input<String> serviceName;
-        private @Nullable Input<String> sid;
-        private @Nullable Input<SubscriptionState> state;
+        private @Nullable Output<Boolean> allowTracing;
+        private @Nullable Output<String> appType;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> notify;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> primaryKey;
+        private Output<String> resourceGroupName;
+        private Output<String> scope;
+        private @Nullable Output<String> secondaryKey;
+        private Output<String> serviceName;
+        private @Nullable Output<String> sid;
+        private @Nullable Output<SubscriptionState> state;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder allowTracing(@Nullable Input<Boolean> allowTracing) {
+        public Builder allowTracing(@Nullable Output<Boolean> allowTracing) {
             this.allowTracing = allowTracing;
             return this;
         }
 
         public Builder allowTracing(@Nullable Boolean allowTracing) {
-            this.allowTracing = Input.ofNullable(allowTracing);
+            this.allowTracing = Output.ofNullable(allowTracing);
             return this;
         }
 
-        public Builder appType(@Nullable Input<String> appType) {
+        public Builder appType(@Nullable Output<String> appType) {
             this.appType = appType;
             return this;
         }
 
         public Builder appType(@Nullable String appType) {
-            this.appType = Input.ofNullable(appType);
+            this.appType = Output.ofNullable(appType);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder notify(@Nullable Input<Boolean> notify) {
+        public Builder notify(@Nullable Output<Boolean> notify) {
             this.notify = notify;
             return this;
         }
 
         public Builder notify(@Nullable Boolean notify) {
-            this.notify = Input.ofNullable(notify);
+            this.notify = Output.ofNullable(notify);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder primaryKey(@Nullable Input<String> primaryKey) {
+        public Builder primaryKey(@Nullable Output<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Input.ofNullable(primaryKey);
+            this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder secondaryKey(@Nullable Input<String> secondaryKey) {
+        public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
 
         public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Input.ofNullable(secondaryKey);
+            this.secondaryKey = Output.ofNullable(secondaryKey);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder sid(@Nullable Input<String> sid) {
+        public Builder sid(@Nullable Output<String> sid) {
             this.sid = sid;
             return this;
         }
 
         public Builder sid(@Nullable String sid) {
-            this.sid = Input.ofNullable(sid);
+            this.sid = Output.ofNullable(sid);
             return this;
         }
 
-        public Builder state(@Nullable Input<SubscriptionState> state) {
+        public Builder state(@Nullable Output<SubscriptionState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable SubscriptionState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public SubscriptionArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.enums.IncidentSeverity;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incidentId")
-      private final @Nullable Input<String> incidentId;
+      private final @Nullable Output<String> incidentId;
 
-    public Input<String> getIncidentId() {
-        return this.incidentId == null ? Input.empty() : this.incidentId;
+    public Output<String> getIncidentId() {
+        return this.incidentId == null ? Output.empty() : this.incidentId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationName")
-      private final @Nullable Input<String> relationName;
+      private final @Nullable Output<String> relationName;
 
-    public Input<String> getRelationName() {
-        return this.relationName == null ? Input.empty() : this.relationName;
+    public Output<String> getRelationName() {
+        return this.relationName == null ? Output.empty() : this.relationName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity")
-      private final @Nullable Input<Either<String,IncidentSeverity>> severity;
+      private final @Nullable Output<Either<String,IncidentSeverity>> severity;
 
-    public Input<Either<String,IncidentSeverity>> getSeverity() {
-        return this.severity == null ? Input.empty() : this.severity;
+    public Output<Either<String,IncidentSeverity>> getSeverity() {
+        return this.severity == null ? Output.empty() : this.severity;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public IncidentInfoArgs(
-        @Nullable Input<String> incidentId,
-        @Nullable Input<String> relationName,
-        @Nullable Input<Either<String,IncidentSeverity>> severity,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> incidentId,
+        @Nullable Output<String> relationName,
+        @Nullable Output<Either<String,IncidentSeverity>> severity,
+        @Nullable Output<String> title) {
         this.incidentId = incidentId;
         this.relationName = relationName;
         this.severity = severity;
@@ -76,10 +76,10 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IncidentInfoArgs() {
-        this.incidentId = Input.empty();
-        this.relationName = Input.empty();
-        this.severity = Input.empty();
-        this.title = Input.empty();
+        this.incidentId = Output.empty();
+        this.relationName = Output.empty();
+        this.severity = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> incidentId;
-        private @Nullable Input<String> relationName;
-        private @Nullable Input<Either<String,IncidentSeverity>> severity;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> incidentId;
+        private @Nullable Output<String> relationName;
+        private @Nullable Output<Either<String,IncidentSeverity>> severity;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder incidentId(@Nullable Input<String> incidentId) {
+        public Builder incidentId(@Nullable Output<String> incidentId) {
             this.incidentId = incidentId;
             return this;
         }
 
         public Builder incidentId(@Nullable String incidentId) {
-            this.incidentId = Input.ofNullable(incidentId);
+            this.incidentId = Output.ofNullable(incidentId);
             return this;
         }
 
-        public Builder relationName(@Nullable Input<String> relationName) {
+        public Builder relationName(@Nullable Output<String> relationName) {
             this.relationName = relationName;
             return this;
         }
 
         public Builder relationName(@Nullable String relationName) {
-            this.relationName = Input.ofNullable(relationName);
+            this.relationName = Output.ofNullable(relationName);
             return this;
         }
 
-        public Builder severity(@Nullable Input<Either<String,IncidentSeverity>> severity) {
+        public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
             this.severity = severity;
             return this;
         }
 
         public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
-            this.severity = Input.ofNullable(severity);
+            this.severity = Output.ofNullable(severity);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public IncidentInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="commit")
-      private final @Nullable Input<String> commit;
+      private final @Nullable Output<String> commit;
 
-    public Input<String> getCommit() {
-        return this.commit == null ? Input.empty() : this.commit;
+    public Output<String> getCommit() {
+        return this.commit == null ? Output.empty() : this.commit;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="semver")
-      private final @Nullable Input<String> semver;
+      private final @Nullable Output<String> semver;
 
-    public Input<String> getSemver() {
-        return this.semver == null ? Input.empty() : this.semver;
+    public Output<String> getSemver() {
+        return this.semver == null ? Output.empty() : this.semver;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public RepositoryRefDefinitionArgs(
-        @Nullable Input<String> branch,
-        @Nullable Input<String> commit,
-        @Nullable Input<String> semver,
-        @Nullable Input<String> tag) {
+        @Nullable Output<String> branch,
+        @Nullable Output<String> commit,
+        @Nullable Output<String> semver,
+        @Nullable Output<String> tag) {
         this.branch = branch;
         this.commit = commit;
         this.semver = semver;
@@ -74,10 +74,10 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private RepositoryRefDefinitionArgs() {
-        this.branch = Input.empty();
-        this.commit = Input.empty();
-        this.semver = Input.empty();
-        this.tag = Input.empty();
+        this.branch = Output.empty();
+        this.commit = Output.empty();
+        this.semver = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branch;
-        private @Nullable Input<String> commit;
-        private @Nullable Input<String> semver;
-        private @Nullable Input<String> tag;
+        private @Nullable Output<String> branch;
+        private @Nullable Output<String> commit;
+        private @Nullable Output<String> semver;
+        private @Nullable Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     	      this.tag = defaults.tag;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder commit(@Nullable Input<String> commit) {
+        public Builder commit(@Nullable Output<String> commit) {
             this.commit = commit;
             return this;
         }
 
         public Builder commit(@Nullable String commit) {
-            this.commit = Input.ofNullable(commit);
+            this.commit = Output.ofNullable(commit);
             return this;
         }
 
-        public Builder semver(@Nullable Input<String> semver) {
+        public Builder semver(@Nullable Output<String> semver) {
             this.semver = semver;
             return this;
         }
 
         public Builder semver(@Nullable String semver) {
-            this.semver = Input.ofNullable(semver);
+            this.semver = Output.ofNullable(semver);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public RepositoryRefDefinitionArgs build() {

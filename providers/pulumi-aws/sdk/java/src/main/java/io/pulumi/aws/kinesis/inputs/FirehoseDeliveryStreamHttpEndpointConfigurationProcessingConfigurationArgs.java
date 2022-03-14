@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
      * 
      */
     @InputImport(name="processors")
-      private final @Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors;
+      private final @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors;
 
-    public Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
-        return this.processors == null ? Input.empty() : this.processors;
+    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
+        return this.processors == null ? Output.empty() : this.processors;
     }
 
     public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }
 
     private FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.processors = Input.empty();
+        this.enabled = Output.empty();
+        this.processors = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
     	      this.processors = defaults.processors;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder processors(@Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors) {
+        public Builder processors(@Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
 
         public Builder processors(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs> processors) {
-            this.processors = Input.ofNullable(processors);
+            this.processors = Output.ofNullable(processors);
             return this;
         }
         public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationArgs build() {

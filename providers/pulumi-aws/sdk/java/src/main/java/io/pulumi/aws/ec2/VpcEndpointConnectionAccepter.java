@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcEndpointConnectionAccepterArgs;
 import io.pulumi.aws.ec2.inputs.VpcEndpointConnectionAccepterState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -110,14 +109,14 @@ public class VpcEndpointConnectionAccepter extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcEndpointConnectionAccepter(String name, VpcEndpointConnectionAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcEndpointConnectionAccepter:VpcEndpointConnectionAccepter", name, args == null ? VpcEndpointConnectionAccepterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/vpcEndpointConnectionAccepter:VpcEndpointConnectionAccepter", name, args == null ? VpcEndpointConnectionAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VpcEndpointConnectionAccepter(String name, Input<String> id, @Nullable VpcEndpointConnectionAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VpcEndpointConnectionAccepter(String name, Output<String> id, @Nullable VpcEndpointConnectionAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/vpcEndpointConnectionAccepter:VpcEndpointConnectionAccepter", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -133,7 +132,7 @@ public class VpcEndpointConnectionAccepter extends io.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcEndpointConnectionAccepter get(String name, Input<String> id, @Nullable VpcEndpointConnectionAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VpcEndpointConnectionAccepter get(String name, Output<String> id, @Nullable VpcEndpointConnectionAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpcEndpointConnectionAccepter(name, id, state, options);
     }
 }

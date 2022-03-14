@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @InputImport(name="targetArn")
-      private final @Nullable Input<String> targetArn;
+      private final @Nullable Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
-        return this.targetArn == null ? Input.empty() : this.targetArn;
+    public Output<String> getTargetArn() {
+        return this.targetArn == null ? Output.empty() : this.targetArn;
     }
 
     public AccountAuditConfigurationAuditNotificationTargetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> targetArn) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> targetArn) {
         this.enabled = enabled;
         this.roleArn = roleArn;
         this.targetArn = targetArn;
     }
 
     private AccountAuditConfigurationAuditNotificationTargetArgs() {
-        this.enabled = Input.empty();
-        this.roleArn = Input.empty();
-        this.targetArn = Input.empty();
+        this.enabled = Output.empty();
+        this.roleArn = Output.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> targetArn;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder targetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Input.ofNullable(targetArn);
+            this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
         public AccountAuditConfigurationAuditNotificationTargetArgs build() {

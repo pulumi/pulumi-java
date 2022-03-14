@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationExtractArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationLoadArgs;
@@ -25,10 +25,10 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="copy")
-      private final @Nullable Input<JobConfigurationTableCopyArgs> copy;
+      private final @Nullable Output<JobConfigurationTableCopyArgs> copy;
 
-    public Input<JobConfigurationTableCopyArgs> getCopy() {
-        return this.copy == null ? Input.empty() : this.copy;
+    public Output<JobConfigurationTableCopyArgs> getCopy() {
+        return this.copy == null ? Output.empty() : this.copy;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dryRun")
-      private final @Nullable Input<Boolean> dryRun;
+      private final @Nullable Output<Boolean> dryRun;
 
-    public Input<Boolean> getDryRun() {
-        return this.dryRun == null ? Input.empty() : this.dryRun;
+    public Output<Boolean> getDryRun() {
+        return this.dryRun == null ? Output.empty() : this.dryRun;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extract")
-      private final @Nullable Input<JobConfigurationExtractArgs> extract;
+      private final @Nullable Output<JobConfigurationExtractArgs> extract;
 
-    public Input<JobConfigurationExtractArgs> getExtract() {
-        return this.extract == null ? Input.empty() : this.extract;
+    public Output<JobConfigurationExtractArgs> getExtract() {
+        return this.extract == null ? Output.empty() : this.extract;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="jobTimeoutMs")
-      private final @Nullable Input<String> jobTimeoutMs;
+      private final @Nullable Output<String> jobTimeoutMs;
 
-    public Input<String> getJobTimeoutMs() {
-        return this.jobTimeoutMs == null ? Input.empty() : this.jobTimeoutMs;
+    public Output<String> getJobTimeoutMs() {
+        return this.jobTimeoutMs == null ? Output.empty() : this.jobTimeoutMs;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="load")
-      private final @Nullable Input<JobConfigurationLoadArgs> load;
+      private final @Nullable Output<JobConfigurationLoadArgs> load;
 
-    public Input<JobConfigurationLoadArgs> getLoad() {
-        return this.load == null ? Input.empty() : this.load;
+    public Output<JobConfigurationLoadArgs> getLoad() {
+        return this.load == null ? Output.empty() : this.load;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<JobConfigurationQueryArgs> query;
+      private final @Nullable Output<JobConfigurationQueryArgs> query;
 
-    public Input<JobConfigurationQueryArgs> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<JobConfigurationQueryArgs> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     public JobConfigurationArgs(
-        @Nullable Input<JobConfigurationTableCopyArgs> copy,
-        @Nullable Input<Boolean> dryRun,
-        @Nullable Input<JobConfigurationExtractArgs> extract,
-        @Nullable Input<String> jobTimeoutMs,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<JobConfigurationLoadArgs> load,
-        @Nullable Input<JobConfigurationQueryArgs> query) {
+        @Nullable Output<JobConfigurationTableCopyArgs> copy,
+        @Nullable Output<Boolean> dryRun,
+        @Nullable Output<JobConfigurationExtractArgs> extract,
+        @Nullable Output<String> jobTimeoutMs,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<JobConfigurationLoadArgs> load,
+        @Nullable Output<JobConfigurationQueryArgs> query) {
         this.copy = copy;
         this.dryRun = dryRun;
         this.extract = extract;
@@ -115,13 +115,13 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private JobConfigurationArgs() {
-        this.copy = Input.empty();
-        this.dryRun = Input.empty();
-        this.extract = Input.empty();
-        this.jobTimeoutMs = Input.empty();
-        this.labels = Input.empty();
-        this.load = Input.empty();
-        this.query = Input.empty();
+        this.copy = Output.empty();
+        this.dryRun = Output.empty();
+        this.extract = Output.empty();
+        this.jobTimeoutMs = Output.empty();
+        this.labels = Output.empty();
+        this.load = Output.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<JobConfigurationTableCopyArgs> copy;
-        private @Nullable Input<Boolean> dryRun;
-        private @Nullable Input<JobConfigurationExtractArgs> extract;
-        private @Nullable Input<String> jobTimeoutMs;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<JobConfigurationLoadArgs> load;
-        private @Nullable Input<JobConfigurationQueryArgs> query;
+        private @Nullable Output<JobConfigurationTableCopyArgs> copy;
+        private @Nullable Output<Boolean> dryRun;
+        private @Nullable Output<JobConfigurationExtractArgs> extract;
+        private @Nullable Output<String> jobTimeoutMs;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<JobConfigurationLoadArgs> load;
+        private @Nullable Output<JobConfigurationQueryArgs> query;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.query = defaults.query;
         }
 
-        public Builder copy(@Nullable Input<JobConfigurationTableCopyArgs> copy) {
+        public Builder copy(@Nullable Output<JobConfigurationTableCopyArgs> copy) {
             this.copy = copy;
             return this;
         }
 
         public Builder copy(@Nullable JobConfigurationTableCopyArgs copy) {
-            this.copy = Input.ofNullable(copy);
+            this.copy = Output.ofNullable(copy);
             return this;
         }
 
-        public Builder dryRun(@Nullable Input<Boolean> dryRun) {
+        public Builder dryRun(@Nullable Output<Boolean> dryRun) {
             this.dryRun = dryRun;
             return this;
         }
 
         public Builder dryRun(@Nullable Boolean dryRun) {
-            this.dryRun = Input.ofNullable(dryRun);
+            this.dryRun = Output.ofNullable(dryRun);
             return this;
         }
 
-        public Builder extract(@Nullable Input<JobConfigurationExtractArgs> extract) {
+        public Builder extract(@Nullable Output<JobConfigurationExtractArgs> extract) {
             this.extract = extract;
             return this;
         }
 
         public Builder extract(@Nullable JobConfigurationExtractArgs extract) {
-            this.extract = Input.ofNullable(extract);
+            this.extract = Output.ofNullable(extract);
             return this;
         }
 
-        public Builder jobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
             this.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
         public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
-            this.jobTimeoutMs = Input.ofNullable(jobTimeoutMs);
+            this.jobTimeoutMs = Output.ofNullable(jobTimeoutMs);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder load(@Nullable Input<JobConfigurationLoadArgs> load) {
+        public Builder load(@Nullable Output<JobConfigurationLoadArgs> load) {
             this.load = load;
             return this;
         }
 
         public Builder load(@Nullable JobConfigurationLoadArgs load) {
-            this.load = Input.ofNullable(load);
+            this.load = Output.ofNullable(load);
             return this;
         }
 
-        public Builder query(@Nullable Input<JobConfigurationQueryArgs> query) {
+        public Builder query(@Nullable Output<JobConfigurationQueryArgs> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable JobConfigurationQueryArgs query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
         public JobConfigurationArgs build() {

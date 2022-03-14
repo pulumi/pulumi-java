@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmAutomationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
     public static final ResponsePlanActionArgs Empty = new ResponsePlanActionArgs();
 
     @InputImport(name="ssmAutomation")
-      private final @Nullable Input<ResponsePlanSsmAutomationArgs> ssmAutomation;
+      private final @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
 
-    public Input<ResponsePlanSsmAutomationArgs> getSsmAutomation() {
-        return this.ssmAutomation == null ? Input.empty() : this.ssmAutomation;
+    public Output<ResponsePlanSsmAutomationArgs> getSsmAutomation() {
+        return this.ssmAutomation == null ? Output.empty() : this.ssmAutomation;
     }
 
-    public ResponsePlanActionArgs(@Nullable Input<ResponsePlanSsmAutomationArgs> ssmAutomation) {
+    public ResponsePlanActionArgs(@Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation) {
         this.ssmAutomation = ssmAutomation;
     }
 
     private ResponsePlanActionArgs() {
-        this.ssmAutomation = Input.empty();
+        this.ssmAutomation = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ResponsePlanSsmAutomationArgs> ssmAutomation;
+        private @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
     	      this.ssmAutomation = defaults.ssmAutomation;
         }
 
-        public Builder ssmAutomation(@Nullable Input<ResponsePlanSsmAutomationArgs> ssmAutomation) {
+        public Builder ssmAutomation(@Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation) {
             this.ssmAutomation = ssmAutomation;
             return this;
         }
 
         public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomationArgs ssmAutomation) {
-            this.ssmAutomation = Input.ofNullable(ssmAutomation);
+            this.ssmAutomation = Output.ofNullable(ssmAutomation);
             return this;
         }
         public ResponsePlanActionArgs build() {

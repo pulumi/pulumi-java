@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.azurenative.datalakestore.enums.EncryptionIdentityType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<EncryptionIdentityType> type;
+      private final Output<EncryptionIdentityType> type;
 
-    public Input<EncryptionIdentityType> getType() {
+    public Output<EncryptionIdentityType> getType() {
         return this.type;
     }
 
-    public EncryptionIdentityArgs(Input<EncryptionIdentityType> type) {
+    public EncryptionIdentityArgs(Output<EncryptionIdentityType> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private EncryptionIdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<EncryptionIdentityType> type;
+        private Output<EncryptionIdentityType> type;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<EncryptionIdentityType> type) {
+        public Builder type(Output<EncryptionIdentityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(EncryptionIdentityType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public EncryptionIdentityArgs build() {

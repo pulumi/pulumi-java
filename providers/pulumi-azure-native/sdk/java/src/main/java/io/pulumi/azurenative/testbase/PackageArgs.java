@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.testbase.inputs.TargetOSInfoArgs;
 import io.pulumi.azurenative.testbase.inputs.TestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName", required=true)
-      private final Input<String> applicationName;
+      private final Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
+    public Output<String> getApplicationName() {
         return this.applicationName;
     }
 
@@ -34,9 +34,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPath", required=true)
-      private final Input<String> blobPath;
+      private final Output<String> blobPath;
 
-    public Input<String> getBlobPath() {
+    public Output<String> getBlobPath() {
         return this.blobPath;
     }
 
@@ -45,9 +45,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flightingRing", required=true)
-      private final Input<String> flightingRing;
+      private final Output<String> flightingRing;
 
-    public Input<String> getFlightingRing() {
+    public Output<String> getFlightingRing() {
         return this.flightingRing;
     }
 
@@ -56,10 +56,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-      private final @Nullable Input<String> packageName;
+      private final @Nullable Output<String> packageName;
 
-    public Input<String> getPackageName() {
-        return this.packageName == null ? Input.empty() : this.packageName;
+    public Output<String> getPackageName() {
+        return this.packageName == null ? Output.empty() : this.packageName;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,10 +89,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetOSList", required=true)
-      private final Input<List<TargetOSInfoArgs>> targetOSList;
+      private final Output<List<TargetOSInfoArgs>> targetOSList;
 
-    public Input<List<TargetOSInfoArgs>> getTargetOSList() {
+    public Output<List<TargetOSInfoArgs>> getTargetOSList() {
         return this.targetOSList;
     }
 
@@ -111,9 +111,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-      private final Input<String> testBaseAccountName;
+      private final Output<String> testBaseAccountName;
 
-    public Input<String> getTestBaseAccountName() {
+    public Output<String> getTestBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -122,9 +122,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tests", required=true)
-      private final Input<List<TestArgs>> tests;
+      private final Output<List<TestArgs>> tests;
 
-    public Input<List<TestArgs>> getTests() {
+    public Output<List<TestArgs>> getTests() {
         return this.tests;
     }
 
@@ -133,24 +133,24 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public PackageArgs(
-        Input<String> applicationName,
-        Input<String> blobPath,
-        Input<String> flightingRing,
-        @Nullable Input<String> location,
-        @Nullable Input<String> packageName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<List<TargetOSInfoArgs>> targetOSList,
-        Input<String> testBaseAccountName,
-        Input<List<TestArgs>> tests,
-        Input<String> version) {
+        Output<String> applicationName,
+        Output<String> blobPath,
+        Output<String> flightingRing,
+        @Nullable Output<String> location,
+        @Nullable Output<String> packageName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<List<TargetOSInfoArgs>> targetOSList,
+        Output<String> testBaseAccountName,
+        Output<List<TestArgs>> tests,
+        Output<String> version) {
         this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
         this.blobPath = Objects.requireNonNull(blobPath, "expected parameter 'blobPath' to be non-null");
         this.flightingRing = Objects.requireNonNull(flightingRing, "expected parameter 'flightingRing' to be non-null");
@@ -165,17 +165,17 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageArgs() {
-        this.applicationName = Input.empty();
-        this.blobPath = Input.empty();
-        this.flightingRing = Input.empty();
-        this.location = Input.empty();
-        this.packageName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.targetOSList = Input.empty();
-        this.testBaseAccountName = Input.empty();
-        this.tests = Input.empty();
-        this.version = Input.empty();
+        this.applicationName = Output.empty();
+        this.blobPath = Output.empty();
+        this.flightingRing = Output.empty();
+        this.location = Output.empty();
+        this.packageName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.targetOSList = Output.empty();
+        this.testBaseAccountName = Output.empty();
+        this.tests = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationName;
-        private Input<String> blobPath;
-        private Input<String> flightingRing;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> packageName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<List<TargetOSInfoArgs>> targetOSList;
-        private Input<String> testBaseAccountName;
-        private Input<List<TestArgs>> tests;
-        private Input<String> version;
+        private Output<String> applicationName;
+        private Output<String> blobPath;
+        private Output<String> flightingRing;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> packageName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<List<TargetOSInfoArgs>> targetOSList;
+        private Output<String> testBaseAccountName;
+        private Output<List<TestArgs>> tests;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder applicationName(Input<String> applicationName) {
+        public Builder applicationName(Output<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
         public Builder applicationName(String applicationName) {
-            this.applicationName = Input.of(Objects.requireNonNull(applicationName));
+            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder blobPath(Input<String> blobPath) {
+        public Builder blobPath(Output<String> blobPath) {
             this.blobPath = Objects.requireNonNull(blobPath);
             return this;
         }
 
         public Builder blobPath(String blobPath) {
-            this.blobPath = Input.of(Objects.requireNonNull(blobPath));
+            this.blobPath = Output.of(Objects.requireNonNull(blobPath));
             return this;
         }
 
-        public Builder flightingRing(Input<String> flightingRing) {
+        public Builder flightingRing(Output<String> flightingRing) {
             this.flightingRing = Objects.requireNonNull(flightingRing);
             return this;
         }
 
         public Builder flightingRing(String flightingRing) {
-            this.flightingRing = Input.of(Objects.requireNonNull(flightingRing));
+            this.flightingRing = Output.of(Objects.requireNonNull(flightingRing));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder packageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Input.ofNullable(packageName);
+            this.packageName = Output.ofNullable(packageName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetOSList(Input<List<TargetOSInfoArgs>> targetOSList) {
+        public Builder targetOSList(Output<List<TargetOSInfoArgs>> targetOSList) {
             this.targetOSList = Objects.requireNonNull(targetOSList);
             return this;
         }
 
         public Builder targetOSList(List<TargetOSInfoArgs> targetOSList) {
-            this.targetOSList = Input.of(Objects.requireNonNull(targetOSList));
+            this.targetOSList = Output.of(Objects.requireNonNull(targetOSList));
             return this;
         }
 
-        public Builder testBaseAccountName(Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
 
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Input.of(Objects.requireNonNull(testBaseAccountName));
+            this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }
 
-        public Builder tests(Input<List<TestArgs>> tests) {
+        public Builder tests(Output<List<TestArgs>> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
 
         public Builder tests(List<TestArgs> tests) {
-            this.tests = Input.of(Objects.requireNonNull(tests));
+            this.tests = Output.of(Objects.requireNonNull(tests));
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public PackageArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,38 +19,38 @@ public final class ConfigurationTemplateSettingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
     @InputImport(name="resource")
-      private final @Nullable Input<String> resource;
+      private final @Nullable Output<String> resource;
 
-    public Input<String> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<String> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ConfigurationTemplateSettingArgs(
-        Input<String> name,
-        Input<String> namespace,
-        @Nullable Input<String> resource,
-        Input<String> value) {
+        Output<String> name,
+        Output<String> namespace,
+        @Nullable Output<String> resource,
+        Output<String> value) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
         this.resource = resource;
@@ -58,10 +58,10 @@ public final class ConfigurationTemplateSettingArgs extends io.pulumi.resources.
     }
 
     private ConfigurationTemplateSettingArgs() {
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.resource = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.resource = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class ConfigurationTemplateSettingArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> namespace;
-        private @Nullable Input<String> resource;
-        private Input<String> value;
+        private Output<String> name;
+        private Output<String> namespace;
+        private @Nullable Output<String> resource;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class ConfigurationTemplateSettingArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder resource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ConfigurationTemplateSettingArgs build() {

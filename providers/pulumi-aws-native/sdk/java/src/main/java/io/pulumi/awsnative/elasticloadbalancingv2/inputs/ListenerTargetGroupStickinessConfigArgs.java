@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -16,29 +16,29 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
     public static final ListenerTargetGroupStickinessConfigArgs Empty = new ListenerTargetGroupStickinessConfigArgs();
 
     @InputImport(name="durationSeconds")
-      private final @Nullable Input<Integer> durationSeconds;
+      private final @Nullable Output<Integer> durationSeconds;
 
-    public Input<Integer> getDurationSeconds() {
-        return this.durationSeconds == null ? Input.empty() : this.durationSeconds;
+    public Output<Integer> getDurationSeconds() {
+        return this.durationSeconds == null ? Output.empty() : this.durationSeconds;
     }
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public ListenerTargetGroupStickinessConfigArgs(
-        @Nullable Input<Integer> durationSeconds,
-        @Nullable Input<Boolean> enabled) {
+        @Nullable Output<Integer> durationSeconds,
+        @Nullable Output<Boolean> enabled) {
         this.durationSeconds = durationSeconds;
         this.enabled = enabled;
     }
 
     private ListenerTargetGroupStickinessConfigArgs() {
-        this.durationSeconds = Input.empty();
-        this.enabled = Input.empty();
+        this.durationSeconds = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> durationSeconds;
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<Integer> durationSeconds;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder durationSeconds(@Nullable Input<Integer> durationSeconds) {
+        public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = Input.ofNullable(durationSeconds);
+            this.durationSeconds = Output.ofNullable(durationSeconds);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public ListenerTargetGroupStickinessConfigArgs build() {

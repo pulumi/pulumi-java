@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,24 +15,24 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
     public static final DatabaseInstanceServerCaCertGetArgs Empty = new DatabaseInstanceServerCaCertGetArgs();
 
     @InputImport(name="cert")
-      private final @Nullable Input<String> cert;
+      private final @Nullable Output<String> cert;
 
-    public Input<String> getCert() {
-        return this.cert == null ? Input.empty() : this.cert;
+    public Output<String> getCert() {
+        return this.cert == null ? Output.empty() : this.cert;
     }
 
     @InputImport(name="commonName")
-      private final @Nullable Input<String> commonName;
+      private final @Nullable Output<String> commonName;
 
-    public Input<String> getCommonName() {
-        return this.commonName == null ? Input.empty() : this.commonName;
+    public Output<String> getCommonName() {
+        return this.commonName == null ? Output.empty() : this.commonName;
     }
 
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     @InputImport(name="sha1Fingerprint")
-      private final @Nullable Input<String> sha1Fingerprint;
+      private final @Nullable Output<String> sha1Fingerprint;
 
-    public Input<String> getSha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
+    public Output<String> getSha1Fingerprint() {
+        return this.sha1Fingerprint == null ? Output.empty() : this.sha1Fingerprint;
     }
 
     public DatabaseInstanceServerCaCertGetArgs(
-        @Nullable Input<String> cert,
-        @Nullable Input<String> commonName,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<String> sha1Fingerprint) {
+        @Nullable Output<String> cert,
+        @Nullable Output<String> commonName,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<String> sha1Fingerprint) {
         this.cert = cert;
         this.commonName = commonName;
         this.createTime = createTime;
@@ -68,11 +68,11 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
     }
 
     private DatabaseInstanceServerCaCertGetArgs() {
-        this.cert = Input.empty();
-        this.commonName = Input.empty();
-        this.createTime = Input.empty();
-        this.expirationTime = Input.empty();
-        this.sha1Fingerprint = Input.empty();
+        this.cert = Output.empty();
+        this.commonName = Output.empty();
+        this.createTime = Output.empty();
+        this.expirationTime = Output.empty();
+        this.sha1Fingerprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,11 +84,11 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cert;
-        private @Nullable Input<String> commonName;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<String> sha1Fingerprint;
+        private @Nullable Output<String> cert;
+        private @Nullable Output<String> commonName;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<String> sha1Fingerprint;
 
         public Builder() {
     	      // Empty
@@ -103,53 +103,53 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder cert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Output<String> cert) {
             this.cert = cert;
             return this;
         }
 
         public Builder cert(@Nullable String cert) {
-            this.cert = Input.ofNullable(cert);
+            this.cert = Output.ofNullable(cert);
             return this;
         }
 
-        public Builder commonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Input.ofNullable(commonName);
+            this.commonName = Output.ofNullable(commonName);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder sha1Fingerprint(@Nullable Input<String> sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
 
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
+            this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
             return this;
         }
         public DatabaseInstanceServerCaCertGetArgs build() {

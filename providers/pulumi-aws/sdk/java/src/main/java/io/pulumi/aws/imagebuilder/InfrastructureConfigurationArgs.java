@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder;
 
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceProfileName", required=true)
-      private final Input<String> instanceProfileName;
+      private final Output<String> instanceProfileName;
 
-    public Input<String> getInstanceProfileName() {
+    public Output<String> getInstanceProfileName() {
         return this.instanceProfileName;
     }
 
@@ -45,10 +45,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceTypes")
-      private final @Nullable Input<List<String>> instanceTypes;
+      private final @Nullable Output<List<String>> instanceTypes;
 
-    public Input<List<String>> getInstanceTypes() {
-        return this.instanceTypes == null ? Input.empty() : this.instanceTypes;
+    public Output<List<String>> getInstanceTypes() {
+        return this.instanceTypes == null ? Output.empty() : this.instanceTypes;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyPair")
-      private final @Nullable Input<String> keyPair;
+      private final @Nullable Output<String> keyPair;
 
-    public Input<String> getKeyPair() {
-        return this.keyPair == null ? Input.empty() : this.keyPair;
+    public Output<String> getKeyPair() {
+        return this.keyPair == null ? Output.empty() : this.keyPair;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<InfrastructureConfigurationLoggingArgs> logging;
+      private final @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
 
-    public Input<InfrastructureConfigurationLoggingArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<InfrastructureConfigurationLoggingArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceTags")
-      private final @Nullable Input<Map<String,String>> resourceTags;
+      private final @Nullable Output<Map<String,String>> resourceTags;
 
-    public Input<Map<String,String>> getResourceTags() {
-        return this.resourceTags == null ? Input.empty() : this.resourceTags;
+    public Output<Map<String,String>> getResourceTags() {
+        return this.resourceTags == null ? Output.empty() : this.resourceTags;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="snsTopicArn")
-      private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
+    public Output<String> getSnsTopicArn() {
+        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="terminateInstanceOnFailure")
-      private final @Nullable Input<Boolean> terminateInstanceOnFailure;
+      private final @Nullable Output<Boolean> terminateInstanceOnFailure;
 
-    public Input<Boolean> getTerminateInstanceOnFailure() {
-        return this.terminateInstanceOnFailure == null ? Input.empty() : this.terminateInstanceOnFailure;
+    public Output<Boolean> getTerminateInstanceOnFailure() {
+        return this.terminateInstanceOnFailure == null ? Output.empty() : this.terminateInstanceOnFailure;
     }
 
     public InfrastructureConfigurationArgs(
-        @Nullable Input<String> description,
-        Input<String> instanceProfileName,
-        @Nullable Input<List<String>> instanceTypes,
-        @Nullable Input<String> keyPair,
-        @Nullable Input<InfrastructureConfigurationLoggingArgs> logging,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> resourceTags,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<String> snsTopicArn,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Boolean> terminateInstanceOnFailure) {
+        @Nullable Output<String> description,
+        Output<String> instanceProfileName,
+        @Nullable Output<List<String>> instanceTypes,
+        @Nullable Output<String> keyPair,
+        @Nullable Output<InfrastructureConfigurationLoggingArgs> logging,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> resourceTags,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<String> snsTopicArn,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Boolean> terminateInstanceOnFailure) {
         this.description = description;
         this.instanceProfileName = Objects.requireNonNull(instanceProfileName, "expected parameter 'instanceProfileName' to be non-null");
         this.instanceTypes = instanceTypes;
@@ -178,18 +178,18 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     }
 
     private InfrastructureConfigurationArgs() {
-        this.description = Input.empty();
-        this.instanceProfileName = Input.empty();
-        this.instanceTypes = Input.empty();
-        this.keyPair = Input.empty();
-        this.logging = Input.empty();
-        this.name = Input.empty();
-        this.resourceTags = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.snsTopicArn = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.terminateInstanceOnFailure = Input.empty();
+        this.description = Output.empty();
+        this.instanceProfileName = Output.empty();
+        this.instanceTypes = Output.empty();
+        this.keyPair = Output.empty();
+        this.logging = Output.empty();
+        this.name = Output.empty();
+        this.resourceTags = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.snsTopicArn = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.terminateInstanceOnFailure = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> instanceProfileName;
-        private @Nullable Input<List<String>> instanceTypes;
-        private @Nullable Input<String> keyPair;
-        private @Nullable Input<InfrastructureConfigurationLoggingArgs> logging;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> resourceTags;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<String> snsTopicArn;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Boolean> terminateInstanceOnFailure;
+        private @Nullable Output<String> description;
+        private Output<String> instanceProfileName;
+        private @Nullable Output<List<String>> instanceTypes;
+        private @Nullable Output<String> keyPair;
+        private @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> resourceTags;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<String> snsTopicArn;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Boolean> terminateInstanceOnFailure;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     	      this.terminateInstanceOnFailure = defaults.terminateInstanceOnFailure;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceProfileName(Input<String> instanceProfileName) {
+        public Builder instanceProfileName(Output<String> instanceProfileName) {
             this.instanceProfileName = Objects.requireNonNull(instanceProfileName);
             return this;
         }
 
         public Builder instanceProfileName(String instanceProfileName) {
-            this.instanceProfileName = Input.of(Objects.requireNonNull(instanceProfileName));
+            this.instanceProfileName = Output.of(Objects.requireNonNull(instanceProfileName));
             return this;
         }
 
-        public Builder instanceTypes(@Nullable Input<List<String>> instanceTypes) {
+        public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
-            this.instanceTypes = Input.ofNullable(instanceTypes);
+            this.instanceTypes = Output.ofNullable(instanceTypes);
             return this;
         }
 
-        public Builder keyPair(@Nullable Input<String> keyPair) {
+        public Builder keyPair(@Nullable Output<String> keyPair) {
             this.keyPair = keyPair;
             return this;
         }
 
         public Builder keyPair(@Nullable String keyPair) {
-            this.keyPair = Input.ofNullable(keyPair);
+            this.keyPair = Output.ofNullable(keyPair);
             return this;
         }
 
-        public Builder logging(@Nullable Input<InfrastructureConfigurationLoggingArgs> logging) {
+        public Builder logging(@Nullable Output<InfrastructureConfigurationLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable InfrastructureConfigurationLoggingArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceTags(@Nullable Input<Map<String,String>> resourceTags) {
+        public Builder resourceTags(@Nullable Output<Map<String,String>> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
         public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
-            this.resourceTags = Input.ofNullable(resourceTags);
+            this.resourceTags = Output.ofNullable(resourceTags);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Input.ofNullable(snsTopicArn);
+            this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder terminateInstanceOnFailure(@Nullable Input<Boolean> terminateInstanceOnFailure) {
+        public Builder terminateInstanceOnFailure(@Nullable Output<Boolean> terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
 
         public Builder terminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
-            this.terminateInstanceOnFailure = Input.ofNullable(terminateInstanceOnFailure);
+            this.terminateInstanceOnFailure = Output.ofNullable(terminateInstanceOnFailure);
             return this;
         }
         public InfrastructureConfigurationArgs build() {

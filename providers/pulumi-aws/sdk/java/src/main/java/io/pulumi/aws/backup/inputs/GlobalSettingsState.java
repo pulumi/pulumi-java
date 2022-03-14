@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class GlobalSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="globalSettings")
-      private final @Nullable Input<Map<String,String>> globalSettings;
+      private final @Nullable Output<Map<String,String>> globalSettings;
 
-    public Input<Map<String,String>> getGlobalSettings() {
-        return this.globalSettings == null ? Input.empty() : this.globalSettings;
+    public Output<Map<String,String>> getGlobalSettings() {
+        return this.globalSettings == null ? Output.empty() : this.globalSettings;
     }
 
-    public GlobalSettingsState(@Nullable Input<Map<String,String>> globalSettings) {
+    public GlobalSettingsState(@Nullable Output<Map<String,String>> globalSettings) {
         this.globalSettings = globalSettings;
     }
 
     private GlobalSettingsState() {
-        this.globalSettings = Input.empty();
+        this.globalSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class GlobalSettingsState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> globalSettings;
+        private @Nullable Output<Map<String,String>> globalSettings;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class GlobalSettingsState extends io.pulumi.resources.ResourceArgs 
     	      this.globalSettings = defaults.globalSettings;
         }
 
-        public Builder globalSettings(@Nullable Input<Map<String,String>> globalSettings) {
+        public Builder globalSettings(@Nullable Output<Map<String,String>> globalSettings) {
             this.globalSettings = globalSettings;
             return this;
         }
 
         public Builder globalSettings(@Nullable Map<String,String> globalSettings) {
-            this.globalSettings = Input.ofNullable(globalSettings);
+            this.globalSettings = Output.ofNullable(globalSettings);
             return this;
         }
         public GlobalSettingsState build() {

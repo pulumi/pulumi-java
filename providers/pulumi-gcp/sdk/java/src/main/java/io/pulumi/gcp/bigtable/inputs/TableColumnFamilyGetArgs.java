@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TableColumnFamilyGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="family", required=true)
-      private final Input<String> family;
+      private final Output<String> family;
 
-    public Input<String> getFamily() {
+    public Output<String> getFamily() {
         return this.family;
     }
 
-    public TableColumnFamilyGetArgs(Input<String> family) {
+    public TableColumnFamilyGetArgs(Output<String> family) {
         this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
     }
 
     private TableColumnFamilyGetArgs() {
-        this.family = Input.empty();
+        this.family = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TableColumnFamilyGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> family;
+        private Output<String> family;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TableColumnFamilyGetArgs extends io.pulumi.resources.Resource
     	      this.family = defaults.family;
         }
 
-        public Builder family(Input<String> family) {
+        public Builder family(Output<String> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
         public Builder family(String family) {
-            this.family = Input.of(Objects.requireNonNull(family));
+            this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
         public TableColumnFamilyGetArgs build() {

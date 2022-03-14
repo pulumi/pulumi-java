@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.enums.ConflictResolutionMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="conflictResolutionPath")
-      private final @Nullable Input<String> conflictResolutionPath;
+      private final @Nullable Output<String> conflictResolutionPath;
 
-    public Input<String> getConflictResolutionPath() {
-        return this.conflictResolutionPath == null ? Input.empty() : this.conflictResolutionPath;
+    public Output<String> getConflictResolutionPath() {
+        return this.conflictResolutionPath == null ? Output.empty() : this.conflictResolutionPath;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="conflictResolutionProcedure")
-      private final @Nullable Input<String> conflictResolutionProcedure;
+      private final @Nullable Output<String> conflictResolutionProcedure;
 
-    public Input<String> getConflictResolutionProcedure() {
-        return this.conflictResolutionProcedure == null ? Input.empty() : this.conflictResolutionProcedure;
+    public Output<String> getConflictResolutionProcedure() {
+        return this.conflictResolutionProcedure == null ? Output.empty() : this.conflictResolutionProcedure;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,ConflictResolutionMode>> mode;
+      private final @Nullable Output<Either<String,ConflictResolutionMode>> mode;
 
-    public Input<Either<String,ConflictResolutionMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,ConflictResolutionMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     public ConflictResolutionPolicyArgs(
-        @Nullable Input<String> conflictResolutionPath,
-        @Nullable Input<String> conflictResolutionProcedure,
-        @Nullable Input<Either<String,ConflictResolutionMode>> mode) {
+        @Nullable Output<String> conflictResolutionPath,
+        @Nullable Output<String> conflictResolutionProcedure,
+        @Nullable Output<Either<String,ConflictResolutionMode>> mode) {
         this.conflictResolutionPath = conflictResolutionPath;
         this.conflictResolutionProcedure = conflictResolutionProcedure;
-        this.mode = mode == null ? Input.ofLeft("LastWriterWins") : mode;
+        this.mode = mode == null ? Output.ofLeft("LastWriterWins") : mode;
     }
 
     private ConflictResolutionPolicyArgs() {
-        this.conflictResolutionPath = Input.empty();
-        this.conflictResolutionProcedure = Input.empty();
-        this.mode = Input.empty();
+        this.conflictResolutionPath = Output.empty();
+        this.conflictResolutionProcedure = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> conflictResolutionPath;
-        private @Nullable Input<String> conflictResolutionProcedure;
-        private @Nullable Input<Either<String,ConflictResolutionMode>> mode;
+        private @Nullable Output<String> conflictResolutionPath;
+        private @Nullable Output<String> conflictResolutionProcedure;
+        private @Nullable Output<Either<String,ConflictResolutionMode>> mode;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
     	      this.mode = defaults.mode;
         }
 
-        public Builder conflictResolutionPath(@Nullable Input<String> conflictResolutionPath) {
+        public Builder conflictResolutionPath(@Nullable Output<String> conflictResolutionPath) {
             this.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
 
         public Builder conflictResolutionPath(@Nullable String conflictResolutionPath) {
-            this.conflictResolutionPath = Input.ofNullable(conflictResolutionPath);
+            this.conflictResolutionPath = Output.ofNullable(conflictResolutionPath);
             return this;
         }
 
-        public Builder conflictResolutionProcedure(@Nullable Input<String> conflictResolutionProcedure) {
+        public Builder conflictResolutionProcedure(@Nullable Output<String> conflictResolutionProcedure) {
             this.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
 
         public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
-            this.conflictResolutionProcedure = Input.ofNullable(conflictResolutionProcedure);
+            this.conflictResolutionProcedure = Output.ofNullable(conflictResolutionProcedure);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,ConflictResolutionMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,ConflictResolutionMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,ConflictResolutionMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public ConflictResolutionPolicyArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.aws.gamelift.inputs.FleetState;
 import io.pulumi.aws.gamelift.outputs.FleetEc2InboundPermission;
 import io.pulumi.aws.gamelift.outputs.FleetResourceCreationLimitPolicy;
 import io.pulumi.aws.gamelift.outputs.FleetRuntimeConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -285,14 +284,14 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fleet(String name, FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:gamelift/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:gamelift/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Fleet(String name, Input<String> id, @Nullable FleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Fleet(String name, Output<String> id, @Nullable FleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:gamelift/fleet:Fleet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -308,7 +307,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Fleet get(String name, Input<String> id, @Nullable FleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Fleet get(String name, Output<String> id, @Nullable FleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Fleet(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accessType")
-      private final @Nullable Input<String> accessType;
+      private final @Nullable Output<String> accessType;
 
-    public Input<String> getAccessType() {
-        return this.accessType == null ? Input.empty() : this.accessType;
+    public Output<String> getAccessType() {
+        return this.accessType == null ? Output.empty() : this.accessType;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="proxyUri")
-      private final @Nullable Input<String> proxyUri;
+      private final @Nullable Output<String> proxyUri;
 
-    public Input<String> getProxyUri() {
-        return this.proxyUri == null ? Input.empty() : this.proxyUri;
+    public Output<String> getProxyUri() {
+        return this.proxyUri == null ? Output.empty() : this.proxyUri;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="runtimeOwner")
-      private final @Nullable Input<String> runtimeOwner;
+      private final @Nullable Output<String> runtimeOwner;
 
-    public Input<String> getRuntimeOwner() {
-        return this.runtimeOwner == null ? Input.empty() : this.runtimeOwner;
+    public Output<String> getRuntimeOwner() {
+        return this.runtimeOwner == null ? Output.empty() : this.runtimeOwner;
     }
 
     public RuntimeAccessConfigGetArgs(
-        @Nullable Input<String> accessType,
-        @Nullable Input<String> proxyUri,
-        @Nullable Input<String> runtimeOwner) {
+        @Nullable Output<String> accessType,
+        @Nullable Output<String> proxyUri,
+        @Nullable Output<String> runtimeOwner) {
         this.accessType = accessType;
         this.proxyUri = proxyUri;
         this.runtimeOwner = runtimeOwner;
     }
 
     private RuntimeAccessConfigGetArgs() {
-        this.accessType = Input.empty();
-        this.proxyUri = Input.empty();
-        this.runtimeOwner = Input.empty();
+        this.accessType = Output.empty();
+        this.proxyUri = Output.empty();
+        this.runtimeOwner = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessType;
-        private @Nullable Input<String> proxyUri;
-        private @Nullable Input<String> runtimeOwner;
+        private @Nullable Output<String> accessType;
+        private @Nullable Output<String> proxyUri;
+        private @Nullable Output<String> runtimeOwner;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
     	      this.runtimeOwner = defaults.runtimeOwner;
         }
 
-        public Builder accessType(@Nullable Input<String> accessType) {
+        public Builder accessType(@Nullable Output<String> accessType) {
             this.accessType = accessType;
             return this;
         }
 
         public Builder accessType(@Nullable String accessType) {
-            this.accessType = Input.ofNullable(accessType);
+            this.accessType = Output.ofNullable(accessType);
             return this;
         }
 
-        public Builder proxyUri(@Nullable Input<String> proxyUri) {
+        public Builder proxyUri(@Nullable Output<String> proxyUri) {
             this.proxyUri = proxyUri;
             return this;
         }
 
         public Builder proxyUri(@Nullable String proxyUri) {
-            this.proxyUri = Input.ofNullable(proxyUri);
+            this.proxyUri = Output.ofNullable(proxyUri);
             return this;
         }
 
-        public Builder runtimeOwner(@Nullable Input<String> runtimeOwner) {
+        public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
             this.runtimeOwner = runtimeOwner;
             return this;
         }
 
         public Builder runtimeOwner(@Nullable String runtimeOwner) {
-            this.runtimeOwner = Input.ofNullable(runtimeOwner);
+            this.runtimeOwner = Output.ofNullable(runtimeOwner);
             return this;
         }
         public RuntimeAccessConfigGetArgs build() {

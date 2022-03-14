@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="maxUnusedVersionsToKeep", required=true)
-      private final Input<Double> maxUnusedVersionsToKeep;
+      private final Output<Double> maxUnusedVersionsToKeep;
 
-    public Input<Double> getMaxUnusedVersionsToKeep() {
+    public Output<Double> getMaxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }
 
-    public ApplicationTypeVersionsCleanupPolicyArgs(Input<Double> maxUnusedVersionsToKeep) {
+    public ApplicationTypeVersionsCleanupPolicyArgs(Output<Double> maxUnusedVersionsToKeep) {
         this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep, "expected parameter 'maxUnusedVersionsToKeep' to be non-null");
     }
 
     private ApplicationTypeVersionsCleanupPolicyArgs() {
-        this.maxUnusedVersionsToKeep = Input.empty();
+        this.maxUnusedVersionsToKeep = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<Double> maxUnusedVersionsToKeep;
+        private Output<Double> maxUnusedVersionsToKeep;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends io.pulumi.re
     	      this.maxUnusedVersionsToKeep = defaults.maxUnusedVersionsToKeep;
         }
 
-        public Builder maxUnusedVersionsToKeep(Input<Double> maxUnusedVersionsToKeep) {
+        public Builder maxUnusedVersionsToKeep(Output<Double> maxUnusedVersionsToKeep) {
             this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep);
             return this;
         }
 
         public Builder maxUnusedVersionsToKeep(Double maxUnusedVersionsToKeep) {
-            this.maxUnusedVersionsToKeep = Input.of(Objects.requireNonNull(maxUnusedVersionsToKeep));
+            this.maxUnusedVersionsToKeep = Output.of(Objects.requireNonNull(maxUnusedVersionsToKeep));
             return this;
         }
         public ApplicationTypeVersionsCleanupPolicyArgs build() {

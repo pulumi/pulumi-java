@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudcontrol.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,17 +15,17 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     public static final ResourceState Empty = new ResourceState();
 
     @InputImport(name="desiredState")
-      private final @Nullable Input<String> desiredState;
+      private final @Nullable Output<String> desiredState;
 
-    public Input<String> getDesiredState() {
-        return this.desiredState == null ? Input.empty() : this.desiredState;
+    public Output<String> getDesiredState() {
+        return this.desiredState == null ? Output.empty() : this.desiredState;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<String> properties;
+      private final @Nullable Output<String> properties;
 
-    public Input<String> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<String> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<String> schema;
+      private final @Nullable Output<String> schema;
 
-    public Input<String> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<String> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     /**
@@ -66,19 +66,19 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeVersionId")
-      private final @Nullable Input<String> typeVersionId;
+      private final @Nullable Output<String> typeVersionId;
 
-    public Input<String> getTypeVersionId() {
-        return this.typeVersionId == null ? Input.empty() : this.typeVersionId;
+    public Output<String> getTypeVersionId() {
+        return this.typeVersionId == null ? Output.empty() : this.typeVersionId;
     }
 
     public ResourceState(
-        @Nullable Input<String> desiredState,
-        @Nullable Input<String> properties,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> schema,
-        @Nullable Input<String> typeName,
-        @Nullable Input<String> typeVersionId) {
+        @Nullable Output<String> desiredState,
+        @Nullable Output<String> properties,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> schema,
+        @Nullable Output<String> typeName,
+        @Nullable Output<String> typeVersionId) {
         this.desiredState = desiredState;
         this.properties = properties;
         this.roleArn = roleArn;
@@ -88,12 +88,12 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceState() {
-        this.desiredState = Input.empty();
-        this.properties = Input.empty();
-        this.roleArn = Input.empty();
-        this.schema = Input.empty();
-        this.typeName = Input.empty();
-        this.typeVersionId = Input.empty();
+        this.desiredState = Output.empty();
+        this.properties = Output.empty();
+        this.roleArn = Output.empty();
+        this.schema = Output.empty();
+        this.typeName = Output.empty();
+        this.typeVersionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,12 +105,12 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> desiredState;
-        private @Nullable Input<String> properties;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> schema;
-        private @Nullable Input<String> typeName;
-        private @Nullable Input<String> typeVersionId;
+        private @Nullable Output<String> desiredState;
+        private @Nullable Output<String> properties;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> schema;
+        private @Nullable Output<String> typeName;
+        private @Nullable Output<String> typeVersionId;
 
         public Builder() {
     	      // Empty
@@ -126,63 +126,63 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     	      this.typeVersionId = defaults.typeVersionId;
         }
 
-        public Builder desiredState(@Nullable Input<String> desiredState) {
+        public Builder desiredState(@Nullable Output<String> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
         public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Input.ofNullable(desiredState);
+            this.desiredState = Output.ofNullable(desiredState);
             return this;
         }
 
-        public Builder properties(@Nullable Input<String> properties) {
+        public Builder properties(@Nullable Output<String> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable String properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder schema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable String schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
 
-        public Builder typeVersionId(@Nullable Input<String> typeVersionId) {
+        public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
         }
 
         public Builder typeVersionId(@Nullable String typeVersionId) {
-            this.typeVersionId = Input.ofNullable(typeVersionId);
+            this.typeVersionId = Output.ofNullable(typeVersionId);
             return this;
         }
         public ResourceState build() {

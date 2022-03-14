@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryData")
-      private final @Nullable Input<Map<String,String>> binaryData;
+      private final @Nullable Output<Map<String,String>> binaryData;
 
-    public Input<Map<String,String>> getBinaryData() {
-        return this.binaryData == null ? Input.empty() : this.binaryData;
+    public Output<Map<String,String>> getBinaryData() {
+        return this.binaryData == null ? Output.empty() : this.binaryData;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<Map<String,String>> data;
+      private final @Nullable Output<Map<String,String>> data;
 
-    public Input<Map<String,String>> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<Map<String,String>> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="immutable")
-      private final @Nullable Input<Boolean> immutable;
+      private final @Nullable Output<Boolean> immutable;
 
-    public Input<Boolean> getImmutable() {
-        return this.immutable == null ? Input.empty() : this.immutable;
+    public Output<Boolean> getImmutable() {
+        return this.immutable == null ? Output.empty() : this.immutable;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     public ConfigMapArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<Map<String,String>> binaryData,
-        @Nullable Input<Map<String,String>> data,
-        @Nullable Input<Boolean> immutable,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<Map<String,String>> binaryData,
+        @Nullable Output<Map<String,String>> data,
+        @Nullable Output<Boolean> immutable,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata) {
         this.apiVersion = apiVersion;
         this.binaryData = binaryData;
         this.data = data;
@@ -99,12 +99,12 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigMapArgs() {
-        this.apiVersion = Input.empty();
-        this.binaryData = Input.empty();
-        this.data = Input.empty();
-        this.immutable = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
+        this.apiVersion = Output.empty();
+        this.binaryData = Output.empty();
+        this.data = Output.empty();
+        this.immutable = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<Map<String,String>> binaryData;
-        private @Nullable Input<Map<String,String>> data;
-        private @Nullable Input<Boolean> immutable;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<Map<String,String>> binaryData;
+        private @Nullable Output<Map<String,String>> data;
+        private @Nullable Output<Boolean> immutable;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder binaryData(@Nullable Input<Map<String,String>> binaryData) {
+        public Builder binaryData(@Nullable Output<Map<String,String>> binaryData) {
             this.binaryData = binaryData;
             return this;
         }
 
         public Builder binaryData(@Nullable Map<String,String> binaryData) {
-            this.binaryData = Input.ofNullable(binaryData);
+            this.binaryData = Output.ofNullable(binaryData);
             return this;
         }
 
-        public Builder data(@Nullable Input<Map<String,String>> data) {
+        public Builder data(@Nullable Output<Map<String,String>> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable Map<String,String> data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder immutable(@Nullable Input<Boolean> immutable) {
+        public Builder immutable(@Nullable Output<Boolean> immutable) {
             this.immutable = immutable;
             return this;
         }
 
         public Builder immutable(@Nullable Boolean immutable) {
-            this.immutable = Input.ofNullable(immutable);
+            this.immutable = Output.ofNullable(immutable);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
         public ConfigMapArgs build() {

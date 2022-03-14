@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appYamlPath")
-      private final @Nullable Input<String> appYamlPath;
+      private final @Nullable Output<String> appYamlPath;
 
-    public Input<String> getAppYamlPath() {
-        return this.appYamlPath == null ? Input.empty() : this.appYamlPath;
+    public Output<String> getAppYamlPath() {
+        return this.appYamlPath == null ? Output.empty() : this.appYamlPath;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudBuildTimeout")
-      private final @Nullable Input<String> cloudBuildTimeout;
+      private final @Nullable Output<String> cloudBuildTimeout;
 
-    public Input<String> getCloudBuildTimeout() {
-        return this.cloudBuildTimeout == null ? Input.empty() : this.cloudBuildTimeout;
+    public Output<String> getCloudBuildTimeout() {
+        return this.cloudBuildTimeout == null ? Output.empty() : this.cloudBuildTimeout;
     }
 
     public CloudBuildOptionsArgs(
-        @Nullable Input<String> appYamlPath,
-        @Nullable Input<String> cloudBuildTimeout) {
+        @Nullable Output<String> appYamlPath,
+        @Nullable Output<String> cloudBuildTimeout) {
         this.appYamlPath = appYamlPath;
         this.cloudBuildTimeout = cloudBuildTimeout;
     }
 
     private CloudBuildOptionsArgs() {
-        this.appYamlPath = Input.empty();
-        this.cloudBuildTimeout = Input.empty();
+        this.appYamlPath = Output.empty();
+        this.cloudBuildTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appYamlPath;
-        private @Nullable Input<String> cloudBuildTimeout;
+        private @Nullable Output<String> appYamlPath;
+        private @Nullable Output<String> cloudBuildTimeout;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
         }
 
-        public Builder appYamlPath(@Nullable Input<String> appYamlPath) {
+        public Builder appYamlPath(@Nullable Output<String> appYamlPath) {
             this.appYamlPath = appYamlPath;
             return this;
         }
 
         public Builder appYamlPath(@Nullable String appYamlPath) {
-            this.appYamlPath = Input.ofNullable(appYamlPath);
+            this.appYamlPath = Output.ofNullable(appYamlPath);
             return this;
         }
 
-        public Builder cloudBuildTimeout(@Nullable Input<String> cloudBuildTimeout) {
+        public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
             this.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
 
         public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
-            this.cloudBuildTimeout = Input.ofNullable(cloudBuildTimeout);
+            this.cloudBuildTimeout = Output.ofNullable(cloudBuildTimeout);
             return this;
         }
         public CloudBuildOptionsArgs build() {

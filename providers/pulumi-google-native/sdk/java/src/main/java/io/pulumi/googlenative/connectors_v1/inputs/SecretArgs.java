@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretVersion")
-      private final @Nullable Input<String> secretVersion;
+      private final @Nullable Output<String> secretVersion;
 
-    public Input<String> getSecretVersion() {
-        return this.secretVersion == null ? Input.empty() : this.secretVersion;
+    public Output<String> getSecretVersion() {
+        return this.secretVersion == null ? Output.empty() : this.secretVersion;
     }
 
-    public SecretArgs(@Nullable Input<String> secretVersion) {
+    public SecretArgs(@Nullable Output<String> secretVersion) {
         this.secretVersion = secretVersion;
     }
 
     private SecretArgs() {
-        this.secretVersion = Input.empty();
+        this.secretVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> secretVersion;
+        private @Nullable Output<String> secretVersion;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretVersion = defaults.secretVersion;
         }
 
-        public Builder secretVersion(@Nullable Input<String> secretVersion) {
+        public Builder secretVersion(@Nullable Output<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Input.ofNullable(secretVersion);
+            this.secretVersion = Output.ofNullable(secretVersion);
             return this;
         }
         public SecretArgs build() {

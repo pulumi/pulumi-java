@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.inputs.LaunchGroupToWeightArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
     public static final LaunchStepConfigArgs Empty = new LaunchStepConfigArgs();
 
     @InputImport(name="groupWeights", required=true)
-      private final Input<List<LaunchGroupToWeightArgs>> groupWeights;
+      private final Output<List<LaunchGroupToWeightArgs>> groupWeights;
 
-    public Input<List<LaunchGroupToWeightArgs>> getGroupWeights() {
+    public Output<List<LaunchGroupToWeightArgs>> getGroupWeights() {
         return this.groupWeights;
     }
 
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
     public LaunchStepConfigArgs(
-        Input<List<LaunchGroupToWeightArgs>> groupWeights,
-        Input<String> startTime) {
+        Output<List<LaunchGroupToWeightArgs>> groupWeights,
+        Output<String> startTime) {
         this.groupWeights = Objects.requireNonNull(groupWeights, "expected parameter 'groupWeights' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private LaunchStepConfigArgs() {
-        this.groupWeights = Input.empty();
-        this.startTime = Input.empty();
+        this.groupWeights = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<LaunchGroupToWeightArgs>> groupWeights;
-        private Input<String> startTime;
+        private Output<List<LaunchGroupToWeightArgs>> groupWeights;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder groupWeights(Input<List<LaunchGroupToWeightArgs>> groupWeights) {
+        public Builder groupWeights(Output<List<LaunchGroupToWeightArgs>> groupWeights) {
             this.groupWeights = Objects.requireNonNull(groupWeights);
             return this;
         }
 
         public Builder groupWeights(List<LaunchGroupToWeightArgs> groupWeights) {
-            this.groupWeights = Input.of(Objects.requireNonNull(groupWeights));
+            this.groupWeights = Output.of(Objects.requireNonNull(groupWeights));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public LaunchStepConfigArgs build() {

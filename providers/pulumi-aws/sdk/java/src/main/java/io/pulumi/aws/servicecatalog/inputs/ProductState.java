@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributor")
-      private final @Nullable Input<String> distributor;
+      private final @Nullable Output<String> distributor;
 
-    public Input<String> getDistributor() {
-        return this.distributor == null ? Input.empty() : this.distributor;
+    public Output<String> getDistributor() {
+        return this.distributor == null ? Output.empty() : this.distributor;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasDefaultPath")
-      private final @Nullable Input<Boolean> hasDefaultPath;
+      private final @Nullable Output<Boolean> hasDefaultPath;
 
-    public Input<Boolean> getHasDefaultPath() {
-        return this.hasDefaultPath == null ? Input.empty() : this.hasDefaultPath;
+    public Output<Boolean> getHasDefaultPath() {
+        return this.hasDefaultPath == null ? Output.empty() : this.hasDefaultPath;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningArtifactParameters")
-      private final @Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
+      private final @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
 
-    public Input<ProductProvisioningArtifactParametersGetArgs> getProvisioningArtifactParameters() {
-        return this.provisioningArtifactParameters == null ? Input.empty() : this.provisioningArtifactParameters;
+    public Output<ProductProvisioningArtifactParametersGetArgs> getProvisioningArtifactParameters() {
+        return this.provisioningArtifactParameters == null ? Output.empty() : this.provisioningArtifactParameters;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportDescription")
-      private final @Nullable Input<String> supportDescription;
+      private final @Nullable Output<String> supportDescription;
 
-    public Input<String> getSupportDescription() {
-        return this.supportDescription == null ? Input.empty() : this.supportDescription;
+    public Output<String> getSupportDescription() {
+        return this.supportDescription == null ? Output.empty() : this.supportDescription;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportEmail")
-      private final @Nullable Input<String> supportEmail;
+      private final @Nullable Output<String> supportEmail;
 
-    public Input<String> getSupportEmail() {
-        return this.supportEmail == null ? Input.empty() : this.supportEmail;
+    public Output<String> getSupportEmail() {
+        return this.supportEmail == null ? Output.empty() : this.supportEmail;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportUrl")
-      private final @Nullable Input<String> supportUrl;
+      private final @Nullable Output<String> supportUrl;
 
-    public Input<String> getSupportUrl() {
-        return this.supportUrl == null ? Input.empty() : this.supportUrl;
+    public Output<String> getSupportUrl() {
+        return this.supportUrl == null ? Output.empty() : this.supportUrl;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -187,29 +187,29 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProductState(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> distributor,
-        @Nullable Input<Boolean> hasDefaultPath,
-        @Nullable Input<String> name,
-        @Nullable Input<String> owner,
-        @Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters,
-        @Nullable Input<String> status,
-        @Nullable Input<String> supportDescription,
-        @Nullable Input<String> supportEmail,
-        @Nullable Input<String> supportUrl,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> distributor,
+        @Nullable Output<Boolean> hasDefaultPath,
+        @Nullable Output<String> name,
+        @Nullable Output<String> owner,
+        @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters,
+        @Nullable Output<String> status,
+        @Nullable Output<String> supportDescription,
+        @Nullable Output<String> supportEmail,
+        @Nullable Output<String> supportUrl,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type) {
         this.acceptLanguage = acceptLanguage;
         this.arn = arn;
         this.createdTime = createdTime;
@@ -229,22 +229,22 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductState() {
-        this.acceptLanguage = Input.empty();
-        this.arn = Input.empty();
-        this.createdTime = Input.empty();
-        this.description = Input.empty();
-        this.distributor = Input.empty();
-        this.hasDefaultPath = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.provisioningArtifactParameters = Input.empty();
-        this.status = Input.empty();
-        this.supportDescription = Input.empty();
-        this.supportEmail = Input.empty();
-        this.supportUrl = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.arn = Output.empty();
+        this.createdTime = Output.empty();
+        this.description = Output.empty();
+        this.distributor = Output.empty();
+        this.hasDefaultPath = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.provisioningArtifactParameters = Output.empty();
+        this.status = Output.empty();
+        this.supportDescription = Output.empty();
+        this.supportEmail = Output.empty();
+        this.supportUrl = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -256,22 +256,22 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> distributor;
-        private @Nullable Input<Boolean> hasDefaultPath;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> supportDescription;
-        private @Nullable Input<String> supportEmail;
-        private @Nullable Input<String> supportUrl;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> distributor;
+        private @Nullable Output<Boolean> hasDefaultPath;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> supportDescription;
+        private @Nullable Output<String> supportEmail;
+        private @Nullable Output<String> supportUrl;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -297,163 +297,163 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder distributor(@Nullable Input<String> distributor) {
+        public Builder distributor(@Nullable Output<String> distributor) {
             this.distributor = distributor;
             return this;
         }
 
         public Builder distributor(@Nullable String distributor) {
-            this.distributor = Input.ofNullable(distributor);
+            this.distributor = Output.ofNullable(distributor);
             return this;
         }
 
-        public Builder hasDefaultPath(@Nullable Input<Boolean> hasDefaultPath) {
+        public Builder hasDefaultPath(@Nullable Output<Boolean> hasDefaultPath) {
             this.hasDefaultPath = hasDefaultPath;
             return this;
         }
 
         public Builder hasDefaultPath(@Nullable Boolean hasDefaultPath) {
-            this.hasDefaultPath = Input.ofNullable(hasDefaultPath);
+            this.hasDefaultPath = Output.ofNullable(hasDefaultPath);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder provisioningArtifactParameters(@Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters) {
+        public Builder provisioningArtifactParameters(@Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters) {
             this.provisioningArtifactParameters = provisioningArtifactParameters;
             return this;
         }
 
         public Builder provisioningArtifactParameters(@Nullable ProductProvisioningArtifactParametersGetArgs provisioningArtifactParameters) {
-            this.provisioningArtifactParameters = Input.ofNullable(provisioningArtifactParameters);
+            this.provisioningArtifactParameters = Output.ofNullable(provisioningArtifactParameters);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder supportDescription(@Nullable Input<String> supportDescription) {
+        public Builder supportDescription(@Nullable Output<String> supportDescription) {
             this.supportDescription = supportDescription;
             return this;
         }
 
         public Builder supportDescription(@Nullable String supportDescription) {
-            this.supportDescription = Input.ofNullable(supportDescription);
+            this.supportDescription = Output.ofNullable(supportDescription);
             return this;
         }
 
-        public Builder supportEmail(@Nullable Input<String> supportEmail) {
+        public Builder supportEmail(@Nullable Output<String> supportEmail) {
             this.supportEmail = supportEmail;
             return this;
         }
 
         public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Input.ofNullable(supportEmail);
+            this.supportEmail = Output.ofNullable(supportEmail);
             return this;
         }
 
-        public Builder supportUrl(@Nullable Input<String> supportUrl) {
+        public Builder supportUrl(@Nullable Output<String> supportUrl) {
             this.supportUrl = supportUrl;
             return this;
         }
 
         public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Input.ofNullable(supportUrl);
+            this.supportUrl = Output.ofNullable(supportUrl);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProductState build() {

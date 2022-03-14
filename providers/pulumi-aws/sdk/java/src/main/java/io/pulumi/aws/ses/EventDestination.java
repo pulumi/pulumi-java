@@ -9,7 +9,6 @@ import io.pulumi.aws.ses.inputs.EventDestinationState;
 import io.pulumi.aws.ses.outputs.EventDestinationCloudwatchDestination;
 import io.pulumi.aws.ses.outputs.EventDestinationKinesisDestination;
 import io.pulumi.aws.ses.outputs.EventDestinationSnsDestination;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,14 +184,14 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventDestination(String name, EventDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/eventDestination:EventDestination", name, args == null ? EventDestinationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ses/eventDestination:EventDestination", name, args == null ? EventDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventDestination(String name, Input<String> id, @Nullable EventDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventDestination(String name, Output<String> id, @Nullable EventDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ses/eventDestination:EventDestination", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -208,7 +207,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventDestination get(String name, Input<String> id, @Nullable EventDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventDestination get(String name, Output<String> id, @Nullable EventDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventDestination(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.ConnectionPhysicalConnectionRequirementsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionProperties")
-      private final @Nullable Input<Map<String,String>> connectionProperties;
+      private final @Nullable Output<Map<String,String>> connectionProperties;
 
-    public Input<Map<String,String>> getConnectionProperties() {
-        return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
+    public Output<Map<String,String>> getConnectionProperties() {
+        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionType")
-      private final @Nullable Input<String> connectionType;
+      private final @Nullable Output<String> connectionType;
 
-    public Input<String> getConnectionType() {
-        return this.connectionType == null ? Input.empty() : this.connectionType;
+    public Output<String> getConnectionType() {
+        return this.connectionType == null ? Output.empty() : this.connectionType;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchCriterias")
-      private final @Nullable Input<List<String>> matchCriterias;
+      private final @Nullable Output<List<String>> matchCriterias;
 
-    public Input<List<String>> getMatchCriterias() {
-        return this.matchCriterias == null ? Input.empty() : this.matchCriterias;
+    public Output<List<String>> getMatchCriterias() {
+        return this.matchCriterias == null ? Output.empty() : this.matchCriterias;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalConnectionRequirements")
-      private final @Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
+      private final @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
 
-    public Input<ConnectionPhysicalConnectionRequirementsArgs> getPhysicalConnectionRequirements() {
-        return this.physicalConnectionRequirements == null ? Input.empty() : this.physicalConnectionRequirements;
+    public Output<ConnectionPhysicalConnectionRequirementsArgs> getPhysicalConnectionRequirements() {
+        return this.physicalConnectionRequirements == null ? Output.empty() : this.physicalConnectionRequirements;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConnectionArgs(
-        @Nullable Input<String> catalogId,
-        @Nullable Input<Map<String,String>> connectionProperties,
-        @Nullable Input<String> connectionType,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> matchCriterias,
-        @Nullable Input<String> name,
-        @Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> catalogId,
+        @Nullable Output<Map<String,String>> connectionProperties,
+        @Nullable Output<String> connectionType,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> matchCriterias,
+        @Nullable Output<String> name,
+        @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements,
+        @Nullable Output<Map<String,String>> tags) {
         this.catalogId = catalogId;
         this.connectionProperties = connectionProperties;
         this.connectionType = connectionType;
@@ -125,14 +125,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.catalogId = Input.empty();
-        this.connectionProperties = Input.empty();
-        this.connectionType = Input.empty();
-        this.description = Input.empty();
-        this.matchCriterias = Input.empty();
-        this.name = Input.empty();
-        this.physicalConnectionRequirements = Input.empty();
-        this.tags = Input.empty();
+        this.catalogId = Output.empty();
+        this.connectionProperties = Output.empty();
+        this.connectionType = Output.empty();
+        this.description = Output.empty();
+        this.matchCriterias = Output.empty();
+        this.name = Output.empty();
+        this.physicalConnectionRequirements = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private @Nullable Input<Map<String,String>> connectionProperties;
-        private @Nullable Input<String> connectionType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> matchCriterias;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> catalogId;
+        private @Nullable Output<Map<String,String>> connectionProperties;
+        private @Nullable Output<String> connectionType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> matchCriterias;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder connectionProperties(@Nullable Input<Map<String,String>> connectionProperties) {
+        public Builder connectionProperties(@Nullable Output<Map<String,String>> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
         public Builder connectionProperties(@Nullable Map<String,String> connectionProperties) {
-            this.connectionProperties = Input.ofNullable(connectionProperties);
+            this.connectionProperties = Output.ofNullable(connectionProperties);
             return this;
         }
 
-        public Builder connectionType(@Nullable Input<String> connectionType) {
+        public Builder connectionType(@Nullable Output<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
         public Builder connectionType(@Nullable String connectionType) {
-            this.connectionType = Input.ofNullable(connectionType);
+            this.connectionType = Output.ofNullable(connectionType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder matchCriterias(@Nullable Input<List<String>> matchCriterias) {
+        public Builder matchCriterias(@Nullable Output<List<String>> matchCriterias) {
             this.matchCriterias = matchCriterias;
             return this;
         }
 
         public Builder matchCriterias(@Nullable List<String> matchCriterias) {
-            this.matchCriterias = Input.ofNullable(matchCriterias);
+            this.matchCriterias = Output.ofNullable(matchCriterias);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder physicalConnectionRequirements(@Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements) {
+        public Builder physicalConnectionRequirements(@Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements) {
             this.physicalConnectionRequirements = physicalConnectionRequirements;
             return this;
         }
 
         public Builder physicalConnectionRequirements(@Nullable ConnectionPhysicalConnectionRequirementsArgs physicalConnectionRequirements) {
-            this.physicalConnectionRequirements = Input.ofNullable(physicalConnectionRequirements);
+            this.physicalConnectionRequirements = Output.ofNullable(physicalConnectionRequirements);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConnectionArgs build() {

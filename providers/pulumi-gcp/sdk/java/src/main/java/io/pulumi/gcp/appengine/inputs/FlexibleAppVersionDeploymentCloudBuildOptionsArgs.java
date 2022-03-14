@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
      * 
      */
     @InputImport(name="appYamlPath", required=true)
-      private final Input<String> appYamlPath;
+      private final Output<String> appYamlPath;
 
-    public Input<String> getAppYamlPath() {
+    public Output<String> getAppYamlPath() {
         return this.appYamlPath;
     }
 
@@ -31,22 +31,22 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
      * 
      */
     @InputImport(name="cloudBuildTimeout")
-      private final @Nullable Input<String> cloudBuildTimeout;
+      private final @Nullable Output<String> cloudBuildTimeout;
 
-    public Input<String> getCloudBuildTimeout() {
-        return this.cloudBuildTimeout == null ? Input.empty() : this.cloudBuildTimeout;
+    public Output<String> getCloudBuildTimeout() {
+        return this.cloudBuildTimeout == null ? Output.empty() : this.cloudBuildTimeout;
     }
 
     public FlexibleAppVersionDeploymentCloudBuildOptionsArgs(
-        Input<String> appYamlPath,
-        @Nullable Input<String> cloudBuildTimeout) {
+        Output<String> appYamlPath,
+        @Nullable Output<String> cloudBuildTimeout) {
         this.appYamlPath = Objects.requireNonNull(appYamlPath, "expected parameter 'appYamlPath' to be non-null");
         this.cloudBuildTimeout = cloudBuildTimeout;
     }
 
     private FlexibleAppVersionDeploymentCloudBuildOptionsArgs() {
-        this.appYamlPath = Input.empty();
-        this.cloudBuildTimeout = Input.empty();
+        this.appYamlPath = Output.empty();
+        this.cloudBuildTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
     }
 
     public static final class Builder {
-        private Input<String> appYamlPath;
-        private @Nullable Input<String> cloudBuildTimeout;
+        private Output<String> appYamlPath;
+        private @Nullable Output<String> cloudBuildTimeout;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
     	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
         }
 
-        public Builder appYamlPath(Input<String> appYamlPath) {
+        public Builder appYamlPath(Output<String> appYamlPath) {
             this.appYamlPath = Objects.requireNonNull(appYamlPath);
             return this;
         }
 
         public Builder appYamlPath(String appYamlPath) {
-            this.appYamlPath = Input.of(Objects.requireNonNull(appYamlPath));
+            this.appYamlPath = Output.of(Objects.requireNonNull(appYamlPath));
             return this;
         }
 
-        public Builder cloudBuildTimeout(@Nullable Input<String> cloudBuildTimeout) {
+        public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
             this.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
 
         public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
-            this.cloudBuildTimeout = Input.ofNullable(cloudBuildTimeout);
+            this.cloudBuildTimeout = Output.ofNullable(cloudBuildTimeout);
             return this;
         }
         public FlexibleAppVersionDeploymentCloudBuildOptionsArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.refactorspaces.enums.ServiceEndpointType;
 import io.pulumi.awsnative.refactorspaces.inputs.ServiceLambdaEndpointInputArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ServiceTagArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ServiceUrlEndpointInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,45 +20,45 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-      private final Input<String> applicationIdentifier;
+      private final Output<String> applicationIdentifier;
 
-    public Input<String> getApplicationIdentifier() {
+    public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="endpointType")
-      private final @Nullable Input<ServiceEndpointType> endpointType;
+      private final @Nullable Output<ServiceEndpointType> endpointType;
 
-    public Input<ServiceEndpointType> getEndpointType() {
-        return this.endpointType == null ? Input.empty() : this.endpointType;
+    public Output<ServiceEndpointType> getEndpointType() {
+        return this.endpointType == null ? Output.empty() : this.endpointType;
     }
 
     @InputImport(name="environmentIdentifier", required=true)
-      private final Input<String> environmentIdentifier;
+      private final Output<String> environmentIdentifier;
 
-    public Input<String> getEnvironmentIdentifier() {
+    public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @InputImport(name="lambdaEndpoint")
-      private final @Nullable Input<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
+      private final @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
 
-    public Input<ServiceLambdaEndpointInputArgs> getLambdaEndpoint() {
-        return this.lambdaEndpoint == null ? Input.empty() : this.lambdaEndpoint;
+    public Output<ServiceLambdaEndpointInputArgs> getLambdaEndpoint() {
+        return this.lambdaEndpoint == null ? Output.empty() : this.lambdaEndpoint;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,36 +66,36 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ServiceTagArgs>> tags;
+      private final @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Input<List<ServiceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ServiceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="urlEndpoint")
-      private final @Nullable Input<ServiceUrlEndpointInputArgs> urlEndpoint;
+      private final @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
 
-    public Input<ServiceUrlEndpointInputArgs> getUrlEndpoint() {
-        return this.urlEndpoint == null ? Input.empty() : this.urlEndpoint;
+    public Output<ServiceUrlEndpointInputArgs> getUrlEndpoint() {
+        return this.urlEndpoint == null ? Output.empty() : this.urlEndpoint;
     }
 
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public ServiceArgs(
-        Input<String> applicationIdentifier,
-        @Nullable Input<String> description,
-        @Nullable Input<ServiceEndpointType> endpointType,
-        Input<String> environmentIdentifier,
-        @Nullable Input<ServiceLambdaEndpointInputArgs> lambdaEndpoint,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ServiceTagArgs>> tags,
-        @Nullable Input<ServiceUrlEndpointInputArgs> urlEndpoint,
-        @Nullable Input<String> vpcId) {
+        Output<String> applicationIdentifier,
+        @Nullable Output<String> description,
+        @Nullable Output<ServiceEndpointType> endpointType,
+        Output<String> environmentIdentifier,
+        @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ServiceTagArgs>> tags,
+        @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint,
+        @Nullable Output<String> vpcId) {
         this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
         this.description = description;
         this.endpointType = endpointType;
@@ -108,15 +108,15 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.applicationIdentifier = Input.empty();
-        this.description = Input.empty();
-        this.endpointType = Input.empty();
-        this.environmentIdentifier = Input.empty();
-        this.lambdaEndpoint = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.urlEndpoint = Input.empty();
-        this.vpcId = Input.empty();
+        this.applicationIdentifier = Output.empty();
+        this.description = Output.empty();
+        this.endpointType = Output.empty();
+        this.environmentIdentifier = Output.empty();
+        this.lambdaEndpoint = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.urlEndpoint = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,15 +128,15 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationIdentifier;
-        private @Nullable Input<String> description;
-        private @Nullable Input<ServiceEndpointType> endpointType;
-        private Input<String> environmentIdentifier;
-        private @Nullable Input<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ServiceTagArgs>> tags;
-        private @Nullable Input<ServiceUrlEndpointInputArgs> urlEndpoint;
-        private @Nullable Input<String> vpcId;
+        private Output<String> applicationIdentifier;
+        private @Nullable Output<String> description;
+        private @Nullable Output<ServiceEndpointType> endpointType;
+        private Output<String> environmentIdentifier;
+        private @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ServiceTagArgs>> tags;
+        private @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -155,93 +155,93 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder applicationIdentifier(Input<String> applicationIdentifier) {
+        public Builder applicationIdentifier(Output<String> applicationIdentifier) {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
 
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Input.of(Objects.requireNonNull(applicationIdentifier));
+            this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endpointType(@Nullable Input<ServiceEndpointType> endpointType) {
+        public Builder endpointType(@Nullable Output<ServiceEndpointType> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
         public Builder endpointType(@Nullable ServiceEndpointType endpointType) {
-            this.endpointType = Input.ofNullable(endpointType);
+            this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
 
-        public Builder environmentIdentifier(Input<String> environmentIdentifier) {
+        public Builder environmentIdentifier(Output<String> environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
         }
 
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Input.of(Objects.requireNonNull(environmentIdentifier));
+            this.environmentIdentifier = Output.of(Objects.requireNonNull(environmentIdentifier));
             return this;
         }
 
-        public Builder lambdaEndpoint(@Nullable Input<ServiceLambdaEndpointInputArgs> lambdaEndpoint) {
+        public Builder lambdaEndpoint(@Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint) {
             this.lambdaEndpoint = lambdaEndpoint;
             return this;
         }
 
         public Builder lambdaEndpoint(@Nullable ServiceLambdaEndpointInputArgs lambdaEndpoint) {
-            this.lambdaEndpoint = Input.ofNullable(lambdaEndpoint);
+            this.lambdaEndpoint = Output.ofNullable(lambdaEndpoint);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ServiceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ServiceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder urlEndpoint(@Nullable Input<ServiceUrlEndpointInputArgs> urlEndpoint) {
+        public Builder urlEndpoint(@Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint) {
             this.urlEndpoint = urlEndpoint;
             return this;
         }
 
         public Builder urlEndpoint(@Nullable ServiceUrlEndpointInputArgs urlEndpoint) {
-            this.urlEndpoint = Input.ofNullable(urlEndpoint);
+            this.urlEndpoint = Output.ofNullable(urlEndpoint);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public ServiceArgs build() {

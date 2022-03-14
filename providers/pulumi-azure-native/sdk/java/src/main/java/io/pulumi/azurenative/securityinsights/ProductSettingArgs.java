@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.enums.SettingKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,SettingKind>> kind;
+      private final Output<Either<String,SettingKind>> kind;
 
-    public Input<Either<String,SettingKind>> getKind() {
+    public Output<Either<String,SettingKind>> getKind() {
         return this.kind;
     }
 
@@ -32,9 +32,9 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-      private final Input<String> operationalInsightsResourceProvider;
+      private final Output<String> operationalInsightsResourceProvider;
 
-    public Input<String> getOperationalInsightsResourceProvider() {
+    public Output<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -43,9 +43,9 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settingsName")
-      private final @Nullable Input<String> settingsName;
+      private final @Nullable Output<String> settingsName;
 
-    public Input<String> getSettingsName() {
-        return this.settingsName == null ? Input.empty() : this.settingsName;
+    public Output<String> getSettingsName() {
+        return this.settingsName == null ? Output.empty() : this.settingsName;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public ProductSettingArgs(
-        Input<Either<String,SettingKind>> kind,
-        Input<String> operationalInsightsResourceProvider,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> settingsName,
-        Input<String> workspaceName) {
+        Output<Either<String,SettingKind>> kind,
+        Output<String> operationalInsightsResourceProvider,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> settingsName,
+        Output<String> workspaceName) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductSettingArgs() {
-        this.kind = Input.empty();
-        this.operationalInsightsResourceProvider = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.settingsName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.kind = Output.empty();
+        this.operationalInsightsResourceProvider = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.settingsName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,SettingKind>> kind;
-        private Input<String> operationalInsightsResourceProvider;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> settingsName;
-        private Input<String> workspaceName;
+        private Output<Either<String,SettingKind>> kind;
+        private Output<String> operationalInsightsResourceProvider;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> settingsName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder kind(Input<Either<String,SettingKind>> kind) {
+        public Builder kind(Output<Either<String,SettingKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,SettingKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
+            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder settingsName(@Nullable Input<String> settingsName) {
+        public Builder settingsName(@Nullable Output<String> settingsName) {
             this.settingsName = settingsName;
             return this;
         }
 
         public Builder settingsName(@Nullable String settingsName) {
-            this.settingsName = Input.ofNullable(settingsName);
+            this.settingsName = Output.ofNullable(settingsName);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public ProductSettingArgs build() {

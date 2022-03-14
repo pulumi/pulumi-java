@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RuleGroupCustomResponseBodyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -29,9 +29,9 @@ public final class RuleGroupCustomResponseBodyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<String> contentType;
+      private final Output<String> contentType;
 
-    public Input<String> getContentType() {
+    public Output<String> getContentType() {
         return this.contentType;
     }
 
@@ -40,25 +40,25 @@ public final class RuleGroupCustomResponseBodyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     public RuleGroupCustomResponseBodyArgs(
-        Input<String> content,
-        Input<String> contentType,
-        Input<String> key) {
+        Output<String> content,
+        Output<String> contentType,
+        Output<String> key) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
     }
 
     private RuleGroupCustomResponseBodyArgs() {
-        this.content = Input.empty();
-        this.contentType = Input.empty();
-        this.key = Input.empty();
+        this.content = Output.empty();
+        this.contentType = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class RuleGroupCustomResponseBodyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> content;
-        private Input<String> contentType;
-        private Input<String> key;
+        private Output<String> content;
+        private Output<String> contentType;
+        private Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class RuleGroupCustomResponseBodyArgs extends io.pulumi.resources.R
     	      this.key = defaults.key;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder contentType(Input<String> contentType) {
+        public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
         public RuleGroupCustomResponseBodyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunSourcePropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunTargetPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="artifacts")
-      private final @Nullable Input<List<String>> artifacts;
+      private final @Nullable Output<List<String>> artifacts;
 
-    public Input<List<String>> getArtifacts() {
-        return this.artifacts == null ? Input.empty() : this.artifacts;
+    public Output<List<String>> getArtifacts() {
+        return this.artifacts == null ? Output.empty() : this.artifacts;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="catalogDigest")
-      private final @Nullable Input<String> catalogDigest;
+      private final @Nullable Output<String> catalogDigest;
 
-    public Input<String> getCatalogDigest() {
-        return this.catalogDigest == null ? Input.empty() : this.catalogDigest;
+    public Output<String> getCatalogDigest() {
+        return this.catalogDigest == null ? Output.empty() : this.catalogDigest;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pipelineResourceId")
-      private final @Nullable Input<String> pipelineResourceId;
+      private final @Nullable Output<String> pipelineResourceId;
 
-    public Input<String> getPipelineResourceId() {
-        return this.pipelineResourceId == null ? Input.empty() : this.pipelineResourceId;
+    public Output<String> getPipelineResourceId() {
+        return this.pipelineResourceId == null ? Output.empty() : this.pipelineResourceId;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<PipelineRunSourcePropertiesArgs> source;
+      private final @Nullable Output<PipelineRunSourcePropertiesArgs> source;
 
-    public Input<PipelineRunSourcePropertiesArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<PipelineRunSourcePropertiesArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<PipelineRunTargetPropertiesArgs> target;
+      private final @Nullable Output<PipelineRunTargetPropertiesArgs> target;
 
-    public Input<PipelineRunTargetPropertiesArgs> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<PipelineRunTargetPropertiesArgs> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public PipelineRunRequestArgs(
-        @Nullable Input<List<String>> artifacts,
-        @Nullable Input<String> catalogDigest,
-        @Nullable Input<String> pipelineResourceId,
-        @Nullable Input<PipelineRunSourcePropertiesArgs> source,
-        @Nullable Input<PipelineRunTargetPropertiesArgs> target) {
+        @Nullable Output<List<String>> artifacts,
+        @Nullable Output<String> catalogDigest,
+        @Nullable Output<String> pipelineResourceId,
+        @Nullable Output<PipelineRunSourcePropertiesArgs> source,
+        @Nullable Output<PipelineRunTargetPropertiesArgs> target) {
         this.artifacts = artifacts;
         this.catalogDigest = catalogDigest;
         this.pipelineResourceId = pipelineResourceId;
@@ -93,11 +93,11 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PipelineRunRequestArgs() {
-        this.artifacts = Input.empty();
-        this.catalogDigest = Input.empty();
-        this.pipelineResourceId = Input.empty();
-        this.source = Input.empty();
-        this.target = Input.empty();
+        this.artifacts = Output.empty();
+        this.catalogDigest = Output.empty();
+        this.pipelineResourceId = Output.empty();
+        this.source = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> artifacts;
-        private @Nullable Input<String> catalogDigest;
-        private @Nullable Input<String> pipelineResourceId;
-        private @Nullable Input<PipelineRunSourcePropertiesArgs> source;
-        private @Nullable Input<PipelineRunTargetPropertiesArgs> target;
+        private @Nullable Output<List<String>> artifacts;
+        private @Nullable Output<String> catalogDigest;
+        private @Nullable Output<String> pipelineResourceId;
+        private @Nullable Output<PipelineRunSourcePropertiesArgs> source;
+        private @Nullable Output<PipelineRunTargetPropertiesArgs> target;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     	      this.target = defaults.target;
         }
 
-        public Builder artifacts(@Nullable Input<List<String>> artifacts) {
+        public Builder artifacts(@Nullable Output<List<String>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         public Builder artifacts(@Nullable List<String> artifacts) {
-            this.artifacts = Input.ofNullable(artifacts);
+            this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
 
-        public Builder catalogDigest(@Nullable Input<String> catalogDigest) {
+        public Builder catalogDigest(@Nullable Output<String> catalogDigest) {
             this.catalogDigest = catalogDigest;
             return this;
         }
 
         public Builder catalogDigest(@Nullable String catalogDigest) {
-            this.catalogDigest = Input.ofNullable(catalogDigest);
+            this.catalogDigest = Output.ofNullable(catalogDigest);
             return this;
         }
 
-        public Builder pipelineResourceId(@Nullable Input<String> pipelineResourceId) {
+        public Builder pipelineResourceId(@Nullable Output<String> pipelineResourceId) {
             this.pipelineResourceId = pipelineResourceId;
             return this;
         }
 
         public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
-            this.pipelineResourceId = Input.ofNullable(pipelineResourceId);
+            this.pipelineResourceId = Output.ofNullable(pipelineResourceId);
             return this;
         }
 
-        public Builder source(@Nullable Input<PipelineRunSourcePropertiesArgs> source) {
+        public Builder source(@Nullable Output<PipelineRunSourcePropertiesArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable PipelineRunSourcePropertiesArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder target(@Nullable Input<PipelineRunTargetPropertiesArgs> target) {
+        public Builder target(@Nullable Output<PipelineRunTargetPropertiesArgs> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable PipelineRunTargetPropertiesArgs target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public PipelineRunRequestArgs build() {

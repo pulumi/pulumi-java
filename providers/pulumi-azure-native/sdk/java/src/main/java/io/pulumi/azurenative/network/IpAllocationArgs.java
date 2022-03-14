@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.IPVersion;
 import io.pulumi.azurenative.network.enums.IpAllocationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationTags")
-      private final @Nullable Input<Map<String,String>> allocationTags;
+      private final @Nullable Output<Map<String,String>> allocationTags;
 
-    public Input<Map<String,String>> getAllocationTags() {
-        return this.allocationTags == null ? Input.empty() : this.allocationTags;
+    public Output<Map<String,String>> getAllocationTags() {
+        return this.allocationTags == null ? Output.empty() : this.allocationTags;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocationName")
-      private final @Nullable Input<String> ipAllocationName;
+      private final @Nullable Output<String> ipAllocationName;
 
-    public Input<String> getIpAllocationName() {
-        return this.ipAllocationName == null ? Input.empty() : this.ipAllocationName;
+    public Output<String> getIpAllocationName() {
+        return this.ipAllocationName == null ? Output.empty() : this.ipAllocationName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamAllocationId")
-      private final @Nullable Input<String> ipamAllocationId;
+      private final @Nullable Output<String> ipamAllocationId;
 
-    public Input<String> getIpamAllocationId() {
-        return this.ipamAllocationId == null ? Input.empty() : this.ipamAllocationId;
+    public Output<String> getIpamAllocationId() {
+        return this.ipamAllocationId == null ? Output.empty() : this.ipamAllocationId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixLength")
-      private final @Nullable Input<Integer> prefixLength;
+      private final @Nullable Output<Integer> prefixLength;
 
-    public Input<Integer> getPrefixLength() {
-        return this.prefixLength == null ? Input.empty() : this.prefixLength;
+    public Output<Integer> getPrefixLength() {
+        return this.prefixLength == null ? Output.empty() : this.prefixLength;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixType")
-      private final @Nullable Input<Either<String,IPVersion>> prefixType;
+      private final @Nullable Output<Either<String,IPVersion>> prefixType;
 
-    public Input<Either<String,IPVersion>> getPrefixType() {
-        return this.prefixType == null ? Input.empty() : this.prefixType;
+    public Output<Either<String,IPVersion>> getPrefixType() {
+        return this.prefixType == null ? Output.empty() : this.prefixType;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,10 +123,10 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -134,31 +134,31 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,IpAllocationType>> type;
+      private final @Nullable Output<Either<String,IpAllocationType>> type;
 
-    public Input<Either<String,IpAllocationType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,IpAllocationType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public IpAllocationArgs(
-        @Nullable Input<Map<String,String>> allocationTags,
-        @Nullable Input<String> id,
-        @Nullable Input<String> ipAllocationName,
-        @Nullable Input<String> ipamAllocationId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> prefix,
-        @Nullable Input<Integer> prefixLength,
-        @Nullable Input<Either<String,IPVersion>> prefixType,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Either<String,IpAllocationType>> type) {
+        @Nullable Output<Map<String,String>> allocationTags,
+        @Nullable Output<String> id,
+        @Nullable Output<String> ipAllocationName,
+        @Nullable Output<String> ipamAllocationId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> prefix,
+        @Nullable Output<Integer> prefixLength,
+        @Nullable Output<Either<String,IPVersion>> prefixType,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Either<String,IpAllocationType>> type) {
         this.allocationTags = allocationTags;
         this.id = id;
         this.ipAllocationName = ipAllocationName;
         this.ipamAllocationId = ipamAllocationId;
         this.location = location;
         this.prefix = prefix;
-        this.prefixLength = prefixLength == null ? Input.ofNullable(0) : prefixLength;
+        this.prefixLength = prefixLength == null ? Output.ofNullable(0) : prefixLength;
         this.prefixType = prefixType;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
@@ -166,17 +166,17 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpAllocationArgs() {
-        this.allocationTags = Input.empty();
-        this.id = Input.empty();
-        this.ipAllocationName = Input.empty();
-        this.ipamAllocationId = Input.empty();
-        this.location = Input.empty();
-        this.prefix = Input.empty();
-        this.prefixLength = Input.empty();
-        this.prefixType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.allocationTags = Output.empty();
+        this.id = Output.empty();
+        this.ipAllocationName = Output.empty();
+        this.ipamAllocationId = Output.empty();
+        this.location = Output.empty();
+        this.prefix = Output.empty();
+        this.prefixLength = Output.empty();
+        this.prefixType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> allocationTags;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> ipAllocationName;
-        private @Nullable Input<String> ipamAllocationId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<Integer> prefixLength;
-        private @Nullable Input<Either<String,IPVersion>> prefixType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Either<String,IpAllocationType>> type;
+        private @Nullable Output<Map<String,String>> allocationTags;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> ipAllocationName;
+        private @Nullable Output<String> ipamAllocationId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<Integer> prefixLength;
+        private @Nullable Output<Either<String,IPVersion>> prefixType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Either<String,IpAllocationType>> type;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder allocationTags(@Nullable Input<Map<String,String>> allocationTags) {
+        public Builder allocationTags(@Nullable Output<Map<String,String>> allocationTags) {
             this.allocationTags = allocationTags;
             return this;
         }
 
         public Builder allocationTags(@Nullable Map<String,String> allocationTags) {
-            this.allocationTags = Input.ofNullable(allocationTags);
+            this.allocationTags = Output.ofNullable(allocationTags);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipAllocationName(@Nullable Input<String> ipAllocationName) {
+        public Builder ipAllocationName(@Nullable Output<String> ipAllocationName) {
             this.ipAllocationName = ipAllocationName;
             return this;
         }
 
         public Builder ipAllocationName(@Nullable String ipAllocationName) {
-            this.ipAllocationName = Input.ofNullable(ipAllocationName);
+            this.ipAllocationName = Output.ofNullable(ipAllocationName);
             return this;
         }
 
-        public Builder ipamAllocationId(@Nullable Input<String> ipamAllocationId) {
+        public Builder ipamAllocationId(@Nullable Output<String> ipamAllocationId) {
             this.ipamAllocationId = ipamAllocationId;
             return this;
         }
 
         public Builder ipamAllocationId(@Nullable String ipamAllocationId) {
-            this.ipamAllocationId = Input.ofNullable(ipamAllocationId);
+            this.ipamAllocationId = Output.ofNullable(ipamAllocationId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder prefixLength(@Nullable Input<Integer> prefixLength) {
+        public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
         public Builder prefixLength(@Nullable Integer prefixLength) {
-            this.prefixLength = Input.ofNullable(prefixLength);
+            this.prefixLength = Output.ofNullable(prefixLength);
             return this;
         }
 
-        public Builder prefixType(@Nullable Input<Either<String,IPVersion>> prefixType) {
+        public Builder prefixType(@Nullable Output<Either<String,IPVersion>> prefixType) {
             this.prefixType = prefixType;
             return this;
         }
 
         public Builder prefixType(@Nullable Either<String,IPVersion> prefixType) {
-            this.prefixType = Input.ofNullable(prefixType);
+            this.prefixType = Output.ofNullable(prefixType);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,IpAllocationType>> type) {
+        public Builder type(@Nullable Output<Either<String,IpAllocationType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,IpAllocationType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IpAllocationArgs build() {

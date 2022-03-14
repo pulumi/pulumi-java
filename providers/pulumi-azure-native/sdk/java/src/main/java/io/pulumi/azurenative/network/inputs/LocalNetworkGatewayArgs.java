@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AddressSpaceArgs;
 import io.pulumi.azurenative.network.inputs.BgpSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bgpSettings")
-      private final @Nullable Input<BgpSettingsArgs> bgpSettings;
+      private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
-    public Input<BgpSettingsArgs> getBgpSettings() {
-        return this.bgpSettings == null ? Input.empty() : this.bgpSettings;
+    public Output<BgpSettingsArgs> getBgpSettings() {
+        return this.bgpSettings == null ? Output.empty() : this.bgpSettings;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayIpAddress")
-      private final @Nullable Input<String> gatewayIpAddress;
+      private final @Nullable Output<String> gatewayIpAddress;
 
-    public Input<String> getGatewayIpAddress() {
-        return this.gatewayIpAddress == null ? Input.empty() : this.gatewayIpAddress;
+    public Output<String> getGatewayIpAddress() {
+        return this.gatewayIpAddress == null ? Output.empty() : this.gatewayIpAddress;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="localNetworkAddressSpace")
-      private final @Nullable Input<AddressSpaceArgs> localNetworkAddressSpace;
+      private final @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace;
 
-    public Input<AddressSpaceArgs> getLocalNetworkAddressSpace() {
-        return this.localNetworkAddressSpace == null ? Input.empty() : this.localNetworkAddressSpace;
+    public Output<AddressSpaceArgs> getLocalNetworkAddressSpace() {
+        return this.localNetworkAddressSpace == null ? Output.empty() : this.localNetworkAddressSpace;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LocalNetworkGatewayArgs(
-        @Nullable Input<BgpSettingsArgs> bgpSettings,
-        @Nullable Input<String> fqdn,
-        @Nullable Input<String> gatewayIpAddress,
-        @Nullable Input<String> id,
-        @Nullable Input<AddressSpaceArgs> localNetworkAddressSpace,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<BgpSettingsArgs> bgpSettings,
+        @Nullable Output<String> fqdn,
+        @Nullable Output<String> gatewayIpAddress,
+        @Nullable Output<String> id,
+        @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> tags) {
         this.bgpSettings = bgpSettings;
         this.fqdn = fqdn;
         this.gatewayIpAddress = gatewayIpAddress;
@@ -116,13 +116,13 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
     }
 
     private LocalNetworkGatewayArgs() {
-        this.bgpSettings = Input.empty();
-        this.fqdn = Input.empty();
-        this.gatewayIpAddress = Input.empty();
-        this.id = Input.empty();
-        this.localNetworkAddressSpace = Input.empty();
-        this.location = Input.empty();
-        this.tags = Input.empty();
+        this.bgpSettings = Output.empty();
+        this.fqdn = Output.empty();
+        this.gatewayIpAddress = Output.empty();
+        this.id = Output.empty();
+        this.localNetworkAddressSpace = Output.empty();
+        this.location = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<BgpSettingsArgs> bgpSettings;
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<String> gatewayIpAddress;
-        private @Nullable Input<String> id;
-        private @Nullable Input<AddressSpaceArgs> localNetworkAddressSpace;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<BgpSettingsArgs> bgpSettings;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<String> gatewayIpAddress;
+        private @Nullable Output<String> id;
+        private @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder bgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
+        public Builder bgpSettings(@Nullable Output<BgpSettingsArgs> bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
         public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
-            this.bgpSettings = Input.ofNullable(bgpSettings);
+            this.bgpSettings = Output.ofNullable(bgpSettings);
             return this;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder gatewayIpAddress(@Nullable Input<String> gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
-            this.gatewayIpAddress = Input.ofNullable(gatewayIpAddress);
+            this.gatewayIpAddress = Output.ofNullable(gatewayIpAddress);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder localNetworkAddressSpace(@Nullable Input<AddressSpaceArgs> localNetworkAddressSpace) {
+        public Builder localNetworkAddressSpace(@Nullable Output<AddressSpaceArgs> localNetworkAddressSpace) {
             this.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
 
         public Builder localNetworkAddressSpace(@Nullable AddressSpaceArgs localNetworkAddressSpace) {
-            this.localNetworkAddressSpace = Input.ofNullable(localNetworkAddressSpace);
+            this.localNetworkAddressSpace = Output.ofNullable(localNetworkAddressSpace);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LocalNetworkGatewayArgs build() {

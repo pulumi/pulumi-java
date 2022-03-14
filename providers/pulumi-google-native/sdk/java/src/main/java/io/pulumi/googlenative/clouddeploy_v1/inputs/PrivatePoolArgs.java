@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStorage")
-      private final @Nullable Input<String> artifactStorage;
+      private final @Nullable Output<String> artifactStorage;
 
-    public Input<String> getArtifactStorage() {
-        return this.artifactStorage == null ? Input.empty() : this.artifactStorage;
+    public Output<String> getArtifactStorage() {
+        return this.artifactStorage == null ? Output.empty() : this.artifactStorage;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerPool", required=true)
-      private final Input<String> workerPool;
+      private final Output<String> workerPool;
 
-    public Input<String> getWorkerPool() {
+    public Output<String> getWorkerPool() {
         return this.workerPool;
     }
 
     public PrivatePoolArgs(
-        @Nullable Input<String> artifactStorage,
-        @Nullable Input<String> serviceAccount,
-        Input<String> workerPool) {
+        @Nullable Output<String> artifactStorage,
+        @Nullable Output<String> serviceAccount,
+        Output<String> workerPool) {
         this.artifactStorage = artifactStorage;
         this.serviceAccount = serviceAccount;
         this.workerPool = Objects.requireNonNull(workerPool, "expected parameter 'workerPool' to be non-null");
     }
 
     private PrivatePoolArgs() {
-        this.artifactStorage = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.workerPool = Input.empty();
+        this.artifactStorage = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.workerPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactStorage;
-        private @Nullable Input<String> serviceAccount;
-        private Input<String> workerPool;
+        private @Nullable Output<String> artifactStorage;
+        private @Nullable Output<String> serviceAccount;
+        private Output<String> workerPool;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder artifactStorage(@Nullable Input<String> artifactStorage) {
+        public Builder artifactStorage(@Nullable Output<String> artifactStorage) {
             this.artifactStorage = artifactStorage;
             return this;
         }
 
         public Builder artifactStorage(@Nullable String artifactStorage) {
-            this.artifactStorage = Input.ofNullable(artifactStorage);
+            this.artifactStorage = Output.ofNullable(artifactStorage);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder workerPool(Input<String> workerPool) {
+        public Builder workerPool(Output<String> workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
 
         public Builder workerPool(String workerPool) {
-            this.workerPool = Input.of(Objects.requireNonNull(workerPool));
+            this.workerPool = Output.of(Objects.requireNonNull(workerPool));
             return this;
         }
         public PrivatePoolArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2AndroidApplicationArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedApplications")
-      private final @Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications;
+      private final @Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications;
 
-    public Input<List<V2AndroidApplicationArgs>> getAllowedApplications() {
-        return this.allowedApplications == null ? Input.empty() : this.allowedApplications;
+    public Output<List<V2AndroidApplicationArgs>> getAllowedApplications() {
+        return this.allowedApplications == null ? Output.empty() : this.allowedApplications;
     }
 
-    public V2AndroidKeyRestrictionsArgs(@Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications) {
+    public V2AndroidKeyRestrictionsArgs(@Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications) {
         this.allowedApplications = allowedApplications;
     }
 
     private V2AndroidKeyRestrictionsArgs() {
-        this.allowedApplications = Input.empty();
+        this.allowedApplications = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications;
+        private @Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
     	      this.allowedApplications = defaults.allowedApplications;
         }
 
-        public Builder allowedApplications(@Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications) {
+        public Builder allowedApplications(@Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications) {
             this.allowedApplications = allowedApplications;
             return this;
         }
 
         public Builder allowedApplications(@Nullable List<V2AndroidApplicationArgs> allowedApplications) {
-            this.allowedApplications = Input.ofNullable(allowedApplications);
+            this.allowedApplications = Output.ofNullable(allowedApplications);
             return this;
         }
         public V2AndroidKeyRestrictionsArgs build() {

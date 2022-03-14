@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rule")
-      private final @Nullable Input<List<BucketLifecycleRuleItemArgs>> rule;
+      private final @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
 
-    public Input<List<BucketLifecycleRuleItemArgs>> getRule() {
-        return this.rule == null ? Input.empty() : this.rule;
+    public Output<List<BucketLifecycleRuleItemArgs>> getRule() {
+        return this.rule == null ? Output.empty() : this.rule;
     }
 
-    public BucketLifecycleArgs(@Nullable Input<List<BucketLifecycleRuleItemArgs>> rule) {
+    public BucketLifecycleArgs(@Nullable Output<List<BucketLifecycleRuleItemArgs>> rule) {
         this.rule = rule;
     }
 
     private BucketLifecycleArgs() {
-        this.rule = Input.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BucketLifecycleRuleItemArgs>> rule;
+        private @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.rule = defaults.rule;
         }
 
-        public Builder rule(@Nullable Input<List<BucketLifecycleRuleItemArgs>> rule) {
+        public Builder rule(@Nullable Output<List<BucketLifecycleRuleItemArgs>> rule) {
             this.rule = rule;
             return this;
         }
 
         public Builder rule(@Nullable List<BucketLifecycleRuleItemArgs> rule) {
-            this.rule = Input.ofNullable(rule);
+            this.rule = Output.ofNullable(rule);
             return this;
         }
         public BucketLifecycleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checkInterval")
-      private final @Nullable Input<String> checkInterval;
+      private final @Nullable Output<String> checkInterval;
 
-    public Input<String> getCheckInterval() {
-        return this.checkInterval == null ? Input.empty() : this.checkInterval;
+    public Output<String> getCheckInterval() {
+        return this.checkInterval == null ? Output.empty() : this.checkInterval;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableHealthCheck")
-      private final @Nullable Input<Boolean> disableHealthCheck;
+      private final @Nullable Output<Boolean> disableHealthCheck;
 
-    public Input<Boolean> getDisableHealthCheck() {
-        return this.disableHealthCheck == null ? Input.empty() : this.disableHealthCheck;
+    public Output<Boolean> getDisableHealthCheck() {
+        return this.disableHealthCheck == null ? Output.empty() : this.disableHealthCheck;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthyThreshold")
-      private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Output<Integer> healthyThreshold;
 
-    public Input<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
+    public Output<Integer> getHealthyThreshold() {
+        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restartThreshold")
-      private final @Nullable Input<Integer> restartThreshold;
+      private final @Nullable Output<Integer> restartThreshold;
 
-    public Input<Integer> getRestartThreshold() {
-        return this.restartThreshold == null ? Input.empty() : this.restartThreshold;
+    public Output<Integer> getRestartThreshold() {
+        return this.restartThreshold == null ? Output.empty() : this.restartThreshold;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unhealthyThreshold")
-      private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Input<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
+    public Output<Integer> getUnhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
     }
 
     public HealthCheckArgs(
-        @Nullable Input<String> checkInterval,
-        @Nullable Input<Boolean> disableHealthCheck,
-        @Nullable Input<Integer> healthyThreshold,
-        @Nullable Input<String> host,
-        @Nullable Input<Integer> restartThreshold,
-        @Nullable Input<String> timeout,
-        @Nullable Input<Integer> unhealthyThreshold) {
+        @Nullable Output<String> checkInterval,
+        @Nullable Output<Boolean> disableHealthCheck,
+        @Nullable Output<Integer> healthyThreshold,
+        @Nullable Output<String> host,
+        @Nullable Output<Integer> restartThreshold,
+        @Nullable Output<String> timeout,
+        @Nullable Output<Integer> unhealthyThreshold) {
         this.checkInterval = checkInterval;
         this.disableHealthCheck = disableHealthCheck;
         this.healthyThreshold = healthyThreshold;
@@ -115,13 +115,13 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthCheckArgs() {
-        this.checkInterval = Input.empty();
-        this.disableHealthCheck = Input.empty();
-        this.healthyThreshold = Input.empty();
-        this.host = Input.empty();
-        this.restartThreshold = Input.empty();
-        this.timeout = Input.empty();
-        this.unhealthyThreshold = Input.empty();
+        this.checkInterval = Output.empty();
+        this.disableHealthCheck = Output.empty();
+        this.healthyThreshold = Output.empty();
+        this.host = Output.empty();
+        this.restartThreshold = Output.empty();
+        this.timeout = Output.empty();
+        this.unhealthyThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> checkInterval;
-        private @Nullable Input<Boolean> disableHealthCheck;
-        private @Nullable Input<Integer> healthyThreshold;
-        private @Nullable Input<String> host;
-        private @Nullable Input<Integer> restartThreshold;
-        private @Nullable Input<String> timeout;
-        private @Nullable Input<Integer> unhealthyThreshold;
+        private @Nullable Output<String> checkInterval;
+        private @Nullable Output<Boolean> disableHealthCheck;
+        private @Nullable Output<Integer> healthyThreshold;
+        private @Nullable Output<String> host;
+        private @Nullable Output<Integer> restartThreshold;
+        private @Nullable Output<String> timeout;
+        private @Nullable Output<Integer> unhealthyThreshold;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder checkInterval(@Nullable Input<String> checkInterval) {
+        public Builder checkInterval(@Nullable Output<String> checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
 
         public Builder checkInterval(@Nullable String checkInterval) {
-            this.checkInterval = Input.ofNullable(checkInterval);
+            this.checkInterval = Output.ofNullable(checkInterval);
             return this;
         }
 
-        public Builder disableHealthCheck(@Nullable Input<Boolean> disableHealthCheck) {
+        public Builder disableHealthCheck(@Nullable Output<Boolean> disableHealthCheck) {
             this.disableHealthCheck = disableHealthCheck;
             return this;
         }
 
         public Builder disableHealthCheck(@Nullable Boolean disableHealthCheck) {
-            this.disableHealthCheck = Input.ofNullable(disableHealthCheck);
+            this.disableHealthCheck = Output.ofNullable(disableHealthCheck);
             return this;
         }
 
-        public Builder healthyThreshold(@Nullable Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Input.ofNullable(healthyThreshold);
+            this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder restartThreshold(@Nullable Input<Integer> restartThreshold) {
+        public Builder restartThreshold(@Nullable Output<Integer> restartThreshold) {
             this.restartThreshold = restartThreshold;
             return this;
         }
 
         public Builder restartThreshold(@Nullable Integer restartThreshold) {
-            this.restartThreshold = Input.ofNullable(restartThreshold);
+            this.restartThreshold = Output.ofNullable(restartThreshold);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
         }
         public HealthCheckArgs build() {

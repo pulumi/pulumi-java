@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     public static final AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs Empty = new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs();
 
     @InputImport(name="sns")
-      private final @Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
+      private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
 
-    public Input<AccountAuditConfigurationAuditNotificationTargetArgs> getSns() {
-        return this.sns == null ? Input.empty() : this.sns;
+    public Output<AccountAuditConfigurationAuditNotificationTargetArgs> getSns() {
+        return this.sns == null ? Output.empty() : this.sns;
     }
 
-    public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(@Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
+    public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(@Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
         this.sns = sns;
     }
 
     private AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs() {
-        this.sns = Input.empty();
+        this.sns = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     }
 
     public static final class Builder {
-        private @Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
+        private @Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     	      this.sns = defaults.sns;
         }
 
-        public Builder sns(@Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
+        public Builder sns(@Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
             this.sns = sns;
             return this;
         }
 
         public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTargetArgs sns) {
-            this.sns = Input.ofNullable(sns);
+            this.sns = Output.ofNullable(sns);
             return this;
         }
         public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs build() {

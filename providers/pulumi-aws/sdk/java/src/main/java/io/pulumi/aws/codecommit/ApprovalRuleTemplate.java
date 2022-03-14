@@ -6,7 +6,6 @@ package io.pulumi.aws.codecommit;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codecommit.ApprovalRuleTemplateArgs;
 import io.pulumi.aws.codecommit.inputs.ApprovalRuleTemplateState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -180,14 +179,14 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApprovalRuleTemplate(String name, ApprovalRuleTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codecommit/approvalRuleTemplate:ApprovalRuleTemplate", name, args == null ? ApprovalRuleTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:codecommit/approvalRuleTemplate:ApprovalRuleTemplate", name, args == null ? ApprovalRuleTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApprovalRuleTemplate(String name, Input<String> id, @Nullable ApprovalRuleTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApprovalRuleTemplate(String name, Output<String> id, @Nullable ApprovalRuleTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:codecommit/approvalRuleTemplate:ApprovalRuleTemplate", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -203,7 +202,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApprovalRuleTemplate get(String name, Input<String> id, @Nullable ApprovalRuleTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApprovalRuleTemplate get(String name, Output<String> id, @Nullable ApprovalRuleTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApprovalRuleTemplate(name, id, state, options);
     }
 }

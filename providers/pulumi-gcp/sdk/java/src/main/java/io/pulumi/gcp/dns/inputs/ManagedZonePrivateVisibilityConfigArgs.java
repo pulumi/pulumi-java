@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZonePrivateVisibilityConfigNetworkArgs;
 import java.util.List;
@@ -15,18 +15,18 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     public static final ManagedZonePrivateVisibilityConfigArgs Empty = new ManagedZonePrivateVisibilityConfigArgs();
 
     @InputImport(name="networks", required=true)
-      private final Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
+      private final Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
-    public Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> getNetworks() {
+    public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> getNetworks() {
         return this.networks;
     }
 
-    public ManagedZonePrivateVisibilityConfigArgs(Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
+    public ManagedZonePrivateVisibilityConfigArgs(Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
         this.networks = Objects.requireNonNull(networks, "expected parameter 'networks' to be non-null");
     }
 
     private ManagedZonePrivateVisibilityConfigArgs() {
-        this.networks = Input.empty();
+        this.networks = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
+        private Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     	      this.networks = defaults.networks;
         }
 
-        public Builder networks(Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
+        public Builder networks(Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
 
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
-            this.networks = Input.of(Objects.requireNonNull(networks));
+            this.networks = Output.of(Objects.requireNonNull(networks));
             return this;
         }
         public ManagedZonePrivateVisibilityConfigArgs build() {

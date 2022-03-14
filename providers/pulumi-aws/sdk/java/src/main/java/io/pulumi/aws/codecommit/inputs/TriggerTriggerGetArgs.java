@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="branches")
-      private final @Nullable Input<List<String>> branches;
+      private final @Nullable Output<List<String>> branches;
 
-    public Input<List<String>> getBranches() {
-        return this.branches == null ? Input.empty() : this.branches;
+    public Output<List<String>> getBranches() {
+        return this.branches == null ? Output.empty() : this.branches;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customData")
-      private final @Nullable Input<String> customData;
+      private final @Nullable Output<String> customData;
 
-    public Input<String> getCustomData() {
-        return this.customData == null ? Input.empty() : this.customData;
+    public Output<String> getCustomData() {
+        return this.customData == null ? Output.empty() : this.customData;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationArn", required=true)
-      private final Input<String> destinationArn;
+      private final Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
+    public Output<String> getDestinationArn() {
         return this.destinationArn;
     }
 
@@ -53,9 +53,9 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="events", required=true)
-      private final Input<List<String>> events;
+      private final Output<List<String>> events;
 
-    public Input<List<String>> getEvents() {
+    public Output<List<String>> getEvents() {
         return this.events;
     }
 
@@ -64,18 +64,18 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public TriggerTriggerGetArgs(
-        @Nullable Input<List<String>> branches,
-        @Nullable Input<String> customData,
-        Input<String> destinationArn,
-        Input<List<String>> events,
-        Input<String> name) {
+        @Nullable Output<List<String>> branches,
+        @Nullable Output<String> customData,
+        Output<String> destinationArn,
+        Output<List<String>> events,
+        Output<String> name) {
         this.branches = branches;
         this.customData = customData;
         this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
@@ -84,11 +84,11 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TriggerTriggerGetArgs() {
-        this.branches = Input.empty();
-        this.customData = Input.empty();
-        this.destinationArn = Input.empty();
-        this.events = Input.empty();
-        this.name = Input.empty();
+        this.branches = Output.empty();
+        this.customData = Output.empty();
+        this.destinationArn = Output.empty();
+        this.events = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> branches;
-        private @Nullable Input<String> customData;
-        private Input<String> destinationArn;
-        private Input<List<String>> events;
-        private Input<String> name;
+        private @Nullable Output<List<String>> branches;
+        private @Nullable Output<String> customData;
+        private Output<String> destinationArn;
+        private Output<List<String>> events;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder branches(@Nullable Input<List<String>> branches) {
+        public Builder branches(@Nullable Output<List<String>> branches) {
             this.branches = branches;
             return this;
         }
 
         public Builder branches(@Nullable List<String> branches) {
-            this.branches = Input.ofNullable(branches);
+            this.branches = Output.ofNullable(branches);
             return this;
         }
 
-        public Builder customData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
 
         public Builder customData(@Nullable String customData) {
-            this.customData = Input.ofNullable(customData);
+            this.customData = Output.ofNullable(customData);
             return this;
         }
 
-        public Builder destinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Output<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
+            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
 
-        public Builder events(Input<List<String>> events) {
+        public Builder events(Output<List<String>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
         public Builder events(List<String> events) {
-            this.events = Input.of(Objects.requireNonNull(events));
+            this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public TriggerTriggerGetArgs build() {

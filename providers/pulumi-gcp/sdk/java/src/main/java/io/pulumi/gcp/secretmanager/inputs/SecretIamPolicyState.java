@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     /**
@@ -43,24 +43,24 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="secretId")
-      private final @Nullable Input<String> secretId;
+      private final @Nullable Output<String> secretId;
 
-    public Input<String> getSecretId() {
-        return this.secretId == null ? Input.empty() : this.secretId;
+    public Output<String> getSecretId() {
+        return this.secretId == null ? Output.empty() : this.secretId;
     }
 
     public SecretIamPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> project,
-        @Nullable Input<String> secretId) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> project,
+        @Nullable Output<String> secretId) {
         this.etag = etag;
         this.policyData = policyData;
         this.project = project;
@@ -68,10 +68,10 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     private SecretIamPolicyState() {
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.secretId = Input.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.secretId = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> secretId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> secretId;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder secretId(@Nullable Input<String> secretId) {
+        public Builder secretId(@Nullable Output<String> secretId) {
             this.secretId = secretId;
             return this;
         }
 
         public Builder secretId(@Nullable String secretId) {
-            this.secretId = Input.ofNullable(secretId);
+            this.secretId = Output.ofNullable(secretId);
             return this;
         }
         public SecretIamPolicyState build() {

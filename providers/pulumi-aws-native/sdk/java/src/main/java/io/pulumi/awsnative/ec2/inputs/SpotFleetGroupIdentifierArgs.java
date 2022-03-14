@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     public static final SpotFleetGroupIdentifierArgs Empty = new SpotFleetGroupIdentifierArgs();
 
     @InputImport(name="groupId", required=true)
-      private final Input<String> groupId;
+      private final Output<String> groupId;
 
-    public Input<String> getGroupId() {
+    public Output<String> getGroupId() {
         return this.groupId;
     }
 
-    public SpotFleetGroupIdentifierArgs(Input<String> groupId) {
+    public SpotFleetGroupIdentifierArgs(Output<String> groupId) {
         this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
     }
 
     private SpotFleetGroupIdentifierArgs() {
-        this.groupId = Input.empty();
+        this.groupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> groupId;
+        private Output<String> groupId;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     	      this.groupId = defaults.groupId;
         }
 
-        public Builder groupId(Input<String> groupId) {
+        public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Input.of(Objects.requireNonNull(groupId));
+            this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
         public SpotFleetGroupIdentifierArgs build() {

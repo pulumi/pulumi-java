@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.StorageAccountArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<StorageAccountArgs> properties;
+      private final @Nullable Output<StorageAccountArgs> properties;
 
-    public Input<StorageAccountArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<StorageAccountArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -42,9 +42,9 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -53,17 +53,17 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageName")
-      private final @Nullable Input<String> storageName;
+      private final @Nullable Output<String> storageName;
 
-    public Input<String> getStorageName() {
-        return this.storageName == null ? Input.empty() : this.storageName;
+    public Output<String> getStorageName() {
+        return this.storageName == null ? Output.empty() : this.storageName;
     }
 
     public StorageArgs(
-        @Nullable Input<StorageAccountArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<String> storageName) {
+        @Nullable Output<StorageAccountArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<String> storageName) {
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
@@ -71,10 +71,10 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageArgs() {
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.storageName = Input.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.storageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<StorageAccountArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<String> storageName;
+        private @Nullable Output<StorageAccountArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<String> storageName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageName = defaults.storageName;
         }
 
-        public Builder properties(@Nullable Input<StorageAccountArgs> properties) {
+        public Builder properties(@Nullable Output<StorageAccountArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable StorageAccountArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder storageName(@Nullable Input<String> storageName) {
+        public Builder storageName(@Nullable Output<String> storageName) {
             this.storageName = storageName;
             return this;
         }
 
         public Builder storageName(@Nullable String storageName) {
-            this.storageName = Input.ofNullable(storageName);
+            this.storageName = Output.ofNullable(storageName);
             return this;
         }
         public StorageArgs build() {

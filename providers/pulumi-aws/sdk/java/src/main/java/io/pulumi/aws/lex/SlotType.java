@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lex.SlotTypeArgs;
 import io.pulumi.aws.lex.inputs.SlotTypeState;
 import io.pulumi.aws.lex.outputs.SlotTypeEnumerationValue;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,14 +213,14 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SlotType(String name, SlotTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lex/slotType:SlotType", name, args == null ? SlotTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:lex/slotType:SlotType", name, args == null ? SlotTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SlotType(String name, Input<String> id, @Nullable SlotTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SlotType(String name, Output<String> id, @Nullable SlotTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:lex/slotType:SlotType", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -237,7 +236,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SlotType get(String name, Input<String> id, @Nullable SlotTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SlotType get(String name, Output<String> id, @Nullable SlotTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SlotType(name, id, state, options);
     }
 }

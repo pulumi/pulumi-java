@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class FleetOnDemandOptionsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allocationStrategy")
-      private final @Nullable Input<String> allocationStrategy;
+      private final @Nullable Output<String> allocationStrategy;
 
-    public Input<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
+    public Output<String> getAllocationStrategy() {
+        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
     }
 
-    public FleetOnDemandOptionsArgs(@Nullable Input<String> allocationStrategy) {
+    public FleetOnDemandOptionsArgs(@Nullable Output<String> allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
     }
 
     private FleetOnDemandOptionsArgs() {
-        this.allocationStrategy = Input.empty();
+        this.allocationStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FleetOnDemandOptionsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allocationStrategy;
+        private @Nullable Output<String> allocationStrategy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FleetOnDemandOptionsArgs extends io.pulumi.resources.Resource
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Input.ofNullable(allocationStrategy);
+            this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
         public FleetOnDemandOptionsArgs build() {

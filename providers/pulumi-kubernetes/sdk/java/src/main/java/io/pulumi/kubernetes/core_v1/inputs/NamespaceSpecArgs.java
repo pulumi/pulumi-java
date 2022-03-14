@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalizers")
-      private final @Nullable Input<List<String>> finalizers;
+      private final @Nullable Output<List<String>> finalizers;
 
-    public Input<List<String>> getFinalizers() {
-        return this.finalizers == null ? Input.empty() : this.finalizers;
+    public Output<List<String>> getFinalizers() {
+        return this.finalizers == null ? Output.empty() : this.finalizers;
     }
 
-    public NamespaceSpecArgs(@Nullable Input<List<String>> finalizers) {
+    public NamespaceSpecArgs(@Nullable Output<List<String>> finalizers) {
         this.finalizers = finalizers;
     }
 
     private NamespaceSpecArgs() {
-        this.finalizers = Input.empty();
+        this.finalizers = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> finalizers;
+        private @Nullable Output<List<String>> finalizers;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.finalizers = defaults.finalizers;
         }
 
-        public Builder finalizers(@Nullable Input<List<String>> finalizers) {
+        public Builder finalizers(@Nullable Output<List<String>> finalizers) {
             this.finalizers = finalizers;
             return this;
         }
 
         public Builder finalizers(@Nullable List<String> finalizers) {
-            this.finalizers = Input.ofNullable(finalizers);
+            this.finalizers = Output.ofNullable(finalizers);
             return this;
         }
         public NamespaceSpecArgs build() {

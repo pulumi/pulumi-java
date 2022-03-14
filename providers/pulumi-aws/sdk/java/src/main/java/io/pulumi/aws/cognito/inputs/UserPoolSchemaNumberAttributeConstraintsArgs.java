@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolSchemaNumberAttributeConstraintsArgs extends io.pulum
      * 
      */
     @InputImport(name="maxValue")
-      private final @Nullable Input<String> maxValue;
+      private final @Nullable Output<String> maxValue;
 
-    public Input<String> getMaxValue() {
-        return this.maxValue == null ? Input.empty() : this.maxValue;
+    public Output<String> getMaxValue() {
+        return this.maxValue == null ? Output.empty() : this.maxValue;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class UserPoolSchemaNumberAttributeConstraintsArgs extends io.pulum
      * 
      */
     @InputImport(name="minValue")
-      private final @Nullable Input<String> minValue;
+      private final @Nullable Output<String> minValue;
 
-    public Input<String> getMinValue() {
-        return this.minValue == null ? Input.empty() : this.minValue;
+    public Output<String> getMinValue() {
+        return this.minValue == null ? Output.empty() : this.minValue;
     }
 
     public UserPoolSchemaNumberAttributeConstraintsArgs(
-        @Nullable Input<String> maxValue,
-        @Nullable Input<String> minValue) {
+        @Nullable Output<String> maxValue,
+        @Nullable Output<String> minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }
 
     private UserPoolSchemaNumberAttributeConstraintsArgs() {
-        this.maxValue = Input.empty();
-        this.minValue = Input.empty();
+        this.maxValue = Output.empty();
+        this.minValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class UserPoolSchemaNumberAttributeConstraintsArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxValue;
-        private @Nullable Input<String> minValue;
+        private @Nullable Output<String> maxValue;
+        private @Nullable Output<String> minValue;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class UserPoolSchemaNumberAttributeConstraintsArgs extends io.pulum
     	      this.minValue = defaults.minValue;
         }
 
-        public Builder maxValue(@Nullable Input<String> maxValue) {
+        public Builder maxValue(@Nullable Output<String> maxValue) {
             this.maxValue = maxValue;
             return this;
         }
 
         public Builder maxValue(@Nullable String maxValue) {
-            this.maxValue = Input.ofNullable(maxValue);
+            this.maxValue = Output.ofNullable(maxValue);
             return this;
         }
 
-        public Builder minValue(@Nullable Input<String> minValue) {
+        public Builder minValue(@Nullable Output<String> minValue) {
             this.minValue = minValue;
             return this;
         }
 
         public Builder minValue(@Nullable String minValue) {
-            this.minValue = Input.ofNullable(minValue);
+            this.minValue = Output.ofNullable(minValue);
             return this;
         }
         public UserPoolSchemaNumberAttributeConstraintsArgs build() {

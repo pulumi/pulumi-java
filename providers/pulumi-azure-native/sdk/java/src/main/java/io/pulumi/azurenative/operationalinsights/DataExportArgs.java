@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataExportId")
-      private final @Nullable Input<String> dataExportId;
+      private final @Nullable Output<String> dataExportId;
 
-    public Input<String> getDataExportId() {
-        return this.dataExportId == null ? Input.empty() : this.dataExportId;
+    public Output<String> getDataExportId() {
+        return this.dataExportId == null ? Output.empty() : this.dataExportId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataExportName")
-      private final @Nullable Input<String> dataExportName;
+      private final @Nullable Output<String> dataExportName;
 
-    public Input<String> getDataExportName() {
-        return this.dataExportName == null ? Input.empty() : this.dataExportName;
+    public Output<String> getDataExportName() {
+        return this.dataExportName == null ? Output.empty() : this.dataExportName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubName")
-      private final @Nullable Input<String> eventHubName;
+      private final @Nullable Output<String> eventHubName;
 
-    public Input<String> getEventHubName() {
-        return this.eventHubName == null ? Input.empty() : this.eventHubName;
+    public Output<String> getEventHubName() {
+        return this.eventHubName == null ? Output.empty() : this.eventHubName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedDate")
-      private final @Nullable Input<String> lastModifiedDate;
+      private final @Nullable Output<String> lastModifiedDate;
 
-    public Input<String> getLastModifiedDate() {
-        return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
+    public Output<String> getLastModifiedDate() {
+        return this.lastModifiedDate == null ? Output.empty() : this.lastModifiedDate;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -98,9 +98,9 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -109,9 +109,9 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableNames", required=true)
-      private final Input<List<String>> tableNames;
+      private final Output<List<String>> tableNames;
 
-    public Input<List<String>> getTableNames() {
+    public Output<List<String>> getTableNames() {
         return this.tableNames;
     }
 
@@ -120,23 +120,23 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public DataExportArgs(
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> dataExportId,
-        @Nullable Input<String> dataExportName,
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<String> eventHubName,
-        @Nullable Input<String> lastModifiedDate,
-        Input<String> resourceGroupName,
-        Input<String> resourceId,
-        Input<List<String>> tableNames,
-        Input<String> workspaceName) {
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> dataExportId,
+        @Nullable Output<String> dataExportName,
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<String> eventHubName,
+        @Nullable Output<String> lastModifiedDate,
+        Output<String> resourceGroupName,
+        Output<String> resourceId,
+        Output<List<String>> tableNames,
+        Output<String> workspaceName) {
         this.createdDate = createdDate;
         this.dataExportId = dataExportId;
         this.dataExportName = dataExportName;
@@ -150,16 +150,16 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataExportArgs() {
-        this.createdDate = Input.empty();
-        this.dataExportId = Input.empty();
-        this.dataExportName = Input.empty();
-        this.enable = Input.empty();
-        this.eventHubName = Input.empty();
-        this.lastModifiedDate = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceId = Input.empty();
-        this.tableNames = Input.empty();
-        this.workspaceName = Input.empty();
+        this.createdDate = Output.empty();
+        this.dataExportId = Output.empty();
+        this.dataExportName = Output.empty();
+        this.enable = Output.empty();
+        this.eventHubName = Output.empty();
+        this.lastModifiedDate = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceId = Output.empty();
+        this.tableNames = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> dataExportId;
-        private @Nullable Input<String> dataExportName;
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<String> eventHubName;
-        private @Nullable Input<String> lastModifiedDate;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceId;
-        private Input<List<String>> tableNames;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> dataExportId;
+        private @Nullable Output<String> dataExportName;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<String> eventHubName;
+        private @Nullable Output<String> lastModifiedDate;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceId;
+        private Output<List<String>> tableNames;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder dataExportId(@Nullable Input<String> dataExportId) {
+        public Builder dataExportId(@Nullable Output<String> dataExportId) {
             this.dataExportId = dataExportId;
             return this;
         }
 
         public Builder dataExportId(@Nullable String dataExportId) {
-            this.dataExportId = Input.ofNullable(dataExportId);
+            this.dataExportId = Output.ofNullable(dataExportId);
             return this;
         }
 
-        public Builder dataExportName(@Nullable Input<String> dataExportName) {
+        public Builder dataExportName(@Nullable Output<String> dataExportName) {
             this.dataExportName = dataExportName;
             return this;
         }
 
         public Builder dataExportName(@Nullable String dataExportName) {
-            this.dataExportName = Input.ofNullable(dataExportName);
+            this.dataExportName = Output.ofNullable(dataExportName);
             return this;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder eventHubName(@Nullable Input<String> eventHubName) {
+        public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Input.ofNullable(eventHubName);
+            this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
 
-        public Builder lastModifiedDate(@Nullable Input<String> lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Input.ofNullable(lastModifiedDate);
+            this.lastModifiedDate = Output.ofNullable(lastModifiedDate);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder tableNames(Input<List<String>> tableNames) {
+        public Builder tableNames(Output<List<String>> tableNames) {
             this.tableNames = Objects.requireNonNull(tableNames);
             return this;
         }
 
         public Builder tableNames(List<String> tableNames) {
-            this.tableNames = Input.of(Objects.requireNonNull(tableNames));
+            this.tableNames = Output.of(Objects.requireNonNull(tableNames));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public DataExportArgs build() {

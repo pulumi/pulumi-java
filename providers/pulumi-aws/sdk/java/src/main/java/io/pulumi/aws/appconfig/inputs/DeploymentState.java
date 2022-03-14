@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationProfileId")
-      private final @Nullable Input<String> configurationProfileId;
+      private final @Nullable Output<String> configurationProfileId;
 
-    public Input<String> getConfigurationProfileId() {
-        return this.configurationProfileId == null ? Input.empty() : this.configurationProfileId;
+    public Output<String> getConfigurationProfileId() {
+        return this.configurationProfileId == null ? Output.empty() : this.configurationProfileId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationVersion")
-      private final @Nullable Input<String> configurationVersion;
+      private final @Nullable Output<String> configurationVersion;
 
-    public Input<String> getConfigurationVersion() {
-        return this.configurationVersion == null ? Input.empty() : this.configurationVersion;
+    public Output<String> getConfigurationVersion() {
+        return this.configurationVersion == null ? Output.empty() : this.configurationVersion;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentNumber")
-      private final @Nullable Input<Integer> deploymentNumber;
+      private final @Nullable Output<Integer> deploymentNumber;
 
-    public Input<Integer> getDeploymentNumber() {
-        return this.deploymentNumber == null ? Input.empty() : this.deploymentNumber;
+    public Output<Integer> getDeploymentNumber() {
+        return this.deploymentNumber == null ? Output.empty() : this.deploymentNumber;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentStrategyId")
-      private final @Nullable Input<String> deploymentStrategyId;
+      private final @Nullable Output<String> deploymentStrategyId;
 
-    public Input<String> getDeploymentStrategyId() {
-        return this.deploymentStrategyId == null ? Input.empty() : this.deploymentStrategyId;
+    public Output<String> getDeploymentStrategyId() {
+        return this.deploymentStrategyId == null ? Output.empty() : this.deploymentStrategyId;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentId")
-      private final @Nullable Input<String> environmentId;
+      private final @Nullable Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
-        return this.environmentId == null ? Input.empty() : this.environmentId;
+    public Output<String> getEnvironmentId() {
+        return this.environmentId == null ? Output.empty() : this.environmentId;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -131,24 +131,24 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DeploymentState(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> configurationProfileId,
-        @Nullable Input<String> configurationVersion,
-        @Nullable Input<Integer> deploymentNumber,
-        @Nullable Input<String> deploymentStrategyId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> environmentId,
-        @Nullable Input<String> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> configurationProfileId,
+        @Nullable Output<String> configurationVersion,
+        @Nullable Output<Integer> deploymentNumber,
+        @Nullable Output<String> deploymentStrategyId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> environmentId,
+        @Nullable Output<String> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.applicationId = applicationId;
         this.arn = arn;
         this.configurationProfileId = configurationProfileId;
@@ -163,17 +163,17 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentState() {
-        this.applicationId = Input.empty();
-        this.arn = Input.empty();
-        this.configurationProfileId = Input.empty();
-        this.configurationVersion = Input.empty();
-        this.deploymentNumber = Input.empty();
-        this.deploymentStrategyId = Input.empty();
-        this.description = Input.empty();
-        this.environmentId = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.applicationId = Output.empty();
+        this.arn = Output.empty();
+        this.configurationProfileId = Output.empty();
+        this.configurationVersion = Output.empty();
+        this.deploymentNumber = Output.empty();
+        this.deploymentStrategyId = Output.empty();
+        this.description = Output.empty();
+        this.environmentId = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,17 +185,17 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> configurationProfileId;
-        private @Nullable Input<String> configurationVersion;
-        private @Nullable Input<Integer> deploymentNumber;
-        private @Nullable Input<String> deploymentStrategyId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> environmentId;
-        private @Nullable Input<String> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> configurationProfileId;
+        private @Nullable Output<String> configurationVersion;
+        private @Nullable Output<Integer> deploymentNumber;
+        private @Nullable Output<String> deploymentStrategyId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> environmentId;
+        private @Nullable Output<String> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -216,113 +216,113 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder configurationProfileId(@Nullable Input<String> configurationProfileId) {
+        public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
             this.configurationProfileId = configurationProfileId;
             return this;
         }
 
         public Builder configurationProfileId(@Nullable String configurationProfileId) {
-            this.configurationProfileId = Input.ofNullable(configurationProfileId);
+            this.configurationProfileId = Output.ofNullable(configurationProfileId);
             return this;
         }
 
-        public Builder configurationVersion(@Nullable Input<String> configurationVersion) {
+        public Builder configurationVersion(@Nullable Output<String> configurationVersion) {
             this.configurationVersion = configurationVersion;
             return this;
         }
 
         public Builder configurationVersion(@Nullable String configurationVersion) {
-            this.configurationVersion = Input.ofNullable(configurationVersion);
+            this.configurationVersion = Output.ofNullable(configurationVersion);
             return this;
         }
 
-        public Builder deploymentNumber(@Nullable Input<Integer> deploymentNumber) {
+        public Builder deploymentNumber(@Nullable Output<Integer> deploymentNumber) {
             this.deploymentNumber = deploymentNumber;
             return this;
         }
 
         public Builder deploymentNumber(@Nullable Integer deploymentNumber) {
-            this.deploymentNumber = Input.ofNullable(deploymentNumber);
+            this.deploymentNumber = Output.ofNullable(deploymentNumber);
             return this;
         }
 
-        public Builder deploymentStrategyId(@Nullable Input<String> deploymentStrategyId) {
+        public Builder deploymentStrategyId(@Nullable Output<String> deploymentStrategyId) {
             this.deploymentStrategyId = deploymentStrategyId;
             return this;
         }
 
         public Builder deploymentStrategyId(@Nullable String deploymentStrategyId) {
-            this.deploymentStrategyId = Input.ofNullable(deploymentStrategyId);
+            this.deploymentStrategyId = Output.ofNullable(deploymentStrategyId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Input.ofNullable(environmentId);
+            this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DeploymentState build() {

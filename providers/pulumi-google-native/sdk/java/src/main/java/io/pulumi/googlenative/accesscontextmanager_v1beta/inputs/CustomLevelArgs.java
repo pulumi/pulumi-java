@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ExprArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class CustomLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expr", required=true)
-      private final Input<ExprArgs> expr;
+      private final Output<ExprArgs> expr;
 
-    public Input<ExprArgs> getExpr() {
+    public Output<ExprArgs> getExpr() {
         return this.expr;
     }
 
-    public CustomLevelArgs(Input<ExprArgs> expr) {
+    public CustomLevelArgs(Output<ExprArgs> expr) {
         this.expr = Objects.requireNonNull(expr, "expected parameter 'expr' to be non-null");
     }
 
     private CustomLevelArgs() {
-        this.expr = Input.empty();
+        this.expr = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class CustomLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<ExprArgs> expr;
+        private Output<ExprArgs> expr;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class CustomLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expr = defaults.expr;
         }
 
-        public Builder expr(Input<ExprArgs> expr) {
+        public Builder expr(Output<ExprArgs> expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
 
         public Builder expr(ExprArgs expr) {
-            this.expr = Input.of(Objects.requireNonNull(expr));
+            this.expr = Output.of(Objects.requireNonNull(expr));
             return this;
         }
         public CustomLevelArgs build() {

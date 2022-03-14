@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,18 +21,18 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="srcIpRanges", required=true)
-      private final Input<List<String>> srcIpRanges;
+      private final Output<List<String>> srcIpRanges;
 
-    public Input<List<String>> getSrcIpRanges() {
+    public Output<List<String>> getSrcIpRanges() {
         return this.srcIpRanges;
     }
 
-    public SecurityPolicyRuleMatchConfigGetArgs(Input<List<String>> srcIpRanges) {
+    public SecurityPolicyRuleMatchConfigGetArgs(Output<List<String>> srcIpRanges) {
         this.srcIpRanges = Objects.requireNonNull(srcIpRanges, "expected parameter 'srcIpRanges' to be non-null");
     }
 
     private SecurityPolicyRuleMatchConfigGetArgs() {
-        this.srcIpRanges = Input.empty();
+        this.srcIpRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<List<String>> srcIpRanges;
+        private Output<List<String>> srcIpRanges;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder srcIpRanges(Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(Output<List<String>> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
 
         public Builder srcIpRanges(List<String> srcIpRanges) {
-            this.srcIpRanges = Input.of(Objects.requireNonNull(srcIpRanges));
+            this.srcIpRanges = Output.of(Objects.requireNonNull(srcIpRanges));
             return this;
         }
         public SecurityPolicyRuleMatchConfigGetArgs build() {

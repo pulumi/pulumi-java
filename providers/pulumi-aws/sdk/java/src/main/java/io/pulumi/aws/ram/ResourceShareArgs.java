@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowExternalPrincipals")
-      private final @Nullable Input<Boolean> allowExternalPrincipals;
+      private final @Nullable Output<Boolean> allowExternalPrincipals;
 
-    public Input<Boolean> getAllowExternalPrincipals() {
-        return this.allowExternalPrincipals == null ? Input.empty() : this.allowExternalPrincipals;
+    public Output<Boolean> getAllowExternalPrincipals() {
+        return this.allowExternalPrincipals == null ? Output.empty() : this.allowExternalPrincipals;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResourceShareArgs(
-        @Nullable Input<Boolean> allowExternalPrincipals,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> allowExternalPrincipals,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.allowExternalPrincipals = allowExternalPrincipals;
         this.name = name;
         this.tags = tags;
     }
 
     private ResourceShareArgs() {
-        this.allowExternalPrincipals = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.allowExternalPrincipals = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowExternalPrincipals;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> allowExternalPrincipals;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder allowExternalPrincipals(@Nullable Input<Boolean> allowExternalPrincipals) {
+        public Builder allowExternalPrincipals(@Nullable Output<Boolean> allowExternalPrincipals) {
             this.allowExternalPrincipals = allowExternalPrincipals;
             return this;
         }
 
         public Builder allowExternalPrincipals(@Nullable Boolean allowExternalPrincipals) {
-            this.allowExternalPrincipals = Input.ofNullable(allowExternalPrincipals);
+            this.allowExternalPrincipals = Output.ofNullable(allowExternalPrincipals);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResourceShareArgs build() {

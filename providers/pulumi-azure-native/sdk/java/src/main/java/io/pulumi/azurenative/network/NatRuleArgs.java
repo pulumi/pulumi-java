@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.VpnNatRuleMode;
 import io.pulumi.azurenative.network.enums.VpnNatRuleType;
 import io.pulumi.azurenative.network.inputs.VpnNatRuleMappingArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalMappings")
-      private final @Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings;
+      private final @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings;
 
-    public Input<List<VpnNatRuleMappingArgs>> getExternalMappings() {
-        return this.externalMappings == null ? Input.empty() : this.externalMappings;
+    public Output<List<VpnNatRuleMappingArgs>> getExternalMappings() {
+        return this.externalMappings == null ? Output.empty() : this.externalMappings;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName", required=true)
-      private final Input<String> gatewayName;
+      private final Output<String> gatewayName;
 
-    public Input<String> getGatewayName() {
+    public Output<String> getGatewayName() {
         return this.gatewayName;
     }
 
@@ -46,10 +46,10 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalMappings")
-      private final @Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings;
+      private final @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings;
 
-    public Input<List<VpnNatRuleMappingArgs>> getInternalMappings() {
-        return this.internalMappings == null ? Input.empty() : this.internalMappings;
+    public Output<List<VpnNatRuleMappingArgs>> getInternalMappings() {
+        return this.internalMappings == null ? Output.empty() : this.internalMappings;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfigurationId")
-      private final @Nullable Input<String> ipConfigurationId;
+      private final @Nullable Output<String> ipConfigurationId;
 
-    public Input<String> getIpConfigurationId() {
-        return this.ipConfigurationId == null ? Input.empty() : this.ipConfigurationId;
+    public Output<String> getIpConfigurationId() {
+        return this.ipConfigurationId == null ? Output.empty() : this.ipConfigurationId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,VpnNatRuleMode>> mode;
+      private final @Nullable Output<Either<String,VpnNatRuleMode>> mode;
 
-    public Input<Either<String,VpnNatRuleMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,VpnNatRuleMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natRuleName")
-      private final @Nullable Input<String> natRuleName;
+      private final @Nullable Output<String> natRuleName;
 
-    public Input<String> getNatRuleName() {
-        return this.natRuleName == null ? Input.empty() : this.natRuleName;
+    public Output<String> getNatRuleName() {
+        return this.natRuleName == null ? Output.empty() : this.natRuleName;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,23 +123,23 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,VpnNatRuleType>> type;
+      private final @Nullable Output<Either<String,VpnNatRuleType>> type;
 
-    public Input<Either<String,VpnNatRuleType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,VpnNatRuleType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public NatRuleArgs(
-        @Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings,
-        Input<String> gatewayName,
-        @Nullable Input<String> id,
-        @Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings,
-        @Nullable Input<String> ipConfigurationId,
-        @Nullable Input<Either<String,VpnNatRuleMode>> mode,
-        @Nullable Input<String> name,
-        @Nullable Input<String> natRuleName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,VpnNatRuleType>> type) {
+        @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings,
+        Output<String> gatewayName,
+        @Nullable Output<String> id,
+        @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings,
+        @Nullable Output<String> ipConfigurationId,
+        @Nullable Output<Either<String,VpnNatRuleMode>> mode,
+        @Nullable Output<String> name,
+        @Nullable Output<String> natRuleName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,VpnNatRuleType>> type) {
         this.externalMappings = externalMappings;
         this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
         this.id = id;
@@ -153,16 +153,16 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NatRuleArgs() {
-        this.externalMappings = Input.empty();
-        this.gatewayName = Input.empty();
-        this.id = Input.empty();
-        this.internalMappings = Input.empty();
-        this.ipConfigurationId = Input.empty();
-        this.mode = Input.empty();
-        this.name = Input.empty();
-        this.natRuleName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.type = Input.empty();
+        this.externalMappings = Output.empty();
+        this.gatewayName = Output.empty();
+        this.id = Output.empty();
+        this.internalMappings = Output.empty();
+        this.ipConfigurationId = Output.empty();
+        this.mode = Output.empty();
+        this.name = Output.empty();
+        this.natRuleName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings;
-        private Input<String> gatewayName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings;
-        private @Nullable Input<String> ipConfigurationId;
-        private @Nullable Input<Either<String,VpnNatRuleMode>> mode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> natRuleName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,VpnNatRuleType>> type;
+        private @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings;
+        private Output<String> gatewayName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings;
+        private @Nullable Output<String> ipConfigurationId;
+        private @Nullable Output<Either<String,VpnNatRuleMode>> mode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> natRuleName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,VpnNatRuleType>> type;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder externalMappings(@Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings) {
+        public Builder externalMappings(@Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings) {
             this.externalMappings = externalMappings;
             return this;
         }
 
         public Builder externalMappings(@Nullable List<VpnNatRuleMappingArgs> externalMappings) {
-            this.externalMappings = Input.ofNullable(externalMappings);
+            this.externalMappings = Output.ofNullable(externalMappings);
             return this;
         }
 
-        public Builder gatewayName(Input<String> gatewayName) {
+        public Builder gatewayName(Output<String> gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
 
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Input.of(Objects.requireNonNull(gatewayName));
+            this.gatewayName = Output.of(Objects.requireNonNull(gatewayName));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder internalMappings(@Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings) {
+        public Builder internalMappings(@Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings) {
             this.internalMappings = internalMappings;
             return this;
         }
 
         public Builder internalMappings(@Nullable List<VpnNatRuleMappingArgs> internalMappings) {
-            this.internalMappings = Input.ofNullable(internalMappings);
+            this.internalMappings = Output.ofNullable(internalMappings);
             return this;
         }
 
-        public Builder ipConfigurationId(@Nullable Input<String> ipConfigurationId) {
+        public Builder ipConfigurationId(@Nullable Output<String> ipConfigurationId) {
             this.ipConfigurationId = ipConfigurationId;
             return this;
         }
 
         public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
-            this.ipConfigurationId = Input.ofNullable(ipConfigurationId);
+            this.ipConfigurationId = Output.ofNullable(ipConfigurationId);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,VpnNatRuleMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,VpnNatRuleMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,VpnNatRuleMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder natRuleName(@Nullable Input<String> natRuleName) {
+        public Builder natRuleName(@Nullable Output<String> natRuleName) {
             this.natRuleName = natRuleName;
             return this;
         }
 
         public Builder natRuleName(@Nullable String natRuleName) {
-            this.natRuleName = Input.ofNullable(natRuleName);
+            this.natRuleName = Output.ofNullable(natRuleName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,VpnNatRuleType>> type) {
+        public Builder type(@Nullable Output<Either<String,VpnNatRuleType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,VpnNatRuleType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public NatRuleArgs build() {

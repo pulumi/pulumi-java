@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="eventHubName")
-      private final @Nullable Input<String> eventHubName;
+      private final @Nullable Output<String> eventHubName;
 
-    public Input<String> getEventHubName() {
-        return this.eventHubName == null ? Input.empty() : this.eventHubName;
+    public Output<String> getEventHubName() {
+        return this.eventHubName == null ? Output.empty() : this.eventHubName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionKey")
-      private final @Nullable Input<String> partitionKey;
+      private final @Nullable Output<String> partitionKey;
 
-    public Input<String> getPartitionKey() {
-        return this.partitionKey == null ? Input.empty() : this.partitionKey;
+    public Output<String> getPartitionKey() {
+        return this.partitionKey == null ? Output.empty() : this.partitionKey;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceBusNamespace")
-      private final @Nullable Input<String> serviceBusNamespace;
+      private final @Nullable Output<String> serviceBusNamespace;
 
-    public Input<String> getServiceBusNamespace() {
-        return this.serviceBusNamespace == null ? Input.empty() : this.serviceBusNamespace;
+    public Output<String> getServiceBusNamespace() {
+        return this.serviceBusNamespace == null ? Output.empty() : this.serviceBusNamespace;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-      private final @Nullable Input<String> sharedAccessPolicyKey;
+      private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Input<String> getSharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Input.empty() : this.sharedAccessPolicyKey;
+    public Output<String> getSharedAccessPolicyKey() {
+        return this.sharedAccessPolicyKey == null ? Output.empty() : this.sharedAccessPolicyKey;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-      private final @Nullable Input<String> sharedAccessPolicyName;
+      private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Input<String> getSharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Input.empty() : this.sharedAccessPolicyName;
+    public Output<String> getSharedAccessPolicyName() {
+        return this.sharedAccessPolicyName == null ? Output.empty() : this.sharedAccessPolicyName;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public EventHubOutputDataSourceArgs(
-        @Nullable Input<String> eventHubName,
-        @Nullable Input<String> partitionKey,
-        @Nullable Input<String> serviceBusNamespace,
-        @Nullable Input<String> sharedAccessPolicyKey,
-        @Nullable Input<String> sharedAccessPolicyName,
-        Input<String> type) {
+        @Nullable Output<String> eventHubName,
+        @Nullable Output<String> partitionKey,
+        @Nullable Output<String> serviceBusNamespace,
+        @Nullable Output<String> sharedAccessPolicyKey,
+        @Nullable Output<String> sharedAccessPolicyName,
+        Output<String> type) {
         this.eventHubName = eventHubName;
         this.partitionKey = partitionKey;
         this.serviceBusNamespace = serviceBusNamespace;
@@ -101,12 +101,12 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
     }
 
     private EventHubOutputDataSourceArgs() {
-        this.eventHubName = Input.empty();
-        this.partitionKey = Input.empty();
-        this.serviceBusNamespace = Input.empty();
-        this.sharedAccessPolicyKey = Input.empty();
-        this.sharedAccessPolicyName = Input.empty();
-        this.type = Input.empty();
+        this.eventHubName = Output.empty();
+        this.partitionKey = Output.empty();
+        this.serviceBusNamespace = Output.empty();
+        this.sharedAccessPolicyKey = Output.empty();
+        this.sharedAccessPolicyName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eventHubName;
-        private @Nullable Input<String> partitionKey;
-        private @Nullable Input<String> serviceBusNamespace;
-        private @Nullable Input<String> sharedAccessPolicyKey;
-        private @Nullable Input<String> sharedAccessPolicyName;
-        private Input<String> type;
+        private @Nullable Output<String> eventHubName;
+        private @Nullable Output<String> partitionKey;
+        private @Nullable Output<String> serviceBusNamespace;
+        private @Nullable Output<String> sharedAccessPolicyKey;
+        private @Nullable Output<String> sharedAccessPolicyName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class EventHubOutputDataSourceArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder eventHubName(@Nullable Input<String> eventHubName) {
+        public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Input.ofNullable(eventHubName);
+            this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
 
-        public Builder partitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Input.ofNullable(partitionKey);
+            this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder serviceBusNamespace(@Nullable Input<String> serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = Input.ofNullable(serviceBusNamespace);
+            this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
             return this;
         }
 
-        public Builder sharedAccessPolicyKey(@Nullable Input<String> sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = Input.ofNullable(sharedAccessPolicyKey);
+            this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
             return this;
         }
 
-        public Builder sharedAccessPolicyName(@Nullable Input<String> sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Input.ofNullable(sharedAccessPolicyName);
+            this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public EventHubOutputDataSourceArgs build() {

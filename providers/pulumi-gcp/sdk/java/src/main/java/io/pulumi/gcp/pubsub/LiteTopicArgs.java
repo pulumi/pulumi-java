@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicReservationConfigArgs;
@@ -22,10 +22,10 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionConfig")
-      private final @Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig;
+      private final @Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig;
 
-    public Input<LiteTopicPartitionConfigArgs> getPartitionConfig() {
-        return this.partitionConfig == null ? Input.empty() : this.partitionConfig;
+    public Output<LiteTopicPartitionConfigArgs> getPartitionConfig() {
+        return this.partitionConfig == null ? Output.empty() : this.partitionConfig;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationConfig")
-      private final @Nullable Input<LiteTopicReservationConfigArgs> reservationConfig;
+      private final @Nullable Output<LiteTopicReservationConfigArgs> reservationConfig;
 
-    public Input<LiteTopicReservationConfigArgs> getReservationConfig() {
-        return this.reservationConfig == null ? Input.empty() : this.reservationConfig;
+    public Output<LiteTopicReservationConfigArgs> getReservationConfig() {
+        return this.reservationConfig == null ? Output.empty() : this.reservationConfig;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionConfig")
-      private final @Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig;
+      private final @Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig;
 
-    public Input<LiteTopicRetentionConfigArgs> getRetentionConfig() {
-        return this.retentionConfig == null ? Input.empty() : this.retentionConfig;
+    public Output<LiteTopicRetentionConfigArgs> getRetentionConfig() {
+        return this.retentionConfig == null ? Output.empty() : this.retentionConfig;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public LiteTopicArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<LiteTopicReservationConfigArgs> reservationConfig,
-        @Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> name,
+        @Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<LiteTopicReservationConfigArgs> reservationConfig,
+        @Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig,
+        @Nullable Output<String> zone) {
         this.name = name;
         this.partitionConfig = partitionConfig;
         this.project = project;
@@ -116,13 +116,13 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LiteTopicArgs() {
-        this.name = Input.empty();
-        this.partitionConfig = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.reservationConfig = Input.empty();
-        this.retentionConfig = Input.empty();
-        this.zone = Input.empty();
+        this.name = Output.empty();
+        this.partitionConfig = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.reservationConfig = Output.empty();
+        this.retentionConfig = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<LiteTopicReservationConfigArgs> reservationConfig;
-        private @Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> name;
+        private @Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<LiteTopicReservationConfigArgs> reservationConfig;
+        private @Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder partitionConfig(@Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig) {
+        public Builder partitionConfig(@Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig) {
             this.partitionConfig = partitionConfig;
             return this;
         }
 
         public Builder partitionConfig(@Nullable LiteTopicPartitionConfigArgs partitionConfig) {
-            this.partitionConfig = Input.ofNullable(partitionConfig);
+            this.partitionConfig = Output.ofNullable(partitionConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder reservationConfig(@Nullable Input<LiteTopicReservationConfigArgs> reservationConfig) {
+        public Builder reservationConfig(@Nullable Output<LiteTopicReservationConfigArgs> reservationConfig) {
             this.reservationConfig = reservationConfig;
             return this;
         }
 
         public Builder reservationConfig(@Nullable LiteTopicReservationConfigArgs reservationConfig) {
-            this.reservationConfig = Input.ofNullable(reservationConfig);
+            this.reservationConfig = Output.ofNullable(reservationConfig);
             return this;
         }
 
-        public Builder retentionConfig(@Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig) {
+        public Builder retentionConfig(@Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig) {
             this.retentionConfig = retentionConfig;
             return this;
         }
 
         public Builder retentionConfig(@Nullable LiteTopicRetentionConfigArgs retentionConfig) {
-            this.retentionConfig = Input.ofNullable(retentionConfig);
+            this.retentionConfig = Output.ofNullable(retentionConfig);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public LiteTopicArgs build() {

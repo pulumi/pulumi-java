@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tags.inputs.TagKeyIamMemberConditionArgs;
 import java.lang.String;
@@ -16,16 +16,16 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     public static final TagKeyIamMemberArgs Empty = new TagKeyIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TagKeyIamMemberConditionArgs> condition;
+      private final @Nullable Output<TagKeyIamMemberConditionArgs> condition;
 
-    public Input<TagKeyIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TagKeyIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -36,9 +36,9 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -47,17 +47,17 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagKey", required=true)
-      private final Input<String> tagKey;
+      private final Output<String> tagKey;
 
-    public Input<String> getTagKey() {
+    public Output<String> getTagKey() {
         return this.tagKey;
     }
 
     public TagKeyIamMemberArgs(
-        @Nullable Input<TagKeyIamMemberConditionArgs> condition,
-        Input<String> member,
-        Input<String> role,
-        Input<String> tagKey) {
+        @Nullable Output<TagKeyIamMemberConditionArgs> condition,
+        Output<String> member,
+        Output<String> role,
+        Output<String> tagKey) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
@@ -65,10 +65,10 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TagKeyIamMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
-        this.tagKey = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
+        this.tagKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<TagKeyIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private Input<String> role;
-        private Input<String> tagKey;
+        private @Nullable Output<TagKeyIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private Output<String> role;
+        private Output<String> tagKey;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tagKey = defaults.tagKey;
         }
 
-        public Builder condition(@Nullable Input<TagKeyIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<TagKeyIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TagKeyIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder tagKey(Input<String> tagKey) {
+        public Builder tagKey(Output<String> tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
 
         public Builder tagKey(String tagKey) {
-            this.tagKey = Input.of(Objects.requireNonNull(tagKey));
+            this.tagKey = Output.of(Objects.requireNonNull(tagKey));
             return this;
         }
         public TagKeyIamMemberArgs build() {

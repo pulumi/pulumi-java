@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
     public static final SchedulingPolicyShareAttributesArgs Empty = new SchedulingPolicyShareAttributesArgs();
 
     @InputImport(name="shareIdentifier")
-      private final @Nullable Input<String> shareIdentifier;
+      private final @Nullable Output<String> shareIdentifier;
 
-    public Input<String> getShareIdentifier() {
-        return this.shareIdentifier == null ? Input.empty() : this.shareIdentifier;
+    public Output<String> getShareIdentifier() {
+        return this.shareIdentifier == null ? Output.empty() : this.shareIdentifier;
     }
 
     @InputImport(name="weightFactor")
-      private final @Nullable Input<Double> weightFactor;
+      private final @Nullable Output<Double> weightFactor;
 
-    public Input<Double> getWeightFactor() {
-        return this.weightFactor == null ? Input.empty() : this.weightFactor;
+    public Output<Double> getWeightFactor() {
+        return this.weightFactor == null ? Output.empty() : this.weightFactor;
     }
 
     public SchedulingPolicyShareAttributesArgs(
-        @Nullable Input<String> shareIdentifier,
-        @Nullable Input<Double> weightFactor) {
+        @Nullable Output<String> shareIdentifier,
+        @Nullable Output<Double> weightFactor) {
         this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }
 
     private SchedulingPolicyShareAttributesArgs() {
-        this.shareIdentifier = Input.empty();
-        this.weightFactor = Input.empty();
+        this.shareIdentifier = Output.empty();
+        this.weightFactor = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> shareIdentifier;
-        private @Nullable Input<Double> weightFactor;
+        private @Nullable Output<String> shareIdentifier;
+        private @Nullable Output<Double> weightFactor;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
     	      this.weightFactor = defaults.weightFactor;
         }
 
-        public Builder shareIdentifier(@Nullable Input<String> shareIdentifier) {
+        public Builder shareIdentifier(@Nullable Output<String> shareIdentifier) {
             this.shareIdentifier = shareIdentifier;
             return this;
         }
 
         public Builder shareIdentifier(@Nullable String shareIdentifier) {
-            this.shareIdentifier = Input.ofNullable(shareIdentifier);
+            this.shareIdentifier = Output.ofNullable(shareIdentifier);
             return this;
         }
 
-        public Builder weightFactor(@Nullable Input<Double> weightFactor) {
+        public Builder weightFactor(@Nullable Output<Double> weightFactor) {
             this.weightFactor = weightFactor;
             return this;
         }
 
         public Builder weightFactor(@Nullable Double weightFactor) {
-            this.weightFactor = Input.ofNullable(weightFactor);
+            this.weightFactor = Output.ofNullable(weightFactor);
             return this;
         }
         public SchedulingPolicyShareAttributesArgs build() {

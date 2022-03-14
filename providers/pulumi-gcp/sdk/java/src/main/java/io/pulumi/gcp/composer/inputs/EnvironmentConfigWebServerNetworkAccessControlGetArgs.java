@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class EnvironmentConfigWebServerNetworkAccessControlGetArgs extends
     public static final EnvironmentConfigWebServerNetworkAccessControlGetArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlGetArgs();
 
     @InputImport(name="allowedIpRanges")
-      private final @Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
+      private final @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
 
-    public Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> getAllowedIpRanges() {
-        return this.allowedIpRanges == null ? Input.empty() : this.allowedIpRanges;
+    public Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> getAllowedIpRanges() {
+        return this.allowedIpRanges == null ? Output.empty() : this.allowedIpRanges;
     }
 
-    public EnvironmentConfigWebServerNetworkAccessControlGetArgs(@Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges) {
+    public EnvironmentConfigWebServerNetworkAccessControlGetArgs(@Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
     }
 
     private EnvironmentConfigWebServerNetworkAccessControlGetArgs() {
-        this.allowedIpRanges = Input.empty();
+        this.allowedIpRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class EnvironmentConfigWebServerNetworkAccessControlGetArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
+        private @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class EnvironmentConfigWebServerNetworkAccessControlGetArgs extends
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder allowedIpRanges(@Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges) {
+        public Builder allowedIpRanges(@Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges) {
             this.allowedIpRanges = allowedIpRanges;
             return this;
         }
 
         public Builder allowedIpRanges(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs> allowedIpRanges) {
-            this.allowedIpRanges = Input.ofNullable(allowedIpRanges);
+            this.allowedIpRanges = Output.ofNullable(allowedIpRanges);
             return this;
         }
         public EnvironmentConfigWebServerNetworkAccessControlGetArgs build() {

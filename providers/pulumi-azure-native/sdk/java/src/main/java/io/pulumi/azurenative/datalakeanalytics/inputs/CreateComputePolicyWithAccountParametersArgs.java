@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datalakeanalytics.inputs;
 
 import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="maxDegreeOfParallelismPerJob")
-      private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
+      private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Input<Integer> getMaxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
+    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
+        return this.maxDegreeOfParallelismPerJob == null ? Output.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="minPriorityPerJob")
-      private final @Nullable Input<Integer> minPriorityPerJob;
+      private final @Nullable Output<Integer> minPriorityPerJob;
 
-    public Input<Integer> getMinPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
+    public Output<Integer> getMinPriorityPerJob() {
+        return this.minPriorityPerJob == null ? Output.empty() : this.minPriorityPerJob;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -59,9 +59,9 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<String> objectId;
+      private final Output<String> objectId;
 
-    public Input<String> getObjectId() {
+    public Output<String> getObjectId() {
         return this.objectId;
     }
 
@@ -70,18 +70,18 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<Either<String,AADObjectType>> objectType;
+      private final Output<Either<String,AADObjectType>> objectType;
 
-    public Input<Either<String,AADObjectType>> getObjectType() {
+    public Output<Either<String,AADObjectType>> getObjectType() {
         return this.objectType;
     }
 
     public CreateComputePolicyWithAccountParametersArgs(
-        @Nullable Input<Integer> maxDegreeOfParallelismPerJob,
-        @Nullable Input<Integer> minPriorityPerJob,
-        Input<String> name,
-        Input<String> objectId,
-        Input<Either<String,AADObjectType>> objectType) {
+        @Nullable Output<Integer> maxDegreeOfParallelismPerJob,
+        @Nullable Output<Integer> minPriorityPerJob,
+        Output<String> name,
+        Output<String> objectId,
+        Output<Either<String,AADObjectType>> objectType) {
         this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
         this.minPriorityPerJob = minPriorityPerJob;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -90,11 +90,11 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     }
 
     private CreateComputePolicyWithAccountParametersArgs() {
-        this.maxDegreeOfParallelismPerJob = Input.empty();
-        this.minPriorityPerJob = Input.empty();
-        this.name = Input.empty();
-        this.objectId = Input.empty();
-        this.objectType = Input.empty();
+        this.maxDegreeOfParallelismPerJob = Output.empty();
+        this.minPriorityPerJob = Output.empty();
+        this.name = Output.empty();
+        this.objectId = Output.empty();
+        this.objectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
-        private @Nullable Input<Integer> minPriorityPerJob;
-        private Input<String> name;
-        private Input<String> objectId;
-        private Input<Either<String,AADObjectType>> objectType;
+        private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
+        private @Nullable Output<Integer> minPriorityPerJob;
+        private Output<String> name;
+        private Output<String> objectId;
+        private Output<Either<String,AADObjectType>> objectType;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder maxDegreeOfParallelismPerJob(@Nullable Input<Integer> maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Input.ofNullable(maxDegreeOfParallelismPerJob);
+            this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
 
-        public Builder minPriorityPerJob(@Nullable Input<Integer> minPriorityPerJob) {
+        public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Input.ofNullable(minPriorityPerJob);
+            this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder objectId(Input<String> objectId) {
+        public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder objectType(Input<Either<String,AADObjectType>> objectType) {
+        public Builder objectType(Output<Either<String,AADObjectType>> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(Either<String,AADObjectType> objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
         public CreateComputePolicyWithAccountParametersArgs build() {

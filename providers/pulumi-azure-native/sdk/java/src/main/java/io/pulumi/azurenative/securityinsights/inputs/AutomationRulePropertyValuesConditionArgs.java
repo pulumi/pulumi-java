@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionConditionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="conditionProperties", required=true)
-      private final Input<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties;
+      private final Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties;
 
-    public Input<AutomationRulePropertyValuesConditionConditionPropertiesArgs> getConditionProperties() {
+    public Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> getConditionProperties() {
         return this.conditionProperties;
     }
 
@@ -35,22 +35,22 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="conditionType", required=true)
-      private final Input<String> conditionType;
+      private final Output<String> conditionType;
 
-    public Input<String> getConditionType() {
+    public Output<String> getConditionType() {
         return this.conditionType;
     }
 
     public AutomationRulePropertyValuesConditionArgs(
-        Input<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties,
-        Input<String> conditionType) {
+        Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties,
+        Output<String> conditionType) {
         this.conditionProperties = Objects.requireNonNull(conditionProperties, "expected parameter 'conditionProperties' to be non-null");
         this.conditionType = Objects.requireNonNull(conditionType, "expected parameter 'conditionType' to be non-null");
     }
 
     private AutomationRulePropertyValuesConditionArgs() {
-        this.conditionProperties = Input.empty();
-        this.conditionType = Input.empty();
+        this.conditionProperties = Output.empty();
+        this.conditionType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties;
-        private Input<String> conditionType;
+        private Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties;
+        private Output<String> conditionType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
     	      this.conditionType = defaults.conditionType;
         }
 
-        public Builder conditionProperties(Input<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties) {
+        public Builder conditionProperties(Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties) {
             this.conditionProperties = Objects.requireNonNull(conditionProperties);
             return this;
         }
 
         public Builder conditionProperties(AutomationRulePropertyValuesConditionConditionPropertiesArgs conditionProperties) {
-            this.conditionProperties = Input.of(Objects.requireNonNull(conditionProperties));
+            this.conditionProperties = Output.of(Objects.requireNonNull(conditionProperties));
             return this;
         }
 
-        public Builder conditionType(Input<String> conditionType) {
+        public Builder conditionType(Output<String> conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
 
         public Builder conditionType(String conditionType) {
-            this.conditionType = Input.of(Objects.requireNonNull(conditionType));
+            this.conditionType = Output.of(Objects.requireNonNull(conditionType));
             return this;
         }
         public AutomationRulePropertyValuesConditionArgs build() {

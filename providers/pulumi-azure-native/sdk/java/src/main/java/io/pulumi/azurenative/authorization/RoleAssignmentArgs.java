@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization;
 
 import io.pulumi.azurenative.authorization.enums.PrincipalType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<String> condition;
+      private final @Nullable Output<String> condition;
 
-    public Input<String> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<String> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionVersion")
-      private final @Nullable Input<String> conditionVersion;
+      private final @Nullable Output<String> conditionVersion;
 
-    public Input<String> getConditionVersion() {
-        return this.conditionVersion == null ? Input.empty() : this.conditionVersion;
+    public Output<String> getConditionVersion() {
+        return this.conditionVersion == null ? Output.empty() : this.conditionVersion;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delegatedManagedIdentityResourceId")
-      private final @Nullable Input<String> delegatedManagedIdentityResourceId;
+      private final @Nullable Output<String> delegatedManagedIdentityResourceId;
 
-    public Input<String> getDelegatedManagedIdentityResourceId() {
-        return this.delegatedManagedIdentityResourceId == null ? Input.empty() : this.delegatedManagedIdentityResourceId;
+    public Output<String> getDelegatedManagedIdentityResourceId() {
+        return this.delegatedManagedIdentityResourceId == null ? Output.empty() : this.delegatedManagedIdentityResourceId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -76,10 +76,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalType")
-      private final @Nullable Input<Either<String,PrincipalType>> principalType;
+      private final @Nullable Output<Either<String,PrincipalType>> principalType;
 
-    public Input<Either<String,PrincipalType>> getPrincipalType() {
-        return this.principalType == null ? Input.empty() : this.principalType;
+    public Output<Either<String,PrincipalType>> getPrincipalType() {
+        return this.principalType == null ? Output.empty() : this.principalType;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleAssignmentName")
-      private final @Nullable Input<String> roleAssignmentName;
+      private final @Nullable Output<String> roleAssignmentName;
 
-    public Input<String> getRoleAssignmentName() {
-        return this.roleAssignmentName == null ? Input.empty() : this.roleAssignmentName;
+    public Output<String> getRoleAssignmentName() {
+        return this.roleAssignmentName == null ? Output.empty() : this.roleAssignmentName;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-      private final Input<String> roleDefinitionId;
+      private final Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
+    public Output<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
 
@@ -109,43 +109,43 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public RoleAssignmentArgs(
-        @Nullable Input<String> condition,
-        @Nullable Input<String> conditionVersion,
-        @Nullable Input<String> delegatedManagedIdentityResourceId,
-        @Nullable Input<String> description,
-        Input<String> principalId,
-        @Nullable Input<Either<String,PrincipalType>> principalType,
-        @Nullable Input<String> roleAssignmentName,
-        Input<String> roleDefinitionId,
-        Input<String> scope) {
+        @Nullable Output<String> condition,
+        @Nullable Output<String> conditionVersion,
+        @Nullable Output<String> delegatedManagedIdentityResourceId,
+        @Nullable Output<String> description,
+        Output<String> principalId,
+        @Nullable Output<Either<String,PrincipalType>> principalType,
+        @Nullable Output<String> roleAssignmentName,
+        Output<String> roleDefinitionId,
+        Output<String> scope) {
         this.condition = condition;
         this.conditionVersion = conditionVersion;
         this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
         this.description = description;
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalType = principalType == null ? Input.ofLeft("User") : principalType;
+        this.principalType = principalType == null ? Output.ofLeft("User") : principalType;
         this.roleAssignmentName = roleAssignmentName;
         this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
     }
 
     private RoleAssignmentArgs() {
-        this.condition = Input.empty();
-        this.conditionVersion = Input.empty();
-        this.delegatedManagedIdentityResourceId = Input.empty();
-        this.description = Input.empty();
-        this.principalId = Input.empty();
-        this.principalType = Input.empty();
-        this.roleAssignmentName = Input.empty();
-        this.roleDefinitionId = Input.empty();
-        this.scope = Input.empty();
+        this.condition = Output.empty();
+        this.conditionVersion = Output.empty();
+        this.delegatedManagedIdentityResourceId = Output.empty();
+        this.description = Output.empty();
+        this.principalId = Output.empty();
+        this.principalType = Output.empty();
+        this.roleAssignmentName = Output.empty();
+        this.roleDefinitionId = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> condition;
-        private @Nullable Input<String> conditionVersion;
-        private @Nullable Input<String> delegatedManagedIdentityResourceId;
-        private @Nullable Input<String> description;
-        private Input<String> principalId;
-        private @Nullable Input<Either<String,PrincipalType>> principalType;
-        private @Nullable Input<String> roleAssignmentName;
-        private Input<String> roleDefinitionId;
-        private Input<String> scope;
+        private @Nullable Output<String> condition;
+        private @Nullable Output<String> conditionVersion;
+        private @Nullable Output<String> delegatedManagedIdentityResourceId;
+        private @Nullable Output<String> description;
+        private Output<String> principalId;
+        private @Nullable Output<Either<String,PrincipalType>> principalType;
+        private @Nullable Output<String> roleAssignmentName;
+        private Output<String> roleDefinitionId;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder condition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder conditionVersion(@Nullable Input<String> conditionVersion) {
+        public Builder conditionVersion(@Nullable Output<String> conditionVersion) {
             this.conditionVersion = conditionVersion;
             return this;
         }
 
         public Builder conditionVersion(@Nullable String conditionVersion) {
-            this.conditionVersion = Input.ofNullable(conditionVersion);
+            this.conditionVersion = Output.ofNullable(conditionVersion);
             return this;
         }
 
-        public Builder delegatedManagedIdentityResourceId(@Nullable Input<String> delegatedManagedIdentityResourceId) {
+        public Builder delegatedManagedIdentityResourceId(@Nullable Output<String> delegatedManagedIdentityResourceId) {
             this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
             return this;
         }
 
         public Builder delegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
-            this.delegatedManagedIdentityResourceId = Input.ofNullable(delegatedManagedIdentityResourceId);
+            this.delegatedManagedIdentityResourceId = Output.ofNullable(delegatedManagedIdentityResourceId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder principalType(@Nullable Input<Either<String,PrincipalType>> principalType) {
+        public Builder principalType(@Nullable Output<Either<String,PrincipalType>> principalType) {
             this.principalType = principalType;
             return this;
         }
 
         public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
-            this.principalType = Input.ofNullable(principalType);
+            this.principalType = Output.ofNullable(principalType);
             return this;
         }
 
-        public Builder roleAssignmentName(@Nullable Input<String> roleAssignmentName) {
+        public Builder roleAssignmentName(@Nullable Output<String> roleAssignmentName) {
             this.roleAssignmentName = roleAssignmentName;
             return this;
         }
 
         public Builder roleAssignmentName(@Nullable String roleAssignmentName) {
-            this.roleAssignmentName = Input.ofNullable(roleAssignmentName);
+            this.roleAssignmentName = Output.ofNullable(roleAssignmentName);
             return this;
         }
 
-        public Builder roleDefinitionId(Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
+            this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public RoleAssignmentArgs build() {

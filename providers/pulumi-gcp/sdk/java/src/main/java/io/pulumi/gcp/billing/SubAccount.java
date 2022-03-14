@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.billing;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -159,14 +158,14 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubAccount(String name, SubAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/subAccount:SubAccount", name, args == null ? SubAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:billing/subAccount:SubAccount", name, args == null ? SubAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SubAccount(String name, Input<String> id, @Nullable SubAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SubAccount(String name, Output<String> id, @Nullable SubAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:billing/subAccount:SubAccount", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -182,7 +181,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubAccount get(String name, Input<String> id, @Nullable SubAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SubAccount get(String name, Output<String> id, @Nullable SubAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubAccount(name, id, state, options);
     }
 }

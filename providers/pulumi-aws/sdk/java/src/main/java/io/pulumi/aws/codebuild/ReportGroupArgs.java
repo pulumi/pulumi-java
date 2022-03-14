@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild;
 
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteReports")
-      private final @Nullable Input<Boolean> deleteReports;
+      private final @Nullable Output<Boolean> deleteReports;
 
-    public Input<Boolean> getDeleteReports() {
-        return this.deleteReports == null ? Input.empty() : this.deleteReports;
+    public Output<Boolean> getDeleteReports() {
+        return this.deleteReports == null ? Output.empty() : this.deleteReports;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportConfig", required=true)
-      private final Input<ReportGroupExportConfigArgs> exportConfig;
+      private final Output<ReportGroupExportConfigArgs> exportConfig;
 
-    public Input<ReportGroupExportConfigArgs> getExportConfig() {
+    public Output<ReportGroupExportConfigArgs> getExportConfig() {
         return this.exportConfig;
     }
 
@@ -44,10 +44,10 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ReportGroupArgs(
-        @Nullable Input<Boolean> deleteReports,
-        Input<ReportGroupExportConfigArgs> exportConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> type) {
+        @Nullable Output<Boolean> deleteReports,
+        Output<ReportGroupExportConfigArgs> exportConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> type) {
         this.deleteReports = deleteReports;
         this.exportConfig = Objects.requireNonNull(exportConfig, "expected parameter 'exportConfig' to be non-null");
         this.name = name;
@@ -86,11 +86,11 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportGroupArgs() {
-        this.deleteReports = Input.empty();
-        this.exportConfig = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.deleteReports = Output.empty();
+        this.exportConfig = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deleteReports;
-        private Input<ReportGroupExportConfigArgs> exportConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> type;
+        private @Nullable Output<Boolean> deleteReports;
+        private Output<ReportGroupExportConfigArgs> exportConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder deleteReports(@Nullable Input<Boolean> deleteReports) {
+        public Builder deleteReports(@Nullable Output<Boolean> deleteReports) {
             this.deleteReports = deleteReports;
             return this;
         }
 
         public Builder deleteReports(@Nullable Boolean deleteReports) {
-            this.deleteReports = Input.ofNullable(deleteReports);
+            this.deleteReports = Output.ofNullable(deleteReports);
             return this;
         }
 
-        public Builder exportConfig(Input<ReportGroupExportConfigArgs> exportConfig) {
+        public Builder exportConfig(Output<ReportGroupExportConfigArgs> exportConfig) {
             this.exportConfig = Objects.requireNonNull(exportConfig);
             return this;
         }
 
         public Builder exportConfig(ReportGroupExportConfigArgs exportConfig) {
-            this.exportConfig = Input.of(Objects.requireNonNull(exportConfig));
+            this.exportConfig = Output.of(Objects.requireNonNull(exportConfig));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ReportGroupArgs build() {

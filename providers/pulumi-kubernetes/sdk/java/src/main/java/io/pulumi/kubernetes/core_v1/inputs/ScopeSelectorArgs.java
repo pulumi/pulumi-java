@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ScopedResourceSelectorRequirementArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchExpressions")
-      private final @Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
+      private final @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 
-    public Input<List<ScopedResourceSelectorRequirementArgs>> getMatchExpressions() {
-        return this.matchExpressions == null ? Input.empty() : this.matchExpressions;
+    public Output<List<ScopedResourceSelectorRequirementArgs>> getMatchExpressions() {
+        return this.matchExpressions == null ? Output.empty() : this.matchExpressions;
     }
 
-    public ScopeSelectorArgs(@Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
+    public ScopeSelectorArgs(@Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
         this.matchExpressions = matchExpressions;
     }
 
     private ScopeSelectorArgs() {
-        this.matchExpressions = Input.empty();
+        this.matchExpressions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
+        private @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.matchExpressions = defaults.matchExpressions;
         }
 
-        public Builder matchExpressions(@Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
+        public Builder matchExpressions(@Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
         public Builder matchExpressions(@Nullable List<ScopedResourceSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Input.ofNullable(matchExpressions);
+            this.matchExpressions = Output.ofNullable(matchExpressions);
             return this;
         }
         public ScopeSelectorArgs build() {

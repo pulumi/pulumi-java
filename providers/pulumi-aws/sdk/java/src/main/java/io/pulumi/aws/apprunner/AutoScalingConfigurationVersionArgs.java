@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="autoScalingConfigurationName", required=true)
-      private final Input<String> autoScalingConfigurationName;
+      private final Output<String> autoScalingConfigurationName;
 
-    public Input<String> getAutoScalingConfigurationName() {
+    public Output<String> getAutoScalingConfigurationName() {
         return this.autoScalingConfigurationName;
     }
 
@@ -32,10 +32,10 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxConcurrency")
-      private final @Nullable Input<Integer> maxConcurrency;
+      private final @Nullable Output<Integer> maxConcurrency;
 
-    public Input<Integer> getMaxConcurrency() {
-        return this.maxConcurrency == null ? Input.empty() : this.maxConcurrency;
+    public Output<Integer> getMaxConcurrency() {
+        return this.maxConcurrency == null ? Output.empty() : this.maxConcurrency;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxSize")
-      private final @Nullable Input<Integer> maxSize;
+      private final @Nullable Output<Integer> maxSize;
 
-    public Input<Integer> getMaxSize() {
-        return this.maxSize == null ? Input.empty() : this.maxSize;
+    public Output<Integer> getMaxSize() {
+        return this.maxSize == null ? Output.empty() : this.maxSize;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="minSize")
-      private final @Nullable Input<Integer> minSize;
+      private final @Nullable Output<Integer> minSize;
 
-    public Input<Integer> getMinSize() {
-        return this.minSize == null ? Input.empty() : this.minSize;
+    public Output<Integer> getMinSize() {
+        return this.minSize == null ? Output.empty() : this.minSize;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AutoScalingConfigurationVersionArgs(
-        Input<String> autoScalingConfigurationName,
-        @Nullable Input<Integer> maxConcurrency,
-        @Nullable Input<Integer> maxSize,
-        @Nullable Input<Integer> minSize,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> autoScalingConfigurationName,
+        @Nullable Output<Integer> maxConcurrency,
+        @Nullable Output<Integer> maxSize,
+        @Nullable Output<Integer> minSize,
+        @Nullable Output<Map<String,String>> tags) {
         this.autoScalingConfigurationName = Objects.requireNonNull(autoScalingConfigurationName, "expected parameter 'autoScalingConfigurationName' to be non-null");
         this.maxConcurrency = maxConcurrency;
         this.maxSize = maxSize;
@@ -85,11 +85,11 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     }
 
     private AutoScalingConfigurationVersionArgs() {
-        this.autoScalingConfigurationName = Input.empty();
-        this.maxConcurrency = Input.empty();
-        this.maxSize = Input.empty();
-        this.minSize = Input.empty();
-        this.tags = Input.empty();
+        this.autoScalingConfigurationName = Output.empty();
+        this.maxConcurrency = Output.empty();
+        this.maxSize = Output.empty();
+        this.minSize = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> autoScalingConfigurationName;
-        private @Nullable Input<Integer> maxConcurrency;
-        private @Nullable Input<Integer> maxSize;
-        private @Nullable Input<Integer> minSize;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> autoScalingConfigurationName;
+        private @Nullable Output<Integer> maxConcurrency;
+        private @Nullable Output<Integer> maxSize;
+        private @Nullable Output<Integer> minSize;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder autoScalingConfigurationName(Input<String> autoScalingConfigurationName) {
+        public Builder autoScalingConfigurationName(Output<String> autoScalingConfigurationName) {
             this.autoScalingConfigurationName = Objects.requireNonNull(autoScalingConfigurationName);
             return this;
         }
 
         public Builder autoScalingConfigurationName(String autoScalingConfigurationName) {
-            this.autoScalingConfigurationName = Input.of(Objects.requireNonNull(autoScalingConfigurationName));
+            this.autoScalingConfigurationName = Output.of(Objects.requireNonNull(autoScalingConfigurationName));
             return this;
         }
 
-        public Builder maxConcurrency(@Nullable Input<Integer> maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Output<Integer> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
 
         public Builder maxConcurrency(@Nullable Integer maxConcurrency) {
-            this.maxConcurrency = Input.ofNullable(maxConcurrency);
+            this.maxConcurrency = Output.ofNullable(maxConcurrency);
             return this;
         }
 
-        public Builder maxSize(@Nullable Input<Integer> maxSize) {
+        public Builder maxSize(@Nullable Output<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
         public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Input.ofNullable(maxSize);
+            this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
 
-        public Builder minSize(@Nullable Input<Integer> minSize) {
+        public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
 
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Input.ofNullable(minSize);
+            this.minSize = Output.ofNullable(minSize);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AutoScalingConfigurationVersionArgs build() {

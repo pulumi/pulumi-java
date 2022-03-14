@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableAutoPopulationOfTimespanConfig")
-      private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
+      private final @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
 
-    public Input<Boolean> getEnableAutoPopulationOfTimespanConfig() {
-        return this.enableAutoPopulationOfTimespanConfig == null ? Input.empty() : this.enableAutoPopulationOfTimespanConfig;
+    public Output<Boolean> getEnableAutoPopulationOfTimespanConfig() {
+        return this.enableAutoPopulationOfTimespanConfig == null ? Output.empty() : this.enableAutoPopulationOfTimespanConfig;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="timestampField")
-      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField;
+      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> timestampField;
 
-    public Input<GooglePrivacyDlpV2FieldIdArgs> getTimestampField() {
-        return this.timestampField == null ? Input.empty() : this.timestampField;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> getTimestampField() {
+        return this.timestampField == null ? Output.empty() : this.timestampField;
     }
 
     public GooglePrivacyDlpV2TimespanConfigArgs(
-        @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> startTime,
-        @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField) {
+        @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> startTime,
+        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> timestampField) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;
@@ -76,10 +76,10 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
     }
 
     private GooglePrivacyDlpV2TimespanConfigArgs() {
-        this.enableAutoPopulationOfTimespanConfig = Input.empty();
-        this.endTime = Input.empty();
-        this.startTime = Input.empty();
-        this.timestampField = Input.empty();
+        this.enableAutoPopulationOfTimespanConfig = Output.empty();
+        this.endTime = Output.empty();
+        this.startTime = Output.empty();
+        this.timestampField = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField;
+        private @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> timestampField;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
     	      this.timestampField = defaults.timestampField;
         }
 
-        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig) {
+        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
 
         public Builder enableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
-            this.enableAutoPopulationOfTimespanConfig = Input.ofNullable(enableAutoPopulationOfTimespanConfig);
+            this.enableAutoPopulationOfTimespanConfig = Output.ofNullable(enableAutoPopulationOfTimespanConfig);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder timestampField(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField) {
+        public Builder timestampField(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> timestampField) {
             this.timestampField = timestampField;
             return this;
         }
 
         public Builder timestampField(@Nullable GooglePrivacyDlpV2FieldIdArgs timestampField) {
-            this.timestampField = Input.ofNullable(timestampField);
+            this.timestampField = Output.ofNullable(timestampField);
             return this;
         }
         public GooglePrivacyDlpV2TimespanConfigArgs build() {

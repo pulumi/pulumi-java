@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionS3OutputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends 
     public static final ModelExplainabilityJobDefinitionMonitoringOutputArgs Empty = new ModelExplainabilityJobDefinitionMonitoringOutputArgs();
 
     @InputImport(name="s3Output", required=true)
-      private final Input<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output;
+      private final Output<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output;
 
-    public Input<ModelExplainabilityJobDefinitionS3OutputArgs> getS3Output() {
+    public Output<ModelExplainabilityJobDefinitionS3OutputArgs> getS3Output() {
         return this.s3Output;
     }
 
-    public ModelExplainabilityJobDefinitionMonitoringOutputArgs(Input<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output) {
+    public ModelExplainabilityJobDefinitionMonitoringOutputArgs(Output<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output) {
         this.s3Output = Objects.requireNonNull(s3Output, "expected parameter 's3Output' to be non-null");
     }
 
     private ModelExplainabilityJobDefinitionMonitoringOutputArgs() {
-        this.s3Output = Input.empty();
+        this.s3Output = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends 
     }
 
     public static final class Builder {
-        private Input<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output;
+        private Output<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends 
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder s3Output(Input<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output) {
+        public Builder s3Output(Output<ModelExplainabilityJobDefinitionS3OutputArgs> s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
 
         public Builder s3Output(ModelExplainabilityJobDefinitionS3OutputArgs s3Output) {
-            this.s3Output = Input.of(Objects.requireNonNull(s3Output));
+            this.s3Output = Output.of(Objects.requireNonNull(s3Output));
             return this;
         }
         public ModelExplainabilityJobDefinitionMonitoringOutputArgs build() {

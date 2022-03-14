@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class RegionInstanceGroupManagerStatusVersionTargetGetArgs extends 
     public static final RegionInstanceGroupManagerStatusVersionTargetGetArgs Empty = new RegionInstanceGroupManagerStatusVersionTargetGetArgs();
 
     @InputImport(name="isReached")
-      private final @Nullable Input<Boolean> isReached;
+      private final @Nullable Output<Boolean> isReached;
 
-    public Input<Boolean> getIsReached() {
-        return this.isReached == null ? Input.empty() : this.isReached;
+    public Output<Boolean> getIsReached() {
+        return this.isReached == null ? Output.empty() : this.isReached;
     }
 
-    public RegionInstanceGroupManagerStatusVersionTargetGetArgs(@Nullable Input<Boolean> isReached) {
+    public RegionInstanceGroupManagerStatusVersionTargetGetArgs(@Nullable Output<Boolean> isReached) {
         this.isReached = isReached;
     }
 
     private RegionInstanceGroupManagerStatusVersionTargetGetArgs() {
-        this.isReached = Input.empty();
+        this.isReached = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class RegionInstanceGroupManagerStatusVersionTargetGetArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isReached;
+        private @Nullable Output<Boolean> isReached;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class RegionInstanceGroupManagerStatusVersionTargetGetArgs extends 
     	      this.isReached = defaults.isReached;
         }
 
-        public Builder isReached(@Nullable Input<Boolean> isReached) {
+        public Builder isReached(@Nullable Output<Boolean> isReached) {
             this.isReached = isReached;
             return this;
         }
 
         public Builder isReached(@Nullable Boolean isReached) {
-            this.isReached = Input.ofNullable(isReached);
+            this.isReached = Output.ofNullable(isReached);
             return this;
         }
         public RegionInstanceGroupManagerStatusVersionTargetGetArgs build() {

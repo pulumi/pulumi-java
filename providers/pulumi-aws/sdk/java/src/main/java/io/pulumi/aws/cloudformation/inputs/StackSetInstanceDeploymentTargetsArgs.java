@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class StackSetInstanceDeploymentTargetsArgs extends io.pulumi.resou
     public static final StackSetInstanceDeploymentTargetsArgs Empty = new StackSetInstanceDeploymentTargetsArgs();
 
     @InputImport(name="organizationalUnitIds")
-      private final @Nullable Input<List<String>> organizationalUnitIds;
+      private final @Nullable Output<List<String>> organizationalUnitIds;
 
-    public Input<List<String>> getOrganizationalUnitIds() {
-        return this.organizationalUnitIds == null ? Input.empty() : this.organizationalUnitIds;
+    public Output<List<String>> getOrganizationalUnitIds() {
+        return this.organizationalUnitIds == null ? Output.empty() : this.organizationalUnitIds;
     }
 
-    public StackSetInstanceDeploymentTargetsArgs(@Nullable Input<List<String>> organizationalUnitIds) {
+    public StackSetInstanceDeploymentTargetsArgs(@Nullable Output<List<String>> organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
     }
 
     private StackSetInstanceDeploymentTargetsArgs() {
-        this.organizationalUnitIds = Input.empty();
+        this.organizationalUnitIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class StackSetInstanceDeploymentTargetsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> organizationalUnitIds;
+        private @Nullable Output<List<String>> organizationalUnitIds;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class StackSetInstanceDeploymentTargetsArgs extends io.pulumi.resou
     	      this.organizationalUnitIds = defaults.organizationalUnitIds;
         }
 
-        public Builder organizationalUnitIds(@Nullable Input<List<String>> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable Output<List<String>> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
-            this.organizationalUnitIds = Input.ofNullable(organizationalUnitIds);
+            this.organizationalUnitIds = Output.ofNullable(organizationalUnitIds);
             return this;
         }
         public StackSetInstanceDeploymentTargetsArgs build() {

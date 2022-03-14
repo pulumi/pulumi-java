@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-      private final @Nullable Input<String> computerName;
+      private final @Nullable Output<String> computerName;
 
-    public Input<String> getComputerName() {
-        return this.computerName == null ? Input.empty() : this.computerName;
+    public Output<String> getComputerName() {
+        return this.computerName == null ? Output.empty() : this.computerName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKey")
-      private final @Nullable Input<String> sshPublicKey;
+      private final @Nullable Output<String> sshPublicKey;
 
-    public Input<String> getSshPublicKey() {
-        return this.sshPublicKey == null ? Input.empty() : this.sshPublicKey;
+    public Output<String> getSshPublicKey() {
+        return this.sshPublicKey == null ? Output.empty() : this.sshPublicKey;
     }
 
     public OSProfileArgs(
-        @Nullable Input<String> computerName,
-        @Nullable Input<String> sshPublicKey) {
+        @Nullable Output<String> computerName,
+        @Nullable Output<String> sshPublicKey) {
         this.computerName = computerName;
         this.sshPublicKey = sshPublicKey;
     }
 
     private OSProfileArgs() {
-        this.computerName = Input.empty();
-        this.sshPublicKey = Input.empty();
+        this.computerName = Output.empty();
+        this.sshPublicKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> computerName;
-        private @Nullable Input<String> sshPublicKey;
+        private @Nullable Output<String> computerName;
+        private @Nullable Output<String> sshPublicKey;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sshPublicKey = defaults.sshPublicKey;
         }
 
-        public Builder computerName(@Nullable Input<String> computerName) {
+        public Builder computerName(@Nullable Output<String> computerName) {
             this.computerName = computerName;
             return this;
         }
 
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = Input.ofNullable(computerName);
+            this.computerName = Output.ofNullable(computerName);
             return this;
         }
 
-        public Builder sshPublicKey(@Nullable Input<String> sshPublicKey) {
+        public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
 
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Input.ofNullable(sshPublicKey);
+            this.sshPublicKey = Output.ofNullable(sshPublicKey);
             return this;
         }
         public OSProfileArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateGetArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minimalAction")
-      private final @Nullable Input<String> minimalAction;
+      private final @Nullable Output<String> minimalAction;
 
-    public Input<String> getMinimalAction() {
-        return this.minimalAction == null ? Input.empty() : this.minimalAction;
+    public Output<String> getMinimalAction() {
+        return this.minimalAction == null ? Output.empty() : this.minimalAction;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mostDisruptiveAllowedAction")
-      private final @Nullable Input<String> mostDisruptiveAllowedAction;
+      private final @Nullable Output<String> mostDisruptiveAllowedAction;
 
-    public Input<String> getMostDisruptiveAllowedAction() {
-        return this.mostDisruptiveAllowedAction == null ? Input.empty() : this.mostDisruptiveAllowedAction;
+    public Output<String> getMostDisruptiveAllowedAction() {
+        return this.mostDisruptiveAllowedAction == null ? Output.empty() : this.mostDisruptiveAllowedAction;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="preservedState")
-      private final @Nullable Input<RegionPerInstanceConfigPreservedStateGetArgs> preservedState;
+      private final @Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState;
 
-    public Input<RegionPerInstanceConfigPreservedStateGetArgs> getPreservedState() {
-        return this.preservedState == null ? Input.empty() : this.preservedState;
+    public Output<RegionPerInstanceConfigPreservedStateGetArgs> getPreservedState() {
+        return this.preservedState == null ? Output.empty() : this.preservedState;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="regionInstanceGroupManager")
-      private final @Nullable Input<String> regionInstanceGroupManager;
+      private final @Nullable Output<String> regionInstanceGroupManager;
 
-    public Input<String> getRegionInstanceGroupManager() {
-        return this.regionInstanceGroupManager == null ? Input.empty() : this.regionInstanceGroupManager;
+    public Output<String> getRegionInstanceGroupManager() {
+        return this.regionInstanceGroupManager == null ? Output.empty() : this.regionInstanceGroupManager;
     }
 
     /**
@@ -112,21 +112,21 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="removeInstanceStateOnDestroy")
-      private final @Nullable Input<Boolean> removeInstanceStateOnDestroy;
+      private final @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
-    public Input<Boolean> getRemoveInstanceStateOnDestroy() {
-        return this.removeInstanceStateOnDestroy == null ? Input.empty() : this.removeInstanceStateOnDestroy;
+    public Output<Boolean> getRemoveInstanceStateOnDestroy() {
+        return this.removeInstanceStateOnDestroy == null ? Output.empty() : this.removeInstanceStateOnDestroy;
     }
 
     public RegionPerInstanceConfigState(
-        @Nullable Input<String> minimalAction,
-        @Nullable Input<String> mostDisruptiveAllowedAction,
-        @Nullable Input<String> name,
-        @Nullable Input<RegionPerInstanceConfigPreservedStateGetArgs> preservedState,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> regionInstanceGroupManager,
-        @Nullable Input<Boolean> removeInstanceStateOnDestroy) {
+        @Nullable Output<String> minimalAction,
+        @Nullable Output<String> mostDisruptiveAllowedAction,
+        @Nullable Output<String> name,
+        @Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> regionInstanceGroupManager,
+        @Nullable Output<Boolean> removeInstanceStateOnDestroy) {
         this.minimalAction = minimalAction;
         this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
         this.name = name;
@@ -138,14 +138,14 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
     }
 
     private RegionPerInstanceConfigState() {
-        this.minimalAction = Input.empty();
-        this.mostDisruptiveAllowedAction = Input.empty();
-        this.name = Input.empty();
-        this.preservedState = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.regionInstanceGroupManager = Input.empty();
-        this.removeInstanceStateOnDestroy = Input.empty();
+        this.minimalAction = Output.empty();
+        this.mostDisruptiveAllowedAction = Output.empty();
+        this.name = Output.empty();
+        this.preservedState = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.regionInstanceGroupManager = Output.empty();
+        this.removeInstanceStateOnDestroy = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,14 +157,14 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> minimalAction;
-        private @Nullable Input<String> mostDisruptiveAllowedAction;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RegionPerInstanceConfigPreservedStateGetArgs> preservedState;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> regionInstanceGroupManager;
-        private @Nullable Input<Boolean> removeInstanceStateOnDestroy;
+        private @Nullable Output<String> minimalAction;
+        private @Nullable Output<String> mostDisruptiveAllowedAction;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> regionInstanceGroupManager;
+        private @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
         public Builder() {
     	      // Empty
@@ -182,83 +182,83 @@ public final class RegionPerInstanceConfigState extends io.pulumi.resources.Reso
     	      this.removeInstanceStateOnDestroy = defaults.removeInstanceStateOnDestroy;
         }
 
-        public Builder minimalAction(@Nullable Input<String> minimalAction) {
+        public Builder minimalAction(@Nullable Output<String> minimalAction) {
             this.minimalAction = minimalAction;
             return this;
         }
 
         public Builder minimalAction(@Nullable String minimalAction) {
-            this.minimalAction = Input.ofNullable(minimalAction);
+            this.minimalAction = Output.ofNullable(minimalAction);
             return this;
         }
 
-        public Builder mostDisruptiveAllowedAction(@Nullable Input<String> mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(@Nullable Output<String> mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
 
         public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = Input.ofNullable(mostDisruptiveAllowedAction);
+            this.mostDisruptiveAllowedAction = Output.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder preservedState(@Nullable Input<RegionPerInstanceConfigPreservedStateGetArgs> preservedState) {
+        public Builder preservedState(@Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState) {
             this.preservedState = preservedState;
             return this;
         }
 
         public Builder preservedState(@Nullable RegionPerInstanceConfigPreservedStateGetArgs preservedState) {
-            this.preservedState = Input.ofNullable(preservedState);
+            this.preservedState = Output.ofNullable(preservedState);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder regionInstanceGroupManager(@Nullable Input<String> regionInstanceGroupManager) {
+        public Builder regionInstanceGroupManager(@Nullable Output<String> regionInstanceGroupManager) {
             this.regionInstanceGroupManager = regionInstanceGroupManager;
             return this;
         }
 
         public Builder regionInstanceGroupManager(@Nullable String regionInstanceGroupManager) {
-            this.regionInstanceGroupManager = Input.ofNullable(regionInstanceGroupManager);
+            this.regionInstanceGroupManager = Output.ofNullable(regionInstanceGroupManager);
             return this;
         }
 
-        public Builder removeInstanceStateOnDestroy(@Nullable Input<Boolean> removeInstanceStateOnDestroy) {
+        public Builder removeInstanceStateOnDestroy(@Nullable Output<Boolean> removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
 
         public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
-            this.removeInstanceStateOnDestroy = Input.ofNullable(removeInstanceStateOnDestroy);
+            this.removeInstanceStateOnDestroy = Output.ofNullable(removeInstanceStateOnDestroy);
             return this;
         }
         public RegionPerInstanceConfigState build() {

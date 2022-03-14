@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.synapse.enums.EngineType;
 import io.pulumi.azurenative.synapse.inputs.AzureSkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType")
-      private final @Nullable Input<Either<String,EngineType>> engineType;
+      private final @Nullable Output<Either<String,EngineType>> engineType;
 
-    public Input<Either<String,EngineType>> getEngineType() {
-        return this.engineType == null ? Input.empty() : this.engineType;
+    public Output<Either<String,EngineType>> getEngineType() {
+        return this.engineType == null ? Output.empty() : this.engineType;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kustoPoolName")
-      private final @Nullable Input<String> kustoPoolName;
+      private final @Nullable Output<String> kustoPoolName;
 
-    public Input<String> getKustoPoolName() {
-        return this.kustoPoolName == null ? Input.empty() : this.kustoPoolName;
+    public Output<String> getKustoPoolName() {
+        return this.kustoPoolName == null ? Output.empty() : this.kustoPoolName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,9 +67,9 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<AzureSkuArgs> sku;
+      private final Output<AzureSkuArgs> sku;
 
-    public Input<AzureSkuArgs> getSku() {
+    public Output<AzureSkuArgs> getSku() {
         return this.sku;
     }
 
@@ -78,10 +78,10 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
@@ -100,21 +100,21 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceUid")
-      private final @Nullable Input<String> workspaceUid;
+      private final @Nullable Output<String> workspaceUid;
 
-    public Input<String> getWorkspaceUid() {
-        return this.workspaceUid == null ? Input.empty() : this.workspaceUid;
+    public Output<String> getWorkspaceUid() {
+        return this.workspaceUid == null ? Output.empty() : this.workspaceUid;
     }
 
     public KustoPoolArgs(
-        @Nullable Input<Either<String,EngineType>> engineType,
-        @Nullable Input<String> kustoPoolName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<AzureSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workspaceName,
-        @Nullable Input<String> workspaceUid) {
+        @Nullable Output<Either<String,EngineType>> engineType,
+        @Nullable Output<String> kustoPoolName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<AzureSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workspaceName,
+        @Nullable Output<String> workspaceUid) {
         this.engineType = engineType;
         this.kustoPoolName = kustoPoolName;
         this.location = location;
@@ -126,14 +126,14 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KustoPoolArgs() {
-        this.engineType = Input.empty();
-        this.kustoPoolName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
-        this.workspaceUid = Input.empty();
+        this.engineType = Output.empty();
+        this.kustoPoolName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
+        this.workspaceUid = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EngineType>> engineType;
-        private @Nullable Input<String> kustoPoolName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<AzureSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workspaceName;
-        private @Nullable Input<String> workspaceUid;
+        private @Nullable Output<Either<String,EngineType>> engineType;
+        private @Nullable Output<String> kustoPoolName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<AzureSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workspaceName;
+        private @Nullable Output<String> workspaceUid;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceUid = defaults.workspaceUid;
         }
 
-        public Builder engineType(@Nullable Input<Either<String,EngineType>> engineType) {
+        public Builder engineType(@Nullable Output<Either<String,EngineType>> engineType) {
             this.engineType = engineType;
             return this;
         }
 
         public Builder engineType(@Nullable Either<String,EngineType> engineType) {
-            this.engineType = Input.ofNullable(engineType);
+            this.engineType = Output.ofNullable(engineType);
             return this;
         }
 
-        public Builder kustoPoolName(@Nullable Input<String> kustoPoolName) {
+        public Builder kustoPoolName(@Nullable Output<String> kustoPoolName) {
             this.kustoPoolName = kustoPoolName;
             return this;
         }
 
         public Builder kustoPoolName(@Nullable String kustoPoolName) {
-            this.kustoPoolName = Input.ofNullable(kustoPoolName);
+            this.kustoPoolName = Output.ofNullable(kustoPoolName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<AzureSkuArgs> sku) {
+        public Builder sku(Output<AzureSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(AzureSkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
 
-        public Builder workspaceUid(@Nullable Input<String> workspaceUid) {
+        public Builder workspaceUid(@Nullable Output<String> workspaceUid) {
             this.workspaceUid = workspaceUid;
             return this;
         }
 
         public Builder workspaceUid(@Nullable String workspaceUid) {
-            this.workspaceUid = Input.ofNullable(workspaceUid);
+            this.workspaceUid = Output.ofNullable(workspaceUid);
             return this;
         }
         public KustoPoolArgs build() {

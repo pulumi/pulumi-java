@@ -3,7 +3,7 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,10 +22,10 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="max", required=true)
-      private final Input<Integer> max;
+      private final Output<Integer> max;
 
-    public Input<Integer> getMax() {
+    public Output<Integer> getMax() {
         return this.max;
     }
 
@@ -44,9 +44,9 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="min", required=true)
-      private final Input<Integer> min;
+      private final Output<Integer> min;
 
-    public Input<Integer> getMin() {
+    public Output<Integer> getMin() {
         return this.min;
     }
 
@@ -55,17 +55,17 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seed")
-      private final @Nullable Input<String> seed;
+      private final @Nullable Output<String> seed;
 
-    public Input<String> getSeed() {
-        return this.seed == null ? Input.empty() : this.seed;
+    public Output<String> getSeed() {
+        return this.seed == null ? Output.empty() : this.seed;
     }
 
     public RandomIntegerArgs(
-        @Nullable Input<Map<String,Object>> keepers,
-        Input<Integer> max,
-        Input<Integer> min,
-        @Nullable Input<String> seed) {
+        @Nullable Output<Map<String,Object>> keepers,
+        Output<Integer> max,
+        Output<Integer> min,
+        @Nullable Output<String> seed) {
         this.keepers = keepers;
         this.max = Objects.requireNonNull(max, "expected parameter 'max' to be non-null");
         this.min = Objects.requireNonNull(min, "expected parameter 'min' to be non-null");
@@ -73,10 +73,10 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomIntegerArgs() {
-        this.keepers = Input.empty();
-        this.max = Input.empty();
-        this.min = Input.empty();
-        this.seed = Input.empty();
+        this.keepers = Output.empty();
+        this.max = Output.empty();
+        this.min = Output.empty();
+        this.seed = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> keepers;
-        private Input<Integer> max;
-        private Input<Integer> min;
-        private @Nullable Input<String> seed;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private Output<Integer> max;
+        private Output<Integer> min;
+        private @Nullable Output<String> seed;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.seed = defaults.seed;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder max(Input<Integer> max) {
+        public Builder max(Output<Integer> max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
         public Builder max(Integer max) {
-            this.max = Input.of(Objects.requireNonNull(max));
+            this.max = Output.of(Objects.requireNonNull(max));
             return this;
         }
 
-        public Builder min(Input<Integer> min) {
+        public Builder min(Output<Integer> min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
         public Builder min(Integer min) {
-            this.min = Input.of(Objects.requireNonNull(min));
+            this.min = Output.of(Objects.requireNonNull(min));
             return this;
         }
 
-        public Builder seed(@Nullable Input<String> seed) {
+        public Builder seed(@Nullable Output<String> seed) {
             this.seed = seed;
             return this;
         }
 
         public Builder seed(@Nullable String seed) {
-            this.seed = Input.ofNullable(seed);
+            this.seed = Output.ofNullable(seed);
             return this;
         }
         public RandomIntegerArgs build() {

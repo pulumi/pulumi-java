@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.enums.TypePrimitive;
 import io.pulumi.googlenative.healthcare_v1.inputs.FieldArgs;
@@ -26,10 +26,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<FieldArgs>> fields;
+      private final @Nullable Output<List<FieldArgs>> fields;
 
-    public Input<List<FieldArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<FieldArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primitive")
-      private final @Nullable Input<TypePrimitive> primitive;
+      private final @Nullable Output<TypePrimitive> primitive;
 
-    public Input<TypePrimitive> getPrimitive() {
-        return this.primitive == null ? Input.empty() : this.primitive;
+    public Output<TypePrimitive> getPrimitive() {
+        return this.primitive == null ? Output.empty() : this.primitive;
     }
 
     public TypeArgs(
-        @Nullable Input<List<FieldArgs>> fields,
-        @Nullable Input<String> name,
-        @Nullable Input<TypePrimitive> primitive) {
+        @Nullable Output<List<FieldArgs>> fields,
+        @Nullable Output<String> name,
+        @Nullable Output<TypePrimitive> primitive) {
         this.fields = fields;
         this.name = name;
         this.primitive = primitive;
     }
 
     private TypeArgs() {
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.primitive = Input.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.primitive = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FieldArgs>> fields;
-        private @Nullable Input<String> name;
-        private @Nullable Input<TypePrimitive> primitive;
+        private @Nullable Output<List<FieldArgs>> fields;
+        private @Nullable Output<String> name;
+        private @Nullable Output<TypePrimitive> primitive;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.primitive = defaults.primitive;
         }
 
-        public Builder fields(@Nullable Input<List<FieldArgs>> fields) {
+        public Builder fields(@Nullable Output<List<FieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<FieldArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder primitive(@Nullable Input<TypePrimitive> primitive) {
+        public Builder primitive(@Nullable Output<TypePrimitive> primitive) {
             this.primitive = primitive;
             return this;
         }
 
         public Builder primitive(@Nullable TypePrimitive primitive) {
-            this.primitive = Input.ofNullable(primitive);
+            this.primitive = Output.ofNullable(primitive);
             return this;
         }
         public TypeArgs build() {

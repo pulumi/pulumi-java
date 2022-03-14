@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,70 +16,70 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
     public static final EC2FleetPlacementArgs Empty = new EC2FleetPlacementArgs();
 
     @InputImport(name="affinity")
-      private final @Nullable Input<String> affinity;
+      private final @Nullable Output<String> affinity;
 
-    public Input<String> getAffinity() {
-        return this.affinity == null ? Input.empty() : this.affinity;
+    public Output<String> getAffinity() {
+        return this.affinity == null ? Output.empty() : this.affinity;
     }
 
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     @InputImport(name="hostId")
-      private final @Nullable Input<String> hostId;
+      private final @Nullable Output<String> hostId;
 
-    public Input<String> getHostId() {
-        return this.hostId == null ? Input.empty() : this.hostId;
+    public Output<String> getHostId() {
+        return this.hostId == null ? Output.empty() : this.hostId;
     }
 
     @InputImport(name="hostResourceGroupArn")
-      private final @Nullable Input<String> hostResourceGroupArn;
+      private final @Nullable Output<String> hostResourceGroupArn;
 
-    public Input<String> getHostResourceGroupArn() {
-        return this.hostResourceGroupArn == null ? Input.empty() : this.hostResourceGroupArn;
+    public Output<String> getHostResourceGroupArn() {
+        return this.hostResourceGroupArn == null ? Output.empty() : this.hostResourceGroupArn;
     }
 
     @InputImport(name="partitionNumber")
-      private final @Nullable Input<Integer> partitionNumber;
+      private final @Nullable Output<Integer> partitionNumber;
 
-    public Input<Integer> getPartitionNumber() {
-        return this.partitionNumber == null ? Input.empty() : this.partitionNumber;
+    public Output<Integer> getPartitionNumber() {
+        return this.partitionNumber == null ? Output.empty() : this.partitionNumber;
     }
 
     @InputImport(name="spreadDomain")
-      private final @Nullable Input<String> spreadDomain;
+      private final @Nullable Output<String> spreadDomain;
 
-    public Input<String> getSpreadDomain() {
-        return this.spreadDomain == null ? Input.empty() : this.spreadDomain;
+    public Output<String> getSpreadDomain() {
+        return this.spreadDomain == null ? Output.empty() : this.spreadDomain;
     }
 
     @InputImport(name="tenancy")
-      private final @Nullable Input<String> tenancy;
+      private final @Nullable Output<String> tenancy;
 
-    public Input<String> getTenancy() {
-        return this.tenancy == null ? Input.empty() : this.tenancy;
+    public Output<String> getTenancy() {
+        return this.tenancy == null ? Output.empty() : this.tenancy;
     }
 
     public EC2FleetPlacementArgs(
-        @Nullable Input<String> affinity,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> groupName,
-        @Nullable Input<String> hostId,
-        @Nullable Input<String> hostResourceGroupArn,
-        @Nullable Input<Integer> partitionNumber,
-        @Nullable Input<String> spreadDomain,
-        @Nullable Input<String> tenancy) {
+        @Nullable Output<String> affinity,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> groupName,
+        @Nullable Output<String> hostId,
+        @Nullable Output<String> hostResourceGroupArn,
+        @Nullable Output<Integer> partitionNumber,
+        @Nullable Output<String> spreadDomain,
+        @Nullable Output<String> tenancy) {
         this.affinity = affinity;
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;
@@ -91,14 +91,14 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EC2FleetPlacementArgs() {
-        this.affinity = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.groupName = Input.empty();
-        this.hostId = Input.empty();
-        this.hostResourceGroupArn = Input.empty();
-        this.partitionNumber = Input.empty();
-        this.spreadDomain = Input.empty();
-        this.tenancy = Input.empty();
+        this.affinity = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.groupName = Output.empty();
+        this.hostId = Output.empty();
+        this.hostResourceGroupArn = Output.empty();
+        this.partitionNumber = Output.empty();
+        this.spreadDomain = Output.empty();
+        this.tenancy = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,14 +110,14 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> affinity;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<String> hostId;
-        private @Nullable Input<String> hostResourceGroupArn;
-        private @Nullable Input<Integer> partitionNumber;
-        private @Nullable Input<String> spreadDomain;
-        private @Nullable Input<String> tenancy;
+        private @Nullable Output<String> affinity;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<String> hostId;
+        private @Nullable Output<String> hostResourceGroupArn;
+        private @Nullable Output<Integer> partitionNumber;
+        private @Nullable Output<String> spreadDomain;
+        private @Nullable Output<String> tenancy;
 
         public Builder() {
     	      // Empty
@@ -135,83 +135,83 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder affinity(@Nullable Input<String> affinity) {
+        public Builder affinity(@Nullable Output<String> affinity) {
             this.affinity = affinity;
             return this;
         }
 
         public Builder affinity(@Nullable String affinity) {
-            this.affinity = Input.ofNullable(affinity);
+            this.affinity = Output.ofNullable(affinity);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder hostId(@Nullable Input<String> hostId) {
+        public Builder hostId(@Nullable Output<String> hostId) {
             this.hostId = hostId;
             return this;
         }
 
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = Input.ofNullable(hostId);
+            this.hostId = Output.ofNullable(hostId);
             return this;
         }
 
-        public Builder hostResourceGroupArn(@Nullable Input<String> hostResourceGroupArn) {
+        public Builder hostResourceGroupArn(@Nullable Output<String> hostResourceGroupArn) {
             this.hostResourceGroupArn = hostResourceGroupArn;
             return this;
         }
 
         public Builder hostResourceGroupArn(@Nullable String hostResourceGroupArn) {
-            this.hostResourceGroupArn = Input.ofNullable(hostResourceGroupArn);
+            this.hostResourceGroupArn = Output.ofNullable(hostResourceGroupArn);
             return this;
         }
 
-        public Builder partitionNumber(@Nullable Input<Integer> partitionNumber) {
+        public Builder partitionNumber(@Nullable Output<Integer> partitionNumber) {
             this.partitionNumber = partitionNumber;
             return this;
         }
 
         public Builder partitionNumber(@Nullable Integer partitionNumber) {
-            this.partitionNumber = Input.ofNullable(partitionNumber);
+            this.partitionNumber = Output.ofNullable(partitionNumber);
             return this;
         }
 
-        public Builder spreadDomain(@Nullable Input<String> spreadDomain) {
+        public Builder spreadDomain(@Nullable Output<String> spreadDomain) {
             this.spreadDomain = spreadDomain;
             return this;
         }
 
         public Builder spreadDomain(@Nullable String spreadDomain) {
-            this.spreadDomain = Input.ofNullable(spreadDomain);
+            this.spreadDomain = Output.ofNullable(spreadDomain);
             return this;
         }
 
-        public Builder tenancy(@Nullable Input<String> tenancy) {
+        public Builder tenancy(@Nullable Output<String> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
         public Builder tenancy(@Nullable String tenancy) {
-            this.tenancy = Input.ofNullable(tenancy);
+            this.tenancy = Output.ofNullable(tenancy);
             return this;
         }
         public EC2FleetPlacementArgs build() {

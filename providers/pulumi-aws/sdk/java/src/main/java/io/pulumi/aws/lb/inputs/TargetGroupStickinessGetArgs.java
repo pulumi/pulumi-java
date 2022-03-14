@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cookieDuration")
-      private final @Nullable Input<Integer> cookieDuration;
+      private final @Nullable Output<Integer> cookieDuration;
 
-    public Input<Integer> getCookieDuration() {
-        return this.cookieDuration == null ? Input.empty() : this.cookieDuration;
+    public Output<Integer> getCookieDuration() {
+        return this.cookieDuration == null ? Output.empty() : this.cookieDuration;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cookieName")
-      private final @Nullable Input<String> cookieName;
+      private final @Nullable Output<String> cookieName;
 
-    public Input<String> getCookieName() {
-        return this.cookieName == null ? Input.empty() : this.cookieName;
+    public Output<String> getCookieName() {
+        return this.cookieName == null ? Output.empty() : this.cookieName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TargetGroupStickinessGetArgs(
-        @Nullable Input<Integer> cookieDuration,
-        @Nullable Input<String> cookieName,
-        @Nullable Input<Boolean> enabled,
-        Input<String> type) {
+        @Nullable Output<Integer> cookieDuration,
+        @Nullable Output<String> cookieName,
+        @Nullable Output<Boolean> enabled,
+        Output<String> type) {
         this.cookieDuration = cookieDuration;
         this.cookieName = cookieName;
         this.enabled = enabled;
@@ -72,10 +72,10 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     }
 
     private TargetGroupStickinessGetArgs() {
-        this.cookieDuration = Input.empty();
-        this.cookieName = Input.empty();
-        this.enabled = Input.empty();
-        this.type = Input.empty();
+        this.cookieDuration = Output.empty();
+        this.cookieName = Output.empty();
+        this.enabled = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cookieDuration;
-        private @Nullable Input<String> cookieName;
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> type;
+        private @Nullable Output<Integer> cookieDuration;
+        private @Nullable Output<String> cookieName;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder cookieDuration(@Nullable Input<Integer> cookieDuration) {
+        public Builder cookieDuration(@Nullable Output<Integer> cookieDuration) {
             this.cookieDuration = cookieDuration;
             return this;
         }
 
         public Builder cookieDuration(@Nullable Integer cookieDuration) {
-            this.cookieDuration = Input.ofNullable(cookieDuration);
+            this.cookieDuration = Output.ofNullable(cookieDuration);
             return this;
         }
 
-        public Builder cookieName(@Nullable Input<String> cookieName) {
+        public Builder cookieName(@Nullable Output<String> cookieName) {
             this.cookieName = cookieName;
             return this;
         }
 
         public Builder cookieName(@Nullable String cookieName) {
-            this.cookieName = Input.ofNullable(cookieName);
+            this.cookieName = Output.ofNullable(cookieName);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TargetGroupStickinessGetArgs build() {

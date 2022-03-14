@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.logging;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,14 +170,14 @@ public class BillingAccountBucketConfig extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public BillingAccountBucketConfig(String name, BillingAccountBucketConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, args == null ? BillingAccountBucketConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, args == null ? BillingAccountBucketConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BillingAccountBucketConfig(String name, Input<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BillingAccountBucketConfig(String name, Output<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -194,7 +193,7 @@ public class BillingAccountBucketConfig extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BillingAccountBucketConfig get(String name, Input<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BillingAccountBucketConfig get(String name, Output<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BillingAccountBucketConfig(name, id, state, options);
     }
 }

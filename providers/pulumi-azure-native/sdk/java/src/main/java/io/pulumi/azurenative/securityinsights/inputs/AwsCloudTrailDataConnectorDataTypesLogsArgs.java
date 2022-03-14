@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.enums.DataTypeState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class AwsCloudTrailDataConnectorDataTypesLogsArgs extends io.pulumi
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,DataTypeState>> state;
+      private final @Nullable Output<Either<String,DataTypeState>> state;
 
-    public Input<Either<String,DataTypeState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,DataTypeState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
-    public AwsCloudTrailDataConnectorDataTypesLogsArgs(@Nullable Input<Either<String,DataTypeState>> state) {
+    public AwsCloudTrailDataConnectorDataTypesLogsArgs(@Nullable Output<Either<String,DataTypeState>> state) {
         this.state = state;
     }
 
     private AwsCloudTrailDataConnectorDataTypesLogsArgs() {
-        this.state = Input.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class AwsCloudTrailDataConnectorDataTypesLogsArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DataTypeState>> state;
+        private @Nullable Output<Either<String,DataTypeState>> state;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class AwsCloudTrailDataConnectorDataTypesLogsArgs extends io.pulumi
     	      this.state = defaults.state;
         }
 
-        public Builder state(@Nullable Input<Either<String,DataTypeState>> state) {
+        public Builder state(@Nullable Output<Either<String,DataTypeState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,DataTypeState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public AwsCloudTrailDataConnectorDataTypesLogsArgs build() {

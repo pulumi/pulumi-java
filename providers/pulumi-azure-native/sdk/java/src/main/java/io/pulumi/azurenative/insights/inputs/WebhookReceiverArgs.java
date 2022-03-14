@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifierUri")
-      private final @Nullable Input<String> identifierUri;
+      private final @Nullable Output<String> identifierUri;
 
-    public Input<String> getIdentifierUri() {
-        return this.identifierUri == null ? Input.empty() : this.identifierUri;
+    public Output<String> getIdentifierUri() {
+        return this.identifierUri == null ? Output.empty() : this.identifierUri;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,10 +46,10 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceUri", required=true)
-      private final Input<String> serviceUri;
+      private final Output<String> serviceUri;
 
-    public Input<String> getServiceUri() {
+    public Output<String> getServiceUri() {
         return this.serviceUri;
     }
 
@@ -68,10 +68,10 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="useAadAuth")
-      private final @Nullable Input<Boolean> useAadAuth;
+      private final @Nullable Output<Boolean> useAadAuth;
 
-    public Input<Boolean> getUseAadAuth() {
-        return this.useAadAuth == null ? Input.empty() : this.useAadAuth;
+    public Output<Boolean> getUseAadAuth() {
+        return this.useAadAuth == null ? Output.empty() : this.useAadAuth;
     }
 
     /**
@@ -90,37 +90,37 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-      private final @Nullable Input<Boolean> useCommonAlertSchema;
+      private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Input<Boolean> getUseCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Input.empty() : this.useCommonAlertSchema;
+    public Output<Boolean> getUseCommonAlertSchema() {
+        return this.useCommonAlertSchema == null ? Output.empty() : this.useCommonAlertSchema;
     }
 
     public WebhookReceiverArgs(
-        @Nullable Input<String> identifierUri,
-        Input<String> name,
-        @Nullable Input<String> objectId,
-        Input<String> serviceUri,
-        @Nullable Input<String> tenantId,
-        @Nullable Input<Boolean> useAadAuth,
-        @Nullable Input<Boolean> useCommonAlertSchema) {
+        @Nullable Output<String> identifierUri,
+        Output<String> name,
+        @Nullable Output<String> objectId,
+        Output<String> serviceUri,
+        @Nullable Output<String> tenantId,
+        @Nullable Output<Boolean> useAadAuth,
+        @Nullable Output<Boolean> useCommonAlertSchema) {
         this.identifierUri = identifierUri;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.objectId = objectId;
         this.serviceUri = Objects.requireNonNull(serviceUri, "expected parameter 'serviceUri' to be non-null");
         this.tenantId = tenantId;
-        this.useAadAuth = useAadAuth == null ? Input.ofNullable(false) : useAadAuth;
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Input.ofNullable(false) : useCommonAlertSchema;
+        this.useAadAuth = useAadAuth == null ? Output.ofNullable(false) : useAadAuth;
+        this.useCommonAlertSchema = useCommonAlertSchema == null ? Output.ofNullable(false) : useCommonAlertSchema;
     }
 
     private WebhookReceiverArgs() {
-        this.identifierUri = Input.empty();
-        this.name = Input.empty();
-        this.objectId = Input.empty();
-        this.serviceUri = Input.empty();
-        this.tenantId = Input.empty();
-        this.useAadAuth = Input.empty();
-        this.useCommonAlertSchema = Input.empty();
+        this.identifierUri = Output.empty();
+        this.name = Output.empty();
+        this.objectId = Output.empty();
+        this.serviceUri = Output.empty();
+        this.tenantId = Output.empty();
+        this.useAadAuth = Output.empty();
+        this.useCommonAlertSchema = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identifierUri;
-        private Input<String> name;
-        private @Nullable Input<String> objectId;
-        private Input<String> serviceUri;
-        private @Nullable Input<String> tenantId;
-        private @Nullable Input<Boolean> useAadAuth;
-        private @Nullable Input<Boolean> useCommonAlertSchema;
+        private @Nullable Output<String> identifierUri;
+        private Output<String> name;
+        private @Nullable Output<String> objectId;
+        private Output<String> serviceUri;
+        private @Nullable Output<String> tenantId;
+        private @Nullable Output<Boolean> useAadAuth;
+        private @Nullable Output<Boolean> useCommonAlertSchema;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder identifierUri(@Nullable Input<String> identifierUri) {
+        public Builder identifierUri(@Nullable Output<String> identifierUri) {
             this.identifierUri = identifierUri;
             return this;
         }
 
         public Builder identifierUri(@Nullable String identifierUri) {
-            this.identifierUri = Input.ofNullable(identifierUri);
+            this.identifierUri = Output.ofNullable(identifierUri);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
 
-        public Builder serviceUri(Input<String> serviceUri) {
+        public Builder serviceUri(Output<String> serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
 
         public Builder serviceUri(String serviceUri) {
-            this.serviceUri = Input.of(Objects.requireNonNull(serviceUri));
+            this.serviceUri = Output.of(Objects.requireNonNull(serviceUri));
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder useAadAuth(@Nullable Input<Boolean> useAadAuth) {
+        public Builder useAadAuth(@Nullable Output<Boolean> useAadAuth) {
             this.useAadAuth = useAadAuth;
             return this;
         }
 
         public Builder useAadAuth(@Nullable Boolean useAadAuth) {
-            this.useAadAuth = Input.ofNullable(useAadAuth);
+            this.useAadAuth = Output.ofNullable(useAadAuth);
             return this;
         }
 
-        public Builder useCommonAlertSchema(@Nullable Input<Boolean> useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Input.ofNullable(useCommonAlertSchema);
+            this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
         }
         public WebhookReceiverArgs build() {

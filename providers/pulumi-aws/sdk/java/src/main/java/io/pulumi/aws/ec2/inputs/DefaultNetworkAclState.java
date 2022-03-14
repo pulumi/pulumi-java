@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultNetworkAclId")
-      private final @Nullable Input<String> defaultNetworkAclId;
+      private final @Nullable Output<String> defaultNetworkAclId;
 
-    public Input<String> getDefaultNetworkAclId() {
-        return this.defaultNetworkAclId == null ? Input.empty() : this.defaultNetworkAclId;
+    public Output<String> getDefaultNetworkAclId() {
+        return this.defaultNetworkAclId == null ? Output.empty() : this.defaultNetworkAclId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="egress")
-      private final @Nullable Input<List<DefaultNetworkAclEgressGetArgs>> egress;
+      private final @Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress;
 
-    public Input<List<DefaultNetworkAclEgressGetArgs>> getEgress() {
-        return this.egress == null ? Input.empty() : this.egress;
+    public Output<List<DefaultNetworkAclEgressGetArgs>> getEgress() {
+        return this.egress == null ? Output.empty() : this.egress;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ingress")
-      private final @Nullable Input<List<DefaultNetworkAclIngressGetArgs>> ingress;
+      private final @Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress;
 
-    public Input<List<DefaultNetworkAclIngressGetArgs>> getIngress() {
-        return this.ingress == null ? Input.empty() : this.ingress;
+    public Output<List<DefaultNetworkAclIngressGetArgs>> getIngress() {
+        return this.ingress == null ? Output.empty() : this.ingress;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public DefaultNetworkAclState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> defaultNetworkAclId,
-        @Nullable Input<List<DefaultNetworkAclEgressGetArgs>> egress,
-        @Nullable Input<List<DefaultNetworkAclIngressGetArgs>> ingress,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> defaultNetworkAclId,
+        @Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress,
+        @Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId) {
         this.arn = arn;
         this.defaultNetworkAclId = defaultNetworkAclId;
         this.egress = egress;
@@ -139,15 +139,15 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
     }
 
     private DefaultNetworkAclState() {
-        this.arn = Input.empty();
-        this.defaultNetworkAclId = Input.empty();
-        this.egress = Input.empty();
-        this.ingress = Input.empty();
-        this.ownerId = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
+        this.arn = Output.empty();
+        this.defaultNetworkAclId = Output.empty();
+        this.egress = Output.empty();
+        this.ingress = Output.empty();
+        this.ownerId = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> defaultNetworkAclId;
-        private @Nullable Input<List<DefaultNetworkAclEgressGetArgs>> egress;
-        private @Nullable Input<List<DefaultNetworkAclIngressGetArgs>> ingress;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> defaultNetworkAclId;
+        private @Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress;
+        private @Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder defaultNetworkAclId(@Nullable Input<String> defaultNetworkAclId) {
+        public Builder defaultNetworkAclId(@Nullable Output<String> defaultNetworkAclId) {
             this.defaultNetworkAclId = defaultNetworkAclId;
             return this;
         }
 
         public Builder defaultNetworkAclId(@Nullable String defaultNetworkAclId) {
-            this.defaultNetworkAclId = Input.ofNullable(defaultNetworkAclId);
+            this.defaultNetworkAclId = Output.ofNullable(defaultNetworkAclId);
             return this;
         }
 
-        public Builder egress(@Nullable Input<List<DefaultNetworkAclEgressGetArgs>> egress) {
+        public Builder egress(@Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
         public Builder egress(@Nullable List<DefaultNetworkAclEgressGetArgs> egress) {
-            this.egress = Input.ofNullable(egress);
+            this.egress = Output.ofNullable(egress);
             return this;
         }
 
-        public Builder ingress(@Nullable Input<List<DefaultNetworkAclIngressGetArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
         public Builder ingress(@Nullable List<DefaultNetworkAclIngressGetArgs> ingress) {
-            this.ingress = Input.ofNullable(ingress);
+            this.ingress = Output.ofNullable(ingress);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public DefaultNetworkAclState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.inputs.PlatformImagePurchasePlanArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="offer")
-      private final @Nullable Input<String> offer;
+      private final @Nullable Output<String> offer;
 
-    public Input<String> getOffer() {
-        return this.offer == null ? Input.empty() : this.offer;
+    public Output<String> getOffer() {
+        return this.offer == null ? Output.empty() : this.offer;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="planInfo")
-      private final @Nullable Input<PlatformImagePurchasePlanArgs> planInfo;
+      private final @Nullable Output<PlatformImagePurchasePlanArgs> planInfo;
 
-    public Input<PlatformImagePurchasePlanArgs> getPlanInfo() {
-        return this.planInfo == null ? Input.empty() : this.planInfo;
+    public Output<PlatformImagePurchasePlanArgs> getPlanInfo() {
+        return this.planInfo == null ? Output.empty() : this.planInfo;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -80,19 +80,19 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ImageTemplatePlatformImageSourceArgs(
-        @Nullable Input<String> offer,
-        @Nullable Input<PlatformImagePurchasePlanArgs> planInfo,
-        @Nullable Input<String> publisher,
-        @Nullable Input<String> sku,
-        Input<String> type,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> offer,
+        @Nullable Output<PlatformImagePurchasePlanArgs> planInfo,
+        @Nullable Output<String> publisher,
+        @Nullable Output<String> sku,
+        Output<String> type,
+        @Nullable Output<String> version) {
         this.offer = offer;
         this.planInfo = planInfo;
         this.publisher = publisher;
@@ -102,12 +102,12 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     }
 
     private ImageTemplatePlatformImageSourceArgs() {
-        this.offer = Input.empty();
-        this.planInfo = Input.empty();
-        this.publisher = Input.empty();
-        this.sku = Input.empty();
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.offer = Output.empty();
+        this.planInfo = Output.empty();
+        this.publisher = Output.empty();
+        this.sku = Output.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> offer;
-        private @Nullable Input<PlatformImagePurchasePlanArgs> planInfo;
-        private @Nullable Input<String> publisher;
-        private @Nullable Input<String> sku;
-        private Input<String> type;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> offer;
+        private @Nullable Output<PlatformImagePurchasePlanArgs> planInfo;
+        private @Nullable Output<String> publisher;
+        private @Nullable Output<String> sku;
+        private Output<String> type;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     	      this.version = defaults.version;
         }
 
-        public Builder offer(@Nullable Input<String> offer) {
+        public Builder offer(@Nullable Output<String> offer) {
             this.offer = offer;
             return this;
         }
 
         public Builder offer(@Nullable String offer) {
-            this.offer = Input.ofNullable(offer);
+            this.offer = Output.ofNullable(offer);
             return this;
         }
 
-        public Builder planInfo(@Nullable Input<PlatformImagePurchasePlanArgs> planInfo) {
+        public Builder planInfo(@Nullable Output<PlatformImagePurchasePlanArgs> planInfo) {
             this.planInfo = planInfo;
             return this;
         }
 
         public Builder planInfo(@Nullable PlatformImagePurchasePlanArgs planInfo) {
-            this.planInfo = Input.ofNullable(planInfo);
+            this.planInfo = Output.ofNullable(planInfo);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ImageTemplatePlatformImageSourceArgs build() {

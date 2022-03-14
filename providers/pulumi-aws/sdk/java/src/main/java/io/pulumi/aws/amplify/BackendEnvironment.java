@@ -6,7 +6,6 @@ package io.pulumi.aws.amplify;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.amplify.BackendEnvironmentArgs;
 import io.pulumi.aws.amplify.inputs.BackendEnvironmentState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -138,14 +137,14 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendEnvironment(String name, BackendEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amplify/backendEnvironment:BackendEnvironment", name, args == null ? BackendEnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:amplify/backendEnvironment:BackendEnvironment", name, args == null ? BackendEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BackendEnvironment(String name, Input<String> id, @Nullable BackendEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BackendEnvironment(String name, Output<String> id, @Nullable BackendEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:amplify/backendEnvironment:BackendEnvironment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -161,7 +160,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BackendEnvironment get(String name, Input<String> id, @Nullable BackendEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BackendEnvironment get(String name, Output<String> id, @Nullable BackendEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackendEnvironment(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.PackageDesiredState;
 import io.pulumi.googlenative.osconfig_v1beta.enums.PackageManager;
@@ -25,10 +25,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredState")
-      private final @Nullable Input<PackageDesiredState> desiredState;
+      private final @Nullable Output<PackageDesiredState> desiredState;
 
-    public Input<PackageDesiredState> getDesiredState() {
-        return this.desiredState == null ? Input.empty() : this.desiredState;
+    public Output<PackageDesiredState> getDesiredState() {
+        return this.desiredState == null ? Output.empty() : this.desiredState;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manager")
-      private final @Nullable Input<PackageManager> manager;
+      private final @Nullable Output<PackageManager> manager;
 
-    public Input<PackageManager> getManager() {
-        return this.manager == null ? Input.empty() : this.manager;
+    public Output<PackageManager> getManager() {
+        return this.manager == null ? Output.empty() : this.manager;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PackageArgs(
-        @Nullable Input<PackageDesiredState> desiredState,
-        @Nullable Input<PackageManager> manager,
-        Input<String> name) {
+        @Nullable Output<PackageDesiredState> desiredState,
+        @Nullable Output<PackageManager> manager,
+        Output<String> name) {
         this.desiredState = desiredState;
         this.manager = manager;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private PackageArgs() {
-        this.desiredState = Input.empty();
-        this.manager = Input.empty();
-        this.name = Input.empty();
+        this.desiredState = Output.empty();
+        this.manager = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PackageDesiredState> desiredState;
-        private @Nullable Input<PackageManager> manager;
-        private Input<String> name;
+        private @Nullable Output<PackageDesiredState> desiredState;
+        private @Nullable Output<PackageManager> manager;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder desiredState(@Nullable Input<PackageDesiredState> desiredState) {
+        public Builder desiredState(@Nullable Output<PackageDesiredState> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
         public Builder desiredState(@Nullable PackageDesiredState desiredState) {
-            this.desiredState = Input.ofNullable(desiredState);
+            this.desiredState = Output.ofNullable(desiredState);
             return this;
         }
 
-        public Builder manager(@Nullable Input<PackageManager> manager) {
+        public Builder manager(@Nullable Output<PackageManager> manager) {
             this.manager = manager;
             return this;
         }
 
         public Builder manager(@Nullable PackageManager manager) {
-            this.manager = Input.ofNullable(manager);
+            this.manager = Output.ofNullable(manager);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PackageArgs build() {

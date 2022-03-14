@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.guardduty;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activate", required=true)
-      private final Input<Boolean> activate;
+      private final Output<Boolean> activate;
 
-    public Input<Boolean> getActivate() {
+    public Output<Boolean> getActivate() {
         return this.activate;
     }
 
@@ -32,9 +32,9 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorId", required=true)
-      private final Input<String> detectorId;
+      private final Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
+    public Output<String> getDetectorId() {
         return this.detectorId;
     }
 
@@ -43,9 +43,9 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<String> format;
+      private final Output<String> format;
 
-    public Input<String> getFormat() {
+    public Output<String> getFormat() {
         return this.format;
     }
 
@@ -54,9 +54,9 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -65,10 +65,10 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IPSetArgs(
-        Input<Boolean> activate,
-        Input<String> detectorId,
-        Input<String> format,
-        Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<Boolean> activate,
+        Output<String> detectorId,
+        Output<String> format,
+        Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.activate = Objects.requireNonNull(activate, "expected parameter 'activate' to be non-null");
         this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
         this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
@@ -98,12 +98,12 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPSetArgs() {
-        this.activate = Input.empty();
-        this.detectorId = Input.empty();
-        this.format = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.activate = Output.empty();
+        this.detectorId = Output.empty();
+        this.format = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> activate;
-        private Input<String> detectorId;
-        private Input<String> format;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<Boolean> activate;
+        private Output<String> detectorId;
+        private Output<String> format;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder activate(Input<Boolean> activate) {
+        public Builder activate(Output<Boolean> activate) {
             this.activate = Objects.requireNonNull(activate);
             return this;
         }
 
         public Builder activate(Boolean activate) {
-            this.activate = Input.of(Objects.requireNonNull(activate));
+            this.activate = Output.of(Objects.requireNonNull(activate));
             return this;
         }
 
-        public Builder detectorId(Input<String> detectorId) {
+        public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
         public Builder detectorId(String detectorId) {
-            this.detectorId = Input.of(Objects.requireNonNull(detectorId));
+            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder format(Input<String> format) {
+        public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(String format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IPSetArgs build() {

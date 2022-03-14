@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.essentialcontacts;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -30,9 +30,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageTag", required=true)
-      private final Input<String> languageTag;
+      private final Output<String> languageTag;
 
-    public Input<String> getLanguageTag() {
+    public Output<String> getLanguageTag() {
         return this.languageTag;
     }
 
@@ -41,9 +41,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationCategorySubscriptions", required=true)
-      private final Input<List<String>> notificationCategorySubscriptions;
+      private final Output<List<String>> notificationCategorySubscriptions;
 
-    public Input<List<String>> getNotificationCategorySubscriptions() {
+    public Output<List<String>> getNotificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
 
@@ -52,17 +52,17 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
     public ContactArgs(
-        Input<String> email,
-        Input<String> languageTag,
-        Input<List<String>> notificationCategorySubscriptions,
-        Input<String> parent) {
+        Output<String> email,
+        Output<String> languageTag,
+        Output<List<String>> notificationCategorySubscriptions,
+        Output<String> parent) {
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.languageTag = Objects.requireNonNull(languageTag, "expected parameter 'languageTag' to be non-null");
         this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions, "expected parameter 'notificationCategorySubscriptions' to be non-null");
@@ -70,10 +70,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.email = Input.empty();
-        this.languageTag = Input.empty();
-        this.notificationCategorySubscriptions = Input.empty();
-        this.parent = Input.empty();
+        this.email = Output.empty();
+        this.languageTag = Output.empty();
+        this.notificationCategorySubscriptions = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> email;
-        private Input<String> languageTag;
-        private Input<List<String>> notificationCategorySubscriptions;
-        private Input<String> parent;
+        private Output<String> email;
+        private Output<String> languageTag;
+        private Output<List<String>> notificationCategorySubscriptions;
+        private Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder languageTag(Input<String> languageTag) {
+        public Builder languageTag(Output<String> languageTag) {
             this.languageTag = Objects.requireNonNull(languageTag);
             return this;
         }
 
         public Builder languageTag(String languageTag) {
-            this.languageTag = Input.of(Objects.requireNonNull(languageTag));
+            this.languageTag = Output.of(Objects.requireNonNull(languageTag));
             return this;
         }
 
-        public Builder notificationCategorySubscriptions(Input<List<String>> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(Output<List<String>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions);
             return this;
         }
 
         public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Input.of(Objects.requireNonNull(notificationCategorySubscriptions));
+            this.notificationCategorySubscriptions = Output.of(Objects.requireNonNull(notificationCategorySubscriptions));
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
         public ContactArgs build() {

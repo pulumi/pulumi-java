@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.aws.route53.inputs.ResolverEndpointIpAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<String> direction;
+      private final Output<String> direction;
 
-    public Input<String> getDirection() {
+    public Output<String> getDirection() {
         return this.direction;
     }
 
@@ -36,9 +36,9 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddresses", required=true)
-      private final Input<List<ResolverEndpointIpAddressArgs>> ipAddresses;
+      private final Output<List<ResolverEndpointIpAddressArgs>> ipAddresses;
 
-    public Input<List<ResolverEndpointIpAddressArgs>> getIpAddresses() {
+    public Output<List<ResolverEndpointIpAddressArgs>> getIpAddresses() {
         return this.ipAddresses;
     }
 
@@ -47,10 +47,10 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -69,18 +69,18 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResolverEndpointArgs(
-        Input<String> direction,
-        Input<List<ResolverEndpointIpAddressArgs>> ipAddresses,
-        @Nullable Input<String> name,
-        Input<List<String>> securityGroupIds,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> direction,
+        Output<List<ResolverEndpointIpAddressArgs>> ipAddresses,
+        @Nullable Output<String> name,
+        Output<List<String>> securityGroupIds,
+        @Nullable Output<Map<String,String>> tags) {
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.ipAddresses = Objects.requireNonNull(ipAddresses, "expected parameter 'ipAddresses' to be non-null");
         this.name = name;
@@ -89,11 +89,11 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResolverEndpointArgs() {
-        this.direction = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.name = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.tags = Input.empty();
+        this.direction = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.name = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> direction;
-        private Input<List<ResolverEndpointIpAddressArgs>> ipAddresses;
-        private @Nullable Input<String> name;
-        private Input<List<String>> securityGroupIds;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> direction;
+        private Output<List<ResolverEndpointIpAddressArgs>> ipAddresses;
+        private @Nullable Output<String> name;
+        private Output<List<String>> securityGroupIds;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder direction(Input<String> direction) {
+        public Builder direction(Output<String> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(String direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder ipAddresses(Input<List<ResolverEndpointIpAddressArgs>> ipAddresses) {
+        public Builder ipAddresses(Output<List<ResolverEndpointIpAddressArgs>> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
         public Builder ipAddresses(List<ResolverEndpointIpAddressArgs> ipAddresses) {
-            this.ipAddresses = Input.of(Objects.requireNonNull(ipAddresses));
+            this.ipAddresses = Output.of(Objects.requireNonNull(ipAddresses));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResolverEndpointArgs build() {

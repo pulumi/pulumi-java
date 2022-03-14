@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
     public static final OriginEndpointMssEncryptionArgs Empty = new OriginEndpointMssEncryptionArgs();
 
     @InputImport(name="spekeKeyProvider", required=true)
-      private final Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+      private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Input<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public OriginEndpointMssEncryptionArgs(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+    public OriginEndpointMssEncryptionArgs(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
         this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
     }
 
     private OriginEndpointMssEncryptionArgs() {
-        this.spekeKeyProvider = Input.empty();
+        this.spekeKeyProvider = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+        private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder spekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
+            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }
         public OriginEndpointMssEncryptionArgs build() {

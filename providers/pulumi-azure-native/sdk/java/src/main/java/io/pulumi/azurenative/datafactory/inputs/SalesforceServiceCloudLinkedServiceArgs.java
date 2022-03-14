@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<Object> apiVersion;
+      private final @Nullable Output<Object> apiVersion;
 
-    public Input<Object> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<Object> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="environmentUrl")
-      private final @Nullable Input<Object> environmentUrl;
+      private final @Nullable Output<Object> environmentUrl;
 
-    public Input<Object> getEnvironmentUrl() {
-        return this.environmentUrl == null ? Input.empty() : this.environmentUrl;
+    public Output<Object> getEnvironmentUrl() {
+        return this.environmentUrl == null ? Output.empty() : this.environmentUrl;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="extendedProperties")
-      private final @Nullable Input<Object> extendedProperties;
+      private final @Nullable Output<Object> extendedProperties;
 
-    public Input<Object> getExtendedProperties() {
-        return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
+    public Output<Object> getExtendedProperties() {
+        return this.extendedProperties == null ? Output.empty() : this.extendedProperties;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="securityToken")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecurityToken() {
-        return this.securityToken == null ? Input.empty() : this.securityToken;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecurityToken() {
+        return this.securityToken == null ? Output.empty() : this.securityToken;
     }
 
     /**
@@ -142,9 +142,9 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -153,25 +153,25 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<Object> username;
+      private final @Nullable Output<Object> username;
 
-    public Input<Object> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<Object> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public SalesforceServiceCloudLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Object> apiVersion,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> environmentUrl,
-        @Nullable Input<Object> extendedProperties,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken,
-        Input<String> type,
-        @Nullable Input<Object> username) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Object> apiVersion,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> environmentUrl,
+        @Nullable Output<Object> extendedProperties,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken,
+        Output<String> type,
+        @Nullable Output<Object> username) {
         this.annotations = annotations;
         this.apiVersion = apiVersion;
         this.connectVia = connectVia;
@@ -187,18 +187,18 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     }
 
     private SalesforceServiceCloudLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.apiVersion = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.environmentUrl = Input.empty();
-        this.extendedProperties = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.securityToken = Input.empty();
-        this.type = Input.empty();
-        this.username = Input.empty();
+        this.annotations = Output.empty();
+        this.apiVersion = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.environmentUrl = Output.empty();
+        this.extendedProperties = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.securityToken = Output.empty();
+        this.type = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -210,18 +210,18 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Object> apiVersion;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> environmentUrl;
-        private @Nullable Input<Object> extendedProperties;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
-        private Input<String> type;
-        private @Nullable Input<Object> username;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Object> apiVersion;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> environmentUrl;
+        private @Nullable Output<Object> extendedProperties;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
+        private Output<String> type;
+        private @Nullable Output<Object> username;
 
         public Builder() {
     	      // Empty
@@ -243,123 +243,123 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     	      this.username = defaults.username;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder apiVersion(@Nullable Input<Object> apiVersion) {
+        public Builder apiVersion(@Nullable Output<Object> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable Object apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder environmentUrl(@Nullable Input<Object> environmentUrl) {
+        public Builder environmentUrl(@Nullable Output<Object> environmentUrl) {
             this.environmentUrl = environmentUrl;
             return this;
         }
 
         public Builder environmentUrl(@Nullable Object environmentUrl) {
-            this.environmentUrl = Input.ofNullable(environmentUrl);
+            this.environmentUrl = Output.ofNullable(environmentUrl);
             return this;
         }
 
-        public Builder extendedProperties(@Nullable Input<Object> extendedProperties) {
+        public Builder extendedProperties(@Nullable Output<Object> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
         public Builder extendedProperties(@Nullable Object extendedProperties) {
-            this.extendedProperties = Input.ofNullable(extendedProperties);
+            this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder securityToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken) {
+        public Builder securityToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
         public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> securityToken) {
-            this.securityToken = Input.ofNullable(securityToken);
+            this.securityToken = Output.ofNullable(securityToken);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder username(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable Object username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public SalesforceServiceCloudLinkedServiceArgs build() {

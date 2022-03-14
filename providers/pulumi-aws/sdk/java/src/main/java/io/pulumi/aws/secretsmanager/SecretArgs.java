@@ -5,7 +5,7 @@ package io.pulumi.aws.secretsmanager;
 
 import io.pulumi.aws.secretsmanager.inputs.SecretReplicaArgs;
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRulesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceOverwriteReplicaSecret")
-      private final @Nullable Input<Boolean> forceOverwriteReplicaSecret;
+      private final @Nullable Output<Boolean> forceOverwriteReplicaSecret;
 
-    public Input<Boolean> getForceOverwriteReplicaSecret() {
-        return this.forceOverwriteReplicaSecret == null ? Input.empty() : this.forceOverwriteReplicaSecret;
+    public Output<Boolean> getForceOverwriteReplicaSecret() {
+        return this.forceOverwriteReplicaSecret == null ? Output.empty() : this.forceOverwriteReplicaSecret;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryWindowInDays")
-      private final @Nullable Input<Integer> recoveryWindowInDays;
+      private final @Nullable Output<Integer> recoveryWindowInDays;
 
-    public Input<Integer> getRecoveryWindowInDays() {
-        return this.recoveryWindowInDays == null ? Input.empty() : this.recoveryWindowInDays;
+    public Output<Integer> getRecoveryWindowInDays() {
+        return this.recoveryWindowInDays == null ? Output.empty() : this.recoveryWindowInDays;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas")
-      private final @Nullable Input<List<SecretReplicaArgs>> replicas;
+      private final @Nullable Output<List<SecretReplicaArgs>> replicas;
 
-    public Input<List<SecretReplicaArgs>> getReplicas() {
-        return this.replicas == null ? Input.empty() : this.replicas;
+    public Output<List<SecretReplicaArgs>> getReplicas() {
+        return this.replicas == null ? Output.empty() : this.replicas;
     }
 
     /**
@@ -117,11 +117,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     @InputImport(name="rotationLambdaArn")
-      private final @Nullable Input<String> rotationLambdaArn;
+      private final @Nullable Output<String> rotationLambdaArn;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-    public Input<String> getRotationLambdaArn() {
-        return this.rotationLambdaArn == null ? Input.empty() : this.rotationLambdaArn;
+    public Output<String> getRotationLambdaArn() {
+        return this.rotationLambdaArn == null ? Output.empty() : this.rotationLambdaArn;
     }
 
     /**
@@ -133,11 +133,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     @InputImport(name="rotationRules")
-      private final @Nullable Input<SecretRotationRulesArgs> rotationRules;
+      private final @Nullable Output<SecretRotationRulesArgs> rotationRules;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-    public Input<SecretRotationRulesArgs> getRotationRules() {
-        return this.rotationRules == null ? Input.empty() : this.rotationRules;
+    public Output<SecretRotationRulesArgs> getRotationRules() {
+        return this.rotationRules == null ? Output.empty() : this.rotationRules;
     }
 
     /**
@@ -145,24 +145,24 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SecretArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> forceOverwriteReplicaSecret,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> policy,
-        @Nullable Input<Integer> recoveryWindowInDays,
-        @Nullable Input<List<SecretReplicaArgs>> replicas,
-        @Nullable Input<String> rotationLambdaArn,
-        @Nullable Input<SecretRotationRulesArgs> rotationRules,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> forceOverwriteReplicaSecret,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> policy,
+        @Nullable Output<Integer> recoveryWindowInDays,
+        @Nullable Output<List<SecretReplicaArgs>> replicas,
+        @Nullable Output<String> rotationLambdaArn,
+        @Nullable Output<SecretRotationRulesArgs> rotationRules,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.forceOverwriteReplicaSecret = forceOverwriteReplicaSecret;
         this.kmsKeyId = kmsKeyId;
@@ -177,17 +177,17 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.description = Input.empty();
-        this.forceOverwriteReplicaSecret = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.policy = Input.empty();
-        this.recoveryWindowInDays = Input.empty();
-        this.replicas = Input.empty();
-        this.rotationLambdaArn = Input.empty();
-        this.rotationRules = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.forceOverwriteReplicaSecret = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.policy = Output.empty();
+        this.recoveryWindowInDays = Output.empty();
+        this.replicas = Output.empty();
+        this.rotationLambdaArn = Output.empty();
+        this.rotationRules = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,17 +199,17 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> forceOverwriteReplicaSecret;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<Integer> recoveryWindowInDays;
-        private @Nullable Input<List<SecretReplicaArgs>> replicas;
-        private @Nullable Input<String> rotationLambdaArn;
-        private @Nullable Input<SecretRotationRulesArgs> rotationRules;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> forceOverwriteReplicaSecret;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<Integer> recoveryWindowInDays;
+        private @Nullable Output<List<SecretReplicaArgs>> replicas;
+        private @Nullable Output<String> rotationLambdaArn;
+        private @Nullable Output<SecretRotationRulesArgs> rotationRules;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -230,113 +230,113 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder forceOverwriteReplicaSecret(@Nullable Input<Boolean> forceOverwriteReplicaSecret) {
+        public Builder forceOverwriteReplicaSecret(@Nullable Output<Boolean> forceOverwriteReplicaSecret) {
             this.forceOverwriteReplicaSecret = forceOverwriteReplicaSecret;
             return this;
         }
 
         public Builder forceOverwriteReplicaSecret(@Nullable Boolean forceOverwriteReplicaSecret) {
-            this.forceOverwriteReplicaSecret = Input.ofNullable(forceOverwriteReplicaSecret);
+            this.forceOverwriteReplicaSecret = Output.ofNullable(forceOverwriteReplicaSecret);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder recoveryWindowInDays(@Nullable Input<Integer> recoveryWindowInDays) {
+        public Builder recoveryWindowInDays(@Nullable Output<Integer> recoveryWindowInDays) {
             this.recoveryWindowInDays = recoveryWindowInDays;
             return this;
         }
 
         public Builder recoveryWindowInDays(@Nullable Integer recoveryWindowInDays) {
-            this.recoveryWindowInDays = Input.ofNullable(recoveryWindowInDays);
+            this.recoveryWindowInDays = Output.ofNullable(recoveryWindowInDays);
             return this;
         }
 
-        public Builder replicas(@Nullable Input<List<SecretReplicaArgs>> replicas) {
+        public Builder replicas(@Nullable Output<List<SecretReplicaArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
 
         public Builder replicas(@Nullable List<SecretReplicaArgs> replicas) {
-            this.replicas = Input.ofNullable(replicas);
+            this.replicas = Output.ofNullable(replicas);
             return this;
         }
 
-        public Builder rotationLambdaArn(@Nullable Input<String> rotationLambdaArn) {
+        public Builder rotationLambdaArn(@Nullable Output<String> rotationLambdaArn) {
             this.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
 
         public Builder rotationLambdaArn(@Nullable String rotationLambdaArn) {
-            this.rotationLambdaArn = Input.ofNullable(rotationLambdaArn);
+            this.rotationLambdaArn = Output.ofNullable(rotationLambdaArn);
             return this;
         }
 
-        public Builder rotationRules(@Nullable Input<SecretRotationRulesArgs> rotationRules) {
+        public Builder rotationRules(@Nullable Output<SecretRotationRulesArgs> rotationRules) {
             this.rotationRules = rotationRules;
             return this;
         }
 
         public Builder rotationRules(@Nullable SecretRotationRulesArgs rotationRules) {
-            this.rotationRules = Input.ofNullable(rotationRules);
+            this.rotationRules = Output.ofNullable(rotationRules);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SecretArgs build() {

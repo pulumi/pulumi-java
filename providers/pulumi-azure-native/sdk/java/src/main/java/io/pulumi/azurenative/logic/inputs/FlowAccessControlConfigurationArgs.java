@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.FlowAccessControlConfigurationPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions;
+      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
 
-    public Input<FlowAccessControlConfigurationPolicyArgs> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<FlowAccessControlConfigurationPolicyArgs> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="contents")
-      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents;
+      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
 
-    public Input<FlowAccessControlConfigurationPolicyArgs> getContents() {
-        return this.contents == null ? Input.empty() : this.contents;
+    public Output<FlowAccessControlConfigurationPolicyArgs> getContents() {
+        return this.contents == null ? Output.empty() : this.contents;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers;
+      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
 
-    public Input<FlowAccessControlConfigurationPolicyArgs> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<FlowAccessControlConfigurationPolicyArgs> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workflowManagement")
-      private final @Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
+      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
 
-    public Input<FlowAccessControlConfigurationPolicyArgs> getWorkflowManagement() {
-        return this.workflowManagement == null ? Input.empty() : this.workflowManagement;
+    public Output<FlowAccessControlConfigurationPolicyArgs> getWorkflowManagement() {
+        return this.workflowManagement == null ? Output.empty() : this.workflowManagement;
     }
 
     public FlowAccessControlConfigurationArgs(
-        @Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions,
-        @Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents,
-        @Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers,
-        @Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
+        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions,
+        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents,
+        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers,
+        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
         this.actions = actions;
         this.contents = contents;
         this.triggers = triggers;
@@ -74,10 +74,10 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
     }
 
     private FlowAccessControlConfigurationArgs() {
-        this.actions = Input.empty();
-        this.contents = Input.empty();
-        this.triggers = Input.empty();
-        this.workflowManagement = Input.empty();
+        this.actions = Output.empty();
+        this.contents = Output.empty();
+        this.triggers = Output.empty();
+        this.workflowManagement = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions;
-        private @Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents;
-        private @Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers;
-        private @Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
+        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
+        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
+        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
+        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
     	      this.workflowManagement = defaults.workflowManagement;
         }
 
-        public Builder actions(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions) {
+        public Builder actions(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable FlowAccessControlConfigurationPolicyArgs actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder contents(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents) {
+        public Builder contents(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents) {
             this.contents = contents;
             return this;
         }
 
         public Builder contents(@Nullable FlowAccessControlConfigurationPolicyArgs contents) {
-            this.contents = Input.ofNullable(contents);
+            this.contents = Output.ofNullable(contents);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers) {
+        public Builder triggers(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable FlowAccessControlConfigurationPolicyArgs triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
 
-        public Builder workflowManagement(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
+        public Builder workflowManagement(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
             this.workflowManagement = workflowManagement;
             return this;
         }
 
         public Builder workflowManagement(@Nullable FlowAccessControlConfigurationPolicyArgs workflowManagement) {
-            this.workflowManagement = Input.ofNullable(workflowManagement);
+            this.workflowManagement = Output.ofNullable(workflowManagement);
             return this;
         }
         public FlowAccessControlConfigurationArgs build() {

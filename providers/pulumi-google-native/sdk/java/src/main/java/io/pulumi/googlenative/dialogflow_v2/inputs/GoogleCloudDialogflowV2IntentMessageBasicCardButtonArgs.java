@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
      * 
      */
     @InputImport(name="openUriAction", required=true)
-      private final Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
+      private final Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> getOpenUriAction() {
+    public Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> getOpenUriAction() {
         return this.openUriAction;
     }
 
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs(
-        Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction,
-        Input<String> title) {
+        Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction,
+        Output<String> title) {
         this.openUriAction = Objects.requireNonNull(openUriAction, "expected parameter 'openUriAction' to be non-null");
         this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
     }
 
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs() {
-        this.openUriAction = Input.empty();
-        this.title = Input.empty();
+        this.openUriAction = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
     }
 
     public static final class Builder {
-        private Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
-        private Input<String> title;
+        private Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
     	      this.title = defaults.title;
         }
 
-        public Builder openUriAction(Input<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction) {
+        public Builder openUriAction(Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction) {
             this.openUriAction = Objects.requireNonNull(openUriAction);
             return this;
         }
 
         public Builder openUriAction(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs openUriAction) {
-            this.openUriAction = Input.of(Objects.requireNonNull(openUriAction));
+            this.openUriAction = Output.of(Objects.requireNonNull(openUriAction));
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs build() {

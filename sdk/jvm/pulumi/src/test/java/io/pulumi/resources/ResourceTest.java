@@ -2,7 +2,7 @@ package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
-import io.pulumi.core.InputOutputTests;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.MockCallArgs;
@@ -49,7 +49,7 @@ public class ResourceTest {
                 .orElse(null);
         assertThat(resource).isNotNull();
 
-        var urn = InputOutputTests.waitFor(resource.getUrn()).getValueNullable();
+        var urn = OutputTests.waitFor(resource.getUrn()).getValueNullable();
         var provider = Internal.from(resource).getProvider(resource.getResourceType());
 
         assertThat(provider).isPresent();

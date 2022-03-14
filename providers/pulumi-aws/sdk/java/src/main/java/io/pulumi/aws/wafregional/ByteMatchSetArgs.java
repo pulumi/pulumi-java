@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="byteMatchTuples")
-      private final @Nullable Input<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
+      private final @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
 
-    public Input<List<ByteMatchSetByteMatchTupleArgs>> getByteMatchTuples() {
-        return this.byteMatchTuples == null ? Input.empty() : this.byteMatchTuples;
+    public Output<List<ByteMatchSetByteMatchTupleArgs>> getByteMatchTuples() {
+        return this.byteMatchTuples == null ? Output.empty() : this.byteMatchTuples;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ByteMatchSetArgs(
-        @Nullable Input<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples,
+        @Nullable Output<String> name) {
         this.byteMatchTuples = byteMatchTuples;
         this.name = name;
     }
 
     private ByteMatchSetArgs() {
-        this.byteMatchTuples = Input.empty();
-        this.name = Input.empty();
+        this.byteMatchTuples = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder byteMatchTuples(@Nullable Input<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples) {
+        public Builder byteMatchTuples(@Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples) {
             this.byteMatchTuples = byteMatchTuples;
             return this;
         }
 
         public Builder byteMatchTuples(@Nullable List<ByteMatchSetByteMatchTupleArgs> byteMatchTuples) {
-            this.byteMatchTuples = Input.ofNullable(byteMatchTuples);
+            this.byteMatchTuples = Output.ofNullable(byteMatchTuples);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ByteMatchSetArgs build() {

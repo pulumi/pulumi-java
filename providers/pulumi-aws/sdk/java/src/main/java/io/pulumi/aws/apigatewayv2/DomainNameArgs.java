@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationArgs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -33,9 +33,9 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainNameConfiguration", required=true)
-      private final Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
+      private final Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
-    public Input<DomainNameDomainNameConfigurationArgs> getDomainNameConfiguration() {
+    public Output<DomainNameDomainNameConfigurationArgs> getDomainNameConfiguration() {
         return this.domainNameConfiguration;
     }
 
@@ -44,10 +44,10 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutualTlsAuthentication")
-      private final @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
+      private final @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
-    public Input<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
-        return this.mutualTlsAuthentication == null ? Input.empty() : this.mutualTlsAuthentication;
+    public Output<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
+        return this.mutualTlsAuthentication == null ? Output.empty() : this.mutualTlsAuthentication;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DomainNameArgs(
-        Input<String> domainName,
-        Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration,
-        @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> domainName,
+        Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration,
+        @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication,
+        @Nullable Output<Map<String,String>> tags) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.domainNameConfiguration = Objects.requireNonNull(domainNameConfiguration, "expected parameter 'domainNameConfiguration' to be non-null");
         this.mutualTlsAuthentication = mutualTlsAuthentication;
@@ -73,10 +73,10 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainNameArgs() {
-        this.domainName = Input.empty();
-        this.domainNameConfiguration = Input.empty();
-        this.mutualTlsAuthentication = Input.empty();
-        this.tags = Input.empty();
+        this.domainName = Output.empty();
+        this.domainNameConfiguration = Output.empty();
+        this.mutualTlsAuthentication = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domainName;
-        private Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
-        private @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> domainName;
+        private Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
+        private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder domainNameConfiguration(Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration) {
+        public Builder domainNameConfiguration(Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration) {
             this.domainNameConfiguration = Objects.requireNonNull(domainNameConfiguration);
             return this;
         }
 
         public Builder domainNameConfiguration(DomainNameDomainNameConfigurationArgs domainNameConfiguration) {
-            this.domainNameConfiguration = Input.of(Objects.requireNonNull(domainNameConfiguration));
+            this.domainNameConfiguration = Output.of(Objects.requireNonNull(domainNameConfiguration));
             return this;
         }
 
-        public Builder mutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
-            this.mutualTlsAuthentication = Input.ofNullable(mutualTlsAuthentication);
+            this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DomainNameArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.NodeGroupMaintenancePolicy;
 import io.pulumi.googlenative.compute_beta.enums.NodeGroupStatus;
@@ -23,10 +23,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingPolicy")
-      private final @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
+      private final @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Input<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
+    public Output<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
+        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -34,16 +34,16 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="initialNodeCount", required=true)
-      private final Input<String> initialNodeCount;
+      private final Output<String> initialNodeCount;
 
-    public Input<String> getInitialNodeCount() {
+    public Output<String> getInitialNodeCount() {
         return this.initialNodeCount;
     }
 
@@ -52,10 +52,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationHint")
-      private final @Nullable Input<String> locationHint;
+      private final @Nullable Output<String> locationHint;
 
-    public Input<String> getLocationHint() {
-        return this.locationHint == null ? Input.empty() : this.locationHint;
+    public Output<String> getLocationHint() {
+        return this.locationHint == null ? Output.empty() : this.locationHint;
     }
 
     /**
@@ -63,17 +63,17 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-      private final @Nullable Input<NodeGroupMaintenancePolicy> maintenancePolicy;
+      private final @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
 
-    public Input<NodeGroupMaintenancePolicy> getMaintenancePolicy() {
-        return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
+    public Output<NodeGroupMaintenancePolicy> getMaintenancePolicy() {
+        return this.maintenancePolicy == null ? Output.empty() : this.maintenancePolicy;
     }
 
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
-    public Input<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -92,53 +92,53 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTemplate")
-      private final @Nullable Input<String> nodeTemplate;
+      private final @Nullable Output<String> nodeTemplate;
 
-    public Input<String> getNodeTemplate() {
-        return this.nodeTemplate == null ? Input.empty() : this.nodeTemplate;
+    public Output<String> getNodeTemplate() {
+        return this.nodeTemplate == null ? Output.empty() : this.nodeTemplate;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<NodeGroupStatus> status;
+      private final @Nullable Output<NodeGroupStatus> status;
 
-    public Input<NodeGroupStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<NodeGroupStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public NodeGroupArgs(
-        @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy,
-        @Nullable Input<String> description,
-        Input<String> initialNodeCount,
-        @Nullable Input<String> locationHint,
-        @Nullable Input<NodeGroupMaintenancePolicy> maintenancePolicy,
-        @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Input<String> name,
-        @Nullable Input<String> nodeTemplate,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<NodeGroupStatus> status,
-        @Nullable Input<String> zone) {
+        @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy,
+        @Nullable Output<String> description,
+        Output<String> initialNodeCount,
+        @Nullable Output<String> locationHint,
+        @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy,
+        @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow,
+        @Nullable Output<String> name,
+        @Nullable Output<String> nodeTemplate,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<NodeGroupStatus> status,
+        @Nullable Output<String> zone) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.description = description;
         this.initialNodeCount = Objects.requireNonNull(initialNodeCount, "expected parameter 'initialNodeCount' to be non-null");
@@ -154,18 +154,18 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeGroupArgs() {
-        this.autoscalingPolicy = Input.empty();
-        this.description = Input.empty();
-        this.initialNodeCount = Input.empty();
-        this.locationHint = Input.empty();
-        this.maintenancePolicy = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.name = Input.empty();
-        this.nodeTemplate = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.status = Input.empty();
-        this.zone = Input.empty();
+        this.autoscalingPolicy = Output.empty();
+        this.description = Output.empty();
+        this.initialNodeCount = Output.empty();
+        this.locationHint = Output.empty();
+        this.maintenancePolicy = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.name = Output.empty();
+        this.nodeTemplate = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.status = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,18 +177,18 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
-        private @Nullable Input<String> description;
-        private Input<String> initialNodeCount;
-        private @Nullable Input<String> locationHint;
-        private @Nullable Input<NodeGroupMaintenancePolicy> maintenancePolicy;
-        private @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> nodeTemplate;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<NodeGroupStatus> status;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
+        private @Nullable Output<String> description;
+        private Output<String> initialNodeCount;
+        private @Nullable Output<String> locationHint;
+        private @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
+        private @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> nodeTemplate;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<NodeGroupStatus> status;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -210,123 +210,123 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder autoscalingPolicy(@Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
         public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder initialNodeCount(Input<String> initialNodeCount) {
+        public Builder initialNodeCount(Output<String> initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
 
         public Builder initialNodeCount(String initialNodeCount) {
-            this.initialNodeCount = Input.of(Objects.requireNonNull(initialNodeCount));
+            this.initialNodeCount = Output.of(Objects.requireNonNull(initialNodeCount));
             return this;
         }
 
-        public Builder locationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
         public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Input.ofNullable(locationHint);
+            this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
 
-        public Builder maintenancePolicy(@Nullable Input<NodeGroupMaintenancePolicy> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
         public Builder maintenancePolicy(@Nullable NodeGroupMaintenancePolicy maintenancePolicy) {
-            this.maintenancePolicy = Input.ofNullable(maintenancePolicy);
+            this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodeTemplate(@Nullable Input<String> nodeTemplate) {
+        public Builder nodeTemplate(@Nullable Output<String> nodeTemplate) {
             this.nodeTemplate = nodeTemplate;
             return this;
         }
 
         public Builder nodeTemplate(@Nullable String nodeTemplate) {
-            this.nodeTemplate = Input.ofNullable(nodeTemplate);
+            this.nodeTemplate = Output.ofNullable(nodeTemplate);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder status(@Nullable Input<NodeGroupStatus> status) {
+        public Builder status(@Nullable Output<NodeGroupStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable NodeGroupStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public NodeGroupArgs build() {

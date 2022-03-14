@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkmanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestDestinationArgs;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestSourceArgs;
@@ -24,10 +24,10 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<ConnectivityTestDestinationArgs> destination;
+      private final Output<ConnectivityTestDestinationArgs> destination;
 
-    public Input<ConnectivityTestDestinationArgs> getDestination() {
+    public Output<ConnectivityTestDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -60,10 +60,10 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relatedProjects")
-      private final @Nullable Input<List<String>> relatedProjects;
+      private final @Nullable Output<List<String>> relatedProjects;
 
-    public Input<List<String>> getRelatedProjects() {
-        return this.relatedProjects == null ? Input.empty() : this.relatedProjects;
+    public Output<List<String>> getRelatedProjects() {
+        return this.relatedProjects == null ? Output.empty() : this.relatedProjects;
     }
 
     /**
@@ -136,21 +136,21 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<ConnectivityTestSourceArgs> source;
+      private final Output<ConnectivityTestSourceArgs> source;
 
-    public Input<ConnectivityTestSourceArgs> getSource() {
+    public Output<ConnectivityTestSourceArgs> getSource() {
         return this.source;
     }
 
     public ConnectivityTestArgs(
-        @Nullable Input<String> description,
-        Input<ConnectivityTestDestinationArgs> destination,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> protocol,
-        @Nullable Input<List<String>> relatedProjects,
-        Input<ConnectivityTestSourceArgs> source) {
+        @Nullable Output<String> description,
+        Output<ConnectivityTestDestinationArgs> destination,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> protocol,
+        @Nullable Output<List<String>> relatedProjects,
+        Output<ConnectivityTestSourceArgs> source) {
         this.description = description;
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.labels = labels;
@@ -162,14 +162,14 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConnectivityTestArgs() {
-        this.description = Input.empty();
-        this.destination = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.protocol = Input.empty();
-        this.relatedProjects = Input.empty();
-        this.source = Input.empty();
+        this.description = Output.empty();
+        this.destination = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.protocol = Output.empty();
+        this.relatedProjects = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -181,14 +181,14 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<ConnectivityTestDestinationArgs> destination;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<List<String>> relatedProjects;
-        private Input<ConnectivityTestSourceArgs> source;
+        private @Nullable Output<String> description;
+        private Output<ConnectivityTestDestinationArgs> destination;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<List<String>> relatedProjects;
+        private Output<ConnectivityTestSourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -206,83 +206,83 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
     	      this.source = defaults.source;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destination(Input<ConnectivityTestDestinationArgs> destination) {
+        public Builder destination(Output<ConnectivityTestDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(ConnectivityTestDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder relatedProjects(@Nullable Input<List<String>> relatedProjects) {
+        public Builder relatedProjects(@Nullable Output<List<String>> relatedProjects) {
             this.relatedProjects = relatedProjects;
             return this;
         }
 
         public Builder relatedProjects(@Nullable List<String> relatedProjects) {
-            this.relatedProjects = Input.ofNullable(relatedProjects);
+            this.relatedProjects = Output.ofNullable(relatedProjects);
             return this;
         }
 
-        public Builder source(Input<ConnectivityTestSourceArgs> source) {
+        public Builder source(Output<ConnectivityTestSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(ConnectivityTestSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public ConnectivityTestArgs build() {

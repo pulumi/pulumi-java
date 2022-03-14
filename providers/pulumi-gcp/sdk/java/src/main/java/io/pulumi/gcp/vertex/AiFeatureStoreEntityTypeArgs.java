@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="featurestore", required=true)
-      private final Input<String> featurestore;
+      private final Output<String> featurestore;
 
-    public Input<String> getFeaturestore() {
+    public Output<String> getFeaturestore() {
         return this.featurestore;
     }
 
@@ -32,10 +32,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="monitoringConfig")
-      private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
+      private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
-    public Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> getMonitoringConfig() {
-        return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> getMonitoringConfig() {
+        return this.monitoringConfig == null ? Output.empty() : this.monitoringConfig;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public AiFeatureStoreEntityTypeArgs(
-        Input<String> featurestore,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig,
-        @Nullable Input<String> name) {
+        Output<String> featurestore,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig,
+        @Nullable Output<String> name) {
         this.featurestore = Objects.requireNonNull(featurestore, "expected parameter 'featurestore' to be non-null");
         this.labels = labels;
         this.monitoringConfig = monitoringConfig;
@@ -74,10 +74,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     }
 
     private AiFeatureStoreEntityTypeArgs() {
-        this.featurestore = Input.empty();
-        this.labels = Input.empty();
-        this.monitoringConfig = Input.empty();
-        this.name = Input.empty();
+        this.featurestore = Output.empty();
+        this.labels = Output.empty();
+        this.monitoringConfig = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> featurestore;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
-        private @Nullable Input<String> name;
+        private Output<String> featurestore;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     	      this.name = defaults.name;
         }
 
-        public Builder featurestore(Input<String> featurestore) {
+        public Builder featurestore(Output<String> featurestore) {
             this.featurestore = Objects.requireNonNull(featurestore);
             return this;
         }
 
         public Builder featurestore(String featurestore) {
-            this.featurestore = Input.of(Objects.requireNonNull(featurestore));
+            this.featurestore = Output.of(Objects.requireNonNull(featurestore));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder monitoringConfig(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
+        public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
 
         public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
-            this.monitoringConfig = Input.ofNullable(monitoringConfig);
+            this.monitoringConfig = Output.ofNullable(monitoringConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public AiFeatureStoreEntityTypeArgs build() {

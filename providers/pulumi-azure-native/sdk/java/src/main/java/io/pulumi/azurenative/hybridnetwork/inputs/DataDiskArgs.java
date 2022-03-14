@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.enums.DiskCreateOptionTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createOption")
-      private final @Nullable Input<Either<String,DiskCreateOptionTypes>> createOption;
+      private final @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
 
-    public Input<Either<String,DiskCreateOptionTypes>> getCreateOption() {
-        return this.createOption == null ? Input.empty() : this.createOption;
+    public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
+        return this.createOption == null ? Output.empty() : this.createOption;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-      private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Output<Integer> diskSizeGB;
 
-    public Input<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
+    public Output<Integer> getDiskSizeGB() {
+        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public DataDiskArgs(
-        @Nullable Input<Either<String,DiskCreateOptionTypes>> createOption,
-        @Nullable Input<Integer> diskSizeGB,
-        @Nullable Input<String> name) {
+        @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption,
+        @Nullable Output<Integer> diskSizeGB,
+        @Nullable Output<String> name) {
         this.createOption = createOption;
         this.diskSizeGB = diskSizeGB;
         this.name = name;
     }
 
     private DataDiskArgs() {
-        this.createOption = Input.empty();
-        this.diskSizeGB = Input.empty();
-        this.name = Input.empty();
+        this.createOption = Output.empty();
+        this.diskSizeGB = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DiskCreateOptionTypes>> createOption;
-        private @Nullable Input<Integer> diskSizeGB;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
+        private @Nullable Output<Integer> diskSizeGB;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder createOption(@Nullable Input<Either<String,DiskCreateOptionTypes>> createOption) {
+        public Builder createOption(@Nullable Output<Either<String,DiskCreateOptionTypes>> createOption) {
             this.createOption = createOption;
             return this;
         }
 
         public Builder createOption(@Nullable Either<String,DiskCreateOptionTypes> createOption) {
-            this.createOption = Input.ofNullable(createOption);
+            this.createOption = Output.ofNullable(createOption);
             return this;
         }
 
-        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Input.ofNullable(diskSizeGB);
+            this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public DataDiskArgs build() {

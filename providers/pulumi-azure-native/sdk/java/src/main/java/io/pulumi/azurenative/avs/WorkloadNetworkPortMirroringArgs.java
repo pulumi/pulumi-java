@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.enums.PortMirroringDirectionEnum;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="direction")
-      private final @Nullable Input<Either<String,PortMirroringDirectionEnum>> direction;
+      private final @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
 
-    public Input<Either<String,PortMirroringDirectionEnum>> getDirection() {
-        return this.direction == null ? Input.empty() : this.direction;
+    public Output<Either<String,PortMirroringDirectionEnum>> getDirection() {
+        return this.direction == null ? Output.empty() : this.direction;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="portMirroringId")
-      private final @Nullable Input<String> portMirroringId;
+      private final @Nullable Output<String> portMirroringId;
 
-    public Input<String> getPortMirroringId() {
-        return this.portMirroringId == null ? Input.empty() : this.portMirroringId;
+    public Output<String> getPortMirroringId() {
+        return this.portMirroringId == null ? Output.empty() : this.portMirroringId;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -77,9 +77,9 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,10 +88,10 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Double> revision;
+      private final @Nullable Output<Double> revision;
 
-    public Input<Double> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Double> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public WorkloadNetworkPortMirroringArgs(
-        @Nullable Input<String> destination,
-        @Nullable Input<Either<String,PortMirroringDirectionEnum>> direction,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> portMirroringId,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Double> revision,
-        @Nullable Input<String> source) {
+        @Nullable Output<String> destination,
+        @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> portMirroringId,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Double> revision,
+        @Nullable Output<String> source) {
         this.destination = destination;
         this.direction = direction;
         this.displayName = displayName;
@@ -125,14 +125,14 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     }
 
     private WorkloadNetworkPortMirroringArgs() {
-        this.destination = Input.empty();
-        this.direction = Input.empty();
-        this.displayName = Input.empty();
-        this.portMirroringId = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.revision = Input.empty();
-        this.source = Input.empty();
+        this.destination = Output.empty();
+        this.direction = Output.empty();
+        this.displayName = Output.empty();
+        this.portMirroringId = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.revision = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destination;
-        private @Nullable Input<Either<String,PortMirroringDirectionEnum>> direction;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> portMirroringId;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Double> revision;
-        private @Nullable Input<String> source;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> portMirroringId;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Double> revision;
+        private @Nullable Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     	      this.source = defaults.source;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder direction(@Nullable Input<Either<String,PortMirroringDirectionEnum>> direction) {
+        public Builder direction(@Nullable Output<Either<String,PortMirroringDirectionEnum>> direction) {
             this.direction = direction;
             return this;
         }
 
         public Builder direction(@Nullable Either<String,PortMirroringDirectionEnum> direction) {
-            this.direction = Input.ofNullable(direction);
+            this.direction = Output.ofNullable(direction);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder portMirroringId(@Nullable Input<String> portMirroringId) {
+        public Builder portMirroringId(@Nullable Output<String> portMirroringId) {
             this.portMirroringId = portMirroringId;
             return this;
         }
 
         public Builder portMirroringId(@Nullable String portMirroringId) {
-            this.portMirroringId = Input.ofNullable(portMirroringId);
+            this.portMirroringId = Output.ofNullable(portMirroringId);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder revision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Double revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public WorkloadNetworkPortMirroringArgs build() {

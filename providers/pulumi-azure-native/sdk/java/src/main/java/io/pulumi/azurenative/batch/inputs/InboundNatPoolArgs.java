@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.InboundEndpointProtocol;
 import io.pulumi.azurenative.batch.inputs.NetworkSecurityGroupRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort", required=true)
-      private final Input<Integer> backendPort;
+      private final Output<Integer> backendPort;
 
-    public Input<Integer> getBackendPort() {
+    public Output<Integer> getBackendPort() {
         return this.backendPort;
     }
 
@@ -34,9 +34,9 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeEnd", required=true)
-      private final Input<Integer> frontendPortRangeEnd;
+      private final Output<Integer> frontendPortRangeEnd;
 
-    public Input<Integer> getFrontendPortRangeEnd() {
+    public Output<Integer> getFrontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
 
@@ -45,9 +45,9 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeStart", required=true)
-      private final Input<Integer> frontendPortRangeStart;
+      private final Output<Integer> frontendPortRangeStart;
 
-    public Input<Integer> getFrontendPortRangeStart() {
+    public Output<Integer> getFrontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
 
@@ -56,9 +56,9 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -67,26 +67,26 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkSecurityGroupRules")
-      private final @Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
+      private final @Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
 
-    public Input<List<NetworkSecurityGroupRuleArgs>> getNetworkSecurityGroupRules() {
-        return this.networkSecurityGroupRules == null ? Input.empty() : this.networkSecurityGroupRules;
+    public Output<List<NetworkSecurityGroupRuleArgs>> getNetworkSecurityGroupRules() {
+        return this.networkSecurityGroupRules == null ? Output.empty() : this.networkSecurityGroupRules;
     }
 
     @InputImport(name="protocol", required=true)
-      private final Input<InboundEndpointProtocol> protocol;
+      private final Output<InboundEndpointProtocol> protocol;
 
-    public Input<InboundEndpointProtocol> getProtocol() {
+    public Output<InboundEndpointProtocol> getProtocol() {
         return this.protocol;
     }
 
     public InboundNatPoolArgs(
-        Input<Integer> backendPort,
-        Input<Integer> frontendPortRangeEnd,
-        Input<Integer> frontendPortRangeStart,
-        Input<String> name,
-        @Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules,
-        Input<InboundEndpointProtocol> protocol) {
+        Output<Integer> backendPort,
+        Output<Integer> frontendPortRangeEnd,
+        Output<Integer> frontendPortRangeStart,
+        Output<String> name,
+        @Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules,
+        Output<InboundEndpointProtocol> protocol) {
         this.backendPort = Objects.requireNonNull(backendPort, "expected parameter 'backendPort' to be non-null");
         this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd, "expected parameter 'frontendPortRangeEnd' to be non-null");
         this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart, "expected parameter 'frontendPortRangeStart' to be non-null");
@@ -96,12 +96,12 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InboundNatPoolArgs() {
-        this.backendPort = Input.empty();
-        this.frontendPortRangeEnd = Input.empty();
-        this.frontendPortRangeStart = Input.empty();
-        this.name = Input.empty();
-        this.networkSecurityGroupRules = Input.empty();
-        this.protocol = Input.empty();
+        this.backendPort = Output.empty();
+        this.frontendPortRangeEnd = Output.empty();
+        this.frontendPortRangeStart = Output.empty();
+        this.name = Output.empty();
+        this.networkSecurityGroupRules = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> backendPort;
-        private Input<Integer> frontendPortRangeEnd;
-        private Input<Integer> frontendPortRangeStart;
-        private Input<String> name;
-        private @Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
-        private Input<InboundEndpointProtocol> protocol;
+        private Output<Integer> backendPort;
+        private Output<Integer> frontendPortRangeEnd;
+        private Output<Integer> frontendPortRangeStart;
+        private Output<String> name;
+        private @Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
+        private Output<InboundEndpointProtocol> protocol;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder backendPort(Input<Integer> backendPort) {
+        public Builder backendPort(Output<Integer> backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
         public Builder backendPort(Integer backendPort) {
-            this.backendPort = Input.of(Objects.requireNonNull(backendPort));
+            this.backendPort = Output.of(Objects.requireNonNull(backendPort));
             return this;
         }
 
-        public Builder frontendPortRangeEnd(Input<Integer> frontendPortRangeEnd) {
+        public Builder frontendPortRangeEnd(Output<Integer> frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
 
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
-            this.frontendPortRangeEnd = Input.of(Objects.requireNonNull(frontendPortRangeEnd));
+            this.frontendPortRangeEnd = Output.of(Objects.requireNonNull(frontendPortRangeEnd));
             return this;
         }
 
-        public Builder frontendPortRangeStart(Input<Integer> frontendPortRangeStart) {
+        public Builder frontendPortRangeStart(Output<Integer> frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
 
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
-            this.frontendPortRangeStart = Input.of(Objects.requireNonNull(frontendPortRangeStart));
+            this.frontendPortRangeStart = Output.of(Objects.requireNonNull(frontendPortRangeStart));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder networkSecurityGroupRules(@Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules) {
+        public Builder networkSecurityGroupRules(@Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules) {
             this.networkSecurityGroupRules = networkSecurityGroupRules;
             return this;
         }
 
         public Builder networkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleArgs> networkSecurityGroupRules) {
-            this.networkSecurityGroupRules = Input.ofNullable(networkSecurityGroupRules);
+            this.networkSecurityGroupRules = Output.ofNullable(networkSecurityGroupRules);
             return this;
         }
 
-        public Builder protocol(Input<InboundEndpointProtocol> protocol) {
+        public Builder protocol(Output<InboundEndpointProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(InboundEndpointProtocol protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public InboundNatPoolArgs build() {

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentOverridesArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,86 +23,86 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     public static final ComponentArgs Empty = new ComponentArgs();
 
     @InputImport(name="bindingProperties")
-      private final @Nullable Input<ComponentBindingPropertiesArgs> bindingProperties;
+      private final @Nullable Output<ComponentBindingPropertiesArgs> bindingProperties;
 
-    public Input<ComponentBindingPropertiesArgs> getBindingProperties() {
-        return this.bindingProperties == null ? Input.empty() : this.bindingProperties;
+    public Output<ComponentBindingPropertiesArgs> getBindingProperties() {
+        return this.bindingProperties == null ? Output.empty() : this.bindingProperties;
     }
 
     @InputImport(name="children")
-      private final @Nullable Input<List<ComponentChildArgs>> children;
+      private final @Nullable Output<List<ComponentChildArgs>> children;
 
-    public Input<List<ComponentChildArgs>> getChildren() {
-        return this.children == null ? Input.empty() : this.children;
+    public Output<List<ComponentChildArgs>> getChildren() {
+        return this.children == null ? Output.empty() : this.children;
     }
 
     @InputImport(name="collectionProperties")
-      private final @Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties;
+      private final @Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties;
 
-    public Input<ComponentCollectionPropertiesArgs> getCollectionProperties() {
-        return this.collectionProperties == null ? Input.empty() : this.collectionProperties;
+    public Output<ComponentCollectionPropertiesArgs> getCollectionProperties() {
+        return this.collectionProperties == null ? Output.empty() : this.collectionProperties;
     }
 
     @InputImport(name="componentType")
-      private final @Nullable Input<String> componentType;
+      private final @Nullable Output<String> componentType;
 
-    public Input<String> getComponentType() {
-        return this.componentType == null ? Input.empty() : this.componentType;
+    public Output<String> getComponentType() {
+        return this.componentType == null ? Output.empty() : this.componentType;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="overrides")
-      private final @Nullable Input<ComponentOverridesArgs> overrides;
+      private final @Nullable Output<ComponentOverridesArgs> overrides;
 
-    public Input<ComponentOverridesArgs> getOverrides() {
-        return this.overrides == null ? Input.empty() : this.overrides;
+    public Output<ComponentOverridesArgs> getOverrides() {
+        return this.overrides == null ? Output.empty() : this.overrides;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<ComponentPropertiesArgs> properties;
+      private final @Nullable Output<ComponentPropertiesArgs> properties;
 
-    public Input<ComponentPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ComponentPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     @InputImport(name="sourceId")
-      private final @Nullable Input<String> sourceId;
+      private final @Nullable Output<String> sourceId;
 
-    public Input<String> getSourceId() {
-        return this.sourceId == null ? Input.empty() : this.sourceId;
+    public Output<String> getSourceId() {
+        return this.sourceId == null ? Output.empty() : this.sourceId;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<ComponentTagsArgs> tags;
+      private final @Nullable Output<ComponentTagsArgs> tags;
 
-    public Input<ComponentTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<ComponentTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="variants")
-      private final @Nullable Input<List<ComponentVariantArgs>> variants;
+      private final @Nullable Output<List<ComponentVariantArgs>> variants;
 
-    public Input<List<ComponentVariantArgs>> getVariants() {
-        return this.variants == null ? Input.empty() : this.variants;
+    public Output<List<ComponentVariantArgs>> getVariants() {
+        return this.variants == null ? Output.empty() : this.variants;
     }
 
     public ComponentArgs(
-        @Nullable Input<ComponentBindingPropertiesArgs> bindingProperties,
-        @Nullable Input<List<ComponentChildArgs>> children,
-        @Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties,
-        @Nullable Input<String> componentType,
-        @Nullable Input<String> name,
-        @Nullable Input<ComponentOverridesArgs> overrides,
-        @Nullable Input<ComponentPropertiesArgs> properties,
-        @Nullable Input<String> sourceId,
-        @Nullable Input<ComponentTagsArgs> tags,
-        @Nullable Input<List<ComponentVariantArgs>> variants) {
+        @Nullable Output<ComponentBindingPropertiesArgs> bindingProperties,
+        @Nullable Output<List<ComponentChildArgs>> children,
+        @Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties,
+        @Nullable Output<String> componentType,
+        @Nullable Output<String> name,
+        @Nullable Output<ComponentOverridesArgs> overrides,
+        @Nullable Output<ComponentPropertiesArgs> properties,
+        @Nullable Output<String> sourceId,
+        @Nullable Output<ComponentTagsArgs> tags,
+        @Nullable Output<List<ComponentVariantArgs>> variants) {
         this.bindingProperties = bindingProperties;
         this.children = children;
         this.collectionProperties = collectionProperties;
@@ -116,16 +116,16 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComponentArgs() {
-        this.bindingProperties = Input.empty();
-        this.children = Input.empty();
-        this.collectionProperties = Input.empty();
-        this.componentType = Input.empty();
-        this.name = Input.empty();
-        this.overrides = Input.empty();
-        this.properties = Input.empty();
-        this.sourceId = Input.empty();
-        this.tags = Input.empty();
-        this.variants = Input.empty();
+        this.bindingProperties = Output.empty();
+        this.children = Output.empty();
+        this.collectionProperties = Output.empty();
+        this.componentType = Output.empty();
+        this.name = Output.empty();
+        this.overrides = Output.empty();
+        this.properties = Output.empty();
+        this.sourceId = Output.empty();
+        this.tags = Output.empty();
+        this.variants = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,16 +137,16 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ComponentBindingPropertiesArgs> bindingProperties;
-        private @Nullable Input<List<ComponentChildArgs>> children;
-        private @Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties;
-        private @Nullable Input<String> componentType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ComponentOverridesArgs> overrides;
-        private @Nullable Input<ComponentPropertiesArgs> properties;
-        private @Nullable Input<String> sourceId;
-        private @Nullable Input<ComponentTagsArgs> tags;
-        private @Nullable Input<List<ComponentVariantArgs>> variants;
+        private @Nullable Output<ComponentBindingPropertiesArgs> bindingProperties;
+        private @Nullable Output<List<ComponentChildArgs>> children;
+        private @Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties;
+        private @Nullable Output<String> componentType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ComponentOverridesArgs> overrides;
+        private @Nullable Output<ComponentPropertiesArgs> properties;
+        private @Nullable Output<String> sourceId;
+        private @Nullable Output<ComponentTagsArgs> tags;
+        private @Nullable Output<List<ComponentVariantArgs>> variants;
 
         public Builder() {
     	      // Empty
@@ -166,103 +166,103 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variants = defaults.variants;
         }
 
-        public Builder bindingProperties(@Nullable Input<ComponentBindingPropertiesArgs> bindingProperties) {
+        public Builder bindingProperties(@Nullable Output<ComponentBindingPropertiesArgs> bindingProperties) {
             this.bindingProperties = bindingProperties;
             return this;
         }
 
         public Builder bindingProperties(@Nullable ComponentBindingPropertiesArgs bindingProperties) {
-            this.bindingProperties = Input.ofNullable(bindingProperties);
+            this.bindingProperties = Output.ofNullable(bindingProperties);
             return this;
         }
 
-        public Builder children(@Nullable Input<List<ComponentChildArgs>> children) {
+        public Builder children(@Nullable Output<List<ComponentChildArgs>> children) {
             this.children = children;
             return this;
         }
 
         public Builder children(@Nullable List<ComponentChildArgs> children) {
-            this.children = Input.ofNullable(children);
+            this.children = Output.ofNullable(children);
             return this;
         }
 
-        public Builder collectionProperties(@Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties) {
+        public Builder collectionProperties(@Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties) {
             this.collectionProperties = collectionProperties;
             return this;
         }
 
         public Builder collectionProperties(@Nullable ComponentCollectionPropertiesArgs collectionProperties) {
-            this.collectionProperties = Input.ofNullable(collectionProperties);
+            this.collectionProperties = Output.ofNullable(collectionProperties);
             return this;
         }
 
-        public Builder componentType(@Nullable Input<String> componentType) {
+        public Builder componentType(@Nullable Output<String> componentType) {
             this.componentType = componentType;
             return this;
         }
 
         public Builder componentType(@Nullable String componentType) {
-            this.componentType = Input.ofNullable(componentType);
+            this.componentType = Output.ofNullable(componentType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder overrides(@Nullable Input<ComponentOverridesArgs> overrides) {
+        public Builder overrides(@Nullable Output<ComponentOverridesArgs> overrides) {
             this.overrides = overrides;
             return this;
         }
 
         public Builder overrides(@Nullable ComponentOverridesArgs overrides) {
-            this.overrides = Input.ofNullable(overrides);
+            this.overrides = Output.ofNullable(overrides);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ComponentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ComponentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ComponentPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder sourceId(@Nullable Input<String> sourceId) {
+        public Builder sourceId(@Nullable Output<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Input.ofNullable(sourceId);
+            this.sourceId = Output.ofNullable(sourceId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<ComponentTagsArgs> tags) {
+        public Builder tags(@Nullable Output<ComponentTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable ComponentTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder variants(@Nullable Input<List<ComponentVariantArgs>> variants) {
+        public Builder variants(@Nullable Output<List<ComponentVariantArgs>> variants) {
             this.variants = variants;
             return this;
         }
 
         public Builder variants(@Nullable List<ComponentVariantArgs> variants) {
-            this.variants = Input.ofNullable(variants);
+            this.variants = Output.ofNullable(variants);
             return this;
         }
         public ComponentArgs build() {

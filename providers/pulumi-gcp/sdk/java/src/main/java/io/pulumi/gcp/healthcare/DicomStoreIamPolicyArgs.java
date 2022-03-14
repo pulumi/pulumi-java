@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dicomStoreId", required=true)
-      private final Input<String> dicomStoreId;
+      private final Output<String> dicomStoreId;
 
-    public Input<String> getDicomStoreId() {
+    public Output<String> getDicomStoreId() {
         return this.dicomStoreId;
     }
 
@@ -33,22 +33,22 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public DicomStoreIamPolicyArgs(
-        Input<String> dicomStoreId,
-        Input<String> policyData) {
+        Output<String> dicomStoreId,
+        Output<String> policyData) {
         this.dicomStoreId = Objects.requireNonNull(dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private DicomStoreIamPolicyArgs() {
-        this.dicomStoreId = Input.empty();
-        this.policyData = Input.empty();
+        this.dicomStoreId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> dicomStoreId;
-        private Input<String> policyData;
+        private Output<String> dicomStoreId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder dicomStoreId(Input<String> dicomStoreId) {
+        public Builder dicomStoreId(Output<String> dicomStoreId) {
             this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
             return this;
         }
 
         public Builder dicomStoreId(String dicomStoreId) {
-            this.dicomStoreId = Input.of(Objects.requireNonNull(dicomStoreId));
+            this.dicomStoreId = Output.of(Objects.requireNonNull(dicomStoreId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public DicomStoreIamPolicyArgs build() {

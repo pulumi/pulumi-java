@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<String> diskType;
+      private final @Nullable Output<String> diskType;
 
-    public Input<String> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<String> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPoint")
-      private final @Nullable Input<String> mountPoint;
+      private final @Nullable Output<String> mountPoint;
 
-    public Input<String> getMountPoint() {
-        return this.mountPoint == null ? Input.empty() : this.mountPoint;
+    public Output<String> getMountPoint() {
+        return this.mountPoint == null ? Output.empty() : this.mountPoint;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-      private final @Nullable Input<Integer> sizeGb;
+      private final @Nullable Output<Integer> sizeGb;
 
-    public Input<Integer> getSizeGb() {
-        return this.sizeGb == null ? Input.empty() : this.sizeGb;
+    public Output<Integer> getSizeGb() {
+        return this.sizeGb == null ? Output.empty() : this.sizeGb;
     }
 
     public DiskArgs(
-        @Nullable Input<String> diskType,
-        @Nullable Input<String> mountPoint,
-        @Nullable Input<Integer> sizeGb) {
+        @Nullable Output<String> diskType,
+        @Nullable Output<String> mountPoint,
+        @Nullable Output<Integer> sizeGb) {
         this.diskType = diskType;
         this.mountPoint = mountPoint;
         this.sizeGb = sizeGb;
     }
 
     private DiskArgs() {
-        this.diskType = Input.empty();
-        this.mountPoint = Input.empty();
-        this.sizeGb = Input.empty();
+        this.diskType = Output.empty();
+        this.mountPoint = Output.empty();
+        this.sizeGb = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskType;
-        private @Nullable Input<String> mountPoint;
-        private @Nullable Input<Integer> sizeGb;
+        private @Nullable Output<String> diskType;
+        private @Nullable Output<String> mountPoint;
+        private @Nullable Output<Integer> sizeGb;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizeGb = defaults.sizeGb;
         }
 
-        public Builder diskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder mountPoint(@Nullable Input<String> mountPoint) {
+        public Builder mountPoint(@Nullable Output<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
 
         public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Input.ofNullable(mountPoint);
+            this.mountPoint = Output.ofNullable(mountPoint);
             return this;
         }
 
-        public Builder sizeGb(@Nullable Input<Integer> sizeGb) {
+        public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
 
         public Builder sizeGb(@Nullable Integer sizeGb) {
-            this.sizeGb = Input.ofNullable(sizeGb);
+            this.sizeGb = Output.ofNullable(sizeGb);
             return this;
         }
         public DiskArgs build() {

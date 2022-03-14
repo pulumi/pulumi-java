@@ -6,7 +6,6 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.SqlResourceSqlRoleAssignmentArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,26 +139,26 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlResourceSqlRoleAssignment(String name, SqlResourceSqlRoleAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:SqlResourceSqlRoleAssignment", name, args == null ? SqlResourceSqlRoleAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:SqlResourceSqlRoleAssignment", name, args == null ? SqlResourceSqlRoleAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlResourceSqlRoleAssignment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlResourceSqlRoleAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:SqlResourceSqlRoleAssignment", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlRoleAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlRoleAssignment").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlRoleAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlRoleAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -173,7 +172,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlResourceSqlRoleAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlResourceSqlRoleAssignment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlResourceSqlRoleAssignment(name, id, options);
     }
 }

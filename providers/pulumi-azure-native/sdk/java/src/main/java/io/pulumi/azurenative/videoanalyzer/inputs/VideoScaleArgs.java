@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.enums.VideoScaleMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-      private final @Nullable Input<String> height;
+      private final @Nullable Output<String> height;
 
-    public Input<String> getHeight() {
-        return this.height == null ? Input.empty() : this.height;
+    public Output<String> getHeight() {
+        return this.height == null ? Output.empty() : this.height;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,VideoScaleMode>> mode;
+      private final @Nullable Output<Either<String,VideoScaleMode>> mode;
 
-    public Input<Either<String,VideoScaleMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,VideoScaleMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-      private final @Nullable Input<String> width;
+      private final @Nullable Output<String> width;
 
-    public Input<String> getWidth() {
-        return this.width == null ? Input.empty() : this.width;
+    public Output<String> getWidth() {
+        return this.width == null ? Output.empty() : this.width;
     }
 
     public VideoScaleArgs(
-        @Nullable Input<String> height,
-        @Nullable Input<Either<String,VideoScaleMode>> mode,
-        @Nullable Input<String> width) {
+        @Nullable Output<String> height,
+        @Nullable Output<Either<String,VideoScaleMode>> mode,
+        @Nullable Output<String> width) {
         this.height = height;
         this.mode = mode;
         this.width = width;
     }
 
     private VideoScaleArgs() {
-        this.height = Input.empty();
-        this.mode = Input.empty();
-        this.width = Input.empty();
+        this.height = Output.empty();
+        this.mode = Output.empty();
+        this.width = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> height;
-        private @Nullable Input<Either<String,VideoScaleMode>> mode;
-        private @Nullable Input<String> width;
+        private @Nullable Output<String> height;
+        private @Nullable Output<Either<String,VideoScaleMode>> mode;
+        private @Nullable Output<String> width;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder height(@Nullable Input<String> height) {
+        public Builder height(@Nullable Output<String> height) {
             this.height = height;
             return this;
         }
 
         public Builder height(@Nullable String height) {
-            this.height = Input.ofNullable(height);
+            this.height = Output.ofNullable(height);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,VideoScaleMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,VideoScaleMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,VideoScaleMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder width(@Nullable Input<String> width) {
+        public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
 
         public Builder width(@Nullable String width) {
-            this.width = Input.ofNullable(width);
+            this.width = Output.ofNullable(width);
             return this;
         }
         public VideoScaleArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,9 +32,9 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLink", required=true)
-      private final Input<ContentLinkArgs> contentLink;
+      private final Output<ContentLinkArgs> contentLink;
 
-    public Input<ContentLinkArgs> getContentLink() {
+    public Output<ContentLinkArgs> getContentLink() {
         return this.contentLink;
     }
 
@@ -43,10 +43,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moduleName")
-      private final @Nullable Input<String> moduleName;
+      private final @Nullable Output<String> moduleName;
 
-    public Input<String> getModuleName() {
-        return this.moduleName == null ? Input.empty() : this.moduleName;
+    public Output<String> getModuleName() {
+        return this.moduleName == null ? Output.empty() : this.moduleName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,20 +87,20 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ModuleArgs(
-        Input<String> automationAccountName,
-        Input<ContentLinkArgs> contentLink,
-        @Nullable Input<String> location,
-        @Nullable Input<String> moduleName,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> automationAccountName,
+        Output<ContentLinkArgs> contentLink,
+        @Nullable Output<String> location,
+        @Nullable Output<String> moduleName,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.contentLink = Objects.requireNonNull(contentLink, "expected parameter 'contentLink' to be non-null");
         this.location = location;
@@ -111,13 +111,13 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModuleArgs() {
-        this.automationAccountName = Input.empty();
-        this.contentLink = Input.empty();
-        this.location = Input.empty();
-        this.moduleName = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.contentLink = Output.empty();
+        this.location = Output.empty();
+        this.moduleName = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private Input<ContentLinkArgs> contentLink;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> moduleName;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> automationAccountName;
+        private Output<ContentLinkArgs> contentLink;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> moduleName;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder contentLink(Input<ContentLinkArgs> contentLink) {
+        public Builder contentLink(Output<ContentLinkArgs> contentLink) {
             this.contentLink = Objects.requireNonNull(contentLink);
             return this;
         }
 
         public Builder contentLink(ContentLinkArgs contentLink) {
-            this.contentLink = Input.of(Objects.requireNonNull(contentLink));
+            this.contentLink = Output.of(Objects.requireNonNull(contentLink));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder moduleName(@Nullable Input<String> moduleName) {
+        public Builder moduleName(@Nullable Output<String> moduleName) {
             this.moduleName = moduleName;
             return this;
         }
 
         public Builder moduleName(@Nullable String moduleName) {
-            this.moduleName = Input.ofNullable(moduleName);
+            this.moduleName = Output.ofNullable(moduleName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ModuleArgs build() {

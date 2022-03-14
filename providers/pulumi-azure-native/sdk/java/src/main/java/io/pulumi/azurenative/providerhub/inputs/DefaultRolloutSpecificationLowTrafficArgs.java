@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
     public static final DefaultRolloutSpecificationLowTrafficArgs Empty = new DefaultRolloutSpecificationLowTrafficArgs();
 
     @InputImport(name="regions")
-      private final @Nullable Input<List<String>> regions;
+      private final @Nullable Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<List<String>> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     @InputImport(name="waitDuration")
-      private final @Nullable Input<String> waitDuration;
+      private final @Nullable Output<String> waitDuration;
 
-    public Input<String> getWaitDuration() {
-        return this.waitDuration == null ? Input.empty() : this.waitDuration;
+    public Output<String> getWaitDuration() {
+        return this.waitDuration == null ? Output.empty() : this.waitDuration;
     }
 
     public DefaultRolloutSpecificationLowTrafficArgs(
-        @Nullable Input<List<String>> regions,
-        @Nullable Input<String> waitDuration) {
+        @Nullable Output<List<String>> regions,
+        @Nullable Output<String> waitDuration) {
         this.regions = regions;
         this.waitDuration = waitDuration;
     }
 
     private DefaultRolloutSpecificationLowTrafficArgs() {
-        this.regions = Input.empty();
-        this.waitDuration = Input.empty();
+        this.regions = Output.empty();
+        this.waitDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> regions;
-        private @Nullable Input<String> waitDuration;
+        private @Nullable Output<List<String>> regions;
+        private @Nullable Output<String> waitDuration;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
     	      this.waitDuration = defaults.waitDuration;
         }
 
-        public Builder regions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
 
-        public Builder waitDuration(@Nullable Input<String> waitDuration) {
+        public Builder waitDuration(@Nullable Output<String> waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }
 
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Input.ofNullable(waitDuration);
+            this.waitDuration = Output.ofNullable(waitDuration);
             return this;
         }
         public DefaultRolloutSpecificationLowTrafficArgs build() {

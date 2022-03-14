@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.inputs.ClusterCapacityProviderStrategyItemArgs;
 import io.pulumi.awsnative.ecs.inputs.ClusterConfigurationArgs;
 import io.pulumi.awsnative.ecs.inputs.ClusterSettingsArgs;
 import io.pulumi.awsnative.ecs.inputs.ClusterTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     public static final ClusterArgs Empty = new ClusterArgs();
 
     @InputImport(name="capacityProviders")
-      private final @Nullable Input<List<String>> capacityProviders;
+      private final @Nullable Output<List<String>> capacityProviders;
 
-    public Input<List<String>> getCapacityProviders() {
-        return this.capacityProviders == null ? Input.empty() : this.capacityProviders;
+    public Output<List<String>> getCapacityProviders() {
+        return this.capacityProviders == null ? Output.empty() : this.capacityProviders;
     }
 
     /**
@@ -31,47 +31,47 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     @InputImport(name="clusterSettings")
-      private final @Nullable Input<List<ClusterSettingsArgs>> clusterSettings;
+      private final @Nullable Output<List<ClusterSettingsArgs>> clusterSettings;
 
-    public Input<List<ClusterSettingsArgs>> getClusterSettings() {
-        return this.clusterSettings == null ? Input.empty() : this.clusterSettings;
+    public Output<List<ClusterSettingsArgs>> getClusterSettings() {
+        return this.clusterSettings == null ? Output.empty() : this.clusterSettings;
     }
 
     @InputImport(name="configuration")
-      private final @Nullable Input<ClusterConfigurationArgs> configuration;
+      private final @Nullable Output<ClusterConfigurationArgs> configuration;
 
-    public Input<ClusterConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<ClusterConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     @InputImport(name="defaultCapacityProviderStrategy")
-      private final @Nullable Input<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
+      private final @Nullable Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
 
-    public Input<List<ClusterCapacityProviderStrategyItemArgs>> getDefaultCapacityProviderStrategy() {
-        return this.defaultCapacityProviderStrategy == null ? Input.empty() : this.defaultCapacityProviderStrategy;
+    public Output<List<ClusterCapacityProviderStrategyItemArgs>> getDefaultCapacityProviderStrategy() {
+        return this.defaultCapacityProviderStrategy == null ? Output.empty() : this.defaultCapacityProviderStrategy;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ClusterTagArgs>> tags;
+      private final @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Input<List<ClusterTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ClusterTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterArgs(
-        @Nullable Input<List<String>> capacityProviders,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<List<ClusterSettingsArgs>> clusterSettings,
-        @Nullable Input<ClusterConfigurationArgs> configuration,
-        @Nullable Input<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy,
-        @Nullable Input<List<ClusterTagArgs>> tags) {
+        @Nullable Output<List<String>> capacityProviders,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<List<ClusterSettingsArgs>> clusterSettings,
+        @Nullable Output<ClusterConfigurationArgs> configuration,
+        @Nullable Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy,
+        @Nullable Output<List<ClusterTagArgs>> tags) {
         this.capacityProviders = capacityProviders;
         this.clusterName = clusterName;
         this.clusterSettings = clusterSettings;
@@ -81,12 +81,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.capacityProviders = Input.empty();
-        this.clusterName = Input.empty();
-        this.clusterSettings = Input.empty();
-        this.configuration = Input.empty();
-        this.defaultCapacityProviderStrategy = Input.empty();
-        this.tags = Input.empty();
+        this.capacityProviders = Output.empty();
+        this.clusterName = Output.empty();
+        this.clusterSettings = Output.empty();
+        this.configuration = Output.empty();
+        this.defaultCapacityProviderStrategy = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,12 +98,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> capacityProviders;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<List<ClusterSettingsArgs>> clusterSettings;
-        private @Nullable Input<ClusterConfigurationArgs> configuration;
-        private @Nullable Input<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
-        private @Nullable Input<List<ClusterTagArgs>> tags;
+        private @Nullable Output<List<String>> capacityProviders;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<List<ClusterSettingsArgs>> clusterSettings;
+        private @Nullable Output<ClusterConfigurationArgs> configuration;
+        private @Nullable Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
+        private @Nullable Output<List<ClusterTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -119,63 +119,63 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder capacityProviders(@Nullable Input<List<String>> capacityProviders) {
+        public Builder capacityProviders(@Nullable Output<List<String>> capacityProviders) {
             this.capacityProviders = capacityProviders;
             return this;
         }
 
         public Builder capacityProviders(@Nullable List<String> capacityProviders) {
-            this.capacityProviders = Input.ofNullable(capacityProviders);
+            this.capacityProviders = Output.ofNullable(capacityProviders);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder clusterSettings(@Nullable Input<List<ClusterSettingsArgs>> clusterSettings) {
+        public Builder clusterSettings(@Nullable Output<List<ClusterSettingsArgs>> clusterSettings) {
             this.clusterSettings = clusterSettings;
             return this;
         }
 
         public Builder clusterSettings(@Nullable List<ClusterSettingsArgs> clusterSettings) {
-            this.clusterSettings = Input.ofNullable(clusterSettings);
+            this.clusterSettings = Output.ofNullable(clusterSettings);
             return this;
         }
 
-        public Builder configuration(@Nullable Input<ClusterConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<ClusterConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable ClusterConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder defaultCapacityProviderStrategy(@Nullable Input<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy) {
+        public Builder defaultCapacityProviderStrategy(@Nullable Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
             return this;
         }
 
         public Builder defaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderStrategyItemArgs> defaultCapacityProviderStrategy) {
-            this.defaultCapacityProviderStrategy = Input.ofNullable(defaultCapacityProviderStrategy);
+            this.defaultCapacityProviderStrategy = Output.ofNullable(defaultCapacityProviderStrategy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ClusterTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ClusterTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterArgs build() {

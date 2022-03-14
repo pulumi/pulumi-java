@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs;
 import java.lang.Integer;
@@ -22,17 +22,17 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
      * 
      */
     @InputImport(name="diskConfig")
-      private final @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
+      private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
 
-    public Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> getDiskConfig() {
-        return this.diskConfig == null ? Input.empty() : this.diskConfig;
+    public Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> getDiskConfig() {
+        return this.diskConfig == null ? Output.empty() : this.diskConfig;
     }
 
     @InputImport(name="instanceNames")
-      private final @Nullable Input<List<String>> instanceNames;
+      private final @Nullable Output<List<String>> instanceNames;
 
-    public Input<List<String>> getInstanceNames() {
-        return this.instanceNames == null ? Input.empty() : this.instanceNames;
+    public Output<List<String>> getInstanceNames() {
+        return this.instanceNames == null ? Output.empty() : this.instanceNames;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
      * 
      */
     @InputImport(name="numInstances")
-      private final @Nullable Input<Integer> numInstances;
+      private final @Nullable Output<Integer> numInstances;
 
-    public Input<Integer> getNumInstances() {
-        return this.numInstances == null ? Input.empty() : this.numInstances;
+    public Output<Integer> getNumInstances() {
+        return this.numInstances == null ? Output.empty() : this.numInstances;
     }
 
     public ClusterClusterConfigPreemptibleWorkerConfigGetArgs(
-        @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig,
-        @Nullable Input<List<String>> instanceNames,
-        @Nullable Input<Integer> numInstances) {
+        @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig,
+        @Nullable Output<List<String>> instanceNames,
+        @Nullable Output<Integer> numInstances) {
         this.diskConfig = diskConfig;
         this.instanceNames = instanceNames;
         this.numInstances = numInstances;
     }
 
     private ClusterClusterConfigPreemptibleWorkerConfigGetArgs() {
-        this.diskConfig = Input.empty();
-        this.instanceNames = Input.empty();
-        this.numInstances = Input.empty();
+        this.diskConfig = Output.empty();
+        this.instanceNames = Output.empty();
+        this.numInstances = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
-        private @Nullable Input<List<String>> instanceNames;
-        private @Nullable Input<Integer> numInstances;
+        private @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
+        private @Nullable Output<List<String>> instanceNames;
+        private @Nullable Output<Integer> numInstances;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
     	      this.numInstances = defaults.numInstances;
         }
 
-        public Builder diskConfig(@Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
         public Builder diskConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs diskConfig) {
-            this.diskConfig = Input.ofNullable(diskConfig);
+            this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder instanceNames(@Nullable Input<List<String>> instanceNames) {
+        public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
         public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Input.ofNullable(instanceNames);
+            this.instanceNames = Output.ofNullable(instanceNames);
             return this;
         }
 
-        public Builder numInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
         public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Input.ofNullable(numInstances);
+            this.numInstances = Output.ofNullable(numInstances);
             return this;
         }
         public ClusterClusterConfigPreemptibleWorkerConfigGetArgs build() {

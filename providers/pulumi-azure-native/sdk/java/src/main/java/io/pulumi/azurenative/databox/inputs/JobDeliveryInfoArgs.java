@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scheduledDateTime")
-      private final @Nullable Input<String> scheduledDateTime;
+      private final @Nullable Output<String> scheduledDateTime;
 
-    public Input<String> getScheduledDateTime() {
-        return this.scheduledDateTime == null ? Input.empty() : this.scheduledDateTime;
+    public Output<String> getScheduledDateTime() {
+        return this.scheduledDateTime == null ? Output.empty() : this.scheduledDateTime;
     }
 
-    public JobDeliveryInfoArgs(@Nullable Input<String> scheduledDateTime) {
+    public JobDeliveryInfoArgs(@Nullable Output<String> scheduledDateTime) {
         this.scheduledDateTime = scheduledDateTime;
     }
 
     private JobDeliveryInfoArgs() {
-        this.scheduledDateTime = Input.empty();
+        this.scheduledDateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> scheduledDateTime;
+        private @Nullable Output<String> scheduledDateTime;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scheduledDateTime = defaults.scheduledDateTime;
         }
 
-        public Builder scheduledDateTime(@Nullable Input<String> scheduledDateTime) {
+        public Builder scheduledDateTime(@Nullable Output<String> scheduledDateTime) {
             this.scheduledDateTime = scheduledDateTime;
             return this;
         }
 
         public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
-            this.scheduledDateTime = Input.ofNullable(scheduledDateTime);
+            this.scheduledDateTime = Output.ofNullable(scheduledDateTime);
             return this;
         }
         public JobDeliveryInfoArgs build() {

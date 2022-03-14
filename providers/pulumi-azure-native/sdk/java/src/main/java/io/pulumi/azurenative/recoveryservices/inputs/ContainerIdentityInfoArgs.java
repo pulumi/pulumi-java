@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="aadTenantId")
-      private final @Nullable Input<String> aadTenantId;
+      private final @Nullable Output<String> aadTenantId;
 
-    public Input<String> getAadTenantId() {
-        return this.aadTenantId == null ? Input.empty() : this.aadTenantId;
+    public Output<String> getAadTenantId() {
+        return this.aadTenantId == null ? Output.empty() : this.aadTenantId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="servicePrincipalClientId")
-      private final @Nullable Input<String> servicePrincipalClientId;
+      private final @Nullable Output<String> servicePrincipalClientId;
 
-    public Input<String> getServicePrincipalClientId() {
-        return this.servicePrincipalClientId == null ? Input.empty() : this.servicePrincipalClientId;
+    public Output<String> getServicePrincipalClientId() {
+        return this.servicePrincipalClientId == null ? Output.empty() : this.servicePrincipalClientId;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="uniqueName")
-      private final @Nullable Input<String> uniqueName;
+      private final @Nullable Output<String> uniqueName;
 
-    public Input<String> getUniqueName() {
-        return this.uniqueName == null ? Input.empty() : this.uniqueName;
+    public Output<String> getUniqueName() {
+        return this.uniqueName == null ? Output.empty() : this.uniqueName;
     }
 
     public ContainerIdentityInfoArgs(
-        @Nullable Input<String> aadTenantId,
-        @Nullable Input<String> audience,
-        @Nullable Input<String> servicePrincipalClientId,
-        @Nullable Input<String> uniqueName) {
+        @Nullable Output<String> aadTenantId,
+        @Nullable Output<String> audience,
+        @Nullable Output<String> servicePrincipalClientId,
+        @Nullable Output<String> uniqueName) {
         this.aadTenantId = aadTenantId;
         this.audience = audience;
         this.servicePrincipalClientId = servicePrincipalClientId;
@@ -74,10 +74,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     }
 
     private ContainerIdentityInfoArgs() {
-        this.aadTenantId = Input.empty();
-        this.audience = Input.empty();
-        this.servicePrincipalClientId = Input.empty();
-        this.uniqueName = Input.empty();
+        this.aadTenantId = Output.empty();
+        this.audience = Output.empty();
+        this.servicePrincipalClientId = Output.empty();
+        this.uniqueName = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aadTenantId;
-        private @Nullable Input<String> audience;
-        private @Nullable Input<String> servicePrincipalClientId;
-        private @Nullable Input<String> uniqueName;
+        private @Nullable Output<String> aadTenantId;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<String> servicePrincipalClientId;
+        private @Nullable Output<String> uniqueName;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     	      this.uniqueName = defaults.uniqueName;
         }
 
-        public Builder aadTenantId(@Nullable Input<String> aadTenantId) {
+        public Builder aadTenantId(@Nullable Output<String> aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
 
         public Builder aadTenantId(@Nullable String aadTenantId) {
-            this.aadTenantId = Input.ofNullable(aadTenantId);
+            this.aadTenantId = Output.ofNullable(aadTenantId);
             return this;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder servicePrincipalClientId(@Nullable Input<String> servicePrincipalClientId) {
+        public Builder servicePrincipalClientId(@Nullable Output<String> servicePrincipalClientId) {
             this.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
 
         public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
-            this.servicePrincipalClientId = Input.ofNullable(servicePrincipalClientId);
+            this.servicePrincipalClientId = Output.ofNullable(servicePrincipalClientId);
             return this;
         }
 
-        public Builder uniqueName(@Nullable Input<String> uniqueName) {
+        public Builder uniqueName(@Nullable Output<String> uniqueName) {
             this.uniqueName = uniqueName;
             return this;
         }
 
         public Builder uniqueName(@Nullable String uniqueName) {
-            this.uniqueName = Input.ofNullable(uniqueName);
+            this.uniqueName = Output.ofNullable(uniqueName);
             return this;
         }
         public ContainerIdentityInfoArgs build() {

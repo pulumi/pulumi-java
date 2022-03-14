@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.ResourceProviderCapabilitiesEffect;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,39 +18,39 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
     public static final ResourceProviderCapabilitiesArgs Empty = new ResourceProviderCapabilitiesArgs();
 
     @InputImport(name="effect", required=true)
-      private final Input<Either<String,ResourceProviderCapabilitiesEffect>> effect;
+      private final Output<Either<String,ResourceProviderCapabilitiesEffect>> effect;
 
-    public Input<Either<String,ResourceProviderCapabilitiesEffect>> getEffect() {
+    public Output<Either<String,ResourceProviderCapabilitiesEffect>> getEffect() {
         return this.effect;
     }
 
     @InputImport(name="quotaId", required=true)
-      private final Input<String> quotaId;
+      private final Output<String> quotaId;
 
-    public Input<String> getQuotaId() {
+    public Output<String> getQuotaId() {
         return this.quotaId;
     }
 
     @InputImport(name="requiredFeatures")
-      private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Input<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
+    public Output<List<String>> getRequiredFeatures() {
+        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
     }
 
     public ResourceProviderCapabilitiesArgs(
-        Input<Either<String,ResourceProviderCapabilitiesEffect>> effect,
-        Input<String> quotaId,
-        @Nullable Input<List<String>> requiredFeatures) {
+        Output<Either<String,ResourceProviderCapabilitiesEffect>> effect,
+        Output<String> quotaId,
+        @Nullable Output<List<String>> requiredFeatures) {
         this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
         this.quotaId = Objects.requireNonNull(quotaId, "expected parameter 'quotaId' to be non-null");
         this.requiredFeatures = requiredFeatures;
     }
 
     private ResourceProviderCapabilitiesArgs() {
-        this.effect = Input.empty();
-        this.quotaId = Input.empty();
-        this.requiredFeatures = Input.empty();
+        this.effect = Output.empty();
+        this.quotaId = Output.empty();
+        this.requiredFeatures = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Either<String,ResourceProviderCapabilitiesEffect>> effect;
-        private Input<String> quotaId;
-        private @Nullable Input<List<String>> requiredFeatures;
+        private Output<Either<String,ResourceProviderCapabilitiesEffect>> effect;
+        private Output<String> quotaId;
+        private @Nullable Output<List<String>> requiredFeatures;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
     	      this.requiredFeatures = defaults.requiredFeatures;
         }
 
-        public Builder effect(Input<Either<String,ResourceProviderCapabilitiesEffect>> effect) {
+        public Builder effect(Output<Either<String,ResourceProviderCapabilitiesEffect>> effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
         public Builder effect(Either<String,ResourceProviderCapabilitiesEffect> effect) {
-            this.effect = Input.of(Objects.requireNonNull(effect));
+            this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
 
-        public Builder quotaId(Input<String> quotaId) {
+        public Builder quotaId(Output<String> quotaId) {
             this.quotaId = Objects.requireNonNull(quotaId);
             return this;
         }
 
         public Builder quotaId(String quotaId) {
-            this.quotaId = Input.of(Objects.requireNonNull(quotaId));
+            this.quotaId = Output.of(Objects.requireNonNull(quotaId));
             return this;
         }
 
-        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Input.ofNullable(requiredFeatures);
+            this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
         public ResourceProviderCapabilitiesArgs build() {

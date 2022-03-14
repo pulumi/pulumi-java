@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.DeploymentLabelEntryArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.TargetConfigurationArgs;
@@ -18,10 +18,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
     @InputImport(name="createPolicy")
-      private final @Nullable Input<String> createPolicy;
+      private final @Nullable Output<String> createPolicy;
 
-    public Input<String> getCreatePolicy() {
-        return this.createPolicy == null ? Input.empty() : this.createPolicy;
+    public Output<String> getCreatePolicy() {
+        return this.createPolicy == null ? Output.empty() : this.createPolicy;
     }
 
     /**
@@ -29,17 +29,17 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<DeploymentLabelEntryArgs>> labels;
+      private final @Nullable Output<List<DeploymentLabelEntryArgs>> labels;
 
-    public Input<List<DeploymentLabelEntryArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<DeploymentLabelEntryArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -58,24 +58,24 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="preview")
-      private final @Nullable Input<String> preview;
+      private final @Nullable Output<String> preview;
 
-    public Input<String> getPreview() {
-        return this.preview == null ? Input.empty() : this.preview;
+    public Output<String> getPreview() {
+        return this.preview == null ? Output.empty() : this.preview;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -83,21 +83,21 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<TargetConfigurationArgs> target;
+      private final @Nullable Output<TargetConfigurationArgs> target;
 
-    public Input<TargetConfigurationArgs> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<TargetConfigurationArgs> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public DeploymentArgs(
-        @Nullable Input<String> createPolicy,
-        @Nullable Input<String> description,
-        @Nullable Input<String> id,
-        @Nullable Input<List<DeploymentLabelEntryArgs>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> preview,
-        @Nullable Input<String> project,
-        @Nullable Input<TargetConfigurationArgs> target) {
+        @Nullable Output<String> createPolicy,
+        @Nullable Output<String> description,
+        @Nullable Output<String> id,
+        @Nullable Output<List<DeploymentLabelEntryArgs>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> preview,
+        @Nullable Output<String> project,
+        @Nullable Output<TargetConfigurationArgs> target) {
         this.createPolicy = createPolicy;
         this.description = description;
         this.id = id;
@@ -109,14 +109,14 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.createPolicy = Input.empty();
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.preview = Input.empty();
-        this.project = Input.empty();
-        this.target = Input.empty();
+        this.createPolicy = Output.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.preview = Output.empty();
+        this.project = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,14 +128,14 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createPolicy;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<DeploymentLabelEntryArgs>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> preview;
-        private @Nullable Input<String> project;
-        private @Nullable Input<TargetConfigurationArgs> target;
+        private @Nullable Output<String> createPolicy;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<DeploymentLabelEntryArgs>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> preview;
+        private @Nullable Output<String> project;
+        private @Nullable Output<TargetConfigurationArgs> target;
 
         public Builder() {
     	      // Empty
@@ -153,83 +153,83 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder createPolicy(@Nullable Input<String> createPolicy) {
+        public Builder createPolicy(@Nullable Output<String> createPolicy) {
             this.createPolicy = createPolicy;
             return this;
         }
 
         public Builder createPolicy(@Nullable String createPolicy) {
-            this.createPolicy = Input.ofNullable(createPolicy);
+            this.createPolicy = Output.ofNullable(createPolicy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<DeploymentLabelEntryArgs>> labels) {
+        public Builder labels(@Nullable Output<List<DeploymentLabelEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<DeploymentLabelEntryArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder preview(@Nullable Input<String> preview) {
+        public Builder preview(@Nullable Output<String> preview) {
             this.preview = preview;
             return this;
         }
 
         public Builder preview(@Nullable String preview) {
-            this.preview = Input.ofNullable(preview);
+            this.preview = Output.ofNullable(preview);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder target(@Nullable Input<TargetConfigurationArgs> target) {
+        public Builder target(@Nullable Output<TargetConfigurationArgs> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable TargetConfigurationArgs target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public DeploymentArgs build() {

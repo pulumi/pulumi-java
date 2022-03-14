@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshName", required=true)
-      private final Input<String> meshName;
+      private final Output<String> meshName;
 
-    public Input<String> getMeshName() {
+    public Output<String> getMeshName() {
         return this.meshName;
     }
 
@@ -32,10 +32,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshOwner")
-      private final @Nullable Input<String> meshOwner;
+      private final @Nullable Output<String> meshOwner;
 
-    public Input<String> getMeshOwner() {
-        return this.meshOwner == null ? Input.empty() : this.meshOwner;
+    public Output<String> getMeshOwner() {
+        return this.meshOwner == null ? Output.empty() : this.meshOwner;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec", required=true)
-      private final Input<RouteSpecArgs> spec;
+      private final Output<RouteSpecArgs> spec;
 
-    public Input<RouteSpecArgs> getSpec() {
+    public Output<RouteSpecArgs> getSpec() {
         return this.spec;
     }
 
@@ -65,10 +65,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualRouterName", required=true)
-      private final Input<String> virtualRouterName;
+      private final Output<String> virtualRouterName;
 
-    public Input<String> getVirtualRouterName() {
+    public Output<String> getVirtualRouterName() {
         return this.virtualRouterName;
     }
 
     public RouteArgs(
-        Input<String> meshName,
-        @Nullable Input<String> meshOwner,
-        @Nullable Input<String> name,
-        Input<RouteSpecArgs> spec,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> virtualRouterName) {
+        Output<String> meshName,
+        @Nullable Output<String> meshOwner,
+        @Nullable Output<String> name,
+        Output<RouteSpecArgs> spec,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> virtualRouterName) {
         this.meshName = Objects.requireNonNull(meshName, "expected parameter 'meshName' to be non-null");
         this.meshOwner = meshOwner;
         this.name = name;
@@ -98,12 +98,12 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.meshName = Input.empty();
-        this.meshOwner = Input.empty();
-        this.name = Input.empty();
-        this.spec = Input.empty();
-        this.tags = Input.empty();
-        this.virtualRouterName = Input.empty();
+        this.meshName = Output.empty();
+        this.meshOwner = Output.empty();
+        this.name = Output.empty();
+        this.spec = Output.empty();
+        this.tags = Output.empty();
+        this.virtualRouterName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> meshName;
-        private @Nullable Input<String> meshOwner;
-        private @Nullable Input<String> name;
-        private Input<RouteSpecArgs> spec;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> virtualRouterName;
+        private Output<String> meshName;
+        private @Nullable Output<String> meshOwner;
+        private @Nullable Output<String> name;
+        private Output<RouteSpecArgs> spec;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> virtualRouterName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder meshName(Input<String> meshName) {
+        public Builder meshName(Output<String> meshName) {
             this.meshName = Objects.requireNonNull(meshName);
             return this;
         }
 
         public Builder meshName(String meshName) {
-            this.meshName = Input.of(Objects.requireNonNull(meshName));
+            this.meshName = Output.of(Objects.requireNonNull(meshName));
             return this;
         }
 
-        public Builder meshOwner(@Nullable Input<String> meshOwner) {
+        public Builder meshOwner(@Nullable Output<String> meshOwner) {
             this.meshOwner = meshOwner;
             return this;
         }
 
         public Builder meshOwner(@Nullable String meshOwner) {
-            this.meshOwner = Input.ofNullable(meshOwner);
+            this.meshOwner = Output.ofNullable(meshOwner);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder spec(Input<RouteSpecArgs> spec) {
+        public Builder spec(Output<RouteSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
         public Builder spec(RouteSpecArgs spec) {
-            this.spec = Input.of(Objects.requireNonNull(spec));
+            this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualRouterName(Input<String> virtualRouterName) {
+        public Builder virtualRouterName(Output<String> virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
 
         public Builder virtualRouterName(String virtualRouterName) {
-            this.virtualRouterName = Input.of(Objects.requireNonNull(virtualRouterName));
+            this.virtualRouterName = Output.of(Objects.requireNonNull(virtualRouterName));
             return this;
         }
         public RouteArgs build() {

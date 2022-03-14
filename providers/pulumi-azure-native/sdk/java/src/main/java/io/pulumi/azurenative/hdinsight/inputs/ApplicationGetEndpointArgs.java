@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="destinationPort")
-      private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Output<Integer> destinationPort;
 
-    public Input<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Input.empty() : this.destinationPort;
+    public Output<Integer> getDestinationPort() {
+        return this.destinationPort == null ? Output.empty() : this.destinationPort;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateIPAddress")
-      private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Output<String> privateIPAddress;
 
-    public Input<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
+    public Output<String> getPrivateIPAddress() {
+        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicPort")
-      private final @Nullable Input<Integer> publicPort;
+      private final @Nullable Output<Integer> publicPort;
 
-    public Input<Integer> getPublicPort() {
-        return this.publicPort == null ? Input.empty() : this.publicPort;
+    public Output<Integer> getPublicPort() {
+        return this.publicPort == null ? Output.empty() : this.publicPort;
     }
 
     public ApplicationGetEndpointArgs(
-        @Nullable Input<Integer> destinationPort,
-        @Nullable Input<String> location,
-        @Nullable Input<String> privateIPAddress,
-        @Nullable Input<Integer> publicPort) {
+        @Nullable Output<Integer> destinationPort,
+        @Nullable Output<String> location,
+        @Nullable Output<String> privateIPAddress,
+        @Nullable Output<Integer> publicPort) {
         this.destinationPort = destinationPort;
         this.location = location;
         this.privateIPAddress = privateIPAddress;
@@ -75,10 +75,10 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
     }
 
     private ApplicationGetEndpointArgs() {
-        this.destinationPort = Input.empty();
-        this.location = Input.empty();
-        this.privateIPAddress = Input.empty();
-        this.publicPort = Input.empty();
+        this.destinationPort = Output.empty();
+        this.location = Output.empty();
+        this.privateIPAddress = Output.empty();
+        this.publicPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> destinationPort;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> privateIPAddress;
-        private @Nullable Input<Integer> publicPort;
+        private @Nullable Output<Integer> destinationPort;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> privateIPAddress;
+        private @Nullable Output<Integer> publicPort;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
     	      this.publicPort = defaults.publicPort;
         }
 
-        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Input.ofNullable(destinationPort);
+            this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Input.ofNullable(privateIPAddress);
+            this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder publicPort(@Nullable Input<Integer> publicPort) {
+        public Builder publicPort(@Nullable Output<Integer> publicPort) {
             this.publicPort = publicPort;
             return this;
         }
 
         public Builder publicPort(@Nullable Integer publicPort) {
-            this.publicPort = Input.ofNullable(publicPort);
+            this.publicPort = Output.ofNullable(publicPort);
             return this;
         }
         public ApplicationGetEndpointArgs build() {

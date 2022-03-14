@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="customerAdminGroupId")
-      private final @Nullable Input<String> customerAdminGroupId;
+      private final @Nullable Output<String> customerAdminGroupId;
 
-    public Input<String> getCustomerAdminGroupId() {
-        return this.customerAdminGroupId == null ? Input.empty() : this.customerAdminGroupId;
+    public Output<String> getCustomerAdminGroupId() {
+        return this.customerAdminGroupId == null ? Output.empty() : this.customerAdminGroupId;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -57,10 +57,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public OpenShiftManagedClusterAADIdentityProviderArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> customerAdminGroupId,
-        Input<String> kind,
-        @Nullable Input<String> secret,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> customerAdminGroupId,
+        Output<String> kind,
+        @Nullable Output<String> secret,
+        @Nullable Output<String> tenantId) {
         this.clientId = clientId;
         this.customerAdminGroupId = customerAdminGroupId;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -88,11 +88,11 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
     }
 
     private OpenShiftManagedClusterAADIdentityProviderArgs() {
-        this.clientId = Input.empty();
-        this.customerAdminGroupId = Input.empty();
-        this.kind = Input.empty();
-        this.secret = Input.empty();
-        this.tenantId = Input.empty();
+        this.clientId = Output.empty();
+        this.customerAdminGroupId = Output.empty();
+        this.kind = Output.empty();
+        this.secret = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> customerAdminGroupId;
-        private Input<String> kind;
-        private @Nullable Input<String> secret;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> customerAdminGroupId;
+        private Output<String> kind;
+        private @Nullable Output<String> secret;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder customerAdminGroupId(@Nullable Input<String> customerAdminGroupId) {
+        public Builder customerAdminGroupId(@Nullable Output<String> customerAdminGroupId) {
             this.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
 
         public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
-            this.customerAdminGroupId = Input.ofNullable(customerAdminGroupId);
+            this.customerAdminGroupId = Output.ofNullable(customerAdminGroupId);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public OpenShiftManagedClusterAADIdentityProviderArgs build() {

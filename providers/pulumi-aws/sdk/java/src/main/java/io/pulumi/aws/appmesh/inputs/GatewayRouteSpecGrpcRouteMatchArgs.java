@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class GatewayRouteSpecGrpcRouteMatchArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
-    public GatewayRouteSpecGrpcRouteMatchArgs(Input<String> serviceName) {
+    public GatewayRouteSpecGrpcRouteMatchArgs(Output<String> serviceName) {
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
     }
 
     private GatewayRouteSpecGrpcRouteMatchArgs() {
-        this.serviceName = Input.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GatewayRouteSpecGrpcRouteMatchArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> serviceName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GatewayRouteSpecGrpcRouteMatchArgs extends io.pulumi.resource
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public GatewayRouteSpecGrpcRouteMatchArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs.inputs;
 
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationThumbnailConfigurationRecordingMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="recordingMode", required=true)
-      private final Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
+      private final Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
 
-    public Input<RecordingConfigurationThumbnailConfigurationRecordingMode> getRecordingMode() {
+    public Output<RecordingConfigurationThumbnailConfigurationRecordingMode> getRecordingMode() {
         return this.recordingMode;
     }
 
@@ -35,22 +35,22 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="targetIntervalSeconds")
-      private final @Nullable Input<Integer> targetIntervalSeconds;
+      private final @Nullable Output<Integer> targetIntervalSeconds;
 
-    public Input<Integer> getTargetIntervalSeconds() {
-        return this.targetIntervalSeconds == null ? Input.empty() : this.targetIntervalSeconds;
+    public Output<Integer> getTargetIntervalSeconds() {
+        return this.targetIntervalSeconds == null ? Output.empty() : this.targetIntervalSeconds;
     }
 
     public RecordingConfigurationThumbnailConfigurationArgs(
-        Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode,
-        @Nullable Input<Integer> targetIntervalSeconds) {
+        Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode,
+        @Nullable Output<Integer> targetIntervalSeconds) {
         this.recordingMode = Objects.requireNonNull(recordingMode, "expected parameter 'recordingMode' to be non-null");
         this.targetIntervalSeconds = targetIntervalSeconds;
     }
 
     private RecordingConfigurationThumbnailConfigurationArgs() {
-        this.recordingMode = Input.empty();
-        this.targetIntervalSeconds = Input.empty();
+        this.recordingMode = Output.empty();
+        this.targetIntervalSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
-        private @Nullable Input<Integer> targetIntervalSeconds;
+        private Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
+        private @Nullable Output<Integer> targetIntervalSeconds;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
     	      this.targetIntervalSeconds = defaults.targetIntervalSeconds;
         }
 
-        public Builder recordingMode(Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode) {
+        public Builder recordingMode(Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode) {
             this.recordingMode = Objects.requireNonNull(recordingMode);
             return this;
         }
 
         public Builder recordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
-            this.recordingMode = Input.of(Objects.requireNonNull(recordingMode));
+            this.recordingMode = Output.of(Objects.requireNonNull(recordingMode));
             return this;
         }
 
-        public Builder targetIntervalSeconds(@Nullable Input<Integer> targetIntervalSeconds) {
+        public Builder targetIntervalSeconds(@Nullable Output<Integer> targetIntervalSeconds) {
             this.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }
 
         public Builder targetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
-            this.targetIntervalSeconds = Input.ofNullable(targetIntervalSeconds);
+            this.targetIntervalSeconds = Output.ofNullable(targetIntervalSeconds);
             return this;
         }
         public RecordingConfigurationThumbnailConfigurationArgs build() {

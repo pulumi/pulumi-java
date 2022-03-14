@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
      * 
      */
     @InputImport(name="phoneNumber")
-      private final @Nullable Input<String> phoneNumber;
+      private final @Nullable Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
-        return this.phoneNumber == null ? Input.empty() : this.phoneNumber;
+    public Output<String> getPhoneNumber() {
+        return this.phoneNumber == null ? Output.empty() : this.phoneNumber;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(@Nullable Input<String> phoneNumber) {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(@Nullable Output<String> phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
     private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs() {
-        this.phoneNumber = Input.empty();
+        this.phoneNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
     }
 
     public static final class Builder {
-        private @Nullable Input<String> phoneNumber;
+        private @Nullable Output<String> phoneNumber;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder phoneNumber(@Nullable Input<String> phoneNumber) {
+        public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
         public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Input.ofNullable(phoneNumber);
+            this.phoneNumber = Output.ofNullable(phoneNumber);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs build() {

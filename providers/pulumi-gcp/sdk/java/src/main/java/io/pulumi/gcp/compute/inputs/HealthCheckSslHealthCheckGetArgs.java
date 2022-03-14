@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="portName")
-      private final @Nullable Input<String> portName;
+      private final @Nullable Output<String> portName;
 
-    public Input<String> getPortName() {
-        return this.portName == null ? Input.empty() : this.portName;
+    public Output<String> getPortName() {
+        return this.portName == null ? Output.empty() : this.portName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="portSpecification")
-      private final @Nullable Input<String> portSpecification;
+      private final @Nullable Output<String> portSpecification;
 
-    public Input<String> getPortSpecification() {
-        return this.portSpecification == null ? Input.empty() : this.portSpecification;
+    public Output<String> getPortSpecification() {
+        return this.portSpecification == null ? Output.empty() : this.portSpecification;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="proxyHeader")
-      private final @Nullable Input<String> proxyHeader;
+      private final @Nullable Output<String> proxyHeader;
 
-    public Input<String> getProxyHeader() {
-        return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
+    public Output<String> getProxyHeader() {
+        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="request")
-      private final @Nullable Input<String> request;
+      private final @Nullable Output<String> request;
 
-    public Input<String> getRequest() {
-        return this.request == null ? Input.empty() : this.request;
+    public Output<String> getRequest() {
+        return this.request == null ? Output.empty() : this.request;
     }
 
     /**
@@ -96,19 +96,19 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="response")
-      private final @Nullable Input<String> response;
+      private final @Nullable Output<String> response;
 
-    public Input<String> getResponse() {
-        return this.response == null ? Input.empty() : this.response;
+    public Output<String> getResponse() {
+        return this.response == null ? Output.empty() : this.response;
     }
 
     public HealthCheckSslHealthCheckGetArgs(
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> portName,
-        @Nullable Input<String> portSpecification,
-        @Nullable Input<String> proxyHeader,
-        @Nullable Input<String> request,
-        @Nullable Input<String> response) {
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> portName,
+        @Nullable Output<String> portSpecification,
+        @Nullable Output<String> proxyHeader,
+        @Nullable Output<String> request,
+        @Nullable Output<String> response) {
         this.port = port;
         this.portName = portName;
         this.portSpecification = portSpecification;
@@ -118,12 +118,12 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
     }
 
     private HealthCheckSslHealthCheckGetArgs() {
-        this.port = Input.empty();
-        this.portName = Input.empty();
-        this.portSpecification = Input.empty();
-        this.proxyHeader = Input.empty();
-        this.request = Input.empty();
-        this.response = Input.empty();
+        this.port = Output.empty();
+        this.portName = Output.empty();
+        this.portSpecification = Output.empty();
+        this.proxyHeader = Output.empty();
+        this.request = Output.empty();
+        this.response = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,12 +135,12 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> portName;
-        private @Nullable Input<String> portSpecification;
-        private @Nullable Input<String> proxyHeader;
-        private @Nullable Input<String> request;
-        private @Nullable Input<String> response;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> portName;
+        private @Nullable Output<String> portSpecification;
+        private @Nullable Output<String> proxyHeader;
+        private @Nullable Output<String> request;
+        private @Nullable Output<String> response;
 
         public Builder() {
     	      // Empty
@@ -156,63 +156,63 @@ public final class HealthCheckSslHealthCheckGetArgs extends io.pulumi.resources.
     	      this.response = defaults.response;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder portName(@Nullable Input<String> portName) {
+        public Builder portName(@Nullable Output<String> portName) {
             this.portName = portName;
             return this;
         }
 
         public Builder portName(@Nullable String portName) {
-            this.portName = Input.ofNullable(portName);
+            this.portName = Output.ofNullable(portName);
             return this;
         }
 
-        public Builder portSpecification(@Nullable Input<String> portSpecification) {
+        public Builder portSpecification(@Nullable Output<String> portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
 
         public Builder portSpecification(@Nullable String portSpecification) {
-            this.portSpecification = Input.ofNullable(portSpecification);
+            this.portSpecification = Output.ofNullable(portSpecification);
             return this;
         }
 
-        public Builder proxyHeader(@Nullable Input<String> proxyHeader) {
+        public Builder proxyHeader(@Nullable Output<String> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
         public Builder proxyHeader(@Nullable String proxyHeader) {
-            this.proxyHeader = Input.ofNullable(proxyHeader);
+            this.proxyHeader = Output.ofNullable(proxyHeader);
             return this;
         }
 
-        public Builder request(@Nullable Input<String> request) {
+        public Builder request(@Nullable Output<String> request) {
             this.request = request;
             return this;
         }
 
         public Builder request(@Nullable String request) {
-            this.request = Input.ofNullable(request);
+            this.request = Output.ofNullable(request);
             return this;
         }
 
-        public Builder response(@Nullable Input<String> response) {
+        public Builder response(@Nullable Output<String> response) {
             this.response = response;
             return this;
         }
 
         public Builder response(@Nullable String response) {
-            this.response = Input.ofNullable(response);
+            this.response = Output.ofNullable(response);
             return this;
         }
         public HealthCheckSslHealthCheckGetArgs build() {

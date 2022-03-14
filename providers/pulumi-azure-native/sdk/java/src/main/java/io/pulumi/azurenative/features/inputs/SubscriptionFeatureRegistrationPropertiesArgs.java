@@ -5,7 +5,7 @@ package io.pulumi.azurenative.features.inputs;
 
 import io.pulumi.azurenative.features.enums.SubscriptionFeatureRegistrationState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="shouldFeatureDisplayInPortal")
-      private final @Nullable Input<Boolean> shouldFeatureDisplayInPortal;
+      private final @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
 
-    public Input<Boolean> getShouldFeatureDisplayInPortal() {
-        return this.shouldFeatureDisplayInPortal == null ? Input.empty() : this.shouldFeatureDisplayInPortal;
+    public Output<Boolean> getShouldFeatureDisplayInPortal() {
+        return this.shouldFeatureDisplayInPortal == null ? Output.empty() : this.shouldFeatureDisplayInPortal;
     }
 
     /**
@@ -56,28 +56,28 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state;
+      private final @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
 
-    public Input<Either<String,SubscriptionFeatureRegistrationState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,SubscriptionFeatureRegistrationState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public SubscriptionFeatureRegistrationPropertiesArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<Boolean> shouldFeatureDisplayInPortal,
-        @Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state) {
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<Boolean> shouldFeatureDisplayInPortal,
+        @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state) {
         this.description = description;
         this.metadata = metadata;
-        this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal == null ? Input.ofNullable(false) : shouldFeatureDisplayInPortal;
+        this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal == null ? Output.ofNullable(false) : shouldFeatureDisplayInPortal;
         this.state = state;
     }
 
     private SubscriptionFeatureRegistrationPropertiesArgs() {
-        this.description = Input.empty();
-        this.metadata = Input.empty();
-        this.shouldFeatureDisplayInPortal = Input.empty();
-        this.state = Input.empty();
+        this.description = Output.empty();
+        this.metadata = Output.empty();
+        this.shouldFeatureDisplayInPortal = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<Boolean> shouldFeatureDisplayInPortal;
-        private @Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
+        private @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
     	      this.state = defaults.state;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder shouldFeatureDisplayInPortal(@Nullable Input<Boolean> shouldFeatureDisplayInPortal) {
+        public Builder shouldFeatureDisplayInPortal(@Nullable Output<Boolean> shouldFeatureDisplayInPortal) {
             this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
 
         public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
-            this.shouldFeatureDisplayInPortal = Input.ofNullable(shouldFeatureDisplayInPortal);
+            this.shouldFeatureDisplayInPortal = Output.ofNullable(shouldFeatureDisplayInPortal);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state) {
+        public Builder state(@Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,SubscriptionFeatureRegistrationState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public SubscriptionFeatureRegistrationPropertiesArgs build() {

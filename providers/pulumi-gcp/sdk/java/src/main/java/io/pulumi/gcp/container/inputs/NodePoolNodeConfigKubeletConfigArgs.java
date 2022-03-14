@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
     public static final NodePoolNodeConfigKubeletConfigArgs Empty = new NodePoolNodeConfigKubeletConfigArgs();
 
     @InputImport(name="cpuCfsQuota")
-      private final @Nullable Input<Boolean> cpuCfsQuota;
+      private final @Nullable Output<Boolean> cpuCfsQuota;
 
-    public Input<Boolean> getCpuCfsQuota() {
-        return this.cpuCfsQuota == null ? Input.empty() : this.cpuCfsQuota;
+    public Output<Boolean> getCpuCfsQuota() {
+        return this.cpuCfsQuota == null ? Output.empty() : this.cpuCfsQuota;
     }
 
     @InputImport(name="cpuCfsQuotaPeriod")
-      private final @Nullable Input<String> cpuCfsQuotaPeriod;
+      private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
-    public Input<String> getCpuCfsQuotaPeriod() {
-        return this.cpuCfsQuotaPeriod == null ? Input.empty() : this.cpuCfsQuotaPeriod;
+    public Output<String> getCpuCfsQuotaPeriod() {
+        return this.cpuCfsQuotaPeriod == null ? Output.empty() : this.cpuCfsQuotaPeriod;
     }
 
     @InputImport(name="cpuManagerPolicy", required=true)
-      private final Input<String> cpuManagerPolicy;
+      private final Output<String> cpuManagerPolicy;
 
-    public Input<String> getCpuManagerPolicy() {
+    public Output<String> getCpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
 
     public NodePoolNodeConfigKubeletConfigArgs(
-        @Nullable Input<Boolean> cpuCfsQuota,
-        @Nullable Input<String> cpuCfsQuotaPeriod,
-        Input<String> cpuManagerPolicy) {
+        @Nullable Output<Boolean> cpuCfsQuota,
+        @Nullable Output<String> cpuCfsQuotaPeriod,
+        Output<String> cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy, "expected parameter 'cpuManagerPolicy' to be non-null");
     }
 
     private NodePoolNodeConfigKubeletConfigArgs() {
-        this.cpuCfsQuota = Input.empty();
-        this.cpuCfsQuotaPeriod = Input.empty();
-        this.cpuManagerPolicy = Input.empty();
+        this.cpuCfsQuota = Output.empty();
+        this.cpuCfsQuotaPeriod = Output.empty();
+        this.cpuManagerPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> cpuCfsQuota;
-        private @Nullable Input<String> cpuCfsQuotaPeriod;
-        private Input<String> cpuManagerPolicy;
+        private @Nullable Output<Boolean> cpuCfsQuota;
+        private @Nullable Output<String> cpuCfsQuotaPeriod;
+        private Output<String> cpuManagerPolicy;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
     	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
         }
 
-        public Builder cpuCfsQuota(@Nullable Input<Boolean> cpuCfsQuota) {
+        public Builder cpuCfsQuota(@Nullable Output<Boolean> cpuCfsQuota) {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
-            this.cpuCfsQuota = Input.ofNullable(cpuCfsQuota);
+            this.cpuCfsQuota = Output.ofNullable(cpuCfsQuota);
             return this;
         }
 
-        public Builder cpuCfsQuotaPeriod(@Nullable Input<String> cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
-            this.cpuCfsQuotaPeriod = Input.ofNullable(cpuCfsQuotaPeriod);
+            this.cpuCfsQuotaPeriod = Output.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
 
-        public Builder cpuManagerPolicy(Input<String> cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(Output<String> cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
 
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
-            this.cpuManagerPolicy = Input.of(Objects.requireNonNull(cpuManagerPolicy));
+            this.cpuManagerPolicy = Output.of(Objects.requireNonNull(cpuManagerPolicy));
             return this;
         }
         public NodePoolNodeConfigKubeletConfigArgs build() {

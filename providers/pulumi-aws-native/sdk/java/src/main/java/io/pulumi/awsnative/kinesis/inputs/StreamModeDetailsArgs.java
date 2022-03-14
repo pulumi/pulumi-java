@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesis.inputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamModeDetailsStreamMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class StreamModeDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="streamMode", required=true)
-      private final Input<StreamModeDetailsStreamMode> streamMode;
+      private final Output<StreamModeDetailsStreamMode> streamMode;
 
-    public Input<StreamModeDetailsStreamMode> getStreamMode() {
+    public Output<StreamModeDetailsStreamMode> getStreamMode() {
         return this.streamMode;
     }
 
-    public StreamModeDetailsArgs(Input<StreamModeDetailsStreamMode> streamMode) {
+    public StreamModeDetailsArgs(Output<StreamModeDetailsStreamMode> streamMode) {
         this.streamMode = Objects.requireNonNull(streamMode, "expected parameter 'streamMode' to be non-null");
     }
 
     private StreamModeDetailsArgs() {
-        this.streamMode = Input.empty();
+        this.streamMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class StreamModeDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<StreamModeDetailsStreamMode> streamMode;
+        private Output<StreamModeDetailsStreamMode> streamMode;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class StreamModeDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.streamMode = defaults.streamMode;
         }
 
-        public Builder streamMode(Input<StreamModeDetailsStreamMode> streamMode) {
+        public Builder streamMode(Output<StreamModeDetailsStreamMode> streamMode) {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }
 
         public Builder streamMode(StreamModeDetailsStreamMode streamMode) {
-            this.streamMode = Input.of(Objects.requireNonNull(streamMode));
+            this.streamMode = Output.of(Objects.requireNonNull(streamMode));
             return this;
         }
         public StreamModeDetailsArgs build() {

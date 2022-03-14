@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs;
@@ -28,10 +28,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="conversationModelConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> getConversationModelConfig() {
-        return this.conversationModelConfig == null ? Input.empty() : this.conversationModelConfig;
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> getConversationModelConfig() {
+        return this.conversationModelConfig == null ? Output.empty() : this.conversationModelConfig;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="conversationProcessConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> getConversationProcessConfig() {
-        return this.conversationProcessConfig == null ? Input.empty() : this.conversationProcessConfig;
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> getConversationProcessConfig() {
+        return this.conversationProcessConfig == null ? Output.empty() : this.conversationProcessConfig;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="enableEventBasedSuggestion")
-      private final @Nullable Input<Boolean> enableEventBasedSuggestion;
+      private final @Nullable Output<Boolean> enableEventBasedSuggestion;
 
-    public Input<Boolean> getEnableEventBasedSuggestion() {
-        return this.enableEventBasedSuggestion == null ? Input.empty() : this.enableEventBasedSuggestion;
+    public Output<Boolean> getEnableEventBasedSuggestion() {
+        return this.enableEventBasedSuggestion == null ? Output.empty() : this.enableEventBasedSuggestion;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="queryConfig")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
 
-    public Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> getQueryConfig() {
-        return this.queryConfig == null ? Input.empty() : this.queryConfig;
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> getQueryConfig() {
+        return this.queryConfig == null ? Output.empty() : this.queryConfig;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="suggestionFeature")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature;
 
-    public Input<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> getSuggestionFeature() {
-        return this.suggestionFeature == null ? Input.empty() : this.suggestionFeature;
+    public Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> getSuggestionFeature() {
+        return this.suggestionFeature == null ? Output.empty() : this.suggestionFeature;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="suggestionTriggerSettings")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
 
-    public Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> getSuggestionTriggerSettings() {
-        return this.suggestionTriggerSettings == null ? Input.empty() : this.suggestionTriggerSettings;
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> getSuggestionTriggerSettings() {
+        return this.suggestionTriggerSettings == null ? Output.empty() : this.suggestionTriggerSettings;
     }
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs(
-        @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig,
-        @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig,
-        @Nullable Input<Boolean> enableEventBasedSuggestion,
-        @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig,
-        @Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature,
-        @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings) {
+        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig,
+        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig,
+        @Nullable Output<Boolean> enableEventBasedSuggestion,
+        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig,
+        @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature,
+        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings) {
         this.conversationModelConfig = conversationModelConfig;
         this.conversationProcessConfig = conversationProcessConfig;
         this.enableEventBasedSuggestion = enableEventBasedSuggestion;
@@ -105,12 +105,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs() {
-        this.conversationModelConfig = Input.empty();
-        this.conversationProcessConfig = Input.empty();
-        this.enableEventBasedSuggestion = Input.empty();
-        this.queryConfig = Input.empty();
-        this.suggestionFeature = Input.empty();
-        this.suggestionTriggerSettings = Input.empty();
+        this.conversationModelConfig = Output.empty();
+        this.conversationProcessConfig = Output.empty();
+        this.enableEventBasedSuggestion = Output.empty();
+        this.queryConfig = Output.empty();
+        this.suggestionFeature = Output.empty();
+        this.suggestionTriggerSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
-        private @Nullable Input<Boolean> enableEventBasedSuggestion;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
+        private @Nullable Output<Boolean> enableEventBasedSuggestion;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.suggestionTriggerSettings = defaults.suggestionTriggerSettings;
         }
 
-        public Builder conversationModelConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig) {
+        public Builder conversationModelConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig) {
             this.conversationModelConfig = conversationModelConfig;
             return this;
         }
 
         public Builder conversationModelConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs conversationModelConfig) {
-            this.conversationModelConfig = Input.ofNullable(conversationModelConfig);
+            this.conversationModelConfig = Output.ofNullable(conversationModelConfig);
             return this;
         }
 
-        public Builder conversationProcessConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig) {
+        public Builder conversationProcessConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig) {
             this.conversationProcessConfig = conversationProcessConfig;
             return this;
         }
 
         public Builder conversationProcessConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs conversationProcessConfig) {
-            this.conversationProcessConfig = Input.ofNullable(conversationProcessConfig);
+            this.conversationProcessConfig = Output.ofNullable(conversationProcessConfig);
             return this;
         }
 
-        public Builder enableEventBasedSuggestion(@Nullable Input<Boolean> enableEventBasedSuggestion) {
+        public Builder enableEventBasedSuggestion(@Nullable Output<Boolean> enableEventBasedSuggestion) {
             this.enableEventBasedSuggestion = enableEventBasedSuggestion;
             return this;
         }
 
         public Builder enableEventBasedSuggestion(@Nullable Boolean enableEventBasedSuggestion) {
-            this.enableEventBasedSuggestion = Input.ofNullable(enableEventBasedSuggestion);
+            this.enableEventBasedSuggestion = Output.ofNullable(enableEventBasedSuggestion);
             return this;
         }
 
-        public Builder queryConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig) {
+        public Builder queryConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig) {
             this.queryConfig = queryConfig;
             return this;
         }
 
         public Builder queryConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs queryConfig) {
-            this.queryConfig = Input.ofNullable(queryConfig);
+            this.queryConfig = Output.ofNullable(queryConfig);
             return this;
         }
 
-        public Builder suggestionFeature(@Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature) {
+        public Builder suggestionFeature(@Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature) {
             this.suggestionFeature = suggestionFeature;
             return this;
         }
 
         public Builder suggestionFeature(@Nullable GoogleCloudDialogflowV2beta1SuggestionFeatureArgs suggestionFeature) {
-            this.suggestionFeature = Input.ofNullable(suggestionFeature);
+            this.suggestionFeature = Output.ofNullable(suggestionFeature);
             return this;
         }
 
-        public Builder suggestionTriggerSettings(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings) {
+        public Builder suggestionTriggerSettings(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings) {
             this.suggestionTriggerSettings = suggestionTriggerSettings;
             return this;
         }
 
         public Builder suggestionTriggerSettings(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs suggestionTriggerSettings) {
-            this.suggestionTriggerSettings = Input.ofNullable(suggestionTriggerSettings);
+            this.suggestionTriggerSettings = Output.ofNullable(suggestionTriggerSettings);
             return this;
         }
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs build() {

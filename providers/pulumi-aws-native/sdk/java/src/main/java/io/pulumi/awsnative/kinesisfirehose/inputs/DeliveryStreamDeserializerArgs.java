@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHiveJsonSerDeArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOpenXJsonSerDeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
     public static final DeliveryStreamDeserializerArgs Empty = new DeliveryStreamDeserializerArgs();
 
     @InputImport(name="hiveJsonSerDe")
-      private final @Nullable Input<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
+      private final @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
 
-    public Input<DeliveryStreamHiveJsonSerDeArgs> getHiveJsonSerDe() {
-        return this.hiveJsonSerDe == null ? Input.empty() : this.hiveJsonSerDe;
+    public Output<DeliveryStreamHiveJsonSerDeArgs> getHiveJsonSerDe() {
+        return this.hiveJsonSerDe == null ? Output.empty() : this.hiveJsonSerDe;
     }
 
     @InputImport(name="openXJsonSerDe")
-      private final @Nullable Input<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
+      private final @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
 
-    public Input<DeliveryStreamOpenXJsonSerDeArgs> getOpenXJsonSerDe() {
-        return this.openXJsonSerDe == null ? Input.empty() : this.openXJsonSerDe;
+    public Output<DeliveryStreamOpenXJsonSerDeArgs> getOpenXJsonSerDe() {
+        return this.openXJsonSerDe == null ? Output.empty() : this.openXJsonSerDe;
     }
 
     public DeliveryStreamDeserializerArgs(
-        @Nullable Input<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe,
-        @Nullable Input<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
+        @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe,
+        @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
         this.hiveJsonSerDe = hiveJsonSerDe;
         this.openXJsonSerDe = openXJsonSerDe;
     }
 
     private DeliveryStreamDeserializerArgs() {
-        this.hiveJsonSerDe = Input.empty();
-        this.openXJsonSerDe = Input.empty();
+        this.hiveJsonSerDe = Output.empty();
+        this.openXJsonSerDe = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
-        private @Nullable Input<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
+        private @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
+        private @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
     	      this.openXJsonSerDe = defaults.openXJsonSerDe;
         }
 
-        public Builder hiveJsonSerDe(@Nullable Input<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe) {
+        public Builder hiveJsonSerDe(@Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe) {
             this.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
 
         public Builder hiveJsonSerDe(@Nullable DeliveryStreamHiveJsonSerDeArgs hiveJsonSerDe) {
-            this.hiveJsonSerDe = Input.ofNullable(hiveJsonSerDe);
+            this.hiveJsonSerDe = Output.ofNullable(hiveJsonSerDe);
             return this;
         }
 
-        public Builder openXJsonSerDe(@Nullable Input<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
+        public Builder openXJsonSerDe(@Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
             this.openXJsonSerDe = openXJsonSerDe;
             return this;
         }
 
         public Builder openXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDeArgs openXJsonSerDe) {
-            this.openXJsonSerDe = Input.ofNullable(openXJsonSerDe);
+            this.openXJsonSerDe = Output.ofNullable(openXJsonSerDe);
             return this;
         }
         public DeliveryStreamDeserializerArgs build() {

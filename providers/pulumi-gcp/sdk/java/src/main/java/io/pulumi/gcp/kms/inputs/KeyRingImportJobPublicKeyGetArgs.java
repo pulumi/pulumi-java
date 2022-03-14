@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     public static final KeyRingImportJobPublicKeyGetArgs Empty = new KeyRingImportJobPublicKeyGetArgs();
 
     @InputImport(name="pem")
-      private final @Nullable Input<String> pem;
+      private final @Nullable Output<String> pem;
 
-    public Input<String> getPem() {
-        return this.pem == null ? Input.empty() : this.pem;
+    public Output<String> getPem() {
+        return this.pem == null ? Output.empty() : this.pem;
     }
 
-    public KeyRingImportJobPublicKeyGetArgs(@Nullable Input<String> pem) {
+    public KeyRingImportJobPublicKeyGetArgs(@Nullable Output<String> pem) {
         this.pem = pem;
     }
 
     private KeyRingImportJobPublicKeyGetArgs() {
-        this.pem = Input.empty();
+        this.pem = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pem;
+        private @Nullable Output<String> pem;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     	      this.pem = defaults.pem;
         }
 
-        public Builder pem(@Nullable Input<String> pem) {
+        public Builder pem(@Nullable Output<String> pem) {
             this.pem = pem;
             return this;
         }
 
         public Builder pem(@Nullable String pem) {
-            this.pem = Input.ofNullable(pem);
+            this.pem = Output.ofNullable(pem);
             return this;
         }
         public KeyRingImportJobPublicKeyGetArgs build() {

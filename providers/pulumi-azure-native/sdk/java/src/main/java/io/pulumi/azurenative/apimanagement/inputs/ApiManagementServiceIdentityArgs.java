@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.ApimIdentityType;
 import io.pulumi.azurenative.apimanagement.inputs.UserIdentityPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -27,9 +27,9 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ApimIdentityType>> type;
+      private final Output<Either<String,ApimIdentityType>> type;
 
-    public Input<Either<String,ApimIdentityType>> getType() {
+    public Output<Either<String,ApimIdentityType>> getType() {
         return this.type;
     }
 
@@ -41,22 +41,22 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userAssignedIdentities")
-      private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
+      private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
-    public Input<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
+    public Output<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
     }
 
     public ApiManagementServiceIdentityArgs(
-        Input<Either<String,ApimIdentityType>> type,
-        @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
+        Output<Either<String,ApimIdentityType>> type,
+        @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
     private ApiManagementServiceIdentityArgs() {
-        this.type = Input.empty();
-        this.userAssignedIdentities = Input.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,8 +68,8 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Either<String,ApimIdentityType>> type;
-        private @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
+        private Output<Either<String,ApimIdentityType>> type;
+        private @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -81,23 +81,23 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder type(Input<Either<String,ApimIdentityType>> type) {
+        public Builder type(Output<Either<String,ApimIdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ApimIdentityType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userAssignedIdentities(@Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
         public ApiManagementServiceIdentityArgs build() {

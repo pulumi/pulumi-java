@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="caPool")
-      private final @Nullable Input<String> caPool;
+      private final @Nullable Output<String> caPool;
 
-    public Input<String> getCaPool() {
-        return this.caPool == null ? Input.empty() : this.caPool;
+    public Output<String> getCaPool() {
+        return this.caPool == null ? Output.empty() : this.caPool;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public CaPoolIamPolicyState(
-        @Nullable Input<String> caPool,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> caPool,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> project) {
         this.caPool = caPool;
         this.etag = etag;
         this.location = location;
@@ -87,11 +87,11 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     private CaPoolIamPolicyState() {
-        this.caPool = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
+        this.caPool = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> caPool;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> caPool;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
     	      this.project = defaults.project;
         }
 
-        public Builder caPool(@Nullable Input<String> caPool) {
+        public Builder caPool(@Nullable Output<String> caPool) {
             this.caPool = caPool;
             return this;
         }
 
         public Builder caPool(@Nullable String caPool) {
-            this.caPool = Input.ofNullable(caPool);
+            this.caPool = Output.ofNullable(caPool);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public CaPoolIamPolicyState build() {

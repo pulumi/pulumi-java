@@ -6,7 +6,6 @@ package io.pulumi.aws.servicequotas;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicequotas.ServiceQuotaArgs;
 import io.pulumi.aws.servicequotas.inputs.ServiceQuotaState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -196,14 +195,14 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceQuota(String name, ServiceQuotaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicequotas/serviceQuota:ServiceQuota", name, args == null ? ServiceQuotaArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicequotas/serviceQuota:ServiceQuota", name, args == null ? ServiceQuotaArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServiceQuota(String name, Input<String> id, @Nullable ServiceQuotaState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServiceQuota(String name, Output<String> id, @Nullable ServiceQuotaState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicequotas/serviceQuota:ServiceQuota", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -219,7 +218,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceQuota get(String name, Input<String> id, @Nullable ServiceQuotaState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceQuota get(String name, Output<String> id, @Nullable ServiceQuotaState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceQuota(name, id, state, options);
     }
 }

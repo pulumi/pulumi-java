@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.azurenative.devtestlab.enums.SourceControlType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="armTemplateFolderPath")
-      private final @Nullable Input<String> armTemplateFolderPath;
+      private final @Nullable Output<String> armTemplateFolderPath;
 
-    public Input<String> getArmTemplateFolderPath() {
-        return this.armTemplateFolderPath == null ? Input.empty() : this.armTemplateFolderPath;
+    public Output<String> getArmTemplateFolderPath() {
+        return this.armTemplateFolderPath == null ? Output.empty() : this.armTemplateFolderPath;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchRef")
-      private final @Nullable Input<String> branchRef;
+      private final @Nullable Output<String> branchRef;
 
-    public Input<String> getBranchRef() {
-        return this.branchRef == null ? Input.empty() : this.branchRef;
+    public Output<String> getBranchRef() {
+        return this.branchRef == null ? Output.empty() : this.branchRef;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<String> folderPath;
+      private final @Nullable Output<String> folderPath;
 
-    public Input<String> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<String> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -78,10 +78,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityToken")
-      private final @Nullable Input<String> securityToken;
+      private final @Nullable Output<String> securityToken;
 
-    public Input<String> getSecurityToken() {
-        return this.securityToken == null ? Input.empty() : this.securityToken;
+    public Output<String> getSecurityToken() {
+        return this.securityToken == null ? Output.empty() : this.securityToken;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType")
-      private final @Nullable Input<Either<String,SourceControlType>> sourceType;
+      private final @Nullable Output<Either<String,SourceControlType>> sourceType;
 
-    public Input<Either<String,SourceControlType>> getSourceType() {
-        return this.sourceType == null ? Input.empty() : this.sourceType;
+    public Output<Either<String,SourceControlType>> getSourceType() {
+        return this.sourceType == null ? Output.empty() : this.sourceType;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,EnableStatus>> status;
+      private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Input<Either<String,EnableStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,EnableStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -155,26 +155,26 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public ArtifactSourceArgs(
-        @Nullable Input<String> armTemplateFolderPath,
-        @Nullable Input<String> branchRef,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> folderPath,
-        Input<String> labName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> securityToken,
-        @Nullable Input<Either<String,SourceControlType>> sourceType,
-        @Nullable Input<Either<String,EnableStatus>> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> armTemplateFolderPath,
+        @Nullable Output<String> branchRef,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> folderPath,
+        Output<String> labName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> securityToken,
+        @Nullable Output<Either<String,SourceControlType>> sourceType,
+        @Nullable Output<Either<String,EnableStatus>> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> uri) {
         this.armTemplateFolderPath = armTemplateFolderPath;
         this.branchRef = branchRef;
         this.displayName = displayName;
@@ -191,19 +191,19 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactSourceArgs() {
-        this.armTemplateFolderPath = Input.empty();
-        this.branchRef = Input.empty();
-        this.displayName = Input.empty();
-        this.folderPath = Input.empty();
-        this.labName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityToken = Input.empty();
-        this.sourceType = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.uri = Input.empty();
+        this.armTemplateFolderPath = Output.empty();
+        this.branchRef = Output.empty();
+        this.displayName = Output.empty();
+        this.folderPath = Output.empty();
+        this.labName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityToken = Output.empty();
+        this.sourceType = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -215,19 +215,19 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> armTemplateFolderPath;
-        private @Nullable Input<String> branchRef;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> folderPath;
-        private Input<String> labName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> securityToken;
-        private @Nullable Input<Either<String,SourceControlType>> sourceType;
-        private @Nullable Input<Either<String,EnableStatus>> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> armTemplateFolderPath;
+        private @Nullable Output<String> branchRef;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> folderPath;
+        private Output<String> labName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> securityToken;
+        private @Nullable Output<Either<String,SourceControlType>> sourceType;
+        private @Nullable Output<Either<String,EnableStatus>> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -250,133 +250,133 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder armTemplateFolderPath(@Nullable Input<String> armTemplateFolderPath) {
+        public Builder armTemplateFolderPath(@Nullable Output<String> armTemplateFolderPath) {
             this.armTemplateFolderPath = armTemplateFolderPath;
             return this;
         }
 
         public Builder armTemplateFolderPath(@Nullable String armTemplateFolderPath) {
-            this.armTemplateFolderPath = Input.ofNullable(armTemplateFolderPath);
+            this.armTemplateFolderPath = Output.ofNullable(armTemplateFolderPath);
             return this;
         }
 
-        public Builder branchRef(@Nullable Input<String> branchRef) {
+        public Builder branchRef(@Nullable Output<String> branchRef) {
             this.branchRef = branchRef;
             return this;
         }
 
         public Builder branchRef(@Nullable String branchRef) {
-            this.branchRef = Input.ofNullable(branchRef);
+            this.branchRef = Output.ofNullable(branchRef);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<String> folderPath) {
+        public Builder folderPath(@Nullable Output<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable String folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityToken(@Nullable Input<String> securityToken) {
+        public Builder securityToken(@Nullable Output<String> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
         public Builder securityToken(@Nullable String securityToken) {
-            this.securityToken = Input.ofNullable(securityToken);
+            this.securityToken = Output.ofNullable(securityToken);
             return this;
         }
 
-        public Builder sourceType(@Nullable Input<Either<String,SourceControlType>> sourceType) {
+        public Builder sourceType(@Nullable Output<Either<String,SourceControlType>> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
         public Builder sourceType(@Nullable Either<String,SourceControlType> sourceType) {
-            this.sourceType = Input.ofNullable(sourceType);
+            this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,EnableStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public ArtifactSourceArgs build() {

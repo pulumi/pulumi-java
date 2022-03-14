@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.DiskSecurityTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityType")
-      private final @Nullable Input<Either<String,DiskSecurityTypes>> securityType;
+      private final @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
 
-    public Input<Either<String,DiskSecurityTypes>> getSecurityType() {
-        return this.securityType == null ? Input.empty() : this.securityType;
+    public Output<Either<String,DiskSecurityTypes>> getSecurityType() {
+        return this.securityType == null ? Output.empty() : this.securityType;
     }
 
-    public DiskSecurityProfileArgs(@Nullable Input<Either<String,DiskSecurityTypes>> securityType) {
+    public DiskSecurityProfileArgs(@Nullable Output<Either<String,DiskSecurityTypes>> securityType) {
         this.securityType = securityType;
     }
 
     private DiskSecurityProfileArgs() {
-        this.securityType = Input.empty();
+        this.securityType = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DiskSecurityTypes>> securityType;
+        private @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
     	      this.securityType = defaults.securityType;
         }
 
-        public Builder securityType(@Nullable Input<Either<String,DiskSecurityTypes>> securityType) {
+        public Builder securityType(@Nullable Output<Either<String,DiskSecurityTypes>> securityType) {
             this.securityType = securityType;
             return this;
         }
 
         public Builder securityType(@Nullable Either<String,DiskSecurityTypes> securityType) {
-            this.securityType = Input.ofNullable(securityType);
+            this.securityType = Output.ofNullable(securityType);
             return this;
         }
         public DiskSecurityProfileArgs build() {

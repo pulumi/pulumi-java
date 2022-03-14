@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="bucketName")
-      private final @Nullable Input<String> bucketName;
+      private final @Nullable Output<String> bucketName;
 
-    public Input<String> getBucketName() {
-        return this.bucketName == null ? Input.empty() : this.bucketName;
+    public Output<String> getBucketName() {
+        return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="datasetName")
-      private final @Nullable Input<String> datasetName;
+      private final @Nullable Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
-        return this.datasetName == null ? Input.empty() : this.datasetName;
+    public Output<String> getDatasetName() {
+        return this.datasetName == null ? Output.empty() : this.datasetName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
@@ -67,18 +67,18 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tablePrefix")
-      private final @Nullable Input<String> tablePrefix;
+      private final @Nullable Output<String> tablePrefix;
 
-    public Input<String> getTablePrefix() {
-        return this.tablePrefix == null ? Input.empty() : this.tablePrefix;
+    public Output<String> getTablePrefix() {
+        return this.tablePrefix == null ? Output.empty() : this.tablePrefix;
     }
 
     public GoogleCloudApigeeV1DatastoreConfigArgs(
-        @Nullable Input<String> bucketName,
-        @Nullable Input<String> datasetName,
-        @Nullable Input<String> path,
-        Input<String> project,
-        @Nullable Input<String> tablePrefix) {
+        @Nullable Output<String> bucketName,
+        @Nullable Output<String> datasetName,
+        @Nullable Output<String> path,
+        Output<String> project,
+        @Nullable Output<String> tablePrefix) {
         this.bucketName = bucketName;
         this.datasetName = datasetName;
         this.path = path;
@@ -87,11 +87,11 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     }
 
     private GoogleCloudApigeeV1DatastoreConfigArgs() {
-        this.bucketName = Input.empty();
-        this.datasetName = Input.empty();
-        this.path = Input.empty();
-        this.project = Input.empty();
-        this.tablePrefix = Input.empty();
+        this.bucketName = Output.empty();
+        this.datasetName = Output.empty();
+        this.path = Output.empty();
+        this.project = Output.empty();
+        this.tablePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketName;
-        private @Nullable Input<String> datasetName;
-        private @Nullable Input<String> path;
-        private Input<String> project;
-        private @Nullable Input<String> tablePrefix;
+        private @Nullable Output<String> bucketName;
+        private @Nullable Output<String> datasetName;
+        private @Nullable Output<String> path;
+        private Output<String> project;
+        private @Nullable Output<String> tablePrefix;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder bucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Input.ofNullable(bucketName);
+            this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
 
-        public Builder datasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Input.ofNullable(datasetName);
+            this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder tablePrefix(@Nullable Input<String> tablePrefix) {
+        public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
 
         public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Input.ofNullable(tablePrefix);
+            this.tablePrefix = Output.ofNullable(tablePrefix);
             return this;
         }
         public GoogleCloudApigeeV1DatastoreConfigArgs build() {

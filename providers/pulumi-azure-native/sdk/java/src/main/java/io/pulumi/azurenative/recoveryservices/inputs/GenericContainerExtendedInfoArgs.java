@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ContainerIdentityInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="containerIdentityInfo")
-      private final @Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo;
+      private final @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
 
-    public Input<ContainerIdentityInfoArgs> getContainerIdentityInfo() {
-        return this.containerIdentityInfo == null ? Input.empty() : this.containerIdentityInfo;
+    public Output<ContainerIdentityInfoArgs> getContainerIdentityInfo() {
+        return this.containerIdentityInfo == null ? Output.empty() : this.containerIdentityInfo;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rawCertData")
-      private final @Nullable Input<String> rawCertData;
+      private final @Nullable Output<String> rawCertData;
 
-    public Input<String> getRawCertData() {
-        return this.rawCertData == null ? Input.empty() : this.rawCertData;
+    public Output<String> getRawCertData() {
+        return this.rawCertData == null ? Output.empty() : this.rawCertData;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceEndpoints")
-      private final @Nullable Input<Map<String,String>> serviceEndpoints;
+      private final @Nullable Output<Map<String,String>> serviceEndpoints;
 
-    public Input<Map<String,String>> getServiceEndpoints() {
-        return this.serviceEndpoints == null ? Input.empty() : this.serviceEndpoints;
+    public Output<Map<String,String>> getServiceEndpoints() {
+        return this.serviceEndpoints == null ? Output.empty() : this.serviceEndpoints;
     }
 
     public GenericContainerExtendedInfoArgs(
-        @Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo,
-        @Nullable Input<String> rawCertData,
-        @Nullable Input<Map<String,String>> serviceEndpoints) {
+        @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo,
+        @Nullable Output<String> rawCertData,
+        @Nullable Output<Map<String,String>> serviceEndpoints) {
         this.containerIdentityInfo = containerIdentityInfo;
         this.rawCertData = rawCertData;
         this.serviceEndpoints = serviceEndpoints;
     }
 
     private GenericContainerExtendedInfoArgs() {
-        this.containerIdentityInfo = Input.empty();
-        this.rawCertData = Input.empty();
-        this.serviceEndpoints = Input.empty();
+        this.containerIdentityInfo = Output.empty();
+        this.rawCertData = Output.empty();
+        this.serviceEndpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo;
-        private @Nullable Input<String> rawCertData;
-        private @Nullable Input<Map<String,String>> serviceEndpoints;
+        private @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
+        private @Nullable Output<String> rawCertData;
+        private @Nullable Output<Map<String,String>> serviceEndpoints;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     	      this.serviceEndpoints = defaults.serviceEndpoints;
         }
 
-        public Builder containerIdentityInfo(@Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo) {
+        public Builder containerIdentityInfo(@Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo) {
             this.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
 
         public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoArgs containerIdentityInfo) {
-            this.containerIdentityInfo = Input.ofNullable(containerIdentityInfo);
+            this.containerIdentityInfo = Output.ofNullable(containerIdentityInfo);
             return this;
         }
 
-        public Builder rawCertData(@Nullable Input<String> rawCertData) {
+        public Builder rawCertData(@Nullable Output<String> rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
 
         public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = Input.ofNullable(rawCertData);
+            this.rawCertData = Output.ofNullable(rawCertData);
             return this;
         }
 
-        public Builder serviceEndpoints(@Nullable Input<Map<String,String>> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable Output<Map<String,String>> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
 
         public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
-            this.serviceEndpoints = Input.ofNullable(serviceEndpoints);
+            this.serviceEndpoints = Output.ofNullable(serviceEndpoints);
             return this;
         }
         public GenericContainerExtendedInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceGroupNamedPortArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<String>> instances;
+      private final @Nullable Output<List<String>> instances;
 
-    public Input<List<String>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<String>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namedPorts")
-      private final @Nullable Input<List<InstanceGroupNamedPortArgs>> namedPorts;
+      private final @Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts;
 
-    public Input<List<InstanceGroupNamedPortArgs>> getNamedPorts() {
-        return this.namedPorts == null ? Input.empty() : this.namedPorts;
+    public Output<List<InstanceGroupNamedPortArgs>> getNamedPorts() {
+        return this.namedPorts == null ? Output.empty() : this.namedPorts;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceGroupArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> instances,
-        @Nullable Input<String> name,
-        @Nullable Input<List<InstanceGroupNamedPortArgs>> namedPorts,
-        @Nullable Input<String> network,
-        @Nullable Input<String> project,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> instances,
+        @Nullable Output<String> name,
+        @Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts,
+        @Nullable Output<String> network,
+        @Nullable Output<String> project,
+        @Nullable Output<String> zone) {
         this.description = description;
         this.instances = instances;
         this.name = name;
@@ -119,13 +119,13 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceGroupArgs() {
-        this.description = Input.empty();
-        this.instances = Input.empty();
-        this.name = Input.empty();
-        this.namedPorts = Input.empty();
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.instances = Output.empty();
+        this.name = Output.empty();
+        this.namedPorts = Output.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> instances;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<InstanceGroupNamedPortArgs>> namedPorts;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> instances;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namedPorts(@Nullable Input<List<InstanceGroupNamedPortArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
 
         public Builder namedPorts(@Nullable List<InstanceGroupNamedPortArgs> namedPorts) {
-            this.namedPorts = Input.ofNullable(namedPorts);
+            this.namedPorts = Output.ofNullable(namedPorts);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceGroupArgs build() {

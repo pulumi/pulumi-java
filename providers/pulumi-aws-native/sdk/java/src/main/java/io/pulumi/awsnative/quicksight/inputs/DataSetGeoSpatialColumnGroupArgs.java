@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,17 +25,17 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="columns", required=true)
-      private final Input<List<String>> columns;
+      private final Output<List<String>> columns;
 
-    public Input<List<String>> getColumns() {
+    public Output<List<String>> getColumns() {
         return this.columns;
     }
 
     @InputImport(name="countryCode")
-      private final @Nullable Input<DataSetGeoSpatialCountryCode> countryCode;
+      private final @Nullable Output<DataSetGeoSpatialCountryCode> countryCode;
 
-    public Input<DataSetGeoSpatialCountryCode> getCountryCode() {
-        return this.countryCode == null ? Input.empty() : this.countryCode;
+    public Output<DataSetGeoSpatialCountryCode> getCountryCode() {
+        return this.countryCode == null ? Output.empty() : this.countryCode;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public DataSetGeoSpatialColumnGroupArgs(
-        Input<List<String>> columns,
-        @Nullable Input<DataSetGeoSpatialCountryCode> countryCode,
-        Input<String> name) {
+        Output<List<String>> columns,
+        @Nullable Output<DataSetGeoSpatialCountryCode> countryCode,
+        Output<String> name) {
         this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
         this.countryCode = countryCode;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private DataSetGeoSpatialColumnGroupArgs() {
-        this.columns = Input.empty();
-        this.countryCode = Input.empty();
-        this.name = Input.empty();
+        this.columns = Output.empty();
+        this.countryCode = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<String>> columns;
-        private @Nullable Input<DataSetGeoSpatialCountryCode> countryCode;
-        private Input<String> name;
+        private Output<List<String>> columns;
+        private @Nullable Output<DataSetGeoSpatialCountryCode> countryCode;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
     	      this.name = defaults.name;
         }
 
-        public Builder columns(Input<List<String>> columns) {
+        public Builder columns(Output<List<String>> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
 
         public Builder columns(List<String> columns) {
-            this.columns = Input.of(Objects.requireNonNull(columns));
+            this.columns = Output.of(Objects.requireNonNull(columns));
             return this;
         }
 
-        public Builder countryCode(@Nullable Input<DataSetGeoSpatialCountryCode> countryCode) {
+        public Builder countryCode(@Nullable Output<DataSetGeoSpatialCountryCode> countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
         public Builder countryCode(@Nullable DataSetGeoSpatialCountryCode countryCode) {
-            this.countryCode = Input.ofNullable(countryCode);
+            this.countryCode = Output.ofNullable(countryCode);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public DataSetGeoSpatialColumnGroupArgs build() {

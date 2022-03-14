@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
@@ -27,10 +27,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="extra")
-      private final @Nullable Input<Map<String,List<String>>> extra;
+      private final @Nullable Output<Map<String,List<String>>> extra;
 
-    public Input<Map<String,List<String>>> getExtra() {
-        return this.extra == null ? Input.empty() : this.extra;
+    public Output<Map<String,List<String>>> getExtra() {
+        return this.extra == null ? Output.empty() : this.extra;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groups")
-      private final @Nullable Input<List<String>> groups;
+      private final @Nullable Output<List<String>> groups;
 
-    public Input<List<String>> getGroups() {
-        return this.groups == null ? Input.empty() : this.groups;
+    public Output<List<String>> getGroups() {
+        return this.groups == null ? Output.empty() : this.groups;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="nonResourceAttributes")
-      private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
+      private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
-    public Input<NonResourceAttributesArgs> getNonResourceAttributes() {
-        return this.nonResourceAttributes == null ? Input.empty() : this.nonResourceAttributes;
+    public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
+        return this.nonResourceAttributes == null ? Output.empty() : this.nonResourceAttributes;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceAttributes")
-      private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
+      private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
-    public Input<ResourceAttributesArgs> getResourceAttributes() {
-        return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
+    public Output<ResourceAttributesArgs> getResourceAttributes() {
+        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public SubjectAccessReviewSpecArgs(
-        @Nullable Input<Map<String,List<String>>> extra,
-        @Nullable Input<List<String>> groups,
-        @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes,
-        @Nullable Input<ResourceAttributesArgs> resourceAttributes,
-        @Nullable Input<String> uid,
-        @Nullable Input<String> user) {
+        @Nullable Output<Map<String,List<String>>> extra,
+        @Nullable Output<List<String>> groups,
+        @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes,
+        @Nullable Output<ResourceAttributesArgs> resourceAttributes,
+        @Nullable Output<String> uid,
+        @Nullable Output<String> user) {
         this.extra = extra;
         this.groups = groups;
         this.nonResourceAttributes = nonResourceAttributes;
@@ -104,12 +104,12 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     }
 
     private SubjectAccessReviewSpecArgs() {
-        this.extra = Input.empty();
-        this.groups = Input.empty();
-        this.nonResourceAttributes = Input.empty();
-        this.resourceAttributes = Input.empty();
-        this.uid = Input.empty();
-        this.user = Input.empty();
+        this.extra = Output.empty();
+        this.groups = Output.empty();
+        this.nonResourceAttributes = Output.empty();
+        this.resourceAttributes = Output.empty();
+        this.uid = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,List<String>>> extra;
-        private @Nullable Input<List<String>> groups;
-        private @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
-        private @Nullable Input<ResourceAttributesArgs> resourceAttributes;
-        private @Nullable Input<String> uid;
-        private @Nullable Input<String> user;
+        private @Nullable Output<Map<String,List<String>>> extra;
+        private @Nullable Output<List<String>> groups;
+        private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
+        private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
+        private @Nullable Output<String> uid;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     	      this.user = defaults.user;
         }
 
-        public Builder extra(@Nullable Input<Map<String,List<String>>> extra) {
+        public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
             this.extra = extra;
             return this;
         }
 
         public Builder extra(@Nullable Map<String,List<String>> extra) {
-            this.extra = Input.ofNullable(extra);
+            this.extra = Output.ofNullable(extra);
             return this;
         }
 
-        public Builder groups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Input.ofNullable(groups);
+            this.groups = Output.ofNullable(groups);
             return this;
         }
 
-        public Builder nonResourceAttributes(@Nullable Input<NonResourceAttributesArgs> nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable Output<NonResourceAttributesArgs> nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
         public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
-            this.nonResourceAttributes = Input.ofNullable(nonResourceAttributes);
+            this.nonResourceAttributes = Output.ofNullable(nonResourceAttributes);
             return this;
         }
 
-        public Builder resourceAttributes(@Nullable Input<ResourceAttributesArgs> resourceAttributes) {
+        public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
 
         public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
-            this.resourceAttributes = Input.ofNullable(resourceAttributes);
+            this.resourceAttributes = Output.ofNullable(resourceAttributes);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public SubjectAccessReviewSpecArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.ManagedDiskDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.StorageAccountDetailsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -24,18 +24,18 @@ public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountDetails", required=true)
-      private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+      private final Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
-    public Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
+    public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
         return this.accountDetails;
     }
 
-    public DataImportDetailsArgs(Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
+    public DataImportDetailsArgs(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
         this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
     }
 
     private DataImportDetailsArgs() {
-        this.accountDetails = Input.empty();
+        this.accountDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+        private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.accountDetails = defaults.accountDetails;
         }
 
-        public Builder accountDetails(Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
+        public Builder accountDetails(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
 
         public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
-            this.accountDetails = Input.of(Objects.requireNonNull(accountDetails));
+            this.accountDetails = Output.of(Objects.requireNonNull(accountDetails));
             return this;
         }
         public DataImportDetailsArgs build() {

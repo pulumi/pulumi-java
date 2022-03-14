@@ -5,7 +5,7 @@ package io.pulumi.azurenative.maintenance;
 
 import io.pulumi.azurenative.maintenance.enums.MaintenanceScope;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="extensionProperties")
-      private final @Nullable Input<Map<String,String>> extensionProperties;
+      private final @Nullable Output<Map<String,String>> extensionProperties;
 
-    public Input<Map<String,String>> getExtensionProperties() {
-        return this.extensionProperties == null ? Input.empty() : this.extensionProperties;
+    public Output<Map<String,String>> getExtensionProperties() {
+        return this.extensionProperties == null ? Output.empty() : this.extensionProperties;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maintenanceScope")
-      private final @Nullable Input<Either<String,MaintenanceScope>> maintenanceScope;
+      private final @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
 
-    public Input<Either<String,MaintenanceScope>> getMaintenanceScope() {
-        return this.maintenanceScope == null ? Input.empty() : this.maintenanceScope;
+    public Output<Either<String,MaintenanceScope>> getMaintenanceScope() {
+        return this.maintenanceScope == null ? Output.empty() : this.maintenanceScope;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,10 +77,10 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MaintenanceConfigurationArgs(
-        @Nullable Input<Map<String,String>> extensionProperties,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,MaintenanceScope>> maintenanceScope,
-        @Nullable Input<String> namespace,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Map<String,String>> extensionProperties,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope,
+        @Nullable Output<String> namespace,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.extensionProperties = extensionProperties;
         this.location = location;
         this.maintenanceScope = maintenanceScope;
@@ -112,13 +112,13 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private MaintenanceConfigurationArgs() {
-        this.extensionProperties = Input.empty();
-        this.location = Input.empty();
-        this.maintenanceScope = Input.empty();
-        this.namespace = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
+        this.extensionProperties = Output.empty();
+        this.location = Output.empty();
+        this.maintenanceScope = Output.empty();
+        this.namespace = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> extensionProperties;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,MaintenanceScope>> maintenanceScope;
-        private @Nullable Input<String> namespace;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> extensionProperties;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
+        private @Nullable Output<String> namespace;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder extensionProperties(@Nullable Input<Map<String,String>> extensionProperties) {
+        public Builder extensionProperties(@Nullable Output<Map<String,String>> extensionProperties) {
             this.extensionProperties = extensionProperties;
             return this;
         }
 
         public Builder extensionProperties(@Nullable Map<String,String> extensionProperties) {
-            this.extensionProperties = Input.ofNullable(extensionProperties);
+            this.extensionProperties = Output.ofNullable(extensionProperties);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maintenanceScope(@Nullable Input<Either<String,MaintenanceScope>> maintenanceScope) {
+        public Builder maintenanceScope(@Nullable Output<Either<String,MaintenanceScope>> maintenanceScope) {
             this.maintenanceScope = maintenanceScope;
             return this;
         }
 
         public Builder maintenanceScope(@Nullable Either<String,MaintenanceScope> maintenanceScope) {
-            this.maintenanceScope = Input.ofNullable(maintenanceScope);
+            this.maintenanceScope = Output.ofNullable(maintenanceScope);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MaintenanceConfigurationArgs build() {

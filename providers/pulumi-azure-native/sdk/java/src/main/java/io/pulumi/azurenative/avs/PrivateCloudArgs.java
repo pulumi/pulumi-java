@@ -8,7 +8,7 @@ import io.pulumi.azurenative.avs.inputs.IdentitySourceArgs;
 import io.pulumi.azurenative.avs.inputs.ManagementClusterArgs;
 import io.pulumi.azurenative.avs.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identitySources")
-      private final @Nullable Input<List<IdentitySourceArgs>> identitySources;
+      private final @Nullable Output<List<IdentitySourceArgs>> identitySources;
 
-    public Input<List<IdentitySourceArgs>> getIdentitySources() {
-        return this.identitySources == null ? Input.empty() : this.identitySources;
+    public Output<List<IdentitySourceArgs>> getIdentitySources() {
+        return this.identitySources == null ? Output.empty() : this.identitySources;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internet")
-      private final @Nullable Input<Either<String,InternetEnum>> internet;
+      private final @Nullable Output<Either<String,InternetEnum>> internet;
 
-    public Input<Either<String,InternetEnum>> getInternet() {
-        return this.internet == null ? Input.empty() : this.internet;
+    public Output<Either<String,InternetEnum>> getInternet() {
+        return this.internet == null ? Output.empty() : this.internet;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementCluster", required=true)
-      private final Input<ManagementClusterArgs> managementCluster;
+      private final Output<ManagementClusterArgs> managementCluster;
 
-    public Input<ManagementClusterArgs> getManagementCluster() {
+    public Output<ManagementClusterArgs> getManagementCluster() {
         return this.managementCluster;
     }
 
@@ -70,9 +70,9 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkBlock", required=true)
-      private final Input<String> networkBlock;
+      private final Output<String> networkBlock;
 
-    public Input<String> getNetworkBlock() {
+    public Output<String> getNetworkBlock() {
         return this.networkBlock;
     }
 
@@ -81,10 +81,10 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nsxtPassword")
-      private final @Nullable Input<String> nsxtPassword;
+      private final @Nullable Output<String> nsxtPassword;
 
-    public Input<String> getNsxtPassword() {
-        return this.nsxtPassword == null ? Input.empty() : this.nsxtPassword;
+    public Output<String> getNsxtPassword() {
+        return this.nsxtPassword == null ? Output.empty() : this.nsxtPassword;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName")
-      private final @Nullable Input<String> privateCloudName;
+      private final @Nullable Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
-        return this.privateCloudName == null ? Input.empty() : this.privateCloudName;
+    public Output<String> getPrivateCloudName() {
+        return this.privateCloudName == null ? Output.empty() : this.privateCloudName;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,9 +114,9 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -125,10 +125,10 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -136,26 +136,26 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vcenterPassword")
-      private final @Nullable Input<String> vcenterPassword;
+      private final @Nullable Output<String> vcenterPassword;
 
-    public Input<String> getVcenterPassword() {
-        return this.vcenterPassword == null ? Input.empty() : this.vcenterPassword;
+    public Output<String> getVcenterPassword() {
+        return this.vcenterPassword == null ? Output.empty() : this.vcenterPassword;
     }
 
     public PrivateCloudArgs(
-        @Nullable Input<List<IdentitySourceArgs>> identitySources,
-        @Nullable Input<Either<String,InternetEnum>> internet,
-        @Nullable Input<String> location,
-        Input<ManagementClusterArgs> managementCluster,
-        Input<String> networkBlock,
-        @Nullable Input<String> nsxtPassword,
-        @Nullable Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vcenterPassword) {
+        @Nullable Output<List<IdentitySourceArgs>> identitySources,
+        @Nullable Output<Either<String,InternetEnum>> internet,
+        @Nullable Output<String> location,
+        Output<ManagementClusterArgs> managementCluster,
+        Output<String> networkBlock,
+        @Nullable Output<String> nsxtPassword,
+        @Nullable Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vcenterPassword) {
         this.identitySources = identitySources;
-        this.internet = internet == null ? Input.ofLeft("Disabled") : internet;
+        this.internet = internet == null ? Output.ofLeft("Disabled") : internet;
         this.location = location;
         this.managementCluster = Objects.requireNonNull(managementCluster, "expected parameter 'managementCluster' to be non-null");
         this.networkBlock = Objects.requireNonNull(networkBlock, "expected parameter 'networkBlock' to be non-null");
@@ -168,17 +168,17 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrivateCloudArgs() {
-        this.identitySources = Input.empty();
-        this.internet = Input.empty();
-        this.location = Input.empty();
-        this.managementCluster = Input.empty();
-        this.networkBlock = Input.empty();
-        this.nsxtPassword = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.vcenterPassword = Input.empty();
+        this.identitySources = Output.empty();
+        this.internet = Output.empty();
+        this.location = Output.empty();
+        this.managementCluster = Output.empty();
+        this.networkBlock = Output.empty();
+        this.nsxtPassword = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.vcenterPassword = Output.empty();
     }
 
     public static Builder builder() {
@@ -190,17 +190,17 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IdentitySourceArgs>> identitySources;
-        private @Nullable Input<Either<String,InternetEnum>> internet;
-        private @Nullable Input<String> location;
-        private Input<ManagementClusterArgs> managementCluster;
-        private Input<String> networkBlock;
-        private @Nullable Input<String> nsxtPassword;
-        private @Nullable Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vcenterPassword;
+        private @Nullable Output<List<IdentitySourceArgs>> identitySources;
+        private @Nullable Output<Either<String,InternetEnum>> internet;
+        private @Nullable Output<String> location;
+        private Output<ManagementClusterArgs> managementCluster;
+        private Output<String> networkBlock;
+        private @Nullable Output<String> nsxtPassword;
+        private @Nullable Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vcenterPassword;
 
         public Builder() {
     	      // Empty
@@ -221,113 +221,113 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vcenterPassword = defaults.vcenterPassword;
         }
 
-        public Builder identitySources(@Nullable Input<List<IdentitySourceArgs>> identitySources) {
+        public Builder identitySources(@Nullable Output<List<IdentitySourceArgs>> identitySources) {
             this.identitySources = identitySources;
             return this;
         }
 
         public Builder identitySources(@Nullable List<IdentitySourceArgs> identitySources) {
-            this.identitySources = Input.ofNullable(identitySources);
+            this.identitySources = Output.ofNullable(identitySources);
             return this;
         }
 
-        public Builder internet(@Nullable Input<Either<String,InternetEnum>> internet) {
+        public Builder internet(@Nullable Output<Either<String,InternetEnum>> internet) {
             this.internet = internet;
             return this;
         }
 
         public Builder internet(@Nullable Either<String,InternetEnum> internet) {
-            this.internet = Input.ofNullable(internet);
+            this.internet = Output.ofNullable(internet);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managementCluster(Input<ManagementClusterArgs> managementCluster) {
+        public Builder managementCluster(Output<ManagementClusterArgs> managementCluster) {
             this.managementCluster = Objects.requireNonNull(managementCluster);
             return this;
         }
 
         public Builder managementCluster(ManagementClusterArgs managementCluster) {
-            this.managementCluster = Input.of(Objects.requireNonNull(managementCluster));
+            this.managementCluster = Output.of(Objects.requireNonNull(managementCluster));
             return this;
         }
 
-        public Builder networkBlock(Input<String> networkBlock) {
+        public Builder networkBlock(Output<String> networkBlock) {
             this.networkBlock = Objects.requireNonNull(networkBlock);
             return this;
         }
 
         public Builder networkBlock(String networkBlock) {
-            this.networkBlock = Input.of(Objects.requireNonNull(networkBlock));
+            this.networkBlock = Output.of(Objects.requireNonNull(networkBlock));
             return this;
         }
 
-        public Builder nsxtPassword(@Nullable Input<String> nsxtPassword) {
+        public Builder nsxtPassword(@Nullable Output<String> nsxtPassword) {
             this.nsxtPassword = nsxtPassword;
             return this;
         }
 
         public Builder nsxtPassword(@Nullable String nsxtPassword) {
-            this.nsxtPassword = Input.ofNullable(nsxtPassword);
+            this.nsxtPassword = Output.ofNullable(nsxtPassword);
             return this;
         }
 
-        public Builder privateCloudName(@Nullable Input<String> privateCloudName) {
+        public Builder privateCloudName(@Nullable Output<String> privateCloudName) {
             this.privateCloudName = privateCloudName;
             return this;
         }
 
         public Builder privateCloudName(@Nullable String privateCloudName) {
-            this.privateCloudName = Input.ofNullable(privateCloudName);
+            this.privateCloudName = Output.ofNullable(privateCloudName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vcenterPassword(@Nullable Input<String> vcenterPassword) {
+        public Builder vcenterPassword(@Nullable Output<String> vcenterPassword) {
             this.vcenterPassword = vcenterPassword;
             return this;
         }
 
         public Builder vcenterPassword(@Nullable String vcenterPassword) {
-            this.vcenterPassword = Input.ofNullable(vcenterPassword);
+            this.vcenterPassword = Output.ofNullable(vcenterPassword);
             return this;
         }
         public PrivateCloudArgs build() {

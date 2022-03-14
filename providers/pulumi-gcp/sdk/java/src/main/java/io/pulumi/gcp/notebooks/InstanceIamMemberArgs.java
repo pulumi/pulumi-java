@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.InstanceIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final InstanceIamMemberArgs Empty = new InstanceIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<InstanceIamMemberConditionArgs> condition;
+      private final @Nullable Output<InstanceIamMemberConditionArgs> condition;
 
-    public Input<InstanceIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<InstanceIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,9 +27,9 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceName", required=true)
-      private final Input<String> instanceName;
+      private final Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
+    public Output<String> getInstanceName() {
         return this.instanceName;
     }
 
@@ -38,16 +38,16 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -57,10 +57,10 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -70,19 +70,19 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public InstanceIamMemberArgs(
-        @Nullable Input<InstanceIamMemberConditionArgs> condition,
-        Input<String> instanceName,
-        @Nullable Input<String> location,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role) {
+        @Nullable Output<InstanceIamMemberConditionArgs> condition,
+        Output<String> instanceName,
+        @Nullable Output<String> location,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role) {
         this.condition = condition;
         this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
         this.location = location;
@@ -92,12 +92,12 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InstanceIamMemberArgs() {
-        this.condition = Input.empty();
-        this.instanceName = Input.empty();
-        this.location = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.instanceName = Output.empty();
+        this.location = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceIamMemberConditionArgs> condition;
-        private Input<String> instanceName;
-        private @Nullable Input<String> location;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
+        private @Nullable Output<InstanceIamMemberConditionArgs> condition;
+        private Output<String> instanceName;
+        private @Nullable Output<String> location;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<InstanceIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<InstanceIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable InstanceIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder instanceName(Input<String> instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Input.of(Objects.requireNonNull(instanceName));
+            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public InstanceIamMemberArgs build() {

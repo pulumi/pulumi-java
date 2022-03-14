@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.AlertSeverity;
 import io.pulumi.azurenative.securityinsights.enums.AttackTactic;
 import io.pulumi.azurenative.securityinsights.enums.TriggerOperator;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="alertRuleTemplateName")
-      private final @Nullable Input<String> alertRuleTemplateName;
+      private final @Nullable Output<String> alertRuleTemplateName;
 
-    public Input<String> getAlertRuleTemplateName() {
-        return this.alertRuleTemplateName == null ? Input.empty() : this.alertRuleTemplateName;
+    public Output<String> getAlertRuleTemplateName() {
+        return this.alertRuleTemplateName == null ? Output.empty() : this.alertRuleTemplateName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -59,9 +59,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -71,9 +71,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -82,9 +82,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -93,9 +93,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queryFrequency", required=true)
-      private final Input<String> queryFrequency;
+      private final Output<String> queryFrequency;
 
-    public Input<String> getQueryFrequency() {
+    public Output<String> getQueryFrequency() {
         return this.queryFrequency;
     }
 
@@ -104,9 +104,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queryPeriod", required=true)
-      private final Input<String> queryPeriod;
+      private final Output<String> queryPeriod;
 
-    public Input<String> getQueryPeriod() {
+    public Output<String> getQueryPeriod() {
         return this.queryPeriod;
     }
 
@@ -115,9 +115,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,10 +126,10 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleId")
-      private final @Nullable Input<String> ruleId;
+      private final @Nullable Output<String> ruleId;
 
-    public Input<String> getRuleId() {
-        return this.ruleId == null ? Input.empty() : this.ruleId;
+    public Output<String> getRuleId() {
+        return this.ruleId == null ? Output.empty() : this.ruleId;
     }
 
     /**
@@ -137,9 +137,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="severity", required=true)
-      private final Input<Either<String,AlertSeverity>> severity;
+      private final Output<Either<String,AlertSeverity>> severity;
 
-    public Input<Either<String,AlertSeverity>> getSeverity() {
+    public Output<Either<String,AlertSeverity>> getSeverity() {
         return this.severity;
     }
 
@@ -148,9 +148,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="suppressionDuration", required=true)
-      private final Input<String> suppressionDuration;
+      private final Output<String> suppressionDuration;
 
-    public Input<String> getSuppressionDuration() {
+    public Output<String> getSuppressionDuration() {
         return this.suppressionDuration;
     }
 
@@ -159,9 +159,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="suppressionEnabled", required=true)
-      private final Input<Boolean> suppressionEnabled;
+      private final Output<Boolean> suppressionEnabled;
 
-    public Input<Boolean> getSuppressionEnabled() {
+    public Output<Boolean> getSuppressionEnabled() {
         return this.suppressionEnabled;
     }
 
@@ -170,10 +170,10 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tactics")
-      private final @Nullable Input<List<Either<String,AttackTactic>>> tactics;
+      private final @Nullable Output<List<Either<String,AttackTactic>>> tactics;
 
-    public Input<List<Either<String,AttackTactic>>> getTactics() {
-        return this.tactics == null ? Input.empty() : this.tactics;
+    public Output<List<Either<String,AttackTactic>>> getTactics() {
+        return this.tactics == null ? Output.empty() : this.tactics;
     }
 
     /**
@@ -181,9 +181,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerOperator", required=true)
-      private final Input<TriggerOperator> triggerOperator;
+      private final Output<TriggerOperator> triggerOperator;
 
-    public Input<TriggerOperator> getTriggerOperator() {
+    public Output<TriggerOperator> getTriggerOperator() {
         return this.triggerOperator;
     }
 
@@ -192,9 +192,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerThreshold", required=true)
-      private final Input<Integer> triggerThreshold;
+      private final Output<Integer> triggerThreshold;
 
-    public Input<Integer> getTriggerThreshold() {
+    public Output<Integer> getTriggerThreshold() {
         return this.triggerThreshold;
     }
 
@@ -203,30 +203,30 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public ScheduledAlertRuleArgs(
-        @Nullable Input<String> alertRuleTemplateName,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        Input<Boolean> enabled,
-        Input<String> kind,
-        Input<String> query,
-        Input<String> queryFrequency,
-        Input<String> queryPeriod,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleId,
-        Input<Either<String,AlertSeverity>> severity,
-        Input<String> suppressionDuration,
-        Input<Boolean> suppressionEnabled,
-        @Nullable Input<List<Either<String,AttackTactic>>> tactics,
-        Input<TriggerOperator> triggerOperator,
-        Input<Integer> triggerThreshold,
-        Input<String> workspaceName) {
+        @Nullable Output<String> alertRuleTemplateName,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        Output<Boolean> enabled,
+        Output<String> kind,
+        Output<String> query,
+        Output<String> queryFrequency,
+        Output<String> queryPeriod,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleId,
+        Output<Either<String,AlertSeverity>> severity,
+        Output<String> suppressionDuration,
+        Output<Boolean> suppressionEnabled,
+        @Nullable Output<List<Either<String,AttackTactic>>> tactics,
+        Output<TriggerOperator> triggerOperator,
+        Output<Integer> triggerThreshold,
+        Output<String> workspaceName) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -247,23 +247,23 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ScheduledAlertRuleArgs() {
-        this.alertRuleTemplateName = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.enabled = Input.empty();
-        this.kind = Input.empty();
-        this.query = Input.empty();
-        this.queryFrequency = Input.empty();
-        this.queryPeriod = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleId = Input.empty();
-        this.severity = Input.empty();
-        this.suppressionDuration = Input.empty();
-        this.suppressionEnabled = Input.empty();
-        this.tactics = Input.empty();
-        this.triggerOperator = Input.empty();
-        this.triggerThreshold = Input.empty();
-        this.workspaceName = Input.empty();
+        this.alertRuleTemplateName = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.enabled = Output.empty();
+        this.kind = Output.empty();
+        this.query = Output.empty();
+        this.queryFrequency = Output.empty();
+        this.queryPeriod = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleId = Output.empty();
+        this.severity = Output.empty();
+        this.suppressionDuration = Output.empty();
+        this.suppressionEnabled = Output.empty();
+        this.tactics = Output.empty();
+        this.triggerOperator = Output.empty();
+        this.triggerThreshold = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -275,23 +275,23 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alertRuleTemplateName;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private Input<Boolean> enabled;
-        private Input<String> kind;
-        private Input<String> query;
-        private Input<String> queryFrequency;
-        private Input<String> queryPeriod;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleId;
-        private Input<Either<String,AlertSeverity>> severity;
-        private Input<String> suppressionDuration;
-        private Input<Boolean> suppressionEnabled;
-        private @Nullable Input<List<Either<String,AttackTactic>>> tactics;
-        private Input<TriggerOperator> triggerOperator;
-        private Input<Integer> triggerThreshold;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> alertRuleTemplateName;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private Output<Boolean> enabled;
+        private Output<String> kind;
+        private Output<String> query;
+        private Output<String> queryFrequency;
+        private Output<String> queryPeriod;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleId;
+        private Output<Either<String,AlertSeverity>> severity;
+        private Output<String> suppressionDuration;
+        private Output<Boolean> suppressionEnabled;
+        private @Nullable Output<List<Either<String,AttackTactic>>> tactics;
+        private Output<TriggerOperator> triggerOperator;
+        private Output<Integer> triggerThreshold;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -318,173 +318,173 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder alertRuleTemplateName(@Nullable Input<String> alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(@Nullable Output<String> alertRuleTemplateName) {
             this.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
         public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Input.ofNullable(alertRuleTemplateName);
+            this.alertRuleTemplateName = Output.ofNullable(alertRuleTemplateName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder queryFrequency(Input<String> queryFrequency) {
+        public Builder queryFrequency(Output<String> queryFrequency) {
             this.queryFrequency = Objects.requireNonNull(queryFrequency);
             return this;
         }
 
         public Builder queryFrequency(String queryFrequency) {
-            this.queryFrequency = Input.of(Objects.requireNonNull(queryFrequency));
+            this.queryFrequency = Output.of(Objects.requireNonNull(queryFrequency));
             return this;
         }
 
-        public Builder queryPeriod(Input<String> queryPeriod) {
+        public Builder queryPeriod(Output<String> queryPeriod) {
             this.queryPeriod = Objects.requireNonNull(queryPeriod);
             return this;
         }
 
         public Builder queryPeriod(String queryPeriod) {
-            this.queryPeriod = Input.of(Objects.requireNonNull(queryPeriod));
+            this.queryPeriod = Output.of(Objects.requireNonNull(queryPeriod));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Input.ofNullable(ruleId);
+            this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
 
-        public Builder severity(Input<Either<String,AlertSeverity>> severity) {
+        public Builder severity(Output<Either<String,AlertSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
         public Builder severity(Either<String,AlertSeverity> severity) {
-            this.severity = Input.of(Objects.requireNonNull(severity));
+            this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder suppressionDuration(Input<String> suppressionDuration) {
+        public Builder suppressionDuration(Output<String> suppressionDuration) {
             this.suppressionDuration = Objects.requireNonNull(suppressionDuration);
             return this;
         }
 
         public Builder suppressionDuration(String suppressionDuration) {
-            this.suppressionDuration = Input.of(Objects.requireNonNull(suppressionDuration));
+            this.suppressionDuration = Output.of(Objects.requireNonNull(suppressionDuration));
             return this;
         }
 
-        public Builder suppressionEnabled(Input<Boolean> suppressionEnabled) {
+        public Builder suppressionEnabled(Output<Boolean> suppressionEnabled) {
             this.suppressionEnabled = Objects.requireNonNull(suppressionEnabled);
             return this;
         }
 
         public Builder suppressionEnabled(Boolean suppressionEnabled) {
-            this.suppressionEnabled = Input.of(Objects.requireNonNull(suppressionEnabled));
+            this.suppressionEnabled = Output.of(Objects.requireNonNull(suppressionEnabled));
             return this;
         }
 
-        public Builder tactics(@Nullable Input<List<Either<String,AttackTactic>>> tactics) {
+        public Builder tactics(@Nullable Output<List<Either<String,AttackTactic>>> tactics) {
             this.tactics = tactics;
             return this;
         }
 
         public Builder tactics(@Nullable List<Either<String,AttackTactic>> tactics) {
-            this.tactics = Input.ofNullable(tactics);
+            this.tactics = Output.ofNullable(tactics);
             return this;
         }
 
-        public Builder triggerOperator(Input<TriggerOperator> triggerOperator) {
+        public Builder triggerOperator(Output<TriggerOperator> triggerOperator) {
             this.triggerOperator = Objects.requireNonNull(triggerOperator);
             return this;
         }
 
         public Builder triggerOperator(TriggerOperator triggerOperator) {
-            this.triggerOperator = Input.of(Objects.requireNonNull(triggerOperator));
+            this.triggerOperator = Output.of(Objects.requireNonNull(triggerOperator));
             return this;
         }
 
-        public Builder triggerThreshold(Input<Integer> triggerThreshold) {
+        public Builder triggerThreshold(Output<Integer> triggerThreshold) {
             this.triggerThreshold = Objects.requireNonNull(triggerThreshold);
             return this;
         }
 
         public Builder triggerThreshold(Integer triggerThreshold) {
-            this.triggerThreshold = Input.of(Objects.requireNonNull(triggerThreshold));
+            this.triggerThreshold = Output.of(Objects.requireNonNull(triggerThreshold));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public ScheduledAlertRuleArgs build() {

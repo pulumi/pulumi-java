@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2AudienceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ageGroups")
-      private final @Nullable Input<List<String>> ageGroups;
+      private final @Nullable Output<List<String>> ageGroups;
 
-    public Input<List<String>> getAgeGroups() {
-        return this.ageGroups == null ? Input.empty() : this.ageGroups;
+    public Output<List<String>> getAgeGroups() {
+        return this.ageGroups == null ? Output.empty() : this.ageGroups;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRetailV2AudienceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="genders")
-      private final @Nullable Input<List<String>> genders;
+      private final @Nullable Output<List<String>> genders;
 
-    public Input<List<String>> getGenders() {
-        return this.genders == null ? Input.empty() : this.genders;
+    public Output<List<String>> getGenders() {
+        return this.genders == null ? Output.empty() : this.genders;
     }
 
     public GoogleCloudRetailV2AudienceArgs(
-        @Nullable Input<List<String>> ageGroups,
-        @Nullable Input<List<String>> genders) {
+        @Nullable Output<List<String>> ageGroups,
+        @Nullable Output<List<String>> genders) {
         this.ageGroups = ageGroups;
         this.genders = genders;
     }
 
     private GoogleCloudRetailV2AudienceArgs() {
-        this.ageGroups = Input.empty();
-        this.genders = Input.empty();
+        this.ageGroups = Output.empty();
+        this.genders = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRetailV2AudienceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ageGroups;
-        private @Nullable Input<List<String>> genders;
+        private @Nullable Output<List<String>> ageGroups;
+        private @Nullable Output<List<String>> genders;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRetailV2AudienceArgs extends io.pulumi.resources.R
     	      this.genders = defaults.genders;
         }
 
-        public Builder ageGroups(@Nullable Input<List<String>> ageGroups) {
+        public Builder ageGroups(@Nullable Output<List<String>> ageGroups) {
             this.ageGroups = ageGroups;
             return this;
         }
 
         public Builder ageGroups(@Nullable List<String> ageGroups) {
-            this.ageGroups = Input.ofNullable(ageGroups);
+            this.ageGroups = Output.ofNullable(ageGroups);
             return this;
         }
 
-        public Builder genders(@Nullable Input<List<String>> genders) {
+        public Builder genders(@Nullable Output<List<String>> genders) {
             this.genders = genders;
             return this;
         }
 
         public Builder genders(@Nullable List<String> genders) {
-            this.genders = Input.ofNullable(genders);
+            this.genders = Output.ofNullable(genders);
             return this;
         }
         public GoogleCloudRetailV2AudienceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
-    public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(@Nullable Input<String> action) {
+    public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(@Nullable Output<String> action) {
         this.action = action;
     }
 
     private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs() {
-        this.action = Input.empty();
+        this.action = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
+        private @Nullable Output<String> action;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
     	      this.action = defaults.action;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
         public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs build() {

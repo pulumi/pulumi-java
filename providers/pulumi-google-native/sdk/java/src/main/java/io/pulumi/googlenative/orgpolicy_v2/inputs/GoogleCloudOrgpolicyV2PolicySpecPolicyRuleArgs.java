@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleTypeExprArgs;
@@ -25,10 +25,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="allowAll")
-      private final @Nullable Input<Boolean> allowAll;
+      private final @Nullable Output<Boolean> allowAll;
 
-    public Input<Boolean> getAllowAll() {
-        return this.allowAll == null ? Input.empty() : this.allowAll;
+    public Output<Boolean> getAllowAll() {
+        return this.allowAll == null ? Output.empty() : this.allowAll;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<GoogleTypeExprArgs> condition;
+      private final @Nullable Output<GoogleTypeExprArgs> condition;
 
-    public Input<GoogleTypeExprArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<GoogleTypeExprArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="denyAll")
-      private final @Nullable Input<Boolean> denyAll;
+      private final @Nullable Output<Boolean> denyAll;
 
-    public Input<Boolean> getDenyAll() {
-        return this.denyAll == null ? Input.empty() : this.denyAll;
+    public Output<Boolean> getDenyAll() {
+        return this.denyAll == null ? Output.empty() : this.denyAll;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="enforce")
-      private final @Nullable Input<Boolean> enforce;
+      private final @Nullable Output<Boolean> enforce;
 
-    public Input<Boolean> getEnforce() {
-        return this.enforce == null ? Input.empty() : this.enforce;
+    public Output<Boolean> getEnforce() {
+        return this.enforce == null ? Output.empty() : this.enforce;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
+      private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 
-    public Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(
-        @Nullable Input<Boolean> allowAll,
-        @Nullable Input<GoogleTypeExprArgs> condition,
-        @Nullable Input<Boolean> denyAll,
-        @Nullable Input<Boolean> enforce,
-        @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
+        @Nullable Output<Boolean> allowAll,
+        @Nullable Output<GoogleTypeExprArgs> condition,
+        @Nullable Output<Boolean> denyAll,
+        @Nullable Output<Boolean> enforce,
+        @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
         this.allowAll = allowAll;
         this.condition = condition;
         this.denyAll = denyAll;
@@ -89,11 +89,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     }
 
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs() {
-        this.allowAll = Input.empty();
-        this.condition = Input.empty();
-        this.denyAll = Input.empty();
-        this.enforce = Input.empty();
-        this.values = Input.empty();
+        this.allowAll = Output.empty();
+        this.condition = Output.empty();
+        this.denyAll = Output.empty();
+        this.enforce = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowAll;
-        private @Nullable Input<GoogleTypeExprArgs> condition;
-        private @Nullable Input<Boolean> denyAll;
-        private @Nullable Input<Boolean> enforce;
-        private @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
+        private @Nullable Output<Boolean> allowAll;
+        private @Nullable Output<GoogleTypeExprArgs> condition;
+        private @Nullable Output<Boolean> denyAll;
+        private @Nullable Output<Boolean> enforce;
+        private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     	      this.values = defaults.values;
         }
 
-        public Builder allowAll(@Nullable Input<Boolean> allowAll) {
+        public Builder allowAll(@Nullable Output<Boolean> allowAll) {
             this.allowAll = allowAll;
             return this;
         }
 
         public Builder allowAll(@Nullable Boolean allowAll) {
-            this.allowAll = Input.ofNullable(allowAll);
+            this.allowAll = Output.ofNullable(allowAll);
             return this;
         }
 
-        public Builder condition(@Nullable Input<GoogleTypeExprArgs> condition) {
+        public Builder condition(@Nullable Output<GoogleTypeExprArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable GoogleTypeExprArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder denyAll(@Nullable Input<Boolean> denyAll) {
+        public Builder denyAll(@Nullable Output<Boolean> denyAll) {
             this.denyAll = denyAll;
             return this;
         }
 
         public Builder denyAll(@Nullable Boolean denyAll) {
-            this.denyAll = Input.ofNullable(denyAll);
+            this.denyAll = Output.ofNullable(denyAll);
             return this;
         }
 
-        public Builder enforce(@Nullable Input<Boolean> enforce) {
+        public Builder enforce(@Nullable Output<Boolean> enforce) {
             this.enforce = enforce;
             return this;
         }
 
         public Builder enforce(@Nullable Boolean enforce) {
-            this.enforce = Input.ofNullable(enforce);
+            this.enforce = Output.ofNullable(enforce);
             return this;
         }
 
-        public Builder values(@Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
+        public Builder values(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs build() {

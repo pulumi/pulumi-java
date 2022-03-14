@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxPartitionsNumber")
-      private final @Nullable Input<Object> maxPartitionsNumber;
+      private final @Nullable Output<Object> maxPartitionsNumber;
 
-    public Input<Object> getMaxPartitionsNumber() {
-        return this.maxPartitionsNumber == null ? Input.empty() : this.maxPartitionsNumber;
+    public Output<Object> getMaxPartitionsNumber() {
+        return this.maxPartitionsNumber == null ? Output.empty() : this.maxPartitionsNumber;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partitionColumnName")
-      private final @Nullable Input<Object> partitionColumnName;
+      private final @Nullable Output<Object> partitionColumnName;
 
-    public Input<Object> getPartitionColumnName() {
-        return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
+    public Output<Object> getPartitionColumnName() {
+        return this.partitionColumnName == null ? Output.empty() : this.partitionColumnName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partitionLowerBound")
-      private final @Nullable Input<Object> partitionLowerBound;
+      private final @Nullable Output<Object> partitionLowerBound;
 
-    public Input<Object> getPartitionLowerBound() {
-        return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
+    public Output<Object> getPartitionLowerBound() {
+        return this.partitionLowerBound == null ? Output.empty() : this.partitionLowerBound;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partitionUpperBound")
-      private final @Nullable Input<Object> partitionUpperBound;
+      private final @Nullable Output<Object> partitionUpperBound;
 
-    public Input<Object> getPartitionUpperBound() {
-        return this.partitionUpperBound == null ? Input.empty() : this.partitionUpperBound;
+    public Output<Object> getPartitionUpperBound() {
+        return this.partitionUpperBound == null ? Output.empty() : this.partitionUpperBound;
     }
 
     public SapTablePartitionSettingsArgs(
-        @Nullable Input<Object> maxPartitionsNumber,
-        @Nullable Input<Object> partitionColumnName,
-        @Nullable Input<Object> partitionLowerBound,
-        @Nullable Input<Object> partitionUpperBound) {
+        @Nullable Output<Object> maxPartitionsNumber,
+        @Nullable Output<Object> partitionColumnName,
+        @Nullable Output<Object> partitionLowerBound,
+        @Nullable Output<Object> partitionUpperBound) {
         this.maxPartitionsNumber = maxPartitionsNumber;
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
@@ -74,10 +74,10 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
     }
 
     private SapTablePartitionSettingsArgs() {
-        this.maxPartitionsNumber = Input.empty();
-        this.partitionColumnName = Input.empty();
-        this.partitionLowerBound = Input.empty();
-        this.partitionUpperBound = Input.empty();
+        this.maxPartitionsNumber = Output.empty();
+        this.partitionColumnName = Output.empty();
+        this.partitionLowerBound = Output.empty();
+        this.partitionUpperBound = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> maxPartitionsNumber;
-        private @Nullable Input<Object> partitionColumnName;
-        private @Nullable Input<Object> partitionLowerBound;
-        private @Nullable Input<Object> partitionUpperBound;
+        private @Nullable Output<Object> maxPartitionsNumber;
+        private @Nullable Output<Object> partitionColumnName;
+        private @Nullable Output<Object> partitionLowerBound;
+        private @Nullable Output<Object> partitionUpperBound;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder maxPartitionsNumber(@Nullable Input<Object> maxPartitionsNumber) {
+        public Builder maxPartitionsNumber(@Nullable Output<Object> maxPartitionsNumber) {
             this.maxPartitionsNumber = maxPartitionsNumber;
             return this;
         }
 
         public Builder maxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
-            this.maxPartitionsNumber = Input.ofNullable(maxPartitionsNumber);
+            this.maxPartitionsNumber = Output.ofNullable(maxPartitionsNumber);
             return this;
         }
 
-        public Builder partitionColumnName(@Nullable Input<Object> partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = Input.ofNullable(partitionColumnName);
+            this.partitionColumnName = Output.ofNullable(partitionColumnName);
             return this;
         }
 
-        public Builder partitionLowerBound(@Nullable Input<Object> partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
-            this.partitionLowerBound = Input.ofNullable(partitionLowerBound);
+            this.partitionLowerBound = Output.ofNullable(partitionLowerBound);
             return this;
         }
 
-        public Builder partitionUpperBound(@Nullable Input<Object> partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
 
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
-            this.partitionUpperBound = Input.ofNullable(partitionUpperBound);
+            this.partitionUpperBound = Output.ofNullable(partitionUpperBound);
             return this;
         }
         public SapTablePartitionSettingsArgs build() {

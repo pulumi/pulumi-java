@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.DateAfterModificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="delete")
-      private final @Nullable Input<DateAfterModificationArgs> delete;
+      private final @Nullable Output<DateAfterModificationArgs> delete;
 
-    public Input<DateAfterModificationArgs> getDelete() {
-        return this.delete == null ? Input.empty() : this.delete;
+    public Output<DateAfterModificationArgs> getDelete() {
+        return this.delete == null ? Output.empty() : this.delete;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableAutoTierToHotFromCool")
-      private final @Nullable Input<Boolean> enableAutoTierToHotFromCool;
+      private final @Nullable Output<Boolean> enableAutoTierToHotFromCool;
 
-    public Input<Boolean> getEnableAutoTierToHotFromCool() {
-        return this.enableAutoTierToHotFromCool == null ? Input.empty() : this.enableAutoTierToHotFromCool;
+    public Output<Boolean> getEnableAutoTierToHotFromCool() {
+        return this.enableAutoTierToHotFromCool == null ? Output.empty() : this.enableAutoTierToHotFromCool;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tierToArchive")
-      private final @Nullable Input<DateAfterModificationArgs> tierToArchive;
+      private final @Nullable Output<DateAfterModificationArgs> tierToArchive;
 
-    public Input<DateAfterModificationArgs> getTierToArchive() {
-        return this.tierToArchive == null ? Input.empty() : this.tierToArchive;
+    public Output<DateAfterModificationArgs> getTierToArchive() {
+        return this.tierToArchive == null ? Output.empty() : this.tierToArchive;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tierToCool")
-      private final @Nullable Input<DateAfterModificationArgs> tierToCool;
+      private final @Nullable Output<DateAfterModificationArgs> tierToCool;
 
-    public Input<DateAfterModificationArgs> getTierToCool() {
-        return this.tierToCool == null ? Input.empty() : this.tierToCool;
+    public Output<DateAfterModificationArgs> getTierToCool() {
+        return this.tierToCool == null ? Output.empty() : this.tierToCool;
     }
 
     public ManagementPolicyBaseBlobArgs(
-        @Nullable Input<DateAfterModificationArgs> delete,
-        @Nullable Input<Boolean> enableAutoTierToHotFromCool,
-        @Nullable Input<DateAfterModificationArgs> tierToArchive,
-        @Nullable Input<DateAfterModificationArgs> tierToCool) {
+        @Nullable Output<DateAfterModificationArgs> delete,
+        @Nullable Output<Boolean> enableAutoTierToHotFromCool,
+        @Nullable Output<DateAfterModificationArgs> tierToArchive,
+        @Nullable Output<DateAfterModificationArgs> tierToCool) {
         this.delete = delete;
         this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
         this.tierToArchive = tierToArchive;
@@ -75,10 +75,10 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     }
 
     private ManagementPolicyBaseBlobArgs() {
-        this.delete = Input.empty();
-        this.enableAutoTierToHotFromCool = Input.empty();
-        this.tierToArchive = Input.empty();
-        this.tierToCool = Input.empty();
+        this.delete = Output.empty();
+        this.enableAutoTierToHotFromCool = Output.empty();
+        this.tierToArchive = Output.empty();
+        this.tierToCool = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<DateAfterModificationArgs> delete;
-        private @Nullable Input<Boolean> enableAutoTierToHotFromCool;
-        private @Nullable Input<DateAfterModificationArgs> tierToArchive;
-        private @Nullable Input<DateAfterModificationArgs> tierToCool;
+        private @Nullable Output<DateAfterModificationArgs> delete;
+        private @Nullable Output<Boolean> enableAutoTierToHotFromCool;
+        private @Nullable Output<DateAfterModificationArgs> tierToArchive;
+        private @Nullable Output<DateAfterModificationArgs> tierToCool;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder delete(@Nullable Input<DateAfterModificationArgs> delete) {
+        public Builder delete(@Nullable Output<DateAfterModificationArgs> delete) {
             this.delete = delete;
             return this;
         }
 
         public Builder delete(@Nullable DateAfterModificationArgs delete) {
-            this.delete = Input.ofNullable(delete);
+            this.delete = Output.ofNullable(delete);
             return this;
         }
 
-        public Builder enableAutoTierToHotFromCool(@Nullable Input<Boolean> enableAutoTierToHotFromCool) {
+        public Builder enableAutoTierToHotFromCool(@Nullable Output<Boolean> enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
 
         public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
-            this.enableAutoTierToHotFromCool = Input.ofNullable(enableAutoTierToHotFromCool);
+            this.enableAutoTierToHotFromCool = Output.ofNullable(enableAutoTierToHotFromCool);
             return this;
         }
 
-        public Builder tierToArchive(@Nullable Input<DateAfterModificationArgs> tierToArchive) {
+        public Builder tierToArchive(@Nullable Output<DateAfterModificationArgs> tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
         public Builder tierToArchive(@Nullable DateAfterModificationArgs tierToArchive) {
-            this.tierToArchive = Input.ofNullable(tierToArchive);
+            this.tierToArchive = Output.ofNullable(tierToArchive);
             return this;
         }
 
-        public Builder tierToCool(@Nullable Input<DateAfterModificationArgs> tierToCool) {
+        public Builder tierToCool(@Nullable Output<DateAfterModificationArgs> tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }
 
         public Builder tierToCool(@Nullable DateAfterModificationArgs tierToCool) {
-            this.tierToCool = Input.ofNullable(tierToCool);
+            this.tierToCool = Output.ofNullable(tierToCool);
             return this;
         }
         public ManagementPolicyBaseBlobArgs build() {

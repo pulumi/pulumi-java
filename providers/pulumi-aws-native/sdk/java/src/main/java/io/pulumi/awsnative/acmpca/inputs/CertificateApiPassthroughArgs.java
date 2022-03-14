@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificateExtensionsArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
     public static final CertificateApiPassthroughArgs Empty = new CertificateApiPassthroughArgs();
 
     @InputImport(name="extensions")
-      private final @Nullable Input<CertificateExtensionsArgs> extensions;
+      private final @Nullable Output<CertificateExtensionsArgs> extensions;
 
-    public Input<CertificateExtensionsArgs> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<CertificateExtensionsArgs> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     @InputImport(name="subject")
-      private final @Nullable Input<CertificateSubjectArgs> subject;
+      private final @Nullable Output<CertificateSubjectArgs> subject;
 
-    public Input<CertificateSubjectArgs> getSubject() {
-        return this.subject == null ? Input.empty() : this.subject;
+    public Output<CertificateSubjectArgs> getSubject() {
+        return this.subject == null ? Output.empty() : this.subject;
     }
 
     public CertificateApiPassthroughArgs(
-        @Nullable Input<CertificateExtensionsArgs> extensions,
-        @Nullable Input<CertificateSubjectArgs> subject) {
+        @Nullable Output<CertificateExtensionsArgs> extensions,
+        @Nullable Output<CertificateSubjectArgs> subject) {
         this.extensions = extensions;
         this.subject = subject;
     }
 
     private CertificateApiPassthroughArgs() {
-        this.extensions = Input.empty();
-        this.subject = Input.empty();
+        this.extensions = Output.empty();
+        this.subject = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<CertificateExtensionsArgs> extensions;
-        private @Nullable Input<CertificateSubjectArgs> subject;
+        private @Nullable Output<CertificateExtensionsArgs> extensions;
+        private @Nullable Output<CertificateSubjectArgs> subject;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
     	      this.subject = defaults.subject;
         }
 
-        public Builder extensions(@Nullable Input<CertificateExtensionsArgs> extensions) {
+        public Builder extensions(@Nullable Output<CertificateExtensionsArgs> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable CertificateExtensionsArgs extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder subject(@Nullable Input<CertificateSubjectArgs> subject) {
+        public Builder subject(@Nullable Output<CertificateSubjectArgs> subject) {
             this.subject = subject;
             return this;
         }
 
         public Builder subject(@Nullable CertificateSubjectArgs subject) {
-            this.subject = Input.ofNullable(subject);
+            this.subject = Output.ofNullable(subject);
             return this;
         }
         public CertificateApiPassthroughArgs build() {

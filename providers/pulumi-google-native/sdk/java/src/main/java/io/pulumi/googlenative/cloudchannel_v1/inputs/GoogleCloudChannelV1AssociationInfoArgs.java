@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="baseEntitlement")
-      private final @Nullable Input<String> baseEntitlement;
+      private final @Nullable Output<String> baseEntitlement;
 
-    public Input<String> getBaseEntitlement() {
-        return this.baseEntitlement == null ? Input.empty() : this.baseEntitlement;
+    public Output<String> getBaseEntitlement() {
+        return this.baseEntitlement == null ? Output.empty() : this.baseEntitlement;
     }
 
-    public GoogleCloudChannelV1AssociationInfoArgs(@Nullable Input<String> baseEntitlement) {
+    public GoogleCloudChannelV1AssociationInfoArgs(@Nullable Output<String> baseEntitlement) {
         this.baseEntitlement = baseEntitlement;
     }
 
     private GoogleCloudChannelV1AssociationInfoArgs() {
-        this.baseEntitlement = Input.empty();
+        this.baseEntitlement = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> baseEntitlement;
+        private @Nullable Output<String> baseEntitlement;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
     	      this.baseEntitlement = defaults.baseEntitlement;
         }
 
-        public Builder baseEntitlement(@Nullable Input<String> baseEntitlement) {
+        public Builder baseEntitlement(@Nullable Output<String> baseEntitlement) {
             this.baseEntitlement = baseEntitlement;
             return this;
         }
 
         public Builder baseEntitlement(@Nullable String baseEntitlement) {
-            this.baseEntitlement = Input.ofNullable(baseEntitlement);
+            this.baseEntitlement = Output.ofNullable(baseEntitlement);
             return this;
         }
         public GoogleCloudChannelV1AssociationInfoArgs build() {

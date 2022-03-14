@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeClusterArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeNamespaceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-      private final @Nullable Input<ScopeClusterArgs> cluster;
+      private final @Nullable Output<ScopeClusterArgs> cluster;
 
-    public Input<ScopeClusterArgs> getCluster() {
-        return this.cluster == null ? Input.empty() : this.cluster;
+    public Output<ScopeClusterArgs> getCluster() {
+        return this.cluster == null ? Output.empty() : this.cluster;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<ScopeNamespaceArgs> namespace;
+      private final @Nullable Output<ScopeNamespaceArgs> namespace;
 
-    public Input<ScopeNamespaceArgs> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<ScopeNamespaceArgs> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     public ScopeArgs(
-        @Nullable Input<ScopeClusterArgs> cluster,
-        @Nullable Input<ScopeNamespaceArgs> namespace) {
+        @Nullable Output<ScopeClusterArgs> cluster,
+        @Nullable Output<ScopeNamespaceArgs> namespace) {
         this.cluster = cluster;
         this.namespace = namespace;
     }
 
     private ScopeArgs() {
-        this.cluster = Input.empty();
-        this.namespace = Input.empty();
+        this.cluster = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ScopeClusterArgs> cluster;
-        private @Nullable Input<ScopeNamespaceArgs> namespace;
+        private @Nullable Output<ScopeClusterArgs> cluster;
+        private @Nullable Output<ScopeNamespaceArgs> namespace;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder cluster(@Nullable Input<ScopeClusterArgs> cluster) {
+        public Builder cluster(@Nullable Output<ScopeClusterArgs> cluster) {
             this.cluster = cluster;
             return this;
         }
 
         public Builder cluster(@Nullable ScopeClusterArgs cluster) {
-            this.cluster = Input.ofNullable(cluster);
+            this.cluster = Output.ofNullable(cluster);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<ScopeNamespaceArgs> namespace) {
+        public Builder namespace(@Nullable Output<ScopeNamespaceArgs> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable ScopeNamespaceArgs namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public ScopeArgs build() {

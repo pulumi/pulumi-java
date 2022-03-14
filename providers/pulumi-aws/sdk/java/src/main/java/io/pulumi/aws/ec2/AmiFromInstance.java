@@ -8,7 +8,6 @@ import io.pulumi.aws.ec2.AmiFromInstanceArgs;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceState;
 import io.pulumi.aws.ec2.outputs.AmiFromInstanceEbsBlockDevice;
 import io.pulumi.aws.ec2.outputs.AmiFromInstanceEphemeralBlockDevice;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -393,14 +392,14 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AmiFromInstance(String name, AmiFromInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/amiFromInstance:AmiFromInstance", name, args == null ? AmiFromInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/amiFromInstance:AmiFromInstance", name, args == null ? AmiFromInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AmiFromInstance(String name, Input<String> id, @Nullable AmiFromInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AmiFromInstance(String name, Output<String> id, @Nullable AmiFromInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/amiFromInstance:AmiFromInstance", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -416,7 +415,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AmiFromInstance get(String name, Input<String> id, @Nullable AmiFromInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AmiFromInstance get(String name, Output<String> id, @Nullable AmiFromInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AmiFromInstance(name, id, state, options);
     }
 }

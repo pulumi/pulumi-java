@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="communicationLinkName")
-      private final @Nullable Input<String> communicationLinkName;
+      private final @Nullable Output<String> communicationLinkName;
 
-    public Input<String> getCommunicationLinkName() {
-        return this.communicationLinkName == null ? Input.empty() : this.communicationLinkName;
+    public Output<String> getCommunicationLinkName() {
+        return this.communicationLinkName == null ? Output.empty() : this.communicationLinkName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="partnerServer", required=true)
-      private final Input<String> partnerServer;
+      private final Output<String> partnerServer;
 
-    public Input<String> getPartnerServer() {
+    public Output<String> getPartnerServer() {
         return this.partnerServer;
     }
 
@@ -41,9 +41,9 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public ServerCommunicationLinkArgs(
-        @Nullable Input<String> communicationLinkName,
-        Input<String> partnerServer,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> communicationLinkName,
+        Output<String> partnerServer,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.communicationLinkName = communicationLinkName;
         this.partnerServer = Objects.requireNonNull(partnerServer, "expected parameter 'partnerServer' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     }
 
     private ServerCommunicationLinkArgs() {
-        this.communicationLinkName = Input.empty();
-        this.partnerServer = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.communicationLinkName = Output.empty();
+        this.partnerServer = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> communicationLinkName;
-        private Input<String> partnerServer;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> communicationLinkName;
+        private Output<String> partnerServer;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder communicationLinkName(@Nullable Input<String> communicationLinkName) {
+        public Builder communicationLinkName(@Nullable Output<String> communicationLinkName) {
             this.communicationLinkName = communicationLinkName;
             return this;
         }
 
         public Builder communicationLinkName(@Nullable String communicationLinkName) {
-            this.communicationLinkName = Input.ofNullable(communicationLinkName);
+            this.communicationLinkName = Output.ofNullable(communicationLinkName);
             return this;
         }
 
-        public Builder partnerServer(Input<String> partnerServer) {
+        public Builder partnerServer(Output<String> partnerServer) {
             this.partnerServer = Objects.requireNonNull(partnerServer);
             return this;
         }
 
         public Builder partnerServer(String partnerServer) {
-            this.partnerServer = Input.of(Objects.requireNonNull(partnerServer));
+            this.partnerServer = Output.of(Objects.requireNonNull(partnerServer));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public ServerCommunicationLinkArgs build() {

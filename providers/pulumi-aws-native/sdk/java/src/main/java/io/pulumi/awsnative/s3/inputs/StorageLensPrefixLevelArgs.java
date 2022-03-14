@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelStorageMetricsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
     public static final StorageLensPrefixLevelArgs Empty = new StorageLensPrefixLevelArgs();
 
     @InputImport(name="storageMetrics", required=true)
-      private final Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
+      private final Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
 
-    public Input<StorageLensPrefixLevelStorageMetricsArgs> getStorageMetrics() {
+    public Output<StorageLensPrefixLevelStorageMetricsArgs> getStorageMetrics() {
         return this.storageMetrics;
     }
 
-    public StorageLensPrefixLevelArgs(Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
+    public StorageLensPrefixLevelArgs(Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
         this.storageMetrics = Objects.requireNonNull(storageMetrics, "expected parameter 'storageMetrics' to be non-null");
     }
 
     private StorageLensPrefixLevelArgs() {
-        this.storageMetrics = Input.empty();
+        this.storageMetrics = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
+        private Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
     	      this.storageMetrics = defaults.storageMetrics;
         }
 
-        public Builder storageMetrics(Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
+        public Builder storageMetrics(Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
             this.storageMetrics = Objects.requireNonNull(storageMetrics);
             return this;
         }
 
         public Builder storageMetrics(StorageLensPrefixLevelStorageMetricsArgs storageMetrics) {
-            this.storageMetrics = Input.of(Objects.requireNonNull(storageMetrics));
+            this.storageMetrics = Output.of(Objects.requireNonNull(storageMetrics));
             return this;
         }
         public StorageLensPrefixLevelArgs build() {

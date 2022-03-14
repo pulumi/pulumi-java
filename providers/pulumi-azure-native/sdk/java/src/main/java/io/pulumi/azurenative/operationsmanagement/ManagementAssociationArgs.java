@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ManagementAssociationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managementAssociationName")
-      private final @Nullable Input<String> managementAssociationName;
+      private final @Nullable Output<String> managementAssociationName;
 
-    public Input<String> getManagementAssociationName() {
-        return this.managementAssociationName == null ? Input.empty() : this.managementAssociationName;
+    public Output<String> getManagementAssociationName() {
+        return this.managementAssociationName == null ? Output.empty() : this.managementAssociationName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ManagementAssociationPropertiesArgs> properties;
+      private final @Nullable Output<ManagementAssociationPropertiesArgs> properties;
 
-    public Input<ManagementAssociationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ManagementAssociationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="providerName", required=true)
-      private final Input<String> providerName;
+      private final Output<String> providerName;
 
-    public Input<String> getProviderName() {
+    public Output<String> getProviderName() {
         return this.providerName;
     }
 
@@ -64,9 +64,9 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,9 +75,9 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -86,20 +86,20 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
     public ManagementAssociationArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> managementAssociationName,
-        @Nullable Input<ManagementAssociationPropertiesArgs> properties,
-        Input<String> providerName,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        Input<String> resourceType) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> managementAssociationName,
+        @Nullable Output<ManagementAssociationPropertiesArgs> properties,
+        Output<String> providerName,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        Output<String> resourceType) {
         this.location = location;
         this.managementAssociationName = managementAssociationName;
         this.properties = properties;
@@ -110,13 +110,13 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private ManagementAssociationArgs() {
-        this.location = Input.empty();
-        this.managementAssociationName = Input.empty();
-        this.properties = Input.empty();
-        this.providerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.resourceType = Input.empty();
+        this.location = Output.empty();
+        this.managementAssociationName = Output.empty();
+        this.properties = Output.empty();
+        this.providerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managementAssociationName;
-        private @Nullable Input<ManagementAssociationPropertiesArgs> properties;
-        private Input<String> providerName;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private Input<String> resourceType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managementAssociationName;
+        private @Nullable Output<ManagementAssociationPropertiesArgs> properties;
+        private Output<String> providerName;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managementAssociationName(@Nullable Input<String> managementAssociationName) {
+        public Builder managementAssociationName(@Nullable Output<String> managementAssociationName) {
             this.managementAssociationName = managementAssociationName;
             return this;
         }
 
         public Builder managementAssociationName(@Nullable String managementAssociationName) {
-            this.managementAssociationName = Input.ofNullable(managementAssociationName);
+            this.managementAssociationName = Output.ofNullable(managementAssociationName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ManagementAssociationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ManagementAssociationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ManagementAssociationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerName(Input<String> providerName) {
+        public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
         public Builder providerName(String providerName) {
-            this.providerName = Input.of(Objects.requireNonNull(providerName));
+            this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
         public ManagementAssociationArgs build() {

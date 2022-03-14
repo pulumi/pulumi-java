@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.MinimalSeverity;
 import io.pulumi.azurenative.security.enums.State;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
      * 
      */
     @InputImport(name="minimalSeverity")
-      private final @Nullable Input<Either<String,MinimalSeverity>> minimalSeverity;
+      private final @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
 
-    public Input<Either<String,MinimalSeverity>> getMinimalSeverity() {
-        return this.minimalSeverity == null ? Input.empty() : this.minimalSeverity;
+    public Output<Either<String,MinimalSeverity>> getMinimalSeverity() {
+        return this.minimalSeverity == null ? Output.empty() : this.minimalSeverity;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,State>> state;
+      private final @Nullable Output<Either<String,State>> state;
 
-    public Input<Either<String,State>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,State>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public SecurityContactPropertiesAlertNotificationsArgs(
-        @Nullable Input<Either<String,MinimalSeverity>> minimalSeverity,
-        @Nullable Input<Either<String,State>> state) {
+        @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity,
+        @Nullable Output<Either<String,State>> state) {
         this.minimalSeverity = minimalSeverity;
         this.state = state;
     }
 
     private SecurityContactPropertiesAlertNotificationsArgs() {
-        this.minimalSeverity = Input.empty();
-        this.state = Input.empty();
+        this.minimalSeverity = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,MinimalSeverity>> minimalSeverity;
-        private @Nullable Input<Either<String,State>> state;
+        private @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
+        private @Nullable Output<Either<String,State>> state;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
     	      this.state = defaults.state;
         }
 
-        public Builder minimalSeverity(@Nullable Input<Either<String,MinimalSeverity>> minimalSeverity) {
+        public Builder minimalSeverity(@Nullable Output<Either<String,MinimalSeverity>> minimalSeverity) {
             this.minimalSeverity = minimalSeverity;
             return this;
         }
 
         public Builder minimalSeverity(@Nullable Either<String,MinimalSeverity> minimalSeverity) {
-            this.minimalSeverity = Input.ofNullable(minimalSeverity);
+            this.minimalSeverity = Output.ofNullable(minimalSeverity);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,State>> state) {
+        public Builder state(@Nullable Output<Either<String,State>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public SecurityContactPropertiesAlertNotificationsArgs build() {

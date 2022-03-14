@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerFailurePolicyGetArgs;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventType", required=true)
-      private final Input<String> eventType;
+      private final Output<String> eventType;
 
-    public Input<String> getEventType() {
+    public Output<String> getEventType() {
         return this.eventType;
     }
 
@@ -33,10 +33,10 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="failurePolicy")
-      private final @Nullable Input<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
+      private final @Nullable Output<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
 
-    public Input<FunctionEventTriggerFailurePolicyGetArgs> getFailurePolicy() {
-        return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
+    public Output<FunctionEventTriggerFailurePolicyGetArgs> getFailurePolicy() {
+        return this.failurePolicy == null ? Output.empty() : this.failurePolicy;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<String> resource;
+      private final Output<String> resource;
 
-    public Input<String> getResource() {
+    public Output<String> getResource() {
         return this.resource;
     }
 
     public FunctionEventTriggerGetArgs(
-        Input<String> eventType,
-        @Nullable Input<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy,
-        Input<String> resource) {
+        Output<String> eventType,
+        @Nullable Output<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy,
+        Output<String> resource) {
         this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
         this.failurePolicy = failurePolicy;
         this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
     }
 
     private FunctionEventTriggerGetArgs() {
-        this.eventType = Input.empty();
-        this.failurePolicy = Input.empty();
-        this.resource = Input.empty();
+        this.eventType = Output.empty();
+        this.failurePolicy = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> eventType;
-        private @Nullable Input<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
-        private Input<String> resource;
+        private Output<String> eventType;
+        private @Nullable Output<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
+        private Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
     	      this.resource = defaults.resource;
         }
 
-        public Builder eventType(Input<String> eventType) {
+        public Builder eventType(Output<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
         public Builder eventType(String eventType) {
-            this.eventType = Input.of(Objects.requireNonNull(eventType));
+            this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder failurePolicy(@Nullable Input<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy) {
+        public Builder failurePolicy(@Nullable Output<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
 
         public Builder failurePolicy(@Nullable FunctionEventTriggerFailurePolicyGetArgs failurePolicy) {
-            this.failurePolicy = Input.ofNullable(failurePolicy);
+            this.failurePolicy = Output.ofNullable(failurePolicy);
             return this;
         }
 
-        public Builder resource(Input<String> resource) {
+        public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(String resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
         public FunctionEventTriggerGetArgs build() {

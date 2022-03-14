@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AwsClusterAuthorizationArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneArgs;
@@ -24,10 +24,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorization", required=true)
-      private final Input<AwsClusterAuthorizationArgs> authorization;
+      private final Output<AwsClusterAuthorizationArgs> authorization;
 
-    public Input<AwsClusterAuthorizationArgs> getAuthorization() {
+    public Output<AwsClusterAuthorizationArgs> getAuthorization() {
         return this.authorization;
     }
 
@@ -46,9 +46,9 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsRegion", required=true)
-      private final Input<String> awsRegion;
+      private final Output<String> awsRegion;
 
-    public Input<String> getAwsRegion() {
+    public Output<String> getAwsRegion() {
         return this.awsRegion;
     }
 
@@ -57,9 +57,9 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controlPlane", required=true)
-      private final Input<AwsClusterControlPlaneArgs> controlPlane;
+      private final Output<AwsClusterControlPlaneArgs> controlPlane;
 
-    public Input<AwsClusterControlPlaneArgs> getControlPlane() {
+    public Output<AwsClusterControlPlaneArgs> getControlPlane() {
         return this.controlPlane;
     }
 
@@ -68,10 +68,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleet", required=true)
-      private final Input<AwsClusterFleetArgs> fleet;
+      private final Output<AwsClusterFleetArgs> fleet;
 
-    public Input<AwsClusterFleetArgs> getFleet() {
+    public Output<AwsClusterFleetArgs> getFleet() {
         return this.fleet;
     }
 
@@ -90,9 +90,9 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -101,10 +101,10 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networking", required=true)
-      private final Input<AwsClusterNetworkingArgs> networking;
+      private final Output<AwsClusterNetworkingArgs> networking;
 
-    public Input<AwsClusterNetworkingArgs> getNetworking() {
+    public Output<AwsClusterNetworkingArgs> getNetworking() {
         return this.networking;
     }
 
@@ -123,23 +123,23 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public AwsClusterArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        Input<AwsClusterAuthorizationArgs> authorization,
-        Input<String> awsRegion,
-        Input<AwsClusterControlPlaneArgs> controlPlane,
-        @Nullable Input<String> description,
-        Input<AwsClusterFleetArgs> fleet,
-        Input<String> location,
-        @Nullable Input<String> name,
-        Input<AwsClusterNetworkingArgs> networking,
-        @Nullable Input<String> project) {
+        @Nullable Output<Map<String,String>> annotations,
+        Output<AwsClusterAuthorizationArgs> authorization,
+        Output<String> awsRegion,
+        Output<AwsClusterControlPlaneArgs> controlPlane,
+        @Nullable Output<String> description,
+        Output<AwsClusterFleetArgs> fleet,
+        Output<String> location,
+        @Nullable Output<String> name,
+        Output<AwsClusterNetworkingArgs> networking,
+        @Nullable Output<String> project) {
         this.annotations = annotations;
         this.authorization = Objects.requireNonNull(authorization, "expected parameter 'authorization' to be non-null");
         this.awsRegion = Objects.requireNonNull(awsRegion, "expected parameter 'awsRegion' to be non-null");
@@ -153,16 +153,16 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsClusterArgs() {
-        this.annotations = Input.empty();
-        this.authorization = Input.empty();
-        this.awsRegion = Input.empty();
-        this.controlPlane = Input.empty();
-        this.description = Input.empty();
-        this.fleet = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.networking = Input.empty();
-        this.project = Input.empty();
+        this.annotations = Output.empty();
+        this.authorization = Output.empty();
+        this.awsRegion = Output.empty();
+        this.controlPlane = Output.empty();
+        this.description = Output.empty();
+        this.fleet = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.networking = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private Input<AwsClusterAuthorizationArgs> authorization;
-        private Input<String> awsRegion;
-        private Input<AwsClusterControlPlaneArgs> controlPlane;
-        private @Nullable Input<String> description;
-        private Input<AwsClusterFleetArgs> fleet;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<AwsClusterNetworkingArgs> networking;
-        private @Nullable Input<String> project;
+        private @Nullable Output<Map<String,String>> annotations;
+        private Output<AwsClusterAuthorizationArgs> authorization;
+        private Output<String> awsRegion;
+        private Output<AwsClusterControlPlaneArgs> controlPlane;
+        private @Nullable Output<String> description;
+        private Output<AwsClusterFleetArgs> fleet;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<AwsClusterNetworkingArgs> networking;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder authorization(Input<AwsClusterAuthorizationArgs> authorization) {
+        public Builder authorization(Output<AwsClusterAuthorizationArgs> authorization) {
             this.authorization = Objects.requireNonNull(authorization);
             return this;
         }
 
         public Builder authorization(AwsClusterAuthorizationArgs authorization) {
-            this.authorization = Input.of(Objects.requireNonNull(authorization));
+            this.authorization = Output.of(Objects.requireNonNull(authorization));
             return this;
         }
 
-        public Builder awsRegion(Input<String> awsRegion) {
+        public Builder awsRegion(Output<String> awsRegion) {
             this.awsRegion = Objects.requireNonNull(awsRegion);
             return this;
         }
 
         public Builder awsRegion(String awsRegion) {
-            this.awsRegion = Input.of(Objects.requireNonNull(awsRegion));
+            this.awsRegion = Output.of(Objects.requireNonNull(awsRegion));
             return this;
         }
 
-        public Builder controlPlane(Input<AwsClusterControlPlaneArgs> controlPlane) {
+        public Builder controlPlane(Output<AwsClusterControlPlaneArgs> controlPlane) {
             this.controlPlane = Objects.requireNonNull(controlPlane);
             return this;
         }
 
         public Builder controlPlane(AwsClusterControlPlaneArgs controlPlane) {
-            this.controlPlane = Input.of(Objects.requireNonNull(controlPlane));
+            this.controlPlane = Output.of(Objects.requireNonNull(controlPlane));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fleet(Input<AwsClusterFleetArgs> fleet) {
+        public Builder fleet(Output<AwsClusterFleetArgs> fleet) {
             this.fleet = Objects.requireNonNull(fleet);
             return this;
         }
 
         public Builder fleet(AwsClusterFleetArgs fleet) {
-            this.fleet = Input.of(Objects.requireNonNull(fleet));
+            this.fleet = Output.of(Objects.requireNonNull(fleet));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networking(Input<AwsClusterNetworkingArgs> networking) {
+        public Builder networking(Output<AwsClusterNetworkingArgs> networking) {
             this.networking = Objects.requireNonNull(networking);
             return this;
         }
 
         public Builder networking(AwsClusterNetworkingArgs networking) {
-            this.networking = Input.of(Objects.requireNonNull(networking));
+            this.networking = Output.of(Objects.requireNonNull(networking));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public AwsClusterArgs build() {

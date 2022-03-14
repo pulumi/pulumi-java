@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CxIntentTrainingPhrasePartGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameterId")
-      private final @Nullable Input<String> parameterId;
+      private final @Nullable Output<String> parameterId;
 
-    public Input<String> getParameterId() {
-        return this.parameterId == null ? Input.empty() : this.parameterId;
+    public Output<String> getParameterId() {
+        return this.parameterId == null ? Output.empty() : this.parameterId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class CxIntentTrainingPhrasePartGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="text", required=true)
-      private final Input<String> text;
+      private final Output<String> text;
 
-    public Input<String> getText() {
+    public Output<String> getText() {
         return this.text;
     }
 
     public CxIntentTrainingPhrasePartGetArgs(
-        @Nullable Input<String> parameterId,
-        Input<String> text) {
+        @Nullable Output<String> parameterId,
+        Output<String> text) {
         this.parameterId = parameterId;
         this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
     }
 
     private CxIntentTrainingPhrasePartGetArgs() {
-        this.parameterId = Input.empty();
-        this.text = Input.empty();
+        this.parameterId = Output.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class CxIntentTrainingPhrasePartGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> parameterId;
-        private Input<String> text;
+        private @Nullable Output<String> parameterId;
+        private Output<String> text;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class CxIntentTrainingPhrasePartGetArgs extends io.pulumi.resources
     	      this.text = defaults.text;
         }
 
-        public Builder parameterId(@Nullable Input<String> parameterId) {
+        public Builder parameterId(@Nullable Output<String> parameterId) {
             this.parameterId = parameterId;
             return this;
         }
 
         public Builder parameterId(@Nullable String parameterId) {
-            this.parameterId = Input.ofNullable(parameterId);
+            this.parameterId = Output.ofNullable(parameterId);
             return this;
         }
 
-        public Builder text(Input<String> text) {
+        public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
         public Builder text(String text) {
-            this.text = Input.of(Objects.requireNonNull(text));
+            this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
         public CxIntentTrainingPhrasePartGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class RuleGroupLabelArgs extends io.pulumi.resources.ResourceArgs {
     public static final RuleGroupLabelArgs Empty = new RuleGroupLabelArgs();
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
-    public RuleGroupLabelArgs(Input<String> name) {
+    public RuleGroupLabelArgs(Output<String> name) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private RuleGroupLabelArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class RuleGroupLabelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class RuleGroupLabelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public RuleGroupLabelArgs build() {

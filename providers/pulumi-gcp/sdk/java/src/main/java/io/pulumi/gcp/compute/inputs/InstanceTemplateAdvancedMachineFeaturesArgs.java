@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class InstanceTemplateAdvancedMachineFeaturesArgs extends io.pulumi
      * 
      */
     @InputImport(name="enableNestedVirtualization")
-      private final @Nullable Input<Boolean> enableNestedVirtualization;
+      private final @Nullable Output<Boolean> enableNestedVirtualization;
 
-    public Input<Boolean> getEnableNestedVirtualization() {
-        return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
+    public Output<Boolean> getEnableNestedVirtualization() {
+        return this.enableNestedVirtualization == null ? Output.empty() : this.enableNestedVirtualization;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class InstanceTemplateAdvancedMachineFeaturesArgs extends io.pulumi
      * 
      */
     @InputImport(name="threadsPerCore")
-      private final @Nullable Input<Integer> threadsPerCore;
+      private final @Nullable Output<Integer> threadsPerCore;
 
-    public Input<Integer> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
+    public Output<Integer> getThreadsPerCore() {
+        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
     }
 
     public InstanceTemplateAdvancedMachineFeaturesArgs(
-        @Nullable Input<Boolean> enableNestedVirtualization,
-        @Nullable Input<Integer> threadsPerCore) {
+        @Nullable Output<Boolean> enableNestedVirtualization,
+        @Nullable Output<Integer> threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.threadsPerCore = threadsPerCore;
     }
 
     private InstanceTemplateAdvancedMachineFeaturesArgs() {
-        this.enableNestedVirtualization = Input.empty();
-        this.threadsPerCore = Input.empty();
+        this.enableNestedVirtualization = Output.empty();
+        this.threadsPerCore = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class InstanceTemplateAdvancedMachineFeaturesArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableNestedVirtualization;
-        private @Nullable Input<Integer> threadsPerCore;
+        private @Nullable Output<Boolean> enableNestedVirtualization;
+        private @Nullable Output<Integer> threadsPerCore;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class InstanceTemplateAdvancedMachineFeaturesArgs extends io.pulumi
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder enableNestedVirtualization(@Nullable Input<Boolean> enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(@Nullable Output<Boolean> enableNestedVirtualization) {
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
 
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Input.ofNullable(enableNestedVirtualization);
+            this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
             return this;
         }
 
-        public Builder threadsPerCore(@Nullable Input<Integer> threadsPerCore) {
+        public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
 
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Input.ofNullable(threadsPerCore);
+            this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
         }
         public InstanceTemplateAdvancedMachineFeaturesArgs build() {

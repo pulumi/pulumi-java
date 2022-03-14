@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthRequirementArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OAuthRequirementsArgs;
@@ -27,10 +27,10 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowWithoutCredential")
-      private final @Nullable Input<Boolean> allowWithoutCredential;
+      private final @Nullable Output<Boolean> allowWithoutCredential;
 
-    public Input<Boolean> getAllowWithoutCredential() {
-        return this.allowWithoutCredential == null ? Input.empty() : this.allowWithoutCredential;
+    public Output<Boolean> getAllowWithoutCredential() {
+        return this.allowWithoutCredential == null ? Output.empty() : this.allowWithoutCredential;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="oauth")
-      private final @Nullable Input<OAuthRequirementsArgs> oauth;
+      private final @Nullable Output<OAuthRequirementsArgs> oauth;
 
-    public Input<OAuthRequirementsArgs> getOauth() {
-        return this.oauth == null ? Input.empty() : this.oauth;
+    public Output<OAuthRequirementsArgs> getOauth() {
+        return this.oauth == null ? Output.empty() : this.oauth;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="requirements")
-      private final @Nullable Input<List<AuthRequirementArgs>> requirements;
+      private final @Nullable Output<List<AuthRequirementArgs>> requirements;
 
-    public Input<List<AuthRequirementArgs>> getRequirements() {
-        return this.requirements == null ? Input.empty() : this.requirements;
+    public Output<List<AuthRequirementArgs>> getRequirements() {
+        return this.requirements == null ? Output.empty() : this.requirements;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<String> selector;
+      private final @Nullable Output<String> selector;
 
-    public Input<String> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<String> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     public AuthenticationRuleArgs(
-        @Nullable Input<Boolean> allowWithoutCredential,
-        @Nullable Input<OAuthRequirementsArgs> oauth,
-        @Nullable Input<List<AuthRequirementArgs>> requirements,
-        @Nullable Input<String> selector) {
+        @Nullable Output<Boolean> allowWithoutCredential,
+        @Nullable Output<OAuthRequirementsArgs> oauth,
+        @Nullable Output<List<AuthRequirementArgs>> requirements,
+        @Nullable Output<String> selector) {
         this.allowWithoutCredential = allowWithoutCredential;
         this.oauth = oauth;
         this.requirements = requirements;
@@ -78,10 +78,10 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AuthenticationRuleArgs() {
-        this.allowWithoutCredential = Input.empty();
-        this.oauth = Input.empty();
-        this.requirements = Input.empty();
-        this.selector = Input.empty();
+        this.allowWithoutCredential = Output.empty();
+        this.oauth = Output.empty();
+        this.requirements = Output.empty();
+        this.selector = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowWithoutCredential;
-        private @Nullable Input<OAuthRequirementsArgs> oauth;
-        private @Nullable Input<List<AuthRequirementArgs>> requirements;
-        private @Nullable Input<String> selector;
+        private @Nullable Output<Boolean> allowWithoutCredential;
+        private @Nullable Output<OAuthRequirementsArgs> oauth;
+        private @Nullable Output<List<AuthRequirementArgs>> requirements;
+        private @Nullable Output<String> selector;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.selector = defaults.selector;
         }
 
-        public Builder allowWithoutCredential(@Nullable Input<Boolean> allowWithoutCredential) {
+        public Builder allowWithoutCredential(@Nullable Output<Boolean> allowWithoutCredential) {
             this.allowWithoutCredential = allowWithoutCredential;
             return this;
         }
 
         public Builder allowWithoutCredential(@Nullable Boolean allowWithoutCredential) {
-            this.allowWithoutCredential = Input.ofNullable(allowWithoutCredential);
+            this.allowWithoutCredential = Output.ofNullable(allowWithoutCredential);
             return this;
         }
 
-        public Builder oauth(@Nullable Input<OAuthRequirementsArgs> oauth) {
+        public Builder oauth(@Nullable Output<OAuthRequirementsArgs> oauth) {
             this.oauth = oauth;
             return this;
         }
 
         public Builder oauth(@Nullable OAuthRequirementsArgs oauth) {
-            this.oauth = Input.ofNullable(oauth);
+            this.oauth = Output.ofNullable(oauth);
             return this;
         }
 
-        public Builder requirements(@Nullable Input<List<AuthRequirementArgs>> requirements) {
+        public Builder requirements(@Nullable Output<List<AuthRequirementArgs>> requirements) {
             this.requirements = requirements;
             return this;
         }
 
         public Builder requirements(@Nullable List<AuthRequirementArgs> requirements) {
-            this.requirements = Input.ofNullable(requirements);
+            this.requirements = Output.ofNullable(requirements);
             return this;
         }
 
-        public Builder selector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
         public AuthenticationRuleArgs build() {

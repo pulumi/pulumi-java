@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RouteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableBgpRoutePropagation")
-      private final @Nullable Input<Boolean> disableBgpRoutePropagation;
+      private final @Nullable Output<Boolean> disableBgpRoutePropagation;
 
-    public Input<Boolean> getDisableBgpRoutePropagation() {
-        return this.disableBgpRoutePropagation == null ? Input.empty() : this.disableBgpRoutePropagation;
+    public Output<Boolean> getDisableBgpRoutePropagation() {
+        return this.disableBgpRoutePropagation == null ? Output.empty() : this.disableBgpRoutePropagation;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,10 +67,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTableName")
-      private final @Nullable Input<String> routeTableName;
+      private final @Nullable Output<String> routeTableName;
 
-    public Input<String> getRouteTableName() {
-        return this.routeTableName == null ? Input.empty() : this.routeTableName;
+    public Output<String> getRouteTableName() {
+        return this.routeTableName == null ? Output.empty() : this.routeTableName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-      private final @Nullable Input<List<RouteArgs>> routes;
+      private final @Nullable Output<List<RouteArgs>> routes;
 
-    public Input<List<RouteArgs>> getRoutes() {
-        return this.routes == null ? Input.empty() : this.routes;
+    public Output<List<RouteArgs>> getRoutes() {
+        return this.routes == null ? Output.empty() : this.routes;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RouteTableArgs(
-        @Nullable Input<Boolean> disableBgpRoutePropagation,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> routeTableName,
-        @Nullable Input<List<RouteArgs>> routes,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> disableBgpRoutePropagation,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> routeTableName,
+        @Nullable Output<List<RouteArgs>> routes,
+        @Nullable Output<Map<String,String>> tags) {
         this.disableBgpRoutePropagation = disableBgpRoutePropagation;
         this.id = id;
         this.location = location;
@@ -113,13 +113,13 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteTableArgs() {
-        this.disableBgpRoutePropagation = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routeTableName = Input.empty();
-        this.routes = Input.empty();
-        this.tags = Input.empty();
+        this.disableBgpRoutePropagation = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routeTableName = Output.empty();
+        this.routes = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableBgpRoutePropagation;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> routeTableName;
-        private @Nullable Input<List<RouteArgs>> routes;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> disableBgpRoutePropagation;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> routeTableName;
+        private @Nullable Output<List<RouteArgs>> routes;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder disableBgpRoutePropagation(@Nullable Input<Boolean> disableBgpRoutePropagation) {
+        public Builder disableBgpRoutePropagation(@Nullable Output<Boolean> disableBgpRoutePropagation) {
             this.disableBgpRoutePropagation = disableBgpRoutePropagation;
             return this;
         }
 
         public Builder disableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
-            this.disableBgpRoutePropagation = Input.ofNullable(disableBgpRoutePropagation);
+            this.disableBgpRoutePropagation = Output.ofNullable(disableBgpRoutePropagation);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routeTableName(@Nullable Input<String> routeTableName) {
+        public Builder routeTableName(@Nullable Output<String> routeTableName) {
             this.routeTableName = routeTableName;
             return this;
         }
 
         public Builder routeTableName(@Nullable String routeTableName) {
-            this.routeTableName = Input.ofNullable(routeTableName);
+            this.routeTableName = Output.ofNullable(routeTableName);
             return this;
         }
 
-        public Builder routes(@Nullable Input<List<RouteArgs>> routes) {
+        public Builder routes(@Nullable Output<List<RouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
         public Builder routes(@Nullable List<RouteArgs> routes) {
-            this.routes = Input.ofNullable(routes);
+            this.routes = Output.ofNullable(routes);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RouteTableArgs build() {

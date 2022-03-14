@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyRingId", required=true)
-      private final Input<String> keyRingId;
+      private final Output<String> keyRingId;
 
-    public Input<String> getKeyRingId() {
+    public Output<String> getKeyRingId() {
         return this.keyRingId;
     }
 
@@ -33,22 +33,22 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public KeyRingIAMPolicyArgs(
-        Input<String> keyRingId,
-        Input<String> policyData) {
+        Output<String> keyRingId,
+        Output<String> policyData) {
         this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private KeyRingIAMPolicyArgs() {
-        this.keyRingId = Input.empty();
-        this.policyData = Input.empty();
+        this.keyRingId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> keyRingId;
-        private Input<String> policyData;
+        private Output<String> keyRingId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder keyRingId(Input<String> keyRingId) {
+        public Builder keyRingId(Output<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
 
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Input.of(Objects.requireNonNull(keyRingId));
+            this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public KeyRingIAMPolicyArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codecommit.TriggerArgs;
 import io.pulumi.aws.codecommit.inputs.TriggerState;
 import io.pulumi.aws.codecommit.outputs.TriggerTrigger;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -90,14 +89,14 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Trigger(String name, TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codecommit/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:codecommit/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Trigger(String name, Input<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Trigger(String name, Output<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:codecommit/trigger:Trigger", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -113,7 +112,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Trigger get(String name, Input<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Trigger get(String name, Output<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Trigger(name, id, state, options);
     }
 }

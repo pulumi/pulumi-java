@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceAbpV10xArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceAbpV11Args;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV10xArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV11Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,62 +19,62 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
     public static final WirelessDeviceLoRaWANDeviceArgs Empty = new WirelessDeviceLoRaWANDeviceArgs();
 
     @InputImport(name="abpV10x")
-      private final @Nullable Input<WirelessDeviceAbpV10xArgs> abpV10x;
+      private final @Nullable Output<WirelessDeviceAbpV10xArgs> abpV10x;
 
-    public Input<WirelessDeviceAbpV10xArgs> getAbpV10x() {
-        return this.abpV10x == null ? Input.empty() : this.abpV10x;
+    public Output<WirelessDeviceAbpV10xArgs> getAbpV10x() {
+        return this.abpV10x == null ? Output.empty() : this.abpV10x;
     }
 
     @InputImport(name="abpV11")
-      private final @Nullable Input<WirelessDeviceAbpV11Args> abpV11;
+      private final @Nullable Output<WirelessDeviceAbpV11Args> abpV11;
 
-    public Input<WirelessDeviceAbpV11Args> getAbpV11() {
-        return this.abpV11 == null ? Input.empty() : this.abpV11;
+    public Output<WirelessDeviceAbpV11Args> getAbpV11() {
+        return this.abpV11 == null ? Output.empty() : this.abpV11;
     }
 
     @InputImport(name="devEui")
-      private final @Nullable Input<String> devEui;
+      private final @Nullable Output<String> devEui;
 
-    public Input<String> getDevEui() {
-        return this.devEui == null ? Input.empty() : this.devEui;
+    public Output<String> getDevEui() {
+        return this.devEui == null ? Output.empty() : this.devEui;
     }
 
     @InputImport(name="deviceProfileId")
-      private final @Nullable Input<String> deviceProfileId;
+      private final @Nullable Output<String> deviceProfileId;
 
-    public Input<String> getDeviceProfileId() {
-        return this.deviceProfileId == null ? Input.empty() : this.deviceProfileId;
+    public Output<String> getDeviceProfileId() {
+        return this.deviceProfileId == null ? Output.empty() : this.deviceProfileId;
     }
 
     @InputImport(name="otaaV10x")
-      private final @Nullable Input<WirelessDeviceOtaaV10xArgs> otaaV10x;
+      private final @Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x;
 
-    public Input<WirelessDeviceOtaaV10xArgs> getOtaaV10x() {
-        return this.otaaV10x == null ? Input.empty() : this.otaaV10x;
+    public Output<WirelessDeviceOtaaV10xArgs> getOtaaV10x() {
+        return this.otaaV10x == null ? Output.empty() : this.otaaV10x;
     }
 
     @InputImport(name="otaaV11")
-      private final @Nullable Input<WirelessDeviceOtaaV11Args> otaaV11;
+      private final @Nullable Output<WirelessDeviceOtaaV11Args> otaaV11;
 
-    public Input<WirelessDeviceOtaaV11Args> getOtaaV11() {
-        return this.otaaV11 == null ? Input.empty() : this.otaaV11;
+    public Output<WirelessDeviceOtaaV11Args> getOtaaV11() {
+        return this.otaaV11 == null ? Output.empty() : this.otaaV11;
     }
 
     @InputImport(name="serviceProfileId")
-      private final @Nullable Input<String> serviceProfileId;
+      private final @Nullable Output<String> serviceProfileId;
 
-    public Input<String> getServiceProfileId() {
-        return this.serviceProfileId == null ? Input.empty() : this.serviceProfileId;
+    public Output<String> getServiceProfileId() {
+        return this.serviceProfileId == null ? Output.empty() : this.serviceProfileId;
     }
 
     public WirelessDeviceLoRaWANDeviceArgs(
-        @Nullable Input<WirelessDeviceAbpV10xArgs> abpV10x,
-        @Nullable Input<WirelessDeviceAbpV11Args> abpV11,
-        @Nullable Input<String> devEui,
-        @Nullable Input<String> deviceProfileId,
-        @Nullable Input<WirelessDeviceOtaaV10xArgs> otaaV10x,
-        @Nullable Input<WirelessDeviceOtaaV11Args> otaaV11,
-        @Nullable Input<String> serviceProfileId) {
+        @Nullable Output<WirelessDeviceAbpV10xArgs> abpV10x,
+        @Nullable Output<WirelessDeviceAbpV11Args> abpV11,
+        @Nullable Output<String> devEui,
+        @Nullable Output<String> deviceProfileId,
+        @Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x,
+        @Nullable Output<WirelessDeviceOtaaV11Args> otaaV11,
+        @Nullable Output<String> serviceProfileId) {
         this.abpV10x = abpV10x;
         this.abpV11 = abpV11;
         this.devEui = devEui;
@@ -85,13 +85,13 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
     }
 
     private WirelessDeviceLoRaWANDeviceArgs() {
-        this.abpV10x = Input.empty();
-        this.abpV11 = Input.empty();
-        this.devEui = Input.empty();
-        this.deviceProfileId = Input.empty();
-        this.otaaV10x = Input.empty();
-        this.otaaV11 = Input.empty();
-        this.serviceProfileId = Input.empty();
+        this.abpV10x = Output.empty();
+        this.abpV11 = Output.empty();
+        this.devEui = Output.empty();
+        this.deviceProfileId = Output.empty();
+        this.otaaV10x = Output.empty();
+        this.otaaV11 = Output.empty();
+        this.serviceProfileId = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,13 +103,13 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<WirelessDeviceAbpV10xArgs> abpV10x;
-        private @Nullable Input<WirelessDeviceAbpV11Args> abpV11;
-        private @Nullable Input<String> devEui;
-        private @Nullable Input<String> deviceProfileId;
-        private @Nullable Input<WirelessDeviceOtaaV10xArgs> otaaV10x;
-        private @Nullable Input<WirelessDeviceOtaaV11Args> otaaV11;
-        private @Nullable Input<String> serviceProfileId;
+        private @Nullable Output<WirelessDeviceAbpV10xArgs> abpV10x;
+        private @Nullable Output<WirelessDeviceAbpV11Args> abpV11;
+        private @Nullable Output<String> devEui;
+        private @Nullable Output<String> deviceProfileId;
+        private @Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x;
+        private @Nullable Output<WirelessDeviceOtaaV11Args> otaaV11;
+        private @Nullable Output<String> serviceProfileId;
 
         public Builder() {
     	      // Empty
@@ -126,73 +126,73 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
     	      this.serviceProfileId = defaults.serviceProfileId;
         }
 
-        public Builder abpV10x(@Nullable Input<WirelessDeviceAbpV10xArgs> abpV10x) {
+        public Builder abpV10x(@Nullable Output<WirelessDeviceAbpV10xArgs> abpV10x) {
             this.abpV10x = abpV10x;
             return this;
         }
 
         public Builder abpV10x(@Nullable WirelessDeviceAbpV10xArgs abpV10x) {
-            this.abpV10x = Input.ofNullable(abpV10x);
+            this.abpV10x = Output.ofNullable(abpV10x);
             return this;
         }
 
-        public Builder abpV11(@Nullable Input<WirelessDeviceAbpV11Args> abpV11) {
+        public Builder abpV11(@Nullable Output<WirelessDeviceAbpV11Args> abpV11) {
             this.abpV11 = abpV11;
             return this;
         }
 
         public Builder abpV11(@Nullable WirelessDeviceAbpV11Args abpV11) {
-            this.abpV11 = Input.ofNullable(abpV11);
+            this.abpV11 = Output.ofNullable(abpV11);
             return this;
         }
 
-        public Builder devEui(@Nullable Input<String> devEui) {
+        public Builder devEui(@Nullable Output<String> devEui) {
             this.devEui = devEui;
             return this;
         }
 
         public Builder devEui(@Nullable String devEui) {
-            this.devEui = Input.ofNullable(devEui);
+            this.devEui = Output.ofNullable(devEui);
             return this;
         }
 
-        public Builder deviceProfileId(@Nullable Input<String> deviceProfileId) {
+        public Builder deviceProfileId(@Nullable Output<String> deviceProfileId) {
             this.deviceProfileId = deviceProfileId;
             return this;
         }
 
         public Builder deviceProfileId(@Nullable String deviceProfileId) {
-            this.deviceProfileId = Input.ofNullable(deviceProfileId);
+            this.deviceProfileId = Output.ofNullable(deviceProfileId);
             return this;
         }
 
-        public Builder otaaV10x(@Nullable Input<WirelessDeviceOtaaV10xArgs> otaaV10x) {
+        public Builder otaaV10x(@Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x) {
             this.otaaV10x = otaaV10x;
             return this;
         }
 
         public Builder otaaV10x(@Nullable WirelessDeviceOtaaV10xArgs otaaV10x) {
-            this.otaaV10x = Input.ofNullable(otaaV10x);
+            this.otaaV10x = Output.ofNullable(otaaV10x);
             return this;
         }
 
-        public Builder otaaV11(@Nullable Input<WirelessDeviceOtaaV11Args> otaaV11) {
+        public Builder otaaV11(@Nullable Output<WirelessDeviceOtaaV11Args> otaaV11) {
             this.otaaV11 = otaaV11;
             return this;
         }
 
         public Builder otaaV11(@Nullable WirelessDeviceOtaaV11Args otaaV11) {
-            this.otaaV11 = Input.ofNullable(otaaV11);
+            this.otaaV11 = Output.ofNullable(otaaV11);
             return this;
         }
 
-        public Builder serviceProfileId(@Nullable Input<String> serviceProfileId) {
+        public Builder serviceProfileId(@Nullable Output<String> serviceProfileId) {
             this.serviceProfileId = serviceProfileId;
             return this;
         }
 
         public Builder serviceProfileId(@Nullable String serviceProfileId) {
-            this.serviceProfileId = Input.ofNullable(serviceProfileId);
+            this.serviceProfileId = Output.ofNullable(serviceProfileId);
             return this;
         }
         public WirelessDeviceLoRaWANDeviceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<QueryParameterTypeArgs> type;
+      private final @Nullable Output<QueryParameterTypeArgs> type;
 
-    public Input<QueryParameterTypeArgs> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<QueryParameterTypeArgs> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public QueryParameterTypeStructTypesItemArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<QueryParameterTypeArgs> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<QueryParameterTypeArgs> type) {
         this.description = description;
         this.name = name;
         this.type = type;
     }
 
     private QueryParameterTypeStructTypesItemArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<QueryParameterTypeArgs> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<QueryParameterTypeArgs> type;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(@Nullable Input<QueryParameterTypeArgs> type) {
+        public Builder type(@Nullable Output<QueryParameterTypeArgs> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable QueryParameterTypeArgs type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public QueryParameterTypeStructTypesItemArgs build() {

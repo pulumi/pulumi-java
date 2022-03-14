@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallAction;
 import io.pulumi.azurenative.network.enums.WebApplicationFirewallRuleType;
 import io.pulumi.azurenative.network.inputs.MatchConditionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<Either<String,WebApplicationFirewallAction>> action;
+      private final Output<Either<String,WebApplicationFirewallAction>> action;
 
-    public Input<Either<String,WebApplicationFirewallAction>> getAction() {
+    public Output<Either<String,WebApplicationFirewallAction>> getAction() {
         return this.action;
     }
 
@@ -40,9 +40,9 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="matchConditions", required=true)
-      private final Input<List<MatchConditionArgs>> matchConditions;
+      private final Output<List<MatchConditionArgs>> matchConditions;
 
-    public Input<List<MatchConditionArgs>> getMatchConditions() {
+    public Output<List<MatchConditionArgs>> getMatchConditions() {
         return this.matchConditions;
     }
 
@@ -51,10 +51,10 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -73,18 +73,18 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ruleType", required=true)
-      private final Input<Either<String,WebApplicationFirewallRuleType>> ruleType;
+      private final Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
 
-    public Input<Either<String,WebApplicationFirewallRuleType>> getRuleType() {
+    public Output<Either<String,WebApplicationFirewallRuleType>> getRuleType() {
         return this.ruleType;
     }
 
     public WebApplicationFirewallCustomRuleArgs(
-        Input<Either<String,WebApplicationFirewallAction>> action,
-        Input<List<MatchConditionArgs>> matchConditions,
-        @Nullable Input<String> name,
-        Input<Integer> priority,
-        Input<Either<String,WebApplicationFirewallRuleType>> ruleType) {
+        Output<Either<String,WebApplicationFirewallAction>> action,
+        Output<List<MatchConditionArgs>> matchConditions,
+        @Nullable Output<String> name,
+        Output<Integer> priority,
+        Output<Either<String,WebApplicationFirewallRuleType>> ruleType) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
         this.name = name;
@@ -93,11 +93,11 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     }
 
     private WebApplicationFirewallCustomRuleArgs() {
-        this.action = Input.empty();
-        this.matchConditions = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.ruleType = Input.empty();
+        this.action = Output.empty();
+        this.matchConditions = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.ruleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Either<String,WebApplicationFirewallAction>> action;
-        private Input<List<MatchConditionArgs>> matchConditions;
-        private @Nullable Input<String> name;
-        private Input<Integer> priority;
-        private Input<Either<String,WebApplicationFirewallRuleType>> ruleType;
+        private Output<Either<String,WebApplicationFirewallAction>> action;
+        private Output<List<MatchConditionArgs>> matchConditions;
+        private @Nullable Output<String> name;
+        private Output<Integer> priority;
+        private Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder action(Input<Either<String,WebApplicationFirewallAction>> action) {
+        public Builder action(Output<Either<String,WebApplicationFirewallAction>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(Either<String,WebApplicationFirewallAction> action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder matchConditions(Input<List<MatchConditionArgs>> matchConditions) {
+        public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
         public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
-            this.matchConditions = Input.of(Objects.requireNonNull(matchConditions));
+            this.matchConditions = Output.of(Objects.requireNonNull(matchConditions));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder ruleType(Input<Either<String,WebApplicationFirewallRuleType>> ruleType) {
+        public Builder ruleType(Output<Either<String,WebApplicationFirewallRuleType>> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
         public Builder ruleType(Either<String,WebApplicationFirewallRuleType> ruleType) {
-            this.ruleType = Input.of(Objects.requireNonNull(ruleType));
+            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
         public WebApplicationFirewallCustomRuleArgs build() {

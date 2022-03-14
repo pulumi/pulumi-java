@@ -6,7 +6,6 @@ package io.pulumi.aws.s3control;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.s3control.AccessPointPolicyArgs;
 import io.pulumi.aws.s3control.inputs.AccessPointPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -107,14 +106,14 @@ public class AccessPointPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPointPolicy(String name, AccessPointPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/accessPointPolicy:AccessPointPolicy", name, args == null ? AccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:s3control/accessPointPolicy:AccessPointPolicy", name, args == null ? AccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AccessPointPolicy(String name, Input<String> id, @Nullable AccessPointPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AccessPointPolicy(String name, Output<String> id, @Nullable AccessPointPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:s3control/accessPointPolicy:AccessPointPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -130,7 +129,7 @@ public class AccessPointPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccessPointPolicy get(String name, Input<String> id, @Nullable AccessPointPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AccessPointPolicy get(String name, Output<String> id, @Nullable AccessPointPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessPointPolicy(name, id, state, options);
     }
 }

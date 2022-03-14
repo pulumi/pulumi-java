@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confluent;
 
 import io.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesOfferDetailArgs;
 import io.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesUserDetailArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offerDetail")
-      private final @Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
+      private final @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
 
-    public Input<OrganizationResourcePropertiesOfferDetailArgs> getOfferDetail() {
-        return this.offerDetail == null ? Input.empty() : this.offerDetail;
+    public Output<OrganizationResourcePropertiesOfferDetailArgs> getOfferDetail() {
+        return this.offerDetail == null ? Output.empty() : this.offerDetail;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organizationName")
-      private final @Nullable Input<String> organizationName;
+      private final @Nullable Output<String> organizationName;
 
-    public Input<String> getOrganizationName() {
-        return this.organizationName == null ? Input.empty() : this.organizationName;
+    public Output<String> getOrganizationName() {
+        return this.organizationName == null ? Output.empty() : this.organizationName;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDetail")
-      private final @Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail;
+      private final @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 
-    public Input<OrganizationResourcePropertiesUserDetailArgs> getUserDetail() {
-        return this.userDetail == null ? Input.empty() : this.userDetail;
+    public Output<OrganizationResourcePropertiesUserDetailArgs> getUserDetail() {
+        return this.userDetail == null ? Output.empty() : this.userDetail;
     }
 
     public OrganizationArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail,
-        @Nullable Input<String> organizationName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
+        @Nullable Output<String> location,
+        @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail,
+        @Nullable Output<String> organizationName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
         this.location = location;
         this.offerDetail = offerDetail;
         this.organizationName = organizationName;
@@ -99,12 +99,12 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationArgs() {
-        this.location = Input.empty();
-        this.offerDetail = Input.empty();
-        this.organizationName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.userDetail = Input.empty();
+        this.location = Output.empty();
+        this.offerDetail = Output.empty();
+        this.organizationName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.userDetail = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
-        private @Nullable Input<String> organizationName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail;
+        private @Nullable Output<String> location;
+        private @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
+        private @Nullable Output<String> organizationName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userDetail = defaults.userDetail;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder offerDetail(@Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail) {
+        public Builder offerDetail(@Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail) {
             this.offerDetail = offerDetail;
             return this;
         }
 
         public Builder offerDetail(@Nullable OrganizationResourcePropertiesOfferDetailArgs offerDetail) {
-            this.offerDetail = Input.ofNullable(offerDetail);
+            this.offerDetail = Output.ofNullable(offerDetail);
             return this;
         }
 
-        public Builder organizationName(@Nullable Input<String> organizationName) {
+        public Builder organizationName(@Nullable Output<String> organizationName) {
             this.organizationName = organizationName;
             return this;
         }
 
         public Builder organizationName(@Nullable String organizationName) {
-            this.organizationName = Input.ofNullable(organizationName);
+            this.organizationName = Output.ofNullable(organizationName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userDetail(@Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
+        public Builder userDetail(@Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
             this.userDetail = userDetail;
             return this;
         }
 
         public Builder userDetail(@Nullable OrganizationResourcePropertiesUserDetailArgs userDetail) {
-            this.userDetail = Input.ofNullable(userDetail);
+            this.userDetail = Output.ofNullable(userDetail);
             return this;
         }
         public OrganizationArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.ManagedRuleEnabledState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ruleId", required=true)
-      private final Input<String> ruleId;
+      private final Output<String> ruleId;
 
-    public Input<String> getRuleId() {
+    public Output<String> getRuleId() {
         return this.ruleId;
     }
 
@@ -36,22 +36,22 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,ManagedRuleEnabledState>> state;
+      private final @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
 
-    public Input<Either<String,ManagedRuleEnabledState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,ManagedRuleEnabledState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public ManagedRuleOverrideArgs(
-        Input<String> ruleId,
-        @Nullable Input<Either<String,ManagedRuleEnabledState>> state) {
+        Output<String> ruleId,
+        @Nullable Output<Either<String,ManagedRuleEnabledState>> state) {
         this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
         this.state = state;
     }
 
     private ManagedRuleOverrideArgs() {
-        this.ruleId = Input.empty();
-        this.state = Input.empty();
+        this.ruleId = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> ruleId;
-        private @Nullable Input<Either<String,ManagedRuleEnabledState>> state;
+        private Output<String> ruleId;
+        private @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
     	      this.state = defaults.state;
         }
 
-        public Builder ruleId(Input<String> ruleId) {
+        public Builder ruleId(Output<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
         public Builder ruleId(String ruleId) {
-            this.ruleId = Input.of(Objects.requireNonNull(ruleId));
+            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,ManagedRuleEnabledState>> state) {
+        public Builder state(@Nullable Output<Either<String,ManagedRuleEnabledState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,ManagedRuleEnabledState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public ManagedRuleOverrideArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.SettingsParameterDescriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<List<SettingsParameterDescriptionArgs>> parameters;
+      private final Output<List<SettingsParameterDescriptionArgs>> parameters;
 
-    public Input<List<SettingsParameterDescriptionArgs>> getParameters() {
+    public Output<List<SettingsParameterDescriptionArgs>> getParameters() {
         return this.parameters;
     }
 
     public SettingsSectionDescriptionArgs(
-        Input<String> name,
-        Input<List<SettingsParameterDescriptionArgs>> parameters) {
+        Output<String> name,
+        Output<List<SettingsParameterDescriptionArgs>> parameters) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
     }
 
     private SettingsSectionDescriptionArgs() {
-        this.name = Input.empty();
-        this.parameters = Input.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<List<SettingsParameterDescriptionArgs>> parameters;
+        private Output<String> name;
+        private Output<List<SettingsParameterDescriptionArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(Input<List<SettingsParameterDescriptionArgs>> parameters) {
+        public Builder parameters(Output<List<SettingsParameterDescriptionArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(List<SettingsParameterDescriptionArgs> parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
         public SettingsSectionDescriptionArgs build() {

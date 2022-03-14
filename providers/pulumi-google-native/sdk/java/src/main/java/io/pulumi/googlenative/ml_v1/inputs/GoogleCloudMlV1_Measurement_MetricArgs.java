@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="metric", required=true)
-      private final Input<String> metric;
+      private final Output<String> metric;
 
-    public Input<String> getMetric() {
+    public Output<String> getMetric() {
         return this.metric;
     }
 
@@ -34,22 +34,22 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Double> value;
+      private final Output<Double> value;
 
-    public Input<Double> getValue() {
+    public Output<Double> getValue() {
         return this.value;
     }
 
     public GoogleCloudMlV1_Measurement_MetricArgs(
-        Input<String> metric,
-        Input<Double> value) {
+        Output<String> metric,
+        Output<Double> value) {
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private GoogleCloudMlV1_Measurement_MetricArgs() {
-        this.metric = Input.empty();
-        this.value = Input.empty();
+        this.metric = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> metric;
-        private Input<Double> value;
+        private Output<String> metric;
+        private Output<Double> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
     	      this.value = defaults.value;
         }
 
-        public Builder metric(Input<String> metric) {
+        public Builder metric(Output<String> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
         public Builder metric(String metric) {
-            this.metric = Input.of(Objects.requireNonNull(metric));
+            this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder value(Input<Double> value) {
+        public Builder value(Output<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Double value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public GoogleCloudMlV1_Measurement_MetricArgs build() {

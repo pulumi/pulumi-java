@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-      private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Output<String> sourceDisk;
 
-    public Input<String> getSourceDisk() {
-        return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
+    public Output<String> getSourceDisk() {
+        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
     }
 
-    public SavedDiskArgs(@Nullable Input<String> sourceDisk) {
+    public SavedDiskArgs(@Nullable Output<String> sourceDisk) {
         this.sourceDisk = sourceDisk;
     }
 
     private SavedDiskArgs() {
-        this.sourceDisk = Input.empty();
+        this.sourceDisk = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sourceDisk;
+        private @Nullable Output<String> sourceDisk;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Input.ofNullable(sourceDisk);
+            this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
         public SavedDiskArgs build() {

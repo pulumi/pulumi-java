@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.budgets.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class BudgetsActionScpActionDefinitionArgs extends io.pulumi.resour
     public static final BudgetsActionScpActionDefinitionArgs Empty = new BudgetsActionScpActionDefinitionArgs();
 
     @InputImport(name="policyId", required=true)
-      private final Input<String> policyId;
+      private final Output<String> policyId;
 
-    public Input<String> getPolicyId() {
+    public Output<String> getPolicyId() {
         return this.policyId;
     }
 
     @InputImport(name="targetIds", required=true)
-      private final Input<List<String>> targetIds;
+      private final Output<List<String>> targetIds;
 
-    public Input<List<String>> getTargetIds() {
+    public Output<List<String>> getTargetIds() {
         return this.targetIds;
     }
 
     public BudgetsActionScpActionDefinitionArgs(
-        Input<String> policyId,
-        Input<List<String>> targetIds) {
+        Output<String> policyId,
+        Output<List<String>> targetIds) {
         this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
         this.targetIds = Objects.requireNonNull(targetIds, "expected parameter 'targetIds' to be non-null");
     }
 
     private BudgetsActionScpActionDefinitionArgs() {
-        this.policyId = Input.empty();
-        this.targetIds = Input.empty();
+        this.policyId = Output.empty();
+        this.targetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class BudgetsActionScpActionDefinitionArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> policyId;
-        private Input<List<String>> targetIds;
+        private Output<String> policyId;
+        private Output<List<String>> targetIds;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class BudgetsActionScpActionDefinitionArgs extends io.pulumi.resour
     	      this.targetIds = defaults.targetIds;
         }
 
-        public Builder policyId(Input<String> policyId) {
+        public Builder policyId(Output<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Input.of(Objects.requireNonNull(policyId));
+            this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
 
-        public Builder targetIds(Input<List<String>> targetIds) {
+        public Builder targetIds(Output<List<String>> targetIds) {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }
 
         public Builder targetIds(List<String> targetIds) {
-            this.targetIds = Input.of(Objects.requireNonNull(targetIds));
+            this.targetIds = Output.of(Objects.requireNonNull(targetIds));
             return this;
         }
         public BudgetsActionScpActionDefinitionArgs build() {

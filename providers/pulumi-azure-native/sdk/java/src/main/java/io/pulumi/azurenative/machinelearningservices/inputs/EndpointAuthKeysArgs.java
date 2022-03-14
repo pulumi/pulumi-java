@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="primaryKey")
-      private final @Nullable Input<String> primaryKey;
+      private final @Nullable Output<String> primaryKey;
 
-    public Input<String> getPrimaryKey() {
-        return this.primaryKey == null ? Input.empty() : this.primaryKey;
+    public Output<String> getPrimaryKey() {
+        return this.primaryKey == null ? Output.empty() : this.primaryKey;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secondaryKey")
-      private final @Nullable Input<String> secondaryKey;
+      private final @Nullable Output<String> secondaryKey;
 
-    public Input<String> getSecondaryKey() {
-        return this.secondaryKey == null ? Input.empty() : this.secondaryKey;
+    public Output<String> getSecondaryKey() {
+        return this.secondaryKey == null ? Output.empty() : this.secondaryKey;
     }
 
     public EndpointAuthKeysArgs(
-        @Nullable Input<String> primaryKey,
-        @Nullable Input<String> secondaryKey) {
+        @Nullable Output<String> primaryKey,
+        @Nullable Output<String> secondaryKey) {
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
     }
 
     private EndpointAuthKeysArgs() {
-        this.primaryKey = Input.empty();
-        this.secondaryKey = Input.empty();
+        this.primaryKey = Output.empty();
+        this.secondaryKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> primaryKey;
-        private @Nullable Input<String> secondaryKey;
+        private @Nullable Output<String> primaryKey;
+        private @Nullable Output<String> secondaryKey;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder primaryKey(@Nullable Input<String> primaryKey) {
+        public Builder primaryKey(@Nullable Output<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Input.ofNullable(primaryKey);
+            this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder secondaryKey(@Nullable Input<String> secondaryKey) {
+        public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
 
         public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Input.ofNullable(secondaryKey);
+            this.secondaryKey = Output.ofNullable(secondaryKey);
             return this;
         }
         public EndpointAuthKeysArgs build() {

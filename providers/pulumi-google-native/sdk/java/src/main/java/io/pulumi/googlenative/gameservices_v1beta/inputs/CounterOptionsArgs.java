@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.CustomFieldArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customFields")
-      private final @Nullable Input<List<CustomFieldArgs>> customFields;
+      private final @Nullable Output<List<CustomFieldArgs>> customFields;
 
-    public Input<List<CustomFieldArgs>> getCustomFields() {
-        return this.customFields == null ? Input.empty() : this.customFields;
+    public Output<List<CustomFieldArgs>> getCustomFields() {
+        return this.customFields == null ? Output.empty() : this.customFields;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metric")
-      private final @Nullable Input<String> metric;
+      private final @Nullable Output<String> metric;
 
-    public Input<String> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<String> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     public CounterOptionsArgs(
-        @Nullable Input<List<CustomFieldArgs>> customFields,
-        @Nullable Input<String> field,
-        @Nullable Input<String> metric) {
+        @Nullable Output<List<CustomFieldArgs>> customFields,
+        @Nullable Output<String> field,
+        @Nullable Output<String> metric) {
         this.customFields = customFields;
         this.field = field;
         this.metric = metric;
     }
 
     private CounterOptionsArgs() {
-        this.customFields = Input.empty();
-        this.field = Input.empty();
-        this.metric = Input.empty();
+        this.customFields = Output.empty();
+        this.field = Output.empty();
+        this.metric = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomFieldArgs>> customFields;
-        private @Nullable Input<String> field;
-        private @Nullable Input<String> metric;
+        private @Nullable Output<List<CustomFieldArgs>> customFields;
+        private @Nullable Output<String> field;
+        private @Nullable Output<String> metric;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metric = defaults.metric;
         }
 
-        public Builder customFields(@Nullable Input<List<CustomFieldArgs>> customFields) {
+        public Builder customFields(@Nullable Output<List<CustomFieldArgs>> customFields) {
             this.customFields = customFields;
             return this;
         }
 
         public Builder customFields(@Nullable List<CustomFieldArgs> customFields) {
-            this.customFields = Input.ofNullable(customFields);
+            this.customFields = Output.ofNullable(customFields);
             return this;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder metric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable String metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
         public CounterOptionsArgs build() {

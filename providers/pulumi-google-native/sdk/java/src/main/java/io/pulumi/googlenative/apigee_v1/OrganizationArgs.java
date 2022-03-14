@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationBillingType;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationRuntimeType;
@@ -26,10 +26,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonsConfig")
-      private final @Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
+      private final @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
 
-    public Input<GoogleCloudApigeeV1AddonsConfigArgs> getAddonsConfig() {
-        return this.addonsConfig == null ? Input.empty() : this.addonsConfig;
+    public Output<GoogleCloudApigeeV1AddonsConfigArgs> getAddonsConfig() {
+        return this.addonsConfig == null ? Output.empty() : this.addonsConfig;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsRegion", required=true)
-      private final Input<String> analyticsRegion;
+      private final Output<String> analyticsRegion;
 
-    public Input<String> getAnalyticsRegion() {
+    public Output<String> getAnalyticsRegion() {
         return this.analyticsRegion;
     }
 
@@ -48,10 +48,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<List<String>> attributes;
+      private final @Nullable Output<List<String>> attributes;
 
-    public Input<List<String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<List<String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-      private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Output<String> authorizedNetwork;
 
-    public Input<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
+    public Output<String> getAuthorizedNetwork() {
+        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingType")
-      private final @Nullable Input<OrganizationBillingType> billingType;
+      private final @Nullable Output<OrganizationBillingType> billingType;
 
-    public Input<OrganizationBillingType> getBillingType() {
-        return this.billingType == null ? Input.empty() : this.billingType;
+    public Output<OrganizationBillingType> getBillingType() {
+        return this.billingType == null ? Output.empty() : this.billingType;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerName")
-      private final @Nullable Input<String> customerName;
+      private final @Nullable Output<String> customerName;
 
-    public Input<String> getCustomerName() {
-        return this.customerName == null ? Input.empty() : this.customerName;
+    public Output<String> getCustomerName() {
+        return this.customerName == null ? Output.empty() : this.customerName;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -103,16 +103,16 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
@@ -121,10 +121,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalDisabled")
-      private final @Nullable Input<Boolean> portalDisabled;
+      private final @Nullable Output<Boolean> portalDisabled;
 
-    public Input<Boolean> getPortalDisabled() {
-        return this.portalDisabled == null ? Input.empty() : this.portalDisabled;
+    public Output<Boolean> getPortalDisabled() {
+        return this.portalDisabled == null ? Output.empty() : this.portalDisabled;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
+      private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
 
-    public Input<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
-      private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
+      private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Input<String> getRuntimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
+        return this.runtimeDatabaseEncryptionKeyName == null ? Output.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
     /**
@@ -154,9 +154,9 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeType", required=true)
-      private final Input<OrganizationRuntimeType> runtimeType;
+      private final Output<OrganizationRuntimeType> runtimeType;
 
-    public Input<OrganizationRuntimeType> getRuntimeType() {
+    public Output<OrganizationRuntimeType> getRuntimeType() {
         return this.runtimeType;
     }
 
@@ -165,27 +165,27 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<OrganizationType> type;
+      private final @Nullable Output<OrganizationType> type;
 
-    public Input<OrganizationType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<OrganizationType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public OrganizationArgs(
-        @Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig,
-        Input<String> analyticsRegion,
-        @Nullable Input<List<String>> attributes,
-        @Nullable Input<String> authorizedNetwork,
-        @Nullable Input<OrganizationBillingType> billingType,
-        @Nullable Input<String> customerName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> parent,
-        @Nullable Input<Boolean> portalDisabled,
-        @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties,
-        @Nullable Input<String> runtimeDatabaseEncryptionKeyName,
-        Input<OrganizationRuntimeType> runtimeType,
-        @Nullable Input<OrganizationType> type) {
+        @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig,
+        Output<String> analyticsRegion,
+        @Nullable Output<List<String>> attributes,
+        @Nullable Output<String> authorizedNetwork,
+        @Nullable Output<OrganizationBillingType> billingType,
+        @Nullable Output<String> customerName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> parent,
+        @Nullable Output<Boolean> portalDisabled,
+        @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties,
+        @Nullable Output<String> runtimeDatabaseEncryptionKeyName,
+        Output<OrganizationRuntimeType> runtimeType,
+        @Nullable Output<OrganizationType> type) {
         this.addonsConfig = addonsConfig;
         this.analyticsRegion = Objects.requireNonNull(analyticsRegion, "expected parameter 'analyticsRegion' to be non-null");
         this.attributes = attributes;
@@ -203,20 +203,20 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationArgs() {
-        this.addonsConfig = Input.empty();
-        this.analyticsRegion = Input.empty();
-        this.attributes = Input.empty();
-        this.authorizedNetwork = Input.empty();
-        this.billingType = Input.empty();
-        this.customerName = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.parent = Input.empty();
-        this.portalDisabled = Input.empty();
-        this.properties = Input.empty();
-        this.runtimeDatabaseEncryptionKeyName = Input.empty();
-        this.runtimeType = Input.empty();
-        this.type = Input.empty();
+        this.addonsConfig = Output.empty();
+        this.analyticsRegion = Output.empty();
+        this.attributes = Output.empty();
+        this.authorizedNetwork = Output.empty();
+        this.billingType = Output.empty();
+        this.customerName = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.parent = Output.empty();
+        this.portalDisabled = Output.empty();
+        this.properties = Output.empty();
+        this.runtimeDatabaseEncryptionKeyName = Output.empty();
+        this.runtimeType = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -228,20 +228,20 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
-        private Input<String> analyticsRegion;
-        private @Nullable Input<List<String>> attributes;
-        private @Nullable Input<String> authorizedNetwork;
-        private @Nullable Input<OrganizationBillingType> billingType;
-        private @Nullable Input<String> customerName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> parent;
-        private @Nullable Input<Boolean> portalDisabled;
-        private @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
-        private @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
-        private Input<OrganizationRuntimeType> runtimeType;
-        private @Nullable Input<OrganizationType> type;
+        private @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
+        private Output<String> analyticsRegion;
+        private @Nullable Output<List<String>> attributes;
+        private @Nullable Output<String> authorizedNetwork;
+        private @Nullable Output<OrganizationBillingType> billingType;
+        private @Nullable Output<String> customerName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> parent;
+        private @Nullable Output<Boolean> portalDisabled;
+        private @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
+        private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
+        private Output<OrganizationRuntimeType> runtimeType;
+        private @Nullable Output<OrganizationType> type;
 
         public Builder() {
     	      // Empty
@@ -265,143 +265,143 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder addonsConfig(@Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig) {
+        public Builder addonsConfig(@Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig) {
             this.addonsConfig = addonsConfig;
             return this;
         }
 
         public Builder addonsConfig(@Nullable GoogleCloudApigeeV1AddonsConfigArgs addonsConfig) {
-            this.addonsConfig = Input.ofNullable(addonsConfig);
+            this.addonsConfig = Output.ofNullable(addonsConfig);
             return this;
         }
 
-        public Builder analyticsRegion(Input<String> analyticsRegion) {
+        public Builder analyticsRegion(Output<String> analyticsRegion) {
             this.analyticsRegion = Objects.requireNonNull(analyticsRegion);
             return this;
         }
 
         public Builder analyticsRegion(String analyticsRegion) {
-            this.analyticsRegion = Input.of(Objects.requireNonNull(analyticsRegion));
+            this.analyticsRegion = Output.of(Objects.requireNonNull(analyticsRegion));
             return this;
         }
 
-        public Builder attributes(@Nullable Input<List<String>> attributes) {
+        public Builder attributes(@Nullable Output<List<String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable List<String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder billingType(@Nullable Input<OrganizationBillingType> billingType) {
+        public Builder billingType(@Nullable Output<OrganizationBillingType> billingType) {
             this.billingType = billingType;
             return this;
         }
 
         public Builder billingType(@Nullable OrganizationBillingType billingType) {
-            this.billingType = Input.ofNullable(billingType);
+            this.billingType = Output.ofNullable(billingType);
             return this;
         }
 
-        public Builder customerName(@Nullable Input<String> customerName) {
+        public Builder customerName(@Nullable Output<String> customerName) {
             this.customerName = customerName;
             return this;
         }
 
         public Builder customerName(@Nullable String customerName) {
-            this.customerName = Input.ofNullable(customerName);
+            this.customerName = Output.ofNullable(customerName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder portalDisabled(@Nullable Input<Boolean> portalDisabled) {
+        public Builder portalDisabled(@Nullable Output<Boolean> portalDisabled) {
             this.portalDisabled = portalDisabled;
             return this;
         }
 
         public Builder portalDisabled(@Nullable Boolean portalDisabled) {
-            this.portalDisabled = Input.ofNullable(portalDisabled);
+            this.portalDisabled = Output.ofNullable(portalDisabled);
             return this;
         }
 
-        public Builder properties(@Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
 
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Input.ofNullable(runtimeDatabaseEncryptionKeyName);
+            this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
 
-        public Builder runtimeType(Input<OrganizationRuntimeType> runtimeType) {
+        public Builder runtimeType(Output<OrganizationRuntimeType> runtimeType) {
             this.runtimeType = Objects.requireNonNull(runtimeType);
             return this;
         }
 
         public Builder runtimeType(OrganizationRuntimeType runtimeType) {
-            this.runtimeType = Input.of(Objects.requireNonNull(runtimeType));
+            this.runtimeType = Output.of(Objects.requireNonNull(runtimeType));
             return this;
         }
 
-        public Builder type(@Nullable Input<OrganizationType> type) {
+        public Builder type(@Nullable Output<OrganizationType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable OrganizationType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public OrganizationArgs build() {

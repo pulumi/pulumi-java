@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SubnetReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="privateIpAllocationMethod")
-      private final @Nullable Input<String> privateIpAllocationMethod;
+      private final @Nullable Output<String> privateIpAllocationMethod;
 
-    public Input<String> getPrivateIpAllocationMethod() {
-        return this.privateIpAllocationMethod == null ? Input.empty() : this.privateIpAllocationMethod;
+    public Output<String> getPrivateIpAllocationMethod() {
+        return this.privateIpAllocationMethod == null ? Output.empty() : this.privateIpAllocationMethod;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubnetReferenceArgs> subnet;
+      private final @Nullable Output<SubnetReferenceArgs> subnet;
 
-    public Input<SubnetReferenceArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubnetReferenceArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<String> zones;
+      private final @Nullable Output<String> zones;
 
-    public Input<String> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<String> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public LBFrontendIPConfigurationResourceSettingsArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<String> privateIpAllocationMethod,
-        @Nullable Input<SubnetReferenceArgs> subnet,
-        @Nullable Input<String> zones) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<String> privateIpAllocationMethod,
+        @Nullable Output<SubnetReferenceArgs> subnet,
+        @Nullable Output<String> zones) {
         this.name = name;
         this.privateIpAddress = privateIpAddress;
         this.privateIpAllocationMethod = privateIpAllocationMethod;
@@ -89,11 +89,11 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
     }
 
     private LBFrontendIPConfigurationResourceSettingsArgs() {
-        this.name = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.privateIpAllocationMethod = Input.empty();
-        this.subnet = Input.empty();
-        this.zones = Input.empty();
+        this.name = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.privateIpAllocationMethod = Output.empty();
+        this.subnet = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<String> privateIpAllocationMethod;
-        private @Nullable Input<SubnetReferenceArgs> subnet;
-        private @Nullable Input<String> zones;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<String> privateIpAllocationMethod;
+        private @Nullable Output<SubnetReferenceArgs> subnet;
+        private @Nullable Output<String> zones;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
     	      this.zones = defaults.zones;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder privateIpAllocationMethod(@Nullable Input<String> privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable Output<String> privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
-            this.privateIpAllocationMethod = Input.ofNullable(privateIpAllocationMethod);
+            this.privateIpAllocationMethod = Output.ofNullable(privateIpAllocationMethod);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubnetReferenceArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubnetReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubnetReferenceArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder zones(@Nullable Input<String> zones) {
+        public Builder zones(@Nullable Output<String> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable String zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public LBFrontendIPConfigurationResourceSettingsArgs build() {

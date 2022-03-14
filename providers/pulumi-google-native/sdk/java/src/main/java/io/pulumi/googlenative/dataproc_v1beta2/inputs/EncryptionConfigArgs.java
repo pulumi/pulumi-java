@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gcePdKmsKeyName")
-      private final @Nullable Input<String> gcePdKmsKeyName;
+      private final @Nullable Output<String> gcePdKmsKeyName;
 
-    public Input<String> getGcePdKmsKeyName() {
-        return this.gcePdKmsKeyName == null ? Input.empty() : this.gcePdKmsKeyName;
+    public Output<String> getGcePdKmsKeyName() {
+        return this.gcePdKmsKeyName == null ? Output.empty() : this.gcePdKmsKeyName;
     }
 
-    public EncryptionConfigArgs(@Nullable Input<String> gcePdKmsKeyName) {
+    public EncryptionConfigArgs(@Nullable Output<String> gcePdKmsKeyName) {
         this.gcePdKmsKeyName = gcePdKmsKeyName;
     }
 
     private EncryptionConfigArgs() {
-        this.gcePdKmsKeyName = Input.empty();
+        this.gcePdKmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gcePdKmsKeyName;
+        private @Nullable Output<String> gcePdKmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
         }
 
-        public Builder gcePdKmsKeyName(@Nullable Input<String> gcePdKmsKeyName) {
+        public Builder gcePdKmsKeyName(@Nullable Output<String> gcePdKmsKeyName) {
             this.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
 
         public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = Input.ofNullable(gcePdKmsKeyName);
+            this.gcePdKmsKeyName = Output.ofNullable(gcePdKmsKeyName);
             return this;
         }
         public EncryptionConfigArgs build() {

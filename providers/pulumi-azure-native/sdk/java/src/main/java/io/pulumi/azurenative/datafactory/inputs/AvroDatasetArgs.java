@@ -19,7 +19,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageLocationArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -43,10 +43,10 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="avroCompressionCodec")
-      private final @Nullable Input<Object> avroCompressionCodec;
+      private final @Nullable Output<Object> avroCompressionCodec;
 
-    public Input<Object> getAvroCompressionCodec() {
-        return this.avroCompressionCodec == null ? Input.empty() : this.avroCompressionCodec;
+    public Output<Object> getAvroCompressionCodec() {
+        return this.avroCompressionCodec == null ? Output.empty() : this.avroCompressionCodec;
     }
 
     @InputImport(name="avroCompressionLevel")
-      private final @Nullable Input<Integer> avroCompressionLevel;
+      private final @Nullable Output<Integer> avroCompressionLevel;
 
-    public Input<Integer> getAvroCompressionLevel() {
-        return this.avroCompressionLevel == null ? Input.empty() : this.avroCompressionLevel;
+    public Output<Integer> getAvroCompressionLevel() {
+        return this.avroCompressionLevel == null ? Output.empty() : this.avroCompressionLevel;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-      private final @Nullable Input<DatasetFolderArgs> folder;
+      private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Input<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<DatasetFolderArgs> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -94,9 +94,9 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -105,9 +105,9 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<Object> location;
+      private final Output<Object> location;
 
-    public Input<Object> getLocation() {
+    public Output<Object> getLocation() {
         return this.location;
     }
 
@@ -116,10 +116,10 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<Object> schema;
+      private final @Nullable Output<Object> schema;
 
-    public Input<Object> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<Object> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="structure")
-      private final @Nullable Input<Object> structure;
+      private final @Nullable Output<Object> structure;
 
-    public Input<Object> getStructure() {
-        return this.structure == null ? Input.empty() : this.structure;
+    public Output<Object> getStructure() {
+        return this.structure == null ? Output.empty() : this.structure;
     }
 
     /**
@@ -150,24 +150,24 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AvroDatasetArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Object> avroCompressionCodec,
-        @Nullable Input<Integer> avroCompressionLevel,
-        @Nullable Input<String> description,
-        @Nullable Input<DatasetFolderArgs> folder,
-        Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<Object> location,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Object> schema,
-        @Nullable Input<Object> structure,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Object> avroCompressionCodec,
+        @Nullable Output<Integer> avroCompressionLevel,
+        @Nullable Output<String> description,
+        @Nullable Output<DatasetFolderArgs> folder,
+        Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<Object> location,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Object> schema,
+        @Nullable Output<Object> structure,
+        Output<String> type) {
         this.annotations = annotations;
         this.avroCompressionCodec = avroCompressionCodec;
         this.avroCompressionLevel = avroCompressionLevel;
@@ -182,17 +182,17 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AvroDatasetArgs() {
-        this.annotations = Input.empty();
-        this.avroCompressionCodec = Input.empty();
-        this.avroCompressionLevel = Input.empty();
-        this.description = Input.empty();
-        this.folder = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.location = Input.empty();
-        this.parameters = Input.empty();
-        this.schema = Input.empty();
-        this.structure = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.avroCompressionCodec = Output.empty();
+        this.avroCompressionLevel = Output.empty();
+        this.description = Output.empty();
+        this.folder = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.location = Output.empty();
+        this.parameters = Output.empty();
+        this.schema = Output.empty();
+        this.structure = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,17 +204,17 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Object> avroCompressionCodec;
-        private @Nullable Input<Integer> avroCompressionLevel;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DatasetFolderArgs> folder;
-        private Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<Object> location;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Object> schema;
-        private @Nullable Input<Object> structure;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Object> avroCompressionCodec;
+        private @Nullable Output<Integer> avroCompressionLevel;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DatasetFolderArgs> folder;
+        private Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<Object> location;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Object> schema;
+        private @Nullable Output<Object> structure;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -235,113 +235,113 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder avroCompressionCodec(@Nullable Input<Object> avroCompressionCodec) {
+        public Builder avroCompressionCodec(@Nullable Output<Object> avroCompressionCodec) {
             this.avroCompressionCodec = avroCompressionCodec;
             return this;
         }
 
         public Builder avroCompressionCodec(@Nullable Object avroCompressionCodec) {
-            this.avroCompressionCodec = Input.ofNullable(avroCompressionCodec);
+            this.avroCompressionCodec = Output.ofNullable(avroCompressionCodec);
             return this;
         }
 
-        public Builder avroCompressionLevel(@Nullable Input<Integer> avroCompressionLevel) {
+        public Builder avroCompressionLevel(@Nullable Output<Integer> avroCompressionLevel) {
             this.avroCompressionLevel = avroCompressionLevel;
             return this;
         }
 
         public Builder avroCompressionLevel(@Nullable Integer avroCompressionLevel) {
-            this.avroCompressionLevel = Input.ofNullable(avroCompressionLevel);
+            this.avroCompressionLevel = Output.ofNullable(avroCompressionLevel);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder folder(@Nullable Input<DatasetFolderArgs> folder) {
+        public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder location(Input<Object> location) {
+        public Builder location(Output<Object> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(Object location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder schema(@Nullable Input<Object> schema) {
+        public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable Object schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder structure(@Nullable Input<Object> structure) {
+        public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
 
         public Builder structure(@Nullable Object structure) {
-            this.structure = Input.ofNullable(structure);
+            this.structure = Output.ofNullable(structure);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AvroDatasetArgs build() {

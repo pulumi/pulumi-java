@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.wafregional.IpSetArgs;
 import io.pulumi.aws.wafregional.inputs.IpSetState;
 import io.pulumi.aws.wafregional.outputs.IpSetIpSetDescriptor;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,14 +111,14 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IpSet(String name, @Nullable IpSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/ipSet:IpSet", name, args == null ? IpSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:wafregional/ipSet:IpSet", name, args == null ? IpSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IpSet(String name, Input<String> id, @Nullable IpSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IpSet(String name, Output<String> id, @Nullable IpSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:wafregional/ipSet:IpSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -135,7 +134,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IpSet get(String name, Input<String> id, @Nullable IpSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IpSet get(String name, Output<String> id, @Nullable IpSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IpSet(name, id, state, options);
     }
 }

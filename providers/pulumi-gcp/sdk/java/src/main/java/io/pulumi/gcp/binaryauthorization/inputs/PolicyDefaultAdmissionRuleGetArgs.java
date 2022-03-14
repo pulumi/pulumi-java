@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enforcementMode", required=true)
-      private final Input<String> enforcementMode;
+      private final Output<String> enforcementMode;
 
-    public Input<String> getEnforcementMode() {
+    public Output<String> getEnforcementMode() {
         return this.enforcementMode;
     }
 
@@ -33,9 +33,9 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="evaluationMode", required=true)
-      private final Input<String> evaluationMode;
+      private final Output<String> evaluationMode;
 
-    public Input<String> getEvaluationMode() {
+    public Output<String> getEvaluationMode() {
         return this.evaluationMode;
     }
 
@@ -51,25 +51,25 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="requireAttestationsBies")
-      private final @Nullable Input<List<String>> requireAttestationsBies;
+      private final @Nullable Output<List<String>> requireAttestationsBies;
 
-    public Input<List<String>> getRequireAttestationsBies() {
-        return this.requireAttestationsBies == null ? Input.empty() : this.requireAttestationsBies;
+    public Output<List<String>> getRequireAttestationsBies() {
+        return this.requireAttestationsBies == null ? Output.empty() : this.requireAttestationsBies;
     }
 
     public PolicyDefaultAdmissionRuleGetArgs(
-        Input<String> enforcementMode,
-        Input<String> evaluationMode,
-        @Nullable Input<List<String>> requireAttestationsBies) {
+        Output<String> enforcementMode,
+        Output<String> evaluationMode,
+        @Nullable Output<List<String>> requireAttestationsBies) {
         this.enforcementMode = Objects.requireNonNull(enforcementMode, "expected parameter 'enforcementMode' to be non-null");
         this.evaluationMode = Objects.requireNonNull(evaluationMode, "expected parameter 'evaluationMode' to be non-null");
         this.requireAttestationsBies = requireAttestationsBies;
     }
 
     private PolicyDefaultAdmissionRuleGetArgs() {
-        this.enforcementMode = Input.empty();
-        this.evaluationMode = Input.empty();
-        this.requireAttestationsBies = Input.empty();
+        this.enforcementMode = Output.empty();
+        this.evaluationMode = Output.empty();
+        this.requireAttestationsBies = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> enforcementMode;
-        private Input<String> evaluationMode;
-        private @Nullable Input<List<String>> requireAttestationsBies;
+        private Output<String> enforcementMode;
+        private Output<String> evaluationMode;
+        private @Nullable Output<List<String>> requireAttestationsBies;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
     	      this.requireAttestationsBies = defaults.requireAttestationsBies;
         }
 
-        public Builder enforcementMode(Input<String> enforcementMode) {
+        public Builder enforcementMode(Output<String> enforcementMode) {
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
 
         public Builder enforcementMode(String enforcementMode) {
-            this.enforcementMode = Input.of(Objects.requireNonNull(enforcementMode));
+            this.enforcementMode = Output.of(Objects.requireNonNull(enforcementMode));
             return this;
         }
 
-        public Builder evaluationMode(Input<String> evaluationMode) {
+        public Builder evaluationMode(Output<String> evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
 
         public Builder evaluationMode(String evaluationMode) {
-            this.evaluationMode = Input.of(Objects.requireNonNull(evaluationMode));
+            this.evaluationMode = Output.of(Objects.requireNonNull(evaluationMode));
             return this;
         }
 
-        public Builder requireAttestationsBies(@Nullable Input<List<String>> requireAttestationsBies) {
+        public Builder requireAttestationsBies(@Nullable Output<List<String>> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
 
         public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
-            this.requireAttestationsBies = Input.ofNullable(requireAttestationsBies);
+            this.requireAttestationsBies = Output.ofNullable(requireAttestationsBies);
             return this;
         }
         public PolicyDefaultAdmissionRuleGetArgs build() {

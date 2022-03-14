@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends io.pu
      * 
      */
     @InputImport(name="additionalExtensions")
-      private final @Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
+      private final @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
+    public Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> getAdditionalExtensions() {
+        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends io.pu
      * 
      */
     @InputImport(name="knownExtensions")
-      private final @Nullable Input<List<String>> knownExtensions;
+      private final @Nullable Output<List<String>> knownExtensions;
 
-    public Input<List<String>> getKnownExtensions() {
-        return this.knownExtensions == null ? Input.empty() : this.knownExtensions;
+    public Output<List<String>> getKnownExtensions() {
+        return this.knownExtensions == null ? Output.empty() : this.knownExtensions;
     }
 
     public CertificateTemplatePassthroughExtensionsGetArgs(
-        @Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions,
-        @Nullable Input<List<String>> knownExtensions) {
+        @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions,
+        @Nullable Output<List<String>> knownExtensions) {
         this.additionalExtensions = additionalExtensions;
         this.knownExtensions = knownExtensions;
     }
 
     private CertificateTemplatePassthroughExtensionsGetArgs() {
-        this.additionalExtensions = Input.empty();
-        this.knownExtensions = Input.empty();
+        this.additionalExtensions = Output.empty();
+        this.knownExtensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
-        private @Nullable Input<List<String>> knownExtensions;
+        private @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
+        private @Nullable Output<List<String>> knownExtensions;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends io.pu
     	      this.knownExtensions = defaults.knownExtensions;
         }
 
-        public Builder additionalExtensions(@Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
         public Builder additionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs> additionalExtensions) {
-            this.additionalExtensions = Input.ofNullable(additionalExtensions);
+            this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder knownExtensions(@Nullable Input<List<String>> knownExtensions) {
+        public Builder knownExtensions(@Nullable Output<List<String>> knownExtensions) {
             this.knownExtensions = knownExtensions;
             return this;
         }
 
         public Builder knownExtensions(@Nullable List<String> knownExtensions) {
-            this.knownExtensions = Input.ofNullable(knownExtensions);
+            this.knownExtensions = Output.ofNullable(knownExtensions);
             return this;
         }
         public CertificateTemplatePassthroughExtensionsGetArgs build() {

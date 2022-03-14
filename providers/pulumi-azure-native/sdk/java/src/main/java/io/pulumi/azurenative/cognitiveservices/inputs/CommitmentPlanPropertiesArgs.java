@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 import io.pulumi.azurenative.cognitiveservices.enums.HostingModel;
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentPeriodArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoRenew")
-      private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Output<Boolean> autoRenew;
 
-    public Input<Boolean> getAutoRenew() {
-        return this.autoRenew == null ? Input.empty() : this.autoRenew;
+    public Output<Boolean> getAutoRenew() {
+        return this.autoRenew == null ? Output.empty() : this.autoRenew;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="current")
-      private final @Nullable Input<CommitmentPeriodArgs> current;
+      private final @Nullable Output<CommitmentPeriodArgs> current;
 
-    public Input<CommitmentPeriodArgs> getCurrent() {
-        return this.current == null ? Input.empty() : this.current;
+    public Output<CommitmentPeriodArgs> getCurrent() {
+        return this.current == null ? Output.empty() : this.current;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hostingModel")
-      private final @Nullable Input<Either<String,HostingModel>> hostingModel;
+      private final @Nullable Output<Either<String,HostingModel>> hostingModel;
 
-    public Input<Either<String,HostingModel>> getHostingModel() {
-        return this.hostingModel == null ? Input.empty() : this.hostingModel;
+    public Output<Either<String,HostingModel>> getHostingModel() {
+        return this.hostingModel == null ? Output.empty() : this.hostingModel;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="next")
-      private final @Nullable Input<CommitmentPeriodArgs> next;
+      private final @Nullable Output<CommitmentPeriodArgs> next;
 
-    public Input<CommitmentPeriodArgs> getNext() {
-        return this.next == null ? Input.empty() : this.next;
+    public Output<CommitmentPeriodArgs> getNext() {
+        return this.next == null ? Output.empty() : this.next;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="planType")
-      private final @Nullable Input<String> planType;
+      private final @Nullable Output<String> planType;
 
-    public Input<String> getPlanType() {
-        return this.planType == null ? Input.empty() : this.planType;
+    public Output<String> getPlanType() {
+        return this.planType == null ? Output.empty() : this.planType;
     }
 
     public CommitmentPlanPropertiesArgs(
-        @Nullable Input<Boolean> autoRenew,
-        @Nullable Input<CommitmentPeriodArgs> current,
-        @Nullable Input<Either<String,HostingModel>> hostingModel,
-        @Nullable Input<CommitmentPeriodArgs> next,
-        @Nullable Input<String> planType) {
+        @Nullable Output<Boolean> autoRenew,
+        @Nullable Output<CommitmentPeriodArgs> current,
+        @Nullable Output<Either<String,HostingModel>> hostingModel,
+        @Nullable Output<CommitmentPeriodArgs> next,
+        @Nullable Output<String> planType) {
         this.autoRenew = autoRenew;
         this.current = current;
         this.hostingModel = hostingModel;
@@ -91,11 +91,11 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private CommitmentPlanPropertiesArgs() {
-        this.autoRenew = Input.empty();
-        this.current = Input.empty();
-        this.hostingModel = Input.empty();
-        this.next = Input.empty();
-        this.planType = Input.empty();
+        this.autoRenew = Output.empty();
+        this.current = Output.empty();
+        this.hostingModel = Output.empty();
+        this.next = Output.empty();
+        this.planType = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoRenew;
-        private @Nullable Input<CommitmentPeriodArgs> current;
-        private @Nullable Input<Either<String,HostingModel>> hostingModel;
-        private @Nullable Input<CommitmentPeriodArgs> next;
-        private @Nullable Input<String> planType;
+        private @Nullable Output<Boolean> autoRenew;
+        private @Nullable Output<CommitmentPeriodArgs> current;
+        private @Nullable Output<Either<String,HostingModel>> hostingModel;
+        private @Nullable Output<CommitmentPeriodArgs> next;
+        private @Nullable Output<String> planType;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     	      this.planType = defaults.planType;
         }
 
-        public Builder autoRenew(@Nullable Input<Boolean> autoRenew) {
+        public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
         public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Input.ofNullable(autoRenew);
+            this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
 
-        public Builder current(@Nullable Input<CommitmentPeriodArgs> current) {
+        public Builder current(@Nullable Output<CommitmentPeriodArgs> current) {
             this.current = current;
             return this;
         }
 
         public Builder current(@Nullable CommitmentPeriodArgs current) {
-            this.current = Input.ofNullable(current);
+            this.current = Output.ofNullable(current);
             return this;
         }
 
-        public Builder hostingModel(@Nullable Input<Either<String,HostingModel>> hostingModel) {
+        public Builder hostingModel(@Nullable Output<Either<String,HostingModel>> hostingModel) {
             this.hostingModel = hostingModel;
             return this;
         }
 
         public Builder hostingModel(@Nullable Either<String,HostingModel> hostingModel) {
-            this.hostingModel = Input.ofNullable(hostingModel);
+            this.hostingModel = Output.ofNullable(hostingModel);
             return this;
         }
 
-        public Builder next(@Nullable Input<CommitmentPeriodArgs> next) {
+        public Builder next(@Nullable Output<CommitmentPeriodArgs> next) {
             this.next = next;
             return this;
         }
 
         public Builder next(@Nullable CommitmentPeriodArgs next) {
-            this.next = Input.ofNullable(next);
+            this.next = Output.ofNullable(next);
             return this;
         }
 
-        public Builder planType(@Nullable Input<String> planType) {
+        public Builder planType(@Nullable Output<String> planType) {
             this.planType = planType;
             return this;
         }
 
         public Builder planType(@Nullable String planType) {
-            this.planType = Input.ofNullable(planType);
+            this.planType = Output.ofNullable(planType);
             return this;
         }
         public CommitmentPlanPropertiesArgs build() {

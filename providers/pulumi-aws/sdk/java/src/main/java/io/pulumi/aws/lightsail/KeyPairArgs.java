@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,17 +20,17 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pgpKey")
-      private final @Nullable Input<String> pgpKey;
+      private final @Nullable Output<String> pgpKey;
 
-    public Input<String> getPgpKey() {
-        return this.pgpKey == null ? Input.empty() : this.pgpKey;
+    public Output<String> getPgpKey() {
+        return this.pgpKey == null ? Output.empty() : this.pgpKey;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     public KeyPairArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> pgpKey,
-        @Nullable Input<String> publicKey) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> pgpKey,
+        @Nullable Output<String> publicKey) {
         this.name = name;
         this.namePrefix = namePrefix;
         this.pgpKey = pgpKey;
@@ -69,10 +69,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPairArgs() {
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.pgpKey = Input.empty();
-        this.publicKey = Input.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.pgpKey = Output.empty();
+        this.publicKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> pgpKey;
-        private @Nullable Input<String> publicKey;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> pgpKey;
+        private @Nullable Output<String> publicKey;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder pgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Output<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Input.ofNullable(pgpKey);
+            this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
         public KeyPairArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="delegateeProject")
-      private final @Nullable Input<String> delegateeProject;
+      private final @Nullable Output<String> delegateeProject;
 
-    public Input<String> getDelegateeProject() {
-        return this.delegateeProject == null ? Input.empty() : this.delegateeProject;
+    public Output<String> getDelegateeProject() {
+        return this.delegateeProject == null ? Output.empty() : this.delegateeProject;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="isAddress")
-      private final @Nullable Input<Boolean> isAddress;
+      private final @Nullable Output<Boolean> isAddress;
 
-    public Input<Boolean> getIsAddress() {
-        return this.isAddress == null ? Input.empty() : this.isAddress;
+    public Output<Boolean> getIsAddress() {
+        return this.isAddress == null ? Output.empty() : this.isAddress;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(
-        @Nullable Input<String> delegateeProject,
-        @Nullable Input<String> description,
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<Boolean> isAddress,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> delegateeProject,
+        @Nullable Output<String> description,
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<Boolean> isAddress,
+        @Nullable Output<String> name) {
         this.delegateeProject = delegateeProject;
         this.description = description;
         this.ipCidrRange = ipCidrRange;
@@ -88,11 +88,11 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     }
 
     private PublicDelegatedPrefixPublicDelegatedSubPrefixArgs() {
-        this.delegateeProject = Input.empty();
-        this.description = Input.empty();
-        this.ipCidrRange = Input.empty();
-        this.isAddress = Input.empty();
-        this.name = Input.empty();
+        this.delegateeProject = Output.empty();
+        this.description = Output.empty();
+        this.ipCidrRange = Output.empty();
+        this.isAddress = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> delegateeProject;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<Boolean> isAddress;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> delegateeProject;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<Boolean> isAddress;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     	      this.name = defaults.name;
         }
 
-        public Builder delegateeProject(@Nullable Input<String> delegateeProject) {
+        public Builder delegateeProject(@Nullable Output<String> delegateeProject) {
             this.delegateeProject = delegateeProject;
             return this;
         }
 
         public Builder delegateeProject(@Nullable String delegateeProject) {
-            this.delegateeProject = Input.ofNullable(delegateeProject);
+            this.delegateeProject = Output.ofNullable(delegateeProject);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder isAddress(@Nullable Input<Boolean> isAddress) {
+        public Builder isAddress(@Nullable Output<Boolean> isAddress) {
             this.isAddress = isAddress;
             return this;
         }
 
         public Builder isAddress(@Nullable Boolean isAddress) {
-            this.isAddress = Input.ofNullable(isAddress);
+            this.isAddress = Output.ofNullable(isAddress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamRoleArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamUserArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyUserArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,39 +21,39 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
     public static final AccessPolicyIdentityArgs Empty = new AccessPolicyIdentityArgs();
 
     @InputImport(name="iamRole")
-      private final @Nullable Input<AccessPolicyIamRoleArgs> iamRole;
+      private final @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
 
-    public Input<AccessPolicyIamRoleArgs> getIamRole() {
-        return this.iamRole == null ? Input.empty() : this.iamRole;
+    public Output<AccessPolicyIamRoleArgs> getIamRole() {
+        return this.iamRole == null ? Output.empty() : this.iamRole;
     }
 
     @InputImport(name="iamUser")
-      private final @Nullable Input<AccessPolicyIamUserArgs> iamUser;
+      private final @Nullable Output<AccessPolicyIamUserArgs> iamUser;
 
-    public Input<AccessPolicyIamUserArgs> getIamUser() {
-        return this.iamUser == null ? Input.empty() : this.iamUser;
+    public Output<AccessPolicyIamUserArgs> getIamUser() {
+        return this.iamUser == null ? Output.empty() : this.iamUser;
     }
 
     @InputImport(name="user")
-      private final @Nullable Input<AccessPolicyUserArgs> user;
+      private final @Nullable Output<AccessPolicyUserArgs> user;
 
-    public Input<AccessPolicyUserArgs> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<AccessPolicyUserArgs> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public AccessPolicyIdentityArgs(
-        @Nullable Input<AccessPolicyIamRoleArgs> iamRole,
-        @Nullable Input<AccessPolicyIamUserArgs> iamUser,
-        @Nullable Input<AccessPolicyUserArgs> user) {
+        @Nullable Output<AccessPolicyIamRoleArgs> iamRole,
+        @Nullable Output<AccessPolicyIamUserArgs> iamUser,
+        @Nullable Output<AccessPolicyUserArgs> user) {
         this.iamRole = iamRole;
         this.iamUser = iamUser;
         this.user = user;
     }
 
     private AccessPolicyIdentityArgs() {
-        this.iamRole = Input.empty();
-        this.iamUser = Input.empty();
-        this.user = Input.empty();
+        this.iamRole = Output.empty();
+        this.iamUser = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AccessPolicyIamRoleArgs> iamRole;
-        private @Nullable Input<AccessPolicyIamUserArgs> iamUser;
-        private @Nullable Input<AccessPolicyUserArgs> user;
+        private @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
+        private @Nullable Output<AccessPolicyIamUserArgs> iamUser;
+        private @Nullable Output<AccessPolicyUserArgs> user;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
     	      this.user = defaults.user;
         }
 
-        public Builder iamRole(@Nullable Input<AccessPolicyIamRoleArgs> iamRole) {
+        public Builder iamRole(@Nullable Output<AccessPolicyIamRoleArgs> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
         public Builder iamRole(@Nullable AccessPolicyIamRoleArgs iamRole) {
-            this.iamRole = Input.ofNullable(iamRole);
+            this.iamRole = Output.ofNullable(iamRole);
             return this;
         }
 
-        public Builder iamUser(@Nullable Input<AccessPolicyIamUserArgs> iamUser) {
+        public Builder iamUser(@Nullable Output<AccessPolicyIamUserArgs> iamUser) {
             this.iamUser = iamUser;
             return this;
         }
 
         public Builder iamUser(@Nullable AccessPolicyIamUserArgs iamUser) {
-            this.iamUser = Input.ofNullable(iamUser);
+            this.iamUser = Output.ofNullable(iamUser);
             return this;
         }
 
-        public Builder user(@Nullable Input<AccessPolicyUserArgs> user) {
+        public Builder user(@Nullable Output<AccessPolicyUserArgs> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable AccessPolicyUserArgs user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public AccessPolicyIdentityArgs build() {

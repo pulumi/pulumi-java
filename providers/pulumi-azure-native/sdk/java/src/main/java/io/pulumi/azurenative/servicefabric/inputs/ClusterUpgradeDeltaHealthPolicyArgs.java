@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationDeltaHealthPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationDeltaHealthPolicies")
-      private final @Nullable Input<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies;
+      private final @Nullable Output<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies;
 
-    public Input<Map<String,ApplicationDeltaHealthPolicyArgs>> getApplicationDeltaHealthPolicies() {
-        return this.applicationDeltaHealthPolicies == null ? Input.empty() : this.applicationDeltaHealthPolicies;
+    public Output<Map<String,ApplicationDeltaHealthPolicyArgs>> getApplicationDeltaHealthPolicies() {
+        return this.applicationDeltaHealthPolicies == null ? Output.empty() : this.applicationDeltaHealthPolicies;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyApplications", required=true)
-      private final Input<Integer> maxPercentDeltaUnhealthyApplications;
+      private final Output<Integer> maxPercentDeltaUnhealthyApplications;
 
-    public Input<Integer> getMaxPercentDeltaUnhealthyApplications() {
+    public Output<Integer> getMaxPercentDeltaUnhealthyApplications() {
         return this.maxPercentDeltaUnhealthyApplications;
     }
 
@@ -52,9 +52,9 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyNodes", required=true)
-      private final Input<Integer> maxPercentDeltaUnhealthyNodes;
+      private final Output<Integer> maxPercentDeltaUnhealthyNodes;
 
-    public Input<Integer> getMaxPercentDeltaUnhealthyNodes() {
+    public Output<Integer> getMaxPercentDeltaUnhealthyNodes() {
         return this.maxPercentDeltaUnhealthyNodes;
     }
 
@@ -65,17 +65,17 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
-      private final Input<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes;
+      private final Output<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
-    public Input<Integer> getMaxPercentUpgradeDomainDeltaUnhealthyNodes() {
+    public Output<Integer> getMaxPercentUpgradeDomainDeltaUnhealthyNodes() {
         return this.maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }
 
     public ClusterUpgradeDeltaHealthPolicyArgs(
-        @Nullable Input<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies,
-        Input<Integer> maxPercentDeltaUnhealthyApplications,
-        Input<Integer> maxPercentDeltaUnhealthyNodes,
-        Input<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes) {
+        @Nullable Output<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies,
+        Output<Integer> maxPercentDeltaUnhealthyApplications,
+        Output<Integer> maxPercentDeltaUnhealthyNodes,
+        Output<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes) {
         this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
         this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications, "expected parameter 'maxPercentDeltaUnhealthyApplications' to be non-null");
         this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes, "expected parameter 'maxPercentDeltaUnhealthyNodes' to be non-null");
@@ -83,10 +83,10 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
     }
 
     private ClusterUpgradeDeltaHealthPolicyArgs() {
-        this.applicationDeltaHealthPolicies = Input.empty();
-        this.maxPercentDeltaUnhealthyApplications = Input.empty();
-        this.maxPercentDeltaUnhealthyNodes = Input.empty();
-        this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Input.empty();
+        this.applicationDeltaHealthPolicies = Output.empty();
+        this.maxPercentDeltaUnhealthyApplications = Output.empty();
+        this.maxPercentDeltaUnhealthyNodes = Output.empty();
+        this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,10 +98,10 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies;
-        private Input<Integer> maxPercentDeltaUnhealthyApplications;
-        private Input<Integer> maxPercentDeltaUnhealthyNodes;
-        private Input<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes;
+        private @Nullable Output<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies;
+        private Output<Integer> maxPercentDeltaUnhealthyApplications;
+        private Output<Integer> maxPercentDeltaUnhealthyNodes;
+        private Output<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
         public Builder() {
     	      // Empty
@@ -115,43 +115,43 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
     	      this.maxPercentUpgradeDomainDeltaUnhealthyNodes = defaults.maxPercentUpgradeDomainDeltaUnhealthyNodes;
         }
 
-        public Builder applicationDeltaHealthPolicies(@Nullable Input<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies) {
+        public Builder applicationDeltaHealthPolicies(@Nullable Output<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies) {
             this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
             return this;
         }
 
         public Builder applicationDeltaHealthPolicies(@Nullable Map<String,ApplicationDeltaHealthPolicyArgs> applicationDeltaHealthPolicies) {
-            this.applicationDeltaHealthPolicies = Input.ofNullable(applicationDeltaHealthPolicies);
+            this.applicationDeltaHealthPolicies = Output.ofNullable(applicationDeltaHealthPolicies);
             return this;
         }
 
-        public Builder maxPercentDeltaUnhealthyApplications(Input<Integer> maxPercentDeltaUnhealthyApplications) {
+        public Builder maxPercentDeltaUnhealthyApplications(Output<Integer> maxPercentDeltaUnhealthyApplications) {
             this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications);
             return this;
         }
 
         public Builder maxPercentDeltaUnhealthyApplications(Integer maxPercentDeltaUnhealthyApplications) {
-            this.maxPercentDeltaUnhealthyApplications = Input.of(Objects.requireNonNull(maxPercentDeltaUnhealthyApplications));
+            this.maxPercentDeltaUnhealthyApplications = Output.of(Objects.requireNonNull(maxPercentDeltaUnhealthyApplications));
             return this;
         }
 
-        public Builder maxPercentDeltaUnhealthyNodes(Input<Integer> maxPercentDeltaUnhealthyNodes) {
+        public Builder maxPercentDeltaUnhealthyNodes(Output<Integer> maxPercentDeltaUnhealthyNodes) {
             this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes);
             return this;
         }
 
         public Builder maxPercentDeltaUnhealthyNodes(Integer maxPercentDeltaUnhealthyNodes) {
-            this.maxPercentDeltaUnhealthyNodes = Input.of(Objects.requireNonNull(maxPercentDeltaUnhealthyNodes));
+            this.maxPercentDeltaUnhealthyNodes = Output.of(Objects.requireNonNull(maxPercentDeltaUnhealthyNodes));
             return this;
         }
 
-        public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Input<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes) {
+        public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Output<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes) {
             this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
             return this;
         }
 
         public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
-            this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Input.of(Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes));
+            this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Output.of(Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes));
             return this;
         }
         public ClusterUpgradeDeltaHealthPolicyArgs build() {

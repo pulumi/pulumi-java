@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.testbase.inputs.TestBaseAccountSKUArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,10 +44,10 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restore")
-      private final @Nullable Input<Boolean> restore;
+      private final @Nullable Output<Boolean> restore;
 
-    public Input<Boolean> getRestore() {
-        return this.restore == null ? Input.empty() : this.restore;
+    public Output<Boolean> getRestore() {
+        return this.restore == null ? Output.empty() : this.restore;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<TestBaseAccountSKUArgs> sku;
+      private final Output<TestBaseAccountSKUArgs> sku;
 
-    public Input<TestBaseAccountSKUArgs> getSku() {
+    public Output<TestBaseAccountSKUArgs> getSku() {
         return this.sku;
     }
 
@@ -66,10 +66,10 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="testBaseAccountName")
-      private final @Nullable Input<String> testBaseAccountName;
+      private final @Nullable Output<String> testBaseAccountName;
 
-    public Input<String> getTestBaseAccountName() {
-        return this.testBaseAccountName == null ? Input.empty() : this.testBaseAccountName;
+    public Output<String> getTestBaseAccountName() {
+        return this.testBaseAccountName == null ? Output.empty() : this.testBaseAccountName;
     }
 
     public TestBaseAccountArgs(
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Boolean> restore,
-        Input<TestBaseAccountSKUArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> testBaseAccountName) {
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Boolean> restore,
+        Output<TestBaseAccountSKUArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> testBaseAccountName) {
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.restore = restore;
@@ -99,12 +99,12 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TestBaseAccountArgs() {
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.restore = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.testBaseAccountName = Input.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.restore = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.testBaseAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Boolean> restore;
-        private Input<TestBaseAccountSKUArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> testBaseAccountName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Boolean> restore;
+        private Output<TestBaseAccountSKUArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> testBaseAccountName;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     	      this.testBaseAccountName = defaults.testBaseAccountName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder restore(@Nullable Input<Boolean> restore) {
+        public Builder restore(@Nullable Output<Boolean> restore) {
             this.restore = restore;
             return this;
         }
 
         public Builder restore(@Nullable Boolean restore) {
-            this.restore = Input.ofNullable(restore);
+            this.restore = Output.ofNullable(restore);
             return this;
         }
 
-        public Builder sku(Input<TestBaseAccountSKUArgs> sku) {
+        public Builder sku(Output<TestBaseAccountSKUArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(TestBaseAccountSKUArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder testBaseAccountName(@Nullable Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(@Nullable Output<String> testBaseAccountName) {
             this.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
         public Builder testBaseAccountName(@Nullable String testBaseAccountName) {
-            this.testBaseAccountName = Input.ofNullable(testBaseAccountName);
+            this.testBaseAccountName = Output.ofNullable(testBaseAccountName);
             return this;
         }
         public TestBaseAccountArgs build() {

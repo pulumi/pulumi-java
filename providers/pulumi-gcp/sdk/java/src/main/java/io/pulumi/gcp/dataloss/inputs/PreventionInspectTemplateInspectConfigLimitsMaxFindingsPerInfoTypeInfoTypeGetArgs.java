@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
-    public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs(Input<String> name) {
+    public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs(Output<String> name) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
     }
 
     public static final class Builder {
-        private Input<String> name;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
     	      this.name = defaults.name;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs build() {

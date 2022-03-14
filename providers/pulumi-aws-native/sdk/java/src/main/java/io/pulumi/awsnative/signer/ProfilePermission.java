@@ -5,7 +5,6 @@ package io.pulumi.awsnative.signer;
 
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.signer.ProfilePermissionArgs;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -87,14 +86,14 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProfilePermission(String name, ProfilePermissionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:signer:ProfilePermission", name, args == null ? ProfilePermissionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:signer:ProfilePermission", name, args == null ? ProfilePermissionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProfilePermission(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProfilePermission(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:signer:ProfilePermission", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -109,7 +108,7 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProfilePermission get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProfilePermission get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProfilePermission(name, id, options);
     }
 }

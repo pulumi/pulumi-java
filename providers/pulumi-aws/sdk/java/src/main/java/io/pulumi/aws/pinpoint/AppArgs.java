@@ -6,7 +6,7 @@ package io.pulumi.aws.pinpoint;
 import io.pulumi.aws.pinpoint.inputs.AppCampaignHookArgs;
 import io.pulumi.aws.pinpoint.inputs.AppLimitsArgs;
 import io.pulumi.aws.pinpoint.inputs.AppQuietTimeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="campaignHook")
-      private final @Nullable Input<AppCampaignHookArgs> campaignHook;
+      private final @Nullable Output<AppCampaignHookArgs> campaignHook;
 
-    public Input<AppCampaignHookArgs> getCampaignHook() {
-        return this.campaignHook == null ? Input.empty() : this.campaignHook;
+    public Output<AppCampaignHookArgs> getCampaignHook() {
+        return this.campaignHook == null ? Output.empty() : this.campaignHook;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limits")
-      private final @Nullable Input<AppLimitsArgs> limits;
+      private final @Nullable Output<AppLimitsArgs> limits;
 
-    public Input<AppLimitsArgs> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<AppLimitsArgs> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quietTime")
-      private final @Nullable Input<AppQuietTimeArgs> quietTime;
+      private final @Nullable Output<AppQuietTimeArgs> quietTime;
 
-    public Input<AppQuietTimeArgs> getQuietTime() {
-        return this.quietTime == null ? Input.empty() : this.quietTime;
+    public Output<AppQuietTimeArgs> getQuietTime() {
+        return this.quietTime == null ? Output.empty() : this.quietTime;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AppArgs(
-        @Nullable Input<AppCampaignHookArgs> campaignHook,
-        @Nullable Input<AppLimitsArgs> limits,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<AppQuietTimeArgs> quietTime,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<AppCampaignHookArgs> campaignHook,
+        @Nullable Output<AppLimitsArgs> limits,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<AppQuietTimeArgs> quietTime,
+        @Nullable Output<Map<String,String>> tags) {
         this.campaignHook = campaignHook;
         this.limits = limits;
         this.name = name;
@@ -100,12 +100,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.campaignHook = Input.empty();
-        this.limits = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.quietTime = Input.empty();
-        this.tags = Input.empty();
+        this.campaignHook = Output.empty();
+        this.limits = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.quietTime = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AppCampaignHookArgs> campaignHook;
-        private @Nullable Input<AppLimitsArgs> limits;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<AppQuietTimeArgs> quietTime;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<AppCampaignHookArgs> campaignHook;
+        private @Nullable Output<AppLimitsArgs> limits;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<AppQuietTimeArgs> quietTime;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder campaignHook(@Nullable Input<AppCampaignHookArgs> campaignHook) {
+        public Builder campaignHook(@Nullable Output<AppCampaignHookArgs> campaignHook) {
             this.campaignHook = campaignHook;
             return this;
         }
 
         public Builder campaignHook(@Nullable AppCampaignHookArgs campaignHook) {
-            this.campaignHook = Input.ofNullable(campaignHook);
+            this.campaignHook = Output.ofNullable(campaignHook);
             return this;
         }
 
-        public Builder limits(@Nullable Input<AppLimitsArgs> limits) {
+        public Builder limits(@Nullable Output<AppLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable AppLimitsArgs limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder quietTime(@Nullable Input<AppQuietTimeArgs> quietTime) {
+        public Builder quietTime(@Nullable Output<AppQuietTimeArgs> quietTime) {
             this.quietTime = quietTime;
             return this;
         }
 
         public Builder quietTime(@Nullable AppQuietTimeArgs quietTime) {
-            this.quietTime = Input.ofNullable(quietTime);
+            this.quietTime = Output.ofNullable(quietTime);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AppArgs build() {

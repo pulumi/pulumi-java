@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kms;
 
 import io.pulumi.awsnative.kms.inputs.ReplicaKeyTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPolicy", required=true)
-      private final Input<Object> keyPolicy;
+      private final Output<Object> keyPolicy;
 
-    public Input<Object> getKeyPolicy() {
+    public Output<Object> getKeyPolicy() {
         return this.keyPolicy;
     }
 
@@ -57,10 +57,10 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pendingWindowInDays")
-      private final @Nullable Input<Integer> pendingWindowInDays;
+      private final @Nullable Output<Integer> pendingWindowInDays;
 
-    public Input<Integer> getPendingWindowInDays() {
-        return this.pendingWindowInDays == null ? Input.empty() : this.pendingWindowInDays;
+    public Output<Integer> getPendingWindowInDays() {
+        return this.pendingWindowInDays == null ? Output.empty() : this.pendingWindowInDays;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKeyArn", required=true)
-      private final Input<String> primaryKeyArn;
+      private final Output<String> primaryKeyArn;
 
-    public Input<String> getPrimaryKeyArn() {
+    public Output<String> getPrimaryKeyArn() {
         return this.primaryKeyArn;
     }
 
@@ -79,19 +79,19 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ReplicaKeyTagArgs>> tags;
+      private final @Nullable Output<List<ReplicaKeyTagArgs>> tags;
 
-    public Input<List<ReplicaKeyTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ReplicaKeyTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ReplicaKeyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        Input<Object> keyPolicy,
-        @Nullable Input<Integer> pendingWindowInDays,
-        Input<String> primaryKeyArn,
-        @Nullable Input<List<ReplicaKeyTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        Output<Object> keyPolicy,
+        @Nullable Output<Integer> pendingWindowInDays,
+        Output<String> primaryKeyArn,
+        @Nullable Output<List<ReplicaKeyTagArgs>> tags) {
         this.description = description;
         this.enabled = enabled;
         this.keyPolicy = Objects.requireNonNull(keyPolicy, "expected parameter 'keyPolicy' to be non-null");
@@ -101,12 +101,12 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaKeyArgs() {
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.keyPolicy = Input.empty();
-        this.pendingWindowInDays = Input.empty();
-        this.primaryKeyArn = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.keyPolicy = Output.empty();
+        this.pendingWindowInDays = Output.empty();
+        this.primaryKeyArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private Input<Object> keyPolicy;
-        private @Nullable Input<Integer> pendingWindowInDays;
-        private Input<String> primaryKeyArn;
-        private @Nullable Input<List<ReplicaKeyTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private Output<Object> keyPolicy;
+        private @Nullable Output<Integer> pendingWindowInDays;
+        private Output<String> primaryKeyArn;
+        private @Nullable Output<List<ReplicaKeyTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder keyPolicy(Input<Object> keyPolicy) {
+        public Builder keyPolicy(Output<Object> keyPolicy) {
             this.keyPolicy = Objects.requireNonNull(keyPolicy);
             return this;
         }
 
         public Builder keyPolicy(Object keyPolicy) {
-            this.keyPolicy = Input.of(Objects.requireNonNull(keyPolicy));
+            this.keyPolicy = Output.of(Objects.requireNonNull(keyPolicy));
             return this;
         }
 
-        public Builder pendingWindowInDays(@Nullable Input<Integer> pendingWindowInDays) {
+        public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
             this.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
 
         public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
-            this.pendingWindowInDays = Input.ofNullable(pendingWindowInDays);
+            this.pendingWindowInDays = Output.ofNullable(pendingWindowInDays);
             return this;
         }
 
-        public Builder primaryKeyArn(Input<String> primaryKeyArn) {
+        public Builder primaryKeyArn(Output<String> primaryKeyArn) {
             this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn);
             return this;
         }
 
         public Builder primaryKeyArn(String primaryKeyArn) {
-            this.primaryKeyArn = Input.of(Objects.requireNonNull(primaryKeyArn));
+            this.primaryKeyArn = Output.of(Objects.requireNonNull(primaryKeyArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ReplicaKeyTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ReplicaKeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ReplicaKeyTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ReplicaKeyArgs build() {

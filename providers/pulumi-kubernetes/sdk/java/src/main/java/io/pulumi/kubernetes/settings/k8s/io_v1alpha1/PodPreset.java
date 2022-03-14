@@ -3,7 +3,6 @@
 
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -99,10 +98,10 @@ public class PodPreset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PodPreset(String name, @Nullable PodPresetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:settings.k8s.io/v1alpha1:PodPreset", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("kubernetes:settings.k8s.io/v1alpha1:PodPreset", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private PodPreset(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PodPreset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:settings.k8s.io/v1alpha1:PodPreset", name, null, makeResourceOptions(options, id));
     }
 
@@ -114,7 +113,7 @@ public class PodPreset extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -129,7 +128,7 @@ public class PodPreset extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PodPreset get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PodPreset get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PodPreset(name, id, options);
     }
 }

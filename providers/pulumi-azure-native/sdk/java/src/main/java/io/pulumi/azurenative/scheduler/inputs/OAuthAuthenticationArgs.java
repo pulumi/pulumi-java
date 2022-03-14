@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tenant")
-      private final @Nullable Input<String> tenant;
+      private final @Nullable Output<String> tenant;
 
-    public Input<String> getTenant() {
-        return this.tenant == null ? Input.empty() : this.tenant;
+    public Output<String> getTenant() {
+        return this.tenant == null ? Output.empty() : this.tenant;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public OAuthAuthenticationArgs(
-        @Nullable Input<String> audience,
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> secret,
-        @Nullable Input<String> tenant,
-        Input<String> type) {
+        @Nullable Output<String> audience,
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> secret,
+        @Nullable Output<String> tenant,
+        Output<String> type) {
         this.audience = audience;
         this.clientId = clientId;
         this.secret = secret;
@@ -84,11 +84,11 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     }
 
     private OAuthAuthenticationArgs() {
-        this.audience = Input.empty();
-        this.clientId = Input.empty();
-        this.secret = Input.empty();
-        this.tenant = Input.empty();
-        this.type = Input.empty();
+        this.audience = Output.empty();
+        this.clientId = Output.empty();
+        this.secret = Output.empty();
+        this.tenant = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audience;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> secret;
-        private @Nullable Input<String> tenant;
-        private Input<String> type;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> secret;
+        private @Nullable Output<String> tenant;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
 
-        public Builder tenant(@Nullable Input<String> tenant) {
+        public Builder tenant(@Nullable Output<String> tenant) {
             this.tenant = tenant;
             return this;
         }
 
         public Builder tenant(@Nullable String tenant) {
-            this.tenant = Input.ofNullable(tenant);
+            this.tenant = Output.ofNullable(tenant);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public OAuthAuthenticationArgs build() {

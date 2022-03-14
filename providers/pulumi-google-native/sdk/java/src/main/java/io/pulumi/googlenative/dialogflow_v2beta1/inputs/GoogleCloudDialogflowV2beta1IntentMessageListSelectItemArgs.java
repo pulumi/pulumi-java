@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs;
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * 
      */
     @InputImport(name="info", required=true)
-      private final Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
+      private final Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> getInfo() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> getInfo() {
         return this.info;
     }
 
@@ -58,17 +58,17 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image,
-        Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info,
-        Input<String> title) {
+        @Nullable Output<String> description,
+        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image,
+        Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info,
+        Output<String> title) {
         this.description = description;
         this.image = image;
         this.info = Objects.requireNonNull(info, "expected parameter 'info' to be non-null");
@@ -76,10 +76,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs() {
-        this.description = Input.empty();
-        this.image = Input.empty();
-        this.info = Input.empty();
-        this.title = Input.empty();
+        this.description = Output.empty();
+        this.image = Output.empty();
+        this.info = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
-        private Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
-        private Input<String> title;
+        private @Nullable Output<String> description;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
+        private Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     	      this.title = defaults.title;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder image(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
+        public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder info(Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info) {
+        public Builder info(Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
 
         public Builder info(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs info) {
-            this.info = Input.of(Objects.requireNonNull(info));
+            this.info = Output.of(Objects.requireNonNull(info));
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs build() {

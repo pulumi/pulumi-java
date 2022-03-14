@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustAdminServer")
-      private final @Nullable Input<String> crossRealmTrustAdminServer;
+      private final @Nullable Output<String> crossRealmTrustAdminServer;
 
-    public Input<String> getCrossRealmTrustAdminServer() {
-        return this.crossRealmTrustAdminServer == null ? Input.empty() : this.crossRealmTrustAdminServer;
+    public Output<String> getCrossRealmTrustAdminServer() {
+        return this.crossRealmTrustAdminServer == null ? Output.empty() : this.crossRealmTrustAdminServer;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustKdc")
-      private final @Nullable Input<String> crossRealmTrustKdc;
+      private final @Nullable Output<String> crossRealmTrustKdc;
 
-    public Input<String> getCrossRealmTrustKdc() {
-        return this.crossRealmTrustKdc == null ? Input.empty() : this.crossRealmTrustKdc;
+    public Output<String> getCrossRealmTrustKdc() {
+        return this.crossRealmTrustKdc == null ? Output.empty() : this.crossRealmTrustKdc;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustRealm")
-      private final @Nullable Input<String> crossRealmTrustRealm;
+      private final @Nullable Output<String> crossRealmTrustRealm;
 
-    public Input<String> getCrossRealmTrustRealm() {
-        return this.crossRealmTrustRealm == null ? Input.empty() : this.crossRealmTrustRealm;
+    public Output<String> getCrossRealmTrustRealm() {
+        return this.crossRealmTrustRealm == null ? Output.empty() : this.crossRealmTrustRealm;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustSharedPassword")
-      private final @Nullable Input<String> crossRealmTrustSharedPassword;
+      private final @Nullable Output<String> crossRealmTrustSharedPassword;
 
-    public Input<String> getCrossRealmTrustSharedPassword() {
-        return this.crossRealmTrustSharedPassword == null ? Input.empty() : this.crossRealmTrustSharedPassword;
+    public Output<String> getCrossRealmTrustSharedPassword() {
+        return this.crossRealmTrustSharedPassword == null ? Output.empty() : this.crossRealmTrustSharedPassword;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="enableKerberos")
-      private final @Nullable Input<Boolean> enableKerberos;
+      private final @Nullable Output<Boolean> enableKerberos;
 
-    public Input<Boolean> getEnableKerberos() {
-        return this.enableKerberos == null ? Input.empty() : this.enableKerberos;
+    public Output<Boolean> getEnableKerberos() {
+        return this.enableKerberos == null ? Output.empty() : this.enableKerberos;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="kdcDbKey")
-      private final @Nullable Input<String> kdcDbKey;
+      private final @Nullable Output<String> kdcDbKey;
 
-    public Input<String> getKdcDbKey() {
-        return this.kdcDbKey == null ? Input.empty() : this.kdcDbKey;
+    public Output<String> getKdcDbKey() {
+        return this.kdcDbKey == null ? Output.empty() : this.kdcDbKey;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="keyPassword")
-      private final @Nullable Input<String> keyPassword;
+      private final @Nullable Output<String> keyPassword;
 
-    public Input<String> getKeyPassword() {
-        return this.keyPassword == null ? Input.empty() : this.keyPassword;
+    public Output<String> getKeyPassword() {
+        return this.keyPassword == null ? Output.empty() : this.keyPassword;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="keystore")
-      private final @Nullable Input<String> keystore;
+      private final @Nullable Output<String> keystore;
 
-    public Input<String> getKeystore() {
-        return this.keystore == null ? Input.empty() : this.keystore;
+    public Output<String> getKeystore() {
+        return this.keystore == null ? Output.empty() : this.keystore;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="keystorePassword")
-      private final @Nullable Input<String> keystorePassword;
+      private final @Nullable Output<String> keystorePassword;
 
-    public Input<String> getKeystorePassword() {
-        return this.keystorePassword == null ? Input.empty() : this.keystorePassword;
+    public Output<String> getKeystorePassword() {
+        return this.keystorePassword == null ? Output.empty() : this.keystorePassword;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="realm")
-      private final @Nullable Input<String> realm;
+      private final @Nullable Output<String> realm;
 
-    public Input<String> getRealm() {
-        return this.realm == null ? Input.empty() : this.realm;
+    public Output<String> getRealm() {
+        return this.realm == null ? Output.empty() : this.realm;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="rootPrincipalPassword")
-      private final @Nullable Input<String> rootPrincipalPassword;
+      private final @Nullable Output<String> rootPrincipalPassword;
 
-    public Input<String> getRootPrincipalPassword() {
-        return this.rootPrincipalPassword == null ? Input.empty() : this.rootPrincipalPassword;
+    public Output<String> getRootPrincipalPassword() {
+        return this.rootPrincipalPassword == null ? Output.empty() : this.rootPrincipalPassword;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="tgtLifetimeHours")
-      private final @Nullable Input<Integer> tgtLifetimeHours;
+      private final @Nullable Output<Integer> tgtLifetimeHours;
 
-    public Input<Integer> getTgtLifetimeHours() {
-        return this.tgtLifetimeHours == null ? Input.empty() : this.tgtLifetimeHours;
+    public Output<Integer> getTgtLifetimeHours() {
+        return this.tgtLifetimeHours == null ? Output.empty() : this.tgtLifetimeHours;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="truststore")
-      private final @Nullable Input<String> truststore;
+      private final @Nullable Output<String> truststore;
 
-    public Input<String> getTruststore() {
-        return this.truststore == null ? Input.empty() : this.truststore;
+    public Output<String> getTruststore() {
+        return this.truststore == null ? Output.empty() : this.truststore;
     }
 
     /**
@@ -175,28 +175,28 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="truststorePassword")
-      private final @Nullable Input<String> truststorePassword;
+      private final @Nullable Output<String> truststorePassword;
 
-    public Input<String> getTruststorePassword() {
-        return this.truststorePassword == null ? Input.empty() : this.truststorePassword;
+    public Output<String> getTruststorePassword() {
+        return this.truststorePassword == null ? Output.empty() : this.truststorePassword;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs(
-        @Nullable Input<String> crossRealmTrustAdminServer,
-        @Nullable Input<String> crossRealmTrustKdc,
-        @Nullable Input<String> crossRealmTrustRealm,
-        @Nullable Input<String> crossRealmTrustSharedPassword,
-        @Nullable Input<Boolean> enableKerberos,
-        @Nullable Input<String> kdcDbKey,
-        @Nullable Input<String> keyPassword,
-        @Nullable Input<String> keystore,
-        @Nullable Input<String> keystorePassword,
-        @Nullable Input<String> kmsKey,
-        @Nullable Input<String> realm,
-        @Nullable Input<String> rootPrincipalPassword,
-        @Nullable Input<Integer> tgtLifetimeHours,
-        @Nullable Input<String> truststore,
-        @Nullable Input<String> truststorePassword) {
+        @Nullable Output<String> crossRealmTrustAdminServer,
+        @Nullable Output<String> crossRealmTrustKdc,
+        @Nullable Output<String> crossRealmTrustRealm,
+        @Nullable Output<String> crossRealmTrustSharedPassword,
+        @Nullable Output<Boolean> enableKerberos,
+        @Nullable Output<String> kdcDbKey,
+        @Nullable Output<String> keyPassword,
+        @Nullable Output<String> keystore,
+        @Nullable Output<String> keystorePassword,
+        @Nullable Output<String> kmsKey,
+        @Nullable Output<String> realm,
+        @Nullable Output<String> rootPrincipalPassword,
+        @Nullable Output<Integer> tgtLifetimeHours,
+        @Nullable Output<String> truststore,
+        @Nullable Output<String> truststorePassword) {
         this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
         this.crossRealmTrustKdc = crossRealmTrustKdc;
         this.crossRealmTrustRealm = crossRealmTrustRealm;
@@ -215,21 +215,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs() {
-        this.crossRealmTrustAdminServer = Input.empty();
-        this.crossRealmTrustKdc = Input.empty();
-        this.crossRealmTrustRealm = Input.empty();
-        this.crossRealmTrustSharedPassword = Input.empty();
-        this.enableKerberos = Input.empty();
-        this.kdcDbKey = Input.empty();
-        this.keyPassword = Input.empty();
-        this.keystore = Input.empty();
-        this.keystorePassword = Input.empty();
-        this.kmsKey = Input.empty();
-        this.realm = Input.empty();
-        this.rootPrincipalPassword = Input.empty();
-        this.tgtLifetimeHours = Input.empty();
-        this.truststore = Input.empty();
-        this.truststorePassword = Input.empty();
+        this.crossRealmTrustAdminServer = Output.empty();
+        this.crossRealmTrustKdc = Output.empty();
+        this.crossRealmTrustRealm = Output.empty();
+        this.crossRealmTrustSharedPassword = Output.empty();
+        this.enableKerberos = Output.empty();
+        this.kdcDbKey = Output.empty();
+        this.keyPassword = Output.empty();
+        this.keystore = Output.empty();
+        this.keystorePassword = Output.empty();
+        this.kmsKey = Output.empty();
+        this.realm = Output.empty();
+        this.rootPrincipalPassword = Output.empty();
+        this.tgtLifetimeHours = Output.empty();
+        this.truststore = Output.empty();
+        this.truststorePassword = Output.empty();
     }
 
     public static Builder builder() {
@@ -241,21 +241,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     }
 
     public static final class Builder {
-        private @Nullable Input<String> crossRealmTrustAdminServer;
-        private @Nullable Input<String> crossRealmTrustKdc;
-        private @Nullable Input<String> crossRealmTrustRealm;
-        private @Nullable Input<String> crossRealmTrustSharedPassword;
-        private @Nullable Input<Boolean> enableKerberos;
-        private @Nullable Input<String> kdcDbKey;
-        private @Nullable Input<String> keyPassword;
-        private @Nullable Input<String> keystore;
-        private @Nullable Input<String> keystorePassword;
-        private @Nullable Input<String> kmsKey;
-        private @Nullable Input<String> realm;
-        private @Nullable Input<String> rootPrincipalPassword;
-        private @Nullable Input<Integer> tgtLifetimeHours;
-        private @Nullable Input<String> truststore;
-        private @Nullable Input<String> truststorePassword;
+        private @Nullable Output<String> crossRealmTrustAdminServer;
+        private @Nullable Output<String> crossRealmTrustKdc;
+        private @Nullable Output<String> crossRealmTrustRealm;
+        private @Nullable Output<String> crossRealmTrustSharedPassword;
+        private @Nullable Output<Boolean> enableKerberos;
+        private @Nullable Output<String> kdcDbKey;
+        private @Nullable Output<String> keyPassword;
+        private @Nullable Output<String> keystore;
+        private @Nullable Output<String> keystorePassword;
+        private @Nullable Output<String> kmsKey;
+        private @Nullable Output<String> realm;
+        private @Nullable Output<String> rootPrincipalPassword;
+        private @Nullable Output<Integer> tgtLifetimeHours;
+        private @Nullable Output<String> truststore;
+        private @Nullable Output<String> truststorePassword;
 
         public Builder() {
     	      // Empty
@@ -280,153 +280,153 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     	      this.truststorePassword = defaults.truststorePassword;
         }
 
-        public Builder crossRealmTrustAdminServer(@Nullable Input<String> crossRealmTrustAdminServer) {
+        public Builder crossRealmTrustAdminServer(@Nullable Output<String> crossRealmTrustAdminServer) {
             this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
             return this;
         }
 
         public Builder crossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
-            this.crossRealmTrustAdminServer = Input.ofNullable(crossRealmTrustAdminServer);
+            this.crossRealmTrustAdminServer = Output.ofNullable(crossRealmTrustAdminServer);
             return this;
         }
 
-        public Builder crossRealmTrustKdc(@Nullable Input<String> crossRealmTrustKdc) {
+        public Builder crossRealmTrustKdc(@Nullable Output<String> crossRealmTrustKdc) {
             this.crossRealmTrustKdc = crossRealmTrustKdc;
             return this;
         }
 
         public Builder crossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
-            this.crossRealmTrustKdc = Input.ofNullable(crossRealmTrustKdc);
+            this.crossRealmTrustKdc = Output.ofNullable(crossRealmTrustKdc);
             return this;
         }
 
-        public Builder crossRealmTrustRealm(@Nullable Input<String> crossRealmTrustRealm) {
+        public Builder crossRealmTrustRealm(@Nullable Output<String> crossRealmTrustRealm) {
             this.crossRealmTrustRealm = crossRealmTrustRealm;
             return this;
         }
 
         public Builder crossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
-            this.crossRealmTrustRealm = Input.ofNullable(crossRealmTrustRealm);
+            this.crossRealmTrustRealm = Output.ofNullable(crossRealmTrustRealm);
             return this;
         }
 
-        public Builder crossRealmTrustSharedPassword(@Nullable Input<String> crossRealmTrustSharedPassword) {
+        public Builder crossRealmTrustSharedPassword(@Nullable Output<String> crossRealmTrustSharedPassword) {
             this.crossRealmTrustSharedPassword = crossRealmTrustSharedPassword;
             return this;
         }
 
         public Builder crossRealmTrustSharedPassword(@Nullable String crossRealmTrustSharedPassword) {
-            this.crossRealmTrustSharedPassword = Input.ofNullable(crossRealmTrustSharedPassword);
+            this.crossRealmTrustSharedPassword = Output.ofNullable(crossRealmTrustSharedPassword);
             return this;
         }
 
-        public Builder enableKerberos(@Nullable Input<Boolean> enableKerberos) {
+        public Builder enableKerberos(@Nullable Output<Boolean> enableKerberos) {
             this.enableKerberos = enableKerberos;
             return this;
         }
 
         public Builder enableKerberos(@Nullable Boolean enableKerberos) {
-            this.enableKerberos = Input.ofNullable(enableKerberos);
+            this.enableKerberos = Output.ofNullable(enableKerberos);
             return this;
         }
 
-        public Builder kdcDbKey(@Nullable Input<String> kdcDbKey) {
+        public Builder kdcDbKey(@Nullable Output<String> kdcDbKey) {
             this.kdcDbKey = kdcDbKey;
             return this;
         }
 
         public Builder kdcDbKey(@Nullable String kdcDbKey) {
-            this.kdcDbKey = Input.ofNullable(kdcDbKey);
+            this.kdcDbKey = Output.ofNullable(kdcDbKey);
             return this;
         }
 
-        public Builder keyPassword(@Nullable Input<String> keyPassword) {
+        public Builder keyPassword(@Nullable Output<String> keyPassword) {
             this.keyPassword = keyPassword;
             return this;
         }
 
         public Builder keyPassword(@Nullable String keyPassword) {
-            this.keyPassword = Input.ofNullable(keyPassword);
+            this.keyPassword = Output.ofNullable(keyPassword);
             return this;
         }
 
-        public Builder keystore(@Nullable Input<String> keystore) {
+        public Builder keystore(@Nullable Output<String> keystore) {
             this.keystore = keystore;
             return this;
         }
 
         public Builder keystore(@Nullable String keystore) {
-            this.keystore = Input.ofNullable(keystore);
+            this.keystore = Output.ofNullable(keystore);
             return this;
         }
 
-        public Builder keystorePassword(@Nullable Input<String> keystorePassword) {
+        public Builder keystorePassword(@Nullable Output<String> keystorePassword) {
             this.keystorePassword = keystorePassword;
             return this;
         }
 
         public Builder keystorePassword(@Nullable String keystorePassword) {
-            this.keystorePassword = Input.ofNullable(keystorePassword);
+            this.keystorePassword = Output.ofNullable(keystorePassword);
             return this;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder realm(@Nullable Input<String> realm) {
+        public Builder realm(@Nullable Output<String> realm) {
             this.realm = realm;
             return this;
         }
 
         public Builder realm(@Nullable String realm) {
-            this.realm = Input.ofNullable(realm);
+            this.realm = Output.ofNullable(realm);
             return this;
         }
 
-        public Builder rootPrincipalPassword(@Nullable Input<String> rootPrincipalPassword) {
+        public Builder rootPrincipalPassword(@Nullable Output<String> rootPrincipalPassword) {
             this.rootPrincipalPassword = rootPrincipalPassword;
             return this;
         }
 
         public Builder rootPrincipalPassword(@Nullable String rootPrincipalPassword) {
-            this.rootPrincipalPassword = Input.ofNullable(rootPrincipalPassword);
+            this.rootPrincipalPassword = Output.ofNullable(rootPrincipalPassword);
             return this;
         }
 
-        public Builder tgtLifetimeHours(@Nullable Input<Integer> tgtLifetimeHours) {
+        public Builder tgtLifetimeHours(@Nullable Output<Integer> tgtLifetimeHours) {
             this.tgtLifetimeHours = tgtLifetimeHours;
             return this;
         }
 
         public Builder tgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
-            this.tgtLifetimeHours = Input.ofNullable(tgtLifetimeHours);
+            this.tgtLifetimeHours = Output.ofNullable(tgtLifetimeHours);
             return this;
         }
 
-        public Builder truststore(@Nullable Input<String> truststore) {
+        public Builder truststore(@Nullable Output<String> truststore) {
             this.truststore = truststore;
             return this;
         }
 
         public Builder truststore(@Nullable String truststore) {
-            this.truststore = Input.ofNullable(truststore);
+            this.truststore = Output.ofNullable(truststore);
             return this;
         }
 
-        public Builder truststorePassword(@Nullable Input<String> truststorePassword) {
+        public Builder truststorePassword(@Nullable Output<String> truststorePassword) {
             this.truststorePassword = truststorePassword;
             return this;
         }
 
         public Builder truststorePassword(@Nullable String truststorePassword) {
-            this.truststorePassword = Input.ofNullable(truststorePassword);
+            this.truststorePassword = Output.ofNullable(truststorePassword);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs build() {

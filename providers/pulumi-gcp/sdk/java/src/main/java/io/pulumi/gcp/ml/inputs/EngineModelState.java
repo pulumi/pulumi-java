@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.ml.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.ml.inputs.EngineModelDefaultVersionGetArgs;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-      private final @Nullable Input<EngineModelDefaultVersionGetArgs> defaultVersion;
+      private final @Nullable Output<EngineModelDefaultVersionGetArgs> defaultVersion;
 
-    public Input<EngineModelDefaultVersionGetArgs> getDefaultVersion() {
-        return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
+    public Output<EngineModelDefaultVersionGetArgs> getDefaultVersion() {
+        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionConsoleLogging")
-      private final @Nullable Input<Boolean> onlinePredictionConsoleLogging;
+      private final @Nullable Output<Boolean> onlinePredictionConsoleLogging;
 
-    public Input<Boolean> getOnlinePredictionConsoleLogging() {
-        return this.onlinePredictionConsoleLogging == null ? Input.empty() : this.onlinePredictionConsoleLogging;
+    public Output<Boolean> getOnlinePredictionConsoleLogging() {
+        return this.onlinePredictionConsoleLogging == null ? Output.empty() : this.onlinePredictionConsoleLogging;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionLogging")
-      private final @Nullable Input<Boolean> onlinePredictionLogging;
+      private final @Nullable Output<Boolean> onlinePredictionLogging;
 
-    public Input<Boolean> getOnlinePredictionLogging() {
-        return this.onlinePredictionLogging == null ? Input.empty() : this.onlinePredictionLogging;
+    public Output<Boolean> getOnlinePredictionLogging() {
+        return this.onlinePredictionLogging == null ? Output.empty() : this.onlinePredictionLogging;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -103,21 +103,21 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions")
-      private final @Nullable Input<String> regions;
+      private final @Nullable Output<String> regions;
 
-    public Input<String> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<String> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     public EngineModelState(
-        @Nullable Input<EngineModelDefaultVersionGetArgs> defaultVersion,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> onlinePredictionConsoleLogging,
-        @Nullable Input<Boolean> onlinePredictionLogging,
-        @Nullable Input<String> project,
-        @Nullable Input<String> regions) {
+        @Nullable Output<EngineModelDefaultVersionGetArgs> defaultVersion,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> onlinePredictionConsoleLogging,
+        @Nullable Output<Boolean> onlinePredictionLogging,
+        @Nullable Output<String> project,
+        @Nullable Output<String> regions) {
         this.defaultVersion = defaultVersion;
         this.description = description;
         this.labels = labels;
@@ -129,14 +129,14 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EngineModelState() {
-        this.defaultVersion = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.onlinePredictionConsoleLogging = Input.empty();
-        this.onlinePredictionLogging = Input.empty();
-        this.project = Input.empty();
-        this.regions = Input.empty();
+        this.defaultVersion = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.onlinePredictionConsoleLogging = Output.empty();
+        this.onlinePredictionLogging = Output.empty();
+        this.project = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EngineModelDefaultVersionGetArgs> defaultVersion;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> onlinePredictionConsoleLogging;
-        private @Nullable Input<Boolean> onlinePredictionLogging;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> regions;
+        private @Nullable Output<EngineModelDefaultVersionGetArgs> defaultVersion;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> onlinePredictionConsoleLogging;
+        private @Nullable Output<Boolean> onlinePredictionLogging;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> regions;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
     	      this.regions = defaults.regions;
         }
 
-        public Builder defaultVersion(@Nullable Input<EngineModelDefaultVersionGetArgs> defaultVersion) {
+        public Builder defaultVersion(@Nullable Output<EngineModelDefaultVersionGetArgs> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
         public Builder defaultVersion(@Nullable EngineModelDefaultVersionGetArgs defaultVersion) {
-            this.defaultVersion = Input.ofNullable(defaultVersion);
+            this.defaultVersion = Output.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onlinePredictionConsoleLogging(@Nullable Input<Boolean> onlinePredictionConsoleLogging) {
+        public Builder onlinePredictionConsoleLogging(@Nullable Output<Boolean> onlinePredictionConsoleLogging) {
             this.onlinePredictionConsoleLogging = onlinePredictionConsoleLogging;
             return this;
         }
 
         public Builder onlinePredictionConsoleLogging(@Nullable Boolean onlinePredictionConsoleLogging) {
-            this.onlinePredictionConsoleLogging = Input.ofNullable(onlinePredictionConsoleLogging);
+            this.onlinePredictionConsoleLogging = Output.ofNullable(onlinePredictionConsoleLogging);
             return this;
         }
 
-        public Builder onlinePredictionLogging(@Nullable Input<Boolean> onlinePredictionLogging) {
+        public Builder onlinePredictionLogging(@Nullable Output<Boolean> onlinePredictionLogging) {
             this.onlinePredictionLogging = onlinePredictionLogging;
             return this;
         }
 
         public Builder onlinePredictionLogging(@Nullable Boolean onlinePredictionLogging) {
-            this.onlinePredictionLogging = Input.ofNullable(onlinePredictionLogging);
+            this.onlinePredictionLogging = Output.ofNullable(onlinePredictionLogging);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder regions(@Nullable Input<String> regions) {
+        public Builder regions(@Nullable Output<String> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable String regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
         public EngineModelState build() {

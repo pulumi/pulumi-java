@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyId")
-      private final @Nullable Input<String> publicKeyId;
+      private final @Nullable Output<String> publicKeyId;
 
-    public Input<String> getPublicKeyId() {
-        return this.publicKeyId == null ? Input.empty() : this.publicKeyId;
+    public Output<String> getPublicKeyId() {
+        return this.publicKeyId == null ? Output.empty() : this.publicKeyId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signature")
-      private final @Nullable Input<String> signature;
+      private final @Nullable Output<String> signature;
 
-    public Input<String> getSignature() {
-        return this.signature == null ? Input.empty() : this.signature;
+    public Output<String> getSignature() {
+        return this.signature == null ? Output.empty() : this.signature;
     }
 
     public SignatureArgs(
-        @Nullable Input<String> publicKeyId,
-        @Nullable Input<String> signature) {
+        @Nullable Output<String> publicKeyId,
+        @Nullable Output<String> signature) {
         this.publicKeyId = publicKeyId;
         this.signature = signature;
     }
 
     private SignatureArgs() {
-        this.publicKeyId = Input.empty();
-        this.signature = Input.empty();
+        this.publicKeyId = Output.empty();
+        this.signature = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> publicKeyId;
-        private @Nullable Input<String> signature;
+        private @Nullable Output<String> publicKeyId;
+        private @Nullable Output<String> signature;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signature = defaults.signature;
         }
 
-        public Builder publicKeyId(@Nullable Input<String> publicKeyId) {
+        public Builder publicKeyId(@Nullable Output<String> publicKeyId) {
             this.publicKeyId = publicKeyId;
             return this;
         }
 
         public Builder publicKeyId(@Nullable String publicKeyId) {
-            this.publicKeyId = Input.ofNullable(publicKeyId);
+            this.publicKeyId = Output.ofNullable(publicKeyId);
             return this;
         }
 
-        public Builder signature(@Nullable Input<String> signature) {
+        public Builder signature(@Nullable Output<String> signature) {
             this.signature = signature;
             return this;
         }
 
         public Builder signature(@Nullable String signature) {
-            this.signature = Input.ofNullable(signature);
+            this.signature = Output.ofNullable(signature);
             return this;
         }
         public SignatureArgs build() {

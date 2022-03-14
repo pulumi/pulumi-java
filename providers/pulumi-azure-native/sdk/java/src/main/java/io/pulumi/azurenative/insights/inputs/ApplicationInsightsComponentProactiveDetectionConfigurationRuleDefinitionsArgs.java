@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="helpUrl")
-      private final @Nullable Input<String> helpUrl;
+      private final @Nullable Output<String> helpUrl;
 
-    public Input<String> getHelpUrl() {
-        return this.helpUrl == null ? Input.empty() : this.helpUrl;
+    public Output<String> getHelpUrl() {
+        return this.helpUrl == null ? Output.empty() : this.helpUrl;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="isEnabledByDefault")
-      private final @Nullable Input<Boolean> isEnabledByDefault;
+      private final @Nullable Output<Boolean> isEnabledByDefault;
 
-    public Input<Boolean> getIsEnabledByDefault() {
-        return this.isEnabledByDefault == null ? Input.empty() : this.isEnabledByDefault;
+    public Output<Boolean> getIsEnabledByDefault() {
+        return this.isEnabledByDefault == null ? Output.empty() : this.isEnabledByDefault;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="isHidden")
-      private final @Nullable Input<Boolean> isHidden;
+      private final @Nullable Output<Boolean> isHidden;
 
-    public Input<Boolean> getIsHidden() {
-        return this.isHidden == null ? Input.empty() : this.isHidden;
+    public Output<Boolean> getIsHidden() {
+        return this.isHidden == null ? Output.empty() : this.isHidden;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="isInPreview")
-      private final @Nullable Input<Boolean> isInPreview;
+      private final @Nullable Output<Boolean> isInPreview;
 
-    public Input<Boolean> getIsInPreview() {
-        return this.isInPreview == null ? Input.empty() : this.isInPreview;
+    public Output<Boolean> getIsInPreview() {
+        return this.isInPreview == null ? Output.empty() : this.isInPreview;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="supportsEmailNotifications")
-      private final @Nullable Input<Boolean> supportsEmailNotifications;
+      private final @Nullable Output<Boolean> supportsEmailNotifications;
 
-    public Input<Boolean> getSupportsEmailNotifications() {
-        return this.supportsEmailNotifications == null ? Input.empty() : this.supportsEmailNotifications;
+    public Output<Boolean> getSupportsEmailNotifications() {
+        return this.supportsEmailNotifications == null ? Output.empty() : this.supportsEmailNotifications;
     }
 
     public ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> helpUrl,
-        @Nullable Input<Boolean> isEnabledByDefault,
-        @Nullable Input<Boolean> isHidden,
-        @Nullable Input<Boolean> isInPreview,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> supportsEmailNotifications) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> helpUrl,
+        @Nullable Output<Boolean> isEnabledByDefault,
+        @Nullable Output<Boolean> isHidden,
+        @Nullable Output<Boolean> isInPreview,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> supportsEmailNotifications) {
         this.description = description;
         this.displayName = displayName;
         this.helpUrl = helpUrl;
@@ -127,14 +127,14 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     }
 
     private ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.helpUrl = Input.empty();
-        this.isEnabledByDefault = Input.empty();
-        this.isHidden = Input.empty();
-        this.isInPreview = Input.empty();
-        this.name = Input.empty();
-        this.supportsEmailNotifications = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.helpUrl = Output.empty();
+        this.isEnabledByDefault = Output.empty();
+        this.isHidden = Output.empty();
+        this.isInPreview = Output.empty();
+        this.name = Output.empty();
+        this.supportsEmailNotifications = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> helpUrl;
-        private @Nullable Input<Boolean> isEnabledByDefault;
-        private @Nullable Input<Boolean> isHidden;
-        private @Nullable Input<Boolean> isInPreview;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> supportsEmailNotifications;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> helpUrl;
+        private @Nullable Output<Boolean> isEnabledByDefault;
+        private @Nullable Output<Boolean> isHidden;
+        private @Nullable Output<Boolean> isInPreview;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> supportsEmailNotifications;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     	      this.supportsEmailNotifications = defaults.supportsEmailNotifications;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder helpUrl(@Nullable Input<String> helpUrl) {
+        public Builder helpUrl(@Nullable Output<String> helpUrl) {
             this.helpUrl = helpUrl;
             return this;
         }
 
         public Builder helpUrl(@Nullable String helpUrl) {
-            this.helpUrl = Input.ofNullable(helpUrl);
+            this.helpUrl = Output.ofNullable(helpUrl);
             return this;
         }
 
-        public Builder isEnabledByDefault(@Nullable Input<Boolean> isEnabledByDefault) {
+        public Builder isEnabledByDefault(@Nullable Output<Boolean> isEnabledByDefault) {
             this.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
 
         public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
-            this.isEnabledByDefault = Input.ofNullable(isEnabledByDefault);
+            this.isEnabledByDefault = Output.ofNullable(isEnabledByDefault);
             return this;
         }
 
-        public Builder isHidden(@Nullable Input<Boolean> isHidden) {
+        public Builder isHidden(@Nullable Output<Boolean> isHidden) {
             this.isHidden = isHidden;
             return this;
         }
 
         public Builder isHidden(@Nullable Boolean isHidden) {
-            this.isHidden = Input.ofNullable(isHidden);
+            this.isHidden = Output.ofNullable(isHidden);
             return this;
         }
 
-        public Builder isInPreview(@Nullable Input<Boolean> isInPreview) {
+        public Builder isInPreview(@Nullable Output<Boolean> isInPreview) {
             this.isInPreview = isInPreview;
             return this;
         }
 
         public Builder isInPreview(@Nullable Boolean isInPreview) {
-            this.isInPreview = Input.ofNullable(isInPreview);
+            this.isInPreview = Output.ofNullable(isInPreview);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder supportsEmailNotifications(@Nullable Input<Boolean> supportsEmailNotifications) {
+        public Builder supportsEmailNotifications(@Nullable Output<Boolean> supportsEmailNotifications) {
             this.supportsEmailNotifications = supportsEmailNotifications;
             return this;
         }
 
         public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
-            this.supportsEmailNotifications = Input.ofNullable(supportsEmailNotifications);
+            this.supportsEmailNotifications = Output.ofNullable(supportsEmailNotifications);
             return this;
         }
         public ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs build() {

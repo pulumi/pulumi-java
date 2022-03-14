@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class AiMetadataStoreStateGetArgs extends io.pulumi.resources.Resou
     public static final AiMetadataStoreStateGetArgs Empty = new AiMetadataStoreStateGetArgs();
 
     @InputImport(name="diskUtilizationBytes")
-      private final @Nullable Input<String> diskUtilizationBytes;
+      private final @Nullable Output<String> diskUtilizationBytes;
 
-    public Input<String> getDiskUtilizationBytes() {
-        return this.diskUtilizationBytes == null ? Input.empty() : this.diskUtilizationBytes;
+    public Output<String> getDiskUtilizationBytes() {
+        return this.diskUtilizationBytes == null ? Output.empty() : this.diskUtilizationBytes;
     }
 
-    public AiMetadataStoreStateGetArgs(@Nullable Input<String> diskUtilizationBytes) {
+    public AiMetadataStoreStateGetArgs(@Nullable Output<String> diskUtilizationBytes) {
         this.diskUtilizationBytes = diskUtilizationBytes;
     }
 
     private AiMetadataStoreStateGetArgs() {
-        this.diskUtilizationBytes = Input.empty();
+        this.diskUtilizationBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class AiMetadataStoreStateGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskUtilizationBytes;
+        private @Nullable Output<String> diskUtilizationBytes;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class AiMetadataStoreStateGetArgs extends io.pulumi.resources.Resou
     	      this.diskUtilizationBytes = defaults.diskUtilizationBytes;
         }
 
-        public Builder diskUtilizationBytes(@Nullable Input<String> diskUtilizationBytes) {
+        public Builder diskUtilizationBytes(@Nullable Output<String> diskUtilizationBytes) {
             this.diskUtilizationBytes = diskUtilizationBytes;
             return this;
         }
 
         public Builder diskUtilizationBytes(@Nullable String diskUtilizationBytes) {
-            this.diskUtilizationBytes = Input.ofNullable(diskUtilizationBytes);
+            this.diskUtilizationBytes = Output.ofNullable(diskUtilizationBytes);
             return this;
         }
         public AiMetadataStoreStateGetArgs build() {

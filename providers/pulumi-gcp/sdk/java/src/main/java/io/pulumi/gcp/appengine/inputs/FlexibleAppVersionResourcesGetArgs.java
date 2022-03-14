@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesVolumeGetArgs;
 import java.lang.Double;
@@ -22,10 +22,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Integer> cpu;
+      private final @Nullable Output<Integer> cpu;
 
-    public Input<Integer> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Integer> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskGb")
-      private final @Nullable Input<Integer> diskGb;
+      private final @Nullable Output<Integer> diskGb;
 
-    public Input<Integer> getDiskGb() {
-        return this.diskGb == null ? Input.empty() : this.diskGb;
+    public Output<Integer> getDiskGb() {
+        return this.diskGb == null ? Output.empty() : this.diskGb;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="memoryGb")
-      private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Output<Double> memoryGb;
 
-    public Input<Double> getMemoryGb() {
-        return this.memoryGb == null ? Input.empty() : this.memoryGb;
+    public Output<Double> getMemoryGb() {
+        return this.memoryGb == null ? Output.empty() : this.memoryGb;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes;
+      private final @Nullable Output<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes;
 
-    public Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<FlexibleAppVersionResourcesVolumeGetArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public FlexibleAppVersionResourcesGetArgs(
-        @Nullable Input<Integer> cpu,
-        @Nullable Input<Integer> diskGb,
-        @Nullable Input<Double> memoryGb,
-        @Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes) {
+        @Nullable Output<Integer> cpu,
+        @Nullable Output<Integer> diskGb,
+        @Nullable Output<Double> memoryGb,
+        @Nullable Output<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.memoryGb = memoryGb;
@@ -74,10 +74,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
     }
 
     private FlexibleAppVersionResourcesGetArgs() {
-        this.cpu = Input.empty();
-        this.diskGb = Input.empty();
-        this.memoryGb = Input.empty();
-        this.volumes = Input.empty();
+        this.cpu = Output.empty();
+        this.diskGb = Output.empty();
+        this.memoryGb = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cpu;
-        private @Nullable Input<Integer> diskGb;
-        private @Nullable Input<Double> memoryGb;
-        private @Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes;
+        private @Nullable Output<Integer> cpu;
+        private @Nullable Output<Integer> diskGb;
+        private @Nullable Output<Double> memoryGb;
+        private @Nullable Output<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder cpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Output<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder diskGb(@Nullable Input<Integer> diskGb) {
+        public Builder diskGb(@Nullable Output<Integer> diskGb) {
             this.diskGb = diskGb;
             return this;
         }
 
         public Builder diskGb(@Nullable Integer diskGb) {
-            this.diskGb = Input.ofNullable(diskGb);
+            this.diskGb = Output.ofNullable(diskGb);
             return this;
         }
 
-        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Input.ofNullable(memoryGb);
+            this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<FlexibleAppVersionResourcesVolumeGetArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public FlexibleAppVersionResourcesGetArgs build() {

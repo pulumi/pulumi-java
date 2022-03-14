@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.SecurityTypes;
 import io.pulumi.azurenative.compute.inputs.UefiSettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encryptionAtHost")
-      private final @Nullable Input<Boolean> encryptionAtHost;
+      private final @Nullable Output<Boolean> encryptionAtHost;
 
-    public Input<Boolean> getEncryptionAtHost() {
-        return this.encryptionAtHost == null ? Input.empty() : this.encryptionAtHost;
+    public Output<Boolean> getEncryptionAtHost() {
+        return this.encryptionAtHost == null ? Output.empty() : this.encryptionAtHost;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityType")
-      private final @Nullable Input<Either<String,SecurityTypes>> securityType;
+      private final @Nullable Output<Either<String,SecurityTypes>> securityType;
 
-    public Input<Either<String,SecurityTypes>> getSecurityType() {
-        return this.securityType == null ? Input.empty() : this.securityType;
+    public Output<Either<String,SecurityTypes>> getSecurityType() {
+        return this.securityType == null ? Output.empty() : this.securityType;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uefiSettings")
-      private final @Nullable Input<UefiSettingsArgs> uefiSettings;
+      private final @Nullable Output<UefiSettingsArgs> uefiSettings;
 
-    public Input<UefiSettingsArgs> getUefiSettings() {
-        return this.uefiSettings == null ? Input.empty() : this.uefiSettings;
+    public Output<UefiSettingsArgs> getUefiSettings() {
+        return this.uefiSettings == null ? Output.empty() : this.uefiSettings;
     }
 
     public SecurityProfileArgs(
-        @Nullable Input<Boolean> encryptionAtHost,
-        @Nullable Input<Either<String,SecurityTypes>> securityType,
-        @Nullable Input<UefiSettingsArgs> uefiSettings) {
+        @Nullable Output<Boolean> encryptionAtHost,
+        @Nullable Output<Either<String,SecurityTypes>> securityType,
+        @Nullable Output<UefiSettingsArgs> uefiSettings) {
         this.encryptionAtHost = encryptionAtHost;
         this.securityType = securityType;
         this.uefiSettings = uefiSettings;
     }
 
     private SecurityProfileArgs() {
-        this.encryptionAtHost = Input.empty();
-        this.securityType = Input.empty();
-        this.uefiSettings = Input.empty();
+        this.encryptionAtHost = Output.empty();
+        this.securityType = Output.empty();
+        this.uefiSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> encryptionAtHost;
-        private @Nullable Input<Either<String,SecurityTypes>> securityType;
-        private @Nullable Input<UefiSettingsArgs> uefiSettings;
+        private @Nullable Output<Boolean> encryptionAtHost;
+        private @Nullable Output<Either<String,SecurityTypes>> securityType;
+        private @Nullable Output<UefiSettingsArgs> uefiSettings;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uefiSettings = defaults.uefiSettings;
         }
 
-        public Builder encryptionAtHost(@Nullable Input<Boolean> encryptionAtHost) {
+        public Builder encryptionAtHost(@Nullable Output<Boolean> encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
-            this.encryptionAtHost = Input.ofNullable(encryptionAtHost);
+            this.encryptionAtHost = Output.ofNullable(encryptionAtHost);
             return this;
         }
 
-        public Builder securityType(@Nullable Input<Either<String,SecurityTypes>> securityType) {
+        public Builder securityType(@Nullable Output<Either<String,SecurityTypes>> securityType) {
             this.securityType = securityType;
             return this;
         }
 
         public Builder securityType(@Nullable Either<String,SecurityTypes> securityType) {
-            this.securityType = Input.ofNullable(securityType);
+            this.securityType = Output.ofNullable(securityType);
             return this;
         }
 
-        public Builder uefiSettings(@Nullable Input<UefiSettingsArgs> uefiSettings) {
+        public Builder uefiSettings(@Nullable Output<UefiSettingsArgs> uefiSettings) {
             this.uefiSettings = uefiSettings;
             return this;
         }
 
         public Builder uefiSettings(@Nullable UefiSettingsArgs uefiSettings) {
-            this.uefiSettings = Input.ofNullable(uefiSettings);
+            this.uefiSettings = Output.ofNullable(uefiSettings);
             return this;
         }
         public SecurityProfileArgs build() {

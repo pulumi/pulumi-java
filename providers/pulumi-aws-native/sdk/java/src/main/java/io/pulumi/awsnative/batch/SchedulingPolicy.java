@@ -6,7 +6,6 @@ package io.pulumi.awsnative.batch;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.batch.SchedulingPolicyArgs;
 import io.pulumi.awsnative.batch.outputs.SchedulingPolicyFairsharePolicy;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -99,14 +98,14 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SchedulingPolicy(String name, @Nullable SchedulingPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:batch:SchedulingPolicy", name, args == null ? SchedulingPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:batch:SchedulingPolicy", name, args == null ? SchedulingPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SchedulingPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SchedulingPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:batch:SchedulingPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SchedulingPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SchedulingPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SchedulingPolicy(name, id, options);
     }
 }

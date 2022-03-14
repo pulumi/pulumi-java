@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="applicationGatewayName", required=true)
-      private final Input<String> applicationGatewayName;
+      private final Output<String> applicationGatewayName;
 
-    public Input<String> getApplicationGatewayName() {
+    public Output<String> getApplicationGatewayName() {
         return this.applicationGatewayName;
     }
 
@@ -31,10 +31,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-      private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
+    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ApplicationGatewayPrivateEndpointConnectionArgs(
-        Input<String> applicationGatewayName,
-        @Nullable Input<String> connectionName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        Input<String> resourceGroupName) {
+        Output<String> applicationGatewayName,
+        @Nullable Output<String> connectionName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
+        Output<String> resourceGroupName) {
         this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName, "expected parameter 'applicationGatewayName' to be non-null");
         this.connectionName = connectionName;
         this.id = id;
@@ -97,12 +97,12 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     }
 
     private ApplicationGatewayPrivateEndpointConnectionArgs() {
-        this.applicationGatewayName = Input.empty();
-        this.connectionName = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.privateLinkServiceConnectionState = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.applicationGatewayName = Output.empty();
+        this.connectionName = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.privateLinkServiceConnectionState = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> applicationGatewayName;
-        private @Nullable Input<String> connectionName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private Input<String> resourceGroupName;
+        private Output<String> applicationGatewayName;
+        private @Nullable Output<String> connectionName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder applicationGatewayName(Input<String> applicationGatewayName) {
+        public Builder applicationGatewayName(Output<String> applicationGatewayName) {
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
 
         public Builder applicationGatewayName(String applicationGatewayName) {
-            this.applicationGatewayName = Input.of(Objects.requireNonNull(applicationGatewayName));
+            this.applicationGatewayName = Output.of(Objects.requireNonNull(applicationGatewayName));
             return this;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ApplicationGatewayPrivateEndpointConnectionArgs build() {

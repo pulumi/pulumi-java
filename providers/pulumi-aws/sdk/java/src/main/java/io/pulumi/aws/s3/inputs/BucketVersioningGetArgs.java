@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mfaDelete")
-      private final @Nullable Input<Boolean> mfaDelete;
+      private final @Nullable Output<Boolean> mfaDelete;
 
-    public Input<Boolean> getMfaDelete() {
-        return this.mfaDelete == null ? Input.empty() : this.mfaDelete;
+    public Output<Boolean> getMfaDelete() {
+        return this.mfaDelete == null ? Output.empty() : this.mfaDelete;
     }
 
     public BucketVersioningGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Boolean> mfaDelete) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Boolean> mfaDelete) {
         this.enabled = enabled;
         this.mfaDelete = mfaDelete;
     }
 
     private BucketVersioningGetArgs() {
-        this.enabled = Input.empty();
-        this.mfaDelete = Input.empty();
+        this.enabled = Output.empty();
+        this.mfaDelete = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Boolean> mfaDelete;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Boolean> mfaDelete;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
     	      this.mfaDelete = defaults.mfaDelete;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder mfaDelete(@Nullable Input<Boolean> mfaDelete) {
+        public Builder mfaDelete(@Nullable Output<Boolean> mfaDelete) {
             this.mfaDelete = mfaDelete;
             return this;
         }
 
         public Builder mfaDelete(@Nullable Boolean mfaDelete) {
-            this.mfaDelete = Input.ofNullable(mfaDelete);
+            this.mfaDelete = Output.ofNullable(mfaDelete);
             return this;
         }
         public BucketVersioningGetArgs build() {

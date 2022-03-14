@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
     public static final FlowIncrementalPullConfigArgs Empty = new FlowIncrementalPullConfigArgs();
 
     @InputImport(name="datetimeTypeFieldName")
-      private final @Nullable Input<String> datetimeTypeFieldName;
+      private final @Nullable Output<String> datetimeTypeFieldName;
 
-    public Input<String> getDatetimeTypeFieldName() {
-        return this.datetimeTypeFieldName == null ? Input.empty() : this.datetimeTypeFieldName;
+    public Output<String> getDatetimeTypeFieldName() {
+        return this.datetimeTypeFieldName == null ? Output.empty() : this.datetimeTypeFieldName;
     }
 
-    public FlowIncrementalPullConfigArgs(@Nullable Input<String> datetimeTypeFieldName) {
+    public FlowIncrementalPullConfigArgs(@Nullable Output<String> datetimeTypeFieldName) {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
     }
 
     private FlowIncrementalPullConfigArgs() {
-        this.datetimeTypeFieldName = Input.empty();
+        this.datetimeTypeFieldName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datetimeTypeFieldName;
+        private @Nullable Output<String> datetimeTypeFieldName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
     	      this.datetimeTypeFieldName = defaults.datetimeTypeFieldName;
         }
 
-        public Builder datetimeTypeFieldName(@Nullable Input<String> datetimeTypeFieldName) {
+        public Builder datetimeTypeFieldName(@Nullable Output<String> datetimeTypeFieldName) {
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }
 
         public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
-            this.datetimeTypeFieldName = Input.ofNullable(datetimeTypeFieldName);
+            this.datetimeTypeFieldName = Output.ofNullable(datetimeTypeFieldName);
             return this;
         }
         public FlowIncrementalPullConfigArgs build() {

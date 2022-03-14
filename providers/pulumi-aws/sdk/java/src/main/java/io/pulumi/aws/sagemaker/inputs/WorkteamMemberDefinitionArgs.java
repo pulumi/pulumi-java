@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionCognitoMemberDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionOidcMemberDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cognitoMemberDefinition")
-      private final @Nullable Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
+      private final @Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
 
-    public Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> getCognitoMemberDefinition() {
-        return this.cognitoMemberDefinition == null ? Input.empty() : this.cognitoMemberDefinition;
+    public Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> getCognitoMemberDefinition() {
+        return this.cognitoMemberDefinition == null ? Output.empty() : this.cognitoMemberDefinition;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="oidcMemberDefinition")
-      private final @Nullable Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
+      private final @Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
 
-    public Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> getOidcMemberDefinition() {
-        return this.oidcMemberDefinition == null ? Input.empty() : this.oidcMemberDefinition;
+    public Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> getOidcMemberDefinition() {
+        return this.oidcMemberDefinition == null ? Output.empty() : this.oidcMemberDefinition;
     }
 
     public WorkteamMemberDefinitionArgs(
-        @Nullable Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition,
-        @Nullable Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition) {
+        @Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition,
+        @Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition) {
         this.cognitoMemberDefinition = cognitoMemberDefinition;
         this.oidcMemberDefinition = oidcMemberDefinition;
     }
 
     private WorkteamMemberDefinitionArgs() {
-        this.cognitoMemberDefinition = Input.empty();
-        this.oidcMemberDefinition = Input.empty();
+        this.cognitoMemberDefinition = Output.empty();
+        this.oidcMemberDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
-        private @Nullable Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
+        private @Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
+        private @Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
     	      this.oidcMemberDefinition = defaults.oidcMemberDefinition;
         }
 
-        public Builder cognitoMemberDefinition(@Nullable Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition) {
+        public Builder cognitoMemberDefinition(@Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition) {
             this.cognitoMemberDefinition = cognitoMemberDefinition;
             return this;
         }
 
         public Builder cognitoMemberDefinition(@Nullable WorkteamMemberDefinitionCognitoMemberDefinitionArgs cognitoMemberDefinition) {
-            this.cognitoMemberDefinition = Input.ofNullable(cognitoMemberDefinition);
+            this.cognitoMemberDefinition = Output.ofNullable(cognitoMemberDefinition);
             return this;
         }
 
-        public Builder oidcMemberDefinition(@Nullable Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition) {
+        public Builder oidcMemberDefinition(@Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition) {
             this.oidcMemberDefinition = oidcMemberDefinition;
             return this;
         }
 
         public Builder oidcMemberDefinition(@Nullable WorkteamMemberDefinitionOidcMemberDefinitionArgs oidcMemberDefinition) {
-            this.oidcMemberDefinition = Input.ofNullable(oidcMemberDefinition);
+            this.oidcMemberDefinition = Output.ofNullable(oidcMemberDefinition);
             return this;
         }
         public WorkteamMemberDefinitionArgs build() {

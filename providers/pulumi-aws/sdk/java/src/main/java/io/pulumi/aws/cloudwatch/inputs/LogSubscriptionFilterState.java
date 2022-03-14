@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="destinationArn")
-      private final @Nullable Input<String> destinationArn;
+      private final @Nullable Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
-        return this.destinationArn == null ? Input.empty() : this.destinationArn;
+    public Output<String> getDestinationArn() {
+        return this.destinationArn == null ? Output.empty() : this.destinationArn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="distribution")
-      private final @Nullable Input<String> distribution;
+      private final @Nullable Output<String> distribution;
 
-    public Input<String> getDistribution() {
-        return this.distribution == null ? Input.empty() : this.distribution;
+    public Output<String> getDistribution() {
+        return this.distribution == null ? Output.empty() : this.distribution;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filterPattern")
-      private final @Nullable Input<String> filterPattern;
+      private final @Nullable Output<String> filterPattern;
 
-    public Input<String> getFilterPattern() {
-        return this.filterPattern == null ? Input.empty() : this.filterPattern;
+    public Output<String> getFilterPattern() {
+        return this.filterPattern == null ? Output.empty() : this.filterPattern;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="logGroup")
-      private final @Nullable Input<String> logGroup;
+      private final @Nullable Output<String> logGroup;
 
-    public Input<String> getLogGroup() {
-        return this.logGroup == null ? Input.empty() : this.logGroup;
+    public Output<String> getLogGroup() {
+        return this.logGroup == null ? Output.empty() : this.logGroup;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public LogSubscriptionFilterState(
-        @Nullable Input<String> destinationArn,
-        @Nullable Input<String> distribution,
-        @Nullable Input<String> filterPattern,
-        @Nullable Input<String> logGroup,
-        @Nullable Input<String> name,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> destinationArn,
+        @Nullable Output<String> distribution,
+        @Nullable Output<String> filterPattern,
+        @Nullable Output<String> logGroup,
+        @Nullable Output<String> name,
+        @Nullable Output<String> roleArn) {
         this.destinationArn = destinationArn;
         this.distribution = distribution;
         this.filterPattern = filterPattern;
@@ -96,12 +96,12 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
     }
 
     private LogSubscriptionFilterState() {
-        this.destinationArn = Input.empty();
-        this.distribution = Input.empty();
-        this.filterPattern = Input.empty();
-        this.logGroup = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
+        this.destinationArn = Output.empty();
+        this.distribution = Output.empty();
+        this.filterPattern = Output.empty();
+        this.logGroup = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destinationArn;
-        private @Nullable Input<String> distribution;
-        private @Nullable Input<String> filterPattern;
-        private @Nullable Input<String> logGroup;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> destinationArn;
+        private @Nullable Output<String> distribution;
+        private @Nullable Output<String> filterPattern;
+        private @Nullable Output<String> logGroup;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -134,58 +134,58 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder destinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Output<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Input.ofNullable(destinationArn);
+            this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder distribution(@Nullable Input<String> distribution) {
+        public Builder distribution(@Nullable Output<String> distribution) {
             this.distribution = distribution;
             return this;
         }
 
         public Builder distribution(@Nullable String distribution) {
-            this.distribution = Input.ofNullable(distribution);
+            this.distribution = Output.ofNullable(distribution);
             return this;
         }
 
-        public Builder filterPattern(@Nullable Input<String> filterPattern) {
+        public Builder filterPattern(@Nullable Output<String> filterPattern) {
             this.filterPattern = filterPattern;
             return this;
         }
 
         public Builder filterPattern(@Nullable String filterPattern) {
-            this.filterPattern = Input.ofNullable(filterPattern);
+            this.filterPattern = Output.ofNullable(filterPattern);
             return this;
         }
 
-        public Builder logGroup(@Nullable Input<String> logGroup) {
+        public Builder logGroup(@Nullable Output<String> logGroup) {
             this.logGroup = logGroup;
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public LogSubscriptionFilterState build() {

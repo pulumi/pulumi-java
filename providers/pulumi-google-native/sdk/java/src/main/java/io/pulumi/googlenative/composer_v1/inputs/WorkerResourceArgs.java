@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCount")
-      private final @Nullable Input<Integer> maxCount;
+      private final @Nullable Output<Integer> maxCount;
 
-    public Input<Integer> getMaxCount() {
-        return this.maxCount == null ? Input.empty() : this.maxCount;
+    public Output<Integer> getMaxCount() {
+        return this.maxCount == null ? Output.empty() : this.maxCount;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memoryGb")
-      private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Output<Double> memoryGb;
 
-    public Input<Double> getMemoryGb() {
-        return this.memoryGb == null ? Input.empty() : this.memoryGb;
+    public Output<Double> getMemoryGb() {
+        return this.memoryGb == null ? Output.empty() : this.memoryGb;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCount")
-      private final @Nullable Input<Integer> minCount;
+      private final @Nullable Output<Integer> minCount;
 
-    public Input<Integer> getMinCount() {
-        return this.minCount == null ? Input.empty() : this.minCount;
+    public Output<Integer> getMinCount() {
+        return this.minCount == null ? Output.empty() : this.minCount;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageGb")
-      private final @Nullable Input<Double> storageGb;
+      private final @Nullable Output<Double> storageGb;
 
-    public Input<Double> getStorageGb() {
-        return this.storageGb == null ? Input.empty() : this.storageGb;
+    public Output<Double> getStorageGb() {
+        return this.storageGb == null ? Output.empty() : this.storageGb;
     }
 
     public WorkerResourceArgs(
-        @Nullable Input<Double> cpu,
-        @Nullable Input<Integer> maxCount,
-        @Nullable Input<Double> memoryGb,
-        @Nullable Input<Integer> minCount,
-        @Nullable Input<Double> storageGb) {
+        @Nullable Output<Double> cpu,
+        @Nullable Output<Integer> maxCount,
+        @Nullable Output<Double> memoryGb,
+        @Nullable Output<Integer> minCount,
+        @Nullable Output<Double> storageGb) {
         this.cpu = cpu;
         this.maxCount = maxCount;
         this.memoryGb = memoryGb;
@@ -88,11 +88,11 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerResourceArgs() {
-        this.cpu = Input.empty();
-        this.maxCount = Input.empty();
-        this.memoryGb = Input.empty();
-        this.minCount = Input.empty();
-        this.storageGb = Input.empty();
+        this.cpu = Output.empty();
+        this.maxCount = Output.empty();
+        this.memoryGb = Output.empty();
+        this.minCount = Output.empty();
+        this.storageGb = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<Integer> maxCount;
-        private @Nullable Input<Double> memoryGb;
-        private @Nullable Input<Integer> minCount;
-        private @Nullable Input<Double> storageGb;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<Integer> maxCount;
+        private @Nullable Output<Double> memoryGb;
+        private @Nullable Output<Integer> minCount;
+        private @Nullable Output<Double> storageGb;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder maxCount(@Nullable Input<Integer> maxCount) {
+        public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Input.ofNullable(maxCount);
+            this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
 
-        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Input.ofNullable(memoryGb);
+            this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder minCount(@Nullable Input<Integer> minCount) {
+        public Builder minCount(@Nullable Output<Integer> minCount) {
             this.minCount = minCount;
             return this;
         }
 
         public Builder minCount(@Nullable Integer minCount) {
-            this.minCount = Input.ofNullable(minCount);
+            this.minCount = Output.ofNullable(minCount);
             return this;
         }
 
-        public Builder storageGb(@Nullable Input<Double> storageGb) {
+        public Builder storageGb(@Nullable Output<Double> storageGb) {
             this.storageGb = storageGb;
             return this;
         }
 
         public Builder storageGb(@Nullable Double storageGb) {
-            this.storageGb = Input.ofNullable(storageGb);
+            this.storageGb = Output.ofNullable(storageGb);
             return this;
         }
         public WorkerResourceArgs build() {

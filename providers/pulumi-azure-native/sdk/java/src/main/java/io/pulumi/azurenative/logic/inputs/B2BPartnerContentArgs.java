@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="businessIdentities")
-      private final @Nullable Input<List<BusinessIdentityArgs>> businessIdentities;
+      private final @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;
 
-    public Input<List<BusinessIdentityArgs>> getBusinessIdentities() {
-        return this.businessIdentities == null ? Input.empty() : this.businessIdentities;
+    public Output<List<BusinessIdentityArgs>> getBusinessIdentities() {
+        return this.businessIdentities == null ? Output.empty() : this.businessIdentities;
     }
 
-    public B2BPartnerContentArgs(@Nullable Input<List<BusinessIdentityArgs>> businessIdentities) {
+    public B2BPartnerContentArgs(@Nullable Output<List<BusinessIdentityArgs>> businessIdentities) {
         this.businessIdentities = businessIdentities;
     }
 
     private B2BPartnerContentArgs() {
-        this.businessIdentities = Input.empty();
+        this.businessIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BusinessIdentityArgs>> businessIdentities;
+        private @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
     	      this.businessIdentities = defaults.businessIdentities;
         }
 
-        public Builder businessIdentities(@Nullable Input<List<BusinessIdentityArgs>> businessIdentities) {
+        public Builder businessIdentities(@Nullable Output<List<BusinessIdentityArgs>> businessIdentities) {
             this.businessIdentities = businessIdentities;
             return this;
         }
 
         public Builder businessIdentities(@Nullable List<BusinessIdentityArgs> businessIdentities) {
-            this.businessIdentities = Input.ofNullable(businessIdentities);
+            this.businessIdentities = Output.ofNullable(businessIdentities);
             return this;
         }
         public B2BPartnerContentArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.VirtualMachineConfigNicType;
 import io.pulumi.googlenative.notebooks_v1.inputs.ContainerImageArgs;
@@ -32,10 +32,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="acceleratorConfig")
-      private final @Nullable Input<RuntimeAcceleratorConfigArgs> acceleratorConfig;
+      private final @Nullable Output<RuntimeAcceleratorConfigArgs> acceleratorConfig;
 
-    public Input<RuntimeAcceleratorConfigArgs> getAcceleratorConfig() {
-        return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
+    public Output<RuntimeAcceleratorConfigArgs> getAcceleratorConfig() {
+        return this.acceleratorConfig == null ? Output.empty() : this.acceleratorConfig;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="containerImages")
-      private final @Nullable Input<List<ContainerImageArgs>> containerImages;
+      private final @Nullable Output<List<ContainerImageArgs>> containerImages;
 
-    public Input<List<ContainerImageArgs>> getContainerImages() {
-        return this.containerImages == null ? Input.empty() : this.containerImages;
+    public Output<List<ContainerImageArgs>> getContainerImages() {
+        return this.containerImages == null ? Output.empty() : this.containerImages;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataDisk", required=true)
-      private final Input<LocalDiskArgs> dataDisk;
+      private final Output<LocalDiskArgs> dataDisk;
 
-    public Input<LocalDiskArgs> getDataDisk() {
+    public Output<LocalDiskArgs> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -65,10 +65,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Input<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="internalIpOnly")
-      private final @Nullable Input<Boolean> internalIpOnly;
+      private final @Nullable Output<Boolean> internalIpOnly;
 
-    public Input<Boolean> getInternalIpOnly() {
-        return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
+    public Output<Boolean> getInternalIpOnly() {
+        return this.internalIpOnly == null ? Output.empty() : this.internalIpOnly;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="machineType", required=true)
-      private final Input<String> machineType;
+      private final Output<String> machineType;
 
-    public Input<String> getMachineType() {
+    public Output<String> getMachineType() {
         return this.machineType;
     }
 
@@ -109,10 +109,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nicType")
-      private final @Nullable Input<VirtualMachineConfigNicType> nicType;
+      private final @Nullable Output<VirtualMachineConfigNicType> nicType;
 
-    public Input<VirtualMachineConfigNicType> getNicType() {
-        return this.nicType == null ? Input.empty() : this.nicType;
+    public Output<VirtualMachineConfigNicType> getNicType() {
+        return this.nicType == null ? Output.empty() : this.nicType;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Input<RuntimeShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<RuntimeShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<String> subnet;
+      private final @Nullable Output<String> subnet;
 
-    public Input<String> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<String> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -164,26 +164,26 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public VirtualMachineConfigArgs(
-        @Nullable Input<RuntimeAcceleratorConfigArgs> acceleratorConfig,
-        @Nullable Input<List<ContainerImageArgs>> containerImages,
-        Input<LocalDiskArgs> dataDisk,
-        @Nullable Input<EncryptionConfigArgs> encryptionConfig,
-        @Nullable Input<Boolean> internalIpOnly,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> machineType,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> network,
-        @Nullable Input<VirtualMachineConfigNicType> nicType,
-        @Nullable Input<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Input<String> subnet,
-        @Nullable Input<List<String>> tags) {
+        @Nullable Output<RuntimeAcceleratorConfigArgs> acceleratorConfig,
+        @Nullable Output<List<ContainerImageArgs>> containerImages,
+        Output<LocalDiskArgs> dataDisk,
+        @Nullable Output<EncryptionConfigArgs> encryptionConfig,
+        @Nullable Output<Boolean> internalIpOnly,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> machineType,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> network,
+        @Nullable Output<VirtualMachineConfigNicType> nicType,
+        @Nullable Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig,
+        @Nullable Output<String> subnet,
+        @Nullable Output<List<String>> tags) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
         this.dataDisk = Objects.requireNonNull(dataDisk, "expected parameter 'dataDisk' to be non-null");
@@ -200,19 +200,19 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     }
 
     private VirtualMachineConfigArgs() {
-        this.acceleratorConfig = Input.empty();
-        this.containerImages = Input.empty();
-        this.dataDisk = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.internalIpOnly = Input.empty();
-        this.labels = Input.empty();
-        this.machineType = Input.empty();
-        this.metadata = Input.empty();
-        this.network = Input.empty();
-        this.nicType = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.subnet = Input.empty();
-        this.tags = Input.empty();
+        this.acceleratorConfig = Output.empty();
+        this.containerImages = Output.empty();
+        this.dataDisk = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.internalIpOnly = Output.empty();
+        this.labels = Output.empty();
+        this.machineType = Output.empty();
+        this.metadata = Output.empty();
+        this.network = Output.empty();
+        this.nicType = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.subnet = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -224,19 +224,19 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<RuntimeAcceleratorConfigArgs> acceleratorConfig;
-        private @Nullable Input<List<ContainerImageArgs>> containerImages;
-        private Input<LocalDiskArgs> dataDisk;
-        private @Nullable Input<EncryptionConfigArgs> encryptionConfig;
-        private @Nullable Input<Boolean> internalIpOnly;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> machineType;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> network;
-        private @Nullable Input<VirtualMachineConfigNicType> nicType;
-        private @Nullable Input<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Input<String> subnet;
-        private @Nullable Input<List<String>> tags;
+        private @Nullable Output<RuntimeAcceleratorConfigArgs> acceleratorConfig;
+        private @Nullable Output<List<ContainerImageArgs>> containerImages;
+        private Output<LocalDiskArgs> dataDisk;
+        private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
+        private @Nullable Output<Boolean> internalIpOnly;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> machineType;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> network;
+        private @Nullable Output<VirtualMachineConfigNicType> nicType;
+        private @Nullable Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private @Nullable Output<String> subnet;
+        private @Nullable Output<List<String>> tags;
 
         public Builder() {
     	      // Empty
@@ -259,133 +259,133 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder acceleratorConfig(@Nullable Input<RuntimeAcceleratorConfigArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Output<RuntimeAcceleratorConfigArgs> acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
         public Builder acceleratorConfig(@Nullable RuntimeAcceleratorConfigArgs acceleratorConfig) {
-            this.acceleratorConfig = Input.ofNullable(acceleratorConfig);
+            this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
             return this;
         }
 
-        public Builder containerImages(@Nullable Input<List<ContainerImageArgs>> containerImages) {
+        public Builder containerImages(@Nullable Output<List<ContainerImageArgs>> containerImages) {
             this.containerImages = containerImages;
             return this;
         }
 
         public Builder containerImages(@Nullable List<ContainerImageArgs> containerImages) {
-            this.containerImages = Input.ofNullable(containerImages);
+            this.containerImages = Output.ofNullable(containerImages);
             return this;
         }
 
-        public Builder dataDisk(Input<LocalDiskArgs> dataDisk) {
+        public Builder dataDisk(Output<LocalDiskArgs> dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
 
         public Builder dataDisk(LocalDiskArgs dataDisk) {
-            this.dataDisk = Input.of(Objects.requireNonNull(dataDisk));
+            this.dataDisk = Output.of(Objects.requireNonNull(dataDisk));
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder internalIpOnly(@Nullable Input<Boolean> internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
 
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Input.ofNullable(internalIpOnly);
+            this.internalIpOnly = Output.ofNullable(internalIpOnly);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder machineType(Input<String> machineType) {
+        public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
         public Builder machineType(String machineType) {
-            this.machineType = Input.of(Objects.requireNonNull(machineType));
+            this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder nicType(@Nullable Input<VirtualMachineConfigNicType> nicType) {
+        public Builder nicType(@Nullable Output<VirtualMachineConfigNicType> nicType) {
             this.nicType = nicType;
             return this;
         }
 
         public Builder nicType(@Nullable VirtualMachineConfigNicType nicType) {
-            this.nicType = Input.ofNullable(nicType);
+            this.nicType = Output.ofNullable(nicType);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable RuntimeShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public VirtualMachineConfigArgs build() {

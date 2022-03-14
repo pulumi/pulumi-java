@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.RetryType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryCount")
-      private final @Nullable Input<Integer> retryCount;
+      private final @Nullable Output<Integer> retryCount;
 
-    public Input<Integer> getRetryCount() {
-        return this.retryCount == null ? Input.empty() : this.retryCount;
+    public Output<Integer> getRetryCount() {
+        return this.retryCount == null ? Output.empty() : this.retryCount;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryInterval")
-      private final @Nullable Input<String> retryInterval;
+      private final @Nullable Output<String> retryInterval;
 
-    public Input<String> getRetryInterval() {
-        return this.retryInterval == null ? Input.empty() : this.retryInterval;
+    public Output<String> getRetryInterval() {
+        return this.retryInterval == null ? Output.empty() : this.retryInterval;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryType")
-      private final @Nullable Input<RetryType> retryType;
+      private final @Nullable Output<RetryType> retryType;
 
-    public Input<RetryType> getRetryType() {
-        return this.retryType == null ? Input.empty() : this.retryType;
+    public Output<RetryType> getRetryType() {
+        return this.retryType == null ? Output.empty() : this.retryType;
     }
 
     public RetryPolicyArgs(
-        @Nullable Input<Integer> retryCount,
-        @Nullable Input<String> retryInterval,
-        @Nullable Input<RetryType> retryType) {
+        @Nullable Output<Integer> retryCount,
+        @Nullable Output<String> retryInterval,
+        @Nullable Output<RetryType> retryType) {
         this.retryCount = retryCount;
         this.retryInterval = retryInterval;
         this.retryType = retryType;
     }
 
     private RetryPolicyArgs() {
-        this.retryCount = Input.empty();
-        this.retryInterval = Input.empty();
-        this.retryType = Input.empty();
+        this.retryCount = Output.empty();
+        this.retryInterval = Output.empty();
+        this.retryType = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> retryCount;
-        private @Nullable Input<String> retryInterval;
-        private @Nullable Input<RetryType> retryType;
+        private @Nullable Output<Integer> retryCount;
+        private @Nullable Output<String> retryInterval;
+        private @Nullable Output<RetryType> retryType;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retryType = defaults.retryType;
         }
 
-        public Builder retryCount(@Nullable Input<Integer> retryCount) {
+        public Builder retryCount(@Nullable Output<Integer> retryCount) {
             this.retryCount = retryCount;
             return this;
         }
 
         public Builder retryCount(@Nullable Integer retryCount) {
-            this.retryCount = Input.ofNullable(retryCount);
+            this.retryCount = Output.ofNullable(retryCount);
             return this;
         }
 
-        public Builder retryInterval(@Nullable Input<String> retryInterval) {
+        public Builder retryInterval(@Nullable Output<String> retryInterval) {
             this.retryInterval = retryInterval;
             return this;
         }
 
         public Builder retryInterval(@Nullable String retryInterval) {
-            this.retryInterval = Input.ofNullable(retryInterval);
+            this.retryInterval = Output.ofNullable(retryInterval);
             return this;
         }
 
-        public Builder retryType(@Nullable Input<RetryType> retryType) {
+        public Builder retryType(@Nullable Output<RetryType> retryType) {
             this.retryType = retryType;
             return this;
         }
 
         public Builder retryType(@Nullable RetryType retryType) {
-            this.retryType = Input.ofNullable(retryType);
+            this.retryType = Output.ofNullable(retryType);
             return this;
         }
         public RetryPolicyArgs build() {

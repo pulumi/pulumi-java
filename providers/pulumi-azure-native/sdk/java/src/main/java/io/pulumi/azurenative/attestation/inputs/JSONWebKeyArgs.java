@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.attestation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alg")
-      private final @Nullable Input<String> alg;
+      private final @Nullable Output<String> alg;
 
-    public Input<String> getAlg() {
-        return this.alg == null ? Input.empty() : this.alg;
+    public Output<String> getAlg() {
+        return this.alg == null ? Output.empty() : this.alg;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crv")
-      private final @Nullable Input<String> crv;
+      private final @Nullable Output<String> crv;
 
-    public Input<String> getCrv() {
-        return this.crv == null ? Input.empty() : this.crv;
+    public Output<String> getCrv() {
+        return this.crv == null ? Output.empty() : this.crv;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="d")
-      private final @Nullable Input<String> d;
+      private final @Nullable Output<String> d;
 
-    public Input<String> getD() {
-        return this.d == null ? Input.empty() : this.d;
+    public Output<String> getD() {
+        return this.d == null ? Output.empty() : this.d;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dp")
-      private final @Nullable Input<String> dp;
+      private final @Nullable Output<String> dp;
 
-    public Input<String> getDp() {
-        return this.dp == null ? Input.empty() : this.dp;
+    public Output<String> getDp() {
+        return this.dp == null ? Output.empty() : this.dp;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dq")
-      private final @Nullable Input<String> dq;
+      private final @Nullable Output<String> dq;
 
-    public Input<String> getDq() {
-        return this.dq == null ? Input.empty() : this.dq;
+    public Output<String> getDq() {
+        return this.dq == null ? Output.empty() : this.dq;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="e")
-      private final @Nullable Input<String> e;
+      private final @Nullable Output<String> e;
 
-    public Input<String> getE() {
-        return this.e == null ? Input.empty() : this.e;
+    public Output<String> getE() {
+        return this.e == null ? Output.empty() : this.e;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="k")
-      private final @Nullable Input<String> k;
+      private final @Nullable Output<String> k;
 
-    public Input<String> getK() {
-        return this.k == null ? Input.empty() : this.k;
+    public Output<String> getK() {
+        return this.k == null ? Output.empty() : this.k;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kid")
-      private final @Nullable Input<String> kid;
+      private final @Nullable Output<String> kid;
 
-    public Input<String> getKid() {
-        return this.kid == null ? Input.empty() : this.kid;
+    public Output<String> getKid() {
+        return this.kid == null ? Output.empty() : this.kid;
     }
 
     /**
@@ -124,9 +124,9 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kty", required=true)
-      private final Input<String> kty;
+      private final Output<String> kty;
 
-    public Input<String> getKty() {
+    public Output<String> getKty() {
         return this.kty;
     }
 
@@ -135,10 +135,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="n")
-      private final @Nullable Input<String> n;
+      private final @Nullable Output<String> n;
 
-    public Input<String> getN() {
-        return this.n == null ? Input.empty() : this.n;
+    public Output<String> getN() {
+        return this.n == null ? Output.empty() : this.n;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="p")
-      private final @Nullable Input<String> p;
+      private final @Nullable Output<String> p;
 
-    public Input<String> getP() {
-        return this.p == null ? Input.empty() : this.p;
+    public Output<String> getP() {
+        return this.p == null ? Output.empty() : this.p;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="q")
-      private final @Nullable Input<String> q;
+      private final @Nullable Output<String> q;
 
-    public Input<String> getQ() {
-        return this.q == null ? Input.empty() : this.q;
+    public Output<String> getQ() {
+        return this.q == null ? Output.empty() : this.q;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qi")
-      private final @Nullable Input<String> qi;
+      private final @Nullable Output<String> qi;
 
-    public Input<String> getQi() {
-        return this.qi == null ? Input.empty() : this.qi;
+    public Output<String> getQi() {
+        return this.qi == null ? Output.empty() : this.qi;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="use")
-      private final @Nullable Input<String> use;
+      private final @Nullable Output<String> use;
 
-    public Input<String> getUse() {
-        return this.use == null ? Input.empty() : this.use;
+    public Output<String> getUse() {
+        return this.use == null ? Output.empty() : this.use;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="x")
-      private final @Nullable Input<String> x;
+      private final @Nullable Output<String> x;
 
-    public Input<String> getX() {
-        return this.x == null ? Input.empty() : this.x;
+    public Output<String> getX() {
+        return this.x == null ? Output.empty() : this.x;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="x5c")
-      private final @Nullable Input<List<String>> x5c;
+      private final @Nullable Output<List<String>> x5c;
 
-    public Input<List<String>> getX5c() {
-        return this.x5c == null ? Input.empty() : this.x5c;
+    public Output<List<String>> getX5c() {
+        return this.x5c == null ? Output.empty() : this.x5c;
     }
 
     /**
@@ -221,30 +221,30 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="y")
-      private final @Nullable Input<String> y;
+      private final @Nullable Output<String> y;
 
-    public Input<String> getY() {
-        return this.y == null ? Input.empty() : this.y;
+    public Output<String> getY() {
+        return this.y == null ? Output.empty() : this.y;
     }
 
     public JSONWebKeyArgs(
-        @Nullable Input<String> alg,
-        @Nullable Input<String> crv,
-        @Nullable Input<String> d,
-        @Nullable Input<String> dp,
-        @Nullable Input<String> dq,
-        @Nullable Input<String> e,
-        @Nullable Input<String> k,
-        @Nullable Input<String> kid,
-        Input<String> kty,
-        @Nullable Input<String> n,
-        @Nullable Input<String> p,
-        @Nullable Input<String> q,
-        @Nullable Input<String> qi,
-        @Nullable Input<String> use,
-        @Nullable Input<String> x,
-        @Nullable Input<List<String>> x5c,
-        @Nullable Input<String> y) {
+        @Nullable Output<String> alg,
+        @Nullable Output<String> crv,
+        @Nullable Output<String> d,
+        @Nullable Output<String> dp,
+        @Nullable Output<String> dq,
+        @Nullable Output<String> e,
+        @Nullable Output<String> k,
+        @Nullable Output<String> kid,
+        Output<String> kty,
+        @Nullable Output<String> n,
+        @Nullable Output<String> p,
+        @Nullable Output<String> q,
+        @Nullable Output<String> qi,
+        @Nullable Output<String> use,
+        @Nullable Output<String> x,
+        @Nullable Output<List<String>> x5c,
+        @Nullable Output<String> y) {
         this.alg = alg;
         this.crv = crv;
         this.d = d;
@@ -265,23 +265,23 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JSONWebKeyArgs() {
-        this.alg = Input.empty();
-        this.crv = Input.empty();
-        this.d = Input.empty();
-        this.dp = Input.empty();
-        this.dq = Input.empty();
-        this.e = Input.empty();
-        this.k = Input.empty();
-        this.kid = Input.empty();
-        this.kty = Input.empty();
-        this.n = Input.empty();
-        this.p = Input.empty();
-        this.q = Input.empty();
-        this.qi = Input.empty();
-        this.use = Input.empty();
-        this.x = Input.empty();
-        this.x5c = Input.empty();
-        this.y = Input.empty();
+        this.alg = Output.empty();
+        this.crv = Output.empty();
+        this.d = Output.empty();
+        this.dp = Output.empty();
+        this.dq = Output.empty();
+        this.e = Output.empty();
+        this.k = Output.empty();
+        this.kid = Output.empty();
+        this.kty = Output.empty();
+        this.n = Output.empty();
+        this.p = Output.empty();
+        this.q = Output.empty();
+        this.qi = Output.empty();
+        this.use = Output.empty();
+        this.x = Output.empty();
+        this.x5c = Output.empty();
+        this.y = Output.empty();
     }
 
     public static Builder builder() {
@@ -293,23 +293,23 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alg;
-        private @Nullable Input<String> crv;
-        private @Nullable Input<String> d;
-        private @Nullable Input<String> dp;
-        private @Nullable Input<String> dq;
-        private @Nullable Input<String> e;
-        private @Nullable Input<String> k;
-        private @Nullable Input<String> kid;
-        private Input<String> kty;
-        private @Nullable Input<String> n;
-        private @Nullable Input<String> p;
-        private @Nullable Input<String> q;
-        private @Nullable Input<String> qi;
-        private @Nullable Input<String> use;
-        private @Nullable Input<String> x;
-        private @Nullable Input<List<String>> x5c;
-        private @Nullable Input<String> y;
+        private @Nullable Output<String> alg;
+        private @Nullable Output<String> crv;
+        private @Nullable Output<String> d;
+        private @Nullable Output<String> dp;
+        private @Nullable Output<String> dq;
+        private @Nullable Output<String> e;
+        private @Nullable Output<String> k;
+        private @Nullable Output<String> kid;
+        private Output<String> kty;
+        private @Nullable Output<String> n;
+        private @Nullable Output<String> p;
+        private @Nullable Output<String> q;
+        private @Nullable Output<String> qi;
+        private @Nullable Output<String> use;
+        private @Nullable Output<String> x;
+        private @Nullable Output<List<String>> x5c;
+        private @Nullable Output<String> y;
 
         public Builder() {
     	      // Empty
@@ -336,173 +336,173 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.y = defaults.y;
         }
 
-        public Builder alg(@Nullable Input<String> alg) {
+        public Builder alg(@Nullable Output<String> alg) {
             this.alg = alg;
             return this;
         }
 
         public Builder alg(@Nullable String alg) {
-            this.alg = Input.ofNullable(alg);
+            this.alg = Output.ofNullable(alg);
             return this;
         }
 
-        public Builder crv(@Nullable Input<String> crv) {
+        public Builder crv(@Nullable Output<String> crv) {
             this.crv = crv;
             return this;
         }
 
         public Builder crv(@Nullable String crv) {
-            this.crv = Input.ofNullable(crv);
+            this.crv = Output.ofNullable(crv);
             return this;
         }
 
-        public Builder d(@Nullable Input<String> d) {
+        public Builder d(@Nullable Output<String> d) {
             this.d = d;
             return this;
         }
 
         public Builder d(@Nullable String d) {
-            this.d = Input.ofNullable(d);
+            this.d = Output.ofNullable(d);
             return this;
         }
 
-        public Builder dp(@Nullable Input<String> dp) {
+        public Builder dp(@Nullable Output<String> dp) {
             this.dp = dp;
             return this;
         }
 
         public Builder dp(@Nullable String dp) {
-            this.dp = Input.ofNullable(dp);
+            this.dp = Output.ofNullable(dp);
             return this;
         }
 
-        public Builder dq(@Nullable Input<String> dq) {
+        public Builder dq(@Nullable Output<String> dq) {
             this.dq = dq;
             return this;
         }
 
         public Builder dq(@Nullable String dq) {
-            this.dq = Input.ofNullable(dq);
+            this.dq = Output.ofNullable(dq);
             return this;
         }
 
-        public Builder e(@Nullable Input<String> e) {
+        public Builder e(@Nullable Output<String> e) {
             this.e = e;
             return this;
         }
 
         public Builder e(@Nullable String e) {
-            this.e = Input.ofNullable(e);
+            this.e = Output.ofNullable(e);
             return this;
         }
 
-        public Builder k(@Nullable Input<String> k) {
+        public Builder k(@Nullable Output<String> k) {
             this.k = k;
             return this;
         }
 
         public Builder k(@Nullable String k) {
-            this.k = Input.ofNullable(k);
+            this.k = Output.ofNullable(k);
             return this;
         }
 
-        public Builder kid(@Nullable Input<String> kid) {
+        public Builder kid(@Nullable Output<String> kid) {
             this.kid = kid;
             return this;
         }
 
         public Builder kid(@Nullable String kid) {
-            this.kid = Input.ofNullable(kid);
+            this.kid = Output.ofNullable(kid);
             return this;
         }
 
-        public Builder kty(Input<String> kty) {
+        public Builder kty(Output<String> kty) {
             this.kty = Objects.requireNonNull(kty);
             return this;
         }
 
         public Builder kty(String kty) {
-            this.kty = Input.of(Objects.requireNonNull(kty));
+            this.kty = Output.of(Objects.requireNonNull(kty));
             return this;
         }
 
-        public Builder n(@Nullable Input<String> n) {
+        public Builder n(@Nullable Output<String> n) {
             this.n = n;
             return this;
         }
 
         public Builder n(@Nullable String n) {
-            this.n = Input.ofNullable(n);
+            this.n = Output.ofNullable(n);
             return this;
         }
 
-        public Builder p(@Nullable Input<String> p) {
+        public Builder p(@Nullable Output<String> p) {
             this.p = p;
             return this;
         }
 
         public Builder p(@Nullable String p) {
-            this.p = Input.ofNullable(p);
+            this.p = Output.ofNullable(p);
             return this;
         }
 
-        public Builder q(@Nullable Input<String> q) {
+        public Builder q(@Nullable Output<String> q) {
             this.q = q;
             return this;
         }
 
         public Builder q(@Nullable String q) {
-            this.q = Input.ofNullable(q);
+            this.q = Output.ofNullable(q);
             return this;
         }
 
-        public Builder qi(@Nullable Input<String> qi) {
+        public Builder qi(@Nullable Output<String> qi) {
             this.qi = qi;
             return this;
         }
 
         public Builder qi(@Nullable String qi) {
-            this.qi = Input.ofNullable(qi);
+            this.qi = Output.ofNullable(qi);
             return this;
         }
 
-        public Builder use(@Nullable Input<String> use) {
+        public Builder use(@Nullable Output<String> use) {
             this.use = use;
             return this;
         }
 
         public Builder use(@Nullable String use) {
-            this.use = Input.ofNullable(use);
+            this.use = Output.ofNullable(use);
             return this;
         }
 
-        public Builder x(@Nullable Input<String> x) {
+        public Builder x(@Nullable Output<String> x) {
             this.x = x;
             return this;
         }
 
         public Builder x(@Nullable String x) {
-            this.x = Input.ofNullable(x);
+            this.x = Output.ofNullable(x);
             return this;
         }
 
-        public Builder x5c(@Nullable Input<List<String>> x5c) {
+        public Builder x5c(@Nullable Output<List<String>> x5c) {
             this.x5c = x5c;
             return this;
         }
 
         public Builder x5c(@Nullable List<String> x5c) {
-            this.x5c = Input.ofNullable(x5c);
+            this.x5c = Output.ofNullable(x5c);
             return this;
         }
 
-        public Builder y(@Nullable Input<String> y) {
+        public Builder y(@Nullable Output<String> y) {
             this.y = y;
             return this;
         }
 
         public Builder y(@Nullable String y) {
-            this.y = Input.ofNullable(y);
+            this.y = Output.ofNullable(y);
             return this;
         }
         public JSONWebKeyArgs build() {

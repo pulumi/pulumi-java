@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TlsInfoCommonNameArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ciphers")
-      private final @Nullable Input<List<String>> ciphers;
+      private final @Nullable Output<List<String>> ciphers;
 
-    public Input<List<String>> getCiphers() {
-        return this.ciphers == null ? Input.empty() : this.ciphers;
+    public Output<List<String>> getCiphers() {
+        return this.ciphers == null ? Output.empty() : this.ciphers;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientAuthEnabled")
-      private final @Nullable Input<Boolean> clientAuthEnabled;
+      private final @Nullable Output<Boolean> clientAuthEnabled;
 
-    public Input<Boolean> getClientAuthEnabled() {
-        return this.clientAuthEnabled == null ? Input.empty() : this.clientAuthEnabled;
+    public Output<Boolean> getClientAuthEnabled() {
+        return this.clientAuthEnabled == null ? Output.empty() : this.clientAuthEnabled;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="commonName")
-      private final @Nullable Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName;
+      private final @Nullable Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName;
 
-    public Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> getCommonName() {
-        return this.commonName == null ? Input.empty() : this.commonName;
+    public Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> getCommonName() {
+        return this.commonName == null ? Output.empty() : this.commonName;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -70,10 +70,10 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ignoreValidationErrors")
-      private final @Nullable Input<Boolean> ignoreValidationErrors;
+      private final @Nullable Output<Boolean> ignoreValidationErrors;
 
-    public Input<Boolean> getIgnoreValidationErrors() {
-        return this.ignoreValidationErrors == null ? Input.empty() : this.ignoreValidationErrors;
+    public Output<Boolean> getIgnoreValidationErrors() {
+        return this.ignoreValidationErrors == null ? Output.empty() : this.ignoreValidationErrors;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyAlias")
-      private final @Nullable Input<String> keyAlias;
+      private final @Nullable Output<String> keyAlias;
 
-    public Input<String> getKeyAlias() {
-        return this.keyAlias == null ? Input.empty() : this.keyAlias;
+    public Output<String> getKeyAlias() {
+        return this.keyAlias == null ? Output.empty() : this.keyAlias;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyStore")
-      private final @Nullable Input<String> keyStore;
+      private final @Nullable Output<String> keyStore;
 
-    public Input<String> getKeyStore() {
-        return this.keyStore == null ? Input.empty() : this.keyStore;
+    public Output<String> getKeyStore() {
+        return this.keyStore == null ? Output.empty() : this.keyStore;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="protocols")
-      private final @Nullable Input<List<String>> protocols;
+      private final @Nullable Output<List<String>> protocols;
 
-    public Input<List<String>> getProtocols() {
-        return this.protocols == null ? Input.empty() : this.protocols;
+    public Output<List<String>> getProtocols() {
+        return this.protocols == null ? Output.empty() : this.protocols;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="trustStore")
-      private final @Nullable Input<String> trustStore;
+      private final @Nullable Output<String> trustStore;
 
-    public Input<String> getTrustStore() {
-        return this.trustStore == null ? Input.empty() : this.trustStore;
+    public Output<String> getTrustStore() {
+        return this.trustStore == null ? Output.empty() : this.trustStore;
     }
 
     public GoogleCloudApigeeV1TlsInfoArgs(
-        @Nullable Input<List<String>> ciphers,
-        @Nullable Input<Boolean> clientAuthEnabled,
-        @Nullable Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName,
-        Input<Boolean> enabled,
-        @Nullable Input<Boolean> ignoreValidationErrors,
-        @Nullable Input<String> keyAlias,
-        @Nullable Input<String> keyStore,
-        @Nullable Input<List<String>> protocols,
-        @Nullable Input<String> trustStore) {
+        @Nullable Output<List<String>> ciphers,
+        @Nullable Output<Boolean> clientAuthEnabled,
+        @Nullable Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName,
+        Output<Boolean> enabled,
+        @Nullable Output<Boolean> ignoreValidationErrors,
+        @Nullable Output<String> keyAlias,
+        @Nullable Output<String> keyStore,
+        @Nullable Output<List<String>> protocols,
+        @Nullable Output<String> trustStore) {
         this.ciphers = ciphers;
         this.clientAuthEnabled = clientAuthEnabled;
         this.commonName = commonName;
@@ -142,15 +142,15 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     }
 
     private GoogleCloudApigeeV1TlsInfoArgs() {
-        this.ciphers = Input.empty();
-        this.clientAuthEnabled = Input.empty();
-        this.commonName = Input.empty();
-        this.enabled = Input.empty();
-        this.ignoreValidationErrors = Input.empty();
-        this.keyAlias = Input.empty();
-        this.keyStore = Input.empty();
-        this.protocols = Input.empty();
-        this.trustStore = Input.empty();
+        this.ciphers = Output.empty();
+        this.clientAuthEnabled = Output.empty();
+        this.commonName = Output.empty();
+        this.enabled = Output.empty();
+        this.ignoreValidationErrors = Output.empty();
+        this.keyAlias = Output.empty();
+        this.keyStore = Output.empty();
+        this.protocols = Output.empty();
+        this.trustStore = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ciphers;
-        private @Nullable Input<Boolean> clientAuthEnabled;
-        private @Nullable Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName;
-        private Input<Boolean> enabled;
-        private @Nullable Input<Boolean> ignoreValidationErrors;
-        private @Nullable Input<String> keyAlias;
-        private @Nullable Input<String> keyStore;
-        private @Nullable Input<List<String>> protocols;
-        private @Nullable Input<String> trustStore;
+        private @Nullable Output<List<String>> ciphers;
+        private @Nullable Output<Boolean> clientAuthEnabled;
+        private @Nullable Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName;
+        private Output<Boolean> enabled;
+        private @Nullable Output<Boolean> ignoreValidationErrors;
+        private @Nullable Output<String> keyAlias;
+        private @Nullable Output<String> keyStore;
+        private @Nullable Output<List<String>> protocols;
+        private @Nullable Output<String> trustStore;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     	      this.trustStore = defaults.trustStore;
         }
 
-        public Builder ciphers(@Nullable Input<List<String>> ciphers) {
+        public Builder ciphers(@Nullable Output<List<String>> ciphers) {
             this.ciphers = ciphers;
             return this;
         }
 
         public Builder ciphers(@Nullable List<String> ciphers) {
-            this.ciphers = Input.ofNullable(ciphers);
+            this.ciphers = Output.ofNullable(ciphers);
             return this;
         }
 
-        public Builder clientAuthEnabled(@Nullable Input<Boolean> clientAuthEnabled) {
+        public Builder clientAuthEnabled(@Nullable Output<Boolean> clientAuthEnabled) {
             this.clientAuthEnabled = clientAuthEnabled;
             return this;
         }
 
         public Builder clientAuthEnabled(@Nullable Boolean clientAuthEnabled) {
-            this.clientAuthEnabled = Input.ofNullable(clientAuthEnabled);
+            this.clientAuthEnabled = Output.ofNullable(clientAuthEnabled);
             return this;
         }
 
-        public Builder commonName(@Nullable Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName) {
+        public Builder commonName(@Nullable Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName) {
             this.commonName = commonName;
             return this;
         }
 
         public Builder commonName(@Nullable GoogleCloudApigeeV1TlsInfoCommonNameArgs commonName) {
-            this.commonName = Input.ofNullable(commonName);
+            this.commonName = Output.ofNullable(commonName);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder ignoreValidationErrors(@Nullable Input<Boolean> ignoreValidationErrors) {
+        public Builder ignoreValidationErrors(@Nullable Output<Boolean> ignoreValidationErrors) {
             this.ignoreValidationErrors = ignoreValidationErrors;
             return this;
         }
 
         public Builder ignoreValidationErrors(@Nullable Boolean ignoreValidationErrors) {
-            this.ignoreValidationErrors = Input.ofNullable(ignoreValidationErrors);
+            this.ignoreValidationErrors = Output.ofNullable(ignoreValidationErrors);
             return this;
         }
 
-        public Builder keyAlias(@Nullable Input<String> keyAlias) {
+        public Builder keyAlias(@Nullable Output<String> keyAlias) {
             this.keyAlias = keyAlias;
             return this;
         }
 
         public Builder keyAlias(@Nullable String keyAlias) {
-            this.keyAlias = Input.ofNullable(keyAlias);
+            this.keyAlias = Output.ofNullable(keyAlias);
             return this;
         }
 
-        public Builder keyStore(@Nullable Input<String> keyStore) {
+        public Builder keyStore(@Nullable Output<String> keyStore) {
             this.keyStore = keyStore;
             return this;
         }
 
         public Builder keyStore(@Nullable String keyStore) {
-            this.keyStore = Input.ofNullable(keyStore);
+            this.keyStore = Output.ofNullable(keyStore);
             return this;
         }
 
-        public Builder protocols(@Nullable Input<List<String>> protocols) {
+        public Builder protocols(@Nullable Output<List<String>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
         public Builder protocols(@Nullable List<String> protocols) {
-            this.protocols = Input.ofNullable(protocols);
+            this.protocols = Output.ofNullable(protocols);
             return this;
         }
 
-        public Builder trustStore(@Nullable Input<String> trustStore) {
+        public Builder trustStore(@Nullable Output<String> trustStore) {
             this.trustStore = trustStore;
             return this;
         }
 
         public Builder trustStore(@Nullable String trustStore) {
-            this.trustStore = Input.ofNullable(trustStore);
+            this.trustStore = Output.ofNullable(trustStore);
             return this;
         }
         public GoogleCloudApigeeV1TlsInfoArgs build() {

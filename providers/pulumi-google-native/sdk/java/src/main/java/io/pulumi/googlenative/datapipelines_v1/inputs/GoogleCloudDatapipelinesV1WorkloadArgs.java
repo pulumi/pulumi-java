@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs;
@@ -24,10 +24,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataflowFlexTemplateRequest")
-      private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
+      private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
 
-    public Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> getDataflowFlexTemplateRequest() {
-        return this.dataflowFlexTemplateRequest == null ? Input.empty() : this.dataflowFlexTemplateRequest;
+    public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> getDataflowFlexTemplateRequest() {
+        return this.dataflowFlexTemplateRequest == null ? Output.empty() : this.dataflowFlexTemplateRequest;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataflowLaunchTemplateRequest")
-      private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
+      private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
 
-    public Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> getDataflowLaunchTemplateRequest() {
-        return this.dataflowLaunchTemplateRequest == null ? Input.empty() : this.dataflowLaunchTemplateRequest;
+    public Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> getDataflowLaunchTemplateRequest() {
+        return this.dataflowLaunchTemplateRequest == null ? Output.empty() : this.dataflowLaunchTemplateRequest;
     }
 
     public GoogleCloudDatapipelinesV1WorkloadArgs(
-        @Nullable Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest,
-        @Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
+        @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest,
+        @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
         this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
         this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
     }
 
     private GoogleCloudDatapipelinesV1WorkloadArgs() {
-        this.dataflowFlexTemplateRequest = Input.empty();
-        this.dataflowLaunchTemplateRequest = Input.empty();
+        this.dataflowFlexTemplateRequest = Output.empty();
+        this.dataflowLaunchTemplateRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
-        private @Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
+        private @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
+        private @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
     	      this.dataflowLaunchTemplateRequest = defaults.dataflowLaunchTemplateRequest;
         }
 
-        public Builder dataflowFlexTemplateRequest(@Nullable Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest) {
+        public Builder dataflowFlexTemplateRequest(@Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest) {
             this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
             return this;
         }
 
         public Builder dataflowFlexTemplateRequest(@Nullable GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs dataflowFlexTemplateRequest) {
-            this.dataflowFlexTemplateRequest = Input.ofNullable(dataflowFlexTemplateRequest);
+            this.dataflowFlexTemplateRequest = Output.ofNullable(dataflowFlexTemplateRequest);
             return this;
         }
 
-        public Builder dataflowLaunchTemplateRequest(@Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
+        public Builder dataflowLaunchTemplateRequest(@Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
             this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
             return this;
         }
 
         public Builder dataflowLaunchTemplateRequest(@Nullable GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs dataflowLaunchTemplateRequest) {
-            this.dataflowLaunchTemplateRequest = Input.ofNullable(dataflowLaunchTemplateRequest);
+            this.dataflowLaunchTemplateRequest = Output.ofNullable(dataflowLaunchTemplateRequest);
             return this;
         }
         public GoogleCloudDatapipelinesV1WorkloadArgs build() {

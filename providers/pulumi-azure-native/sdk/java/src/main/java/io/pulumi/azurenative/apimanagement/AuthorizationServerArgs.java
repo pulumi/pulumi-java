@@ -9,7 +9,7 @@ import io.pulumi.azurenative.apimanagement.enums.ClientAuthenticationMethod;
 import io.pulumi.azurenative.apimanagement.enums.GrantType;
 import io.pulumi.azurenative.apimanagement.inputs.TokenBodyParameterContractArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationEndpoint", required=true)
-      private final Input<String> authorizationEndpoint;
+      private final Output<String> authorizationEndpoint;
 
-    public Input<String> getAuthorizationEndpoint() {
+    public Output<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -38,10 +38,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationMethods")
-      private final @Nullable Input<List<AuthorizationMethod>> authorizationMethods;
+      private final @Nullable Output<List<AuthorizationMethod>> authorizationMethods;
 
-    public Input<List<AuthorizationMethod>> getAuthorizationMethods() {
-        return this.authorizationMethods == null ? Input.empty() : this.authorizationMethods;
+    public Output<List<AuthorizationMethod>> getAuthorizationMethods() {
+        return this.authorizationMethods == null ? Output.empty() : this.authorizationMethods;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authsid")
-      private final @Nullable Input<String> authsid;
+      private final @Nullable Output<String> authsid;
 
-    public Input<String> getAuthsid() {
-        return this.authsid == null ? Input.empty() : this.authsid;
+    public Output<String> getAuthsid() {
+        return this.authsid == null ? Output.empty() : this.authsid;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bearerTokenSendingMethods")
-      private final @Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
+      private final @Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
 
-    public Input<List<Either<String,BearerTokenSendingMethod>>> getBearerTokenSendingMethods() {
-        return this.bearerTokenSendingMethods == null ? Input.empty() : this.bearerTokenSendingMethods;
+    public Output<List<Either<String,BearerTokenSendingMethod>>> getBearerTokenSendingMethods() {
+        return this.bearerTokenSendingMethods == null ? Output.empty() : this.bearerTokenSendingMethods;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientAuthenticationMethod")
-      private final @Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
+      private final @Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
 
-    public Input<List<Either<String,ClientAuthenticationMethod>>> getClientAuthenticationMethod() {
-        return this.clientAuthenticationMethod == null ? Input.empty() : this.clientAuthenticationMethod;
+    public Output<List<Either<String,ClientAuthenticationMethod>>> getClientAuthenticationMethod() {
+        return this.clientAuthenticationMethod == null ? Output.empty() : this.clientAuthenticationMethod;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -93,9 +93,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientRegistrationEndpoint", required=true)
-      private final Input<String> clientRegistrationEndpoint;
+      private final Output<String> clientRegistrationEndpoint;
 
-    public Input<String> getClientRegistrationEndpoint() {
+    public Output<String> getClientRegistrationEndpoint() {
         return this.clientRegistrationEndpoint;
     }
 
@@ -104,10 +104,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultScope")
-      private final @Nullable Input<String> defaultScope;
+      private final @Nullable Output<String> defaultScope;
 
-    public Input<String> getDefaultScope() {
-        return this.defaultScope == null ? Input.empty() : this.defaultScope;
+    public Output<String> getDefaultScope() {
+        return this.defaultScope == null ? Output.empty() : this.defaultScope;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -137,9 +137,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -148,9 +148,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="grantTypes", required=true)
-      private final Input<List<Either<String,GrantType>>> grantTypes;
+      private final Output<List<Either<String,GrantType>>> grantTypes;
 
-    public Input<List<Either<String,GrantType>>> getGrantTypes() {
+    public Output<List<Either<String,GrantType>>> getGrantTypes() {
         return this.grantTypes;
     }
 
@@ -159,9 +159,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -170,10 +170,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceOwnerPassword")
-      private final @Nullable Input<String> resourceOwnerPassword;
+      private final @Nullable Output<String> resourceOwnerPassword;
 
-    public Input<String> getResourceOwnerPassword() {
-        return this.resourceOwnerPassword == null ? Input.empty() : this.resourceOwnerPassword;
+    public Output<String> getResourceOwnerPassword() {
+        return this.resourceOwnerPassword == null ? Output.empty() : this.resourceOwnerPassword;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceOwnerUsername")
-      private final @Nullable Input<String> resourceOwnerUsername;
+      private final @Nullable Output<String> resourceOwnerUsername;
 
-    public Input<String> getResourceOwnerUsername() {
-        return this.resourceOwnerUsername == null ? Input.empty() : this.resourceOwnerUsername;
+    public Output<String> getResourceOwnerUsername() {
+        return this.resourceOwnerUsername == null ? Output.empty() : this.resourceOwnerUsername;
     }
 
     /**
@@ -192,9 +192,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -203,10 +203,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="supportState")
-      private final @Nullable Input<Boolean> supportState;
+      private final @Nullable Output<Boolean> supportState;
 
-    public Input<Boolean> getSupportState() {
-        return this.supportState == null ? Input.empty() : this.supportState;
+    public Output<Boolean> getSupportState() {
+        return this.supportState == null ? Output.empty() : this.supportState;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenBodyParameters")
-      private final @Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
+      private final @Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
 
-    public Input<List<TokenBodyParameterContractArgs>> getTokenBodyParameters() {
-        return this.tokenBodyParameters == null ? Input.empty() : this.tokenBodyParameters;
+    public Output<List<TokenBodyParameterContractArgs>> getTokenBodyParameters() {
+        return this.tokenBodyParameters == null ? Output.empty() : this.tokenBodyParameters;
     }
 
     /**
@@ -225,32 +225,32 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenEndpoint")
-      private final @Nullable Input<String> tokenEndpoint;
+      private final @Nullable Output<String> tokenEndpoint;
 
-    public Input<String> getTokenEndpoint() {
-        return this.tokenEndpoint == null ? Input.empty() : this.tokenEndpoint;
+    public Output<String> getTokenEndpoint() {
+        return this.tokenEndpoint == null ? Output.empty() : this.tokenEndpoint;
     }
 
     public AuthorizationServerArgs(
-        Input<String> authorizationEndpoint,
-        @Nullable Input<List<AuthorizationMethod>> authorizationMethods,
-        @Nullable Input<String> authsid,
-        @Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods,
-        @Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod,
-        Input<String> clientId,
-        Input<String> clientRegistrationEndpoint,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<String> defaultScope,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        Input<List<Either<String,GrantType>>> grantTypes,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceOwnerPassword,
-        @Nullable Input<String> resourceOwnerUsername,
-        Input<String> serviceName,
-        @Nullable Input<Boolean> supportState,
-        @Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters,
-        @Nullable Input<String> tokenEndpoint) {
+        Output<String> authorizationEndpoint,
+        @Nullable Output<List<AuthorizationMethod>> authorizationMethods,
+        @Nullable Output<String> authsid,
+        @Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods,
+        @Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod,
+        Output<String> clientId,
+        Output<String> clientRegistrationEndpoint,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<String> defaultScope,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        Output<List<Either<String,GrantType>>> grantTypes,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceOwnerPassword,
+        @Nullable Output<String> resourceOwnerUsername,
+        Output<String> serviceName,
+        @Nullable Output<Boolean> supportState,
+        @Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters,
+        @Nullable Output<String> tokenEndpoint) {
         this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
         this.authorizationMethods = authorizationMethods;
         this.authsid = authsid;
@@ -273,25 +273,25 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
     }
 
     private AuthorizationServerArgs() {
-        this.authorizationEndpoint = Input.empty();
-        this.authorizationMethods = Input.empty();
-        this.authsid = Input.empty();
-        this.bearerTokenSendingMethods = Input.empty();
-        this.clientAuthenticationMethod = Input.empty();
-        this.clientId = Input.empty();
-        this.clientRegistrationEndpoint = Input.empty();
-        this.clientSecret = Input.empty();
-        this.defaultScope = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.grantTypes = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceOwnerPassword = Input.empty();
-        this.resourceOwnerUsername = Input.empty();
-        this.serviceName = Input.empty();
-        this.supportState = Input.empty();
-        this.tokenBodyParameters = Input.empty();
-        this.tokenEndpoint = Input.empty();
+        this.authorizationEndpoint = Output.empty();
+        this.authorizationMethods = Output.empty();
+        this.authsid = Output.empty();
+        this.bearerTokenSendingMethods = Output.empty();
+        this.clientAuthenticationMethod = Output.empty();
+        this.clientId = Output.empty();
+        this.clientRegistrationEndpoint = Output.empty();
+        this.clientSecret = Output.empty();
+        this.defaultScope = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.grantTypes = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceOwnerPassword = Output.empty();
+        this.resourceOwnerUsername = Output.empty();
+        this.serviceName = Output.empty();
+        this.supportState = Output.empty();
+        this.tokenBodyParameters = Output.empty();
+        this.tokenEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -303,25 +303,25 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> authorizationEndpoint;
-        private @Nullable Input<List<AuthorizationMethod>> authorizationMethods;
-        private @Nullable Input<String> authsid;
-        private @Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
-        private @Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
-        private Input<String> clientId;
-        private Input<String> clientRegistrationEndpoint;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<String> defaultScope;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private Input<List<Either<String,GrantType>>> grantTypes;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceOwnerPassword;
-        private @Nullable Input<String> resourceOwnerUsername;
-        private Input<String> serviceName;
-        private @Nullable Input<Boolean> supportState;
-        private @Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
-        private @Nullable Input<String> tokenEndpoint;
+        private Output<String> authorizationEndpoint;
+        private @Nullable Output<List<AuthorizationMethod>> authorizationMethods;
+        private @Nullable Output<String> authsid;
+        private @Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
+        private @Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
+        private Output<String> clientId;
+        private Output<String> clientRegistrationEndpoint;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<String> defaultScope;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private Output<List<Either<String,GrantType>>> grantTypes;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceOwnerPassword;
+        private @Nullable Output<String> resourceOwnerUsername;
+        private Output<String> serviceName;
+        private @Nullable Output<Boolean> supportState;
+        private @Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
+        private @Nullable Output<String> tokenEndpoint;
 
         public Builder() {
     	      // Empty
@@ -350,193 +350,193 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
     	      this.tokenEndpoint = defaults.tokenEndpoint;
         }
 
-        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
+            this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder authorizationMethods(@Nullable Input<List<AuthorizationMethod>> authorizationMethods) {
+        public Builder authorizationMethods(@Nullable Output<List<AuthorizationMethod>> authorizationMethods) {
             this.authorizationMethods = authorizationMethods;
             return this;
         }
 
         public Builder authorizationMethods(@Nullable List<AuthorizationMethod> authorizationMethods) {
-            this.authorizationMethods = Input.ofNullable(authorizationMethods);
+            this.authorizationMethods = Output.ofNullable(authorizationMethods);
             return this;
         }
 
-        public Builder authsid(@Nullable Input<String> authsid) {
+        public Builder authsid(@Nullable Output<String> authsid) {
             this.authsid = authsid;
             return this;
         }
 
         public Builder authsid(@Nullable String authsid) {
-            this.authsid = Input.ofNullable(authsid);
+            this.authsid = Output.ofNullable(authsid);
             return this;
         }
 
-        public Builder bearerTokenSendingMethods(@Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods) {
+        public Builder bearerTokenSendingMethods(@Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
         public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethod>> bearerTokenSendingMethods) {
-            this.bearerTokenSendingMethods = Input.ofNullable(bearerTokenSendingMethods);
+            this.bearerTokenSendingMethods = Output.ofNullable(bearerTokenSendingMethods);
             return this;
         }
 
-        public Builder clientAuthenticationMethod(@Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod) {
+        public Builder clientAuthenticationMethod(@Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod) {
             this.clientAuthenticationMethod = clientAuthenticationMethod;
             return this;
         }
 
         public Builder clientAuthenticationMethod(@Nullable List<Either<String,ClientAuthenticationMethod>> clientAuthenticationMethod) {
-            this.clientAuthenticationMethod = Input.ofNullable(clientAuthenticationMethod);
+            this.clientAuthenticationMethod = Output.ofNullable(clientAuthenticationMethod);
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientRegistrationEndpoint(Input<String> clientRegistrationEndpoint) {
+        public Builder clientRegistrationEndpoint(Output<String> clientRegistrationEndpoint) {
             this.clientRegistrationEndpoint = Objects.requireNonNull(clientRegistrationEndpoint);
             return this;
         }
 
         public Builder clientRegistrationEndpoint(String clientRegistrationEndpoint) {
-            this.clientRegistrationEndpoint = Input.of(Objects.requireNonNull(clientRegistrationEndpoint));
+            this.clientRegistrationEndpoint = Output.of(Objects.requireNonNull(clientRegistrationEndpoint));
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder defaultScope(@Nullable Input<String> defaultScope) {
+        public Builder defaultScope(@Nullable Output<String> defaultScope) {
             this.defaultScope = defaultScope;
             return this;
         }
 
         public Builder defaultScope(@Nullable String defaultScope) {
-            this.defaultScope = Input.ofNullable(defaultScope);
+            this.defaultScope = Output.ofNullable(defaultScope);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder grantTypes(Input<List<Either<String,GrantType>>> grantTypes) {
+        public Builder grantTypes(Output<List<Either<String,GrantType>>> grantTypes) {
             this.grantTypes = Objects.requireNonNull(grantTypes);
             return this;
         }
 
         public Builder grantTypes(List<Either<String,GrantType>> grantTypes) {
-            this.grantTypes = Input.of(Objects.requireNonNull(grantTypes));
+            this.grantTypes = Output.of(Objects.requireNonNull(grantTypes));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceOwnerPassword(@Nullable Input<String> resourceOwnerPassword) {
+        public Builder resourceOwnerPassword(@Nullable Output<String> resourceOwnerPassword) {
             this.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
 
         public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
-            this.resourceOwnerPassword = Input.ofNullable(resourceOwnerPassword);
+            this.resourceOwnerPassword = Output.ofNullable(resourceOwnerPassword);
             return this;
         }
 
-        public Builder resourceOwnerUsername(@Nullable Input<String> resourceOwnerUsername) {
+        public Builder resourceOwnerUsername(@Nullable Output<String> resourceOwnerUsername) {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }
 
         public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
-            this.resourceOwnerUsername = Input.ofNullable(resourceOwnerUsername);
+            this.resourceOwnerUsername = Output.ofNullable(resourceOwnerUsername);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder supportState(@Nullable Input<Boolean> supportState) {
+        public Builder supportState(@Nullable Output<Boolean> supportState) {
             this.supportState = supportState;
             return this;
         }
 
         public Builder supportState(@Nullable Boolean supportState) {
-            this.supportState = Input.ofNullable(supportState);
+            this.supportState = Output.ofNullable(supportState);
             return this;
         }
 
-        public Builder tokenBodyParameters(@Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters) {
+        public Builder tokenBodyParameters(@Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters) {
             this.tokenBodyParameters = tokenBodyParameters;
             return this;
         }
 
         public Builder tokenBodyParameters(@Nullable List<TokenBodyParameterContractArgs> tokenBodyParameters) {
-            this.tokenBodyParameters = Input.ofNullable(tokenBodyParameters);
+            this.tokenBodyParameters = Output.ofNullable(tokenBodyParameters);
             return this;
         }
 
-        public Builder tokenEndpoint(@Nullable Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable Output<String> tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
         public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
-            this.tokenEndpoint = Input.ofNullable(tokenEndpoint);
+            this.tokenEndpoint = Output.ofNullable(tokenEndpoint);
             return this;
         }
         public AuthorizationServerArgs build() {

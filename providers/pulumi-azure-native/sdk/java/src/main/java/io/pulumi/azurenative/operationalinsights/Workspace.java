@@ -10,7 +10,6 @@ import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceCappingRespons
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceFeaturesResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceSkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -315,23 +314,23 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:operationalinsights:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:operationalinsights:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Workspace(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Workspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:Workspace", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20151101preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20200301preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20200801:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20201001:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20210601:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20211201preview:Workspace").build())
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20151101preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200301preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200801:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20201001:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20210601:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20211201preview:Workspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -345,7 +344,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Workspace get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }
 }

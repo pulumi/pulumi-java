@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.ContentKeyPolicyFairPlayRentalAndLeaseKeyType;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ask", required=true)
-      private final Input<String> ask;
+      private final Output<String> ask;
 
-    public Input<String> getAsk() {
+    public Output<String> getAsk() {
         return this.ask;
     }
 
@@ -38,9 +38,9 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fairPlayPfx", required=true)
-      private final Input<String> fairPlayPfx;
+      private final Output<String> fairPlayPfx;
 
-    public Input<String> getFairPlayPfx() {
+    public Output<String> getFairPlayPfx() {
         return this.fairPlayPfx;
     }
 
@@ -49,9 +49,9 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fairPlayPfxPassword", required=true)
-      private final Input<String> fairPlayPfxPassword;
+      private final Output<String> fairPlayPfxPassword;
 
-    public Input<String> getFairPlayPfxPassword() {
+    public Output<String> getFairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
     }
 
@@ -61,9 +61,9 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -72,10 +72,10 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="offlineRentalConfiguration")
-      private final @Nullable Input<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
+      private final @Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
 
-    public Input<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> getOfflineRentalConfiguration() {
-        return this.offlineRentalConfiguration == null ? Input.empty() : this.offlineRentalConfiguration;
+    public Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> getOfflineRentalConfiguration() {
+        return this.offlineRentalConfiguration == null ? Output.empty() : this.offlineRentalConfiguration;
     }
 
     /**
@@ -83,9 +83,9 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="rentalAndLeaseKeyType", required=true)
-      private final Input<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType;
+      private final Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType;
 
-    public Input<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> getRentalAndLeaseKeyType() {
+    public Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> getRentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
     }
 
@@ -94,20 +94,20 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="rentalDuration", required=true)
-      private final Input<Double> rentalDuration;
+      private final Output<Double> rentalDuration;
 
-    public Input<Double> getRentalDuration() {
+    public Output<Double> getRentalDuration() {
         return this.rentalDuration;
     }
 
     public ContentKeyPolicyFairPlayConfigurationArgs(
-        Input<String> ask,
-        Input<String> fairPlayPfx,
-        Input<String> fairPlayPfxPassword,
-        Input<String> odataType,
-        @Nullable Input<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration,
-        Input<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType,
-        Input<Double> rentalDuration) {
+        Output<String> ask,
+        Output<String> fairPlayPfx,
+        Output<String> fairPlayPfxPassword,
+        Output<String> odataType,
+        @Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration,
+        Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType,
+        Output<Double> rentalDuration) {
         this.ask = Objects.requireNonNull(ask, "expected parameter 'ask' to be non-null");
         this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx, "expected parameter 'fairPlayPfx' to be non-null");
         this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword, "expected parameter 'fairPlayPfxPassword' to be non-null");
@@ -118,13 +118,13 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     }
 
     private ContentKeyPolicyFairPlayConfigurationArgs() {
-        this.ask = Input.empty();
-        this.fairPlayPfx = Input.empty();
-        this.fairPlayPfxPassword = Input.empty();
-        this.odataType = Input.empty();
-        this.offlineRentalConfiguration = Input.empty();
-        this.rentalAndLeaseKeyType = Input.empty();
-        this.rentalDuration = Input.empty();
+        this.ask = Output.empty();
+        this.fairPlayPfx = Output.empty();
+        this.fairPlayPfxPassword = Output.empty();
+        this.odataType = Output.empty();
+        this.offlineRentalConfiguration = Output.empty();
+        this.rentalAndLeaseKeyType = Output.empty();
+        this.rentalDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> ask;
-        private Input<String> fairPlayPfx;
-        private Input<String> fairPlayPfxPassword;
-        private Input<String> odataType;
-        private @Nullable Input<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
-        private Input<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType;
-        private Input<Double> rentalDuration;
+        private Output<String> ask;
+        private Output<String> fairPlayPfx;
+        private Output<String> fairPlayPfxPassword;
+        private Output<String> odataType;
+        private @Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
+        private Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType;
+        private Output<Double> rentalDuration;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     	      this.rentalDuration = defaults.rentalDuration;
         }
 
-        public Builder ask(Input<String> ask) {
+        public Builder ask(Output<String> ask) {
             this.ask = Objects.requireNonNull(ask);
             return this;
         }
 
         public Builder ask(String ask) {
-            this.ask = Input.of(Objects.requireNonNull(ask));
+            this.ask = Output.of(Objects.requireNonNull(ask));
             return this;
         }
 
-        public Builder fairPlayPfx(Input<String> fairPlayPfx) {
+        public Builder fairPlayPfx(Output<String> fairPlayPfx) {
             this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx);
             return this;
         }
 
         public Builder fairPlayPfx(String fairPlayPfx) {
-            this.fairPlayPfx = Input.of(Objects.requireNonNull(fairPlayPfx));
+            this.fairPlayPfx = Output.of(Objects.requireNonNull(fairPlayPfx));
             return this;
         }
 
-        public Builder fairPlayPfxPassword(Input<String> fairPlayPfxPassword) {
+        public Builder fairPlayPfxPassword(Output<String> fairPlayPfxPassword) {
             this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword);
             return this;
         }
 
         public Builder fairPlayPfxPassword(String fairPlayPfxPassword) {
-            this.fairPlayPfxPassword = Input.of(Objects.requireNonNull(fairPlayPfxPassword));
+            this.fairPlayPfxPassword = Output.of(Objects.requireNonNull(fairPlayPfxPassword));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder offlineRentalConfiguration(@Nullable Input<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration) {
+        public Builder offlineRentalConfiguration(@Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration) {
             this.offlineRentalConfiguration = offlineRentalConfiguration;
             return this;
         }
 
         public Builder offlineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs offlineRentalConfiguration) {
-            this.offlineRentalConfiguration = Input.ofNullable(offlineRentalConfiguration);
+            this.offlineRentalConfiguration = Output.ofNullable(offlineRentalConfiguration);
             return this;
         }
 
-        public Builder rentalAndLeaseKeyType(Input<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType) {
+        public Builder rentalAndLeaseKeyType(Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType) {
             this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType);
             return this;
         }
 
         public Builder rentalAndLeaseKeyType(Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType> rentalAndLeaseKeyType) {
-            this.rentalAndLeaseKeyType = Input.of(Objects.requireNonNull(rentalAndLeaseKeyType));
+            this.rentalAndLeaseKeyType = Output.of(Objects.requireNonNull(rentalAndLeaseKeyType));
             return this;
         }
 
-        public Builder rentalDuration(Input<Double> rentalDuration) {
+        public Builder rentalDuration(Output<Double> rentalDuration) {
             this.rentalDuration = Objects.requireNonNull(rentalDuration);
             return this;
         }
 
         public Builder rentalDuration(Double rentalDuration) {
-            this.rentalDuration = Input.of(Objects.requireNonNull(rentalDuration));
+            this.rentalDuration = Output.of(Objects.requireNonNull(rentalDuration));
             return this;
         }
         public ContentKeyPolicyFairPlayConfigurationArgs build() {

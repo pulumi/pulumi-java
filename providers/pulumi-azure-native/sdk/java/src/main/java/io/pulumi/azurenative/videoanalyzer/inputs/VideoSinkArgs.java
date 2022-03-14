@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoCreationPropertiesArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoPublishingOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,9 +27,9 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs", required=true)
-      private final Input<List<NodeInputArgs>> inputs;
+      private final Output<List<NodeInputArgs>> inputs;
 
-    public Input<List<NodeInputArgs>> getInputs() {
+    public Output<List<NodeInputArgs>> getInputs() {
         return this.inputs;
     }
 
@@ -38,9 +38,9 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -50,9 +50,9 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -61,10 +61,10 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoCreationProperties")
-      private final @Nullable Input<VideoCreationPropertiesArgs> videoCreationProperties;
+      private final @Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties;
 
-    public Input<VideoCreationPropertiesArgs> getVideoCreationProperties() {
-        return this.videoCreationProperties == null ? Input.empty() : this.videoCreationProperties;
+    public Output<VideoCreationPropertiesArgs> getVideoCreationProperties() {
+        return this.videoCreationProperties == null ? Output.empty() : this.videoCreationProperties;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoName", required=true)
-      private final Input<String> videoName;
+      private final Output<String> videoName;
 
-    public Input<String> getVideoName() {
+    public Output<String> getVideoName() {
         return this.videoName;
     }
 
@@ -83,19 +83,19 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoPublishingOptions")
-      private final @Nullable Input<VideoPublishingOptionsArgs> videoPublishingOptions;
+      private final @Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions;
 
-    public Input<VideoPublishingOptionsArgs> getVideoPublishingOptions() {
-        return this.videoPublishingOptions == null ? Input.empty() : this.videoPublishingOptions;
+    public Output<VideoPublishingOptionsArgs> getVideoPublishingOptions() {
+        return this.videoPublishingOptions == null ? Output.empty() : this.videoPublishingOptions;
     }
 
     public VideoSinkArgs(
-        Input<List<NodeInputArgs>> inputs,
-        Input<String> name,
-        Input<String> type,
-        @Nullable Input<VideoCreationPropertiesArgs> videoCreationProperties,
-        Input<String> videoName,
-        @Nullable Input<VideoPublishingOptionsArgs> videoPublishingOptions) {
+        Output<List<NodeInputArgs>> inputs,
+        Output<String> name,
+        Output<String> type,
+        @Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties,
+        Output<String> videoName,
+        @Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions) {
         this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -105,12 +105,12 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoSinkArgs() {
-        this.inputs = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
-        this.videoCreationProperties = Input.empty();
-        this.videoName = Input.empty();
-        this.videoPublishingOptions = Input.empty();
+        this.inputs = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
+        this.videoCreationProperties = Output.empty();
+        this.videoName = Output.empty();
+        this.videoPublishingOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<NodeInputArgs>> inputs;
-        private Input<String> name;
-        private Input<String> type;
-        private @Nullable Input<VideoCreationPropertiesArgs> videoCreationProperties;
-        private Input<String> videoName;
-        private @Nullable Input<VideoPublishingOptionsArgs> videoPublishingOptions;
+        private Output<List<NodeInputArgs>> inputs;
+        private Output<String> name;
+        private Output<String> type;
+        private @Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties;
+        private Output<String> videoName;
+        private @Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.videoPublishingOptions = defaults.videoPublishingOptions;
         }
 
-        public Builder inputs(Input<List<NodeInputArgs>> inputs) {
+        public Builder inputs(Output<List<NodeInputArgs>> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
         public Builder inputs(List<NodeInputArgs> inputs) {
-            this.inputs = Input.of(Objects.requireNonNull(inputs));
+            this.inputs = Output.of(Objects.requireNonNull(inputs));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder videoCreationProperties(@Nullable Input<VideoCreationPropertiesArgs> videoCreationProperties) {
+        public Builder videoCreationProperties(@Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties) {
             this.videoCreationProperties = videoCreationProperties;
             return this;
         }
 
         public Builder videoCreationProperties(@Nullable VideoCreationPropertiesArgs videoCreationProperties) {
-            this.videoCreationProperties = Input.ofNullable(videoCreationProperties);
+            this.videoCreationProperties = Output.ofNullable(videoCreationProperties);
             return this;
         }
 
-        public Builder videoName(Input<String> videoName) {
+        public Builder videoName(Output<String> videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
 
         public Builder videoName(String videoName) {
-            this.videoName = Input.of(Objects.requireNonNull(videoName));
+            this.videoName = Output.of(Objects.requireNonNull(videoName));
             return this;
         }
 
-        public Builder videoPublishingOptions(@Nullable Input<VideoPublishingOptionsArgs> videoPublishingOptions) {
+        public Builder videoPublishingOptions(@Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions) {
             this.videoPublishingOptions = videoPublishingOptions;
             return this;
         }
 
         public Builder videoPublishingOptions(@Nullable VideoPublishingOptionsArgs videoPublishingOptions) {
-            this.videoPublishingOptions = Input.ofNullable(videoPublishingOptions);
+            this.videoPublishingOptions = Output.ofNullable(videoPublishingOptions);
             return this;
         }
         public VideoSinkArgs build() {

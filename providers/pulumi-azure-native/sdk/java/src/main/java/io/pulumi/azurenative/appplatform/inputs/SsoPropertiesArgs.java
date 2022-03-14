@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuerUri")
-      private final @Nullable Input<String> issuerUri;
+      private final @Nullable Output<String> issuerUri;
 
-    public Input<String> getIssuerUri() {
-        return this.issuerUri == null ? Input.empty() : this.issuerUri;
+    public Output<String> getIssuerUri() {
+        return this.issuerUri == null ? Output.empty() : this.issuerUri;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<List<String>> scope;
+      private final @Nullable Output<List<String>> scope;
 
-    public Input<List<String>> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<List<String>> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public SsoPropertiesArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<String> issuerUri,
-        @Nullable Input<List<String>> scope) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<String> issuerUri,
+        @Nullable Output<List<String>> scope) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.issuerUri = issuerUri;
@@ -75,10 +75,10 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SsoPropertiesArgs() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.issuerUri = Input.empty();
-        this.scope = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.issuerUri = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<String> issuerUri;
-        private @Nullable Input<List<String>> scope;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<String> issuerUri;
+        private @Nullable Output<List<String>> scope;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder issuerUri(@Nullable Input<String> issuerUri) {
+        public Builder issuerUri(@Nullable Output<String> issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
 
         public Builder issuerUri(@Nullable String issuerUri) {
-            this.issuerUri = Input.ofNullable(issuerUri);
+            this.issuerUri = Output.ofNullable(issuerUri);
             return this;
         }
 
-        public Builder scope(@Nullable Input<List<String>> scope) {
+        public Builder scope(@Nullable Output<List<String>> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public SsoPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterMasterAuthClientCertificateConfigArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
     public static final ClusterMasterAuthArgs Empty = new ClusterMasterAuthArgs();
 
     @InputImport(name="clientCertificate")
-      private final @Nullable Input<String> clientCertificate;
+      private final @Nullable Output<String> clientCertificate;
 
-    public Input<String> getClientCertificate() {
-        return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
+    public Output<String> getClientCertificate() {
+        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
     }
 
     /**
@@ -27,31 +27,31 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientCertificateConfig", required=true)
-      private final Input<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
+      private final Output<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
 
-    public Input<ClusterMasterAuthClientCertificateConfigArgs> getClientCertificateConfig() {
+    public Output<ClusterMasterAuthClientCertificateConfigArgs> getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }
 
     @InputImport(name="clientKey")
-      private final @Nullable Input<String> clientKey;
+      private final @Nullable Output<String> clientKey;
 
-    public Input<String> getClientKey() {
-        return this.clientKey == null ? Input.empty() : this.clientKey;
+    public Output<String> getClientKey() {
+        return this.clientKey == null ? Output.empty() : this.clientKey;
     }
 
     @InputImport(name="clusterCaCertificate")
-      private final @Nullable Input<String> clusterCaCertificate;
+      private final @Nullable Output<String> clusterCaCertificate;
 
-    public Input<String> getClusterCaCertificate() {
-        return this.clusterCaCertificate == null ? Input.empty() : this.clusterCaCertificate;
+    public Output<String> getClusterCaCertificate() {
+        return this.clusterCaCertificate == null ? Output.empty() : this.clusterCaCertificate;
     }
 
     public ClusterMasterAuthArgs(
-        @Nullable Input<String> clientCertificate,
-        Input<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig,
-        @Nullable Input<String> clientKey,
-        @Nullable Input<String> clusterCaCertificate) {
+        @Nullable Output<String> clientCertificate,
+        Output<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig,
+        @Nullable Output<String> clientKey,
+        @Nullable Output<String> clusterCaCertificate) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig, "expected parameter 'clientCertificateConfig' to be non-null");
         this.clientKey = clientKey;
@@ -59,10 +59,10 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ClusterMasterAuthArgs() {
-        this.clientCertificate = Input.empty();
-        this.clientCertificateConfig = Input.empty();
-        this.clientKey = Input.empty();
-        this.clusterCaCertificate = Input.empty();
+        this.clientCertificate = Output.empty();
+        this.clientCertificateConfig = Output.empty();
+        this.clientKey = Output.empty();
+        this.clusterCaCertificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,10 +74,10 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientCertificate;
-        private Input<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
-        private @Nullable Input<String> clientKey;
-        private @Nullable Input<String> clusterCaCertificate;
+        private @Nullable Output<String> clientCertificate;
+        private Output<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
+        private @Nullable Output<String> clientKey;
+        private @Nullable Output<String> clusterCaCertificate;
 
         public Builder() {
     	      // Empty
@@ -91,43 +91,43 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
     	      this.clusterCaCertificate = defaults.clusterCaCertificate;
         }
 
-        public Builder clientCertificate(@Nullable Input<String> clientCertificate) {
+        public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
         public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Input.ofNullable(clientCertificate);
+            this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
 
-        public Builder clientCertificateConfig(Input<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig) {
+        public Builder clientCertificateConfig(Output<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig) {
             this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
             return this;
         }
 
         public Builder clientCertificateConfig(ClusterMasterAuthClientCertificateConfigArgs clientCertificateConfig) {
-            this.clientCertificateConfig = Input.of(Objects.requireNonNull(clientCertificateConfig));
+            this.clientCertificateConfig = Output.of(Objects.requireNonNull(clientCertificateConfig));
             return this;
         }
 
-        public Builder clientKey(@Nullable Input<String> clientKey) {
+        public Builder clientKey(@Nullable Output<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
         public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Input.ofNullable(clientKey);
+            this.clientKey = Output.ofNullable(clientKey);
             return this;
         }
 
-        public Builder clusterCaCertificate(@Nullable Input<String> clusterCaCertificate) {
+        public Builder clusterCaCertificate(@Nullable Output<String> clusterCaCertificate) {
             this.clusterCaCertificate = clusterCaCertificate;
             return this;
         }
 
         public Builder clusterCaCertificate(@Nullable String clusterCaCertificate) {
-            this.clusterCaCertificate = Input.ofNullable(clusterCaCertificate);
+            this.clusterCaCertificate = Output.ofNullable(clusterCaCertificate);
             return this;
         }
         public ClusterMasterAuthArgs build() {

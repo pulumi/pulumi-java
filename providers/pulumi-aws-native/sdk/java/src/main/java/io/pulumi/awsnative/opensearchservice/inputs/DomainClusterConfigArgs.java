@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.awsnative.opensearchservice.inputs.DomainZoneAwarenessConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -18,86 +18,86 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
     public static final DomainClusterConfigArgs Empty = new DomainClusterConfigArgs();
 
     @InputImport(name="dedicatedMasterCount")
-      private final @Nullable Input<Integer> dedicatedMasterCount;
+      private final @Nullable Output<Integer> dedicatedMasterCount;
 
-    public Input<Integer> getDedicatedMasterCount() {
-        return this.dedicatedMasterCount == null ? Input.empty() : this.dedicatedMasterCount;
+    public Output<Integer> getDedicatedMasterCount() {
+        return this.dedicatedMasterCount == null ? Output.empty() : this.dedicatedMasterCount;
     }
 
     @InputImport(name="dedicatedMasterEnabled")
-      private final @Nullable Input<Boolean> dedicatedMasterEnabled;
+      private final @Nullable Output<Boolean> dedicatedMasterEnabled;
 
-    public Input<Boolean> getDedicatedMasterEnabled() {
-        return this.dedicatedMasterEnabled == null ? Input.empty() : this.dedicatedMasterEnabled;
+    public Output<Boolean> getDedicatedMasterEnabled() {
+        return this.dedicatedMasterEnabled == null ? Output.empty() : this.dedicatedMasterEnabled;
     }
 
     @InputImport(name="dedicatedMasterType")
-      private final @Nullable Input<String> dedicatedMasterType;
+      private final @Nullable Output<String> dedicatedMasterType;
 
-    public Input<String> getDedicatedMasterType() {
-        return this.dedicatedMasterType == null ? Input.empty() : this.dedicatedMasterType;
+    public Output<String> getDedicatedMasterType() {
+        return this.dedicatedMasterType == null ? Output.empty() : this.dedicatedMasterType;
     }
 
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     @InputImport(name="warmCount")
-      private final @Nullable Input<Integer> warmCount;
+      private final @Nullable Output<Integer> warmCount;
 
-    public Input<Integer> getWarmCount() {
-        return this.warmCount == null ? Input.empty() : this.warmCount;
+    public Output<Integer> getWarmCount() {
+        return this.warmCount == null ? Output.empty() : this.warmCount;
     }
 
     @InputImport(name="warmEnabled")
-      private final @Nullable Input<Boolean> warmEnabled;
+      private final @Nullable Output<Boolean> warmEnabled;
 
-    public Input<Boolean> getWarmEnabled() {
-        return this.warmEnabled == null ? Input.empty() : this.warmEnabled;
+    public Output<Boolean> getWarmEnabled() {
+        return this.warmEnabled == null ? Output.empty() : this.warmEnabled;
     }
 
     @InputImport(name="warmType")
-      private final @Nullable Input<String> warmType;
+      private final @Nullable Output<String> warmType;
 
-    public Input<String> getWarmType() {
-        return this.warmType == null ? Input.empty() : this.warmType;
+    public Output<String> getWarmType() {
+        return this.warmType == null ? Output.empty() : this.warmType;
     }
 
     @InputImport(name="zoneAwarenessConfig")
-      private final @Nullable Input<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
+      private final @Nullable Output<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
 
-    public Input<DomainZoneAwarenessConfigArgs> getZoneAwarenessConfig() {
-        return this.zoneAwarenessConfig == null ? Input.empty() : this.zoneAwarenessConfig;
+    public Output<DomainZoneAwarenessConfigArgs> getZoneAwarenessConfig() {
+        return this.zoneAwarenessConfig == null ? Output.empty() : this.zoneAwarenessConfig;
     }
 
     @InputImport(name="zoneAwarenessEnabled")
-      private final @Nullable Input<Boolean> zoneAwarenessEnabled;
+      private final @Nullable Output<Boolean> zoneAwarenessEnabled;
 
-    public Input<Boolean> getZoneAwarenessEnabled() {
-        return this.zoneAwarenessEnabled == null ? Input.empty() : this.zoneAwarenessEnabled;
+    public Output<Boolean> getZoneAwarenessEnabled() {
+        return this.zoneAwarenessEnabled == null ? Output.empty() : this.zoneAwarenessEnabled;
     }
 
     public DomainClusterConfigArgs(
-        @Nullable Input<Integer> dedicatedMasterCount,
-        @Nullable Input<Boolean> dedicatedMasterEnabled,
-        @Nullable Input<String> dedicatedMasterType,
-        @Nullable Input<Integer> instanceCount,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<Integer> warmCount,
-        @Nullable Input<Boolean> warmEnabled,
-        @Nullable Input<String> warmType,
-        @Nullable Input<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig,
-        @Nullable Input<Boolean> zoneAwarenessEnabled) {
+        @Nullable Output<Integer> dedicatedMasterCount,
+        @Nullable Output<Boolean> dedicatedMasterEnabled,
+        @Nullable Output<String> dedicatedMasterType,
+        @Nullable Output<Integer> instanceCount,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<Integer> warmCount,
+        @Nullable Output<Boolean> warmEnabled,
+        @Nullable Output<String> warmType,
+        @Nullable Output<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig,
+        @Nullable Output<Boolean> zoneAwarenessEnabled) {
         this.dedicatedMasterCount = dedicatedMasterCount;
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         this.dedicatedMasterType = dedicatedMasterType;
@@ -111,16 +111,16 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private DomainClusterConfigArgs() {
-        this.dedicatedMasterCount = Input.empty();
-        this.dedicatedMasterEnabled = Input.empty();
-        this.dedicatedMasterType = Input.empty();
-        this.instanceCount = Input.empty();
-        this.instanceType = Input.empty();
-        this.warmCount = Input.empty();
-        this.warmEnabled = Input.empty();
-        this.warmType = Input.empty();
-        this.zoneAwarenessConfig = Input.empty();
-        this.zoneAwarenessEnabled = Input.empty();
+        this.dedicatedMasterCount = Output.empty();
+        this.dedicatedMasterEnabled = Output.empty();
+        this.dedicatedMasterType = Output.empty();
+        this.instanceCount = Output.empty();
+        this.instanceType = Output.empty();
+        this.warmCount = Output.empty();
+        this.warmEnabled = Output.empty();
+        this.warmType = Output.empty();
+        this.zoneAwarenessConfig = Output.empty();
+        this.zoneAwarenessEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,16 +132,16 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> dedicatedMasterCount;
-        private @Nullable Input<Boolean> dedicatedMasterEnabled;
-        private @Nullable Input<String> dedicatedMasterType;
-        private @Nullable Input<Integer> instanceCount;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<Integer> warmCount;
-        private @Nullable Input<Boolean> warmEnabled;
-        private @Nullable Input<String> warmType;
-        private @Nullable Input<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
-        private @Nullable Input<Boolean> zoneAwarenessEnabled;
+        private @Nullable Output<Integer> dedicatedMasterCount;
+        private @Nullable Output<Boolean> dedicatedMasterEnabled;
+        private @Nullable Output<String> dedicatedMasterType;
+        private @Nullable Output<Integer> instanceCount;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<Integer> warmCount;
+        private @Nullable Output<Boolean> warmEnabled;
+        private @Nullable Output<String> warmType;
+        private @Nullable Output<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
+        private @Nullable Output<Boolean> zoneAwarenessEnabled;
 
         public Builder() {
     	      // Empty
@@ -161,103 +161,103 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
     	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
         }
 
-        public Builder dedicatedMasterCount(@Nullable Input<Integer> dedicatedMasterCount) {
+        public Builder dedicatedMasterCount(@Nullable Output<Integer> dedicatedMasterCount) {
             this.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
 
         public Builder dedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
-            this.dedicatedMasterCount = Input.ofNullable(dedicatedMasterCount);
+            this.dedicatedMasterCount = Output.ofNullable(dedicatedMasterCount);
             return this;
         }
 
-        public Builder dedicatedMasterEnabled(@Nullable Input<Boolean> dedicatedMasterEnabled) {
+        public Builder dedicatedMasterEnabled(@Nullable Output<Boolean> dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
 
         public Builder dedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
-            this.dedicatedMasterEnabled = Input.ofNullable(dedicatedMasterEnabled);
+            this.dedicatedMasterEnabled = Output.ofNullable(dedicatedMasterEnabled);
             return this;
         }
 
-        public Builder dedicatedMasterType(@Nullable Input<String> dedicatedMasterType) {
+        public Builder dedicatedMasterType(@Nullable Output<String> dedicatedMasterType) {
             this.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
 
         public Builder dedicatedMasterType(@Nullable String dedicatedMasterType) {
-            this.dedicatedMasterType = Input.ofNullable(dedicatedMasterType);
+            this.dedicatedMasterType = Output.ofNullable(dedicatedMasterType);
             return this;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder warmCount(@Nullable Input<Integer> warmCount) {
+        public Builder warmCount(@Nullable Output<Integer> warmCount) {
             this.warmCount = warmCount;
             return this;
         }
 
         public Builder warmCount(@Nullable Integer warmCount) {
-            this.warmCount = Input.ofNullable(warmCount);
+            this.warmCount = Output.ofNullable(warmCount);
             return this;
         }
 
-        public Builder warmEnabled(@Nullable Input<Boolean> warmEnabled) {
+        public Builder warmEnabled(@Nullable Output<Boolean> warmEnabled) {
             this.warmEnabled = warmEnabled;
             return this;
         }
 
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
-            this.warmEnabled = Input.ofNullable(warmEnabled);
+            this.warmEnabled = Output.ofNullable(warmEnabled);
             return this;
         }
 
-        public Builder warmType(@Nullable Input<String> warmType) {
+        public Builder warmType(@Nullable Output<String> warmType) {
             this.warmType = warmType;
             return this;
         }
 
         public Builder warmType(@Nullable String warmType) {
-            this.warmType = Input.ofNullable(warmType);
+            this.warmType = Output.ofNullable(warmType);
             return this;
         }
 
-        public Builder zoneAwarenessConfig(@Nullable Input<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig) {
+        public Builder zoneAwarenessConfig(@Nullable Output<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig) {
             this.zoneAwarenessConfig = zoneAwarenessConfig;
             return this;
         }
 
         public Builder zoneAwarenessConfig(@Nullable DomainZoneAwarenessConfigArgs zoneAwarenessConfig) {
-            this.zoneAwarenessConfig = Input.ofNullable(zoneAwarenessConfig);
+            this.zoneAwarenessConfig = Output.ofNullable(zoneAwarenessConfig);
             return this;
         }
 
-        public Builder zoneAwarenessEnabled(@Nullable Input<Boolean> zoneAwarenessEnabled) {
+        public Builder zoneAwarenessEnabled(@Nullable Output<Boolean> zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }
 
         public Builder zoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
-            this.zoneAwarenessEnabled = Input.ofNullable(zoneAwarenessEnabled);
+            this.zoneAwarenessEnabled = Output.ofNullable(zoneAwarenessEnabled);
             return this;
         }
         public DomainClusterConfigArgs build() {

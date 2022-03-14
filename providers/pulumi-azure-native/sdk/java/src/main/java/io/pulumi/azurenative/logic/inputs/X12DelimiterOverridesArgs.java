@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-      private final Input<Integer> componentSeparator;
+      private final Output<Integer> componentSeparator;
 
-    public Input<Integer> getComponentSeparator() {
+    public Output<Integer> getComponentSeparator() {
         return this.componentSeparator;
     }
 
@@ -37,9 +37,9 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-      private final Input<Integer> dataElementSeparator;
+      private final Output<Integer> dataElementSeparator;
 
-    public Input<Integer> getDataElementSeparator() {
+    public Output<Integer> getDataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -48,10 +48,10 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="messageId")
-      private final @Nullable Input<String> messageId;
+      private final @Nullable Output<String> messageId;
 
-    public Input<String> getMessageId() {
-        return this.messageId == null ? Input.empty() : this.messageId;
+    public Output<String> getMessageId() {
+        return this.messageId == null ? Output.empty() : this.messageId;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protocolVersion")
-      private final @Nullable Input<String> protocolVersion;
+      private final @Nullable Output<String> protocolVersion;
 
-    public Input<String> getProtocolVersion() {
-        return this.protocolVersion == null ? Input.empty() : this.protocolVersion;
+    public Output<String> getProtocolVersion() {
+        return this.protocolVersion == null ? Output.empty() : this.protocolVersion;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="replaceCharacter", required=true)
-      private final Input<Integer> replaceCharacter;
+      private final Output<Integer> replaceCharacter;
 
-    public Input<Integer> getReplaceCharacter() {
+    public Output<Integer> getReplaceCharacter() {
         return this.replaceCharacter;
     }
 
@@ -81,9 +81,9 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="replaceSeparatorsInPayload", required=true)
-      private final Input<Boolean> replaceSeparatorsInPayload;
+      private final Output<Boolean> replaceSeparatorsInPayload;
 
-    public Input<Boolean> getReplaceSeparatorsInPayload() {
+    public Output<Boolean> getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
 
@@ -92,9 +92,9 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-      private final Input<Integer> segmentTerminator;
+      private final Output<Integer> segmentTerminator;
 
-    public Input<Integer> getSegmentTerminator() {
+    public Output<Integer> getSegmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -103,9 +103,9 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-      private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+      private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Input<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -114,22 +114,22 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetNamespace")
-      private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Output<String> targetNamespace;
 
-    public Input<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Input.empty() : this.targetNamespace;
+    public Output<String> getTargetNamespace() {
+        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
     }
 
     public X12DelimiterOverridesArgs(
-        Input<Integer> componentSeparator,
-        Input<Integer> dataElementSeparator,
-        @Nullable Input<String> messageId,
-        @Nullable Input<String> protocolVersion,
-        Input<Integer> replaceCharacter,
-        Input<Boolean> replaceSeparatorsInPayload,
-        Input<Integer> segmentTerminator,
-        Input<SegmentTerminatorSuffix> segmentTerminatorSuffix,
-        @Nullable Input<String> targetNamespace) {
+        Output<Integer> componentSeparator,
+        Output<Integer> dataElementSeparator,
+        @Nullable Output<String> messageId,
+        @Nullable Output<String> protocolVersion,
+        Output<Integer> replaceCharacter,
+        Output<Boolean> replaceSeparatorsInPayload,
+        Output<Integer> segmentTerminator,
+        Output<SegmentTerminatorSuffix> segmentTerminatorSuffix,
+        @Nullable Output<String> targetNamespace) {
         this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
         this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
         this.messageId = messageId;
@@ -142,15 +142,15 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     }
 
     private X12DelimiterOverridesArgs() {
-        this.componentSeparator = Input.empty();
-        this.dataElementSeparator = Input.empty();
-        this.messageId = Input.empty();
-        this.protocolVersion = Input.empty();
-        this.replaceCharacter = Input.empty();
-        this.replaceSeparatorsInPayload = Input.empty();
-        this.segmentTerminator = Input.empty();
-        this.segmentTerminatorSuffix = Input.empty();
-        this.targetNamespace = Input.empty();
+        this.componentSeparator = Output.empty();
+        this.dataElementSeparator = Output.empty();
+        this.messageId = Output.empty();
+        this.protocolVersion = Output.empty();
+        this.replaceCharacter = Output.empty();
+        this.replaceSeparatorsInPayload = Output.empty();
+        this.segmentTerminator = Output.empty();
+        this.segmentTerminatorSuffix = Output.empty();
+        this.targetNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Integer> componentSeparator;
-        private Input<Integer> dataElementSeparator;
-        private @Nullable Input<String> messageId;
-        private @Nullable Input<String> protocolVersion;
-        private Input<Integer> replaceCharacter;
-        private Input<Boolean> replaceSeparatorsInPayload;
-        private Input<Integer> segmentTerminator;
-        private Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
-        private @Nullable Input<String> targetNamespace;
+        private Output<Integer> componentSeparator;
+        private Output<Integer> dataElementSeparator;
+        private @Nullable Output<String> messageId;
+        private @Nullable Output<String> protocolVersion;
+        private Output<Integer> replaceCharacter;
+        private Output<Boolean> replaceSeparatorsInPayload;
+        private Output<Integer> segmentTerminator;
+        private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+        private @Nullable Output<String> targetNamespace;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder componentSeparator(Input<Integer> componentSeparator) {
+        public Builder componentSeparator(Output<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Input.of(Objects.requireNonNull(componentSeparator));
+            this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
 
-        public Builder dataElementSeparator(Input<Integer> dataElementSeparator) {
+        public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Input.of(Objects.requireNonNull(dataElementSeparator));
+            this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
 
-        public Builder messageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Input.ofNullable(messageId);
+            this.messageId = Output.ofNullable(messageId);
             return this;
         }
 
-        public Builder protocolVersion(@Nullable Input<String> protocolVersion) {
+        public Builder protocolVersion(@Nullable Output<String> protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
 
         public Builder protocolVersion(@Nullable String protocolVersion) {
-            this.protocolVersion = Input.ofNullable(protocolVersion);
+            this.protocolVersion = Output.ofNullable(protocolVersion);
             return this;
         }
 
-        public Builder replaceCharacter(Input<Integer> replaceCharacter) {
+        public Builder replaceCharacter(Output<Integer> replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
 
         public Builder replaceCharacter(Integer replaceCharacter) {
-            this.replaceCharacter = Input.of(Objects.requireNonNull(replaceCharacter));
+            this.replaceCharacter = Output.of(Objects.requireNonNull(replaceCharacter));
             return this;
         }
 
-        public Builder replaceSeparatorsInPayload(Input<Boolean> replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Output<Boolean> replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
 
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
-            this.replaceSeparatorsInPayload = Input.of(Objects.requireNonNull(replaceSeparatorsInPayload));
+            this.replaceSeparatorsInPayload = Output.of(Objects.requireNonNull(replaceSeparatorsInPayload));
             return this;
         }
 
-        public Builder segmentTerminator(Input<Integer> segmentTerminator) {
+        public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Input.of(Objects.requireNonNull(segmentTerminator));
+            this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
 
-        public Builder segmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
+            this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
 
-        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Input.ofNullable(targetNamespace);
+            this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
         }
         public X12DelimiterOverridesArgs build() {

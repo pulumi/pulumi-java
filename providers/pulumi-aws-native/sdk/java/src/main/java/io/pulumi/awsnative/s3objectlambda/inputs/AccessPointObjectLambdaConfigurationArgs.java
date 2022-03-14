@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
 import io.pulumi.awsnative.s3objectlambda.inputs.AccessPointTransformationConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,38 +22,38 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
     public static final AccessPointObjectLambdaConfigurationArgs Empty = new AccessPointObjectLambdaConfigurationArgs();
 
     @InputImport(name="allowedFeatures")
-      private final @Nullable Input<List<String>> allowedFeatures;
+      private final @Nullable Output<List<String>> allowedFeatures;
 
-    public Input<List<String>> getAllowedFeatures() {
-        return this.allowedFeatures == null ? Input.empty() : this.allowedFeatures;
+    public Output<List<String>> getAllowedFeatures() {
+        return this.allowedFeatures == null ? Output.empty() : this.allowedFeatures;
     }
 
     @InputImport(name="cloudWatchMetricsEnabled")
-      private final @Nullable Input<Boolean> cloudWatchMetricsEnabled;
+      private final @Nullable Output<Boolean> cloudWatchMetricsEnabled;
 
-    public Input<Boolean> getCloudWatchMetricsEnabled() {
-        return this.cloudWatchMetricsEnabled == null ? Input.empty() : this.cloudWatchMetricsEnabled;
+    public Output<Boolean> getCloudWatchMetricsEnabled() {
+        return this.cloudWatchMetricsEnabled == null ? Output.empty() : this.cloudWatchMetricsEnabled;
     }
 
     @InputImport(name="supportingAccessPoint", required=true)
-      private final Input<String> supportingAccessPoint;
+      private final Output<String> supportingAccessPoint;
 
-    public Input<String> getSupportingAccessPoint() {
+    public Output<String> getSupportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
     @InputImport(name="transformationConfigurations", required=true)
-      private final Input<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations;
+      private final Output<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations;
 
-    public Input<List<AccessPointTransformationConfigurationArgs>> getTransformationConfigurations() {
+    public Output<List<AccessPointTransformationConfigurationArgs>> getTransformationConfigurations() {
         return this.transformationConfigurations;
     }
 
     public AccessPointObjectLambdaConfigurationArgs(
-        @Nullable Input<List<String>> allowedFeatures,
-        @Nullable Input<Boolean> cloudWatchMetricsEnabled,
-        Input<String> supportingAccessPoint,
-        Input<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations) {
+        @Nullable Output<List<String>> allowedFeatures,
+        @Nullable Output<Boolean> cloudWatchMetricsEnabled,
+        Output<String> supportingAccessPoint,
+        Output<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations) {
         this.allowedFeatures = allowedFeatures;
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint, "expected parameter 'supportingAccessPoint' to be non-null");
@@ -61,10 +61,10 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
     }
 
     private AccessPointObjectLambdaConfigurationArgs() {
-        this.allowedFeatures = Input.empty();
-        this.cloudWatchMetricsEnabled = Input.empty();
-        this.supportingAccessPoint = Input.empty();
-        this.transformationConfigurations = Input.empty();
+        this.allowedFeatures = Output.empty();
+        this.cloudWatchMetricsEnabled = Output.empty();
+        this.supportingAccessPoint = Output.empty();
+        this.transformationConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,10 +76,10 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedFeatures;
-        private @Nullable Input<Boolean> cloudWatchMetricsEnabled;
-        private Input<String> supportingAccessPoint;
-        private Input<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations;
+        private @Nullable Output<List<String>> allowedFeatures;
+        private @Nullable Output<Boolean> cloudWatchMetricsEnabled;
+        private Output<String> supportingAccessPoint;
+        private Output<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations;
 
         public Builder() {
     	      // Empty
@@ -93,43 +93,43 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
     	      this.transformationConfigurations = defaults.transformationConfigurations;
         }
 
-        public Builder allowedFeatures(@Nullable Input<List<String>> allowedFeatures) {
+        public Builder allowedFeatures(@Nullable Output<List<String>> allowedFeatures) {
             this.allowedFeatures = allowedFeatures;
             return this;
         }
 
         public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
-            this.allowedFeatures = Input.ofNullable(allowedFeatures);
+            this.allowedFeatures = Output.ofNullable(allowedFeatures);
             return this;
         }
 
-        public Builder cloudWatchMetricsEnabled(@Nullable Input<Boolean> cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(@Nullable Output<Boolean> cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
 
         public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = Input.ofNullable(cloudWatchMetricsEnabled);
+            this.cloudWatchMetricsEnabled = Output.ofNullable(cloudWatchMetricsEnabled);
             return this;
         }
 
-        public Builder supportingAccessPoint(Input<String> supportingAccessPoint) {
+        public Builder supportingAccessPoint(Output<String> supportingAccessPoint) {
             this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
             return this;
         }
 
         public Builder supportingAccessPoint(String supportingAccessPoint) {
-            this.supportingAccessPoint = Input.of(Objects.requireNonNull(supportingAccessPoint));
+            this.supportingAccessPoint = Output.of(Objects.requireNonNull(supportingAccessPoint));
             return this;
         }
 
-        public Builder transformationConfigurations(Input<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations) {
+        public Builder transformationConfigurations(Output<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations) {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
 
         public Builder transformationConfigurations(List<AccessPointTransformationConfigurationArgs> transformationConfigurations) {
-            this.transformationConfigurations = Input.of(Objects.requireNonNull(transformationConfigurations));
+            this.transformationConfigurations = Output.of(Objects.requireNonNull(transformationConfigurations));
             return this;
         }
         public AccessPointObjectLambdaConfigurationArgs build() {

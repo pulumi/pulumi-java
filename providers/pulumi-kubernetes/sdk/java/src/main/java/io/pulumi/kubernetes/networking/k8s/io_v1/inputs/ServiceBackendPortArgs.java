@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="number")
-      private final @Nullable Input<Integer> number;
+      private final @Nullable Output<Integer> number;
 
-    public Input<Integer> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Integer> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
     public ServiceBackendPortArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> number) {
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> number) {
         this.name = name;
         this.number = number;
     }
 
     private ServiceBackendPortArgs() {
-        this.name = Input.empty();
-        this.number = Input.empty();
+        this.name = Output.empty();
+        this.number = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> number;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> number;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
     	      this.number = defaults.number;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder number(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Integer number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
         public ServiceBackendPortArgs build() {

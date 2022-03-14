@@ -6,7 +6,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 import io.pulumi.aws.apigatewayv2.inputs.StageAccessLogSettingsGetArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageDefaultRouteSettingsGetArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageRouteSettingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogSettings")
-      private final @Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings;
+      private final @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
 
-    public Input<StageAccessLogSettingsGetArgs> getAccessLogSettings() {
-        return this.accessLogSettings == null ? Input.empty() : this.accessLogSettings;
+    public Output<StageAccessLogSettingsGetArgs> getAccessLogSettings() {
+        return this.accessLogSettings == null ? Output.empty() : this.accessLogSettings;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeploy")
-      private final @Nullable Input<Boolean> autoDeploy;
+      private final @Nullable Output<Boolean> autoDeploy;
 
-    public Input<Boolean> getAutoDeploy() {
-        return this.autoDeploy == null ? Input.empty() : this.autoDeploy;
+    public Output<Boolean> getAutoDeploy() {
+        return this.autoDeploy == null ? Output.empty() : this.autoDeploy;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateId")
-      private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Output<String> clientCertificateId;
 
-    public Input<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
+    public Output<String> getClientCertificateId() {
+        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteSettings")
-      private final @Nullable Input<StageDefaultRouteSettingsGetArgs> defaultRouteSettings;
+      private final @Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings;
 
-    public Input<StageDefaultRouteSettingsGetArgs> getDefaultRouteSettings() {
-        return this.defaultRouteSettings == null ? Input.empty() : this.defaultRouteSettings;
+    public Output<StageDefaultRouteSettingsGetArgs> getDefaultRouteSettings() {
+        return this.defaultRouteSettings == null ? Output.empty() : this.defaultRouteSettings;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentId")
-      private final @Nullable Input<String> deploymentId;
+      private final @Nullable Output<String> deploymentId;
 
-    public Input<String> getDeploymentId() {
-        return this.deploymentId == null ? Input.empty() : this.deploymentId;
+    public Output<String> getDeploymentId() {
+        return this.deploymentId == null ? Output.empty() : this.deploymentId;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionArn")
-      private final @Nullable Input<String> executionArn;
+      private final @Nullable Output<String> executionArn;
 
-    public Input<String> getExecutionArn() {
-        return this.executionArn == null ? Input.empty() : this.executionArn;
+    public Output<String> getExecutionArn() {
+        return this.executionArn == null ? Output.empty() : this.executionArn;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invokeUrl")
-      private final @Nullable Input<String> invokeUrl;
+      private final @Nullable Output<String> invokeUrl;
 
-    public Input<String> getInvokeUrl() {
-        return this.invokeUrl == null ? Input.empty() : this.invokeUrl;
+    public Output<String> getInvokeUrl() {
+        return this.invokeUrl == null ? Output.empty() : this.invokeUrl;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeSettings")
-      private final @Nullable Input<List<StageRouteSettingGetArgs>> routeSettings;
+      private final @Nullable Output<List<StageRouteSettingGetArgs>> routeSettings;
 
-    public Input<List<StageRouteSettingGetArgs>> getRouteSettings() {
-        return this.routeSettings == null ? Input.empty() : this.routeSettings;
+    public Output<List<StageRouteSettingGetArgs>> getRouteSettings() {
+        return this.routeSettings == null ? Output.empty() : this.routeSettings;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageVariables")
-      private final @Nullable Input<Map<String,String>> stageVariables;
+      private final @Nullable Output<Map<String,String>> stageVariables;
 
-    public Input<Map<String,String>> getStageVariables() {
-        return this.stageVariables == null ? Input.empty() : this.stageVariables;
+    public Output<Map<String,String>> getStageVariables() {
+        return this.stageVariables == null ? Output.empty() : this.stageVariables;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -184,28 +184,28 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public StageState(
-        @Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings,
-        @Nullable Input<String> apiId,
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> autoDeploy,
-        @Nullable Input<String> clientCertificateId,
-        @Nullable Input<StageDefaultRouteSettingsGetArgs> defaultRouteSettings,
-        @Nullable Input<String> deploymentId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> executionArn,
-        @Nullable Input<String> invokeUrl,
-        @Nullable Input<String> name,
-        @Nullable Input<List<StageRouteSettingGetArgs>> routeSettings,
-        @Nullable Input<Map<String,String>> stageVariables,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings,
+        @Nullable Output<String> apiId,
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> autoDeploy,
+        @Nullable Output<String> clientCertificateId,
+        @Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings,
+        @Nullable Output<String> deploymentId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> executionArn,
+        @Nullable Output<String> invokeUrl,
+        @Nullable Output<String> name,
+        @Nullable Output<List<StageRouteSettingGetArgs>> routeSettings,
+        @Nullable Output<Map<String,String>> stageVariables,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.accessLogSettings = accessLogSettings;
         this.apiId = apiId;
         this.arn = arn;
@@ -224,21 +224,21 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StageState() {
-        this.accessLogSettings = Input.empty();
-        this.apiId = Input.empty();
-        this.arn = Input.empty();
-        this.autoDeploy = Input.empty();
-        this.clientCertificateId = Input.empty();
-        this.defaultRouteSettings = Input.empty();
-        this.deploymentId = Input.empty();
-        this.description = Input.empty();
-        this.executionArn = Input.empty();
-        this.invokeUrl = Input.empty();
-        this.name = Input.empty();
-        this.routeSettings = Input.empty();
-        this.stageVariables = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.accessLogSettings = Output.empty();
+        this.apiId = Output.empty();
+        this.arn = Output.empty();
+        this.autoDeploy = Output.empty();
+        this.clientCertificateId = Output.empty();
+        this.defaultRouteSettings = Output.empty();
+        this.deploymentId = Output.empty();
+        this.description = Output.empty();
+        this.executionArn = Output.empty();
+        this.invokeUrl = Output.empty();
+        this.name = Output.empty();
+        this.routeSettings = Output.empty();
+        this.stageVariables = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -250,21 +250,21 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings;
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> autoDeploy;
-        private @Nullable Input<String> clientCertificateId;
-        private @Nullable Input<StageDefaultRouteSettingsGetArgs> defaultRouteSettings;
-        private @Nullable Input<String> deploymentId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> executionArn;
-        private @Nullable Input<String> invokeUrl;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<StageRouteSettingGetArgs>> routeSettings;
-        private @Nullable Input<Map<String,String>> stageVariables;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> autoDeploy;
+        private @Nullable Output<String> clientCertificateId;
+        private @Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings;
+        private @Nullable Output<String> deploymentId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> executionArn;
+        private @Nullable Output<String> invokeUrl;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<StageRouteSettingGetArgs>> routeSettings;
+        private @Nullable Output<Map<String,String>> stageVariables;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -289,153 +289,153 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder accessLogSettings(@Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings) {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
 
         public Builder accessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
-            this.accessLogSettings = Input.ofNullable(accessLogSettings);
+            this.accessLogSettings = Output.ofNullable(accessLogSettings);
             return this;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoDeploy(@Nullable Input<Boolean> autoDeploy) {
+        public Builder autoDeploy(@Nullable Output<Boolean> autoDeploy) {
             this.autoDeploy = autoDeploy;
             return this;
         }
 
         public Builder autoDeploy(@Nullable Boolean autoDeploy) {
-            this.autoDeploy = Input.ofNullable(autoDeploy);
+            this.autoDeploy = Output.ofNullable(autoDeploy);
             return this;
         }
 
-        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Input.ofNullable(clientCertificateId);
+            this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder defaultRouteSettings(@Nullable Input<StageDefaultRouteSettingsGetArgs> defaultRouteSettings) {
+        public Builder defaultRouteSettings(@Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings) {
             this.defaultRouteSettings = defaultRouteSettings;
             return this;
         }
 
         public Builder defaultRouteSettings(@Nullable StageDefaultRouteSettingsGetArgs defaultRouteSettings) {
-            this.defaultRouteSettings = Input.ofNullable(defaultRouteSettings);
+            this.defaultRouteSettings = Output.ofNullable(defaultRouteSettings);
             return this;
         }
 
-        public Builder deploymentId(@Nullable Input<String> deploymentId) {
+        public Builder deploymentId(@Nullable Output<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
         public Builder deploymentId(@Nullable String deploymentId) {
-            this.deploymentId = Input.ofNullable(deploymentId);
+            this.deploymentId = Output.ofNullable(deploymentId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder executionArn(@Nullable Input<String> executionArn) {
+        public Builder executionArn(@Nullable Output<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
 
         public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Input.ofNullable(executionArn);
+            this.executionArn = Output.ofNullable(executionArn);
             return this;
         }
 
-        public Builder invokeUrl(@Nullable Input<String> invokeUrl) {
+        public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
             this.invokeUrl = invokeUrl;
             return this;
         }
 
         public Builder invokeUrl(@Nullable String invokeUrl) {
-            this.invokeUrl = Input.ofNullable(invokeUrl);
+            this.invokeUrl = Output.ofNullable(invokeUrl);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder routeSettings(@Nullable Input<List<StageRouteSettingGetArgs>> routeSettings) {
+        public Builder routeSettings(@Nullable Output<List<StageRouteSettingGetArgs>> routeSettings) {
             this.routeSettings = routeSettings;
             return this;
         }
 
         public Builder routeSettings(@Nullable List<StageRouteSettingGetArgs> routeSettings) {
-            this.routeSettings = Input.ofNullable(routeSettings);
+            this.routeSettings = Output.ofNullable(routeSettings);
             return this;
         }
 
-        public Builder stageVariables(@Nullable Input<Map<String,String>> stageVariables) {
+        public Builder stageVariables(@Nullable Output<Map<String,String>> stageVariables) {
             this.stageVariables = stageVariables;
             return this;
         }
 
         public Builder stageVariables(@Nullable Map<String,String> stageVariables) {
-            this.stageVariables = Input.ofNullable(stageVariables);
+            this.stageVariables = Output.ofNullable(stageVariables);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public StageState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -34,22 +34,22 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time", required=true)
-      private final Input<String> time;
+      private final Output<String> time;
 
-    public Input<String> getTime() {
+    public Output<String> getTime() {
         return this.time;
     }
 
     public UtcClipTimeArgs(
-        Input<String> odataType,
-        Input<String> time) {
+        Output<String> odataType,
+        Output<String> time) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
     }
 
     private UtcClipTimeArgs() {
-        this.odataType = Input.empty();
-        this.time = Input.empty();
+        this.odataType = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private Input<String> time;
+        private Output<String> odataType;
+        private Output<String> time;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.time = defaults.time;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder time(Input<String> time) {
+        public Builder time(Output<String> time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }
 
         public Builder time(String time) {
-            this.time = Input.of(Objects.requireNonNull(time));
+            this.time = Output.of(Objects.requireNonNull(time));
             return this;
         }
         public UtcClipTimeArgs build() {

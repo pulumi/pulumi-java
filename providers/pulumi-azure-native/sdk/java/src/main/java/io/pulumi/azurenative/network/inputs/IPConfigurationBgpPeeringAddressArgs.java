@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customBgpIpAddresses")
-      private final @Nullable Input<List<String>> customBgpIpAddresses;
+      private final @Nullable Output<List<String>> customBgpIpAddresses;
 
-    public Input<List<String>> getCustomBgpIpAddresses() {
-        return this.customBgpIpAddresses == null ? Input.empty() : this.customBgpIpAddresses;
+    public Output<List<String>> getCustomBgpIpAddresses() {
+        return this.customBgpIpAddresses == null ? Output.empty() : this.customBgpIpAddresses;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipconfigurationId")
-      private final @Nullable Input<String> ipconfigurationId;
+      private final @Nullable Output<String> ipconfigurationId;
 
-    public Input<String> getIpconfigurationId() {
-        return this.ipconfigurationId == null ? Input.empty() : this.ipconfigurationId;
+    public Output<String> getIpconfigurationId() {
+        return this.ipconfigurationId == null ? Output.empty() : this.ipconfigurationId;
     }
 
     public IPConfigurationBgpPeeringAddressArgs(
-        @Nullable Input<List<String>> customBgpIpAddresses,
-        @Nullable Input<String> ipconfigurationId) {
+        @Nullable Output<List<String>> customBgpIpAddresses,
+        @Nullable Output<String> ipconfigurationId) {
         this.customBgpIpAddresses = customBgpIpAddresses;
         this.ipconfigurationId = ipconfigurationId;
     }
 
     private IPConfigurationBgpPeeringAddressArgs() {
-        this.customBgpIpAddresses = Input.empty();
-        this.ipconfigurationId = Input.empty();
+        this.customBgpIpAddresses = Output.empty();
+        this.ipconfigurationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> customBgpIpAddresses;
-        private @Nullable Input<String> ipconfigurationId;
+        private @Nullable Output<List<String>> customBgpIpAddresses;
+        private @Nullable Output<String> ipconfigurationId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
     	      this.ipconfigurationId = defaults.ipconfigurationId;
         }
 
-        public Builder customBgpIpAddresses(@Nullable Input<List<String>> customBgpIpAddresses) {
+        public Builder customBgpIpAddresses(@Nullable Output<List<String>> customBgpIpAddresses) {
             this.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
 
         public Builder customBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
-            this.customBgpIpAddresses = Input.ofNullable(customBgpIpAddresses);
+            this.customBgpIpAddresses = Output.ofNullable(customBgpIpAddresses);
             return this;
         }
 
-        public Builder ipconfigurationId(@Nullable Input<String> ipconfigurationId) {
+        public Builder ipconfigurationId(@Nullable Output<String> ipconfigurationId) {
             this.ipconfigurationId = ipconfigurationId;
             return this;
         }
 
         public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
-            this.ipconfigurationId = Input.ofNullable(ipconfigurationId);
+            this.ipconfigurationId = Output.ofNullable(ipconfigurationId);
             return this;
         }
         public IPConfigurationBgpPeeringAddressArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoScaleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bitrateKbps")
-      private final @Nullable Input<String> bitrateKbps;
+      private final @Nullable Output<String> bitrateKbps;
 
-    public Input<String> getBitrateKbps() {
-        return this.bitrateKbps == null ? Input.empty() : this.bitrateKbps;
+    public Output<String> getBitrateKbps() {
+        return this.bitrateKbps == null ? Output.empty() : this.bitrateKbps;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="frameRate")
-      private final @Nullable Input<String> frameRate;
+      private final @Nullable Output<String> frameRate;
 
-    public Input<String> getFrameRate() {
-        return this.frameRate == null ? Input.empty() : this.frameRate;
+    public Output<String> getFrameRate() {
+        return this.frameRate == null ? Output.empty() : this.frameRate;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scale")
-      private final @Nullable Input<VideoScaleArgs> scale;
+      private final @Nullable Output<VideoScaleArgs> scale;
 
-    public Input<VideoScaleArgs> getScale() {
-        return this.scale == null ? Input.empty() : this.scale;
+    public Output<VideoScaleArgs> getScale() {
+        return this.scale == null ? Output.empty() : this.scale;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public VideoEncoderH264Args(
-        @Nullable Input<String> bitrateKbps,
-        @Nullable Input<String> frameRate,
-        @Nullable Input<VideoScaleArgs> scale,
-        Input<String> type) {
+        @Nullable Output<String> bitrateKbps,
+        @Nullable Output<String> frameRate,
+        @Nullable Output<VideoScaleArgs> scale,
+        Output<String> type) {
         this.bitrateKbps = bitrateKbps;
         this.frameRate = frameRate;
         this.scale = scale;
@@ -76,10 +76,10 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     }
 
     private VideoEncoderH264Args() {
-        this.bitrateKbps = Input.empty();
-        this.frameRate = Input.empty();
-        this.scale = Input.empty();
-        this.type = Input.empty();
+        this.bitrateKbps = Output.empty();
+        this.frameRate = Output.empty();
+        this.scale = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bitrateKbps;
-        private @Nullable Input<String> frameRate;
-        private @Nullable Input<VideoScaleArgs> scale;
-        private Input<String> type;
+        private @Nullable Output<String> bitrateKbps;
+        private @Nullable Output<String> frameRate;
+        private @Nullable Output<VideoScaleArgs> scale;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder bitrateKbps(@Nullable Input<String> bitrateKbps) {
+        public Builder bitrateKbps(@Nullable Output<String> bitrateKbps) {
             this.bitrateKbps = bitrateKbps;
             return this;
         }
 
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = Input.ofNullable(bitrateKbps);
+            this.bitrateKbps = Output.ofNullable(bitrateKbps);
             return this;
         }
 
-        public Builder frameRate(@Nullable Input<String> frameRate) {
+        public Builder frameRate(@Nullable Output<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
         public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = Input.ofNullable(frameRate);
+            this.frameRate = Output.ofNullable(frameRate);
             return this;
         }
 
-        public Builder scale(@Nullable Input<VideoScaleArgs> scale) {
+        public Builder scale(@Nullable Output<VideoScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
 
         public Builder scale(@Nullable VideoScaleArgs scale) {
-            this.scale = Input.ofNullable(scale);
+            this.scale = Output.ofNullable(scale);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public VideoEncoderH264Args build() {

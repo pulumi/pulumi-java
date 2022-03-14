@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.FormatTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arraySeparator")
-      private final @Nullable Input<String> arraySeparator;
+      private final @Nullable Output<String> arraySeparator;
 
-    public Input<String> getArraySeparator() {
-        return this.arraySeparator == null ? Input.empty() : this.arraySeparator;
+    public Output<String> getArraySeparator() {
+        return this.arraySeparator == null ? Output.empty() : this.arraySeparator;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="columnDelimiter")
-      private final @Nullable Input<String> columnDelimiter;
+      private final @Nullable Output<String> columnDelimiter;
 
-    public Input<String> getColumnDelimiter() {
-        return this.columnDelimiter == null ? Input.empty() : this.columnDelimiter;
+    public Output<String> getColumnDelimiter() {
+        return this.columnDelimiter == null ? Output.empty() : this.columnDelimiter;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="formatType", required=true)
-      private final Input<FormatTypes> formatType;
+      private final Output<FormatTypes> formatType;
 
-    public Input<FormatTypes> getFormatType() {
+    public Output<FormatTypes> getFormatType() {
         return this.formatType;
     }
 
@@ -68,10 +68,10 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="quoteCharacter")
-      private final @Nullable Input<String> quoteCharacter;
+      private final @Nullable Output<String> quoteCharacter;
 
-    public Input<String> getQuoteCharacter() {
-        return this.quoteCharacter == null ? Input.empty() : this.quoteCharacter;
+    public Output<String> getQuoteCharacter() {
+        return this.quoteCharacter == null ? Output.empty() : this.quoteCharacter;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="quoteEscapeCharacter")
-      private final @Nullable Input<String> quoteEscapeCharacter;
+      private final @Nullable Output<String> quoteEscapeCharacter;
 
-    public Input<String> getQuoteEscapeCharacter() {
-        return this.quoteEscapeCharacter == null ? Input.empty() : this.quoteEscapeCharacter;
+    public Output<String> getQuoteEscapeCharacter() {
+        return this.quoteEscapeCharacter == null ? Output.empty() : this.quoteEscapeCharacter;
     }
 
     public ConnectorMappingFormatArgs(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<String> arraySeparator,
-        @Nullable Input<String> columnDelimiter,
-        Input<FormatTypes> formatType,
-        @Nullable Input<String> quoteCharacter,
-        @Nullable Input<String> quoteEscapeCharacter) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<String> arraySeparator,
+        @Nullable Output<String> columnDelimiter,
+        Output<FormatTypes> formatType,
+        @Nullable Output<String> quoteCharacter,
+        @Nullable Output<String> quoteEscapeCharacter) {
         this.acceptLanguage = acceptLanguage;
         this.arraySeparator = arraySeparator;
         this.columnDelimiter = columnDelimiter;
@@ -101,12 +101,12 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
     }
 
     private ConnectorMappingFormatArgs() {
-        this.acceptLanguage = Input.empty();
-        this.arraySeparator = Input.empty();
-        this.columnDelimiter = Input.empty();
-        this.formatType = Input.empty();
-        this.quoteCharacter = Input.empty();
-        this.quoteEscapeCharacter = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.arraySeparator = Output.empty();
+        this.columnDelimiter = Output.empty();
+        this.formatType = Output.empty();
+        this.quoteCharacter = Output.empty();
+        this.quoteEscapeCharacter = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<String> arraySeparator;
-        private @Nullable Input<String> columnDelimiter;
-        private Input<FormatTypes> formatType;
-        private @Nullable Input<String> quoteCharacter;
-        private @Nullable Input<String> quoteEscapeCharacter;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<String> arraySeparator;
+        private @Nullable Output<String> columnDelimiter;
+        private Output<FormatTypes> formatType;
+        private @Nullable Output<String> quoteCharacter;
+        private @Nullable Output<String> quoteEscapeCharacter;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
     	      this.quoteEscapeCharacter = defaults.quoteEscapeCharacter;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder arraySeparator(@Nullable Input<String> arraySeparator) {
+        public Builder arraySeparator(@Nullable Output<String> arraySeparator) {
             this.arraySeparator = arraySeparator;
             return this;
         }
 
         public Builder arraySeparator(@Nullable String arraySeparator) {
-            this.arraySeparator = Input.ofNullable(arraySeparator);
+            this.arraySeparator = Output.ofNullable(arraySeparator);
             return this;
         }
 
-        public Builder columnDelimiter(@Nullable Input<String> columnDelimiter) {
+        public Builder columnDelimiter(@Nullable Output<String> columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
 
         public Builder columnDelimiter(@Nullable String columnDelimiter) {
-            this.columnDelimiter = Input.ofNullable(columnDelimiter);
+            this.columnDelimiter = Output.ofNullable(columnDelimiter);
             return this;
         }
 
-        public Builder formatType(Input<FormatTypes> formatType) {
+        public Builder formatType(Output<FormatTypes> formatType) {
             this.formatType = Objects.requireNonNull(formatType);
             return this;
         }
 
         public Builder formatType(FormatTypes formatType) {
-            this.formatType = Input.of(Objects.requireNonNull(formatType));
+            this.formatType = Output.of(Objects.requireNonNull(formatType));
             return this;
         }
 
-        public Builder quoteCharacter(@Nullable Input<String> quoteCharacter) {
+        public Builder quoteCharacter(@Nullable Output<String> quoteCharacter) {
             this.quoteCharacter = quoteCharacter;
             return this;
         }
 
         public Builder quoteCharacter(@Nullable String quoteCharacter) {
-            this.quoteCharacter = Input.ofNullable(quoteCharacter);
+            this.quoteCharacter = Output.ofNullable(quoteCharacter);
             return this;
         }
 
-        public Builder quoteEscapeCharacter(@Nullable Input<String> quoteEscapeCharacter) {
+        public Builder quoteEscapeCharacter(@Nullable Output<String> quoteEscapeCharacter) {
             this.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }
 
         public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
-            this.quoteEscapeCharacter = Input.ofNullable(quoteEscapeCharacter);
+            this.quoteEscapeCharacter = Output.ofNullable(quoteEscapeCharacter);
             return this;
         }
         public ConnectorMappingFormatArgs build() {

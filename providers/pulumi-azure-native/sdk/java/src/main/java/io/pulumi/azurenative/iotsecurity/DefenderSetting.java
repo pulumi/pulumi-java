@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.iotsecurity.DefenderSettingArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.DefenderSettingsPropertiesResponseMdeIntegration;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -170,18 +169,18 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefenderSetting(String name, DefenderSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:iotsecurity:DefenderSetting", name, args == null ? DefenderSettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:iotsecurity:DefenderSetting", name, args == null ? DefenderSettingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DefenderSetting(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DefenderSetting(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:iotsecurity:DefenderSetting", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:iotsecurity/v20210201preview:DefenderSetting").build())
+                Output.of(Alias.builder().setType("azure-native:iotsecurity/v20210201preview:DefenderSetting").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -195,7 +194,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DefenderSetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DefenderSetting get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefenderSetting(name, id, options);
     }
 }

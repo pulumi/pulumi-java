@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscription")
-      private final @Nullable Input<String> subscription;
+      private final @Nullable Output<String> subscription;
 
-    public Input<String> getSubscription() {
-        return this.subscription == null ? Input.empty() : this.subscription;
+    public Output<String> getSubscription() {
+        return this.subscription == null ? Output.empty() : this.subscription;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public TriggerTransportPubsubGetArgs(
-        @Nullable Input<String> subscription,
-        @Nullable Input<String> topic) {
+        @Nullable Output<String> subscription,
+        @Nullable Output<String> topic) {
         this.subscription = subscription;
         this.topic = topic;
     }
 
     private TriggerTransportPubsubGetArgs() {
-        this.subscription = Input.empty();
-        this.topic = Input.empty();
+        this.subscription = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> subscription;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<String> subscription;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
     	      this.topic = defaults.topic;
         }
 
-        public Builder subscription(@Nullable Input<String> subscription) {
+        public Builder subscription(@Nullable Output<String> subscription) {
             this.subscription = subscription;
             return this;
         }
 
         public Builder subscription(@Nullable String subscription) {
-            this.subscription = Input.ofNullable(subscription);
+            this.subscription = Output.ofNullable(subscription);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public TriggerTransportPubsubGetArgs build() {

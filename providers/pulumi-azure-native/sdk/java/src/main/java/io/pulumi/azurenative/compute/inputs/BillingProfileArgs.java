@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BillingProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPrice")
-      private final @Nullable Input<Double> maxPrice;
+      private final @Nullable Output<Double> maxPrice;
 
-    public Input<Double> getMaxPrice() {
-        return this.maxPrice == null ? Input.empty() : this.maxPrice;
+    public Output<Double> getMaxPrice() {
+        return this.maxPrice == null ? Output.empty() : this.maxPrice;
     }
 
-    public BillingProfileArgs(@Nullable Input<Double> maxPrice) {
+    public BillingProfileArgs(@Nullable Output<Double> maxPrice) {
         this.maxPrice = maxPrice;
     }
 
     private BillingProfileArgs() {
-        this.maxPrice = Input.empty();
+        this.maxPrice = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BillingProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> maxPrice;
+        private @Nullable Output<Double> maxPrice;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BillingProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxPrice = defaults.maxPrice;
         }
 
-        public Builder maxPrice(@Nullable Input<Double> maxPrice) {
+        public Builder maxPrice(@Nullable Output<Double> maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
         public Builder maxPrice(@Nullable Double maxPrice) {
-            this.maxPrice = Input.ofNullable(maxPrice);
+            this.maxPrice = Output.ofNullable(maxPrice);
             return this;
         }
         public BillingProfileArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DomainResourceSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
     public static final DomainJupyterServerAppSettingsArgs Empty = new DomainJupyterServerAppSettingsArgs();
 
     @InputImport(name="defaultResourceSpec")
-      private final @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
+      private final @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
-    public Input<DomainResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
+    public Output<DomainResourceSpecArgs> getDefaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
     }
 
-    public DomainJupyterServerAppSettingsArgs(@Nullable Input<DomainResourceSpecArgs> defaultResourceSpec) {
+    public DomainJupyterServerAppSettingsArgs(@Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 
     private DomainJupyterServerAppSettingsArgs() {
-        this.defaultResourceSpec = Input.empty();
+        this.defaultResourceSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
+        private @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder defaultResourceSpec(@Nullable Input<DomainResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
         public Builder defaultResourceSpec(@Nullable DomainResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
         }
         public DomainJupyterServerAppSettingsArgs build() {

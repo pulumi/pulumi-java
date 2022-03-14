@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -34,22 +34,22 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="querySubscriptions", required=true)
-      private final Input<List<String>> querySubscriptions;
+      private final Output<List<String>> querySubscriptions;
 
-    public Input<List<String>> getQuerySubscriptions() {
+    public Output<List<String>> getQuerySubscriptions() {
         return this.querySubscriptions;
     }
 
     public UserDefinedResourcesPropertiesArgs(
-        Input<String> query,
-        Input<List<String>> querySubscriptions) {
+        Output<String> query,
+        Output<List<String>> querySubscriptions) {
         this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
         this.querySubscriptions = Objects.requireNonNull(querySubscriptions, "expected parameter 'querySubscriptions' to be non-null");
     }
 
     private UserDefinedResourcesPropertiesArgs() {
-        this.query = Input.empty();
-        this.querySubscriptions = Input.empty();
+        this.query = Output.empty();
+        this.querySubscriptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> query;
-        private Input<List<String>> querySubscriptions;
+        private Output<String> query;
+        private Output<List<String>> querySubscriptions;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     	      this.querySubscriptions = defaults.querySubscriptions;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder querySubscriptions(Input<List<String>> querySubscriptions) {
+        public Builder querySubscriptions(Output<List<String>> querySubscriptions) {
             this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
             return this;
         }
 
         public Builder querySubscriptions(List<String> querySubscriptions) {
-            this.querySubscriptions = Input.of(Objects.requireNonNull(querySubscriptions));
+            this.querySubscriptions = Output.of(Objects.requireNonNull(querySubscriptions));
             return this;
         }
         public UserDefinedResourcesPropertiesArgs build() {

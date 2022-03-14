@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ultraSSDEnabled")
-      private final @Nullable Input<Boolean> ultraSSDEnabled;
+      private final @Nullable Output<Boolean> ultraSSDEnabled;
 
-    public Input<Boolean> getUltraSSDEnabled() {
-        return this.ultraSSDEnabled == null ? Input.empty() : this.ultraSSDEnabled;
+    public Output<Boolean> getUltraSSDEnabled() {
+        return this.ultraSSDEnabled == null ? Output.empty() : this.ultraSSDEnabled;
     }
 
-    public AdditionalCapabilitiesArgs(@Nullable Input<Boolean> ultraSSDEnabled) {
+    public AdditionalCapabilitiesArgs(@Nullable Output<Boolean> ultraSSDEnabled) {
         this.ultraSSDEnabled = ultraSSDEnabled;
     }
 
     private AdditionalCapabilitiesArgs() {
-        this.ultraSSDEnabled = Input.empty();
+        this.ultraSSDEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> ultraSSDEnabled;
+        private @Nullable Output<Boolean> ultraSSDEnabled;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
     	      this.ultraSSDEnabled = defaults.ultraSSDEnabled;
         }
 
-        public Builder ultraSSDEnabled(@Nullable Input<Boolean> ultraSSDEnabled) {
+        public Builder ultraSSDEnabled(@Nullable Output<Boolean> ultraSSDEnabled) {
             this.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }
 
         public Builder ultraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
-            this.ultraSSDEnabled = Input.ofNullable(ultraSSDEnabled);
+            this.ultraSSDEnabled = Output.ofNullable(ultraSSDEnabled);
             return this;
         }
         public AdditionalCapabilitiesArgs build() {

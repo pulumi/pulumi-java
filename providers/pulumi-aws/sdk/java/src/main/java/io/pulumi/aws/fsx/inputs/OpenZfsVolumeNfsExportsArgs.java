@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsClientConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class OpenZfsVolumeNfsExportsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientConfigurations", required=true)
-      private final Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
+      private final Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
 
-    public Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> getClientConfigurations() {
+    public Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> getClientConfigurations() {
         return this.clientConfigurations;
     }
 
-    public OpenZfsVolumeNfsExportsArgs(Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations) {
+    public OpenZfsVolumeNfsExportsArgs(Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations) {
         this.clientConfigurations = Objects.requireNonNull(clientConfigurations, "expected parameter 'clientConfigurations' to be non-null");
     }
 
     private OpenZfsVolumeNfsExportsArgs() {
-        this.clientConfigurations = Input.empty();
+        this.clientConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class OpenZfsVolumeNfsExportsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
+        private Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class OpenZfsVolumeNfsExportsArgs extends io.pulumi.resources.Resou
     	      this.clientConfigurations = defaults.clientConfigurations;
         }
 
-        public Builder clientConfigurations(Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations) {
+        public Builder clientConfigurations(Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations) {
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }
 
         public Builder clientConfigurations(List<OpenZfsVolumeNfsExportsClientConfigurationArgs> clientConfigurations) {
-            this.clientConfigurations = Input.of(Objects.requireNonNull(clientConfigurations));
+            this.clientConfigurations = Output.of(Objects.requireNonNull(clientConfigurations));
             return this;
         }
         public OpenZfsVolumeNfsExportsArgs build() {

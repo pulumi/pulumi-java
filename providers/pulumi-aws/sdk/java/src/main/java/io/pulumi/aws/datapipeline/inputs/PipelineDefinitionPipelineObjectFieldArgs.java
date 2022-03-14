@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datapipeline.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -30,10 +30,10 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="refValue")
-      private final @Nullable Input<String> refValue;
+      private final @Nullable Output<String> refValue;
 
-    public Input<String> getRefValue() {
-        return this.refValue == null ? Input.empty() : this.refValue;
+    public Output<String> getRefValue() {
+        return this.refValue == null ? Output.empty() : this.refValue;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     public PipelineDefinitionPipelineObjectFieldArgs(
-        Input<String> key,
-        @Nullable Input<String> refValue,
-        @Nullable Input<String> stringValue) {
+        Output<String> key,
+        @Nullable Output<String> refValue,
+        @Nullable Output<String> stringValue) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.refValue = refValue;
         this.stringValue = stringValue;
     }
 
     private PipelineDefinitionPipelineObjectFieldArgs() {
-        this.key = Input.empty();
-        this.refValue = Input.empty();
-        this.stringValue = Input.empty();
+        this.key = Output.empty();
+        this.refValue = Output.empty();
+        this.stringValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<String> refValue;
-        private @Nullable Input<String> stringValue;
+        private Output<String> key;
+        private @Nullable Output<String> refValue;
+        private @Nullable Output<String> stringValue;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder refValue(@Nullable Input<String> refValue) {
+        public Builder refValue(@Nullable Output<String> refValue) {
             this.refValue = refValue;
             return this;
         }
 
         public Builder refValue(@Nullable String refValue) {
-            this.refValue = Input.ofNullable(refValue);
+            this.refValue = Output.ofNullable(refValue);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
         public PipelineDefinitionPipelineObjectFieldArgs build() {

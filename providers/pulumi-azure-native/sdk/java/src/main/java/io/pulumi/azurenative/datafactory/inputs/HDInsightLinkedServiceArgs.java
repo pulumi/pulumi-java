@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterUri", required=true)
-      private final Input<Object> clusterUri;
+      private final Output<Object> clusterUri;
 
-    public Input<Object> getClusterUri() {
+    public Output<Object> getClusterUri() {
         return this.clusterUri;
     }
 
@@ -54,10 +54,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fileSystem")
-      private final @Nullable Input<Object> fileSystem;
+      private final @Nullable Output<Object> fileSystem;
 
-    public Input<Object> getFileSystem() {
-        return this.fileSystem == null ? Input.empty() : this.fileSystem;
+    public Output<Object> getFileSystem() {
+        return this.fileSystem == null ? Output.empty() : this.fileSystem;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hcatalogLinkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
-        return this.hcatalogLinkedServiceName == null ? Input.empty() : this.hcatalogLinkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
+        return this.hcatalogLinkedServiceName == null ? Output.empty() : this.hcatalogLinkedServiceName;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEspEnabled")
-      private final @Nullable Input<Object> isEspEnabled;
+      private final @Nullable Output<Object> isEspEnabled;
 
-    public Input<Object> getIsEspEnabled() {
-        return this.isEspEnabled == null ? Input.empty() : this.isEspEnabled;
+    public Output<Object> getIsEspEnabled() {
+        return this.isEspEnabled == null ? Output.empty() : this.isEspEnabled;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -154,9 +154,9 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -165,26 +165,26 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<Object> userName;
+      private final @Nullable Output<Object> userName;
 
-    public Input<Object> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<Object> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public HDInsightLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        Input<Object> clusterUri,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> fileSystem,
-        @Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName,
-        @Nullable Input<Object> isEspEnabled,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Input<String> type,
-        @Nullable Input<Object> userName) {
+        @Nullable Output<List<Object>> annotations,
+        Output<Object> clusterUri,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> fileSystem,
+        @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName,
+        @Nullable Output<Object> isEspEnabled,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        Output<String> type,
+        @Nullable Output<Object> userName) {
         this.annotations = annotations;
         this.clusterUri = Objects.requireNonNull(clusterUri, "expected parameter 'clusterUri' to be non-null");
         this.connectVia = connectVia;
@@ -201,19 +201,19 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     }
 
     private HDInsightLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.clusterUri = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.fileSystem = Input.empty();
-        this.hcatalogLinkedServiceName = Input.empty();
-        this.isEspEnabled = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.type = Input.empty();
-        this.userName = Input.empty();
+        this.annotations = Output.empty();
+        this.clusterUri = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.fileSystem = Output.empty();
+        this.hcatalogLinkedServiceName = Output.empty();
+        this.isEspEnabled = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.type = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -225,19 +225,19 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private Input<Object> clusterUri;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> fileSystem;
-        private @Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
-        private @Nullable Input<Object> isEspEnabled;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Input<String> type;
-        private @Nullable Input<Object> userName;
+        private @Nullable Output<List<Object>> annotations;
+        private Output<Object> clusterUri;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> fileSystem;
+        private @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
+        private @Nullable Output<Object> isEspEnabled;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private Output<String> type;
+        private @Nullable Output<Object> userName;
 
         public Builder() {
     	      // Empty
@@ -260,133 +260,133 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     	      this.userName = defaults.userName;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder clusterUri(Input<Object> clusterUri) {
+        public Builder clusterUri(Output<Object> clusterUri) {
             this.clusterUri = Objects.requireNonNull(clusterUri);
             return this;
         }
 
         public Builder clusterUri(Object clusterUri) {
-            this.clusterUri = Input.of(Objects.requireNonNull(clusterUri));
+            this.clusterUri = Output.of(Objects.requireNonNull(clusterUri));
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder fileSystem(@Nullable Input<Object> fileSystem) {
+        public Builder fileSystem(@Nullable Output<Object> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
         public Builder fileSystem(@Nullable Object fileSystem) {
-            this.fileSystem = Input.ofNullable(fileSystem);
+            this.fileSystem = Output.ofNullable(fileSystem);
             return this;
         }
 
-        public Builder hcatalogLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
+        public Builder hcatalogLinkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
             this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
 
         public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
-            this.hcatalogLinkedServiceName = Input.ofNullable(hcatalogLinkedServiceName);
+            this.hcatalogLinkedServiceName = Output.ofNullable(hcatalogLinkedServiceName);
             return this;
         }
 
-        public Builder isEspEnabled(@Nullable Input<Object> isEspEnabled) {
+        public Builder isEspEnabled(@Nullable Output<Object> isEspEnabled) {
             this.isEspEnabled = isEspEnabled;
             return this;
         }
 
         public Builder isEspEnabled(@Nullable Object isEspEnabled) {
-            this.isEspEnabled = Input.ofNullable(isEspEnabled);
+            this.isEspEnabled = Output.ofNullable(isEspEnabled);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userName(@Nullable Input<Object> userName) {
+        public Builder userName(@Nullable Output<Object> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable Object userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public HDInsightLinkedServiceArgs build() {

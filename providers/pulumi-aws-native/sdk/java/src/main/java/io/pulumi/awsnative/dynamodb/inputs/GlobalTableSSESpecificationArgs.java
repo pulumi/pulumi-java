@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
     public static final GlobalTableSSESpecificationArgs Empty = new GlobalTableSSESpecificationArgs();
 
     @InputImport(name="sSEEnabled", required=true)
-      private final Input<Boolean> sSEEnabled;
+      private final Output<Boolean> sSEEnabled;
 
-    public Input<Boolean> getSSEEnabled() {
+    public Output<Boolean> getSSEEnabled() {
         return this.sSEEnabled;
     }
 
     @InputImport(name="sSEType")
-      private final @Nullable Input<String> sSEType;
+      private final @Nullable Output<String> sSEType;
 
-    public Input<String> getSSEType() {
-        return this.sSEType == null ? Input.empty() : this.sSEType;
+    public Output<String> getSSEType() {
+        return this.sSEType == null ? Output.empty() : this.sSEType;
     }
 
     public GlobalTableSSESpecificationArgs(
-        Input<Boolean> sSEEnabled,
-        @Nullable Input<String> sSEType) {
+        Output<Boolean> sSEEnabled,
+        @Nullable Output<String> sSEType) {
         this.sSEEnabled = Objects.requireNonNull(sSEEnabled, "expected parameter 'sSEEnabled' to be non-null");
         this.sSEType = sSEType;
     }
 
     private GlobalTableSSESpecificationArgs() {
-        this.sSEEnabled = Input.empty();
-        this.sSEType = Input.empty();
+        this.sSEEnabled = Output.empty();
+        this.sSEType = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<Boolean> sSEEnabled;
-        private @Nullable Input<String> sSEType;
+        private Output<Boolean> sSEEnabled;
+        private @Nullable Output<String> sSEType;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
     	      this.sSEType = defaults.sSEType;
         }
 
-        public Builder sSEEnabled(Input<Boolean> sSEEnabled) {
+        public Builder sSEEnabled(Output<Boolean> sSEEnabled) {
             this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
             return this;
         }
 
         public Builder sSEEnabled(Boolean sSEEnabled) {
-            this.sSEEnabled = Input.of(Objects.requireNonNull(sSEEnabled));
+            this.sSEEnabled = Output.of(Objects.requireNonNull(sSEEnabled));
             return this;
         }
 
-        public Builder sSEType(@Nullable Input<String> sSEType) {
+        public Builder sSEType(@Nullable Output<String> sSEType) {
             this.sSEType = sSEType;
             return this;
         }
 
         public Builder sSEType(@Nullable String sSEType) {
-            this.sSEType = Input.ofNullable(sSEType);
+            this.sSEType = Output.ofNullable(sSEType);
             return this;
         }
         public GlobalTableSSESpecificationArgs build() {

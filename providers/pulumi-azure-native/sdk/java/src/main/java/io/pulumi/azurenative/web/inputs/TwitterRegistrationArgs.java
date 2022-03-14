@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consumerKey")
-      private final @Nullable Input<String> consumerKey;
+      private final @Nullable Output<String> consumerKey;
 
-    public Input<String> getConsumerKey() {
-        return this.consumerKey == null ? Input.empty() : this.consumerKey;
+    public Output<String> getConsumerKey() {
+        return this.consumerKey == null ? Output.empty() : this.consumerKey;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consumerSecretSettingName")
-      private final @Nullable Input<String> consumerSecretSettingName;
+      private final @Nullable Output<String> consumerSecretSettingName;
 
-    public Input<String> getConsumerSecretSettingName() {
-        return this.consumerSecretSettingName == null ? Input.empty() : this.consumerSecretSettingName;
+    public Output<String> getConsumerSecretSettingName() {
+        return this.consumerSecretSettingName == null ? Output.empty() : this.consumerSecretSettingName;
     }
 
     public TwitterRegistrationArgs(
-        @Nullable Input<String> consumerKey,
-        @Nullable Input<String> consumerSecretSettingName) {
+        @Nullable Output<String> consumerKey,
+        @Nullable Output<String> consumerSecretSettingName) {
         this.consumerKey = consumerKey;
         this.consumerSecretSettingName = consumerSecretSettingName;
     }
 
     private TwitterRegistrationArgs() {
-        this.consumerKey = Input.empty();
-        this.consumerSecretSettingName = Input.empty();
+        this.consumerKey = Output.empty();
+        this.consumerSecretSettingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consumerKey;
-        private @Nullable Input<String> consumerSecretSettingName;
+        private @Nullable Output<String> consumerKey;
+        private @Nullable Output<String> consumerSecretSettingName;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
     	      this.consumerSecretSettingName = defaults.consumerSecretSettingName;
         }
 
-        public Builder consumerKey(@Nullable Input<String> consumerKey) {
+        public Builder consumerKey(@Nullable Output<String> consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
         public Builder consumerKey(@Nullable String consumerKey) {
-            this.consumerKey = Input.ofNullable(consumerKey);
+            this.consumerKey = Output.ofNullable(consumerKey);
             return this;
         }
 
-        public Builder consumerSecretSettingName(@Nullable Input<String> consumerSecretSettingName) {
+        public Builder consumerSecretSettingName(@Nullable Output<String> consumerSecretSettingName) {
             this.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }
 
         public Builder consumerSecretSettingName(@Nullable String consumerSecretSettingName) {
-            this.consumerSecretSettingName = Input.ofNullable(consumerSecretSettingName);
+            this.consumerSecretSettingName = Output.ofNullable(consumerSecretSettingName);
             return this;
         }
         public TwitterRegistrationArgs build() {

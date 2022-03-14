@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.RulesetThresholdType;
 import io.pulumi.awsnative.databrew.enums.RulesetThresholdUnit;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -17,39 +17,39 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
     public static final RulesetThresholdArgs Empty = new RulesetThresholdArgs();
 
     @InputImport(name="type")
-      private final @Nullable Input<RulesetThresholdType> type;
+      private final @Nullable Output<RulesetThresholdType> type;
 
-    public Input<RulesetThresholdType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<RulesetThresholdType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="unit")
-      private final @Nullable Input<RulesetThresholdUnit> unit;
+      private final @Nullable Output<RulesetThresholdUnit> unit;
 
-    public Input<RulesetThresholdUnit> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<RulesetThresholdUnit> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<Double> value;
+      private final Output<Double> value;
 
-    public Input<Double> getValue() {
+    public Output<Double> getValue() {
         return this.value;
     }
 
     public RulesetThresholdArgs(
-        @Nullable Input<RulesetThresholdType> type,
-        @Nullable Input<RulesetThresholdUnit> unit,
-        Input<Double> value) {
+        @Nullable Output<RulesetThresholdType> type,
+        @Nullable Output<RulesetThresholdUnit> unit,
+        Output<Double> value) {
         this.type = type;
         this.unit = unit;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private RulesetThresholdArgs() {
-        this.type = Input.empty();
-        this.unit = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.unit = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<RulesetThresholdType> type;
-        private @Nullable Input<RulesetThresholdUnit> unit;
-        private Input<Double> value;
+        private @Nullable Output<RulesetThresholdType> type;
+        private @Nullable Output<RulesetThresholdUnit> unit;
+        private Output<Double> value;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder type(@Nullable Input<RulesetThresholdType> type) {
+        public Builder type(@Nullable Output<RulesetThresholdType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable RulesetThresholdType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder unit(@Nullable Input<RulesetThresholdUnit> unit) {
+        public Builder unit(@Nullable Output<RulesetThresholdUnit> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable RulesetThresholdUnit unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
 
-        public Builder value(Input<Double> value) {
+        public Builder value(Output<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Double value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public RulesetThresholdArgs build() {

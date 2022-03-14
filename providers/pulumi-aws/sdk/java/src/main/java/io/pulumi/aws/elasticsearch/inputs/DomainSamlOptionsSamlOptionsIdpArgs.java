@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="entityId", required=true)
-      private final Input<String> entityId;
+      private final Output<String> entityId;
 
-    public Input<String> getEntityId() {
+    public Output<String> getEntityId() {
         return this.entityId;
     }
 
@@ -29,22 +29,22 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="metadataContent", required=true)
-      private final Input<String> metadataContent;
+      private final Output<String> metadataContent;
 
-    public Input<String> getMetadataContent() {
+    public Output<String> getMetadataContent() {
         return this.metadataContent;
     }
 
     public DomainSamlOptionsSamlOptionsIdpArgs(
-        Input<String> entityId,
-        Input<String> metadataContent) {
+        Output<String> entityId,
+        Output<String> metadataContent) {
         this.entityId = Objects.requireNonNull(entityId, "expected parameter 'entityId' to be non-null");
         this.metadataContent = Objects.requireNonNull(metadataContent, "expected parameter 'metadataContent' to be non-null");
     }
 
     private DomainSamlOptionsSamlOptionsIdpArgs() {
-        this.entityId = Input.empty();
-        this.metadataContent = Input.empty();
+        this.entityId = Output.empty();
+        this.metadataContent = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> entityId;
-        private Input<String> metadataContent;
+        private Output<String> entityId;
+        private Output<String> metadataContent;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends io.pulumi.resourc
     	      this.metadataContent = defaults.metadataContent;
         }
 
-        public Builder entityId(Input<String> entityId) {
+        public Builder entityId(Output<String> entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
 
         public Builder entityId(String entityId) {
-            this.entityId = Input.of(Objects.requireNonNull(entityId));
+            this.entityId = Output.of(Objects.requireNonNull(entityId));
             return this;
         }
 
-        public Builder metadataContent(Input<String> metadataContent) {
+        public Builder metadataContent(Output<String> metadataContent) {
             this.metadataContent = Objects.requireNonNull(metadataContent);
             return this;
         }
 
         public Builder metadataContent(String metadataContent) {
-            this.metadataContent = Input.of(Objects.requireNonNull(metadataContent));
+            this.metadataContent = Output.of(Objects.requireNonNull(metadataContent));
             return this;
         }
         public DomainSamlOptionsSamlOptionsIdpArgs build() {

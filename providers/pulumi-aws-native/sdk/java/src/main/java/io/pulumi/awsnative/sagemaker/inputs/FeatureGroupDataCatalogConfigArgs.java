@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
     public static final FeatureGroupDataCatalogConfigArgs Empty = new FeatureGroupDataCatalogConfigArgs();
 
     @InputImport(name="catalog", required=true)
-      private final Input<String> catalog;
+      private final Output<String> catalog;
 
-    public Input<String> getCatalog() {
+    public Output<String> getCatalog() {
         return this.catalog;
     }
 
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public FeatureGroupDataCatalogConfigArgs(
-        Input<String> catalog,
-        Input<String> database,
-        Input<String> tableName) {
+        Output<String> catalog,
+        Output<String> database,
+        Output<String> tableName) {
         this.catalog = Objects.requireNonNull(catalog, "expected parameter 'catalog' to be non-null");
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
     }
 
     private FeatureGroupDataCatalogConfigArgs() {
-        this.catalog = Input.empty();
-        this.database = Input.empty();
-        this.tableName = Input.empty();
+        this.catalog = Output.empty();
+        this.database = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> catalog;
-        private Input<String> database;
-        private Input<String> tableName;
+        private Output<String> catalog;
+        private Output<String> database;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder catalog(Input<String> catalog) {
+        public Builder catalog(Output<String> catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
         public Builder catalog(String catalog) {
-            this.catalog = Input.of(Objects.requireNonNull(catalog));
+            this.catalog = Output.of(Objects.requireNonNull(catalog));
             return this;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public FeatureGroupDataCatalogConfigArgs build() {

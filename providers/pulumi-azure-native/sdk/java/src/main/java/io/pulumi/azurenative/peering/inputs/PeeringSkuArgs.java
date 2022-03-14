@@ -7,7 +7,7 @@ import io.pulumi.azurenative.peering.enums.Family;
 import io.pulumi.azurenative.peering.enums.Size;
 import io.pulumi.azurenative.peering.enums.Tier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-      private final @Nullable Input<Either<String,Family>> family;
+      private final @Nullable Output<Either<String,Family>> family;
 
-    public Input<Either<String,Family>> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<Either<String,Family>> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Either<String,Size>> size;
+      private final @Nullable Output<Either<String,Size>> size;
 
-    public Input<Either<String,Size>> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Either<String,Size>> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<Either<String,Tier>> tier;
+      private final @Nullable Output<Either<String,Tier>> tier;
 
-    public Input<Either<String,Tier>> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<Either<String,Tier>> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public PeeringSkuArgs(
-        @Nullable Input<Either<String,Family>> family,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,Size>> size,
-        @Nullable Input<Either<String,Tier>> tier) {
+        @Nullable Output<Either<String,Family>> family,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,Size>> size,
+        @Nullable Output<Either<String,Tier>> tier) {
         this.family = family;
         this.name = name;
         this.size = size;
@@ -78,10 +78,10 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PeeringSkuArgs() {
-        this.family = Input.empty();
-        this.name = Input.empty();
-        this.size = Input.empty();
-        this.tier = Input.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
+        this.size = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Family>> family;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,Size>> size;
-        private @Nullable Input<Either<String,Tier>> tier;
+        private @Nullable Output<Either<String,Family>> family;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,Size>> size;
+        private @Nullable Output<Either<String,Tier>> tier;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder family(@Nullable Input<Either<String,Family>> family) {
+        public Builder family(@Nullable Output<Either<String,Family>> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable Either<String,Family> family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder size(@Nullable Input<Either<String,Size>> size) {
+        public Builder size(@Nullable Output<Either<String,Size>> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Either<String,Size> size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder tier(@Nullable Input<Either<String,Tier>> tier) {
+        public Builder tier(@Nullable Output<Either<String,Tier>> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable Either<String,Tier> tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public PeeringSkuArgs build() {

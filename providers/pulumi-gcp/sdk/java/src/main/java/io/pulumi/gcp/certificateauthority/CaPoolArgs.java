@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolPublishingOptionsArgs;
@@ -23,10 +23,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuancePolicy")
-      private final @Nullable Input<CaPoolIssuancePolicyArgs> issuancePolicy;
+      private final @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy;
 
-    public Input<CaPoolIssuancePolicyArgs> getIssuancePolicy() {
-        return this.issuancePolicy == null ? Input.empty() : this.issuancePolicy;
+    public Output<CaPoolIssuancePolicyArgs> getIssuancePolicy() {
+        return this.issuancePolicy == null ? Output.empty() : this.issuancePolicy;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -58,10 +58,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishingOptions")
-      private final @Nullable Input<CaPoolPublishingOptionsArgs> publishingOptions;
+      private final @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions;
 
-    public Input<CaPoolPublishingOptionsArgs> getPublishingOptions() {
-        return this.publishingOptions == null ? Input.empty() : this.publishingOptions;
+    public Output<CaPoolPublishingOptionsArgs> getPublishingOptions() {
+        return this.publishingOptions == null ? Output.empty() : this.publishingOptions;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<String> tier;
+      private final Output<String> tier;
 
-    public Input<String> getTier() {
+    public Output<String> getTier() {
         return this.tier;
     }
 
     public CaPoolArgs(
-        @Nullable Input<CaPoolIssuancePolicyArgs> issuancePolicy,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<CaPoolPublishingOptionsArgs> publishingOptions,
-        Input<String> tier) {
+        @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions,
+        Output<String> tier) {
         this.issuancePolicy = issuancePolicy;
         this.labels = labels;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
@@ -118,13 +118,13 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CaPoolArgs() {
-        this.issuancePolicy = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.publishingOptions = Input.empty();
-        this.tier = Input.empty();
+        this.issuancePolicy = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.publishingOptions = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CaPoolIssuancePolicyArgs> issuancePolicy;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<CaPoolPublishingOptionsArgs> publishingOptions;
-        private Input<String> tier;
+        private @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions;
+        private Output<String> tier;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder issuancePolicy(@Nullable Input<CaPoolIssuancePolicyArgs> issuancePolicy) {
+        public Builder issuancePolicy(@Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy) {
             this.issuancePolicy = issuancePolicy;
             return this;
         }
 
         public Builder issuancePolicy(@Nullable CaPoolIssuancePolicyArgs issuancePolicy) {
-            this.issuancePolicy = Input.ofNullable(issuancePolicy);
+            this.issuancePolicy = Output.ofNullable(issuancePolicy);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder publishingOptions(@Nullable Input<CaPoolPublishingOptionsArgs> publishingOptions) {
+        public Builder publishingOptions(@Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions) {
             this.publishingOptions = publishingOptions;
             return this;
         }
 
         public Builder publishingOptions(@Nullable CaPoolPublishingOptionsArgs publishingOptions) {
-            this.publishingOptions = Input.ofNullable(publishingOptions);
+            this.publishingOptions = Output.ofNullable(publishingOptions);
             return this;
         }
 
-        public Builder tier(Input<String> tier) {
+        public Builder tier(Output<String> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(String tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
         public CaPoolArgs build() {

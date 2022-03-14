@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.MongoDBCollectionResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -33,10 +33,10 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="collectionName")
-      private final @Nullable Input<String> collectionName;
+      private final @Nullable Output<String> collectionName;
 
-    public Input<String> getCollectionName() {
-        return this.collectionName == null ? Input.empty() : this.collectionName;
+    public Output<String> getCollectionName() {
+        return this.collectionName == null ? Output.empty() : this.collectionName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -55,10 +55,10 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<CreateUpdateOptionsArgs> options;
+      private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Input<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<CreateUpdateOptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<MongoDBCollectionResourceArgs> resource;
+      private final Output<MongoDBCollectionResourceArgs> resource;
 
-    public Input<MongoDBCollectionResourceArgs> getResource() {
+    public Output<MongoDBCollectionResourceArgs> getResource() {
         return this.resource;
     }
 
@@ -88,9 +88,9 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,21 +99,21 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MongoDBResourceMongoDBCollectionArgs(
-        Input<String> accountName,
-        @Nullable Input<String> collectionName,
-        Input<String> databaseName,
-        @Nullable Input<String> location,
-        @Nullable Input<CreateUpdateOptionsArgs> options,
-        Input<MongoDBCollectionResourceArgs> resource,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> accountName,
+        @Nullable Output<String> collectionName,
+        Output<String> databaseName,
+        @Nullable Output<String> location,
+        @Nullable Output<CreateUpdateOptionsArgs> options,
+        Output<MongoDBCollectionResourceArgs> resource,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.collectionName = collectionName;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
@@ -125,14 +125,14 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
     }
 
     private MongoDBResourceMongoDBCollectionArgs() {
-        this.accountName = Input.empty();
-        this.collectionName = Input.empty();
-        this.databaseName = Input.empty();
-        this.location = Input.empty();
-        this.options = Input.empty();
-        this.resource = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.collectionName = Output.empty();
+        this.databaseName = Output.empty();
+        this.location = Output.empty();
+        this.options = Output.empty();
+        this.resource = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> collectionName;
-        private Input<String> databaseName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<CreateUpdateOptionsArgs> options;
-        private Input<MongoDBCollectionResourceArgs> resource;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> accountName;
+        private @Nullable Output<String> collectionName;
+        private Output<String> databaseName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<CreateUpdateOptionsArgs> options;
+        private Output<MongoDBCollectionResourceArgs> resource;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class MongoDBResourceMongoDBCollectionArgs extends io.pulumi.resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder collectionName(@Nullable Input<String> collectionName) {
+        public Builder collectionName(@Nullable Output<String> collectionName) {
             this.collectionName = collectionName;
             return this;
         }
 
         public Builder collectionName(@Nullable String collectionName) {
-            this.collectionName = Input.ofNullable(collectionName);
+            this.collectionName = Output.ofNullable(collectionName);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder options(@Nullable Input<CreateUpdateOptionsArgs> options) {
+        public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder resource(Input<MongoDBCollectionResourceArgs> resource) {
+        public Builder resource(Output<MongoDBCollectionResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(MongoDBCollectionResourceArgs resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MongoDBResourceMongoDBCollectionArgs build() {

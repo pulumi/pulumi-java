@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.EncryptionAlgorithm;
 import io.pulumi.azurenative.logic.enums.SigningAlgorithm;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,9 +28,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkCertificateRevocationListOnReceive", required=true)
-      private final Input<Boolean> checkCertificateRevocationListOnReceive;
+      private final Output<Boolean> checkCertificateRevocationListOnReceive;
 
-    public Input<Boolean> getCheckCertificateRevocationListOnReceive() {
+    public Output<Boolean> getCheckCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
 
@@ -39,9 +39,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkCertificateRevocationListOnSend", required=true)
-      private final Input<Boolean> checkCertificateRevocationListOnSend;
+      private final Output<Boolean> checkCertificateRevocationListOnSend;
 
-    public Input<Boolean> getCheckCertificateRevocationListOnSend() {
+    public Output<Boolean> getCheckCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
 
@@ -50,9 +50,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkDuplicateMessage", required=true)
-      private final Input<Boolean> checkDuplicateMessage;
+      private final Output<Boolean> checkDuplicateMessage;
 
-    public Input<Boolean> getCheckDuplicateMessage() {
+    public Output<Boolean> getCheckDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
 
@@ -61,9 +61,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="compressMessage", required=true)
-      private final Input<Boolean> compressMessage;
+      private final Output<Boolean> compressMessage;
 
-    public Input<Boolean> getCompressMessage() {
+    public Output<Boolean> getCompressMessage() {
         return this.compressMessage;
     }
 
@@ -72,9 +72,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptMessage", required=true)
-      private final Input<Boolean> encryptMessage;
+      private final Output<Boolean> encryptMessage;
 
-    public Input<Boolean> getEncryptMessage() {
+    public Output<Boolean> getEncryptMessage() {
         return this.encryptMessage;
     }
 
@@ -83,9 +83,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptionAlgorithm", required=true)
-      private final Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
+      private final Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
 
-    public Input<Either<String,EncryptionAlgorithm>> getEncryptionAlgorithm() {
+    public Output<Either<String,EncryptionAlgorithm>> getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
@@ -94,9 +94,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="interchangeDuplicatesValidityDays", required=true)
-      private final Input<Integer> interchangeDuplicatesValidityDays;
+      private final Output<Integer> interchangeDuplicatesValidityDays;
 
-    public Input<Integer> getInterchangeDuplicatesValidityDays() {
+    public Output<Integer> getInterchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
 
@@ -105,9 +105,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="overrideMessageProperties", required=true)
-      private final Input<Boolean> overrideMessageProperties;
+      private final Output<Boolean> overrideMessageProperties;
 
-    public Input<Boolean> getOverrideMessageProperties() {
+    public Output<Boolean> getOverrideMessageProperties() {
         return this.overrideMessageProperties;
     }
 
@@ -116,9 +116,9 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="signMessage", required=true)
-      private final Input<Boolean> signMessage;
+      private final Output<Boolean> signMessage;
 
-    public Input<Boolean> getSignMessage() {
+    public Output<Boolean> getSignMessage() {
         return this.signMessage;
     }
 
@@ -127,23 +127,23 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="signingAlgorithm")
-      private final @Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm;
+      private final @Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm;
 
-    public Input<Either<String,SigningAlgorithm>> getSigningAlgorithm() {
-        return this.signingAlgorithm == null ? Input.empty() : this.signingAlgorithm;
+    public Output<Either<String,SigningAlgorithm>> getSigningAlgorithm() {
+        return this.signingAlgorithm == null ? Output.empty() : this.signingAlgorithm;
     }
 
     public AS2ValidationSettingsArgs(
-        Input<Boolean> checkCertificateRevocationListOnReceive,
-        Input<Boolean> checkCertificateRevocationListOnSend,
-        Input<Boolean> checkDuplicateMessage,
-        Input<Boolean> compressMessage,
-        Input<Boolean> encryptMessage,
-        Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm,
-        Input<Integer> interchangeDuplicatesValidityDays,
-        Input<Boolean> overrideMessageProperties,
-        Input<Boolean> signMessage,
-        @Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm) {
+        Output<Boolean> checkCertificateRevocationListOnReceive,
+        Output<Boolean> checkCertificateRevocationListOnSend,
+        Output<Boolean> checkDuplicateMessage,
+        Output<Boolean> compressMessage,
+        Output<Boolean> encryptMessage,
+        Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm,
+        Output<Integer> interchangeDuplicatesValidityDays,
+        Output<Boolean> overrideMessageProperties,
+        Output<Boolean> signMessage,
+        @Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm) {
         this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive, "expected parameter 'checkCertificateRevocationListOnReceive' to be non-null");
         this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend, "expected parameter 'checkCertificateRevocationListOnSend' to be non-null");
         this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage, "expected parameter 'checkDuplicateMessage' to be non-null");
@@ -157,16 +157,16 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private AS2ValidationSettingsArgs() {
-        this.checkCertificateRevocationListOnReceive = Input.empty();
-        this.checkCertificateRevocationListOnSend = Input.empty();
-        this.checkDuplicateMessage = Input.empty();
-        this.compressMessage = Input.empty();
-        this.encryptMessage = Input.empty();
-        this.encryptionAlgorithm = Input.empty();
-        this.interchangeDuplicatesValidityDays = Input.empty();
-        this.overrideMessageProperties = Input.empty();
-        this.signMessage = Input.empty();
-        this.signingAlgorithm = Input.empty();
+        this.checkCertificateRevocationListOnReceive = Output.empty();
+        this.checkCertificateRevocationListOnSend = Output.empty();
+        this.checkDuplicateMessage = Output.empty();
+        this.compressMessage = Output.empty();
+        this.encryptMessage = Output.empty();
+        this.encryptionAlgorithm = Output.empty();
+        this.interchangeDuplicatesValidityDays = Output.empty();
+        this.overrideMessageProperties = Output.empty();
+        this.signMessage = Output.empty();
+        this.signingAlgorithm = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> checkCertificateRevocationListOnReceive;
-        private Input<Boolean> checkCertificateRevocationListOnSend;
-        private Input<Boolean> checkDuplicateMessage;
-        private Input<Boolean> compressMessage;
-        private Input<Boolean> encryptMessage;
-        private Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
-        private Input<Integer> interchangeDuplicatesValidityDays;
-        private Input<Boolean> overrideMessageProperties;
-        private Input<Boolean> signMessage;
-        private @Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm;
+        private Output<Boolean> checkCertificateRevocationListOnReceive;
+        private Output<Boolean> checkCertificateRevocationListOnSend;
+        private Output<Boolean> checkDuplicateMessage;
+        private Output<Boolean> compressMessage;
+        private Output<Boolean> encryptMessage;
+        private Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
+        private Output<Integer> interchangeDuplicatesValidityDays;
+        private Output<Boolean> overrideMessageProperties;
+        private Output<Boolean> signMessage;
+        private @Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     	      this.signingAlgorithm = defaults.signingAlgorithm;
         }
 
-        public Builder checkCertificateRevocationListOnReceive(Input<Boolean> checkCertificateRevocationListOnReceive) {
+        public Builder checkCertificateRevocationListOnReceive(Output<Boolean> checkCertificateRevocationListOnReceive) {
             this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive);
             return this;
         }
 
         public Builder checkCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
-            this.checkCertificateRevocationListOnReceive = Input.of(Objects.requireNonNull(checkCertificateRevocationListOnReceive));
+            this.checkCertificateRevocationListOnReceive = Output.of(Objects.requireNonNull(checkCertificateRevocationListOnReceive));
             return this;
         }
 
-        public Builder checkCertificateRevocationListOnSend(Input<Boolean> checkCertificateRevocationListOnSend) {
+        public Builder checkCertificateRevocationListOnSend(Output<Boolean> checkCertificateRevocationListOnSend) {
             this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend);
             return this;
         }
 
         public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
-            this.checkCertificateRevocationListOnSend = Input.of(Objects.requireNonNull(checkCertificateRevocationListOnSend));
+            this.checkCertificateRevocationListOnSend = Output.of(Objects.requireNonNull(checkCertificateRevocationListOnSend));
             return this;
         }
 
-        public Builder checkDuplicateMessage(Input<Boolean> checkDuplicateMessage) {
+        public Builder checkDuplicateMessage(Output<Boolean> checkDuplicateMessage) {
             this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage);
             return this;
         }
 
         public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
-            this.checkDuplicateMessage = Input.of(Objects.requireNonNull(checkDuplicateMessage));
+            this.checkDuplicateMessage = Output.of(Objects.requireNonNull(checkDuplicateMessage));
             return this;
         }
 
-        public Builder compressMessage(Input<Boolean> compressMessage) {
+        public Builder compressMessage(Output<Boolean> compressMessage) {
             this.compressMessage = Objects.requireNonNull(compressMessage);
             return this;
         }
 
         public Builder compressMessage(Boolean compressMessage) {
-            this.compressMessage = Input.of(Objects.requireNonNull(compressMessage));
+            this.compressMessage = Output.of(Objects.requireNonNull(compressMessage));
             return this;
         }
 
-        public Builder encryptMessage(Input<Boolean> encryptMessage) {
+        public Builder encryptMessage(Output<Boolean> encryptMessage) {
             this.encryptMessage = Objects.requireNonNull(encryptMessage);
             return this;
         }
 
         public Builder encryptMessage(Boolean encryptMessage) {
-            this.encryptMessage = Input.of(Objects.requireNonNull(encryptMessage));
+            this.encryptMessage = Output.of(Objects.requireNonNull(encryptMessage));
             return this;
         }
 
-        public Builder encryptionAlgorithm(Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
         public Builder encryptionAlgorithm(Either<String,EncryptionAlgorithm> encryptionAlgorithm) {
-            this.encryptionAlgorithm = Input.of(Objects.requireNonNull(encryptionAlgorithm));
+            this.encryptionAlgorithm = Output.of(Objects.requireNonNull(encryptionAlgorithm));
             return this;
         }
 
-        public Builder interchangeDuplicatesValidityDays(Input<Integer> interchangeDuplicatesValidityDays) {
+        public Builder interchangeDuplicatesValidityDays(Output<Integer> interchangeDuplicatesValidityDays) {
             this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays);
             return this;
         }
 
         public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
-            this.interchangeDuplicatesValidityDays = Input.of(Objects.requireNonNull(interchangeDuplicatesValidityDays));
+            this.interchangeDuplicatesValidityDays = Output.of(Objects.requireNonNull(interchangeDuplicatesValidityDays));
             return this;
         }
 
-        public Builder overrideMessageProperties(Input<Boolean> overrideMessageProperties) {
+        public Builder overrideMessageProperties(Output<Boolean> overrideMessageProperties) {
             this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties);
             return this;
         }
 
         public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
-            this.overrideMessageProperties = Input.of(Objects.requireNonNull(overrideMessageProperties));
+            this.overrideMessageProperties = Output.of(Objects.requireNonNull(overrideMessageProperties));
             return this;
         }
 
-        public Builder signMessage(Input<Boolean> signMessage) {
+        public Builder signMessage(Output<Boolean> signMessage) {
             this.signMessage = Objects.requireNonNull(signMessage);
             return this;
         }
 
         public Builder signMessage(Boolean signMessage) {
-            this.signMessage = Input.of(Objects.requireNonNull(signMessage));
+            this.signMessage = Output.of(Objects.requireNonNull(signMessage));
             return this;
         }
 
-        public Builder signingAlgorithm(@Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
         public Builder signingAlgorithm(@Nullable Either<String,SigningAlgorithm> signingAlgorithm) {
-            this.signingAlgorithm = Input.ofNullable(signingAlgorithm);
+            this.signingAlgorithm = Output.ofNullable(signingAlgorithm);
             return this;
         }
         public AS2ValidationSettingsArgs build() {

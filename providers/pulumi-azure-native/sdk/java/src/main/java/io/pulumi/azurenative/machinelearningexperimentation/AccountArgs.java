@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningexperimentation;
 
 import io.pulumi.azurenative.machinelearningexperimentation.inputs.StorageAccountPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultId", required=true)
-      private final Input<String> keyVaultId;
+      private final Output<String> keyVaultId;
 
-    public Input<String> getKeyVaultId() {
+    public Output<String> getKeyVaultId() {
         return this.keyVaultId;
     }
 
@@ -65,10 +65,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,10 +87,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seats")
-      private final @Nullable Input<String> seats;
+      private final @Nullable Output<String> seats;
 
-    public Input<String> getSeats() {
-        return this.seats == null ? Input.empty() : this.seats;
+    public Output<String> getSeats() {
+        return this.seats == null ? Output.empty() : this.seats;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccount", required=true)
-      private final Input<StorageAccountPropertiesArgs> storageAccount;
+      private final Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Input<StorageAccountPropertiesArgs> getStorageAccount() {
+    public Output<StorageAccountPropertiesArgs> getStorageAccount() {
         return this.storageAccount;
     }
 
@@ -109,10 +109,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vsoAccountId", required=true)
-      private final Input<String> vsoAccountId;
+      private final Output<String> vsoAccountId;
 
-    public Input<String> getVsoAccountId() {
+    public Output<String> getVsoAccountId() {
         return this.vsoAccountId;
     }
 
     public AccountArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> friendlyName,
-        Input<String> keyVaultId,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> seats,
-        Input<StorageAccountPropertiesArgs> storageAccount,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> vsoAccountId) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> friendlyName,
+        Output<String> keyVaultId,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> seats,
+        Output<StorageAccountPropertiesArgs> storageAccount,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> vsoAccountId) {
         this.accountName = accountName;
         this.description = description;
         this.friendlyName = friendlyName;
@@ -150,16 +150,16 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountName = Input.empty();
-        this.description = Input.empty();
-        this.friendlyName = Input.empty();
-        this.keyVaultId = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.seats = Input.empty();
-        this.storageAccount = Input.empty();
-        this.tags = Input.empty();
-        this.vsoAccountId = Input.empty();
+        this.accountName = Output.empty();
+        this.description = Output.empty();
+        this.friendlyName = Output.empty();
+        this.keyVaultId = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.seats = Output.empty();
+        this.storageAccount = Output.empty();
+        this.tags = Output.empty();
+        this.vsoAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> friendlyName;
-        private Input<String> keyVaultId;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> seats;
-        private Input<StorageAccountPropertiesArgs> storageAccount;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> vsoAccountId;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> friendlyName;
+        private Output<String> keyVaultId;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> seats;
+        private Output<StorageAccountPropertiesArgs> storageAccount;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> vsoAccountId;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vsoAccountId = defaults.vsoAccountId;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder keyVaultId(Input<String> keyVaultId) {
+        public Builder keyVaultId(Output<String> keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
 
         public Builder keyVaultId(String keyVaultId) {
-            this.keyVaultId = Input.of(Objects.requireNonNull(keyVaultId));
+            this.keyVaultId = Output.of(Objects.requireNonNull(keyVaultId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder seats(@Nullable Input<String> seats) {
+        public Builder seats(@Nullable Output<String> seats) {
             this.seats = seats;
             return this;
         }
 
         public Builder seats(@Nullable String seats) {
-            this.seats = Input.ofNullable(seats);
+            this.seats = Output.ofNullable(seats);
             return this;
         }
 
-        public Builder storageAccount(Input<StorageAccountPropertiesArgs> storageAccount) {
+        public Builder storageAccount(Output<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
 
         public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
-            this.storageAccount = Input.of(Objects.requireNonNull(storageAccount));
+            this.storageAccount = Output.of(Objects.requireNonNull(storageAccount));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vsoAccountId(Input<String> vsoAccountId) {
+        public Builder vsoAccountId(Output<String> vsoAccountId) {
             this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
             return this;
         }
 
         public Builder vsoAccountId(String vsoAccountId) {
-            this.vsoAccountId = Input.of(Objects.requireNonNull(vsoAccountId));
+            this.vsoAccountId = Output.of(Objects.requireNonNull(vsoAccountId));
             return this;
         }
         public AccountArgs build() {

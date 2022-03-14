@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer;
 import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyRole;
 import io.pulumi.azurenative.videoanalyzer.inputs.JwtAuthenticationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyName")
-      private final @Nullable Input<String> accessPolicyName;
+      private final @Nullable Output<String> accessPolicyName;
 
-    public Input<String> getAccessPolicyName() {
-        return this.accessPolicyName == null ? Input.empty() : this.accessPolicyName;
+    public Output<String> getAccessPolicyName() {
+        return this.accessPolicyName == null ? Output.empty() : this.accessPolicyName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -44,10 +44,10 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<JwtAuthenticationArgs> authentication;
+      private final @Nullable Output<JwtAuthenticationArgs> authentication;
 
-    public Input<JwtAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<JwtAuthenticationArgs> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,18 +66,18 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<Either<String,AccessPolicyRole>> role;
+      private final @Nullable Output<Either<String,AccessPolicyRole>> role;
 
-    public Input<Either<String,AccessPolicyRole>> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<Either<String,AccessPolicyRole>> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public AccessPolicyArgs(
-        @Nullable Input<String> accessPolicyName,
-        Input<String> accountName,
-        @Nullable Input<JwtAuthenticationArgs> authentication,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,AccessPolicyRole>> role) {
+        @Nullable Output<String> accessPolicyName,
+        Output<String> accountName,
+        @Nullable Output<JwtAuthenticationArgs> authentication,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,AccessPolicyRole>> role) {
         this.accessPolicyName = accessPolicyName;
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.authentication = authentication;
@@ -86,11 +86,11 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPolicyArgs() {
-        this.accessPolicyName = Input.empty();
-        this.accountName = Input.empty();
-        this.authentication = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.role = Input.empty();
+        this.accessPolicyName = Output.empty();
+        this.accountName = Output.empty();
+        this.authentication = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessPolicyName;
-        private Input<String> accountName;
-        private @Nullable Input<JwtAuthenticationArgs> authentication;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,AccessPolicyRole>> role;
+        private @Nullable Output<String> accessPolicyName;
+        private Output<String> accountName;
+        private @Nullable Output<JwtAuthenticationArgs> authentication;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,AccessPolicyRole>> role;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder accessPolicyName(@Nullable Input<String> accessPolicyName) {
+        public Builder accessPolicyName(@Nullable Output<String> accessPolicyName) {
             this.accessPolicyName = accessPolicyName;
             return this;
         }
 
         public Builder accessPolicyName(@Nullable String accessPolicyName) {
-            this.accessPolicyName = Input.ofNullable(accessPolicyName);
+            this.accessPolicyName = Output.ofNullable(accessPolicyName);
             return this;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder authentication(@Nullable Input<JwtAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Output<JwtAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable JwtAuthenticationArgs authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder role(@Nullable Input<Either<String,AccessPolicyRole>> role) {
+        public Builder role(@Nullable Output<Either<String,AccessPolicyRole>> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable Either<String,AccessPolicyRole> role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public AccessPolicyArgs build() {

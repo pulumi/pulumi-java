@@ -15,7 +15,6 @@ import io.pulumi.azurenative.storagecache.outputs.CacheSecuritySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheUpgradeStatusResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -319,24 +318,24 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cache(String name, CacheArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagecache:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storagecache:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Cache(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Cache(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagecache:Cache", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storagecache/v20190801preview:Cache").build()),
-                Input.of(Alias.builder().setType("azure-native:storagecache/v20191101:Cache").build()),
-                Input.of(Alias.builder().setType("azure-native:storagecache/v20200301:Cache").build()),
-                Input.of(Alias.builder().setType("azure-native:storagecache/v20201001:Cache").build()),
-                Input.of(Alias.builder().setType("azure-native:storagecache/v20210301:Cache").build()),
-                Input.of(Alias.builder().setType("azure-native:storagecache/v20210501:Cache").build()),
-                Input.of(Alias.builder().setType("azure-native:storagecache/v20210901:Cache").build())
+                Output.of(Alias.builder().setType("azure-native:storagecache/v20190801preview:Cache").build()),
+                Output.of(Alias.builder().setType("azure-native:storagecache/v20191101:Cache").build()),
+                Output.of(Alias.builder().setType("azure-native:storagecache/v20200301:Cache").build()),
+                Output.of(Alias.builder().setType("azure-native:storagecache/v20201001:Cache").build()),
+                Output.of(Alias.builder().setType("azure-native:storagecache/v20210301:Cache").build()),
+                Output.of(Alias.builder().setType("azure-native:storagecache/v20210501:Cache").build()),
+                Output.of(Alias.builder().setType("azure-native:storagecache/v20210901:Cache").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -350,7 +349,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Cache get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Cache get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cache(name, id, options);
     }
 }

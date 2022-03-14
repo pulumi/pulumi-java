@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.visualstudio;
 
 import io.pulumi.azurenative.visualstudio.inputs.ExtensionResourcePlanArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountResourceName", required=true)
-      private final Input<String> accountResourceName;
+      private final Output<String> accountResourceName;
 
-    public Input<String> getAccountResourceName() {
+    public Output<String> getAccountResourceName() {
         return this.accountResourceName;
     }
 
@@ -32,10 +32,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionResourceName")
-      private final @Nullable Input<String> extensionResourceName;
+      private final @Nullable Output<String> extensionResourceName;
 
-    public Input<String> getExtensionResourceName() {
-        return this.extensionResourceName == null ? Input.empty() : this.extensionResourceName;
+    public Output<String> getExtensionResourceName() {
+        return this.extensionResourceName == null ? Output.empty() : this.extensionResourceName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<ExtensionResourcePlanArgs> plan;
+      private final @Nullable Output<ExtensionResourcePlanArgs> plan;
 
-    public Input<ExtensionResourcePlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<ExtensionResourcePlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,20 +87,20 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ExtensionArgs(
-        Input<String> accountResourceName,
-        @Nullable Input<String> extensionResourceName,
-        @Nullable Input<String> location,
-        @Nullable Input<ExtensionResourcePlanArgs> plan,
-        @Nullable Input<Map<String,String>> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> accountResourceName,
+        @Nullable Output<String> extensionResourceName,
+        @Nullable Output<String> location,
+        @Nullable Output<ExtensionResourcePlanArgs> plan,
+        @Nullable Output<Map<String,String>> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountResourceName = Objects.requireNonNull(accountResourceName, "expected parameter 'accountResourceName' to be non-null");
         this.extensionResourceName = extensionResourceName;
         this.location = location;
@@ -111,13 +111,13 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExtensionArgs() {
-        this.accountResourceName = Input.empty();
-        this.extensionResourceName = Input.empty();
-        this.location = Input.empty();
-        this.plan = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.accountResourceName = Output.empty();
+        this.extensionResourceName = Output.empty();
+        this.location = Output.empty();
+        this.plan = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountResourceName;
-        private @Nullable Input<String> extensionResourceName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ExtensionResourcePlanArgs> plan;
-        private @Nullable Input<Map<String,String>> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> accountResourceName;
+        private @Nullable Output<String> extensionResourceName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ExtensionResourcePlanArgs> plan;
+        private @Nullable Output<Map<String,String>> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountResourceName(Input<String> accountResourceName) {
+        public Builder accountResourceName(Output<String> accountResourceName) {
             this.accountResourceName = Objects.requireNonNull(accountResourceName);
             return this;
         }
 
         public Builder accountResourceName(String accountResourceName) {
-            this.accountResourceName = Input.of(Objects.requireNonNull(accountResourceName));
+            this.accountResourceName = Output.of(Objects.requireNonNull(accountResourceName));
             return this;
         }
 
-        public Builder extensionResourceName(@Nullable Input<String> extensionResourceName) {
+        public Builder extensionResourceName(@Nullable Output<String> extensionResourceName) {
             this.extensionResourceName = extensionResourceName;
             return this;
         }
 
         public Builder extensionResourceName(@Nullable String extensionResourceName) {
-            this.extensionResourceName = Input.ofNullable(extensionResourceName);
+            this.extensionResourceName = Output.ofNullable(extensionResourceName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder plan(@Nullable Input<ExtensionResourcePlanArgs> plan) {
+        public Builder plan(@Nullable Output<ExtensionResourcePlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable ExtensionResourcePlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ExtensionArgs build() {

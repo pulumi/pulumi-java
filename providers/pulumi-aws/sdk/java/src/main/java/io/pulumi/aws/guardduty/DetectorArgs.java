@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty;
 
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasources")
-      private final @Nullable Input<DetectorDatasourcesArgs> datasources;
+      private final @Nullable Output<DetectorDatasourcesArgs> datasources;
 
-    public Input<DetectorDatasourcesArgs> getDatasources() {
-        return this.datasources == null ? Input.empty() : this.datasources;
+    public Output<DetectorDatasourcesArgs> getDatasources() {
+        return this.datasources == null ? Output.empty() : this.datasources;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-      private final @Nullable Input<String> findingPublishingFrequency;
+      private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Input<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
+    public Output<String> getFindingPublishingFrequency() {
+        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DetectorArgs(
-        @Nullable Input<DetectorDatasourcesArgs> datasources,
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<String> findingPublishingFrequency,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<DetectorDatasourcesArgs> datasources,
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<String> findingPublishingFrequency,
+        @Nullable Output<Map<String,String>> tags) {
         this.datasources = datasources;
         this.enable = enable;
         this.findingPublishingFrequency = findingPublishingFrequency;
@@ -73,10 +73,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorArgs() {
-        this.datasources = Input.empty();
-        this.enable = Input.empty();
-        this.findingPublishingFrequency = Input.empty();
-        this.tags = Input.empty();
+        this.datasources = Output.empty();
+        this.enable = Output.empty();
+        this.findingPublishingFrequency = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DetectorDatasourcesArgs> datasources;
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<String> findingPublishingFrequency;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<DetectorDatasourcesArgs> datasources;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<String> findingPublishingFrequency;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder datasources(@Nullable Input<DetectorDatasourcesArgs> datasources) {
+        public Builder datasources(@Nullable Output<DetectorDatasourcesArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
 
         public Builder datasources(@Nullable DetectorDatasourcesArgs datasources) {
-            this.datasources = Input.ofNullable(datasources);
+            this.datasources = Output.ofNullable(datasources);
             return this;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder findingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DetectorArgs build() {

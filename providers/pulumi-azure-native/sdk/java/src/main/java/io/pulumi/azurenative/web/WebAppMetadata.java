@@ -6,7 +6,6 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppMetadataArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,30 +123,30 @@ public class WebAppMetadata extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppMetadata(String name, WebAppMetadataArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppMetadata", name, args == null ? WebAppMetadataArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppMetadata", name, args == null ? WebAppMetadataArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppMetadata(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppMetadata(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppMetadata", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppMetadata").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppMetadata").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppMetadata").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppMetadata").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -161,7 +160,7 @@ public class WebAppMetadata extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppMetadata get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppMetadata get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppMetadata(name, id, options);
     }
 }

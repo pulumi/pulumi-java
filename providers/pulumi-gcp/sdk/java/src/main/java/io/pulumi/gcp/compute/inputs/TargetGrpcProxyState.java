@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selfLinkWithId")
-      private final @Nullable Input<String> selfLinkWithId;
+      private final @Nullable Output<String> selfLinkWithId;
 
-    public Input<String> getSelfLinkWithId() {
-        return this.selfLinkWithId == null ? Input.empty() : this.selfLinkWithId;
+    public Output<String> getSelfLinkWithId() {
+        return this.selfLinkWithId == null ? Output.empty() : this.selfLinkWithId;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="urlMap")
-      private final @Nullable Input<String> urlMap;
+      private final @Nullable Output<String> urlMap;
 
-    public Input<String> getUrlMap() {
-        return this.urlMap == null ? Input.empty() : this.urlMap;
+    public Output<String> getUrlMap() {
+        return this.urlMap == null ? Output.empty() : this.urlMap;
     }
 
     /**
@@ -129,22 +129,22 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="validateForProxyless")
-      private final @Nullable Input<Boolean> validateForProxyless;
+      private final @Nullable Output<Boolean> validateForProxyless;
 
-    public Input<Boolean> getValidateForProxyless() {
-        return this.validateForProxyless == null ? Input.empty() : this.validateForProxyless;
+    public Output<Boolean> getValidateForProxyless() {
+        return this.validateForProxyless == null ? Output.empty() : this.validateForProxyless;
     }
 
     public TargetGrpcProxyState(
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> selfLinkWithId,
-        @Nullable Input<String> urlMap,
-        @Nullable Input<Boolean> validateForProxyless) {
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> selfLinkWithId,
+        @Nullable Output<String> urlMap,
+        @Nullable Output<Boolean> validateForProxyless) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;
@@ -157,15 +157,15 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     }
 
     private TargetGrpcProxyState() {
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.fingerprint = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
-        this.selfLinkWithId = Input.empty();
-        this.urlMap = Input.empty();
-        this.validateForProxyless = Input.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.fingerprint = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
+        this.selfLinkWithId = Output.empty();
+        this.urlMap = Output.empty();
+        this.validateForProxyless = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,15 +177,15 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> selfLinkWithId;
-        private @Nullable Input<String> urlMap;
-        private @Nullable Input<Boolean> validateForProxyless;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> selfLinkWithId;
+        private @Nullable Output<String> urlMap;
+        private @Nullable Output<Boolean> validateForProxyless;
 
         public Builder() {
     	      // Empty
@@ -204,93 +204,93 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     	      this.validateForProxyless = defaults.validateForProxyless;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder selfLinkWithId(@Nullable Input<String> selfLinkWithId) {
+        public Builder selfLinkWithId(@Nullable Output<String> selfLinkWithId) {
             this.selfLinkWithId = selfLinkWithId;
             return this;
         }
 
         public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
-            this.selfLinkWithId = Input.ofNullable(selfLinkWithId);
+            this.selfLinkWithId = Output.ofNullable(selfLinkWithId);
             return this;
         }
 
-        public Builder urlMap(@Nullable Input<String> urlMap) {
+        public Builder urlMap(@Nullable Output<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
 
         public Builder urlMap(@Nullable String urlMap) {
-            this.urlMap = Input.ofNullable(urlMap);
+            this.urlMap = Output.ofNullable(urlMap);
             return this;
         }
 
-        public Builder validateForProxyless(@Nullable Input<Boolean> validateForProxyless) {
+        public Builder validateForProxyless(@Nullable Output<Boolean> validateForProxyless) {
             this.validateForProxyless = validateForProxyless;
             return this;
         }
 
         public Builder validateForProxyless(@Nullable Boolean validateForProxyless) {
-            this.validateForProxyless = Input.ofNullable(validateForProxyless);
+            this.validateForProxyless = Output.ofNullable(validateForProxyless);
             return this;
         }
         public TargetGrpcProxyState build() {

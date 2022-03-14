@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="distributionId", required=true)
-      private final Input<String> distributionId;
+      private final Output<String> distributionId;
 
-    public Input<String> getDistributionId() {
+    public Output<String> getDistributionId() {
         return this.distributionId;
     }
 
@@ -30,22 +30,22 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="monitoringSubscription", required=true)
-      private final Input<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
+      private final Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
 
-    public Input<MonitoringSubscriptionMonitoringSubscriptionArgs> getMonitoringSubscription() {
+    public Output<MonitoringSubscriptionMonitoringSubscriptionArgs> getMonitoringSubscription() {
         return this.monitoringSubscription;
     }
 
     public MonitoringSubscriptionArgs(
-        Input<String> distributionId,
-        Input<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
+        Output<String> distributionId,
+        Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
         this.distributionId = Objects.requireNonNull(distributionId, "expected parameter 'distributionId' to be non-null");
         this.monitoringSubscription = Objects.requireNonNull(monitoringSubscription, "expected parameter 'monitoringSubscription' to be non-null");
     }
 
     private MonitoringSubscriptionArgs() {
-        this.distributionId = Input.empty();
-        this.monitoringSubscription = Input.empty();
+        this.distributionId = Output.empty();
+        this.monitoringSubscription = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> distributionId;
-        private Input<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
+        private Output<String> distributionId;
+        private Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
     	      this.monitoringSubscription = defaults.monitoringSubscription;
         }
 
-        public Builder distributionId(Input<String> distributionId) {
+        public Builder distributionId(Output<String> distributionId) {
             this.distributionId = Objects.requireNonNull(distributionId);
             return this;
         }
 
         public Builder distributionId(String distributionId) {
-            this.distributionId = Input.of(Objects.requireNonNull(distributionId));
+            this.distributionId = Output.of(Objects.requireNonNull(distributionId));
             return this;
         }
 
-        public Builder monitoringSubscription(Input<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
+        public Builder monitoringSubscription(Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
             this.monitoringSubscription = Objects.requireNonNull(monitoringSubscription);
             return this;
         }
 
         public Builder monitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionArgs monitoringSubscription) {
-            this.monitoringSubscription = Input.of(Objects.requireNonNull(monitoringSubscription));
+            this.monitoringSubscription = Output.of(Objects.requireNonNull(monitoringSubscription));
             return this;
         }
         public MonitoringSubscriptionArgs build() {

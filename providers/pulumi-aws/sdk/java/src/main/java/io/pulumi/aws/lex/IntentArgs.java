@@ -10,7 +10,7 @@ import io.pulumi.aws.lex.inputs.IntentFollowUpPromptArgs;
 import io.pulumi.aws.lex.inputs.IntentFulfillmentActivityArgs;
 import io.pulumi.aws.lex.inputs.IntentRejectionStatementArgs;
 import io.pulumi.aws.lex.inputs.IntentSlotArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conclusionStatement")
-      private final @Nullable Input<IntentConclusionStatementArgs> conclusionStatement;
+      private final @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
 
-    public Input<IntentConclusionStatementArgs> getConclusionStatement() {
-        return this.conclusionStatement == null ? Input.empty() : this.conclusionStatement;
+    public Output<IntentConclusionStatementArgs> getConclusionStatement() {
+        return this.conclusionStatement == null ? Output.empty() : this.conclusionStatement;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="confirmationPrompt")
-      private final @Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt;
+      private final @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
 
-    public Input<IntentConfirmationPromptArgs> getConfirmationPrompt() {
-        return this.confirmationPrompt == null ? Input.empty() : this.confirmationPrompt;
+    public Output<IntentConfirmationPromptArgs> getConfirmationPrompt() {
+        return this.confirmationPrompt == null ? Output.empty() : this.confirmationPrompt;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createVersion")
-      private final @Nullable Input<Boolean> createVersion;
+      private final @Nullable Output<Boolean> createVersion;
 
-    public Input<Boolean> getCreateVersion() {
-        return this.createVersion == null ? Input.empty() : this.createVersion;
+    public Output<Boolean> getCreateVersion() {
+        return this.createVersion == null ? Output.empty() : this.createVersion;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dialogCodeHook")
-      private final @Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook;
+      private final @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
 
-    public Input<IntentDialogCodeHookArgs> getDialogCodeHook() {
-        return this.dialogCodeHook == null ? Input.empty() : this.dialogCodeHook;
+    public Output<IntentDialogCodeHookArgs> getDialogCodeHook() {
+        return this.dialogCodeHook == null ? Output.empty() : this.dialogCodeHook;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="followUpPrompt")
-      private final @Nullable Input<IntentFollowUpPromptArgs> followUpPrompt;
+      private final @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
 
-    public Input<IntentFollowUpPromptArgs> getFollowUpPrompt() {
-        return this.followUpPrompt == null ? Input.empty() : this.followUpPrompt;
+    public Output<IntentFollowUpPromptArgs> getFollowUpPrompt() {
+        return this.followUpPrompt == null ? Output.empty() : this.followUpPrompt;
     }
 
     /**
@@ -107,9 +107,9 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fulfillmentActivity", required=true)
-      private final Input<IntentFulfillmentActivityArgs> fulfillmentActivity;
+      private final Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
 
-    public Input<IntentFulfillmentActivityArgs> getFulfillmentActivity() {
+    public Output<IntentFulfillmentActivityArgs> getFulfillmentActivity() {
         return this.fulfillmentActivity;
     }
 
@@ -118,10 +118,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentIntentSignature")
-      private final @Nullable Input<String> parentIntentSignature;
+      private final @Nullable Output<String> parentIntentSignature;
 
-    public Input<String> getParentIntentSignature() {
-        return this.parentIntentSignature == null ? Input.empty() : this.parentIntentSignature;
+    public Output<String> getParentIntentSignature() {
+        return this.parentIntentSignature == null ? Output.empty() : this.parentIntentSignature;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectionStatement")
-      private final @Nullable Input<IntentRejectionStatementArgs> rejectionStatement;
+      private final @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
 
-    public Input<IntentRejectionStatementArgs> getRejectionStatement() {
-        return this.rejectionStatement == null ? Input.empty() : this.rejectionStatement;
+    public Output<IntentRejectionStatementArgs> getRejectionStatement() {
+        return this.rejectionStatement == null ? Output.empty() : this.rejectionStatement;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleUtterances")
-      private final @Nullable Input<List<String>> sampleUtterances;
+      private final @Nullable Output<List<String>> sampleUtterances;
 
-    public Input<List<String>> getSampleUtterances() {
-        return this.sampleUtterances == null ? Input.empty() : this.sampleUtterances;
+    public Output<List<String>> getSampleUtterances() {
+        return this.sampleUtterances == null ? Output.empty() : this.sampleUtterances;
     }
 
     /**
@@ -170,25 +170,25 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slots")
-      private final @Nullable Input<List<IntentSlotArgs>> slots;
+      private final @Nullable Output<List<IntentSlotArgs>> slots;
 
-    public Input<List<IntentSlotArgs>> getSlots() {
-        return this.slots == null ? Input.empty() : this.slots;
+    public Output<List<IntentSlotArgs>> getSlots() {
+        return this.slots == null ? Output.empty() : this.slots;
     }
 
     public IntentArgs(
-        @Nullable Input<IntentConclusionStatementArgs> conclusionStatement,
-        @Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt,
-        @Nullable Input<Boolean> createVersion,
-        @Nullable Input<String> description,
-        @Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook,
-        @Nullable Input<IntentFollowUpPromptArgs> followUpPrompt,
-        Input<IntentFulfillmentActivityArgs> fulfillmentActivity,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentIntentSignature,
-        @Nullable Input<IntentRejectionStatementArgs> rejectionStatement,
-        @Nullable Input<List<String>> sampleUtterances,
-        @Nullable Input<List<IntentSlotArgs>> slots) {
+        @Nullable Output<IntentConclusionStatementArgs> conclusionStatement,
+        @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt,
+        @Nullable Output<Boolean> createVersion,
+        @Nullable Output<String> description,
+        @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook,
+        @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt,
+        Output<IntentFulfillmentActivityArgs> fulfillmentActivity,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentIntentSignature,
+        @Nullable Output<IntentRejectionStatementArgs> rejectionStatement,
+        @Nullable Output<List<String>> sampleUtterances,
+        @Nullable Output<List<IntentSlotArgs>> slots) {
         this.conclusionStatement = conclusionStatement;
         this.confirmationPrompt = confirmationPrompt;
         this.createVersion = createVersion;
@@ -204,18 +204,18 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntentArgs() {
-        this.conclusionStatement = Input.empty();
-        this.confirmationPrompt = Input.empty();
-        this.createVersion = Input.empty();
-        this.description = Input.empty();
-        this.dialogCodeHook = Input.empty();
-        this.followUpPrompt = Input.empty();
-        this.fulfillmentActivity = Input.empty();
-        this.name = Input.empty();
-        this.parentIntentSignature = Input.empty();
-        this.rejectionStatement = Input.empty();
-        this.sampleUtterances = Input.empty();
-        this.slots = Input.empty();
+        this.conclusionStatement = Output.empty();
+        this.confirmationPrompt = Output.empty();
+        this.createVersion = Output.empty();
+        this.description = Output.empty();
+        this.dialogCodeHook = Output.empty();
+        this.followUpPrompt = Output.empty();
+        this.fulfillmentActivity = Output.empty();
+        this.name = Output.empty();
+        this.parentIntentSignature = Output.empty();
+        this.rejectionStatement = Output.empty();
+        this.sampleUtterances = Output.empty();
+        this.slots = Output.empty();
     }
 
     public static Builder builder() {
@@ -227,18 +227,18 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IntentConclusionStatementArgs> conclusionStatement;
-        private @Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt;
-        private @Nullable Input<Boolean> createVersion;
-        private @Nullable Input<String> description;
-        private @Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook;
-        private @Nullable Input<IntentFollowUpPromptArgs> followUpPrompt;
-        private Input<IntentFulfillmentActivityArgs> fulfillmentActivity;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentIntentSignature;
-        private @Nullable Input<IntentRejectionStatementArgs> rejectionStatement;
-        private @Nullable Input<List<String>> sampleUtterances;
-        private @Nullable Input<List<IntentSlotArgs>> slots;
+        private @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
+        private @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
+        private @Nullable Output<Boolean> createVersion;
+        private @Nullable Output<String> description;
+        private @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
+        private @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
+        private Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentIntentSignature;
+        private @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
+        private @Nullable Output<List<String>> sampleUtterances;
+        private @Nullable Output<List<IntentSlotArgs>> slots;
 
         public Builder() {
     	      // Empty
@@ -260,123 +260,123 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.slots = defaults.slots;
         }
 
-        public Builder conclusionStatement(@Nullable Input<IntentConclusionStatementArgs> conclusionStatement) {
+        public Builder conclusionStatement(@Nullable Output<IntentConclusionStatementArgs> conclusionStatement) {
             this.conclusionStatement = conclusionStatement;
             return this;
         }
 
         public Builder conclusionStatement(@Nullable IntentConclusionStatementArgs conclusionStatement) {
-            this.conclusionStatement = Input.ofNullable(conclusionStatement);
+            this.conclusionStatement = Output.ofNullable(conclusionStatement);
             return this;
         }
 
-        public Builder confirmationPrompt(@Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt) {
+        public Builder confirmationPrompt(@Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt) {
             this.confirmationPrompt = confirmationPrompt;
             return this;
         }
 
         public Builder confirmationPrompt(@Nullable IntentConfirmationPromptArgs confirmationPrompt) {
-            this.confirmationPrompt = Input.ofNullable(confirmationPrompt);
+            this.confirmationPrompt = Output.ofNullable(confirmationPrompt);
             return this;
         }
 
-        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
         public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Input.ofNullable(createVersion);
+            this.createVersion = Output.ofNullable(createVersion);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dialogCodeHook(@Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
 
         public Builder dialogCodeHook(@Nullable IntentDialogCodeHookArgs dialogCodeHook) {
-            this.dialogCodeHook = Input.ofNullable(dialogCodeHook);
+            this.dialogCodeHook = Output.ofNullable(dialogCodeHook);
             return this;
         }
 
-        public Builder followUpPrompt(@Nullable Input<IntentFollowUpPromptArgs> followUpPrompt) {
+        public Builder followUpPrompt(@Nullable Output<IntentFollowUpPromptArgs> followUpPrompt) {
             this.followUpPrompt = followUpPrompt;
             return this;
         }
 
         public Builder followUpPrompt(@Nullable IntentFollowUpPromptArgs followUpPrompt) {
-            this.followUpPrompt = Input.ofNullable(followUpPrompt);
+            this.followUpPrompt = Output.ofNullable(followUpPrompt);
             return this;
         }
 
-        public Builder fulfillmentActivity(Input<IntentFulfillmentActivityArgs> fulfillmentActivity) {
+        public Builder fulfillmentActivity(Output<IntentFulfillmentActivityArgs> fulfillmentActivity) {
             this.fulfillmentActivity = Objects.requireNonNull(fulfillmentActivity);
             return this;
         }
 
         public Builder fulfillmentActivity(IntentFulfillmentActivityArgs fulfillmentActivity) {
-            this.fulfillmentActivity = Input.of(Objects.requireNonNull(fulfillmentActivity));
+            this.fulfillmentActivity = Output.of(Objects.requireNonNull(fulfillmentActivity));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentIntentSignature(@Nullable Input<String> parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable Output<String> parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
 
         public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
-            this.parentIntentSignature = Input.ofNullable(parentIntentSignature);
+            this.parentIntentSignature = Output.ofNullable(parentIntentSignature);
             return this;
         }
 
-        public Builder rejectionStatement(@Nullable Input<IntentRejectionStatementArgs> rejectionStatement) {
+        public Builder rejectionStatement(@Nullable Output<IntentRejectionStatementArgs> rejectionStatement) {
             this.rejectionStatement = rejectionStatement;
             return this;
         }
 
         public Builder rejectionStatement(@Nullable IntentRejectionStatementArgs rejectionStatement) {
-            this.rejectionStatement = Input.ofNullable(rejectionStatement);
+            this.rejectionStatement = Output.ofNullable(rejectionStatement);
             return this;
         }
 
-        public Builder sampleUtterances(@Nullable Input<List<String>> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable Output<List<String>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
         public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
-            this.sampleUtterances = Input.ofNullable(sampleUtterances);
+            this.sampleUtterances = Output.ofNullable(sampleUtterances);
             return this;
         }
 
-        public Builder slots(@Nullable Input<List<IntentSlotArgs>> slots) {
+        public Builder slots(@Nullable Output<List<IntentSlotArgs>> slots) {
             this.slots = slots;
             return this;
         }
 
         public Builder slots(@Nullable List<IntentSlotArgs> slots) {
-            this.slots = Input.ofNullable(slots);
+            this.slots = Output.ofNullable(slots);
             return this;
         }
         public IntentArgs build() {

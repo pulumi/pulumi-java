@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,17 +23,17 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     @InputImport(name="networkInterface")
-      private final @Nullable Input<String> networkInterface;
+      private final @Nullable Output<String> networkInterface;
 
-    public Input<String> getNetworkInterface() {
-        return this.networkInterface == null ? Input.empty() : this.networkInterface;
+    public Output<String> getNetworkInterface() {
+        return this.networkInterface == null ? Output.empty() : this.networkInterface;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualMachine")
-      private final @Nullable Input<String> virtualMachine;
+      private final @Nullable Output<String> virtualMachine;
 
-    public Input<String> getVirtualMachine() {
-        return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
+    public Output<String> getVirtualMachine() {
+        return this.virtualMachine == null ? Output.empty() : this.virtualMachine;
     }
 
     public RouterApplianceInstanceArgs(
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> networkInterface,
-        @Nullable Input<String> virtualMachine) {
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> networkInterface,
+        @Nullable Output<String> virtualMachine) {
         this.ipAddress = ipAddress;
         this.networkInterface = networkInterface;
         this.virtualMachine = virtualMachine;
     }
 
     private RouterApplianceInstanceArgs() {
-        this.ipAddress = Input.empty();
-        this.networkInterface = Input.empty();
-        this.virtualMachine = Input.empty();
+        this.ipAddress = Output.empty();
+        this.networkInterface = Output.empty();
+        this.virtualMachine = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> networkInterface;
-        private @Nullable Input<String> virtualMachine;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> networkInterface;
+        private @Nullable Output<String> virtualMachine;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder networkInterface(@Nullable Input<String> networkInterface) {
+        public Builder networkInterface(@Nullable Output<String> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
 
         public Builder networkInterface(@Nullable String networkInterface) {
-            this.networkInterface = Input.ofNullable(networkInterface);
+            this.networkInterface = Output.ofNullable(networkInterface);
             return this;
         }
 
-        public Builder virtualMachine(@Nullable Input<String> virtualMachine) {
+        public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
 
         public Builder virtualMachine(@Nullable String virtualMachine) {
-            this.virtualMachine = Input.ofNullable(virtualMachine);
+            this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
         }
         public RouterApplianceInstanceArgs build() {

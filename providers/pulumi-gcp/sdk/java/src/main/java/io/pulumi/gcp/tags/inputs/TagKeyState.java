@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespacedName")
-      private final @Nullable Input<String> namespacedName;
+      private final @Nullable Output<String> namespacedName;
 
-    public Input<String> getNamespacedName() {
-        return this.namespacedName == null ? Input.empty() : this.namespacedName;
+    public Output<String> getNamespacedName() {
+        return this.namespacedName == null ? Output.empty() : this.namespacedName;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-      private final @Nullable Input<String> shortName;
+      private final @Nullable Output<String> shortName;
 
-    public Input<String> getShortName() {
-        return this.shortName == null ? Input.empty() : this.shortName;
+    public Output<String> getShortName() {
+        return this.shortName == null ? Output.empty() : this.shortName;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public TagKeyState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespacedName,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> shortName,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespacedName,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> shortName,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;
@@ -112,13 +112,13 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagKeyState() {
-        this.createTime = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.namespacedName = Input.empty();
-        this.parent = Input.empty();
-        this.shortName = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.namespacedName = Output.empty();
+        this.parent = Output.empty();
+        this.shortName = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespacedName;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> shortName;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespacedName;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> shortName;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespacedName(@Nullable Input<String> namespacedName) {
+        public Builder namespacedName(@Nullable Output<String> namespacedName) {
             this.namespacedName = namespacedName;
             return this;
         }
 
         public Builder namespacedName(@Nullable String namespacedName) {
-            this.namespacedName = Input.ofNullable(namespacedName);
+            this.namespacedName = Output.ofNullable(namespacedName);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder shortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Input.ofNullable(shortName);
+            this.shortName = Output.ofNullable(shortName);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public TagKeyState build() {

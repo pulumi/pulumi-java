@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataLocations")
-      private final @Nullable Input<List<String>> dataLocations;
+      private final @Nullable Output<List<String>> dataLocations;
 
-    public Input<List<String>> getDataLocations() {
-        return this.dataLocations == null ? Input.empty() : this.dataLocations;
+    public Output<List<String>> getDataLocations() {
+        return this.dataLocations == null ? Output.empty() : this.dataLocations;
     }
 
-    public BucketCustomPlacementConfigArgs(@Nullable Input<List<String>> dataLocations) {
+    public BucketCustomPlacementConfigArgs(@Nullable Output<List<String>> dataLocations) {
         this.dataLocations = dataLocations;
     }
 
     private BucketCustomPlacementConfigArgs() {
-        this.dataLocations = Input.empty();
+        this.dataLocations = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dataLocations;
+        private @Nullable Output<List<String>> dataLocations;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
     	      this.dataLocations = defaults.dataLocations;
         }
 
-        public Builder dataLocations(@Nullable Input<List<String>> dataLocations) {
+        public Builder dataLocations(@Nullable Output<List<String>> dataLocations) {
             this.dataLocations = dataLocations;
             return this;
         }
 
         public Builder dataLocations(@Nullable List<String> dataLocations) {
-            this.dataLocations = Input.ofNullable(dataLocations);
+            this.dataLocations = Output.ofNullable(dataLocations);
             return this;
         }
         public BucketCustomPlacementConfigArgs build() {

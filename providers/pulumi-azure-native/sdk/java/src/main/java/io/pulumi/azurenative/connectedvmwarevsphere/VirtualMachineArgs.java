@@ -12,7 +12,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.inputs.OsProfileArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.PlacementProfileArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -29,10 +29,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firmwareType")
-      private final @Nullable Input<Either<String,FirmwareType>> firmwareType;
+      private final @Nullable Output<Either<String,FirmwareType>> firmwareType;
 
-    public Input<Either<String,FirmwareType>> getFirmwareType() {
-        return this.firmwareType == null ? Input.empty() : this.firmwareType;
+    public Output<Either<String,FirmwareType>> getFirmwareType() {
+        return this.firmwareType == null ? Output.empty() : this.firmwareType;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hardwareProfile")
-      private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
+      private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Input<HardwareProfileArgs> getHardwareProfile() {
-        return this.hardwareProfile == null ? Input.empty() : this.hardwareProfile;
+    public Output<HardwareProfileArgs> getHardwareProfile() {
+        return this.hardwareProfile == null ? Output.empty() : this.hardwareProfile;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inventoryItemId")
-      private final @Nullable Input<String> inventoryItemId;
+      private final @Nullable Output<String> inventoryItemId;
 
-    public Input<String> getInventoryItemId() {
-        return this.inventoryItemId == null ? Input.empty() : this.inventoryItemId;
+    public Output<String> getInventoryItemId() {
+        return this.inventoryItemId == null ? Output.empty() : this.inventoryItemId;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moRefId")
-      private final @Nullable Input<String> moRefId;
+      private final @Nullable Output<String> moRefId;
 
-    public Input<String> getMoRefId() {
-        return this.moRefId == null ? Input.empty() : this.moRefId;
+    public Output<String> getMoRefId() {
+        return this.moRefId == null ? Output.empty() : this.moRefId;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Input<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osProfile")
-      private final @Nullable Input<OsProfileArgs> osProfile;
+      private final @Nullable Output<OsProfileArgs> osProfile;
 
-    public Input<OsProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Input.empty() : this.osProfile;
+    public Output<OsProfileArgs> getOsProfile() {
+        return this.osProfile == null ? Output.empty() : this.osProfile;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementProfile")
-      private final @Nullable Input<PlacementProfileArgs> placementProfile;
+      private final @Nullable Output<PlacementProfileArgs> placementProfile;
 
-    public Input<PlacementProfileArgs> getPlacementProfile() {
-        return this.placementProfile == null ? Input.empty() : this.placementProfile;
+    public Output<PlacementProfileArgs> getPlacementProfile() {
+        return this.placementProfile == null ? Output.empty() : this.placementProfile;
     }
 
     /**
@@ -150,9 +150,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -162,10 +162,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePoolId")
-      private final @Nullable Input<String> resourcePoolId;
+      private final @Nullable Output<String> resourcePoolId;
 
-    public Input<String> getResourcePoolId() {
-        return this.resourcePoolId == null ? Input.empty() : this.resourcePoolId;
+    public Output<String> getResourcePoolId() {
+        return this.resourcePoolId == null ? Output.empty() : this.resourcePoolId;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbiosUuid")
-      private final @Nullable Input<String> smbiosUuid;
+      private final @Nullable Output<String> smbiosUuid;
 
-    public Input<String> getSmbiosUuid() {
-        return this.smbiosUuid == null ? Input.empty() : this.smbiosUuid;
+    public Output<String> getSmbiosUuid() {
+        return this.smbiosUuid == null ? Output.empty() : this.smbiosUuid;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageProfile")
-      private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Input<StorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Input.empty() : this.storageProfile;
+    public Output<StorageProfileArgs> getStorageProfile() {
+        return this.storageProfile == null ? Output.empty() : this.storageProfile;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateId")
-      private final @Nullable Input<String> templateId;
+      private final @Nullable Output<String> templateId;
 
-    public Input<String> getTemplateId() {
-        return this.templateId == null ? Input.empty() : this.templateId;
+    public Output<String> getTemplateId() {
+        return this.templateId == null ? Output.empty() : this.templateId;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vCenterId")
-      private final @Nullable Input<String> vCenterId;
+      private final @Nullable Output<String> vCenterId;
 
-    public Input<String> getVCenterId() {
-        return this.vCenterId == null ? Input.empty() : this.vCenterId;
+    public Output<String> getVCenterId() {
+        return this.vCenterId == null ? Output.empty() : this.vCenterId;
     }
 
     /**
@@ -228,32 +228,32 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachineName")
-      private final @Nullable Input<String> virtualMachineName;
+      private final @Nullable Output<String> virtualMachineName;
 
-    public Input<String> getVirtualMachineName() {
-        return this.virtualMachineName == null ? Input.empty() : this.virtualMachineName;
+    public Output<String> getVirtualMachineName() {
+        return this.virtualMachineName == null ? Output.empty() : this.virtualMachineName;
     }
 
     public VirtualMachineArgs(
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<Either<String,FirmwareType>> firmwareType,
-        @Nullable Input<HardwareProfileArgs> hardwareProfile,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<String> inventoryItemId,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> moRefId,
-        @Nullable Input<NetworkProfileArgs> networkProfile,
-        @Nullable Input<OsProfileArgs> osProfile,
-        @Nullable Input<PlacementProfileArgs> placementProfile,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourcePoolId,
-        @Nullable Input<String> smbiosUuid,
-        @Nullable Input<StorageProfileArgs> storageProfile,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> templateId,
-        @Nullable Input<String> vCenterId,
-        @Nullable Input<String> virtualMachineName) {
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<Either<String,FirmwareType>> firmwareType,
+        @Nullable Output<HardwareProfileArgs> hardwareProfile,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<String> inventoryItemId,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> moRefId,
+        @Nullable Output<NetworkProfileArgs> networkProfile,
+        @Nullable Output<OsProfileArgs> osProfile,
+        @Nullable Output<PlacementProfileArgs> placementProfile,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourcePoolId,
+        @Nullable Output<String> smbiosUuid,
+        @Nullable Output<StorageProfileArgs> storageProfile,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> templateId,
+        @Nullable Output<String> vCenterId,
+        @Nullable Output<String> virtualMachineName) {
         this.extendedLocation = extendedLocation;
         this.firmwareType = firmwareType;
         this.hardwareProfile = hardwareProfile;
@@ -276,25 +276,25 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualMachineArgs() {
-        this.extendedLocation = Input.empty();
-        this.firmwareType = Input.empty();
-        this.hardwareProfile = Input.empty();
-        this.identity = Input.empty();
-        this.inventoryItemId = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.moRefId = Input.empty();
-        this.networkProfile = Input.empty();
-        this.osProfile = Input.empty();
-        this.placementProfile = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourcePoolId = Input.empty();
-        this.smbiosUuid = Input.empty();
-        this.storageProfile = Input.empty();
-        this.tags = Input.empty();
-        this.templateId = Input.empty();
-        this.vCenterId = Input.empty();
-        this.virtualMachineName = Input.empty();
+        this.extendedLocation = Output.empty();
+        this.firmwareType = Output.empty();
+        this.hardwareProfile = Output.empty();
+        this.identity = Output.empty();
+        this.inventoryItemId = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.moRefId = Output.empty();
+        this.networkProfile = Output.empty();
+        this.osProfile = Output.empty();
+        this.placementProfile = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourcePoolId = Output.empty();
+        this.smbiosUuid = Output.empty();
+        this.storageProfile = Output.empty();
+        this.tags = Output.empty();
+        this.templateId = Output.empty();
+        this.vCenterId = Output.empty();
+        this.virtualMachineName = Output.empty();
     }
 
     public static Builder builder() {
@@ -306,25 +306,25 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<Either<String,FirmwareType>> firmwareType;
-        private @Nullable Input<HardwareProfileArgs> hardwareProfile;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<String> inventoryItemId;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> moRefId;
-        private @Nullable Input<NetworkProfileArgs> networkProfile;
-        private @Nullable Input<OsProfileArgs> osProfile;
-        private @Nullable Input<PlacementProfileArgs> placementProfile;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourcePoolId;
-        private @Nullable Input<String> smbiosUuid;
-        private @Nullable Input<StorageProfileArgs> storageProfile;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> templateId;
-        private @Nullable Input<String> vCenterId;
-        private @Nullable Input<String> virtualMachineName;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<Either<String,FirmwareType>> firmwareType;
+        private @Nullable Output<HardwareProfileArgs> hardwareProfile;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<String> inventoryItemId;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> moRefId;
+        private @Nullable Output<NetworkProfileArgs> networkProfile;
+        private @Nullable Output<OsProfileArgs> osProfile;
+        private @Nullable Output<PlacementProfileArgs> placementProfile;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourcePoolId;
+        private @Nullable Output<String> smbiosUuid;
+        private @Nullable Output<StorageProfileArgs> storageProfile;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> templateId;
+        private @Nullable Output<String> vCenterId;
+        private @Nullable Output<String> virtualMachineName;
 
         public Builder() {
     	      // Empty
@@ -353,193 +353,193 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachineName = defaults.virtualMachineName;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder firmwareType(@Nullable Input<Either<String,FirmwareType>> firmwareType) {
+        public Builder firmwareType(@Nullable Output<Either<String,FirmwareType>> firmwareType) {
             this.firmwareType = firmwareType;
             return this;
         }
 
         public Builder firmwareType(@Nullable Either<String,FirmwareType> firmwareType) {
-            this.firmwareType = Input.ofNullable(firmwareType);
+            this.firmwareType = Output.ofNullable(firmwareType);
             return this;
         }
 
-        public Builder hardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
+        public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
         public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Input.ofNullable(hardwareProfile);
+            this.hardwareProfile = Output.ofNullable(hardwareProfile);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder inventoryItemId(@Nullable Input<String> inventoryItemId) {
+        public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
 
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
-            this.inventoryItemId = Input.ofNullable(inventoryItemId);
+            this.inventoryItemId = Output.ofNullable(inventoryItemId);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder moRefId(@Nullable Input<String> moRefId) {
+        public Builder moRefId(@Nullable Output<String> moRefId) {
             this.moRefId = moRefId;
             return this;
         }
 
         public Builder moRefId(@Nullable String moRefId) {
-            this.moRefId = Input.ofNullable(moRefId);
+            this.moRefId = Output.ofNullable(moRefId);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder osProfile(@Nullable Input<OsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
         public Builder osProfile(@Nullable OsProfileArgs osProfile) {
-            this.osProfile = Input.ofNullable(osProfile);
+            this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
 
-        public Builder placementProfile(@Nullable Input<PlacementProfileArgs> placementProfile) {
+        public Builder placementProfile(@Nullable Output<PlacementProfileArgs> placementProfile) {
             this.placementProfile = placementProfile;
             return this;
         }
 
         public Builder placementProfile(@Nullable PlacementProfileArgs placementProfile) {
-            this.placementProfile = Input.ofNullable(placementProfile);
+            this.placementProfile = Output.ofNullable(placementProfile);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourcePoolId(@Nullable Input<String> resourcePoolId) {
+        public Builder resourcePoolId(@Nullable Output<String> resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
 
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
-            this.resourcePoolId = Input.ofNullable(resourcePoolId);
+            this.resourcePoolId = Output.ofNullable(resourcePoolId);
             return this;
         }
 
-        public Builder smbiosUuid(@Nullable Input<String> smbiosUuid) {
+        public Builder smbiosUuid(@Nullable Output<String> smbiosUuid) {
             this.smbiosUuid = smbiosUuid;
             return this;
         }
 
         public Builder smbiosUuid(@Nullable String smbiosUuid) {
-            this.smbiosUuid = Input.ofNullable(smbiosUuid);
+            this.smbiosUuid = Output.ofNullable(smbiosUuid);
             return this;
         }
 
-        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Input.ofNullable(storageProfile);
+            this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = Input.ofNullable(templateId);
+            this.templateId = Output.ofNullable(templateId);
             return this;
         }
 
-        public Builder vCenterId(@Nullable Input<String> vCenterId) {
+        public Builder vCenterId(@Nullable Output<String> vCenterId) {
             this.vCenterId = vCenterId;
             return this;
         }
 
         public Builder vCenterId(@Nullable String vCenterId) {
-            this.vCenterId = Input.ofNullable(vCenterId);
+            this.vCenterId = Output.ofNullable(vCenterId);
             return this;
         }
 
-        public Builder virtualMachineName(@Nullable Input<String> virtualMachineName) {
+        public Builder virtualMachineName(@Nullable Output<String> virtualMachineName) {
             this.virtualMachineName = virtualMachineName;
             return this;
         }
 
         public Builder virtualMachineName(@Nullable String virtualMachineName) {
-            this.virtualMachineName = Input.ofNullable(virtualMachineName);
+            this.virtualMachineName = Output.ofNullable(virtualMachineName);
             return this;
         }
         public VirtualMachineArgs build() {

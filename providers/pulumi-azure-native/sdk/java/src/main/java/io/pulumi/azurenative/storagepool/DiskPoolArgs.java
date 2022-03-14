@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagepool;
 import io.pulumi.azurenative.storagepool.enums.DiskPoolTier;
 import io.pulumi.azurenative.storagepool.inputs.DiskArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalCapabilities")
-      private final @Nullable Input<List<String>> additionalCapabilities;
+      private final @Nullable Output<List<String>> additionalCapabilities;
 
-    public Input<List<String>> getAdditionalCapabilities() {
-        return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
+    public Output<List<String>> getAdditionalCapabilities() {
+        return this.additionalCapabilities == null ? Output.empty() : this.additionalCapabilities;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones", required=true)
-      private final Input<List<String>> availabilityZones;
+      private final Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
+    public Output<List<String>> getAvailabilityZones() {
         return this.availabilityZones;
     }
 
@@ -46,10 +46,10 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskPoolName")
-      private final @Nullable Input<String> diskPoolName;
+      private final @Nullable Output<String> diskPoolName;
 
-    public Input<String> getDiskPoolName() {
-        return this.diskPoolName == null ? Input.empty() : this.diskPoolName;
+    public Output<String> getDiskPoolName() {
+        return this.diskPoolName == null ? Output.empty() : this.diskPoolName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disks")
-      private final @Nullable Input<List<DiskArgs>> disks;
+      private final @Nullable Output<List<DiskArgs>> disks;
 
-    public Input<List<DiskArgs>> getDisks() {
-        return this.disks == null ? Input.empty() : this.disks;
+    public Output<List<DiskArgs>> getDisks() {
+        return this.disks == null ? Output.empty() : this.disks;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,9 +90,9 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
@@ -101,10 +101,10 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<Either<String,DiskPoolTier>> tier;
+      private final Output<Either<String,DiskPoolTier>> tier;
 
-    public Input<Either<String,DiskPoolTier>> getTier() {
+    public Output<Either<String,DiskPoolTier>> getTier() {
         return this.tier;
     }
 
     public DiskPoolArgs(
-        @Nullable Input<List<String>> additionalCapabilities,
-        Input<List<String>> availabilityZones,
-        @Nullable Input<String> diskPoolName,
-        @Nullable Input<List<DiskArgs>> disks,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        Input<Either<String,DiskPoolTier>> tier) {
+        @Nullable Output<List<String>> additionalCapabilities,
+        Output<List<String>> availabilityZones,
+        @Nullable Output<String> diskPoolName,
+        @Nullable Output<List<DiskArgs>> disks,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        Output<Either<String,DiskPoolTier>> tier) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilityZones = Objects.requireNonNull(availabilityZones, "expected parameter 'availabilityZones' to be non-null");
         this.diskPoolName = diskPoolName;
@@ -140,15 +140,15 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskPoolArgs() {
-        this.additionalCapabilities = Input.empty();
-        this.availabilityZones = Input.empty();
-        this.diskPoolName = Input.empty();
-        this.disks = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.tier = Input.empty();
+        this.additionalCapabilities = Output.empty();
+        this.availabilityZones = Output.empty();
+        this.diskPoolName = Output.empty();
+        this.disks = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> additionalCapabilities;
-        private Input<List<String>> availabilityZones;
-        private @Nullable Input<String> diskPoolName;
-        private @Nullable Input<List<DiskArgs>> disks;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<Either<String,DiskPoolTier>> tier;
+        private @Nullable Output<List<String>> additionalCapabilities;
+        private Output<List<String>> availabilityZones;
+        private @Nullable Output<String> diskPoolName;
+        private @Nullable Output<List<DiskArgs>> disks;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<Either<String,DiskPoolTier>> tier;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder additionalCapabilities(@Nullable Input<List<String>> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable Output<List<String>> additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
         public Builder additionalCapabilities(@Nullable List<String> additionalCapabilities) {
-            this.additionalCapabilities = Input.ofNullable(additionalCapabilities);
+            this.additionalCapabilities = Output.ofNullable(additionalCapabilities);
             return this;
         }
 
-        public Builder availabilityZones(Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(Output<List<String>> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
         public Builder availabilityZones(List<String> availabilityZones) {
-            this.availabilityZones = Input.of(Objects.requireNonNull(availabilityZones));
+            this.availabilityZones = Output.of(Objects.requireNonNull(availabilityZones));
             return this;
         }
 
-        public Builder diskPoolName(@Nullable Input<String> diskPoolName) {
+        public Builder diskPoolName(@Nullable Output<String> diskPoolName) {
             this.diskPoolName = diskPoolName;
             return this;
         }
 
         public Builder diskPoolName(@Nullable String diskPoolName) {
-            this.diskPoolName = Input.ofNullable(diskPoolName);
+            this.diskPoolName = Output.ofNullable(diskPoolName);
             return this;
         }
 
-        public Builder disks(@Nullable Input<List<DiskArgs>> disks) {
+        public Builder disks(@Nullable Output<List<DiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
         public Builder disks(@Nullable List<DiskArgs> disks) {
-            this.disks = Input.ofNullable(disks);
+            this.disks = Output.ofNullable(disks);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tier(Input<Either<String,DiskPoolTier>> tier) {
+        public Builder tier(Output<Either<String,DiskPoolTier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(Either<String,DiskPoolTier> tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
         public DiskPoolArgs build() {

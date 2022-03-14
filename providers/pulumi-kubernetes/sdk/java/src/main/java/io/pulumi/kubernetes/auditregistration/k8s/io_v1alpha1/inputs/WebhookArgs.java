@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookThrottleConfigArgs;
@@ -24,9 +24,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientConfig", required=true)
-      private final Input<WebhookClientConfigArgs> clientConfig;
+      private final Output<WebhookClientConfigArgs> clientConfig;
 
-    public Input<WebhookClientConfigArgs> getClientConfig() {
+    public Output<WebhookClientConfigArgs> getClientConfig() {
         return this.clientConfig;
     }
 
@@ -35,22 +35,22 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throttle")
-      private final @Nullable Input<WebhookThrottleConfigArgs> throttle;
+      private final @Nullable Output<WebhookThrottleConfigArgs> throttle;
 
-    public Input<WebhookThrottleConfigArgs> getThrottle() {
-        return this.throttle == null ? Input.empty() : this.throttle;
+    public Output<WebhookThrottleConfigArgs> getThrottle() {
+        return this.throttle == null ? Output.empty() : this.throttle;
     }
 
     public WebhookArgs(
-        Input<WebhookClientConfigArgs> clientConfig,
-        @Nullable Input<WebhookThrottleConfigArgs> throttle) {
+        Output<WebhookClientConfigArgs> clientConfig,
+        @Nullable Output<WebhookThrottleConfigArgs> throttle) {
         this.clientConfig = Objects.requireNonNull(clientConfig, "expected parameter 'clientConfig' to be non-null");
         this.throttle = throttle;
     }
 
     private WebhookArgs() {
-        this.clientConfig = Input.empty();
-        this.throttle = Input.empty();
+        this.clientConfig = Output.empty();
+        this.throttle = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<WebhookClientConfigArgs> clientConfig;
-        private @Nullable Input<WebhookThrottleConfigArgs> throttle;
+        private Output<WebhookClientConfigArgs> clientConfig;
+        private @Nullable Output<WebhookThrottleConfigArgs> throttle;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.throttle = defaults.throttle;
         }
 
-        public Builder clientConfig(Input<WebhookClientConfigArgs> clientConfig) {
+        public Builder clientConfig(Output<WebhookClientConfigArgs> clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
 
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
-            this.clientConfig = Input.of(Objects.requireNonNull(clientConfig));
+            this.clientConfig = Output.of(Objects.requireNonNull(clientConfig));
             return this;
         }
 
-        public Builder throttle(@Nullable Input<WebhookThrottleConfigArgs> throttle) {
+        public Builder throttle(@Nullable Output<WebhookThrottleConfigArgs> throttle) {
             this.throttle = throttle;
             return this;
         }
 
         public Builder throttle(@Nullable WebhookThrottleConfigArgs throttle) {
-            this.throttle = Input.ofNullable(throttle);
+            this.throttle = Output.ofNullable(throttle);
             return this;
         }
         public WebhookArgs build() {

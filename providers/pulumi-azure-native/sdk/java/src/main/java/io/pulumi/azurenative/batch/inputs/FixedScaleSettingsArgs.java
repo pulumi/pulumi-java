@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.ComputeNodeDeallocationOption;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeDeallocationOption")
-      private final @Nullable Input<ComputeNodeDeallocationOption> nodeDeallocationOption;
+      private final @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption;
 
-    public Input<ComputeNodeDeallocationOption> getNodeDeallocationOption() {
-        return this.nodeDeallocationOption == null ? Input.empty() : this.nodeDeallocationOption;
+    public Output<ComputeNodeDeallocationOption> getNodeDeallocationOption() {
+        return this.nodeDeallocationOption == null ? Output.empty() : this.nodeDeallocationOption;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resizeTimeout")
-      private final @Nullable Input<String> resizeTimeout;
+      private final @Nullable Output<String> resizeTimeout;
 
-    public Input<String> getResizeTimeout() {
-        return this.resizeTimeout == null ? Input.empty() : this.resizeTimeout;
+    public Output<String> getResizeTimeout() {
+        return this.resizeTimeout == null ? Output.empty() : this.resizeTimeout;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetDedicatedNodes")
-      private final @Nullable Input<Integer> targetDedicatedNodes;
+      private final @Nullable Output<Integer> targetDedicatedNodes;
 
-    public Input<Integer> getTargetDedicatedNodes() {
-        return this.targetDedicatedNodes == null ? Input.empty() : this.targetDedicatedNodes;
+    public Output<Integer> getTargetDedicatedNodes() {
+        return this.targetDedicatedNodes == null ? Output.empty() : this.targetDedicatedNodes;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetLowPriorityNodes")
-      private final @Nullable Input<Integer> targetLowPriorityNodes;
+      private final @Nullable Output<Integer> targetLowPriorityNodes;
 
-    public Input<Integer> getTargetLowPriorityNodes() {
-        return this.targetLowPriorityNodes == null ? Input.empty() : this.targetLowPriorityNodes;
+    public Output<Integer> getTargetLowPriorityNodes() {
+        return this.targetLowPriorityNodes == null ? Output.empty() : this.targetLowPriorityNodes;
     }
 
     public FixedScaleSettingsArgs(
-        @Nullable Input<ComputeNodeDeallocationOption> nodeDeallocationOption,
-        @Nullable Input<String> resizeTimeout,
-        @Nullable Input<Integer> targetDedicatedNodes,
-        @Nullable Input<Integer> targetLowPriorityNodes) {
+        @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption,
+        @Nullable Output<String> resizeTimeout,
+        @Nullable Output<Integer> targetDedicatedNodes,
+        @Nullable Output<Integer> targetLowPriorityNodes) {
         this.nodeDeallocationOption = nodeDeallocationOption;
         this.resizeTimeout = resizeTimeout;
         this.targetDedicatedNodes = targetDedicatedNodes;
@@ -72,10 +72,10 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FixedScaleSettingsArgs() {
-        this.nodeDeallocationOption = Input.empty();
-        this.resizeTimeout = Input.empty();
-        this.targetDedicatedNodes = Input.empty();
-        this.targetLowPriorityNodes = Input.empty();
+        this.nodeDeallocationOption = Output.empty();
+        this.resizeTimeout = Output.empty();
+        this.targetDedicatedNodes = Output.empty();
+        this.targetLowPriorityNodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ComputeNodeDeallocationOption> nodeDeallocationOption;
-        private @Nullable Input<String> resizeTimeout;
-        private @Nullable Input<Integer> targetDedicatedNodes;
-        private @Nullable Input<Integer> targetLowPriorityNodes;
+        private @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption;
+        private @Nullable Output<String> resizeTimeout;
+        private @Nullable Output<Integer> targetDedicatedNodes;
+        private @Nullable Output<Integer> targetLowPriorityNodes;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
         }
 
-        public Builder nodeDeallocationOption(@Nullable Input<ComputeNodeDeallocationOption> nodeDeallocationOption) {
+        public Builder nodeDeallocationOption(@Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption) {
             this.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
         public Builder nodeDeallocationOption(@Nullable ComputeNodeDeallocationOption nodeDeallocationOption) {
-            this.nodeDeallocationOption = Input.ofNullable(nodeDeallocationOption);
+            this.nodeDeallocationOption = Output.ofNullable(nodeDeallocationOption);
             return this;
         }
 
-        public Builder resizeTimeout(@Nullable Input<String> resizeTimeout) {
+        public Builder resizeTimeout(@Nullable Output<String> resizeTimeout) {
             this.resizeTimeout = resizeTimeout;
             return this;
         }
 
         public Builder resizeTimeout(@Nullable String resizeTimeout) {
-            this.resizeTimeout = Input.ofNullable(resizeTimeout);
+            this.resizeTimeout = Output.ofNullable(resizeTimeout);
             return this;
         }
 
-        public Builder targetDedicatedNodes(@Nullable Input<Integer> targetDedicatedNodes) {
+        public Builder targetDedicatedNodes(@Nullable Output<Integer> targetDedicatedNodes) {
             this.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
 
         public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
-            this.targetDedicatedNodes = Input.ofNullable(targetDedicatedNodes);
+            this.targetDedicatedNodes = Output.ofNullable(targetDedicatedNodes);
             return this;
         }
 
-        public Builder targetLowPriorityNodes(@Nullable Input<Integer> targetLowPriorityNodes) {
+        public Builder targetLowPriorityNodes(@Nullable Output<Integer> targetLowPriorityNodes) {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
 
         public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
-            this.targetLowPriorityNodes = Input.ofNullable(targetLowPriorityNodes);
+            this.targetLowPriorityNodes = Output.ofNullable(targetLowPriorityNodes);
             return this;
         }
         public FixedScaleSettingsArgs build() {

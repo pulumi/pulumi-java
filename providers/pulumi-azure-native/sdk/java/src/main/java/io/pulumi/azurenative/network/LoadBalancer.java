@@ -15,7 +15,6 @@ import io.pulumi.azurenative.network.outputs.LoadBalancingRuleResponse;
 import io.pulumi.azurenative.network.outputs.OutboundRuleResponse;
 import io.pulumi.azurenative.network.outputs.ProbeResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -304,56 +303,56 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancer(String name, LoadBalancerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LoadBalancer(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LoadBalancer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:LoadBalancer", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150501preview:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20150615:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160330:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:LoadBalancer").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:LoadBalancer").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:LoadBalancer").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:LoadBalancer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -367,7 +366,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoadBalancer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LoadBalancer get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoadBalancer(name, id, options);
     }
 }

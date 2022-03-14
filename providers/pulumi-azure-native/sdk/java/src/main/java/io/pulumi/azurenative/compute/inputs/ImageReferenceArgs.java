@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offer")
-      private final @Nullable Input<String> offer;
+      private final @Nullable Output<String> offer;
 
-    public Input<String> getOffer() {
-        return this.offer == null ? Input.empty() : this.offer;
+    public Output<String> getOffer() {
+        return this.offer == null ? Output.empty() : this.offer;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ImageReferenceArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> offer,
-        @Nullable Input<String> publisher,
-        @Nullable Input<String> sku,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> offer,
+        @Nullable Output<String> publisher,
+        @Nullable Output<String> sku,
+        @Nullable Output<String> version) {
         this.id = id;
         this.offer = offer;
         this.publisher = publisher;
@@ -87,11 +87,11 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageReferenceArgs() {
-        this.id = Input.empty();
-        this.offer = Input.empty();
-        this.publisher = Input.empty();
-        this.sku = Input.empty();
-        this.version = Input.empty();
+        this.id = Output.empty();
+        this.offer = Output.empty();
+        this.publisher = Output.empty();
+        this.sku = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> offer;
-        private @Nullable Input<String> publisher;
-        private @Nullable Input<String> sku;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> offer;
+        private @Nullable Output<String> publisher;
+        private @Nullable Output<String> sku;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder offer(@Nullable Input<String> offer) {
+        public Builder offer(@Nullable Output<String> offer) {
             this.offer = offer;
             return this;
         }
 
         public Builder offer(@Nullable String offer) {
-            this.offer = Input.ofNullable(offer);
+            this.offer = Output.ofNullable(offer);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ImageReferenceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -18,62 +18,62 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     public static final CapacityReservationFleetInstanceTypeSpecificationArgs Empty = new CapacityReservationFleetInstanceTypeSpecificationArgs();
 
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     @InputImport(name="availabilityZoneId")
-      private final @Nullable Input<String> availabilityZoneId;
+      private final @Nullable Output<String> availabilityZoneId;
 
-    public Input<String> getAvailabilityZoneId() {
-        return this.availabilityZoneId == null ? Input.empty() : this.availabilityZoneId;
+    public Output<String> getAvailabilityZoneId() {
+        return this.availabilityZoneId == null ? Output.empty() : this.availabilityZoneId;
     }
 
     @InputImport(name="ebsOptimized")
-      private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Input<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
+    public Output<Boolean> getEbsOptimized() {
+        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
     }
 
     @InputImport(name="instancePlatform")
-      private final @Nullable Input<String> instancePlatform;
+      private final @Nullable Output<String> instancePlatform;
 
-    public Input<String> getInstancePlatform() {
-        return this.instancePlatform == null ? Input.empty() : this.instancePlatform;
+    public Output<String> getInstancePlatform() {
+        return this.instancePlatform == null ? Output.empty() : this.instancePlatform;
     }
 
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     @InputImport(name="weight")
-      private final @Nullable Input<Double> weight;
+      private final @Nullable Output<Double> weight;
 
-    public Input<Double> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Double> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public CapacityReservationFleetInstanceTypeSpecificationArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> availabilityZoneId,
-        @Nullable Input<Boolean> ebsOptimized,
-        @Nullable Input<String> instancePlatform,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<Double> weight) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> availabilityZoneId,
+        @Nullable Output<Boolean> ebsOptimized,
+        @Nullable Output<String> instancePlatform,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<Double> weight) {
         this.availabilityZone = availabilityZone;
         this.availabilityZoneId = availabilityZoneId;
         this.ebsOptimized = ebsOptimized;
@@ -84,13 +84,13 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     }
 
     private CapacityReservationFleetInstanceTypeSpecificationArgs() {
-        this.availabilityZone = Input.empty();
-        this.availabilityZoneId = Input.empty();
-        this.ebsOptimized = Input.empty();
-        this.instancePlatform = Input.empty();
-        this.instanceType = Input.empty();
-        this.priority = Input.empty();
-        this.weight = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.availabilityZoneId = Output.empty();
+        this.ebsOptimized = Output.empty();
+        this.instancePlatform = Output.empty();
+        this.instanceType = Output.empty();
+        this.priority = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,13 +102,13 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> availabilityZoneId;
-        private @Nullable Input<Boolean> ebsOptimized;
-        private @Nullable Input<String> instancePlatform;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<Double> weight;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> availabilityZoneId;
+        private @Nullable Output<Boolean> ebsOptimized;
+        private @Nullable Output<String> instancePlatform;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<Double> weight;
 
         public Builder() {
     	      // Empty
@@ -125,73 +125,73 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     	      this.weight = defaults.weight;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder availabilityZoneId(@Nullable Input<String> availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Input.ofNullable(availabilityZoneId);
+            this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
             return this;
         }
 
-        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Input.ofNullable(ebsOptimized);
+            this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder instancePlatform(@Nullable Input<String> instancePlatform) {
+        public Builder instancePlatform(@Nullable Output<String> instancePlatform) {
             this.instancePlatform = instancePlatform;
             return this;
         }
 
         public Builder instancePlatform(@Nullable String instancePlatform) {
-            this.instancePlatform = Input.ofNullable(instancePlatform);
+            this.instancePlatform = Output.ofNullable(instancePlatform);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Double> weight) {
+        public Builder weight(@Nullable Output<Double> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Double weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public CapacityReservationFleetInstanceTypeSpecificationArgs build() {

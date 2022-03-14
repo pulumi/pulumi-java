@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resolverRuleId")
-      private final @Nullable Input<String> resolverRuleId;
+      private final @Nullable Output<String> resolverRuleId;
 
-    public Input<String> getResolverRuleId() {
-        return this.resolverRuleId == null ? Input.empty() : this.resolverRuleId;
+    public Output<String> getResolverRuleId() {
+        return this.resolverRuleId == null ? Output.empty() : this.resolverRuleId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public ResolverRuleAssociationState(
-        @Nullable Input<String> name,
-        @Nullable Input<String> resolverRuleId,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> resolverRuleId,
+        @Nullable Output<String> vpcId) {
         this.name = name;
         this.resolverRuleId = resolverRuleId;
         this.vpcId = vpcId;
     }
 
     private ResolverRuleAssociationState() {
-        this.name = Input.empty();
-        this.resolverRuleId = Input.empty();
-        this.vpcId = Input.empty();
+        this.name = Output.empty();
+        this.resolverRuleId = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> resolverRuleId;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> resolverRuleId;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resolverRuleId(@Nullable Input<String> resolverRuleId) {
+        public Builder resolverRuleId(@Nullable Output<String> resolverRuleId) {
             this.resolverRuleId = resolverRuleId;
             return this;
         }
 
         public Builder resolverRuleId(@Nullable String resolverRuleId) {
-            this.resolverRuleId = Input.ofNullable(resolverRuleId);
+            this.resolverRuleId = Output.ofNullable(resolverRuleId);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public ResolverRuleAssociationState build() {

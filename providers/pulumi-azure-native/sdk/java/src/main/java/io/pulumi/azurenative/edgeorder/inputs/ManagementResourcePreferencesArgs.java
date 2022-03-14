@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ManagementResourcePreferencesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="preferredManagementResourceId")
-      private final @Nullable Input<String> preferredManagementResourceId;
+      private final @Nullable Output<String> preferredManagementResourceId;
 
-    public Input<String> getPreferredManagementResourceId() {
-        return this.preferredManagementResourceId == null ? Input.empty() : this.preferredManagementResourceId;
+    public Output<String> getPreferredManagementResourceId() {
+        return this.preferredManagementResourceId == null ? Output.empty() : this.preferredManagementResourceId;
     }
 
-    public ManagementResourcePreferencesArgs(@Nullable Input<String> preferredManagementResourceId) {
+    public ManagementResourcePreferencesArgs(@Nullable Output<String> preferredManagementResourceId) {
         this.preferredManagementResourceId = preferredManagementResourceId;
     }
 
     private ManagementResourcePreferencesArgs() {
-        this.preferredManagementResourceId = Input.empty();
+        this.preferredManagementResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ManagementResourcePreferencesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> preferredManagementResourceId;
+        private @Nullable Output<String> preferredManagementResourceId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ManagementResourcePreferencesArgs extends io.pulumi.resources
     	      this.preferredManagementResourceId = defaults.preferredManagementResourceId;
         }
 
-        public Builder preferredManagementResourceId(@Nullable Input<String> preferredManagementResourceId) {
+        public Builder preferredManagementResourceId(@Nullable Output<String> preferredManagementResourceId) {
             this.preferredManagementResourceId = preferredManagementResourceId;
             return this;
         }
 
         public Builder preferredManagementResourceId(@Nullable String preferredManagementResourceId) {
-            this.preferredManagementResourceId = Input.ofNullable(preferredManagementResourceId);
+            this.preferredManagementResourceId = Output.ofNullable(preferredManagementResourceId);
             return this;
         }
         public ManagementResourcePreferencesArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -476,14 +475,14 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceGroupManager(String name, @Nullable InstanceGroupManagerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:InstanceGroupManager", name, args == null ? InstanceGroupManagerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:compute/alpha:InstanceGroupManager", name, args == null ? InstanceGroupManagerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private InstanceGroupManager(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private InstanceGroupManager(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/alpha:InstanceGroupManager", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -498,7 +497,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstanceGroupManager get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static InstanceGroupManager get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceGroupManager(name, id, options);
     }
 }

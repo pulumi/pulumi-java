@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cert")
-      private final @Nullable Input<String> cert;
+      private final @Nullable Output<String> cert;
 
-    public Input<String> getCert() {
-        return this.cert == null ? Input.empty() : this.cert;
+    public Output<String> getCert() {
+        return this.cert == null ? Output.empty() : this.cert;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cname")
-      private final @Nullable Input<String> cname;
+      private final @Nullable Output<String> cname;
 
-    public Input<String> getCname() {
-        return this.cname == null ? Input.empty() : this.cname;
+    public Output<String> getCname() {
+        return this.cname == null ? Output.empty() : this.cname;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public SslConfigurationArgs(
-        @Nullable Input<String> cert,
-        @Nullable Input<String> cname,
-        @Nullable Input<String> key,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> cert,
+        @Nullable Output<String> cname,
+        @Nullable Output<String> key,
+        @Nullable Output<String> status) {
         this.cert = cert;
         this.cname = cname;
         this.key = key;
@@ -74,10 +74,10 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SslConfigurationArgs() {
-        this.cert = Input.empty();
-        this.cname = Input.empty();
-        this.key = Input.empty();
-        this.status = Input.empty();
+        this.cert = Output.empty();
+        this.cname = Output.empty();
+        this.key = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cert;
-        private @Nullable Input<String> cname;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> cert;
+        private @Nullable Output<String> cname;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.status = defaults.status;
         }
 
-        public Builder cert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Output<String> cert) {
             this.cert = cert;
             return this;
         }
 
         public Builder cert(@Nullable String cert) {
-            this.cert = Input.ofNullable(cert);
+            this.cert = Output.ofNullable(cert);
             return this;
         }
 
-        public Builder cname(@Nullable Input<String> cname) {
+        public Builder cname(@Nullable Output<String> cname) {
             this.cname = cname;
             return this;
         }
 
         public Builder cname(@Nullable String cname) {
-            this.cname = Input.ofNullable(cname);
+            this.cname = Output.ofNullable(cname);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public SslConfigurationArgs build() {

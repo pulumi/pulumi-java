@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="doNotPersistState")
-      private final @Nullable Input<Boolean> doNotPersistState;
+      private final @Nullable Output<Boolean> doNotPersistState;
 
-    public Input<Boolean> getDoNotPersistState() {
-        return this.doNotPersistState == null ? Input.empty() : this.doNotPersistState;
+    public Output<Boolean> getDoNotPersistState() {
+        return this.doNotPersistState == null ? Output.empty() : this.doNotPersistState;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ReliableCollectionsRefArgs(
-        @Nullable Input<Boolean> doNotPersistState,
-        Input<String> name) {
+        @Nullable Output<Boolean> doNotPersistState,
+        Output<String> name) {
         this.doNotPersistState = doNotPersistState;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ReliableCollectionsRefArgs() {
-        this.doNotPersistState = Input.empty();
-        this.name = Input.empty();
+        this.doNotPersistState = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> doNotPersistState;
-        private Input<String> name;
+        private @Nullable Output<Boolean> doNotPersistState;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
     	      this.name = defaults.name;
         }
 
-        public Builder doNotPersistState(@Nullable Input<Boolean> doNotPersistState) {
+        public Builder doNotPersistState(@Nullable Output<Boolean> doNotPersistState) {
             this.doNotPersistState = doNotPersistState;
             return this;
         }
 
         public Builder doNotPersistState(@Nullable Boolean doNotPersistState) {
-            this.doNotPersistState = Input.ofNullable(doNotPersistState);
+            this.doNotPersistState = Output.ofNullable(doNotPersistState);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ReliableCollectionsRefArgs build() {

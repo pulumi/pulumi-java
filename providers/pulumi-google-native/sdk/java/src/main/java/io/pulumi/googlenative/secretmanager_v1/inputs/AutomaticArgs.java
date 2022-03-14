@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerManagedEncryption")
-      private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
+      private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
-    public Input<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
+    public Output<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
+        return this.customerManagedEncryption == null ? Output.empty() : this.customerManagedEncryption;
     }
 
-    public AutomaticArgs(@Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption) {
+    public AutomaticArgs(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
         this.customerManagedEncryption = customerManagedEncryption;
     }
 
     private AutomaticArgs() {
-        this.customerManagedEncryption = Input.empty();
+        this.customerManagedEncryption = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
+        private @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
     	      this.customerManagedEncryption = defaults.customerManagedEncryption;
         }
 
-        public Builder customerManagedEncryption(@Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
         public Builder customerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Input.ofNullable(customerManagedEncryption);
+            this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
             return this;
         }
         public AutomaticArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.EndpointStatus;
 import io.pulumi.azurenative.network.inputs.EndpointPropertiesCustomHeadersArgs;
 import io.pulumi.azurenative.network.inputs.EndpointPropertiesSubnetsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customHeaders")
-      private final @Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
+      private final @Nullable Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
 
-    public Input<List<EndpointPropertiesCustomHeadersArgs>> getCustomHeaders() {
-        return this.customHeaders == null ? Input.empty() : this.customHeaders;
+    public Output<List<EndpointPropertiesCustomHeadersArgs>> getCustomHeaders() {
+        return this.customHeaders == null ? Output.empty() : this.customHeaders;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointLocation")
-      private final @Nullable Input<String> endpointLocation;
+      private final @Nullable Output<String> endpointLocation;
 
-    public Input<String> getEndpointLocation() {
-        return this.endpointLocation == null ? Input.empty() : this.endpointLocation;
+    public Output<String> getEndpointLocation() {
+        return this.endpointLocation == null ? Output.empty() : this.endpointLocation;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointMonitorStatus")
-      private final @Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
+      private final @Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
 
-    public Input<Either<String,EndpointMonitorStatus>> getEndpointMonitorStatus() {
-        return this.endpointMonitorStatus == null ? Input.empty() : this.endpointMonitorStatus;
+    public Output<Either<String,EndpointMonitorStatus>> getEndpointMonitorStatus() {
+        return this.endpointMonitorStatus == null ? Output.empty() : this.endpointMonitorStatus;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointStatus")
-      private final @Nullable Input<Either<String,EndpointStatus>> endpointStatus;
+      private final @Nullable Output<Either<String,EndpointStatus>> endpointStatus;
 
-    public Input<Either<String,EndpointStatus>> getEndpointStatus() {
-        return this.endpointStatus == null ? Input.empty() : this.endpointStatus;
+    public Output<Either<String,EndpointStatus>> getEndpointStatus() {
+        return this.endpointStatus == null ? Output.empty() : this.endpointStatus;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geoMapping")
-      private final @Nullable Input<List<String>> geoMapping;
+      private final @Nullable Output<List<String>> geoMapping;
 
-    public Input<List<String>> getGeoMapping() {
-        return this.geoMapping == null ? Input.empty() : this.geoMapping;
+    public Output<List<String>> getGeoMapping() {
+        return this.geoMapping == null ? Output.empty() : this.geoMapping;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minChildEndpoints")
-      private final @Nullable Input<Double> minChildEndpoints;
+      private final @Nullable Output<Double> minChildEndpoints;
 
-    public Input<Double> getMinChildEndpoints() {
-        return this.minChildEndpoints == null ? Input.empty() : this.minChildEndpoints;
+    public Output<Double> getMinChildEndpoints() {
+        return this.minChildEndpoints == null ? Output.empty() : this.minChildEndpoints;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minChildEndpointsIPv4")
-      private final @Nullable Input<Double> minChildEndpointsIPv4;
+      private final @Nullable Output<Double> minChildEndpointsIPv4;
 
-    public Input<Double> getMinChildEndpointsIPv4() {
-        return this.minChildEndpointsIPv4 == null ? Input.empty() : this.minChildEndpointsIPv4;
+    public Output<Double> getMinChildEndpointsIPv4() {
+        return this.minChildEndpointsIPv4 == null ? Output.empty() : this.minChildEndpointsIPv4;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minChildEndpointsIPv6")
-      private final @Nullable Input<Double> minChildEndpointsIPv6;
+      private final @Nullable Output<Double> minChildEndpointsIPv6;
 
-    public Input<Double> getMinChildEndpointsIPv6() {
-        return this.minChildEndpointsIPv6 == null ? Input.empty() : this.minChildEndpointsIPv6;
+    public Output<Double> getMinChildEndpointsIPv6() {
+        return this.minChildEndpointsIPv6 == null ? Output.empty() : this.minChildEndpointsIPv6;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Double> priority;
+      private final @Nullable Output<Double> priority;
 
-    public Input<Double> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Double> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-      private final @Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets;
+      private final @Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets;
 
-    public Input<List<EndpointPropertiesSubnetsArgs>> getSubnets() {
-        return this.subnets == null ? Input.empty() : this.subnets;
+    public Output<List<EndpointPropertiesSubnetsArgs>> getSubnets() {
+        return this.subnets == null ? Output.empty() : this.subnets;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceId")
-      private final @Nullable Input<String> targetResourceId;
+      private final @Nullable Output<String> targetResourceId;
 
-    public Input<String> getTargetResourceId() {
-        return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
+    public Output<String> getTargetResourceId() {
+        return this.targetResourceId == null ? Output.empty() : this.targetResourceId;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -195,29 +195,29 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Double> weight;
+      private final @Nullable Output<Double> weight;
 
-    public Input<Double> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Double> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public EndpointArgs(
-        @Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders,
-        @Nullable Input<String> endpointLocation,
-        @Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus,
-        @Nullable Input<Either<String,EndpointStatus>> endpointStatus,
-        @Nullable Input<List<String>> geoMapping,
-        @Nullable Input<String> id,
-        @Nullable Input<Double> minChildEndpoints,
-        @Nullable Input<Double> minChildEndpointsIPv4,
-        @Nullable Input<Double> minChildEndpointsIPv6,
-        @Nullable Input<String> name,
-        @Nullable Input<Double> priority,
-        @Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets,
-        @Nullable Input<String> target,
-        @Nullable Input<String> targetResourceId,
-        @Nullable Input<String> type,
-        @Nullable Input<Double> weight) {
+        @Nullable Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders,
+        @Nullable Output<String> endpointLocation,
+        @Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus,
+        @Nullable Output<Either<String,EndpointStatus>> endpointStatus,
+        @Nullable Output<List<String>> geoMapping,
+        @Nullable Output<String> id,
+        @Nullable Output<Double> minChildEndpoints,
+        @Nullable Output<Double> minChildEndpointsIPv4,
+        @Nullable Output<Double> minChildEndpointsIPv6,
+        @Nullable Output<String> name,
+        @Nullable Output<Double> priority,
+        @Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets,
+        @Nullable Output<String> target,
+        @Nullable Output<String> targetResourceId,
+        @Nullable Output<String> type,
+        @Nullable Output<Double> weight) {
         this.customHeaders = customHeaders;
         this.endpointLocation = endpointLocation;
         this.endpointMonitorStatus = endpointMonitorStatus;
@@ -237,22 +237,22 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.customHeaders = Input.empty();
-        this.endpointLocation = Input.empty();
-        this.endpointMonitorStatus = Input.empty();
-        this.endpointStatus = Input.empty();
-        this.geoMapping = Input.empty();
-        this.id = Input.empty();
-        this.minChildEndpoints = Input.empty();
-        this.minChildEndpointsIPv4 = Input.empty();
-        this.minChildEndpointsIPv6 = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.subnets = Input.empty();
-        this.target = Input.empty();
-        this.targetResourceId = Input.empty();
-        this.type = Input.empty();
-        this.weight = Input.empty();
+        this.customHeaders = Output.empty();
+        this.endpointLocation = Output.empty();
+        this.endpointMonitorStatus = Output.empty();
+        this.endpointStatus = Output.empty();
+        this.geoMapping = Output.empty();
+        this.id = Output.empty();
+        this.minChildEndpoints = Output.empty();
+        this.minChildEndpointsIPv4 = Output.empty();
+        this.minChildEndpointsIPv6 = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.subnets = Output.empty();
+        this.target = Output.empty();
+        this.targetResourceId = Output.empty();
+        this.type = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -264,22 +264,22 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
-        private @Nullable Input<String> endpointLocation;
-        private @Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
-        private @Nullable Input<Either<String,EndpointStatus>> endpointStatus;
-        private @Nullable Input<List<String>> geoMapping;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Double> minChildEndpoints;
-        private @Nullable Input<Double> minChildEndpointsIPv4;
-        private @Nullable Input<Double> minChildEndpointsIPv6;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Double> priority;
-        private @Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets;
-        private @Nullable Input<String> target;
-        private @Nullable Input<String> targetResourceId;
-        private @Nullable Input<String> type;
-        private @Nullable Input<Double> weight;
+        private @Nullable Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
+        private @Nullable Output<String> endpointLocation;
+        private @Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
+        private @Nullable Output<Either<String,EndpointStatus>> endpointStatus;
+        private @Nullable Output<List<String>> geoMapping;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Double> minChildEndpoints;
+        private @Nullable Output<Double> minChildEndpointsIPv4;
+        private @Nullable Output<Double> minChildEndpointsIPv6;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Double> priority;
+        private @Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets;
+        private @Nullable Output<String> target;
+        private @Nullable Output<String> targetResourceId;
+        private @Nullable Output<String> type;
+        private @Nullable Output<Double> weight;
 
         public Builder() {
     	      // Empty
@@ -305,163 +305,163 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder customHeaders(@Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders) {
+        public Builder customHeaders(@Nullable Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
         public Builder customHeaders(@Nullable List<EndpointPropertiesCustomHeadersArgs> customHeaders) {
-            this.customHeaders = Input.ofNullable(customHeaders);
+            this.customHeaders = Output.ofNullable(customHeaders);
             return this;
         }
 
-        public Builder endpointLocation(@Nullable Input<String> endpointLocation) {
+        public Builder endpointLocation(@Nullable Output<String> endpointLocation) {
             this.endpointLocation = endpointLocation;
             return this;
         }
 
         public Builder endpointLocation(@Nullable String endpointLocation) {
-            this.endpointLocation = Input.ofNullable(endpointLocation);
+            this.endpointLocation = Output.ofNullable(endpointLocation);
             return this;
         }
 
-        public Builder endpointMonitorStatus(@Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus) {
+        public Builder endpointMonitorStatus(@Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus) {
             this.endpointMonitorStatus = endpointMonitorStatus;
             return this;
         }
 
         public Builder endpointMonitorStatus(@Nullable Either<String,EndpointMonitorStatus> endpointMonitorStatus) {
-            this.endpointMonitorStatus = Input.ofNullable(endpointMonitorStatus);
+            this.endpointMonitorStatus = Output.ofNullable(endpointMonitorStatus);
             return this;
         }
 
-        public Builder endpointStatus(@Nullable Input<Either<String,EndpointStatus>> endpointStatus) {
+        public Builder endpointStatus(@Nullable Output<Either<String,EndpointStatus>> endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
 
         public Builder endpointStatus(@Nullable Either<String,EndpointStatus> endpointStatus) {
-            this.endpointStatus = Input.ofNullable(endpointStatus);
+            this.endpointStatus = Output.ofNullable(endpointStatus);
             return this;
         }
 
-        public Builder geoMapping(@Nullable Input<List<String>> geoMapping) {
+        public Builder geoMapping(@Nullable Output<List<String>> geoMapping) {
             this.geoMapping = geoMapping;
             return this;
         }
 
         public Builder geoMapping(@Nullable List<String> geoMapping) {
-            this.geoMapping = Input.ofNullable(geoMapping);
+            this.geoMapping = Output.ofNullable(geoMapping);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder minChildEndpoints(@Nullable Input<Double> minChildEndpoints) {
+        public Builder minChildEndpoints(@Nullable Output<Double> minChildEndpoints) {
             this.minChildEndpoints = minChildEndpoints;
             return this;
         }
 
         public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
-            this.minChildEndpoints = Input.ofNullable(minChildEndpoints);
+            this.minChildEndpoints = Output.ofNullable(minChildEndpoints);
             return this;
         }
 
-        public Builder minChildEndpointsIPv4(@Nullable Input<Double> minChildEndpointsIPv4) {
+        public Builder minChildEndpointsIPv4(@Nullable Output<Double> minChildEndpointsIPv4) {
             this.minChildEndpointsIPv4 = minChildEndpointsIPv4;
             return this;
         }
 
         public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
-            this.minChildEndpointsIPv4 = Input.ofNullable(minChildEndpointsIPv4);
+            this.minChildEndpointsIPv4 = Output.ofNullable(minChildEndpointsIPv4);
             return this;
         }
 
-        public Builder minChildEndpointsIPv6(@Nullable Input<Double> minChildEndpointsIPv6) {
+        public Builder minChildEndpointsIPv6(@Nullable Output<Double> minChildEndpointsIPv6) {
             this.minChildEndpointsIPv6 = minChildEndpointsIPv6;
             return this;
         }
 
         public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
-            this.minChildEndpointsIPv6 = Input.ofNullable(minChildEndpointsIPv6);
+            this.minChildEndpointsIPv6 = Output.ofNullable(minChildEndpointsIPv6);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Double> priority) {
+        public Builder priority(@Nullable Output<Double> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Double priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder subnets(@Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets) {
+        public Builder subnets(@Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
         public Builder subnets(@Nullable List<EndpointPropertiesSubnetsArgs> subnets) {
-            this.subnets = Input.ofNullable(subnets);
+            this.subnets = Output.ofNullable(subnets);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder targetResourceId(@Nullable Input<String> targetResourceId) {
+        public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Input.ofNullable(targetResourceId);
+            this.targetResourceId = Output.ofNullable(targetResourceId);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Double> weight) {
+        public Builder weight(@Nullable Output<Double> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Double weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public EndpointArgs build() {

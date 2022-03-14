@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RouterNatSubnetworkToNatSourceIpRangesToNatItem;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondaryIpRangeNames")
-      private final @Nullable Input<List<String>> secondaryIpRangeNames;
+      private final @Nullable Output<List<String>> secondaryIpRangeNames;
 
-    public Input<List<String>> getSecondaryIpRangeNames() {
-        return this.secondaryIpRangeNames == null ? Input.empty() : this.secondaryIpRangeNames;
+    public Output<List<String>> getSecondaryIpRangeNames() {
+        return this.secondaryIpRangeNames == null ? Output.empty() : this.secondaryIpRangeNames;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceIpRangesToNat")
-      private final @Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
+      private final @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
 
-    public Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> getSourceIpRangesToNat() {
-        return this.sourceIpRangesToNat == null ? Input.empty() : this.sourceIpRangesToNat;
+    public Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> getSourceIpRangesToNat() {
+        return this.sourceIpRangesToNat == null ? Output.empty() : this.sourceIpRangesToNat;
     }
 
     public RouterNatSubnetworkToNatArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> secondaryIpRangeNames,
-        @Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> secondaryIpRangeNames,
+        @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
         this.name = name;
         this.secondaryIpRangeNames = secondaryIpRangeNames;
         this.sourceIpRangesToNat = sourceIpRangesToNat;
     }
 
     private RouterNatSubnetworkToNatArgs() {
-        this.name = Input.empty();
-        this.secondaryIpRangeNames = Input.empty();
-        this.sourceIpRangesToNat = Input.empty();
+        this.name = Output.empty();
+        this.secondaryIpRangeNames = Output.empty();
+        this.sourceIpRangesToNat = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> secondaryIpRangeNames;
-        private @Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> secondaryIpRangeNames;
+        private @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
     	      this.sourceIpRangesToNat = defaults.sourceIpRangesToNat;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder secondaryIpRangeNames(@Nullable Input<List<String>> secondaryIpRangeNames) {
+        public Builder secondaryIpRangeNames(@Nullable Output<List<String>> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
 
         public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = Input.ofNullable(secondaryIpRangeNames);
+            this.secondaryIpRangeNames = Output.ofNullable(secondaryIpRangeNames);
             return this;
         }
 
-        public Builder sourceIpRangesToNat(@Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
+        public Builder sourceIpRangesToNat(@Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
             this.sourceIpRangesToNat = sourceIpRangesToNat;
             return this;
         }
 
         public Builder sourceIpRangesToNat(@Nullable List<RouterNatSubnetworkToNatSourceIpRangesToNatItem> sourceIpRangesToNat) {
-            this.sourceIpRangesToNat = Input.ofNullable(sourceIpRangesToNat);
+            this.sourceIpRangesToNat = Output.ofNullable(sourceIpRangesToNat);
             return this;
         }
         public RouterNatSubnetworkToNatArgs build() {

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.FactoryIdentityArgs;
 import io.pulumi.azurenative.datafactory.inputs.FactoryVSTSConfigurationArgs;
 import io.pulumi.azurenative.datafactory.inputs.GlobalParameterSpecificationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<EncryptionConfigurationArgs> encryption;
+      private final @Nullable Output<EncryptionConfigurationArgs> encryption;
 
-    public Input<EncryptionConfigurationArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<EncryptionConfigurationArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName")
-      private final @Nullable Input<String> factoryName;
+      private final @Nullable Output<String> factoryName;
 
-    public Input<String> getFactoryName() {
-        return this.factoryName == null ? Input.empty() : this.factoryName;
+    public Output<String> getFactoryName() {
+        return this.factoryName == null ? Output.empty() : this.factoryName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalParameters")
-      private final @Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
+      private final @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
-    public Input<Map<String,GlobalParameterSpecificationArgs>> getGlobalParameters() {
-        return this.globalParameters == null ? Input.empty() : this.globalParameters;
+    public Output<Map<String,GlobalParameterSpecificationArgs>> getGlobalParameters() {
+        return this.globalParameters == null ? Output.empty() : this.globalParameters;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<FactoryIdentityArgs> identity;
+      private final @Nullable Output<FactoryIdentityArgs> identity;
 
-    public Input<FactoryIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<FactoryIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoConfiguration")
-      private final @Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
+      private final @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
-    public Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> getRepoConfiguration() {
-        return this.repoConfiguration == null ? Input.empty() : this.repoConfiguration;
+    public Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> getRepoConfiguration() {
+        return this.repoConfiguration == null ? Output.empty() : this.repoConfiguration;
     }
 
     /**
@@ -104,9 +104,9 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,22 +115,22 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FactoryArgs(
-        @Nullable Input<EncryptionConfigurationArgs> encryption,
-        @Nullable Input<String> factoryName,
-        @Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters,
-        @Nullable Input<FactoryIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<EncryptionConfigurationArgs> encryption,
+        @Nullable Output<String> factoryName,
+        @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters,
+        @Nullable Output<FactoryIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.encryption = encryption;
         this.factoryName = factoryName;
         this.globalParameters = globalParameters;
@@ -143,15 +143,15 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FactoryArgs() {
-        this.encryption = Input.empty();
-        this.factoryName = Input.empty();
-        this.globalParameters = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.repoConfiguration = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.encryption = Output.empty();
+        this.factoryName = Output.empty();
+        this.globalParameters = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.repoConfiguration = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,15 +163,15 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EncryptionConfigurationArgs> encryption;
-        private @Nullable Input<String> factoryName;
-        private @Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
-        private @Nullable Input<FactoryIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<EncryptionConfigurationArgs> encryption;
+        private @Nullable Output<String> factoryName;
+        private @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
+        private @Nullable Output<FactoryIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -190,93 +190,93 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder encryption(@Nullable Input<EncryptionConfigurationArgs> encryption) {
+        public Builder encryption(@Nullable Output<EncryptionConfigurationArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable EncryptionConfigurationArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder factoryName(@Nullable Input<String> factoryName) {
+        public Builder factoryName(@Nullable Output<String> factoryName) {
             this.factoryName = factoryName;
             return this;
         }
 
         public Builder factoryName(@Nullable String factoryName) {
-            this.factoryName = Input.ofNullable(factoryName);
+            this.factoryName = Output.ofNullable(factoryName);
             return this;
         }
 
-        public Builder globalParameters(@Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
+        public Builder globalParameters(@Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
 
         public Builder globalParameters(@Nullable Map<String,GlobalParameterSpecificationArgs> globalParameters) {
-            this.globalParameters = Input.ofNullable(globalParameters);
+            this.globalParameters = Output.ofNullable(globalParameters);
             return this;
         }
 
-        public Builder identity(@Nullable Input<FactoryIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<FactoryIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable FactoryIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder repoConfiguration(@Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
+        public Builder repoConfiguration(@Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
             this.repoConfiguration = repoConfiguration;
             return this;
         }
 
         public Builder repoConfiguration(@Nullable Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
-            this.repoConfiguration = Input.ofNullable(repoConfiguration);
+            this.repoConfiguration = Output.ofNullable(repoConfiguration);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FactoryArgs build() {

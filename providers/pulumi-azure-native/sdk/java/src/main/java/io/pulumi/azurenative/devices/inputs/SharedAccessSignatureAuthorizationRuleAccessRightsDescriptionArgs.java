@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.AccessRightsDescription;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="keyName", required=true)
-      private final Input<String> keyName;
+      private final Output<String> keyName;
 
-    public Input<String> getKeyName() {
+    public Output<String> getKeyName() {
         return this.keyName;
     }
 
@@ -36,10 +36,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="primaryKey")
-      private final @Nullable Input<String> primaryKey;
+      private final @Nullable Output<String> primaryKey;
 
-    public Input<String> getPrimaryKey() {
-        return this.primaryKey == null ? Input.empty() : this.primaryKey;
+    public Output<String> getPrimaryKey() {
+        return this.primaryKey == null ? Output.empty() : this.primaryKey;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="rights", required=true)
-      private final Input<Either<String,AccessRightsDescription>> rights;
+      private final Output<Either<String,AccessRightsDescription>> rights;
 
-    public Input<Either<String,AccessRightsDescription>> getRights() {
+    public Output<Either<String,AccessRightsDescription>> getRights() {
         return this.rights;
     }
 
@@ -58,17 +58,17 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="secondaryKey")
-      private final @Nullable Input<String> secondaryKey;
+      private final @Nullable Output<String> secondaryKey;
 
-    public Input<String> getSecondaryKey() {
-        return this.secondaryKey == null ? Input.empty() : this.secondaryKey;
+    public Output<String> getSecondaryKey() {
+        return this.secondaryKey == null ? Output.empty() : this.secondaryKey;
     }
 
     public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(
-        Input<String> keyName,
-        @Nullable Input<String> primaryKey,
-        Input<Either<String,AccessRightsDescription>> rights,
-        @Nullable Input<String> secondaryKey) {
+        Output<String> keyName,
+        @Nullable Output<String> primaryKey,
+        Output<Either<String,AccessRightsDescription>> rights,
+        @Nullable Output<String> secondaryKey) {
         this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
         this.primaryKey = primaryKey;
         this.rights = Objects.requireNonNull(rights, "expected parameter 'rights' to be non-null");
@@ -76,10 +76,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     }
 
     private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs() {
-        this.keyName = Input.empty();
-        this.primaryKey = Input.empty();
-        this.rights = Input.empty();
-        this.secondaryKey = Input.empty();
+        this.keyName = Output.empty();
+        this.primaryKey = Output.empty();
+        this.rights = Output.empty();
+        this.secondaryKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     }
 
     public static final class Builder {
-        private Input<String> keyName;
-        private @Nullable Input<String> primaryKey;
-        private Input<Either<String,AccessRightsDescription>> rights;
-        private @Nullable Input<String> secondaryKey;
+        private Output<String> keyName;
+        private @Nullable Output<String> primaryKey;
+        private Output<Either<String,AccessRightsDescription>> rights;
+        private @Nullable Output<String> secondaryKey;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder keyName(Input<String> keyName) {
+        public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Input.of(Objects.requireNonNull(keyName));
+            this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder primaryKey(@Nullable Input<String> primaryKey) {
+        public Builder primaryKey(@Nullable Output<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Input.ofNullable(primaryKey);
+            this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder rights(Input<Either<String,AccessRightsDescription>> rights) {
+        public Builder rights(Output<Either<String,AccessRightsDescription>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
         public Builder rights(Either<String,AccessRightsDescription> rights) {
-            this.rights = Input.of(Objects.requireNonNull(rights));
+            this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
 
-        public Builder secondaryKey(@Nullable Input<String> secondaryKey) {
+        public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
 
         public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Input.ofNullable(secondaryKey);
+            this.secondaryKey = Output.ofNullable(secondaryKey);
             return this;
         }
         public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -31,10 +31,10 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="generation")
-      private final @Nullable Input<String> generation;
+      private final @Nullable Output<String> generation;
 
-    public Input<String> getGeneration() {
-        return this.generation == null ? Input.empty() : this.generation;
+    public Output<String> getGeneration() {
+        return this.generation == null ? Output.empty() : this.generation;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
     public TriggerBuildSourceStorageSourceArgs(
-        Input<String> bucket,
-        @Nullable Input<String> generation,
-        Input<String> object) {
+        Output<String> bucket,
+        @Nullable Output<String> generation,
+        Output<String> object) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.generation = generation;
         this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
     }
 
     private TriggerBuildSourceStorageSourceArgs() {
-        this.bucket = Input.empty();
-        this.generation = Input.empty();
-        this.object = Input.empty();
+        this.bucket = Output.empty();
+        this.generation = Output.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<String> generation;
-        private Input<String> object;
+        private Output<String> bucket;
+        private @Nullable Output<String> generation;
+        private Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class TriggerBuildSourceStorageSourceArgs extends io.pulumi.resourc
     	      this.object = defaults.object;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder generation(@Nullable Input<String> generation) {
+        public Builder generation(@Nullable Output<String> generation) {
             this.generation = generation;
             return this;
         }
 
         public Builder generation(@Nullable String generation) {
-            this.generation = Input.ofNullable(generation);
+            this.generation = Output.ofNullable(generation);
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
         public TriggerBuildSourceStorageSourceArgs build() {

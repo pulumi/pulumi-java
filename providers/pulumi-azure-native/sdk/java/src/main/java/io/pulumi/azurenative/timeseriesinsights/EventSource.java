@@ -6,7 +6,6 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.EventSourceArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -145,23 +144,23 @@ public class EventSource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventSource(String name, EventSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:timeseriesinsights:EventSource", name, args == null ? EventSourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:timeseriesinsights:EventSource", name, args == null ? EventSourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventSource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventSource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:EventSource", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:EventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:EventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:EventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:EventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:EventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:EventSource").build())
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:EventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:EventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:EventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:EventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:EventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:EventSource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -175,7 +174,7 @@ public class EventSource extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventSource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventSource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventSource(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<String> encoding;
+      private final @Nullable Output<String> encoding;
 
-    public Input<String> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<String> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldName")
-      private final @Nullable Input<String> fieldName;
+      private final @Nullable Output<String> fieldName;
 
-    public Input<String> getFieldName() {
-        return this.fieldName == null ? Input.empty() : this.fieldName;
+    public Output<String> getFieldName() {
+        return this.fieldName == null ? Output.empty() : this.fieldName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlyReadLatest")
-      private final @Nullable Input<Boolean> onlyReadLatest;
+      private final @Nullable Output<Boolean> onlyReadLatest;
 
-    public Input<Boolean> getOnlyReadLatest() {
-        return this.onlyReadLatest == null ? Input.empty() : this.onlyReadLatest;
+    public Output<Boolean> getOnlyReadLatest() {
+        return this.onlyReadLatest == null ? Output.empty() : this.onlyReadLatest;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifierEncoded")
-      private final @Nullable Input<String> qualifierEncoded;
+      private final @Nullable Output<String> qualifierEncoded;
 
-    public Input<String> getQualifierEncoded() {
-        return this.qualifierEncoded == null ? Input.empty() : this.qualifierEncoded;
+    public Output<String> getQualifierEncoded() {
+        return this.qualifierEncoded == null ? Output.empty() : this.qualifierEncoded;
     }
 
     @InputImport(name="qualifierString")
-      private final @Nullable Input<String> qualifierString;
+      private final @Nullable Output<String> qualifierString;
 
-    public Input<String> getQualifierString() {
-        return this.qualifierString == null ? Input.empty() : this.qualifierString;
+    public Output<String> getQualifierString() {
+        return this.qualifierString == null ? Output.empty() : this.qualifierString;
     }
 
     /**
@@ -71,19 +71,19 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public BigtableColumnArgs(
-        @Nullable Input<String> encoding,
-        @Nullable Input<String> fieldName,
-        @Nullable Input<Boolean> onlyReadLatest,
-        @Nullable Input<String> qualifierEncoded,
-        @Nullable Input<String> qualifierString,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> encoding,
+        @Nullable Output<String> fieldName,
+        @Nullable Output<Boolean> onlyReadLatest,
+        @Nullable Output<String> qualifierEncoded,
+        @Nullable Output<String> qualifierString,
+        @Nullable Output<String> type) {
         this.encoding = encoding;
         this.fieldName = fieldName;
         this.onlyReadLatest = onlyReadLatest;
@@ -93,12 +93,12 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BigtableColumnArgs() {
-        this.encoding = Input.empty();
-        this.fieldName = Input.empty();
-        this.onlyReadLatest = Input.empty();
-        this.qualifierEncoded = Input.empty();
-        this.qualifierString = Input.empty();
-        this.type = Input.empty();
+        this.encoding = Output.empty();
+        this.fieldName = Output.empty();
+        this.onlyReadLatest = Output.empty();
+        this.qualifierEncoded = Output.empty();
+        this.qualifierString = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,12 +110,12 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encoding;
-        private @Nullable Input<String> fieldName;
-        private @Nullable Input<Boolean> onlyReadLatest;
-        private @Nullable Input<String> qualifierEncoded;
-        private @Nullable Input<String> qualifierString;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> encoding;
+        private @Nullable Output<String> fieldName;
+        private @Nullable Output<Boolean> onlyReadLatest;
+        private @Nullable Output<String> qualifierEncoded;
+        private @Nullable Output<String> qualifierString;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -131,63 +131,63 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder encoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder fieldName(@Nullable Input<String> fieldName) {
+        public Builder fieldName(@Nullable Output<String> fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
         public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Input.ofNullable(fieldName);
+            this.fieldName = Output.ofNullable(fieldName);
             return this;
         }
 
-        public Builder onlyReadLatest(@Nullable Input<Boolean> onlyReadLatest) {
+        public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
             this.onlyReadLatest = onlyReadLatest;
             return this;
         }
 
         public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
-            this.onlyReadLatest = Input.ofNullable(onlyReadLatest);
+            this.onlyReadLatest = Output.ofNullable(onlyReadLatest);
             return this;
         }
 
-        public Builder qualifierEncoded(@Nullable Input<String> qualifierEncoded) {
+        public Builder qualifierEncoded(@Nullable Output<String> qualifierEncoded) {
             this.qualifierEncoded = qualifierEncoded;
             return this;
         }
 
         public Builder qualifierEncoded(@Nullable String qualifierEncoded) {
-            this.qualifierEncoded = Input.ofNullable(qualifierEncoded);
+            this.qualifierEncoded = Output.ofNullable(qualifierEncoded);
             return this;
         }
 
-        public Builder qualifierString(@Nullable Input<String> qualifierString) {
+        public Builder qualifierString(@Nullable Output<String> qualifierString) {
             this.qualifierString = qualifierString;
             return this;
         }
 
         public Builder qualifierString(@Nullable String qualifierString) {
-            this.qualifierString = Input.ofNullable(qualifierString);
+            this.qualifierString = Output.ofNullable(qualifierString);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public BigtableColumnArgs build() {

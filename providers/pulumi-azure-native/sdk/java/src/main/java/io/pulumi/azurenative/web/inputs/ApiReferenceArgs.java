@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brandColor")
-      private final @Nullable Input<String> brandColor;
+      private final @Nullable Output<String> brandColor;
 
-    public Input<String> getBrandColor() {
-        return this.brandColor == null ? Input.empty() : this.brandColor;
+    public Output<String> getBrandColor() {
+        return this.brandColor == null ? Output.empty() : this.brandColor;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconUri")
-      private final @Nullable Input<String> iconUri;
+      private final @Nullable Output<String> iconUri;
 
-    public Input<String> getIconUri() {
-        return this.iconUri == null ? Input.empty() : this.iconUri;
+    public Output<String> getIconUri() {
+        return this.iconUri == null ? Output.empty() : this.iconUri;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="swagger")
-      private final @Nullable Input<Object> swagger;
+      private final @Nullable Output<Object> swagger;
 
-    public Input<Object> getSwagger() {
-        return this.swagger == null ? Input.empty() : this.swagger;
+    public Output<Object> getSwagger() {
+        return this.swagger == null ? Output.empty() : this.swagger;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ApiReferenceArgs(
-        @Nullable Input<String> brandColor,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> iconUri,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<Object> swagger,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> brandColor,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> iconUri,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<Object> swagger,
+        @Nullable Output<String> type) {
         this.brandColor = brandColor;
         this.description = description;
         this.displayName = displayName;
@@ -123,14 +123,14 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiReferenceArgs() {
-        this.brandColor = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.iconUri = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.swagger = Input.empty();
-        this.type = Input.empty();
+        this.brandColor = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.iconUri = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.swagger = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> brandColor;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> iconUri;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Object> swagger;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> brandColor;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> iconUri;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Object> swagger;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder brandColor(@Nullable Input<String> brandColor) {
+        public Builder brandColor(@Nullable Output<String> brandColor) {
             this.brandColor = brandColor;
             return this;
         }
 
         public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = Input.ofNullable(brandColor);
+            this.brandColor = Output.ofNullable(brandColor);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder iconUri(@Nullable Input<String> iconUri) {
+        public Builder iconUri(@Nullable Output<String> iconUri) {
             this.iconUri = iconUri;
             return this;
         }
 
         public Builder iconUri(@Nullable String iconUri) {
-            this.iconUri = Input.ofNullable(iconUri);
+            this.iconUri = Output.ofNullable(iconUri);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder swagger(@Nullable Input<Object> swagger) {
+        public Builder swagger(@Nullable Output<Object> swagger) {
             this.swagger = swagger;
             return this;
         }
 
         public Builder swagger(@Nullable Object swagger) {
-            this.swagger = Input.ofNullable(swagger);
+            this.swagger = Output.ofNullable(swagger);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ApiReferenceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy
      * 
      */
     @InputImport(name="backendService", required=true)
-      private final Input<String> backendService;
+      private final Output<String> backendService;
 
-    public Input<String> getBackendService() {
+    public Output<String> getBackendService() {
         return this.backendService;
     }
 
-    public RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs(Input<String> backendService) {
+    public RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs(Output<String> backendService) {
         this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
     }
 
     private RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs() {
-        this.backendService = Input.empty();
+        this.backendService = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy
     }
 
     public static final class Builder {
-        private Input<String> backendService;
+        private Output<String> backendService;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy
     	      this.backendService = defaults.backendService;
         }
 
-        public Builder backendService(Input<String> backendService) {
+        public Builder backendService(Output<String> backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
         public Builder backendService(String backendService) {
-            this.backendService = Input.of(Objects.requireNonNull(backendService));
+            this.backendService = Output.of(Objects.requireNonNull(backendService));
             return this;
         }
         public RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs build() {

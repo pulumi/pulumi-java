@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<String>> items;
+      private final @Nullable Output<List<String>> items;
 
-    public Input<List<String>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<String>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public KeyGroupState(
-        @Nullable Input<String> comment,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> items,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> comment,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> items,
+        @Nullable Output<String> name) {
         this.comment = comment;
         this.etag = etag;
         this.items = items;
@@ -71,10 +71,10 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyGroupState() {
-        this.comment = Input.empty();
-        this.etag = Input.empty();
-        this.items = Input.empty();
-        this.name = Input.empty();
+        this.comment = Output.empty();
+        this.etag = Output.empty();
+        this.items = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> items;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> items;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder items(@Nullable Input<List<String>> items) {
+        public Builder items(@Nullable Output<List<String>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<String> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public KeyGroupState build() {

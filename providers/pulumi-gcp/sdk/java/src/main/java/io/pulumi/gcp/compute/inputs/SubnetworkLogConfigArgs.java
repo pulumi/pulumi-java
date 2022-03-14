@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="aggregationInterval")
-      private final @Nullable Input<String> aggregationInterval;
+      private final @Nullable Output<String> aggregationInterval;
 
-    public Input<String> getAggregationInterval() {
-        return this.aggregationInterval == null ? Input.empty() : this.aggregationInterval;
+    public Output<String> getAggregationInterval() {
+        return this.aggregationInterval == null ? Output.empty() : this.aggregationInterval;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="filterExpr")
-      private final @Nullable Input<String> filterExpr;
+      private final @Nullable Output<String> filterExpr;
 
-    public Input<String> getFilterExpr() {
-        return this.filterExpr == null ? Input.empty() : this.filterExpr;
+    public Output<String> getFilterExpr() {
+        return this.filterExpr == null ? Output.empty() : this.filterExpr;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="flowSampling")
-      private final @Nullable Input<Double> flowSampling;
+      private final @Nullable Output<Double> flowSampling;
 
-    public Input<Double> getFlowSampling() {
-        return this.flowSampling == null ? Input.empty() : this.flowSampling;
+    public Output<Double> getFlowSampling() {
+        return this.flowSampling == null ? Output.empty() : this.flowSampling;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<String> metadata;
+      private final @Nullable Output<String> metadata;
 
-    public Input<String> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<String> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -81,18 +81,18 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadataFields")
-      private final @Nullable Input<List<String>> metadataFields;
+      private final @Nullable Output<List<String>> metadataFields;
 
-    public Input<List<String>> getMetadataFields() {
-        return this.metadataFields == null ? Input.empty() : this.metadataFields;
+    public Output<List<String>> getMetadataFields() {
+        return this.metadataFields == null ? Output.empty() : this.metadataFields;
     }
 
     public SubnetworkLogConfigArgs(
-        @Nullable Input<String> aggregationInterval,
-        @Nullable Input<String> filterExpr,
-        @Nullable Input<Double> flowSampling,
-        @Nullable Input<String> metadata,
-        @Nullable Input<List<String>> metadataFields) {
+        @Nullable Output<String> aggregationInterval,
+        @Nullable Output<String> filterExpr,
+        @Nullable Output<Double> flowSampling,
+        @Nullable Output<String> metadata,
+        @Nullable Output<List<String>> metadataFields) {
         this.aggregationInterval = aggregationInterval;
         this.filterExpr = filterExpr;
         this.flowSampling = flowSampling;
@@ -101,11 +101,11 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private SubnetworkLogConfigArgs() {
-        this.aggregationInterval = Input.empty();
-        this.filterExpr = Input.empty();
-        this.flowSampling = Input.empty();
-        this.metadata = Input.empty();
-        this.metadataFields = Input.empty();
+        this.aggregationInterval = Output.empty();
+        this.filterExpr = Output.empty();
+        this.flowSampling = Output.empty();
+        this.metadata = Output.empty();
+        this.metadataFields = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,11 +117,11 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aggregationInterval;
-        private @Nullable Input<String> filterExpr;
-        private @Nullable Input<Double> flowSampling;
-        private @Nullable Input<String> metadata;
-        private @Nullable Input<List<String>> metadataFields;
+        private @Nullable Output<String> aggregationInterval;
+        private @Nullable Output<String> filterExpr;
+        private @Nullable Output<Double> flowSampling;
+        private @Nullable Output<String> metadata;
+        private @Nullable Output<List<String>> metadataFields;
 
         public Builder() {
     	      // Empty
@@ -136,53 +136,53 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     	      this.metadataFields = defaults.metadataFields;
         }
 
-        public Builder aggregationInterval(@Nullable Input<String> aggregationInterval) {
+        public Builder aggregationInterval(@Nullable Output<String> aggregationInterval) {
             this.aggregationInterval = aggregationInterval;
             return this;
         }
 
         public Builder aggregationInterval(@Nullable String aggregationInterval) {
-            this.aggregationInterval = Input.ofNullable(aggregationInterval);
+            this.aggregationInterval = Output.ofNullable(aggregationInterval);
             return this;
         }
 
-        public Builder filterExpr(@Nullable Input<String> filterExpr) {
+        public Builder filterExpr(@Nullable Output<String> filterExpr) {
             this.filterExpr = filterExpr;
             return this;
         }
 
         public Builder filterExpr(@Nullable String filterExpr) {
-            this.filterExpr = Input.ofNullable(filterExpr);
+            this.filterExpr = Output.ofNullable(filterExpr);
             return this;
         }
 
-        public Builder flowSampling(@Nullable Input<Double> flowSampling) {
+        public Builder flowSampling(@Nullable Output<Double> flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
 
         public Builder flowSampling(@Nullable Double flowSampling) {
-            this.flowSampling = Input.ofNullable(flowSampling);
+            this.flowSampling = Output.ofNullable(flowSampling);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<String> metadata) {
+        public Builder metadata(@Nullable Output<String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable String metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder metadataFields(@Nullable Input<List<String>> metadataFields) {
+        public Builder metadataFields(@Nullable Output<List<String>> metadataFields) {
             this.metadataFields = metadataFields;
             return this;
         }
 
         public Builder metadataFields(@Nullable List<String> metadataFields) {
-            this.metadataFields = Input.ofNullable(metadataFields);
+            this.metadataFields = Output.ofNullable(metadataFields);
             return this;
         }
         public SubnetworkLogConfigArgs build() {

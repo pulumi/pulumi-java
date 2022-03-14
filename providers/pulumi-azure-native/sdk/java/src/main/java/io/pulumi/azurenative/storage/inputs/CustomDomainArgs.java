@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useSubDomainName")
-      private final @Nullable Input<Boolean> useSubDomainName;
+      private final @Nullable Output<Boolean> useSubDomainName;
 
-    public Input<Boolean> getUseSubDomainName() {
-        return this.useSubDomainName == null ? Input.empty() : this.useSubDomainName;
+    public Output<Boolean> getUseSubDomainName() {
+        return this.useSubDomainName == null ? Output.empty() : this.useSubDomainName;
     }
 
     public CustomDomainArgs(
-        Input<String> name,
-        @Nullable Input<Boolean> useSubDomainName) {
+        Output<String> name,
+        @Nullable Output<Boolean> useSubDomainName) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.useSubDomainName = useSubDomainName;
     }
 
     private CustomDomainArgs() {
-        this.name = Input.empty();
-        this.useSubDomainName = Input.empty();
+        this.name = Output.empty();
+        this.useSubDomainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<Boolean> useSubDomainName;
+        private Output<String> name;
+        private @Nullable Output<Boolean> useSubDomainName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useSubDomainName = defaults.useSubDomainName;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder useSubDomainName(@Nullable Input<Boolean> useSubDomainName) {
+        public Builder useSubDomainName(@Nullable Output<Boolean> useSubDomainName) {
             this.useSubDomainName = useSubDomainName;
             return this;
         }
 
         public Builder useSubDomainName(@Nullable Boolean useSubDomainName) {
-            this.useSubDomainName = Input.ofNullable(useSubDomainName);
+            this.useSubDomainName = Output.ofNullable(useSubDomainName);
             return this;
         }
         public CustomDomainArgs build() {

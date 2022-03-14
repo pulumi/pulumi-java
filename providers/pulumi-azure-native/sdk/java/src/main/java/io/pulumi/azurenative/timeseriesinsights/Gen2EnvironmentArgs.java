@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.Gen2StorageConfigurationI
 import io.pulumi.azurenative.timeseriesinsights.inputs.SkuArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.TimeSeriesIdPropertyArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.WarmStoreConfigurationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentName")
-      private final @Nullable Input<String> environmentName;
+      private final @Nullable Output<String> environmentName;
 
-    public Input<String> getEnvironmentName() {
-        return this.environmentName == null ? Input.empty() : this.environmentName;
+    public Output<String> getEnvironmentName() {
+        return this.environmentName == null ? Output.empty() : this.environmentName;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -48,10 +48,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,9 +70,9 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -81,9 +81,9 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageConfiguration", required=true)
-      private final Input<Gen2StorageConfigurationInputArgs> storageConfiguration;
+      private final Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
 
-    public Input<Gen2StorageConfigurationInputArgs> getStorageConfiguration() {
+    public Output<Gen2StorageConfigurationInputArgs> getStorageConfiguration() {
         return this.storageConfiguration;
     }
 
@@ -92,10 +92,10 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesIdProperties", required=true)
-      private final Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
+      private final Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
 
-    public Input<List<TimeSeriesIdPropertyArgs>> getTimeSeriesIdProperties() {
+    public Output<List<TimeSeriesIdPropertyArgs>> getTimeSeriesIdProperties() {
         return this.timeSeriesIdProperties;
     }
 
@@ -114,22 +114,22 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="warmStoreConfiguration")
-      private final @Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
+      private final @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 
-    public Input<WarmStoreConfigurationPropertiesArgs> getWarmStoreConfiguration() {
-        return this.warmStoreConfiguration == null ? Input.empty() : this.warmStoreConfiguration;
+    public Output<WarmStoreConfigurationPropertiesArgs> getWarmStoreConfiguration() {
+        return this.warmStoreConfiguration == null ? Output.empty() : this.warmStoreConfiguration;
     }
 
     public Gen2EnvironmentArgs(
-        @Nullable Input<String> environmentName,
-        Input<String> kind,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        Input<Gen2StorageConfigurationInputArgs> storageConfiguration,
-        @Nullable Input<Map<String,String>> tags,
-        Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties,
-        @Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
+        @Nullable Output<String> environmentName,
+        Output<String> kind,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        Output<Gen2StorageConfigurationInputArgs> storageConfiguration,
+        @Nullable Output<Map<String,String>> tags,
+        Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties,
+        @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
         this.environmentName = environmentName;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.location = location;
@@ -142,15 +142,15 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private Gen2EnvironmentArgs() {
-        this.environmentName = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.storageConfiguration = Input.empty();
-        this.tags = Input.empty();
-        this.timeSeriesIdProperties = Input.empty();
-        this.warmStoreConfiguration = Input.empty();
+        this.environmentName = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.storageConfiguration = Output.empty();
+        this.tags = Output.empty();
+        this.timeSeriesIdProperties = Output.empty();
+        this.warmStoreConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> environmentName;
-        private Input<String> kind;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private Input<Gen2StorageConfigurationInputArgs> storageConfiguration;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
-        private @Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
+        private @Nullable Output<String> environmentName;
+        private Output<String> kind;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
+        private @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.warmStoreConfiguration = defaults.warmStoreConfiguration;
         }
 
-        public Builder environmentName(@Nullable Input<String> environmentName) {
+        public Builder environmentName(@Nullable Output<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
         public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Input.ofNullable(environmentName);
+            this.environmentName = Output.ofNullable(environmentName);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder storageConfiguration(Input<Gen2StorageConfigurationInputArgs> storageConfiguration) {
+        public Builder storageConfiguration(Output<Gen2StorageConfigurationInputArgs> storageConfiguration) {
             this.storageConfiguration = Objects.requireNonNull(storageConfiguration);
             return this;
         }
 
         public Builder storageConfiguration(Gen2StorageConfigurationInputArgs storageConfiguration) {
-            this.storageConfiguration = Input.of(Objects.requireNonNull(storageConfiguration));
+            this.storageConfiguration = Output.of(Objects.requireNonNull(storageConfiguration));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeSeriesIdProperties(Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
+        public Builder timeSeriesIdProperties(Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
             this.timeSeriesIdProperties = Objects.requireNonNull(timeSeriesIdProperties);
             return this;
         }
 
         public Builder timeSeriesIdProperties(List<TimeSeriesIdPropertyArgs> timeSeriesIdProperties) {
-            this.timeSeriesIdProperties = Input.of(Objects.requireNonNull(timeSeriesIdProperties));
+            this.timeSeriesIdProperties = Output.of(Objects.requireNonNull(timeSeriesIdProperties));
             return this;
         }
 
-        public Builder warmStoreConfiguration(@Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
+        public Builder warmStoreConfiguration(@Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
             this.warmStoreConfiguration = warmStoreConfiguration;
             return this;
         }
 
         public Builder warmStoreConfiguration(@Nullable WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
-            this.warmStoreConfiguration = Input.ofNullable(warmStoreConfiguration);
+            this.warmStoreConfiguration = Output.ofNullable(warmStoreConfiguration);
             return this;
         }
         public Gen2EnvironmentArgs build() {

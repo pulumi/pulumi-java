@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="coreDeviceThingName", required=true)
-      private final Input<String> coreDeviceThingName;
+      private final Output<String> coreDeviceThingName;
 
-    public Input<String> getCoreDeviceThingName() {
+    public Output<String> getCoreDeviceThingName() {
         return this.coreDeviceThingName;
     }
 
-    public GatewayGreengrassV2Args(Input<String> coreDeviceThingName) {
+    public GatewayGreengrassV2Args(Output<String> coreDeviceThingName) {
         this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName, "expected parameter 'coreDeviceThingName' to be non-null");
     }
 
     private GatewayGreengrassV2Args() {
-        this.coreDeviceThingName = Input.empty();
+        this.coreDeviceThingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> coreDeviceThingName;
+        private Output<String> coreDeviceThingName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
     	      this.coreDeviceThingName = defaults.coreDeviceThingName;
         }
 
-        public Builder coreDeviceThingName(Input<String> coreDeviceThingName) {
+        public Builder coreDeviceThingName(Output<String> coreDeviceThingName) {
             this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName);
             return this;
         }
 
         public Builder coreDeviceThingName(String coreDeviceThingName) {
-            this.coreDeviceThingName = Input.of(Objects.requireNonNull(coreDeviceThingName));
+            this.coreDeviceThingName = Output.of(Objects.requireNonNull(coreDeviceThingName));
             return this;
         }
         public GatewayGreengrassV2Args build() {

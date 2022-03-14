@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -29,22 +29,22 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public EventSourceMappingSourceAccessConfigurationArgs(
-        Input<String> type,
-        Input<String> uri) {
+        Output<String> type,
+        Output<String> uri) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private EventSourceMappingSourceAccessConfigurationArgs() {
-        this.type = Input.empty();
-        this.uri = Input.empty();
+        this.type = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> type;
-        private Input<String> uri;
+        private Output<String> type;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     	      this.uri = defaults.uri;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public EventSourceMappingSourceAccessConfigurationArgs build() {

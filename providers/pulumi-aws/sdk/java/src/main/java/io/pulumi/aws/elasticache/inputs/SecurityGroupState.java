@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupNames")
-      private final @Nullable Input<List<String>> securityGroupNames;
+      private final @Nullable Output<List<String>> securityGroupNames;
 
-    public Input<List<String>> getSecurityGroupNames() {
-        return this.securityGroupNames == null ? Input.empty() : this.securityGroupNames;
+    public Output<List<String>> getSecurityGroupNames() {
+        return this.securityGroupNames == null ? Output.empty() : this.securityGroupNames;
     }
 
     public SecurityGroupState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> securityGroupNames) {
-        this.description = description == null ? Input.ofNullable("Managed by Pulumi") : description;
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> securityGroupNames) {
+        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
         this.name = name;
         this.securityGroupNames = securityGroupNames;
     }
 
     private SecurityGroupState() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.securityGroupNames = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.securityGroupNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> securityGroupNames;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> securityGroupNames;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.securityGroupNames = defaults.securityGroupNames;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder securityGroupNames(@Nullable Input<List<String>> securityGroupNames) {
+        public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
             this.securityGroupNames = securityGroupNames;
             return this;
         }
 
         public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Input.ofNullable(securityGroupNames);
+            this.securityGroupNames = Output.ofNullable(securityGroupNames);
             return this;
         }
         public SecurityGroupState build() {

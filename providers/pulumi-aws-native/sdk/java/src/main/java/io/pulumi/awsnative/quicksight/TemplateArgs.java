@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight;
 import io.pulumi.awsnative.quicksight.inputs.TemplateResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     public static final TemplateArgs Empty = new TemplateArgs();
 
     @InputImport(name="awsAccountId", required=true)
-      private final Input<String> awsAccountId;
+      private final Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
+    public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
 
@@ -30,10 +30,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,16 +41,16 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<TemplateResourcePermissionArgs>> permissions;
+      private final @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
 
-    public Input<List<TemplateResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<TemplateResourcePermissionArgs>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     @InputImport(name="sourceEntity", required=true)
-      private final Input<TemplateSourceEntityArgs> sourceEntity;
+      private final Output<TemplateSourceEntityArgs> sourceEntity;
 
-    public Input<TemplateSourceEntityArgs> getSourceEntity() {
+    public Output<TemplateSourceEntityArgs> getSourceEntity() {
         return this.sourceEntity;
     }
 
@@ -59,16 +59,16 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<TemplateTagArgs>> tags;
+      private final @Nullable Output<List<TemplateTagArgs>> tags;
 
-    public Input<List<TemplateTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TemplateTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="templateId", required=true)
-      private final Input<String> templateId;
+      private final Output<String> templateId;
 
-    public Input<String> getTemplateId() {
+    public Output<String> getTemplateId() {
         return this.templateId;
     }
 
@@ -80,20 +80,20 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDescription")
-      private final @Nullable Input<String> versionDescription;
+      private final @Nullable Output<String> versionDescription;
 
-    public Input<String> getVersionDescription() {
-        return this.versionDescription == null ? Input.empty() : this.versionDescription;
+    public Output<String> getVersionDescription() {
+        return this.versionDescription == null ? Output.empty() : this.versionDescription;
     }
 
     public TemplateArgs(
-        Input<String> awsAccountId,
-        @Nullable Input<String> name,
-        @Nullable Input<List<TemplateResourcePermissionArgs>> permissions,
-        Input<TemplateSourceEntityArgs> sourceEntity,
-        @Nullable Input<List<TemplateTagArgs>> tags,
-        Input<String> templateId,
-        @Nullable Input<String> versionDescription) {
+        Output<String> awsAccountId,
+        @Nullable Output<String> name,
+        @Nullable Output<List<TemplateResourcePermissionArgs>> permissions,
+        Output<TemplateSourceEntityArgs> sourceEntity,
+        @Nullable Output<List<TemplateTagArgs>> tags,
+        Output<String> templateId,
+        @Nullable Output<String> versionDescription) {
         this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
         this.name = name;
         this.permissions = permissions;
@@ -104,13 +104,13 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.awsAccountId = Input.empty();
-        this.name = Input.empty();
-        this.permissions = Input.empty();
-        this.sourceEntity = Input.empty();
-        this.tags = Input.empty();
-        this.templateId = Input.empty();
-        this.versionDescription = Input.empty();
+        this.awsAccountId = Output.empty();
+        this.name = Output.empty();
+        this.permissions = Output.empty();
+        this.sourceEntity = Output.empty();
+        this.tags = Output.empty();
+        this.templateId = Output.empty();
+        this.versionDescription = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,13 +122,13 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> awsAccountId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<TemplateResourcePermissionArgs>> permissions;
-        private Input<TemplateSourceEntityArgs> sourceEntity;
-        private @Nullable Input<List<TemplateTagArgs>> tags;
-        private Input<String> templateId;
-        private @Nullable Input<String> versionDescription;
+        private Output<String> awsAccountId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
+        private Output<TemplateSourceEntityArgs> sourceEntity;
+        private @Nullable Output<List<TemplateTagArgs>> tags;
+        private Output<String> templateId;
+        private @Nullable Output<String> versionDescription;
 
         public Builder() {
     	      // Empty
@@ -145,73 +145,73 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder awsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
+            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<TemplateResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<TemplateResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<TemplateResourcePermissionArgs> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder sourceEntity(Input<TemplateSourceEntityArgs> sourceEntity) {
+        public Builder sourceEntity(Output<TemplateSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
 
         public Builder sourceEntity(TemplateSourceEntityArgs sourceEntity) {
-            this.sourceEntity = Input.of(Objects.requireNonNull(sourceEntity));
+            this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TemplateTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TemplateTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateId(Input<String> templateId) {
+        public Builder templateId(Output<String> templateId) {
             this.templateId = Objects.requireNonNull(templateId);
             return this;
         }
 
         public Builder templateId(String templateId) {
-            this.templateId = Input.of(Objects.requireNonNull(templateId));
+            this.templateId = Output.of(Objects.requireNonNull(templateId));
             return this;
         }
 
-        public Builder versionDescription(@Nullable Input<String> versionDescription) {
+        public Builder versionDescription(@Nullable Output<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
 
         public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Input.ofNullable(versionDescription);
+            this.versionDescription = Output.ofNullable(versionDescription);
             return this;
         }
         public TemplateArgs build() {

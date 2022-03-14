@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-      private final @Nullable Input<String> findingPublishingFrequency;
+      private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Input<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
+    public Output<String> getFindingPublishingFrequency() {
+        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole")
-      private final @Nullable Input<String> serviceRole;
+      private final @Nullable Output<String> serviceRole;
 
-    public Input<String> getServiceRole() {
-        return this.serviceRole == null ? Input.empty() : this.serviceRole;
+    public Output<String> getServiceRole() {
+        return this.serviceRole == null ? Output.empty() : this.serviceRole;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedAt")
-      private final @Nullable Input<String> updatedAt;
+      private final @Nullable Output<String> updatedAt;
 
-    public Input<String> getUpdatedAt() {
-        return this.updatedAt == null ? Input.empty() : this.updatedAt;
+    public Output<String> getUpdatedAt() {
+        return this.updatedAt == null ? Output.empty() : this.updatedAt;
     }
 
     public AccountState(
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> findingPublishingFrequency,
-        @Nullable Input<String> serviceRole,
-        @Nullable Input<String> status,
-        @Nullable Input<String> updatedAt) {
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> findingPublishingFrequency,
+        @Nullable Output<String> serviceRole,
+        @Nullable Output<String> status,
+        @Nullable Output<String> updatedAt) {
         this.createdAt = createdAt;
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.serviceRole = serviceRole;
@@ -83,11 +83,11 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountState() {
-        this.createdAt = Input.empty();
-        this.findingPublishingFrequency = Input.empty();
-        this.serviceRole = Input.empty();
-        this.status = Input.empty();
-        this.updatedAt = Input.empty();
+        this.createdAt = Output.empty();
+        this.findingPublishingFrequency = Output.empty();
+        this.serviceRole = Output.empty();
+        this.status = Output.empty();
+        this.updatedAt = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> findingPublishingFrequency;
-        private @Nullable Input<String> serviceRole;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> updatedAt;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> findingPublishingFrequency;
+        private @Nullable Output<String> serviceRole;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> updatedAt;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder findingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder serviceRole(@Nullable Input<String> serviceRole) {
+        public Builder serviceRole(@Nullable Output<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
         public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Input.ofNullable(serviceRole);
+            this.serviceRole = Output.ofNullable(serviceRole);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder updatedAt(@Nullable Input<String> updatedAt) {
+        public Builder updatedAt(@Nullable Output<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Input.ofNullable(updatedAt);
+            this.updatedAt = Output.ofNullable(updatedAt);
             return this;
         }
         public AccountState build() {

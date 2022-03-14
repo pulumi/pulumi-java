@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.azurenative.managednetwork.inputs.ScopeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedNetworkName")
-      private final @Nullable Input<String> managedNetworkName;
+      private final @Nullable Output<String> managedNetworkName;
 
-    public Input<String> getManagedNetworkName() {
-        return this.managedNetworkName == null ? Input.empty() : this.managedNetworkName;
+    public Output<String> getManagedNetworkName() {
+        return this.managedNetworkName == null ? Output.empty() : this.managedNetworkName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<ScopeArgs> scope;
+      private final @Nullable Output<ScopeArgs> scope;
 
-    public Input<ScopeArgs> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<ScopeArgs> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ManagedNetworkArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedNetworkName,
-        Input<String> resourceGroupName,
-        @Nullable Input<ScopeArgs> scope,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedNetworkName,
+        Output<String> resourceGroupName,
+        @Nullable Output<ScopeArgs> scope,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.managedNetworkName = managedNetworkName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedNetworkArgs() {
-        this.location = Input.empty();
-        this.managedNetworkName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scope = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.managedNetworkName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scope = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedNetworkName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ScopeArgs> scope;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedNetworkName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ScopeArgs> scope;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedNetworkName(@Nullable Input<String> managedNetworkName) {
+        public Builder managedNetworkName(@Nullable Output<String> managedNetworkName) {
             this.managedNetworkName = managedNetworkName;
             return this;
         }
 
         public Builder managedNetworkName(@Nullable String managedNetworkName) {
-            this.managedNetworkName = Input.ofNullable(managedNetworkName);
+            this.managedNetworkName = Output.ofNullable(managedNetworkName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scope(@Nullable Input<ScopeArgs> scope) {
+        public Builder scope(@Nullable Output<ScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ManagedNetworkArgs build() {

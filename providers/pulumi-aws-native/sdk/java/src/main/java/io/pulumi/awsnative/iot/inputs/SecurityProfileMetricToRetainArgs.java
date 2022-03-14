@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="metric", required=true)
-      private final Input<String> metric;
+      private final Output<String> metric;
 
-    public Input<String> getMetric() {
+    public Output<String> getMetric() {
         return this.metric;
     }
 
     @InputImport(name="metricDimension")
-      private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
+      private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Input<SecurityProfileMetricDimensionArgs> getMetricDimension() {
-        return this.metricDimension == null ? Input.empty() : this.metricDimension;
+    public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {
+        return this.metricDimension == null ? Output.empty() : this.metricDimension;
     }
 
     public SecurityProfileMetricToRetainArgs(
-        Input<String> metric,
-        @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension) {
+        Output<String> metric,
+        @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
         this.metricDimension = metricDimension;
     }
 
     private SecurityProfileMetricToRetainArgs() {
-        this.metric = Input.empty();
-        this.metricDimension = Input.empty();
+        this.metric = Output.empty();
+        this.metricDimension = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> metric;
-        private @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
+        private Output<String> metric;
+        private @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
     	      this.metricDimension = defaults.metricDimension;
         }
 
-        public Builder metric(Input<String> metric) {
+        public Builder metric(Output<String> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
         public Builder metric(String metric) {
-            this.metric = Input.of(Objects.requireNonNull(metric));
+            this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder metricDimension(@Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension) {
+        public Builder metricDimension(@Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }
 
         public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
-            this.metricDimension = Input.ofNullable(metricDimension);
+            this.metricDimension = Output.ofNullable(metricDimension);
             return this;
         }
         public SecurityProfileMetricToRetainArgs build() {

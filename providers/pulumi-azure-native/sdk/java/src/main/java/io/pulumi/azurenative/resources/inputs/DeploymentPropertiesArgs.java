@@ -9,7 +9,7 @@ import io.pulumi.azurenative.resources.inputs.ExpressionEvaluationOptionsArgs;
 import io.pulumi.azurenative.resources.inputs.OnErrorDeploymentArgs;
 import io.pulumi.azurenative.resources.inputs.ParametersLinkArgs;
 import io.pulumi.azurenative.resources.inputs.TemplateLinkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -29,10 +29,10 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="debugSetting")
-      private final @Nullable Input<DebugSettingArgs> debugSetting;
+      private final @Nullable Output<DebugSettingArgs> debugSetting;
 
-    public Input<DebugSettingArgs> getDebugSetting() {
-        return this.debugSetting == null ? Input.empty() : this.debugSetting;
+    public Output<DebugSettingArgs> getDebugSetting() {
+        return this.debugSetting == null ? Output.empty() : this.debugSetting;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="expressionEvaluationOptions")
-      private final @Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
+      private final @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
 
-    public Input<ExpressionEvaluationOptionsArgs> getExpressionEvaluationOptions() {
-        return this.expressionEvaluationOptions == null ? Input.empty() : this.expressionEvaluationOptions;
+    public Output<ExpressionEvaluationOptionsArgs> getExpressionEvaluationOptions() {
+        return this.expressionEvaluationOptions == null ? Output.empty() : this.expressionEvaluationOptions;
     }
 
     /**
@@ -51,9 +51,9 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mode", required=true)
-      private final Input<DeploymentMode> mode;
+      private final Output<DeploymentMode> mode;
 
-    public Input<DeploymentMode> getMode() {
+    public Output<DeploymentMode> getMode() {
         return this.mode;
     }
 
@@ -62,10 +62,10 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="onErrorDeployment")
-      private final @Nullable Input<OnErrorDeploymentArgs> onErrorDeployment;
+      private final @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment;
 
-    public Input<OnErrorDeploymentArgs> getOnErrorDeployment() {
-        return this.onErrorDeployment == null ? Input.empty() : this.onErrorDeployment;
+    public Output<OnErrorDeploymentArgs> getOnErrorDeployment() {
+        return this.onErrorDeployment == null ? Output.empty() : this.onErrorDeployment;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Object> parameters;
+      private final @Nullable Output<Object> parameters;
 
-    public Input<Object> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Object> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parametersLink")
-      private final @Nullable Input<ParametersLinkArgs> parametersLink;
+      private final @Nullable Output<ParametersLinkArgs> parametersLink;
 
-    public Input<ParametersLinkArgs> getParametersLink() {
-        return this.parametersLink == null ? Input.empty() : this.parametersLink;
+    public Output<ParametersLinkArgs> getParametersLink() {
+        return this.parametersLink == null ? Output.empty() : this.parametersLink;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<Object> template;
+      private final @Nullable Output<Object> template;
 
-    public Input<Object> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<Object> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="templateLink")
-      private final @Nullable Input<TemplateLinkArgs> templateLink;
+      private final @Nullable Output<TemplateLinkArgs> templateLink;
 
-    public Input<TemplateLinkArgs> getTemplateLink() {
-        return this.templateLink == null ? Input.empty() : this.templateLink;
+    public Output<TemplateLinkArgs> getTemplateLink() {
+        return this.templateLink == null ? Output.empty() : this.templateLink;
     }
 
     public DeploymentPropertiesArgs(
-        @Nullable Input<DebugSettingArgs> debugSetting,
-        @Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions,
-        Input<DeploymentMode> mode,
-        @Nullable Input<OnErrorDeploymentArgs> onErrorDeployment,
-        @Nullable Input<Object> parameters,
-        @Nullable Input<ParametersLinkArgs> parametersLink,
-        @Nullable Input<Object> template,
-        @Nullable Input<TemplateLinkArgs> templateLink) {
+        @Nullable Output<DebugSettingArgs> debugSetting,
+        @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions,
+        Output<DeploymentMode> mode,
+        @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment,
+        @Nullable Output<Object> parameters,
+        @Nullable Output<ParametersLinkArgs> parametersLink,
+        @Nullable Output<Object> template,
+        @Nullable Output<TemplateLinkArgs> templateLink) {
         this.debugSetting = debugSetting;
         this.expressionEvaluationOptions = expressionEvaluationOptions;
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
@@ -132,14 +132,14 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private DeploymentPropertiesArgs() {
-        this.debugSetting = Input.empty();
-        this.expressionEvaluationOptions = Input.empty();
-        this.mode = Input.empty();
-        this.onErrorDeployment = Input.empty();
-        this.parameters = Input.empty();
-        this.parametersLink = Input.empty();
-        this.template = Input.empty();
-        this.templateLink = Input.empty();
+        this.debugSetting = Output.empty();
+        this.expressionEvaluationOptions = Output.empty();
+        this.mode = Output.empty();
+        this.onErrorDeployment = Output.empty();
+        this.parameters = Output.empty();
+        this.parametersLink = Output.empty();
+        this.template = Output.empty();
+        this.templateLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<DebugSettingArgs> debugSetting;
-        private @Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
-        private Input<DeploymentMode> mode;
-        private @Nullable Input<OnErrorDeploymentArgs> onErrorDeployment;
-        private @Nullable Input<Object> parameters;
-        private @Nullable Input<ParametersLinkArgs> parametersLink;
-        private @Nullable Input<Object> template;
-        private @Nullable Input<TemplateLinkArgs> templateLink;
+        private @Nullable Output<DebugSettingArgs> debugSetting;
+        private @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
+        private Output<DeploymentMode> mode;
+        private @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment;
+        private @Nullable Output<Object> parameters;
+        private @Nullable Output<ParametersLinkArgs> parametersLink;
+        private @Nullable Output<Object> template;
+        private @Nullable Output<TemplateLinkArgs> templateLink;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.templateLink = defaults.templateLink;
         }
 
-        public Builder debugSetting(@Nullable Input<DebugSettingArgs> debugSetting) {
+        public Builder debugSetting(@Nullable Output<DebugSettingArgs> debugSetting) {
             this.debugSetting = debugSetting;
             return this;
         }
 
         public Builder debugSetting(@Nullable DebugSettingArgs debugSetting) {
-            this.debugSetting = Input.ofNullable(debugSetting);
+            this.debugSetting = Output.ofNullable(debugSetting);
             return this;
         }
 
-        public Builder expressionEvaluationOptions(@Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
+        public Builder expressionEvaluationOptions(@Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
             this.expressionEvaluationOptions = expressionEvaluationOptions;
             return this;
         }
 
         public Builder expressionEvaluationOptions(@Nullable ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
-            this.expressionEvaluationOptions = Input.ofNullable(expressionEvaluationOptions);
+            this.expressionEvaluationOptions = Output.ofNullable(expressionEvaluationOptions);
             return this;
         }
 
-        public Builder mode(Input<DeploymentMode> mode) {
+        public Builder mode(Output<DeploymentMode> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(DeploymentMode mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder onErrorDeployment(@Nullable Input<OnErrorDeploymentArgs> onErrorDeployment) {
+        public Builder onErrorDeployment(@Nullable Output<OnErrorDeploymentArgs> onErrorDeployment) {
             this.onErrorDeployment = onErrorDeployment;
             return this;
         }
 
         public Builder onErrorDeployment(@Nullable OnErrorDeploymentArgs onErrorDeployment) {
-            this.onErrorDeployment = Input.ofNullable(onErrorDeployment);
+            this.onErrorDeployment = Output.ofNullable(onErrorDeployment);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder parametersLink(@Nullable Input<ParametersLinkArgs> parametersLink) {
+        public Builder parametersLink(@Nullable Output<ParametersLinkArgs> parametersLink) {
             this.parametersLink = parametersLink;
             return this;
         }
 
         public Builder parametersLink(@Nullable ParametersLinkArgs parametersLink) {
-            this.parametersLink = Input.ofNullable(parametersLink);
+            this.parametersLink = Output.ofNullable(parametersLink);
             return this;
         }
 
-        public Builder template(@Nullable Input<Object> template) {
+        public Builder template(@Nullable Output<Object> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable Object template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
 
-        public Builder templateLink(@Nullable Input<TemplateLinkArgs> templateLink) {
+        public Builder templateLink(@Nullable Output<TemplateLinkArgs> templateLink) {
             this.templateLink = templateLink;
             return this;
         }
 
         public Builder templateLink(@Nullable TemplateLinkArgs templateLink) {
-            this.templateLink = Input.ofNullable(templateLink);
+            this.templateLink = Output.ofNullable(templateLink);
             return this;
         }
         public DeploymentPropertiesArgs build() {

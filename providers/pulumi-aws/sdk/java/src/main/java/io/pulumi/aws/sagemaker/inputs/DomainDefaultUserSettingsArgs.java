@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsJupyterServerAppS
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsSharingSettingsArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsTensorBoardAppSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="executionRole", required=true)
-      private final Input<String> executionRole;
+      private final Output<String> executionRole;
 
-    public Input<String> getExecutionRole() {
+    public Output<String> getExecutionRole() {
         return this.executionRole;
     }
 
@@ -35,10 +35,10 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="jupyterServerAppSettings")
-      private final @Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+      private final @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
-    public Input<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
-        return this.jupyterServerAppSettings == null ? Input.empty() : this.jupyterServerAppSettings;
+    public Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
+        return this.jupyterServerAppSettings == null ? Output.empty() : this.jupyterServerAppSettings;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kernelGatewayAppSettings")
-      private final @Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+      private final @Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
-    public Input<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
-        return this.kernelGatewayAppSettings == null ? Input.empty() : this.kernelGatewayAppSettings;
+    public Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
+        return this.kernelGatewayAppSettings == null ? Output.empty() : this.kernelGatewayAppSettings;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sharingSettings")
-      private final @Nullable Input<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings;
+      private final @Nullable Output<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings;
 
-    public Input<DomainDefaultUserSettingsSharingSettingsArgs> getSharingSettings() {
-        return this.sharingSettings == null ? Input.empty() : this.sharingSettings;
+    public Output<DomainDefaultUserSettingsSharingSettingsArgs> getSharingSettings() {
+        return this.sharingSettings == null ? Output.empty() : this.sharingSettings;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tensorBoardAppSettings")
-      private final @Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings;
+      private final @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings;
 
-    public Input<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> getTensorBoardAppSettings() {
-        return this.tensorBoardAppSettings == null ? Input.empty() : this.tensorBoardAppSettings;
+    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> getTensorBoardAppSettings() {
+        return this.tensorBoardAppSettings == null ? Output.empty() : this.tensorBoardAppSettings;
     }
 
     public DomainDefaultUserSettingsArgs(
-        Input<String> executionRole,
-        @Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings,
-        @Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings,
-        @Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
+        Output<String> executionRole,
+        @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings,
+        @Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings,
+        @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
         this.executionRole = Objects.requireNonNull(executionRole, "expected parameter 'executionRole' to be non-null");
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
@@ -101,12 +101,12 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     }
 
     private DomainDefaultUserSettingsArgs() {
-        this.executionRole = Input.empty();
-        this.jupyterServerAppSettings = Input.empty();
-        this.kernelGatewayAppSettings = Input.empty();
-        this.securityGroups = Input.empty();
-        this.sharingSettings = Input.empty();
-        this.tensorBoardAppSettings = Input.empty();
+        this.executionRole = Output.empty();
+        this.jupyterServerAppSettings = Output.empty();
+        this.kernelGatewayAppSettings = Output.empty();
+        this.securityGroups = Output.empty();
+        this.sharingSettings = Output.empty();
+        this.tensorBoardAppSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> executionRole;
-        private @Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings;
-        private @Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings;
-        private @Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings;
+        private Output<String> executionRole;
+        private @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+        private @Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings;
+        private @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     	      this.tensorBoardAppSettings = defaults.tensorBoardAppSettings;
         }
 
-        public Builder executionRole(Input<String> executionRole) {
+        public Builder executionRole(Output<String> executionRole) {
             this.executionRole = Objects.requireNonNull(executionRole);
             return this;
         }
 
         public Builder executionRole(String executionRole) {
-            this.executionRole = Input.of(Objects.requireNonNull(executionRole));
+            this.executionRole = Output.of(Objects.requireNonNull(executionRole));
             return this;
         }
 
-        public Builder jupyterServerAppSettings(@Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
         public Builder jupyterServerAppSettings(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsArgs jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = Input.ofNullable(jupyterServerAppSettings);
+            this.jupyterServerAppSettings = Output.ofNullable(jupyterServerAppSettings);
             return this;
         }
 
-        public Builder kernelGatewayAppSettings(@Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
         public Builder kernelGatewayAppSettings(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = Input.ofNullable(kernelGatewayAppSettings);
+            this.kernelGatewayAppSettings = Output.ofNullable(kernelGatewayAppSettings);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder sharingSettings(@Nullable Input<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings) {
+        public Builder sharingSettings(@Nullable Output<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
 
         public Builder sharingSettings(@Nullable DomainDefaultUserSettingsSharingSettingsArgs sharingSettings) {
-            this.sharingSettings = Input.ofNullable(sharingSettings);
+            this.sharingSettings = Output.ofNullable(sharingSettings);
             return this;
         }
 
-        public Builder tensorBoardAppSettings(@Nullable Input<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
+        public Builder tensorBoardAppSettings(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
             this.tensorBoardAppSettings = tensorBoardAppSettings;
             return this;
         }
 
         public Builder tensorBoardAppSettings(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsArgs tensorBoardAppSettings) {
-            this.tensorBoardAppSettings = Input.ofNullable(tensorBoardAppSettings);
+            this.tensorBoardAppSettings = Output.ofNullable(tensorBoardAppSettings);
             return this;
         }
         public DomainDefaultUserSettingsArgs build() {

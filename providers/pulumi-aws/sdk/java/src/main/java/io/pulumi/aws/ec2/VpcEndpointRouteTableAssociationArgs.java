@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class VpcEndpointRouteTableAssociationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="routeTableId", required=true)
-      private final Input<String> routeTableId;
+      private final Output<String> routeTableId;
 
-    public Input<String> getRouteTableId() {
+    public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
 
@@ -29,22 +29,22 @@ public final class VpcEndpointRouteTableAssociationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="vpcEndpointId", required=true)
-      private final Input<String> vpcEndpointId;
+      private final Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
+    public Output<String> getVpcEndpointId() {
         return this.vpcEndpointId;
     }
 
     public VpcEndpointRouteTableAssociationArgs(
-        Input<String> routeTableId,
-        Input<String> vpcEndpointId) {
+        Output<String> routeTableId,
+        Output<String> vpcEndpointId) {
         this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
         this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
     }
 
     private VpcEndpointRouteTableAssociationArgs() {
-        this.routeTableId = Input.empty();
-        this.vpcEndpointId = Input.empty();
+        this.routeTableId = Output.empty();
+        this.vpcEndpointId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class VpcEndpointRouteTableAssociationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> routeTableId;
-        private Input<String> vpcEndpointId;
+        private Output<String> routeTableId;
+        private Output<String> vpcEndpointId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class VpcEndpointRouteTableAssociationArgs extends io.pulumi.resour
     	      this.vpcEndpointId = defaults.vpcEndpointId;
         }
 
-        public Builder routeTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
+            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder vpcEndpointId(Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(Output<String> vpcEndpointId) {
             this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
             return this;
         }
 
         public Builder vpcEndpointId(String vpcEndpointId) {
-            this.vpcEndpointId = Input.of(Objects.requireNonNull(vpcEndpointId));
+            this.vpcEndpointId = Output.of(Objects.requireNonNull(vpcEndpointId));
             return this;
         }
         public VpcEndpointRouteTableAssociationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -31,10 +31,10 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="contentHandlingStrategy")
-      private final @Nullable Input<String> contentHandlingStrategy;
+      private final @Nullable Output<String> contentHandlingStrategy;
 
-    public Input<String> getContentHandlingStrategy() {
-        return this.contentHandlingStrategy == null ? Input.empty() : this.contentHandlingStrategy;
+    public Output<String> getContentHandlingStrategy() {
+        return this.contentHandlingStrategy == null ? Output.empty() : this.contentHandlingStrategy;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integrationId", required=true)
-      private final Input<String> integrationId;
+      private final Output<String> integrationId;
 
-    public Input<String> getIntegrationId() {
+    public Output<String> getIntegrationId() {
         return this.integrationId;
     }
 
@@ -53,9 +53,9 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integrationResponseKey", required=true)
-      private final Input<String> integrationResponseKey;
+      private final Output<String> integrationResponseKey;
 
-    public Input<String> getIntegrationResponseKey() {
+    public Output<String> getIntegrationResponseKey() {
         return this.integrationResponseKey;
     }
 
@@ -64,10 +64,10 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="responseTemplates")
-      private final @Nullable Input<Map<String,String>> responseTemplates;
+      private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Input<Map<String,String>> getResponseTemplates() {
-        return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
+    public Output<Map<String,String>> getResponseTemplates() {
+        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="templateSelectionExpression")
-      private final @Nullable Input<String> templateSelectionExpression;
+      private final @Nullable Output<String> templateSelectionExpression;
 
-    public Input<String> getTemplateSelectionExpression() {
-        return this.templateSelectionExpression == null ? Input.empty() : this.templateSelectionExpression;
+    public Output<String> getTemplateSelectionExpression() {
+        return this.templateSelectionExpression == null ? Output.empty() : this.templateSelectionExpression;
     }
 
     public IntegrationResponseArgs(
-        Input<String> apiId,
-        @Nullable Input<String> contentHandlingStrategy,
-        Input<String> integrationId,
-        Input<String> integrationResponseKey,
-        @Nullable Input<Map<String,String>> responseTemplates,
-        @Nullable Input<String> templateSelectionExpression) {
+        Output<String> apiId,
+        @Nullable Output<String> contentHandlingStrategy,
+        Output<String> integrationId,
+        Output<String> integrationResponseKey,
+        @Nullable Output<Map<String,String>> responseTemplates,
+        @Nullable Output<String> templateSelectionExpression) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.contentHandlingStrategy = contentHandlingStrategy;
         this.integrationId = Objects.requireNonNull(integrationId, "expected parameter 'integrationId' to be non-null");
@@ -97,12 +97,12 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     }
 
     private IntegrationResponseArgs() {
-        this.apiId = Input.empty();
-        this.contentHandlingStrategy = Input.empty();
-        this.integrationId = Input.empty();
-        this.integrationResponseKey = Input.empty();
-        this.responseTemplates = Input.empty();
-        this.templateSelectionExpression = Input.empty();
+        this.apiId = Output.empty();
+        this.contentHandlingStrategy = Output.empty();
+        this.integrationId = Output.empty();
+        this.integrationResponseKey = Output.empty();
+        this.responseTemplates = Output.empty();
+        this.templateSelectionExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<String> contentHandlingStrategy;
-        private Input<String> integrationId;
-        private Input<String> integrationResponseKey;
-        private @Nullable Input<Map<String,String>> responseTemplates;
-        private @Nullable Input<String> templateSelectionExpression;
+        private Output<String> apiId;
+        private @Nullable Output<String> contentHandlingStrategy;
+        private Output<String> integrationId;
+        private Output<String> integrationResponseKey;
+        private @Nullable Output<Map<String,String>> responseTemplates;
+        private @Nullable Output<String> templateSelectionExpression;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     	      this.templateSelectionExpression = defaults.templateSelectionExpression;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder contentHandlingStrategy(@Nullable Input<String> contentHandlingStrategy) {
+        public Builder contentHandlingStrategy(@Nullable Output<String> contentHandlingStrategy) {
             this.contentHandlingStrategy = contentHandlingStrategy;
             return this;
         }
 
         public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
-            this.contentHandlingStrategy = Input.ofNullable(contentHandlingStrategy);
+            this.contentHandlingStrategy = Output.ofNullable(contentHandlingStrategy);
             return this;
         }
 
-        public Builder integrationId(Input<String> integrationId) {
+        public Builder integrationId(Output<String> integrationId) {
             this.integrationId = Objects.requireNonNull(integrationId);
             return this;
         }
 
         public Builder integrationId(String integrationId) {
-            this.integrationId = Input.of(Objects.requireNonNull(integrationId));
+            this.integrationId = Output.of(Objects.requireNonNull(integrationId));
             return this;
         }
 
-        public Builder integrationResponseKey(Input<String> integrationResponseKey) {
+        public Builder integrationResponseKey(Output<String> integrationResponseKey) {
             this.integrationResponseKey = Objects.requireNonNull(integrationResponseKey);
             return this;
         }
 
         public Builder integrationResponseKey(String integrationResponseKey) {
-            this.integrationResponseKey = Input.of(Objects.requireNonNull(integrationResponseKey));
+            this.integrationResponseKey = Output.of(Objects.requireNonNull(integrationResponseKey));
             return this;
         }
 
-        public Builder responseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
+        public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Input.ofNullable(responseTemplates);
+            this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder templateSelectionExpression(@Nullable Input<String> templateSelectionExpression) {
+        public Builder templateSelectionExpression(@Nullable Output<String> templateSelectionExpression) {
             this.templateSelectionExpression = templateSelectionExpression;
             return this;
         }
 
         public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
-            this.templateSelectionExpression = Input.ofNullable(templateSelectionExpression);
+            this.templateSelectionExpression = Output.ofNullable(templateSelectionExpression);
             return this;
         }
         public IntegrationResponseArgs build() {

@@ -10,9 +10,8 @@ import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
-import io.pulumi.core.Input;
-import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.annotations.InputImport;
@@ -103,9 +102,9 @@ class ConverterTests {
         public class SimpleResourceArgs1 extends ResourceArgs {
             @InputImport(name = "s")
             @Nullable
-            public final Input<String> s;
+            public final Output<String> s;
 
-            public SimpleResourceArgs1(@Nullable Input<String> s) {
+            public SimpleResourceArgs1(@Nullable Output<String> s) {
                 this.s = s;
             }
         }
@@ -113,9 +112,9 @@ class ConverterTests {
         public class ComplexResourceArgs1 extends ResourceArgs {
             @InputImport(name = "v")
             @Nullable
-            public final Input<SimpleResourceArgs1> v;
+            public final Output<SimpleResourceArgs1> v;
 
-            public ComplexResourceArgs1(@Nullable Input<SimpleResourceArgs1> v) {
+            public ComplexResourceArgs1(@Nullable Output<SimpleResourceArgs1> v) {
                 this.v = v;
             }
         }
@@ -136,7 +135,7 @@ class ConverterTests {
         @Test
         void testResourceArgs() {
             var gson = new Gson();
-            var args = new ComplexResourceArgs1(Input.of(new SimpleResourceArgs1(Input.of("value2"))));
+            var args = new ComplexResourceArgs1(Output.of(new SimpleResourceArgs1(Output.of("value2"))));
             var converter = new Converter(log);
             serializeToValueAsync(args)
                     .thenApply(value -> converter.convertValue("ArgsConverterTests", value, JsonElement.class))
@@ -214,9 +213,9 @@ class ConverterTests {
         @Test
         void testNullInPreviewProducesFalseKnown() {
             DeploymentTests.DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
-                .setOptions(new TestOptions(true))
-                .setMockGlobalInstance();
+                    .setMocks(new MocksTest.MyMocks())
+                    .setOptions(new TestOptions(true))
+                    .setMockGlobalInstance();
 
             var converter = new Converter(log);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
@@ -230,9 +229,9 @@ class ConverterTests {
         @Test
         void testNullInNormalProducesFalseKnown() {
             DeploymentTests.DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
-                .setOptions(new TestOptions(false))
-                .setMockGlobalInstance();
+                    .setMocks(new MocksTest.MyMocks())
+                    .setOptions(new TestOptions(false))
+                    .setMockGlobalInstance();
 
             var converter = new Converter(log);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
@@ -548,7 +547,7 @@ class ConverterTests {
         @Test
         void testListWithUnknownElement() {
             var converter = new Converter(log);
-            var listWithUnknownElement = List.of(InputOutputTests.unknown());
+            var listWithUnknownElement = List.of(OutputTests.unknown());
             serializeToValueAsync(listWithUnknownElement)
                     .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {

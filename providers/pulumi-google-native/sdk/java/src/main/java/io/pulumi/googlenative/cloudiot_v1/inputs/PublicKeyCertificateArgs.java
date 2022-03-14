@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.PublicKeyCertificateFormat;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<PublicKeyCertificateFormat> format;
+      private final @Nullable Output<PublicKeyCertificateFormat> format;
 
-    public Input<PublicKeyCertificateFormat> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<PublicKeyCertificateFormat> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     public PublicKeyCertificateArgs(
-        @Nullable Input<String> certificate,
-        @Nullable Input<PublicKeyCertificateFormat> format) {
+        @Nullable Output<String> certificate,
+        @Nullable Output<PublicKeyCertificateFormat> format) {
         this.certificate = certificate;
         this.format = format;
     }
 
     private PublicKeyCertificateArgs() {
-        this.certificate = Input.empty();
-        this.format = Input.empty();
+        this.certificate = Output.empty();
+        this.format = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<PublicKeyCertificateFormat> format;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<PublicKeyCertificateFormat> format;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
     	      this.format = defaults.format;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder format(@Nullable Input<PublicKeyCertificateFormat> format) {
+        public Builder format(@Nullable Output<PublicKeyCertificateFormat> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable PublicKeyCertificateFormat format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
         public PublicKeyCertificateArgs build() {

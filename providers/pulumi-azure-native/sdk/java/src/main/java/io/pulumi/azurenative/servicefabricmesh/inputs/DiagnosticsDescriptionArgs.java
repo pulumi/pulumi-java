@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AzureInternalMonitoringPipelineSinkDescriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="defaultSinkRefs")
-      private final @Nullable Input<List<String>> defaultSinkRefs;
+      private final @Nullable Output<List<String>> defaultSinkRefs;
 
-    public Input<List<String>> getDefaultSinkRefs() {
-        return this.defaultSinkRefs == null ? Input.empty() : this.defaultSinkRefs;
+    public Output<List<String>> getDefaultSinkRefs() {
+        return this.defaultSinkRefs == null ? Output.empty() : this.defaultSinkRefs;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sinks")
-      private final @Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
+      private final @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
 
-    public Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> getSinks() {
-        return this.sinks == null ? Input.empty() : this.sinks;
+    public Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> getSinks() {
+        return this.sinks == null ? Output.empty() : this.sinks;
     }
 
     public DiagnosticsDescriptionArgs(
-        @Nullable Input<List<String>> defaultSinkRefs,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
+        @Nullable Output<List<String>> defaultSinkRefs,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
         this.defaultSinkRefs = defaultSinkRefs;
         this.enabled = enabled;
         this.sinks = sinks;
     }
 
     private DiagnosticsDescriptionArgs() {
-        this.defaultSinkRefs = Input.empty();
-        this.enabled = Input.empty();
-        this.sinks = Input.empty();
+        this.defaultSinkRefs = Output.empty();
+        this.enabled = Output.empty();
+        this.sinks = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> defaultSinkRefs;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
+        private @Nullable Output<List<String>> defaultSinkRefs;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     	      this.sinks = defaults.sinks;
         }
 
-        public Builder defaultSinkRefs(@Nullable Input<List<String>> defaultSinkRefs) {
+        public Builder defaultSinkRefs(@Nullable Output<List<String>> defaultSinkRefs) {
             this.defaultSinkRefs = defaultSinkRefs;
             return this;
         }
 
         public Builder defaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
-            this.defaultSinkRefs = Input.ofNullable(defaultSinkRefs);
+            this.defaultSinkRefs = Output.ofNullable(defaultSinkRefs);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder sinks(@Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
+        public Builder sinks(@Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
 
         public Builder sinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionArgs> sinks) {
-            this.sinks = Input.ofNullable(sinks);
+            this.sinks = Output.ofNullable(sinks);
             return this;
         }
         public DiagnosticsDescriptionArgs build() {

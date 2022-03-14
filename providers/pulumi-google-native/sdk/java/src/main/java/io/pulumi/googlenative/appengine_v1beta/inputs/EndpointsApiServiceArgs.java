@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.enums.EndpointsApiServiceRolloutStrategy;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configId")
-      private final @Nullable Input<String> configId;
+      private final @Nullable Output<String> configId;
 
-    public Input<String> getConfigId() {
-        return this.configId == null ? Input.empty() : this.configId;
+    public Output<String> getConfigId() {
+        return this.configId == null ? Output.empty() : this.configId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disableTraceSampling")
-      private final @Nullable Input<Boolean> disableTraceSampling;
+      private final @Nullable Output<Boolean> disableTraceSampling;
 
-    public Input<Boolean> getDisableTraceSampling() {
-        return this.disableTraceSampling == null ? Input.empty() : this.disableTraceSampling;
+    public Output<Boolean> getDisableTraceSampling() {
+        return this.disableTraceSampling == null ? Output.empty() : this.disableTraceSampling;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloutStrategy")
-      private final @Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
+      private final @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
 
-    public Input<EndpointsApiServiceRolloutStrategy> getRolloutStrategy() {
-        return this.rolloutStrategy == null ? Input.empty() : this.rolloutStrategy;
+    public Output<EndpointsApiServiceRolloutStrategy> getRolloutStrategy() {
+        return this.rolloutStrategy == null ? Output.empty() : this.rolloutStrategy;
     }
 
     public EndpointsApiServiceArgs(
-        @Nullable Input<String> configId,
-        @Nullable Input<Boolean> disableTraceSampling,
-        @Nullable Input<String> name,
-        @Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
+        @Nullable Output<String> configId,
+        @Nullable Output<Boolean> disableTraceSampling,
+        @Nullable Output<String> name,
+        @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
         this.name = name;
@@ -76,10 +76,10 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     }
 
     private EndpointsApiServiceArgs() {
-        this.configId = Input.empty();
-        this.disableTraceSampling = Input.empty();
-        this.name = Input.empty();
-        this.rolloutStrategy = Input.empty();
+        this.configId = Output.empty();
+        this.disableTraceSampling = Output.empty();
+        this.name = Output.empty();
+        this.rolloutStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configId;
-        private @Nullable Input<Boolean> disableTraceSampling;
-        private @Nullable Input<String> name;
-        private @Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
+        private @Nullable Output<String> configId;
+        private @Nullable Output<Boolean> disableTraceSampling;
+        private @Nullable Output<String> name;
+        private @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     	      this.rolloutStrategy = defaults.rolloutStrategy;
         }
 
-        public Builder configId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Output<String> configId) {
             this.configId = configId;
             return this;
         }
 
         public Builder configId(@Nullable String configId) {
-            this.configId = Input.ofNullable(configId);
+            this.configId = Output.ofNullable(configId);
             return this;
         }
 
-        public Builder disableTraceSampling(@Nullable Input<Boolean> disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
         public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
-            this.disableTraceSampling = Input.ofNullable(disableTraceSampling);
+            this.disableTraceSampling = Output.ofNullable(disableTraceSampling);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rolloutStrategy(@Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }
 
         public Builder rolloutStrategy(@Nullable EndpointsApiServiceRolloutStrategy rolloutStrategy) {
-            this.rolloutStrategy = Input.ofNullable(rolloutStrategy);
+            this.rolloutStrategy = Output.ofNullable(rolloutStrategy);
             return this;
         }
         public EndpointsApiServiceArgs build() {

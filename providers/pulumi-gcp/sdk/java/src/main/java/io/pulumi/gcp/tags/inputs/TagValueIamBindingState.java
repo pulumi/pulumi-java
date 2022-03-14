@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tags.inputs.TagValueIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
     public static final TagValueIamBindingState Empty = new TagValueIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TagValueIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<TagValueIamBindingConditionGetArgs> condition;
 
-    public Input<TagValueIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TagValueIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,17 +28,17 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -59,18 +59,18 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagValue")
-      private final @Nullable Input<String> tagValue;
+      private final @Nullable Output<String> tagValue;
 
-    public Input<String> getTagValue() {
-        return this.tagValue == null ? Input.empty() : this.tagValue;
+    public Output<String> getTagValue() {
+        return this.tagValue == null ? Output.empty() : this.tagValue;
     }
 
     public TagValueIamBindingState(
-        @Nullable Input<TagValueIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> role,
-        @Nullable Input<String> tagValue) {
+        @Nullable Output<TagValueIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> role,
+        @Nullable Output<String> tagValue) {
         this.condition = condition;
         this.etag = etag;
         this.members = members;
@@ -79,11 +79,11 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
     }
 
     private TagValueIamBindingState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
-        this.tagValue = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
+        this.tagValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<TagValueIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> tagValue;
+        private @Nullable Output<TagValueIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> tagValue;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder condition(@Nullable Input<TagValueIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TagValueIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TagValueIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder tagValue(@Nullable Input<String> tagValue) {
+        public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
         public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Input.ofNullable(tagValue);
+            this.tagValue = Output.ofNullable(tagValue);
             return this;
         }
         public TagValueIamBindingState build() {

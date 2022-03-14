@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firestore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.firestore.inputs.IndexFieldGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collection")
-      private final @Nullable Input<String> collection;
+      private final @Nullable Output<String> collection;
 
-    public Input<String> getCollection() {
-        return this.collection == null ? Input.empty() : this.collection;
+    public Output<String> getCollection() {
+        return this.collection == null ? Output.empty() : this.collection;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<IndexFieldGetArgs>> fields;
+      private final @Nullable Output<List<IndexFieldGetArgs>> fields;
 
-    public Input<List<IndexFieldGetArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<IndexFieldGetArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -86,19 +86,19 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryScope")
-      private final @Nullable Input<String> queryScope;
+      private final @Nullable Output<String> queryScope;
 
-    public Input<String> getQueryScope() {
-        return this.queryScope == null ? Input.empty() : this.queryScope;
+    public Output<String> getQueryScope() {
+        return this.queryScope == null ? Output.empty() : this.queryScope;
     }
 
     public IndexState(
-        @Nullable Input<String> collection,
-        @Nullable Input<String> database,
-        @Nullable Input<List<IndexFieldGetArgs>> fields,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> queryScope) {
+        @Nullable Output<String> collection,
+        @Nullable Output<String> database,
+        @Nullable Output<List<IndexFieldGetArgs>> fields,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> queryScope) {
         this.collection = collection;
         this.database = database;
         this.fields = fields;
@@ -108,12 +108,12 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexState() {
-        this.collection = Input.empty();
-        this.database = Input.empty();
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.queryScope = Input.empty();
+        this.collection = Output.empty();
+        this.database = Output.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.queryScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,12 +125,12 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collection;
-        private @Nullable Input<String> database;
-        private @Nullable Input<List<IndexFieldGetArgs>> fields;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> queryScope;
+        private @Nullable Output<String> collection;
+        private @Nullable Output<String> database;
+        private @Nullable Output<List<IndexFieldGetArgs>> fields;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> queryScope;
 
         public Builder() {
     	      // Empty
@@ -146,63 +146,63 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     	      this.queryScope = defaults.queryScope;
         }
 
-        public Builder collection(@Nullable Input<String> collection) {
+        public Builder collection(@Nullable Output<String> collection) {
             this.collection = collection;
             return this;
         }
 
         public Builder collection(@Nullable String collection) {
-            this.collection = Input.ofNullable(collection);
+            this.collection = Output.ofNullable(collection);
             return this;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<IndexFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Output<List<IndexFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<IndexFieldGetArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder queryScope(@Nullable Input<String> queryScope) {
+        public Builder queryScope(@Nullable Output<String> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
 
         public Builder queryScope(@Nullable String queryScope) {
-            this.queryScope = Input.ofNullable(queryScope);
+            this.queryScope = Output.ofNullable(queryScope);
             return this;
         }
         public IndexState build() {

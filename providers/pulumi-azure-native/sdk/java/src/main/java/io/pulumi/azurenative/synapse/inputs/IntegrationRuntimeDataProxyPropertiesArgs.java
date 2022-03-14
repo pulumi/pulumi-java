@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.EntityReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<EntityReferenceArgs> connectVia;
+      private final @Nullable Output<EntityReferenceArgs> connectVia;
 
-    public Input<EntityReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<EntityReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="stagingLinkedService")
-      private final @Nullable Input<EntityReferenceArgs> stagingLinkedService;
+      private final @Nullable Output<EntityReferenceArgs> stagingLinkedService;
 
-    public Input<EntityReferenceArgs> getStagingLinkedService() {
-        return this.stagingLinkedService == null ? Input.empty() : this.stagingLinkedService;
+    public Output<EntityReferenceArgs> getStagingLinkedService() {
+        return this.stagingLinkedService == null ? Output.empty() : this.stagingLinkedService;
     }
 
     public IntegrationRuntimeDataProxyPropertiesArgs(
-        @Nullable Input<EntityReferenceArgs> connectVia,
-        @Nullable Input<String> path,
-        @Nullable Input<EntityReferenceArgs> stagingLinkedService) {
+        @Nullable Output<EntityReferenceArgs> connectVia,
+        @Nullable Output<String> path,
+        @Nullable Output<EntityReferenceArgs> stagingLinkedService) {
         this.connectVia = connectVia;
         this.path = path;
         this.stagingLinkedService = stagingLinkedService;
     }
 
     private IntegrationRuntimeDataProxyPropertiesArgs() {
-        this.connectVia = Input.empty();
-        this.path = Input.empty();
-        this.stagingLinkedService = Input.empty();
+        this.connectVia = Output.empty();
+        this.path = Output.empty();
+        this.stagingLinkedService = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<EntityReferenceArgs> connectVia;
-        private @Nullable Input<String> path;
-        private @Nullable Input<EntityReferenceArgs> stagingLinkedService;
+        private @Nullable Output<EntityReferenceArgs> connectVia;
+        private @Nullable Output<String> path;
+        private @Nullable Output<EntityReferenceArgs> stagingLinkedService;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
     	      this.stagingLinkedService = defaults.stagingLinkedService;
         }
 
-        public Builder connectVia(@Nullable Input<EntityReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<EntityReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable EntityReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder stagingLinkedService(@Nullable Input<EntityReferenceArgs> stagingLinkedService) {
+        public Builder stagingLinkedService(@Nullable Output<EntityReferenceArgs> stagingLinkedService) {
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }
 
         public Builder stagingLinkedService(@Nullable EntityReferenceArgs stagingLinkedService) {
-            this.stagingLinkedService = Input.ofNullable(stagingLinkedService);
+            this.stagingLinkedService = Output.ofNullable(stagingLinkedService);
             return this;
         }
         public IntegrationRuntimeDataProxyPropertiesArgs build() {

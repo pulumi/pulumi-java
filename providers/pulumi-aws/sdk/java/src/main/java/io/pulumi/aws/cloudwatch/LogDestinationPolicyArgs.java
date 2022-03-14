@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accessPolicy", required=true)
-      private final Input<String> accessPolicy;
+      private final Output<String> accessPolicy;
 
-    public Input<String> getAccessPolicy() {
+    public Output<String> getAccessPolicy() {
         return this.accessPolicy;
     }
 
@@ -31,9 +31,9 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationName", required=true)
-      private final Input<String> destinationName;
+      private final Output<String> destinationName;
 
-    public Input<String> getDestinationName() {
+    public Output<String> getDestinationName() {
         return this.destinationName;
     }
 
@@ -42,25 +42,25 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="forceUpdate")
-      private final @Nullable Input<Boolean> forceUpdate;
+      private final @Nullable Output<Boolean> forceUpdate;
 
-    public Input<Boolean> getForceUpdate() {
-        return this.forceUpdate == null ? Input.empty() : this.forceUpdate;
+    public Output<Boolean> getForceUpdate() {
+        return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
     }
 
     public LogDestinationPolicyArgs(
-        Input<String> accessPolicy,
-        Input<String> destinationName,
-        @Nullable Input<Boolean> forceUpdate) {
+        Output<String> accessPolicy,
+        Output<String> destinationName,
+        @Nullable Output<Boolean> forceUpdate) {
         this.accessPolicy = Objects.requireNonNull(accessPolicy, "expected parameter 'accessPolicy' to be non-null");
         this.destinationName = Objects.requireNonNull(destinationName, "expected parameter 'destinationName' to be non-null");
         this.forceUpdate = forceUpdate;
     }
 
     private LogDestinationPolicyArgs() {
-        this.accessPolicy = Input.empty();
-        this.destinationName = Input.empty();
-        this.forceUpdate = Input.empty();
+        this.accessPolicy = Output.empty();
+        this.destinationName = Output.empty();
+        this.forceUpdate = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> accessPolicy;
-        private Input<String> destinationName;
-        private @Nullable Input<Boolean> forceUpdate;
+        private Output<String> accessPolicy;
+        private Output<String> destinationName;
+        private @Nullable Output<Boolean> forceUpdate;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
     	      this.forceUpdate = defaults.forceUpdate;
         }
 
-        public Builder accessPolicy(Input<String> accessPolicy) {
+        public Builder accessPolicy(Output<String> accessPolicy) {
             this.accessPolicy = Objects.requireNonNull(accessPolicy);
             return this;
         }
 
         public Builder accessPolicy(String accessPolicy) {
-            this.accessPolicy = Input.of(Objects.requireNonNull(accessPolicy));
+            this.accessPolicy = Output.of(Objects.requireNonNull(accessPolicy));
             return this;
         }
 
-        public Builder destinationName(Input<String> destinationName) {
+        public Builder destinationName(Output<String> destinationName) {
             this.destinationName = Objects.requireNonNull(destinationName);
             return this;
         }
 
         public Builder destinationName(String destinationName) {
-            this.destinationName = Input.of(Objects.requireNonNull(destinationName));
+            this.destinationName = Output.of(Objects.requireNonNull(destinationName));
             return this;
         }
 
-        public Builder forceUpdate(@Nullable Input<Boolean> forceUpdate) {
+        public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
 
         public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Input.ofNullable(forceUpdate);
+            this.forceUpdate = Output.ofNullable(forceUpdate);
             return this;
         }
         public LogDestinationPolicyArgs build() {

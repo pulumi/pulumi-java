@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * 
      */
     @InputImport(name="queryTerms")
-      private final @Nullable Input<List<String>> queryTerms;
+      private final @Nullable Output<List<String>> queryTerms;
 
-    public Input<List<String>> getQueryTerms() {
-        return this.queryTerms == null ? Input.empty() : this.queryTerms;
+    public Output<List<String>> getQueryTerms() {
+        return this.queryTerms == null ? Output.empty() : this.queryTerms;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * 
      */
     @InputImport(name="replacementTerm")
-      private final @Nullable Input<String> replacementTerm;
+      private final @Nullable Output<String> replacementTerm;
 
-    public Input<String> getReplacementTerm() {
-        return this.replacementTerm == null ? Input.empty() : this.replacementTerm;
+    public Output<String> getReplacementTerm() {
+        return this.replacementTerm == null ? Output.empty() : this.replacementTerm;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * 
      */
     @InputImport(name="term")
-      private final @Nullable Input<String> term;
+      private final @Nullable Output<String> term;
 
-    public Input<String> getTerm() {
-        return this.term == null ? Input.empty() : this.term;
+    public Output<String> getTerm() {
+        return this.term == null ? Output.empty() : this.term;
     }
 
     public GoogleCloudRetailV2alphaRuleReplacementActionArgs(
-        @Nullable Input<List<String>> queryTerms,
-        @Nullable Input<String> replacementTerm,
-        @Nullable Input<String> term) {
+        @Nullable Output<List<String>> queryTerms,
+        @Nullable Output<String> replacementTerm,
+        @Nullable Output<String> term) {
         this.queryTerms = queryTerms;
         this.replacementTerm = replacementTerm;
         this.term = term;
     }
 
     private GoogleCloudRetailV2alphaRuleReplacementActionArgs() {
-        this.queryTerms = Input.empty();
-        this.replacementTerm = Input.empty();
-        this.term = Input.empty();
+        this.queryTerms = Output.empty();
+        this.replacementTerm = Output.empty();
+        this.term = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> queryTerms;
-        private @Nullable Input<String> replacementTerm;
-        private @Nullable Input<String> term;
+        private @Nullable Output<List<String>> queryTerms;
+        private @Nullable Output<String> replacementTerm;
+        private @Nullable Output<String> term;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
     	      this.term = defaults.term;
         }
 
-        public Builder queryTerms(@Nullable Input<List<String>> queryTerms) {
+        public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
 
         public Builder queryTerms(@Nullable List<String> queryTerms) {
-            this.queryTerms = Input.ofNullable(queryTerms);
+            this.queryTerms = Output.ofNullable(queryTerms);
             return this;
         }
 
-        public Builder replacementTerm(@Nullable Input<String> replacementTerm) {
+        public Builder replacementTerm(@Nullable Output<String> replacementTerm) {
             this.replacementTerm = replacementTerm;
             return this;
         }
 
         public Builder replacementTerm(@Nullable String replacementTerm) {
-            this.replacementTerm = Input.ofNullable(replacementTerm);
+            this.replacementTerm = Output.ofNullable(replacementTerm);
             return this;
         }
 
-        public Builder term(@Nullable Input<String> term) {
+        public Builder term(@Nullable Output<String> term) {
             this.term = term;
             return this;
         }
 
         public Builder term(@Nullable String term) {
-            this.term = Input.ofNullable(term);
+            this.term = Output.ofNullable(term);
             return this;
         }
         public GoogleCloudRetailV2alphaRuleReplacementActionArgs build() {

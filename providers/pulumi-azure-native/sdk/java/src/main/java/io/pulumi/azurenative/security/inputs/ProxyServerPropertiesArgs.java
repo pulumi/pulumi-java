@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<String> port;
+      private final @Nullable Output<String> port;
 
-    public Input<String> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<String> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public ProxyServerPropertiesArgs(
-        @Nullable Input<String> ip,
-        @Nullable Input<String> port) {
+        @Nullable Output<String> ip,
+        @Nullable Output<String> port) {
         this.ip = ip;
         this.port = port;
     }
 
     private ProxyServerPropertiesArgs() {
-        this.ip = Input.empty();
-        this.port = Input.empty();
+        this.ip = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ip;
-        private @Nullable Input<String> port;
+        private @Nullable Output<String> ip;
+        private @Nullable Output<String> port;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.port = defaults.port;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
 
-        public Builder port(@Nullable Input<String> port) {
+        public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable String port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public ProxyServerPropertiesArgs build() {

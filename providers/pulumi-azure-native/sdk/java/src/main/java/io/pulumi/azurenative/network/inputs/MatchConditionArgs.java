@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallOperator;
 import io.pulumi.azurenative.network.enums.WebApplicationFirewallTransform;
 import io.pulumi.azurenative.network.inputs.MatchVariableArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchValues", required=true)
-      private final Input<List<String>> matchValues;
+      private final Output<List<String>> matchValues;
 
-    public Input<List<String>> getMatchValues() {
+    public Output<List<String>> getMatchValues() {
         return this.matchValues;
     }
 
@@ -40,9 +40,9 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchVariables", required=true)
-      private final Input<List<MatchVariableArgs>> matchVariables;
+      private final Output<List<MatchVariableArgs>> matchVariables;
 
-    public Input<List<MatchVariableArgs>> getMatchVariables() {
+    public Output<List<MatchVariableArgs>> getMatchVariables() {
         return this.matchVariables;
     }
 
@@ -51,10 +51,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="negationConditon")
-      private final @Nullable Input<Boolean> negationConditon;
+      private final @Nullable Output<Boolean> negationConditon;
 
-    public Input<Boolean> getNegationConditon() {
-        return this.negationConditon == null ? Input.empty() : this.negationConditon;
+    public Output<Boolean> getNegationConditon() {
+        return this.negationConditon == null ? Output.empty() : this.negationConditon;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,WebApplicationFirewallOperator>> operator;
+      private final Output<Either<String,WebApplicationFirewallOperator>> operator;
 
-    public Input<Either<String,WebApplicationFirewallOperator>> getOperator() {
+    public Output<Either<String,WebApplicationFirewallOperator>> getOperator() {
         return this.operator;
     }
 
@@ -73,18 +73,18 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transforms")
-      private final @Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms;
+      private final @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
-    public Input<List<Either<String,WebApplicationFirewallTransform>>> getTransforms() {
-        return this.transforms == null ? Input.empty() : this.transforms;
+    public Output<List<Either<String,WebApplicationFirewallTransform>>> getTransforms() {
+        return this.transforms == null ? Output.empty() : this.transforms;
     }
 
     public MatchConditionArgs(
-        Input<List<String>> matchValues,
-        Input<List<MatchVariableArgs>> matchVariables,
-        @Nullable Input<Boolean> negationConditon,
-        Input<Either<String,WebApplicationFirewallOperator>> operator,
-        @Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
+        Output<List<String>> matchValues,
+        Output<List<MatchVariableArgs>> matchVariables,
+        @Nullable Output<Boolean> negationConditon,
+        Output<Either<String,WebApplicationFirewallOperator>> operator,
+        @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
         this.matchValues = Objects.requireNonNull(matchValues, "expected parameter 'matchValues' to be non-null");
         this.matchVariables = Objects.requireNonNull(matchVariables, "expected parameter 'matchVariables' to be non-null");
         this.negationConditon = negationConditon;
@@ -93,11 +93,11 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MatchConditionArgs() {
-        this.matchValues = Input.empty();
-        this.matchVariables = Input.empty();
-        this.negationConditon = Input.empty();
-        this.operator = Input.empty();
-        this.transforms = Input.empty();
+        this.matchValues = Output.empty();
+        this.matchVariables = Output.empty();
+        this.negationConditon = Output.empty();
+        this.operator = Output.empty();
+        this.transforms = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> matchValues;
-        private Input<List<MatchVariableArgs>> matchVariables;
-        private @Nullable Input<Boolean> negationConditon;
-        private Input<Either<String,WebApplicationFirewallOperator>> operator;
-        private @Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms;
+        private Output<List<String>> matchValues;
+        private Output<List<MatchVariableArgs>> matchVariables;
+        private @Nullable Output<Boolean> negationConditon;
+        private Output<Either<String,WebApplicationFirewallOperator>> operator;
+        private @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder matchValues(Input<List<String>> matchValues) {
+        public Builder matchValues(Output<List<String>> matchValues) {
             this.matchValues = Objects.requireNonNull(matchValues);
             return this;
         }
 
         public Builder matchValues(List<String> matchValues) {
-            this.matchValues = Input.of(Objects.requireNonNull(matchValues));
+            this.matchValues = Output.of(Objects.requireNonNull(matchValues));
             return this;
         }
 
-        public Builder matchVariables(Input<List<MatchVariableArgs>> matchVariables) {
+        public Builder matchVariables(Output<List<MatchVariableArgs>> matchVariables) {
             this.matchVariables = Objects.requireNonNull(matchVariables);
             return this;
         }
 
         public Builder matchVariables(List<MatchVariableArgs> matchVariables) {
-            this.matchVariables = Input.of(Objects.requireNonNull(matchVariables));
+            this.matchVariables = Output.of(Objects.requireNonNull(matchVariables));
             return this;
         }
 
-        public Builder negationConditon(@Nullable Input<Boolean> negationConditon) {
+        public Builder negationConditon(@Nullable Output<Boolean> negationConditon) {
             this.negationConditon = negationConditon;
             return this;
         }
 
         public Builder negationConditon(@Nullable Boolean negationConditon) {
-            this.negationConditon = Input.ofNullable(negationConditon);
+            this.negationConditon = Output.ofNullable(negationConditon);
             return this;
         }
 
-        public Builder operator(Input<Either<String,WebApplicationFirewallOperator>> operator) {
+        public Builder operator(Output<Either<String,WebApplicationFirewallOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,WebApplicationFirewallOperator> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder transforms(@Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
+        public Builder transforms(@Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
             this.transforms = transforms;
             return this;
         }
 
         public Builder transforms(@Nullable List<Either<String,WebApplicationFirewallTransform>> transforms) {
-            this.transforms = Input.ofNullable(transforms);
+            this.transforms = Output.ofNullable(transforms);
             return this;
         }
         public MatchConditionArgs build() {

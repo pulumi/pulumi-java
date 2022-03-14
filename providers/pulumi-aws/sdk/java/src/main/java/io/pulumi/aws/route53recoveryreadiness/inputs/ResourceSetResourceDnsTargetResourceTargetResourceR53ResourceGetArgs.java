@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
      * 
      */
     @InputImport(name="recordSetId")
-      private final @Nullable Input<String> recordSetId;
+      private final @Nullable Output<String> recordSetId;
 
-    public Input<String> getRecordSetId() {
-        return this.recordSetId == null ? Input.empty() : this.recordSetId;
+    public Output<String> getRecordSetId() {
+        return this.recordSetId == null ? Output.empty() : this.recordSetId;
     }
 
     public ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs(
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> recordSetId) {
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> recordSetId) {
         this.domainName = domainName;
         this.recordSetId = recordSetId;
     }
 
     private ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs() {
-        this.domainName = Input.empty();
-        this.recordSetId = Input.empty();
+        this.domainName = Output.empty();
+        this.recordSetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> recordSetId;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> recordSetId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
     	      this.recordSetId = defaults.recordSetId;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder recordSetId(@Nullable Input<String> recordSetId) {
+        public Builder recordSetId(@Nullable Output<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
 
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Input.ofNullable(recordSetId);
+            this.recordSetId = Output.ofNullable(recordSetId);
             return this;
         }
         public ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs build() {

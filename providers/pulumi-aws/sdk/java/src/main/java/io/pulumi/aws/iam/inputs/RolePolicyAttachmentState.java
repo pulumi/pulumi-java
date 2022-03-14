@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyArn")
-      private final @Nullable Input<String> policyArn;
+      private final @Nullable Output<String> policyArn;
 
-    public Input<String> getPolicyArn() {
-        return this.policyArn == null ? Input.empty() : this.policyArn;
+    public Output<String> getPolicyArn() {
+        return this.policyArn == null ? Output.empty() : this.policyArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public RolePolicyAttachmentState(
-        @Nullable Input<String> policyArn,
-        @Nullable Input<String> role) {
+        @Nullable Output<String> policyArn,
+        @Nullable Output<String> role) {
         this.policyArn = policyArn;
         this.role = role;
     }
 
     private RolePolicyAttachmentState() {
-        this.policyArn = Input.empty();
-        this.role = Input.empty();
+        this.policyArn = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policyArn;
-        private @Nullable Input<String> role;
+        private @Nullable Output<String> policyArn;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -70,17 +70,17 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
     	      this.role = defaults.role;
         }
 
-        public Builder policyArn(@Nullable Input<String> policyArn) {
+        public Builder policyArn(@Nullable Output<String> policyArn) {
             this.policyArn = policyArn;
             return this;
         }
 
         public Builder policyArn(@Nullable String policyArn) {
-            this.policyArn = Input.ofNullable(policyArn);
+            this.policyArn = Output.ofNullable(policyArn);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secretRef")
-      private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
+      private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
-    public Input<LocalObjectReferenceArgs> getSecretRef() {
-        return this.secretRef == null ? Input.empty() : this.secretRef;
+    public Output<LocalObjectReferenceArgs> getSecretRef() {
+        return this.secretRef == null ? Output.empty() : this.secretRef;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeID", required=true)
-      private final Input<String> volumeID;
+      private final Output<String> volumeID;
 
-    public Input<String> getVolumeID() {
+    public Output<String> getVolumeID() {
         return this.volumeID;
     }
 
     public CinderVolumeSourceArgs(
-        @Nullable Input<String> fsType,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<LocalObjectReferenceArgs> secretRef,
-        Input<String> volumeID) {
+        @Nullable Output<String> fsType,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<LocalObjectReferenceArgs> secretRef,
+        Output<String> volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;
@@ -76,10 +76,10 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CinderVolumeSourceArgs() {
-        this.fsType = Input.empty();
-        this.readOnly = Input.empty();
-        this.secretRef = Input.empty();
-        this.volumeID = Input.empty();
+        this.fsType = Output.empty();
+        this.readOnly = Output.empty();
+        this.secretRef = Output.empty();
+        this.volumeID = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fsType;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<LocalObjectReferenceArgs> secretRef;
-        private Input<String> volumeID;
+        private @Nullable Output<String> fsType;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<LocalObjectReferenceArgs> secretRef;
+        private Output<String> volumeID;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.volumeID = defaults.volumeID;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder secretRef(@Nullable Input<LocalObjectReferenceArgs> secretRef) {
+        public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
         public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
-            this.secretRef = Input.ofNullable(secretRef);
+            this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
 
-        public Builder volumeID(Input<String> volumeID) {
+        public Builder volumeID(Output<String> volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
 
         public Builder volumeID(String volumeID) {
-            this.volumeID = Input.of(Objects.requireNonNull(volumeID));
+            this.volumeID = Output.of(Objects.requireNonNull(volumeID));
             return this;
         }
         public CinderVolumeSourceArgs build() {

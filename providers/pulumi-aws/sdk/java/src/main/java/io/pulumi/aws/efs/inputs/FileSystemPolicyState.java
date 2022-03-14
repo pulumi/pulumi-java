@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+        return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileSystemId")
-      private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
-        return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
+    public Output<String> getFileSystemId() {
+        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public FileSystemPolicyState(
-        @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck,
-        @Nullable Input<String> fileSystemId,
-        @Nullable Input<String> policy) {
+        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
+        @Nullable Output<String> fileSystemId,
+        @Nullable Output<String> policy) {
         this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
         this.fileSystemId = fileSystemId;
         this.policy = policy;
     }
 
     private FileSystemPolicyState() {
-        this.bypassPolicyLockoutSafetyCheck = Input.empty();
-        this.fileSystemId = Input.empty();
-        this.policy = Input.empty();
+        this.bypassPolicyLockoutSafetyCheck = Output.empty();
+        this.fileSystemId = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
-        private @Nullable Input<String> fileSystemId;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+        private @Nullable Output<String> fileSystemId;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
     	      this.policy = defaults.policy;
         }
 
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Input.ofNullable(bypassPolicyLockoutSafetyCheck);
+            this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
 
-        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Input.ofNullable(fileSystemId);
+            this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public FileSystemPolicyState build() {

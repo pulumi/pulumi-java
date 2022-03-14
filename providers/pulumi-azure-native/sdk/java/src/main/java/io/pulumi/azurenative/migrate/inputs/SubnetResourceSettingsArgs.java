@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NsgReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="addressPrefix")
-      private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Output<String> addressPrefix;
 
-    public Input<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
+    public Output<String> getAddressPrefix() {
+        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="networkSecurityGroup")
-      private final @Nullable Input<NsgReferenceArgs> networkSecurityGroup;
+      private final @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
 
-    public Input<NsgReferenceArgs> getNetworkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
+    public Output<NsgReferenceArgs> getNetworkSecurityGroup() {
+        return this.networkSecurityGroup == null ? Output.empty() : this.networkSecurityGroup;
     }
 
     public SubnetResourceSettingsArgs(
-        @Nullable Input<String> addressPrefix,
-        @Nullable Input<String> name,
-        @Nullable Input<NsgReferenceArgs> networkSecurityGroup) {
+        @Nullable Output<String> addressPrefix,
+        @Nullable Output<String> name,
+        @Nullable Output<NsgReferenceArgs> networkSecurityGroup) {
         this.addressPrefix = addressPrefix;
         this.name = name;
         this.networkSecurityGroup = networkSecurityGroup;
     }
 
     private SubnetResourceSettingsArgs() {
-        this.addressPrefix = Input.empty();
-        this.name = Input.empty();
-        this.networkSecurityGroup = Input.empty();
+        this.addressPrefix = Output.empty();
+        this.name = Output.empty();
+        this.networkSecurityGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressPrefix;
-        private @Nullable Input<String> name;
-        private @Nullable Input<NsgReferenceArgs> networkSecurityGroup;
+        private @Nullable Output<String> addressPrefix;
+        private @Nullable Output<String> name;
+        private @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
     	      this.networkSecurityGroup = defaults.networkSecurityGroup;
         }
 
-        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Input.ofNullable(addressPrefix);
+            this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkSecurityGroup(@Nullable Input<NsgReferenceArgs> networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable Output<NsgReferenceArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
         public Builder networkSecurityGroup(@Nullable NsgReferenceArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Input.ofNullable(networkSecurityGroup);
+            this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
             return this;
         }
         public SubnetResourceSettingsArgs build() {

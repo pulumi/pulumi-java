@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.MySqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-      private final Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
+      private final Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
 
-    public Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -35,9 +35,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-      private final Input<MySqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Input<MySqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -46,25 +46,25 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-      private final Input<MySqlConnectionInfoArgs> targetConnectionInfo;
+      private final Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Input<MySqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
     public MigrateMySqlAzureDbForMySqlSyncTaskInputArgs(
-        Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases,
-        Input<MySqlConnectionInfoArgs> sourceConnectionInfo,
-        Input<MySqlConnectionInfoArgs> targetConnectionInfo) {
+        Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases,
+        Output<MySqlConnectionInfoArgs> sourceConnectionInfo,
+        Output<MySqlConnectionInfoArgs> targetConnectionInfo) {
         this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
     }
 
     private MigrateMySqlAzureDbForMySqlSyncTaskInputArgs() {
-        this.selectedDatabases = Input.empty();
-        this.sourceConnectionInfo = Input.empty();
-        this.targetConnectionInfo = Input.empty();
+        this.selectedDatabases = Output.empty();
+        this.sourceConnectionInfo = Output.empty();
+        this.targetConnectionInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
-        private Input<MySqlConnectionInfoArgs> sourceConnectionInfo;
-        private Input<MySqlConnectionInfoArgs> targetConnectionInfo;
+        private Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
+        private Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
+        private Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder selectedDatabases(Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
         public Builder selectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs> selectedDatabases) {
-            this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
+            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder sourceConnectionInfo(Input<MySqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Output<MySqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
         public Builder sourceConnectionInfo(MySqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
+            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder targetConnectionInfo(Input<MySqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Output<MySqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
         public Builder targetConnectionInfo(MySqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
+            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
         public MigrateMySqlAzureDbForMySqlSyncTaskInputArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.TokenCertificateArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TokenPasswordArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,29 +21,29 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
     public static final TokenCredentialsPropertiesArgs Empty = new TokenCredentialsPropertiesArgs();
 
     @InputImport(name="certificates")
-      private final @Nullable Input<List<TokenCertificateArgs>> certificates;
+      private final @Nullable Output<List<TokenCertificateArgs>> certificates;
 
-    public Input<List<TokenCertificateArgs>> getCertificates() {
-        return this.certificates == null ? Input.empty() : this.certificates;
+    public Output<List<TokenCertificateArgs>> getCertificates() {
+        return this.certificates == null ? Output.empty() : this.certificates;
     }
 
     @InputImport(name="passwords")
-      private final @Nullable Input<List<TokenPasswordArgs>> passwords;
+      private final @Nullable Output<List<TokenPasswordArgs>> passwords;
 
-    public Input<List<TokenPasswordArgs>> getPasswords() {
-        return this.passwords == null ? Input.empty() : this.passwords;
+    public Output<List<TokenPasswordArgs>> getPasswords() {
+        return this.passwords == null ? Output.empty() : this.passwords;
     }
 
     public TokenCredentialsPropertiesArgs(
-        @Nullable Input<List<TokenCertificateArgs>> certificates,
-        @Nullable Input<List<TokenPasswordArgs>> passwords) {
+        @Nullable Output<List<TokenCertificateArgs>> certificates,
+        @Nullable Output<List<TokenPasswordArgs>> passwords) {
         this.certificates = certificates;
         this.passwords = passwords;
     }
 
     private TokenCredentialsPropertiesArgs() {
-        this.certificates = Input.empty();
-        this.passwords = Input.empty();
+        this.certificates = Output.empty();
+        this.passwords = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TokenCertificateArgs>> certificates;
-        private @Nullable Input<List<TokenPasswordArgs>> passwords;
+        private @Nullable Output<List<TokenCertificateArgs>> certificates;
+        private @Nullable Output<List<TokenPasswordArgs>> passwords;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
     	      this.passwords = defaults.passwords;
         }
 
-        public Builder certificates(@Nullable Input<List<TokenCertificateArgs>> certificates) {
+        public Builder certificates(@Nullable Output<List<TokenCertificateArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
 
         public Builder certificates(@Nullable List<TokenCertificateArgs> certificates) {
-            this.certificates = Input.ofNullable(certificates);
+            this.certificates = Output.ofNullable(certificates);
             return this;
         }
 
-        public Builder passwords(@Nullable Input<List<TokenPasswordArgs>> passwords) {
+        public Builder passwords(@Nullable Output<List<TokenPasswordArgs>> passwords) {
             this.passwords = passwords;
             return this;
         }
 
         public Builder passwords(@Nullable List<TokenPasswordArgs> passwords) {
-            this.passwords = Input.ofNullable(passwords);
+            this.passwords = Output.ofNullable(passwords);
             return this;
         }
         public TokenCredentialsPropertiesArgs build() {

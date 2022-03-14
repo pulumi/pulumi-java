@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.KnowledgeBaseArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-      private final Input<String> cpeUri;
+      private final Output<String> cpeUri;
 
-    public Input<String> getCpeUri() {
+    public Output<String> getCpeUri() {
         return this.cpeUri;
     }
 
@@ -32,10 +32,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixingKbs", required=true)
-      private final Input<List<KnowledgeBaseArgs>> fixingKbs;
+      private final Output<List<KnowledgeBaseArgs>> fixingKbs;
 
-    public Input<List<KnowledgeBaseArgs>> getFixingKbs() {
+    public Output<List<KnowledgeBaseArgs>> getFixingKbs() {
         return this.fixingKbs;
     }
 
@@ -54,17 +54,17 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public WindowsDetailArgs(
-        Input<String> cpeUri,
-        @Nullable Input<String> description,
-        Input<List<KnowledgeBaseArgs>> fixingKbs,
-        Input<String> name) {
+        Output<String> cpeUri,
+        @Nullable Output<String> description,
+        Output<List<KnowledgeBaseArgs>> fixingKbs,
+        Output<String> name) {
         this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
         this.description = description;
         this.fixingKbs = Objects.requireNonNull(fixingKbs, "expected parameter 'fixingKbs' to be non-null");
@@ -72,10 +72,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WindowsDetailArgs() {
-        this.cpeUri = Input.empty();
-        this.description = Input.empty();
-        this.fixingKbs = Input.empty();
-        this.name = Input.empty();
+        this.cpeUri = Output.empty();
+        this.description = Output.empty();
+        this.fixingKbs = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cpeUri;
-        private @Nullable Input<String> description;
-        private Input<List<KnowledgeBaseArgs>> fixingKbs;
-        private Input<String> name;
+        private Output<String> cpeUri;
+        private @Nullable Output<String> description;
+        private Output<List<KnowledgeBaseArgs>> fixingKbs;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder cpeUri(Input<String> cpeUri) {
+        public Builder cpeUri(Output<String> cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Input.of(Objects.requireNonNull(cpeUri));
+            this.cpeUri = Output.of(Objects.requireNonNull(cpeUri));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fixingKbs(Input<List<KnowledgeBaseArgs>> fixingKbs) {
+        public Builder fixingKbs(Output<List<KnowledgeBaseArgs>> fixingKbs) {
             this.fixingKbs = Objects.requireNonNull(fixingKbs);
             return this;
         }
 
         public Builder fixingKbs(List<KnowledgeBaseArgs> fixingKbs) {
-            this.fixingKbs = Input.of(Objects.requireNonNull(fixingKbs));
+            this.fixingKbs = Output.of(Objects.requireNonNull(fixingKbs));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public WindowsDetailArgs build() {

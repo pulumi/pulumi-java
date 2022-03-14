@@ -8,7 +8,7 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationS3ConnectorOperator
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationSalesforceConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationServiceNowConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationZendeskConnectorOperator;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,46 +19,46 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
     public static final IntegrationConnectorOperatorArgs Empty = new IntegrationConnectorOperatorArgs();
 
     @InputImport(name="marketo")
-      private final @Nullable Input<IntegrationMarketoConnectorOperator> marketo;
+      private final @Nullable Output<IntegrationMarketoConnectorOperator> marketo;
 
-    public Input<IntegrationMarketoConnectorOperator> getMarketo() {
-        return this.marketo == null ? Input.empty() : this.marketo;
+    public Output<IntegrationMarketoConnectorOperator> getMarketo() {
+        return this.marketo == null ? Output.empty() : this.marketo;
     }
 
     @InputImport(name="s3")
-      private final @Nullable Input<IntegrationS3ConnectorOperator> s3;
+      private final @Nullable Output<IntegrationS3ConnectorOperator> s3;
 
-    public Input<IntegrationS3ConnectorOperator> getS3() {
-        return this.s3 == null ? Input.empty() : this.s3;
+    public Output<IntegrationS3ConnectorOperator> getS3() {
+        return this.s3 == null ? Output.empty() : this.s3;
     }
 
     @InputImport(name="salesforce")
-      private final @Nullable Input<IntegrationSalesforceConnectorOperator> salesforce;
+      private final @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce;
 
-    public Input<IntegrationSalesforceConnectorOperator> getSalesforce() {
-        return this.salesforce == null ? Input.empty() : this.salesforce;
+    public Output<IntegrationSalesforceConnectorOperator> getSalesforce() {
+        return this.salesforce == null ? Output.empty() : this.salesforce;
     }
 
     @InputImport(name="serviceNow")
-      private final @Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow;
+      private final @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow;
 
-    public Input<IntegrationServiceNowConnectorOperator> getServiceNow() {
-        return this.serviceNow == null ? Input.empty() : this.serviceNow;
+    public Output<IntegrationServiceNowConnectorOperator> getServiceNow() {
+        return this.serviceNow == null ? Output.empty() : this.serviceNow;
     }
 
     @InputImport(name="zendesk")
-      private final @Nullable Input<IntegrationZendeskConnectorOperator> zendesk;
+      private final @Nullable Output<IntegrationZendeskConnectorOperator> zendesk;
 
-    public Input<IntegrationZendeskConnectorOperator> getZendesk() {
-        return this.zendesk == null ? Input.empty() : this.zendesk;
+    public Output<IntegrationZendeskConnectorOperator> getZendesk() {
+        return this.zendesk == null ? Output.empty() : this.zendesk;
     }
 
     public IntegrationConnectorOperatorArgs(
-        @Nullable Input<IntegrationMarketoConnectorOperator> marketo,
-        @Nullable Input<IntegrationS3ConnectorOperator> s3,
-        @Nullable Input<IntegrationSalesforceConnectorOperator> salesforce,
-        @Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow,
-        @Nullable Input<IntegrationZendeskConnectorOperator> zendesk) {
+        @Nullable Output<IntegrationMarketoConnectorOperator> marketo,
+        @Nullable Output<IntegrationS3ConnectorOperator> s3,
+        @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce,
+        @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow,
+        @Nullable Output<IntegrationZendeskConnectorOperator> zendesk) {
         this.marketo = marketo;
         this.s3 = s3;
         this.salesforce = salesforce;
@@ -67,11 +67,11 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
     }
 
     private IntegrationConnectorOperatorArgs() {
-        this.marketo = Input.empty();
-        this.s3 = Input.empty();
-        this.salesforce = Input.empty();
-        this.serviceNow = Input.empty();
-        this.zendesk = Input.empty();
+        this.marketo = Output.empty();
+        this.s3 = Output.empty();
+        this.salesforce = Output.empty();
+        this.serviceNow = Output.empty();
+        this.zendesk = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,11 +83,11 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<IntegrationMarketoConnectorOperator> marketo;
-        private @Nullable Input<IntegrationS3ConnectorOperator> s3;
-        private @Nullable Input<IntegrationSalesforceConnectorOperator> salesforce;
-        private @Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow;
-        private @Nullable Input<IntegrationZendeskConnectorOperator> zendesk;
+        private @Nullable Output<IntegrationMarketoConnectorOperator> marketo;
+        private @Nullable Output<IntegrationS3ConnectorOperator> s3;
+        private @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce;
+        private @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow;
+        private @Nullable Output<IntegrationZendeskConnectorOperator> zendesk;
 
         public Builder() {
     	      // Empty
@@ -102,53 +102,53 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder marketo(@Nullable Input<IntegrationMarketoConnectorOperator> marketo) {
+        public Builder marketo(@Nullable Output<IntegrationMarketoConnectorOperator> marketo) {
             this.marketo = marketo;
             return this;
         }
 
         public Builder marketo(@Nullable IntegrationMarketoConnectorOperator marketo) {
-            this.marketo = Input.ofNullable(marketo);
+            this.marketo = Output.ofNullable(marketo);
             return this;
         }
 
-        public Builder s3(@Nullable Input<IntegrationS3ConnectorOperator> s3) {
+        public Builder s3(@Nullable Output<IntegrationS3ConnectorOperator> s3) {
             this.s3 = s3;
             return this;
         }
 
         public Builder s3(@Nullable IntegrationS3ConnectorOperator s3) {
-            this.s3 = Input.ofNullable(s3);
+            this.s3 = Output.ofNullable(s3);
             return this;
         }
 
-        public Builder salesforce(@Nullable Input<IntegrationSalesforceConnectorOperator> salesforce) {
+        public Builder salesforce(@Nullable Output<IntegrationSalesforceConnectorOperator> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
         public Builder salesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
-            this.salesforce = Input.ofNullable(salesforce);
+            this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
 
-        public Builder serviceNow(@Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow) {
+        public Builder serviceNow(@Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
         public Builder serviceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
-            this.serviceNow = Input.ofNullable(serviceNow);
+            this.serviceNow = Output.ofNullable(serviceNow);
             return this;
         }
 
-        public Builder zendesk(@Nullable Input<IntegrationZendeskConnectorOperator> zendesk) {
+        public Builder zendesk(@Nullable Output<IntegrationZendeskConnectorOperator> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
         public Builder zendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
-            this.zendesk = Input.ofNullable(zendesk);
+            this.zendesk = Output.ofNullable(zendesk);
             return this;
         }
         public IntegrationConnectorOperatorArgs build() {

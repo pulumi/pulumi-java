@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.ServiceLevelObjectiveCalendarPeriod;
 import io.pulumi.googlenative.monitoring_v3.inputs.ServiceLevelIndicatorArgs;
@@ -23,10 +23,10 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="calendarPeriod")
-      private final @Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
+      private final @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
 
-    public Input<ServiceLevelObjectiveCalendarPeriod> getCalendarPeriod() {
-        return this.calendarPeriod == null ? Input.empty() : this.calendarPeriod;
+    public Output<ServiceLevelObjectiveCalendarPeriod> getCalendarPeriod() {
+        return this.calendarPeriod == null ? Output.empty() : this.calendarPeriod;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="goal")
-      private final @Nullable Input<Double> goal;
+      private final @Nullable Output<Double> goal;
 
-    public Input<Double> getGoal() {
-        return this.goal == null ? Input.empty() : this.goal;
+    public Output<Double> getGoal() {
+        return this.goal == null ? Output.empty() : this.goal;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,16 +67,16 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rollingPeriod")
-      private final @Nullable Input<String> rollingPeriod;
+      private final @Nullable Output<String> rollingPeriod;
 
-    public Input<String> getRollingPeriod() {
-        return this.rollingPeriod == null ? Input.empty() : this.rollingPeriod;
+    public Output<String> getRollingPeriod() {
+        return this.rollingPeriod == null ? Output.empty() : this.rollingPeriod;
     }
 
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
@@ -85,17 +85,17 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceLevelIndicator")
-      private final @Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator;
+      private final @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
 
-    public Input<ServiceLevelIndicatorArgs> getServiceLevelIndicator() {
-        return this.serviceLevelIndicator == null ? Input.empty() : this.serviceLevelIndicator;
+    public Output<ServiceLevelIndicatorArgs> getServiceLevelIndicator() {
+        return this.serviceLevelIndicator == null ? Output.empty() : this.serviceLevelIndicator;
     }
 
     @InputImport(name="serviceLevelObjectiveId")
-      private final @Nullable Input<String> serviceLevelObjectiveId;
+      private final @Nullable Output<String> serviceLevelObjectiveId;
 
-    public Input<String> getServiceLevelObjectiveId() {
-        return this.serviceLevelObjectiveId == null ? Input.empty() : this.serviceLevelObjectiveId;
+    public Output<String> getServiceLevelObjectiveId() {
+        return this.serviceLevelObjectiveId == null ? Output.empty() : this.serviceLevelObjectiveId;
     }
 
     /**
@@ -103,38 +103,38 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userLabels")
-      private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Input<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Input.empty() : this.userLabels;
+    public Output<Map<String,String>> getUserLabels() {
+        return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
     @InputImport(name="v3Id", required=true)
-      private final Input<String> v3Id;
+      private final Output<String> v3Id;
 
-    public Input<String> getV3Id() {
+    public Output<String> getV3Id() {
         return this.v3Id;
     }
 
     @InputImport(name="v3Id1", required=true)
-      private final Input<String> v3Id1;
+      private final Output<String> v3Id1;
 
-    public Input<String> getV3Id1() {
+    public Output<String> getV3Id1() {
         return this.v3Id1;
     }
 
     public ServiceLevelObjectiveArgs(
-        @Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Double> goal,
-        @Nullable Input<String> name,
-        @Nullable Input<String> rollingPeriod,
-        Input<String> serviceId,
-        @Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator,
-        @Nullable Input<String> serviceLevelObjectiveId,
-        @Nullable Input<Map<String,String>> userLabels,
-        Input<String> v3Id,
-        Input<String> v3Id1) {
+        @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Double> goal,
+        @Nullable Output<String> name,
+        @Nullable Output<String> rollingPeriod,
+        Output<String> serviceId,
+        @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator,
+        @Nullable Output<String> serviceLevelObjectiveId,
+        @Nullable Output<Map<String,String>> userLabels,
+        Output<String> v3Id,
+        Output<String> v3Id1) {
         this.calendarPeriod = calendarPeriod;
         this.displayName = displayName;
         this.goal = goal;
@@ -149,17 +149,17 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceLevelObjectiveArgs() {
-        this.calendarPeriod = Input.empty();
-        this.displayName = Input.empty();
-        this.goal = Input.empty();
-        this.name = Input.empty();
-        this.rollingPeriod = Input.empty();
-        this.serviceId = Input.empty();
-        this.serviceLevelIndicator = Input.empty();
-        this.serviceLevelObjectiveId = Input.empty();
-        this.userLabels = Input.empty();
-        this.v3Id = Input.empty();
-        this.v3Id1 = Input.empty();
+        this.calendarPeriod = Output.empty();
+        this.displayName = Output.empty();
+        this.goal = Output.empty();
+        this.name = Output.empty();
+        this.rollingPeriod = Output.empty();
+        this.serviceId = Output.empty();
+        this.serviceLevelIndicator = Output.empty();
+        this.serviceLevelObjectiveId = Output.empty();
+        this.userLabels = Output.empty();
+        this.v3Id = Output.empty();
+        this.v3Id1 = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,17 +171,17 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Double> goal;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> rollingPeriod;
-        private Input<String> serviceId;
-        private @Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator;
-        private @Nullable Input<String> serviceLevelObjectiveId;
-        private @Nullable Input<Map<String,String>> userLabels;
-        private Input<String> v3Id;
-        private Input<String> v3Id1;
+        private @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Double> goal;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> rollingPeriod;
+        private Output<String> serviceId;
+        private @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
+        private @Nullable Output<String> serviceLevelObjectiveId;
+        private @Nullable Output<Map<String,String>> userLabels;
+        private Output<String> v3Id;
+        private Output<String> v3Id1;
 
         public Builder() {
     	      // Empty
@@ -202,113 +202,113 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     	      this.v3Id1 = defaults.v3Id1;
         }
 
-        public Builder calendarPeriod(@Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod) {
+        public Builder calendarPeriod(@Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod) {
             this.calendarPeriod = calendarPeriod;
             return this;
         }
 
         public Builder calendarPeriod(@Nullable ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
-            this.calendarPeriod = Input.ofNullable(calendarPeriod);
+            this.calendarPeriod = Output.ofNullable(calendarPeriod);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder goal(@Nullable Input<Double> goal) {
+        public Builder goal(@Nullable Output<Double> goal) {
             this.goal = goal;
             return this;
         }
 
         public Builder goal(@Nullable Double goal) {
-            this.goal = Input.ofNullable(goal);
+            this.goal = Output.ofNullable(goal);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rollingPeriod(@Nullable Input<String> rollingPeriod) {
+        public Builder rollingPeriod(@Nullable Output<String> rollingPeriod) {
             this.rollingPeriod = rollingPeriod;
             return this;
         }
 
         public Builder rollingPeriod(@Nullable String rollingPeriod) {
-            this.rollingPeriod = Input.ofNullable(rollingPeriod);
+            this.rollingPeriod = Output.ofNullable(rollingPeriod);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder serviceLevelIndicator(@Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator) {
+        public Builder serviceLevelIndicator(@Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator) {
             this.serviceLevelIndicator = serviceLevelIndicator;
             return this;
         }
 
         public Builder serviceLevelIndicator(@Nullable ServiceLevelIndicatorArgs serviceLevelIndicator) {
-            this.serviceLevelIndicator = Input.ofNullable(serviceLevelIndicator);
+            this.serviceLevelIndicator = Output.ofNullable(serviceLevelIndicator);
             return this;
         }
 
-        public Builder serviceLevelObjectiveId(@Nullable Input<String> serviceLevelObjectiveId) {
+        public Builder serviceLevelObjectiveId(@Nullable Output<String> serviceLevelObjectiveId) {
             this.serviceLevelObjectiveId = serviceLevelObjectiveId;
             return this;
         }
 
         public Builder serviceLevelObjectiveId(@Nullable String serviceLevelObjectiveId) {
-            this.serviceLevelObjectiveId = Input.ofNullable(serviceLevelObjectiveId);
+            this.serviceLevelObjectiveId = Output.ofNullable(serviceLevelObjectiveId);
             return this;
         }
 
-        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Input.ofNullable(userLabels);
+            this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
 
-        public Builder v3Id(Input<String> v3Id) {
+        public Builder v3Id(Output<String> v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
 
         public Builder v3Id(String v3Id) {
-            this.v3Id = Input.of(Objects.requireNonNull(v3Id));
+            this.v3Id = Output.of(Objects.requireNonNull(v3Id));
             return this;
         }
 
-        public Builder v3Id1(Input<String> v3Id1) {
+        public Builder v3Id1(Output<String> v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
 
         public Builder v3Id1(String v3Id1) {
-            this.v3Id1 = Input.of(Objects.requireNonNull(v3Id1));
+            this.v3Id1 = Output.of(Objects.requireNonNull(v3Id1));
             return this;
         }
         public ServiceLevelObjectiveArgs build() {

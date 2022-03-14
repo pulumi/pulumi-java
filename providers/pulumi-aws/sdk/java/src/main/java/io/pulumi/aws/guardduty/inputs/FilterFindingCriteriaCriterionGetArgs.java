@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.guardduty.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="equals")
-      private final @Nullable Input<List<String>> equals;
+      private final @Nullable Output<List<String>> equals;
 
-    public Input<List<String>> getEquals() {
-        return this.equals == null ? Input.empty() : this.equals;
+    public Output<List<String>> getEquals() {
+        return this.equals == null ? Output.empty() : this.equals;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="field", required=true)
-      private final Input<String> field;
+      private final Output<String> field;
 
-    public Input<String> getField() {
+    public Output<String> getField() {
         return this.field;
     }
 
@@ -42,10 +42,10 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="greaterThan")
-      private final @Nullable Input<String> greaterThan;
+      private final @Nullable Output<String> greaterThan;
 
-    public Input<String> getGreaterThan() {
-        return this.greaterThan == null ? Input.empty() : this.greaterThan;
+    public Output<String> getGreaterThan() {
+        return this.greaterThan == null ? Output.empty() : this.greaterThan;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="greaterThanOrEqual")
-      private final @Nullable Input<String> greaterThanOrEqual;
+      private final @Nullable Output<String> greaterThanOrEqual;
 
-    public Input<String> getGreaterThanOrEqual() {
-        return this.greaterThanOrEqual == null ? Input.empty() : this.greaterThanOrEqual;
+    public Output<String> getGreaterThanOrEqual() {
+        return this.greaterThanOrEqual == null ? Output.empty() : this.greaterThanOrEqual;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lessThan")
-      private final @Nullable Input<String> lessThan;
+      private final @Nullable Output<String> lessThan;
 
-    public Input<String> getLessThan() {
-        return this.lessThan == null ? Input.empty() : this.lessThan;
+    public Output<String> getLessThan() {
+        return this.lessThan == null ? Output.empty() : this.lessThan;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lessThanOrEqual")
-      private final @Nullable Input<String> lessThanOrEqual;
+      private final @Nullable Output<String> lessThanOrEqual;
 
-    public Input<String> getLessThanOrEqual() {
-        return this.lessThanOrEqual == null ? Input.empty() : this.lessThanOrEqual;
+    public Output<String> getLessThanOrEqual() {
+        return this.lessThanOrEqual == null ? Output.empty() : this.lessThanOrEqual;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="notEquals")
-      private final @Nullable Input<List<String>> notEquals;
+      private final @Nullable Output<List<String>> notEquals;
 
-    public Input<List<String>> getNotEquals() {
-        return this.notEquals == null ? Input.empty() : this.notEquals;
+    public Output<List<String>> getNotEquals() {
+        return this.notEquals == null ? Output.empty() : this.notEquals;
     }
 
     public FilterFindingCriteriaCriterionGetArgs(
-        @Nullable Input<List<String>> equals,
-        Input<String> field,
-        @Nullable Input<String> greaterThan,
-        @Nullable Input<String> greaterThanOrEqual,
-        @Nullable Input<String> lessThan,
-        @Nullable Input<String> lessThanOrEqual,
-        @Nullable Input<List<String>> notEquals) {
+        @Nullable Output<List<String>> equals,
+        Output<String> field,
+        @Nullable Output<String> greaterThan,
+        @Nullable Output<String> greaterThanOrEqual,
+        @Nullable Output<String> lessThan,
+        @Nullable Output<String> lessThanOrEqual,
+        @Nullable Output<List<String>> notEquals) {
         this.equals = equals;
         this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
         this.greaterThan = greaterThan;
@@ -110,13 +110,13 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
     }
 
     private FilterFindingCriteriaCriterionGetArgs() {
-        this.equals = Input.empty();
-        this.field = Input.empty();
-        this.greaterThan = Input.empty();
-        this.greaterThanOrEqual = Input.empty();
-        this.lessThan = Input.empty();
-        this.lessThanOrEqual = Input.empty();
-        this.notEquals = Input.empty();
+        this.equals = Output.empty();
+        this.field = Output.empty();
+        this.greaterThan = Output.empty();
+        this.greaterThanOrEqual = Output.empty();
+        this.lessThan = Output.empty();
+        this.lessThanOrEqual = Output.empty();
+        this.notEquals = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> equals;
-        private Input<String> field;
-        private @Nullable Input<String> greaterThan;
-        private @Nullable Input<String> greaterThanOrEqual;
-        private @Nullable Input<String> lessThan;
-        private @Nullable Input<String> lessThanOrEqual;
-        private @Nullable Input<List<String>> notEquals;
+        private @Nullable Output<List<String>> equals;
+        private Output<String> field;
+        private @Nullable Output<String> greaterThan;
+        private @Nullable Output<String> greaterThanOrEqual;
+        private @Nullable Output<String> lessThan;
+        private @Nullable Output<String> lessThanOrEqual;
+        private @Nullable Output<List<String>> notEquals;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
     	      this.notEquals = defaults.notEquals;
         }
 
-        public Builder equals(@Nullable Input<List<String>> equals) {
+        public Builder equals(@Nullable Output<List<String>> equals) {
             this.equals = equals;
             return this;
         }
 
         public Builder equals(@Nullable List<String> equals) {
-            this.equals = Input.ofNullable(equals);
+            this.equals = Output.ofNullable(equals);
             return this;
         }
 
-        public Builder field(Input<String> field) {
+        public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
         public Builder field(String field) {
-            this.field = Input.of(Objects.requireNonNull(field));
+            this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder greaterThan(@Nullable Input<String> greaterThan) {
+        public Builder greaterThan(@Nullable Output<String> greaterThan) {
             this.greaterThan = greaterThan;
             return this;
         }
 
         public Builder greaterThan(@Nullable String greaterThan) {
-            this.greaterThan = Input.ofNullable(greaterThan);
+            this.greaterThan = Output.ofNullable(greaterThan);
             return this;
         }
 
-        public Builder greaterThanOrEqual(@Nullable Input<String> greaterThanOrEqual) {
+        public Builder greaterThanOrEqual(@Nullable Output<String> greaterThanOrEqual) {
             this.greaterThanOrEqual = greaterThanOrEqual;
             return this;
         }
 
         public Builder greaterThanOrEqual(@Nullable String greaterThanOrEqual) {
-            this.greaterThanOrEqual = Input.ofNullable(greaterThanOrEqual);
+            this.greaterThanOrEqual = Output.ofNullable(greaterThanOrEqual);
             return this;
         }
 
-        public Builder lessThan(@Nullable Input<String> lessThan) {
+        public Builder lessThan(@Nullable Output<String> lessThan) {
             this.lessThan = lessThan;
             return this;
         }
 
         public Builder lessThan(@Nullable String lessThan) {
-            this.lessThan = Input.ofNullable(lessThan);
+            this.lessThan = Output.ofNullable(lessThan);
             return this;
         }
 
-        public Builder lessThanOrEqual(@Nullable Input<String> lessThanOrEqual) {
+        public Builder lessThanOrEqual(@Nullable Output<String> lessThanOrEqual) {
             this.lessThanOrEqual = lessThanOrEqual;
             return this;
         }
 
         public Builder lessThanOrEqual(@Nullable String lessThanOrEqual) {
-            this.lessThanOrEqual = Input.ofNullable(lessThanOrEqual);
+            this.lessThanOrEqual = Output.ofNullable(lessThanOrEqual);
             return this;
         }
 
-        public Builder notEquals(@Nullable Input<List<String>> notEquals) {
+        public Builder notEquals(@Nullable Output<List<String>> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
 
         public Builder notEquals(@Nullable List<String> notEquals) {
-            this.notEquals = Input.ofNullable(notEquals);
+            this.notEquals = Output.ofNullable(notEquals);
             return this;
         }
         public FilterFindingCriteriaCriterionGetArgs build() {

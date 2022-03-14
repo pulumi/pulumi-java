@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
-    public DeploymentTargetConfigArgs(Input<String> content) {
+    public DeploymentTargetConfigArgs(Output<String> content) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
     }
 
     private DeploymentTargetConfigArgs() {
-        this.content = Input.empty();
+        this.content = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> content;
+        private Output<String> content;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
     	      this.content = defaults.content;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
         public DeploymentTargetConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicedirectory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceId")
-      private final @Nullable Input<String> serviceId;
+      private final @Nullable Output<String> serviceId;
 
-    public Input<String> getServiceId() {
-        return this.serviceId == null ? Input.empty() : this.serviceId;
+    public Output<String> getServiceId() {
+        return this.serviceId == null ? Output.empty() : this.serviceId;
     }
 
     public ServiceState(
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> serviceId) {
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> serviceId) {
         this.metadata = metadata;
         this.name = name;
         this.namespace = namespace;
@@ -75,10 +75,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceState() {
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.serviceId = Input.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.serviceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> serviceId;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> serviceId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder serviceId(@Nullable Input<String> serviceId) {
+        public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Input.ofNullable(serviceId);
+            this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
         public ServiceState build() {

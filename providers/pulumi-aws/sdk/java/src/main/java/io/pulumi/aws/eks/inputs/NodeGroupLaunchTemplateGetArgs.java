@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NodeGroupLaunchTemplateGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class NodeGroupLaunchTemplateGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class NodeGroupLaunchTemplateGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public NodeGroupLaunchTemplateGetArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> version) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> version) {
         this.id = id;
         this.name = name;
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 
     private NodeGroupLaunchTemplateGetArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.version = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class NodeGroupLaunchTemplateGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> version;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class NodeGroupLaunchTemplateGetArgs extends io.pulumi.resources.Re
     	      this.version = defaults.version;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public NodeGroupLaunchTemplateGetArgs build() {

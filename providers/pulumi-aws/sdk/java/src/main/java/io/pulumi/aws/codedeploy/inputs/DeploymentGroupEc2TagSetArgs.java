@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ec2TagFilters")
-      private final @Nullable Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
+      private final @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
 
-    public Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> getEc2TagFilters() {
-        return this.ec2TagFilters == null ? Input.empty() : this.ec2TagFilters;
+    public Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> getEc2TagFilters() {
+        return this.ec2TagFilters == null ? Output.empty() : this.ec2TagFilters;
     }
 
-    public DeploymentGroupEc2TagSetArgs(@Nullable Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters) {
+    public DeploymentGroupEc2TagSetArgs(@Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters) {
         this.ec2TagFilters = ec2TagFilters;
     }
 
     private DeploymentGroupEc2TagSetArgs() {
-        this.ec2TagFilters = Input.empty();
+        this.ec2TagFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
+        private @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
     	      this.ec2TagFilters = defaults.ec2TagFilters;
         }
 
-        public Builder ec2TagFilters(@Nullable Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters) {
+        public Builder ec2TagFilters(@Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters) {
             this.ec2TagFilters = ec2TagFilters;
             return this;
         }
 
         public Builder ec2TagFilters(@Nullable List<DeploymentGroupEc2TagSetEc2TagFilterArgs> ec2TagFilters) {
-            this.ec2TagFilters = Input.ofNullable(ec2TagFilters);
+            this.ec2TagFilters = Output.ofNullable(ec2TagFilters);
             return this;
         }
         public DeploymentGroupEc2TagSetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.KeyVaultContractCreatePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId")
-      private final @Nullable Input<String> certificateId;
+      private final @Nullable Output<String> certificateId;
 
-    public Input<String> getCertificateId() {
-        return this.certificateId == null ? Input.empty() : this.certificateId;
+    public Output<String> getCertificateId() {
+        return this.certificateId == null ? Output.empty() : this.certificateId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVault")
-      private final @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
+      private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
-    public Input<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
-        return this.keyVault == null ? Input.empty() : this.keyVault;
+    public Output<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
+        return this.keyVault == null ? Output.empty() : this.keyVault;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,19 +75,19 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public CertificateArgs(
-        @Nullable Input<String> certificateId,
-        @Nullable Input<String> data,
-        @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault,
-        @Nullable Input<String> password,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        @Nullable Output<String> certificateId,
+        @Nullable Output<String> data,
+        @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault,
+        @Nullable Output<String> password,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.certificateId = certificateId;
         this.data = data;
         this.keyVault = keyVault;
@@ -97,12 +97,12 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateId = Input.empty();
-        this.data = Input.empty();
-        this.keyVault = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.certificateId = Output.empty();
+        this.data = Output.empty();
+        this.keyVault = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateId;
-        private @Nullable Input<String> data;
-        private @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
-        private @Nullable Input<String> password;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private @Nullable Output<String> certificateId;
+        private @Nullable Output<String> data;
+        private @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
+        private @Nullable Output<String> password;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder certificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Output<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Input.ofNullable(certificateId);
+            this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder keyVault(@Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault) {
+        public Builder keyVault(@Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
         public Builder keyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
-            this.keyVault = Input.ofNullable(keyVault);
+            this.keyVault = Output.ofNullable(keyVault);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public CertificateArgs build() {

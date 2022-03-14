@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuResourcePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkusArgs Empty = new SkusArgs();
 
     @InputImport(name="properties")
-      private final @Nullable Input<SkuResourcePropertiesArgs> properties;
+      private final @Nullable Output<SkuResourcePropertiesArgs> properties;
 
-    public Input<SkuResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<SkuResourcePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -27,9 +27,9 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-      private final Input<String> providerNamespace;
+      private final Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
+    public Output<String> getProviderNamespace() {
         return this.providerNamespace;
     }
 
@@ -38,9 +38,9 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -49,17 +49,17 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     public SkusArgs(
-        @Nullable Input<SkuResourcePropertiesArgs> properties,
-        Input<String> providerNamespace,
-        Input<String> resourceType,
-        @Nullable Input<String> sku) {
+        @Nullable Output<SkuResourcePropertiesArgs> properties,
+        Output<String> providerNamespace,
+        Output<String> resourceType,
+        @Nullable Output<String> sku) {
         this.properties = properties;
         this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
@@ -67,10 +67,10 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkusArgs() {
-        this.properties = Input.empty();
-        this.providerNamespace = Input.empty();
-        this.resourceType = Input.empty();
-        this.sku = Input.empty();
+        this.properties = Output.empty();
+        this.providerNamespace = Output.empty();
+        this.resourceType = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SkuResourcePropertiesArgs> properties;
-        private Input<String> providerNamespace;
-        private Input<String> resourceType;
-        private @Nullable Input<String> sku;
+        private @Nullable Output<SkuResourcePropertiesArgs> properties;
+        private Output<String> providerNamespace;
+        private Output<String> resourceType;
+        private @Nullable Output<String> sku;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder properties(@Nullable Input<SkuResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<SkuResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable SkuResourcePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
+            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
         public SkusArgs build() {

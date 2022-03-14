@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyDocument", required=true)
-      private final Input<String> policyDocument;
+      private final Output<String> policyDocument;
 
-    public Input<String> getPolicyDocument() {
+    public Output<String> getPolicyDocument() {
         return this.policyDocument;
     }
 
@@ -29,22 +29,22 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyName", required=true)
-      private final Input<String> policyName;
+      private final Output<String> policyName;
 
-    public Input<String> getPolicyName() {
+    public Output<String> getPolicyName() {
         return this.policyName;
     }
 
     public LogResourcePolicyArgs(
-        Input<String> policyDocument,
-        Input<String> policyName) {
+        Output<String> policyDocument,
+        Output<String> policyName) {
         this.policyDocument = Objects.requireNonNull(policyDocument, "expected parameter 'policyDocument' to be non-null");
         this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
     }
 
     private LogResourcePolicyArgs() {
-        this.policyDocument = Input.empty();
-        this.policyName = Input.empty();
+        this.policyDocument = Output.empty();
+        this.policyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> policyDocument;
-        private Input<String> policyName;
+        private Output<String> policyDocument;
+        private Output<String> policyName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.policyName = defaults.policyName;
         }
 
-        public Builder policyDocument(Input<String> policyDocument) {
+        public Builder policyDocument(Output<String> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
 
         public Builder policyDocument(String policyDocument) {
-            this.policyDocument = Input.of(Objects.requireNonNull(policyDocument));
+            this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
             return this;
         }
 
-        public Builder policyName(Input<String> policyName) {
+        public Builder policyName(Output<String> policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Input.of(Objects.requireNonNull(policyName));
+            this.policyName = Output.of(Objects.requireNonNull(policyName));
             return this;
         }
         public LogResourcePolicyArgs build() {

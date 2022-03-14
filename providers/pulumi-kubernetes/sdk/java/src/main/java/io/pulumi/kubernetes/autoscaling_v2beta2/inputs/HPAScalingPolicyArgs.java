@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="periodSeconds", required=true)
-      private final Input<Integer> periodSeconds;
+      private final Output<Integer> periodSeconds;
 
-    public Input<Integer> getPeriodSeconds() {
+    public Output<Integer> getPeriodSeconds() {
         return this.periodSeconds;
     }
 
@@ -34,9 +34,9 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -45,25 +45,25 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Integer> value;
+      private final Output<Integer> value;
 
-    public Input<Integer> getValue() {
+    public Output<Integer> getValue() {
         return this.value;
     }
 
     public HPAScalingPolicyArgs(
-        Input<Integer> periodSeconds,
-        Input<String> type,
-        Input<Integer> value) {
+        Output<Integer> periodSeconds,
+        Output<String> type,
+        Output<Integer> value) {
         this.periodSeconds = Objects.requireNonNull(periodSeconds, "expected parameter 'periodSeconds' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private HPAScalingPolicyArgs() {
-        this.periodSeconds = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.periodSeconds = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Integer> periodSeconds;
-        private Input<String> type;
-        private Input<Integer> value;
+        private Output<Integer> periodSeconds;
+        private Output<String> type;
+        private Output<Integer> value;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder periodSeconds(Input<Integer> periodSeconds) {
+        public Builder periodSeconds(Output<Integer> periodSeconds) {
             this.periodSeconds = Objects.requireNonNull(periodSeconds);
             return this;
         }
 
         public Builder periodSeconds(Integer periodSeconds) {
-            this.periodSeconds = Input.of(Objects.requireNonNull(periodSeconds));
+            this.periodSeconds = Output.of(Objects.requireNonNull(periodSeconds));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(Input<Integer> value) {
+        public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Integer value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public HPAScalingPolicyArgs build() {

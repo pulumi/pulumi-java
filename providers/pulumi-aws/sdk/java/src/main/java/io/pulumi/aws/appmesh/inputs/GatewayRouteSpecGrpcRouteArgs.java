@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteActionArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteMatchArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -19,9 +19,9 @@ public final class GatewayRouteSpecGrpcRouteArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<GatewayRouteSpecGrpcRouteActionArgs> action;
+      private final Output<GatewayRouteSpecGrpcRouteActionArgs> action;
 
-    public Input<GatewayRouteSpecGrpcRouteActionArgs> getAction() {
+    public Output<GatewayRouteSpecGrpcRouteActionArgs> getAction() {
         return this.action;
     }
 
@@ -30,22 +30,22 @@ public final class GatewayRouteSpecGrpcRouteArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="match", required=true)
-      private final Input<GatewayRouteSpecGrpcRouteMatchArgs> match;
+      private final Output<GatewayRouteSpecGrpcRouteMatchArgs> match;
 
-    public Input<GatewayRouteSpecGrpcRouteMatchArgs> getMatch() {
+    public Output<GatewayRouteSpecGrpcRouteMatchArgs> getMatch() {
         return this.match;
     }
 
     public GatewayRouteSpecGrpcRouteArgs(
-        Input<GatewayRouteSpecGrpcRouteActionArgs> action,
-        Input<GatewayRouteSpecGrpcRouteMatchArgs> match) {
+        Output<GatewayRouteSpecGrpcRouteActionArgs> action,
+        Output<GatewayRouteSpecGrpcRouteMatchArgs> match) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
     }
 
     private GatewayRouteSpecGrpcRouteArgs() {
-        this.action = Input.empty();
-        this.match = Input.empty();
+        this.action = Output.empty();
+        this.match = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GatewayRouteSpecGrpcRouteArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<GatewayRouteSpecGrpcRouteActionArgs> action;
-        private Input<GatewayRouteSpecGrpcRouteMatchArgs> match;
+        private Output<GatewayRouteSpecGrpcRouteActionArgs> action;
+        private Output<GatewayRouteSpecGrpcRouteMatchArgs> match;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class GatewayRouteSpecGrpcRouteArgs extends io.pulumi.resources.Res
     	      this.match = defaults.match;
         }
 
-        public Builder action(Input<GatewayRouteSpecGrpcRouteActionArgs> action) {
+        public Builder action(Output<GatewayRouteSpecGrpcRouteActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(GatewayRouteSpecGrpcRouteActionArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder match(Input<GatewayRouteSpecGrpcRouteMatchArgs> match) {
+        public Builder match(Output<GatewayRouteSpecGrpcRouteMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
         public Builder match(GatewayRouteSpecGrpcRouteMatchArgs match) {
-            this.match = Input.of(Objects.requireNonNull(match));
+            this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
         public GatewayRouteSpecGrpcRouteArgs build() {

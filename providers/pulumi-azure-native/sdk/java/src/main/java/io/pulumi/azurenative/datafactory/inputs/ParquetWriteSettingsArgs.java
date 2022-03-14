@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fileNamePrefix")
-      private final @Nullable Input<Object> fileNamePrefix;
+      private final @Nullable Output<Object> fileNamePrefix;
 
-    public Input<Object> getFileNamePrefix() {
-        return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
+    public Output<Object> getFileNamePrefix() {
+        return this.fileNamePrefix == null ? Output.empty() : this.fileNamePrefix;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxRowsPerFile")
-      private final @Nullable Input<Object> maxRowsPerFile;
+      private final @Nullable Output<Object> maxRowsPerFile;
 
-    public Input<Object> getMaxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
+    public Output<Object> getMaxRowsPerFile() {
+        return this.maxRowsPerFile == null ? Output.empty() : this.maxRowsPerFile;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ParquetWriteSettingsArgs(
-        @Nullable Input<Object> fileNamePrefix,
-        @Nullable Input<Object> maxRowsPerFile,
-        Input<String> type) {
+        @Nullable Output<Object> fileNamePrefix,
+        @Nullable Output<Object> maxRowsPerFile,
+        Output<String> type) {
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ParquetWriteSettingsArgs() {
-        this.fileNamePrefix = Input.empty();
-        this.maxRowsPerFile = Input.empty();
-        this.type = Input.empty();
+        this.fileNamePrefix = Output.empty();
+        this.maxRowsPerFile = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> fileNamePrefix;
-        private @Nullable Input<Object> maxRowsPerFile;
-        private Input<String> type;
+        private @Nullable Output<Object> fileNamePrefix;
+        private @Nullable Output<Object> maxRowsPerFile;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder fileNamePrefix(@Nullable Input<Object> fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Output<Object> fileNamePrefix) {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Input.ofNullable(fileNamePrefix);
+            this.fileNamePrefix = Output.ofNullable(fileNamePrefix);
             return this;
         }
 
-        public Builder maxRowsPerFile(@Nullable Input<Object> maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Input.ofNullable(maxRowsPerFile);
+            this.maxRowsPerFile = Output.ofNullable(maxRowsPerFile);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ParquetWriteSettingsArgs build() {

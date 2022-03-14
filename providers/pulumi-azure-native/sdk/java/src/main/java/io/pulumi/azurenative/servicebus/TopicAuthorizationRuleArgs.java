@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.servicebus.enums.AccessRights;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authorizationRuleName")
-      private final @Nullable Input<String> authorizationRuleName;
+      private final @Nullable Output<String> authorizationRuleName;
 
-    public Input<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
+    public Output<String> getAuthorizationRuleName() {
+        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -43,9 +43,9 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rights", required=true)
-      private final Input<List<AccessRights>> rights;
+      private final Output<List<AccessRights>> rights;
 
-    public Input<List<AccessRights>> getRights() {
+    public Output<List<AccessRights>> getRights() {
         return this.rights;
     }
 
@@ -65,18 +65,18 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="topicName", required=true)
-      private final Input<String> topicName;
+      private final Output<String> topicName;
 
-    public Input<String> getTopicName() {
+    public Output<String> getTopicName() {
         return this.topicName;
     }
 
     public TopicAuthorizationRuleArgs(
-        @Nullable Input<String> authorizationRuleName,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        Input<List<AccessRights>> rights,
-        Input<String> topicName) {
+        @Nullable Output<String> authorizationRuleName,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        Output<List<AccessRights>> rights,
+        Output<String> topicName) {
         this.authorizationRuleName = authorizationRuleName;
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
     }
 
     private TopicAuthorizationRuleArgs() {
-        this.authorizationRuleName = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rights = Input.empty();
-        this.topicName = Input.empty();
+        this.authorizationRuleName = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rights = Output.empty();
+        this.topicName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationRuleName;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private Input<List<AccessRights>> rights;
-        private Input<String> topicName;
+        private @Nullable Output<String> authorizationRuleName;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private Output<List<AccessRights>> rights;
+        private Output<String> topicName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rights(Input<List<AccessRights>> rights) {
+        public Builder rights(Output<List<AccessRights>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
         public Builder rights(List<AccessRights> rights) {
-            this.rights = Input.of(Objects.requireNonNull(rights));
+            this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
 
-        public Builder topicName(Input<String> topicName) {
+        public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
         public Builder topicName(String topicName) {
-            this.topicName = Input.of(Objects.requireNonNull(topicName));
+            this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
         }
         public TopicAuthorizationRuleArgs build() {

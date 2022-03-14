@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class SpotFleetNetworkInterfaceCountRequestArgs extends io.pulumi.r
     public static final SpotFleetNetworkInterfaceCountRequestArgs Empty = new SpotFleetNetworkInterfaceCountRequestArgs();
 
     @InputImport(name="max")
-      private final @Nullable Input<Integer> max;
+      private final @Nullable Output<Integer> max;
 
-    public Input<Integer> getMax() {
-        return this.max == null ? Input.empty() : this.max;
+    public Output<Integer> getMax() {
+        return this.max == null ? Output.empty() : this.max;
     }
 
     @InputImport(name="min")
-      private final @Nullable Input<Integer> min;
+      private final @Nullable Output<Integer> min;
 
-    public Input<Integer> getMin() {
-        return this.min == null ? Input.empty() : this.min;
+    public Output<Integer> getMin() {
+        return this.min == null ? Output.empty() : this.min;
     }
 
     public SpotFleetNetworkInterfaceCountRequestArgs(
-        @Nullable Input<Integer> max,
-        @Nullable Input<Integer> min) {
+        @Nullable Output<Integer> max,
+        @Nullable Output<Integer> min) {
         this.max = max;
         this.min = min;
     }
 
     private SpotFleetNetworkInterfaceCountRequestArgs() {
-        this.max = Input.empty();
-        this.min = Input.empty();
+        this.max = Output.empty();
+        this.min = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class SpotFleetNetworkInterfaceCountRequestArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> max;
-        private @Nullable Input<Integer> min;
+        private @Nullable Output<Integer> max;
+        private @Nullable Output<Integer> min;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class SpotFleetNetworkInterfaceCountRequestArgs extends io.pulumi.r
     	      this.min = defaults.min;
         }
 
-        public Builder max(@Nullable Input<Integer> max) {
+        public Builder max(@Nullable Output<Integer> max) {
             this.max = max;
             return this;
         }
 
         public Builder max(@Nullable Integer max) {
-            this.max = Input.ofNullable(max);
+            this.max = Output.ofNullable(max);
             return this;
         }
 
-        public Builder min(@Nullable Input<Integer> min) {
+        public Builder min(@Nullable Output<Integer> min) {
             this.min = min;
             return this;
         }
 
         public Builder min(@Nullable Integer min) {
-            this.min = Input.ofNullable(min);
+            this.min = Output.ofNullable(min);
             return this;
         }
         public SpotFleetNetworkInterfaceCountRequestArgs build() {

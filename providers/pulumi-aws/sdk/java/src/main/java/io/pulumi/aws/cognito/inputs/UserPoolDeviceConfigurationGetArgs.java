@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolDeviceConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="challengeRequiredOnNewDevice")
-      private final @Nullable Input<Boolean> challengeRequiredOnNewDevice;
+      private final @Nullable Output<Boolean> challengeRequiredOnNewDevice;
 
-    public Input<Boolean> getChallengeRequiredOnNewDevice() {
-        return this.challengeRequiredOnNewDevice == null ? Input.empty() : this.challengeRequiredOnNewDevice;
+    public Output<Boolean> getChallengeRequiredOnNewDevice() {
+        return this.challengeRequiredOnNewDevice == null ? Output.empty() : this.challengeRequiredOnNewDevice;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class UserPoolDeviceConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deviceOnlyRememberedOnUserPrompt")
-      private final @Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt;
+      private final @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
 
-    public Input<Boolean> getDeviceOnlyRememberedOnUserPrompt() {
-        return this.deviceOnlyRememberedOnUserPrompt == null ? Input.empty() : this.deviceOnlyRememberedOnUserPrompt;
+    public Output<Boolean> getDeviceOnlyRememberedOnUserPrompt() {
+        return this.deviceOnlyRememberedOnUserPrompt == null ? Output.empty() : this.deviceOnlyRememberedOnUserPrompt;
     }
 
     public UserPoolDeviceConfigurationGetArgs(
-        @Nullable Input<Boolean> challengeRequiredOnNewDevice,
-        @Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt) {
+        @Nullable Output<Boolean> challengeRequiredOnNewDevice,
+        @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt) {
         this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
         this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
     }
 
     private UserPoolDeviceConfigurationGetArgs() {
-        this.challengeRequiredOnNewDevice = Input.empty();
-        this.deviceOnlyRememberedOnUserPrompt = Input.empty();
+        this.challengeRequiredOnNewDevice = Output.empty();
+        this.deviceOnlyRememberedOnUserPrompt = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class UserPoolDeviceConfigurationGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> challengeRequiredOnNewDevice;
-        private @Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt;
+        private @Nullable Output<Boolean> challengeRequiredOnNewDevice;
+        private @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class UserPoolDeviceConfigurationGetArgs extends io.pulumi.resource
     	      this.deviceOnlyRememberedOnUserPrompt = defaults.deviceOnlyRememberedOnUserPrompt;
         }
 
-        public Builder challengeRequiredOnNewDevice(@Nullable Input<Boolean> challengeRequiredOnNewDevice) {
+        public Builder challengeRequiredOnNewDevice(@Nullable Output<Boolean> challengeRequiredOnNewDevice) {
             this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
             return this;
         }
 
         public Builder challengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
-            this.challengeRequiredOnNewDevice = Input.ofNullable(challengeRequiredOnNewDevice);
+            this.challengeRequiredOnNewDevice = Output.ofNullable(challengeRequiredOnNewDevice);
             return this;
         }
 
-        public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt) {
+        public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt) {
             this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
             return this;
         }
 
         public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
-            this.deviceOnlyRememberedOnUserPrompt = Input.ofNullable(deviceOnlyRememberedOnUserPrompt);
+            this.deviceOnlyRememberedOnUserPrompt = Output.ofNullable(deviceOnlyRememberedOnUserPrompt);
             return this;
         }
         public UserPoolDeviceConfigurationGetArgs build() {

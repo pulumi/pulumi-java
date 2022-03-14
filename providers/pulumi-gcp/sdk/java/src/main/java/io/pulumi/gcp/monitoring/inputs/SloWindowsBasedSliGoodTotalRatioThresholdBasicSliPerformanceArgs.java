@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs;
@@ -23,10 +23,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="availability")
-      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability;
+      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability;
 
-    public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> getAvailability() {
-        return this.availability == null ? Input.empty() : this.availability;
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> getAvailability() {
+        return this.availability == null ? Output.empty() : this.availability;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="latency")
-      private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency;
+      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency;
 
-    public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> getLatency() {
-        return this.latency == null ? Input.empty() : this.latency;
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> getLatency() {
+        return this.latency == null ? Output.empty() : this.latency;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="methods")
-      private final @Nullable Input<List<String>> methods;
+      private final @Nullable Output<List<String>> methods;
 
-    public Input<List<String>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<String>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     /**
@@ -83,18 +83,18 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      * 
      */
     @InputImport(name="versions")
-      private final @Nullable Input<List<String>> versions;
+      private final @Nullable Output<List<String>> versions;
 
-    public Input<List<String>> getVersions() {
-        return this.versions == null ? Input.empty() : this.versions;
+    public Output<List<String>> getVersions() {
+        return this.versions == null ? Output.empty() : this.versions;
     }
 
     public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs(
-        @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability,
-        @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency,
-        @Nullable Input<List<String>> locations,
-        @Nullable Input<List<String>> methods,
-        @Nullable Input<List<String>> versions) {
+        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability,
+        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency,
+        @Nullable Output<List<String>> locations,
+        @Nullable Output<List<String>> methods,
+        @Nullable Output<List<String>> versions) {
         this.availability = availability;
         this.latency = latency;
         this.locations = locations;
@@ -103,11 +103,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
     }
 
     private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs() {
-        this.availability = Input.empty();
-        this.latency = Input.empty();
-        this.locations = Input.empty();
-        this.methods = Input.empty();
-        this.versions = Input.empty();
+        this.availability = Output.empty();
+        this.latency = Output.empty();
+        this.locations = Output.empty();
+        this.methods = Output.empty();
+        this.versions = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,11 +119,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
     }
 
     public static final class Builder {
-        private @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability;
-        private @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency;
-        private @Nullable Input<List<String>> locations;
-        private @Nullable Input<List<String>> methods;
-        private @Nullable Input<List<String>> versions;
+        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability;
+        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency;
+        private @Nullable Output<List<String>> locations;
+        private @Nullable Output<List<String>> methods;
+        private @Nullable Output<List<String>> versions;
 
         public Builder() {
     	      // Empty
@@ -138,53 +138,53 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
     	      this.versions = defaults.versions;
         }
 
-        public Builder availability(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability) {
+        public Builder availability(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs> availability) {
             this.availability = availability;
             return this;
         }
 
         public Builder availability(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs availability) {
-            this.availability = Input.ofNullable(availability);
+            this.availability = Output.ofNullable(availability);
             return this;
         }
 
-        public Builder latency(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency) {
+        public Builder latency(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency) {
             this.latency = latency;
             return this;
         }
 
         public Builder latency(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs latency) {
-            this.latency = Input.ofNullable(latency);
+            this.latency = Output.ofNullable(latency);
             return this;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder methods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder versions(@Nullable Input<List<String>> versions) {
+        public Builder versions(@Nullable Output<List<String>> versions) {
             this.versions = versions;
             return this;
         }
 
         public Builder versions(@Nullable List<String> versions) {
-            this.versions = Input.ofNullable(versions);
+            this.versions = Output.ofNullable(versions);
             return this;
         }
         public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs build() {

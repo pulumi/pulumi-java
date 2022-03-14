@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="gracefulDecommissionTimeout", required=true)
-      private final Input<String> gracefulDecommissionTimeout;
+      private final Output<String> gracefulDecommissionTimeout;
 
-    public Input<String> getGracefulDecommissionTimeout() {
+    public Output<String> getGracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
 
@@ -35,9 +35,9 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="scaleDownFactor", required=true)
-      private final Input<Double> scaleDownFactor;
+      private final Output<Double> scaleDownFactor;
 
-    public Input<Double> getScaleDownFactor() {
+    public Output<Double> getScaleDownFactor() {
         return this.scaleDownFactor;
     }
 
@@ -46,10 +46,10 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="scaleDownMinWorkerFraction")
-      private final @Nullable Input<Double> scaleDownMinWorkerFraction;
+      private final @Nullable Output<Double> scaleDownMinWorkerFraction;
 
-    public Input<Double> getScaleDownMinWorkerFraction() {
-        return this.scaleDownMinWorkerFraction == null ? Input.empty() : this.scaleDownMinWorkerFraction;
+    public Output<Double> getScaleDownMinWorkerFraction() {
+        return this.scaleDownMinWorkerFraction == null ? Output.empty() : this.scaleDownMinWorkerFraction;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="scaleUpFactor", required=true)
-      private final Input<Double> scaleUpFactor;
+      private final Output<Double> scaleUpFactor;
 
-    public Input<Double> getScaleUpFactor() {
+    public Output<Double> getScaleUpFactor() {
         return this.scaleUpFactor;
     }
 
@@ -68,18 +68,18 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="scaleUpMinWorkerFraction")
-      private final @Nullable Input<Double> scaleUpMinWorkerFraction;
+      private final @Nullable Output<Double> scaleUpMinWorkerFraction;
 
-    public Input<Double> getScaleUpMinWorkerFraction() {
-        return this.scaleUpMinWorkerFraction == null ? Input.empty() : this.scaleUpMinWorkerFraction;
+    public Output<Double> getScaleUpMinWorkerFraction() {
+        return this.scaleUpMinWorkerFraction == null ? Output.empty() : this.scaleUpMinWorkerFraction;
     }
 
     public BasicYarnAutoscalingConfigArgs(
-        Input<String> gracefulDecommissionTimeout,
-        Input<Double> scaleDownFactor,
-        @Nullable Input<Double> scaleDownMinWorkerFraction,
-        Input<Double> scaleUpFactor,
-        @Nullable Input<Double> scaleUpMinWorkerFraction) {
+        Output<String> gracefulDecommissionTimeout,
+        Output<Double> scaleDownFactor,
+        @Nullable Output<Double> scaleDownMinWorkerFraction,
+        Output<Double> scaleUpFactor,
+        @Nullable Output<Double> scaleUpMinWorkerFraction) {
         this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout, "expected parameter 'gracefulDecommissionTimeout' to be non-null");
         this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor, "expected parameter 'scaleDownFactor' to be non-null");
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
@@ -88,11 +88,11 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
     }
 
     private BasicYarnAutoscalingConfigArgs() {
-        this.gracefulDecommissionTimeout = Input.empty();
-        this.scaleDownFactor = Input.empty();
-        this.scaleDownMinWorkerFraction = Input.empty();
-        this.scaleUpFactor = Input.empty();
-        this.scaleUpMinWorkerFraction = Input.empty();
+        this.gracefulDecommissionTimeout = Output.empty();
+        this.scaleDownFactor = Output.empty();
+        this.scaleDownMinWorkerFraction = Output.empty();
+        this.scaleUpFactor = Output.empty();
+        this.scaleUpMinWorkerFraction = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> gracefulDecommissionTimeout;
-        private Input<Double> scaleDownFactor;
-        private @Nullable Input<Double> scaleDownMinWorkerFraction;
-        private Input<Double> scaleUpFactor;
-        private @Nullable Input<Double> scaleUpMinWorkerFraction;
+        private Output<String> gracefulDecommissionTimeout;
+        private Output<Double> scaleDownFactor;
+        private @Nullable Output<Double> scaleDownMinWorkerFraction;
+        private Output<Double> scaleUpFactor;
+        private @Nullable Output<Double> scaleUpMinWorkerFraction;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
     	      this.scaleUpMinWorkerFraction = defaults.scaleUpMinWorkerFraction;
         }
 
-        public Builder gracefulDecommissionTimeout(Input<String> gracefulDecommissionTimeout) {
+        public Builder gracefulDecommissionTimeout(Output<String> gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
             return this;
         }
 
         public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
-            this.gracefulDecommissionTimeout = Input.of(Objects.requireNonNull(gracefulDecommissionTimeout));
+            this.gracefulDecommissionTimeout = Output.of(Objects.requireNonNull(gracefulDecommissionTimeout));
             return this;
         }
 
-        public Builder scaleDownFactor(Input<Double> scaleDownFactor) {
+        public Builder scaleDownFactor(Output<Double> scaleDownFactor) {
             this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
             return this;
         }
 
         public Builder scaleDownFactor(Double scaleDownFactor) {
-            this.scaleDownFactor = Input.of(Objects.requireNonNull(scaleDownFactor));
+            this.scaleDownFactor = Output.of(Objects.requireNonNull(scaleDownFactor));
             return this;
         }
 
-        public Builder scaleDownMinWorkerFraction(@Nullable Input<Double> scaleDownMinWorkerFraction) {
+        public Builder scaleDownMinWorkerFraction(@Nullable Output<Double> scaleDownMinWorkerFraction) {
             this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
             return this;
         }
 
         public Builder scaleDownMinWorkerFraction(@Nullable Double scaleDownMinWorkerFraction) {
-            this.scaleDownMinWorkerFraction = Input.ofNullable(scaleDownMinWorkerFraction);
+            this.scaleDownMinWorkerFraction = Output.ofNullable(scaleDownMinWorkerFraction);
             return this;
         }
 
-        public Builder scaleUpFactor(Input<Double> scaleUpFactor) {
+        public Builder scaleUpFactor(Output<Double> scaleUpFactor) {
             this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
             return this;
         }
 
         public Builder scaleUpFactor(Double scaleUpFactor) {
-            this.scaleUpFactor = Input.of(Objects.requireNonNull(scaleUpFactor));
+            this.scaleUpFactor = Output.of(Objects.requireNonNull(scaleUpFactor));
             return this;
         }
 
-        public Builder scaleUpMinWorkerFraction(@Nullable Input<Double> scaleUpMinWorkerFraction) {
+        public Builder scaleUpMinWorkerFraction(@Nullable Output<Double> scaleUpMinWorkerFraction) {
             this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
             return this;
         }
 
         public Builder scaleUpMinWorkerFraction(@Nullable Double scaleUpMinWorkerFraction) {
-            this.scaleUpMinWorkerFraction = Input.ofNullable(scaleUpMinWorkerFraction);
+            this.scaleUpMinWorkerFraction = Output.ofNullable(scaleUpMinWorkerFraction);
             return this;
         }
         public BasicYarnAutoscalingConfigArgs build() {

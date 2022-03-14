@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataContentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<MarkdownPartMetadataContentArgs> content;
+      private final @Nullable Output<MarkdownPartMetadataContentArgs> content;
 
-    public Input<MarkdownPartMetadataContentArgs> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<MarkdownPartMetadataContentArgs> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
-    public MarkdownPartMetadataSettingsArgs(@Nullable Input<MarkdownPartMetadataContentArgs> content) {
+    public MarkdownPartMetadataSettingsArgs(@Nullable Output<MarkdownPartMetadataContentArgs> content) {
         this.content = content;
     }
 
     private MarkdownPartMetadataSettingsArgs() {
-        this.content = Input.empty();
+        this.content = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<MarkdownPartMetadataContentArgs> content;
+        private @Nullable Output<MarkdownPartMetadataContentArgs> content;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
     	      this.content = defaults.content;
         }
 
-        public Builder content(@Nullable Input<MarkdownPartMetadataContentArgs> content) {
+        public Builder content(@Nullable Output<MarkdownPartMetadataContentArgs> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable MarkdownPartMetadataContentArgs content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
         public MarkdownPartMetadataSettingsArgs build() {

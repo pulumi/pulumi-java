@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupActionDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupCustomActionArgs Empty = new RuleGroupCustomActionArgs();
 
     @InputImport(name="actionDefinition", required=true)
-      private final Input<RuleGroupActionDefinitionArgs> actionDefinition;
+      private final Output<RuleGroupActionDefinitionArgs> actionDefinition;
 
-    public Input<RuleGroupActionDefinitionArgs> getActionDefinition() {
+    public Output<RuleGroupActionDefinitionArgs> getActionDefinition() {
         return this.actionDefinition;
     }
 
     @InputImport(name="actionName", required=true)
-      private final Input<String> actionName;
+      private final Output<String> actionName;
 
-    public Input<String> getActionName() {
+    public Output<String> getActionName() {
         return this.actionName;
     }
 
     public RuleGroupCustomActionArgs(
-        Input<RuleGroupActionDefinitionArgs> actionDefinition,
-        Input<String> actionName) {
+        Output<RuleGroupActionDefinitionArgs> actionDefinition,
+        Output<String> actionName) {
         this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
         this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
     }
 
     private RuleGroupCustomActionArgs() {
-        this.actionDefinition = Input.empty();
-        this.actionName = Input.empty();
+        this.actionDefinition = Output.empty();
+        this.actionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<RuleGroupActionDefinitionArgs> actionDefinition;
-        private Input<String> actionName;
+        private Output<RuleGroupActionDefinitionArgs> actionDefinition;
+        private Output<String> actionName;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder actionDefinition(Input<RuleGroupActionDefinitionArgs> actionDefinition) {
+        public Builder actionDefinition(Output<RuleGroupActionDefinitionArgs> actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
         public Builder actionDefinition(RuleGroupActionDefinitionArgs actionDefinition) {
-            this.actionDefinition = Input.of(Objects.requireNonNull(actionDefinition));
+            this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
             return this;
         }
 
-        public Builder actionName(Input<String> actionName) {
+        public Builder actionName(Output<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Input.of(Objects.requireNonNull(actionName));
+            this.actionName = Output.of(Objects.requireNonNull(actionName));
             return this;
         }
         public RuleGroupCustomActionArgs build() {

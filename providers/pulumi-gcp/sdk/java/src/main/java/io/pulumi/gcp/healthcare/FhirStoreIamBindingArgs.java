@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingConditionArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     public static final FhirStoreIamBindingArgs Empty = new FhirStoreIamBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<FhirStoreIamBindingConditionArgs> condition;
+      private final @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
 
-    public Input<FhirStoreIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<FhirStoreIamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -31,16 +31,16 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fhirStoreId", required=true)
-      private final Input<String> fhirStoreId;
+      private final Output<String> fhirStoreId;
 
-    public Input<String> getFhirStoreId() {
+    public Output<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -51,17 +51,17 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public FhirStoreIamBindingArgs(
-        @Nullable Input<FhirStoreIamBindingConditionArgs> condition,
-        Input<String> fhirStoreId,
-        Input<List<String>> members,
-        Input<String> role) {
+        @Nullable Output<FhirStoreIamBindingConditionArgs> condition,
+        Output<String> fhirStoreId,
+        Output<List<String>> members,
+        Output<String> role) {
         this.condition = condition;
         this.fhirStoreId = Objects.requireNonNull(fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -69,10 +69,10 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     private FhirStoreIamBindingArgs() {
-        this.condition = Input.empty();
-        this.fhirStoreId = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.fhirStoreId = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<FhirStoreIamBindingConditionArgs> condition;
-        private Input<String> fhirStoreId;
-        private Input<List<String>> members;
-        private Input<String> role;
+        private @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
+        private Output<String> fhirStoreId;
+        private Output<List<String>> members;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<FhirStoreIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<FhirStoreIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable FhirStoreIamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder fhirStoreId(Input<String> fhirStoreId) {
+        public Builder fhirStoreId(Output<String> fhirStoreId) {
             this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
             return this;
         }
 
         public Builder fhirStoreId(String fhirStoreId) {
-            this.fhirStoreId = Input.of(Objects.requireNonNull(fhirStoreId));
+            this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public FhirStoreIamBindingArgs build() {

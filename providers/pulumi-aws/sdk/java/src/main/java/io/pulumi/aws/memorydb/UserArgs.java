@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb;
 
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString", required=true)
-      private final Input<String> accessString;
+      private final Output<String> accessString;
 
-    public Input<String> getAccessString() {
+    public Output<String> getAccessString() {
         return this.accessString;
     }
 
@@ -32,9 +32,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationMode", required=true)
-      private final Input<UserAuthenticationModeArgs> authenticationMode;
+      private final Output<UserAuthenticationModeArgs> authenticationMode;
 
-    public Input<UserAuthenticationModeArgs> getAuthenticationMode() {
+    public Output<UserAuthenticationModeArgs> getAuthenticationMode() {
         return this.authenticationMode;
     }
 
@@ -43,10 +43,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public UserArgs(
-        Input<String> accessString,
-        Input<UserAuthenticationModeArgs> authenticationMode,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        Input<String> userName) {
+        Output<String> accessString,
+        Output<UserAuthenticationModeArgs> authenticationMode,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        Output<String> userName) {
         this.accessString = Objects.requireNonNull(accessString, "expected parameter 'accessString' to be non-null");
         this.authenticationMode = Objects.requireNonNull(authenticationMode, "expected parameter 'authenticationMode' to be non-null");
         this.tags = tags;
@@ -85,11 +85,11 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.accessString = Input.empty();
-        this.authenticationMode = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userName = Input.empty();
+        this.accessString = Output.empty();
+        this.authenticationMode = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accessString;
-        private Input<UserAuthenticationModeArgs> authenticationMode;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private Input<String> userName;
+        private Output<String> accessString;
+        private Output<UserAuthenticationModeArgs> authenticationMode;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder accessString(Input<String> accessString) {
+        public Builder accessString(Output<String> accessString) {
             this.accessString = Objects.requireNonNull(accessString);
             return this;
         }
 
         public Builder accessString(String accessString) {
-            this.accessString = Input.of(Objects.requireNonNull(accessString));
+            this.accessString = Output.of(Objects.requireNonNull(accessString));
             return this;
         }
 
-        public Builder authenticationMode(Input<UserAuthenticationModeArgs> authenticationMode) {
+        public Builder authenticationMode(Output<UserAuthenticationModeArgs> authenticationMode) {
             this.authenticationMode = Objects.requireNonNull(authenticationMode);
             return this;
         }
 
         public Builder authenticationMode(UserAuthenticationModeArgs authenticationMode) {
-            this.authenticationMode = Input.of(Objects.requireNonNull(authenticationMode));
+            this.authenticationMode = Output.of(Objects.requireNonNull(authenticationMode));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public UserArgs build() {

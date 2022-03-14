@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.FilterTrackSelectionArgs;
 import io.pulumi.azurenative.media.inputs.FirstQualityArgs;
 import io.pulumi.azurenative.media.inputs.PresentationTimeRangeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -34,10 +34,10 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterName")
-      private final @Nullable Input<String> filterName;
+      private final @Nullable Output<String> filterName;
 
-    public Input<String> getFilterName() {
-        return this.filterName == null ? Input.empty() : this.filterName;
+    public Output<String> getFilterName() {
+        return this.filterName == null ? Output.empty() : this.filterName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstQuality")
-      private final @Nullable Input<FirstQualityArgs> firstQuality;
+      private final @Nullable Output<FirstQualityArgs> firstQuality;
 
-    public Input<FirstQualityArgs> getFirstQuality() {
-        return this.firstQuality == null ? Input.empty() : this.firstQuality;
+    public Output<FirstQualityArgs> getFirstQuality() {
+        return this.firstQuality == null ? Output.empty() : this.firstQuality;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="presentationTimeRange")
-      private final @Nullable Input<PresentationTimeRangeArgs> presentationTimeRange;
+      private final @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
 
-    public Input<PresentationTimeRangeArgs> getPresentationTimeRange() {
-        return this.presentationTimeRange == null ? Input.empty() : this.presentationTimeRange;
+    public Output<PresentationTimeRangeArgs> getPresentationTimeRange() {
+        return this.presentationTimeRange == null ? Output.empty() : this.presentationTimeRange;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,19 +78,19 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracks")
-      private final @Nullable Input<List<FilterTrackSelectionArgs>> tracks;
+      private final @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
 
-    public Input<List<FilterTrackSelectionArgs>> getTracks() {
-        return this.tracks == null ? Input.empty() : this.tracks;
+    public Output<List<FilterTrackSelectionArgs>> getTracks() {
+        return this.tracks == null ? Output.empty() : this.tracks;
     }
 
     public AccountFilterArgs(
-        Input<String> accountName,
-        @Nullable Input<String> filterName,
-        @Nullable Input<FirstQualityArgs> firstQuality,
-        @Nullable Input<PresentationTimeRangeArgs> presentationTimeRange,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<FilterTrackSelectionArgs>> tracks) {
+        Output<String> accountName,
+        @Nullable Output<String> filterName,
+        @Nullable Output<FirstQualityArgs> firstQuality,
+        @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<FilterTrackSelectionArgs>> tracks) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.filterName = filterName;
         this.firstQuality = firstQuality;
@@ -100,12 +100,12 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountFilterArgs() {
-        this.accountName = Input.empty();
-        this.filterName = Input.empty();
-        this.firstQuality = Input.empty();
-        this.presentationTimeRange = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tracks = Input.empty();
+        this.accountName = Output.empty();
+        this.filterName = Output.empty();
+        this.firstQuality = Output.empty();
+        this.presentationTimeRange = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tracks = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> filterName;
-        private @Nullable Input<FirstQualityArgs> firstQuality;
-        private @Nullable Input<PresentationTimeRangeArgs> presentationTimeRange;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<FilterTrackSelectionArgs>> tracks;
+        private Output<String> accountName;
+        private @Nullable Output<String> filterName;
+        private @Nullable Output<FirstQualityArgs> firstQuality;
+        private @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tracks = defaults.tracks;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder filterName(@Nullable Input<String> filterName) {
+        public Builder filterName(@Nullable Output<String> filterName) {
             this.filterName = filterName;
             return this;
         }
 
         public Builder filterName(@Nullable String filterName) {
-            this.filterName = Input.ofNullable(filterName);
+            this.filterName = Output.ofNullable(filterName);
             return this;
         }
 
-        public Builder firstQuality(@Nullable Input<FirstQualityArgs> firstQuality) {
+        public Builder firstQuality(@Nullable Output<FirstQualityArgs> firstQuality) {
             this.firstQuality = firstQuality;
             return this;
         }
 
         public Builder firstQuality(@Nullable FirstQualityArgs firstQuality) {
-            this.firstQuality = Input.ofNullable(firstQuality);
+            this.firstQuality = Output.ofNullable(firstQuality);
             return this;
         }
 
-        public Builder presentationTimeRange(@Nullable Input<PresentationTimeRangeArgs> presentationTimeRange) {
+        public Builder presentationTimeRange(@Nullable Output<PresentationTimeRangeArgs> presentationTimeRange) {
             this.presentationTimeRange = presentationTimeRange;
             return this;
         }
 
         public Builder presentationTimeRange(@Nullable PresentationTimeRangeArgs presentationTimeRange) {
-            this.presentationTimeRange = Input.ofNullable(presentationTimeRange);
+            this.presentationTimeRange = Output.ofNullable(presentationTimeRange);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tracks(@Nullable Input<List<FilterTrackSelectionArgs>> tracks) {
+        public Builder tracks(@Nullable Output<List<FilterTrackSelectionArgs>> tracks) {
             this.tracks = tracks;
             return this;
         }
 
         public Builder tracks(@Nullable List<FilterTrackSelectionArgs> tracks) {
-            this.tracks = Input.ofNullable(tracks);
+            this.tracks = Output.ofNullable(tracks);
             return this;
         }
         public AccountFilterArgs build() {

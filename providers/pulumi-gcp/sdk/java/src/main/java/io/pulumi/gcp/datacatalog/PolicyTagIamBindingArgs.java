@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamBindingConditionArgs;
 import java.lang.String;
@@ -17,16 +17,16 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     public static final PolicyTagIamBindingArgs Empty = new PolicyTagIamBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<PolicyTagIamBindingConditionArgs> condition;
+      private final @Nullable Output<PolicyTagIamBindingConditionArgs> condition;
 
-    public Input<PolicyTagIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<PolicyTagIamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -35,9 +35,9 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTag", required=true)
-      private final Input<String> policyTag;
+      private final Output<String> policyTag;
 
-    public Input<String> getPolicyTag() {
+    public Output<String> getPolicyTag() {
         return this.policyTag;
     }
 
@@ -48,17 +48,17 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public PolicyTagIamBindingArgs(
-        @Nullable Input<PolicyTagIamBindingConditionArgs> condition,
-        Input<List<String>> members,
-        Input<String> policyTag,
-        Input<String> role) {
+        @Nullable Output<PolicyTagIamBindingConditionArgs> condition,
+        Output<List<String>> members,
+        Output<String> policyTag,
+        Output<String> role) {
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.policyTag = Objects.requireNonNull(policyTag, "expected parameter 'policyTag' to be non-null");
@@ -66,10 +66,10 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     private PolicyTagIamBindingArgs() {
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.policyTag = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.policyTag = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,10 +81,10 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyTagIamBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private Input<String> policyTag;
-        private Input<String> role;
+        private @Nullable Output<PolicyTagIamBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private Output<String> policyTag;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -98,43 +98,43 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<PolicyTagIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<PolicyTagIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable PolicyTagIamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder policyTag(Input<String> policyTag) {
+        public Builder policyTag(Output<String> policyTag) {
             this.policyTag = Objects.requireNonNull(policyTag);
             return this;
         }
 
         public Builder policyTag(String policyTag) {
-            this.policyTag = Input.of(Objects.requireNonNull(policyTag));
+            this.policyTag = Output.of(Objects.requireNonNull(policyTag));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public PolicyTagIamBindingArgs build() {

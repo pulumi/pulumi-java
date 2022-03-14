@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyTimestampArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyVariantArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,39 +25,39 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="quality")
-      private final @Nullable Input<String> quality;
+      private final @Nullable Output<String> quality;
 
-    public Input<String> getQuality() {
-        return this.quality == null ? Input.empty() : this.quality;
+    public Output<String> getQuality() {
+        return this.quality == null ? Output.empty() : this.quality;
     }
 
     @InputImport(name="timestamp")
-      private final @Nullable Input<DetectorModelAssetPropertyTimestampArgs> timestamp;
+      private final @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
 
-    public Input<DetectorModelAssetPropertyTimestampArgs> getTimestamp() {
-        return this.timestamp == null ? Input.empty() : this.timestamp;
+    public Output<DetectorModelAssetPropertyTimestampArgs> getTimestamp() {
+        return this.timestamp == null ? Output.empty() : this.timestamp;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<DetectorModelAssetPropertyVariantArgs> value;
+      private final Output<DetectorModelAssetPropertyVariantArgs> value;
 
-    public Input<DetectorModelAssetPropertyVariantArgs> getValue() {
+    public Output<DetectorModelAssetPropertyVariantArgs> getValue() {
         return this.value;
     }
 
     public DetectorModelAssetPropertyValueArgs(
-        @Nullable Input<String> quality,
-        @Nullable Input<DetectorModelAssetPropertyTimestampArgs> timestamp,
-        Input<DetectorModelAssetPropertyVariantArgs> value) {
+        @Nullable Output<String> quality,
+        @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp,
+        Output<DetectorModelAssetPropertyVariantArgs> value) {
         this.quality = quality;
         this.timestamp = timestamp;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private DetectorModelAssetPropertyValueArgs() {
-        this.quality = Input.empty();
-        this.timestamp = Input.empty();
-        this.value = Input.empty();
+        this.quality = Output.empty();
+        this.timestamp = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> quality;
-        private @Nullable Input<DetectorModelAssetPropertyTimestampArgs> timestamp;
-        private Input<DetectorModelAssetPropertyVariantArgs> value;
+        private @Nullable Output<String> quality;
+        private @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
+        private Output<DetectorModelAssetPropertyVariantArgs> value;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
     	      this.value = defaults.value;
         }
 
-        public Builder quality(@Nullable Input<String> quality) {
+        public Builder quality(@Nullable Output<String> quality) {
             this.quality = quality;
             return this;
         }
 
         public Builder quality(@Nullable String quality) {
-            this.quality = Input.ofNullable(quality);
+            this.quality = Output.ofNullable(quality);
             return this;
         }
 
-        public Builder timestamp(@Nullable Input<DetectorModelAssetPropertyTimestampArgs> timestamp) {
+        public Builder timestamp(@Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp) {
             this.timestamp = timestamp;
             return this;
         }
 
         public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestampArgs timestamp) {
-            this.timestamp = Input.ofNullable(timestamp);
+            this.timestamp = Output.ofNullable(timestamp);
             return this;
         }
 
-        public Builder value(Input<DetectorModelAssetPropertyVariantArgs> value) {
+        public Builder value(Output<DetectorModelAssetPropertyVariantArgs> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(DetectorModelAssetPropertyVariantArgs value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public DetectorModelAssetPropertyValueArgs build() {

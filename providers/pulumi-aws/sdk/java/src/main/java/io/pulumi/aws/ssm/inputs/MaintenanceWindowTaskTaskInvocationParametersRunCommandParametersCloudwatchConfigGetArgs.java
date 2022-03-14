@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="cloudwatchLogGroupName")
-      private final @Nullable Input<String> cloudwatchLogGroupName;
+      private final @Nullable Output<String> cloudwatchLogGroupName;
 
-    public Input<String> getCloudwatchLogGroupName() {
-        return this.cloudwatchLogGroupName == null ? Input.empty() : this.cloudwatchLogGroupName;
+    public Output<String> getCloudwatchLogGroupName() {
+        return this.cloudwatchLogGroupName == null ? Output.empty() : this.cloudwatchLogGroupName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="cloudwatchOutputEnabled")
-      private final @Nullable Input<Boolean> cloudwatchOutputEnabled;
+      private final @Nullable Output<Boolean> cloudwatchOutputEnabled;
 
-    public Input<Boolean> getCloudwatchOutputEnabled() {
-        return this.cloudwatchOutputEnabled == null ? Input.empty() : this.cloudwatchOutputEnabled;
+    public Output<Boolean> getCloudwatchOutputEnabled() {
+        return this.cloudwatchOutputEnabled == null ? Output.empty() : this.cloudwatchOutputEnabled;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs(
-        @Nullable Input<String> cloudwatchLogGroupName,
-        @Nullable Input<Boolean> cloudwatchOutputEnabled) {
+        @Nullable Output<String> cloudwatchLogGroupName,
+        @Nullable Output<Boolean> cloudwatchOutputEnabled) {
         this.cloudwatchLogGroupName = cloudwatchLogGroupName;
         this.cloudwatchOutputEnabled = cloudwatchOutputEnabled;
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs() {
-        this.cloudwatchLogGroupName = Input.empty();
-        this.cloudwatchOutputEnabled = Input.empty();
+        this.cloudwatchLogGroupName = Output.empty();
+        this.cloudwatchOutputEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudwatchLogGroupName;
-        private @Nullable Input<Boolean> cloudwatchOutputEnabled;
+        private @Nullable Output<String> cloudwatchLogGroupName;
+        private @Nullable Output<Boolean> cloudwatchOutputEnabled;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.cloudwatchOutputEnabled = defaults.cloudwatchOutputEnabled;
         }
 
-        public Builder cloudwatchLogGroupName(@Nullable Input<String> cloudwatchLogGroupName) {
+        public Builder cloudwatchLogGroupName(@Nullable Output<String> cloudwatchLogGroupName) {
             this.cloudwatchLogGroupName = cloudwatchLogGroupName;
             return this;
         }
 
         public Builder cloudwatchLogGroupName(@Nullable String cloudwatchLogGroupName) {
-            this.cloudwatchLogGroupName = Input.ofNullable(cloudwatchLogGroupName);
+            this.cloudwatchLogGroupName = Output.ofNullable(cloudwatchLogGroupName);
             return this;
         }
 
-        public Builder cloudwatchOutputEnabled(@Nullable Input<Boolean> cloudwatchOutputEnabled) {
+        public Builder cloudwatchOutputEnabled(@Nullable Output<Boolean> cloudwatchOutputEnabled) {
             this.cloudwatchOutputEnabled = cloudwatchOutputEnabled;
             return this;
         }
 
         public Builder cloudwatchOutputEnabled(@Nullable Boolean cloudwatchOutputEnabled) {
-            this.cloudwatchOutputEnabled = Input.ofNullable(cloudwatchOutputEnabled);
+            this.cloudwatchOutputEnabled = Output.ofNullable(cloudwatchOutputEnabled);
             return this;
         }
         public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcIpamOrganizationAdminAccountArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpamOrganizationAdminAccountState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -130,14 +129,14 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpamOrganizationAdminAccount(String name, VpcIpamOrganizationAdminAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpamOrganizationAdminAccount:VpcIpamOrganizationAdminAccount", name, args == null ? VpcIpamOrganizationAdminAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/vpcIpamOrganizationAdminAccount:VpcIpamOrganizationAdminAccount", name, args == null ? VpcIpamOrganizationAdminAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VpcIpamOrganizationAdminAccount(String name, Input<String> id, @Nullable VpcIpamOrganizationAdminAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VpcIpamOrganizationAdminAccount(String name, Output<String> id, @Nullable VpcIpamOrganizationAdminAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/vpcIpamOrganizationAdminAccount:VpcIpamOrganizationAdminAccount", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -153,7 +152,7 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcIpamOrganizationAdminAccount get(String name, Input<String> id, @Nullable VpcIpamOrganizationAdminAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VpcIpamOrganizationAdminAccount get(String name, Output<String> id, @Nullable VpcIpamOrganizationAdminAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpcIpamOrganizationAdminAccount(name, id, state, options);
     }
 }

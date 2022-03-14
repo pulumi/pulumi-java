@@ -6,7 +6,6 @@ package io.pulumi.aws.sns;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sns.TopicArgs;
 import io.pulumi.aws.sns.inputs.TopicState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -452,14 +451,14 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Topic(String name, @Nullable TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sns/topic:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sns/topic:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Topic(String name, Input<String> id, @Nullable TopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Topic(String name, Output<String> id, @Nullable TopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sns/topic:Topic", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -475,7 +474,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Topic get(String name, Input<String> id, @Nullable TopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Topic get(String name, Output<String> id, @Nullable TopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Topic(name, id, state, options);
     }
 }

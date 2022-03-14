@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sasToken", required=true)
-      private final Input<String> sasToken;
+      private final Output<String> sasToken;
 
-    public Input<String> getSasToken() {
+    public Output<String> getSasToken() {
         return this.sasToken;
     }
 
-    public AzureCredentialsArgs(Input<String> sasToken) {
+    public AzureCredentialsArgs(Output<String> sasToken) {
         this.sasToken = Objects.requireNonNull(sasToken, "expected parameter 'sasToken' to be non-null");
     }
 
     private AzureCredentialsArgs() {
-        this.sasToken = Input.empty();
+        this.sasToken = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> sasToken;
+        private Output<String> sasToken;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
     	      this.sasToken = defaults.sasToken;
         }
 
-        public Builder sasToken(Input<String> sasToken) {
+        public Builder sasToken(Output<String> sasToken) {
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
         }
 
         public Builder sasToken(String sasToken) {
-            this.sasToken = Input.of(Objects.requireNonNull(sasToken));
+            this.sasToken = Output.of(Objects.requireNonNull(sasToken));
             return this;
         }
         public AzureCredentialsArgs build() {

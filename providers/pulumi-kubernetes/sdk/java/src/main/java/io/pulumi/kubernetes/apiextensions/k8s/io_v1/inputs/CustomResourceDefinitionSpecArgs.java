@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceConversionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
@@ -28,10 +28,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conversion")
-      private final @Nullable Input<CustomResourceConversionArgs> conversion;
+      private final @Nullable Output<CustomResourceConversionArgs> conversion;
 
-    public Input<CustomResourceConversionArgs> getConversion() {
-        return this.conversion == null ? Input.empty() : this.conversion;
+    public Output<CustomResourceConversionArgs> getConversion() {
+        return this.conversion == null ? Output.empty() : this.conversion;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="group", required=true)
-      private final Input<String> group;
+      private final Output<String> group;
 
-    public Input<String> getGroup() {
+    public Output<String> getGroup() {
         return this.group;
     }
 
@@ -50,9 +50,9 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="names", required=true)
-      private final Input<CustomResourceDefinitionNamesArgs> names;
+      private final Output<CustomResourceDefinitionNamesArgs> names;
 
-    public Input<CustomResourceDefinitionNamesArgs> getNames() {
+    public Output<CustomResourceDefinitionNamesArgs> getNames() {
         return this.names;
     }
 
@@ -61,10 +61,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="preserveUnknownFields")
-      private final @Nullable Input<Boolean> preserveUnknownFields;
+      private final @Nullable Output<Boolean> preserveUnknownFields;
 
-    public Input<Boolean> getPreserveUnknownFields() {
-        return this.preserveUnknownFields == null ? Input.empty() : this.preserveUnknownFields;
+    public Output<Boolean> getPreserveUnknownFields() {
+        return this.preserveUnknownFields == null ? Output.empty() : this.preserveUnknownFields;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -83,19 +83,19 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="versions", required=true)
-      private final Input<List<CustomResourceDefinitionVersionArgs>> versions;
+      private final Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
-    public Input<List<CustomResourceDefinitionVersionArgs>> getVersions() {
+    public Output<List<CustomResourceDefinitionVersionArgs>> getVersions() {
         return this.versions;
     }
 
     public CustomResourceDefinitionSpecArgs(
-        @Nullable Input<CustomResourceConversionArgs> conversion,
-        Input<String> group,
-        Input<CustomResourceDefinitionNamesArgs> names,
-        @Nullable Input<Boolean> preserveUnknownFields,
-        Input<String> scope,
-        Input<List<CustomResourceDefinitionVersionArgs>> versions) {
+        @Nullable Output<CustomResourceConversionArgs> conversion,
+        Output<String> group,
+        Output<CustomResourceDefinitionNamesArgs> names,
+        @Nullable Output<Boolean> preserveUnknownFields,
+        Output<String> scope,
+        Output<List<CustomResourceDefinitionVersionArgs>> versions) {
         this.conversion = conversion;
         this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
         this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
@@ -105,12 +105,12 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     }
 
     private CustomResourceDefinitionSpecArgs() {
-        this.conversion = Input.empty();
-        this.group = Input.empty();
-        this.names = Input.empty();
-        this.preserveUnknownFields = Input.empty();
-        this.scope = Input.empty();
-        this.versions = Input.empty();
+        this.conversion = Output.empty();
+        this.group = Output.empty();
+        this.names = Output.empty();
+        this.preserveUnknownFields = Output.empty();
+        this.scope = Output.empty();
+        this.versions = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomResourceConversionArgs> conversion;
-        private Input<String> group;
-        private Input<CustomResourceDefinitionNamesArgs> names;
-        private @Nullable Input<Boolean> preserveUnknownFields;
-        private Input<String> scope;
-        private Input<List<CustomResourceDefinitionVersionArgs>> versions;
+        private @Nullable Output<CustomResourceConversionArgs> conversion;
+        private Output<String> group;
+        private Output<CustomResourceDefinitionNamesArgs> names;
+        private @Nullable Output<Boolean> preserveUnknownFields;
+        private Output<String> scope;
+        private Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     	      this.versions = defaults.versions;
         }
 
-        public Builder conversion(@Nullable Input<CustomResourceConversionArgs> conversion) {
+        public Builder conversion(@Nullable Output<CustomResourceConversionArgs> conversion) {
             this.conversion = conversion;
             return this;
         }
 
         public Builder conversion(@Nullable CustomResourceConversionArgs conversion) {
-            this.conversion = Input.ofNullable(conversion);
+            this.conversion = Output.ofNullable(conversion);
             return this;
         }
 
-        public Builder group(Input<String> group) {
+        public Builder group(Output<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
         public Builder group(String group) {
-            this.group = Input.of(Objects.requireNonNull(group));
+            this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
 
-        public Builder names(Input<CustomResourceDefinitionNamesArgs> names) {
+        public Builder names(Output<CustomResourceDefinitionNamesArgs> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
         public Builder names(CustomResourceDefinitionNamesArgs names) {
-            this.names = Input.of(Objects.requireNonNull(names));
+            this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
 
-        public Builder preserveUnknownFields(@Nullable Input<Boolean> preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Output<Boolean> preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
         public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
-            this.preserveUnknownFields = Input.ofNullable(preserveUnknownFields);
+            this.preserveUnknownFields = Output.ofNullable(preserveUnknownFields);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder versions(Input<List<CustomResourceDefinitionVersionArgs>> versions) {
+        public Builder versions(Output<List<CustomResourceDefinitionVersionArgs>> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
         public Builder versions(List<CustomResourceDefinitionVersionArgs> versions) {
-            this.versions = Input.of(Objects.requireNonNull(versions));
+            this.versions = Output.of(Objects.requireNonNull(versions));
             return this;
         }
         public CustomResourceDefinitionSpecArgs build() {

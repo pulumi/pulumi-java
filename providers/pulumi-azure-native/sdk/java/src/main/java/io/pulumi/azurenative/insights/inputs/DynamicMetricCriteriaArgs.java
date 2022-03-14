@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.enums.DynamicThresholdSensitivity;
 import io.pulumi.azurenative.insights.inputs.DynamicThresholdFailingPeriodsArgs;
 import io.pulumi.azurenative.insights.inputs.MetricDimensionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -31,9 +31,9 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alertSensitivity", required=true)
-      private final Input<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
+      private final Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
 
-    public Input<Either<String,DynamicThresholdSensitivity>> getAlertSensitivity() {
+    public Output<Either<String,DynamicThresholdSensitivity>> getAlertSensitivity() {
         return this.alertSensitivity;
     }
 
@@ -43,9 +43,9 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="criterionType", required=true)
-      private final Input<String> criterionType;
+      private final Output<String> criterionType;
 
-    public Input<String> getCriterionType() {
+    public Output<String> getCriterionType() {
         return this.criterionType;
     }
 
@@ -54,10 +54,10 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<List<MetricDimensionArgs>> dimensions;
+      private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
-    public Input<List<MetricDimensionArgs>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<List<MetricDimensionArgs>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="failingPeriods", required=true)
-      private final Input<DynamicThresholdFailingPeriodsArgs> failingPeriods;
+      private final Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
 
-    public Input<DynamicThresholdFailingPeriodsArgs> getFailingPeriods() {
+    public Output<DynamicThresholdFailingPeriodsArgs> getFailingPeriods() {
         return this.failingPeriods;
     }
 
@@ -76,10 +76,10 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ignoreDataBefore")
-      private final @Nullable Input<String> ignoreDataBefore;
+      private final @Nullable Output<String> ignoreDataBefore;
 
-    public Input<String> getIgnoreDataBefore() {
-        return this.ignoreDataBefore == null ? Input.empty() : this.ignoreDataBefore;
+    public Output<String> getIgnoreDataBefore() {
+        return this.ignoreDataBefore == null ? Output.empty() : this.ignoreDataBefore;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -98,10 +98,10 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metricNamespace")
-      private final @Nullable Input<String> metricNamespace;
+      private final @Nullable Output<String> metricNamespace;
 
-    public Input<String> getMetricNamespace() {
-        return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
+    public Output<String> getMetricNamespace() {
+        return this.metricNamespace == null ? Output.empty() : this.metricNamespace;
     }
 
     /**
@@ -109,9 +109,9 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -120,9 +120,9 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,DynamicThresholdOperator>> operator;
+      private final Output<Either<String,DynamicThresholdOperator>> operator;
 
-    public Input<Either<String,DynamicThresholdOperator>> getOperator() {
+    public Output<Either<String,DynamicThresholdOperator>> getOperator() {
         return this.operator;
     }
 
@@ -131,10 +131,10 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="skipMetricValidation")
-      private final @Nullable Input<Boolean> skipMetricValidation;
+      private final @Nullable Output<Boolean> skipMetricValidation;
 
-    public Input<Boolean> getSkipMetricValidation() {
-        return this.skipMetricValidation == null ? Input.empty() : this.skipMetricValidation;
+    public Output<Boolean> getSkipMetricValidation() {
+        return this.skipMetricValidation == null ? Output.empty() : this.skipMetricValidation;
     }
 
     /**
@@ -142,24 +142,24 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timeAggregation", required=true)
-      private final Input<Either<String,AggregationTypeEnum>> timeAggregation;
+      private final Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
-    public Input<Either<String,AggregationTypeEnum>> getTimeAggregation() {
+    public Output<Either<String,AggregationTypeEnum>> getTimeAggregation() {
         return this.timeAggregation;
     }
 
     public DynamicMetricCriteriaArgs(
-        Input<Either<String,DynamicThresholdSensitivity>> alertSensitivity,
-        Input<String> criterionType,
-        @Nullable Input<List<MetricDimensionArgs>> dimensions,
-        Input<DynamicThresholdFailingPeriodsArgs> failingPeriods,
-        @Nullable Input<String> ignoreDataBefore,
-        Input<String> metricName,
-        @Nullable Input<String> metricNamespace,
-        Input<String> name,
-        Input<Either<String,DynamicThresholdOperator>> operator,
-        @Nullable Input<Boolean> skipMetricValidation,
-        Input<Either<String,AggregationTypeEnum>> timeAggregation) {
+        Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity,
+        Output<String> criterionType,
+        @Nullable Output<List<MetricDimensionArgs>> dimensions,
+        Output<DynamicThresholdFailingPeriodsArgs> failingPeriods,
+        @Nullable Output<String> ignoreDataBefore,
+        Output<String> metricName,
+        @Nullable Output<String> metricNamespace,
+        Output<String> name,
+        Output<Either<String,DynamicThresholdOperator>> operator,
+        @Nullable Output<Boolean> skipMetricValidation,
+        Output<Either<String,AggregationTypeEnum>> timeAggregation) {
         this.alertSensitivity = Objects.requireNonNull(alertSensitivity, "expected parameter 'alertSensitivity' to be non-null");
         this.criterionType = Objects.requireNonNull(criterionType, "expected parameter 'criterionType' to be non-null");
         this.dimensions = dimensions;
@@ -174,17 +174,17 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     }
 
     private DynamicMetricCriteriaArgs() {
-        this.alertSensitivity = Input.empty();
-        this.criterionType = Input.empty();
-        this.dimensions = Input.empty();
-        this.failingPeriods = Input.empty();
-        this.ignoreDataBefore = Input.empty();
-        this.metricName = Input.empty();
-        this.metricNamespace = Input.empty();
-        this.name = Input.empty();
-        this.operator = Input.empty();
-        this.skipMetricValidation = Input.empty();
-        this.timeAggregation = Input.empty();
+        this.alertSensitivity = Output.empty();
+        this.criterionType = Output.empty();
+        this.dimensions = Output.empty();
+        this.failingPeriods = Output.empty();
+        this.ignoreDataBefore = Output.empty();
+        this.metricName = Output.empty();
+        this.metricNamespace = Output.empty();
+        this.name = Output.empty();
+        this.operator = Output.empty();
+        this.skipMetricValidation = Output.empty();
+        this.timeAggregation = Output.empty();
     }
 
     public static Builder builder() {
@@ -196,17 +196,17 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
-        private Input<String> criterionType;
-        private @Nullable Input<List<MetricDimensionArgs>> dimensions;
-        private Input<DynamicThresholdFailingPeriodsArgs> failingPeriods;
-        private @Nullable Input<String> ignoreDataBefore;
-        private Input<String> metricName;
-        private @Nullable Input<String> metricNamespace;
-        private Input<String> name;
-        private Input<Either<String,DynamicThresholdOperator>> operator;
-        private @Nullable Input<Boolean> skipMetricValidation;
-        private Input<Either<String,AggregationTypeEnum>> timeAggregation;
+        private Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
+        private Output<String> criterionType;
+        private @Nullable Output<List<MetricDimensionArgs>> dimensions;
+        private Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
+        private @Nullable Output<String> ignoreDataBefore;
+        private Output<String> metricName;
+        private @Nullable Output<String> metricNamespace;
+        private Output<String> name;
+        private Output<Either<String,DynamicThresholdOperator>> operator;
+        private @Nullable Output<Boolean> skipMetricValidation;
+        private Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
         public Builder() {
     	      // Empty
@@ -227,113 +227,113 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     	      this.timeAggregation = defaults.timeAggregation;
         }
 
-        public Builder alertSensitivity(Input<Either<String,DynamicThresholdSensitivity>> alertSensitivity) {
+        public Builder alertSensitivity(Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity) {
             this.alertSensitivity = Objects.requireNonNull(alertSensitivity);
             return this;
         }
 
         public Builder alertSensitivity(Either<String,DynamicThresholdSensitivity> alertSensitivity) {
-            this.alertSensitivity = Input.of(Objects.requireNonNull(alertSensitivity));
+            this.alertSensitivity = Output.of(Objects.requireNonNull(alertSensitivity));
             return this;
         }
 
-        public Builder criterionType(Input<String> criterionType) {
+        public Builder criterionType(Output<String> criterionType) {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
 
         public Builder criterionType(String criterionType) {
-            this.criterionType = Input.of(Objects.requireNonNull(criterionType));
+            this.criterionType = Output.of(Objects.requireNonNull(criterionType));
             return this;
         }
 
-        public Builder dimensions(@Nullable Input<List<MetricDimensionArgs>> dimensions) {
+        public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder failingPeriods(Input<DynamicThresholdFailingPeriodsArgs> failingPeriods) {
+        public Builder failingPeriods(Output<DynamicThresholdFailingPeriodsArgs> failingPeriods) {
             this.failingPeriods = Objects.requireNonNull(failingPeriods);
             return this;
         }
 
         public Builder failingPeriods(DynamicThresholdFailingPeriodsArgs failingPeriods) {
-            this.failingPeriods = Input.of(Objects.requireNonNull(failingPeriods));
+            this.failingPeriods = Output.of(Objects.requireNonNull(failingPeriods));
             return this;
         }
 
-        public Builder ignoreDataBefore(@Nullable Input<String> ignoreDataBefore) {
+        public Builder ignoreDataBefore(@Nullable Output<String> ignoreDataBefore) {
             this.ignoreDataBefore = ignoreDataBefore;
             return this;
         }
 
         public Builder ignoreDataBefore(@Nullable String ignoreDataBefore) {
-            this.ignoreDataBefore = Input.ofNullable(ignoreDataBefore);
+            this.ignoreDataBefore = Output.ofNullable(ignoreDataBefore);
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Input.ofNullable(metricNamespace);
+            this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder operator(Input<Either<String,DynamicThresholdOperator>> operator) {
+        public Builder operator(Output<Either<String,DynamicThresholdOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,DynamicThresholdOperator> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder skipMetricValidation(@Nullable Input<Boolean> skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
-            this.skipMetricValidation = Input.ofNullable(skipMetricValidation);
+            this.skipMetricValidation = Output.ofNullable(skipMetricValidation);
             return this;
         }
 
-        public Builder timeAggregation(Input<Either<String,AggregationTypeEnum>> timeAggregation) {
+        public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
 
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
-            this.timeAggregation = Input.of(Objects.requireNonNull(timeAggregation));
+            this.timeAggregation = Output.of(Objects.requireNonNull(timeAggregation));
             return this;
         }
         public DynamicMetricCriteriaArgs build() {

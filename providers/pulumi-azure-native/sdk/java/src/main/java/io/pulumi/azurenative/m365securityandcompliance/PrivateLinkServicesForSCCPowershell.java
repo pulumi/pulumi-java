@@ -9,7 +9,6 @@ import io.pulumi.azurenative.m365securityandcompliance.outputs.ServicesPropertie
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -200,18 +199,18 @@ public class PrivateLinkServicesForSCCPowershell extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateLinkServicesForSCCPowershell(String name, PrivateLinkServicesForSCCPowershellArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:m365securityandcompliance:privateLinkServicesForSCCPowershell", name, args == null ? PrivateLinkServicesForSCCPowershellArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:m365securityandcompliance:privateLinkServicesForSCCPowershell", name, args == null ? PrivateLinkServicesForSCCPowershellArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateLinkServicesForSCCPowershell(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateLinkServicesForSCCPowershell(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:m365securityandcompliance:privateLinkServicesForSCCPowershell", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:m365securityandcompliance/v20210325preview:privateLinkServicesForSCCPowershell").build())
+                Output.of(Alias.builder().setType("azure-native:m365securityandcompliance/v20210325preview:privateLinkServicesForSCCPowershell").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -225,7 +224,7 @@ public class PrivateLinkServicesForSCCPowershell extends io.pulumi.resources.Cus
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateLinkServicesForSCCPowershell get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateLinkServicesForSCCPowershell get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateLinkServicesForSCCPowershell(name, id, options);
     }
 }

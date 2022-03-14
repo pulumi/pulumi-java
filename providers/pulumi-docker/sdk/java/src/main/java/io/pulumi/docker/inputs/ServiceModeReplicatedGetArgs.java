@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ServiceModeReplicatedGetArgs extends io.pulumi.resources.Reso
     public static final ServiceModeReplicatedGetArgs Empty = new ServiceModeReplicatedGetArgs();
 
     @InputImport(name="replicas")
-      private final @Nullable Input<Integer> replicas;
+      private final @Nullable Output<Integer> replicas;
 
-    public Input<Integer> getReplicas() {
-        return this.replicas == null ? Input.empty() : this.replicas;
+    public Output<Integer> getReplicas() {
+        return this.replicas == null ? Output.empty() : this.replicas;
     }
 
-    public ServiceModeReplicatedGetArgs(@Nullable Input<Integer> replicas) {
+    public ServiceModeReplicatedGetArgs(@Nullable Output<Integer> replicas) {
         this.replicas = replicas;
     }
 
     private ServiceModeReplicatedGetArgs() {
-        this.replicas = Input.empty();
+        this.replicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ServiceModeReplicatedGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> replicas;
+        private @Nullable Output<Integer> replicas;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ServiceModeReplicatedGetArgs extends io.pulumi.resources.Reso
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder replicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Input.ofNullable(replicas);
+            this.replicas = Output.ofNullable(replicas);
             return this;
         }
         public ServiceModeReplicatedGetArgs build() {

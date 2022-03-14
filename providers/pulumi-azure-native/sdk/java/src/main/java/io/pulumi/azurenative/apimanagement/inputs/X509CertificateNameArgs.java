@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="issuerCertificateThumbprint")
-      private final @Nullable Input<String> issuerCertificateThumbprint;
+      private final @Nullable Output<String> issuerCertificateThumbprint;
 
-    public Input<String> getIssuerCertificateThumbprint() {
-        return this.issuerCertificateThumbprint == null ? Input.empty() : this.issuerCertificateThumbprint;
+    public Output<String> getIssuerCertificateThumbprint() {
+        return this.issuerCertificateThumbprint == null ? Output.empty() : this.issuerCertificateThumbprint;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public X509CertificateNameArgs(
-        @Nullable Input<String> issuerCertificateThumbprint,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> issuerCertificateThumbprint,
+        @Nullable Output<String> name) {
         this.issuerCertificateThumbprint = issuerCertificateThumbprint;
         this.name = name;
     }
 
     private X509CertificateNameArgs() {
-        this.issuerCertificateThumbprint = Input.empty();
-        this.name = Input.empty();
+        this.issuerCertificateThumbprint = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> issuerCertificateThumbprint;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> issuerCertificateThumbprint;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder issuerCertificateThumbprint(@Nullable Input<String> issuerCertificateThumbprint) {
+        public Builder issuerCertificateThumbprint(@Nullable Output<String> issuerCertificateThumbprint) {
             this.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
 
         public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
-            this.issuerCertificateThumbprint = Input.ofNullable(issuerCertificateThumbprint);
+            this.issuerCertificateThumbprint = Output.ofNullable(issuerCertificateThumbprint);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public X509CertificateNameArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     public static final BucketEncryptionArgs Empty = new BucketEncryptionArgs();
 
     @InputImport(name="defaultKmsKeyName", required=true)
-      private final Input<String> defaultKmsKeyName;
+      private final Output<String> defaultKmsKeyName;
 
-    public Input<String> getDefaultKmsKeyName() {
+    public Output<String> getDefaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
 
-    public BucketEncryptionArgs(Input<String> defaultKmsKeyName) {
+    public BucketEncryptionArgs(Output<String> defaultKmsKeyName) {
         this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName, "expected parameter 'defaultKmsKeyName' to be non-null");
     }
 
     private BucketEncryptionArgs() {
-        this.defaultKmsKeyName = Input.empty();
+        this.defaultKmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> defaultKmsKeyName;
+        private Output<String> defaultKmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
         }
 
-        public Builder defaultKmsKeyName(Input<String> defaultKmsKeyName) {
+        public Builder defaultKmsKeyName(Output<String> defaultKmsKeyName) {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
 
         public Builder defaultKmsKeyName(String defaultKmsKeyName) {
-            this.defaultKmsKeyName = Input.of(Objects.requireNonNull(defaultKmsKeyName));
+            this.defaultKmsKeyName = Output.of(Objects.requireNonNull(defaultKmsKeyName));
             return this;
         }
         public BucketEncryptionArgs build() {

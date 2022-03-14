@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.aws.synthetics.inputs.CanaryArtifactConfigS3EncryptionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class CanaryArtifactConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="s3Encryption")
-      private final @Nullable Input<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption;
+      private final @Nullable Output<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption;
 
-    public Input<CanaryArtifactConfigS3EncryptionGetArgs> getS3Encryption() {
-        return this.s3Encryption == null ? Input.empty() : this.s3Encryption;
+    public Output<CanaryArtifactConfigS3EncryptionGetArgs> getS3Encryption() {
+        return this.s3Encryption == null ? Output.empty() : this.s3Encryption;
     }
 
-    public CanaryArtifactConfigGetArgs(@Nullable Input<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption) {
+    public CanaryArtifactConfigGetArgs(@Nullable Output<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption) {
         this.s3Encryption = s3Encryption;
     }
 
     private CanaryArtifactConfigGetArgs() {
-        this.s3Encryption = Input.empty();
+        this.s3Encryption = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CanaryArtifactConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption;
+        private @Nullable Output<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CanaryArtifactConfigGetArgs extends io.pulumi.resources.Resou
     	      this.s3Encryption = defaults.s3Encryption;
         }
 
-        public Builder s3Encryption(@Nullable Input<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption) {
+        public Builder s3Encryption(@Nullable Output<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption) {
             this.s3Encryption = s3Encryption;
             return this;
         }
 
         public Builder s3Encryption(@Nullable CanaryArtifactConfigS3EncryptionGetArgs s3Encryption) {
-            this.s3Encryption = Input.ofNullable(s3Encryption);
+            this.s3Encryption = Output.ofNullable(s3Encryption);
             return this;
         }
         public CanaryArtifactConfigGetArgs build() {

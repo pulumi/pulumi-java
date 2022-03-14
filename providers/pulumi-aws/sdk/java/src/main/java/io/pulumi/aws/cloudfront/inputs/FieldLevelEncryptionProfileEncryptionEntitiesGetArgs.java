@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
     public static final FieldLevelEncryptionProfileEncryptionEntitiesGetArgs Empty = new FieldLevelEncryptionProfileEncryptionEntitiesGetArgs();
 
     @InputImport(name="items")
-      private final @Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
+      private final @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
 
-    public Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(@Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
+    public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(@Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
         this.items = items;
     }
 
     private FieldLevelEncryptionProfileEncryptionEntitiesGetArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
+        private @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
+        public Builder items(@Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs build() {

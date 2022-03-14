@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<String> state;
+      private final Output<String> state;
 
-    public Input<String> getState() {
+    public Output<String> getState() {
         return this.state;
     }
 
     public ClusterDatabaseEncryptionGetArgs(
-        @Nullable Input<String> keyName,
-        Input<String> state) {
+        @Nullable Output<String> keyName,
+        Output<String> state) {
         this.keyName = keyName;
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
     }
 
     private ClusterDatabaseEncryptionGetArgs() {
-        this.keyName = Input.empty();
-        this.state = Input.empty();
+        this.keyName = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyName;
-        private Input<String> state;
+        private @Nullable Output<String> keyName;
+        private Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
     	      this.state = defaults.state;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder state(Input<String> state) {
+        public Builder state(Output<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(String state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
         public ClusterDatabaseEncryptionGetArgs build() {

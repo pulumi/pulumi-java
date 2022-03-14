@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-      private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Output<String> forceUpdateTag;
 
-    public Input<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
+    public Output<String> getForceUpdateTag() {
+        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineRunName")
-      private final @Nullable Input<String> pipelineRunName;
+      private final @Nullable Output<String> pipelineRunName;
 
-    public Input<String> getPipelineRunName() {
-        return this.pipelineRunName == null ? Input.empty() : this.pipelineRunName;
+    public Output<String> getPipelineRunName() {
+        return this.pipelineRunName == null ? Output.empty() : this.pipelineRunName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -53,10 +53,10 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="request")
-      private final @Nullable Input<PipelineRunRequestArgs> request;
+      private final @Nullable Output<PipelineRunRequestArgs> request;
 
-    public Input<PipelineRunRequestArgs> getRequest() {
-        return this.request == null ? Input.empty() : this.request;
+    public Output<PipelineRunRequestArgs> getRequest() {
+        return this.request == null ? Output.empty() : this.request;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public PipelineRunArgs(
-        @Nullable Input<String> forceUpdateTag,
-        @Nullable Input<String> pipelineRunName,
-        Input<String> registryName,
-        @Nullable Input<PipelineRunRequestArgs> request,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> forceUpdateTag,
+        @Nullable Output<String> pipelineRunName,
+        Output<String> registryName,
+        @Nullable Output<PipelineRunRequestArgs> request,
+        Output<String> resourceGroupName) {
         this.forceUpdateTag = forceUpdateTag;
         this.pipelineRunName = pipelineRunName;
         this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
@@ -84,11 +84,11 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineRunArgs() {
-        this.forceUpdateTag = Input.empty();
-        this.pipelineRunName = Input.empty();
-        this.registryName = Input.empty();
-        this.request = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.forceUpdateTag = Output.empty();
+        this.pipelineRunName = Output.empty();
+        this.registryName = Output.empty();
+        this.request = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> forceUpdateTag;
-        private @Nullable Input<String> pipelineRunName;
-        private Input<String> registryName;
-        private @Nullable Input<PipelineRunRequestArgs> request;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> forceUpdateTag;
+        private @Nullable Output<String> pipelineRunName;
+        private Output<String> registryName;
+        private @Nullable Output<PipelineRunRequestArgs> request;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder pipelineRunName(@Nullable Input<String> pipelineRunName) {
+        public Builder pipelineRunName(@Nullable Output<String> pipelineRunName) {
             this.pipelineRunName = pipelineRunName;
             return this;
         }
 
         public Builder pipelineRunName(@Nullable String pipelineRunName) {
-            this.pipelineRunName = Input.ofNullable(pipelineRunName);
+            this.pipelineRunName = Output.ofNullable(pipelineRunName);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder request(@Nullable Input<PipelineRunRequestArgs> request) {
+        public Builder request(@Nullable Output<PipelineRunRequestArgs> request) {
             this.request = request;
             return this;
         }
 
         public Builder request(@Nullable PipelineRunRequestArgs request) {
-            this.request = Input.ofNullable(request);
+            this.request = Output.ofNullable(request);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public PipelineRunArgs build() {

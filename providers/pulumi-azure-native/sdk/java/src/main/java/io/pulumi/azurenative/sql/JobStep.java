@@ -9,7 +9,6 @@ import io.pulumi.azurenative.sql.outputs.JobStepActionResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepExecutionOptionsResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepOutputResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -186,24 +185,24 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobStep(String name, JobStepArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:JobStep", name, args == null ? JobStepArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:JobStep", name, args == null ? JobStepArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private JobStep(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private JobStep(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:JobStep", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20170301preview:JobStep").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:JobStep").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:JobStep").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:JobStep").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:JobStep").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:JobStep").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:JobStep").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20170301preview:JobStep").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:JobStep").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:JobStep").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:JobStep").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:JobStep").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:JobStep").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:JobStep").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -217,7 +216,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static JobStep get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static JobStep get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobStep(name, id, options);
     }
 }

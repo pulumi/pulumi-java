@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.location.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
     public static final MapConfigurationArgs Empty = new MapConfigurationArgs();
 
     @InputImport(name="style", required=true)
-      private final Input<String> style;
+      private final Output<String> style;
 
-    public Input<String> getStyle() {
+    public Output<String> getStyle() {
         return this.style;
     }
 
-    public MapConfigurationArgs(Input<String> style) {
+    public MapConfigurationArgs(Output<String> style) {
         this.style = Objects.requireNonNull(style, "expected parameter 'style' to be non-null");
     }
 
     private MapConfigurationArgs() {
-        this.style = Input.empty();
+        this.style = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> style;
+        private Output<String> style;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.style = defaults.style;
         }
 
-        public Builder style(Input<String> style) {
+        public Builder style(Output<String> style) {
             this.style = Objects.requireNonNull(style);
             return this;
         }
 
         public Builder style(String style) {
-            this.style = Input.of(Objects.requireNonNull(style));
+            this.style = Output.of(Objects.requireNonNull(style));
             return this;
         }
         public MapConfigurationArgs build() {

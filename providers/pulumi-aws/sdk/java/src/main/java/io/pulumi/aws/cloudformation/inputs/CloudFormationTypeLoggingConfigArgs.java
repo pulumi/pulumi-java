@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="logGroupName", required=true)
-      private final Input<String> logGroupName;
+      private final Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
+    public Output<String> getLogGroupName() {
         return this.logGroupName;
     }
 
@@ -29,22 +29,22 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="logRoleArn", required=true)
-      private final Input<String> logRoleArn;
+      private final Output<String> logRoleArn;
 
-    public Input<String> getLogRoleArn() {
+    public Output<String> getLogRoleArn() {
         return this.logRoleArn;
     }
 
     public CloudFormationTypeLoggingConfigArgs(
-        Input<String> logGroupName,
-        Input<String> logRoleArn) {
+        Output<String> logGroupName,
+        Output<String> logRoleArn) {
         this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
         this.logRoleArn = Objects.requireNonNull(logRoleArn, "expected parameter 'logRoleArn' to be non-null");
     }
 
     private CloudFormationTypeLoggingConfigArgs() {
-        this.logGroupName = Input.empty();
-        this.logRoleArn = Input.empty();
+        this.logGroupName = Output.empty();
+        this.logRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> logGroupName;
-        private Input<String> logRoleArn;
+        private Output<String> logGroupName;
+        private Output<String> logRoleArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
     	      this.logRoleArn = defaults.logRoleArn;
         }
 
-        public Builder logGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Output<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
+            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
 
-        public Builder logRoleArn(Input<String> logRoleArn) {
+        public Builder logRoleArn(Output<String> logRoleArn) {
             this.logRoleArn = Objects.requireNonNull(logRoleArn);
             return this;
         }
 
         public Builder logRoleArn(String logRoleArn) {
-            this.logRoleArn = Input.of(Objects.requireNonNull(logRoleArn));
+            this.logRoleArn = Output.of(Objects.requireNonNull(logRoleArn));
             return this;
         }
         public CloudFormationTypeLoggingConfigArgs build() {

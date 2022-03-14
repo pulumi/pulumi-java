@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.AsyncOptionsArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.InputMappingArgs;
@@ -27,10 +27,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asyncOptions")
-      private final @Nullable Input<List<AsyncOptionsArgs>> asyncOptions;
+      private final @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
 
-    public Input<List<AsyncOptionsArgs>> getAsyncOptions() {
-        return this.asyncOptions == null ? Input.empty() : this.asyncOptions;
+    public Output<List<AsyncOptionsArgs>> getAsyncOptions() {
+        return this.asyncOptions == null ? Output.empty() : this.asyncOptions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputMappings")
-      private final @Nullable Input<List<InputMappingArgs>> inputMappings;
+      private final @Nullable Output<List<InputMappingArgs>> inputMappings;
 
-    public Input<List<InputMappingArgs>> getInputMappings() {
-        return this.inputMappings == null ? Input.empty() : this.inputMappings;
+    public Output<List<InputMappingArgs>> getInputMappings() {
+        return this.inputMappings == null ? Output.empty() : this.inputMappings;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameProperty")
-      private final @Nullable Input<String> nameProperty;
+      private final @Nullable Output<String> nameProperty;
 
-    public Input<String> getNameProperty() {
-        return this.nameProperty == null ? Input.empty() : this.nameProperty;
+    public Output<String> getNameProperty() {
+        return this.nameProperty == null ? Output.empty() : this.nameProperty;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationOptions")
-      private final @Nullable Input<ValidationOptionsArgs> validationOptions;
+      private final @Nullable Output<ValidationOptionsArgs> validationOptions;
 
-    public Input<ValidationOptionsArgs> getValidationOptions() {
-        return this.validationOptions == null ? Input.empty() : this.validationOptions;
+    public Output<ValidationOptionsArgs> getValidationOptions() {
+        return this.validationOptions == null ? Output.empty() : this.validationOptions;
     }
 
     public OptionsArgs(
-        @Nullable Input<List<AsyncOptionsArgs>> asyncOptions,
-        @Nullable Input<List<InputMappingArgs>> inputMappings,
-        @Nullable Input<String> nameProperty,
-        @Nullable Input<ValidationOptionsArgs> validationOptions) {
+        @Nullable Output<List<AsyncOptionsArgs>> asyncOptions,
+        @Nullable Output<List<InputMappingArgs>> inputMappings,
+        @Nullable Output<String> nameProperty,
+        @Nullable Output<ValidationOptionsArgs> validationOptions) {
         this.asyncOptions = asyncOptions;
         this.inputMappings = inputMappings;
         this.nameProperty = nameProperty;
@@ -78,10 +78,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OptionsArgs() {
-        this.asyncOptions = Input.empty();
-        this.inputMappings = Input.empty();
-        this.nameProperty = Input.empty();
-        this.validationOptions = Input.empty();
+        this.asyncOptions = Output.empty();
+        this.inputMappings = Output.empty();
+        this.nameProperty = Output.empty();
+        this.validationOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AsyncOptionsArgs>> asyncOptions;
-        private @Nullable Input<List<InputMappingArgs>> inputMappings;
-        private @Nullable Input<String> nameProperty;
-        private @Nullable Input<ValidationOptionsArgs> validationOptions;
+        private @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
+        private @Nullable Output<List<InputMappingArgs>> inputMappings;
+        private @Nullable Output<String> nameProperty;
+        private @Nullable Output<ValidationOptionsArgs> validationOptions;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder asyncOptions(@Nullable Input<List<AsyncOptionsArgs>> asyncOptions) {
+        public Builder asyncOptions(@Nullable Output<List<AsyncOptionsArgs>> asyncOptions) {
             this.asyncOptions = asyncOptions;
             return this;
         }
 
         public Builder asyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
-            this.asyncOptions = Input.ofNullable(asyncOptions);
+            this.asyncOptions = Output.ofNullable(asyncOptions);
             return this;
         }
 
-        public Builder inputMappings(@Nullable Input<List<InputMappingArgs>> inputMappings) {
+        public Builder inputMappings(@Nullable Output<List<InputMappingArgs>> inputMappings) {
             this.inputMappings = inputMappings;
             return this;
         }
 
         public Builder inputMappings(@Nullable List<InputMappingArgs> inputMappings) {
-            this.inputMappings = Input.ofNullable(inputMappings);
+            this.inputMappings = Output.ofNullable(inputMappings);
             return this;
         }
 
-        public Builder nameProperty(@Nullable Input<String> nameProperty) {
+        public Builder nameProperty(@Nullable Output<String> nameProperty) {
             this.nameProperty = nameProperty;
             return this;
         }
 
         public Builder nameProperty(@Nullable String nameProperty) {
-            this.nameProperty = Input.ofNullable(nameProperty);
+            this.nameProperty = Output.ofNullable(nameProperty);
             return this;
         }
 
-        public Builder validationOptions(@Nullable Input<ValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Output<ValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
         public Builder validationOptions(@Nullable ValidationOptionsArgs validationOptions) {
-            this.validationOptions = Input.ofNullable(validationOptions);
+            this.validationOptions = Output.ofNullable(validationOptions);
             return this;
         }
         public OptionsArgs build() {

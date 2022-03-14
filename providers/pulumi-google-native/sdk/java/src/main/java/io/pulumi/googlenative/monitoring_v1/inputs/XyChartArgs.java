@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AxisArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.ChartOptionsArgs;
@@ -28,10 +28,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chartOptions")
-      private final @Nullable Input<ChartOptionsArgs> chartOptions;
+      private final @Nullable Output<ChartOptionsArgs> chartOptions;
 
-    public Input<ChartOptionsArgs> getChartOptions() {
-        return this.chartOptions == null ? Input.empty() : this.chartOptions;
+    public Output<ChartOptionsArgs> getChartOptions() {
+        return this.chartOptions == null ? Output.empty() : this.chartOptions;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSets", required=true)
-      private final Input<List<DataSetArgs>> dataSets;
+      private final Output<List<DataSetArgs>> dataSets;
 
-    public Input<List<DataSetArgs>> getDataSets() {
+    public Output<List<DataSetArgs>> getDataSets() {
         return this.dataSets;
     }
 
@@ -50,10 +50,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholds")
-      private final @Nullable Input<List<ThresholdArgs>> thresholds;
+      private final @Nullable Output<List<ThresholdArgs>> thresholds;
 
-    public Input<List<ThresholdArgs>> getThresholds() {
-        return this.thresholds == null ? Input.empty() : this.thresholds;
+    public Output<List<ThresholdArgs>> getThresholds() {
+        return this.thresholds == null ? Output.empty() : this.thresholds;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeshiftDuration")
-      private final @Nullable Input<String> timeshiftDuration;
+      private final @Nullable Output<String> timeshiftDuration;
 
-    public Input<String> getTimeshiftDuration() {
-        return this.timeshiftDuration == null ? Input.empty() : this.timeshiftDuration;
+    public Output<String> getTimeshiftDuration() {
+        return this.timeshiftDuration == null ? Output.empty() : this.timeshiftDuration;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xAxis")
-      private final @Nullable Input<AxisArgs> xAxis;
+      private final @Nullable Output<AxisArgs> xAxis;
 
-    public Input<AxisArgs> getXAxis() {
-        return this.xAxis == null ? Input.empty() : this.xAxis;
+    public Output<AxisArgs> getXAxis() {
+        return this.xAxis == null ? Output.empty() : this.xAxis;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="y2Axis")
-      private final @Nullable Input<AxisArgs> y2Axis;
+      private final @Nullable Output<AxisArgs> y2Axis;
 
-    public Input<AxisArgs> getY2Axis() {
-        return this.y2Axis == null ? Input.empty() : this.y2Axis;
+    public Output<AxisArgs> getY2Axis() {
+        return this.y2Axis == null ? Output.empty() : this.y2Axis;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yAxis")
-      private final @Nullable Input<AxisArgs> yAxis;
+      private final @Nullable Output<AxisArgs> yAxis;
 
-    public Input<AxisArgs> getYAxis() {
-        return this.yAxis == null ? Input.empty() : this.yAxis;
+    public Output<AxisArgs> getYAxis() {
+        return this.yAxis == null ? Output.empty() : this.yAxis;
     }
 
     public XyChartArgs(
-        @Nullable Input<ChartOptionsArgs> chartOptions,
-        Input<List<DataSetArgs>> dataSets,
-        @Nullable Input<List<ThresholdArgs>> thresholds,
-        @Nullable Input<String> timeshiftDuration,
-        @Nullable Input<AxisArgs> xAxis,
-        @Nullable Input<AxisArgs> y2Axis,
-        @Nullable Input<AxisArgs> yAxis) {
+        @Nullable Output<ChartOptionsArgs> chartOptions,
+        Output<List<DataSetArgs>> dataSets,
+        @Nullable Output<List<ThresholdArgs>> thresholds,
+        @Nullable Output<String> timeshiftDuration,
+        @Nullable Output<AxisArgs> xAxis,
+        @Nullable Output<AxisArgs> y2Axis,
+        @Nullable Output<AxisArgs> yAxis) {
         this.chartOptions = chartOptions;
         this.dataSets = Objects.requireNonNull(dataSets, "expected parameter 'dataSets' to be non-null");
         this.thresholds = thresholds;
@@ -118,13 +118,13 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private XyChartArgs() {
-        this.chartOptions = Input.empty();
-        this.dataSets = Input.empty();
-        this.thresholds = Input.empty();
-        this.timeshiftDuration = Input.empty();
-        this.xAxis = Input.empty();
-        this.y2Axis = Input.empty();
-        this.yAxis = Input.empty();
+        this.chartOptions = Output.empty();
+        this.dataSets = Output.empty();
+        this.thresholds = Output.empty();
+        this.timeshiftDuration = Output.empty();
+        this.xAxis = Output.empty();
+        this.y2Axis = Output.empty();
+        this.yAxis = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ChartOptionsArgs> chartOptions;
-        private Input<List<DataSetArgs>> dataSets;
-        private @Nullable Input<List<ThresholdArgs>> thresholds;
-        private @Nullable Input<String> timeshiftDuration;
-        private @Nullable Input<AxisArgs> xAxis;
-        private @Nullable Input<AxisArgs> y2Axis;
-        private @Nullable Input<AxisArgs> yAxis;
+        private @Nullable Output<ChartOptionsArgs> chartOptions;
+        private Output<List<DataSetArgs>> dataSets;
+        private @Nullable Output<List<ThresholdArgs>> thresholds;
+        private @Nullable Output<String> timeshiftDuration;
+        private @Nullable Output<AxisArgs> xAxis;
+        private @Nullable Output<AxisArgs> y2Axis;
+        private @Nullable Output<AxisArgs> yAxis;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     	      this.yAxis = defaults.yAxis;
         }
 
-        public Builder chartOptions(@Nullable Input<ChartOptionsArgs> chartOptions) {
+        public Builder chartOptions(@Nullable Output<ChartOptionsArgs> chartOptions) {
             this.chartOptions = chartOptions;
             return this;
         }
 
         public Builder chartOptions(@Nullable ChartOptionsArgs chartOptions) {
-            this.chartOptions = Input.ofNullable(chartOptions);
+            this.chartOptions = Output.ofNullable(chartOptions);
             return this;
         }
 
-        public Builder dataSets(Input<List<DataSetArgs>> dataSets) {
+        public Builder dataSets(Output<List<DataSetArgs>> dataSets) {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
 
         public Builder dataSets(List<DataSetArgs> dataSets) {
-            this.dataSets = Input.of(Objects.requireNonNull(dataSets));
+            this.dataSets = Output.of(Objects.requireNonNull(dataSets));
             return this;
         }
 
-        public Builder thresholds(@Nullable Input<List<ThresholdArgs>> thresholds) {
+        public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
             this.thresholds = thresholds;
             return this;
         }
 
         public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
-            this.thresholds = Input.ofNullable(thresholds);
+            this.thresholds = Output.ofNullable(thresholds);
             return this;
         }
 
-        public Builder timeshiftDuration(@Nullable Input<String> timeshiftDuration) {
+        public Builder timeshiftDuration(@Nullable Output<String> timeshiftDuration) {
             this.timeshiftDuration = timeshiftDuration;
             return this;
         }
 
         public Builder timeshiftDuration(@Nullable String timeshiftDuration) {
-            this.timeshiftDuration = Input.ofNullable(timeshiftDuration);
+            this.timeshiftDuration = Output.ofNullable(timeshiftDuration);
             return this;
         }
 
-        public Builder xAxis(@Nullable Input<AxisArgs> xAxis) {
+        public Builder xAxis(@Nullable Output<AxisArgs> xAxis) {
             this.xAxis = xAxis;
             return this;
         }
 
         public Builder xAxis(@Nullable AxisArgs xAxis) {
-            this.xAxis = Input.ofNullable(xAxis);
+            this.xAxis = Output.ofNullable(xAxis);
             return this;
         }
 
-        public Builder y2Axis(@Nullable Input<AxisArgs> y2Axis) {
+        public Builder y2Axis(@Nullable Output<AxisArgs> y2Axis) {
             this.y2Axis = y2Axis;
             return this;
         }
 
         public Builder y2Axis(@Nullable AxisArgs y2Axis) {
-            this.y2Axis = Input.ofNullable(y2Axis);
+            this.y2Axis = Output.ofNullable(y2Axis);
             return this;
         }
 
-        public Builder yAxis(@Nullable Input<AxisArgs> yAxis) {
+        public Builder yAxis(@Nullable Output<AxisArgs> yAxis) {
             this.yAxis = yAxis;
             return this;
         }
 
         public Builder yAxis(@Nullable AxisArgs yAxis) {
-            this.yAxis = Input.ofNullable(yAxis);
+            this.yAxis = Output.ofNullable(yAxis);
             return this;
         }
         public XyChartArgs build() {

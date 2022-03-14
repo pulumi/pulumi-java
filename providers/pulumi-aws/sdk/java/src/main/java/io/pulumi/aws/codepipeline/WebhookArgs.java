@@ -5,7 +5,7 @@ package io.pulumi.aws.codepipeline;
 
 import io.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationArgs;
 import io.pulumi.aws.codepipeline.inputs.WebhookFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-      private final Input<String> authentication;
+      private final Output<String> authentication;
 
-    public Input<String> getAuthentication() {
+    public Output<String> getAuthentication() {
         return this.authentication;
     }
 
@@ -34,10 +34,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationConfiguration")
-      private final @Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
+      private final @Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Input<WebhookAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
+    public Output<WebhookAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
+        return this.authenticationConfiguration == null ? Output.empty() : this.authenticationConfiguration;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filters", required=true)
-      private final Input<List<WebhookFilterArgs>> filters;
+      private final Output<List<WebhookFilterArgs>> filters;
 
-    public Input<List<WebhookFilterArgs>> getFilters() {
+    public Output<List<WebhookFilterArgs>> getFilters() {
         return this.filters;
     }
 
@@ -56,10 +56,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetAction", required=true)
-      private final Input<String> targetAction;
+      private final Output<String> targetAction;
 
-    public Input<String> getTargetAction() {
+    public Output<String> getTargetAction() {
         return this.targetAction;
     }
 
@@ -89,20 +89,20 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPipeline", required=true)
-      private final Input<String> targetPipeline;
+      private final Output<String> targetPipeline;
 
-    public Input<String> getTargetPipeline() {
+    public Output<String> getTargetPipeline() {
         return this.targetPipeline;
     }
 
     public WebhookArgs(
-        Input<String> authentication,
-        @Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration,
-        Input<List<WebhookFilterArgs>> filters,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> targetAction,
-        Input<String> targetPipeline) {
+        Output<String> authentication,
+        @Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration,
+        Output<List<WebhookFilterArgs>> filters,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> targetAction,
+        Output<String> targetPipeline) {
         this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
         this.authenticationConfiguration = authenticationConfiguration;
         this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
@@ -113,13 +113,13 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.authentication = Input.empty();
-        this.authenticationConfiguration = Input.empty();
-        this.filters = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.targetAction = Input.empty();
-        this.targetPipeline = Input.empty();
+        this.authentication = Output.empty();
+        this.authenticationConfiguration = Output.empty();
+        this.filters = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.targetAction = Output.empty();
+        this.targetPipeline = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> authentication;
-        private @Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
-        private Input<List<WebhookFilterArgs>> filters;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> targetAction;
-        private Input<String> targetPipeline;
+        private Output<String> authentication;
+        private @Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
+        private Output<List<WebhookFilterArgs>> filters;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> targetAction;
+        private Output<String> targetPipeline;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetPipeline = defaults.targetPipeline;
         }
 
-        public Builder authentication(Input<String> authentication) {
+        public Builder authentication(Output<String> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
         public Builder authentication(String authentication) {
-            this.authentication = Input.of(Objects.requireNonNull(authentication));
+            this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
 
-        public Builder authenticationConfiguration(@Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
         public Builder authenticationConfiguration(@Nullable WebhookAuthenticationConfigurationArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
+            this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder filters(Input<List<WebhookFilterArgs>> filters) {
+        public Builder filters(Output<List<WebhookFilterArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
         public Builder filters(List<WebhookFilterArgs> filters) {
-            this.filters = Input.of(Objects.requireNonNull(filters));
+            this.filters = Output.of(Objects.requireNonNull(filters));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetAction(Input<String> targetAction) {
+        public Builder targetAction(Output<String> targetAction) {
             this.targetAction = Objects.requireNonNull(targetAction);
             return this;
         }
 
         public Builder targetAction(String targetAction) {
-            this.targetAction = Input.of(Objects.requireNonNull(targetAction));
+            this.targetAction = Output.of(Objects.requireNonNull(targetAction));
             return this;
         }
 
-        public Builder targetPipeline(Input<String> targetPipeline) {
+        public Builder targetPipeline(Output<String> targetPipeline) {
             this.targetPipeline = Objects.requireNonNull(targetPipeline);
             return this;
         }
 
         public Builder targetPipeline(String targetPipeline) {
-            this.targetPipeline = Input.of(Objects.requireNonNull(targetPipeline));
+            this.targetPipeline = Output.of(Objects.requireNonNull(targetPipeline));
             return this;
         }
         public WebhookArgs build() {

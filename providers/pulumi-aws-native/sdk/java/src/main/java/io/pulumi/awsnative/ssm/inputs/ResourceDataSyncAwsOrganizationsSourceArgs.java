@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
     public static final ResourceDataSyncAwsOrganizationsSourceArgs Empty = new ResourceDataSyncAwsOrganizationsSourceArgs();
 
     @InputImport(name="organizationSourceType", required=true)
-      private final Input<String> organizationSourceType;
+      private final Output<String> organizationSourceType;
 
-    public Input<String> getOrganizationSourceType() {
+    public Output<String> getOrganizationSourceType() {
         return this.organizationSourceType;
     }
 
     @InputImport(name="organizationalUnits")
-      private final @Nullable Input<List<String>> organizationalUnits;
+      private final @Nullable Output<List<String>> organizationalUnits;
 
-    public Input<List<String>> getOrganizationalUnits() {
-        return this.organizationalUnits == null ? Input.empty() : this.organizationalUnits;
+    public Output<List<String>> getOrganizationalUnits() {
+        return this.organizationalUnits == null ? Output.empty() : this.organizationalUnits;
     }
 
     public ResourceDataSyncAwsOrganizationsSourceArgs(
-        Input<String> organizationSourceType,
-        @Nullable Input<List<String>> organizationalUnits) {
+        Output<String> organizationSourceType,
+        @Nullable Output<List<String>> organizationalUnits) {
         this.organizationSourceType = Objects.requireNonNull(organizationSourceType, "expected parameter 'organizationSourceType' to be non-null");
         this.organizationalUnits = organizationalUnits;
     }
 
     private ResourceDataSyncAwsOrganizationsSourceArgs() {
-        this.organizationSourceType = Input.empty();
-        this.organizationalUnits = Input.empty();
+        this.organizationSourceType = Output.empty();
+        this.organizationalUnits = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> organizationSourceType;
-        private @Nullable Input<List<String>> organizationalUnits;
+        private Output<String> organizationSourceType;
+        private @Nullable Output<List<String>> organizationalUnits;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
     	      this.organizationalUnits = defaults.organizationalUnits;
         }
 
-        public Builder organizationSourceType(Input<String> organizationSourceType) {
+        public Builder organizationSourceType(Output<String> organizationSourceType) {
             this.organizationSourceType = Objects.requireNonNull(organizationSourceType);
             return this;
         }
 
         public Builder organizationSourceType(String organizationSourceType) {
-            this.organizationSourceType = Input.of(Objects.requireNonNull(organizationSourceType));
+            this.organizationSourceType = Output.of(Objects.requireNonNull(organizationSourceType));
             return this;
         }
 
-        public Builder organizationalUnits(@Nullable Input<List<String>> organizationalUnits) {
+        public Builder organizationalUnits(@Nullable Output<List<String>> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
             return this;
         }
 
         public Builder organizationalUnits(@Nullable List<String> organizationalUnits) {
-            this.organizationalUnits = Input.ofNullable(organizationalUnits);
+            this.organizationalUnits = Output.ofNullable(organizationalUnits);
             return this;
         }
         public ResourceDataSyncAwsOrganizationsSourceArgs build() {

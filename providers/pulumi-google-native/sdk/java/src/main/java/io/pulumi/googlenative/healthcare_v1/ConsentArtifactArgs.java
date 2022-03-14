@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.ImageArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.SignatureArgs;
@@ -23,10 +23,10 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consentContentScreenshots")
-      private final @Nullable Input<List<ImageArgs>> consentContentScreenshots;
+      private final @Nullable Output<List<ImageArgs>> consentContentScreenshots;
 
-    public Input<List<ImageArgs>> getConsentContentScreenshots() {
-        return this.consentContentScreenshots == null ? Input.empty() : this.consentContentScreenshots;
+    public Output<List<ImageArgs>> getConsentContentScreenshots() {
+        return this.consentContentScreenshots == null ? Output.empty() : this.consentContentScreenshots;
     }
 
     /**
@@ -34,23 +34,23 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consentContentVersion")
-      private final @Nullable Input<String> consentContentVersion;
+      private final @Nullable Output<String> consentContentVersion;
 
-    public Input<String> getConsentContentVersion() {
-        return this.consentContentVersion == null ? Input.empty() : this.consentContentVersion;
+    public Output<String> getConsentContentVersion() {
+        return this.consentContentVersion == null ? Output.empty() : this.consentContentVersion;
     }
 
     @InputImport(name="consentStoreId", required=true)
-      private final Input<String> consentStoreId;
+      private final Output<String> consentStoreId;
 
-    public Input<String> getConsentStoreId() {
+    public Output<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -59,17 +59,17 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="guardianSignature")
-      private final @Nullable Input<SignatureArgs> guardianSignature;
+      private final @Nullable Output<SignatureArgs> guardianSignature;
 
-    public Input<SignatureArgs> getGuardianSignature() {
-        return this.guardianSignature == null ? Input.empty() : this.guardianSignature;
+    public Output<SignatureArgs> getGuardianSignature() {
+        return this.guardianSignature == null ? Output.empty() : this.guardianSignature;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -88,17 +88,17 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -106,9 +106,9 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
@@ -117,10 +117,10 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userSignature")
-      private final @Nullable Input<SignatureArgs> userSignature;
+      private final @Nullable Output<SignatureArgs> userSignature;
 
-    public Input<SignatureArgs> getUserSignature() {
-        return this.userSignature == null ? Input.empty() : this.userSignature;
+    public Output<SignatureArgs> getUserSignature() {
+        return this.userSignature == null ? Output.empty() : this.userSignature;
     }
 
     /**
@@ -128,25 +128,25 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="witnessSignature")
-      private final @Nullable Input<SignatureArgs> witnessSignature;
+      private final @Nullable Output<SignatureArgs> witnessSignature;
 
-    public Input<SignatureArgs> getWitnessSignature() {
-        return this.witnessSignature == null ? Input.empty() : this.witnessSignature;
+    public Output<SignatureArgs> getWitnessSignature() {
+        return this.witnessSignature == null ? Output.empty() : this.witnessSignature;
     }
 
     public ConsentArtifactArgs(
-        @Nullable Input<List<ImageArgs>> consentContentScreenshots,
-        @Nullable Input<String> consentContentVersion,
-        Input<String> consentStoreId,
-        Input<String> datasetId,
-        @Nullable Input<SignatureArgs> guardianSignature,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> userId,
-        @Nullable Input<SignatureArgs> userSignature,
-        @Nullable Input<SignatureArgs> witnessSignature) {
+        @Nullable Output<List<ImageArgs>> consentContentScreenshots,
+        @Nullable Output<String> consentContentVersion,
+        Output<String> consentStoreId,
+        Output<String> datasetId,
+        @Nullable Output<SignatureArgs> guardianSignature,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> userId,
+        @Nullable Output<SignatureArgs> userSignature,
+        @Nullable Output<SignatureArgs> witnessSignature) {
         this.consentContentScreenshots = consentContentScreenshots;
         this.consentContentVersion = consentContentVersion;
         this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
@@ -162,18 +162,18 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConsentArtifactArgs() {
-        this.consentContentScreenshots = Input.empty();
-        this.consentContentVersion = Input.empty();
-        this.consentStoreId = Input.empty();
-        this.datasetId = Input.empty();
-        this.guardianSignature = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.userId = Input.empty();
-        this.userSignature = Input.empty();
-        this.witnessSignature = Input.empty();
+        this.consentContentScreenshots = Output.empty();
+        this.consentContentVersion = Output.empty();
+        this.consentStoreId = Output.empty();
+        this.datasetId = Output.empty();
+        this.guardianSignature = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.userId = Output.empty();
+        this.userSignature = Output.empty();
+        this.witnessSignature = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,18 +185,18 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImageArgs>> consentContentScreenshots;
-        private @Nullable Input<String> consentContentVersion;
-        private Input<String> consentStoreId;
-        private Input<String> datasetId;
-        private @Nullable Input<SignatureArgs> guardianSignature;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> userId;
-        private @Nullable Input<SignatureArgs> userSignature;
-        private @Nullable Input<SignatureArgs> witnessSignature;
+        private @Nullable Output<List<ImageArgs>> consentContentScreenshots;
+        private @Nullable Output<String> consentContentVersion;
+        private Output<String> consentStoreId;
+        private Output<String> datasetId;
+        private @Nullable Output<SignatureArgs> guardianSignature;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> userId;
+        private @Nullable Output<SignatureArgs> userSignature;
+        private @Nullable Output<SignatureArgs> witnessSignature;
 
         public Builder() {
     	      // Empty
@@ -218,123 +218,123 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     	      this.witnessSignature = defaults.witnessSignature;
         }
 
-        public Builder consentContentScreenshots(@Nullable Input<List<ImageArgs>> consentContentScreenshots) {
+        public Builder consentContentScreenshots(@Nullable Output<List<ImageArgs>> consentContentScreenshots) {
             this.consentContentScreenshots = consentContentScreenshots;
             return this;
         }
 
         public Builder consentContentScreenshots(@Nullable List<ImageArgs> consentContentScreenshots) {
-            this.consentContentScreenshots = Input.ofNullable(consentContentScreenshots);
+            this.consentContentScreenshots = Output.ofNullable(consentContentScreenshots);
             return this;
         }
 
-        public Builder consentContentVersion(@Nullable Input<String> consentContentVersion) {
+        public Builder consentContentVersion(@Nullable Output<String> consentContentVersion) {
             this.consentContentVersion = consentContentVersion;
             return this;
         }
 
         public Builder consentContentVersion(@Nullable String consentContentVersion) {
-            this.consentContentVersion = Input.ofNullable(consentContentVersion);
+            this.consentContentVersion = Output.ofNullable(consentContentVersion);
             return this;
         }
 
-        public Builder consentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
+            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder guardianSignature(@Nullable Input<SignatureArgs> guardianSignature) {
+        public Builder guardianSignature(@Nullable Output<SignatureArgs> guardianSignature) {
             this.guardianSignature = guardianSignature;
             return this;
         }
 
         public Builder guardianSignature(@Nullable SignatureArgs guardianSignature) {
-            this.guardianSignature = Input.ofNullable(guardianSignature);
+            this.guardianSignature = Output.ofNullable(guardianSignature);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
 
-        public Builder userSignature(@Nullable Input<SignatureArgs> userSignature) {
+        public Builder userSignature(@Nullable Output<SignatureArgs> userSignature) {
             this.userSignature = userSignature;
             return this;
         }
 
         public Builder userSignature(@Nullable SignatureArgs userSignature) {
-            this.userSignature = Input.ofNullable(userSignature);
+            this.userSignature = Output.ofNullable(userSignature);
             return this;
         }
 
-        public Builder witnessSignature(@Nullable Input<SignatureArgs> witnessSignature) {
+        public Builder witnessSignature(@Nullable Output<SignatureArgs> witnessSignature) {
             this.witnessSignature = witnessSignature;
             return this;
         }
 
         public Builder witnessSignature(@Nullable SignatureArgs witnessSignature) {
-            this.witnessSignature = Input.ofNullable(witnessSignature);
+            this.witnessSignature = Output.ofNullable(witnessSignature);
             return this;
         }
         public ConsentArtifactArgs build() {

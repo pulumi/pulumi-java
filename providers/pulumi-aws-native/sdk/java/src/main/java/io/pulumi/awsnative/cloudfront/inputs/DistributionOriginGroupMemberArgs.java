@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class DistributionOriginGroupMemberArgs extends io.pulumi.resources
     public static final DistributionOriginGroupMemberArgs Empty = new DistributionOriginGroupMemberArgs();
 
     @InputImport(name="originId", required=true)
-      private final Input<String> originId;
+      private final Output<String> originId;
 
-    public Input<String> getOriginId() {
+    public Output<String> getOriginId() {
         return this.originId;
     }
 
-    public DistributionOriginGroupMemberArgs(Input<String> originId) {
+    public DistributionOriginGroupMemberArgs(Output<String> originId) {
         this.originId = Objects.requireNonNull(originId, "expected parameter 'originId' to be non-null");
     }
 
     private DistributionOriginGroupMemberArgs() {
-        this.originId = Input.empty();
+        this.originId = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DistributionOriginGroupMemberArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> originId;
+        private Output<String> originId;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DistributionOriginGroupMemberArgs extends io.pulumi.resources
     	      this.originId = defaults.originId;
         }
 
-        public Builder originId(Input<String> originId) {
+        public Builder originId(Output<String> originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
 
         public Builder originId(String originId) {
-            this.originId = Input.of(Objects.requireNonNull(originId));
+            this.originId = Output.of(Objects.requireNonNull(originId));
             return this;
         }
         public DistributionOriginGroupMemberArgs build() {

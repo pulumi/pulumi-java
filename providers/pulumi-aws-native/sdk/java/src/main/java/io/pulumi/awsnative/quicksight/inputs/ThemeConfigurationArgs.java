@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeDataColorPaletteArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeSheetStyleArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTypographyArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeUIColorPaletteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,38 +23,38 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     public static final ThemeConfigurationArgs Empty = new ThemeConfigurationArgs();
 
     @InputImport(name="dataColorPalette")
-      private final @Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette;
+      private final @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette;
 
-    public Input<ThemeDataColorPaletteArgs> getDataColorPalette() {
-        return this.dataColorPalette == null ? Input.empty() : this.dataColorPalette;
+    public Output<ThemeDataColorPaletteArgs> getDataColorPalette() {
+        return this.dataColorPalette == null ? Output.empty() : this.dataColorPalette;
     }
 
     @InputImport(name="sheet")
-      private final @Nullable Input<ThemeSheetStyleArgs> sheet;
+      private final @Nullable Output<ThemeSheetStyleArgs> sheet;
 
-    public Input<ThemeSheetStyleArgs> getSheet() {
-        return this.sheet == null ? Input.empty() : this.sheet;
+    public Output<ThemeSheetStyleArgs> getSheet() {
+        return this.sheet == null ? Output.empty() : this.sheet;
     }
 
     @InputImport(name="typography")
-      private final @Nullable Input<ThemeTypographyArgs> typography;
+      private final @Nullable Output<ThemeTypographyArgs> typography;
 
-    public Input<ThemeTypographyArgs> getTypography() {
-        return this.typography == null ? Input.empty() : this.typography;
+    public Output<ThemeTypographyArgs> getTypography() {
+        return this.typography == null ? Output.empty() : this.typography;
     }
 
     @InputImport(name="uIColorPalette")
-      private final @Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette;
+      private final @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette;
 
-    public Input<ThemeUIColorPaletteArgs> getUIColorPalette() {
-        return this.uIColorPalette == null ? Input.empty() : this.uIColorPalette;
+    public Output<ThemeUIColorPaletteArgs> getUIColorPalette() {
+        return this.uIColorPalette == null ? Output.empty() : this.uIColorPalette;
     }
 
     public ThemeConfigurationArgs(
-        @Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette,
-        @Nullable Input<ThemeSheetStyleArgs> sheet,
-        @Nullable Input<ThemeTypographyArgs> typography,
-        @Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette) {
+        @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette,
+        @Nullable Output<ThemeSheetStyleArgs> sheet,
+        @Nullable Output<ThemeTypographyArgs> typography,
+        @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette) {
         this.dataColorPalette = dataColorPalette;
         this.sheet = sheet;
         this.typography = typography;
@@ -62,10 +62,10 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ThemeConfigurationArgs() {
-        this.dataColorPalette = Input.empty();
-        this.sheet = Input.empty();
-        this.typography = Input.empty();
-        this.uIColorPalette = Input.empty();
+        this.dataColorPalette = Output.empty();
+        this.sheet = Output.empty();
+        this.typography = Output.empty();
+        this.uIColorPalette = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,10 +77,10 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette;
-        private @Nullable Input<ThemeSheetStyleArgs> sheet;
-        private @Nullable Input<ThemeTypographyArgs> typography;
-        private @Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette;
+        private @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette;
+        private @Nullable Output<ThemeSheetStyleArgs> sheet;
+        private @Nullable Output<ThemeTypographyArgs> typography;
+        private @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette;
 
         public Builder() {
     	      // Empty
@@ -94,43 +94,43 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.uIColorPalette = defaults.uIColorPalette;
         }
 
-        public Builder dataColorPalette(@Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette) {
+        public Builder dataColorPalette(@Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette) {
             this.dataColorPalette = dataColorPalette;
             return this;
         }
 
         public Builder dataColorPalette(@Nullable ThemeDataColorPaletteArgs dataColorPalette) {
-            this.dataColorPalette = Input.ofNullable(dataColorPalette);
+            this.dataColorPalette = Output.ofNullable(dataColorPalette);
             return this;
         }
 
-        public Builder sheet(@Nullable Input<ThemeSheetStyleArgs> sheet) {
+        public Builder sheet(@Nullable Output<ThemeSheetStyleArgs> sheet) {
             this.sheet = sheet;
             return this;
         }
 
         public Builder sheet(@Nullable ThemeSheetStyleArgs sheet) {
-            this.sheet = Input.ofNullable(sheet);
+            this.sheet = Output.ofNullable(sheet);
             return this;
         }
 
-        public Builder typography(@Nullable Input<ThemeTypographyArgs> typography) {
+        public Builder typography(@Nullable Output<ThemeTypographyArgs> typography) {
             this.typography = typography;
             return this;
         }
 
         public Builder typography(@Nullable ThemeTypographyArgs typography) {
-            this.typography = Input.ofNullable(typography);
+            this.typography = Output.ofNullable(typography);
             return this;
         }
 
-        public Builder uIColorPalette(@Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette) {
+        public Builder uIColorPalette(@Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette) {
             this.uIColorPalette = uIColorPalette;
             return this;
         }
 
         public Builder uIColorPalette(@Nullable ThemeUIColorPaletteArgs uIColorPalette) {
-            this.uIColorPalette = Input.ofNullable(uIColorPalette);
+            this.uIColorPalette = Output.ofNullable(uIColorPalette);
             return this;
         }
         public ThemeConfigurationArgs build() {

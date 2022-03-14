@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.inputs.PrivateEndpointConnectionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<PrivateEndpointConnectionPropertiesArgs> properties;
+      private final Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
-    public Input<PrivateEndpointConnectionPropertiesArgs> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesArgs> getProperties() {
         return this.properties;
     }
 
-    public PrivateEndpointConnectionArgs(Input<PrivateEndpointConnectionPropertiesArgs> properties) {
+    public PrivateEndpointConnectionArgs(Output<PrivateEndpointConnectionPropertiesArgs> properties) {
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.properties = Input.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<PrivateEndpointConnectionPropertiesArgs> properties;
+        private Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.properties = defaults.properties;
         }
 
-        public Builder properties(Input<PrivateEndpointConnectionPropertiesArgs> properties) {
+        public Builder properties(Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
         public PrivateEndpointConnectionArgs build() {

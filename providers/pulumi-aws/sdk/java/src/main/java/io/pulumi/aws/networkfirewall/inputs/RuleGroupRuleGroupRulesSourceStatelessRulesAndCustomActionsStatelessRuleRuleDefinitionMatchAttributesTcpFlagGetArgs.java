@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="flags", required=true)
-      private final Input<List<String>> flags;
+      private final Output<List<String>> flags;
 
-    public Input<List<String>> getFlags() {
+    public Output<List<String>> getFlags() {
         return this.flags;
     }
 
@@ -33,22 +33,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="masks")
-      private final @Nullable Input<List<String>> masks;
+      private final @Nullable Output<List<String>> masks;
 
-    public Input<List<String>> getMasks() {
-        return this.masks == null ? Input.empty() : this.masks;
+    public Output<List<String>> getMasks() {
+        return this.masks == null ? Output.empty() : this.masks;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs(
-        Input<List<String>> flags,
-        @Nullable Input<List<String>> masks) {
+        Output<List<String>> flags,
+        @Nullable Output<List<String>> masks) {
         this.flags = Objects.requireNonNull(flags, "expected parameter 'flags' to be non-null");
         this.masks = masks;
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs() {
-        this.flags = Input.empty();
-        this.masks = Input.empty();
+        this.flags = Output.empty();
+        this.masks = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     public static final class Builder {
-        private Input<List<String>> flags;
-        private @Nullable Input<List<String>> masks;
+        private Output<List<String>> flags;
+        private @Nullable Output<List<String>> masks;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.masks = defaults.masks;
         }
 
-        public Builder flags(Input<List<String>> flags) {
+        public Builder flags(Output<List<String>> flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
 
         public Builder flags(List<String> flags) {
-            this.flags = Input.of(Objects.requireNonNull(flags));
+            this.flags = Output.of(Objects.requireNonNull(flags));
             return this;
         }
 
-        public Builder masks(@Nullable Input<List<String>> masks) {
+        public Builder masks(@Nullable Output<List<String>> masks) {
             this.masks = masks;
             return this;
         }
 
         public Builder masks(@Nullable List<String> masks) {
-            this.masks = Input.ofNullable(masks);
+            this.masks = Output.ofNullable(masks);
             return this;
         }
         public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs build() {

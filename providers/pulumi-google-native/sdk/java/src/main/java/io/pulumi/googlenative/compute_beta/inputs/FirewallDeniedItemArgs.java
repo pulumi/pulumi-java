@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class FirewallDeniedItemArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipProtocol")
-      private final @Nullable Input<String> ipProtocol;
+      private final @Nullable Output<String> ipProtocol;
 
-    public Input<String> getIpProtocol() {
-        return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
+    public Output<String> getIpProtocol() {
+        return this.ipProtocol == null ? Output.empty() : this.ipProtocol;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FirewallDeniedItemArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<String>> ports;
+      private final @Nullable Output<List<String>> ports;
 
-    public Input<List<String>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<String>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public FirewallDeniedItemArgs(
-        @Nullable Input<String> ipProtocol,
-        @Nullable Input<List<String>> ports) {
+        @Nullable Output<String> ipProtocol,
+        @Nullable Output<List<String>> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }
 
     private FirewallDeniedItemArgs() {
-        this.ipProtocol = Input.empty();
-        this.ports = Input.empty();
+        this.ipProtocol = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FirewallDeniedItemArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipProtocol;
-        private @Nullable Input<List<String>> ports;
+        private @Nullable Output<String> ipProtocol;
+        private @Nullable Output<List<String>> ports;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FirewallDeniedItemArgs extends io.pulumi.resources.ResourceAr
     	      this.ports = defaults.ports;
         }
 
-        public Builder ipProtocol(@Nullable Input<String> ipProtocol) {
+        public Builder ipProtocol(@Nullable Output<String> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
 
         public Builder ipProtocol(@Nullable String ipProtocol) {
-            this.ipProtocol = Input.ofNullable(ipProtocol);
+            this.ipProtocol = Output.ofNullable(ipProtocol);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public FirewallDeniedItemArgs build() {

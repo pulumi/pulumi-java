@@ -9,7 +9,6 @@ import io.pulumi.aws.fsx.inputs.OpenZfsVolumeState;
 import io.pulumi.aws.fsx.outputs.OpenZfsVolumeNfsExports;
 import io.pulumi.aws.fsx.outputs.OpenZfsVolumeOriginSnapshot;
 import io.pulumi.aws.fsx.outputs.OpenZfsVolumeUserAndGroupQuota;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -264,14 +263,14 @@ public class OpenZfsVolume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OpenZfsVolume(String name, OpenZfsVolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/openZfsVolume:OpenZfsVolume", name, args == null ? OpenZfsVolumeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:fsx/openZfsVolume:OpenZfsVolume", name, args == null ? OpenZfsVolumeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OpenZfsVolume(String name, Input<String> id, @Nullable OpenZfsVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OpenZfsVolume(String name, Output<String> id, @Nullable OpenZfsVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:fsx/openZfsVolume:OpenZfsVolume", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -287,7 +286,7 @@ public class OpenZfsVolume extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OpenZfsVolume get(String name, Input<String> id, @Nullable OpenZfsVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OpenZfsVolume get(String name, Output<String> id, @Nullable OpenZfsVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OpenZfsVolume(name, id, state, options);
     }
 }

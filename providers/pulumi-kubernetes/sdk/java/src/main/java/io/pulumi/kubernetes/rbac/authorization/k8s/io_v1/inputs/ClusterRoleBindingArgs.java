@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs.RoleRefArgs;
@@ -27,10 +27,10 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="roleRef", required=true)
-      private final Input<RoleRefArgs> roleRef;
+      private final Output<RoleRefArgs> roleRef;
 
-    public Input<RoleRefArgs> getRoleRef() {
+    public Output<RoleRefArgs> getRoleRef() {
         return this.roleRef;
     }
 
@@ -71,18 +71,18 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subjects")
-      private final @Nullable Input<List<SubjectArgs>> subjects;
+      private final @Nullable Output<List<SubjectArgs>> subjects;
 
-    public Input<List<SubjectArgs>> getSubjects() {
-        return this.subjects == null ? Input.empty() : this.subjects;
+    public Output<List<SubjectArgs>> getSubjects() {
+        return this.subjects == null ? Output.empty() : this.subjects;
     }
 
     public ClusterRoleBindingArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        Input<RoleRefArgs> roleRef,
-        @Nullable Input<List<SubjectArgs>> subjects) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        Output<RoleRefArgs> roleRef,
+        @Nullable Output<List<SubjectArgs>> subjects) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -91,11 +91,11 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ClusterRoleBindingArgs() {
-        this.apiVersion = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.roleRef = Input.empty();
-        this.subjects = Input.empty();
+        this.apiVersion = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.roleRef = Output.empty();
+        this.subjects = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private Input<RoleRefArgs> roleRef;
-        private @Nullable Input<List<SubjectArgs>> subjects;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private Output<RoleRefArgs> roleRef;
+        private @Nullable Output<List<SubjectArgs>> subjects;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder roleRef(Input<RoleRefArgs> roleRef) {
+        public Builder roleRef(Output<RoleRefArgs> roleRef) {
             this.roleRef = Objects.requireNonNull(roleRef);
             return this;
         }
 
         public Builder roleRef(RoleRefArgs roleRef) {
-            this.roleRef = Input.of(Objects.requireNonNull(roleRef));
+            this.roleRef = Output.of(Objects.requireNonNull(roleRef));
             return this;
         }
 
-        public Builder subjects(@Nullable Input<List<SubjectArgs>> subjects) {
+        public Builder subjects(@Nullable Output<List<SubjectArgs>> subjects) {
             this.subjects = subjects;
             return this;
         }
 
         public Builder subjects(@Nullable List<SubjectArgs> subjects) {
-            this.subjects = Input.ofNullable(subjects);
+            this.subjects = Output.ofNullable(subjects);
             return this;
         }
         public ClusterRoleBindingArgs build() {

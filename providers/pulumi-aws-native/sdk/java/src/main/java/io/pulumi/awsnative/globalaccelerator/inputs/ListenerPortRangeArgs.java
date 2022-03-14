@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,29 +18,29 @@ public final class ListenerPortRangeArgs extends io.pulumi.resources.ResourceArg
     public static final ListenerPortRangeArgs Empty = new ListenerPortRangeArgs();
 
     @InputImport(name="fromPort", required=true)
-      private final Input<Integer> fromPort;
+      private final Output<Integer> fromPort;
 
-    public Input<Integer> getFromPort() {
+    public Output<Integer> getFromPort() {
         return this.fromPort;
     }
 
     @InputImport(name="toPort", required=true)
-      private final Input<Integer> toPort;
+      private final Output<Integer> toPort;
 
-    public Input<Integer> getToPort() {
+    public Output<Integer> getToPort() {
         return this.toPort;
     }
 
     public ListenerPortRangeArgs(
-        Input<Integer> fromPort,
-        Input<Integer> toPort) {
+        Output<Integer> fromPort,
+        Output<Integer> toPort) {
         this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
         this.toPort = Objects.requireNonNull(toPort, "expected parameter 'toPort' to be non-null");
     }
 
     private ListenerPortRangeArgs() {
-        this.fromPort = Input.empty();
-        this.toPort = Input.empty();
+        this.fromPort = Output.empty();
+        this.toPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class ListenerPortRangeArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Integer> fromPort;
-        private Input<Integer> toPort;
+        private Output<Integer> fromPort;
+        private Output<Integer> toPort;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class ListenerPortRangeArgs extends io.pulumi.resources.ResourceArg
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder fromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Output<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Input.of(Objects.requireNonNull(fromPort));
+            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder toPort(Input<Integer> toPort) {
+        public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
         public Builder toPort(Integer toPort) {
-            this.toPort = Input.of(Objects.requireNonNull(toPort));
+            this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
         }
         public ListenerPortRangeArgs build() {

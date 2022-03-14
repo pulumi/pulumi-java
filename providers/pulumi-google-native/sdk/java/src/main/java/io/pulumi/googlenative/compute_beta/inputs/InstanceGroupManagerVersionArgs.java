@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.FixedOrPercentArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceTemplate")
-      private final @Nullable Input<String> instanceTemplate;
+      private final @Nullable Output<String> instanceTemplate;
 
-    public Input<String> getInstanceTemplate() {
-        return this.instanceTemplate == null ? Input.empty() : this.instanceTemplate;
+    public Output<String> getInstanceTemplate() {
+        return this.instanceTemplate == null ? Output.empty() : this.instanceTemplate;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetSize")
-      private final @Nullable Input<FixedOrPercentArgs> targetSize;
+      private final @Nullable Output<FixedOrPercentArgs> targetSize;
 
-    public Input<FixedOrPercentArgs> getTargetSize() {
-        return this.targetSize == null ? Input.empty() : this.targetSize;
+    public Output<FixedOrPercentArgs> getTargetSize() {
+        return this.targetSize == null ? Output.empty() : this.targetSize;
     }
 
     public InstanceGroupManagerVersionArgs(
-        @Nullable Input<String> instanceTemplate,
-        @Nullable Input<String> name,
-        @Nullable Input<FixedOrPercentArgs> targetSize) {
+        @Nullable Output<String> instanceTemplate,
+        @Nullable Output<String> name,
+        @Nullable Output<FixedOrPercentArgs> targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;
     }
 
     private InstanceGroupManagerVersionArgs() {
-        this.instanceTemplate = Input.empty();
-        this.name = Input.empty();
-        this.targetSize = Input.empty();
+        this.instanceTemplate = Output.empty();
+        this.name = Output.empty();
+        this.targetSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceTemplate;
-        private @Nullable Input<String> name;
-        private @Nullable Input<FixedOrPercentArgs> targetSize;
+        private @Nullable Output<String> instanceTemplate;
+        private @Nullable Output<String> name;
+        private @Nullable Output<FixedOrPercentArgs> targetSize;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder instanceTemplate(@Nullable Input<String> instanceTemplate) {
+        public Builder instanceTemplate(@Nullable Output<String> instanceTemplate) {
             this.instanceTemplate = instanceTemplate;
             return this;
         }
 
         public Builder instanceTemplate(@Nullable String instanceTemplate) {
-            this.instanceTemplate = Input.ofNullable(instanceTemplate);
+            this.instanceTemplate = Output.ofNullable(instanceTemplate);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder targetSize(@Nullable Input<FixedOrPercentArgs> targetSize) {
+        public Builder targetSize(@Nullable Output<FixedOrPercentArgs> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
         public Builder targetSize(@Nullable FixedOrPercentArgs targetSize) {
-            this.targetSize = Input.ofNullable(targetSize);
+            this.targetSize = Output.ofNullable(targetSize);
             return this;
         }
         public InstanceGroupManagerVersionArgs build() {

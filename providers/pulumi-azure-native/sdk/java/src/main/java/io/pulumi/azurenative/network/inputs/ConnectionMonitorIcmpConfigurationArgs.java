@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="disableTraceRoute")
-      private final @Nullable Input<Boolean> disableTraceRoute;
+      private final @Nullable Output<Boolean> disableTraceRoute;
 
-    public Input<Boolean> getDisableTraceRoute() {
-        return this.disableTraceRoute == null ? Input.empty() : this.disableTraceRoute;
+    public Output<Boolean> getDisableTraceRoute() {
+        return this.disableTraceRoute == null ? Output.empty() : this.disableTraceRoute;
     }
 
-    public ConnectionMonitorIcmpConfigurationArgs(@Nullable Input<Boolean> disableTraceRoute) {
+    public ConnectionMonitorIcmpConfigurationArgs(@Nullable Output<Boolean> disableTraceRoute) {
         this.disableTraceRoute = disableTraceRoute;
     }
 
     private ConnectionMonitorIcmpConfigurationArgs() {
-        this.disableTraceRoute = Input.empty();
+        this.disableTraceRoute = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableTraceRoute;
+        private @Nullable Output<Boolean> disableTraceRoute;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
     	      this.disableTraceRoute = defaults.disableTraceRoute;
         }
 
-        public Builder disableTraceRoute(@Nullable Input<Boolean> disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Output<Boolean> disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
 
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
-            this.disableTraceRoute = Input.ofNullable(disableTraceRoute);
+            this.disableTraceRoute = Output.ofNullable(disableTraceRoute);
             return this;
         }
         public ConnectionMonitorIcmpConfigurationArgs build() {

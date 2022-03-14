@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @InputImport(name="force")
-      private final @Nullable Input<Boolean> force;
+      private final @Nullable Output<Boolean> force;
 
-    public Input<Boolean> getForce() {
-        return this.force == null ? Input.empty() : this.force;
+    public Output<Boolean> getForce() {
+        return this.force == null ? Output.empty() : this.force;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @InputImport(name="tableUri")
-      private final @Nullable Input<String> tableUri;
+      private final @Nullable Output<String> tableUri;
 
-    public Input<String> getTableUri() {
-        return this.tableUri == null ? Input.empty() : this.tableUri;
+    public Output<String> getTableUri() {
+        return this.tableUri == null ? Output.empty() : this.tableUri;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @InputImport(name="writeDisposition")
-      private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
+      private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 
-    public Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> getWriteDisposition() {
-        return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
+    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> getWriteDisposition() {
+        return this.writeDisposition == null ? Output.empty() : this.writeDisposition;
     }
 
     public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(
-        @Nullable Input<Boolean> force,
-        @Nullable Input<String> tableUri,
-        @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
+        @Nullable Output<Boolean> force,
+        @Nullable Output<String> tableUri,
+        @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
         this.force = force;
         this.tableUri = tableUri;
         this.writeDisposition = writeDisposition;
     }
 
     private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs() {
-        this.force = Input.empty();
-        this.tableUri = Input.empty();
-        this.writeDisposition = Input.empty();
+        this.force = Output.empty();
+        this.tableUri = Output.empty();
+        this.writeDisposition = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> force;
-        private @Nullable Input<String> tableUri;
-        private @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
+        private @Nullable Output<Boolean> force;
+        private @Nullable Output<String> tableUri;
+        private @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder force(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
 
         public Builder force(@Nullable Boolean force) {
-            this.force = Input.ofNullable(force);
+            this.force = Output.ofNullable(force);
             return this;
         }
 
-        public Builder tableUri(@Nullable Input<String> tableUri) {
+        public Builder tableUri(@Nullable Output<String> tableUri) {
             this.tableUri = tableUri;
             return this;
         }
 
         public Builder tableUri(@Nullable String tableUri) {
-            this.tableUri = Input.ofNullable(tableUri);
+            this.tableUri = Output.ofNullable(tableUri);
             return this;
         }
 
-        public Builder writeDisposition(@Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
+        public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
         public Builder writeDisposition(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition writeDisposition) {
-            this.writeDisposition = Input.ofNullable(writeDisposition);
+            this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
         }
         public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs build() {

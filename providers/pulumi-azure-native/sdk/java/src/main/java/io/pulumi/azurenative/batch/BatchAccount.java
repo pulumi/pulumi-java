@@ -12,7 +12,6 @@ import io.pulumi.azurenative.batch.outputs.KeyVaultReferenceResponse;
 import io.pulumi.azurenative.batch.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.batch.outputs.VirtualMachineFamilyCoreQuotaResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -329,29 +328,29 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BatchAccount(String name, BatchAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:batch:BatchAccount", name, args == null ? BatchAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:batch:BatchAccount", name, args == null ? BatchAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BatchAccount(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BatchAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:batch:BatchAccount", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:batch/v20151201:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20170101:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20170501:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20170901:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20181201:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20190401:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20190801:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20200301:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20200501:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20200901:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20210101:BatchAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:batch/v20210601:BatchAccount").build())
+                Output.of(Alias.builder().setType("azure-native:batch/v20151201:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20170101:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20170501:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20170901:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20181201:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20190401:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20190801:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20200301:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20200501:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20200901:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20210101:BatchAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:batch/v20210601:BatchAccount").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -365,7 +364,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BatchAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BatchAccount get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BatchAccount(name, id, options);
     }
 }

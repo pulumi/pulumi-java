@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationsArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordTransformationsArgs;
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="infoTypeTransformations")
-      private final @Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
+      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
-    public Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> getInfoTypeTransformations() {
-        return this.infoTypeTransformations == null ? Input.empty() : this.infoTypeTransformations;
+    public Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> getInfoTypeTransformations() {
+        return this.infoTypeTransformations == null ? Output.empty() : this.infoTypeTransformations;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="recordTransformations")
-      private final @Nullable Input<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
+      private final @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
 
-    public Input<GooglePrivacyDlpV2RecordTransformationsArgs> getRecordTransformations() {
-        return this.recordTransformations == null ? Input.empty() : this.recordTransformations;
+    public Output<GooglePrivacyDlpV2RecordTransformationsArgs> getRecordTransformations() {
+        return this.recordTransformations == null ? Output.empty() : this.recordTransformations;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="transformationErrorHandling")
-      private final @Nullable Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
+      private final @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
 
-    public Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> getTransformationErrorHandling() {
-        return this.transformationErrorHandling == null ? Input.empty() : this.transformationErrorHandling;
+    public Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> getTransformationErrorHandling() {
+        return this.transformationErrorHandling == null ? Output.empty() : this.transformationErrorHandling;
     }
 
     public GooglePrivacyDlpV2DeidentifyConfigArgs(
-        @Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations,
-        @Nullable Input<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations,
-        @Nullable Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
+        @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations,
+        @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations,
+        @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
         this.infoTypeTransformations = infoTypeTransformations;
         this.recordTransformations = recordTransformations;
         this.transformationErrorHandling = transformationErrorHandling;
     }
 
     private GooglePrivacyDlpV2DeidentifyConfigArgs() {
-        this.infoTypeTransformations = Input.empty();
-        this.recordTransformations = Input.empty();
-        this.transformationErrorHandling = Input.empty();
+        this.infoTypeTransformations = Output.empty();
+        this.recordTransformations = Output.empty();
+        this.transformationErrorHandling = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
-        private @Nullable Input<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
-        private @Nullable Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
+        private @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
+        private @Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
+        private @Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
     	      this.transformationErrorHandling = defaults.transformationErrorHandling;
         }
 
-        public Builder infoTypeTransformations(@Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
+        public Builder infoTypeTransformations(@Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
             this.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
 
         public Builder infoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
-            this.infoTypeTransformations = Input.ofNullable(infoTypeTransformations);
+            this.infoTypeTransformations = Output.ofNullable(infoTypeTransformations);
             return this;
         }
 
-        public Builder recordTransformations(@Nullable Input<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations) {
+        public Builder recordTransformations(@Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations) {
             this.recordTransformations = recordTransformations;
             return this;
         }
 
         public Builder recordTransformations(@Nullable GooglePrivacyDlpV2RecordTransformationsArgs recordTransformations) {
-            this.recordTransformations = Input.ofNullable(recordTransformations);
+            this.recordTransformations = Output.ofNullable(recordTransformations);
             return this;
         }
 
-        public Builder transformationErrorHandling(@Nullable Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
+        public Builder transformationErrorHandling(@Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
             this.transformationErrorHandling = transformationErrorHandling;
             return this;
         }
 
         public Builder transformationErrorHandling(@Nullable GooglePrivacyDlpV2TransformationErrorHandlingArgs transformationErrorHandling) {
-            this.transformationErrorHandling = Input.ofNullable(transformationErrorHandling);
+            this.transformationErrorHandling = Output.ofNullable(transformationErrorHandling);
             return this;
         }
         public GooglePrivacyDlpV2DeidentifyConfigArgs build() {

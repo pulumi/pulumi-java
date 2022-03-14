@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputKinesisFirehoseGet
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputKinesisStreamGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputLambdaGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputSchemaGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kinesisFirehose")
-      private final @Nullable Input<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
+      private final @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
 
-    public Input<AnalyticsApplicationOutputKinesisFirehoseGetArgs> getKinesisFirehose() {
-        return this.kinesisFirehose == null ? Input.empty() : this.kinesisFirehose;
+    public Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> getKinesisFirehose() {
+        return this.kinesisFirehose == null ? Output.empty() : this.kinesisFirehose;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kinesisStream")
-      private final @Nullable Input<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
+      private final @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
 
-    public Input<AnalyticsApplicationOutputKinesisStreamGetArgs> getKinesisStream() {
-        return this.kinesisStream == null ? Input.empty() : this.kinesisStream;
+    public Output<AnalyticsApplicationOutputKinesisStreamGetArgs> getKinesisStream() {
+        return this.kinesisStream == null ? Output.empty() : this.kinesisStream;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="lambda")
-      private final @Nullable Input<AnalyticsApplicationOutputLambdaGetArgs> lambda;
+      private final @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
 
-    public Input<AnalyticsApplicationOutputLambdaGetArgs> getLambda() {
-        return this.lambda == null ? Input.empty() : this.lambda;
+    public Output<AnalyticsApplicationOutputLambdaGetArgs> getLambda() {
+        return this.lambda == null ? Output.empty() : this.lambda;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -80,19 +80,19 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="schema", required=true)
-      private final Input<AnalyticsApplicationOutputSchemaGetArgs> schema;
+      private final Output<AnalyticsApplicationOutputSchemaGetArgs> schema;
 
-    public Input<AnalyticsApplicationOutputSchemaGetArgs> getSchema() {
+    public Output<AnalyticsApplicationOutputSchemaGetArgs> getSchema() {
         return this.schema;
     }
 
     public AnalyticsApplicationOutputGetArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose,
-        @Nullable Input<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream,
-        @Nullable Input<AnalyticsApplicationOutputLambdaGetArgs> lambda,
-        Input<String> name,
-        Input<AnalyticsApplicationOutputSchemaGetArgs> schema) {
+        @Nullable Output<String> id,
+        @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose,
+        @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream,
+        @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda,
+        Output<String> name,
+        Output<AnalyticsApplicationOutputSchemaGetArgs> schema) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;
@@ -102,12 +102,12 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
     }
 
     private AnalyticsApplicationOutputGetArgs() {
-        this.id = Input.empty();
-        this.kinesisFirehose = Input.empty();
-        this.kinesisStream = Input.empty();
-        this.lambda = Input.empty();
-        this.name = Input.empty();
-        this.schema = Input.empty();
+        this.id = Output.empty();
+        this.kinesisFirehose = Output.empty();
+        this.kinesisStream = Output.empty();
+        this.lambda = Output.empty();
+        this.name = Output.empty();
+        this.schema = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
-        private @Nullable Input<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
-        private @Nullable Input<AnalyticsApplicationOutputLambdaGetArgs> lambda;
-        private Input<String> name;
-        private Input<AnalyticsApplicationOutputSchemaGetArgs> schema;
+        private @Nullable Output<String> id;
+        private @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
+        private @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
+        private @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
+        private Output<String> name;
+        private Output<AnalyticsApplicationOutputSchemaGetArgs> schema;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class AnalyticsApplicationOutputGetArgs extends io.pulumi.resources
     	      this.schema = defaults.schema;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder kinesisFirehose(@Nullable Input<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
         public Builder kinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehoseGetArgs kinesisFirehose) {
-            this.kinesisFirehose = Input.ofNullable(kinesisFirehose);
+            this.kinesisFirehose = Output.ofNullable(kinesisFirehose);
             return this;
         }
 
-        public Builder kinesisStream(@Nullable Input<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream) {
+        public Builder kinesisStream(@Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
 
         public Builder kinesisStream(@Nullable AnalyticsApplicationOutputKinesisStreamGetArgs kinesisStream) {
-            this.kinesisStream = Input.ofNullable(kinesisStream);
+            this.kinesisStream = Output.ofNullable(kinesisStream);
             return this;
         }
 
-        public Builder lambda(@Nullable Input<AnalyticsApplicationOutputLambdaGetArgs> lambda) {
+        public Builder lambda(@Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
 
         public Builder lambda(@Nullable AnalyticsApplicationOutputLambdaGetArgs lambda) {
-            this.lambda = Input.ofNullable(lambda);
+            this.lambda = Output.ofNullable(lambda);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder schema(Input<AnalyticsApplicationOutputSchemaGetArgs> schema) {
+        public Builder schema(Output<AnalyticsApplicationOutputSchemaGetArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
         public Builder schema(AnalyticsApplicationOutputSchemaGetArgs schema) {
-            this.schema = Input.of(Objects.requireNonNull(schema));
+            this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
         public AnalyticsApplicationOutputGetArgs build() {

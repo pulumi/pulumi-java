@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="contentUrl", required=true)
-      private final Input<String> contentUrl;
+      private final Output<String> contentUrl;
 
-    public Input<String> getContentUrl() {
+    public Output<String> getContentUrl() {
         return this.contentUrl;
     }
 
@@ -35,10 +35,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="icon")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getIcon() {
-        return this.icon == null ? Input.empty() : this.icon;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getIcon() {
+        return this.icon == null ? Output.empty() : this.icon;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="largeImage")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getLargeImage() {
-        return this.largeImage == null ? Input.empty() : this.largeImage;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getLargeImage() {
+        return this.largeImage == null ? Output.empty() : this.largeImage;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs(
-        Input<String> contentUrl,
-        @Nullable Input<String> description,
-        @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon,
-        @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage,
-        Input<String> name) {
+        Output<String> contentUrl,
+        @Nullable Output<String> description,
+        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon,
+        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage,
+        Output<String> name) {
         this.contentUrl = Objects.requireNonNull(contentUrl, "expected parameter 'contentUrl' to be non-null");
         this.description = description;
         this.icon = icon;
@@ -88,11 +88,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs() {
-        this.contentUrl = Input.empty();
-        this.description = Input.empty();
-        this.icon = Input.empty();
-        this.largeImage = Input.empty();
-        this.name = Input.empty();
+        this.contentUrl = Output.empty();
+        this.description = Output.empty();
+        this.icon = Output.empty();
+        this.largeImage = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     }
 
     public static final class Builder {
-        private Input<String> contentUrl;
-        private @Nullable Input<String> description;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
-        private Input<String> name;
+        private Output<String> contentUrl;
+        private @Nullable Output<String> description;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     	      this.name = defaults.name;
         }
 
-        public Builder contentUrl(Input<String> contentUrl) {
+        public Builder contentUrl(Output<String> contentUrl) {
             this.contentUrl = Objects.requireNonNull(contentUrl);
             return this;
         }
 
         public Builder contentUrl(String contentUrl) {
-            this.contentUrl = Input.of(Objects.requireNonNull(contentUrl));
+            this.contentUrl = Output.of(Objects.requireNonNull(contentUrl));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder icon(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon) {
+        public Builder icon(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon) {
             this.icon = icon;
             return this;
         }
 
         public Builder icon(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs icon) {
-            this.icon = Input.ofNullable(icon);
+            this.icon = Output.ofNullable(icon);
             return this;
         }
 
-        public Builder largeImage(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage) {
+        public Builder largeImage(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage) {
             this.largeImage = largeImage;
             return this;
         }
 
         public Builder largeImage(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs largeImage) {
-            this.largeImage = Input.ofNullable(largeImage);
+            this.largeImage = Output.ofNullable(largeImage);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs build() {

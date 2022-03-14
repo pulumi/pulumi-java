@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.UsagePermissionType;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetSharedPublicIpAddressConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labSubnetName")
-      private final @Nullable Input<String> labSubnetName;
+      private final @Nullable Output<String> labSubnetName;
 
-    public Input<String> getLabSubnetName() {
-        return this.labSubnetName == null ? Input.empty() : this.labSubnetName;
+    public Output<String> getLabSubnetName() {
+        return this.labSubnetName == null ? Output.empty() : this.labSubnetName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedPublicIpAddressConfiguration")
-      private final @Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
+      private final @Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
-    public Input<SubnetSharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
-        return this.sharedPublicIpAddressConfiguration == null ? Input.empty() : this.sharedPublicIpAddressConfiguration;
+    public Output<SubnetSharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
+        return this.sharedPublicIpAddressConfiguration == null ? Output.empty() : this.sharedPublicIpAddressConfiguration;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useInVmCreationPermission")
-      private final @Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission;
+      private final @Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission;
 
-    public Input<Either<String,UsagePermissionType>> getUseInVmCreationPermission() {
-        return this.useInVmCreationPermission == null ? Input.empty() : this.useInVmCreationPermission;
+    public Output<Either<String,UsagePermissionType>> getUseInVmCreationPermission() {
+        return this.useInVmCreationPermission == null ? Output.empty() : this.useInVmCreationPermission;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usePublicIpAddressPermission")
-      private final @Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
+      private final @Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
 
-    public Input<Either<String,UsagePermissionType>> getUsePublicIpAddressPermission() {
-        return this.usePublicIpAddressPermission == null ? Input.empty() : this.usePublicIpAddressPermission;
+    public Output<Either<String,UsagePermissionType>> getUsePublicIpAddressPermission() {
+        return this.usePublicIpAddressPermission == null ? Output.empty() : this.usePublicIpAddressPermission;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkPoolName")
-      private final @Nullable Input<String> virtualNetworkPoolName;
+      private final @Nullable Output<String> virtualNetworkPoolName;
 
-    public Input<String> getVirtualNetworkPoolName() {
-        return this.virtualNetworkPoolName == null ? Input.empty() : this.virtualNetworkPoolName;
+    public Output<String> getVirtualNetworkPoolName() {
+        return this.virtualNetworkPoolName == null ? Output.empty() : this.virtualNetworkPoolName;
     }
 
     public SubnetOverrideArgs(
-        @Nullable Input<String> labSubnetName,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration,
-        @Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission,
-        @Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission,
-        @Nullable Input<String> virtualNetworkPoolName) {
+        @Nullable Output<String> labSubnetName,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration,
+        @Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission,
+        @Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission,
+        @Nullable Output<String> virtualNetworkPoolName) {
         this.labSubnetName = labSubnetName;
         this.resourceId = resourceId;
         this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
@@ -103,12 +103,12 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetOverrideArgs() {
-        this.labSubnetName = Input.empty();
-        this.resourceId = Input.empty();
-        this.sharedPublicIpAddressConfiguration = Input.empty();
-        this.useInVmCreationPermission = Input.empty();
-        this.usePublicIpAddressPermission = Input.empty();
-        this.virtualNetworkPoolName = Input.empty();
+        this.labSubnetName = Output.empty();
+        this.resourceId = Output.empty();
+        this.sharedPublicIpAddressConfiguration = Output.empty();
+        this.useInVmCreationPermission = Output.empty();
+        this.usePublicIpAddressPermission = Output.empty();
+        this.virtualNetworkPoolName = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> labSubnetName;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
-        private @Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission;
-        private @Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
-        private @Nullable Input<String> virtualNetworkPoolName;
+        private @Nullable Output<String> labSubnetName;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
+        private @Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission;
+        private @Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
+        private @Nullable Output<String> virtualNetworkPoolName;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkPoolName = defaults.virtualNetworkPoolName;
         }
 
-        public Builder labSubnetName(@Nullable Input<String> labSubnetName) {
+        public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
         public Builder labSubnetName(@Nullable String labSubnetName) {
-            this.labSubnetName = Input.ofNullable(labSubnetName);
+            this.labSubnetName = Output.ofNullable(labSubnetName);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder sharedPublicIpAddressConfiguration(@Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
+        public Builder sharedPublicIpAddressConfiguration(@Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
         public Builder sharedPublicIpAddressConfiguration(@Nullable SubnetSharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
-            this.sharedPublicIpAddressConfiguration = Input.ofNullable(sharedPublicIpAddressConfiguration);
+            this.sharedPublicIpAddressConfiguration = Output.ofNullable(sharedPublicIpAddressConfiguration);
             return this;
         }
 
-        public Builder useInVmCreationPermission(@Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission) {
+        public Builder useInVmCreationPermission(@Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission) {
             this.useInVmCreationPermission = useInVmCreationPermission;
             return this;
         }
 
         public Builder useInVmCreationPermission(@Nullable Either<String,UsagePermissionType> useInVmCreationPermission) {
-            this.useInVmCreationPermission = Input.ofNullable(useInVmCreationPermission);
+            this.useInVmCreationPermission = Output.ofNullable(useInVmCreationPermission);
             return this;
         }
 
-        public Builder usePublicIpAddressPermission(@Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission) {
+        public Builder usePublicIpAddressPermission(@Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission) {
             this.usePublicIpAddressPermission = usePublicIpAddressPermission;
             return this;
         }
 
         public Builder usePublicIpAddressPermission(@Nullable Either<String,UsagePermissionType> usePublicIpAddressPermission) {
-            this.usePublicIpAddressPermission = Input.ofNullable(usePublicIpAddressPermission);
+            this.usePublicIpAddressPermission = Output.ofNullable(usePublicIpAddressPermission);
             return this;
         }
 
-        public Builder virtualNetworkPoolName(@Nullable Input<String> virtualNetworkPoolName) {
+        public Builder virtualNetworkPoolName(@Nullable Output<String> virtualNetworkPoolName) {
             this.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
         }
 
         public Builder virtualNetworkPoolName(@Nullable String virtualNetworkPoolName) {
-            this.virtualNetworkPoolName = Input.ofNullable(virtualNetworkPoolName);
+            this.virtualNetworkPoolName = Output.ofNullable(virtualNetworkPoolName);
             return this;
         }
         public SubnetOverrideArgs build() {

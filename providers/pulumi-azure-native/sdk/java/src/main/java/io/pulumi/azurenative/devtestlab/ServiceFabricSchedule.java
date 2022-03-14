@@ -10,7 +10,6 @@ import io.pulumi.azurenative.devtestlab.outputs.HourDetailsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.WeekDetailsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -285,18 +284,18 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceFabricSchedule(String name, ServiceFabricScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:ServiceFabricSchedule", name, args == null ? ServiceFabricScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:devtestlab:ServiceFabricSchedule", name, args == null ? ServiceFabricScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServiceFabricSchedule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServiceFabricSchedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:ServiceFabricSchedule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:devtestlab/v20180915:ServiceFabricSchedule").build())
+                Output.of(Alias.builder().setType("azure-native:devtestlab/v20180915:ServiceFabricSchedule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -310,7 +309,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceFabricSchedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceFabricSchedule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceFabricSchedule(name, id, options);
     }
 }

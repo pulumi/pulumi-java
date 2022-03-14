@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="server", required=true)
-      private final Input<String> server;
+      private final Output<String> server;
 
-    public Input<String> getServer() {
+    public Output<String> getServer() {
         return this.server;
     }
 
@@ -45,25 +45,25 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public ImageRegistryCredentialArgs(
-        @Nullable Input<String> password,
-        Input<String> server,
-        Input<String> username) {
+        @Nullable Output<String> password,
+        Output<String> server,
+        Output<String> username) {
         this.password = password;
         this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 
     private ImageRegistryCredentialArgs() {
-        this.password = Input.empty();
-        this.server = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.server = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private Input<String> server;
-        private Input<String> username;
+        private @Nullable Output<String> password;
+        private Output<String> server;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder server(Input<String> server) {
+        public Builder server(Output<String> server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
 
         public Builder server(String server) {
-            this.server = Input.of(Objects.requireNonNull(server));
+            this.server = Output.of(Objects.requireNonNull(server));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public ImageRegistryCredentialArgs build() {

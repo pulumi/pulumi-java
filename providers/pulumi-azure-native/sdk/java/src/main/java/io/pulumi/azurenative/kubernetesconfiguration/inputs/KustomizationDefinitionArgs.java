@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.enums.KustomizationValidationType;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.DependsOnDefinitionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -29,10 +29,10 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<DependsOnDefinitionArgs>> dependsOn;
+      private final @Nullable Output<List<DependsOnDefinitionArgs>> dependsOn;
 
-    public Input<List<DependsOnDefinitionArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<DependsOnDefinitionArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="force")
-      private final @Nullable Input<Boolean> force;
+      private final @Nullable Output<Boolean> force;
 
-    public Input<Boolean> getForce() {
-        return this.force == null ? Input.empty() : this.force;
+    public Output<Boolean> getForce() {
+        return this.force == null ? Output.empty() : this.force;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="prune")
-      private final @Nullable Input<Boolean> prune;
+      private final @Nullable Output<Boolean> prune;
 
-    public Input<Boolean> getPrune() {
-        return this.prune == null ? Input.empty() : this.prune;
+    public Output<Boolean> getPrune() {
+        return this.prune == null ? Output.empty() : this.prune;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retryIntervalInSeconds")
-      private final @Nullable Input<Double> retryIntervalInSeconds;
+      private final @Nullable Output<Double> retryIntervalInSeconds;
 
-    public Input<Double> getRetryIntervalInSeconds() {
-        return this.retryIntervalInSeconds == null ? Input.empty() : this.retryIntervalInSeconds;
+    public Output<Double> getRetryIntervalInSeconds() {
+        return this.retryIntervalInSeconds == null ? Output.empty() : this.retryIntervalInSeconds;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="syncIntervalInSeconds")
-      private final @Nullable Input<Double> syncIntervalInSeconds;
+      private final @Nullable Output<Double> syncIntervalInSeconds;
 
-    public Input<Double> getSyncIntervalInSeconds() {
-        return this.syncIntervalInSeconds == null ? Input.empty() : this.syncIntervalInSeconds;
+    public Output<Double> getSyncIntervalInSeconds() {
+        return this.syncIntervalInSeconds == null ? Output.empty() : this.syncIntervalInSeconds;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeoutInSeconds")
-      private final @Nullable Input<Double> timeoutInSeconds;
+      private final @Nullable Output<Double> timeoutInSeconds;
 
-    public Input<Double> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
+    public Output<Double> getTimeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
     }
 
     /**
@@ -106,40 +106,40 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="validation")
-      private final @Nullable Input<Either<String,KustomizationValidationType>> validation;
+      private final @Nullable Output<Either<String,KustomizationValidationType>> validation;
 
-    public Input<Either<String,KustomizationValidationType>> getValidation() {
-        return this.validation == null ? Input.empty() : this.validation;
+    public Output<Either<String,KustomizationValidationType>> getValidation() {
+        return this.validation == null ? Output.empty() : this.validation;
     }
 
     public KustomizationDefinitionArgs(
-        @Nullable Input<List<DependsOnDefinitionArgs>> dependsOn,
-        @Nullable Input<Boolean> force,
-        @Nullable Input<String> path,
-        @Nullable Input<Boolean> prune,
-        @Nullable Input<Double> retryIntervalInSeconds,
-        @Nullable Input<Double> syncIntervalInSeconds,
-        @Nullable Input<Double> timeoutInSeconds,
-        @Nullable Input<Either<String,KustomizationValidationType>> validation) {
+        @Nullable Output<List<DependsOnDefinitionArgs>> dependsOn,
+        @Nullable Output<Boolean> force,
+        @Nullable Output<String> path,
+        @Nullable Output<Boolean> prune,
+        @Nullable Output<Double> retryIntervalInSeconds,
+        @Nullable Output<Double> syncIntervalInSeconds,
+        @Nullable Output<Double> timeoutInSeconds,
+        @Nullable Output<Either<String,KustomizationValidationType>> validation) {
         this.dependsOn = dependsOn;
-        this.force = force == null ? Input.ofNullable(false) : force;
-        this.path = path == null ? Input.ofNullable("") : path;
-        this.prune = prune == null ? Input.ofNullable(false) : prune;
+        this.force = force == null ? Output.ofNullable(false) : force;
+        this.path = path == null ? Output.ofNullable("") : path;
+        this.prune = prune == null ? Output.ofNullable(false) : prune;
         this.retryIntervalInSeconds = retryIntervalInSeconds;
-        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Input.ofNullable(6e+02) : syncIntervalInSeconds;
-        this.timeoutInSeconds = timeoutInSeconds == null ? Input.ofNullable(6e+02) : timeoutInSeconds;
+        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Output.ofNullable(6e+02) : syncIntervalInSeconds;
+        this.timeoutInSeconds = timeoutInSeconds == null ? Output.ofNullable(6e+02) : timeoutInSeconds;
         this.validation = validation;
     }
 
     private KustomizationDefinitionArgs() {
-        this.dependsOn = Input.empty();
-        this.force = Input.empty();
-        this.path = Input.empty();
-        this.prune = Input.empty();
-        this.retryIntervalInSeconds = Input.empty();
-        this.syncIntervalInSeconds = Input.empty();
-        this.timeoutInSeconds = Input.empty();
-        this.validation = Input.empty();
+        this.dependsOn = Output.empty();
+        this.force = Output.empty();
+        this.path = Output.empty();
+        this.prune = Output.empty();
+        this.retryIntervalInSeconds = Output.empty();
+        this.syncIntervalInSeconds = Output.empty();
+        this.timeoutInSeconds = Output.empty();
+        this.validation = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DependsOnDefinitionArgs>> dependsOn;
-        private @Nullable Input<Boolean> force;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Boolean> prune;
-        private @Nullable Input<Double> retryIntervalInSeconds;
-        private @Nullable Input<Double> syncIntervalInSeconds;
-        private @Nullable Input<Double> timeoutInSeconds;
-        private @Nullable Input<Either<String,KustomizationValidationType>> validation;
+        private @Nullable Output<List<DependsOnDefinitionArgs>> dependsOn;
+        private @Nullable Output<Boolean> force;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Boolean> prune;
+        private @Nullable Output<Double> retryIntervalInSeconds;
+        private @Nullable Output<Double> syncIntervalInSeconds;
+        private @Nullable Output<Double> timeoutInSeconds;
+        private @Nullable Output<Either<String,KustomizationValidationType>> validation;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     	      this.validation = defaults.validation;
         }
 
-        public Builder dependsOn(@Nullable Input<List<DependsOnDefinitionArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<DependsOnDefinitionArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<DependsOnDefinitionArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder force(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
 
         public Builder force(@Nullable Boolean force) {
-            this.force = Input.ofNullable(force);
+            this.force = Output.ofNullable(force);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder prune(@Nullable Input<Boolean> prune) {
+        public Builder prune(@Nullable Output<Boolean> prune) {
             this.prune = prune;
             return this;
         }
 
         public Builder prune(@Nullable Boolean prune) {
-            this.prune = Input.ofNullable(prune);
+            this.prune = Output.ofNullable(prune);
             return this;
         }
 
-        public Builder retryIntervalInSeconds(@Nullable Input<Double> retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Output<Double> retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
         public Builder retryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
-            this.retryIntervalInSeconds = Input.ofNullable(retryIntervalInSeconds);
+            this.retryIntervalInSeconds = Output.ofNullable(retryIntervalInSeconds);
             return this;
         }
 
-        public Builder syncIntervalInSeconds(@Nullable Input<Double> syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Output<Double> syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
-            this.syncIntervalInSeconds = Input.ofNullable(syncIntervalInSeconds);
+            this.syncIntervalInSeconds = Output.ofNullable(syncIntervalInSeconds);
             return this;
         }
 
-        public Builder timeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
-            this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder validation(@Nullable Input<Either<String,KustomizationValidationType>> validation) {
+        public Builder validation(@Nullable Output<Either<String,KustomizationValidationType>> validation) {
             this.validation = validation;
             return this;
         }
 
         public Builder validation(@Nullable Either<String,KustomizationValidationType> validation) {
-            this.validation = Input.ofNullable(validation);
+            this.validation = Output.ofNullable(validation);
             return this;
         }
         public KustomizationDefinitionArgs build() {

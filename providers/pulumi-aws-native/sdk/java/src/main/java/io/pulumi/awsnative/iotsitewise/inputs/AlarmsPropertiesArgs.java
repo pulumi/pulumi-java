@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alarmRoleArn")
-      private final @Nullable Input<String> alarmRoleArn;
+      private final @Nullable Output<String> alarmRoleArn;
 
-    public Input<String> getAlarmRoleArn() {
-        return this.alarmRoleArn == null ? Input.empty() : this.alarmRoleArn;
+    public Output<String> getAlarmRoleArn() {
+        return this.alarmRoleArn == null ? Output.empty() : this.alarmRoleArn;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notificationLambdaArn")
-      private final @Nullable Input<String> notificationLambdaArn;
+      private final @Nullable Output<String> notificationLambdaArn;
 
-    public Input<String> getNotificationLambdaArn() {
-        return this.notificationLambdaArn == null ? Input.empty() : this.notificationLambdaArn;
+    public Output<String> getNotificationLambdaArn() {
+        return this.notificationLambdaArn == null ? Output.empty() : this.notificationLambdaArn;
     }
 
     public AlarmsPropertiesArgs(
-        @Nullable Input<String> alarmRoleArn,
-        @Nullable Input<String> notificationLambdaArn) {
+        @Nullable Output<String> alarmRoleArn,
+        @Nullable Output<String> notificationLambdaArn) {
         this.alarmRoleArn = alarmRoleArn;
         this.notificationLambdaArn = notificationLambdaArn;
     }
 
     private AlarmsPropertiesArgs() {
-        this.alarmRoleArn = Input.empty();
-        this.notificationLambdaArn = Input.empty();
+        this.alarmRoleArn = Output.empty();
+        this.notificationLambdaArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alarmRoleArn;
-        private @Nullable Input<String> notificationLambdaArn;
+        private @Nullable Output<String> alarmRoleArn;
+        private @Nullable Output<String> notificationLambdaArn;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.notificationLambdaArn = defaults.notificationLambdaArn;
         }
 
-        public Builder alarmRoleArn(@Nullable Input<String> alarmRoleArn) {
+        public Builder alarmRoleArn(@Nullable Output<String> alarmRoleArn) {
             this.alarmRoleArn = alarmRoleArn;
             return this;
         }
 
         public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
-            this.alarmRoleArn = Input.ofNullable(alarmRoleArn);
+            this.alarmRoleArn = Output.ofNullable(alarmRoleArn);
             return this;
         }
 
-        public Builder notificationLambdaArn(@Nullable Input<String> notificationLambdaArn) {
+        public Builder notificationLambdaArn(@Nullable Output<String> notificationLambdaArn) {
             this.notificationLambdaArn = notificationLambdaArn;
             return this;
         }
 
         public Builder notificationLambdaArn(@Nullable String notificationLambdaArn) {
-            this.notificationLambdaArn = Input.ofNullable(notificationLambdaArn);
+            this.notificationLambdaArn = Output.ofNullable(notificationLambdaArn);
             return this;
         }
         public AlarmsPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
      * 
      */
     @InputImport(name="apiKey", required=true)
-      private final Input<String> apiKey;
+      private final Output<String> apiKey;
 
-    public Input<String> getApiKey() {
+    public Output<String> getApiKey() {
         return this.apiKey;
     }
 
-    public ConnectorProfileSingularConnectorProfileCredentialsArgs(Input<String> apiKey) {
+    public ConnectorProfileSingularConnectorProfileCredentialsArgs(Output<String> apiKey) {
         this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
     }
 
     private ConnectorProfileSingularConnectorProfileCredentialsArgs() {
-        this.apiKey = Input.empty();
+        this.apiKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
     }
 
     public static final class Builder {
-        private Input<String> apiKey;
+        private Output<String> apiKey;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
     	      this.apiKey = defaults.apiKey;
         }
 
-        public Builder apiKey(Input<String> apiKey) {
+        public Builder apiKey(Output<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Input.of(Objects.requireNonNull(apiKey));
+            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
         }
         public ConnectorProfileSingularConnectorProfileCredentialsArgs build() {

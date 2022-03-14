@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class StandardsSubscriptionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="standardsArn", required=true)
-      private final Input<String> standardsArn;
+      private final Output<String> standardsArn;
 
-    public Input<String> getStandardsArn() {
+    public Output<String> getStandardsArn() {
         return this.standardsArn;
     }
 
-    public StandardsSubscriptionArgs(Input<String> standardsArn) {
+    public StandardsSubscriptionArgs(Output<String> standardsArn) {
         this.standardsArn = Objects.requireNonNull(standardsArn, "expected parameter 'standardsArn' to be non-null");
     }
 
     private StandardsSubscriptionArgs() {
-        this.standardsArn = Input.empty();
+        this.standardsArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class StandardsSubscriptionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> standardsArn;
+        private Output<String> standardsArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class StandardsSubscriptionArgs extends io.pulumi.resources.Resourc
     	      this.standardsArn = defaults.standardsArn;
         }
 
-        public Builder standardsArn(Input<String> standardsArn) {
+        public Builder standardsArn(Output<String> standardsArn) {
             this.standardsArn = Objects.requireNonNull(standardsArn);
             return this;
         }
 
         public Builder standardsArn(String standardsArn) {
-            this.standardsArn = Input.of(Objects.requireNonNull(standardsArn));
+            this.standardsArn = Output.of(Objects.requireNonNull(standardsArn));
             return this;
         }
         public StandardsSubscriptionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nextLink")
-      private final @Nullable Input<String> nextLink;
+      private final @Nullable Output<String> nextLink;
 
-    public Input<String> getNextLink() {
-        return this.nextLink == null ? Input.empty() : this.nextLink;
+    public Output<String> getNextLink() {
+        return this.nextLink == null ? Output.empty() : this.nextLink;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<List<VirtualNetworkPropertiesArgs>> value;
+      private final @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
 
-    public Input<List<VirtualNetworkPropertiesArgs>> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<List<VirtualNetworkPropertiesArgs>> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public VirtualNetworkPropertiesListArgs(
-        @Nullable Input<String> nextLink,
-        @Nullable Input<List<VirtualNetworkPropertiesArgs>> value) {
+        @Nullable Output<String> nextLink,
+        @Nullable Output<List<VirtualNetworkPropertiesArgs>> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
 
     private VirtualNetworkPropertiesListArgs() {
-        this.nextLink = Input.empty();
-        this.value = Input.empty();
+        this.nextLink = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nextLink;
-        private @Nullable Input<List<VirtualNetworkPropertiesArgs>> value;
+        private @Nullable Output<String> nextLink;
+        private @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder nextLink(@Nullable Input<String> nextLink) {
+        public Builder nextLink(@Nullable Output<String> nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
         public Builder nextLink(@Nullable String nextLink) {
-            this.nextLink = Input.ofNullable(nextLink);
+            this.nextLink = Output.ofNullable(nextLink);
             return this;
         }
 
-        public Builder value(@Nullable Input<List<VirtualNetworkPropertiesArgs>> value) {
+        public Builder value(@Nullable Output<List<VirtualNetworkPropertiesArgs>> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable List<VirtualNetworkPropertiesArgs> value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public VirtualNetworkPropertiesListArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3outposts.inputs;
 
 import io.pulumi.aws.s3outposts.inputs.EndpointNetworkInterfaceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-      private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
-        return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
+    public Output<String> getCidrBlock() {
+        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<String> creationTime;
+      private final @Nullable Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<String> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
+      private final @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
 
-    public Input<List<EndpointNetworkInterfaceGetArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<EndpointNetworkInterfaceGetArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId")
-      private final @Nullable Input<String> outpostId;
+      private final @Nullable Output<String> outpostId;
 
-    public Input<String> getOutpostId() {
-        return this.outpostId == null ? Input.empty() : this.outpostId;
+    public Output<String> getOutpostId() {
+        return this.outpostId == null ? Output.empty() : this.outpostId;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupId")
-      private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
+    public Output<String> getSecurityGroupId() {
+        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public EndpointState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> cidrBlock,
-        @Nullable Input<String> creationTime,
-        @Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces,
-        @Nullable Input<String> outpostId,
-        @Nullable Input<String> securityGroupId,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> cidrBlock,
+        @Nullable Output<String> creationTime,
+        @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces,
+        @Nullable Output<String> outpostId,
+        @Nullable Output<String> securityGroupId,
+        @Nullable Output<String> subnetId) {
         this.arn = arn;
         this.cidrBlock = cidrBlock;
         this.creationTime = creationTime;
@@ -111,13 +111,13 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointState() {
-        this.arn = Input.empty();
-        this.cidrBlock = Input.empty();
-        this.creationTime = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.outpostId = Input.empty();
-        this.securityGroupId = Input.empty();
-        this.subnetId = Input.empty();
+        this.arn = Output.empty();
+        this.cidrBlock = Output.empty();
+        this.creationTime = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.outpostId = Output.empty();
+        this.securityGroupId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> cidrBlock;
-        private @Nullable Input<String> creationTime;
-        private @Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
-        private @Nullable Input<String> outpostId;
-        private @Nullable Input<String> securityGroupId;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> cidrBlock;
+        private @Nullable Output<String> creationTime;
+        private @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
+        private @Nullable Output<String> outpostId;
+        private @Nullable Output<String> securityGroupId;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Input.ofNullable(cidrBlock);
+            this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder outpostId(@Nullable Input<String> outpostId) {
+        public Builder outpostId(@Nullable Output<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
 
         public Builder outpostId(@Nullable String outpostId) {
-            this.outpostId = Input.ofNullable(outpostId);
+            this.outpostId = Output.ofNullable(outpostId);
             return this;
         }
 
-        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Input.ofNullable(securityGroupId);
+            this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public EndpointState build() {

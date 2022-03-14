@@ -12,7 +12,6 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ErrorResponseWrapper
 import io.pulumi.azurenative.machinelearningcompute.outputs.GlobalServiceConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -287,19 +286,19 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public OperationalizationCluster(String name, OperationalizationClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningcompute:OperationalizationCluster", name, args == null ? OperationalizationClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:machinelearningcompute:OperationalizationCluster", name, args == null ? OperationalizationClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OperationalizationCluster(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OperationalizationCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningcompute:OperationalizationCluster", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:machinelearningcompute/v20170601preview:OperationalizationCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningcompute/v20170801preview:OperationalizationCluster").build())
+                Output.of(Alias.builder().setType("azure-native:machinelearningcompute/v20170601preview:OperationalizationCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningcompute/v20170801preview:OperationalizationCluster").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -313,7 +312,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OperationalizationCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OperationalizationCluster get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OperationalizationCluster(name, id, options);
     }
 }

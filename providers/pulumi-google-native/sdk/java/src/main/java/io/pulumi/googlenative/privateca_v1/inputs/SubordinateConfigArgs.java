@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.SubordinateConfigChainArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateAuthority", required=true)
-      private final Input<String> certificateAuthority;
+      private final Output<String> certificateAuthority;
 
-    public Input<String> getCertificateAuthority() {
+    public Output<String> getCertificateAuthority() {
         return this.certificateAuthority;
     }
 
@@ -34,22 +34,22 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pemIssuerChain", required=true)
-      private final Input<SubordinateConfigChainArgs> pemIssuerChain;
+      private final Output<SubordinateConfigChainArgs> pemIssuerChain;
 
-    public Input<SubordinateConfigChainArgs> getPemIssuerChain() {
+    public Output<SubordinateConfigChainArgs> getPemIssuerChain() {
         return this.pemIssuerChain;
     }
 
     public SubordinateConfigArgs(
-        Input<String> certificateAuthority,
-        Input<SubordinateConfigChainArgs> pemIssuerChain) {
+        Output<String> certificateAuthority,
+        Output<SubordinateConfigChainArgs> pemIssuerChain) {
         this.certificateAuthority = Objects.requireNonNull(certificateAuthority, "expected parameter 'certificateAuthority' to be non-null");
         this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain, "expected parameter 'pemIssuerChain' to be non-null");
     }
 
     private SubordinateConfigArgs() {
-        this.certificateAuthority = Input.empty();
-        this.pemIssuerChain = Input.empty();
+        this.certificateAuthority = Output.empty();
+        this.pemIssuerChain = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> certificateAuthority;
-        private Input<SubordinateConfigChainArgs> pemIssuerChain;
+        private Output<String> certificateAuthority;
+        private Output<SubordinateConfigChainArgs> pemIssuerChain;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.pemIssuerChain = defaults.pemIssuerChain;
         }
 
-        public Builder certificateAuthority(Input<String> certificateAuthority) {
+        public Builder certificateAuthority(Output<String> certificateAuthority) {
             this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
             return this;
         }
 
         public Builder certificateAuthority(String certificateAuthority) {
-            this.certificateAuthority = Input.of(Objects.requireNonNull(certificateAuthority));
+            this.certificateAuthority = Output.of(Objects.requireNonNull(certificateAuthority));
             return this;
         }
 
-        public Builder pemIssuerChain(Input<SubordinateConfigChainArgs> pemIssuerChain) {
+        public Builder pemIssuerChain(Output<SubordinateConfigChainArgs> pemIssuerChain) {
             this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
             return this;
         }
 
         public Builder pemIssuerChain(SubordinateConfigChainArgs pemIssuerChain) {
-            this.pemIssuerChain = Input.of(Objects.requireNonNull(pemIssuerChain));
+            this.pemIssuerChain = Output.of(Objects.requireNonNull(pemIssuerChain));
             return this;
         }
         public SubordinateConfigArgs build() {

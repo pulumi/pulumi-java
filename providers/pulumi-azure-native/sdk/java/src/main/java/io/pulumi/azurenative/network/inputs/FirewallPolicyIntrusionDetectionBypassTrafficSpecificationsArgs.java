@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.FirewallPolicyIntrusionDetectionProtocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="destinationAddresses")
-      private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Input<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
+    public Output<List<String>> getDestinationAddresses() {
+        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="destinationIpGroups")
-      private final @Nullable Input<List<String>> destinationIpGroups;
+      private final @Nullable Output<List<String>> destinationIpGroups;
 
-    public Input<List<String>> getDestinationIpGroups() {
-        return this.destinationIpGroups == null ? Input.empty() : this.destinationIpGroups;
+    public Output<List<String>> getDestinationIpGroups() {
+        return this.destinationIpGroups == null ? Output.empty() : this.destinationIpGroups;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="destinationPorts")
-      private final @Nullable Input<List<String>> destinationPorts;
+      private final @Nullable Output<List<String>> destinationPorts;
 
-    public Input<List<String>> getDestinationPorts() {
-        return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
+    public Output<List<String>> getDestinationPorts() {
+        return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol;
+      private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol;
 
-    public Input<Either<String,FirewallPolicyIntrusionDetectionProtocol>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="sourceAddresses")
-      private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Input<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
+    public Output<List<String>> getSourceAddresses() {
+        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
     }
 
     /**
@@ -103,21 +103,21 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
      * 
      */
     @InputImport(name="sourceIpGroups")
-      private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Input<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
+    public Output<List<String>> getSourceIpGroups() {
+        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
     }
 
     public FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> destinationAddresses,
-        @Nullable Input<List<String>> destinationIpGroups,
-        @Nullable Input<List<String>> destinationPorts,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol,
-        @Nullable Input<List<String>> sourceAddresses,
-        @Nullable Input<List<String>> sourceIpGroups) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> destinationAddresses,
+        @Nullable Output<List<String>> destinationIpGroups,
+        @Nullable Output<List<String>> destinationPorts,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol,
+        @Nullable Output<List<String>> sourceAddresses,
+        @Nullable Output<List<String>> sourceIpGroups) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationIpGroups = destinationIpGroups;
@@ -129,14 +129,14 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     }
 
     private FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs() {
-        this.description = Input.empty();
-        this.destinationAddresses = Input.empty();
-        this.destinationIpGroups = Input.empty();
-        this.destinationPorts = Input.empty();
-        this.name = Input.empty();
-        this.protocol = Input.empty();
-        this.sourceAddresses = Input.empty();
-        this.sourceIpGroups = Input.empty();
+        this.description = Output.empty();
+        this.destinationAddresses = Output.empty();
+        this.destinationIpGroups = Output.empty();
+        this.destinationPorts = Output.empty();
+        this.name = Output.empty();
+        this.protocol = Output.empty();
+        this.sourceAddresses = Output.empty();
+        this.sourceIpGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> destinationAddresses;
-        private @Nullable Input<List<String>> destinationIpGroups;
-        private @Nullable Input<List<String>> destinationPorts;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol;
-        private @Nullable Input<List<String>> sourceAddresses;
-        private @Nullable Input<List<String>> sourceIpGroups;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> destinationAddresses;
+        private @Nullable Output<List<String>> destinationIpGroups;
+        private @Nullable Output<List<String>> destinationPorts;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol;
+        private @Nullable Output<List<String>> sourceAddresses;
+        private @Nullable Output<List<String>> sourceIpGroups;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     	      this.sourceIpGroups = defaults.sourceIpGroups;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Input.ofNullable(destinationAddresses);
+            this.destinationAddresses = Output.ofNullable(destinationAddresses);
             return this;
         }
 
-        public Builder destinationIpGroups(@Nullable Input<List<String>> destinationIpGroups) {
+        public Builder destinationIpGroups(@Nullable Output<List<String>> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
-            this.destinationIpGroups = Input.ofNullable(destinationIpGroups);
+            this.destinationIpGroups = Output.ofNullable(destinationIpGroups);
             return this;
         }
 
-        public Builder destinationPorts(@Nullable Input<List<String>> destinationPorts) {
+        public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Input.ofNullable(destinationPorts);
+            this.destinationPorts = Output.ofNullable(destinationPorts);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,FirewallPolicyIntrusionDetectionProtocol> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder sourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Input.ofNullable(sourceAddresses);
+            this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
 
-        public Builder sourceIpGroups(@Nullable Input<List<String>> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Input.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
             return this;
         }
         public FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs build() {

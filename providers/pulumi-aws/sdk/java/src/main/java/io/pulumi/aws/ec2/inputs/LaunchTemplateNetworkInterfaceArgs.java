@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="associateCarrierIpAddress")
-      private final @Nullable Input<String> associateCarrierIpAddress;
+      private final @Nullable Output<String> associateCarrierIpAddress;
 
-    public Input<String> getAssociateCarrierIpAddress() {
-        return this.associateCarrierIpAddress == null ? Input.empty() : this.associateCarrierIpAddress;
+    public Output<String> getAssociateCarrierIpAddress() {
+        return this.associateCarrierIpAddress == null ? Output.empty() : this.associateCarrierIpAddress;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="associatePublicIpAddress")
-      private final @Nullable Input<String> associatePublicIpAddress;
+      private final @Nullable Output<String> associatePublicIpAddress;
 
-    public Input<String> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
+    public Output<String> getAssociatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deleteOnTermination")
-      private final @Nullable Input<String> deleteOnTermination;
+      private final @Nullable Output<String> deleteOnTermination;
 
-    public Input<String> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
+    public Output<String> getDeleteOnTermination() {
+        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deviceIndex")
-      private final @Nullable Input<Integer> deviceIndex;
+      private final @Nullable Output<Integer> deviceIndex;
 
-    public Input<Integer> getDeviceIndex() {
-        return this.deviceIndex == null ? Input.empty() : this.deviceIndex;
+    public Output<Integer> getDeviceIndex() {
+        return this.deviceIndex == null ? Output.empty() : this.deviceIndex;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="interfaceType")
-      private final @Nullable Input<String> interfaceType;
+      private final @Nullable Output<String> interfaceType;
 
-    public Input<String> getInterfaceType() {
-        return this.interfaceType == null ? Input.empty() : this.interfaceType;
+    public Output<String> getInterfaceType() {
+        return this.interfaceType == null ? Output.empty() : this.interfaceType;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv4AddressCount")
-      private final @Nullable Input<Integer> ipv4AddressCount;
+      private final @Nullable Output<Integer> ipv4AddressCount;
 
-    public Input<Integer> getIpv4AddressCount() {
-        return this.ipv4AddressCount == null ? Input.empty() : this.ipv4AddressCount;
+    public Output<Integer> getIpv4AddressCount() {
+        return this.ipv4AddressCount == null ? Output.empty() : this.ipv4AddressCount;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv4Addresses")
-      private final @Nullable Input<List<String>> ipv4Addresses;
+      private final @Nullable Output<List<String>> ipv4Addresses;
 
-    public Input<List<String>> getIpv4Addresses() {
-        return this.ipv4Addresses == null ? Input.empty() : this.ipv4Addresses;
+    public Output<List<String>> getIpv4Addresses() {
+        return this.ipv4Addresses == null ? Output.empty() : this.ipv4Addresses;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv6AddressCount")
-      private final @Nullable Input<Integer> ipv6AddressCount;
+      private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Input<Integer> getIpv6AddressCount() {
-        return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
+    public Output<Integer> getIpv6AddressCount() {
+        return this.ipv6AddressCount == null ? Output.empty() : this.ipv6AddressCount;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv6Addresses")
-      private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Input<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
+    public Output<List<String>> getIpv6Addresses() {
+        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkCardIndex")
-      private final @Nullable Input<Integer> networkCardIndex;
+      private final @Nullable Output<Integer> networkCardIndex;
 
-    public Input<Integer> getNetworkCardIndex() {
-        return this.networkCardIndex == null ? Input.empty() : this.networkCardIndex;
+    public Output<Integer> getNetworkCardIndex() {
+        return this.networkCardIndex == null ? Output.empty() : this.networkCardIndex;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkInterfaceId")
-      private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
+    public Output<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -175,28 +175,28 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public LaunchTemplateNetworkInterfaceArgs(
-        @Nullable Input<String> associateCarrierIpAddress,
-        @Nullable Input<String> associatePublicIpAddress,
-        @Nullable Input<String> deleteOnTermination,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> deviceIndex,
-        @Nullable Input<String> interfaceType,
-        @Nullable Input<Integer> ipv4AddressCount,
-        @Nullable Input<List<String>> ipv4Addresses,
-        @Nullable Input<Integer> ipv6AddressCount,
-        @Nullable Input<List<String>> ipv6Addresses,
-        @Nullable Input<Integer> networkCardIndex,
-        @Nullable Input<String> networkInterfaceId,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> associateCarrierIpAddress,
+        @Nullable Output<String> associatePublicIpAddress,
+        @Nullable Output<String> deleteOnTermination,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> deviceIndex,
+        @Nullable Output<String> interfaceType,
+        @Nullable Output<Integer> ipv4AddressCount,
+        @Nullable Output<List<String>> ipv4Addresses,
+        @Nullable Output<Integer> ipv6AddressCount,
+        @Nullable Output<List<String>> ipv6Addresses,
+        @Nullable Output<Integer> networkCardIndex,
+        @Nullable Output<String> networkInterfaceId,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<String> subnetId) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;
@@ -215,21 +215,21 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     }
 
     private LaunchTemplateNetworkInterfaceArgs() {
-        this.associateCarrierIpAddress = Input.empty();
-        this.associatePublicIpAddress = Input.empty();
-        this.deleteOnTermination = Input.empty();
-        this.description = Input.empty();
-        this.deviceIndex = Input.empty();
-        this.interfaceType = Input.empty();
-        this.ipv4AddressCount = Input.empty();
-        this.ipv4Addresses = Input.empty();
-        this.ipv6AddressCount = Input.empty();
-        this.ipv6Addresses = Input.empty();
-        this.networkCardIndex = Input.empty();
-        this.networkInterfaceId = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetId = Input.empty();
+        this.associateCarrierIpAddress = Output.empty();
+        this.associatePublicIpAddress = Output.empty();
+        this.deleteOnTermination = Output.empty();
+        this.description = Output.empty();
+        this.deviceIndex = Output.empty();
+        this.interfaceType = Output.empty();
+        this.ipv4AddressCount = Output.empty();
+        this.ipv4Addresses = Output.empty();
+        this.ipv6AddressCount = Output.empty();
+        this.ipv6Addresses = Output.empty();
+        this.networkCardIndex = Output.empty();
+        this.networkInterfaceId = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -241,21 +241,21 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associateCarrierIpAddress;
-        private @Nullable Input<String> associatePublicIpAddress;
-        private @Nullable Input<String> deleteOnTermination;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> deviceIndex;
-        private @Nullable Input<String> interfaceType;
-        private @Nullable Input<Integer> ipv4AddressCount;
-        private @Nullable Input<List<String>> ipv4Addresses;
-        private @Nullable Input<Integer> ipv6AddressCount;
-        private @Nullable Input<List<String>> ipv6Addresses;
-        private @Nullable Input<Integer> networkCardIndex;
-        private @Nullable Input<String> networkInterfaceId;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> associateCarrierIpAddress;
+        private @Nullable Output<String> associatePublicIpAddress;
+        private @Nullable Output<String> deleteOnTermination;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> deviceIndex;
+        private @Nullable Output<String> interfaceType;
+        private @Nullable Output<Integer> ipv4AddressCount;
+        private @Nullable Output<List<String>> ipv4Addresses;
+        private @Nullable Output<Integer> ipv6AddressCount;
+        private @Nullable Output<List<String>> ipv6Addresses;
+        private @Nullable Output<Integer> networkCardIndex;
+        private @Nullable Output<String> networkInterfaceId;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -280,153 +280,153 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder associateCarrierIpAddress(@Nullable Input<String> associateCarrierIpAddress) {
+        public Builder associateCarrierIpAddress(@Nullable Output<String> associateCarrierIpAddress) {
             this.associateCarrierIpAddress = associateCarrierIpAddress;
             return this;
         }
 
         public Builder associateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
-            this.associateCarrierIpAddress = Input.ofNullable(associateCarrierIpAddress);
+            this.associateCarrierIpAddress = Output.ofNullable(associateCarrierIpAddress);
             return this;
         }
 
-        public Builder associatePublicIpAddress(@Nullable Input<String> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Output<String> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
         public Builder associatePublicIpAddress(@Nullable String associatePublicIpAddress) {
-            this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder deleteOnTermination(@Nullable Input<String> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Output<String> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
         public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
-            this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder deviceIndex(@Nullable Input<Integer> deviceIndex) {
+        public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
 
         public Builder deviceIndex(@Nullable Integer deviceIndex) {
-            this.deviceIndex = Input.ofNullable(deviceIndex);
+            this.deviceIndex = Output.ofNullable(deviceIndex);
             return this;
         }
 
-        public Builder interfaceType(@Nullable Input<String> interfaceType) {
+        public Builder interfaceType(@Nullable Output<String> interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
 
         public Builder interfaceType(@Nullable String interfaceType) {
-            this.interfaceType = Input.ofNullable(interfaceType);
+            this.interfaceType = Output.ofNullable(interfaceType);
             return this;
         }
 
-        public Builder ipv4AddressCount(@Nullable Input<Integer> ipv4AddressCount) {
+        public Builder ipv4AddressCount(@Nullable Output<Integer> ipv4AddressCount) {
             this.ipv4AddressCount = ipv4AddressCount;
             return this;
         }
 
         public Builder ipv4AddressCount(@Nullable Integer ipv4AddressCount) {
-            this.ipv4AddressCount = Input.ofNullable(ipv4AddressCount);
+            this.ipv4AddressCount = Output.ofNullable(ipv4AddressCount);
             return this;
         }
 
-        public Builder ipv4Addresses(@Nullable Input<List<String>> ipv4Addresses) {
+        public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
             this.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
         public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
-            this.ipv4Addresses = Input.ofNullable(ipv4Addresses);
+            this.ipv4Addresses = Output.ofNullable(ipv4Addresses);
             return this;
         }
 
-        public Builder ipv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Input.ofNullable(ipv6AddressCount);
+            this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
             return this;
         }
 
-        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder networkCardIndex(@Nullable Input<Integer> networkCardIndex) {
+        public Builder networkCardIndex(@Nullable Output<Integer> networkCardIndex) {
             this.networkCardIndex = networkCardIndex;
             return this;
         }
 
         public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
-            this.networkCardIndex = Input.ofNullable(networkCardIndex);
+            this.networkCardIndex = Output.ofNullable(networkCardIndex);
             return this;
         }
 
-        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public LaunchTemplateNetworkInterfaceArgs build() {

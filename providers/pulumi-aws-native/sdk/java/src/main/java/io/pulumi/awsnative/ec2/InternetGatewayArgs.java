@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.InternetGatewayTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<InternetGatewayTagArgs>> tags;
+      private final @Nullable Output<List<InternetGatewayTagArgs>> tags;
 
-    public Input<List<InternetGatewayTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<InternetGatewayTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
-    public InternetGatewayArgs(@Nullable Input<List<InternetGatewayTagArgs>> tags) {
+    public InternetGatewayArgs(@Nullable Output<List<InternetGatewayTagArgs>> tags) {
         this.tags = tags;
     }
 
     private InternetGatewayArgs() {
-        this.tags = Input.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<InternetGatewayTagArgs>> tags;
+        private @Nullable Output<List<InternetGatewayTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder tags(@Nullable Input<List<InternetGatewayTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<InternetGatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<InternetGatewayTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public InternetGatewayArgs build() {

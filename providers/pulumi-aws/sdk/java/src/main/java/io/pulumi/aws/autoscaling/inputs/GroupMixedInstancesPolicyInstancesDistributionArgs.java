@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * 
      */
     @InputImport(name="onDemandAllocationStrategy")
-      private final @Nullable Input<String> onDemandAllocationStrategy;
+      private final @Nullable Output<String> onDemandAllocationStrategy;
 
-    public Input<String> getOnDemandAllocationStrategy() {
-        return this.onDemandAllocationStrategy == null ? Input.empty() : this.onDemandAllocationStrategy;
+    public Output<String> getOnDemandAllocationStrategy() {
+        return this.onDemandAllocationStrategy == null ? Output.empty() : this.onDemandAllocationStrategy;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * 
      */
     @InputImport(name="onDemandBaseCapacity")
-      private final @Nullable Input<Integer> onDemandBaseCapacity;
+      private final @Nullable Output<Integer> onDemandBaseCapacity;
 
-    public Input<Integer> getOnDemandBaseCapacity() {
-        return this.onDemandBaseCapacity == null ? Input.empty() : this.onDemandBaseCapacity;
+    public Output<Integer> getOnDemandBaseCapacity() {
+        return this.onDemandBaseCapacity == null ? Output.empty() : this.onDemandBaseCapacity;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * 
      */
     @InputImport(name="onDemandPercentageAboveBaseCapacity")
-      private final @Nullable Input<Integer> onDemandPercentageAboveBaseCapacity;
+      private final @Nullable Output<Integer> onDemandPercentageAboveBaseCapacity;
 
-    public Input<Integer> getOnDemandPercentageAboveBaseCapacity() {
-        return this.onDemandPercentageAboveBaseCapacity == null ? Input.empty() : this.onDemandPercentageAboveBaseCapacity;
+    public Output<Integer> getOnDemandPercentageAboveBaseCapacity() {
+        return this.onDemandPercentageAboveBaseCapacity == null ? Output.empty() : this.onDemandPercentageAboveBaseCapacity;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * 
      */
     @InputImport(name="spotAllocationStrategy")
-      private final @Nullable Input<String> spotAllocationStrategy;
+      private final @Nullable Output<String> spotAllocationStrategy;
 
-    public Input<String> getSpotAllocationStrategy() {
-        return this.spotAllocationStrategy == null ? Input.empty() : this.spotAllocationStrategy;
+    public Output<String> getSpotAllocationStrategy() {
+        return this.spotAllocationStrategy == null ? Output.empty() : this.spotAllocationStrategy;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * 
      */
     @InputImport(name="spotInstancePools")
-      private final @Nullable Input<Integer> spotInstancePools;
+      private final @Nullable Output<Integer> spotInstancePools;
 
-    public Input<Integer> getSpotInstancePools() {
-        return this.spotInstancePools == null ? Input.empty() : this.spotInstancePools;
+    public Output<Integer> getSpotInstancePools() {
+        return this.spotInstancePools == null ? Output.empty() : this.spotInstancePools;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * 
      */
     @InputImport(name="spotMaxPrice")
-      private final @Nullable Input<String> spotMaxPrice;
+      private final @Nullable Output<String> spotMaxPrice;
 
-    public Input<String> getSpotMaxPrice() {
-        return this.spotMaxPrice == null ? Input.empty() : this.spotMaxPrice;
+    public Output<String> getSpotMaxPrice() {
+        return this.spotMaxPrice == null ? Output.empty() : this.spotMaxPrice;
     }
 
     public GroupMixedInstancesPolicyInstancesDistributionArgs(
-        @Nullable Input<String> onDemandAllocationStrategy,
-        @Nullable Input<Integer> onDemandBaseCapacity,
-        @Nullable Input<Integer> onDemandPercentageAboveBaseCapacity,
-        @Nullable Input<String> spotAllocationStrategy,
-        @Nullable Input<Integer> spotInstancePools,
-        @Nullable Input<String> spotMaxPrice) {
+        @Nullable Output<String> onDemandAllocationStrategy,
+        @Nullable Output<Integer> onDemandBaseCapacity,
+        @Nullable Output<Integer> onDemandPercentageAboveBaseCapacity,
+        @Nullable Output<String> spotAllocationStrategy,
+        @Nullable Output<Integer> spotInstancePools,
+        @Nullable Output<String> spotMaxPrice) {
         this.onDemandAllocationStrategy = onDemandAllocationStrategy;
         this.onDemandBaseCapacity = onDemandBaseCapacity;
         this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -97,12 +97,12 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     }
 
     private GroupMixedInstancesPolicyInstancesDistributionArgs() {
-        this.onDemandAllocationStrategy = Input.empty();
-        this.onDemandBaseCapacity = Input.empty();
-        this.onDemandPercentageAboveBaseCapacity = Input.empty();
-        this.spotAllocationStrategy = Input.empty();
-        this.spotInstancePools = Input.empty();
-        this.spotMaxPrice = Input.empty();
+        this.onDemandAllocationStrategy = Output.empty();
+        this.onDemandBaseCapacity = Output.empty();
+        this.onDemandPercentageAboveBaseCapacity = Output.empty();
+        this.spotAllocationStrategy = Output.empty();
+        this.spotInstancePools = Output.empty();
+        this.spotMaxPrice = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<String> onDemandAllocationStrategy;
-        private @Nullable Input<Integer> onDemandBaseCapacity;
-        private @Nullable Input<Integer> onDemandPercentageAboveBaseCapacity;
-        private @Nullable Input<String> spotAllocationStrategy;
-        private @Nullable Input<Integer> spotInstancePools;
-        private @Nullable Input<String> spotMaxPrice;
+        private @Nullable Output<String> onDemandAllocationStrategy;
+        private @Nullable Output<Integer> onDemandBaseCapacity;
+        private @Nullable Output<Integer> onDemandPercentageAboveBaseCapacity;
+        private @Nullable Output<String> spotAllocationStrategy;
+        private @Nullable Output<Integer> spotInstancePools;
+        private @Nullable Output<String> spotMaxPrice;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     	      this.spotMaxPrice = defaults.spotMaxPrice;
         }
 
-        public Builder onDemandAllocationStrategy(@Nullable Input<String> onDemandAllocationStrategy) {
+        public Builder onDemandAllocationStrategy(@Nullable Output<String> onDemandAllocationStrategy) {
             this.onDemandAllocationStrategy = onDemandAllocationStrategy;
             return this;
         }
 
         public Builder onDemandAllocationStrategy(@Nullable String onDemandAllocationStrategy) {
-            this.onDemandAllocationStrategy = Input.ofNullable(onDemandAllocationStrategy);
+            this.onDemandAllocationStrategy = Output.ofNullable(onDemandAllocationStrategy);
             return this;
         }
 
-        public Builder onDemandBaseCapacity(@Nullable Input<Integer> onDemandBaseCapacity) {
+        public Builder onDemandBaseCapacity(@Nullable Output<Integer> onDemandBaseCapacity) {
             this.onDemandBaseCapacity = onDemandBaseCapacity;
             return this;
         }
 
         public Builder onDemandBaseCapacity(@Nullable Integer onDemandBaseCapacity) {
-            this.onDemandBaseCapacity = Input.ofNullable(onDemandBaseCapacity);
+            this.onDemandBaseCapacity = Output.ofNullable(onDemandBaseCapacity);
             return this;
         }
 
-        public Builder onDemandPercentageAboveBaseCapacity(@Nullable Input<Integer> onDemandPercentageAboveBaseCapacity) {
+        public Builder onDemandPercentageAboveBaseCapacity(@Nullable Output<Integer> onDemandPercentageAboveBaseCapacity) {
             this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
             return this;
         }
 
         public Builder onDemandPercentageAboveBaseCapacity(@Nullable Integer onDemandPercentageAboveBaseCapacity) {
-            this.onDemandPercentageAboveBaseCapacity = Input.ofNullable(onDemandPercentageAboveBaseCapacity);
+            this.onDemandPercentageAboveBaseCapacity = Output.ofNullable(onDemandPercentageAboveBaseCapacity);
             return this;
         }
 
-        public Builder spotAllocationStrategy(@Nullable Input<String> spotAllocationStrategy) {
+        public Builder spotAllocationStrategy(@Nullable Output<String> spotAllocationStrategy) {
             this.spotAllocationStrategy = spotAllocationStrategy;
             return this;
         }
 
         public Builder spotAllocationStrategy(@Nullable String spotAllocationStrategy) {
-            this.spotAllocationStrategy = Input.ofNullable(spotAllocationStrategy);
+            this.spotAllocationStrategy = Output.ofNullable(spotAllocationStrategy);
             return this;
         }
 
-        public Builder spotInstancePools(@Nullable Input<Integer> spotInstancePools) {
+        public Builder spotInstancePools(@Nullable Output<Integer> spotInstancePools) {
             this.spotInstancePools = spotInstancePools;
             return this;
         }
 
         public Builder spotInstancePools(@Nullable Integer spotInstancePools) {
-            this.spotInstancePools = Input.ofNullable(spotInstancePools);
+            this.spotInstancePools = Output.ofNullable(spotInstancePools);
             return this;
         }
 
-        public Builder spotMaxPrice(@Nullable Input<String> spotMaxPrice) {
+        public Builder spotMaxPrice(@Nullable Output<String> spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
         }
 
         public Builder spotMaxPrice(@Nullable String spotMaxPrice) {
-            this.spotMaxPrice = Input.ofNullable(spotMaxPrice);
+            this.spotMaxPrice = Output.ofNullable(spotMaxPrice);
             return this;
         }
         public GroupMixedInstancesPolicyInstancesDistributionArgs build() {

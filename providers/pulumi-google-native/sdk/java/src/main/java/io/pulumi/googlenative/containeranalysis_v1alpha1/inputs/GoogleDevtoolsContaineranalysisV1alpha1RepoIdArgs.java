@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
      * 
      */
     @InputImport(name="projectRepoId")
-      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
+      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
 
-    public Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> getProjectRepoId() {
-        return this.projectRepoId == null ? Input.empty() : this.projectRepoId;
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> getProjectRepoId() {
+        return this.projectRepoId == null ? Output.empty() : this.projectRepoId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs(
-        @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId,
-        @Nullable Input<String> uid) {
+        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId,
+        @Nullable Output<String> uid) {
         this.projectRepoId = projectRepoId;
         this.uid = uid;
     }
 
     private GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs() {
-        this.projectRepoId = Input.empty();
-        this.uid = Input.empty();
+        this.projectRepoId = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
-        private @Nullable Input<String> uid;
+        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
     	      this.uid = defaults.uid;
         }
 
-        public Builder projectRepoId(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId) {
+        public Builder projectRepoId(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId) {
             this.projectRepoId = projectRepoId;
             return this;
         }
 
         public Builder projectRepoId(@Nullable GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs projectRepoId) {
-            this.projectRepoId = Input.ofNullable(projectRepoId);
+            this.projectRepoId = Output.ofNullable(projectRepoId);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs build() {

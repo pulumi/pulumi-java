@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceAuthArgs;
 import io.pulumi.docker.inputs.ServiceConvergeConfigArgs;
@@ -28,10 +28,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth")
-      private final @Nullable Input<ServiceAuthArgs> auth;
+      private final @Nullable Output<ServiceAuthArgs> auth;
 
-    public Input<ServiceAuthArgs> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<ServiceAuthArgs> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="convergeConfig")
-      private final @Nullable Input<ServiceConvergeConfigArgs> convergeConfig;
+      private final @Nullable Output<ServiceConvergeConfigArgs> convergeConfig;
 
-    public Input<ServiceConvergeConfigArgs> getConvergeConfig() {
-        return this.convergeConfig == null ? Input.empty() : this.convergeConfig;
+    public Output<ServiceConvergeConfigArgs> getConvergeConfig() {
+        return this.convergeConfig == null ? Output.empty() : this.convergeConfig;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointSpec")
-      private final @Nullable Input<ServiceEndpointSpecArgs> endpointSpec;
+      private final @Nullable Output<ServiceEndpointSpecArgs> endpointSpec;
 
-    public Input<ServiceEndpointSpecArgs> getEndpointSpec() {
-        return this.endpointSpec == null ? Input.empty() : this.endpointSpec;
+    public Output<ServiceEndpointSpecArgs> getEndpointSpec() {
+        return this.endpointSpec == null ? Output.empty() : this.endpointSpec;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<ServiceLabelArgs>> labels;
+      private final @Nullable Output<List<ServiceLabelArgs>> labels;
 
-    public Input<List<ServiceLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<ServiceLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<ServiceModeArgs> mode;
+      private final @Nullable Output<ServiceModeArgs> mode;
 
-    public Input<ServiceModeArgs> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<ServiceModeArgs> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollbackConfig")
-      private final @Nullable Input<ServiceRollbackConfigArgs> rollbackConfig;
+      private final @Nullable Output<ServiceRollbackConfigArgs> rollbackConfig;
 
-    public Input<ServiceRollbackConfigArgs> getRollbackConfig() {
-        return this.rollbackConfig == null ? Input.empty() : this.rollbackConfig;
+    public Output<ServiceRollbackConfigArgs> getRollbackConfig() {
+        return this.rollbackConfig == null ? Output.empty() : this.rollbackConfig;
     }
 
     /**
@@ -105,9 +105,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSpec", required=true)
-      private final Input<ServiceTaskSpecArgs> taskSpec;
+      private final Output<ServiceTaskSpecArgs> taskSpec;
 
-    public Input<ServiceTaskSpecArgs> getTaskSpec() {
+    public Output<ServiceTaskSpecArgs> getTaskSpec() {
         return this.taskSpec;
     }
 
@@ -116,22 +116,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateConfig")
-      private final @Nullable Input<ServiceUpdateConfigArgs> updateConfig;
+      private final @Nullable Output<ServiceUpdateConfigArgs> updateConfig;
 
-    public Input<ServiceUpdateConfigArgs> getUpdateConfig() {
-        return this.updateConfig == null ? Input.empty() : this.updateConfig;
+    public Output<ServiceUpdateConfigArgs> getUpdateConfig() {
+        return this.updateConfig == null ? Output.empty() : this.updateConfig;
     }
 
     public ServiceArgs(
-        @Nullable Input<ServiceAuthArgs> auth,
-        @Nullable Input<ServiceConvergeConfigArgs> convergeConfig,
-        @Nullable Input<ServiceEndpointSpecArgs> endpointSpec,
-        @Nullable Input<List<ServiceLabelArgs>> labels,
-        @Nullable Input<ServiceModeArgs> mode,
-        @Nullable Input<String> name,
-        @Nullable Input<ServiceRollbackConfigArgs> rollbackConfig,
-        Input<ServiceTaskSpecArgs> taskSpec,
-        @Nullable Input<ServiceUpdateConfigArgs> updateConfig) {
+        @Nullable Output<ServiceAuthArgs> auth,
+        @Nullable Output<ServiceConvergeConfigArgs> convergeConfig,
+        @Nullable Output<ServiceEndpointSpecArgs> endpointSpec,
+        @Nullable Output<List<ServiceLabelArgs>> labels,
+        @Nullable Output<ServiceModeArgs> mode,
+        @Nullable Output<String> name,
+        @Nullable Output<ServiceRollbackConfigArgs> rollbackConfig,
+        Output<ServiceTaskSpecArgs> taskSpec,
+        @Nullable Output<ServiceUpdateConfigArgs> updateConfig) {
         this.auth = auth;
         this.convergeConfig = convergeConfig;
         this.endpointSpec = endpointSpec;
@@ -144,15 +144,15 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.auth = Input.empty();
-        this.convergeConfig = Input.empty();
-        this.endpointSpec = Input.empty();
-        this.labels = Input.empty();
-        this.mode = Input.empty();
-        this.name = Input.empty();
-        this.rollbackConfig = Input.empty();
-        this.taskSpec = Input.empty();
-        this.updateConfig = Input.empty();
+        this.auth = Output.empty();
+        this.convergeConfig = Output.empty();
+        this.endpointSpec = Output.empty();
+        this.labels = Output.empty();
+        this.mode = Output.empty();
+        this.name = Output.empty();
+        this.rollbackConfig = Output.empty();
+        this.taskSpec = Output.empty();
+        this.updateConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -164,15 +164,15 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceAuthArgs> auth;
-        private @Nullable Input<ServiceConvergeConfigArgs> convergeConfig;
-        private @Nullable Input<ServiceEndpointSpecArgs> endpointSpec;
-        private @Nullable Input<List<ServiceLabelArgs>> labels;
-        private @Nullable Input<ServiceModeArgs> mode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ServiceRollbackConfigArgs> rollbackConfig;
-        private Input<ServiceTaskSpecArgs> taskSpec;
-        private @Nullable Input<ServiceUpdateConfigArgs> updateConfig;
+        private @Nullable Output<ServiceAuthArgs> auth;
+        private @Nullable Output<ServiceConvergeConfigArgs> convergeConfig;
+        private @Nullable Output<ServiceEndpointSpecArgs> endpointSpec;
+        private @Nullable Output<List<ServiceLabelArgs>> labels;
+        private @Nullable Output<ServiceModeArgs> mode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ServiceRollbackConfigArgs> rollbackConfig;
+        private Output<ServiceTaskSpecArgs> taskSpec;
+        private @Nullable Output<ServiceUpdateConfigArgs> updateConfig;
 
         public Builder() {
     	      // Empty
@@ -191,93 +191,93 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateConfig = defaults.updateConfig;
         }
 
-        public Builder auth(@Nullable Input<ServiceAuthArgs> auth) {
+        public Builder auth(@Nullable Output<ServiceAuthArgs> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable ServiceAuthArgs auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder convergeConfig(@Nullable Input<ServiceConvergeConfigArgs> convergeConfig) {
+        public Builder convergeConfig(@Nullable Output<ServiceConvergeConfigArgs> convergeConfig) {
             this.convergeConfig = convergeConfig;
             return this;
         }
 
         public Builder convergeConfig(@Nullable ServiceConvergeConfigArgs convergeConfig) {
-            this.convergeConfig = Input.ofNullable(convergeConfig);
+            this.convergeConfig = Output.ofNullable(convergeConfig);
             return this;
         }
 
-        public Builder endpointSpec(@Nullable Input<ServiceEndpointSpecArgs> endpointSpec) {
+        public Builder endpointSpec(@Nullable Output<ServiceEndpointSpecArgs> endpointSpec) {
             this.endpointSpec = endpointSpec;
             return this;
         }
 
         public Builder endpointSpec(@Nullable ServiceEndpointSpecArgs endpointSpec) {
-            this.endpointSpec = Input.ofNullable(endpointSpec);
+            this.endpointSpec = Output.ofNullable(endpointSpec);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<ServiceLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<ServiceLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<ServiceLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder mode(@Nullable Input<ServiceModeArgs> mode) {
+        public Builder mode(@Nullable Output<ServiceModeArgs> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable ServiceModeArgs mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rollbackConfig(@Nullable Input<ServiceRollbackConfigArgs> rollbackConfig) {
+        public Builder rollbackConfig(@Nullable Output<ServiceRollbackConfigArgs> rollbackConfig) {
             this.rollbackConfig = rollbackConfig;
             return this;
         }
 
         public Builder rollbackConfig(@Nullable ServiceRollbackConfigArgs rollbackConfig) {
-            this.rollbackConfig = Input.ofNullable(rollbackConfig);
+            this.rollbackConfig = Output.ofNullable(rollbackConfig);
             return this;
         }
 
-        public Builder taskSpec(Input<ServiceTaskSpecArgs> taskSpec) {
+        public Builder taskSpec(Output<ServiceTaskSpecArgs> taskSpec) {
             this.taskSpec = Objects.requireNonNull(taskSpec);
             return this;
         }
 
         public Builder taskSpec(ServiceTaskSpecArgs taskSpec) {
-            this.taskSpec = Input.of(Objects.requireNonNull(taskSpec));
+            this.taskSpec = Output.of(Objects.requireNonNull(taskSpec));
             return this;
         }
 
-        public Builder updateConfig(@Nullable Input<ServiceUpdateConfigArgs> updateConfig) {
+        public Builder updateConfig(@Nullable Output<ServiceUpdateConfigArgs> updateConfig) {
             this.updateConfig = updateConfig;
             return this;
         }
 
         public Builder updateConfig(@Nullable ServiceUpdateConfigArgs updateConfig) {
-            this.updateConfig = Input.ofNullable(updateConfig);
+            this.updateConfig = Output.ofNullable(updateConfig);
             return this;
         }
         public ServiceArgs build() {

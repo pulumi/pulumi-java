@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.awsnative.forecast.inputs.AttributesItemPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
     public static final SchemaPropertiesArgs Empty = new SchemaPropertiesArgs();
 
     @InputImport(name="attributes")
-      private final @Nullable Input<List<AttributesItemPropertiesArgs>> attributes;
+      private final @Nullable Output<List<AttributesItemPropertiesArgs>> attributes;
 
-    public Input<List<AttributesItemPropertiesArgs>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<List<AttributesItemPropertiesArgs>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
-    public SchemaPropertiesArgs(@Nullable Input<List<AttributesItemPropertiesArgs>> attributes) {
+    public SchemaPropertiesArgs(@Nullable Output<List<AttributesItemPropertiesArgs>> attributes) {
         this.attributes = attributes;
     }
 
     private SchemaPropertiesArgs() {
-        this.attributes = Input.empty();
+        this.attributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AttributesItemPropertiesArgs>> attributes;
+        private @Nullable Output<List<AttributesItemPropertiesArgs>> attributes;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder attributes(@Nullable Input<List<AttributesItemPropertiesArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<AttributesItemPropertiesArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable List<AttributesItemPropertiesArgs> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
         public SchemaPropertiesArgs build() {

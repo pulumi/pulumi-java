@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<Integer> code;
+      private final @Nullable Output<Integer> code;
 
-    public Input<Integer> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<Integer> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="recommendations")
-      private final @Nullable Input<List<String>> recommendations;
+      private final @Nullable Output<List<String>> recommendations;
 
-    public Input<List<String>> getRecommendations() {
-        return this.recommendations == null ? Input.empty() : this.recommendations;
+    public Output<List<String>> getRecommendations() {
+        return this.recommendations == null ? Output.empty() : this.recommendations;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public MABContainerHealthDetailsArgs(
-        @Nullable Input<Integer> code,
-        @Nullable Input<String> message,
-        @Nullable Input<List<String>> recommendations,
-        @Nullable Input<String> title) {
+        @Nullable Output<Integer> code,
+        @Nullable Output<String> message,
+        @Nullable Output<List<String>> recommendations,
+        @Nullable Output<String> title) {
         this.code = code;
         this.message = message;
         this.recommendations = recommendations;
@@ -76,10 +76,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
     }
 
     private MABContainerHealthDetailsArgs() {
-        this.code = Input.empty();
-        this.message = Input.empty();
-        this.recommendations = Input.empty();
-        this.title = Input.empty();
+        this.code = Output.empty();
+        this.message = Output.empty();
+        this.recommendations = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> code;
-        private @Nullable Input<String> message;
-        private @Nullable Input<List<String>> recommendations;
-        private @Nullable Input<String> title;
+        private @Nullable Output<Integer> code;
+        private @Nullable Output<String> message;
+        private @Nullable Output<List<String>> recommendations;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
     	      this.title = defaults.title;
         }
 
-        public Builder code(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Output<Integer> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable Integer code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder recommendations(@Nullable Input<List<String>> recommendations) {
+        public Builder recommendations(@Nullable Output<List<String>> recommendations) {
             this.recommendations = recommendations;
             return this;
         }
 
         public Builder recommendations(@Nullable List<String> recommendations) {
-            this.recommendations = Input.ofNullable(recommendations);
+            this.recommendations = Output.ofNullable(recommendations);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public MABContainerHealthDetailsArgs build() {

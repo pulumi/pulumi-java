@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isActiveCMK")
-      private final @Nullable Input<Boolean> isActiveCMK;
+      private final @Nullable Output<Boolean> isActiveCMK;
 
-    public Input<Boolean> getIsActiveCMK() {
-        return this.isActiveCMK == null ? Input.empty() : this.isActiveCMK;
+    public Output<Boolean> getIsActiveCMK() {
+        return this.isActiveCMK == null ? Output.empty() : this.isActiveCMK;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultUrl")
-      private final @Nullable Input<String> keyVaultUrl;
+      private final @Nullable Output<String> keyVaultUrl;
 
-    public Input<String> getKeyVaultUrl() {
-        return this.keyVaultUrl == null ? Input.empty() : this.keyVaultUrl;
+    public Output<String> getKeyVaultUrl() {
+        return this.keyVaultUrl == null ? Output.empty() : this.keyVaultUrl;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public KeyArgs(
-        @Nullable Input<Boolean> isActiveCMK,
-        @Nullable Input<String> keyName,
-        @Nullable Input<String> keyVaultUrl,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<Boolean> isActiveCMK,
+        @Nullable Output<String> keyName,
+        @Nullable Output<String> keyVaultUrl,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.isActiveCMK = isActiveCMK;
         this.keyName = keyName;
         this.keyVaultUrl = keyVaultUrl;
@@ -84,11 +84,11 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.isActiveCMK = Input.empty();
-        this.keyName = Input.empty();
-        this.keyVaultUrl = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.isActiveCMK = Output.empty();
+        this.keyName = Output.empty();
+        this.keyVaultUrl = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isActiveCMK;
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<String> keyVaultUrl;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<Boolean> isActiveCMK;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<String> keyVaultUrl;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder isActiveCMK(@Nullable Input<Boolean> isActiveCMK) {
+        public Builder isActiveCMK(@Nullable Output<Boolean> isActiveCMK) {
             this.isActiveCMK = isActiveCMK;
             return this;
         }
 
         public Builder isActiveCMK(@Nullable Boolean isActiveCMK) {
-            this.isActiveCMK = Input.ofNullable(isActiveCMK);
+            this.isActiveCMK = Output.ofNullable(isActiveCMK);
             return this;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder keyVaultUrl(@Nullable Input<String> keyVaultUrl) {
+        public Builder keyVaultUrl(@Nullable Output<String> keyVaultUrl) {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
 
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
-            this.keyVaultUrl = Input.ofNullable(keyVaultUrl);
+            this.keyVaultUrl = Output.ofNullable(keyVaultUrl);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public KeyArgs build() {

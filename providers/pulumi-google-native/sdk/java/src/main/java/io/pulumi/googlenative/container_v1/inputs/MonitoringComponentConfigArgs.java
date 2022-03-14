@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.MonitoringComponentConfigEnableComponentsItem;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enableComponents")
-      private final @Nullable Input<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
+      private final @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
 
-    public Input<List<MonitoringComponentConfigEnableComponentsItem>> getEnableComponents() {
-        return this.enableComponents == null ? Input.empty() : this.enableComponents;
+    public Output<List<MonitoringComponentConfigEnableComponentsItem>> getEnableComponents() {
+        return this.enableComponents == null ? Output.empty() : this.enableComponents;
     }
 
-    public MonitoringComponentConfigArgs(@Nullable Input<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents) {
+    public MonitoringComponentConfigArgs(@Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents) {
         this.enableComponents = enableComponents;
     }
 
     private MonitoringComponentConfigArgs() {
-        this.enableComponents = Input.empty();
+        this.enableComponents = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
+        private @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
     	      this.enableComponents = defaults.enableComponents;
         }
 
-        public Builder enableComponents(@Nullable Input<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents) {
+        public Builder enableComponents(@Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents) {
             this.enableComponents = enableComponents;
             return this;
         }
 
         public Builder enableComponents(@Nullable List<MonitoringComponentConfigEnableComponentsItem> enableComponents) {
-            this.enableComponents = Input.ofNullable(enableComponents);
+            this.enableComponents = Output.ofNullable(enableComponents);
             return this;
         }
         public MonitoringComponentConfigArgs build() {

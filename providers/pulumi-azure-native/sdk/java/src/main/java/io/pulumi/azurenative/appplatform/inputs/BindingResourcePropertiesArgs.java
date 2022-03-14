@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bindingParameters")
-      private final @Nullable Input<Map<String,Object>> bindingParameters;
+      private final @Nullable Output<Map<String,Object>> bindingParameters;
 
-    public Input<Map<String,Object>> getBindingParameters() {
-        return this.bindingParameters == null ? Input.empty() : this.bindingParameters;
+    public Output<Map<String,Object>> getBindingParameters() {
+        return this.bindingParameters == null ? Output.empty() : this.bindingParameters;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public BindingResourcePropertiesArgs(
-        @Nullable Input<Map<String,Object>> bindingParameters,
-        @Nullable Input<String> key,
-        @Nullable Input<String> resourceId) {
+        @Nullable Output<Map<String,Object>> bindingParameters,
+        @Nullable Output<String> key,
+        @Nullable Output<String> resourceId) {
         this.bindingParameters = bindingParameters;
         this.key = key;
         this.resourceId = resourceId;
     }
 
     private BindingResourcePropertiesArgs() {
-        this.bindingParameters = Input.empty();
-        this.key = Input.empty();
-        this.resourceId = Input.empty();
+        this.bindingParameters = Output.empty();
+        this.key = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> bindingParameters;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<Map<String,Object>> bindingParameters;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder bindingParameters(@Nullable Input<Map<String,Object>> bindingParameters) {
+        public Builder bindingParameters(@Nullable Output<Map<String,Object>> bindingParameters) {
             this.bindingParameters = bindingParameters;
             return this;
         }
 
         public Builder bindingParameters(@Nullable Map<String,Object> bindingParameters) {
-            this.bindingParameters = Input.ofNullable(bindingParameters);
+            this.bindingParameters = Output.ofNullable(bindingParameters);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public BindingResourcePropertiesArgs build() {

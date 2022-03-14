@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyId", required=true)
-      private final Input<String> policyId;
+      private final Output<String> policyId;
 
-    public Input<String> getPolicyId() {
+    public Output<String> getPolicyId() {
         return this.policyId;
     }
 
@@ -29,22 +29,22 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetId", required=true)
-      private final Input<String> targetId;
+      private final Output<String> targetId;
 
-    public Input<String> getTargetId() {
+    public Output<String> getTargetId() {
         return this.targetId;
     }
 
     public PolicyAttachmentArgs(
-        Input<String> policyId,
-        Input<String> targetId) {
+        Output<String> policyId,
+        Output<String> targetId) {
         this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
         this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
     }
 
     private PolicyAttachmentArgs() {
-        this.policyId = Input.empty();
-        this.targetId = Input.empty();
+        this.policyId = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> policyId;
-        private Input<String> targetId;
+        private Output<String> policyId;
+        private Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder policyId(Input<String> policyId) {
+        public Builder policyId(Output<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Input.of(Objects.requireNonNull(policyId));
+            this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
 
-        public Builder targetId(Input<String> targetId) {
+        public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
         public Builder targetId(String targetId) {
-            this.targetId = Input.of(Objects.requireNonNull(targetId));
+            this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
         public PolicyAttachmentArgs build() {

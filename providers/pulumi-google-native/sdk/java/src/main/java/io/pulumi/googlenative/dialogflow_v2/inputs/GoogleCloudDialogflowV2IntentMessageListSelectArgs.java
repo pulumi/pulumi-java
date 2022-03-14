@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageListSelectItemArgs;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
      * 
      */
     @InputImport(name="items", required=true)
-      private final Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
+      private final Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
 
-    public Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> getItems() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> getItems() {
         return this.items;
     }
 
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
      * 
      */
     @InputImport(name="subtitle")
-      private final @Nullable Input<String> subtitle;
+      private final @Nullable Output<String> subtitle;
 
-    public Input<String> getSubtitle() {
-        return this.subtitle == null ? Input.empty() : this.subtitle;
+    public Output<String> getSubtitle() {
+        return this.subtitle == null ? Output.empty() : this.subtitle;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2IntentMessageListSelectArgs(
-        Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items,
-        @Nullable Input<String> subtitle,
-        @Nullable Input<String> title) {
+        Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items,
+        @Nullable Output<String> subtitle,
+        @Nullable Output<String> title) {
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
         this.subtitle = subtitle;
         this.title = title;
     }
 
     private GoogleCloudDialogflowV2IntentMessageListSelectArgs() {
-        this.items = Input.empty();
-        this.subtitle = Input.empty();
-        this.title = Input.empty();
+        this.items = Output.empty();
+        this.subtitle = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
-        private @Nullable Input<String> subtitle;
-        private @Nullable Input<String> title;
+        private Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
+        private @Nullable Output<String> subtitle;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
     	      this.title = defaults.title;
         }
 
-        public Builder items(Input<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items) {
+        public Builder items(Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder subtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Input.ofNullable(subtitle);
+            this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageListSelectArgs build() {

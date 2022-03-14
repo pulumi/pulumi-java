@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.BlobAuditingPolicyState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -79,10 +79,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="auditActionsAndGroups")
-      private final @Nullable Input<List<String>> auditActionsAndGroups;
+      private final @Nullable Output<List<String>> auditActionsAndGroups;
 
-    public Input<List<String>> getAuditActionsAndGroups() {
-        return this.auditActionsAndGroups == null ? Input.empty() : this.auditActionsAndGroups;
+    public Output<List<String>> getAuditActionsAndGroups() {
+        return this.auditActionsAndGroups == null ? Output.empty() : this.auditActionsAndGroups;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="blobAuditingPolicyName")
-      private final @Nullable Input<String> blobAuditingPolicyName;
+      private final @Nullable Output<String> blobAuditingPolicyName;
 
-    public Input<String> getBlobAuditingPolicyName() {
-        return this.blobAuditingPolicyName == null ? Input.empty() : this.blobAuditingPolicyName;
+    public Output<String> getBlobAuditingPolicyName() {
+        return this.blobAuditingPolicyName == null ? Output.empty() : this.blobAuditingPolicyName;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -122,10 +122,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="isAzureMonitorTargetEnabled")
-      private final @Nullable Input<Boolean> isAzureMonitorTargetEnabled;
+      private final @Nullable Output<Boolean> isAzureMonitorTargetEnabled;
 
-    public Input<Boolean> getIsAzureMonitorTargetEnabled() {
-        return this.isAzureMonitorTargetEnabled == null ? Input.empty() : this.isAzureMonitorTargetEnabled;
+    public Output<Boolean> getIsAzureMonitorTargetEnabled() {
+        return this.isAzureMonitorTargetEnabled == null ? Output.empty() : this.isAzureMonitorTargetEnabled;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="isStorageSecondaryKeyInUse")
-      private final @Nullable Input<Boolean> isStorageSecondaryKeyInUse;
+      private final @Nullable Output<Boolean> isStorageSecondaryKeyInUse;
 
-    public Input<Boolean> getIsStorageSecondaryKeyInUse() {
-        return this.isStorageSecondaryKeyInUse == null ? Input.empty() : this.isStorageSecondaryKeyInUse;
+    public Output<Boolean> getIsStorageSecondaryKeyInUse() {
+        return this.isStorageSecondaryKeyInUse == null ? Output.empty() : this.isStorageSecondaryKeyInUse;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="predicateExpression")
-      private final @Nullable Input<String> predicateExpression;
+      private final @Nullable Output<String> predicateExpression;
 
-    public Input<String> getPredicateExpression() {
-        return this.predicateExpression == null ? Input.empty() : this.predicateExpression;
+    public Output<String> getPredicateExpression() {
+        return this.predicateExpression == null ? Output.empty() : this.predicateExpression;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="queueDelayMs")
-      private final @Nullable Input<Integer> queueDelayMs;
+      private final @Nullable Output<Integer> queueDelayMs;
 
-    public Input<Integer> getQueueDelayMs() {
-        return this.queueDelayMs == null ? Input.empty() : this.queueDelayMs;
+    public Output<Integer> getQueueDelayMs() {
+        return this.queueDelayMs == null ? Output.empty() : this.queueDelayMs;
     }
 
     /**
@@ -167,9 +167,9 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -178,10 +178,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="retentionDays")
-      private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Output<Integer> retentionDays;
 
-    public Input<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Input.empty() : this.retentionDays;
+    public Output<Integer> getRetentionDays() {
+        return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
     /**
@@ -189,9 +189,9 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -200,9 +200,9 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<BlobAuditingPolicyState> state;
+      private final Output<BlobAuditingPolicyState> state;
 
-    public Input<BlobAuditingPolicyState> getState() {
+    public Output<BlobAuditingPolicyState> getState() {
         return this.state;
     }
 
@@ -216,10 +216,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageAccountAccessKey")
-      private final @Nullable Input<String> storageAccountAccessKey;
+      private final @Nullable Output<String> storageAccountAccessKey;
 
-    public Input<String> getStorageAccountAccessKey() {
-        return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
+    public Output<String> getStorageAccountAccessKey() {
+        return this.storageAccountAccessKey == null ? Output.empty() : this.storageAccountAccessKey;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageAccountSubscriptionId")
-      private final @Nullable Input<String> storageAccountSubscriptionId;
+      private final @Nullable Output<String> storageAccountSubscriptionId;
 
-    public Input<String> getStorageAccountSubscriptionId() {
-        return this.storageAccountSubscriptionId == null ? Input.empty() : this.storageAccountSubscriptionId;
+    public Output<String> getStorageAccountSubscriptionId() {
+        return this.storageAccountSubscriptionId == null ? Output.empty() : this.storageAccountSubscriptionId;
     }
 
     /**
@@ -238,27 +238,27 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageEndpoint")
-      private final @Nullable Input<String> storageEndpoint;
+      private final @Nullable Output<String> storageEndpoint;
 
-    public Input<String> getStorageEndpoint() {
-        return this.storageEndpoint == null ? Input.empty() : this.storageEndpoint;
+    public Output<String> getStorageEndpoint() {
+        return this.storageEndpoint == null ? Output.empty() : this.storageEndpoint;
     }
 
     public ExtendedDatabaseBlobAuditingPolicyArgs(
-        @Nullable Input<List<String>> auditActionsAndGroups,
-        @Nullable Input<String> blobAuditingPolicyName,
-        Input<String> databaseName,
-        @Nullable Input<Boolean> isAzureMonitorTargetEnabled,
-        @Nullable Input<Boolean> isStorageSecondaryKeyInUse,
-        @Nullable Input<String> predicateExpression,
-        @Nullable Input<Integer> queueDelayMs,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> retentionDays,
-        Input<String> serverName,
-        Input<BlobAuditingPolicyState> state,
-        @Nullable Input<String> storageAccountAccessKey,
-        @Nullable Input<String> storageAccountSubscriptionId,
-        @Nullable Input<String> storageEndpoint) {
+        @Nullable Output<List<String>> auditActionsAndGroups,
+        @Nullable Output<String> blobAuditingPolicyName,
+        Output<String> databaseName,
+        @Nullable Output<Boolean> isAzureMonitorTargetEnabled,
+        @Nullable Output<Boolean> isStorageSecondaryKeyInUse,
+        @Nullable Output<String> predicateExpression,
+        @Nullable Output<Integer> queueDelayMs,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> retentionDays,
+        Output<String> serverName,
+        Output<BlobAuditingPolicyState> state,
+        @Nullable Output<String> storageAccountAccessKey,
+        @Nullable Output<String> storageAccountSubscriptionId,
+        @Nullable Output<String> storageEndpoint) {
         this.auditActionsAndGroups = auditActionsAndGroups;
         this.blobAuditingPolicyName = blobAuditingPolicyName;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
@@ -276,20 +276,20 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
     }
 
     private ExtendedDatabaseBlobAuditingPolicyArgs() {
-        this.auditActionsAndGroups = Input.empty();
-        this.blobAuditingPolicyName = Input.empty();
-        this.databaseName = Input.empty();
-        this.isAzureMonitorTargetEnabled = Input.empty();
-        this.isStorageSecondaryKeyInUse = Input.empty();
-        this.predicateExpression = Input.empty();
-        this.queueDelayMs = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retentionDays = Input.empty();
-        this.serverName = Input.empty();
-        this.state = Input.empty();
-        this.storageAccountAccessKey = Input.empty();
-        this.storageAccountSubscriptionId = Input.empty();
-        this.storageEndpoint = Input.empty();
+        this.auditActionsAndGroups = Output.empty();
+        this.blobAuditingPolicyName = Output.empty();
+        this.databaseName = Output.empty();
+        this.isAzureMonitorTargetEnabled = Output.empty();
+        this.isStorageSecondaryKeyInUse = Output.empty();
+        this.predicateExpression = Output.empty();
+        this.queueDelayMs = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retentionDays = Output.empty();
+        this.serverName = Output.empty();
+        this.state = Output.empty();
+        this.storageAccountAccessKey = Output.empty();
+        this.storageAccountSubscriptionId = Output.empty();
+        this.storageEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -301,20 +301,20 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> auditActionsAndGroups;
-        private @Nullable Input<String> blobAuditingPolicyName;
-        private Input<String> databaseName;
-        private @Nullable Input<Boolean> isAzureMonitorTargetEnabled;
-        private @Nullable Input<Boolean> isStorageSecondaryKeyInUse;
-        private @Nullable Input<String> predicateExpression;
-        private @Nullable Input<Integer> queueDelayMs;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> retentionDays;
-        private Input<String> serverName;
-        private Input<BlobAuditingPolicyState> state;
-        private @Nullable Input<String> storageAccountAccessKey;
-        private @Nullable Input<String> storageAccountSubscriptionId;
-        private @Nullable Input<String> storageEndpoint;
+        private @Nullable Output<List<String>> auditActionsAndGroups;
+        private @Nullable Output<String> blobAuditingPolicyName;
+        private Output<String> databaseName;
+        private @Nullable Output<Boolean> isAzureMonitorTargetEnabled;
+        private @Nullable Output<Boolean> isStorageSecondaryKeyInUse;
+        private @Nullable Output<String> predicateExpression;
+        private @Nullable Output<Integer> queueDelayMs;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> retentionDays;
+        private Output<String> serverName;
+        private Output<BlobAuditingPolicyState> state;
+        private @Nullable Output<String> storageAccountAccessKey;
+        private @Nullable Output<String> storageAccountSubscriptionId;
+        private @Nullable Output<String> storageEndpoint;
 
         public Builder() {
     	      // Empty
@@ -338,143 +338,143 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
     	      this.storageEndpoint = defaults.storageEndpoint;
         }
 
-        public Builder auditActionsAndGroups(@Nullable Input<List<String>> auditActionsAndGroups) {
+        public Builder auditActionsAndGroups(@Nullable Output<List<String>> auditActionsAndGroups) {
             this.auditActionsAndGroups = auditActionsAndGroups;
             return this;
         }
 
         public Builder auditActionsAndGroups(@Nullable List<String> auditActionsAndGroups) {
-            this.auditActionsAndGroups = Input.ofNullable(auditActionsAndGroups);
+            this.auditActionsAndGroups = Output.ofNullable(auditActionsAndGroups);
             return this;
         }
 
-        public Builder blobAuditingPolicyName(@Nullable Input<String> blobAuditingPolicyName) {
+        public Builder blobAuditingPolicyName(@Nullable Output<String> blobAuditingPolicyName) {
             this.blobAuditingPolicyName = blobAuditingPolicyName;
             return this;
         }
 
         public Builder blobAuditingPolicyName(@Nullable String blobAuditingPolicyName) {
-            this.blobAuditingPolicyName = Input.ofNullable(blobAuditingPolicyName);
+            this.blobAuditingPolicyName = Output.ofNullable(blobAuditingPolicyName);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder isAzureMonitorTargetEnabled(@Nullable Input<Boolean> isAzureMonitorTargetEnabled) {
+        public Builder isAzureMonitorTargetEnabled(@Nullable Output<Boolean> isAzureMonitorTargetEnabled) {
             this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;
             return this;
         }
 
         public Builder isAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
-            this.isAzureMonitorTargetEnabled = Input.ofNullable(isAzureMonitorTargetEnabled);
+            this.isAzureMonitorTargetEnabled = Output.ofNullable(isAzureMonitorTargetEnabled);
             return this;
         }
 
-        public Builder isStorageSecondaryKeyInUse(@Nullable Input<Boolean> isStorageSecondaryKeyInUse) {
+        public Builder isStorageSecondaryKeyInUse(@Nullable Output<Boolean> isStorageSecondaryKeyInUse) {
             this.isStorageSecondaryKeyInUse = isStorageSecondaryKeyInUse;
             return this;
         }
 
         public Builder isStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
-            this.isStorageSecondaryKeyInUse = Input.ofNullable(isStorageSecondaryKeyInUse);
+            this.isStorageSecondaryKeyInUse = Output.ofNullable(isStorageSecondaryKeyInUse);
             return this;
         }
 
-        public Builder predicateExpression(@Nullable Input<String> predicateExpression) {
+        public Builder predicateExpression(@Nullable Output<String> predicateExpression) {
             this.predicateExpression = predicateExpression;
             return this;
         }
 
         public Builder predicateExpression(@Nullable String predicateExpression) {
-            this.predicateExpression = Input.ofNullable(predicateExpression);
+            this.predicateExpression = Output.ofNullable(predicateExpression);
             return this;
         }
 
-        public Builder queueDelayMs(@Nullable Input<Integer> queueDelayMs) {
+        public Builder queueDelayMs(@Nullable Output<Integer> queueDelayMs) {
             this.queueDelayMs = queueDelayMs;
             return this;
         }
 
         public Builder queueDelayMs(@Nullable Integer queueDelayMs) {
-            this.queueDelayMs = Input.ofNullable(queueDelayMs);
+            this.queueDelayMs = Output.ofNullable(queueDelayMs);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Input.ofNullable(retentionDays);
+            this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder state(Input<BlobAuditingPolicyState> state) {
+        public Builder state(Output<BlobAuditingPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(BlobAuditingPolicyState state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder storageAccountAccessKey(@Nullable Input<String> storageAccountAccessKey) {
+        public Builder storageAccountAccessKey(@Nullable Output<String> storageAccountAccessKey) {
             this.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
 
         public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
-            this.storageAccountAccessKey = Input.ofNullable(storageAccountAccessKey);
+            this.storageAccountAccessKey = Output.ofNullable(storageAccountAccessKey);
             return this;
         }
 
-        public Builder storageAccountSubscriptionId(@Nullable Input<String> storageAccountSubscriptionId) {
+        public Builder storageAccountSubscriptionId(@Nullable Output<String> storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
 
         public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
-            this.storageAccountSubscriptionId = Input.ofNullable(storageAccountSubscriptionId);
+            this.storageAccountSubscriptionId = Output.ofNullable(storageAccountSubscriptionId);
             return this;
         }
 
-        public Builder storageEndpoint(@Nullable Input<String> storageEndpoint) {
+        public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
 
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
-            this.storageEndpoint = Input.ofNullable(storageEndpoint);
+            this.storageEndpoint = Output.ofNullable(storageEndpoint);
             return this;
         }
         public ExtendedDatabaseBlobAuditingPolicyArgs build() {

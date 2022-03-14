@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketReplicaModificationsArgs;
 import io.pulumi.awsnative.s3.inputs.BucketSseKmsEncryptedObjectsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="replicaModifications")
-      private final @Nullable Input<BucketReplicaModificationsArgs> replicaModifications;
+      private final @Nullable Output<BucketReplicaModificationsArgs> replicaModifications;
 
-    public Input<BucketReplicaModificationsArgs> getReplicaModifications() {
-        return this.replicaModifications == null ? Input.empty() : this.replicaModifications;
+    public Output<BucketReplicaModificationsArgs> getReplicaModifications() {
+        return this.replicaModifications == null ? Output.empty() : this.replicaModifications;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sseKmsEncryptedObjects")
-      private final @Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+      private final @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
-    public Input<BucketSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Input.empty() : this.sseKmsEncryptedObjects;
+    public Output<BucketSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
+        return this.sseKmsEncryptedObjects == null ? Output.empty() : this.sseKmsEncryptedObjects;
     }
 
     public BucketSourceSelectionCriteriaArgs(
-        @Nullable Input<BucketReplicaModificationsArgs> replicaModifications,
-        @Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
+        @Nullable Output<BucketReplicaModificationsArgs> replicaModifications,
+        @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
         this.replicaModifications = replicaModifications;
         this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
     }
 
     private BucketSourceSelectionCriteriaArgs() {
-        this.replicaModifications = Input.empty();
-        this.sseKmsEncryptedObjects = Input.empty();
+        this.replicaModifications = Output.empty();
+        this.sseKmsEncryptedObjects = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketReplicaModificationsArgs> replicaModifications;
-        private @Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+        private @Nullable Output<BucketReplicaModificationsArgs> replicaModifications;
+        private @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
     	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
         }
 
-        public Builder replicaModifications(@Nullable Input<BucketReplicaModificationsArgs> replicaModifications) {
+        public Builder replicaModifications(@Nullable Output<BucketReplicaModificationsArgs> replicaModifications) {
             this.replicaModifications = replicaModifications;
             return this;
         }
 
         public Builder replicaModifications(@Nullable BucketReplicaModificationsArgs replicaModifications) {
-            this.replicaModifications = Input.ofNullable(replicaModifications);
+            this.replicaModifications = Output.ofNullable(replicaModifications);
             return this;
         }
 
-        public Builder sseKmsEncryptedObjects(@Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
+        public Builder sseKmsEncryptedObjects(@Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
 
         public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = Input.ofNullable(sseKmsEncryptedObjects);
+            this.sseKmsEncryptedObjects = Output.ofNullable(sseKmsEncryptedObjects);
             return this;
         }
         public BucketSourceSelectionCriteriaArgs build() {

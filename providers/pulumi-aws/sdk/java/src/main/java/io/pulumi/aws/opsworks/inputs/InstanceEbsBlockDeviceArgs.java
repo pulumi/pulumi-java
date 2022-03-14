@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -17,54 +17,54 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
     public static final InstanceEbsBlockDeviceArgs Empty = new InstanceEbsBlockDeviceArgs();
 
     @InputImport(name="deleteOnTermination")
-      private final @Nullable Input<Boolean> deleteOnTermination;
+      private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Input<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
+    public Output<Boolean> getDeleteOnTermination() {
+        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
     }
 
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     @InputImport(name="snapshotId")
-      private final @Nullable Input<String> snapshotId;
+      private final @Nullable Output<String> snapshotId;
 
-    public Input<String> getSnapshotId() {
-        return this.snapshotId == null ? Input.empty() : this.snapshotId;
+    public Output<String> getSnapshotId() {
+        return this.snapshotId == null ? Output.empty() : this.snapshotId;
     }
 
     @InputImport(name="volumeSize")
-      private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Output<Integer> volumeSize;
 
-    public Input<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Input.empty() : this.volumeSize;
+    public Output<Integer> getVolumeSize() {
+        return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public InstanceEbsBlockDeviceArgs(
-        @Nullable Input<Boolean> deleteOnTermination,
-        Input<String> deviceName,
-        @Nullable Input<Integer> iops,
-        @Nullable Input<String> snapshotId,
-        @Nullable Input<Integer> volumeSize,
-        @Nullable Input<String> volumeType) {
+        @Nullable Output<Boolean> deleteOnTermination,
+        Output<String> deviceName,
+        @Nullable Output<Integer> iops,
+        @Nullable Output<String> snapshotId,
+        @Nullable Output<Integer> volumeSize,
+        @Nullable Output<String> volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.iops = iops;
@@ -74,12 +74,12 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
     }
 
     private InstanceEbsBlockDeviceArgs() {
-        this.deleteOnTermination = Input.empty();
-        this.deviceName = Input.empty();
-        this.iops = Input.empty();
-        this.snapshotId = Input.empty();
-        this.volumeSize = Input.empty();
-        this.volumeType = Input.empty();
+        this.deleteOnTermination = Output.empty();
+        this.deviceName = Output.empty();
+        this.iops = Output.empty();
+        this.snapshotId = Output.empty();
+        this.volumeSize = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,12 +91,12 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deleteOnTermination;
-        private Input<String> deviceName;
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<String> snapshotId;
-        private @Nullable Input<Integer> volumeSize;
-        private @Nullable Input<String> volumeType;
+        private @Nullable Output<Boolean> deleteOnTermination;
+        private Output<String> deviceName;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<String> snapshotId;
+        private @Nullable Output<Integer> volumeSize;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -112,63 +112,63 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder deleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder snapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Input.ofNullable(snapshotId);
+            this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Input.ofNullable(volumeSize);
+            this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public InstanceEbsBlockDeviceArgs build() {

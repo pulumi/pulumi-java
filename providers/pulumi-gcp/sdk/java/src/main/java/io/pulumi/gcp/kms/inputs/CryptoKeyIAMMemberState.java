@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMMemberConditionGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<CryptoKeyIAMMemberConditionGetArgs> condition;
+      private final @Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition;
 
-    public Input<CryptoKeyIAMMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<CryptoKeyIAMMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cryptoKeyId")
-      private final @Nullable Input<String> cryptoKeyId;
+      private final @Nullable Output<String> cryptoKeyId;
 
-    public Input<String> getCryptoKeyId() {
-        return this.cryptoKeyId == null ? Input.empty() : this.cryptoKeyId;
+    public Output<String> getCryptoKeyId() {
+        return this.cryptoKeyId == null ? Output.empty() : this.cryptoKeyId;
     }
 
     /**
@@ -46,17 +46,17 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public CryptoKeyIAMMemberState(
-        @Nullable Input<CryptoKeyIAMMemberConditionGetArgs> condition,
-        @Nullable Input<String> cryptoKeyId,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> member,
-        @Nullable Input<String> role) {
+        @Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition,
+        @Nullable Output<String> cryptoKeyId,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> member,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.cryptoKeyId = cryptoKeyId;
         this.etag = etag;
@@ -85,11 +85,11 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
     }
 
     private CryptoKeyIAMMemberState() {
-        this.condition = Input.empty();
-        this.cryptoKeyId = Input.empty();
-        this.etag = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.cryptoKeyId = Output.empty();
+        this.etag = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<CryptoKeyIAMMemberConditionGetArgs> condition;
-        private @Nullable Input<String> cryptoKeyId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> role;
+        private @Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition;
+        private @Nullable Output<String> cryptoKeyId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<CryptoKeyIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable CryptoKeyIAMMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder cryptoKeyId(@Nullable Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(@Nullable Output<String> cryptoKeyId) {
             this.cryptoKeyId = cryptoKeyId;
             return this;
         }
 
         public Builder cryptoKeyId(@Nullable String cryptoKeyId) {
-            this.cryptoKeyId = Input.ofNullable(cryptoKeyId);
+            this.cryptoKeyId = Output.ofNullable(cryptoKeyId);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public CryptoKeyIAMMemberState build() {

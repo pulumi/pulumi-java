@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="marketplaceOffer")
-      private final @Nullable Input<String> marketplaceOffer;
+      private final @Nullable Output<String> marketplaceOffer;
 
-    public Input<String> getMarketplaceOffer() {
-        return this.marketplaceOffer == null ? Input.empty() : this.marketplaceOffer;
+    public Output<String> getMarketplaceOffer() {
+        return this.marketplaceOffer == null ? Output.empty() : this.marketplaceOffer;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="marketplacePublisher")
-      private final @Nullable Input<String> marketplacePublisher;
+      private final @Nullable Output<String> marketplacePublisher;
 
-    public Input<String> getMarketplacePublisher() {
-        return this.marketplacePublisher == null ? Input.empty() : this.marketplacePublisher;
+    public Output<String> getMarketplacePublisher() {
+        return this.marketplacePublisher == null ? Output.empty() : this.marketplacePublisher;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -75,10 +75,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="premierAddOnName")
-      private final @Nullable Input<String> premierAddOnName;
+      private final @Nullable Output<String> premierAddOnName;
 
-    public Input<String> getPremierAddOnName() {
-        return this.premierAddOnName == null ? Input.empty() : this.premierAddOnName;
+    public Output<String> getPremierAddOnName() {
+        return this.premierAddOnName == null ? Output.empty() : this.premierAddOnName;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="product")
-      private final @Nullable Input<String> product;
+      private final @Nullable Output<String> product;
 
-    public Input<String> getProduct() {
-        return this.product == null ? Input.empty() : this.product;
+    public Output<String> getProduct() {
+        return this.product == null ? Output.empty() : this.product;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,10 +108,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -130,24 +130,24 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vendor")
-      private final @Nullable Input<String> vendor;
+      private final @Nullable Output<String> vendor;
 
-    public Input<String> getVendor() {
-        return this.vendor == null ? Input.empty() : this.vendor;
+    public Output<String> getVendor() {
+        return this.vendor == null ? Output.empty() : this.vendor;
     }
 
     public WebAppPremierAddOnArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> marketplaceOffer,
-        @Nullable Input<String> marketplacePublisher,
-        Input<String> name,
-        @Nullable Input<String> premierAddOnName,
-        @Nullable Input<String> product,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vendor) {
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> marketplaceOffer,
+        @Nullable Output<String> marketplacePublisher,
+        Output<String> name,
+        @Nullable Output<String> premierAddOnName,
+        @Nullable Output<String> product,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vendor) {
         this.kind = kind;
         this.location = location;
         this.marketplaceOffer = marketplaceOffer;
@@ -162,17 +162,17 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
     }
 
     private WebAppPremierAddOnArgs() {
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.marketplaceOffer = Input.empty();
-        this.marketplacePublisher = Input.empty();
-        this.name = Input.empty();
-        this.premierAddOnName = Input.empty();
-        this.product = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.vendor = Input.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.marketplaceOffer = Output.empty();
+        this.marketplacePublisher = Output.empty();
+        this.name = Output.empty();
+        this.premierAddOnName = Output.empty();
+        this.product = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.vendor = Output.empty();
     }
 
     public static Builder builder() {
@@ -184,17 +184,17 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> marketplaceOffer;
-        private @Nullable Input<String> marketplacePublisher;
-        private Input<String> name;
-        private @Nullable Input<String> premierAddOnName;
-        private @Nullable Input<String> product;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vendor;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> marketplaceOffer;
+        private @Nullable Output<String> marketplacePublisher;
+        private Output<String> name;
+        private @Nullable Output<String> premierAddOnName;
+        private @Nullable Output<String> product;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vendor;
 
         public Builder() {
     	      // Empty
@@ -215,113 +215,113 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder marketplaceOffer(@Nullable Input<String> marketplaceOffer) {
+        public Builder marketplaceOffer(@Nullable Output<String> marketplaceOffer) {
             this.marketplaceOffer = marketplaceOffer;
             return this;
         }
 
         public Builder marketplaceOffer(@Nullable String marketplaceOffer) {
-            this.marketplaceOffer = Input.ofNullable(marketplaceOffer);
+            this.marketplaceOffer = Output.ofNullable(marketplaceOffer);
             return this;
         }
 
-        public Builder marketplacePublisher(@Nullable Input<String> marketplacePublisher) {
+        public Builder marketplacePublisher(@Nullable Output<String> marketplacePublisher) {
             this.marketplacePublisher = marketplacePublisher;
             return this;
         }
 
         public Builder marketplacePublisher(@Nullable String marketplacePublisher) {
-            this.marketplacePublisher = Input.ofNullable(marketplacePublisher);
+            this.marketplacePublisher = Output.ofNullable(marketplacePublisher);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder premierAddOnName(@Nullable Input<String> premierAddOnName) {
+        public Builder premierAddOnName(@Nullable Output<String> premierAddOnName) {
             this.premierAddOnName = premierAddOnName;
             return this;
         }
 
         public Builder premierAddOnName(@Nullable String premierAddOnName) {
-            this.premierAddOnName = Input.ofNullable(premierAddOnName);
+            this.premierAddOnName = Output.ofNullable(premierAddOnName);
             return this;
         }
 
-        public Builder product(@Nullable Input<String> product) {
+        public Builder product(@Nullable Output<String> product) {
             this.product = product;
             return this;
         }
 
         public Builder product(@Nullable String product) {
-            this.product = Input.ofNullable(product);
+            this.product = Output.ofNullable(product);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Input.ofNullable(vendor);
+            this.vendor = Output.ofNullable(vendor);
             return this;
         }
         public WebAppPremierAddOnArgs build() {

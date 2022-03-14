@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.SubnetPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubnetPropertiesArgs> subnet;
+      private final @Nullable Output<SubnetPropertiesArgs> subnet;
 
-    public Input<SubnetPropertiesArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubnetPropertiesArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public VirtualNetworkPropertiesArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<SubnetPropertiesArgs> subnet) {
+        @Nullable Output<String> id,
+        @Nullable Output<SubnetPropertiesArgs> subnet) {
         this.id = id;
         this.subnet = subnet;
     }
 
     private VirtualNetworkPropertiesArgs() {
-        this.id = Input.empty();
-        this.subnet = Input.empty();
+        this.id = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<SubnetPropertiesArgs> subnet;
+        private @Nullable Output<String> id;
+        private @Nullable Output<SubnetPropertiesArgs> subnet;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubnetPropertiesArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubnetPropertiesArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubnetPropertiesArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public VirtualNetworkPropertiesArgs build() {

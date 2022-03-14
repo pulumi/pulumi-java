@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PlanRuleCopyActionLifecycleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="coldStorageAfter")
-      private final @Nullable Input<Integer> coldStorageAfter;
+      private final @Nullable Output<Integer> coldStorageAfter;
 
-    public Input<Integer> getColdStorageAfter() {
-        return this.coldStorageAfter == null ? Input.empty() : this.coldStorageAfter;
+    public Output<Integer> getColdStorageAfter() {
+        return this.coldStorageAfter == null ? Output.empty() : this.coldStorageAfter;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PlanRuleCopyActionLifecycleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deleteAfter")
-      private final @Nullable Input<Integer> deleteAfter;
+      private final @Nullable Output<Integer> deleteAfter;
 
-    public Input<Integer> getDeleteAfter() {
-        return this.deleteAfter == null ? Input.empty() : this.deleteAfter;
+    public Output<Integer> getDeleteAfter() {
+        return this.deleteAfter == null ? Output.empty() : this.deleteAfter;
     }
 
     public PlanRuleCopyActionLifecycleArgs(
-        @Nullable Input<Integer> coldStorageAfter,
-        @Nullable Input<Integer> deleteAfter) {
+        @Nullable Output<Integer> coldStorageAfter,
+        @Nullable Output<Integer> deleteAfter) {
         this.coldStorageAfter = coldStorageAfter;
         this.deleteAfter = deleteAfter;
     }
 
     private PlanRuleCopyActionLifecycleArgs() {
-        this.coldStorageAfter = Input.empty();
-        this.deleteAfter = Input.empty();
+        this.coldStorageAfter = Output.empty();
+        this.deleteAfter = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PlanRuleCopyActionLifecycleArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> coldStorageAfter;
-        private @Nullable Input<Integer> deleteAfter;
+        private @Nullable Output<Integer> coldStorageAfter;
+        private @Nullable Output<Integer> deleteAfter;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PlanRuleCopyActionLifecycleArgs extends io.pulumi.resources.R
     	      this.deleteAfter = defaults.deleteAfter;
         }
 
-        public Builder coldStorageAfter(@Nullable Input<Integer> coldStorageAfter) {
+        public Builder coldStorageAfter(@Nullable Output<Integer> coldStorageAfter) {
             this.coldStorageAfter = coldStorageAfter;
             return this;
         }
 
         public Builder coldStorageAfter(@Nullable Integer coldStorageAfter) {
-            this.coldStorageAfter = Input.ofNullable(coldStorageAfter);
+            this.coldStorageAfter = Output.ofNullable(coldStorageAfter);
             return this;
         }
 
-        public Builder deleteAfter(@Nullable Input<Integer> deleteAfter) {
+        public Builder deleteAfter(@Nullable Output<Integer> deleteAfter) {
             this.deleteAfter = deleteAfter;
             return this;
         }
 
         public Builder deleteAfter(@Nullable Integer deleteAfter) {
-            this.deleteAfter = Input.ofNullable(deleteAfter);
+            this.deleteAfter = Output.ofNullable(deleteAfter);
             return this;
         }
         public PlanRuleCopyActionLifecycleArgs build() {

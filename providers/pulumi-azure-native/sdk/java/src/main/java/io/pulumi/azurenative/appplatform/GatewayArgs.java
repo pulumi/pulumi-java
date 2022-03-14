@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.GatewayPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName")
-      private final @Nullable Input<String> gatewayName;
+      private final @Nullable Output<String> gatewayName;
 
-    public Input<String> getGatewayName() {
-        return this.gatewayName == null ? Input.empty() : this.gatewayName;
+    public Output<String> getGatewayName() {
+        return this.gatewayName == null ? Output.empty() : this.gatewayName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<GatewayPropertiesArgs> properties;
+      private final @Nullable Output<GatewayPropertiesArgs> properties;
 
-    public Input<GatewayPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<GatewayPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -65,18 +65,18 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     public GatewayArgs(
-        @Nullable Input<String> gatewayName,
-        @Nullable Input<GatewayPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<SkuArgs> sku) {
+        @Nullable Output<String> gatewayName,
+        @Nullable Output<GatewayPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<SkuArgs> sku) {
         this.gatewayName = gatewayName;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayArgs() {
-        this.gatewayName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.sku = Input.empty();
+        this.gatewayName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gatewayName;
-        private @Nullable Input<GatewayPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<SkuArgs> sku;
+        private @Nullable Output<String> gatewayName;
+        private @Nullable Output<GatewayPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<SkuArgs> sku;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder gatewayName(@Nullable Input<String> gatewayName) {
+        public Builder gatewayName(@Nullable Output<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Input.ofNullable(gatewayName);
+            this.gatewayName = Output.ofNullable(gatewayName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<GatewayPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<GatewayPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable GatewayPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
         public GatewayArgs build() {

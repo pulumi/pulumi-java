@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alternateName")
-      private final @Nullable Input<String> alternateName;
+      private final @Nullable Output<String> alternateName;
 
-    public Input<String> getAlternateName() {
-        return this.alternateName == null ? Input.empty() : this.alternateName;
+    public Output<String> getAlternateName() {
+        return this.alternateName == null ? Output.empty() : this.alternateName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -52,10 +52,10 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="partnerNamespace")
-      private final @Nullable Input<String> partnerNamespace;
+      private final @Nullable Output<String> partnerNamespace;
 
-    public Input<String> getPartnerNamespace() {
-        return this.partnerNamespace == null ? Input.empty() : this.partnerNamespace;
+    public Output<String> getPartnerNamespace() {
+        return this.partnerNamespace == null ? Output.empty() : this.partnerNamespace;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DisasterRecoveryConfigArgs(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> alternateName,
-        Input<String> namespaceName,
-        @Nullable Input<String> partnerNamespace,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> alternateName,
+        Output<String> namespaceName,
+        @Nullable Output<String> partnerNamespace,
+        Output<String> resourceGroupName) {
         this.alias = alias;
         this.alternateName = alternateName;
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
@@ -83,11 +83,11 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
     }
 
     private DisasterRecoveryConfigArgs() {
-        this.alias = Input.empty();
-        this.alternateName = Input.empty();
-        this.namespaceName = Input.empty();
-        this.partnerNamespace = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.alias = Output.empty();
+        this.alternateName = Output.empty();
+        this.namespaceName = Output.empty();
+        this.partnerNamespace = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> alternateName;
-        private Input<String> namespaceName;
-        private @Nullable Input<String> partnerNamespace;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> alternateName;
+        private Output<String> namespaceName;
+        private @Nullable Output<String> partnerNamespace;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder alternateName(@Nullable Input<String> alternateName) {
+        public Builder alternateName(@Nullable Output<String> alternateName) {
             this.alternateName = alternateName;
             return this;
         }
 
         public Builder alternateName(@Nullable String alternateName) {
-            this.alternateName = Input.ofNullable(alternateName);
+            this.alternateName = Output.ofNullable(alternateName);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder partnerNamespace(@Nullable Input<String> partnerNamespace) {
+        public Builder partnerNamespace(@Nullable Output<String> partnerNamespace) {
             this.partnerNamespace = partnerNamespace;
             return this;
         }
 
         public Builder partnerNamespace(@Nullable String partnerNamespace) {
-            this.partnerNamespace = Input.ofNullable(partnerNamespace);
+            this.partnerNamespace = Output.ofNullable(partnerNamespace);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DisasterRecoveryConfigArgs build() {

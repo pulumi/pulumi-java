@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs;
@@ -25,10 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
      * 
      */
     @InputImport(name="phraseMatchRules")
-      private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
+      private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
 
-    public Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> getPhraseMatchRules() {
-        return this.phraseMatchRules == null ? Input.empty() : this.phraseMatchRules;
+    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> getPhraseMatchRules() {
+        return this.phraseMatchRules == null ? Output.empty() : this.phraseMatchRules;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
+      private final Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 
-    public Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> getType() {
+    public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> getType() {
         return this.type;
     }
 
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs(
-        @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules,
-        Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
+        @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules,
+        Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
         this.phraseMatchRules = phraseMatchRules;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs() {
-        this.phraseMatchRules = Input.empty();
-        this.type = Input.empty();
+        this.phraseMatchRules = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
-        private Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
+        private @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
+        private Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     	      this.type = defaults.type;
         }
 
-        public Builder phraseMatchRules(@Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules) {
+        public Builder phraseMatchRules(@Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules) {
             this.phraseMatchRules = phraseMatchRules;
             return this;
         }
 
         public Builder phraseMatchRules(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs> phraseMatchRules) {
-            this.phraseMatchRules = Input.ofNullable(phraseMatchRules);
+            this.phraseMatchRules = Output.ofNullable(phraseMatchRules);
             return this;
         }
 
-        public Builder type(Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
+        public Builder type(Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs build() {

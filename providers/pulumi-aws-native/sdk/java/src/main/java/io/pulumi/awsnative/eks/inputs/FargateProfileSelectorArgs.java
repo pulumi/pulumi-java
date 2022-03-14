@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.awsnative.eks.inputs.FargateProfileLabelArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
     public static final FargateProfileSelectorArgs Empty = new FargateProfileSelectorArgs();
 
     @InputImport(name="labels")
-      private final @Nullable Input<List<FargateProfileLabelArgs>> labels;
+      private final @Nullable Output<List<FargateProfileLabelArgs>> labels;
 
-    public Input<List<FargateProfileLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<FargateProfileLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
     public FargateProfileSelectorArgs(
-        @Nullable Input<List<FargateProfileLabelArgs>> labels,
-        Input<String> namespace) {
+        @Nullable Output<List<FargateProfileLabelArgs>> labels,
+        Output<String> namespace) {
         this.labels = labels;
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
     }
 
     private FargateProfileSelectorArgs() {
-        this.labels = Input.empty();
-        this.namespace = Input.empty();
+        this.labels = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FargateProfileLabelArgs>> labels;
-        private Input<String> namespace;
+        private @Nullable Output<List<FargateProfileLabelArgs>> labels;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder labels(@Nullable Input<List<FargateProfileLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<FargateProfileLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<FargateProfileLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public FargateProfileSelectorArgs build() {

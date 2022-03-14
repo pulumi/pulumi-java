@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri")
-      private final @Nullable Input<List<String>> resourceUri;
+      private final @Nullable Output<List<String>> resourceUri;
 
-    public Input<List<String>> getResourceUri() {
-        return this.resourceUri == null ? Input.empty() : this.resourceUri;
+    public Output<List<String>> getResourceUri() {
+        return this.resourceUri == null ? Output.empty() : this.resourceUri;
     }
 
-    public DeployableArgs(@Nullable Input<List<String>> resourceUri) {
+    public DeployableArgs(@Nullable Output<List<String>> resourceUri) {
         this.resourceUri = resourceUri;
     }
 
     private DeployableArgs() {
-        this.resourceUri = Input.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> resourceUri;
+        private @Nullable Output<List<String>> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder resourceUri(@Nullable Input<List<String>> resourceUri) {
+        public Builder resourceUri(@Nullable Output<List<String>> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
         public Builder resourceUri(@Nullable List<String> resourceUri) {
-            this.resourceUri = Input.ofNullable(resourceUri);
+            this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
         public DeployableArgs build() {

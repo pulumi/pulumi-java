@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.ManagedRulesDefinitionArgs;
 import io.pulumi.azurenative.network.inputs.PolicySettingsArgs;
 import io.pulumi.azurenative.network.inputs.WebApplicationFirewallCustomRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="customRules")
-      private final @Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules;
+      private final @Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules;
 
-    public Input<List<WebApplicationFirewallCustomRuleArgs>> getCustomRules() {
-        return this.customRules == null ? Input.empty() : this.customRules;
+    public Output<List<WebApplicationFirewallCustomRuleArgs>> getCustomRules() {
+        return this.customRules == null ? Output.empty() : this.customRules;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="managedRules", required=true)
-      private final Input<ManagedRulesDefinitionArgs> managedRules;
+      private final Output<ManagedRulesDefinitionArgs> managedRules;
 
-    public Input<ManagedRulesDefinitionArgs> getManagedRules() {
+    public Output<ManagedRulesDefinitionArgs> getManagedRules() {
         return this.managedRules;
     }
 
@@ -68,10 +68,10 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policySettings")
-      private final @Nullable Input<PolicySettingsArgs> policySettings;
+      private final @Nullable Output<PolicySettingsArgs> policySettings;
 
-    public Input<PolicySettingsArgs> getPolicySettings() {
-        return this.policySettings == null ? Input.empty() : this.policySettings;
+    public Output<PolicySettingsArgs> getPolicySettings() {
+        return this.policySettings == null ? Output.empty() : this.policySettings;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,21 +101,21 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public WebApplicationFirewallPolicyArgs(
-        @Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        Input<ManagedRulesDefinitionArgs> managedRules,
-        @Nullable Input<String> policyName,
-        @Nullable Input<PolicySettingsArgs> policySettings,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        Output<ManagedRulesDefinitionArgs> managedRules,
+        @Nullable Output<String> policyName,
+        @Nullable Output<PolicySettingsArgs> policySettings,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.customRules = customRules;
         this.id = id;
         this.location = location;
@@ -127,14 +127,14 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
     }
 
     private WebApplicationFirewallPolicyArgs() {
-        this.customRules = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.managedRules = Input.empty();
-        this.policyName = Input.empty();
-        this.policySettings = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.customRules = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.managedRules = Output.empty();
+        this.policyName = Output.empty();
+        this.policySettings = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private Input<ManagedRulesDefinitionArgs> managedRules;
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<PolicySettingsArgs> policySettings;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private Output<ManagedRulesDefinitionArgs> managedRules;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<PolicySettingsArgs> policySettings;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
     	      this.tags = defaults.tags;
         }
 
-        public Builder customRules(@Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules) {
+        public Builder customRules(@Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules) {
             this.customRules = customRules;
             return this;
         }
 
         public Builder customRules(@Nullable List<WebApplicationFirewallCustomRuleArgs> customRules) {
-            this.customRules = Input.ofNullable(customRules);
+            this.customRules = Output.ofNullable(customRules);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedRules(Input<ManagedRulesDefinitionArgs> managedRules) {
+        public Builder managedRules(Output<ManagedRulesDefinitionArgs> managedRules) {
             this.managedRules = Objects.requireNonNull(managedRules);
             return this;
         }
 
         public Builder managedRules(ManagedRulesDefinitionArgs managedRules) {
-            this.managedRules = Input.of(Objects.requireNonNull(managedRules));
+            this.managedRules = Output.of(Objects.requireNonNull(managedRules));
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder policySettings(@Nullable Input<PolicySettingsArgs> policySettings) {
+        public Builder policySettings(@Nullable Output<PolicySettingsArgs> policySettings) {
             this.policySettings = policySettings;
             return this;
         }
 
         public Builder policySettings(@Nullable PolicySettingsArgs policySettings) {
-            this.policySettings = Input.ofNullable(policySettings);
+            this.policySettings = Output.ofNullable(policySettings);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public WebApplicationFirewallPolicyArgs build() {

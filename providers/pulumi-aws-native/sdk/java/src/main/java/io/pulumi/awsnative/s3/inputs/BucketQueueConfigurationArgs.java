@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="event", required=true)
-      private final Input<String> event;
+      private final Output<String> event;
 
-    public Input<String> getEvent() {
+    public Output<String> getEvent() {
         return this.event;
     }
 
@@ -35,10 +35,10 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<BucketNotificationFilterArgs> filter;
+      private final @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Input<BucketNotificationFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<BucketNotificationFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="queue", required=true)
-      private final Input<String> queue;
+      private final Output<String> queue;
 
-    public Input<String> getQueue() {
+    public Output<String> getQueue() {
         return this.queue;
     }
 
     public BucketQueueConfigurationArgs(
-        Input<String> event,
-        @Nullable Input<BucketNotificationFilterArgs> filter,
-        Input<String> queue) {
+        Output<String> event,
+        @Nullable Output<BucketNotificationFilterArgs> filter,
+        Output<String> queue) {
         this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
         this.filter = filter;
         this.queue = Objects.requireNonNull(queue, "expected parameter 'queue' to be non-null");
     }
 
     private BucketQueueConfigurationArgs() {
-        this.event = Input.empty();
-        this.filter = Input.empty();
-        this.queue = Input.empty();
+        this.event = Output.empty();
+        this.filter = Output.empty();
+        this.queue = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> event;
-        private @Nullable Input<BucketNotificationFilterArgs> filter;
-        private Input<String> queue;
+        private Output<String> event;
+        private @Nullable Output<BucketNotificationFilterArgs> filter;
+        private Output<String> queue;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
     	      this.queue = defaults.queue;
         }
 
-        public Builder event(Input<String> event) {
+        public Builder event(Output<String> event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
         public Builder event(String event) {
-            this.event = Input.of(Objects.requireNonNull(event));
+            this.event = Output.of(Objects.requireNonNull(event));
             return this;
         }
 
-        public Builder filter(@Nullable Input<BucketNotificationFilterArgs> filter) {
+        public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder queue(Input<String> queue) {
+        public Builder queue(Output<String> queue) {
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
 
         public Builder queue(String queue) {
-            this.queue = Input.of(Objects.requireNonNull(queue));
+            this.queue = Output.of(Objects.requireNonNull(queue));
             return this;
         }
         public BucketQueueConfigurationArgs build() {

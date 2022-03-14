@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
      * 
      */
     @InputImport(name="categories", required=true)
-      private final Input<List<String>> categories;
+      private final Output<List<String>> categories;
 
-    public Input<List<String>> getCategories() {
+    public Output<List<String>> getCategories() {
         return this.categories;
     }
 
-    public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(Input<List<String>> categories) {
+    public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(Output<List<String>> categories) {
         this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
     }
 
     private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs() {
-        this.categories = Input.empty();
+        this.categories = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     }
 
     public static final class Builder {
-        private Input<List<String>> categories;
+        private Output<List<String>> categories;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     	      this.categories = defaults.categories;
         }
 
-        public Builder categories(Input<List<String>> categories) {
+        public Builder categories(Output<List<String>> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
         public Builder categories(List<String> categories) {
-            this.categories = Input.of(Objects.requireNonNull(categories));
+            this.categories = Output.of(Objects.requireNonNull(categories));
             return this;
         }
         public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs build() {

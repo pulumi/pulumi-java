@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.ReplicationRecoveryServicesProviderArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryServicesProviderPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,28 +126,28 @@ public class ReplicationRecoveryServicesProvider extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationRecoveryServicesProvider(String name, ReplicationRecoveryServicesProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ReplicationRecoveryServicesProvider", name, args == null ? ReplicationRecoveryServicesProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:recoveryservices:ReplicationRecoveryServicesProvider", name, args == null ? ReplicationRecoveryServicesProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReplicationRecoveryServicesProvider(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReplicationRecoveryServicesProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ReplicationRecoveryServicesProvider", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20180110:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20180710:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211101:ReplicationRecoveryServicesProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ReplicationRecoveryServicesProvider").build())
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180110:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180710:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211101:ReplicationRecoveryServicesProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ReplicationRecoveryServicesProvider").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -162,7 +161,7 @@ public class ReplicationRecoveryServicesProvider extends io.pulumi.resources.Cus
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReplicationRecoveryServicesProvider get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReplicationRecoveryServicesProvider get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationRecoveryServicesProvider(name, id, options);
     }
 }

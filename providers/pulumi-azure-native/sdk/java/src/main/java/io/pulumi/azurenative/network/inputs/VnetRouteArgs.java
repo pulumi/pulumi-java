@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.StaticRouteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticRoutes")
-      private final @Nullable Input<List<StaticRouteArgs>> staticRoutes;
+      private final @Nullable Output<List<StaticRouteArgs>> staticRoutes;
 
-    public Input<List<StaticRouteArgs>> getStaticRoutes() {
-        return this.staticRoutes == null ? Input.empty() : this.staticRoutes;
+    public Output<List<StaticRouteArgs>> getStaticRoutes() {
+        return this.staticRoutes == null ? Output.empty() : this.staticRoutes;
     }
 
-    public VnetRouteArgs(@Nullable Input<List<StaticRouteArgs>> staticRoutes) {
+    public VnetRouteArgs(@Nullable Output<List<StaticRouteArgs>> staticRoutes) {
         this.staticRoutes = staticRoutes;
     }
 
     private VnetRouteArgs() {
-        this.staticRoutes = Input.empty();
+        this.staticRoutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StaticRouteArgs>> staticRoutes;
+        private @Nullable Output<List<StaticRouteArgs>> staticRoutes;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.staticRoutes = defaults.staticRoutes;
         }
 
-        public Builder staticRoutes(@Nullable Input<List<StaticRouteArgs>> staticRoutes) {
+        public Builder staticRoutes(@Nullable Output<List<StaticRouteArgs>> staticRoutes) {
             this.staticRoutes = staticRoutes;
             return this;
         }
 
         public Builder staticRoutes(@Nullable List<StaticRouteArgs> staticRoutes) {
-            this.staticRoutes = Input.ofNullable(staticRoutes);
+            this.staticRoutes = Output.ofNullable(staticRoutes);
             return this;
         }
         public VnetRouteArgs build() {

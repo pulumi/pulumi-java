@@ -8,7 +8,7 @@ import io.pulumi.awsnative.eks.inputs.ClusterKubernetesNetworkConfigArgs;
 import io.pulumi.awsnative.eks.inputs.ClusterLoggingArgs;
 import io.pulumi.awsnative.eks.inputs.ClusterResourcesVpcConfigArgs;
 import io.pulumi.awsnative.eks.inputs.ClusterTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,24 +21,24 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     public static final ClusterArgs Empty = new ClusterArgs();
 
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<List<ClusterEncryptionConfigArgs>> encryptionConfig;
+      private final @Nullable Output<List<ClusterEncryptionConfigArgs>> encryptionConfig;
 
-    public Input<List<ClusterEncryptionConfigArgs>> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<List<ClusterEncryptionConfigArgs>> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     @InputImport(name="kubernetesNetworkConfig")
-      private final @Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
+      private final @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
 
-    public Input<ClusterKubernetesNetworkConfigArgs> getKubernetesNetworkConfig() {
-        return this.kubernetesNetworkConfig == null ? Input.empty() : this.kubernetesNetworkConfig;
+    public Output<ClusterKubernetesNetworkConfigArgs> getKubernetesNetworkConfig() {
+        return this.kubernetesNetworkConfig == null ? Output.empty() : this.kubernetesNetworkConfig;
     }
 
     @InputImport(name="logging")
-      private final @Nullable Input<ClusterLoggingArgs> logging;
+      private final @Nullable Output<ClusterLoggingArgs> logging;
 
-    public Input<ClusterLoggingArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<ClusterLoggingArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -46,16 +46,16 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="resourcesVpcConfig", required=true)
-      private final Input<ClusterResourcesVpcConfigArgs> resourcesVpcConfig;
+      private final Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig;
 
-    public Input<ClusterResourcesVpcConfigArgs> getResourcesVpcConfig() {
+    public Output<ClusterResourcesVpcConfigArgs> getResourcesVpcConfig() {
         return this.resourcesVpcConfig;
     }
 
@@ -64,9 +64,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -75,10 +75,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ClusterTagArgs>> tags;
+      private final @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Input<List<ClusterTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ClusterTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -86,21 +86,21 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ClusterArgs(
-        @Nullable Input<List<ClusterEncryptionConfigArgs>> encryptionConfig,
-        @Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig,
-        @Nullable Input<ClusterLoggingArgs> logging,
-        @Nullable Input<String> name,
-        Input<ClusterResourcesVpcConfigArgs> resourcesVpcConfig,
-        Input<String> roleArn,
-        @Nullable Input<List<ClusterTagArgs>> tags,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<ClusterEncryptionConfigArgs>> encryptionConfig,
+        @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig,
+        @Nullable Output<ClusterLoggingArgs> logging,
+        @Nullable Output<String> name,
+        Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig,
+        Output<String> roleArn,
+        @Nullable Output<List<ClusterTagArgs>> tags,
+        @Nullable Output<String> version) {
         this.encryptionConfig = encryptionConfig;
         this.kubernetesNetworkConfig = kubernetesNetworkConfig;
         this.logging = logging;
@@ -112,14 +112,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.encryptionConfig = Input.empty();
-        this.kubernetesNetworkConfig = Input.empty();
-        this.logging = Input.empty();
-        this.name = Input.empty();
-        this.resourcesVpcConfig = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
-        this.version = Input.empty();
+        this.encryptionConfig = Output.empty();
+        this.kubernetesNetworkConfig = Output.empty();
+        this.logging = Output.empty();
+        this.name = Output.empty();
+        this.resourcesVpcConfig = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,14 +131,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClusterEncryptionConfigArgs>> encryptionConfig;
-        private @Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
-        private @Nullable Input<ClusterLoggingArgs> logging;
-        private @Nullable Input<String> name;
-        private Input<ClusterResourcesVpcConfigArgs> resourcesVpcConfig;
-        private Input<String> roleArn;
-        private @Nullable Input<List<ClusterTagArgs>> tags;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<ClusterEncryptionConfigArgs>> encryptionConfig;
+        private @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
+        private @Nullable Output<ClusterLoggingArgs> logging;
+        private @Nullable Output<String> name;
+        private Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig;
+        private Output<String> roleArn;
+        private @Nullable Output<List<ClusterTagArgs>> tags;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -156,83 +156,83 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder encryptionConfig(@Nullable Input<List<ClusterEncryptionConfigArgs>> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<List<ClusterEncryptionConfigArgs>> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable List<ClusterEncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder kubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
 
         public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
-            this.kubernetesNetworkConfig = Input.ofNullable(kubernetesNetworkConfig);
+            this.kubernetesNetworkConfig = Output.ofNullable(kubernetesNetworkConfig);
             return this;
         }
 
-        public Builder logging(@Nullable Input<ClusterLoggingArgs> logging) {
+        public Builder logging(@Nullable Output<ClusterLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable ClusterLoggingArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourcesVpcConfig(Input<ClusterResourcesVpcConfigArgs> resourcesVpcConfig) {
+        public Builder resourcesVpcConfig(Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig) {
             this.resourcesVpcConfig = Objects.requireNonNull(resourcesVpcConfig);
             return this;
         }
 
         public Builder resourcesVpcConfig(ClusterResourcesVpcConfigArgs resourcesVpcConfig) {
-            this.resourcesVpcConfig = Input.of(Objects.requireNonNull(resourcesVpcConfig));
+            this.resourcesVpcConfig = Output.of(Objects.requireNonNull(resourcesVpcConfig));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ClusterTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ClusterTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ClusterArgs build() {

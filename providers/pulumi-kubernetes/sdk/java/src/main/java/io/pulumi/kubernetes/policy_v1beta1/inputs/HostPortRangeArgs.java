@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="max", required=true)
-      private final Input<Integer> max;
+      private final Output<Integer> max;
 
-    public Input<Integer> getMax() {
+    public Output<Integer> getMax() {
         return this.max;
     }
 
@@ -33,22 +33,22 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="min", required=true)
-      private final Input<Integer> min;
+      private final Output<Integer> min;
 
-    public Input<Integer> getMin() {
+    public Output<Integer> getMin() {
         return this.min;
     }
 
     public HostPortRangeArgs(
-        Input<Integer> max,
-        Input<Integer> min) {
+        Output<Integer> max,
+        Output<Integer> min) {
         this.max = Objects.requireNonNull(max, "expected parameter 'max' to be non-null");
         this.min = Objects.requireNonNull(min, "expected parameter 'min' to be non-null");
     }
 
     private HostPortRangeArgs() {
-        this.max = Input.empty();
-        this.min = Input.empty();
+        this.max = Output.empty();
+        this.min = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> max;
-        private Input<Integer> min;
+        private Output<Integer> max;
+        private Output<Integer> min;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.min = defaults.min;
         }
 
-        public Builder max(Input<Integer> max) {
+        public Builder max(Output<Integer> max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
         public Builder max(Integer max) {
-            this.max = Input.of(Objects.requireNonNull(max));
+            this.max = Output.of(Objects.requireNonNull(max));
             return this;
         }
 
-        public Builder min(Input<Integer> min) {
+        public Builder min(Output<Integer> min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
         public Builder min(Integer min) {
-            this.min = Input.of(Objects.requireNonNull(min));
+            this.min = Output.of(Objects.requireNonNull(min));
             return this;
         }
         public HostPortRangeArgs build() {

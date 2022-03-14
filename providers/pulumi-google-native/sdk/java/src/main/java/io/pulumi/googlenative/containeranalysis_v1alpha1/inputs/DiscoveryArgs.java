@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisKind")
-      private final @Nullable Input<DiscoveryAnalysisKind> analysisKind;
+      private final @Nullable Output<DiscoveryAnalysisKind> analysisKind;
 
-    public Input<DiscoveryAnalysisKind> getAnalysisKind() {
-        return this.analysisKind == null ? Input.empty() : this.analysisKind;
+    public Output<DiscoveryAnalysisKind> getAnalysisKind() {
+        return this.analysisKind == null ? Output.empty() : this.analysisKind;
     }
 
-    public DiscoveryArgs(@Nullable Input<DiscoveryAnalysisKind> analysisKind) {
+    public DiscoveryArgs(@Nullable Output<DiscoveryAnalysisKind> analysisKind) {
         this.analysisKind = analysisKind;
     }
 
     private DiscoveryArgs() {
-        this.analysisKind = Input.empty();
+        this.analysisKind = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DiscoveryAnalysisKind> analysisKind;
+        private @Nullable Output<DiscoveryAnalysisKind> analysisKind;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.analysisKind = defaults.analysisKind;
         }
 
-        public Builder analysisKind(@Nullable Input<DiscoveryAnalysisKind> analysisKind) {
+        public Builder analysisKind(@Nullable Output<DiscoveryAnalysisKind> analysisKind) {
             this.analysisKind = analysisKind;
             return this;
         }
 
         public Builder analysisKind(@Nullable DiscoveryAnalysisKind analysisKind) {
-            this.analysisKind = Input.ofNullable(analysisKind);
+            this.analysisKind = Output.ofNullable(analysisKind);
             return this;
         }
         public DiscoveryArgs build() {

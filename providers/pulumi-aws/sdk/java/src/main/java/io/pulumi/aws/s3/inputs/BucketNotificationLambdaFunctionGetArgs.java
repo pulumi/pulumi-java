@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="events", required=true)
-      private final Input<List<String>> events;
+      private final Output<List<String>> events;
 
-    public Input<List<String>> getEvents() {
+    public Output<List<String>> getEvents() {
         return this.events;
     }
 
@@ -31,10 +31,10 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="filterPrefix")
-      private final @Nullable Input<String> filterPrefix;
+      private final @Nullable Output<String> filterPrefix;
 
-    public Input<String> getFilterPrefix() {
-        return this.filterPrefix == null ? Input.empty() : this.filterPrefix;
+    public Output<String> getFilterPrefix() {
+        return this.filterPrefix == null ? Output.empty() : this.filterPrefix;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="filterSuffix")
-      private final @Nullable Input<String> filterSuffix;
+      private final @Nullable Output<String> filterSuffix;
 
-    public Input<String> getFilterSuffix() {
-        return this.filterSuffix == null ? Input.empty() : this.filterSuffix;
+    public Output<String> getFilterSuffix() {
+        return this.filterSuffix == null ? Output.empty() : this.filterSuffix;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="lambdaFunctionArn")
-      private final @Nullable Input<String> lambdaFunctionArn;
+      private final @Nullable Output<String> lambdaFunctionArn;
 
-    public Input<String> getLambdaFunctionArn() {
-        return this.lambdaFunctionArn == null ? Input.empty() : this.lambdaFunctionArn;
+    public Output<String> getLambdaFunctionArn() {
+        return this.lambdaFunctionArn == null ? Output.empty() : this.lambdaFunctionArn;
     }
 
     public BucketNotificationLambdaFunctionGetArgs(
-        Input<List<String>> events,
-        @Nullable Input<String> filterPrefix,
-        @Nullable Input<String> filterSuffix,
-        @Nullable Input<String> id,
-        @Nullable Input<String> lambdaFunctionArn) {
+        Output<List<String>> events,
+        @Nullable Output<String> filterPrefix,
+        @Nullable Output<String> filterSuffix,
+        @Nullable Output<String> id,
+        @Nullable Output<String> lambdaFunctionArn) {
         this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;
@@ -84,11 +84,11 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
     }
 
     private BucketNotificationLambdaFunctionGetArgs() {
-        this.events = Input.empty();
-        this.filterPrefix = Input.empty();
-        this.filterSuffix = Input.empty();
-        this.id = Input.empty();
-        this.lambdaFunctionArn = Input.empty();
+        this.events = Output.empty();
+        this.filterPrefix = Output.empty();
+        this.filterSuffix = Output.empty();
+        this.id = Output.empty();
+        this.lambdaFunctionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<List<String>> events;
-        private @Nullable Input<String> filterPrefix;
-        private @Nullable Input<String> filterSuffix;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> lambdaFunctionArn;
+        private Output<List<String>> events;
+        private @Nullable Output<String> filterPrefix;
+        private @Nullable Output<String> filterSuffix;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> lambdaFunctionArn;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class BucketNotificationLambdaFunctionGetArgs extends io.pulumi.res
     	      this.lambdaFunctionArn = defaults.lambdaFunctionArn;
         }
 
-        public Builder events(Input<List<String>> events) {
+        public Builder events(Output<List<String>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
         public Builder events(List<String> events) {
-            this.events = Input.of(Objects.requireNonNull(events));
+            this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder filterPrefix(@Nullable Input<String> filterPrefix) {
+        public Builder filterPrefix(@Nullable Output<String> filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
 
         public Builder filterPrefix(@Nullable String filterPrefix) {
-            this.filterPrefix = Input.ofNullable(filterPrefix);
+            this.filterPrefix = Output.ofNullable(filterPrefix);
             return this;
         }
 
-        public Builder filterSuffix(@Nullable Input<String> filterSuffix) {
+        public Builder filterSuffix(@Nullable Output<String> filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
 
         public Builder filterSuffix(@Nullable String filterSuffix) {
-            this.filterSuffix = Input.ofNullable(filterSuffix);
+            this.filterSuffix = Output.ofNullable(filterSuffix);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder lambdaFunctionArn(@Nullable Input<String> lambdaFunctionArn) {
+        public Builder lambdaFunctionArn(@Nullable Output<String> lambdaFunctionArn) {
             this.lambdaFunctionArn = lambdaFunctionArn;
             return this;
         }
 
         public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
-            this.lambdaFunctionArn = Input.ofNullable(lambdaFunctionArn);
+            this.lambdaFunctionArn = Output.ofNullable(lambdaFunctionArn);
             return this;
         }
         public BucketNotificationLambdaFunctionGetArgs build() {

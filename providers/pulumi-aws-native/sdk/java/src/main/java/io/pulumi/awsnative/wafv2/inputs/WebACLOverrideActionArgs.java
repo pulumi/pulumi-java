@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Object> count;
+      private final @Nullable Output<Object> count;
 
-    public Input<Object> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Object> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="none")
-      private final @Nullable Input<Object> none;
+      private final @Nullable Output<Object> none;
 
-    public Input<Object> getNone() {
-        return this.none == null ? Input.empty() : this.none;
+    public Output<Object> getNone() {
+        return this.none == null ? Output.empty() : this.none;
     }
 
     public WebACLOverrideActionArgs(
-        @Nullable Input<Object> count,
-        @Nullable Input<Object> none) {
+        @Nullable Output<Object> count,
+        @Nullable Output<Object> none) {
         this.count = count;
         this.none = none;
     }
 
     private WebACLOverrideActionArgs() {
-        this.count = Input.empty();
-        this.none = Input.empty();
+        this.count = Output.empty();
+        this.none = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> count;
-        private @Nullable Input<Object> none;
+        private @Nullable Output<Object> count;
+        private @Nullable Output<Object> none;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
     	      this.none = defaults.none;
         }
 
-        public Builder count(@Nullable Input<Object> count) {
+        public Builder count(@Nullable Output<Object> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Object count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder none(@Nullable Input<Object> none) {
+        public Builder none(@Nullable Output<Object> none) {
             this.none = none;
             return this;
         }
 
         public Builder none(@Nullable Object none) {
-            this.none = Input.ofNullable(none);
+            this.none = Output.ofNullable(none);
             return this;
         }
         public WebACLOverrideActionArgs build() {

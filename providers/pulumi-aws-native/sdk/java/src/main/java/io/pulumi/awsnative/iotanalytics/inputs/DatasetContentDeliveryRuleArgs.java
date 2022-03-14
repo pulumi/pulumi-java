@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentDeliveryRuleDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     public static final DatasetContentDeliveryRuleArgs Empty = new DatasetContentDeliveryRuleArgs();
 
     @InputImport(name="destination", required=true)
-      private final Input<DatasetContentDeliveryRuleDestinationArgs> destination;
+      private final Output<DatasetContentDeliveryRuleDestinationArgs> destination;
 
-    public Input<DatasetContentDeliveryRuleDestinationArgs> getDestination() {
+    public Output<DatasetContentDeliveryRuleDestinationArgs> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="entryName")
-      private final @Nullable Input<String> entryName;
+      private final @Nullable Output<String> entryName;
 
-    public Input<String> getEntryName() {
-        return this.entryName == null ? Input.empty() : this.entryName;
+    public Output<String> getEntryName() {
+        return this.entryName == null ? Output.empty() : this.entryName;
     }
 
     public DatasetContentDeliveryRuleArgs(
-        Input<DatasetContentDeliveryRuleDestinationArgs> destination,
-        @Nullable Input<String> entryName) {
+        Output<DatasetContentDeliveryRuleDestinationArgs> destination,
+        @Nullable Output<String> entryName) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.entryName = entryName;
     }
 
     private DatasetContentDeliveryRuleArgs() {
-        this.destination = Input.empty();
-        this.entryName = Input.empty();
+        this.destination = Output.empty();
+        this.entryName = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<DatasetContentDeliveryRuleDestinationArgs> destination;
-        private @Nullable Input<String> entryName;
+        private Output<DatasetContentDeliveryRuleDestinationArgs> destination;
+        private @Nullable Output<String> entryName;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     	      this.entryName = defaults.entryName;
         }
 
-        public Builder destination(Input<DatasetContentDeliveryRuleDestinationArgs> destination) {
+        public Builder destination(Output<DatasetContentDeliveryRuleDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(DatasetContentDeliveryRuleDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder entryName(@Nullable Input<String> entryName) {
+        public Builder entryName(@Nullable Output<String> entryName) {
             this.entryName = entryName;
             return this;
         }
 
         public Builder entryName(@Nullable String entryName) {
-            this.entryName = Input.ofNullable(entryName);
+            this.entryName = Output.ofNullable(entryName);
             return this;
         }
         public DatasetContentDeliveryRuleArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationNFSMountOptionsVersion;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<LocationNFSMountOptionsVersion> version;
+      private final @Nullable Output<LocationNFSMountOptionsVersion> version;
 
-    public Input<LocationNFSMountOptionsVersion> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<LocationNFSMountOptionsVersion> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
-    public LocationNFSMountOptionsArgs(@Nullable Input<LocationNFSMountOptionsVersion> version) {
+    public LocationNFSMountOptionsArgs(@Nullable Output<LocationNFSMountOptionsVersion> version) {
         this.version = version;
     }
 
     private LocationNFSMountOptionsArgs() {
-        this.version = Input.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<LocationNFSMountOptionsVersion> version;
+        private @Nullable Output<LocationNFSMountOptionsVersion> version;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder version(@Nullable Input<LocationNFSMountOptionsVersion> version) {
+        public Builder version(@Nullable Output<LocationNFSMountOptionsVersion> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable LocationNFSMountOptionsVersion version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public LocationNFSMountOptionsArgs build() {

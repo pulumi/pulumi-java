@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
      * 
      */
     @InputImport(name="predefinedLoadMetricSpecification")
-      private final @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
+      private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
 
-    public Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> getPredefinedLoadMetricSpecification() {
-        return this.predefinedLoadMetricSpecification == null ? Input.empty() : this.predefinedLoadMetricSpecification;
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> getPredefinedLoadMetricSpecification() {
+        return this.predefinedLoadMetricSpecification == null ? Output.empty() : this.predefinedLoadMetricSpecification;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
      * 
      */
     @InputImport(name="predefinedMetricPairSpecification")
-      private final @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification;
+      private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification;
 
-    public Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> getPredefinedMetricPairSpecification() {
-        return this.predefinedMetricPairSpecification == null ? Input.empty() : this.predefinedMetricPairSpecification;
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> getPredefinedMetricPairSpecification() {
+        return this.predefinedMetricPairSpecification == null ? Output.empty() : this.predefinedMetricPairSpecification;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
      * 
      */
     @InputImport(name="predefinedScalingMetricSpecification")
-      private final @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification;
+      private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification;
 
-    public Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> getPredefinedScalingMetricSpecification() {
-        return this.predefinedScalingMetricSpecification == null ? Input.empty() : this.predefinedScalingMetricSpecification;
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> getPredefinedScalingMetricSpecification() {
+        return this.predefinedScalingMetricSpecification == null ? Output.empty() : this.predefinedScalingMetricSpecification;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
      * 
      */
     @InputImport(name="targetValue", required=true)
-      private final Input<Integer> targetValue;
+      private final Output<Integer> targetValue;
 
-    public Input<Integer> getTargetValue() {
+    public Output<Integer> getTargetValue() {
         return this.targetValue;
     }
 
     public PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs(
-        @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification,
-        @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification,
-        @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification,
-        Input<Integer> targetValue) {
+        @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification,
+        @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification,
+        @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification,
+        Output<Integer> targetValue) {
         this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
         this.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
         this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
@@ -73,10 +73,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
     }
 
     private PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs() {
-        this.predefinedLoadMetricSpecification = Input.empty();
-        this.predefinedMetricPairSpecification = Input.empty();
-        this.predefinedScalingMetricSpecification = Input.empty();
-        this.targetValue = Input.empty();
+        this.predefinedLoadMetricSpecification = Output.empty();
+        this.predefinedMetricPairSpecification = Output.empty();
+        this.predefinedScalingMetricSpecification = Output.empty();
+        this.targetValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
-        private @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification;
-        private @Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification;
-        private Input<Integer> targetValue;
+        private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
+        private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification;
+        private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification;
+        private Output<Integer> targetValue;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder predefinedLoadMetricSpecification(@Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification) {
+        public Builder predefinedLoadMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
 
         public Builder predefinedLoadMetricSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs predefinedLoadMetricSpecification) {
-            this.predefinedLoadMetricSpecification = Input.ofNullable(predefinedLoadMetricSpecification);
+            this.predefinedLoadMetricSpecification = Output.ofNullable(predefinedLoadMetricSpecification);
             return this;
         }
 
-        public Builder predefinedMetricPairSpecification(@Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification) {
+        public Builder predefinedMetricPairSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification) {
             this.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
             return this;
         }
 
         public Builder predefinedMetricPairSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs predefinedMetricPairSpecification) {
-            this.predefinedMetricPairSpecification = Input.ofNullable(predefinedMetricPairSpecification);
+            this.predefinedMetricPairSpecification = Output.ofNullable(predefinedMetricPairSpecification);
             return this;
         }
 
-        public Builder predefinedScalingMetricSpecification(@Nullable Input<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification) {
+        public Builder predefinedScalingMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
             return this;
         }
 
         public Builder predefinedScalingMetricSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs predefinedScalingMetricSpecification) {
-            this.predefinedScalingMetricSpecification = Input.ofNullable(predefinedScalingMetricSpecification);
+            this.predefinedScalingMetricSpecification = Output.ofNullable(predefinedScalingMetricSpecification);
             return this;
         }
 
-        public Builder targetValue(Input<Integer> targetValue) {
+        public Builder targetValue(Output<Integer> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
 
         public Builder targetValue(Integer targetValue) {
-            this.targetValue = Input.of(Objects.requireNonNull(targetValue));
+            this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
         }
         public PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs build() {

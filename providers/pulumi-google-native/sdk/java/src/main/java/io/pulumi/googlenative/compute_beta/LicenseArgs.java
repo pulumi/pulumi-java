@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.LicenseResourceRequirementsArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,31 +32,31 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="resourceRequirements")
-      private final @Nullable Input<LicenseResourceRequirementsArgs> resourceRequirements;
+      private final @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
 
-    public Input<LicenseResourceRequirementsArgs> getResourceRequirements() {
-        return this.resourceRequirements == null ? Input.empty() : this.resourceRequirements;
+    public Output<LicenseResourceRequirementsArgs> getResourceRequirements() {
+        return this.resourceRequirements == null ? Output.empty() : this.resourceRequirements;
     }
 
     /**
@@ -64,19 +64,19 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferable")
-      private final @Nullable Input<Boolean> transferable;
+      private final @Nullable Output<Boolean> transferable;
 
-    public Input<Boolean> getTransferable() {
-        return this.transferable == null ? Input.empty() : this.transferable;
+    public Output<Boolean> getTransferable() {
+        return this.transferable == null ? Output.empty() : this.transferable;
     }
 
     public LicenseArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<LicenseResourceRequirementsArgs> resourceRequirements,
-        @Nullable Input<Boolean> transferable) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements,
+        @Nullable Output<Boolean> transferable) {
         this.description = description;
         this.name = name;
         this.project = project;
@@ -86,12 +86,12 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LicenseArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.resourceRequirements = Input.empty();
-        this.transferable = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.resourceRequirements = Output.empty();
+        this.transferable = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,12 +103,12 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<LicenseResourceRequirementsArgs> resourceRequirements;
-        private @Nullable Input<Boolean> transferable;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
+        private @Nullable Output<Boolean> transferable;
 
         public Builder() {
     	      // Empty
@@ -124,63 +124,63 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transferable = defaults.transferable;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder resourceRequirements(@Nullable Input<LicenseResourceRequirementsArgs> resourceRequirements) {
+        public Builder resourceRequirements(@Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
 
         public Builder resourceRequirements(@Nullable LicenseResourceRequirementsArgs resourceRequirements) {
-            this.resourceRequirements = Input.ofNullable(resourceRequirements);
+            this.resourceRequirements = Output.ofNullable(resourceRequirements);
             return this;
         }
 
-        public Builder transferable(@Nullable Input<Boolean> transferable) {
+        public Builder transferable(@Nullable Output<Boolean> transferable) {
             this.transferable = transferable;
             return this;
         }
 
         public Builder transferable(@Nullable Boolean transferable) {
-            this.transferable = Input.ofNullable(transferable);
+            this.transferable = Output.ofNullable(transferable);
             return this;
         }
         public LicenseArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -32,9 +32,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -43,10 +43,10 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationDisableEmailNotification")
-      private final @Nullable Input<String> invitationDisableEmailNotification;
+      private final @Nullable Output<String> invitationDisableEmailNotification;
 
-    public Input<String> getInvitationDisableEmailNotification() {
-        return this.invitationDisableEmailNotification == null ? Input.empty() : this.invitationDisableEmailNotification;
+    public Output<String> getInvitationDisableEmailNotification() {
+        return this.invitationDisableEmailNotification == null ? Output.empty() : this.invitationDisableEmailNotification;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationMessage")
-      private final @Nullable Input<String> invitationMessage;
+      private final @Nullable Output<String> invitationMessage;
 
-    public Input<String> getInvitationMessage() {
-        return this.invitationMessage == null ? Input.empty() : this.invitationMessage;
+    public Output<String> getInvitationMessage() {
+        return this.invitationMessage == null ? Output.empty() : this.invitationMessage;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-      private final @Nullable Input<Boolean> invite;
+      private final @Nullable Output<Boolean> invite;
 
-    public Input<Boolean> getInvite() {
-        return this.invite == null ? Input.empty() : this.invite;
+    public Output<Boolean> getInvite() {
+        return this.invite == null ? Output.empty() : this.invite;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MemberArgs(
-        Input<String> accountId,
-        Input<String> email,
-        @Nullable Input<String> invitationDisableEmailNotification,
-        @Nullable Input<String> invitationMessage,
-        @Nullable Input<Boolean> invite,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> accountId,
+        Output<String> email,
+        @Nullable Output<String> invitationDisableEmailNotification,
+        @Nullable Output<String> invitationMessage,
+        @Nullable Output<Boolean> invite,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.invitationDisableEmailNotification = invitationDisableEmailNotification;
@@ -111,13 +111,13 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberArgs() {
-        this.accountId = Input.empty();
-        this.email = Input.empty();
-        this.invitationDisableEmailNotification = Input.empty();
-        this.invitationMessage = Input.empty();
-        this.invite = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
+        this.accountId = Output.empty();
+        this.email = Output.empty();
+        this.invitationDisableEmailNotification = Output.empty();
+        this.invitationMessage = Output.empty();
+        this.invite = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private Input<String> email;
-        private @Nullable Input<String> invitationDisableEmailNotification;
-        private @Nullable Input<String> invitationMessage;
-        private @Nullable Input<Boolean> invite;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> accountId;
+        private Output<String> email;
+        private @Nullable Output<String> invitationDisableEmailNotification;
+        private @Nullable Output<String> invitationMessage;
+        private @Nullable Output<Boolean> invite;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder invitationDisableEmailNotification(@Nullable Input<String> invitationDisableEmailNotification) {
+        public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
 
         public Builder invitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
-            this.invitationDisableEmailNotification = Input.ofNullable(invitationDisableEmailNotification);
+            this.invitationDisableEmailNotification = Output.ofNullable(invitationDisableEmailNotification);
             return this;
         }
 
-        public Builder invitationMessage(@Nullable Input<String> invitationMessage) {
+        public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
 
         public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Input.ofNullable(invitationMessage);
+            this.invitationMessage = Output.ofNullable(invitationMessage);
             return this;
         }
 
-        public Builder invite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Input.ofNullable(invite);
+            this.invite = Output.ofNullable(invite);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MemberArgs build() {

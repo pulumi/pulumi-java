@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<List<Object>> arguments;
+      private final @Nullable Output<List<Object>> arguments;
 
-    public Input<List<Object>> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<List<Object>> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="combiner")
-      private final @Nullable Input<Object> combiner;
+      private final @Nullable Output<Object> combiner;
 
-    public Input<Object> getCombiner() {
-        return this.combiner == null ? Input.empty() : this.combiner;
+    public Output<Object> getCombiner() {
+        return this.combiner == null ? Output.empty() : this.combiner;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="commandEnvironment")
-      private final @Nullable Input<List<Object>> commandEnvironment;
+      private final @Nullable Output<List<Object>> commandEnvironment;
 
-    public Input<List<Object>> getCommandEnvironment() {
-        return this.commandEnvironment == null ? Input.empty() : this.commandEnvironment;
+    public Output<List<Object>> getCommandEnvironment() {
+        return this.commandEnvironment == null ? Output.empty() : this.commandEnvironment;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defines")
-      private final @Nullable Input<Map<String,Object>> defines;
+      private final @Nullable Output<Map<String,Object>> defines;
 
-    public Input<Map<String,Object>> getDefines() {
-        return this.defines == null ? Input.empty() : this.defines;
+    public Output<Map<String,Object>> getDefines() {
+        return this.defines == null ? Output.empty() : this.defines;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileLinkedService")
-      private final @Nullable Input<LinkedServiceReferenceArgs> fileLinkedService;
+      private final @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
 
-    public Input<LinkedServiceReferenceArgs> getFileLinkedService() {
-        return this.fileLinkedService == null ? Input.empty() : this.fileLinkedService;
+    public Output<LinkedServiceReferenceArgs> getFileLinkedService() {
+        return this.fileLinkedService == null ? Output.empty() : this.fileLinkedService;
     }
 
     /**
@@ -109,9 +109,9 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="filePaths", required=true)
-      private final Input<List<Object>> filePaths;
+      private final Output<List<Object>> filePaths;
 
-    public Input<List<Object>> getFilePaths() {
+    public Output<List<Object>> getFilePaths() {
         return this.filePaths;
     }
 
@@ -120,10 +120,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="getDebugInfo")
-      private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+      private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Input<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
-        return this.getDebugInfo == null ? Input.empty() : this.getDebugInfo;
+    public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
+        return this.getDebugInfo == null ? Output.empty() : this.getDebugInfo;
     }
 
     /**
@@ -131,9 +131,9 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="input", required=true)
-      private final Input<Object> input;
+      private final Output<Object> input;
 
-    public Input<Object> getInput() {
+    public Output<Object> getInput() {
         return this.input;
     }
 
@@ -142,10 +142,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -153,9 +153,9 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="mapper", required=true)
-      private final Input<Object> mapper;
+      private final Output<Object> mapper;
 
-    public Input<Object> getMapper() {
+    public Output<Object> getMapper() {
         return this.mapper;
     }
 
@@ -164,9 +164,9 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -175,9 +175,9 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="output", required=true)
-      private final Input<Object> output;
+      private final Output<Object> output;
 
-    public Input<Object> getOutput() {
+    public Output<Object> getOutput() {
         return this.output;
     }
 
@@ -186,10 +186,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -197,9 +197,9 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="reducer", required=true)
-      private final Input<Object> reducer;
+      private final Output<Object> reducer;
 
-    public Input<Object> getReducer() {
+    public Output<Object> getReducer() {
         return this.reducer;
     }
 
@@ -208,10 +208,10 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageLinkedServices")
-      private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+      private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
-    public Input<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
-        return this.storageLinkedServices == null ? Input.empty() : this.storageLinkedServices;
+    public Output<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
+        return this.storageLinkedServices == null ? Output.empty() : this.storageLinkedServices;
     }
 
     /**
@@ -220,9 +220,9 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -231,32 +231,32 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public HDInsightStreamingActivityArgs(
-        @Nullable Input<List<Object>> arguments,
-        @Nullable Input<Object> combiner,
-        @Nullable Input<List<Object>> commandEnvironment,
-        @Nullable Input<Map<String,Object>> defines,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<LinkedServiceReferenceArgs> fileLinkedService,
-        Input<List<Object>> filePaths,
-        @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo,
-        Input<Object> input,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<Object> mapper,
-        Input<String> name,
-        Input<Object> output,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        Input<Object> reducer,
-        @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<List<Object>> arguments,
+        @Nullable Output<Object> combiner,
+        @Nullable Output<List<Object>> commandEnvironment,
+        @Nullable Output<Map<String,Object>> defines,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService,
+        Output<List<Object>> filePaths,
+        @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo,
+        Output<Object> input,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<Object> mapper,
+        Output<String> name,
+        Output<Object> output,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        Output<Object> reducer,
+        @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.arguments = arguments;
         this.combiner = combiner;
         this.commandEnvironment = commandEnvironment;
@@ -279,25 +279,25 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     }
 
     private HDInsightStreamingActivityArgs() {
-        this.arguments = Input.empty();
-        this.combiner = Input.empty();
-        this.commandEnvironment = Input.empty();
-        this.defines = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.fileLinkedService = Input.empty();
-        this.filePaths = Input.empty();
-        this.getDebugInfo = Input.empty();
-        this.input = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.mapper = Input.empty();
-        this.name = Input.empty();
-        this.output = Input.empty();
-        this.policy = Input.empty();
-        this.reducer = Input.empty();
-        this.storageLinkedServices = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.arguments = Output.empty();
+        this.combiner = Output.empty();
+        this.commandEnvironment = Output.empty();
+        this.defines = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.fileLinkedService = Output.empty();
+        this.filePaths = Output.empty();
+        this.getDebugInfo = Output.empty();
+        this.input = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.mapper = Output.empty();
+        this.name = Output.empty();
+        this.output = Output.empty();
+        this.policy = Output.empty();
+        this.reducer = Output.empty();
+        this.storageLinkedServices = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -309,25 +309,25 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> arguments;
-        private @Nullable Input<Object> combiner;
-        private @Nullable Input<List<Object>> commandEnvironment;
-        private @Nullable Input<Map<String,Object>> defines;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<LinkedServiceReferenceArgs> fileLinkedService;
-        private Input<List<Object>> filePaths;
-        private @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
-        private Input<Object> input;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<Object> mapper;
-        private Input<String> name;
-        private Input<Object> output;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private Input<Object> reducer;
-        private @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<List<Object>> arguments;
+        private @Nullable Output<Object> combiner;
+        private @Nullable Output<List<Object>> commandEnvironment;
+        private @Nullable Output<Map<String,Object>> defines;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
+        private Output<List<Object>> filePaths;
+        private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+        private Output<Object> input;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<Object> mapper;
+        private Output<String> name;
+        private Output<Object> output;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private Output<Object> reducer;
+        private @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -356,193 +356,193 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder arguments(@Nullable Input<List<Object>> arguments) {
+        public Builder arguments(@Nullable Output<List<Object>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder combiner(@Nullable Input<Object> combiner) {
+        public Builder combiner(@Nullable Output<Object> combiner) {
             this.combiner = combiner;
             return this;
         }
 
         public Builder combiner(@Nullable Object combiner) {
-            this.combiner = Input.ofNullable(combiner);
+            this.combiner = Output.ofNullable(combiner);
             return this;
         }
 
-        public Builder commandEnvironment(@Nullable Input<List<Object>> commandEnvironment) {
+        public Builder commandEnvironment(@Nullable Output<List<Object>> commandEnvironment) {
             this.commandEnvironment = commandEnvironment;
             return this;
         }
 
         public Builder commandEnvironment(@Nullable List<Object> commandEnvironment) {
-            this.commandEnvironment = Input.ofNullable(commandEnvironment);
+            this.commandEnvironment = Output.ofNullable(commandEnvironment);
             return this;
         }
 
-        public Builder defines(@Nullable Input<Map<String,Object>> defines) {
+        public Builder defines(@Nullable Output<Map<String,Object>> defines) {
             this.defines = defines;
             return this;
         }
 
         public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = Input.ofNullable(defines);
+            this.defines = Output.ofNullable(defines);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fileLinkedService(@Nullable Input<LinkedServiceReferenceArgs> fileLinkedService) {
+        public Builder fileLinkedService(@Nullable Output<LinkedServiceReferenceArgs> fileLinkedService) {
             this.fileLinkedService = fileLinkedService;
             return this;
         }
 
         public Builder fileLinkedService(@Nullable LinkedServiceReferenceArgs fileLinkedService) {
-            this.fileLinkedService = Input.ofNullable(fileLinkedService);
+            this.fileLinkedService = Output.ofNullable(fileLinkedService);
             return this;
         }
 
-        public Builder filePaths(Input<List<Object>> filePaths) {
+        public Builder filePaths(Output<List<Object>> filePaths) {
             this.filePaths = Objects.requireNonNull(filePaths);
             return this;
         }
 
         public Builder filePaths(List<Object> filePaths) {
-            this.filePaths = Input.of(Objects.requireNonNull(filePaths));
+            this.filePaths = Output.of(Objects.requireNonNull(filePaths));
             return this;
         }
 
-        public Builder getDebugInfo(@Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
+        public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
 
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Input.ofNullable(getDebugInfo);
+            this.getDebugInfo = Output.ofNullable(getDebugInfo);
             return this;
         }
 
-        public Builder input(Input<Object> input) {
+        public Builder input(Output<Object> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
         public Builder input(Object input) {
-            this.input = Input.of(Objects.requireNonNull(input));
+            this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder mapper(Input<Object> mapper) {
+        public Builder mapper(Output<Object> mapper) {
             this.mapper = Objects.requireNonNull(mapper);
             return this;
         }
 
         public Builder mapper(Object mapper) {
-            this.mapper = Input.of(Objects.requireNonNull(mapper));
+            this.mapper = Output.of(Objects.requireNonNull(mapper));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder output(Input<Object> output) {
+        public Builder output(Output<Object> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
         public Builder output(Object output) {
-            this.output = Input.of(Objects.requireNonNull(output));
+            this.output = Output.of(Objects.requireNonNull(output));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder reducer(Input<Object> reducer) {
+        public Builder reducer(Output<Object> reducer) {
             this.reducer = Objects.requireNonNull(reducer);
             return this;
         }
 
         public Builder reducer(Object reducer) {
-            this.reducer = Input.of(Objects.requireNonNull(reducer));
+            this.reducer = Output.of(Objects.requireNonNull(reducer));
             return this;
         }
 
-        public Builder storageLinkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
+        public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
 
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
-            this.storageLinkedServices = Input.ofNullable(storageLinkedServices);
+            this.storageLinkedServices = Output.ofNullable(storageLinkedServices);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public HDInsightStreamingActivityArgs build() {

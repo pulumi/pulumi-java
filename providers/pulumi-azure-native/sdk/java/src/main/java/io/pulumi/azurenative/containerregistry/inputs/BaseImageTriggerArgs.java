@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.BaseImageTriggerType;
 import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.azurenative.containerregistry.enums.UpdateTriggerPayloadType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,9 +27,9 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="baseImageTriggerType", required=true)
-      private final Input<Either<String,BaseImageTriggerType>> baseImageTriggerType;
+      private final Output<Either<String,BaseImageTriggerType>> baseImageTriggerType;
 
-    public Input<Either<String,BaseImageTriggerType>> getBaseImageTriggerType() {
+    public Output<Either<String,BaseImageTriggerType>> getBaseImageTriggerType() {
         return this.baseImageTriggerType;
     }
 
@@ -38,9 +38,9 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -49,10 +49,10 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,TriggerStatus>> status;
+      private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Input<Either<String,TriggerStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,TriggerStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateTriggerEndpoint")
-      private final @Nullable Input<String> updateTriggerEndpoint;
+      private final @Nullable Output<String> updateTriggerEndpoint;
 
-    public Input<String> getUpdateTriggerEndpoint() {
-        return this.updateTriggerEndpoint == null ? Input.empty() : this.updateTriggerEndpoint;
+    public Output<String> getUpdateTriggerEndpoint() {
+        return this.updateTriggerEndpoint == null ? Output.empty() : this.updateTriggerEndpoint;
     }
 
     /**
@@ -71,31 +71,31 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateTriggerPayloadType")
-      private final @Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
+      private final @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
 
-    public Input<Either<String,UpdateTriggerPayloadType>> getUpdateTriggerPayloadType() {
-        return this.updateTriggerPayloadType == null ? Input.empty() : this.updateTriggerPayloadType;
+    public Output<Either<String,UpdateTriggerPayloadType>> getUpdateTriggerPayloadType() {
+        return this.updateTriggerPayloadType == null ? Output.empty() : this.updateTriggerPayloadType;
     }
 
     public BaseImageTriggerArgs(
-        Input<Either<String,BaseImageTriggerType>> baseImageTriggerType,
-        Input<String> name,
-        @Nullable Input<Either<String,TriggerStatus>> status,
-        @Nullable Input<String> updateTriggerEndpoint,
-        @Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
+        Output<Either<String,BaseImageTriggerType>> baseImageTriggerType,
+        Output<String> name,
+        @Nullable Output<Either<String,TriggerStatus>> status,
+        @Nullable Output<String> updateTriggerEndpoint,
+        @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
         this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType, "expected parameter 'baseImageTriggerType' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = status == null ? Input.ofLeft("Enabled") : status;
+        this.status = status == null ? Output.ofLeft("Enabled") : status;
         this.updateTriggerEndpoint = updateTriggerEndpoint;
         this.updateTriggerPayloadType = updateTriggerPayloadType;
     }
 
     private BaseImageTriggerArgs() {
-        this.baseImageTriggerType = Input.empty();
-        this.name = Input.empty();
-        this.status = Input.empty();
-        this.updateTriggerEndpoint = Input.empty();
-        this.updateTriggerPayloadType = Input.empty();
+        this.baseImageTriggerType = Output.empty();
+        this.name = Output.empty();
+        this.status = Output.empty();
+        this.updateTriggerEndpoint = Output.empty();
+        this.updateTriggerPayloadType = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Either<String,BaseImageTriggerType>> baseImageTriggerType;
-        private Input<String> name;
-        private @Nullable Input<Either<String,TriggerStatus>> status;
-        private @Nullable Input<String> updateTriggerEndpoint;
-        private @Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
+        private Output<Either<String,BaseImageTriggerType>> baseImageTriggerType;
+        private Output<String> name;
+        private @Nullable Output<Either<String,TriggerStatus>> status;
+        private @Nullable Output<String> updateTriggerEndpoint;
+        private @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.updateTriggerPayloadType = defaults.updateTriggerPayloadType;
         }
 
-        public Builder baseImageTriggerType(Input<Either<String,BaseImageTriggerType>> baseImageTriggerType) {
+        public Builder baseImageTriggerType(Output<Either<String,BaseImageTriggerType>> baseImageTriggerType) {
             this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType);
             return this;
         }
 
         public Builder baseImageTriggerType(Either<String,BaseImageTriggerType> baseImageTriggerType) {
-            this.baseImageTriggerType = Input.of(Objects.requireNonNull(baseImageTriggerType));
+            this.baseImageTriggerType = Output.of(Objects.requireNonNull(baseImageTriggerType));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,TriggerStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder updateTriggerEndpoint(@Nullable Input<String> updateTriggerEndpoint) {
+        public Builder updateTriggerEndpoint(@Nullable Output<String> updateTriggerEndpoint) {
             this.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
 
         public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
-            this.updateTriggerEndpoint = Input.ofNullable(updateTriggerEndpoint);
+            this.updateTriggerEndpoint = Output.ofNullable(updateTriggerEndpoint);
             return this;
         }
 
-        public Builder updateTriggerPayloadType(@Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
+        public Builder updateTriggerPayloadType(@Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
 
         public Builder updateTriggerPayloadType(@Nullable Either<String,UpdateTriggerPayloadType> updateTriggerPayloadType) {
-            this.updateTriggerPayloadType = Input.ofNullable(updateTriggerPayloadType);
+            this.updateTriggerPayloadType = Output.ofNullable(updateTriggerPayloadType);
             return this;
         }
         public BaseImageTriggerArgs build() {

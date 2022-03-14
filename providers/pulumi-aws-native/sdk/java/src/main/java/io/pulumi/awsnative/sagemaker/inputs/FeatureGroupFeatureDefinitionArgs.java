@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.FeatureGroupFeatureDefinitionFeatureType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
     public static final FeatureGroupFeatureDefinitionArgs Empty = new FeatureGroupFeatureDefinitionArgs();
 
     @InputImport(name="featureName", required=true)
-      private final Input<String> featureName;
+      private final Output<String> featureName;
 
-    public Input<String> getFeatureName() {
+    public Output<String> getFeatureName() {
         return this.featureName;
     }
 
     @InputImport(name="featureType", required=true)
-      private final Input<FeatureGroupFeatureDefinitionFeatureType> featureType;
+      private final Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
 
-    public Input<FeatureGroupFeatureDefinitionFeatureType> getFeatureType() {
+    public Output<FeatureGroupFeatureDefinitionFeatureType> getFeatureType() {
         return this.featureType;
     }
 
     public FeatureGroupFeatureDefinitionArgs(
-        Input<String> featureName,
-        Input<FeatureGroupFeatureDefinitionFeatureType> featureType) {
+        Output<String> featureName,
+        Output<FeatureGroupFeatureDefinitionFeatureType> featureType) {
         this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
         this.featureType = Objects.requireNonNull(featureType, "expected parameter 'featureType' to be non-null");
     }
 
     private FeatureGroupFeatureDefinitionArgs() {
-        this.featureName = Input.empty();
-        this.featureType = Input.empty();
+        this.featureName = Output.empty();
+        this.featureType = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> featureName;
-        private Input<FeatureGroupFeatureDefinitionFeatureType> featureType;
+        private Output<String> featureName;
+        private Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
     	      this.featureType = defaults.featureType;
         }
 
-        public Builder featureName(Input<String> featureName) {
+        public Builder featureName(Output<String> featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
         public Builder featureName(String featureName) {
-            this.featureName = Input.of(Objects.requireNonNull(featureName));
+            this.featureName = Output.of(Objects.requireNonNull(featureName));
             return this;
         }
 
-        public Builder featureType(Input<FeatureGroupFeatureDefinitionFeatureType> featureType) {
+        public Builder featureType(Output<FeatureGroupFeatureDefinitionFeatureType> featureType) {
             this.featureType = Objects.requireNonNull(featureType);
             return this;
         }
 
         public Builder featureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
-            this.featureType = Input.of(Objects.requireNonNull(featureType));
+            this.featureType = Output.of(Objects.requireNonNull(featureType));
             return this;
         }
         public FeatureGroupFeatureDefinitionArgs build() {

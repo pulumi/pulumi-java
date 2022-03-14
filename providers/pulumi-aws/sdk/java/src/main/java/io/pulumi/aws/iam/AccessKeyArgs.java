@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pgpKey")
-      private final @Nullable Input<String> pgpKey;
+      private final @Nullable Output<String> pgpKey;
 
-    public Input<String> getPgpKey() {
-        return this.pgpKey == null ? Input.empty() : this.pgpKey;
+    public Output<String> getPgpKey() {
+        return this.pgpKey == null ? Output.empty() : this.pgpKey;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user", required=true)
-      private final Input<String> user;
+      private final Output<String> user;
 
-    public Input<String> getUser() {
+    public Output<String> getUser() {
         return this.user;
     }
 
     public AccessKeyArgs(
-        @Nullable Input<String> pgpKey,
-        @Nullable Input<String> status,
-        Input<String> user) {
+        @Nullable Output<String> pgpKey,
+        @Nullable Output<String> status,
+        Output<String> user) {
         this.pgpKey = pgpKey;
         this.status = status;
         this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
     }
 
     private AccessKeyArgs() {
-        this.pgpKey = Input.empty();
-        this.status = Input.empty();
-        this.user = Input.empty();
+        this.pgpKey = Output.empty();
+        this.status = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pgpKey;
-        private @Nullable Input<String> status;
-        private Input<String> user;
+        private @Nullable Output<String> pgpKey;
+        private @Nullable Output<String> status;
+        private Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder pgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Output<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Input.ofNullable(pgpKey);
+            this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder user(Input<String> user) {
+        public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
         public Builder user(String user) {
-            this.user = Input.of(Objects.requireNonNull(user));
+            this.user = Output.of(Objects.requireNonNull(user));
             return this;
         }
         public AccessKeyArgs build() {

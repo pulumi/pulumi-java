@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import io.pulumi.azurenative.automation.inputs.ScheduleAssociationPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -33,10 +33,10 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobScheduleId")
-      private final @Nullable Input<String> jobScheduleId;
+      private final @Nullable Output<String> jobScheduleId;
 
-    public Input<String> getJobScheduleId() {
-        return this.jobScheduleId == null ? Input.empty() : this.jobScheduleId;
+    public Output<String> getJobScheduleId() {
+        return this.jobScheduleId == null ? Output.empty() : this.jobScheduleId;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runOn")
-      private final @Nullable Input<String> runOn;
+      private final @Nullable Output<String> runOn;
 
-    public Input<String> getRunOn() {
-        return this.runOn == null ? Input.empty() : this.runOn;
+    public Output<String> getRunOn() {
+        return this.runOn == null ? Output.empty() : this.runOn;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runbook", required=true)
-      private final Input<RunbookAssociationPropertyArgs> runbook;
+      private final Output<RunbookAssociationPropertyArgs> runbook;
 
-    public Input<RunbookAssociationPropertyArgs> getRunbook() {
+    public Output<RunbookAssociationPropertyArgs> getRunbook() {
         return this.runbook;
     }
 
@@ -88,20 +88,20 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<ScheduleAssociationPropertyArgs> schedule;
+      private final Output<ScheduleAssociationPropertyArgs> schedule;
 
-    public Input<ScheduleAssociationPropertyArgs> getSchedule() {
+    public Output<ScheduleAssociationPropertyArgs> getSchedule() {
         return this.schedule;
     }
 
     public JobScheduleArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<String> jobScheduleId,
-        @Nullable Input<Map<String,String>> parameters,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> runOn,
-        Input<RunbookAssociationPropertyArgs> runbook,
-        Input<ScheduleAssociationPropertyArgs> schedule) {
+        Output<String> automationAccountName,
+        @Nullable Output<String> jobScheduleId,
+        @Nullable Output<Map<String,String>> parameters,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> runOn,
+        Output<RunbookAssociationPropertyArgs> runbook,
+        Output<ScheduleAssociationPropertyArgs> schedule) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.jobScheduleId = jobScheduleId;
         this.parameters = parameters;
@@ -112,13 +112,13 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobScheduleArgs() {
-        this.automationAccountName = Input.empty();
-        this.jobScheduleId = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.runOn = Input.empty();
-        this.runbook = Input.empty();
-        this.schedule = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.jobScheduleId = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.runOn = Output.empty();
+        this.runbook = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> jobScheduleId;
-        private @Nullable Input<Map<String,String>> parameters;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> runOn;
-        private Input<RunbookAssociationPropertyArgs> runbook;
-        private Input<ScheduleAssociationPropertyArgs> schedule;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> jobScheduleId;
+        private @Nullable Output<Map<String,String>> parameters;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> runOn;
+        private Output<RunbookAssociationPropertyArgs> runbook;
+        private Output<ScheduleAssociationPropertyArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder jobScheduleId(@Nullable Input<String> jobScheduleId) {
+        public Builder jobScheduleId(@Nullable Output<String> jobScheduleId) {
             this.jobScheduleId = jobScheduleId;
             return this;
         }
 
         public Builder jobScheduleId(@Nullable String jobScheduleId) {
-            this.jobScheduleId = Input.ofNullable(jobScheduleId);
+            this.jobScheduleId = Output.ofNullable(jobScheduleId);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder runOn(@Nullable Input<String> runOn) {
+        public Builder runOn(@Nullable Output<String> runOn) {
             this.runOn = runOn;
             return this;
         }
 
         public Builder runOn(@Nullable String runOn) {
-            this.runOn = Input.ofNullable(runOn);
+            this.runOn = Output.ofNullable(runOn);
             return this;
         }
 
-        public Builder runbook(Input<RunbookAssociationPropertyArgs> runbook) {
+        public Builder runbook(Output<RunbookAssociationPropertyArgs> runbook) {
             this.runbook = Objects.requireNonNull(runbook);
             return this;
         }
 
         public Builder runbook(RunbookAssociationPropertyArgs runbook) {
-            this.runbook = Input.of(Objects.requireNonNull(runbook));
+            this.runbook = Output.of(Objects.requireNonNull(runbook));
             return this;
         }
 
-        public Builder schedule(Input<ScheduleAssociationPropertyArgs> schedule) {
+        public Builder schedule(Output<ScheduleAssociationPropertyArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(ScheduleAssociationPropertyArgs schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
         public JobScheduleArgs build() {

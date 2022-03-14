@@ -6,7 +6,6 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.TagOptionArgs;
 import io.pulumi.aws.servicecatalog.inputs.TagOptionState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -117,14 +116,14 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagOption(String name, TagOptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/tagOption:TagOption", name, args == null ? TagOptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicecatalog/tagOption:TagOption", name, args == null ? TagOptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TagOption(String name, Input<String> id, @Nullable TagOptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TagOption(String name, Output<String> id, @Nullable TagOptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicecatalog/tagOption:TagOption", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -140,7 +139,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagOption get(String name, Input<String> id, @Nullable TagOptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TagOption get(String name, Output<String> id, @Nullable TagOptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TagOption(name, id, state, options);
     }
 }

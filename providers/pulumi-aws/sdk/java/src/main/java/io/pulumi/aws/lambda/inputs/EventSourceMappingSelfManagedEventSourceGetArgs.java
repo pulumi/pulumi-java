@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,18 +19,18 @@ public final class EventSourceMappingSelfManagedEventSourceGetArgs extends io.pu
      * 
      */
     @InputImport(name="endpoints", required=true)
-      private final Input<Map<String,String>> endpoints;
+      private final Output<Map<String,String>> endpoints;
 
-    public Input<Map<String,String>> getEndpoints() {
+    public Output<Map<String,String>> getEndpoints() {
         return this.endpoints;
     }
 
-    public EventSourceMappingSelfManagedEventSourceGetArgs(Input<Map<String,String>> endpoints) {
+    public EventSourceMappingSelfManagedEventSourceGetArgs(Output<Map<String,String>> endpoints) {
         this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
     }
 
     private EventSourceMappingSelfManagedEventSourceGetArgs() {
-        this.endpoints = Input.empty();
+        this.endpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class EventSourceMappingSelfManagedEventSourceGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> endpoints;
+        private Output<Map<String,String>> endpoints;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class EventSourceMappingSelfManagedEventSourceGetArgs extends io.pu
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder endpoints(Input<Map<String,String>> endpoints) {
+        public Builder endpoints(Output<Map<String,String>> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
         public Builder endpoints(Map<String,String> endpoints) {
-            this.endpoints = Input.of(Objects.requireNonNull(endpoints));
+            this.endpoints = Output.of(Objects.requireNonNull(endpoints));
             return this;
         }
         public EventSourceMappingSelfManagedEventSourceGetArgs build() {

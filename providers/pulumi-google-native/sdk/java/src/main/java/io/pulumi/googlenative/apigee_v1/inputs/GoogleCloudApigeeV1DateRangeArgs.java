@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="end", required=true)
-      private final Input<String> end;
+      private final Output<String> end;
 
-    public Input<String> getEnd() {
+    public Output<String> getEnd() {
         return this.end;
     }
 
@@ -33,22 +33,22 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="start", required=true)
-      private final Input<String> start;
+      private final Output<String> start;
 
-    public Input<String> getStart() {
+    public Output<String> getStart() {
         return this.start;
     }
 
     public GoogleCloudApigeeV1DateRangeArgs(
-        Input<String> end,
-        Input<String> start) {
+        Output<String> end,
+        Output<String> start) {
         this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
         this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
     }
 
     private GoogleCloudApigeeV1DateRangeArgs() {
-        this.end = Input.empty();
-        this.start = Input.empty();
+        this.end = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> end;
-        private Input<String> start;
+        private Output<String> end;
+        private Output<String> start;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     	      this.start = defaults.start;
         }
 
-        public Builder end(Input<String> end) {
+        public Builder end(Output<String> end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
         public Builder end(String end) {
-            this.end = Input.of(Objects.requireNonNull(end));
+            this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
 
-        public Builder start(Input<String> start) {
+        public Builder start(Output<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
         public Builder start(String start) {
-            this.start = Input.of(Objects.requireNonNull(start));
+            this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
         public GoogleCloudApigeeV1DateRangeArgs build() {

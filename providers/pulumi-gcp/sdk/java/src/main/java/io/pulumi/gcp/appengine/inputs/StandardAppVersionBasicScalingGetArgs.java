@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="idleTimeout")
-      private final @Nullable Input<String> idleTimeout;
+      private final @Nullable Output<String> idleTimeout;
 
-    public Input<String> getIdleTimeout() {
-        return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
+    public Output<String> getIdleTimeout() {
+        return this.idleTimeout == null ? Output.empty() : this.idleTimeout;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxInstances", required=true)
-      private final Input<Integer> maxInstances;
+      private final Output<Integer> maxInstances;
 
-    public Input<Integer> getMaxInstances() {
+    public Output<Integer> getMaxInstances() {
         return this.maxInstances;
     }
 
     public StandardAppVersionBasicScalingGetArgs(
-        @Nullable Input<String> idleTimeout,
-        Input<Integer> maxInstances) {
+        @Nullable Output<String> idleTimeout,
+        Output<Integer> maxInstances) {
         this.idleTimeout = idleTimeout;
         this.maxInstances = Objects.requireNonNull(maxInstances, "expected parameter 'maxInstances' to be non-null");
     }
 
     private StandardAppVersionBasicScalingGetArgs() {
-        this.idleTimeout = Input.empty();
-        this.maxInstances = Input.empty();
+        this.idleTimeout = Output.empty();
+        this.maxInstances = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> idleTimeout;
-        private Input<Integer> maxInstances;
+        private @Nullable Output<String> idleTimeout;
+        private Output<Integer> maxInstances;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
     	      this.maxInstances = defaults.maxInstances;
         }
 
-        public Builder idleTimeout(@Nullable Input<String> idleTimeout) {
+        public Builder idleTimeout(@Nullable Output<String> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
         public Builder idleTimeout(@Nullable String idleTimeout) {
-            this.idleTimeout = Input.ofNullable(idleTimeout);
+            this.idleTimeout = Output.ofNullable(idleTimeout);
             return this;
         }
 
-        public Builder maxInstances(Input<Integer> maxInstances) {
+        public Builder maxInstances(Output<Integer> maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
 
         public Builder maxInstances(Integer maxInstances) {
-            this.maxInstances = Input.of(Objects.requireNonNull(maxInstances));
+            this.maxInstances = Output.of(Objects.requireNonNull(maxInstances));
             return this;
         }
         public StandardAppVersionBasicScalingGetArgs build() {

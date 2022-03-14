@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dailyQuotaGb")
-      private final @Nullable Input<Double> dailyQuotaGb;
+      private final @Nullable Output<Double> dailyQuotaGb;
 
-    public Input<Double> getDailyQuotaGb() {
-        return this.dailyQuotaGb == null ? Input.empty() : this.dailyQuotaGb;
+    public Output<Double> getDailyQuotaGb() {
+        return this.dailyQuotaGb == null ? Output.empty() : this.dailyQuotaGb;
     }
 
-    public WorkspaceCappingArgs(@Nullable Input<Double> dailyQuotaGb) {
+    public WorkspaceCappingArgs(@Nullable Output<Double> dailyQuotaGb) {
         this.dailyQuotaGb = dailyQuotaGb;
     }
 
     private WorkspaceCappingArgs() {
-        this.dailyQuotaGb = Input.empty();
+        this.dailyQuotaGb = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> dailyQuotaGb;
+        private @Nullable Output<Double> dailyQuotaGb;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
     	      this.dailyQuotaGb = defaults.dailyQuotaGb;
         }
 
-        public Builder dailyQuotaGb(@Nullable Input<Double> dailyQuotaGb) {
+        public Builder dailyQuotaGb(@Nullable Output<Double> dailyQuotaGb) {
             this.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
 
         public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
-            this.dailyQuotaGb = Input.ofNullable(dailyQuotaGb);
+            this.dailyQuotaGb = Output.ofNullable(dailyQuotaGb);
             return this;
         }
         public WorkspaceCappingArgs build() {

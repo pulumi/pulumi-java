@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="availabilitySetName")
-      private final @Nullable Input<String> availabilitySetName;
+      private final @Nullable Output<String> availabilitySetName;
 
-    public Input<String> getAvailabilitySetName() {
-        return this.availabilitySetName == null ? Input.empty() : this.availabilitySetName;
+    public Output<String> getAvailabilitySetName() {
+        return this.availabilitySetName == null ? Output.empty() : this.availabilitySetName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformFaultDomainCount")
-      private final @Nullable Input<Integer> platformFaultDomainCount;
+      private final @Nullable Output<Integer> platformFaultDomainCount;
 
-    public Input<Integer> getPlatformFaultDomainCount() {
-        return this.platformFaultDomainCount == null ? Input.empty() : this.platformFaultDomainCount;
+    public Output<Integer> getPlatformFaultDomainCount() {
+        return this.platformFaultDomainCount == null ? Output.empty() : this.platformFaultDomainCount;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformUpdateDomainCount")
-      private final @Nullable Input<Integer> platformUpdateDomainCount;
+      private final @Nullable Output<Integer> platformUpdateDomainCount;
 
-    public Input<Integer> getPlatformUpdateDomainCount() {
-        return this.platformUpdateDomainCount == null ? Input.empty() : this.platformUpdateDomainCount;
+    public Output<Integer> getPlatformUpdateDomainCount() {
+        return this.platformUpdateDomainCount == null ? Output.empty() : this.platformUpdateDomainCount;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proximityPlacementGroup")
-      private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
+      private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
-    public Input<SubResourceArgs> getProximityPlacementGroup() {
-        return this.proximityPlacementGroup == null ? Input.empty() : this.proximityPlacementGroup;
+    public Output<SubResourceArgs> getProximityPlacementGroup() {
+        return this.proximityPlacementGroup == null ? Output.empty() : this.proximityPlacementGroup;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,10 +90,10 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="virtualMachines")
-      private final @Nullable Input<List<SubResourceArgs>> virtualMachines;
+      private final @Nullable Output<List<SubResourceArgs>> virtualMachines;
 
-    public Input<List<SubResourceArgs>> getVirtualMachines() {
-        return this.virtualMachines == null ? Input.empty() : this.virtualMachines;
+    public Output<List<SubResourceArgs>> getVirtualMachines() {
+        return this.virtualMachines == null ? Output.empty() : this.virtualMachines;
     }
 
     public AvailabilitySetArgs(
-        @Nullable Input<String> availabilitySetName,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> platformFaultDomainCount,
-        @Nullable Input<Integer> platformUpdateDomainCount,
-        @Nullable Input<SubResourceArgs> proximityPlacementGroup,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<SubResourceArgs>> virtualMachines) {
+        @Nullable Output<String> availabilitySetName,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> platformFaultDomainCount,
+        @Nullable Output<Integer> platformUpdateDomainCount,
+        @Nullable Output<SubResourceArgs> proximityPlacementGroup,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<SubResourceArgs>> virtualMachines) {
         this.availabilitySetName = availabilitySetName;
         this.location = location;
         this.platformFaultDomainCount = platformFaultDomainCount;
@@ -140,15 +140,15 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AvailabilitySetArgs() {
-        this.availabilitySetName = Input.empty();
-        this.location = Input.empty();
-        this.platformFaultDomainCount = Input.empty();
-        this.platformUpdateDomainCount = Input.empty();
-        this.proximityPlacementGroup = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.virtualMachines = Input.empty();
+        this.availabilitySetName = Output.empty();
+        this.location = Output.empty();
+        this.platformFaultDomainCount = Output.empty();
+        this.platformUpdateDomainCount = Output.empty();
+        this.proximityPlacementGroup = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.virtualMachines = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilitySetName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> platformFaultDomainCount;
-        private @Nullable Input<Integer> platformUpdateDomainCount;
-        private @Nullable Input<SubResourceArgs> proximityPlacementGroup;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<SubResourceArgs>> virtualMachines;
+        private @Nullable Output<String> availabilitySetName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> platformFaultDomainCount;
+        private @Nullable Output<Integer> platformUpdateDomainCount;
+        private @Nullable Output<SubResourceArgs> proximityPlacementGroup;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<SubResourceArgs>> virtualMachines;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder availabilitySetName(@Nullable Input<String> availabilitySetName) {
+        public Builder availabilitySetName(@Nullable Output<String> availabilitySetName) {
             this.availabilitySetName = availabilitySetName;
             return this;
         }
 
         public Builder availabilitySetName(@Nullable String availabilitySetName) {
-            this.availabilitySetName = Input.ofNullable(availabilitySetName);
+            this.availabilitySetName = Output.ofNullable(availabilitySetName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder platformFaultDomainCount(@Nullable Input<Integer> platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Output<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
         public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
-            this.platformFaultDomainCount = Input.ofNullable(platformFaultDomainCount);
+            this.platformFaultDomainCount = Output.ofNullable(platformFaultDomainCount);
             return this;
         }
 
-        public Builder platformUpdateDomainCount(@Nullable Input<Integer> platformUpdateDomainCount) {
+        public Builder platformUpdateDomainCount(@Nullable Output<Integer> platformUpdateDomainCount) {
             this.platformUpdateDomainCount = platformUpdateDomainCount;
             return this;
         }
 
         public Builder platformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
-            this.platformUpdateDomainCount = Input.ofNullable(platformUpdateDomainCount);
+            this.platformUpdateDomainCount = Output.ofNullable(platformUpdateDomainCount);
             return this;
         }
 
-        public Builder proximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
         public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
-            this.proximityPlacementGroup = Input.ofNullable(proximityPlacementGroup);
+            this.proximityPlacementGroup = Output.ofNullable(proximityPlacementGroup);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualMachines(@Nullable Input<List<SubResourceArgs>> virtualMachines) {
+        public Builder virtualMachines(@Nullable Output<List<SubResourceArgs>> virtualMachines) {
             this.virtualMachines = virtualMachines;
             return this;
         }
 
         public Builder virtualMachines(@Nullable List<SubResourceArgs> virtualMachines) {
-            this.virtualMachines = Input.ofNullable(virtualMachines);
+            this.virtualMachines = Output.ofNullable(virtualMachines);
             return this;
         }
         public AvailabilitySetArgs build() {

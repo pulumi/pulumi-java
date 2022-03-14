@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingEbsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ebs")
-      private final @Nullable Input<ImageRecipeBlockDeviceMappingEbsArgs> ebs;
+      private final @Nullable Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs;
 
-    public Input<ImageRecipeBlockDeviceMappingEbsArgs> getEbs() {
-        return this.ebs == null ? Input.empty() : this.ebs;
+    public Output<ImageRecipeBlockDeviceMappingEbsArgs> getEbs() {
+        return this.ebs == null ? Output.empty() : this.ebs;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="noDevice")
-      private final @Nullable Input<Boolean> noDevice;
+      private final @Nullable Output<Boolean> noDevice;
 
-    public Input<Boolean> getNoDevice() {
-        return this.noDevice == null ? Input.empty() : this.noDevice;
+    public Output<Boolean> getNoDevice() {
+        return this.noDevice == null ? Output.empty() : this.noDevice;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="virtualName")
-      private final @Nullable Input<String> virtualName;
+      private final @Nullable Output<String> virtualName;
 
-    public Input<String> getVirtualName() {
-        return this.virtualName == null ? Input.empty() : this.virtualName;
+    public Output<String> getVirtualName() {
+        return this.virtualName == null ? Output.empty() : this.virtualName;
     }
 
     public ImageRecipeBlockDeviceMappingArgs(
-        @Nullable Input<String> deviceName,
-        @Nullable Input<ImageRecipeBlockDeviceMappingEbsArgs> ebs,
-        @Nullable Input<Boolean> noDevice,
-        @Nullable Input<String> virtualName) {
+        @Nullable Output<String> deviceName,
+        @Nullable Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs,
+        @Nullable Output<Boolean> noDevice,
+        @Nullable Output<String> virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;
@@ -72,10 +72,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     }
 
     private ImageRecipeBlockDeviceMappingArgs() {
-        this.deviceName = Input.empty();
-        this.ebs = Input.empty();
-        this.noDevice = Input.empty();
-        this.virtualName = Input.empty();
+        this.deviceName = Output.empty();
+        this.ebs = Output.empty();
+        this.noDevice = Output.empty();
+        this.virtualName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<ImageRecipeBlockDeviceMappingEbsArgs> ebs;
-        private @Nullable Input<Boolean> noDevice;
-        private @Nullable Input<String> virtualName;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs;
+        private @Nullable Output<Boolean> noDevice;
+        private @Nullable Output<String> virtualName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder ebs(@Nullable Input<ImageRecipeBlockDeviceMappingEbsArgs> ebs) {
+        public Builder ebs(@Nullable Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
 
         public Builder ebs(@Nullable ImageRecipeBlockDeviceMappingEbsArgs ebs) {
-            this.ebs = Input.ofNullable(ebs);
+            this.ebs = Output.ofNullable(ebs);
             return this;
         }
 
-        public Builder noDevice(@Nullable Input<Boolean> noDevice) {
+        public Builder noDevice(@Nullable Output<Boolean> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
         public Builder noDevice(@Nullable Boolean noDevice) {
-            this.noDevice = Input.ofNullable(noDevice);
+            this.noDevice = Output.ofNullable(noDevice);
             return this;
         }
 
-        public Builder virtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Input.ofNullable(virtualName);
+            this.virtualName = Output.ofNullable(virtualName);
             return this;
         }
         public ImageRecipeBlockDeviceMappingArgs build() {

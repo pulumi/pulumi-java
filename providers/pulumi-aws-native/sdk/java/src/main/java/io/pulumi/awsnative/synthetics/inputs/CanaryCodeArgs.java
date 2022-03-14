@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,46 +15,46 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
     public static final CanaryCodeArgs Empty = new CanaryCodeArgs();
 
     @InputImport(name="handler", required=true)
-      private final Input<String> handler;
+      private final Output<String> handler;
 
-    public Input<String> getHandler() {
+    public Output<String> getHandler() {
         return this.handler;
     }
 
     @InputImport(name="s3Bucket")
-      private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Output<String> s3Bucket;
 
-    public Input<String> getS3Bucket() {
-        return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
+    public Output<String> getS3Bucket() {
+        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
     }
 
     @InputImport(name="s3Key")
-      private final @Nullable Input<String> s3Key;
+      private final @Nullable Output<String> s3Key;
 
-    public Input<String> getS3Key() {
-        return this.s3Key == null ? Input.empty() : this.s3Key;
+    public Output<String> getS3Key() {
+        return this.s3Key == null ? Output.empty() : this.s3Key;
     }
 
     @InputImport(name="s3ObjectVersion")
-      private final @Nullable Input<String> s3ObjectVersion;
+      private final @Nullable Output<String> s3ObjectVersion;
 
-    public Input<String> getS3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
+    public Output<String> getS3ObjectVersion() {
+        return this.s3ObjectVersion == null ? Output.empty() : this.s3ObjectVersion;
     }
 
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     public CanaryCodeArgs(
-        Input<String> handler,
-        @Nullable Input<String> s3Bucket,
-        @Nullable Input<String> s3Key,
-        @Nullable Input<String> s3ObjectVersion,
-        @Nullable Input<String> script) {
+        Output<String> handler,
+        @Nullable Output<String> s3Bucket,
+        @Nullable Output<String> s3Key,
+        @Nullable Output<String> s3ObjectVersion,
+        @Nullable Output<String> script) {
         this.handler = Objects.requireNonNull(handler, "expected parameter 'handler' to be non-null");
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
@@ -63,11 +63,11 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CanaryCodeArgs() {
-        this.handler = Input.empty();
-        this.s3Bucket = Input.empty();
-        this.s3Key = Input.empty();
-        this.s3ObjectVersion = Input.empty();
-        this.script = Input.empty();
+        this.handler = Output.empty();
+        this.s3Bucket = Output.empty();
+        this.s3Key = Output.empty();
+        this.s3ObjectVersion = Output.empty();
+        this.script = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,11 +79,11 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> handler;
-        private @Nullable Input<String> s3Bucket;
-        private @Nullable Input<String> s3Key;
-        private @Nullable Input<String> s3ObjectVersion;
-        private @Nullable Input<String> script;
+        private Output<String> handler;
+        private @Nullable Output<String> s3Bucket;
+        private @Nullable Output<String> s3Key;
+        private @Nullable Output<String> s3ObjectVersion;
+        private @Nullable Output<String> script;
 
         public Builder() {
     	      // Empty
@@ -98,53 +98,53 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.script = defaults.script;
         }
 
-        public Builder handler(Input<String> handler) {
+        public Builder handler(Output<String> handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
 
         public Builder handler(String handler) {
-            this.handler = Input.of(Objects.requireNonNull(handler));
+            this.handler = Output.of(Objects.requireNonNull(handler));
             return this;
         }
 
-        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
         public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Input.ofNullable(s3Bucket);
+            this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder s3Key(@Nullable Input<String> s3Key) {
+        public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
         public Builder s3Key(@Nullable String s3Key) {
-            this.s3Key = Input.ofNullable(s3Key);
+            this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
 
-        public Builder s3ObjectVersion(@Nullable Input<String> s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Input.ofNullable(s3ObjectVersion);
+            this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
         public CanaryCodeArgs build() {

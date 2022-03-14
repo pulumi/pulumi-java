@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsArgs;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationArgs;
@@ -22,10 +22,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSettings")
-      private final @Nullable Input<ReservationShareSettingsArgs> shareSettings;
+      private final @Nullable Output<ReservationShareSettingsArgs> shareSettings;
 
-    public Input<ReservationShareSettingsArgs> getShareSettings() {
-        return this.shareSettings == null ? Input.empty() : this.shareSettings;
+    public Output<ReservationShareSettingsArgs> getShareSettings() {
+        return this.shareSettings == null ? Output.empty() : this.shareSettings;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservation", required=true)
-      private final Input<ReservationSpecificReservationArgs> specificReservation;
+      private final Output<ReservationSpecificReservationArgs> specificReservation;
 
-    public Input<ReservationSpecificReservationArgs> getSpecificReservation() {
+    public Output<ReservationSpecificReservationArgs> getSpecificReservation() {
         return this.specificReservation;
     }
 
@@ -88,10 +88,10 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservationRequired")
-      private final @Nullable Input<Boolean> specificReservationRequired;
+      private final @Nullable Output<Boolean> specificReservationRequired;
 
-    public Input<Boolean> getSpecificReservationRequired() {
-        return this.specificReservationRequired == null ? Input.empty() : this.specificReservationRequired;
+    public Output<Boolean> getSpecificReservationRequired() {
+        return this.specificReservationRequired == null ? Output.empty() : this.specificReservationRequired;
     }
 
     /**
@@ -99,20 +99,20 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone", required=true)
-      private final Input<String> zone;
+      private final Output<String> zone;
 
-    public Input<String> getZone() {
+    public Output<String> getZone() {
         return this.zone;
     }
 
     public ReservationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<ReservationShareSettingsArgs> shareSettings,
-        Input<ReservationSpecificReservationArgs> specificReservation,
-        @Nullable Input<Boolean> specificReservationRequired,
-        Input<String> zone) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<ReservationShareSettingsArgs> shareSettings,
+        Output<ReservationSpecificReservationArgs> specificReservation,
+        @Nullable Output<Boolean> specificReservationRequired,
+        Output<String> zone) {
         this.description = description;
         this.name = name;
         this.project = project;
@@ -123,13 +123,13 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReservationArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.shareSettings = Input.empty();
-        this.specificReservation = Input.empty();
-        this.specificReservationRequired = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.shareSettings = Output.empty();
+        this.specificReservation = Output.empty();
+        this.specificReservationRequired = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,13 +141,13 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ReservationShareSettingsArgs> shareSettings;
-        private Input<ReservationSpecificReservationArgs> specificReservation;
-        private @Nullable Input<Boolean> specificReservationRequired;
-        private Input<String> zone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ReservationShareSettingsArgs> shareSettings;
+        private Output<ReservationSpecificReservationArgs> specificReservation;
+        private @Nullable Output<Boolean> specificReservationRequired;
+        private Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -164,73 +164,73 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder shareSettings(@Nullable Input<ReservationShareSettingsArgs> shareSettings) {
+        public Builder shareSettings(@Nullable Output<ReservationShareSettingsArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
 
         public Builder shareSettings(@Nullable ReservationShareSettingsArgs shareSettings) {
-            this.shareSettings = Input.ofNullable(shareSettings);
+            this.shareSettings = Output.ofNullable(shareSettings);
             return this;
         }
 
-        public Builder specificReservation(Input<ReservationSpecificReservationArgs> specificReservation) {
+        public Builder specificReservation(Output<ReservationSpecificReservationArgs> specificReservation) {
             this.specificReservation = Objects.requireNonNull(specificReservation);
             return this;
         }
 
         public Builder specificReservation(ReservationSpecificReservationArgs specificReservation) {
-            this.specificReservation = Input.of(Objects.requireNonNull(specificReservation));
+            this.specificReservation = Output.of(Objects.requireNonNull(specificReservation));
             return this;
         }
 
-        public Builder specificReservationRequired(@Nullable Input<Boolean> specificReservationRequired) {
+        public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
             this.specificReservationRequired = specificReservationRequired;
             return this;
         }
 
         public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
-            this.specificReservationRequired = Input.ofNullable(specificReservationRequired);
+            this.specificReservationRequired = Output.ofNullable(specificReservationRequired);
             return this;
         }
 
-        public Builder zone(Input<String> zone) {
+        public Builder zone(Output<String> zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
 
         public Builder zone(String zone) {
-            this.zone = Input.of(Objects.requireNonNull(zone));
+            this.zone = Output.of(Objects.requireNonNull(zone));
             return this;
         }
         public ReservationArgs build() {

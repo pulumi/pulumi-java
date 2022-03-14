@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,39 +16,39 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
     public static final BrokerInstanceArgs Empty = new BrokerInstanceArgs();
 
     @InputImport(name="consoleUrl")
-      private final @Nullable Input<String> consoleUrl;
+      private final @Nullable Output<String> consoleUrl;
 
-    public Input<String> getConsoleUrl() {
-        return this.consoleUrl == null ? Input.empty() : this.consoleUrl;
+    public Output<String> getConsoleUrl() {
+        return this.consoleUrl == null ? Output.empty() : this.consoleUrl;
     }
 
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<String>> endpoints;
+      private final @Nullable Output<List<String>> endpoints;
 
-    public Input<List<String>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<String>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     public BrokerInstanceArgs(
-        @Nullable Input<String> consoleUrl,
-        @Nullable Input<List<String>> endpoints,
-        @Nullable Input<String> ipAddress) {
+        @Nullable Output<String> consoleUrl,
+        @Nullable Output<List<String>> endpoints,
+        @Nullable Output<String> ipAddress) {
         this.consoleUrl = consoleUrl;
         this.endpoints = endpoints;
         this.ipAddress = ipAddress;
     }
 
     private BrokerInstanceArgs() {
-        this.consoleUrl = Input.empty();
-        this.endpoints = Input.empty();
-        this.ipAddress = Input.empty();
+        this.consoleUrl = Output.empty();
+        this.endpoints = Output.empty();
+        this.ipAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consoleUrl;
-        private @Nullable Input<List<String>> endpoints;
-        private @Nullable Input<String> ipAddress;
+        private @Nullable Output<String> consoleUrl;
+        private @Nullable Output<List<String>> endpoints;
+        private @Nullable Output<String> ipAddress;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder consoleUrl(@Nullable Input<String> consoleUrl) {
+        public Builder consoleUrl(@Nullable Output<String> consoleUrl) {
             this.consoleUrl = consoleUrl;
             return this;
         }
 
         public Builder consoleUrl(@Nullable String consoleUrl) {
-            this.consoleUrl = Input.ofNullable(consoleUrl);
+            this.consoleUrl = Output.ofNullable(consoleUrl);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<String>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<String>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<String> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
         public BrokerInstanceArgs build() {

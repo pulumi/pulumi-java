@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.enums.CertificateAuthorityTier;
 import io.pulumi.googlenative.privateca_v1beta1.enums.CertificateAuthorityType;
@@ -23,9 +23,9 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     public static final CertificateAuthorityArgs Empty = new CertificateAuthorityArgs();
 
     @InputImport(name="certificateAuthorityId", required=true)
-      private final Input<String> certificateAuthorityId;
+      private final Output<String> certificateAuthorityId;
 
-    public Input<String> getCertificateAuthorityId() {
+    public Output<String> getCertificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
@@ -34,10 +34,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificatePolicy")
-      private final @Nullable Input<CertificateAuthorityPolicyArgs> certificatePolicy;
+      private final @Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy;
 
-    public Input<CertificateAuthorityPolicyArgs> getCertificatePolicy() {
-        return this.certificatePolicy == null ? Input.empty() : this.certificatePolicy;
+    public Output<CertificateAuthorityPolicyArgs> getCertificatePolicy() {
+        return this.certificatePolicy == null ? Output.empty() : this.certificatePolicy;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<CertificateConfigArgs> config;
+      private final Output<CertificateConfigArgs> config;
 
-    public Input<CertificateConfigArgs> getConfig() {
+    public Output<CertificateConfigArgs> getConfig() {
         return this.config;
     }
 
@@ -56,10 +56,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="gcsBucket")
-      private final @Nullable Input<String> gcsBucket;
+      private final @Nullable Output<String> gcsBucket;
 
-    public Input<String> getGcsBucket() {
-        return this.gcsBucket == null ? Input.empty() : this.gcsBucket;
+    public Output<String> getGcsBucket() {
+        return this.gcsBucket == null ? Output.empty() : this.gcsBucket;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="issuingOptions")
-      private final @Nullable Input<IssuingOptionsArgs> issuingOptions;
+      private final @Nullable Output<IssuingOptionsArgs> issuingOptions;
 
-    public Input<IssuingOptionsArgs> getIssuingOptions() {
-        return this.issuingOptions == null ? Input.empty() : this.issuingOptions;
+    public Output<IssuingOptionsArgs> getIssuingOptions() {
+        return this.issuingOptions == null ? Output.empty() : this.issuingOptions;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keySpec", required=true)
-      private final Input<KeyVersionSpecArgs> keySpec;
+      private final Output<KeyVersionSpecArgs> keySpec;
 
-    public Input<KeyVersionSpecArgs> getKeySpec() {
+    public Output<KeyVersionSpecArgs> getKeySpec() {
         return this.keySpec;
     }
 
@@ -89,10 +89,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -100,31 +100,31 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lifetime", required=true)
-      private final Input<String> lifetime;
+      private final Output<String> lifetime;
 
-    public Input<String> getLifetime() {
+    public Output<String> getLifetime() {
         return this.lifetime;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subordinateConfig")
-      private final @Nullable Input<SubordinateConfigArgs> subordinateConfig;
+      private final @Nullable Output<SubordinateConfigArgs> subordinateConfig;
 
-    public Input<SubordinateConfigArgs> getSubordinateConfig() {
-        return this.subordinateConfig == null ? Input.empty() : this.subordinateConfig;
+    public Output<SubordinateConfigArgs> getSubordinateConfig() {
+        return this.subordinateConfig == null ? Output.empty() : this.subordinateConfig;
     }
 
     /**
@@ -143,9 +143,9 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<CertificateAuthorityTier> tier;
+      private final Output<CertificateAuthorityTier> tier;
 
-    public Input<CertificateAuthorityTier> getTier() {
+    public Output<CertificateAuthorityTier> getTier() {
         return this.tier;
     }
 
@@ -154,27 +154,27 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<CertificateAuthorityType> type;
+      private final Output<CertificateAuthorityType> type;
 
-    public Input<CertificateAuthorityType> getType() {
+    public Output<CertificateAuthorityType> getType() {
         return this.type;
     }
 
     public CertificateAuthorityArgs(
-        Input<String> certificateAuthorityId,
-        @Nullable Input<CertificateAuthorityPolicyArgs> certificatePolicy,
-        Input<CertificateConfigArgs> config,
-        @Nullable Input<String> gcsBucket,
-        @Nullable Input<IssuingOptionsArgs> issuingOptions,
-        Input<KeyVersionSpecArgs> keySpec,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> lifetime,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<SubordinateConfigArgs> subordinateConfig,
-        Input<CertificateAuthorityTier> tier,
-        Input<CertificateAuthorityType> type) {
+        Output<String> certificateAuthorityId,
+        @Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy,
+        Output<CertificateConfigArgs> config,
+        @Nullable Output<String> gcsBucket,
+        @Nullable Output<IssuingOptionsArgs> issuingOptions,
+        Output<KeyVersionSpecArgs> keySpec,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> lifetime,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<SubordinateConfigArgs> subordinateConfig,
+        Output<CertificateAuthorityTier> tier,
+        Output<CertificateAuthorityType> type) {
         this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId, "expected parameter 'certificateAuthorityId' to be non-null");
         this.certificatePolicy = certificatePolicy;
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
@@ -192,20 +192,20 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateAuthorityArgs() {
-        this.certificateAuthorityId = Input.empty();
-        this.certificatePolicy = Input.empty();
-        this.config = Input.empty();
-        this.gcsBucket = Input.empty();
-        this.issuingOptions = Input.empty();
-        this.keySpec = Input.empty();
-        this.labels = Input.empty();
-        this.lifetime = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.subordinateConfig = Input.empty();
-        this.tier = Input.empty();
-        this.type = Input.empty();
+        this.certificateAuthorityId = Output.empty();
+        this.certificatePolicy = Output.empty();
+        this.config = Output.empty();
+        this.gcsBucket = Output.empty();
+        this.issuingOptions = Output.empty();
+        this.keySpec = Output.empty();
+        this.labels = Output.empty();
+        this.lifetime = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.subordinateConfig = Output.empty();
+        this.tier = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,20 +217,20 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> certificateAuthorityId;
-        private @Nullable Input<CertificateAuthorityPolicyArgs> certificatePolicy;
-        private Input<CertificateConfigArgs> config;
-        private @Nullable Input<String> gcsBucket;
-        private @Nullable Input<IssuingOptionsArgs> issuingOptions;
-        private Input<KeyVersionSpecArgs> keySpec;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> lifetime;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<SubordinateConfigArgs> subordinateConfig;
-        private Input<CertificateAuthorityTier> tier;
-        private Input<CertificateAuthorityType> type;
+        private Output<String> certificateAuthorityId;
+        private @Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy;
+        private Output<CertificateConfigArgs> config;
+        private @Nullable Output<String> gcsBucket;
+        private @Nullable Output<IssuingOptionsArgs> issuingOptions;
+        private Output<KeyVersionSpecArgs> keySpec;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> lifetime;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<SubordinateConfigArgs> subordinateConfig;
+        private Output<CertificateAuthorityTier> tier;
+        private Output<CertificateAuthorityType> type;
 
         public Builder() {
     	      // Empty
@@ -254,143 +254,143 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder certificateAuthorityId(Input<String> certificateAuthorityId) {
+        public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
 
         public Builder certificateAuthorityId(String certificateAuthorityId) {
-            this.certificateAuthorityId = Input.of(Objects.requireNonNull(certificateAuthorityId));
+            this.certificateAuthorityId = Output.of(Objects.requireNonNull(certificateAuthorityId));
             return this;
         }
 
-        public Builder certificatePolicy(@Nullable Input<CertificateAuthorityPolicyArgs> certificatePolicy) {
+        public Builder certificatePolicy(@Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy) {
             this.certificatePolicy = certificatePolicy;
             return this;
         }
 
         public Builder certificatePolicy(@Nullable CertificateAuthorityPolicyArgs certificatePolicy) {
-            this.certificatePolicy = Input.ofNullable(certificatePolicy);
+            this.certificatePolicy = Output.ofNullable(certificatePolicy);
             return this;
         }
 
-        public Builder config(Input<CertificateConfigArgs> config) {
+        public Builder config(Output<CertificateConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(CertificateConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder gcsBucket(@Nullable Input<String> gcsBucket) {
+        public Builder gcsBucket(@Nullable Output<String> gcsBucket) {
             this.gcsBucket = gcsBucket;
             return this;
         }
 
         public Builder gcsBucket(@Nullable String gcsBucket) {
-            this.gcsBucket = Input.ofNullable(gcsBucket);
+            this.gcsBucket = Output.ofNullable(gcsBucket);
             return this;
         }
 
-        public Builder issuingOptions(@Nullable Input<IssuingOptionsArgs> issuingOptions) {
+        public Builder issuingOptions(@Nullable Output<IssuingOptionsArgs> issuingOptions) {
             this.issuingOptions = issuingOptions;
             return this;
         }
 
         public Builder issuingOptions(@Nullable IssuingOptionsArgs issuingOptions) {
-            this.issuingOptions = Input.ofNullable(issuingOptions);
+            this.issuingOptions = Output.ofNullable(issuingOptions);
             return this;
         }
 
-        public Builder keySpec(Input<KeyVersionSpecArgs> keySpec) {
+        public Builder keySpec(Output<KeyVersionSpecArgs> keySpec) {
             this.keySpec = Objects.requireNonNull(keySpec);
             return this;
         }
 
         public Builder keySpec(KeyVersionSpecArgs keySpec) {
-            this.keySpec = Input.of(Objects.requireNonNull(keySpec));
+            this.keySpec = Output.of(Objects.requireNonNull(keySpec));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lifetime(Input<String> lifetime) {
+        public Builder lifetime(Output<String> lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
 
         public Builder lifetime(String lifetime) {
-            this.lifetime = Input.of(Objects.requireNonNull(lifetime));
+            this.lifetime = Output.of(Objects.requireNonNull(lifetime));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder subordinateConfig(@Nullable Input<SubordinateConfigArgs> subordinateConfig) {
+        public Builder subordinateConfig(@Nullable Output<SubordinateConfigArgs> subordinateConfig) {
             this.subordinateConfig = subordinateConfig;
             return this;
         }
 
         public Builder subordinateConfig(@Nullable SubordinateConfigArgs subordinateConfig) {
-            this.subordinateConfig = Input.ofNullable(subordinateConfig);
+            this.subordinateConfig = Output.ofNullable(subordinateConfig);
             return this;
         }
 
-        public Builder tier(Input<CertificateAuthorityTier> tier) {
+        public Builder tier(Output<CertificateAuthorityTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(CertificateAuthorityTier tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
 
-        public Builder type(Input<CertificateAuthorityType> type) {
+        public Builder type(Output<CertificateAuthorityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(CertificateAuthorityType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CertificateAuthorityArgs build() {

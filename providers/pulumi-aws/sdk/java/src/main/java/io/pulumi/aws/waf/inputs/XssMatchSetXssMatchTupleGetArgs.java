@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleFieldToMatchGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
+      private final Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
-    public Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -34,22 +34,22 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="textTransformation", required=true)
-      private final Input<String> textTransformation;
+      private final Output<String> textTransformation;
 
-    public Input<String> getTextTransformation() {
+    public Output<String> getTextTransformation() {
         return this.textTransformation;
     }
 
     public XssMatchSetXssMatchTupleGetArgs(
-        Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch,
-        Input<String> textTransformation) {
+        Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch,
+        Output<String> textTransformation) {
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.textTransformation = Objects.requireNonNull(textTransformation, "expected parameter 'textTransformation' to be non-null");
     }
 
     private XssMatchSetXssMatchTupleGetArgs() {
-        this.fieldToMatch = Input.empty();
-        this.textTransformation = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.textTransformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
-        private Input<String> textTransformation;
+        private Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
+        private Output<String> textTransformation;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder fieldToMatch(Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(XssMatchSetXssMatchTupleFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder textTransformation(Input<String> textTransformation) {
+        public Builder textTransformation(Output<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
 
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Input.of(Objects.requireNonNull(textTransformation));
+            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
             return this;
         }
         public XssMatchSetXssMatchTupleGetArgs build() {

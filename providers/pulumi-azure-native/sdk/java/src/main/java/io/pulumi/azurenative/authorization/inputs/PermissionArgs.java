@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<String>> actions;
+      private final @Nullable Output<List<String>> actions;
 
-    public Input<List<String>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<String>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataActions")
-      private final @Nullable Input<List<String>> dataActions;
+      private final @Nullable Output<List<String>> dataActions;
 
-    public Input<List<String>> getDataActions() {
-        return this.dataActions == null ? Input.empty() : this.dataActions;
+    public Output<List<String>> getDataActions() {
+        return this.dataActions == null ? Output.empty() : this.dataActions;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notActions")
-      private final @Nullable Input<List<String>> notActions;
+      private final @Nullable Output<List<String>> notActions;
 
-    public Input<List<String>> getNotActions() {
-        return this.notActions == null ? Input.empty() : this.notActions;
+    public Output<List<String>> getNotActions() {
+        return this.notActions == null ? Output.empty() : this.notActions;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notDataActions")
-      private final @Nullable Input<List<String>> notDataActions;
+      private final @Nullable Output<List<String>> notDataActions;
 
-    public Input<List<String>> getNotDataActions() {
-        return this.notDataActions == null ? Input.empty() : this.notDataActions;
+    public Output<List<String>> getNotDataActions() {
+        return this.notDataActions == null ? Output.empty() : this.notDataActions;
     }
 
     public PermissionArgs(
-        @Nullable Input<List<String>> actions,
-        @Nullable Input<List<String>> dataActions,
-        @Nullable Input<List<String>> notActions,
-        @Nullable Input<List<String>> notDataActions) {
+        @Nullable Output<List<String>> actions,
+        @Nullable Output<List<String>> dataActions,
+        @Nullable Output<List<String>> notActions,
+        @Nullable Output<List<String>> notDataActions) {
         this.actions = actions;
         this.dataActions = dataActions;
         this.notActions = notActions;
@@ -75,10 +75,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionArgs() {
-        this.actions = Input.empty();
-        this.dataActions = Input.empty();
-        this.notActions = Input.empty();
-        this.notDataActions = Input.empty();
+        this.actions = Output.empty();
+        this.dataActions = Output.empty();
+        this.notActions = Output.empty();
+        this.notDataActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> actions;
-        private @Nullable Input<List<String>> dataActions;
-        private @Nullable Input<List<String>> notActions;
-        private @Nullable Input<List<String>> notDataActions;
+        private @Nullable Output<List<String>> actions;
+        private @Nullable Output<List<String>> dataActions;
+        private @Nullable Output<List<String>> notActions;
+        private @Nullable Output<List<String>> notDataActions;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notDataActions = defaults.notDataActions;
         }
 
-        public Builder actions(@Nullable Input<List<String>> actions) {
+        public Builder actions(@Nullable Output<List<String>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<String> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder dataActions(@Nullable Input<List<String>> dataActions) {
+        public Builder dataActions(@Nullable Output<List<String>> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
 
         public Builder dataActions(@Nullable List<String> dataActions) {
-            this.dataActions = Input.ofNullable(dataActions);
+            this.dataActions = Output.ofNullable(dataActions);
             return this;
         }
 
-        public Builder notActions(@Nullable Input<List<String>> notActions) {
+        public Builder notActions(@Nullable Output<List<String>> notActions) {
             this.notActions = notActions;
             return this;
         }
 
         public Builder notActions(@Nullable List<String> notActions) {
-            this.notActions = Input.ofNullable(notActions);
+            this.notActions = Output.ofNullable(notActions);
             return this;
         }
 
-        public Builder notDataActions(@Nullable Input<List<String>> notDataActions) {
+        public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }
 
         public Builder notDataActions(@Nullable List<String> notDataActions) {
-            this.notDataActions = Input.ofNullable(notDataActions);
+            this.notDataActions = Output.ofNullable(notDataActions);
             return this;
         }
         public PermissionArgs build() {

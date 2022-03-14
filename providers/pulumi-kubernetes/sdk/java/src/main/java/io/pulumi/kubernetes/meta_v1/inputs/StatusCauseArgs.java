@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     public StatusCauseArgs(
-        @Nullable Input<String> field,
-        @Nullable Input<String> message,
-        @Nullable Input<String> reason) {
+        @Nullable Output<String> field,
+        @Nullable Output<String> message,
+        @Nullable Output<String> reason) {
         this.field = field;
         this.message = message;
         this.reason = reason;
     }
 
     private StatusCauseArgs() {
-        this.field = Input.empty();
-        this.message = Input.empty();
-        this.reason = Input.empty();
+        this.field = Output.empty();
+        this.message = Output.empty();
+        this.reason = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> field;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> reason;
+        private @Nullable Output<String> field;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> reason;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reason = defaults.reason;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
         public StatusCauseArgs build() {

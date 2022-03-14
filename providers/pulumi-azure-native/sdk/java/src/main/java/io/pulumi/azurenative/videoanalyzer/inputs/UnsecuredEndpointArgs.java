@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="credentials", required=true)
-      private final Input<UsernamePasswordCredentialsArgs> credentials;
+      private final Output<UsernamePasswordCredentialsArgs> credentials;
 
-    public Input<UsernamePasswordCredentialsArgs> getCredentials() {
+    public Output<UsernamePasswordCredentialsArgs> getCredentials() {
         return this.credentials;
     }
 
@@ -36,10 +36,10 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tunnel")
-      private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
+      private final @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
-    public Input<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
-        return this.tunnel == null ? Input.empty() : this.tunnel;
+    public Output<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
+        return this.tunnel == null ? Output.empty() : this.tunnel;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -59,17 +59,17 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public UnsecuredEndpointArgs(
-        Input<UsernamePasswordCredentialsArgs> credentials,
-        @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel,
-        Input<String> type,
-        Input<String> url) {
+        Output<UsernamePasswordCredentialsArgs> credentials,
+        @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel,
+        Output<String> type,
+        Output<String> url) {
         this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
         this.tunnel = tunnel;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -77,10 +77,10 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     }
 
     private UnsecuredEndpointArgs() {
-        this.credentials = Input.empty();
-        this.tunnel = Input.empty();
-        this.type = Input.empty();
-        this.url = Input.empty();
+        this.credentials = Output.empty();
+        this.tunnel = Output.empty();
+        this.type = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<UsernamePasswordCredentialsArgs> credentials;
-        private @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
-        private Input<String> type;
-        private Input<String> url;
+        private Output<UsernamePasswordCredentialsArgs> credentials;
+        private @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
+        private Output<String> type;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     	      this.url = defaults.url;
         }
 
-        public Builder credentials(Input<UsernamePasswordCredentialsArgs> credentials) {
+        public Builder credentials(Output<UsernamePasswordCredentialsArgs> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
         public Builder credentials(UsernamePasswordCredentialsArgs credentials) {
-            this.credentials = Input.of(Objects.requireNonNull(credentials));
+            this.credentials = Output.of(Objects.requireNonNull(credentials));
             return this;
         }
 
-        public Builder tunnel(@Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel) {
+        public Builder tunnel(@Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel) {
             this.tunnel = tunnel;
             return this;
         }
 
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
-            this.tunnel = Input.ofNullable(tunnel);
+            this.tunnel = Output.ofNullable(tunnel);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public UnsecuredEndpointArgs build() {

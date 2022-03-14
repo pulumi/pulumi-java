@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="functionName", required=true)
-      private final Input<String> functionName;
+      private final Output<String> functionName;
 
-    public Input<String> getFunctionName() {
+    public Output<String> getFunctionName() {
         return this.functionName;
     }
 
@@ -30,9 +30,9 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisionedConcurrentExecutions", required=true)
-      private final Input<Integer> provisionedConcurrentExecutions;
+      private final Output<Integer> provisionedConcurrentExecutions;
 
-    public Input<Integer> getProvisionedConcurrentExecutions() {
+    public Output<Integer> getProvisionedConcurrentExecutions() {
         return this.provisionedConcurrentExecutions;
     }
 
@@ -41,25 +41,25 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="qualifier", required=true)
-      private final Input<String> qualifier;
+      private final Output<String> qualifier;
 
-    public Input<String> getQualifier() {
+    public Output<String> getQualifier() {
         return this.qualifier;
     }
 
     public ProvisionedConcurrencyConfigArgs(
-        Input<String> functionName,
-        Input<Integer> provisionedConcurrentExecutions,
-        Input<String> qualifier) {
+        Output<String> functionName,
+        Output<Integer> provisionedConcurrentExecutions,
+        Output<String> qualifier) {
         this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
         this.provisionedConcurrentExecutions = Objects.requireNonNull(provisionedConcurrentExecutions, "expected parameter 'provisionedConcurrentExecutions' to be non-null");
         this.qualifier = Objects.requireNonNull(qualifier, "expected parameter 'qualifier' to be non-null");
     }
 
     private ProvisionedConcurrencyConfigArgs() {
-        this.functionName = Input.empty();
-        this.provisionedConcurrentExecutions = Input.empty();
-        this.qualifier = Input.empty();
+        this.functionName = Output.empty();
+        this.provisionedConcurrentExecutions = Output.empty();
+        this.qualifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> functionName;
-        private Input<Integer> provisionedConcurrentExecutions;
-        private Input<String> qualifier;
+        private Output<String> functionName;
+        private Output<Integer> provisionedConcurrentExecutions;
+        private Output<String> qualifier;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder functionName(Input<String> functionName) {
+        public Builder functionName(Output<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
         public Builder functionName(String functionName) {
-            this.functionName = Input.of(Objects.requireNonNull(functionName));
+            this.functionName = Output.of(Objects.requireNonNull(functionName));
             return this;
         }
 
-        public Builder provisionedConcurrentExecutions(Input<Integer> provisionedConcurrentExecutions) {
+        public Builder provisionedConcurrentExecutions(Output<Integer> provisionedConcurrentExecutions) {
             this.provisionedConcurrentExecutions = Objects.requireNonNull(provisionedConcurrentExecutions);
             return this;
         }
 
         public Builder provisionedConcurrentExecutions(Integer provisionedConcurrentExecutions) {
-            this.provisionedConcurrentExecutions = Input.of(Objects.requireNonNull(provisionedConcurrentExecutions));
+            this.provisionedConcurrentExecutions = Output.of(Objects.requireNonNull(provisionedConcurrentExecutions));
             return this;
         }
 
-        public Builder qualifier(Input<String> qualifier) {
+        public Builder qualifier(Output<String> qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
 
         public Builder qualifier(String qualifier) {
-            this.qualifier = Input.of(Objects.requireNonNull(qualifier));
+            this.qualifier = Output.of(Objects.requireNonNull(qualifier));
             return this;
         }
         public ProvisionedConcurrencyConfigArgs build() {

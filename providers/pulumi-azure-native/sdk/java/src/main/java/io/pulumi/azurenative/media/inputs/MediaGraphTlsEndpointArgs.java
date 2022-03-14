@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.MediaGraphPemCertificateListArgs;
 import io.pulumi.azurenative.media.inputs.MediaGraphTlsValidationOptionsArgs;
 import io.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentialsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials;
+      private final @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
-    public Input<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -49,10 +49,10 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trustedCertificates")
-      private final @Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates;
+      private final @Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates;
 
-    public Input<MediaGraphPemCertificateListArgs> getTrustedCertificates() {
-        return this.trustedCertificates == null ? Input.empty() : this.trustedCertificates;
+    public Output<MediaGraphPemCertificateListArgs> getTrustedCertificates() {
+        return this.trustedCertificates == null ? Output.empty() : this.trustedCertificates;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
@@ -71,18 +71,18 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validationOptions")
-      private final @Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions;
+      private final @Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions;
 
-    public Input<MediaGraphTlsValidationOptionsArgs> getValidationOptions() {
-        return this.validationOptions == null ? Input.empty() : this.validationOptions;
+    public Output<MediaGraphTlsValidationOptionsArgs> getValidationOptions() {
+        return this.validationOptions == null ? Output.empty() : this.validationOptions;
     }
 
     public MediaGraphTlsEndpointArgs(
-        @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials,
-        Input<String> odataType,
-        @Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates,
-        Input<String> url,
-        @Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions) {
+        @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials,
+        Output<String> odataType,
+        @Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates,
+        Output<String> url,
+        @Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions) {
         this.credentials = credentials;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.trustedCertificates = trustedCertificates;
@@ -91,11 +91,11 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
     }
 
     private MediaGraphTlsEndpointArgs() {
-        this.credentials = Input.empty();
-        this.odataType = Input.empty();
-        this.trustedCertificates = Input.empty();
-        this.url = Input.empty();
-        this.validationOptions = Input.empty();
+        this.credentials = Output.empty();
+        this.odataType = Output.empty();
+        this.trustedCertificates = Output.empty();
+        this.url = Output.empty();
+        this.validationOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials;
-        private Input<String> odataType;
-        private @Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates;
-        private Input<String> url;
-        private @Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions;
+        private @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
+        private Output<String> odataType;
+        private @Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates;
+        private Output<String> url;
+        private @Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder credentials(@Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder trustedCertificates(@Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates) {
+        public Builder trustedCertificates(@Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
 
         public Builder trustedCertificates(@Nullable MediaGraphPemCertificateListArgs trustedCertificates) {
-            this.trustedCertificates = Input.ofNullable(trustedCertificates);
+            this.trustedCertificates = Output.ofNullable(trustedCertificates);
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder validationOptions(@Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
         public Builder validationOptions(@Nullable MediaGraphTlsValidationOptionsArgs validationOptions) {
-            this.validationOptions = Input.ofNullable(validationOptions);
+            this.validationOptions = Output.ofNullable(validationOptions);
             return this;
         }
         public MediaGraphTlsEndpointArgs build() {

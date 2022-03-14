@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -100,14 +99,14 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Override(String name, OverrideArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Override", name, args == null ? OverrideArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:apigee/v1:Override", name, args == null ? OverrideArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Override(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Override(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:apigee/v1:Override", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -122,7 +121,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Override get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Override get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Override(name, id, options);
     }
 }

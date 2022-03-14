@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -84,14 +83,14 @@ public class TagTemplateIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagTemplateIamPolicy(String name, TagTemplateIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/tagTemplateIamPolicy:TagTemplateIamPolicy", name, args == null ? TagTemplateIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:datacatalog/tagTemplateIamPolicy:TagTemplateIamPolicy", name, args == null ? TagTemplateIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TagTemplateIamPolicy(String name, Input<String> id, @Nullable TagTemplateIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TagTemplateIamPolicy(String name, Output<String> id, @Nullable TagTemplateIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:datacatalog/tagTemplateIamPolicy:TagTemplateIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -107,7 +106,7 @@ public class TagTemplateIamPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagTemplateIamPolicy get(String name, Input<String> id, @Nullable TagTemplateIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TagTemplateIamPolicy get(String name, Output<String> id, @Nullable TagTemplateIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TagTemplateIamPolicy(name, id, state, options);
     }
 }

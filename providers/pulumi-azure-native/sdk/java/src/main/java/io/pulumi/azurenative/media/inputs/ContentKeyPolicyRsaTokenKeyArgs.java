@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="exponent", required=true)
-      private final Input<String> exponent;
+      private final Output<String> exponent;
 
-    public Input<String> getExponent() {
+    public Output<String> getExponent() {
         return this.exponent;
     }
 
@@ -33,9 +33,9 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="modulus", required=true)
-      private final Input<String> modulus;
+      private final Output<String> modulus;
 
-    public Input<String> getModulus() {
+    public Output<String> getModulus() {
         return this.modulus;
     }
 
@@ -45,25 +45,25 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public ContentKeyPolicyRsaTokenKeyArgs(
-        Input<String> exponent,
-        Input<String> modulus,
-        Input<String> odataType) {
+        Output<String> exponent,
+        Output<String> modulus,
+        Output<String> odataType) {
         this.exponent = Objects.requireNonNull(exponent, "expected parameter 'exponent' to be non-null");
         this.modulus = Objects.requireNonNull(modulus, "expected parameter 'modulus' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private ContentKeyPolicyRsaTokenKeyArgs() {
-        this.exponent = Input.empty();
-        this.modulus = Input.empty();
-        this.odataType = Input.empty();
+        this.exponent = Output.empty();
+        this.modulus = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> exponent;
-        private Input<String> modulus;
-        private Input<String> odataType;
+        private Output<String> exponent;
+        private Output<String> modulus;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder exponent(Input<String> exponent) {
+        public Builder exponent(Output<String> exponent) {
             this.exponent = Objects.requireNonNull(exponent);
             return this;
         }
 
         public Builder exponent(String exponent) {
-            this.exponent = Input.of(Objects.requireNonNull(exponent));
+            this.exponent = Output.of(Objects.requireNonNull(exponent));
             return this;
         }
 
-        public Builder modulus(Input<String> modulus) {
+        public Builder modulus(Output<String> modulus) {
             this.modulus = Objects.requireNonNull(modulus);
             return this;
         }
 
         public Builder modulus(String modulus) {
-            this.modulus = Input.of(Objects.requireNonNull(modulus));
+            this.modulus = Output.of(Objects.requireNonNull(modulus));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public ContentKeyPolicyRsaTokenKeyArgs build() {

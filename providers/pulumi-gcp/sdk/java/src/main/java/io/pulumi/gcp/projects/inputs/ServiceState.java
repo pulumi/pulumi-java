@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableDependentServices")
-      private final @Nullable Input<Boolean> disableDependentServices;
+      private final @Nullable Output<Boolean> disableDependentServices;
 
-    public Input<Boolean> getDisableDependentServices() {
-        return this.disableDependentServices == null ? Input.empty() : this.disableDependentServices;
+    public Output<Boolean> getDisableDependentServices() {
+        return this.disableDependentServices == null ? Output.empty() : this.disableDependentServices;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableOnDestroy")
-      private final @Nullable Input<Boolean> disableOnDestroy;
+      private final @Nullable Output<Boolean> disableOnDestroy;
 
-    public Input<Boolean> getDisableOnDestroy() {
-        return this.disableOnDestroy == null ? Input.empty() : this.disableOnDestroy;
+    public Output<Boolean> getDisableOnDestroy() {
+        return this.disableOnDestroy == null ? Output.empty() : this.disableOnDestroy;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public ServiceState(
-        @Nullable Input<Boolean> disableDependentServices,
-        @Nullable Input<Boolean> disableOnDestroy,
-        @Nullable Input<String> project,
-        @Nullable Input<String> service) {
+        @Nullable Output<Boolean> disableDependentServices,
+        @Nullable Output<Boolean> disableOnDestroy,
+        @Nullable Output<String> project,
+        @Nullable Output<String> service) {
         this.disableDependentServices = disableDependentServices;
         this.disableOnDestroy = disableOnDestroy;
         this.project = project;
@@ -75,10 +75,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceState() {
-        this.disableDependentServices = Input.empty();
-        this.disableOnDestroy = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
+        this.disableDependentServices = Output.empty();
+        this.disableOnDestroy = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableDependentServices;
-        private @Nullable Input<Boolean> disableOnDestroy;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> service;
+        private @Nullable Output<Boolean> disableDependentServices;
+        private @Nullable Output<Boolean> disableOnDestroy;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder disableDependentServices(@Nullable Input<Boolean> disableDependentServices) {
+        public Builder disableDependentServices(@Nullable Output<Boolean> disableDependentServices) {
             this.disableDependentServices = disableDependentServices;
             return this;
         }
 
         public Builder disableDependentServices(@Nullable Boolean disableDependentServices) {
-            this.disableDependentServices = Input.ofNullable(disableDependentServices);
+            this.disableDependentServices = Output.ofNullable(disableDependentServices);
             return this;
         }
 
-        public Builder disableOnDestroy(@Nullable Input<Boolean> disableOnDestroy) {
+        public Builder disableOnDestroy(@Nullable Output<Boolean> disableOnDestroy) {
             this.disableOnDestroy = disableOnDestroy;
             return this;
         }
 
         public Builder disableOnDestroy(@Nullable Boolean disableOnDestroy) {
-            this.disableOnDestroy = Input.ofNullable(disableOnDestroy);
+            this.disableOnDestroy = Output.ofNullable(disableOnDestroy);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public ServiceState build() {

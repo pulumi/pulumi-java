@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.enums.JobStepOutputType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credential", required=true)
-      private final Input<String> credential;
+      private final Output<String> credential;
 
-    public Input<String> getCredential() {
+    public Output<String> getCredential() {
         return this.credential;
     }
 
@@ -36,9 +36,9 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -47,10 +47,10 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName")
-      private final @Nullable Input<String> resourceGroupName;
+      private final @Nullable Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
-        return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
+    public Output<String> getResourceGroupName() {
+        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaName")
-      private final @Nullable Input<String> schemaName;
+      private final @Nullable Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
-        return this.schemaName == null ? Input.empty() : this.schemaName;
+    public Output<String> getSchemaName() {
+        return this.schemaName == null ? Output.empty() : this.schemaName;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -80,10 +80,10 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
@@ -102,40 +102,40 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,JobStepOutputType>> type;
+      private final @Nullable Output<Either<String,JobStepOutputType>> type;
 
-    public Input<Either<String,JobStepOutputType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,JobStepOutputType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public JobStepOutputArgs(
-        Input<String> credential,
-        Input<String> databaseName,
-        @Nullable Input<String> resourceGroupName,
-        @Nullable Input<String> schemaName,
-        Input<String> serverName,
-        @Nullable Input<String> subscriptionId,
-        Input<String> tableName,
-        @Nullable Input<Either<String,JobStepOutputType>> type) {
+        Output<String> credential,
+        Output<String> databaseName,
+        @Nullable Output<String> resourceGroupName,
+        @Nullable Output<String> schemaName,
+        Output<String> serverName,
+        @Nullable Output<String> subscriptionId,
+        Output<String> tableName,
+        @Nullable Output<Either<String,JobStepOutputType>> type) {
         this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.resourceGroupName = resourceGroupName;
-        this.schemaName = schemaName == null ? Input.ofNullable("dbo") : schemaName;
+        this.schemaName = schemaName == null ? Output.ofNullable("dbo") : schemaName;
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
         this.subscriptionId = subscriptionId;
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.type = type == null ? Input.ofLeft("SqlDatabase") : type;
+        this.type = type == null ? Output.ofLeft("SqlDatabase") : type;
     }
 
     private JobStepOutputArgs() {
-        this.credential = Input.empty();
-        this.databaseName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaName = Input.empty();
-        this.serverName = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tableName = Input.empty();
-        this.type = Input.empty();
+        this.credential = Output.empty();
+        this.databaseName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaName = Output.empty();
+        this.serverName = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tableName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> credential;
-        private Input<String> databaseName;
-        private @Nullable Input<String> resourceGroupName;
-        private @Nullable Input<String> schemaName;
-        private Input<String> serverName;
-        private @Nullable Input<String> subscriptionId;
-        private Input<String> tableName;
-        private @Nullable Input<Either<String,JobStepOutputType>> type;
+        private Output<String> credential;
+        private Output<String> databaseName;
+        private @Nullable Output<String> resourceGroupName;
+        private @Nullable Output<String> schemaName;
+        private Output<String> serverName;
+        private @Nullable Output<String> subscriptionId;
+        private Output<String> tableName;
+        private @Nullable Output<Either<String,JobStepOutputType>> type;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder credential(Input<String> credential) {
+        public Builder credential(Output<String> credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
         public Builder credential(String credential) {
-            this.credential = Input.of(Objects.requireNonNull(credential));
+            this.credential = Output.of(Objects.requireNonNull(credential));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder resourceGroupName(@Nullable Input<String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = Input.ofNullable(resourceGroupName);
+            this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder schemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Input.ofNullable(schemaName);
+            this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,JobStepOutputType>> type) {
+        public Builder type(@Nullable Output<Either<String,JobStepOutputType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,JobStepOutputType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public JobStepOutputArgs build() {

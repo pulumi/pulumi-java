@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.customerinsights.inputs.ParticipantProfilePropertyReferenceArgs;
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipLinkFieldMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Output<Map<String,String>> description;
 
-    public Input<Map<String,String>> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<Map<String,String>> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -56,9 +56,9 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interactionType", required=true)
-      private final Input<String> interactionType;
+      private final Output<String> interactionType;
 
-    public Input<String> getInteractionType() {
+    public Output<String> getInteractionType() {
         return this.interactionType;
     }
 
@@ -67,10 +67,10 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mappings")
-      private final @Nullable Input<List<RelationshipLinkFieldMappingArgs>> mappings;
+      private final @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
 
-    public Input<List<RelationshipLinkFieldMappingArgs>> getMappings() {
-        return this.mappings == null ? Input.empty() : this.mappings;
+    public Output<List<RelationshipLinkFieldMappingArgs>> getMappings() {
+        return this.mappings == null ? Output.empty() : this.mappings;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="profilePropertyReferences", required=true)
-      private final Input<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
+      private final Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
 
-    public Input<List<ParticipantProfilePropertyReferenceArgs>> getProfilePropertyReferences() {
+    public Output<List<ParticipantProfilePropertyReferenceArgs>> getProfilePropertyReferences() {
         return this.profilePropertyReferences;
     }
 
@@ -89,9 +89,9 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relatedProfilePropertyReferences", required=true)
-      private final Input<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
+      private final Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
 
-    public Input<List<ParticipantProfilePropertyReferenceArgs>> getRelatedProfilePropertyReferences() {
+    public Output<List<ParticipantProfilePropertyReferenceArgs>> getRelatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
     }
 
@@ -100,10 +100,10 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relationshipLinkName")
-      private final @Nullable Input<String> relationshipLinkName;
+      private final @Nullable Output<String> relationshipLinkName;
 
-    public Input<String> getRelationshipLinkName() {
-        return this.relationshipLinkName == null ? Input.empty() : this.relationshipLinkName;
+    public Output<String> getRelationshipLinkName() {
+        return this.relationshipLinkName == null ? Output.empty() : this.relationshipLinkName;
     }
 
     /**
@@ -111,9 +111,9 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relationshipName", required=true)
-      private final Input<String> relationshipName;
+      private final Output<String> relationshipName;
 
-    public Input<String> getRelationshipName() {
+    public Output<String> getRelationshipName() {
         return this.relationshipName;
     }
 
@@ -122,23 +122,23 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public RelationshipLinkArgs(
-        @Nullable Input<Map<String,String>> description,
-        @Nullable Input<Map<String,String>> displayName,
-        Input<String> hubName,
-        Input<String> interactionType,
-        @Nullable Input<List<RelationshipLinkFieldMappingArgs>> mappings,
-        Input<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences,
-        Input<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences,
-        @Nullable Input<String> relationshipLinkName,
-        Input<String> relationshipName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<Map<String,String>> description,
+        @Nullable Output<Map<String,String>> displayName,
+        Output<String> hubName,
+        Output<String> interactionType,
+        @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings,
+        Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences,
+        Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences,
+        @Nullable Output<String> relationshipLinkName,
+        Output<String> relationshipName,
+        Output<String> resourceGroupName) {
         this.description = description;
         this.displayName = displayName;
         this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
@@ -152,16 +152,16 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RelationshipLinkArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.hubName = Input.empty();
-        this.interactionType = Input.empty();
-        this.mappings = Input.empty();
-        this.profilePropertyReferences = Input.empty();
-        this.relatedProfilePropertyReferences = Input.empty();
-        this.relationshipLinkName = Input.empty();
-        this.relationshipName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.hubName = Output.empty();
+        this.interactionType = Output.empty();
+        this.mappings = Output.empty();
+        this.profilePropertyReferences = Output.empty();
+        this.relatedProfilePropertyReferences = Output.empty();
+        this.relationshipLinkName = Output.empty();
+        this.relationshipName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> description;
-        private @Nullable Input<Map<String,String>> displayName;
-        private Input<String> hubName;
-        private Input<String> interactionType;
-        private @Nullable Input<List<RelationshipLinkFieldMappingArgs>> mappings;
-        private Input<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
-        private Input<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
-        private @Nullable Input<String> relationshipLinkName;
-        private Input<String> relationshipName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> description;
+        private @Nullable Output<Map<String,String>> displayName;
+        private Output<String> hubName;
+        private Output<String> interactionType;
+        private @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
+        private Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
+        private Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
+        private @Nullable Output<String> relationshipLinkName;
+        private Output<String> relationshipName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder description(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder interactionType(Input<String> interactionType) {
+        public Builder interactionType(Output<String> interactionType) {
             this.interactionType = Objects.requireNonNull(interactionType);
             return this;
         }
 
         public Builder interactionType(String interactionType) {
-            this.interactionType = Input.of(Objects.requireNonNull(interactionType));
+            this.interactionType = Output.of(Objects.requireNonNull(interactionType));
             return this;
         }
 
-        public Builder mappings(@Nullable Input<List<RelationshipLinkFieldMappingArgs>> mappings) {
+        public Builder mappings(@Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings) {
             this.mappings = mappings;
             return this;
         }
 
         public Builder mappings(@Nullable List<RelationshipLinkFieldMappingArgs> mappings) {
-            this.mappings = Input.ofNullable(mappings);
+            this.mappings = Output.ofNullable(mappings);
             return this;
         }
 
-        public Builder profilePropertyReferences(Input<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences) {
+        public Builder profilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences) {
             this.profilePropertyReferences = Objects.requireNonNull(profilePropertyReferences);
             return this;
         }
 
         public Builder profilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> profilePropertyReferences) {
-            this.profilePropertyReferences = Input.of(Objects.requireNonNull(profilePropertyReferences));
+            this.profilePropertyReferences = Output.of(Objects.requireNonNull(profilePropertyReferences));
             return this;
         }
 
-        public Builder relatedProfilePropertyReferences(Input<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences) {
+        public Builder relatedProfilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences) {
             this.relatedProfilePropertyReferences = Objects.requireNonNull(relatedProfilePropertyReferences);
             return this;
         }
 
         public Builder relatedProfilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> relatedProfilePropertyReferences) {
-            this.relatedProfilePropertyReferences = Input.of(Objects.requireNonNull(relatedProfilePropertyReferences));
+            this.relatedProfilePropertyReferences = Output.of(Objects.requireNonNull(relatedProfilePropertyReferences));
             return this;
         }
 
-        public Builder relationshipLinkName(@Nullable Input<String> relationshipLinkName) {
+        public Builder relationshipLinkName(@Nullable Output<String> relationshipLinkName) {
             this.relationshipLinkName = relationshipLinkName;
             return this;
         }
 
         public Builder relationshipLinkName(@Nullable String relationshipLinkName) {
-            this.relationshipLinkName = Input.ofNullable(relationshipLinkName);
+            this.relationshipLinkName = Output.ofNullable(relationshipLinkName);
             return this;
         }
 
-        public Builder relationshipName(Input<String> relationshipName) {
+        public Builder relationshipName(Output<String> relationshipName) {
             this.relationshipName = Objects.requireNonNull(relationshipName);
             return this;
         }
 
         public Builder relationshipName(String relationshipName) {
-            this.relationshipName = Input.of(Objects.requireNonNull(relationshipName));
+            this.relationshipName = Output.of(Objects.requireNonNull(relationshipName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public RelationshipLinkArgs build() {

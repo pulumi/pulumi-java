@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class TopicRuleCloudwatchLogsActionArgs extends io.pulumi.resources
     public static final TopicRuleCloudwatchLogsActionArgs Empty = new TopicRuleCloudwatchLogsActionArgs();
 
     @InputImport(name="logGroupName", required=true)
-      private final Input<String> logGroupName;
+      private final Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
+    public Output<String> getLogGroupName() {
         return this.logGroupName;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public TopicRuleCloudwatchLogsActionArgs(
-        Input<String> logGroupName,
-        Input<String> roleArn) {
+        Output<String> logGroupName,
+        Output<String> roleArn) {
         this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private TopicRuleCloudwatchLogsActionArgs() {
-        this.logGroupName = Input.empty();
-        this.roleArn = Input.empty();
+        this.logGroupName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class TopicRuleCloudwatchLogsActionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> logGroupName;
-        private Input<String> roleArn;
+        private Output<String> logGroupName;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class TopicRuleCloudwatchLogsActionArgs extends io.pulumi.resources
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder logGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Output<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
+            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public TopicRuleCloudwatchLogsActionArgs build() {

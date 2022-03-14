@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class CertificateQualifierArgs extends io.pulumi.resources.Resource
     public static final CertificateQualifierArgs Empty = new CertificateQualifierArgs();
 
     @InputImport(name="cpsUri", required=true)
-      private final Input<String> cpsUri;
+      private final Output<String> cpsUri;
 
-    public Input<String> getCpsUri() {
+    public Output<String> getCpsUri() {
         return this.cpsUri;
     }
 
-    public CertificateQualifierArgs(Input<String> cpsUri) {
+    public CertificateQualifierArgs(Output<String> cpsUri) {
         this.cpsUri = Objects.requireNonNull(cpsUri, "expected parameter 'cpsUri' to be non-null");
     }
 
     private CertificateQualifierArgs() {
-        this.cpsUri = Input.empty();
+        this.cpsUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class CertificateQualifierArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> cpsUri;
+        private Output<String> cpsUri;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class CertificateQualifierArgs extends io.pulumi.resources.Resource
     	      this.cpsUri = defaults.cpsUri;
         }
 
-        public Builder cpsUri(Input<String> cpsUri) {
+        public Builder cpsUri(Output<String> cpsUri) {
             this.cpsUri = Objects.requireNonNull(cpsUri);
             return this;
         }
 
         public Builder cpsUri(String cpsUri) {
-            this.cpsUri = Input.of(Objects.requireNonNull(cpsUri));
+            this.cpsUri = Output.of(Objects.requireNonNull(cpsUri));
             return this;
         }
         public CertificateQualifierArgs build() {

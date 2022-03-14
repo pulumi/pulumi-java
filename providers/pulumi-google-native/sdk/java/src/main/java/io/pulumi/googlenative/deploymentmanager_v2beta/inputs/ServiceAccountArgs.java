@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
-    public ServiceAccountArgs(@Nullable Input<String> email) {
+    public ServiceAccountArgs(@Nullable Output<String> email) {
         this.email = email;
     }
 
     private ServiceAccountArgs() {
-        this.email = Input.empty();
+        this.email = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
+        private @Nullable Output<String> email;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.email = defaults.email;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
         public ServiceAccountArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amplify.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="branchName")
-      private final @Nullable Input<String> branchName;
+      private final @Nullable Output<String> branchName;
 
-    public Input<String> getBranchName() {
-        return this.branchName == null ? Input.empty() : this.branchName;
+    public Output<String> getBranchName() {
+        return this.branchName == null ? Output.empty() : this.branchName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastDeployTime")
-      private final @Nullable Input<String> lastDeployTime;
+      private final @Nullable Output<String> lastDeployTime;
 
-    public Input<String> getLastDeployTime() {
-        return this.lastDeployTime == null ? Input.empty() : this.lastDeployTime;
+    public Output<String> getLastDeployTime() {
+        return this.lastDeployTime == null ? Output.empty() : this.lastDeployTime;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="thumbnailUrl")
-      private final @Nullable Input<String> thumbnailUrl;
+      private final @Nullable Output<String> thumbnailUrl;
 
-    public Input<String> getThumbnailUrl() {
-        return this.thumbnailUrl == null ? Input.empty() : this.thumbnailUrl;
+    public Output<String> getThumbnailUrl() {
+        return this.thumbnailUrl == null ? Output.empty() : this.thumbnailUrl;
     }
 
     public AppProductionBranchArgs(
-        @Nullable Input<String> branchName,
-        @Nullable Input<String> lastDeployTime,
-        @Nullable Input<String> status,
-        @Nullable Input<String> thumbnailUrl) {
+        @Nullable Output<String> branchName,
+        @Nullable Output<String> lastDeployTime,
+        @Nullable Output<String> status,
+        @Nullable Output<String> thumbnailUrl) {
         this.branchName = branchName;
         this.lastDeployTime = lastDeployTime;
         this.status = status;
@@ -70,10 +70,10 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
     }
 
     private AppProductionBranchArgs() {
-        this.branchName = Input.empty();
-        this.lastDeployTime = Input.empty();
-        this.status = Input.empty();
-        this.thumbnailUrl = Input.empty();
+        this.branchName = Output.empty();
+        this.lastDeployTime = Output.empty();
+        this.status = Output.empty();
+        this.thumbnailUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branchName;
-        private @Nullable Input<String> lastDeployTime;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> thumbnailUrl;
+        private @Nullable Output<String> branchName;
+        private @Nullable Output<String> lastDeployTime;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> thumbnailUrl;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
     	      this.thumbnailUrl = defaults.thumbnailUrl;
         }
 
-        public Builder branchName(@Nullable Input<String> branchName) {
+        public Builder branchName(@Nullable Output<String> branchName) {
             this.branchName = branchName;
             return this;
         }
 
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = Input.ofNullable(branchName);
+            this.branchName = Output.ofNullable(branchName);
             return this;
         }
 
-        public Builder lastDeployTime(@Nullable Input<String> lastDeployTime) {
+        public Builder lastDeployTime(@Nullable Output<String> lastDeployTime) {
             this.lastDeployTime = lastDeployTime;
             return this;
         }
 
         public Builder lastDeployTime(@Nullable String lastDeployTime) {
-            this.lastDeployTime = Input.ofNullable(lastDeployTime);
+            this.lastDeployTime = Output.ofNullable(lastDeployTime);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder thumbnailUrl(@Nullable Input<String> thumbnailUrl) {
+        public Builder thumbnailUrl(@Nullable Output<String> thumbnailUrl) {
             this.thumbnailUrl = thumbnailUrl;
             return this;
         }
 
         public Builder thumbnailUrl(@Nullable String thumbnailUrl) {
-            this.thumbnailUrl = Input.ofNullable(thumbnailUrl);
+            this.thumbnailUrl = Output.ofNullable(thumbnailUrl);
             return this;
         }
         public AppProductionBranchArgs build() {

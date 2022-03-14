@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="regexFileSet")
-      private final @Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
+      private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
 
-    public Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> getRegexFileSet() {
-        return this.regexFileSet == null ? Input.empty() : this.regexFileSet;
+    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> getRegexFileSet() {
+        return this.regexFileSet == null ? Output.empty() : this.regexFileSet;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(
-        @Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet,
-        @Nullable Input<String> url) {
+        @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet,
+        @Nullable Output<String> url) {
         this.regexFileSet = regexFileSet;
         this.url = url;
     }
 
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs() {
-        this.regexFileSet = Input.empty();
-        this.url = Input.empty();
+        this.regexFileSet = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     public static final class Builder {
-        private @Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
-        private @Nullable Input<String> url;
+        private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     	      this.url = defaults.url;
         }
 
-        public Builder regexFileSet(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet) {
+        public Builder regexFileSet(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet) {
             this.regexFileSet = regexFileSet;
             return this;
         }
 
         public Builder regexFileSet(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs regexFileSet) {
-            this.regexFileSet = Input.ofNullable(regexFileSet);
+            this.regexFileSet = Output.ofNullable(regexFileSet);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs build() {

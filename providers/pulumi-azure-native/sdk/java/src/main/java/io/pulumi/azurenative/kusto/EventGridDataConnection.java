@@ -6,7 +6,6 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.EventGridDataConnectionArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -255,10 +254,10 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public EventGridDataConnection(String name, EventGridDataConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kusto:EventGridDataConnection", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:kusto:EventGridDataConnection", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private EventGridDataConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventGridDataConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kusto:EventGridDataConnection", name, null, makeResourceOptions(options, id));
     }
 
@@ -269,19 +268,19 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:kusto/v20190121:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20190515:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20190907:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20191109:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200215:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200614:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200918:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20210101:EventGridDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20210827:EventGridDataConnection").build())
+                Output.of(Alias.builder().setType("azure-native:kusto/v20190121:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20190515:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20190907:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:EventGridDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:EventGridDataConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -295,7 +294,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventGridDataConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventGridDataConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventGridDataConnection(name, id, options);
     }
 }

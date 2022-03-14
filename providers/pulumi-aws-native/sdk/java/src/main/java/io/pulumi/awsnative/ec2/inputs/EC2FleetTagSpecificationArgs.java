@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
     public static final EC2FleetTagSpecificationArgs Empty = new EC2FleetTagSpecificationArgs();
 
     @InputImport(name="resourceType")
-      private final @Nullable Input<EC2FleetTagSpecificationResourceType> resourceType;
+      private final @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType;
 
-    public Input<EC2FleetTagSpecificationResourceType> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<EC2FleetTagSpecificationResourceType> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<EC2FleetTagArgs>> tags;
+      private final @Nullable Output<List<EC2FleetTagArgs>> tags;
 
-    public Input<List<EC2FleetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<EC2FleetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EC2FleetTagSpecificationArgs(
-        @Nullable Input<EC2FleetTagSpecificationResourceType> resourceType,
-        @Nullable Input<List<EC2FleetTagArgs>> tags) {
+        @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType,
+        @Nullable Output<List<EC2FleetTagArgs>> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }
 
     private EC2FleetTagSpecificationArgs() {
-        this.resourceType = Input.empty();
-        this.tags = Input.empty();
+        this.resourceType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<EC2FleetTagSpecificationResourceType> resourceType;
-        private @Nullable Input<List<EC2FleetTagArgs>> tags;
+        private @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType;
+        private @Nullable Output<List<EC2FleetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class EC2FleetTagSpecificationArgs extends io.pulumi.resources.Reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder resourceType(@Nullable Input<EC2FleetTagSpecificationResourceType> resourceType) {
+        public Builder resourceType(@Nullable Output<EC2FleetTagSpecificationResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<EC2FleetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<EC2FleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<EC2FleetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EC2FleetTagSpecificationArgs build() {

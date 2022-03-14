@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="registryId")
-      private final @Nullable Input<String> registryId;
+      private final @Nullable Output<String> registryId;
 
-    public Input<String> getRegistryId() {
-        return this.registryId == null ? Input.empty() : this.registryId;
+    public Output<String> getRegistryId() {
+        return this.registryId == null ? Output.empty() : this.registryId;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="replicationConfiguration")
-      private final @Nullable Input<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
+      private final @Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
 
-    public Input<ReplicationConfigurationReplicationConfigurationGetArgs> getReplicationConfiguration() {
-        return this.replicationConfiguration == null ? Input.empty() : this.replicationConfiguration;
+    public Output<ReplicationConfigurationReplicationConfigurationGetArgs> getReplicationConfiguration() {
+        return this.replicationConfiguration == null ? Output.empty() : this.replicationConfiguration;
     }
 
     public ReplicationConfigurationState(
-        @Nullable Input<String> registryId,
-        @Nullable Input<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
+        @Nullable Output<String> registryId,
+        @Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
         this.registryId = registryId;
         this.replicationConfiguration = replicationConfiguration;
     }
 
     private ReplicationConfigurationState() {
-        this.registryId = Input.empty();
-        this.replicationConfiguration = Input.empty();
+        this.registryId = Output.empty();
+        this.replicationConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> registryId;
-        private @Nullable Input<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
+        private @Nullable Output<String> registryId;
+        private @Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
     	      this.replicationConfiguration = defaults.replicationConfiguration;
         }
 
-        public Builder registryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Input.ofNullable(registryId);
+            this.registryId = Output.ofNullable(registryId);
             return this;
         }
 
-        public Builder replicationConfiguration(@Nullable Input<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
 
         public Builder replicationConfiguration(@Nullable ReplicationConfigurationReplicationConfigurationGetArgs replicationConfiguration) {
-            this.replicationConfiguration = Input.ofNullable(replicationConfiguration);
+            this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
             return this;
         }
         public ReplicationConfigurationState build() {

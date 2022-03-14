@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb;
 
 import io.pulumi.awsnative.memorydb.inputs.ACLTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aCLName")
-      private final @Nullable Input<String> aCLName;
+      private final @Nullable Output<String> aCLName;
 
-    public Input<String> getACLName() {
-        return this.aCLName == null ? Input.empty() : this.aCLName;
+    public Output<String> getACLName() {
+        return this.aCLName == null ? Output.empty() : this.aCLName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ACLTagArgs>> tags;
+      private final @Nullable Output<List<ACLTagArgs>> tags;
 
-    public Input<List<ACLTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ACLTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userNames")
-      private final @Nullable Input<List<String>> userNames;
+      private final @Nullable Output<List<String>> userNames;
 
-    public Input<List<String>> getUserNames() {
-        return this.userNames == null ? Input.empty() : this.userNames;
+    public Output<List<String>> getUserNames() {
+        return this.userNames == null ? Output.empty() : this.userNames;
     }
 
     public ACLArgs(
-        @Nullable Input<String> aCLName,
-        @Nullable Input<List<ACLTagArgs>> tags,
-        @Nullable Input<List<String>> userNames) {
+        @Nullable Output<String> aCLName,
+        @Nullable Output<List<ACLTagArgs>> tags,
+        @Nullable Output<List<String>> userNames) {
         this.aCLName = aCLName;
         this.tags = tags;
         this.userNames = userNames;
     }
 
     private ACLArgs() {
-        this.aCLName = Input.empty();
-        this.tags = Input.empty();
-        this.userNames = Input.empty();
+        this.aCLName = Output.empty();
+        this.tags = Output.empty();
+        this.userNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aCLName;
-        private @Nullable Input<List<ACLTagArgs>> tags;
-        private @Nullable Input<List<String>> userNames;
+        private @Nullable Output<String> aCLName;
+        private @Nullable Output<List<ACLTagArgs>> tags;
+        private @Nullable Output<List<String>> userNames;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userNames = defaults.userNames;
         }
 
-        public Builder aCLName(@Nullable Input<String> aCLName) {
+        public Builder aCLName(@Nullable Output<String> aCLName) {
             this.aCLName = aCLName;
             return this;
         }
 
         public Builder aCLName(@Nullable String aCLName) {
-            this.aCLName = Input.ofNullable(aCLName);
+            this.aCLName = Output.ofNullable(aCLName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ACLTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ACLTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ACLTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userNames(@Nullable Input<List<String>> userNames) {
+        public Builder userNames(@Nullable Output<List<String>> userNames) {
             this.userNames = userNames;
             return this;
         }
 
         public Builder userNames(@Nullable List<String> userNames) {
-            this.userNames = Input.ofNullable(userNames);
+            this.userNames = Output.ofNullable(userNames);
             return this;
         }
         public ACLArgs build() {

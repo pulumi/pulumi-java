@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class GatewayRouteSpecHttpRouteActionTargetGetArgs extends io.pulum
      * 
      */
     @InputImport(name="virtualService", required=true)
-      private final Input<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
+      private final Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
 
-    public Input<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> getVirtualService() {
+    public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> getVirtualService() {
         return this.virtualService;
     }
 
-    public GatewayRouteSpecHttpRouteActionTargetGetArgs(Input<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService) {
+    public GatewayRouteSpecHttpRouteActionTargetGetArgs(Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService) {
         this.virtualService = Objects.requireNonNull(virtualService, "expected parameter 'virtualService' to be non-null");
     }
 
     private GatewayRouteSpecHttpRouteActionTargetGetArgs() {
-        this.virtualService = Input.empty();
+        this.virtualService = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GatewayRouteSpecHttpRouteActionTargetGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
+        private Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GatewayRouteSpecHttpRouteActionTargetGetArgs extends io.pulum
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder virtualService(Input<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService) {
+        public Builder virtualService(Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }
 
         public Builder virtualService(GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs virtualService) {
-            this.virtualService = Input.of(Objects.requireNonNull(virtualService));
+            this.virtualService = Output.of(Objects.requireNonNull(virtualService));
             return this;
         }
         public GatewayRouteSpecHttpRouteActionTargetGetArgs build() {

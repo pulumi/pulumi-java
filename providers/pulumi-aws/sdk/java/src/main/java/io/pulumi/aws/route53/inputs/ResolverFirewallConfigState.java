@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="firewallFailOpen")
-      private final @Nullable Input<String> firewallFailOpen;
+      private final @Nullable Output<String> firewallFailOpen;
 
-    public Input<String> getFirewallFailOpen() {
-        return this.firewallFailOpen == null ? Input.empty() : this.firewallFailOpen;
+    public Output<String> getFirewallFailOpen() {
+        return this.firewallFailOpen == null ? Output.empty() : this.firewallFailOpen;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public ResolverFirewallConfigState(
-        @Nullable Input<String> firewallFailOpen,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> resourceId) {
+        @Nullable Output<String> firewallFailOpen,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> resourceId) {
         this.firewallFailOpen = firewallFailOpen;
         this.ownerId = ownerId;
         this.resourceId = resourceId;
     }
 
     private ResolverFirewallConfigState() {
-        this.firewallFailOpen = Input.empty();
-        this.ownerId = Input.empty();
-        this.resourceId = Input.empty();
+        this.firewallFailOpen = Output.empty();
+        this.ownerId = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> firewallFailOpen;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> firewallFailOpen;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder firewallFailOpen(@Nullable Input<String> firewallFailOpen) {
+        public Builder firewallFailOpen(@Nullable Output<String> firewallFailOpen) {
             this.firewallFailOpen = firewallFailOpen;
             return this;
         }
 
         public Builder firewallFailOpen(@Nullable String firewallFailOpen) {
-            this.firewallFailOpen = Input.ofNullable(firewallFailOpen);
+            this.firewallFailOpen = Output.ofNullable(firewallFailOpen);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public ResolverFirewallConfigState build() {

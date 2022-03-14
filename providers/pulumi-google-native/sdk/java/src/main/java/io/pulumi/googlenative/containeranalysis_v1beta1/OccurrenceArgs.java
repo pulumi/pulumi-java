@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DetailsArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DocumentOccurrenceArgs;
@@ -32,10 +32,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation")
-      private final @Nullable Input<DetailsArgs> attestation;
+      private final @Nullable Output<DetailsArgs> attestation;
 
-    public Input<DetailsArgs> getAttestation() {
-        return this.attestation == null ? Input.empty() : this.attestation;
+    public Output<DetailsArgs> getAttestation() {
+        return this.attestation == null ? Output.empty() : this.attestation;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-      private final @Nullable Input<GrafeasV1beta1BuildDetailsArgs> build;
+      private final @Nullable Output<GrafeasV1beta1BuildDetailsArgs> build;
 
-    public Input<GrafeasV1beta1BuildDetailsArgs> getBuild() {
-        return this.build == null ? Input.empty() : this.build;
+    public Output<GrafeasV1beta1BuildDetailsArgs> getBuild() {
+        return this.build == null ? Output.empty() : this.build;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment")
-      private final @Nullable Input<GrafeasV1beta1DeploymentDetailsArgs> deployment;
+      private final @Nullable Output<GrafeasV1beta1DeploymentDetailsArgs> deployment;
 
-    public Input<GrafeasV1beta1DeploymentDetailsArgs> getDeployment() {
-        return this.deployment == null ? Input.empty() : this.deployment;
+    public Output<GrafeasV1beta1DeploymentDetailsArgs> getDeployment() {
+        return this.deployment == null ? Output.empty() : this.deployment;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="derivedImage")
-      private final @Nullable Input<GrafeasV1beta1ImageDetailsArgs> derivedImage;
+      private final @Nullable Output<GrafeasV1beta1ImageDetailsArgs> derivedImage;
 
-    public Input<GrafeasV1beta1ImageDetailsArgs> getDerivedImage() {
-        return this.derivedImage == null ? Input.empty() : this.derivedImage;
+    public Output<GrafeasV1beta1ImageDetailsArgs> getDerivedImage() {
+        return this.derivedImage == null ? Output.empty() : this.derivedImage;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discovered")
-      private final @Nullable Input<GrafeasV1beta1DiscoveryDetailsArgs> discovered;
+      private final @Nullable Output<GrafeasV1beta1DiscoveryDetailsArgs> discovered;
 
-    public Input<GrafeasV1beta1DiscoveryDetailsArgs> getDiscovered() {
-        return this.discovered == null ? Input.empty() : this.discovered;
+    public Output<GrafeasV1beta1DiscoveryDetailsArgs> getDiscovered() {
+        return this.discovered == null ? Output.empty() : this.discovered;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installation")
-      private final @Nullable Input<GrafeasV1beta1PackageDetailsArgs> installation;
+      private final @Nullable Output<GrafeasV1beta1PackageDetailsArgs> installation;
 
-    public Input<GrafeasV1beta1PackageDetailsArgs> getInstallation() {
-        return this.installation == null ? Input.empty() : this.installation;
+    public Output<GrafeasV1beta1PackageDetailsArgs> getInstallation() {
+        return this.installation == null ? Output.empty() : this.installation;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intoto")
-      private final @Nullable Input<GrafeasV1beta1IntotoDetailsArgs> intoto;
+      private final @Nullable Output<GrafeasV1beta1IntotoDetailsArgs> intoto;
 
-    public Input<GrafeasV1beta1IntotoDetailsArgs> getIntoto() {
-        return this.intoto == null ? Input.empty() : this.intoto;
+    public Output<GrafeasV1beta1IntotoDetailsArgs> getIntoto() {
+        return this.intoto == null ? Output.empty() : this.intoto;
     }
 
     /**
@@ -109,17 +109,17 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noteName", required=true)
-      private final Input<String> noteName;
+      private final Output<String> noteName;
 
-    public Input<String> getNoteName() {
+    public Output<String> getNoteName() {
         return this.noteName;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-      private final @Nullable Input<String> remediation;
+      private final @Nullable Output<String> remediation;
 
-    public Input<String> getRemediation() {
-        return this.remediation == null ? Input.empty() : this.remediation;
+    public Output<String> getRemediation() {
+        return this.remediation == null ? Output.empty() : this.remediation;
     }
 
     /**
@@ -138,9 +138,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<ResourceArgs> resource;
+      private final Output<ResourceArgs> resource;
 
-    public Input<ResourceArgs> getResource() {
+    public Output<ResourceArgs> getResource() {
         return this.resource;
     }
 
@@ -149,10 +149,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sbom")
-      private final @Nullable Input<DocumentOccurrenceArgs> sbom;
+      private final @Nullable Output<DocumentOccurrenceArgs> sbom;
 
-    public Input<DocumentOccurrenceArgs> getSbom() {
-        return this.sbom == null ? Input.empty() : this.sbom;
+    public Output<DocumentOccurrenceArgs> getSbom() {
+        return this.sbom == null ? Output.empty() : this.sbom;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxFile")
-      private final @Nullable Input<FileOccurrenceArgs> spdxFile;
+      private final @Nullable Output<FileOccurrenceArgs> spdxFile;
 
-    public Input<FileOccurrenceArgs> getSpdxFile() {
-        return this.spdxFile == null ? Input.empty() : this.spdxFile;
+    public Output<FileOccurrenceArgs> getSpdxFile() {
+        return this.spdxFile == null ? Output.empty() : this.spdxFile;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxPackage")
-      private final @Nullable Input<PackageInfoOccurrenceArgs> spdxPackage;
+      private final @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage;
 
-    public Input<PackageInfoOccurrenceArgs> getSpdxPackage() {
-        return this.spdxPackage == null ? Input.empty() : this.spdxPackage;
+    public Output<PackageInfoOccurrenceArgs> getSpdxPackage() {
+        return this.spdxPackage == null ? Output.empty() : this.spdxPackage;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxRelationship")
-      private final @Nullable Input<RelationshipOccurrenceArgs> spdxRelationship;
+      private final @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship;
 
-    public Input<RelationshipOccurrenceArgs> getSpdxRelationship() {
-        return this.spdxRelationship == null ? Input.empty() : this.spdxRelationship;
+    public Output<RelationshipOccurrenceArgs> getSpdxRelationship() {
+        return this.spdxRelationship == null ? Output.empty() : this.spdxRelationship;
     }
 
     /**
@@ -193,29 +193,29 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vulnerability")
-      private final @Nullable Input<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability;
+      private final @Nullable Output<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability;
 
-    public Input<GrafeasV1beta1VulnerabilityDetailsArgs> getVulnerability() {
-        return this.vulnerability == null ? Input.empty() : this.vulnerability;
+    public Output<GrafeasV1beta1VulnerabilityDetailsArgs> getVulnerability() {
+        return this.vulnerability == null ? Output.empty() : this.vulnerability;
     }
 
     public OccurrenceArgs(
-        @Nullable Input<DetailsArgs> attestation,
-        @Nullable Input<GrafeasV1beta1BuildDetailsArgs> build,
-        @Nullable Input<GrafeasV1beta1DeploymentDetailsArgs> deployment,
-        @Nullable Input<GrafeasV1beta1ImageDetailsArgs> derivedImage,
-        @Nullable Input<GrafeasV1beta1DiscoveryDetailsArgs> discovered,
-        @Nullable Input<GrafeasV1beta1PackageDetailsArgs> installation,
-        @Nullable Input<GrafeasV1beta1IntotoDetailsArgs> intoto,
-        Input<String> noteName,
-        @Nullable Input<String> project,
-        @Nullable Input<String> remediation,
-        Input<ResourceArgs> resource,
-        @Nullable Input<DocumentOccurrenceArgs> sbom,
-        @Nullable Input<FileOccurrenceArgs> spdxFile,
-        @Nullable Input<PackageInfoOccurrenceArgs> spdxPackage,
-        @Nullable Input<RelationshipOccurrenceArgs> spdxRelationship,
-        @Nullable Input<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability) {
+        @Nullable Output<DetailsArgs> attestation,
+        @Nullable Output<GrafeasV1beta1BuildDetailsArgs> build,
+        @Nullable Output<GrafeasV1beta1DeploymentDetailsArgs> deployment,
+        @Nullable Output<GrafeasV1beta1ImageDetailsArgs> derivedImage,
+        @Nullable Output<GrafeasV1beta1DiscoveryDetailsArgs> discovered,
+        @Nullable Output<GrafeasV1beta1PackageDetailsArgs> installation,
+        @Nullable Output<GrafeasV1beta1IntotoDetailsArgs> intoto,
+        Output<String> noteName,
+        @Nullable Output<String> project,
+        @Nullable Output<String> remediation,
+        Output<ResourceArgs> resource,
+        @Nullable Output<DocumentOccurrenceArgs> sbom,
+        @Nullable Output<FileOccurrenceArgs> spdxFile,
+        @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage,
+        @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship,
+        @Nullable Output<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.deployment = deployment;
@@ -235,22 +235,22 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OccurrenceArgs() {
-        this.attestation = Input.empty();
-        this.build = Input.empty();
-        this.deployment = Input.empty();
-        this.derivedImage = Input.empty();
-        this.discovered = Input.empty();
-        this.installation = Input.empty();
-        this.intoto = Input.empty();
-        this.noteName = Input.empty();
-        this.project = Input.empty();
-        this.remediation = Input.empty();
-        this.resource = Input.empty();
-        this.sbom = Input.empty();
-        this.spdxFile = Input.empty();
-        this.spdxPackage = Input.empty();
-        this.spdxRelationship = Input.empty();
-        this.vulnerability = Input.empty();
+        this.attestation = Output.empty();
+        this.build = Output.empty();
+        this.deployment = Output.empty();
+        this.derivedImage = Output.empty();
+        this.discovered = Output.empty();
+        this.installation = Output.empty();
+        this.intoto = Output.empty();
+        this.noteName = Output.empty();
+        this.project = Output.empty();
+        this.remediation = Output.empty();
+        this.resource = Output.empty();
+        this.sbom = Output.empty();
+        this.spdxFile = Output.empty();
+        this.spdxPackage = Output.empty();
+        this.spdxRelationship = Output.empty();
+        this.vulnerability = Output.empty();
     }
 
     public static Builder builder() {
@@ -262,22 +262,22 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DetailsArgs> attestation;
-        private @Nullable Input<GrafeasV1beta1BuildDetailsArgs> build;
-        private @Nullable Input<GrafeasV1beta1DeploymentDetailsArgs> deployment;
-        private @Nullable Input<GrafeasV1beta1ImageDetailsArgs> derivedImage;
-        private @Nullable Input<GrafeasV1beta1DiscoveryDetailsArgs> discovered;
-        private @Nullable Input<GrafeasV1beta1PackageDetailsArgs> installation;
-        private @Nullable Input<GrafeasV1beta1IntotoDetailsArgs> intoto;
-        private Input<String> noteName;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> remediation;
-        private Input<ResourceArgs> resource;
-        private @Nullable Input<DocumentOccurrenceArgs> sbom;
-        private @Nullable Input<FileOccurrenceArgs> spdxFile;
-        private @Nullable Input<PackageInfoOccurrenceArgs> spdxPackage;
-        private @Nullable Input<RelationshipOccurrenceArgs> spdxRelationship;
-        private @Nullable Input<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability;
+        private @Nullable Output<DetailsArgs> attestation;
+        private @Nullable Output<GrafeasV1beta1BuildDetailsArgs> build;
+        private @Nullable Output<GrafeasV1beta1DeploymentDetailsArgs> deployment;
+        private @Nullable Output<GrafeasV1beta1ImageDetailsArgs> derivedImage;
+        private @Nullable Output<GrafeasV1beta1DiscoveryDetailsArgs> discovered;
+        private @Nullable Output<GrafeasV1beta1PackageDetailsArgs> installation;
+        private @Nullable Output<GrafeasV1beta1IntotoDetailsArgs> intoto;
+        private Output<String> noteName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> remediation;
+        private Output<ResourceArgs> resource;
+        private @Nullable Output<DocumentOccurrenceArgs> sbom;
+        private @Nullable Output<FileOccurrenceArgs> spdxFile;
+        private @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage;
+        private @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship;
+        private @Nullable Output<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability;
 
         public Builder() {
     	      // Empty
@@ -303,163 +303,163 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder attestation(@Nullable Input<DetailsArgs> attestation) {
+        public Builder attestation(@Nullable Output<DetailsArgs> attestation) {
             this.attestation = attestation;
             return this;
         }
 
         public Builder attestation(@Nullable DetailsArgs attestation) {
-            this.attestation = Input.ofNullable(attestation);
+            this.attestation = Output.ofNullable(attestation);
             return this;
         }
 
-        public Builder build(@Nullable Input<GrafeasV1beta1BuildDetailsArgs> build) {
+        public Builder build(@Nullable Output<GrafeasV1beta1BuildDetailsArgs> build) {
             this.build = build;
             return this;
         }
 
         public Builder build(@Nullable GrafeasV1beta1BuildDetailsArgs build) {
-            this.build = Input.ofNullable(build);
+            this.build = Output.ofNullable(build);
             return this;
         }
 
-        public Builder deployment(@Nullable Input<GrafeasV1beta1DeploymentDetailsArgs> deployment) {
+        public Builder deployment(@Nullable Output<GrafeasV1beta1DeploymentDetailsArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
 
         public Builder deployment(@Nullable GrafeasV1beta1DeploymentDetailsArgs deployment) {
-            this.deployment = Input.ofNullable(deployment);
+            this.deployment = Output.ofNullable(deployment);
             return this;
         }
 
-        public Builder derivedImage(@Nullable Input<GrafeasV1beta1ImageDetailsArgs> derivedImage) {
+        public Builder derivedImage(@Nullable Output<GrafeasV1beta1ImageDetailsArgs> derivedImage) {
             this.derivedImage = derivedImage;
             return this;
         }
 
         public Builder derivedImage(@Nullable GrafeasV1beta1ImageDetailsArgs derivedImage) {
-            this.derivedImage = Input.ofNullable(derivedImage);
+            this.derivedImage = Output.ofNullable(derivedImage);
             return this;
         }
 
-        public Builder discovered(@Nullable Input<GrafeasV1beta1DiscoveryDetailsArgs> discovered) {
+        public Builder discovered(@Nullable Output<GrafeasV1beta1DiscoveryDetailsArgs> discovered) {
             this.discovered = discovered;
             return this;
         }
 
         public Builder discovered(@Nullable GrafeasV1beta1DiscoveryDetailsArgs discovered) {
-            this.discovered = Input.ofNullable(discovered);
+            this.discovered = Output.ofNullable(discovered);
             return this;
         }
 
-        public Builder installation(@Nullable Input<GrafeasV1beta1PackageDetailsArgs> installation) {
+        public Builder installation(@Nullable Output<GrafeasV1beta1PackageDetailsArgs> installation) {
             this.installation = installation;
             return this;
         }
 
         public Builder installation(@Nullable GrafeasV1beta1PackageDetailsArgs installation) {
-            this.installation = Input.ofNullable(installation);
+            this.installation = Output.ofNullable(installation);
             return this;
         }
 
-        public Builder intoto(@Nullable Input<GrafeasV1beta1IntotoDetailsArgs> intoto) {
+        public Builder intoto(@Nullable Output<GrafeasV1beta1IntotoDetailsArgs> intoto) {
             this.intoto = intoto;
             return this;
         }
 
         public Builder intoto(@Nullable GrafeasV1beta1IntotoDetailsArgs intoto) {
-            this.intoto = Input.ofNullable(intoto);
+            this.intoto = Output.ofNullable(intoto);
             return this;
         }
 
-        public Builder noteName(Input<String> noteName) {
+        public Builder noteName(Output<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
 
         public Builder noteName(String noteName) {
-            this.noteName = Input.of(Objects.requireNonNull(noteName));
+            this.noteName = Output.of(Objects.requireNonNull(noteName));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder remediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Input.ofNullable(remediation);
+            this.remediation = Output.ofNullable(remediation);
             return this;
         }
 
-        public Builder resource(Input<ResourceArgs> resource) {
+        public Builder resource(Output<ResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(ResourceArgs resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder sbom(@Nullable Input<DocumentOccurrenceArgs> sbom) {
+        public Builder sbom(@Nullable Output<DocumentOccurrenceArgs> sbom) {
             this.sbom = sbom;
             return this;
         }
 
         public Builder sbom(@Nullable DocumentOccurrenceArgs sbom) {
-            this.sbom = Input.ofNullable(sbom);
+            this.sbom = Output.ofNullable(sbom);
             return this;
         }
 
-        public Builder spdxFile(@Nullable Input<FileOccurrenceArgs> spdxFile) {
+        public Builder spdxFile(@Nullable Output<FileOccurrenceArgs> spdxFile) {
             this.spdxFile = spdxFile;
             return this;
         }
 
         public Builder spdxFile(@Nullable FileOccurrenceArgs spdxFile) {
-            this.spdxFile = Input.ofNullable(spdxFile);
+            this.spdxFile = Output.ofNullable(spdxFile);
             return this;
         }
 
-        public Builder spdxPackage(@Nullable Input<PackageInfoOccurrenceArgs> spdxPackage) {
+        public Builder spdxPackage(@Nullable Output<PackageInfoOccurrenceArgs> spdxPackage) {
             this.spdxPackage = spdxPackage;
             return this;
         }
 
         public Builder spdxPackage(@Nullable PackageInfoOccurrenceArgs spdxPackage) {
-            this.spdxPackage = Input.ofNullable(spdxPackage);
+            this.spdxPackage = Output.ofNullable(spdxPackage);
             return this;
         }
 
-        public Builder spdxRelationship(@Nullable Input<RelationshipOccurrenceArgs> spdxRelationship) {
+        public Builder spdxRelationship(@Nullable Output<RelationshipOccurrenceArgs> spdxRelationship) {
             this.spdxRelationship = spdxRelationship;
             return this;
         }
 
         public Builder spdxRelationship(@Nullable RelationshipOccurrenceArgs spdxRelationship) {
-            this.spdxRelationship = Input.ofNullable(spdxRelationship);
+            this.spdxRelationship = Output.ofNullable(spdxRelationship);
             return this;
         }
 
-        public Builder vulnerability(@Nullable Input<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability) {
+        public Builder vulnerability(@Nullable Output<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
 
         public Builder vulnerability(@Nullable GrafeasV1beta1VulnerabilityDetailsArgs vulnerability) {
-            this.vulnerability = Input.ofNullable(vulnerability);
+            this.vulnerability = Output.ofNullable(vulnerability);
             return this;
         }
         public OccurrenceArgs build() {

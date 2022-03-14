@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datalakestore.inputs.CreateTrustedIdProviderWithAcc
 import io.pulumi.azurenative.datalakestore.inputs.CreateVirtualNetworkRuleWithAccountParametersArgs;
 import io.pulumi.azurenative.datalakestore.inputs.EncryptionConfigArgs;
 import io.pulumi.azurenative.datalakestore.inputs.EncryptionIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -31,10 +31,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultGroup")
-      private final @Nullable Input<String> defaultGroup;
+      private final @Nullable Output<String> defaultGroup;
 
-    public Input<String> getDefaultGroup() {
-        return this.defaultGroup == null ? Input.empty() : this.defaultGroup;
+    public Output<String> getDefaultGroup() {
+        return this.defaultGroup == null ? Output.empty() : this.defaultGroup;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Input<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionState")
-      private final @Nullable Input<EncryptionState> encryptionState;
+      private final @Nullable Output<EncryptionState> encryptionState;
 
-    public Input<EncryptionState> getEncryptionState() {
-        return this.encryptionState == null ? Input.empty() : this.encryptionState;
+    public Output<EncryptionState> getEncryptionState() {
+        return this.encryptionState == null ? Output.empty() : this.encryptionState;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallAllowAzureIps")
-      private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
+      private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
-    public Input<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
-        return this.firewallAllowAzureIps == null ? Input.empty() : this.firewallAllowAzureIps;
+    public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
+        return this.firewallAllowAzureIps == null ? Output.empty() : this.firewallAllowAzureIps;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallRules")
-      private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
+      private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
-    public Input<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Input.empty() : this.firewallRules;
+    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
+        return this.firewallRules == null ? Output.empty() : this.firewallRules;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallState")
-      private final @Nullable Input<FirewallState> firewallState;
+      private final @Nullable Output<FirewallState> firewallState;
 
-    public Input<FirewallState> getFirewallState() {
-        return this.firewallState == null ? Input.empty() : this.firewallState;
+    public Output<FirewallState> getFirewallState() {
+        return this.firewallState == null ? Output.empty() : this.firewallState;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<EncryptionIdentityArgs> identity;
+      private final @Nullable Output<EncryptionIdentityArgs> identity;
 
-    public Input<EncryptionIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<EncryptionIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="newTier")
-      private final @Nullable Input<TierType> newTier;
+      private final @Nullable Output<TierType> newTier;
 
-    public Input<TierType> getNewTier() {
-        return this.newTier == null ? Input.empty() : this.newTier;
+    public Output<TierType> getNewTier() {
+        return this.newTier == null ? Output.empty() : this.newTier;
     }
 
     /**
@@ -141,9 +141,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -152,10 +152,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedIdProviderState")
-      private final @Nullable Input<TrustedIdProviderState> trustedIdProviderState;
+      private final @Nullable Output<TrustedIdProviderState> trustedIdProviderState;
 
-    public Input<TrustedIdProviderState> getTrustedIdProviderState() {
-        return this.trustedIdProviderState == null ? Input.empty() : this.trustedIdProviderState;
+    public Output<TrustedIdProviderState> getTrustedIdProviderState() {
+        return this.trustedIdProviderState == null ? Output.empty() : this.trustedIdProviderState;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedIdProviders")
-      private final @Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
+      private final @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
 
-    public Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> getTrustedIdProviders() {
-        return this.trustedIdProviders == null ? Input.empty() : this.trustedIdProviders;
+    public Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> getTrustedIdProviders() {
+        return this.trustedIdProviders == null ? Output.empty() : this.trustedIdProviders;
     }
 
     /**
@@ -185,28 +185,28 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkRules")
-      private final @Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
+      private final @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 
-    public Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
+    public Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> getVirtualNetworkRules() {
+        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
     }
 
     public AccountArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<String> defaultGroup,
-        @Nullable Input<EncryptionConfigArgs> encryptionConfig,
-        @Nullable Input<EncryptionState> encryptionState,
-        @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps,
-        @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules,
-        @Nullable Input<FirewallState> firewallState,
-        @Nullable Input<EncryptionIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<TierType> newTier,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<TrustedIdProviderState> trustedIdProviderState,
-        @Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders,
-        @Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<String> defaultGroup,
+        @Nullable Output<EncryptionConfigArgs> encryptionConfig,
+        @Nullable Output<EncryptionState> encryptionState,
+        @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps,
+        @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules,
+        @Nullable Output<FirewallState> firewallState,
+        @Nullable Output<EncryptionIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<TierType> newTier,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<TrustedIdProviderState> trustedIdProviderState,
+        @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders,
+        @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
         this.accountName = accountName;
         this.defaultGroup = defaultGroup;
         this.encryptionConfig = encryptionConfig;
@@ -225,21 +225,21 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountName = Input.empty();
-        this.defaultGroup = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.encryptionState = Input.empty();
-        this.firewallAllowAzureIps = Input.empty();
-        this.firewallRules = Input.empty();
-        this.firewallState = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.newTier = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.trustedIdProviderState = Input.empty();
-        this.trustedIdProviders = Input.empty();
-        this.virtualNetworkRules = Input.empty();
+        this.accountName = Output.empty();
+        this.defaultGroup = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.encryptionState = Output.empty();
+        this.firewallAllowAzureIps = Output.empty();
+        this.firewallRules = Output.empty();
+        this.firewallState = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.newTier = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.trustedIdProviderState = Output.empty();
+        this.trustedIdProviders = Output.empty();
+        this.virtualNetworkRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -251,21 +251,21 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<String> defaultGroup;
-        private @Nullable Input<EncryptionConfigArgs> encryptionConfig;
-        private @Nullable Input<EncryptionState> encryptionState;
-        private @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
-        private @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
-        private @Nullable Input<FirewallState> firewallState;
-        private @Nullable Input<EncryptionIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<TierType> newTier;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<TrustedIdProviderState> trustedIdProviderState;
-        private @Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
-        private @Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<String> defaultGroup;
+        private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
+        private @Nullable Output<EncryptionState> encryptionState;
+        private @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
+        private @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
+        private @Nullable Output<FirewallState> firewallState;
+        private @Nullable Output<EncryptionIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<TierType> newTier;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<TrustedIdProviderState> trustedIdProviderState;
+        private @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
+        private @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 
         public Builder() {
     	      // Empty
@@ -290,153 +290,153 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder defaultGroup(@Nullable Input<String> defaultGroup) {
+        public Builder defaultGroup(@Nullable Output<String> defaultGroup) {
             this.defaultGroup = defaultGroup;
             return this;
         }
 
         public Builder defaultGroup(@Nullable String defaultGroup) {
-            this.defaultGroup = Input.ofNullable(defaultGroup);
+            this.defaultGroup = Output.ofNullable(defaultGroup);
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder encryptionState(@Nullable Input<EncryptionState> encryptionState) {
+        public Builder encryptionState(@Nullable Output<EncryptionState> encryptionState) {
             this.encryptionState = encryptionState;
             return this;
         }
 
         public Builder encryptionState(@Nullable EncryptionState encryptionState) {
-            this.encryptionState = Input.ofNullable(encryptionState);
+            this.encryptionState = Output.ofNullable(encryptionState);
             return this;
         }
 
-        public Builder firewallAllowAzureIps(@Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
+        public Builder firewallAllowAzureIps(@Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
             this.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
 
         public Builder firewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
-            this.firewallAllowAzureIps = Input.ofNullable(firewallAllowAzureIps);
+            this.firewallAllowAzureIps = Output.ofNullable(firewallAllowAzureIps);
             return this;
         }
 
-        public Builder firewallRules(@Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
+        public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
         public Builder firewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
-            this.firewallRules = Input.ofNullable(firewallRules);
+            this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
 
-        public Builder firewallState(@Nullable Input<FirewallState> firewallState) {
+        public Builder firewallState(@Nullable Output<FirewallState> firewallState) {
             this.firewallState = firewallState;
             return this;
         }
 
         public Builder firewallState(@Nullable FirewallState firewallState) {
-            this.firewallState = Input.ofNullable(firewallState);
+            this.firewallState = Output.ofNullable(firewallState);
             return this;
         }
 
-        public Builder identity(@Nullable Input<EncryptionIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<EncryptionIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable EncryptionIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder newTier(@Nullable Input<TierType> newTier) {
+        public Builder newTier(@Nullable Output<TierType> newTier) {
             this.newTier = newTier;
             return this;
         }
 
         public Builder newTier(@Nullable TierType newTier) {
-            this.newTier = Input.ofNullable(newTier);
+            this.newTier = Output.ofNullable(newTier);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder trustedIdProviderState(@Nullable Input<TrustedIdProviderState> trustedIdProviderState) {
+        public Builder trustedIdProviderState(@Nullable Output<TrustedIdProviderState> trustedIdProviderState) {
             this.trustedIdProviderState = trustedIdProviderState;
             return this;
         }
 
         public Builder trustedIdProviderState(@Nullable TrustedIdProviderState trustedIdProviderState) {
-            this.trustedIdProviderState = Input.ofNullable(trustedIdProviderState);
+            this.trustedIdProviderState = Output.ofNullable(trustedIdProviderState);
             return this;
         }
 
-        public Builder trustedIdProviders(@Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders) {
+        public Builder trustedIdProviders(@Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders) {
             this.trustedIdProviders = trustedIdProviders;
             return this;
         }
 
         public Builder trustedIdProviders(@Nullable List<CreateTrustedIdProviderWithAccountParametersArgs> trustedIdProviders) {
-            this.trustedIdProviders = Input.ofNullable(trustedIdProviders);
+            this.trustedIdProviders = Output.ofNullable(trustedIdProviders);
             return this;
         }
 
-        public Builder virtualNetworkRules(@Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
         public Builder virtualNetworkRules(@Nullable List<CreateVirtualNetworkRuleWithAccountParametersArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
         public AccountArgs build() {

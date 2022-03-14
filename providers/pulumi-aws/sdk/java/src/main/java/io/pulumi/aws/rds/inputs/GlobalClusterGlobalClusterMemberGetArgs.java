@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="dbClusterArn")
-      private final @Nullable Input<String> dbClusterArn;
+      private final @Nullable Output<String> dbClusterArn;
 
-    public Input<String> getDbClusterArn() {
-        return this.dbClusterArn == null ? Input.empty() : this.dbClusterArn;
+    public Output<String> getDbClusterArn() {
+        return this.dbClusterArn == null ? Output.empty() : this.dbClusterArn;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="isWriter")
-      private final @Nullable Input<Boolean> isWriter;
+      private final @Nullable Output<Boolean> isWriter;
 
-    public Input<Boolean> getIsWriter() {
-        return this.isWriter == null ? Input.empty() : this.isWriter;
+    public Output<Boolean> getIsWriter() {
+        return this.isWriter == null ? Output.empty() : this.isWriter;
     }
 
     public GlobalClusterGlobalClusterMemberGetArgs(
-        @Nullable Input<String> dbClusterArn,
-        @Nullable Input<Boolean> isWriter) {
+        @Nullable Output<String> dbClusterArn,
+        @Nullable Output<Boolean> isWriter) {
         this.dbClusterArn = dbClusterArn;
         this.isWriter = isWriter;
     }
 
     private GlobalClusterGlobalClusterMemberGetArgs() {
-        this.dbClusterArn = Input.empty();
-        this.isWriter = Input.empty();
+        this.dbClusterArn = Output.empty();
+        this.isWriter = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dbClusterArn;
-        private @Nullable Input<Boolean> isWriter;
+        private @Nullable Output<String> dbClusterArn;
+        private @Nullable Output<Boolean> isWriter;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
     	      this.isWriter = defaults.isWriter;
         }
 
-        public Builder dbClusterArn(@Nullable Input<String> dbClusterArn) {
+        public Builder dbClusterArn(@Nullable Output<String> dbClusterArn) {
             this.dbClusterArn = dbClusterArn;
             return this;
         }
 
         public Builder dbClusterArn(@Nullable String dbClusterArn) {
-            this.dbClusterArn = Input.ofNullable(dbClusterArn);
+            this.dbClusterArn = Output.ofNullable(dbClusterArn);
             return this;
         }
 
-        public Builder isWriter(@Nullable Input<Boolean> isWriter) {
+        public Builder isWriter(@Nullable Output<Boolean> isWriter) {
             this.isWriter = isWriter;
             return this;
         }
 
         public Builder isWriter(@Nullable Boolean isWriter) {
-            this.isWriter = Input.ofNullable(isWriter);
+            this.isWriter = Output.ofNullable(isWriter);
             return this;
         }
         public GlobalClusterGlobalClusterMemberGetArgs build() {

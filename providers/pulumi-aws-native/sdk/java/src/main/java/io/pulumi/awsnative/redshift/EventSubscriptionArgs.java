@@ -7,7 +7,7 @@ import io.pulumi.awsnative.redshift.enums.EventSubscriptionEventCategoriesItem;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionSeverity;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import io.pulumi.awsnative.redshift.inputs.EventSubscriptionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventCategories")
-      private final @Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories;
+      private final @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
-    public Input<List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
-        return this.eventCategories == null ? Input.empty() : this.eventCategories;
+    public Output<List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
+        return this.eventCategories == null ? Output.empty() : this.eventCategories;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="severity")
-      private final @Nullable Input<EventSubscriptionSeverity> severity;
+      private final @Nullable Output<EventSubscriptionSeverity> severity;
 
-    public Input<EventSubscriptionSeverity> getSeverity() {
-        return this.severity == null ? Input.empty() : this.severity;
+    public Output<EventSubscriptionSeverity> getSeverity() {
+        return this.severity == null ? Output.empty() : this.severity;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snsTopicArn")
-      private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
+    public Output<String> getSnsTopicArn() {
+        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceIds")
-      private final @Nullable Input<List<String>> sourceIds;
+      private final @Nullable Output<List<String>> sourceIds;
 
-    public Input<List<String>> getSourceIds() {
-        return this.sourceIds == null ? Input.empty() : this.sourceIds;
+    public Output<List<String>> getSourceIds() {
+        return this.sourceIds == null ? Output.empty() : this.sourceIds;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceType")
-      private final @Nullable Input<EventSubscriptionSourceType> sourceType;
+      private final @Nullable Output<EventSubscriptionSourceType> sourceType;
 
-    public Input<EventSubscriptionSourceType> getSourceType() {
-        return this.sourceType == null ? Input.empty() : this.sourceType;
+    public Output<EventSubscriptionSourceType> getSourceType() {
+        return this.sourceType == null ? Output.empty() : this.sourceType;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-      private final Input<String> subscriptionName;
+      private final Output<String> subscriptionName;
 
-    public Input<String> getSubscriptionName() {
+    public Output<String> getSubscriptionName() {
         return this.subscriptionName;
     }
 
@@ -102,21 +102,21 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<EventSubscriptionTagArgs>> tags;
+      private final @Nullable Output<List<EventSubscriptionTagArgs>> tags;
 
-    public Input<List<EventSubscriptionTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<EventSubscriptionTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EventSubscriptionArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories,
-        @Nullable Input<EventSubscriptionSeverity> severity,
-        @Nullable Input<String> snsTopicArn,
-        @Nullable Input<List<String>> sourceIds,
-        @Nullable Input<EventSubscriptionSourceType> sourceType,
-        Input<String> subscriptionName,
-        @Nullable Input<List<EventSubscriptionTagArgs>> tags) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories,
+        @Nullable Output<EventSubscriptionSeverity> severity,
+        @Nullable Output<String> snsTopicArn,
+        @Nullable Output<List<String>> sourceIds,
+        @Nullable Output<EventSubscriptionSourceType> sourceType,
+        Output<String> subscriptionName,
+        @Nullable Output<List<EventSubscriptionTagArgs>> tags) {
         this.enabled = enabled;
         this.eventCategories = eventCategories;
         this.severity = severity;
@@ -128,14 +128,14 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EventSubscriptionArgs() {
-        this.enabled = Input.empty();
-        this.eventCategories = Input.empty();
-        this.severity = Input.empty();
-        this.snsTopicArn = Input.empty();
-        this.sourceIds = Input.empty();
-        this.sourceType = Input.empty();
-        this.subscriptionName = Input.empty();
-        this.tags = Input.empty();
+        this.enabled = Output.empty();
+        this.eventCategories = Output.empty();
+        this.severity = Output.empty();
+        this.snsTopicArn = Output.empty();
+        this.sourceIds = Output.empty();
+        this.sourceType = Output.empty();
+        this.subscriptionName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories;
-        private @Nullable Input<EventSubscriptionSeverity> severity;
-        private @Nullable Input<String> snsTopicArn;
-        private @Nullable Input<List<String>> sourceIds;
-        private @Nullable Input<EventSubscriptionSourceType> sourceType;
-        private Input<String> subscriptionName;
-        private @Nullable Input<List<EventSubscriptionTagArgs>> tags;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
+        private @Nullable Output<EventSubscriptionSeverity> severity;
+        private @Nullable Output<String> snsTopicArn;
+        private @Nullable Output<List<String>> sourceIds;
+        private @Nullable Output<EventSubscriptionSourceType> sourceType;
+        private Output<String> subscriptionName;
+        private @Nullable Output<List<EventSubscriptionTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder eventCategories(@Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories) {
+        public Builder eventCategories(@Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
 
         public Builder eventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
-            this.eventCategories = Input.ofNullable(eventCategories);
+            this.eventCategories = Output.ofNullable(eventCategories);
             return this;
         }
 
-        public Builder severity(@Nullable Input<EventSubscriptionSeverity> severity) {
+        public Builder severity(@Nullable Output<EventSubscriptionSeverity> severity) {
             this.severity = severity;
             return this;
         }
 
         public Builder severity(@Nullable EventSubscriptionSeverity severity) {
-            this.severity = Input.ofNullable(severity);
+            this.severity = Output.ofNullable(severity);
             return this;
         }
 
-        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Input.ofNullable(snsTopicArn);
+            this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
 
-        public Builder sourceIds(@Nullable Input<List<String>> sourceIds) {
+        public Builder sourceIds(@Nullable Output<List<String>> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
 
         public Builder sourceIds(@Nullable List<String> sourceIds) {
-            this.sourceIds = Input.ofNullable(sourceIds);
+            this.sourceIds = Output.ofNullable(sourceIds);
             return this;
         }
 
-        public Builder sourceType(@Nullable Input<EventSubscriptionSourceType> sourceType) {
+        public Builder sourceType(@Nullable Output<EventSubscriptionSourceType> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
         public Builder sourceType(@Nullable EventSubscriptionSourceType sourceType) {
-            this.sourceType = Input.ofNullable(sourceType);
+            this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
 
-        public Builder subscriptionName(Input<String> subscriptionName) {
+        public Builder subscriptionName(Output<String> subscriptionName) {
             this.subscriptionName = Objects.requireNonNull(subscriptionName);
             return this;
         }
 
         public Builder subscriptionName(String subscriptionName) {
-            this.subscriptionName = Input.of(Objects.requireNonNull(subscriptionName));
+            this.subscriptionName = Output.of(Objects.requireNonNull(subscriptionName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<EventSubscriptionTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<EventSubscriptionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<EventSubscriptionTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EventSubscriptionArgs build() {

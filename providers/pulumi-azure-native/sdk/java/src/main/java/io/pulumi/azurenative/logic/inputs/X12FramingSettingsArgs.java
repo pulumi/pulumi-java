@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import io.pulumi.azurenative.logic.enums.X12CharacterSet;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,9 +27,9 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="characterSet", required=true)
-      private final Input<Either<String,X12CharacterSet>> characterSet;
+      private final Output<Either<String,X12CharacterSet>> characterSet;
 
-    public Input<Either<String,X12CharacterSet>> getCharacterSet() {
+    public Output<Either<String,X12CharacterSet>> getCharacterSet() {
         return this.characterSet;
     }
 
@@ -38,9 +38,9 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-      private final Input<Integer> componentSeparator;
+      private final Output<Integer> componentSeparator;
 
-    public Input<Integer> getComponentSeparator() {
+    public Output<Integer> getComponentSeparator() {
         return this.componentSeparator;
     }
 
@@ -49,9 +49,9 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-      private final Input<Integer> dataElementSeparator;
+      private final Output<Integer> dataElementSeparator;
 
-    public Input<Integer> getDataElementSeparator() {
+    public Output<Integer> getDataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -60,9 +60,9 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replaceCharacter", required=true)
-      private final Input<Integer> replaceCharacter;
+      private final Output<Integer> replaceCharacter;
 
-    public Input<Integer> getReplaceCharacter() {
+    public Output<Integer> getReplaceCharacter() {
         return this.replaceCharacter;
     }
 
@@ -71,9 +71,9 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replaceSeparatorsInPayload", required=true)
-      private final Input<Boolean> replaceSeparatorsInPayload;
+      private final Output<Boolean> replaceSeparatorsInPayload;
 
-    public Input<Boolean> getReplaceSeparatorsInPayload() {
+    public Output<Boolean> getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
 
@@ -82,9 +82,9 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-      private final Input<Integer> segmentTerminator;
+      private final Output<Integer> segmentTerminator;
 
-    public Input<Integer> getSegmentTerminator() {
+    public Output<Integer> getSegmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -93,20 +93,20 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-      private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+      private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Input<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
     public X12FramingSettingsArgs(
-        Input<Either<String,X12CharacterSet>> characterSet,
-        Input<Integer> componentSeparator,
-        Input<Integer> dataElementSeparator,
-        Input<Integer> replaceCharacter,
-        Input<Boolean> replaceSeparatorsInPayload,
-        Input<Integer> segmentTerminator,
-        Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        Output<Either<String,X12CharacterSet>> characterSet,
+        Output<Integer> componentSeparator,
+        Output<Integer> dataElementSeparator,
+        Output<Integer> replaceCharacter,
+        Output<Boolean> replaceSeparatorsInPayload,
+        Output<Integer> segmentTerminator,
+        Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
         this.characterSet = Objects.requireNonNull(characterSet, "expected parameter 'characterSet' to be non-null");
         this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
         this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
@@ -117,13 +117,13 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private X12FramingSettingsArgs() {
-        this.characterSet = Input.empty();
-        this.componentSeparator = Input.empty();
-        this.dataElementSeparator = Input.empty();
-        this.replaceCharacter = Input.empty();
-        this.replaceSeparatorsInPayload = Input.empty();
-        this.segmentTerminator = Input.empty();
-        this.segmentTerminatorSuffix = Input.empty();
+        this.characterSet = Output.empty();
+        this.componentSeparator = Output.empty();
+        this.dataElementSeparator = Output.empty();
+        this.replaceCharacter = Output.empty();
+        this.replaceSeparatorsInPayload = Output.empty();
+        this.segmentTerminator = Output.empty();
+        this.segmentTerminatorSuffix = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<Either<String,X12CharacterSet>> characterSet;
-        private Input<Integer> componentSeparator;
-        private Input<Integer> dataElementSeparator;
-        private Input<Integer> replaceCharacter;
-        private Input<Boolean> replaceSeparatorsInPayload;
-        private Input<Integer> segmentTerminator;
-        private Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+        private Output<Either<String,X12CharacterSet>> characterSet;
+        private Output<Integer> componentSeparator;
+        private Output<Integer> dataElementSeparator;
+        private Output<Integer> replaceCharacter;
+        private Output<Boolean> replaceSeparatorsInPayload;
+        private Output<Integer> segmentTerminator;
+        private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
         }
 
-        public Builder characterSet(Input<Either<String,X12CharacterSet>> characterSet) {
+        public Builder characterSet(Output<Either<String,X12CharacterSet>> characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
 
         public Builder characterSet(Either<String,X12CharacterSet> characterSet) {
-            this.characterSet = Input.of(Objects.requireNonNull(characterSet));
+            this.characterSet = Output.of(Objects.requireNonNull(characterSet));
             return this;
         }
 
-        public Builder componentSeparator(Input<Integer> componentSeparator) {
+        public Builder componentSeparator(Output<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Input.of(Objects.requireNonNull(componentSeparator));
+            this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
 
-        public Builder dataElementSeparator(Input<Integer> dataElementSeparator) {
+        public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Input.of(Objects.requireNonNull(dataElementSeparator));
+            this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
 
-        public Builder replaceCharacter(Input<Integer> replaceCharacter) {
+        public Builder replaceCharacter(Output<Integer> replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
 
         public Builder replaceCharacter(Integer replaceCharacter) {
-            this.replaceCharacter = Input.of(Objects.requireNonNull(replaceCharacter));
+            this.replaceCharacter = Output.of(Objects.requireNonNull(replaceCharacter));
             return this;
         }
 
-        public Builder replaceSeparatorsInPayload(Input<Boolean> replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Output<Boolean> replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
 
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
-            this.replaceSeparatorsInPayload = Input.of(Objects.requireNonNull(replaceSeparatorsInPayload));
+            this.replaceSeparatorsInPayload = Output.of(Objects.requireNonNull(replaceSeparatorsInPayload));
             return this;
         }
 
-        public Builder segmentTerminator(Input<Integer> segmentTerminator) {
+        public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Input.of(Objects.requireNonNull(segmentTerminator));
+            this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
 
-        public Builder segmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
+            this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
         public X12FramingSettingsArgs build() {

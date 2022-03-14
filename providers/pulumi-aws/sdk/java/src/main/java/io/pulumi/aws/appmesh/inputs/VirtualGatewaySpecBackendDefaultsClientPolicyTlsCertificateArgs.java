@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateAr
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateAr
      * 
      */
     @InputImport(name="sds")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> getSds() {
-        return this.sds == null ? Input.empty() : this.sds;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> getSds() {
+        return this.sds == null ? Output.empty() : this.sds;
     }
 
     public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs(
-        @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file,
-        @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds) {
+        @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file,
+        @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds) {
         this.file = file;
         this.sds = sds;
     }
 
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs() {
-        this.file = Input.empty();
-        this.sds = Input.empty();
+        this.file = Output.empty();
+        this.sds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateAr
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file;
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateAr
     	      this.sds = defaults.sds;
         }
 
-        public Builder file(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file) {
+        public Builder file(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder sds(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds) {
+        public Builder sds(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
 
         public Builder sds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs sds) {
-            this.sds = Input.ofNullable(sds);
+            this.sds = Output.ofNullable(sds);
             return this;
         }
         public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs build() {

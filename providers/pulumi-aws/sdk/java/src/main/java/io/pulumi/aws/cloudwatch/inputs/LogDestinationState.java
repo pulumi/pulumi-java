@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetArn")
-      private final @Nullable Input<String> targetArn;
+      private final @Nullable Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
-        return this.targetArn == null ? Input.empty() : this.targetArn;
+    public Output<String> getTargetArn() {
+        return this.targetArn == null ? Output.empty() : this.targetArn;
     }
 
     public LogDestinationState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> targetArn) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> targetArn) {
         this.arn = arn;
         this.name = name;
         this.roleArn = roleArn;
@@ -70,10 +70,10 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     }
 
     private LogDestinationState() {
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.targetArn = Input.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> targetArn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder targetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Input.ofNullable(targetArn);
+            this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
         public LogDestinationState build() {

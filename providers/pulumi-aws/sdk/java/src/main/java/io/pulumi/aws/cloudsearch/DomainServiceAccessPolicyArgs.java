@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudsearch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessPolicy", required=true)
-      private final Input<String> accessPolicy;
+      private final Output<String> accessPolicy;
 
-    public Input<String> getAccessPolicy() {
+    public Output<String> getAccessPolicy() {
         return this.accessPolicy;
     }
 
@@ -29,22 +29,22 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
     public DomainServiceAccessPolicyArgs(
-        Input<String> accessPolicy,
-        Input<String> domainName) {
+        Output<String> accessPolicy,
+        Output<String> domainName) {
         this.accessPolicy = Objects.requireNonNull(accessPolicy, "expected parameter 'accessPolicy' to be non-null");
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
     }
 
     private DomainServiceAccessPolicyArgs() {
-        this.accessPolicy = Input.empty();
-        this.domainName = Input.empty();
+        this.accessPolicy = Output.empty();
+        this.domainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> accessPolicy;
-        private Input<String> domainName;
+        private Output<String> accessPolicy;
+        private Output<String> domainName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder accessPolicy(Input<String> accessPolicy) {
+        public Builder accessPolicy(Output<String> accessPolicy) {
             this.accessPolicy = Objects.requireNonNull(accessPolicy);
             return this;
         }
 
         public Builder accessPolicy(String accessPolicy) {
-            this.accessPolicy = Input.of(Objects.requireNonNull(accessPolicy));
+            this.accessPolicy = Output.of(Objects.requireNonNull(accessPolicy));
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
         public DomainServiceAccessPolicyArgs build() {

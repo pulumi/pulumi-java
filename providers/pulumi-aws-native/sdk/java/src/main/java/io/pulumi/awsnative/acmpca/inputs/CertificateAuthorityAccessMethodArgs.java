@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
     public static final CertificateAuthorityAccessMethodArgs Empty = new CertificateAuthorityAccessMethodArgs();
 
     @InputImport(name="accessMethodType")
-      private final @Nullable Input<String> accessMethodType;
+      private final @Nullable Output<String> accessMethodType;
 
-    public Input<String> getAccessMethodType() {
-        return this.accessMethodType == null ? Input.empty() : this.accessMethodType;
+    public Output<String> getAccessMethodType() {
+        return this.accessMethodType == null ? Output.empty() : this.accessMethodType;
     }
 
     @InputImport(name="customObjectIdentifier")
-      private final @Nullable Input<String> customObjectIdentifier;
+      private final @Nullable Output<String> customObjectIdentifier;
 
-    public Input<String> getCustomObjectIdentifier() {
-        return this.customObjectIdentifier == null ? Input.empty() : this.customObjectIdentifier;
+    public Output<String> getCustomObjectIdentifier() {
+        return this.customObjectIdentifier == null ? Output.empty() : this.customObjectIdentifier;
     }
 
     public CertificateAuthorityAccessMethodArgs(
-        @Nullable Input<String> accessMethodType,
-        @Nullable Input<String> customObjectIdentifier) {
+        @Nullable Output<String> accessMethodType,
+        @Nullable Output<String> customObjectIdentifier) {
         this.accessMethodType = accessMethodType;
         this.customObjectIdentifier = customObjectIdentifier;
     }
 
     private CertificateAuthorityAccessMethodArgs() {
-        this.accessMethodType = Input.empty();
-        this.customObjectIdentifier = Input.empty();
+        this.accessMethodType = Output.empty();
+        this.customObjectIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessMethodType;
-        private @Nullable Input<String> customObjectIdentifier;
+        private @Nullable Output<String> accessMethodType;
+        private @Nullable Output<String> customObjectIdentifier;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
     	      this.customObjectIdentifier = defaults.customObjectIdentifier;
         }
 
-        public Builder accessMethodType(@Nullable Input<String> accessMethodType) {
+        public Builder accessMethodType(@Nullable Output<String> accessMethodType) {
             this.accessMethodType = accessMethodType;
             return this;
         }
 
         public Builder accessMethodType(@Nullable String accessMethodType) {
-            this.accessMethodType = Input.ofNullable(accessMethodType);
+            this.accessMethodType = Output.ofNullable(accessMethodType);
             return this;
         }
 
-        public Builder customObjectIdentifier(@Nullable Input<String> customObjectIdentifier) {
+        public Builder customObjectIdentifier(@Nullable Output<String> customObjectIdentifier) {
             this.customObjectIdentifier = customObjectIdentifier;
             return this;
         }
 
         public Builder customObjectIdentifier(@Nullable String customObjectIdentifier) {
-            this.customObjectIdentifier = Input.ofNullable(customObjectIdentifier);
+            this.customObjectIdentifier = Output.ofNullable(customObjectIdentifier);
             return this;
         }
         public CertificateAuthorityAccessMethodArgs build() {

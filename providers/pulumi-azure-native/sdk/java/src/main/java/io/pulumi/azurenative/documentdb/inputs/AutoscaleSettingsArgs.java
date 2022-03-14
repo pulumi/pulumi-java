@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxThroughput")
-      private final @Nullable Input<Integer> maxThroughput;
+      private final @Nullable Output<Integer> maxThroughput;
 
-    public Input<Integer> getMaxThroughput() {
-        return this.maxThroughput == null ? Input.empty() : this.maxThroughput;
+    public Output<Integer> getMaxThroughput() {
+        return this.maxThroughput == null ? Output.empty() : this.maxThroughput;
     }
 
-    public AutoscaleSettingsArgs(@Nullable Input<Integer> maxThroughput) {
+    public AutoscaleSettingsArgs(@Nullable Output<Integer> maxThroughput) {
         this.maxThroughput = maxThroughput;
     }
 
     private AutoscaleSettingsArgs() {
-        this.maxThroughput = Input.empty();
+        this.maxThroughput = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxThroughput;
+        private @Nullable Output<Integer> maxThroughput;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.maxThroughput = defaults.maxThroughput;
         }
 
-        public Builder maxThroughput(@Nullable Input<Integer> maxThroughput) {
+        public Builder maxThroughput(@Nullable Output<Integer> maxThroughput) {
             this.maxThroughput = maxThroughput;
             return this;
         }
 
         public Builder maxThroughput(@Nullable Integer maxThroughput) {
-            this.maxThroughput = Input.ofNullable(maxThroughput);
+            this.maxThroughput = Output.ofNullable(maxThroughput);
             return this;
         }
         public AutoscaleSettingsArgs build() {

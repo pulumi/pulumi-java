@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventPermissionConditionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<EventPermissionConditionGetArgs> condition;
+      private final @Nullable Output<EventPermissionConditionGetArgs> condition;
 
-    public Input<EventPermissionConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<EventPermissionConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventBusName")
-      private final @Nullable Input<String> eventBusName;
+      private final @Nullable Output<String> eventBusName;
 
-    public Input<String> getEventBusName() {
-        return this.eventBusName == null ? Input.empty() : this.eventBusName;
+    public Output<String> getEventBusName() {
+        return this.eventBusName == null ? Output.empty() : this.eventBusName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statementId")
-      private final @Nullable Input<String> statementId;
+      private final @Nullable Output<String> statementId;
 
-    public Input<String> getStatementId() {
-        return this.statementId == null ? Input.empty() : this.statementId;
+    public Output<String> getStatementId() {
+        return this.statementId == null ? Output.empty() : this.statementId;
     }
 
     public EventPermissionState(
-        @Nullable Input<String> action,
-        @Nullable Input<EventPermissionConditionGetArgs> condition,
-        @Nullable Input<String> eventBusName,
-        @Nullable Input<String> principal,
-        @Nullable Input<String> statementId) {
+        @Nullable Output<String> action,
+        @Nullable Output<EventPermissionConditionGetArgs> condition,
+        @Nullable Output<String> eventBusName,
+        @Nullable Output<String> principal,
+        @Nullable Output<String> statementId) {
         this.action = action;
         this.condition = condition;
         this.eventBusName = eventBusName;
@@ -84,11 +84,11 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     }
 
     private EventPermissionState() {
-        this.action = Input.empty();
-        this.condition = Input.empty();
-        this.eventBusName = Input.empty();
-        this.principal = Input.empty();
-        this.statementId = Input.empty();
+        this.action = Output.empty();
+        this.condition = Output.empty();
+        this.eventBusName = Output.empty();
+        this.principal = Output.empty();
+        this.statementId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<EventPermissionConditionGetArgs> condition;
-        private @Nullable Input<String> eventBusName;
-        private @Nullable Input<String> principal;
-        private @Nullable Input<String> statementId;
+        private @Nullable Output<String> action;
+        private @Nullable Output<EventPermissionConditionGetArgs> condition;
+        private @Nullable Output<String> eventBusName;
+        private @Nullable Output<String> principal;
+        private @Nullable Output<String> statementId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     	      this.statementId = defaults.statementId;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder condition(@Nullable Input<EventPermissionConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<EventPermissionConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable EventPermissionConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder eventBusName(@Nullable Input<String> eventBusName) {
+        public Builder eventBusName(@Nullable Output<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
 
         public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Input.ofNullable(eventBusName);
+            this.eventBusName = Output.ofNullable(eventBusName);
             return this;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
 
-        public Builder statementId(@Nullable Input<String> statementId) {
+        public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
 
         public Builder statementId(@Nullable String statementId) {
-            this.statementId = Input.ofNullable(statementId);
+            this.statementId = Output.ofNullable(statementId);
             return this;
         }
         public EventPermissionState build() {

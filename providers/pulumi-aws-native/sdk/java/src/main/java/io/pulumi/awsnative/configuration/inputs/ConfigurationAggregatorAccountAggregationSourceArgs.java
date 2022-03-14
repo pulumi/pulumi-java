@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,39 +17,39 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     public static final ConfigurationAggregatorAccountAggregationSourceArgs Empty = new ConfigurationAggregatorAccountAggregationSourceArgs();
 
     @InputImport(name="accountIds", required=true)
-      private final Input<List<String>> accountIds;
+      private final Output<List<String>> accountIds;
 
-    public Input<List<String>> getAccountIds() {
+    public Output<List<String>> getAccountIds() {
         return this.accountIds;
     }
 
     @InputImport(name="allAwsRegions")
-      private final @Nullable Input<Boolean> allAwsRegions;
+      private final @Nullable Output<Boolean> allAwsRegions;
 
-    public Input<Boolean> getAllAwsRegions() {
-        return this.allAwsRegions == null ? Input.empty() : this.allAwsRegions;
+    public Output<Boolean> getAllAwsRegions() {
+        return this.allAwsRegions == null ? Output.empty() : this.allAwsRegions;
     }
 
     @InputImport(name="awsRegions")
-      private final @Nullable Input<List<String>> awsRegions;
+      private final @Nullable Output<List<String>> awsRegions;
 
-    public Input<List<String>> getAwsRegions() {
-        return this.awsRegions == null ? Input.empty() : this.awsRegions;
+    public Output<List<String>> getAwsRegions() {
+        return this.awsRegions == null ? Output.empty() : this.awsRegions;
     }
 
     public ConfigurationAggregatorAccountAggregationSourceArgs(
-        Input<List<String>> accountIds,
-        @Nullable Input<Boolean> allAwsRegions,
-        @Nullable Input<List<String>> awsRegions) {
+        Output<List<String>> accountIds,
+        @Nullable Output<Boolean> allAwsRegions,
+        @Nullable Output<List<String>> awsRegions) {
         this.accountIds = Objects.requireNonNull(accountIds, "expected parameter 'accountIds' to be non-null");
         this.allAwsRegions = allAwsRegions;
         this.awsRegions = awsRegions;
     }
 
     private ConfigurationAggregatorAccountAggregationSourceArgs() {
-        this.accountIds = Input.empty();
-        this.allAwsRegions = Input.empty();
-        this.awsRegions = Input.empty();
+        this.accountIds = Output.empty();
+        this.allAwsRegions = Output.empty();
+        this.awsRegions = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     }
 
     public static final class Builder {
-        private Input<List<String>> accountIds;
-        private @Nullable Input<Boolean> allAwsRegions;
-        private @Nullable Input<List<String>> awsRegions;
+        private Output<List<String>> accountIds;
+        private @Nullable Output<Boolean> allAwsRegions;
+        private @Nullable Output<List<String>> awsRegions;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     	      this.awsRegions = defaults.awsRegions;
         }
 
-        public Builder accountIds(Input<List<String>> accountIds) {
+        public Builder accountIds(Output<List<String>> accountIds) {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
 
         public Builder accountIds(List<String> accountIds) {
-            this.accountIds = Input.of(Objects.requireNonNull(accountIds));
+            this.accountIds = Output.of(Objects.requireNonNull(accountIds));
             return this;
         }
 
-        public Builder allAwsRegions(@Nullable Input<Boolean> allAwsRegions) {
+        public Builder allAwsRegions(@Nullable Output<Boolean> allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
 
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = Input.ofNullable(allAwsRegions);
+            this.allAwsRegions = Output.ofNullable(allAwsRegions);
             return this;
         }
 
-        public Builder awsRegions(@Nullable Input<List<String>> awsRegions) {
+        public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
 
         public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = Input.ofNullable(awsRegions);
+            this.awsRegions = Output.ofNullable(awsRegions);
             return this;
         }
         public ConfigurationAggregatorAccountAggregationSourceArgs build() {

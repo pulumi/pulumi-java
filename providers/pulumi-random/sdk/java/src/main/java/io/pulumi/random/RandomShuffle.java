@@ -3,7 +3,6 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -134,14 +133,14 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomShuffle(String name, RandomShuffleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomShuffle:RandomShuffle", name, args == null ? RandomShuffleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("random:index/randomShuffle:RandomShuffle", name, args == null ? RandomShuffleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RandomShuffle(String name, Input<String> id, @Nullable RandomShuffleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RandomShuffle(String name, Output<String> id, @Nullable RandomShuffleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomShuffle:RandomShuffle", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -157,7 +156,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RandomShuffle get(String name, Input<String> id, @Nullable RandomShuffleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RandomShuffle get(String name, Output<String> id, @Nullable RandomShuffleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomShuffle(name, id, state, options);
     }
 }

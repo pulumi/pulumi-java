@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.ConnectionTypeArgs;
 import io.pulumi.azurenative.automation.outputs.FieldDefinitionResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,20 +170,20 @@ public class ConnectionType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionType(String name, ConnectionTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:ConnectionType", name, args == null ? ConnectionTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:automation:ConnectionType", name, args == null ? ConnectionTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConnectionType(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConnectionType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:ConnectionType", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:automation/v20151031:ConnectionType").build()),
-                Input.of(Alias.builder().setType("azure-native:automation/v20190601:ConnectionType").build()),
-                Input.of(Alias.builder().setType("azure-native:automation/v20200113preview:ConnectionType").build())
+                Output.of(Alias.builder().setType("azure-native:automation/v20151031:ConnectionType").build()),
+                Output.of(Alias.builder().setType("azure-native:automation/v20190601:ConnectionType").build()),
+                Output.of(Alias.builder().setType("azure-native:automation/v20200113preview:ConnectionType").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -198,7 +197,7 @@ public class ConnectionType extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConnectionType get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConnectionType get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectionType(name, id, options);
     }
 }

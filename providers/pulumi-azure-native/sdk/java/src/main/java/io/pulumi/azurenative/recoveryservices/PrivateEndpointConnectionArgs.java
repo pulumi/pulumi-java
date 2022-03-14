@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-      private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Input<String> getPrivateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
+    public Output<String> getPrivateEndpointConnectionName() {
+        return this.privateEndpointConnectionName == null ? Output.empty() : this.privateEndpointConnectionName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties;
+      private final @Nullable Output<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties;
 
-    public Input<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,10 +75,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public PrivateEndpointConnectionArgs(
-        @Nullable Input<String> eTag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> privateEndpointConnectionName,
-        @Nullable Input<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> vaultName) {
+        @Nullable Output<String> eTag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> privateEndpointConnectionName,
+        @Nullable Output<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> vaultName) {
         this.eTag = eTag;
         this.location = location;
         this.privateEndpointConnectionName = privateEndpointConnectionName;
@@ -110,13 +110,13 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.eTag = Input.empty();
-        this.location = Input.empty();
-        this.privateEndpointConnectionName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.vaultName = Input.empty();
+        this.eTag = Output.empty();
+        this.location = Output.empty();
+        this.privateEndpointConnectionName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> privateEndpointConnectionName;
-        private @Nullable Input<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> vaultName;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> privateEndpointConnectionName;
+        private @Nullable Output<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Input.ofNullable(privateEndpointConnectionName);
+            this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties) {
+        public Builder properties(@Nullable Output<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public PrivateEndpointConnectionArgs build() {

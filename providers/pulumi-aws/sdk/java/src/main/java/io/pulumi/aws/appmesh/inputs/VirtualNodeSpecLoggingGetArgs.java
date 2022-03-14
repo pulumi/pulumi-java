@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualNodeSpecLoggingGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessLog")
-      private final @Nullable Input<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog;
+      private final @Nullable Output<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog;
 
-    public Input<VirtualNodeSpecLoggingAccessLogGetArgs> getAccessLog() {
-        return this.accessLog == null ? Input.empty() : this.accessLog;
+    public Output<VirtualNodeSpecLoggingAccessLogGetArgs> getAccessLog() {
+        return this.accessLog == null ? Output.empty() : this.accessLog;
     }
 
-    public VirtualNodeSpecLoggingGetArgs(@Nullable Input<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog) {
+    public VirtualNodeSpecLoggingGetArgs(@Nullable Output<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog) {
         this.accessLog = accessLog;
     }
 
     private VirtualNodeSpecLoggingGetArgs() {
-        this.accessLog = Input.empty();
+        this.accessLog = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecLoggingGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog;
+        private @Nullable Output<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualNodeSpecLoggingGetArgs extends io.pulumi.resources.Res
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder accessLog(@Nullable Input<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog) {
+        public Builder accessLog(@Nullable Output<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog) {
             this.accessLog = accessLog;
             return this;
         }
 
         public Builder accessLog(@Nullable VirtualNodeSpecLoggingAccessLogGetArgs accessLog) {
-            this.accessLog = Input.ofNullable(accessLog);
+            this.accessLog = Output.ofNullable(accessLog);
             return this;
         }
         public VirtualNodeSpecLoggingGetArgs build() {

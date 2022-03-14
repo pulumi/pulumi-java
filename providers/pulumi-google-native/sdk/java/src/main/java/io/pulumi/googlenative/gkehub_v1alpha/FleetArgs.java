@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -30,31 +30,31 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetName")
-      private final @Nullable Input<String> fleetName;
+      private final @Nullable Output<String> fleetName;
 
-    public Input<String> getFleetName() {
-        return this.fleetName == null ? Input.empty() : this.fleetName;
+    public Output<String> getFleetName() {
+        return this.fleetName == null ? Output.empty() : this.fleetName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public FleetArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> fleetName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> fleetName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project) {
         this.displayName = displayName;
         this.fleetName = fleetName;
         this.location = location;
@@ -62,10 +62,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.displayName = Input.empty();
-        this.fleetName = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
+        this.displayName = Output.empty();
+        this.fleetName = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,10 +77,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> fleetName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> fleetName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -94,43 +94,43 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder fleetName(@Nullable Input<String> fleetName) {
+        public Builder fleetName(@Nullable Output<String> fleetName) {
             this.fleetName = fleetName;
             return this;
         }
 
         public Builder fleetName(@Nullable String fleetName) {
-            this.fleetName = Input.ofNullable(fleetName);
+            this.fleetName = Output.ofNullable(fleetName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public FleetArgs build() {

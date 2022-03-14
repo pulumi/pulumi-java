@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BucketArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="buckets")
-      private final @Nullable Input<List<GooglePrivacyDlpV2BucketArgs>> buckets;
+      private final @Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets;
 
-    public Input<List<GooglePrivacyDlpV2BucketArgs>> getBuckets() {
-        return this.buckets == null ? Input.empty() : this.buckets;
+    public Output<List<GooglePrivacyDlpV2BucketArgs>> getBuckets() {
+        return this.buckets == null ? Output.empty() : this.buckets;
     }
 
-    public GooglePrivacyDlpV2BucketingConfigArgs(@Nullable Input<List<GooglePrivacyDlpV2BucketArgs>> buckets) {
+    public GooglePrivacyDlpV2BucketingConfigArgs(@Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets) {
         this.buckets = buckets;
     }
 
     private GooglePrivacyDlpV2BucketingConfigArgs() {
-        this.buckets = Input.empty();
+        this.buckets = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2BucketArgs>> buckets;
+        private @Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
     	      this.buckets = defaults.buckets;
         }
 
-        public Builder buckets(@Nullable Input<List<GooglePrivacyDlpV2BucketArgs>> buckets) {
+        public Builder buckets(@Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets) {
             this.buckets = buckets;
             return this;
         }
 
         public Builder buckets(@Nullable List<GooglePrivacyDlpV2BucketArgs> buckets) {
-            this.buckets = Input.ofNullable(buckets);
+            this.buckets = Output.ofNullable(buckets);
             return this;
         }
         public GooglePrivacyDlpV2BucketingConfigArgs build() {

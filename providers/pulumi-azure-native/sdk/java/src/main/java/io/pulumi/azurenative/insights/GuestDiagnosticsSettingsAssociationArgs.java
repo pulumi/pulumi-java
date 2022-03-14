@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="associationName")
-      private final @Nullable Input<String> associationName;
+      private final @Nullable Output<String> associationName;
 
-    public Input<String> getAssociationName() {
-        return this.associationName == null ? Input.empty() : this.associationName;
+    public Output<String> getAssociationName() {
+        return this.associationName == null ? Output.empty() : this.associationName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="guestDiagnosticSettingsName", required=true)
-      private final Input<String> guestDiagnosticSettingsName;
+      private final Output<String> guestDiagnosticSettingsName;
 
-    public Input<String> getGuestDiagnosticSettingsName() {
+    public Output<String> getGuestDiagnosticSettingsName() {
         return this.guestDiagnosticSettingsName;
     }
 
@@ -42,10 +42,10 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceUri", required=true)
-      private final Input<String> resourceUri;
+      private final Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
+    public Output<String> getResourceUri() {
         return this.resourceUri;
     }
 
@@ -64,18 +64,18 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GuestDiagnosticsSettingsAssociationArgs(
-        @Nullable Input<String> associationName,
-        Input<String> guestDiagnosticSettingsName,
-        @Nullable Input<String> location,
-        Input<String> resourceUri,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> associationName,
+        Output<String> guestDiagnosticSettingsName,
+        @Nullable Output<String> location,
+        Output<String> resourceUri,
+        @Nullable Output<Map<String,String>> tags) {
         this.associationName = associationName;
         this.guestDiagnosticSettingsName = Objects.requireNonNull(guestDiagnosticSettingsName, "expected parameter 'guestDiagnosticSettingsName' to be non-null");
         this.location = location;
@@ -84,11 +84,11 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     }
 
     private GuestDiagnosticsSettingsAssociationArgs() {
-        this.associationName = Input.empty();
-        this.guestDiagnosticSettingsName = Input.empty();
-        this.location = Input.empty();
-        this.resourceUri = Input.empty();
-        this.tags = Input.empty();
+        this.associationName = Output.empty();
+        this.guestDiagnosticSettingsName = Output.empty();
+        this.location = Output.empty();
+        this.resourceUri = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associationName;
-        private Input<String> guestDiagnosticSettingsName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceUri;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> associationName;
+        private Output<String> guestDiagnosticSettingsName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceUri;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     	      this.tags = defaults.tags;
         }
 
-        public Builder associationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Output<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Input.ofNullable(associationName);
+            this.associationName = Output.ofNullable(associationName);
             return this;
         }
 
-        public Builder guestDiagnosticSettingsName(Input<String> guestDiagnosticSettingsName) {
+        public Builder guestDiagnosticSettingsName(Output<String> guestDiagnosticSettingsName) {
             this.guestDiagnosticSettingsName = Objects.requireNonNull(guestDiagnosticSettingsName);
             return this;
         }
 
         public Builder guestDiagnosticSettingsName(String guestDiagnosticSettingsName) {
-            this.guestDiagnosticSettingsName = Input.of(Objects.requireNonNull(guestDiagnosticSettingsName));
+            this.guestDiagnosticSettingsName = Output.of(Objects.requireNonNull(guestDiagnosticSettingsName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
+            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GuestDiagnosticsSettingsAssociationArgs build() {

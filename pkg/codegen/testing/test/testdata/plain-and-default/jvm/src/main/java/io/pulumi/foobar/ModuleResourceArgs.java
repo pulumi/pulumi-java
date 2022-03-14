@@ -3,7 +3,7 @@
 
 package io.pulumi.foobar;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.foobar.enums.EnumThing;
 import java.lang.Boolean;
@@ -19,38 +19,38 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 
     @InputImport(name="optional_bool")
-      private final @Nullable Input<Boolean> optional_bool;
+      private final @Nullable Output<Boolean> optional_bool;
 
-    public Input<Boolean> getOptional_bool() {
-        return this.optional_bool == null ? Input.empty() : this.optional_bool;
+    public Output<Boolean> getOptional_bool() {
+        return this.optional_bool == null ? Output.empty() : this.optional_bool;
     }
 
     @InputImport(name="optional_const")
-      private final @Nullable Input<String> optional_const;
+      private final @Nullable Output<String> optional_const;
 
-    public Input<String> getOptional_const() {
-        return this.optional_const == null ? Input.empty() : this.optional_const;
+    public Output<String> getOptional_const() {
+        return this.optional_const == null ? Output.empty() : this.optional_const;
     }
 
     @InputImport(name="optional_enum")
-      private final @Nullable Input<EnumThing> optional_enum;
+      private final @Nullable Output<EnumThing> optional_enum;
 
-    public Input<EnumThing> getOptional_enum() {
-        return this.optional_enum == null ? Input.empty() : this.optional_enum;
+    public Output<EnumThing> getOptional_enum() {
+        return this.optional_enum == null ? Output.empty() : this.optional_enum;
     }
 
     @InputImport(name="optional_number")
-      private final @Nullable Input<Double> optional_number;
+      private final @Nullable Output<Double> optional_number;
 
-    public Input<Double> getOptional_number() {
-        return this.optional_number == null ? Input.empty() : this.optional_number;
+    public Output<Double> getOptional_number() {
+        return this.optional_number == null ? Output.empty() : this.optional_number;
     }
 
     @InputImport(name="optional_string")
-      private final @Nullable Input<String> optional_string;
+      private final @Nullable Output<String> optional_string;
 
-    public Input<String> getOptional_string() {
-        return this.optional_string == null ? Input.empty() : this.optional_string;
+    public Output<String> getOptional_string() {
+        return this.optional_string == null ? Output.empty() : this.optional_string;
     }
 
     @InputImport(name="plain_optional_bool")
@@ -110,39 +110,39 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     @InputImport(name="required_bool", required=true)
-      private final Input<Boolean> required_bool;
+      private final Output<Boolean> required_bool;
 
-    public Input<Boolean> getRequired_bool() {
+    public Output<Boolean> getRequired_bool() {
         return this.required_bool;
     }
 
     @InputImport(name="required_enum", required=true)
-      private final Input<EnumThing> required_enum;
+      private final Output<EnumThing> required_enum;
 
-    public Input<EnumThing> getRequired_enum() {
+    public Output<EnumThing> getRequired_enum() {
         return this.required_enum;
     }
 
     @InputImport(name="required_number", required=true)
-      private final Input<Double> required_number;
+      private final Output<Double> required_number;
 
-    public Input<Double> getRequired_number() {
+    public Output<Double> getRequired_number() {
         return this.required_number;
     }
 
     @InputImport(name="required_string", required=true)
-      private final Input<String> required_string;
+      private final Output<String> required_string;
 
-    public Input<String> getRequired_string() {
+    public Output<String> getRequired_string() {
         return this.required_string;
     }
 
     public ModuleResourceArgs(
-        @Nullable Input<Boolean> optional_bool,
-        @Nullable Input<String> optional_const,
-        @Nullable Input<EnumThing> optional_enum,
-        @Nullable Input<Double> optional_number,
-        @Nullable Input<String> optional_string,
+        @Nullable Output<Boolean> optional_bool,
+        @Nullable Output<String> optional_const,
+        @Nullable Output<EnumThing> optional_enum,
+        @Nullable Output<Double> optional_number,
+        @Nullable Output<String> optional_string,
         @Nullable Boolean plain_optional_bool,
         @Nullable String plain_optional_const,
         @Nullable Double plain_optional_number,
@@ -151,15 +151,15 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
         String plain_required_const,
         Double plain_required_number,
         String plain_required_string,
-        Input<Boolean> required_bool,
-        Input<EnumThing> required_enum,
-        Input<Double> required_number,
-        Input<String> required_string) {
-        this.optional_bool = optional_bool == null ? Input.ofNullable(true) : optional_bool;
-        this.optional_const = optional_const == null ? Input.ofNullable("another") : optional_const;
-        this.optional_enum = optional_enum == null ? Input.ofNullable(io.pulumi.foobar.enums.EnumThing.Eight) : optional_enum;
-        this.optional_number = optional_number == null ? Input.ofNullable(4.2e+01) : optional_number;
-        this.optional_string = optional_string == null ? Input.ofNullable("buzzer") : optional_string;
+        Output<Boolean> required_bool,
+        Output<EnumThing> required_enum,
+        Output<Double> required_number,
+        Output<String> required_string) {
+        this.optional_bool = optional_bool == null ? Output.ofNullable(true) : optional_bool;
+        this.optional_const = optional_const == null ? Output.ofNullable("another") : optional_const;
+        this.optional_enum = optional_enum == null ? Output.ofNullable(io.pulumi.foobar.enums.EnumThing.Eight) : optional_enum;
+        this.optional_number = optional_number == null ? Output.ofNullable(4.2e+01) : optional_number;
+        this.optional_string = optional_string == null ? Output.ofNullable("buzzer") : optional_string;
         this.plain_optional_bool = plain_optional_bool == null ? true : plain_optional_bool;
         this.plain_optional_const = plain_optional_const == null ? "another" : plain_optional_const;
         this.plain_optional_number = plain_optional_number == null ? 4.2e+01 : plain_optional_number;
@@ -168,18 +168,18 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
         this.plain_required_const = plain_required_const == null ? "another" : Objects.requireNonNull(plain_required_const, "expected parameter 'plain_required_const' to be non-null");
         this.plain_required_number = plain_required_number == null ? 4.2e+01 : Objects.requireNonNull(plain_required_number, "expected parameter 'plain_required_number' to be non-null");
         this.plain_required_string = plain_required_string == null ? "buzzer" : Objects.requireNonNull(plain_required_string, "expected parameter 'plain_required_string' to be non-null");
-        this.required_bool = required_bool == null ? Input.ofNullable(true) : Objects.requireNonNull(required_bool, "expected parameter 'required_bool' to be non-null");
-        this.required_enum = required_enum == null ? Input.ofNullable(io.pulumi.foobar.enums.EnumThing.Four) : Objects.requireNonNull(required_enum, "expected parameter 'required_enum' to be non-null");
-        this.required_number = required_number == null ? Input.ofNullable(4.2e+01) : Objects.requireNonNull(required_number, "expected parameter 'required_number' to be non-null");
-        this.required_string = required_string == null ? Input.ofNullable("buzzer") : Objects.requireNonNull(required_string, "expected parameter 'required_string' to be non-null");
+        this.required_bool = required_bool == null ? Output.ofNullable(true) : Objects.requireNonNull(required_bool, "expected parameter 'required_bool' to be non-null");
+        this.required_enum = required_enum == null ? Output.ofNullable(io.pulumi.foobar.enums.EnumThing.Four) : Objects.requireNonNull(required_enum, "expected parameter 'required_enum' to be non-null");
+        this.required_number = required_number == null ? Output.ofNullable(4.2e+01) : Objects.requireNonNull(required_number, "expected parameter 'required_number' to be non-null");
+        this.required_string = required_string == null ? Output.ofNullable("buzzer") : Objects.requireNonNull(required_string, "expected parameter 'required_string' to be non-null");
     }
 
     private ModuleResourceArgs() {
-        this.optional_bool = Input.empty();
-        this.optional_const = Input.empty();
-        this.optional_enum = Input.empty();
-        this.optional_number = Input.empty();
-        this.optional_string = Input.empty();
+        this.optional_bool = Output.empty();
+        this.optional_const = Output.empty();
+        this.optional_enum = Output.empty();
+        this.optional_number = Output.empty();
+        this.optional_string = Output.empty();
         this.plain_optional_bool = null;
         this.plain_optional_const = null;
         this.plain_optional_number = null;
@@ -188,10 +188,10 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
         this.plain_required_const = null;
         this.plain_required_number = null;
         this.plain_required_string = null;
-        this.required_bool = Input.empty();
-        this.required_enum = Input.empty();
-        this.required_number = Input.empty();
-        this.required_string = Input.empty();
+        this.required_bool = Output.empty();
+        this.required_enum = Output.empty();
+        this.required_number = Output.empty();
+        this.required_string = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,11 +203,11 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> optional_bool;
-        private @Nullable Input<String> optional_const;
-        private @Nullable Input<EnumThing> optional_enum;
-        private @Nullable Input<Double> optional_number;
-        private @Nullable Input<String> optional_string;
+        private @Nullable Output<Boolean> optional_bool;
+        private @Nullable Output<String> optional_const;
+        private @Nullable Output<EnumThing> optional_enum;
+        private @Nullable Output<Double> optional_number;
+        private @Nullable Output<String> optional_string;
         private @Nullable Boolean plain_optional_bool;
         private @Nullable String plain_optional_const;
         private @Nullable Double plain_optional_number;
@@ -216,10 +216,10 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
         private String plain_required_const;
         private Double plain_required_number;
         private String plain_required_string;
-        private Input<Boolean> required_bool;
-        private Input<EnumThing> required_enum;
-        private Input<Double> required_number;
-        private Input<String> required_string;
+        private Output<Boolean> required_bool;
+        private Output<EnumThing> required_enum;
+        private Output<Double> required_number;
+        private Output<String> required_string;
 
         public Builder() {
     	      // Empty
@@ -246,53 +246,53 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.required_string = defaults.required_string;
         }
 
-        public Builder optional_bool(@Nullable Input<Boolean> optional_bool) {
+        public Builder optional_bool(@Nullable Output<Boolean> optional_bool) {
             this.optional_bool = optional_bool;
             return this;
         }
 
         public Builder optional_bool(@Nullable Boolean optional_bool) {
-            this.optional_bool = Input.ofNullable(optional_bool);
+            this.optional_bool = Output.ofNullable(optional_bool);
             return this;
         }
 
-        public Builder optional_const(@Nullable Input<String> optional_const) {
+        public Builder optional_const(@Nullable Output<String> optional_const) {
             this.optional_const = optional_const;
             return this;
         }
 
         public Builder optional_const(@Nullable String optional_const) {
-            this.optional_const = Input.ofNullable(optional_const);
+            this.optional_const = Output.ofNullable(optional_const);
             return this;
         }
 
-        public Builder optional_enum(@Nullable Input<EnumThing> optional_enum) {
+        public Builder optional_enum(@Nullable Output<EnumThing> optional_enum) {
             this.optional_enum = optional_enum;
             return this;
         }
 
         public Builder optional_enum(@Nullable EnumThing optional_enum) {
-            this.optional_enum = Input.ofNullable(optional_enum);
+            this.optional_enum = Output.ofNullable(optional_enum);
             return this;
         }
 
-        public Builder optional_number(@Nullable Input<Double> optional_number) {
+        public Builder optional_number(@Nullable Output<Double> optional_number) {
             this.optional_number = optional_number;
             return this;
         }
 
         public Builder optional_number(@Nullable Double optional_number) {
-            this.optional_number = Input.ofNullable(optional_number);
+            this.optional_number = Output.ofNullable(optional_number);
             return this;
         }
 
-        public Builder optional_string(@Nullable Input<String> optional_string) {
+        public Builder optional_string(@Nullable Output<String> optional_string) {
             this.optional_string = optional_string;
             return this;
         }
 
         public Builder optional_string(@Nullable String optional_string) {
-            this.optional_string = Input.ofNullable(optional_string);
+            this.optional_string = Output.ofNullable(optional_string);
             return this;
         }
 
@@ -336,43 +336,43 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
 
-        public Builder required_bool(Input<Boolean> required_bool) {
+        public Builder required_bool(Output<Boolean> required_bool) {
             this.required_bool = Objects.requireNonNull(required_bool);
             return this;
         }
 
         public Builder required_bool(Boolean required_bool) {
-            this.required_bool = Input.of(Objects.requireNonNull(required_bool));
+            this.required_bool = Output.of(Objects.requireNonNull(required_bool));
             return this;
         }
 
-        public Builder required_enum(Input<EnumThing> required_enum) {
+        public Builder required_enum(Output<EnumThing> required_enum) {
             this.required_enum = Objects.requireNonNull(required_enum);
             return this;
         }
 
         public Builder required_enum(EnumThing required_enum) {
-            this.required_enum = Input.of(Objects.requireNonNull(required_enum));
+            this.required_enum = Output.of(Objects.requireNonNull(required_enum));
             return this;
         }
 
-        public Builder required_number(Input<Double> required_number) {
+        public Builder required_number(Output<Double> required_number) {
             this.required_number = Objects.requireNonNull(required_number);
             return this;
         }
 
         public Builder required_number(Double required_number) {
-            this.required_number = Input.of(Objects.requireNonNull(required_number));
+            this.required_number = Output.of(Objects.requireNonNull(required_number));
             return this;
         }
 
-        public Builder required_string(Input<String> required_string) {
+        public Builder required_string(Output<String> required_string) {
             this.required_string = Objects.requireNonNull(required_string);
             return this;
         }
 
         public Builder required_string(String required_string) {
-            this.required_string = Input.of(Objects.requireNonNull(required_string));
+            this.required_string = Output.of(Objects.requireNonNull(required_string));
             return this;
         }
         public ModuleResourceArgs build() {

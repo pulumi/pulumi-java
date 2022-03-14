@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
      * 
      */
     @InputImport(name="cloudSecret", required=true)
-      private final Input<String> cloudSecret;
+      private final Output<String> cloudSecret;
 
-    public Input<String> getCloudSecret() {
+    public Output<String> getCloudSecret() {
         return this.cloudSecret;
     }
 
-    public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(Input<String> cloudSecret) {
+    public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(Output<String> cloudSecret) {
         this.cloudSecret = Objects.requireNonNull(cloudSecret, "expected parameter 'cloudSecret' to be non-null");
     }
 
     private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs() {
-        this.cloudSecret = Input.empty();
+        this.cloudSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
     }
 
     public static final class Builder {
-        private Input<String> cloudSecret;
+        private Output<String> cloudSecret;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
     	      this.cloudSecret = defaults.cloudSecret;
         }
 
-        public Builder cloudSecret(Input<String> cloudSecret) {
+        public Builder cloudSecret(Output<String> cloudSecret) {
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
         }
 
         public Builder cloudSecret(String cloudSecret) {
-            this.cloudSecret = Input.of(Objects.requireNonNull(cloudSecret));
+            this.cloudSecret = Output.of(Objects.requireNonNull(cloudSecret));
             return this;
         }
         public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs build() {

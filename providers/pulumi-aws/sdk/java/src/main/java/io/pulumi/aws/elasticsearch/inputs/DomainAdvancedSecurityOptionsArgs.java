@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainAdvancedSecurityOptionsMasterUserOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -31,10 +31,10 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="internalUserDatabaseEnabled")
-      private final @Nullable Input<Boolean> internalUserDatabaseEnabled;
+      private final @Nullable Output<Boolean> internalUserDatabaseEnabled;
 
-    public Input<Boolean> getInternalUserDatabaseEnabled() {
-        return this.internalUserDatabaseEnabled == null ? Input.empty() : this.internalUserDatabaseEnabled;
+    public Output<Boolean> getInternalUserDatabaseEnabled() {
+        return this.internalUserDatabaseEnabled == null ? Output.empty() : this.internalUserDatabaseEnabled;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="masterUserOptions")
-      private final @Nullable Input<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions;
+      private final @Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions;
 
-    public Input<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> getMasterUserOptions() {
-        return this.masterUserOptions == null ? Input.empty() : this.masterUserOptions;
+    public Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> getMasterUserOptions() {
+        return this.masterUserOptions == null ? Output.empty() : this.masterUserOptions;
     }
 
     public DomainAdvancedSecurityOptionsArgs(
-        Input<Boolean> enabled,
-        @Nullable Input<Boolean> internalUserDatabaseEnabled,
-        @Nullable Input<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions) {
+        Output<Boolean> enabled,
+        @Nullable Output<Boolean> internalUserDatabaseEnabled,
+        @Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions) {
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
         this.masterUserOptions = masterUserOptions;
     }
 
     private DomainAdvancedSecurityOptionsArgs() {
-        this.enabled = Input.empty();
-        this.internalUserDatabaseEnabled = Input.empty();
-        this.masterUserOptions = Input.empty();
+        this.enabled = Output.empty();
+        this.internalUserDatabaseEnabled = Output.empty();
+        this.masterUserOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Boolean> enabled;
-        private @Nullable Input<Boolean> internalUserDatabaseEnabled;
-        private @Nullable Input<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions;
+        private Output<Boolean> enabled;
+        private @Nullable Output<Boolean> internalUserDatabaseEnabled;
+        private @Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
     	      this.masterUserOptions = defaults.masterUserOptions;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder internalUserDatabaseEnabled(@Nullable Input<Boolean> internalUserDatabaseEnabled) {
+        public Builder internalUserDatabaseEnabled(@Nullable Output<Boolean> internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
 
         public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
-            this.internalUserDatabaseEnabled = Input.ofNullable(internalUserDatabaseEnabled);
+            this.internalUserDatabaseEnabled = Output.ofNullable(internalUserDatabaseEnabled);
             return this;
         }
 
-        public Builder masterUserOptions(@Nullable Input<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions) {
+        public Builder masterUserOptions(@Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
         }
 
         public Builder masterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptionsArgs masterUserOptions) {
-            this.masterUserOptions = Input.ofNullable(masterUserOptions);
+            this.masterUserOptions = Output.ofNullable(masterUserOptions);
             return this;
         }
         public DomainAdvancedSecurityOptionsArgs build() {

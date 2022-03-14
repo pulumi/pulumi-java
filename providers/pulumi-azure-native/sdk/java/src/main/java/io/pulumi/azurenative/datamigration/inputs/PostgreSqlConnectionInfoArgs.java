@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -57,9 +57,9 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -69,9 +69,9 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -80,19 +80,19 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public PostgreSqlConnectionInfoArgs(
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> password,
-        Input<Integer> port,
-        Input<String> serverName,
-        Input<String> type,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> password,
+        Output<Integer> port,
+        Output<String> serverName,
+        Output<String> type,
+        @Nullable Output<String> userName) {
         this.databaseName = databaseName;
         this.password = password;
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
@@ -102,12 +102,12 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     }
 
     private PostgreSqlConnectionInfoArgs() {
-        this.databaseName = Input.empty();
-        this.password = Input.empty();
-        this.port = Input.empty();
-        this.serverName = Input.empty();
-        this.type = Input.empty();
-        this.userName = Input.empty();
+        this.databaseName = Output.empty();
+        this.password = Output.empty();
+        this.port = Output.empty();
+        this.serverName = Output.empty();
+        this.type = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> password;
-        private Input<Integer> port;
-        private Input<String> serverName;
-        private Input<String> type;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> password;
+        private Output<Integer> port;
+        private Output<String> serverName;
+        private Output<String> type;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     	      this.userName = defaults.userName;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public PostgreSqlConnectionInfoArgs build() {

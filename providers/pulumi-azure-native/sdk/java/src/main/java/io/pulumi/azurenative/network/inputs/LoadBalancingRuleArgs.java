@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.LoadDistribution;
 import io.pulumi.azurenative.network.enums.TransportProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,10 +29,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backendAddressPool")
-      private final @Nullable Input<SubResourceArgs> backendAddressPool;
+      private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
-    public Input<SubResourceArgs> getBackendAddressPool() {
-        return this.backendAddressPool == null ? Input.empty() : this.backendAddressPool;
+    public Output<SubResourceArgs> getBackendAddressPool() {
+        return this.backendAddressPool == null ? Output.empty() : this.backendAddressPool;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backendPort")
-      private final @Nullable Input<Integer> backendPort;
+      private final @Nullable Output<Integer> backendPort;
 
-    public Input<Integer> getBackendPort() {
-        return this.backendPort == null ? Input.empty() : this.backendPort;
+    public Output<Integer> getBackendPort() {
+        return this.backendPort == null ? Output.empty() : this.backendPort;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableOutboundSnat")
-      private final @Nullable Input<Boolean> disableOutboundSnat;
+      private final @Nullable Output<Boolean> disableOutboundSnat;
 
-    public Input<Boolean> getDisableOutboundSnat() {
-        return this.disableOutboundSnat == null ? Input.empty() : this.disableOutboundSnat;
+    public Output<Boolean> getDisableOutboundSnat() {
+        return this.disableOutboundSnat == null ? Output.empty() : this.disableOutboundSnat;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableFloatingIP")
-      private final @Nullable Input<Boolean> enableFloatingIP;
+      private final @Nullable Output<Boolean> enableFloatingIP;
 
-    public Input<Boolean> getEnableFloatingIP() {
-        return this.enableFloatingIP == null ? Input.empty() : this.enableFloatingIP;
+    public Output<Boolean> getEnableFloatingIP() {
+        return this.enableFloatingIP == null ? Output.empty() : this.enableFloatingIP;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableTcpReset")
-      private final @Nullable Input<Boolean> enableTcpReset;
+      private final @Nullable Output<Boolean> enableTcpReset;
 
-    public Input<Boolean> getEnableTcpReset() {
-        return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
+    public Output<Boolean> getEnableTcpReset() {
+        return this.enableTcpReset == null ? Output.empty() : this.enableTcpReset;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-      private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
+      private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Input<SubResourceArgs> getFrontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
+    public Output<SubResourceArgs> getFrontendIPConfiguration() {
+        return this.frontendIPConfiguration == null ? Output.empty() : this.frontendIPConfiguration;
     }
 
     /**
@@ -95,9 +95,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frontendPort", required=true)
-      private final Input<Integer> frontendPort;
+      private final Output<Integer> frontendPort;
 
-    public Input<Integer> getFrontendPort() {
+    public Output<Integer> getFrontendPort() {
         return this.frontendPort;
     }
 
@@ -106,10 +106,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-      private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Input<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
+    public Output<Integer> getIdleTimeoutInMinutes() {
+        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="loadDistribution")
-      private final @Nullable Input<Either<String,LoadDistribution>> loadDistribution;
+      private final @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
 
-    public Input<Either<String,LoadDistribution>> getLoadDistribution() {
-        return this.loadDistribution == null ? Input.empty() : this.loadDistribution;
+    public Output<Either<String,LoadDistribution>> getLoadDistribution() {
+        return this.loadDistribution == null ? Output.empty() : this.loadDistribution;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="probe")
-      private final @Nullable Input<SubResourceArgs> probe;
+      private final @Nullable Output<SubResourceArgs> probe;
 
-    public Input<SubResourceArgs> getProbe() {
-        return this.probe == null ? Input.empty() : this.probe;
+    public Output<SubResourceArgs> getProbe() {
+        return this.probe == null ? Output.empty() : this.probe;
     }
 
     /**
@@ -161,26 +161,26 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,TransportProtocol>> protocol;
+      private final Output<Either<String,TransportProtocol>> protocol;
 
-    public Input<Either<String,TransportProtocol>> getProtocol() {
+    public Output<Either<String,TransportProtocol>> getProtocol() {
         return this.protocol;
     }
 
     public LoadBalancingRuleArgs(
-        @Nullable Input<SubResourceArgs> backendAddressPool,
-        @Nullable Input<Integer> backendPort,
-        @Nullable Input<Boolean> disableOutboundSnat,
-        @Nullable Input<Boolean> enableFloatingIP,
-        @Nullable Input<Boolean> enableTcpReset,
-        @Nullable Input<SubResourceArgs> frontendIPConfiguration,
-        Input<Integer> frontendPort,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> idleTimeoutInMinutes,
-        @Nullable Input<Either<String,LoadDistribution>> loadDistribution,
-        @Nullable Input<String> name,
-        @Nullable Input<SubResourceArgs> probe,
-        Input<Either<String,TransportProtocol>> protocol) {
+        @Nullable Output<SubResourceArgs> backendAddressPool,
+        @Nullable Output<Integer> backendPort,
+        @Nullable Output<Boolean> disableOutboundSnat,
+        @Nullable Output<Boolean> enableFloatingIP,
+        @Nullable Output<Boolean> enableTcpReset,
+        @Nullable Output<SubResourceArgs> frontendIPConfiguration,
+        Output<Integer> frontendPort,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> idleTimeoutInMinutes,
+        @Nullable Output<Either<String,LoadDistribution>> loadDistribution,
+        @Nullable Output<String> name,
+        @Nullable Output<SubResourceArgs> probe,
+        Output<Either<String,TransportProtocol>> protocol) {
         this.backendAddressPool = backendAddressPool;
         this.backendPort = backendPort;
         this.disableOutboundSnat = disableOutboundSnat;
@@ -197,19 +197,19 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LoadBalancingRuleArgs() {
-        this.backendAddressPool = Input.empty();
-        this.backendPort = Input.empty();
-        this.disableOutboundSnat = Input.empty();
-        this.enableFloatingIP = Input.empty();
-        this.enableTcpReset = Input.empty();
-        this.frontendIPConfiguration = Input.empty();
-        this.frontendPort = Input.empty();
-        this.id = Input.empty();
-        this.idleTimeoutInMinutes = Input.empty();
-        this.loadDistribution = Input.empty();
-        this.name = Input.empty();
-        this.probe = Input.empty();
-        this.protocol = Input.empty();
+        this.backendAddressPool = Output.empty();
+        this.backendPort = Output.empty();
+        this.disableOutboundSnat = Output.empty();
+        this.enableFloatingIP = Output.empty();
+        this.enableTcpReset = Output.empty();
+        this.frontendIPConfiguration = Output.empty();
+        this.frontendPort = Output.empty();
+        this.id = Output.empty();
+        this.idleTimeoutInMinutes = Output.empty();
+        this.loadDistribution = Output.empty();
+        this.name = Output.empty();
+        this.probe = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -221,19 +221,19 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> backendAddressPool;
-        private @Nullable Input<Integer> backendPort;
-        private @Nullable Input<Boolean> disableOutboundSnat;
-        private @Nullable Input<Boolean> enableFloatingIP;
-        private @Nullable Input<Boolean> enableTcpReset;
-        private @Nullable Input<SubResourceArgs> frontendIPConfiguration;
-        private Input<Integer> frontendPort;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> idleTimeoutInMinutes;
-        private @Nullable Input<Either<String,LoadDistribution>> loadDistribution;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SubResourceArgs> probe;
-        private Input<Either<String,TransportProtocol>> protocol;
+        private @Nullable Output<SubResourceArgs> backendAddressPool;
+        private @Nullable Output<Integer> backendPort;
+        private @Nullable Output<Boolean> disableOutboundSnat;
+        private @Nullable Output<Boolean> enableFloatingIP;
+        private @Nullable Output<Boolean> enableTcpReset;
+        private @Nullable Output<SubResourceArgs> frontendIPConfiguration;
+        private Output<Integer> frontendPort;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> idleTimeoutInMinutes;
+        private @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SubResourceArgs> probe;
+        private Output<Either<String,TransportProtocol>> protocol;
 
         public Builder() {
     	      // Empty
@@ -256,133 +256,133 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder backendAddressPool(@Nullable Input<SubResourceArgs> backendAddressPool) {
+        public Builder backendAddressPool(@Nullable Output<SubResourceArgs> backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
         public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
-            this.backendAddressPool = Input.ofNullable(backendAddressPool);
+            this.backendAddressPool = Output.ofNullable(backendAddressPool);
             return this;
         }
 
-        public Builder backendPort(@Nullable Input<Integer> backendPort) {
+        public Builder backendPort(@Nullable Output<Integer> backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
         public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = Input.ofNullable(backendPort);
+            this.backendPort = Output.ofNullable(backendPort);
             return this;
         }
 
-        public Builder disableOutboundSnat(@Nullable Input<Boolean> disableOutboundSnat) {
+        public Builder disableOutboundSnat(@Nullable Output<Boolean> disableOutboundSnat) {
             this.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
 
         public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
-            this.disableOutboundSnat = Input.ofNullable(disableOutboundSnat);
+            this.disableOutboundSnat = Output.ofNullable(disableOutboundSnat);
             return this;
         }
 
-        public Builder enableFloatingIP(@Nullable Input<Boolean> enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Output<Boolean> enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
 
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
-            this.enableFloatingIP = Input.ofNullable(enableFloatingIP);
+            this.enableFloatingIP = Output.ofNullable(enableFloatingIP);
             return this;
         }
 
-        public Builder enableTcpReset(@Nullable Input<Boolean> enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = Input.ofNullable(enableTcpReset);
+            this.enableTcpReset = Output.ofNullable(enableTcpReset);
             return this;
         }
 
-        public Builder frontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
-            this.frontendIPConfiguration = Input.ofNullable(frontendIPConfiguration);
+            this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
             return this;
         }
 
-        public Builder frontendPort(Input<Integer> frontendPort) {
+        public Builder frontendPort(Output<Integer> frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
 
         public Builder frontendPort(Integer frontendPort) {
-            this.frontendPort = Input.of(Objects.requireNonNull(frontendPort));
+            this.frontendPort = Output.of(Objects.requireNonNull(frontendPort));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder loadDistribution(@Nullable Input<Either<String,LoadDistribution>> loadDistribution) {
+        public Builder loadDistribution(@Nullable Output<Either<String,LoadDistribution>> loadDistribution) {
             this.loadDistribution = loadDistribution;
             return this;
         }
 
         public Builder loadDistribution(@Nullable Either<String,LoadDistribution> loadDistribution) {
-            this.loadDistribution = Input.ofNullable(loadDistribution);
+            this.loadDistribution = Output.ofNullable(loadDistribution);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder probe(@Nullable Input<SubResourceArgs> probe) {
+        public Builder probe(@Nullable Output<SubResourceArgs> probe) {
             this.probe = probe;
             return this;
         }
 
         public Builder probe(@Nullable SubResourceArgs probe) {
-            this.probe = Input.ofNullable(probe);
+            this.probe = Output.ofNullable(probe);
             return this;
         }
 
-        public Builder protocol(Input<Either<String,TransportProtocol>> protocol) {
+        public Builder protocol(Output<Either<String,TransportProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,TransportProtocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public LoadBalancingRuleArgs build() {

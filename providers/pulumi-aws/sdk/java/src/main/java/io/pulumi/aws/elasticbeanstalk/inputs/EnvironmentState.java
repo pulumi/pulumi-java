@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentAllSettingGetArgs;
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allSettings")
-      private final @Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings;
+      private final @Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings;
 
-    public Input<List<EnvironmentAllSettingGetArgs>> getAllSettings() {
-        return this.allSettings == null ? Input.empty() : this.allSettings;
+    public Output<List<EnvironmentAllSettingGetArgs>> getAllSettings() {
+        return this.allSettings == null ? Output.empty() : this.allSettings;
     }
 
     /**
@@ -37,17 +37,17 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="application")
-      private final @Nullable Input<String> application;
+      private final @Nullable Output<String> application;
 
-    public Input<String> getApplication() {
-        return this.application == null ? Input.empty() : this.application;
+    public Output<String> getApplication() {
+        return this.application == null ? Output.empty() : this.application;
     }
 
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroups")
-      private final @Nullable Input<List<String>> autoscalingGroups;
+      private final @Nullable Output<List<String>> autoscalingGroups;
 
-    public Input<List<String>> getAutoscalingGroups() {
-        return this.autoscalingGroups == null ? Input.empty() : this.autoscalingGroups;
+    public Output<List<String>> getAutoscalingGroups() {
+        return this.autoscalingGroups == null ? Output.empty() : this.autoscalingGroups;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cname")
-      private final @Nullable Input<String> cname;
+      private final @Nullable Output<String> cname;
 
-    public Input<String> getCname() {
-        return this.cname == null ? Input.empty() : this.cname;
+    public Output<String> getCname() {
+        return this.cname == null ? Output.empty() : this.cname;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cnamePrefix")
-      private final @Nullable Input<String> cnamePrefix;
+      private final @Nullable Output<String> cnamePrefix;
 
-    public Input<String> getCnamePrefix() {
-        return this.cnamePrefix == null ? Input.empty() : this.cnamePrefix;
+    public Output<String> getCnamePrefix() {
+        return this.cnamePrefix == null ? Output.empty() : this.cnamePrefix;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointUrl")
-      private final @Nullable Input<String> endpointUrl;
+      private final @Nullable Output<String> endpointUrl;
 
-    public Input<String> getEndpointUrl() {
-        return this.endpointUrl == null ? Input.empty() : this.endpointUrl;
+    public Output<String> getEndpointUrl() {
+        return this.endpointUrl == null ? Output.empty() : this.endpointUrl;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<String>> instances;
+      private final @Nullable Output<List<String>> instances;
 
-    public Input<List<String>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<String>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchConfigurations")
-      private final @Nullable Input<List<String>> launchConfigurations;
+      private final @Nullable Output<List<String>> launchConfigurations;
 
-    public Input<List<String>> getLaunchConfigurations() {
-        return this.launchConfigurations == null ? Input.empty() : this.launchConfigurations;
+    public Output<List<String>> getLaunchConfigurations() {
+        return this.launchConfigurations == null ? Output.empty() : this.launchConfigurations;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-      private final @Nullable Input<List<String>> loadBalancers;
+      private final @Nullable Output<List<String>> loadBalancers;
 
-    public Input<List<String>> getLoadBalancers() {
-        return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
+    public Output<List<String>> getLoadBalancers() {
+        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformArn")
-      private final @Nullable Input<String> platformArn;
+      private final @Nullable Output<String> platformArn;
 
-    public Input<String> getPlatformArn() {
-        return this.platformArn == null ? Input.empty() : this.platformArn;
+    public Output<String> getPlatformArn() {
+        return this.platformArn == null ? Output.empty() : this.platformArn;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pollInterval")
-      private final @Nullable Input<String> pollInterval;
+      private final @Nullable Output<String> pollInterval;
 
-    public Input<String> getPollInterval() {
-        return this.pollInterval == null ? Input.empty() : this.pollInterval;
+    public Output<String> getPollInterval() {
+        return this.pollInterval == null ? Output.empty() : this.pollInterval;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queues")
-      private final @Nullable Input<List<String>> queues;
+      private final @Nullable Output<List<String>> queues;
 
-    public Input<List<String>> getQueues() {
-        return this.queues == null ? Input.empty() : this.queues;
+    public Output<List<String>> getQueues() {
+        return this.queues == null ? Output.empty() : this.queues;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<List<EnvironmentSettingGetArgs>> settings;
+      private final @Nullable Output<List<EnvironmentSettingGetArgs>> settings;
 
-    public Input<List<EnvironmentSettingGetArgs>> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<List<EnvironmentSettingGetArgs>> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -207,10 +207,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionStackName")
-      private final @Nullable Input<String> solutionStackName;
+      private final @Nullable Output<String> solutionStackName;
 
-    public Input<String> getSolutionStackName() {
-        return this.solutionStackName == null ? Input.empty() : this.solutionStackName;
+    public Output<String> getSolutionStackName() {
+        return this.solutionStackName == null ? Output.empty() : this.solutionStackName;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -229,10 +229,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateName")
-      private final @Nullable Input<String> templateName;
+      private final @Nullable Output<String> templateName;
 
-    public Input<String> getTemplateName() {
-        return this.templateName == null ? Input.empty() : this.templateName;
+    public Output<String> getTemplateName() {
+        return this.templateName == null ? Output.empty() : this.templateName;
     }
 
     /**
@@ -253,10 +253,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     /**
@@ -264,10 +264,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<List<String>> triggers;
+      private final @Nullable Output<List<String>> triggers;
 
-    public Input<List<String>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<List<String>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     /**
@@ -276,10 +276,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -290,37 +290,37 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForReadyTimeout")
-      private final @Nullable Input<String> waitForReadyTimeout;
+      private final @Nullable Output<String> waitForReadyTimeout;
 
-    public Input<String> getWaitForReadyTimeout() {
-        return this.waitForReadyTimeout == null ? Input.empty() : this.waitForReadyTimeout;
+    public Output<String> getWaitForReadyTimeout() {
+        return this.waitForReadyTimeout == null ? Output.empty() : this.waitForReadyTimeout;
     }
 
     public EnvironmentState(
-        @Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings,
-        @Nullable Input<String> application,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> autoscalingGroups,
-        @Nullable Input<String> cname,
-        @Nullable Input<String> cnamePrefix,
-        @Nullable Input<String> description,
-        @Nullable Input<String> endpointUrl,
-        @Nullable Input<List<String>> instances,
-        @Nullable Input<List<String>> launchConfigurations,
-        @Nullable Input<List<String>> loadBalancers,
-        @Nullable Input<String> name,
-        @Nullable Input<String> platformArn,
-        @Nullable Input<String> pollInterval,
-        @Nullable Input<List<String>> queues,
-        @Nullable Input<List<EnvironmentSettingGetArgs>> settings,
-        @Nullable Input<String> solutionStackName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> templateName,
-        @Nullable Input<String> tier,
-        @Nullable Input<List<String>> triggers,
-        @Nullable Input<String> version,
-        @Nullable Input<String> waitForReadyTimeout) {
+        @Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings,
+        @Nullable Output<String> application,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> autoscalingGroups,
+        @Nullable Output<String> cname,
+        @Nullable Output<String> cnamePrefix,
+        @Nullable Output<String> description,
+        @Nullable Output<String> endpointUrl,
+        @Nullable Output<List<String>> instances,
+        @Nullable Output<List<String>> launchConfigurations,
+        @Nullable Output<List<String>> loadBalancers,
+        @Nullable Output<String> name,
+        @Nullable Output<String> platformArn,
+        @Nullable Output<String> pollInterval,
+        @Nullable Output<List<String>> queues,
+        @Nullable Output<List<EnvironmentSettingGetArgs>> settings,
+        @Nullable Output<String> solutionStackName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> templateName,
+        @Nullable Output<String> tier,
+        @Nullable Output<List<String>> triggers,
+        @Nullable Output<String> version,
+        @Nullable Output<String> waitForReadyTimeout) {
         this.allSettings = allSettings;
         this.application = application;
         this.arn = arn;
@@ -348,30 +348,30 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentState() {
-        this.allSettings = Input.empty();
-        this.application = Input.empty();
-        this.arn = Input.empty();
-        this.autoscalingGroups = Input.empty();
-        this.cname = Input.empty();
-        this.cnamePrefix = Input.empty();
-        this.description = Input.empty();
-        this.endpointUrl = Input.empty();
-        this.instances = Input.empty();
-        this.launchConfigurations = Input.empty();
-        this.loadBalancers = Input.empty();
-        this.name = Input.empty();
-        this.platformArn = Input.empty();
-        this.pollInterval = Input.empty();
-        this.queues = Input.empty();
-        this.settings = Input.empty();
-        this.solutionStackName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.templateName = Input.empty();
-        this.tier = Input.empty();
-        this.triggers = Input.empty();
-        this.version = Input.empty();
-        this.waitForReadyTimeout = Input.empty();
+        this.allSettings = Output.empty();
+        this.application = Output.empty();
+        this.arn = Output.empty();
+        this.autoscalingGroups = Output.empty();
+        this.cname = Output.empty();
+        this.cnamePrefix = Output.empty();
+        this.description = Output.empty();
+        this.endpointUrl = Output.empty();
+        this.instances = Output.empty();
+        this.launchConfigurations = Output.empty();
+        this.loadBalancers = Output.empty();
+        this.name = Output.empty();
+        this.platformArn = Output.empty();
+        this.pollInterval = Output.empty();
+        this.queues = Output.empty();
+        this.settings = Output.empty();
+        this.solutionStackName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.templateName = Output.empty();
+        this.tier = Output.empty();
+        this.triggers = Output.empty();
+        this.version = Output.empty();
+        this.waitForReadyTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -383,30 +383,30 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings;
-        private @Nullable Input<String> application;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> autoscalingGroups;
-        private @Nullable Input<String> cname;
-        private @Nullable Input<String> cnamePrefix;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> endpointUrl;
-        private @Nullable Input<List<String>> instances;
-        private @Nullable Input<List<String>> launchConfigurations;
-        private @Nullable Input<List<String>> loadBalancers;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> platformArn;
-        private @Nullable Input<String> pollInterval;
-        private @Nullable Input<List<String>> queues;
-        private @Nullable Input<List<EnvironmentSettingGetArgs>> settings;
-        private @Nullable Input<String> solutionStackName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> templateName;
-        private @Nullable Input<String> tier;
-        private @Nullable Input<List<String>> triggers;
-        private @Nullable Input<String> version;
-        private @Nullable Input<String> waitForReadyTimeout;
+        private @Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings;
+        private @Nullable Output<String> application;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> autoscalingGroups;
+        private @Nullable Output<String> cname;
+        private @Nullable Output<String> cnamePrefix;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> endpointUrl;
+        private @Nullable Output<List<String>> instances;
+        private @Nullable Output<List<String>> launchConfigurations;
+        private @Nullable Output<List<String>> loadBalancers;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> platformArn;
+        private @Nullable Output<String> pollInterval;
+        private @Nullable Output<List<String>> queues;
+        private @Nullable Output<List<EnvironmentSettingGetArgs>> settings;
+        private @Nullable Output<String> solutionStackName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> templateName;
+        private @Nullable Output<String> tier;
+        private @Nullable Output<List<String>> triggers;
+        private @Nullable Output<String> version;
+        private @Nullable Output<String> waitForReadyTimeout;
 
         public Builder() {
     	      // Empty
@@ -440,238 +440,238 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     	      this.waitForReadyTimeout = defaults.waitForReadyTimeout;
         }
 
-        public Builder allSettings(@Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings) {
+        public Builder allSettings(@Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings) {
             this.allSettings = allSettings;
             return this;
         }
 
         public Builder allSettings(@Nullable List<EnvironmentAllSettingGetArgs> allSettings) {
-            this.allSettings = Input.ofNullable(allSettings);
+            this.allSettings = Output.ofNullable(allSettings);
             return this;
         }
 
-        public Builder application(@Nullable Input<String> application) {
+        public Builder application(@Nullable Output<String> application) {
             this.application = application;
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoscalingGroups(@Nullable Input<List<String>> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable Output<List<String>> autoscalingGroups) {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
         public Builder autoscalingGroups(@Nullable List<String> autoscalingGroups) {
-            this.autoscalingGroups = Input.ofNullable(autoscalingGroups);
+            this.autoscalingGroups = Output.ofNullable(autoscalingGroups);
             return this;
         }
 
-        public Builder cname(@Nullable Input<String> cname) {
+        public Builder cname(@Nullable Output<String> cname) {
             this.cname = cname;
             return this;
         }
 
         public Builder cname(@Nullable String cname) {
-            this.cname = Input.ofNullable(cname);
+            this.cname = Output.ofNullable(cname);
             return this;
         }
 
-        public Builder cnamePrefix(@Nullable Input<String> cnamePrefix) {
+        public Builder cnamePrefix(@Nullable Output<String> cnamePrefix) {
             this.cnamePrefix = cnamePrefix;
             return this;
         }
 
         public Builder cnamePrefix(@Nullable String cnamePrefix) {
-            this.cnamePrefix = Input.ofNullable(cnamePrefix);
+            this.cnamePrefix = Output.ofNullable(cnamePrefix);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endpointUrl(@Nullable Input<String> endpointUrl) {
+        public Builder endpointUrl(@Nullable Output<String> endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }
 
         public Builder endpointUrl(@Nullable String endpointUrl) {
-            this.endpointUrl = Input.ofNullable(endpointUrl);
+            this.endpointUrl = Output.ofNullable(endpointUrl);
             return this;
         }
 
-        public Builder instances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder launchConfigurations(@Nullable Input<List<String>> launchConfigurations) {
+        public Builder launchConfigurations(@Nullable Output<List<String>> launchConfigurations) {
             this.launchConfigurations = launchConfigurations;
             return this;
         }
 
         public Builder launchConfigurations(@Nullable List<String> launchConfigurations) {
-            this.launchConfigurations = Input.ofNullable(launchConfigurations);
+            this.launchConfigurations = Output.ofNullable(launchConfigurations);
             return this;
         }
 
-        public Builder loadBalancers(@Nullable Input<List<String>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Output<List<String>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
         public Builder loadBalancers(@Nullable List<String> loadBalancers) {
-            this.loadBalancers = Input.ofNullable(loadBalancers);
+            this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder platformArn(@Nullable Input<String> platformArn) {
+        public Builder platformArn(@Nullable Output<String> platformArn) {
             this.platformArn = platformArn;
             return this;
         }
 
         public Builder platformArn(@Nullable String platformArn) {
-            this.platformArn = Input.ofNullable(platformArn);
+            this.platformArn = Output.ofNullable(platformArn);
             return this;
         }
 
-        public Builder pollInterval(@Nullable Input<String> pollInterval) {
+        public Builder pollInterval(@Nullable Output<String> pollInterval) {
             this.pollInterval = pollInterval;
             return this;
         }
 
         public Builder pollInterval(@Nullable String pollInterval) {
-            this.pollInterval = Input.ofNullable(pollInterval);
+            this.pollInterval = Output.ofNullable(pollInterval);
             return this;
         }
 
-        public Builder queues(@Nullable Input<List<String>> queues) {
+        public Builder queues(@Nullable Output<List<String>> queues) {
             this.queues = queues;
             return this;
         }
 
         public Builder queues(@Nullable List<String> queues) {
-            this.queues = Input.ofNullable(queues);
+            this.queues = Output.ofNullable(queues);
             return this;
         }
 
-        public Builder settings(@Nullable Input<List<EnvironmentSettingGetArgs>> settings) {
+        public Builder settings(@Nullable Output<List<EnvironmentSettingGetArgs>> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable List<EnvironmentSettingGetArgs> settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder solutionStackName(@Nullable Input<String> solutionStackName) {
+        public Builder solutionStackName(@Nullable Output<String> solutionStackName) {
             this.solutionStackName = solutionStackName;
             return this;
         }
 
         public Builder solutionStackName(@Nullable String solutionStackName) {
-            this.solutionStackName = Input.ofNullable(solutionStackName);
+            this.solutionStackName = Output.ofNullable(solutionStackName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder templateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Output<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = Input.ofNullable(templateName);
+            this.templateName = Output.ofNullable(templateName);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<List<String>> triggers) {
+        public Builder triggers(@Nullable Output<List<String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable List<String> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder waitForReadyTimeout(@Nullable Input<String> waitForReadyTimeout) {
+        public Builder waitForReadyTimeout(@Nullable Output<String> waitForReadyTimeout) {
             this.waitForReadyTimeout = waitForReadyTimeout;
             return this;
         }
 
         public Builder waitForReadyTimeout(@Nullable String waitForReadyTimeout) {
-            this.waitForReadyTimeout = Input.ofNullable(waitForReadyTimeout);
+            this.waitForReadyTimeout = Output.ofNullable(waitForReadyTimeout);
             return this;
         }
         public EnvironmentState build() {

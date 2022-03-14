@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.accesscontextmanager;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -299,14 +298,14 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServicePerimeter(String name, ServicePerimeterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/servicePerimeter:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:accesscontextmanager/servicePerimeter:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServicePerimeter(String name, Input<String> id, @Nullable ServicePerimeterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServicePerimeter(String name, Output<String> id, @Nullable ServicePerimeterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:accesscontextmanager/servicePerimeter:ServicePerimeter", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -322,7 +321,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServicePerimeter get(String name, Input<String> id, @Nullable ServicePerimeterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServicePerimeter get(String name, Output<String> id, @Nullable ServicePerimeterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServicePerimeter(name, id, state, options);
     }
 }

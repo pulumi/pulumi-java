@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlRdbmsArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsArgs;
@@ -24,10 +24,10 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mysqlExcludedObjects")
-      private final @Nullable Input<MysqlRdbmsArgs> mysqlExcludedObjects;
+      private final @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
 
-    public Input<MysqlRdbmsArgs> getMysqlExcludedObjects() {
-        return this.mysqlExcludedObjects == null ? Input.empty() : this.mysqlExcludedObjects;
+    public Output<MysqlRdbmsArgs> getMysqlExcludedObjects() {
+        return this.mysqlExcludedObjects == null ? Output.empty() : this.mysqlExcludedObjects;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="oracleExcludedObjects")
-      private final @Nullable Input<OracleRdbmsArgs> oracleExcludedObjects;
+      private final @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
 
-    public Input<OracleRdbmsArgs> getOracleExcludedObjects() {
-        return this.oracleExcludedObjects == null ? Input.empty() : this.oracleExcludedObjects;
+    public Output<OracleRdbmsArgs> getOracleExcludedObjects() {
+        return this.oracleExcludedObjects == null ? Output.empty() : this.oracleExcludedObjects;
     }
 
     public BackfillAllStrategyArgs(
-        @Nullable Input<MysqlRdbmsArgs> mysqlExcludedObjects,
-        @Nullable Input<OracleRdbmsArgs> oracleExcludedObjects) {
+        @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects,
+        @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects) {
         this.mysqlExcludedObjects = mysqlExcludedObjects;
         this.oracleExcludedObjects = oracleExcludedObjects;
     }
 
     private BackfillAllStrategyArgs() {
-        this.mysqlExcludedObjects = Input.empty();
-        this.oracleExcludedObjects = Input.empty();
+        this.mysqlExcludedObjects = Output.empty();
+        this.oracleExcludedObjects = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<MysqlRdbmsArgs> mysqlExcludedObjects;
-        private @Nullable Input<OracleRdbmsArgs> oracleExcludedObjects;
+        private @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
+        private @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
     	      this.oracleExcludedObjects = defaults.oracleExcludedObjects;
         }
 
-        public Builder mysqlExcludedObjects(@Nullable Input<MysqlRdbmsArgs> mysqlExcludedObjects) {
+        public Builder mysqlExcludedObjects(@Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects) {
             this.mysqlExcludedObjects = mysqlExcludedObjects;
             return this;
         }
 
         public Builder mysqlExcludedObjects(@Nullable MysqlRdbmsArgs mysqlExcludedObjects) {
-            this.mysqlExcludedObjects = Input.ofNullable(mysqlExcludedObjects);
+            this.mysqlExcludedObjects = Output.ofNullable(mysqlExcludedObjects);
             return this;
         }
 
-        public Builder oracleExcludedObjects(@Nullable Input<OracleRdbmsArgs> oracleExcludedObjects) {
+        public Builder oracleExcludedObjects(@Nullable Output<OracleRdbmsArgs> oracleExcludedObjects) {
             this.oracleExcludedObjects = oracleExcludedObjects;
             return this;
         }
 
         public Builder oracleExcludedObjects(@Nullable OracleRdbmsArgs oracleExcludedObjects) {
-            this.oracleExcludedObjects = Input.ofNullable(oracleExcludedObjects);
+            this.oracleExcludedObjects = Output.ofNullable(oracleExcludedObjects);
             return this;
         }
         public BackfillAllStrategyArgs build() {

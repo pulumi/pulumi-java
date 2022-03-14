@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="branch", required=true)
-      private final Input<String> branch;
+      private final Output<String> branch;
 
-    public Input<String> getBranch() {
+    public Output<String> getBranch() {
         return this.branch;
     }
 
@@ -32,10 +32,10 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="commentControl")
-      private final @Nullable Input<String> commentControl;
+      private final @Nullable Output<String> commentControl;
 
-    public Input<String> getCommentControl() {
-        return this.commentControl == null ? Input.empty() : this.commentControl;
+    public Output<String> getCommentControl() {
+        return this.commentControl == null ? Output.empty() : this.commentControl;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="invertRegex")
-      private final @Nullable Input<Boolean> invertRegex;
+      private final @Nullable Output<Boolean> invertRegex;
 
-    public Input<Boolean> getInvertRegex() {
-        return this.invertRegex == null ? Input.empty() : this.invertRegex;
+    public Output<Boolean> getInvertRegex() {
+        return this.invertRegex == null ? Output.empty() : this.invertRegex;
     }
 
     public TriggerGithubPullRequestGetArgs(
-        Input<String> branch,
-        @Nullable Input<String> commentControl,
-        @Nullable Input<Boolean> invertRegex) {
+        Output<String> branch,
+        @Nullable Output<String> commentControl,
+        @Nullable Output<Boolean> invertRegex) {
         this.branch = Objects.requireNonNull(branch, "expected parameter 'branch' to be non-null");
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;
     }
 
     private TriggerGithubPullRequestGetArgs() {
-        this.branch = Input.empty();
-        this.commentControl = Input.empty();
-        this.invertRegex = Input.empty();
+        this.branch = Output.empty();
+        this.commentControl = Output.empty();
+        this.invertRegex = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> branch;
-        private @Nullable Input<String> commentControl;
-        private @Nullable Input<Boolean> invertRegex;
+        private Output<String> branch;
+        private @Nullable Output<String> commentControl;
+        private @Nullable Output<Boolean> invertRegex;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
     	      this.invertRegex = defaults.invertRegex;
         }
 
-        public Builder branch(Input<String> branch) {
+        public Builder branch(Output<String> branch) {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
 
         public Builder branch(String branch) {
-            this.branch = Input.of(Objects.requireNonNull(branch));
+            this.branch = Output.of(Objects.requireNonNull(branch));
             return this;
         }
 
-        public Builder commentControl(@Nullable Input<String> commentControl) {
+        public Builder commentControl(@Nullable Output<String> commentControl) {
             this.commentControl = commentControl;
             return this;
         }
 
         public Builder commentControl(@Nullable String commentControl) {
-            this.commentControl = Input.ofNullable(commentControl);
+            this.commentControl = Output.ofNullable(commentControl);
             return this;
         }
 
-        public Builder invertRegex(@Nullable Input<Boolean> invertRegex) {
+        public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
         public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Input.ofNullable(invertRegex);
+            this.invertRegex = Output.ofNullable(invertRegex);
             return this;
         }
         public TriggerGithubPullRequestGetArgs build() {

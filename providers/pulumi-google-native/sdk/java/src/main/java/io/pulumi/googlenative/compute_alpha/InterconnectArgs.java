@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.InterconnectInterconnectType;
 import io.pulumi.googlenative.compute_alpha.enums.InterconnectLinkType;
@@ -25,10 +25,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminEnabled")
-      private final @Nullable Input<Boolean> adminEnabled;
+      private final @Nullable Output<Boolean> adminEnabled;
 
-    public Input<Boolean> getAdminEnabled() {
-        return this.adminEnabled == null ? Input.empty() : this.adminEnabled;
+    public Output<Boolean> getAdminEnabled() {
+        return this.adminEnabled == null ? Output.empty() : this.adminEnabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerName")
-      private final @Nullable Input<String> customerName;
+      private final @Nullable Output<String> customerName;
 
-    public Input<String> getCustomerName() {
-        return this.customerName == null ? Input.empty() : this.customerName;
+    public Output<String> getCustomerName() {
+        return this.customerName == null ? Output.empty() : this.customerName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interconnectType")
-      private final @Nullable Input<InterconnectInterconnectType> interconnectType;
+      private final @Nullable Output<InterconnectInterconnectType> interconnectType;
 
-    public Input<InterconnectInterconnectType> getInterconnectType() {
-        return this.interconnectType == null ? Input.empty() : this.interconnectType;
+    public Output<InterconnectInterconnectType> getInterconnectType() {
+        return this.interconnectType == null ? Output.empty() : this.interconnectType;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkType")
-      private final @Nullable Input<InterconnectLinkType> linkType;
+      private final @Nullable Output<InterconnectLinkType> linkType;
 
-    public Input<InterconnectLinkType> getLinkType() {
-        return this.linkType == null ? Input.empty() : this.linkType;
+    public Output<InterconnectLinkType> getLinkType() {
+        return this.linkType == null ? Output.empty() : this.linkType;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="macsec")
-      private final @Nullable Input<InterconnectMacsecArgs> macsec;
+      private final @Nullable Output<InterconnectMacsecArgs> macsec;
 
-    public Input<InterconnectMacsecArgs> getMacsec() {
-        return this.macsec == null ? Input.empty() : this.macsec;
+    public Output<InterconnectMacsecArgs> getMacsec() {
+        return this.macsec == null ? Output.empty() : this.macsec;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="macsecEnabled")
-      private final @Nullable Input<Boolean> macsecEnabled;
+      private final @Nullable Output<Boolean> macsecEnabled;
 
-    public Input<Boolean> getMacsecEnabled() {
-        return this.macsecEnabled == null ? Input.empty() : this.macsecEnabled;
+    public Output<Boolean> getMacsecEnabled() {
+        return this.macsecEnabled == null ? Output.empty() : this.macsecEnabled;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nocContactEmail")
-      private final @Nullable Input<String> nocContactEmail;
+      private final @Nullable Output<String> nocContactEmail;
 
-    public Input<String> getNocContactEmail() {
-        return this.nocContactEmail == null ? Input.empty() : this.nocContactEmail;
+    public Output<String> getNocContactEmail() {
+        return this.nocContactEmail == null ? Output.empty() : this.nocContactEmail;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -160,27 +160,27 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedLinkCount")
-      private final @Nullable Input<Integer> requestedLinkCount;
+      private final @Nullable Output<Integer> requestedLinkCount;
 
-    public Input<Integer> getRequestedLinkCount() {
-        return this.requestedLinkCount == null ? Input.empty() : this.requestedLinkCount;
+    public Output<Integer> getRequestedLinkCount() {
+        return this.requestedLinkCount == null ? Output.empty() : this.requestedLinkCount;
     }
 
     public InterconnectArgs(
-        @Nullable Input<Boolean> adminEnabled,
-        @Nullable Input<String> customerName,
-        @Nullable Input<String> description,
-        @Nullable Input<InterconnectInterconnectType> interconnectType,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<InterconnectLinkType> linkType,
-        @Nullable Input<String> location,
-        @Nullable Input<InterconnectMacsecArgs> macsec,
-        @Nullable Input<Boolean> macsecEnabled,
-        @Nullable Input<String> name,
-        @Nullable Input<String> nocContactEmail,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<Integer> requestedLinkCount) {
+        @Nullable Output<Boolean> adminEnabled,
+        @Nullable Output<String> customerName,
+        @Nullable Output<String> description,
+        @Nullable Output<InterconnectInterconnectType> interconnectType,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<InterconnectLinkType> linkType,
+        @Nullable Output<String> location,
+        @Nullable Output<InterconnectMacsecArgs> macsec,
+        @Nullable Output<Boolean> macsecEnabled,
+        @Nullable Output<String> name,
+        @Nullable Output<String> nocContactEmail,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<Integer> requestedLinkCount) {
         this.adminEnabled = adminEnabled;
         this.customerName = customerName;
         this.description = description;
@@ -198,20 +198,20 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InterconnectArgs() {
-        this.adminEnabled = Input.empty();
-        this.customerName = Input.empty();
-        this.description = Input.empty();
-        this.interconnectType = Input.empty();
-        this.labels = Input.empty();
-        this.linkType = Input.empty();
-        this.location = Input.empty();
-        this.macsec = Input.empty();
-        this.macsecEnabled = Input.empty();
-        this.name = Input.empty();
-        this.nocContactEmail = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.requestedLinkCount = Input.empty();
+        this.adminEnabled = Output.empty();
+        this.customerName = Output.empty();
+        this.description = Output.empty();
+        this.interconnectType = Output.empty();
+        this.labels = Output.empty();
+        this.linkType = Output.empty();
+        this.location = Output.empty();
+        this.macsec = Output.empty();
+        this.macsecEnabled = Output.empty();
+        this.name = Output.empty();
+        this.nocContactEmail = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.requestedLinkCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -223,20 +223,20 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> adminEnabled;
-        private @Nullable Input<String> customerName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<InterconnectInterconnectType> interconnectType;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<InterconnectLinkType> linkType;
-        private @Nullable Input<String> location;
-        private @Nullable Input<InterconnectMacsecArgs> macsec;
-        private @Nullable Input<Boolean> macsecEnabled;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> nocContactEmail;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<Integer> requestedLinkCount;
+        private @Nullable Output<Boolean> adminEnabled;
+        private @Nullable Output<String> customerName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<InterconnectInterconnectType> interconnectType;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<InterconnectLinkType> linkType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<InterconnectMacsecArgs> macsec;
+        private @Nullable Output<Boolean> macsecEnabled;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> nocContactEmail;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<Integer> requestedLinkCount;
 
         public Builder() {
     	      // Empty
@@ -260,143 +260,143 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestedLinkCount = defaults.requestedLinkCount;
         }
 
-        public Builder adminEnabled(@Nullable Input<Boolean> adminEnabled) {
+        public Builder adminEnabled(@Nullable Output<Boolean> adminEnabled) {
             this.adminEnabled = adminEnabled;
             return this;
         }
 
         public Builder adminEnabled(@Nullable Boolean adminEnabled) {
-            this.adminEnabled = Input.ofNullable(adminEnabled);
+            this.adminEnabled = Output.ofNullable(adminEnabled);
             return this;
         }
 
-        public Builder customerName(@Nullable Input<String> customerName) {
+        public Builder customerName(@Nullable Output<String> customerName) {
             this.customerName = customerName;
             return this;
         }
 
         public Builder customerName(@Nullable String customerName) {
-            this.customerName = Input.ofNullable(customerName);
+            this.customerName = Output.ofNullable(customerName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder interconnectType(@Nullable Input<InterconnectInterconnectType> interconnectType) {
+        public Builder interconnectType(@Nullable Output<InterconnectInterconnectType> interconnectType) {
             this.interconnectType = interconnectType;
             return this;
         }
 
         public Builder interconnectType(@Nullable InterconnectInterconnectType interconnectType) {
-            this.interconnectType = Input.ofNullable(interconnectType);
+            this.interconnectType = Output.ofNullable(interconnectType);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder linkType(@Nullable Input<InterconnectLinkType> linkType) {
+        public Builder linkType(@Nullable Output<InterconnectLinkType> linkType) {
             this.linkType = linkType;
             return this;
         }
 
         public Builder linkType(@Nullable InterconnectLinkType linkType) {
-            this.linkType = Input.ofNullable(linkType);
+            this.linkType = Output.ofNullable(linkType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder macsec(@Nullable Input<InterconnectMacsecArgs> macsec) {
+        public Builder macsec(@Nullable Output<InterconnectMacsecArgs> macsec) {
             this.macsec = macsec;
             return this;
         }
 
         public Builder macsec(@Nullable InterconnectMacsecArgs macsec) {
-            this.macsec = Input.ofNullable(macsec);
+            this.macsec = Output.ofNullable(macsec);
             return this;
         }
 
-        public Builder macsecEnabled(@Nullable Input<Boolean> macsecEnabled) {
+        public Builder macsecEnabled(@Nullable Output<Boolean> macsecEnabled) {
             this.macsecEnabled = macsecEnabled;
             return this;
         }
 
         public Builder macsecEnabled(@Nullable Boolean macsecEnabled) {
-            this.macsecEnabled = Input.ofNullable(macsecEnabled);
+            this.macsecEnabled = Output.ofNullable(macsecEnabled);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nocContactEmail(@Nullable Input<String> nocContactEmail) {
+        public Builder nocContactEmail(@Nullable Output<String> nocContactEmail) {
             this.nocContactEmail = nocContactEmail;
             return this;
         }
 
         public Builder nocContactEmail(@Nullable String nocContactEmail) {
-            this.nocContactEmail = Input.ofNullable(nocContactEmail);
+            this.nocContactEmail = Output.ofNullable(nocContactEmail);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder requestedLinkCount(@Nullable Input<Integer> requestedLinkCount) {
+        public Builder requestedLinkCount(@Nullable Output<Integer> requestedLinkCount) {
             this.requestedLinkCount = requestedLinkCount;
             return this;
         }
 
         public Builder requestedLinkCount(@Nullable Integer requestedLinkCount) {
-            this.requestedLinkCount = Input.ofNullable(requestedLinkCount);
+            this.requestedLinkCount = Output.ofNullable(requestedLinkCount);
             return this;
         }
         public InterconnectArgs build() {

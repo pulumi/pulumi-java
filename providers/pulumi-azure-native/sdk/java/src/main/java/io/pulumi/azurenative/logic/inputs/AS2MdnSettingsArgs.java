@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.HashingAlgorithm;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dispositionNotificationTo")
-      private final @Nullable Input<String> dispositionNotificationTo;
+      private final @Nullable Output<String> dispositionNotificationTo;
 
-    public Input<String> getDispositionNotificationTo() {
-        return this.dispositionNotificationTo == null ? Input.empty() : this.dispositionNotificationTo;
+    public Output<String> getDispositionNotificationTo() {
+        return this.dispositionNotificationTo == null ? Output.empty() : this.dispositionNotificationTo;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mdnText")
-      private final @Nullable Input<String> mdnText;
+      private final @Nullable Output<String> mdnText;
 
-    public Input<String> getMdnText() {
-        return this.mdnText == null ? Input.empty() : this.mdnText;
+    public Output<String> getMdnText() {
+        return this.mdnText == null ? Output.empty() : this.mdnText;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="micHashingAlgorithm", required=true)
-      private final Input<Either<String,HashingAlgorithm>> micHashingAlgorithm;
+      private final Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
 
-    public Input<Either<String,HashingAlgorithm>> getMicHashingAlgorithm() {
+    public Output<Either<String,HashingAlgorithm>> getMicHashingAlgorithm() {
         return this.micHashingAlgorithm;
     }
 
@@ -59,9 +59,9 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="needMDN", required=true)
-      private final Input<Boolean> needMDN;
+      private final Output<Boolean> needMDN;
 
-    public Input<Boolean> getNeedMDN() {
+    public Output<Boolean> getNeedMDN() {
         return this.needMDN;
     }
 
@@ -70,10 +70,10 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="receiptDeliveryUrl")
-      private final @Nullable Input<String> receiptDeliveryUrl;
+      private final @Nullable Output<String> receiptDeliveryUrl;
 
-    public Input<String> getReceiptDeliveryUrl() {
-        return this.receiptDeliveryUrl == null ? Input.empty() : this.receiptDeliveryUrl;
+    public Output<String> getReceiptDeliveryUrl() {
+        return this.receiptDeliveryUrl == null ? Output.empty() : this.receiptDeliveryUrl;
     }
 
     /**
@@ -81,9 +81,9 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendInboundMDNToMessageBox", required=true)
-      private final Input<Boolean> sendInboundMDNToMessageBox;
+      private final Output<Boolean> sendInboundMDNToMessageBox;
 
-    public Input<Boolean> getSendInboundMDNToMessageBox() {
+    public Output<Boolean> getSendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
     }
 
@@ -92,9 +92,9 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendMDNAsynchronously", required=true)
-      private final Input<Boolean> sendMDNAsynchronously;
+      private final Output<Boolean> sendMDNAsynchronously;
 
-    public Input<Boolean> getSendMDNAsynchronously() {
+    public Output<Boolean> getSendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
     }
 
@@ -103,9 +103,9 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signMDN", required=true)
-      private final Input<Boolean> signMDN;
+      private final Output<Boolean> signMDN;
 
-    public Input<Boolean> getSignMDN() {
+    public Output<Boolean> getSignMDN() {
         return this.signMDN;
     }
 
@@ -114,22 +114,22 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signOutboundMDNIfOptional", required=true)
-      private final Input<Boolean> signOutboundMDNIfOptional;
+      private final Output<Boolean> signOutboundMDNIfOptional;
 
-    public Input<Boolean> getSignOutboundMDNIfOptional() {
+    public Output<Boolean> getSignOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }
 
     public AS2MdnSettingsArgs(
-        @Nullable Input<String> dispositionNotificationTo,
-        @Nullable Input<String> mdnText,
-        Input<Either<String,HashingAlgorithm>> micHashingAlgorithm,
-        Input<Boolean> needMDN,
-        @Nullable Input<String> receiptDeliveryUrl,
-        Input<Boolean> sendInboundMDNToMessageBox,
-        Input<Boolean> sendMDNAsynchronously,
-        Input<Boolean> signMDN,
-        Input<Boolean> signOutboundMDNIfOptional) {
+        @Nullable Output<String> dispositionNotificationTo,
+        @Nullable Output<String> mdnText,
+        Output<Either<String,HashingAlgorithm>> micHashingAlgorithm,
+        Output<Boolean> needMDN,
+        @Nullable Output<String> receiptDeliveryUrl,
+        Output<Boolean> sendInboundMDNToMessageBox,
+        Output<Boolean> sendMDNAsynchronously,
+        Output<Boolean> signMDN,
+        Output<Boolean> signOutboundMDNIfOptional) {
         this.dispositionNotificationTo = dispositionNotificationTo;
         this.mdnText = mdnText;
         this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm, "expected parameter 'micHashingAlgorithm' to be non-null");
@@ -142,15 +142,15 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AS2MdnSettingsArgs() {
-        this.dispositionNotificationTo = Input.empty();
-        this.mdnText = Input.empty();
-        this.micHashingAlgorithm = Input.empty();
-        this.needMDN = Input.empty();
-        this.receiptDeliveryUrl = Input.empty();
-        this.sendInboundMDNToMessageBox = Input.empty();
-        this.sendMDNAsynchronously = Input.empty();
-        this.signMDN = Input.empty();
-        this.signOutboundMDNIfOptional = Input.empty();
+        this.dispositionNotificationTo = Output.empty();
+        this.mdnText = Output.empty();
+        this.micHashingAlgorithm = Output.empty();
+        this.needMDN = Output.empty();
+        this.receiptDeliveryUrl = Output.empty();
+        this.sendInboundMDNToMessageBox = Output.empty();
+        this.sendMDNAsynchronously = Output.empty();
+        this.signMDN = Output.empty();
+        this.signOutboundMDNIfOptional = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dispositionNotificationTo;
-        private @Nullable Input<String> mdnText;
-        private Input<Either<String,HashingAlgorithm>> micHashingAlgorithm;
-        private Input<Boolean> needMDN;
-        private @Nullable Input<String> receiptDeliveryUrl;
-        private Input<Boolean> sendInboundMDNToMessageBox;
-        private Input<Boolean> sendMDNAsynchronously;
-        private Input<Boolean> signMDN;
-        private Input<Boolean> signOutboundMDNIfOptional;
+        private @Nullable Output<String> dispositionNotificationTo;
+        private @Nullable Output<String> mdnText;
+        private Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
+        private Output<Boolean> needMDN;
+        private @Nullable Output<String> receiptDeliveryUrl;
+        private Output<Boolean> sendInboundMDNToMessageBox;
+        private Output<Boolean> sendMDNAsynchronously;
+        private Output<Boolean> signMDN;
+        private Output<Boolean> signOutboundMDNIfOptional;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signOutboundMDNIfOptional = defaults.signOutboundMDNIfOptional;
         }
 
-        public Builder dispositionNotificationTo(@Nullable Input<String> dispositionNotificationTo) {
+        public Builder dispositionNotificationTo(@Nullable Output<String> dispositionNotificationTo) {
             this.dispositionNotificationTo = dispositionNotificationTo;
             return this;
         }
 
         public Builder dispositionNotificationTo(@Nullable String dispositionNotificationTo) {
-            this.dispositionNotificationTo = Input.ofNullable(dispositionNotificationTo);
+            this.dispositionNotificationTo = Output.ofNullable(dispositionNotificationTo);
             return this;
         }
 
-        public Builder mdnText(@Nullable Input<String> mdnText) {
+        public Builder mdnText(@Nullable Output<String> mdnText) {
             this.mdnText = mdnText;
             return this;
         }
 
         public Builder mdnText(@Nullable String mdnText) {
-            this.mdnText = Input.ofNullable(mdnText);
+            this.mdnText = Output.ofNullable(mdnText);
             return this;
         }
 
-        public Builder micHashingAlgorithm(Input<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
+        public Builder micHashingAlgorithm(Output<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
             this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm);
             return this;
         }
 
         public Builder micHashingAlgorithm(Either<String,HashingAlgorithm> micHashingAlgorithm) {
-            this.micHashingAlgorithm = Input.of(Objects.requireNonNull(micHashingAlgorithm));
+            this.micHashingAlgorithm = Output.of(Objects.requireNonNull(micHashingAlgorithm));
             return this;
         }
 
-        public Builder needMDN(Input<Boolean> needMDN) {
+        public Builder needMDN(Output<Boolean> needMDN) {
             this.needMDN = Objects.requireNonNull(needMDN);
             return this;
         }
 
         public Builder needMDN(Boolean needMDN) {
-            this.needMDN = Input.of(Objects.requireNonNull(needMDN));
+            this.needMDN = Output.of(Objects.requireNonNull(needMDN));
             return this;
         }
 
-        public Builder receiptDeliveryUrl(@Nullable Input<String> receiptDeliveryUrl) {
+        public Builder receiptDeliveryUrl(@Nullable Output<String> receiptDeliveryUrl) {
             this.receiptDeliveryUrl = receiptDeliveryUrl;
             return this;
         }
 
         public Builder receiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
-            this.receiptDeliveryUrl = Input.ofNullable(receiptDeliveryUrl);
+            this.receiptDeliveryUrl = Output.ofNullable(receiptDeliveryUrl);
             return this;
         }
 
-        public Builder sendInboundMDNToMessageBox(Input<Boolean> sendInboundMDNToMessageBox) {
+        public Builder sendInboundMDNToMessageBox(Output<Boolean> sendInboundMDNToMessageBox) {
             this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox);
             return this;
         }
 
         public Builder sendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
-            this.sendInboundMDNToMessageBox = Input.of(Objects.requireNonNull(sendInboundMDNToMessageBox));
+            this.sendInboundMDNToMessageBox = Output.of(Objects.requireNonNull(sendInboundMDNToMessageBox));
             return this;
         }
 
-        public Builder sendMDNAsynchronously(Input<Boolean> sendMDNAsynchronously) {
+        public Builder sendMDNAsynchronously(Output<Boolean> sendMDNAsynchronously) {
             this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously);
             return this;
         }
 
         public Builder sendMDNAsynchronously(Boolean sendMDNAsynchronously) {
-            this.sendMDNAsynchronously = Input.of(Objects.requireNonNull(sendMDNAsynchronously));
+            this.sendMDNAsynchronously = Output.of(Objects.requireNonNull(sendMDNAsynchronously));
             return this;
         }
 
-        public Builder signMDN(Input<Boolean> signMDN) {
+        public Builder signMDN(Output<Boolean> signMDN) {
             this.signMDN = Objects.requireNonNull(signMDN);
             return this;
         }
 
         public Builder signMDN(Boolean signMDN) {
-            this.signMDN = Input.of(Objects.requireNonNull(signMDN));
+            this.signMDN = Output.of(Objects.requireNonNull(signMDN));
             return this;
         }
 
-        public Builder signOutboundMDNIfOptional(Input<Boolean> signOutboundMDNIfOptional) {
+        public Builder signOutboundMDNIfOptional(Output<Boolean> signOutboundMDNIfOptional) {
             this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
             return this;
         }
 
         public Builder signOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
-            this.signOutboundMDNIfOptional = Input.of(Objects.requireNonNull(signOutboundMDNIfOptional));
+            this.signOutboundMDNIfOptional = Output.of(Objects.requireNonNull(signOutboundMDNIfOptional));
             return this;
         }
         public AS2MdnSettingsArgs build() {

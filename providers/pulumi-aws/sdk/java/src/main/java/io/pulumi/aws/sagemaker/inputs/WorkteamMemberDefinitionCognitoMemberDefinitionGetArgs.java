@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -29,9 +29,9 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
      * 
      */
     @InputImport(name="userGroup", required=true)
-      private final Input<String> userGroup;
+      private final Output<String> userGroup;
 
-    public Input<String> getUserGroup() {
+    public Output<String> getUserGroup() {
         return this.userGroup;
     }
 
@@ -40,25 +40,25 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
      * 
      */
     @InputImport(name="userPool", required=true)
-      private final Input<String> userPool;
+      private final Output<String> userPool;
 
-    public Input<String> getUserPool() {
+    public Output<String> getUserPool() {
         return this.userPool;
     }
 
     public WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs(
-        Input<String> clientId,
-        Input<String> userGroup,
-        Input<String> userPool) {
+        Output<String> clientId,
+        Output<String> userGroup,
+        Output<String> userPool) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.userGroup = Objects.requireNonNull(userGroup, "expected parameter 'userGroup' to be non-null");
         this.userPool = Objects.requireNonNull(userPool, "expected parameter 'userPool' to be non-null");
     }
 
     private WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs() {
-        this.clientId = Input.empty();
-        this.userGroup = Input.empty();
-        this.userPool = Input.empty();
+        this.clientId = Output.empty();
+        this.userGroup = Output.empty();
+        this.userPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private Input<String> userGroup;
-        private Input<String> userPool;
+        private Output<String> clientId;
+        private Output<String> userGroup;
+        private Output<String> userPool;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
     	      this.userPool = defaults.userPool;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder userGroup(Input<String> userGroup) {
+        public Builder userGroup(Output<String> userGroup) {
             this.userGroup = Objects.requireNonNull(userGroup);
             return this;
         }
 
         public Builder userGroup(String userGroup) {
-            this.userGroup = Input.of(Objects.requireNonNull(userGroup));
+            this.userGroup = Output.of(Objects.requireNonNull(userGroup));
             return this;
         }
 
-        public Builder userPool(Input<String> userPool) {
+        public Builder userPool(Output<String> userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }
 
         public Builder userPool(String userPool) {
-            this.userPool = Input.of(Objects.requireNonNull(userPool));
+            this.userPool = Output.of(Objects.requireNonNull(userPool));
             return this;
         }
         public WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs build() {

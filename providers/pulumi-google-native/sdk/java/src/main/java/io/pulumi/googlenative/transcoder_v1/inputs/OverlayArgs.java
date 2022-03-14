@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.ImageArgs;
@@ -25,10 +25,10 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="animations")
-      private final @Nullable Input<List<AnimationArgs>> animations;
+      private final @Nullable Output<List<AnimationArgs>> animations;
 
-    public Input<List<AnimationArgs>> getAnimations() {
-        return this.animations == null ? Input.empty() : this.animations;
+    public Output<List<AnimationArgs>> getAnimations() {
+        return this.animations == null ? Output.empty() : this.animations;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<ImageArgs> image;
+      private final @Nullable Output<ImageArgs> image;
 
-    public Input<ImageArgs> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<ImageArgs> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     public OverlayArgs(
-        @Nullable Input<List<AnimationArgs>> animations,
-        @Nullable Input<ImageArgs> image) {
+        @Nullable Output<List<AnimationArgs>> animations,
+        @Nullable Output<ImageArgs> image) {
         this.animations = animations;
         this.image = image;
     }
 
     private OverlayArgs() {
-        this.animations = Input.empty();
-        this.image = Input.empty();
+        this.animations = Output.empty();
+        this.image = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AnimationArgs>> animations;
-        private @Nullable Input<ImageArgs> image;
+        private @Nullable Output<List<AnimationArgs>> animations;
+        private @Nullable Output<ImageArgs> image;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.image = defaults.image;
         }
 
-        public Builder animations(@Nullable Input<List<AnimationArgs>> animations) {
+        public Builder animations(@Nullable Output<List<AnimationArgs>> animations) {
             this.animations = animations;
             return this;
         }
 
         public Builder animations(@Nullable List<AnimationArgs> animations) {
-            this.animations = Input.ofNullable(animations);
+            this.animations = Output.ofNullable(animations);
             return this;
         }
 
-        public Builder image(@Nullable Input<ImageArgs> image) {
+        public Builder image(@Nullable Output<ImageArgs> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable ImageArgs image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
         public OverlayArgs build() {

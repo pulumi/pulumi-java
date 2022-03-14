@@ -5,7 +5,7 @@ package io.pulumi.azurenative.notificationhubs;
 
 import io.pulumi.azurenative.notificationhubs.enums.NamespaceType;
 import io.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="critical")
-      private final @Nullable Input<Boolean> critical;
+      private final @Nullable Output<Boolean> critical;
 
-    public Input<Boolean> getCritical() {
-        return this.critical == null ? Input.empty() : this.critical;
+    public Output<Boolean> getCritical() {
+        return this.critical == null ? Output.empty() : this.critical;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataCenter")
-      private final @Nullable Input<String> dataCenter;
+      private final @Nullable Output<String> dataCenter;
 
-    public Input<String> getDataCenter() {
-        return this.dataCenter == null ? Input.empty() : this.dataCenter;
+    public Output<String> getDataCenter() {
+        return this.dataCenter == null ? Output.empty() : this.dataCenter;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName")
-      private final @Nullable Input<String> namespaceName;
+      private final @Nullable Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
-        return this.namespaceName == null ? Input.empty() : this.namespaceName;
+    public Output<String> getNamespaceName() {
+        return this.namespaceName == null ? Output.empty() : this.namespaceName;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceType")
-      private final @Nullable Input<NamespaceType> namespaceType;
+      private final @Nullable Output<NamespaceType> namespaceType;
 
-    public Input<NamespaceType> getNamespaceType() {
-        return this.namespaceType == null ? Input.empty() : this.namespaceType;
+    public Output<NamespaceType> getNamespaceType() {
+        return this.namespaceType == null ? Output.empty() : this.namespaceType;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -133,9 +133,9 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -144,10 +144,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleUnit")
-      private final @Nullable Input<String> scaleUnit;
+      private final @Nullable Output<String> scaleUnit;
 
-    public Input<String> getScaleUnit() {
-        return this.scaleUnit == null ? Input.empty() : this.scaleUnit;
+    public Output<String> getScaleUnit() {
+        return this.scaleUnit == null ? Output.empty() : this.scaleUnit;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusEndpoint")
-      private final @Nullable Input<String> serviceBusEndpoint;
+      private final @Nullable Output<String> serviceBusEndpoint;
 
-    public Input<String> getServiceBusEndpoint() {
-        return this.serviceBusEndpoint == null ? Input.empty() : this.serviceBusEndpoint;
+    public Output<String> getServiceBusEndpoint() {
+        return this.serviceBusEndpoint == null ? Output.empty() : this.serviceBusEndpoint;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -210,31 +210,31 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedAt")
-      private final @Nullable Input<String> updatedAt;
+      private final @Nullable Output<String> updatedAt;
 
-    public Input<String> getUpdatedAt() {
-        return this.updatedAt == null ? Input.empty() : this.updatedAt;
+    public Output<String> getUpdatedAt() {
+        return this.updatedAt == null ? Output.empty() : this.updatedAt;
     }
 
     public NamespaceArgs(
-        @Nullable Input<String> createdAt,
-        @Nullable Input<Boolean> critical,
-        @Nullable Input<String> dataCenter,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespaceName,
-        @Nullable Input<NamespaceType> namespaceType,
-        @Nullable Input<String> provisioningState,
-        @Nullable Input<String> region,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scaleUnit,
-        @Nullable Input<String> serviceBusEndpoint,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<String> status,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> updatedAt) {
+        @Nullable Output<String> createdAt,
+        @Nullable Output<Boolean> critical,
+        @Nullable Output<String> dataCenter,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespaceName,
+        @Nullable Output<NamespaceType> namespaceType,
+        @Nullable Output<String> provisioningState,
+        @Nullable Output<String> region,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scaleUnit,
+        @Nullable Output<String> serviceBusEndpoint,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<String> status,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> updatedAt) {
         this.createdAt = createdAt;
         this.critical = critical;
         this.dataCenter = dataCenter;
@@ -256,24 +256,24 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamespaceArgs() {
-        this.createdAt = Input.empty();
-        this.critical = Input.empty();
-        this.dataCenter = Input.empty();
-        this.enabled = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.namespaceName = Input.empty();
-        this.namespaceType = Input.empty();
-        this.provisioningState = Input.empty();
-        this.region = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scaleUnit = Input.empty();
-        this.serviceBusEndpoint = Input.empty();
-        this.sku = Input.empty();
-        this.status = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tags = Input.empty();
-        this.updatedAt = Input.empty();
+        this.createdAt = Output.empty();
+        this.critical = Output.empty();
+        this.dataCenter = Output.empty();
+        this.enabled = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.namespaceName = Output.empty();
+        this.namespaceType = Output.empty();
+        this.provisioningState = Output.empty();
+        this.region = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scaleUnit = Output.empty();
+        this.serviceBusEndpoint = Output.empty();
+        this.sku = Output.empty();
+        this.status = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tags = Output.empty();
+        this.updatedAt = Output.empty();
     }
 
     public static Builder builder() {
@@ -285,24 +285,24 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<Boolean> critical;
-        private @Nullable Input<String> dataCenter;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespaceName;
-        private @Nullable Input<NamespaceType> namespaceType;
-        private @Nullable Input<String> provisioningState;
-        private @Nullable Input<String> region;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scaleUnit;
-        private @Nullable Input<String> serviceBusEndpoint;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> updatedAt;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<Boolean> critical;
+        private @Nullable Output<String> dataCenter;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespaceName;
+        private @Nullable Output<NamespaceType> namespaceType;
+        private @Nullable Output<String> provisioningState;
+        private @Nullable Output<String> region;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scaleUnit;
+        private @Nullable Output<String> serviceBusEndpoint;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> updatedAt;
 
         public Builder() {
     	      // Empty
@@ -330,183 +330,183 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder critical(@Nullable Input<Boolean> critical) {
+        public Builder critical(@Nullable Output<Boolean> critical) {
             this.critical = critical;
             return this;
         }
 
         public Builder critical(@Nullable Boolean critical) {
-            this.critical = Input.ofNullable(critical);
+            this.critical = Output.ofNullable(critical);
             return this;
         }
 
-        public Builder dataCenter(@Nullable Input<String> dataCenter) {
+        public Builder dataCenter(@Nullable Output<String> dataCenter) {
             this.dataCenter = dataCenter;
             return this;
         }
 
         public Builder dataCenter(@Nullable String dataCenter) {
-            this.dataCenter = Input.ofNullable(dataCenter);
+            this.dataCenter = Output.ofNullable(dataCenter);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespaceName(@Nullable Input<String> namespaceName) {
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
             this.namespaceName = namespaceName;
             return this;
         }
 
         public Builder namespaceName(@Nullable String namespaceName) {
-            this.namespaceName = Input.ofNullable(namespaceName);
+            this.namespaceName = Output.ofNullable(namespaceName);
             return this;
         }
 
-        public Builder namespaceType(@Nullable Input<NamespaceType> namespaceType) {
+        public Builder namespaceType(@Nullable Output<NamespaceType> namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
 
         public Builder namespaceType(@Nullable NamespaceType namespaceType) {
-            this.namespaceType = Input.ofNullable(namespaceType);
+            this.namespaceType = Output.ofNullable(namespaceType);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scaleUnit(@Nullable Input<String> scaleUnit) {
+        public Builder scaleUnit(@Nullable Output<String> scaleUnit) {
             this.scaleUnit = scaleUnit;
             return this;
         }
 
         public Builder scaleUnit(@Nullable String scaleUnit) {
-            this.scaleUnit = Input.ofNullable(scaleUnit);
+            this.scaleUnit = Output.ofNullable(scaleUnit);
             return this;
         }
 
-        public Builder serviceBusEndpoint(@Nullable Input<String> serviceBusEndpoint) {
+        public Builder serviceBusEndpoint(@Nullable Output<String> serviceBusEndpoint) {
             this.serviceBusEndpoint = serviceBusEndpoint;
             return this;
         }
 
         public Builder serviceBusEndpoint(@Nullable String serviceBusEndpoint) {
-            this.serviceBusEndpoint = Input.ofNullable(serviceBusEndpoint);
+            this.serviceBusEndpoint = Output.ofNullable(serviceBusEndpoint);
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder updatedAt(@Nullable Input<String> updatedAt) {
+        public Builder updatedAt(@Nullable Output<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Input.ofNullable(updatedAt);
+            this.updatedAt = Output.ofNullable(updatedAt);
             return this;
         }
         public NamespaceArgs build() {

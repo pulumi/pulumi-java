@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkconnectivity.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-      private final Input<Boolean> siteToSiteDataTransfer;
+      private final Output<Boolean> siteToSiteDataTransfer;
 
-    public Input<Boolean> getSiteToSiteDataTransfer() {
+    public Output<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 
@@ -31,22 +31,22 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="uris", required=true)
-      private final Input<List<String>> uris;
+      private final Output<List<String>> uris;
 
-    public Input<List<String>> getUris() {
+    public Output<List<String>> getUris() {
         return this.uris;
     }
 
     public SpokeLinkedInterconnectAttachmentsGetArgs(
-        Input<Boolean> siteToSiteDataTransfer,
-        Input<List<String>> uris) {
+        Output<Boolean> siteToSiteDataTransfer,
+        Output<List<String>> uris) {
         this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
         this.uris = Objects.requireNonNull(uris, "expected parameter 'uris' to be non-null");
     }
 
     private SpokeLinkedInterconnectAttachmentsGetArgs() {
-        this.siteToSiteDataTransfer = Input.empty();
-        this.uris = Input.empty();
+        this.siteToSiteDataTransfer = Output.empty();
+        this.uris = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<Boolean> siteToSiteDataTransfer;
-        private Input<List<String>> uris;
+        private Output<Boolean> siteToSiteDataTransfer;
+        private Output<List<String>> uris;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
     	      this.uris = defaults.uris;
         }
 
-        public Builder siteToSiteDataTransfer(Input<Boolean> siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Output<Boolean> siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
 
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Input.of(Objects.requireNonNull(siteToSiteDataTransfer));
+            this.siteToSiteDataTransfer = Output.of(Objects.requireNonNull(siteToSiteDataTransfer));
             return this;
         }
 
-        public Builder uris(Input<List<String>> uris) {
+        public Builder uris(Output<List<String>> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
 
         public Builder uris(List<String> uris) {
-            this.uris = Input.of(Objects.requireNonNull(uris));
+            this.uris = Output.of(Objects.requireNonNull(uris));
             return this;
         }
         public SpokeLinkedInterconnectAttachmentsGetArgs build() {

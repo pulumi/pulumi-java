@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.PermissionScopeArgs;
 import io.pulumi.azurenative.storage.inputs.SshPublicKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -34,10 +34,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasSharedKey")
-      private final @Nullable Input<Boolean> hasSharedKey;
+      private final @Nullable Output<Boolean> hasSharedKey;
 
-    public Input<Boolean> getHasSharedKey() {
-        return this.hasSharedKey == null ? Input.empty() : this.hasSharedKey;
+    public Output<Boolean> getHasSharedKey() {
+        return this.hasSharedKey == null ? Output.empty() : this.hasSharedKey;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasSshKey")
-      private final @Nullable Input<Boolean> hasSshKey;
+      private final @Nullable Output<Boolean> hasSshKey;
 
-    public Input<Boolean> getHasSshKey() {
-        return this.hasSshKey == null ? Input.empty() : this.hasSshKey;
+    public Output<Boolean> getHasSshKey() {
+        return this.hasSshKey == null ? Output.empty() : this.hasSshKey;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasSshPassword")
-      private final @Nullable Input<Boolean> hasSshPassword;
+      private final @Nullable Output<Boolean> hasSshPassword;
 
-    public Input<Boolean> getHasSshPassword() {
-        return this.hasSshPassword == null ? Input.empty() : this.hasSshPassword;
+    public Output<Boolean> getHasSshPassword() {
+        return this.hasSshPassword == null ? Output.empty() : this.hasSshPassword;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectory")
-      private final @Nullable Input<String> homeDirectory;
+      private final @Nullable Output<String> homeDirectory;
 
-    public Input<String> getHomeDirectory() {
-        return this.homeDirectory == null ? Input.empty() : this.homeDirectory;
+    public Output<String> getHomeDirectory() {
+        return this.homeDirectory == null ? Output.empty() : this.homeDirectory;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionScopes")
-      private final @Nullable Input<List<PermissionScopeArgs>> permissionScopes;
+      private final @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
 
-    public Input<List<PermissionScopeArgs>> getPermissionScopes() {
-        return this.permissionScopes == null ? Input.empty() : this.permissionScopes;
+    public Output<List<PermissionScopeArgs>> getPermissionScopes() {
+        return this.permissionScopes == null ? Output.empty() : this.permissionScopes;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,10 +100,10 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshAuthorizedKeys")
-      private final @Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys;
+      private final @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
 
-    public Input<List<SshPublicKeyArgs>> getSshAuthorizedKeys() {
-        return this.sshAuthorizedKeys == null ? Input.empty() : this.sshAuthorizedKeys;
+    public Output<List<SshPublicKeyArgs>> getSshAuthorizedKeys() {
+        return this.sshAuthorizedKeys == null ? Output.empty() : this.sshAuthorizedKeys;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public LocalUserArgs(
-        Input<String> accountName,
-        @Nullable Input<Boolean> hasSharedKey,
-        @Nullable Input<Boolean> hasSshKey,
-        @Nullable Input<Boolean> hasSshPassword,
-        @Nullable Input<String> homeDirectory,
-        @Nullable Input<List<PermissionScopeArgs>> permissionScopes,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys,
-        @Nullable Input<String> username) {
+        Output<String> accountName,
+        @Nullable Output<Boolean> hasSharedKey,
+        @Nullable Output<Boolean> hasSshKey,
+        @Nullable Output<Boolean> hasSshPassword,
+        @Nullable Output<String> homeDirectory,
+        @Nullable Output<List<PermissionScopeArgs>> permissionScopes,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys,
+        @Nullable Output<String> username) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.hasSharedKey = hasSharedKey;
         this.hasSshKey = hasSshKey;
@@ -139,15 +139,15 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocalUserArgs() {
-        this.accountName = Input.empty();
-        this.hasSharedKey = Input.empty();
-        this.hasSshKey = Input.empty();
-        this.hasSshPassword = Input.empty();
-        this.homeDirectory = Input.empty();
-        this.permissionScopes = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sshAuthorizedKeys = Input.empty();
-        this.username = Input.empty();
+        this.accountName = Output.empty();
+        this.hasSharedKey = Output.empty();
+        this.hasSshKey = Output.empty();
+        this.hasSshPassword = Output.empty();
+        this.homeDirectory = Output.empty();
+        this.permissionScopes = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sshAuthorizedKeys = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<Boolean> hasSharedKey;
-        private @Nullable Input<Boolean> hasSshKey;
-        private @Nullable Input<Boolean> hasSshPassword;
-        private @Nullable Input<String> homeDirectory;
-        private @Nullable Input<List<PermissionScopeArgs>> permissionScopes;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys;
-        private @Nullable Input<String> username;
+        private Output<String> accountName;
+        private @Nullable Output<Boolean> hasSharedKey;
+        private @Nullable Output<Boolean> hasSshKey;
+        private @Nullable Output<Boolean> hasSshPassword;
+        private @Nullable Output<String> homeDirectory;
+        private @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder hasSharedKey(@Nullable Input<Boolean> hasSharedKey) {
+        public Builder hasSharedKey(@Nullable Output<Boolean> hasSharedKey) {
             this.hasSharedKey = hasSharedKey;
             return this;
         }
 
         public Builder hasSharedKey(@Nullable Boolean hasSharedKey) {
-            this.hasSharedKey = Input.ofNullable(hasSharedKey);
+            this.hasSharedKey = Output.ofNullable(hasSharedKey);
             return this;
         }
 
-        public Builder hasSshKey(@Nullable Input<Boolean> hasSshKey) {
+        public Builder hasSshKey(@Nullable Output<Boolean> hasSshKey) {
             this.hasSshKey = hasSshKey;
             return this;
         }
 
         public Builder hasSshKey(@Nullable Boolean hasSshKey) {
-            this.hasSshKey = Input.ofNullable(hasSshKey);
+            this.hasSshKey = Output.ofNullable(hasSshKey);
             return this;
         }
 
-        public Builder hasSshPassword(@Nullable Input<Boolean> hasSshPassword) {
+        public Builder hasSshPassword(@Nullable Output<Boolean> hasSshPassword) {
             this.hasSshPassword = hasSshPassword;
             return this;
         }
 
         public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
-            this.hasSshPassword = Input.ofNullable(hasSshPassword);
+            this.hasSshPassword = Output.ofNullable(hasSshPassword);
             return this;
         }
 
-        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
         public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Input.ofNullable(homeDirectory);
+            this.homeDirectory = Output.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder permissionScopes(@Nullable Input<List<PermissionScopeArgs>> permissionScopes) {
+        public Builder permissionScopes(@Nullable Output<List<PermissionScopeArgs>> permissionScopes) {
             this.permissionScopes = permissionScopes;
             return this;
         }
 
         public Builder permissionScopes(@Nullable List<PermissionScopeArgs> permissionScopes) {
-            this.permissionScopes = Input.ofNullable(permissionScopes);
+            this.permissionScopes = Output.ofNullable(permissionScopes);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sshAuthorizedKeys(@Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys) {
+        public Builder sshAuthorizedKeys(@Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
 
         public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyArgs> sshAuthorizedKeys) {
-            this.sshAuthorizedKeys = Input.ofNullable(sshAuthorizedKeys);
+            this.sshAuthorizedKeys = Output.ofNullable(sshAuthorizedKeys);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public LocalUserArgs build() {

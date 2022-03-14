@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.enums.ServiceLoadMetricWeight;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultLoad")
-      private final @Nullable Input<Integer> defaultLoad;
+      private final @Nullable Output<Integer> defaultLoad;
 
-    public Input<Integer> getDefaultLoad() {
-        return this.defaultLoad == null ? Input.empty() : this.defaultLoad;
+    public Output<Integer> getDefaultLoad() {
+        return this.defaultLoad == null ? Output.empty() : this.defaultLoad;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -48,10 +48,10 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryDefaultLoad")
-      private final @Nullable Input<Integer> primaryDefaultLoad;
+      private final @Nullable Output<Integer> primaryDefaultLoad;
 
-    public Input<Integer> getPrimaryDefaultLoad() {
-        return this.primaryDefaultLoad == null ? Input.empty() : this.primaryDefaultLoad;
+    public Output<Integer> getPrimaryDefaultLoad() {
+        return this.primaryDefaultLoad == null ? Output.empty() : this.primaryDefaultLoad;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secondaryDefaultLoad")
-      private final @Nullable Input<Integer> secondaryDefaultLoad;
+      private final @Nullable Output<Integer> secondaryDefaultLoad;
 
-    public Input<Integer> getSecondaryDefaultLoad() {
-        return this.secondaryDefaultLoad == null ? Input.empty() : this.secondaryDefaultLoad;
+    public Output<Integer> getSecondaryDefaultLoad() {
+        return this.secondaryDefaultLoad == null ? Output.empty() : this.secondaryDefaultLoad;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Either<String,ServiceLoadMetricWeight>> weight;
+      private final @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight;
 
-    public Input<Either<String,ServiceLoadMetricWeight>> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Either<String,ServiceLoadMetricWeight>> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public ServiceLoadMetricDescriptionArgs(
-        @Nullable Input<Integer> defaultLoad,
-        Input<String> name,
-        @Nullable Input<Integer> primaryDefaultLoad,
-        @Nullable Input<Integer> secondaryDefaultLoad,
-        @Nullable Input<Either<String,ServiceLoadMetricWeight>> weight) {
+        @Nullable Output<Integer> defaultLoad,
+        Output<String> name,
+        @Nullable Output<Integer> primaryDefaultLoad,
+        @Nullable Output<Integer> secondaryDefaultLoad,
+        @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight) {
         this.defaultLoad = defaultLoad;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.primaryDefaultLoad = primaryDefaultLoad;
@@ -90,11 +90,11 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     }
 
     private ServiceLoadMetricDescriptionArgs() {
-        this.defaultLoad = Input.empty();
-        this.name = Input.empty();
-        this.primaryDefaultLoad = Input.empty();
-        this.secondaryDefaultLoad = Input.empty();
-        this.weight = Input.empty();
+        this.defaultLoad = Output.empty();
+        this.name = Output.empty();
+        this.primaryDefaultLoad = Output.empty();
+        this.secondaryDefaultLoad = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> defaultLoad;
-        private Input<String> name;
-        private @Nullable Input<Integer> primaryDefaultLoad;
-        private @Nullable Input<Integer> secondaryDefaultLoad;
-        private @Nullable Input<Either<String,ServiceLoadMetricWeight>> weight;
+        private @Nullable Output<Integer> defaultLoad;
+        private Output<String> name;
+        private @Nullable Output<Integer> primaryDefaultLoad;
+        private @Nullable Output<Integer> secondaryDefaultLoad;
+        private @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     	      this.weight = defaults.weight;
         }
 
-        public Builder defaultLoad(@Nullable Input<Integer> defaultLoad) {
+        public Builder defaultLoad(@Nullable Output<Integer> defaultLoad) {
             this.defaultLoad = defaultLoad;
             return this;
         }
 
         public Builder defaultLoad(@Nullable Integer defaultLoad) {
-            this.defaultLoad = Input.ofNullable(defaultLoad);
+            this.defaultLoad = Output.ofNullable(defaultLoad);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder primaryDefaultLoad(@Nullable Input<Integer> primaryDefaultLoad) {
+        public Builder primaryDefaultLoad(@Nullable Output<Integer> primaryDefaultLoad) {
             this.primaryDefaultLoad = primaryDefaultLoad;
             return this;
         }
 
         public Builder primaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
-            this.primaryDefaultLoad = Input.ofNullable(primaryDefaultLoad);
+            this.primaryDefaultLoad = Output.ofNullable(primaryDefaultLoad);
             return this;
         }
 
-        public Builder secondaryDefaultLoad(@Nullable Input<Integer> secondaryDefaultLoad) {
+        public Builder secondaryDefaultLoad(@Nullable Output<Integer> secondaryDefaultLoad) {
             this.secondaryDefaultLoad = secondaryDefaultLoad;
             return this;
         }
 
         public Builder secondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
-            this.secondaryDefaultLoad = Input.ofNullable(secondaryDefaultLoad);
+            this.secondaryDefaultLoad = Output.ofNullable(secondaryDefaultLoad);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Either<String,ServiceLoadMetricWeight>> weight) {
+        public Builder weight(@Nullable Output<Either<String,ServiceLoadMetricWeight>> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Either<String,ServiceLoadMetricWeight> weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public ServiceLoadMetricDescriptionArgs build() {

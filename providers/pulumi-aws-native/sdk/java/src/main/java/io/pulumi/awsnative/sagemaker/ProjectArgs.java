@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ProjectTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ServiceCatalogProvisioningDetailsPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,17 +18,17 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @InputImport(name="projectDescription")
-      private final @Nullable Input<String> projectDescription;
+      private final @Nullable Output<String> projectDescription;
 
-    public Input<String> getProjectDescription() {
-        return this.projectDescription == null ? Input.empty() : this.projectDescription;
+    public Output<String> getProjectDescription() {
+        return this.projectDescription == null ? Output.empty() : this.projectDescription;
     }
 
     @InputImport(name="projectName")
-      private final @Nullable Input<String> projectName;
+      private final @Nullable Output<String> projectName;
 
-    public Input<String> getProjectName() {
-        return this.projectName == null ? Input.empty() : this.projectName;
+    public Output<String> getProjectName() {
+        return this.projectName == null ? Output.empty() : this.projectName;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCatalogProvisioningDetails", required=true)
-      private final Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
+      private final Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
 
-    public Input<ServiceCatalogProvisioningDetailsPropertiesArgs> getServiceCatalogProvisioningDetails() {
+    public Output<ServiceCatalogProvisioningDetailsPropertiesArgs> getServiceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
 
@@ -47,17 +47,17 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ProjectTagArgs>> tags;
+      private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Input<List<ProjectTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ProjectTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProjectArgs(
-        @Nullable Input<String> projectDescription,
-        @Nullable Input<String> projectName,
-        Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails,
-        @Nullable Input<List<ProjectTagArgs>> tags) {
+        @Nullable Output<String> projectDescription,
+        @Nullable Output<String> projectName,
+        Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails,
+        @Nullable Output<List<ProjectTagArgs>> tags) {
         this.projectDescription = projectDescription;
         this.projectName = projectName;
         this.serviceCatalogProvisioningDetails = Objects.requireNonNull(serviceCatalogProvisioningDetails, "expected parameter 'serviceCatalogProvisioningDetails' to be non-null");
@@ -65,10 +65,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.projectDescription = Input.empty();
-        this.projectName = Input.empty();
-        this.serviceCatalogProvisioningDetails = Input.empty();
-        this.tags = Input.empty();
+        this.projectDescription = Output.empty();
+        this.projectName = Output.empty();
+        this.serviceCatalogProvisioningDetails = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> projectDescription;
-        private @Nullable Input<String> projectName;
-        private Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
-        private @Nullable Input<List<ProjectTagArgs>> tags;
+        private @Nullable Output<String> projectDescription;
+        private @Nullable Output<String> projectName;
+        private Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
+        private @Nullable Output<List<ProjectTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder projectDescription(@Nullable Input<String> projectDescription) {
+        public Builder projectDescription(@Nullable Output<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
         public Builder projectDescription(@Nullable String projectDescription) {
-            this.projectDescription = Input.ofNullable(projectDescription);
+            this.projectDescription = Output.ofNullable(projectDescription);
             return this;
         }
 
-        public Builder projectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Input.ofNullable(projectName);
+            this.projectName = Output.ofNullable(projectName);
             return this;
         }
 
-        public Builder serviceCatalogProvisioningDetails(Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Objects.requireNonNull(serviceCatalogProvisioningDetails);
             return this;
         }
 
         public Builder serviceCatalogProvisioningDetails(ServiceCatalogProvisioningDetailsPropertiesArgs serviceCatalogProvisioningDetails) {
-            this.serviceCatalogProvisioningDetails = Input.of(Objects.requireNonNull(serviceCatalogProvisioningDetails));
+            this.serviceCatalogProvisioningDetails = Output.of(Objects.requireNonNull(serviceCatalogProvisioningDetails));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProjectArgs build() {

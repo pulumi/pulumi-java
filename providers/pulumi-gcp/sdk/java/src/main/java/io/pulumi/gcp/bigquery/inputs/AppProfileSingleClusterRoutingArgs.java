@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowTransactionalWrites")
-      private final @Nullable Input<Boolean> allowTransactionalWrites;
+      private final @Nullable Output<Boolean> allowTransactionalWrites;
 
-    public Input<Boolean> getAllowTransactionalWrites() {
-        return this.allowTransactionalWrites == null ? Input.empty() : this.allowTransactionalWrites;
+    public Output<Boolean> getAllowTransactionalWrites() {
+        return this.allowTransactionalWrites == null ? Output.empty() : this.allowTransactionalWrites;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterId", required=true)
-      private final Input<String> clusterId;
+      private final Output<String> clusterId;
 
-    public Input<String> getClusterId() {
+    public Output<String> getClusterId() {
         return this.clusterId;
     }
 
     public AppProfileSingleClusterRoutingArgs(
-        @Nullable Input<Boolean> allowTransactionalWrites,
-        Input<String> clusterId) {
+        @Nullable Output<Boolean> allowTransactionalWrites,
+        Output<String> clusterId) {
         this.allowTransactionalWrites = allowTransactionalWrites;
         this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
     }
 
     private AppProfileSingleClusterRoutingArgs() {
-        this.allowTransactionalWrites = Input.empty();
-        this.clusterId = Input.empty();
+        this.allowTransactionalWrites = Output.empty();
+        this.clusterId = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowTransactionalWrites;
-        private Input<String> clusterId;
+        private @Nullable Output<Boolean> allowTransactionalWrites;
+        private Output<String> clusterId;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
     	      this.clusterId = defaults.clusterId;
         }
 
-        public Builder allowTransactionalWrites(@Nullable Input<Boolean> allowTransactionalWrites) {
+        public Builder allowTransactionalWrites(@Nullable Output<Boolean> allowTransactionalWrites) {
             this.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
 
         public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
-            this.allowTransactionalWrites = Input.ofNullable(allowTransactionalWrites);
+            this.allowTransactionalWrites = Output.ofNullable(allowTransactionalWrites);
             return this;
         }
 
-        public Builder clusterId(Input<String> clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Input.of(Objects.requireNonNull(clusterId));
+            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
         public AppProfileSingleClusterRoutingArgs build() {

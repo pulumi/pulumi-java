@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="primarybytesIn")
-      private final @Nullable Input<Double> primarybytesIn;
+      private final @Nullable Output<Double> primarybytesIn;
 
-    public Input<Double> getPrimarybytesIn() {
-        return this.primarybytesIn == null ? Input.empty() : this.primarybytesIn;
+    public Output<Double> getPrimarybytesIn() {
+        return this.primarybytesIn == null ? Output.empty() : this.primarybytesIn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="primarybytesOut")
-      private final @Nullable Input<Double> primarybytesOut;
+      private final @Nullable Output<Double> primarybytesOut;
 
-    public Input<Double> getPrimarybytesOut() {
-        return this.primarybytesOut == null ? Input.empty() : this.primarybytesOut;
+    public Output<Double> getPrimarybytesOut() {
+        return this.primarybytesOut == null ? Output.empty() : this.primarybytesOut;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondarybytesIn")
-      private final @Nullable Input<Double> secondarybytesIn;
+      private final @Nullable Output<Double> secondarybytesIn;
 
-    public Input<Double> getSecondarybytesIn() {
-        return this.secondarybytesIn == null ? Input.empty() : this.secondarybytesIn;
+    public Output<Double> getSecondarybytesIn() {
+        return this.secondarybytesIn == null ? Output.empty() : this.secondarybytesIn;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondarybytesOut")
-      private final @Nullable Input<Double> secondarybytesOut;
+      private final @Nullable Output<Double> secondarybytesOut;
 
-    public Input<Double> getSecondarybytesOut() {
-        return this.secondarybytesOut == null ? Input.empty() : this.secondarybytesOut;
+    public Output<Double> getSecondarybytesOut() {
+        return this.secondarybytesOut == null ? Output.empty() : this.secondarybytesOut;
     }
 
     public ExpressRouteCircuitStatsArgs(
-        @Nullable Input<Double> primarybytesIn,
-        @Nullable Input<Double> primarybytesOut,
-        @Nullable Input<Double> secondarybytesIn,
-        @Nullable Input<Double> secondarybytesOut) {
+        @Nullable Output<Double> primarybytesIn,
+        @Nullable Output<Double> primarybytesOut,
+        @Nullable Output<Double> secondarybytesIn,
+        @Nullable Output<Double> secondarybytesOut) {
         this.primarybytesIn = primarybytesIn;
         this.primarybytesOut = primarybytesOut;
         this.secondarybytesIn = secondarybytesIn;
@@ -74,10 +74,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
     }
 
     private ExpressRouteCircuitStatsArgs() {
-        this.primarybytesIn = Input.empty();
-        this.primarybytesOut = Input.empty();
-        this.secondarybytesIn = Input.empty();
-        this.secondarybytesOut = Input.empty();
+        this.primarybytesIn = Output.empty();
+        this.primarybytesOut = Output.empty();
+        this.secondarybytesIn = Output.empty();
+        this.secondarybytesOut = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> primarybytesIn;
-        private @Nullable Input<Double> primarybytesOut;
-        private @Nullable Input<Double> secondarybytesIn;
-        private @Nullable Input<Double> secondarybytesOut;
+        private @Nullable Output<Double> primarybytesIn;
+        private @Nullable Output<Double> primarybytesOut;
+        private @Nullable Output<Double> secondarybytesIn;
+        private @Nullable Output<Double> secondarybytesOut;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
     	      this.secondarybytesOut = defaults.secondarybytesOut;
         }
 
-        public Builder primarybytesIn(@Nullable Input<Double> primarybytesIn) {
+        public Builder primarybytesIn(@Nullable Output<Double> primarybytesIn) {
             this.primarybytesIn = primarybytesIn;
             return this;
         }
 
         public Builder primarybytesIn(@Nullable Double primarybytesIn) {
-            this.primarybytesIn = Input.ofNullable(primarybytesIn);
+            this.primarybytesIn = Output.ofNullable(primarybytesIn);
             return this;
         }
 
-        public Builder primarybytesOut(@Nullable Input<Double> primarybytesOut) {
+        public Builder primarybytesOut(@Nullable Output<Double> primarybytesOut) {
             this.primarybytesOut = primarybytesOut;
             return this;
         }
 
         public Builder primarybytesOut(@Nullable Double primarybytesOut) {
-            this.primarybytesOut = Input.ofNullable(primarybytesOut);
+            this.primarybytesOut = Output.ofNullable(primarybytesOut);
             return this;
         }
 
-        public Builder secondarybytesIn(@Nullable Input<Double> secondarybytesIn) {
+        public Builder secondarybytesIn(@Nullable Output<Double> secondarybytesIn) {
             this.secondarybytesIn = secondarybytesIn;
             return this;
         }
 
         public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
-            this.secondarybytesIn = Input.ofNullable(secondarybytesIn);
+            this.secondarybytesIn = Output.ofNullable(secondarybytesIn);
             return this;
         }
 
-        public Builder secondarybytesOut(@Nullable Input<Double> secondarybytesOut) {
+        public Builder secondarybytesOut(@Nullable Output<Double> secondarybytesOut) {
             this.secondarybytesOut = secondarybytesOut;
             return this;
         }
 
         public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
-            this.secondarybytesOut = Input.ofNullable(secondarybytesOut);
+            this.secondarybytesOut = Output.ofNullable(secondarybytesOut);
             return this;
         }
         public ExpressRouteCircuitStatsArgs build() {

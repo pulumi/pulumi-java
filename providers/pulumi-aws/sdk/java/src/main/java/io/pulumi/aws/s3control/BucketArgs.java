@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -31,9 +31,9 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId", required=true)
-      private final Input<String> outpostId;
+      private final Output<String> outpostId;
 
-    public Input<String> getOutpostId() {
+    public Output<String> getOutpostId() {
         return this.outpostId;
     }
 
@@ -42,25 +42,25 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public BucketArgs(
-        Input<String> bucket,
-        Input<String> outpostId,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> bucket,
+        Output<String> outpostId,
+        @Nullable Output<Map<String,String>> tags) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.outpostId = Objects.requireNonNull(outpostId, "expected parameter 'outpostId' to be non-null");
         this.tags = tags;
     }
 
     private BucketArgs() {
-        this.bucket = Input.empty();
-        this.outpostId = Input.empty();
-        this.tags = Input.empty();
+        this.bucket = Output.empty();
+        this.outpostId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<String> outpostId;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> bucket;
+        private Output<String> outpostId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder outpostId(Input<String> outpostId) {
+        public Builder outpostId(Output<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
         public Builder outpostId(String outpostId) {
-            this.outpostId = Input.of(Objects.requireNonNull(outpostId));
+            this.outpostId = Output.of(Objects.requireNonNull(outpostId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public BucketArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFi
      * 
      */
     @InputImport(name="certificateChain", required=true)
-      private final Input<String> certificateChain;
+      private final Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
+    public Output<String> getCertificateChain() {
         return this.certificateChain;
     }
 
@@ -29,22 +29,22 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFi
      * 
      */
     @InputImport(name="privateKey", required=true)
-      private final Input<String> privateKey;
+      private final Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
+    public Output<String> getPrivateKey() {
         return this.privateKey;
     }
 
     public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs(
-        Input<String> certificateChain,
-        Input<String> privateKey) {
+        Output<String> certificateChain,
+        Output<String> privateKey) {
         this.certificateChain = Objects.requireNonNull(certificateChain, "expected parameter 'certificateChain' to be non-null");
         this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
     }
 
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs() {
-        this.certificateChain = Input.empty();
-        this.privateKey = Input.empty();
+        this.certificateChain = Output.empty();
+        this.privateKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFi
     }
 
     public static final class Builder {
-        private Input<String> certificateChain;
-        private Input<String> privateKey;
+        private Output<String> certificateChain;
+        private Output<String> privateKey;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFi
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder certificateChain(Input<String> certificateChain) {
+        public Builder certificateChain(Output<String> certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
         public Builder certificateChain(String certificateChain) {
-            this.certificateChain = Input.of(Objects.requireNonNull(certificateChain));
+            this.certificateChain = Output.of(Objects.requireNonNull(certificateChain));
             return this;
         }
 
-        public Builder privateKey(Input<String> privateKey) {
+        public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
         public Builder privateKey(String privateKey) {
-            this.privateKey = Input.of(Objects.requireNonNull(privateKey));
+            this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
         }
         public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs build() {

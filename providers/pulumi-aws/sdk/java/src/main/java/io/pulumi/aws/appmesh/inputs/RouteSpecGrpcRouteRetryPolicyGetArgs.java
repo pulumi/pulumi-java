@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="grpcRetryEvents")
-      private final @Nullable Input<List<String>> grpcRetryEvents;
+      private final @Nullable Output<List<String>> grpcRetryEvents;
 
-    public Input<List<String>> getGrpcRetryEvents() {
-        return this.grpcRetryEvents == null ? Input.empty() : this.grpcRetryEvents;
+    public Output<List<String>> getGrpcRetryEvents() {
+        return this.grpcRetryEvents == null ? Output.empty() : this.grpcRetryEvents;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="httpRetryEvents")
-      private final @Nullable Input<List<String>> httpRetryEvents;
+      private final @Nullable Output<List<String>> httpRetryEvents;
 
-    public Input<List<String>> getHttpRetryEvents() {
-        return this.httpRetryEvents == null ? Input.empty() : this.httpRetryEvents;
+    public Output<List<String>> getHttpRetryEvents() {
+        return this.httpRetryEvents == null ? Output.empty() : this.httpRetryEvents;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxRetries", required=true)
-      private final Input<Integer> maxRetries;
+      private final Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
+    public Output<Integer> getMaxRetries() {
         return this.maxRetries;
     }
 
@@ -58,9 +58,9 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="perRetryTimeout", required=true)
-      private final Input<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
+      private final Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
 
-    public Input<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> getPerRetryTimeout() {
+    public Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> getPerRetryTimeout() {
         return this.perRetryTimeout;
     }
 
@@ -69,18 +69,18 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tcpRetryEvents")
-      private final @Nullable Input<List<String>> tcpRetryEvents;
+      private final @Nullable Output<List<String>> tcpRetryEvents;
 
-    public Input<List<String>> getTcpRetryEvents() {
-        return this.tcpRetryEvents == null ? Input.empty() : this.tcpRetryEvents;
+    public Output<List<String>> getTcpRetryEvents() {
+        return this.tcpRetryEvents == null ? Output.empty() : this.tcpRetryEvents;
     }
 
     public RouteSpecGrpcRouteRetryPolicyGetArgs(
-        @Nullable Input<List<String>> grpcRetryEvents,
-        @Nullable Input<List<String>> httpRetryEvents,
-        Input<Integer> maxRetries,
-        Input<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout,
-        @Nullable Input<List<String>> tcpRetryEvents) {
+        @Nullable Output<List<String>> grpcRetryEvents,
+        @Nullable Output<List<String>> httpRetryEvents,
+        Output<Integer> maxRetries,
+        Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout,
+        @Nullable Output<List<String>> tcpRetryEvents) {
         this.grpcRetryEvents = grpcRetryEvents;
         this.httpRetryEvents = httpRetryEvents;
         this.maxRetries = Objects.requireNonNull(maxRetries, "expected parameter 'maxRetries' to be non-null");
@@ -89,11 +89,11 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
     }
 
     private RouteSpecGrpcRouteRetryPolicyGetArgs() {
-        this.grpcRetryEvents = Input.empty();
-        this.httpRetryEvents = Input.empty();
-        this.maxRetries = Input.empty();
-        this.perRetryTimeout = Input.empty();
-        this.tcpRetryEvents = Input.empty();
+        this.grpcRetryEvents = Output.empty();
+        this.httpRetryEvents = Output.empty();
+        this.maxRetries = Output.empty();
+        this.perRetryTimeout = Output.empty();
+        this.tcpRetryEvents = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> grpcRetryEvents;
-        private @Nullable Input<List<String>> httpRetryEvents;
-        private Input<Integer> maxRetries;
-        private Input<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
-        private @Nullable Input<List<String>> tcpRetryEvents;
+        private @Nullable Output<List<String>> grpcRetryEvents;
+        private @Nullable Output<List<String>> httpRetryEvents;
+        private Output<Integer> maxRetries;
+        private Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
+        private @Nullable Output<List<String>> tcpRetryEvents;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class RouteSpecGrpcRouteRetryPolicyGetArgs extends io.pulumi.resour
     	      this.tcpRetryEvents = defaults.tcpRetryEvents;
         }
 
-        public Builder grpcRetryEvents(@Nullable Input<List<String>> grpcRetryEvents) {
+        public Builder grpcRetryEvents(@Nullable Output<List<String>> grpcRetryEvents) {
             this.grpcRetryEvents = grpcRetryEvents;
             return this;
         }
 
         public Builder grpcRetryEvents(@Nullable List<String> grpcRetryEvents) {
-            this.grpcRetryEvents = Input.ofNullable(grpcRetryEvents);
+            this.grpcRetryEvents = Output.ofNullable(grpcRetryEvents);
             return this;
         }
 
-        public Builder httpRetryEvents(@Nullable Input<List<String>> httpRetryEvents) {
+        public Builder httpRetryEvents(@Nullable Output<List<String>> httpRetryEvents) {
             this.httpRetryEvents = httpRetryEvents;
             return this;
         }
 
         public Builder httpRetryEvents(@Nullable List<String> httpRetryEvents) {
-            this.httpRetryEvents = Input.ofNullable(httpRetryEvents);
+            this.httpRetryEvents = Output.ofNullable(httpRetryEvents);
             return this;
         }
 
-        public Builder maxRetries(Input<Integer> maxRetries) {
+        public Builder maxRetries(Output<Integer> maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
 
         public Builder maxRetries(Integer maxRetries) {
-            this.maxRetries = Input.of(Objects.requireNonNull(maxRetries));
+            this.maxRetries = Output.of(Objects.requireNonNull(maxRetries));
             return this;
         }
 
-        public Builder perRetryTimeout(Input<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout) {
+        public Builder perRetryTimeout(Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout) {
             this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
             return this;
         }
 
         public Builder perRetryTimeout(RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs perRetryTimeout) {
-            this.perRetryTimeout = Input.of(Objects.requireNonNull(perRetryTimeout));
+            this.perRetryTimeout = Output.of(Objects.requireNonNull(perRetryTimeout));
             return this;
         }
 
-        public Builder tcpRetryEvents(@Nullable Input<List<String>> tcpRetryEvents) {
+        public Builder tcpRetryEvents(@Nullable Output<List<String>> tcpRetryEvents) {
             this.tcpRetryEvents = tcpRetryEvents;
             return this;
         }
 
         public Builder tcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
-            this.tcpRetryEvents = Input.ofNullable(tcpRetryEvents);
+            this.tcpRetryEvents = Output.ofNullable(tcpRetryEvents);
             return this;
         }
         public RouteSpecGrpcRouteRetryPolicyGetArgs build() {

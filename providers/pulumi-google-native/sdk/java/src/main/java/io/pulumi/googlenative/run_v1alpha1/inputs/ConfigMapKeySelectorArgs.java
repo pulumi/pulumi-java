@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="localObjectReference")
-      private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
+      private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
-    public Input<LocalObjectReferenceArgs> getLocalObjectReference() {
-        return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
+    public Output<LocalObjectReferenceArgs> getLocalObjectReference() {
+        return this.localObjectReference == null ? Output.empty() : this.localObjectReference;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="optional")
-      private final @Nullable Input<Boolean> optional;
+      private final @Nullable Output<Boolean> optional;
 
-    public Input<Boolean> getOptional() {
-        return this.optional == null ? Input.empty() : this.optional;
+    public Output<Boolean> getOptional() {
+        return this.optional == null ? Output.empty() : this.optional;
     }
 
     public ConfigMapKeySelectorArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<LocalObjectReferenceArgs> localObjectReference,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> optional) {
+        @Nullable Output<String> key,
+        @Nullable Output<LocalObjectReferenceArgs> localObjectReference,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> optional) {
         this.key = key;
         this.localObjectReference = localObjectReference;
         this.name = name;
@@ -76,10 +76,10 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
     }
 
     private ConfigMapKeySelectorArgs() {
-        this.key = Input.empty();
-        this.localObjectReference = Input.empty();
-        this.name = Input.empty();
-        this.optional = Input.empty();
+        this.key = Output.empty();
+        this.localObjectReference = Output.empty();
+        this.name = Output.empty();
+        this.optional = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> optional;
+        private @Nullable Output<String> key;
+        private @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> optional;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
     	      this.optional = defaults.optional;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder localObjectReference(@Nullable Input<LocalObjectReferenceArgs> localObjectReference) {
+        public Builder localObjectReference(@Nullable Output<LocalObjectReferenceArgs> localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
         public Builder localObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
-            this.localObjectReference = Input.ofNullable(localObjectReference);
+            this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder optional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Input.ofNullable(optional);
+            this.optional = Output.ofNullable(optional);
             return this;
         }
         public ConfigMapKeySelectorArgs build() {

@@ -11,7 +11,6 @@ import io.pulumi.aws.route53.outputs.RecordFailoverRoutingPolicy;
 import io.pulumi.aws.route53.outputs.RecordGeolocationRoutingPolicy;
 import io.pulumi.aws.route53.outputs.RecordLatencyRoutingPolicy;
 import io.pulumi.aws.route53.outputs.RecordWeightedRoutingPolicy;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -294,14 +293,14 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Record(String name, RecordArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/record:Record", name, args == null ? RecordArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53/record:Record", name, args == null ? RecordArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Record(String name, Input<String> id, @Nullable RecordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Record(String name, Output<String> id, @Nullable RecordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53/record:Record", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -317,7 +316,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Record get(String name, Input<String> id, @Nullable RecordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Record get(String name, Output<String> id, @Nullable RecordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Record(name, id, state, options);
     }
 }

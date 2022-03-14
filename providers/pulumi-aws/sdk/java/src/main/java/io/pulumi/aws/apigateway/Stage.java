@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.StageArgs;
 import io.pulumi.aws.apigateway.inputs.StageState;
 import io.pulumi.aws.apigateway.outputs.StageAccessLogSettings;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -315,14 +314,14 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stage(String name, StageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/stage:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:apigateway/stage:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Stage(String name, Input<String> id, @Nullable StageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Stage(String name, Output<String> id, @Nullable StageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:apigateway/stage:Stage", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -338,7 +337,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Stage get(String name, Input<String> id, @Nullable StageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Stage get(String name, Output<String> id, @Nullable StageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Stage(name, id, state, options);
     }
 }

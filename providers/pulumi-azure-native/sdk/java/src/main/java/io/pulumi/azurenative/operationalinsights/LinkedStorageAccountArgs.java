@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataSourceType")
-      private final @Nullable Input<String> dataSourceType;
+      private final @Nullable Output<String> dataSourceType;
 
-    public Input<String> getDataSourceType() {
-        return this.dataSourceType == null ? Input.empty() : this.dataSourceType;
+    public Output<String> getDataSourceType() {
+        return this.dataSourceType == null ? Output.empty() : this.dataSourceType;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -42,10 +42,10 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageAccountIds")
-      private final @Nullable Input<List<String>> storageAccountIds;
+      private final @Nullable Output<List<String>> storageAccountIds;
 
-    public Input<List<String>> getStorageAccountIds() {
-        return this.storageAccountIds == null ? Input.empty() : this.storageAccountIds;
+    public Output<List<String>> getStorageAccountIds() {
+        return this.storageAccountIds == null ? Output.empty() : this.storageAccountIds;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public LinkedStorageAccountArgs(
-        @Nullable Input<String> dataSourceType,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<String>> storageAccountIds,
-        Input<String> workspaceName) {
+        @Nullable Output<String> dataSourceType,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<String>> storageAccountIds,
+        Output<String> workspaceName) {
         this.dataSourceType = dataSourceType;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.storageAccountIds = storageAccountIds;
@@ -71,10 +71,10 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     }
 
     private LinkedStorageAccountArgs() {
-        this.dataSourceType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccountIds = Input.empty();
-        this.workspaceName = Input.empty();
+        this.dataSourceType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccountIds = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataSourceType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<String>> storageAccountIds;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> dataSourceType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<String>> storageAccountIds;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder dataSourceType(@Nullable Input<String> dataSourceType) {
+        public Builder dataSourceType(@Nullable Output<String> dataSourceType) {
             this.dataSourceType = dataSourceType;
             return this;
         }
 
         public Builder dataSourceType(@Nullable String dataSourceType) {
-            this.dataSourceType = Input.ofNullable(dataSourceType);
+            this.dataSourceType = Output.ofNullable(dataSourceType);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccountIds(@Nullable Input<List<String>> storageAccountIds) {
+        public Builder storageAccountIds(@Nullable Output<List<String>> storageAccountIds) {
             this.storageAccountIds = storageAccountIds;
             return this;
         }
 
         public Builder storageAccountIds(@Nullable List<String> storageAccountIds) {
-            this.storageAccountIds = Input.ofNullable(storageAccountIds);
+            this.storageAccountIds = Output.ofNullable(storageAccountIds);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public LinkedStorageAccountArgs build() {

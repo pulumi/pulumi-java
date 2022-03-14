@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigHeadersGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class OriginRequestPolicyHeadersConfigGetArgs extends io.pulumi.res
     public static final OriginRequestPolicyHeadersConfigGetArgs Empty = new OriginRequestPolicyHeadersConfigGetArgs();
 
     @InputImport(name="headerBehavior")
-      private final @Nullable Input<String> headerBehavior;
+      private final @Nullable Output<String> headerBehavior;
 
-    public Input<String> getHeaderBehavior() {
-        return this.headerBehavior == null ? Input.empty() : this.headerBehavior;
+    public Output<String> getHeaderBehavior() {
+        return this.headerBehavior == null ? Output.empty() : this.headerBehavior;
     }
 
     @InputImport(name="headers")
-      private final @Nullable Input<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers;
+      private final @Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers;
 
-    public Input<OriginRequestPolicyHeadersConfigHeadersGetArgs> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     public OriginRequestPolicyHeadersConfigGetArgs(
-        @Nullable Input<String> headerBehavior,
-        @Nullable Input<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
+        @Nullable Output<String> headerBehavior,
+        @Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }
 
     private OriginRequestPolicyHeadersConfigGetArgs() {
-        this.headerBehavior = Input.empty();
-        this.headers = Input.empty();
+        this.headerBehavior = Output.empty();
+        this.headers = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class OriginRequestPolicyHeadersConfigGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> headerBehavior;
-        private @Nullable Input<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers;
+        private @Nullable Output<String> headerBehavior;
+        private @Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class OriginRequestPolicyHeadersConfigGetArgs extends io.pulumi.res
     	      this.headers = defaults.headers;
         }
 
-        public Builder headerBehavior(@Nullable Input<String> headerBehavior) {
+        public Builder headerBehavior(@Nullable Output<String> headerBehavior) {
             this.headerBehavior = headerBehavior;
             return this;
         }
 
         public Builder headerBehavior(@Nullable String headerBehavior) {
-            this.headerBehavior = Input.ofNullable(headerBehavior);
+            this.headerBehavior = Output.ofNullable(headerBehavior);
             return this;
         }
 
-        public Builder headers(@Nullable Input<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
+        public Builder headers(@Nullable Output<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable OriginRequestPolicyHeadersConfigHeadersGetArgs headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
         public OriginRequestPolicyHeadersConfigGetArgs build() {

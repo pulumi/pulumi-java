@@ -9,7 +9,6 @@ import io.pulumi.azurenative.webpubsub.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.webpubsub.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,21 +156,21 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public WebPubSubPrivateEndpointConnection(String name, WebPubSubPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:webpubsub:WebPubSubPrivateEndpointConnection", name, args == null ? WebPubSubPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:webpubsub:WebPubSubPrivateEndpointConnection", name, args == null ? WebPubSubPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebPubSubPrivateEndpointConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebPubSubPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:webpubsub:WebPubSubPrivateEndpointConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210401preview:WebPubSubPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210601preview:WebPubSubPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210901preview:WebPubSubPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20211001:WebPubSubPrivateEndpointConnection").build())
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210401preview:WebPubSubPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210601preview:WebPubSubPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210901preview:WebPubSubPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20211001:WebPubSubPrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -185,7 +184,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebPubSubPrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebPubSubPrivateEndpointConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebPubSubPrivateEndpointConnection(name, id, options);
     }
 }

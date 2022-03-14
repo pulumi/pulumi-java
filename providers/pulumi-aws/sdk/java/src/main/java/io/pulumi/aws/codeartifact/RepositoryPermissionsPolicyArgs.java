@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
@@ -30,10 +30,10 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="domainOwner")
-      private final @Nullable Input<String> domainOwner;
+      private final @Nullable Output<String> domainOwner;
 
-    public Input<String> getDomainOwner() {
-        return this.domainOwner == null ? Input.empty() : this.domainOwner;
+    public Output<String> getDomainOwner() {
+        return this.domainOwner == null ? Output.empty() : this.domainOwner;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyDocument", required=true)
-      private final Input<String> policyDocument;
+      private final Output<String> policyDocument;
 
-    public Input<String> getPolicyDocument() {
+    public Output<String> getPolicyDocument() {
         return this.policyDocument;
     }
 
@@ -52,10 +52,10 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyRevision")
-      private final @Nullable Input<String> policyRevision;
+      private final @Nullable Output<String> policyRevision;
 
-    public Input<String> getPolicyRevision() {
-        return this.policyRevision == null ? Input.empty() : this.policyRevision;
+    public Output<String> getPolicyRevision() {
+        return this.policyRevision == null ? Output.empty() : this.policyRevision;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="repository", required=true)
-      private final Input<String> repository;
+      private final Output<String> repository;
 
-    public Input<String> getRepository() {
+    public Output<String> getRepository() {
         return this.repository;
     }
 
     public RepositoryPermissionsPolicyArgs(
-        Input<String> domain,
-        @Nullable Input<String> domainOwner,
-        Input<String> policyDocument,
-        @Nullable Input<String> policyRevision,
-        Input<String> repository) {
+        Output<String> domain,
+        @Nullable Output<String> domainOwner,
+        Output<String> policyDocument,
+        @Nullable Output<String> policyRevision,
+        Output<String> repository) {
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.domainOwner = domainOwner;
         this.policyDocument = Objects.requireNonNull(policyDocument, "expected parameter 'policyDocument' to be non-null");
@@ -83,11 +83,11 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
     }
 
     private RepositoryPermissionsPolicyArgs() {
-        this.domain = Input.empty();
-        this.domainOwner = Input.empty();
-        this.policyDocument = Input.empty();
-        this.policyRevision = Input.empty();
-        this.repository = Input.empty();
+        this.domain = Output.empty();
+        this.domainOwner = Output.empty();
+        this.policyDocument = Output.empty();
+        this.policyRevision = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> domain;
-        private @Nullable Input<String> domainOwner;
-        private Input<String> policyDocument;
-        private @Nullable Input<String> policyRevision;
-        private Input<String> repository;
+        private Output<String> domain;
+        private @Nullable Output<String> domainOwner;
+        private Output<String> policyDocument;
+        private @Nullable Output<String> policyRevision;
+        private Output<String> repository;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
     	      this.repository = defaults.repository;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder domainOwner(@Nullable Input<String> domainOwner) {
+        public Builder domainOwner(@Nullable Output<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
 
         public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Input.ofNullable(domainOwner);
+            this.domainOwner = Output.ofNullable(domainOwner);
             return this;
         }
 
-        public Builder policyDocument(Input<String> policyDocument) {
+        public Builder policyDocument(Output<String> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
 
         public Builder policyDocument(String policyDocument) {
-            this.policyDocument = Input.of(Objects.requireNonNull(policyDocument));
+            this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
             return this;
         }
 
-        public Builder policyRevision(@Nullable Input<String> policyRevision) {
+        public Builder policyRevision(@Nullable Output<String> policyRevision) {
             this.policyRevision = policyRevision;
             return this;
         }
 
         public Builder policyRevision(@Nullable String policyRevision) {
-            this.policyRevision = Input.ofNullable(policyRevision);
+            this.policyRevision = Output.ofNullable(policyRevision);
             return this;
         }
 
-        public Builder repository(Input<String> repository) {
+        public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
         public Builder repository(String repository) {
-            this.repository = Input.of(Objects.requireNonNull(repository));
+            this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
         public RepositoryPermissionsPolicyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentModelArgs;
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentScaleSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="model")
-      private final @Nullable Input<DeploymentModelArgs> model;
+      private final @Nullable Output<DeploymentModelArgs> model;
 
-    public Input<DeploymentModelArgs> getModel() {
-        return this.model == null ? Input.empty() : this.model;
+    public Output<DeploymentModelArgs> getModel() {
+        return this.model == null ? Output.empty() : this.model;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scaleSettings")
-      private final @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings;
+      private final @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings;
 
-    public Input<DeploymentScaleSettingsArgs> getScaleSettings() {
-        return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
+    public Output<DeploymentScaleSettingsArgs> getScaleSettings() {
+        return this.scaleSettings == null ? Output.empty() : this.scaleSettings;
     }
 
     public DeploymentPropertiesArgs(
-        @Nullable Input<DeploymentModelArgs> model,
-        @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings) {
+        @Nullable Output<DeploymentModelArgs> model,
+        @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings) {
         this.model = model;
         this.scaleSettings = scaleSettings;
     }
 
     private DeploymentPropertiesArgs() {
-        this.model = Input.empty();
-        this.scaleSettings = Input.empty();
+        this.model = Output.empty();
+        this.scaleSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<DeploymentModelArgs> model;
-        private @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings;
+        private @Nullable Output<DeploymentModelArgs> model;
+        private @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.scaleSettings = defaults.scaleSettings;
         }
 
-        public Builder model(@Nullable Input<DeploymentModelArgs> model) {
+        public Builder model(@Nullable Output<DeploymentModelArgs> model) {
             this.model = model;
             return this;
         }
 
         public Builder model(@Nullable DeploymentModelArgs model) {
-            this.model = Input.ofNullable(model);
+            this.model = Output.ofNullable(model);
             return this;
         }
 
-        public Builder scaleSettings(@Nullable Input<DeploymentScaleSettingsArgs> scaleSettings) {
+        public Builder scaleSettings(@Nullable Output<DeploymentScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
         public Builder scaleSettings(@Nullable DeploymentScaleSettingsArgs scaleSettings) {
-            this.scaleSettings = Input.ofNullable(scaleSettings);
+            this.scaleSettings = Output.ofNullable(scaleSettings);
             return this;
         }
         public DeploymentPropertiesArgs build() {

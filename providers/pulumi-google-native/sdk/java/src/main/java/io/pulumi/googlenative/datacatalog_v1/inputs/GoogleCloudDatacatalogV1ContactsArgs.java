@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsPersonArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="people")
-      private final @Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
+      private final @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
-    public Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> getPeople() {
-        return this.people == null ? Input.empty() : this.people;
+    public Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> getPeople() {
+        return this.people == null ? Output.empty() : this.people;
     }
 
-    public GoogleCloudDatacatalogV1ContactsArgs(@Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
+    public GoogleCloudDatacatalogV1ContactsArgs(@Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
         this.people = people;
     }
 
     private GoogleCloudDatacatalogV1ContactsArgs() {
-        this.people = Input.empty();
+        this.people = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
+        private @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
     	      this.people = defaults.people;
         }
 
-        public Builder people(@Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
+        public Builder people(@Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
             this.people = people;
             return this;
         }
 
         public Builder people(@Nullable List<GoogleCloudDatacatalogV1ContactsPersonArgs> people) {
-            this.people = Input.ofNullable(people);
+            this.people = Output.ofNullable(people);
             return this;
         }
         public GoogleCloudDatacatalogV1ContactsArgs build() {

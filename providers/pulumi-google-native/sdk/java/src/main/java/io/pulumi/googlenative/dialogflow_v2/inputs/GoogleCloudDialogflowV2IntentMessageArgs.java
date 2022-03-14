@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessagePlatform;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardArgs;
@@ -38,10 +38,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="basicCard")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> getBasicCard() {
-        return this.basicCard == null ? Input.empty() : this.basicCard;
+    public Output<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> getBasicCard() {
+        return this.basicCard == null ? Output.empty() : this.basicCard;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="browseCarouselCard")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> getBrowseCarouselCard() {
-        return this.browseCarouselCard == null ? Input.empty() : this.browseCarouselCard;
+    public Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> getBrowseCarouselCard() {
+        return this.browseCarouselCard == null ? Output.empty() : this.browseCarouselCard;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="card")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCardArgs> card;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageCardArgs> card;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageCardArgs> getCard() {
-        return this.card == null ? Input.empty() : this.card;
+    public Output<GoogleCloudDialogflowV2IntentMessageCardArgs> getCard() {
+        return this.card == null ? Output.empty() : this.card;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="carouselSelect")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> getCarouselSelect() {
-        return this.carouselSelect == null ? Input.empty() : this.carouselSelect;
+    public Output<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> getCarouselSelect() {
+        return this.carouselSelect == null ? Output.empty() : this.carouselSelect;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="linkOutSuggestion")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> getLinkOutSuggestion() {
-        return this.linkOutSuggestion == null ? Input.empty() : this.linkOutSuggestion;
+    public Output<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> getLinkOutSuggestion() {
+        return this.linkOutSuggestion == null ? Output.empty() : this.linkOutSuggestion;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="listSelect")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> getListSelect() {
-        return this.listSelect == null ? Input.empty() : this.listSelect;
+    public Output<GoogleCloudDialogflowV2IntentMessageListSelectArgs> getListSelect() {
+        return this.listSelect == null ? Output.empty() : this.listSelect;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="mediaContent")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> getMediaContent() {
-        return this.mediaContent == null ? Input.empty() : this.mediaContent;
+    public Output<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> getMediaContent() {
+        return this.mediaContent == null ? Output.empty() : this.mediaContent;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="payload")
-      private final @Nullable Input<Map<String,String>> payload;
+      private final @Nullable Output<Map<String,String>> payload;
 
-    public Input<Map<String,String>> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<Map<String,String>> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessagePlatform> platform;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessagePlatform> platform;
 
-    public Input<GoogleCloudDialogflowV2IntentMessagePlatform> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<GoogleCloudDialogflowV2IntentMessagePlatform> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="quickReplies")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> getQuickReplies() {
-        return this.quickReplies == null ? Input.empty() : this.quickReplies;
+    public Output<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> getQuickReplies() {
+        return this.quickReplies == null ? Output.empty() : this.quickReplies;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="simpleResponses")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> getSimpleResponses() {
-        return this.simpleResponses == null ? Input.empty() : this.simpleResponses;
+    public Output<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> getSimpleResponses() {
+        return this.simpleResponses == null ? Output.empty() : this.simpleResponses;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="suggestions")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> getSuggestions() {
-        return this.suggestions == null ? Input.empty() : this.suggestions;
+    public Output<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> getSuggestions() {
+        return this.suggestions == null ? Output.empty() : this.suggestions;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tableCard")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> getTableCard() {
-        return this.tableCard == null ? Input.empty() : this.tableCard;
+    public Output<GoogleCloudDialogflowV2IntentMessageTableCardArgs> getTableCard() {
+        return this.tableCard == null ? Output.empty() : this.tableCard;
     }
 
     /**
@@ -192,28 +192,28 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageTextArgs> text;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageTextArgs> text;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageTextArgs> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<GoogleCloudDialogflowV2IntentMessageTextArgs> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
     public GoogleCloudDialogflowV2IntentMessageArgs(
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageCardArgs> card,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent,
-        @Nullable Input<Map<String,String>> payload,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessagePlatform> platform,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard,
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageTextArgs> text) {
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageCardArgs> card,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent,
+        @Nullable Output<Map<String,String>> payload,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessagePlatform> platform,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard,
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageTextArgs> text) {
         this.basicCard = basicCard;
         this.browseCarouselCard = browseCarouselCard;
         this.card = card;
@@ -232,21 +232,21 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
     }
 
     private GoogleCloudDialogflowV2IntentMessageArgs() {
-        this.basicCard = Input.empty();
-        this.browseCarouselCard = Input.empty();
-        this.card = Input.empty();
-        this.carouselSelect = Input.empty();
-        this.image = Input.empty();
-        this.linkOutSuggestion = Input.empty();
-        this.listSelect = Input.empty();
-        this.mediaContent = Input.empty();
-        this.payload = Input.empty();
-        this.platform = Input.empty();
-        this.quickReplies = Input.empty();
-        this.simpleResponses = Input.empty();
-        this.suggestions = Input.empty();
-        this.tableCard = Input.empty();
-        this.text = Input.empty();
+        this.basicCard = Output.empty();
+        this.browseCarouselCard = Output.empty();
+        this.card = Output.empty();
+        this.carouselSelect = Output.empty();
+        this.image = Output.empty();
+        this.linkOutSuggestion = Output.empty();
+        this.listSelect = Output.empty();
+        this.mediaContent = Output.empty();
+        this.payload = Output.empty();
+        this.platform = Output.empty();
+        this.quickReplies = Output.empty();
+        this.simpleResponses = Output.empty();
+        this.suggestions = Output.empty();
+        this.tableCard = Output.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -258,21 +258,21 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageCardArgs> card;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent;
-        private @Nullable Input<Map<String,String>> payload;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessagePlatform> platform;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard;
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageTextArgs> text;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageCardArgs> card;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent;
+        private @Nullable Output<Map<String,String>> payload;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessagePlatform> platform;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageTextArgs> text;
 
         public Builder() {
     	      // Empty
@@ -297,153 +297,153 @@ public final class GoogleCloudDialogflowV2IntentMessageArgs extends io.pulumi.re
     	      this.text = defaults.text;
         }
 
-        public Builder basicCard(@Nullable Input<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard) {
+        public Builder basicCard(@Nullable Output<GoogleCloudDialogflowV2IntentMessageBasicCardArgs> basicCard) {
             this.basicCard = basicCard;
             return this;
         }
 
         public Builder basicCard(@Nullable GoogleCloudDialogflowV2IntentMessageBasicCardArgs basicCard) {
-            this.basicCard = Input.ofNullable(basicCard);
+            this.basicCard = Output.ofNullable(basicCard);
             return this;
         }
 
-        public Builder browseCarouselCard(@Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard) {
+        public Builder browseCarouselCard(@Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs> browseCarouselCard) {
             this.browseCarouselCard = browseCarouselCard;
             return this;
         }
 
         public Builder browseCarouselCard(@Nullable GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs browseCarouselCard) {
-            this.browseCarouselCard = Input.ofNullable(browseCarouselCard);
+            this.browseCarouselCard = Output.ofNullable(browseCarouselCard);
             return this;
         }
 
-        public Builder card(@Nullable Input<GoogleCloudDialogflowV2IntentMessageCardArgs> card) {
+        public Builder card(@Nullable Output<GoogleCloudDialogflowV2IntentMessageCardArgs> card) {
             this.card = card;
             return this;
         }
 
         public Builder card(@Nullable GoogleCloudDialogflowV2IntentMessageCardArgs card) {
-            this.card = Input.ofNullable(card);
+            this.card = Output.ofNullable(card);
             return this;
         }
 
-        public Builder carouselSelect(@Nullable Input<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect) {
+        public Builder carouselSelect(@Nullable Output<GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs> carouselSelect) {
             this.carouselSelect = carouselSelect;
             return this;
         }
 
         public Builder carouselSelect(@Nullable GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs carouselSelect) {
-            this.carouselSelect = Input.ofNullable(carouselSelect);
+            this.carouselSelect = Output.ofNullable(carouselSelect);
             return this;
         }
 
-        public Builder image(@Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
+        public Builder image(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder linkOutSuggestion(@Nullable Input<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion) {
+        public Builder linkOutSuggestion(@Nullable Output<GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs> linkOutSuggestion) {
             this.linkOutSuggestion = linkOutSuggestion;
             return this;
         }
 
         public Builder linkOutSuggestion(@Nullable GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs linkOutSuggestion) {
-            this.linkOutSuggestion = Input.ofNullable(linkOutSuggestion);
+            this.linkOutSuggestion = Output.ofNullable(linkOutSuggestion);
             return this;
         }
 
-        public Builder listSelect(@Nullable Input<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect) {
+        public Builder listSelect(@Nullable Output<GoogleCloudDialogflowV2IntentMessageListSelectArgs> listSelect) {
             this.listSelect = listSelect;
             return this;
         }
 
         public Builder listSelect(@Nullable GoogleCloudDialogflowV2IntentMessageListSelectArgs listSelect) {
-            this.listSelect = Input.ofNullable(listSelect);
+            this.listSelect = Output.ofNullable(listSelect);
             return this;
         }
 
-        public Builder mediaContent(@Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent) {
+        public Builder mediaContent(@Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentArgs> mediaContent) {
             this.mediaContent = mediaContent;
             return this;
         }
 
         public Builder mediaContent(@Nullable GoogleCloudDialogflowV2IntentMessageMediaContentArgs mediaContent) {
-            this.mediaContent = Input.ofNullable(mediaContent);
+            this.mediaContent = Output.ofNullable(mediaContent);
             return this;
         }
 
-        public Builder payload(@Nullable Input<Map<String,String>> payload) {
+        public Builder payload(@Nullable Output<Map<String,String>> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable Map<String,String> payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder platform(@Nullable Input<GoogleCloudDialogflowV2IntentMessagePlatform> platform) {
+        public Builder platform(@Nullable Output<GoogleCloudDialogflowV2IntentMessagePlatform> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable GoogleCloudDialogflowV2IntentMessagePlatform platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder quickReplies(@Nullable Input<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies) {
+        public Builder quickReplies(@Nullable Output<GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs> quickReplies) {
             this.quickReplies = quickReplies;
             return this;
         }
 
         public Builder quickReplies(@Nullable GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs quickReplies) {
-            this.quickReplies = Input.ofNullable(quickReplies);
+            this.quickReplies = Output.ofNullable(quickReplies);
             return this;
         }
 
-        public Builder simpleResponses(@Nullable Input<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses) {
+        public Builder simpleResponses(@Nullable Output<GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs> simpleResponses) {
             this.simpleResponses = simpleResponses;
             return this;
         }
 
         public Builder simpleResponses(@Nullable GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs simpleResponses) {
-            this.simpleResponses = Input.ofNullable(simpleResponses);
+            this.simpleResponses = Output.ofNullable(simpleResponses);
             return this;
         }
 
-        public Builder suggestions(@Nullable Input<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions) {
+        public Builder suggestions(@Nullable Output<GoogleCloudDialogflowV2IntentMessageSuggestionsArgs> suggestions) {
             this.suggestions = suggestions;
             return this;
         }
 
         public Builder suggestions(@Nullable GoogleCloudDialogflowV2IntentMessageSuggestionsArgs suggestions) {
-            this.suggestions = Input.ofNullable(suggestions);
+            this.suggestions = Output.ofNullable(suggestions);
             return this;
         }
 
-        public Builder tableCard(@Nullable Input<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard) {
+        public Builder tableCard(@Nullable Output<GoogleCloudDialogflowV2IntentMessageTableCardArgs> tableCard) {
             this.tableCard = tableCard;
             return this;
         }
 
         public Builder tableCard(@Nullable GoogleCloudDialogflowV2IntentMessageTableCardArgs tableCard) {
-            this.tableCard = Input.ofNullable(tableCard);
+            this.tableCard = Output.ofNullable(tableCard);
             return this;
         }
 
-        public Builder text(@Nullable Input<GoogleCloudDialogflowV2IntentMessageTextArgs> text) {
+        public Builder text(@Nullable Output<GoogleCloudDialogflowV2IntentMessageTextArgs> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable GoogleCloudDialogflowV2IntentMessageTextArgs text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageArgs build() {

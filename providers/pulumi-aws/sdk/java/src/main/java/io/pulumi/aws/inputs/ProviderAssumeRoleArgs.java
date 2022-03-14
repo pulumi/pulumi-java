@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,70 +18,70 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
     public static final ProviderAssumeRoleArgs Empty = new ProviderAssumeRoleArgs();
 
     @InputImport(name="durationSeconds")
-      private final @Nullable Input<Integer> durationSeconds;
+      private final @Nullable Output<Integer> durationSeconds;
 
-    public Input<Integer> getDurationSeconds() {
-        return this.durationSeconds == null ? Input.empty() : this.durationSeconds;
+    public Output<Integer> getDurationSeconds() {
+        return this.durationSeconds == null ? Output.empty() : this.durationSeconds;
     }
 
     @InputImport(name="externalId")
-      private final @Nullable Input<String> externalId;
+      private final @Nullable Output<String> externalId;
 
-    public Input<String> getExternalId() {
-        return this.externalId == null ? Input.empty() : this.externalId;
+    public Output<String> getExternalId() {
+        return this.externalId == null ? Output.empty() : this.externalId;
     }
 
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     @InputImport(name="policyArns")
-      private final @Nullable Input<List<String>> policyArns;
+      private final @Nullable Output<List<String>> policyArns;
 
-    public Input<List<String>> getPolicyArns() {
-        return this.policyArns == null ? Input.empty() : this.policyArns;
+    public Output<List<String>> getPolicyArns() {
+        return this.policyArns == null ? Output.empty() : this.policyArns;
     }
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     @InputImport(name="sessionName")
-      private final @Nullable Input<String> sessionName;
+      private final @Nullable Output<String> sessionName;
 
-    public Input<String> getSessionName() {
-        return this.sessionName == null ? Input.empty() : this.sessionName;
+    public Output<String> getSessionName() {
+        return this.sessionName == null ? Output.empty() : this.sessionName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="transitiveTagKeys")
-      private final @Nullable Input<List<String>> transitiveTagKeys;
+      private final @Nullable Output<List<String>> transitiveTagKeys;
 
-    public Input<List<String>> getTransitiveTagKeys() {
-        return this.transitiveTagKeys == null ? Input.empty() : this.transitiveTagKeys;
+    public Output<List<String>> getTransitiveTagKeys() {
+        return this.transitiveTagKeys == null ? Output.empty() : this.transitiveTagKeys;
     }
 
     public ProviderAssumeRoleArgs(
-        @Nullable Input<Integer> durationSeconds,
-        @Nullable Input<String> externalId,
-        @Nullable Input<String> policy,
-        @Nullable Input<List<String>> policyArns,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> sessionName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> transitiveTagKeys) {
+        @Nullable Output<Integer> durationSeconds,
+        @Nullable Output<String> externalId,
+        @Nullable Output<String> policy,
+        @Nullable Output<List<String>> policyArns,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> sessionName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> transitiveTagKeys) {
         this.durationSeconds = durationSeconds;
         this.externalId = externalId;
         this.policy = policy;
@@ -93,14 +93,14 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ProviderAssumeRoleArgs() {
-        this.durationSeconds = Input.empty();
-        this.externalId = Input.empty();
-        this.policy = Input.empty();
-        this.policyArns = Input.empty();
-        this.roleArn = Input.empty();
-        this.sessionName = Input.empty();
-        this.tags = Input.empty();
-        this.transitiveTagKeys = Input.empty();
+        this.durationSeconds = Output.empty();
+        this.externalId = Output.empty();
+        this.policy = Output.empty();
+        this.policyArns = Output.empty();
+        this.roleArn = Output.empty();
+        this.sessionName = Output.empty();
+        this.tags = Output.empty();
+        this.transitiveTagKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,14 +112,14 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> durationSeconds;
-        private @Nullable Input<String> externalId;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<List<String>> policyArns;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> sessionName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> transitiveTagKeys;
+        private @Nullable Output<Integer> durationSeconds;
+        private @Nullable Output<String> externalId;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<List<String>> policyArns;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> sessionName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> transitiveTagKeys;
 
         public Builder() {
     	      // Empty
@@ -137,83 +137,83 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
     	      this.transitiveTagKeys = defaults.transitiveTagKeys;
         }
 
-        public Builder durationSeconds(@Nullable Input<Integer> durationSeconds) {
+        public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = Input.ofNullable(durationSeconds);
+            this.durationSeconds = Output.ofNullable(durationSeconds);
             return this;
         }
 
-        public Builder externalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Input.ofNullable(externalId);
+            this.externalId = Output.ofNullable(externalId);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder policyArns(@Nullable Input<List<String>> policyArns) {
+        public Builder policyArns(@Nullable Output<List<String>> policyArns) {
             this.policyArns = policyArns;
             return this;
         }
 
         public Builder policyArns(@Nullable List<String> policyArns) {
-            this.policyArns = Input.ofNullable(policyArns);
+            this.policyArns = Output.ofNullable(policyArns);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder sessionName(@Nullable Input<String> sessionName) {
+        public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
 
         public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Input.ofNullable(sessionName);
+            this.sessionName = Output.ofNullable(sessionName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transitiveTagKeys(@Nullable Input<List<String>> transitiveTagKeys) {
+        public Builder transitiveTagKeys(@Nullable Output<List<String>> transitiveTagKeys) {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
 
         public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
-            this.transitiveTagKeys = Input.ofNullable(transitiveTagKeys);
+            this.transitiveTagKeys = Output.ofNullable(transitiveTagKeys);
             return this;
         }
         public ProviderAssumeRoleArgs build() {

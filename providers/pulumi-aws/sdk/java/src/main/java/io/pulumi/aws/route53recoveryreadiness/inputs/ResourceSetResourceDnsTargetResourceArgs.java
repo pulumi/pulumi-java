@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -31,10 +31,10 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="hostedZoneArn")
-      private final @Nullable Input<String> hostedZoneArn;
+      private final @Nullable Output<String> hostedZoneArn;
 
-    public Input<String> getHostedZoneArn() {
-        return this.hostedZoneArn == null ? Input.empty() : this.hostedZoneArn;
+    public Output<String> getHostedZoneArn() {
+        return this.hostedZoneArn == null ? Output.empty() : this.hostedZoneArn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="recordSetId")
-      private final @Nullable Input<String> recordSetId;
+      private final @Nullable Output<String> recordSetId;
 
-    public Input<String> getRecordSetId() {
-        return this.recordSetId == null ? Input.empty() : this.recordSetId;
+    public Output<String> getRecordSetId() {
+        return this.recordSetId == null ? Output.empty() : this.recordSetId;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="recordType")
-      private final @Nullable Input<String> recordType;
+      private final @Nullable Output<String> recordType;
 
-    public Input<String> getRecordType() {
-        return this.recordType == null ? Input.empty() : this.recordType;
+    public Output<String> getRecordType() {
+        return this.recordType == null ? Output.empty() : this.recordType;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetResource")
-      private final @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
+      private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
 
-    public Input<ResourceSetResourceDnsTargetResourceTargetResourceArgs> getTargetResource() {
-        return this.targetResource == null ? Input.empty() : this.targetResource;
+    public Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> getTargetResource() {
+        return this.targetResource == null ? Output.empty() : this.targetResource;
     }
 
     public ResourceSetResourceDnsTargetResourceArgs(
-        Input<String> domainName,
-        @Nullable Input<String> hostedZoneArn,
-        @Nullable Input<String> recordSetId,
-        @Nullable Input<String> recordType,
-        @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource) {
+        Output<String> domainName,
+        @Nullable Output<String> hostedZoneArn,
+        @Nullable Output<String> recordSetId,
+        @Nullable Output<String> recordType,
+        @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.hostedZoneArn = hostedZoneArn;
         this.recordSetId = recordSetId;
@@ -84,11 +84,11 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     }
 
     private ResourceSetResourceDnsTargetResourceArgs() {
-        this.domainName = Input.empty();
-        this.hostedZoneArn = Input.empty();
-        this.recordSetId = Input.empty();
-        this.recordType = Input.empty();
-        this.targetResource = Input.empty();
+        this.domainName = Output.empty();
+        this.hostedZoneArn = Output.empty();
+        this.recordSetId = Output.empty();
+        this.recordType = Output.empty();
+        this.targetResource = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> domainName;
-        private @Nullable Input<String> hostedZoneArn;
-        private @Nullable Input<String> recordSetId;
-        private @Nullable Input<String> recordType;
-        private @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
+        private Output<String> domainName;
+        private @Nullable Output<String> hostedZoneArn;
+        private @Nullable Output<String> recordSetId;
+        private @Nullable Output<String> recordType;
+        private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     	      this.targetResource = defaults.targetResource;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder hostedZoneArn(@Nullable Input<String> hostedZoneArn) {
+        public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
             this.hostedZoneArn = hostedZoneArn;
             return this;
         }
 
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
-            this.hostedZoneArn = Input.ofNullable(hostedZoneArn);
+            this.hostedZoneArn = Output.ofNullable(hostedZoneArn);
             return this;
         }
 
-        public Builder recordSetId(@Nullable Input<String> recordSetId) {
+        public Builder recordSetId(@Nullable Output<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
 
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Input.ofNullable(recordSetId);
+            this.recordSetId = Output.ofNullable(recordSetId);
             return this;
         }
 
-        public Builder recordType(@Nullable Input<String> recordType) {
+        public Builder recordType(@Nullable Output<String> recordType) {
             this.recordType = recordType;
             return this;
         }
 
         public Builder recordType(@Nullable String recordType) {
-            this.recordType = Input.ofNullable(recordType);
+            this.recordType = Output.ofNullable(recordType);
             return this;
         }
 
-        public Builder targetResource(@Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource) {
+        public Builder targetResource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource) {
             this.targetResource = targetResource;
             return this;
         }
 
         public Builder targetResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceArgs targetResource) {
-            this.targetResource = Input.ofNullable(targetResource);
+            this.targetResource = Output.ofNullable(targetResource);
             return this;
         }
         public ResourceSetResourceDnsTargetResourceArgs build() {

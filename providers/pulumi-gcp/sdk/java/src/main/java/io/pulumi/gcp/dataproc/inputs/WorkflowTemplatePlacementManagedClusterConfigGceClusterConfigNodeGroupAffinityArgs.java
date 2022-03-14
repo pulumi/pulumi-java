@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * 
      */
     @InputImport(name="nodeGroup", required=true)
-      private final Input<String> nodeGroup;
+      private final Output<String> nodeGroup;
 
-    public Input<String> getNodeGroup() {
+    public Output<String> getNodeGroup() {
         return this.nodeGroup;
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs(Input<String> nodeGroup) {
+    public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs(Output<String> nodeGroup) {
         this.nodeGroup = Objects.requireNonNull(nodeGroup, "expected parameter 'nodeGroup' to be non-null");
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs() {
-        this.nodeGroup = Input.empty();
+        this.nodeGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     }
 
     public static final class Builder {
-        private Input<String> nodeGroup;
+        private Output<String> nodeGroup;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     	      this.nodeGroup = defaults.nodeGroup;
         }
 
-        public Builder nodeGroup(Input<String> nodeGroup) {
+        public Builder nodeGroup(Output<String> nodeGroup) {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
 
         public Builder nodeGroup(String nodeGroup) {
-            this.nodeGroup = Input.of(Objects.requireNonNull(nodeGroup));
+            this.nodeGroup = Output.of(Objects.requireNonNull(nodeGroup));
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs build() {

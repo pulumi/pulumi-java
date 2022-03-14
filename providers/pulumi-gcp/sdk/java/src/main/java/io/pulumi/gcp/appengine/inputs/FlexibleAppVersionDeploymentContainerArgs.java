@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class FlexibleAppVersionDeploymentContainerArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
-    public FlexibleAppVersionDeploymentContainerArgs(Input<String> image) {
+    public FlexibleAppVersionDeploymentContainerArgs(Output<String> image) {
         this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
     }
 
     private FlexibleAppVersionDeploymentContainerArgs() {
-        this.image = Input.empty();
+        this.image = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FlexibleAppVersionDeploymentContainerArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> image;
+        private Output<String> image;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FlexibleAppVersionDeploymentContainerArgs extends io.pulumi.r
     	      this.image = defaults.image;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
         public FlexibleAppVersionDeploymentContainerArgs build() {

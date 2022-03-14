@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SubnetworkAggregationInterval;
 import io.pulumi.googlenative.compute_alpha.enums.SubnetworkIpv6AccessType;
@@ -32,10 +32,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregationInterval")
-      private final @Nullable Input<SubnetworkAggregationInterval> aggregationInterval;
+      private final @Nullable Output<SubnetworkAggregationInterval> aggregationInterval;
 
-    public Input<SubnetworkAggregationInterval> getAggregationInterval() {
-        return this.aggregationInterval == null ? Input.empty() : this.aggregationInterval;
+    public Output<SubnetworkAggregationInterval> getAggregationInterval() {
+        return this.aggregationInterval == null ? Output.empty() : this.aggregationInterval;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSubnetCidrRoutesOverlap")
-      private final @Nullable Input<Boolean> allowSubnetCidrRoutesOverlap;
+      private final @Nullable Output<Boolean> allowSubnetCidrRoutesOverlap;
 
-    public Input<Boolean> getAllowSubnetCidrRoutesOverlap() {
-        return this.allowSubnetCidrRoutesOverlap == null ? Input.empty() : this.allowSubnetCidrRoutesOverlap;
+    public Output<Boolean> getAllowSubnetCidrRoutesOverlap() {
+        return this.allowSubnetCidrRoutesOverlap == null ? Output.empty() : this.allowSubnetCidrRoutesOverlap;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFlowLogs")
-      private final @Nullable Input<Boolean> enableFlowLogs;
+      private final @Nullable Output<Boolean> enableFlowLogs;
 
-    public Input<Boolean> getEnableFlowLogs() {
-        return this.enableFlowLogs == null ? Input.empty() : this.enableFlowLogs;
+    public Output<Boolean> getEnableFlowLogs() {
+        return this.enableFlowLogs == null ? Output.empty() : this.enableFlowLogs;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableL2")
-      private final @Nullable Input<Boolean> enableL2;
+      private final @Nullable Output<Boolean> enableL2;
 
-    public Input<Boolean> getEnableL2() {
-        return this.enableL2 == null ? Input.empty() : this.enableL2;
+    public Output<Boolean> getEnableL2() {
+        return this.enableL2 == null ? Output.empty() : this.enableL2;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowSampling")
-      private final @Nullable Input<Double> flowSampling;
+      private final @Nullable Output<Double> flowSampling;
 
-    public Input<Double> getFlowSampling() {
-        return this.flowSampling == null ? Input.empty() : this.flowSampling;
+    public Output<Double> getFlowSampling() {
+        return this.flowSampling == null ? Output.empty() : this.flowSampling;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6AccessType")
-      private final @Nullable Input<SubnetworkIpv6AccessType> ipv6AccessType;
+      private final @Nullable Output<SubnetworkIpv6AccessType> ipv6AccessType;
 
-    public Input<SubnetworkIpv6AccessType> getIpv6AccessType() {
-        return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
+    public Output<SubnetworkIpv6AccessType> getIpv6AccessType() {
+        return this.ipv6AccessType == null ? Output.empty() : this.ipv6AccessType;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-      private final @Nullable Input<SubnetworkLogConfigArgs> logConfig;
+      private final @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
-    public Input<SubnetworkLogConfigArgs> getLogConfig() {
-        return this.logConfig == null ? Input.empty() : this.logConfig;
+    public Output<SubnetworkLogConfigArgs> getLogConfig() {
+        return this.logConfig == null ? Output.empty() : this.logConfig;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<SubnetworkMetadata> metadata;
+      private final @Nullable Output<SubnetworkMetadata> metadata;
 
-    public Input<SubnetworkMetadata> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<SubnetworkMetadata> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpGoogleAccess")
-      private final @Nullable Input<Boolean> privateIpGoogleAccess;
+      private final @Nullable Output<Boolean> privateIpGoogleAccess;
 
-    public Input<Boolean> getPrivateIpGoogleAccess() {
-        return this.privateIpGoogleAccess == null ? Input.empty() : this.privateIpGoogleAccess;
+    public Output<Boolean> getPrivateIpGoogleAccess() {
+        return this.privateIpGoogleAccess == null ? Output.empty() : this.privateIpGoogleAccess;
     }
 
     /**
@@ -175,17 +175,17 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-      private final @Nullable Input<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+      private final @Nullable Output<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
-    public Input<SubnetworkPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
+    public Output<SubnetworkPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
+        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-      private final @Nullable Input<SubnetworkPurpose> purpose;
+      private final @Nullable Output<SubnetworkPurpose> purpose;
 
-    public Input<SubnetworkPurpose> getPurpose() {
-        return this.purpose == null ? Input.empty() : this.purpose;
+    public Output<SubnetworkPurpose> getPurpose() {
+        return this.purpose == null ? Output.empty() : this.purpose;
     }
 
     /**
@@ -204,17 +204,17 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedInternalRange")
-      private final @Nullable Input<String> reservedInternalRange;
+      private final @Nullable Output<String> reservedInternalRange;
 
-    public Input<String> getReservedInternalRange() {
-        return this.reservedInternalRange == null ? Input.empty() : this.reservedInternalRange;
+    public Output<String> getReservedInternalRange() {
+        return this.reservedInternalRange == null ? Output.empty() : this.reservedInternalRange;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<SubnetworkRole> role;
+      private final @Nullable Output<SubnetworkRole> role;
 
-    public Input<SubnetworkRole> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<SubnetworkRole> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryIpRanges")
-      private final @Nullable Input<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges;
+      private final @Nullable Output<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges;
 
-    public Input<List<SubnetworkSecondaryRangeArgs>> getSecondaryIpRanges() {
-        return this.secondaryIpRanges == null ? Input.empty() : this.secondaryIpRanges;
+    public Output<List<SubnetworkSecondaryRangeArgs>> getSecondaryIpRanges() {
+        return this.secondaryIpRanges == null ? Output.empty() : this.secondaryIpRanges;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackType")
-      private final @Nullable Input<SubnetworkStackType> stackType;
+      private final @Nullable Output<SubnetworkStackType> stackType;
 
-    public Input<SubnetworkStackType> getStackType() {
-        return this.stackType == null ? Input.empty() : this.stackType;
+    public Output<SubnetworkStackType> getStackType() {
+        return this.stackType == null ? Output.empty() : this.stackType;
     }
 
     /**
@@ -266,36 +266,36 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vlans")
-      private final @Nullable Input<List<Integer>> vlans;
+      private final @Nullable Output<List<Integer>> vlans;
 
-    public Input<List<Integer>> getVlans() {
-        return this.vlans == null ? Input.empty() : this.vlans;
+    public Output<List<Integer>> getVlans() {
+        return this.vlans == null ? Output.empty() : this.vlans;
     }
 
     public SubnetworkArgs(
-        @Nullable Input<SubnetworkAggregationInterval> aggregationInterval,
-        @Nullable Input<Boolean> allowSubnetCidrRoutesOverlap,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableFlowLogs,
-        @Nullable Input<Boolean> enableL2,
-        @Nullable Input<Double> flowSampling,
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<SubnetworkIpv6AccessType> ipv6AccessType,
-        @Nullable Input<SubnetworkLogConfigArgs> logConfig,
-        @Nullable Input<SubnetworkMetadata> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<Boolean> privateIpGoogleAccess,
-        @Nullable Input<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess,
-        @Nullable Input<String> project,
-        @Nullable Input<SubnetworkPurpose> purpose,
-        Input<String> region,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> reservedInternalRange,
-        @Nullable Input<SubnetworkRole> role,
-        @Nullable Input<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges,
-        @Nullable Input<SubnetworkStackType> stackType,
-        @Nullable Input<List<Integer>> vlans) {
+        @Nullable Output<SubnetworkAggregationInterval> aggregationInterval,
+        @Nullable Output<Boolean> allowSubnetCidrRoutesOverlap,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableFlowLogs,
+        @Nullable Output<Boolean> enableL2,
+        @Nullable Output<Double> flowSampling,
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<SubnetworkIpv6AccessType> ipv6AccessType,
+        @Nullable Output<SubnetworkLogConfigArgs> logConfig,
+        @Nullable Output<SubnetworkMetadata> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<Boolean> privateIpGoogleAccess,
+        @Nullable Output<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess,
+        @Nullable Output<String> project,
+        @Nullable Output<SubnetworkPurpose> purpose,
+        Output<String> region,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> reservedInternalRange,
+        @Nullable Output<SubnetworkRole> role,
+        @Nullable Output<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges,
+        @Nullable Output<SubnetworkStackType> stackType,
+        @Nullable Output<List<Integer>> vlans) {
         this.aggregationInterval = aggregationInterval;
         this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
         this.description = description;
@@ -322,29 +322,29 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetworkArgs() {
-        this.aggregationInterval = Input.empty();
-        this.allowSubnetCidrRoutesOverlap = Input.empty();
-        this.description = Input.empty();
-        this.enableFlowLogs = Input.empty();
-        this.enableL2 = Input.empty();
-        this.flowSampling = Input.empty();
-        this.ipCidrRange = Input.empty();
-        this.ipv6AccessType = Input.empty();
-        this.logConfig = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.privateIpGoogleAccess = Input.empty();
-        this.privateIpv6GoogleAccess = Input.empty();
-        this.project = Input.empty();
-        this.purpose = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
-        this.reservedInternalRange = Input.empty();
-        this.role = Input.empty();
-        this.secondaryIpRanges = Input.empty();
-        this.stackType = Input.empty();
-        this.vlans = Input.empty();
+        this.aggregationInterval = Output.empty();
+        this.allowSubnetCidrRoutesOverlap = Output.empty();
+        this.description = Output.empty();
+        this.enableFlowLogs = Output.empty();
+        this.enableL2 = Output.empty();
+        this.flowSampling = Output.empty();
+        this.ipCidrRange = Output.empty();
+        this.ipv6AccessType = Output.empty();
+        this.logConfig = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.privateIpGoogleAccess = Output.empty();
+        this.privateIpv6GoogleAccess = Output.empty();
+        this.project = Output.empty();
+        this.purpose = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
+        this.reservedInternalRange = Output.empty();
+        this.role = Output.empty();
+        this.secondaryIpRanges = Output.empty();
+        this.stackType = Output.empty();
+        this.vlans = Output.empty();
     }
 
     public static Builder builder() {
@@ -356,29 +356,29 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SubnetworkAggregationInterval> aggregationInterval;
-        private @Nullable Input<Boolean> allowSubnetCidrRoutesOverlap;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableFlowLogs;
-        private @Nullable Input<Boolean> enableL2;
-        private @Nullable Input<Double> flowSampling;
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<SubnetworkIpv6AccessType> ipv6AccessType;
-        private @Nullable Input<SubnetworkLogConfigArgs> logConfig;
-        private @Nullable Input<SubnetworkMetadata> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Boolean> privateIpGoogleAccess;
-        private @Nullable Input<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SubnetworkPurpose> purpose;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> reservedInternalRange;
-        private @Nullable Input<SubnetworkRole> role;
-        private @Nullable Input<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges;
-        private @Nullable Input<SubnetworkStackType> stackType;
-        private @Nullable Input<List<Integer>> vlans;
+        private @Nullable Output<SubnetworkAggregationInterval> aggregationInterval;
+        private @Nullable Output<Boolean> allowSubnetCidrRoutesOverlap;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableFlowLogs;
+        private @Nullable Output<Boolean> enableL2;
+        private @Nullable Output<Double> flowSampling;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<SubnetworkIpv6AccessType> ipv6AccessType;
+        private @Nullable Output<SubnetworkLogConfigArgs> logConfig;
+        private @Nullable Output<SubnetworkMetadata> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Boolean> privateIpGoogleAccess;
+        private @Nullable Output<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SubnetworkPurpose> purpose;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> reservedInternalRange;
+        private @Nullable Output<SubnetworkRole> role;
+        private @Nullable Output<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges;
+        private @Nullable Output<SubnetworkStackType> stackType;
+        private @Nullable Output<List<Integer>> vlans;
 
         public Builder() {
     	      // Empty
@@ -411,233 +411,233 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vlans = defaults.vlans;
         }
 
-        public Builder aggregationInterval(@Nullable Input<SubnetworkAggregationInterval> aggregationInterval) {
+        public Builder aggregationInterval(@Nullable Output<SubnetworkAggregationInterval> aggregationInterval) {
             this.aggregationInterval = aggregationInterval;
             return this;
         }
 
         public Builder aggregationInterval(@Nullable SubnetworkAggregationInterval aggregationInterval) {
-            this.aggregationInterval = Input.ofNullable(aggregationInterval);
+            this.aggregationInterval = Output.ofNullable(aggregationInterval);
             return this;
         }
 
-        public Builder allowSubnetCidrRoutesOverlap(@Nullable Input<Boolean> allowSubnetCidrRoutesOverlap) {
+        public Builder allowSubnetCidrRoutesOverlap(@Nullable Output<Boolean> allowSubnetCidrRoutesOverlap) {
             this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
             return this;
         }
 
         public Builder allowSubnetCidrRoutesOverlap(@Nullable Boolean allowSubnetCidrRoutesOverlap) {
-            this.allowSubnetCidrRoutesOverlap = Input.ofNullable(allowSubnetCidrRoutesOverlap);
+            this.allowSubnetCidrRoutesOverlap = Output.ofNullable(allowSubnetCidrRoutesOverlap);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableFlowLogs(@Nullable Input<Boolean> enableFlowLogs) {
+        public Builder enableFlowLogs(@Nullable Output<Boolean> enableFlowLogs) {
             this.enableFlowLogs = enableFlowLogs;
             return this;
         }
 
         public Builder enableFlowLogs(@Nullable Boolean enableFlowLogs) {
-            this.enableFlowLogs = Input.ofNullable(enableFlowLogs);
+            this.enableFlowLogs = Output.ofNullable(enableFlowLogs);
             return this;
         }
 
-        public Builder enableL2(@Nullable Input<Boolean> enableL2) {
+        public Builder enableL2(@Nullable Output<Boolean> enableL2) {
             this.enableL2 = enableL2;
             return this;
         }
 
         public Builder enableL2(@Nullable Boolean enableL2) {
-            this.enableL2 = Input.ofNullable(enableL2);
+            this.enableL2 = Output.ofNullable(enableL2);
             return this;
         }
 
-        public Builder flowSampling(@Nullable Input<Double> flowSampling) {
+        public Builder flowSampling(@Nullable Output<Double> flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
 
         public Builder flowSampling(@Nullable Double flowSampling) {
-            this.flowSampling = Input.ofNullable(flowSampling);
+            this.flowSampling = Output.ofNullable(flowSampling);
             return this;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder ipv6AccessType(@Nullable Input<SubnetworkIpv6AccessType> ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable Output<SubnetworkIpv6AccessType> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
         public Builder ipv6AccessType(@Nullable SubnetworkIpv6AccessType ipv6AccessType) {
-            this.ipv6AccessType = Input.ofNullable(ipv6AccessType);
+            this.ipv6AccessType = Output.ofNullable(ipv6AccessType);
             return this;
         }
 
-        public Builder logConfig(@Nullable Input<SubnetworkLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
         public Builder logConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
-            this.logConfig = Input.ofNullable(logConfig);
+            this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<SubnetworkMetadata> metadata) {
+        public Builder metadata(@Nullable Output<SubnetworkMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable SubnetworkMetadata metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder privateIpGoogleAccess(@Nullable Input<Boolean> privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(@Nullable Output<Boolean> privateIpGoogleAccess) {
             this.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
 
         public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
-            this.privateIpGoogleAccess = Input.ofNullable(privateIpGoogleAccess);
+            this.privateIpGoogleAccess = Output.ofNullable(privateIpGoogleAccess);
             return this;
         }
 
-        public Builder privateIpv6GoogleAccess(@Nullable Input<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Output<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
         public Builder privateIpv6GoogleAccess(@Nullable SubnetworkPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder purpose(@Nullable Input<SubnetworkPurpose> purpose) {
+        public Builder purpose(@Nullable Output<SubnetworkPurpose> purpose) {
             this.purpose = purpose;
             return this;
         }
 
         public Builder purpose(@Nullable SubnetworkPurpose purpose) {
-            this.purpose = Input.ofNullable(purpose);
+            this.purpose = Output.ofNullable(purpose);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder reservedInternalRange(@Nullable Input<String> reservedInternalRange) {
+        public Builder reservedInternalRange(@Nullable Output<String> reservedInternalRange) {
             this.reservedInternalRange = reservedInternalRange;
             return this;
         }
 
         public Builder reservedInternalRange(@Nullable String reservedInternalRange) {
-            this.reservedInternalRange = Input.ofNullable(reservedInternalRange);
+            this.reservedInternalRange = Output.ofNullable(reservedInternalRange);
             return this;
         }
 
-        public Builder role(@Nullable Input<SubnetworkRole> role) {
+        public Builder role(@Nullable Output<SubnetworkRole> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable SubnetworkRole role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder secondaryIpRanges(@Nullable Input<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges) {
             this.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
 
         public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryRangeArgs> secondaryIpRanges) {
-            this.secondaryIpRanges = Input.ofNullable(secondaryIpRanges);
+            this.secondaryIpRanges = Output.ofNullable(secondaryIpRanges);
             return this;
         }
 
-        public Builder stackType(@Nullable Input<SubnetworkStackType> stackType) {
+        public Builder stackType(@Nullable Output<SubnetworkStackType> stackType) {
             this.stackType = stackType;
             return this;
         }
 
         public Builder stackType(@Nullable SubnetworkStackType stackType) {
-            this.stackType = Input.ofNullable(stackType);
+            this.stackType = Output.ofNullable(stackType);
             return this;
         }
 
-        public Builder vlans(@Nullable Input<List<Integer>> vlans) {
+        public Builder vlans(@Nullable Output<List<Integer>> vlans) {
             this.vlans = vlans;
             return this;
         }
 
         public Builder vlans(@Nullable List<Integer> vlans) {
-            this.vlans = Input.ofNullable(vlans);
+            this.vlans = Output.ofNullable(vlans);
             return this;
         }
         public SubnetworkArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
@@ -26,10 +26,10 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="elapsedTime")
-      private final @Nullable Input<DurationArgs> elapsedTime;
+      private final @Nullable Output<DurationArgs> elapsedTime;
 
-    public Input<DurationArgs> getElapsedTime() {
-        return this.elapsedTime == null ? Input.empty() : this.elapsedTime;
+    public Output<DurationArgs> getElapsedTime() {
+        return this.elapsedTime == null ? Output.empty() : this.elapsedTime;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="errorCount")
-      private final @Nullable Input<Integer> errorCount;
+      private final @Nullable Output<Integer> errorCount;
 
-    public Input<Integer> getErrorCount() {
-        return this.errorCount == null ? Input.empty() : this.errorCount;
+    public Output<Integer> getErrorCount() {
+        return this.errorCount == null ? Output.empty() : this.errorCount;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="failureCount")
-      private final @Nullable Input<Integer> failureCount;
+      private final @Nullable Output<Integer> failureCount;
 
-    public Input<Integer> getFailureCount() {
-        return this.failureCount == null ? Input.empty() : this.failureCount;
+    public Output<Integer> getFailureCount() {
+        return this.failureCount == null ? Output.empty() : this.failureCount;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="flakyCount")
-      private final @Nullable Input<Integer> flakyCount;
+      private final @Nullable Output<Integer> flakyCount;
 
-    public Input<Integer> getFlakyCount() {
-        return this.flakyCount == null ? Input.empty() : this.flakyCount;
+    public Output<Integer> getFlakyCount() {
+        return this.flakyCount == null ? Output.empty() : this.flakyCount;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="skippedCount")
-      private final @Nullable Input<Integer> skippedCount;
+      private final @Nullable Output<Integer> skippedCount;
 
-    public Input<Integer> getSkippedCount() {
-        return this.skippedCount == null ? Input.empty() : this.skippedCount;
+    public Output<Integer> getSkippedCount() {
+        return this.skippedCount == null ? Output.empty() : this.skippedCount;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="totalCount")
-      private final @Nullable Input<Integer> totalCount;
+      private final @Nullable Output<Integer> totalCount;
 
-    public Input<Integer> getTotalCount() {
-        return this.totalCount == null ? Input.empty() : this.totalCount;
+    public Output<Integer> getTotalCount() {
+        return this.totalCount == null ? Output.empty() : this.totalCount;
     }
 
     /**
@@ -103,21 +103,21 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="xmlSource")
-      private final @Nullable Input<FileReferenceArgs> xmlSource;
+      private final @Nullable Output<FileReferenceArgs> xmlSource;
 
-    public Input<FileReferenceArgs> getXmlSource() {
-        return this.xmlSource == null ? Input.empty() : this.xmlSource;
+    public Output<FileReferenceArgs> getXmlSource() {
+        return this.xmlSource == null ? Output.empty() : this.xmlSource;
     }
 
     public TestSuiteOverviewArgs(
-        @Nullable Input<DurationArgs> elapsedTime,
-        @Nullable Input<Integer> errorCount,
-        @Nullable Input<Integer> failureCount,
-        @Nullable Input<Integer> flakyCount,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> skippedCount,
-        @Nullable Input<Integer> totalCount,
-        @Nullable Input<FileReferenceArgs> xmlSource) {
+        @Nullable Output<DurationArgs> elapsedTime,
+        @Nullable Output<Integer> errorCount,
+        @Nullable Output<Integer> failureCount,
+        @Nullable Output<Integer> flakyCount,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> skippedCount,
+        @Nullable Output<Integer> totalCount,
+        @Nullable Output<FileReferenceArgs> xmlSource) {
         this.elapsedTime = elapsedTime;
         this.errorCount = errorCount;
         this.failureCount = failureCount;
@@ -129,14 +129,14 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TestSuiteOverviewArgs() {
-        this.elapsedTime = Input.empty();
-        this.errorCount = Input.empty();
-        this.failureCount = Input.empty();
-        this.flakyCount = Input.empty();
-        this.name = Input.empty();
-        this.skippedCount = Input.empty();
-        this.totalCount = Input.empty();
-        this.xmlSource = Input.empty();
+        this.elapsedTime = Output.empty();
+        this.errorCount = Output.empty();
+        this.failureCount = Output.empty();
+        this.flakyCount = Output.empty();
+        this.name = Output.empty();
+        this.skippedCount = Output.empty();
+        this.totalCount = Output.empty();
+        this.xmlSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DurationArgs> elapsedTime;
-        private @Nullable Input<Integer> errorCount;
-        private @Nullable Input<Integer> failureCount;
-        private @Nullable Input<Integer> flakyCount;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> skippedCount;
-        private @Nullable Input<Integer> totalCount;
-        private @Nullable Input<FileReferenceArgs> xmlSource;
+        private @Nullable Output<DurationArgs> elapsedTime;
+        private @Nullable Output<Integer> errorCount;
+        private @Nullable Output<Integer> failureCount;
+        private @Nullable Output<Integer> flakyCount;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> skippedCount;
+        private @Nullable Output<Integer> totalCount;
+        private @Nullable Output<FileReferenceArgs> xmlSource;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     	      this.xmlSource = defaults.xmlSource;
         }
 
-        public Builder elapsedTime(@Nullable Input<DurationArgs> elapsedTime) {
+        public Builder elapsedTime(@Nullable Output<DurationArgs> elapsedTime) {
             this.elapsedTime = elapsedTime;
             return this;
         }
 
         public Builder elapsedTime(@Nullable DurationArgs elapsedTime) {
-            this.elapsedTime = Input.ofNullable(elapsedTime);
+            this.elapsedTime = Output.ofNullable(elapsedTime);
             return this;
         }
 
-        public Builder errorCount(@Nullable Input<Integer> errorCount) {
+        public Builder errorCount(@Nullable Output<Integer> errorCount) {
             this.errorCount = errorCount;
             return this;
         }
 
         public Builder errorCount(@Nullable Integer errorCount) {
-            this.errorCount = Input.ofNullable(errorCount);
+            this.errorCount = Output.ofNullable(errorCount);
             return this;
         }
 
-        public Builder failureCount(@Nullable Input<Integer> failureCount) {
+        public Builder failureCount(@Nullable Output<Integer> failureCount) {
             this.failureCount = failureCount;
             return this;
         }
 
         public Builder failureCount(@Nullable Integer failureCount) {
-            this.failureCount = Input.ofNullable(failureCount);
+            this.failureCount = Output.ofNullable(failureCount);
             return this;
         }
 
-        public Builder flakyCount(@Nullable Input<Integer> flakyCount) {
+        public Builder flakyCount(@Nullable Output<Integer> flakyCount) {
             this.flakyCount = flakyCount;
             return this;
         }
 
         public Builder flakyCount(@Nullable Integer flakyCount) {
-            this.flakyCount = Input.ofNullable(flakyCount);
+            this.flakyCount = Output.ofNullable(flakyCount);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder skippedCount(@Nullable Input<Integer> skippedCount) {
+        public Builder skippedCount(@Nullable Output<Integer> skippedCount) {
             this.skippedCount = skippedCount;
             return this;
         }
 
         public Builder skippedCount(@Nullable Integer skippedCount) {
-            this.skippedCount = Input.ofNullable(skippedCount);
+            this.skippedCount = Output.ofNullable(skippedCount);
             return this;
         }
 
-        public Builder totalCount(@Nullable Input<Integer> totalCount) {
+        public Builder totalCount(@Nullable Output<Integer> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
 
         public Builder totalCount(@Nullable Integer totalCount) {
-            this.totalCount = Input.ofNullable(totalCount);
+            this.totalCount = Output.ofNullable(totalCount);
             return this;
         }
 
-        public Builder xmlSource(@Nullable Input<FileReferenceArgs> xmlSource) {
+        public Builder xmlSource(@Nullable Output<FileReferenceArgs> xmlSource) {
             this.xmlSource = xmlSource;
             return this;
         }
 
         public Builder xmlSource(@Nullable FileReferenceArgs xmlSource) {
-            this.xmlSource = Input.ofNullable(xmlSource);
+            this.xmlSource = Output.ofNullable(xmlSource);
             return this;
         }
         public TestSuiteOverviewArgs build() {

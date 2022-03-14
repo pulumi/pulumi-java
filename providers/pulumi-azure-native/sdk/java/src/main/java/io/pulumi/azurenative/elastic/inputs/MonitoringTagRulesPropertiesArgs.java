@@ -6,7 +6,7 @@ package io.pulumi.azurenative.elastic.inputs;
 import io.pulumi.azurenative.elastic.enums.ProvisioningState;
 import io.pulumi.azurenative.elastic.inputs.LogRulesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logRules")
-      private final @Nullable Input<LogRulesArgs> logRules;
+      private final @Nullable Output<LogRulesArgs> logRules;
 
-    public Input<LogRulesArgs> getLogRules() {
-        return this.logRules == null ? Input.empty() : this.logRules;
+    public Output<LogRulesArgs> getLogRules() {
+        return this.logRules == null ? Output.empty() : this.logRules;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     public MonitoringTagRulesPropertiesArgs(
-        @Nullable Input<LogRulesArgs> logRules,
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        @Nullable Output<LogRulesArgs> logRules,
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState) {
         this.logRules = logRules;
         this.provisioningState = provisioningState;
     }
 
     private MonitoringTagRulesPropertiesArgs() {
-        this.logRules = Input.empty();
-        this.provisioningState = Input.empty();
+        this.logRules = Output.empty();
+        this.provisioningState = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<LogRulesArgs> logRules;
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+        private @Nullable Output<LogRulesArgs> logRules;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder logRules(@Nullable Input<LogRulesArgs> logRules) {
+        public Builder logRules(@Nullable Output<LogRulesArgs> logRules) {
             this.logRules = logRules;
             return this;
         }
 
         public Builder logRules(@Nullable LogRulesArgs logRules) {
-            this.logRules = Input.ofNullable(logRules);
+            this.logRules = Output.ofNullable(logRules);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
         public MonitoringTagRulesPropertiesArgs build() {

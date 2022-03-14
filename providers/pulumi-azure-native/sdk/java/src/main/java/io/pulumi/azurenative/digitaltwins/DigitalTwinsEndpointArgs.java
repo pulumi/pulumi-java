@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins;
 import io.pulumi.azurenative.digitaltwins.inputs.EventGridArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.EventHubArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.ServiceBusArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpointName")
-      private final @Nullable Input<String> endpointName;
+      private final @Nullable Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
-        return this.endpointName == null ? Input.empty() : this.endpointName;
+    public Output<String> getEndpointName() {
+        return this.endpointName == null ? Output.empty() : this.endpointName;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Object> properties;
+      private final Output<Object> properties;
 
-    public Input<Object> getProperties() {
+    public Output<Object> getProperties() {
         return this.properties;
     }
 
@@ -45,9 +45,9 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,17 +56,17 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public DigitalTwinsEndpointArgs(
-        @Nullable Input<String> endpointName,
-        Input<Object> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        @Nullable Output<String> endpointName,
+        Output<Object> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.endpointName = endpointName;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -74,10 +74,10 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     }
 
     private DigitalTwinsEndpointArgs() {
-        this.endpointName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.endpointName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpointName;
-        private Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private @Nullable Output<String> endpointName;
+        private Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder endpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Input.ofNullable(endpointName);
+            this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
 
-        public Builder properties(Input<Object> properties) {
+        public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Object properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public DigitalTwinsEndpointArgs build() {

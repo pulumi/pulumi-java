@@ -7,7 +7,7 @@ import io.pulumi.azurenative.powerbi.enums.ResourceProvisioningState;
 import io.pulumi.azurenative.powerbi.inputs.ConnectionStateArgs;
 import io.pulumi.azurenative.powerbi.inputs.PrivateEndpointArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="azureResourceName", required=true)
-      private final Input<String> azureResourceName;
+      private final Output<String> azureResourceName;
 
-    public Input<String> getAzureResourceName() {
+    public Output<String> getAzureResourceName() {
         return this.azureResourceName;
     }
 
@@ -34,10 +34,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpoint")
-      private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
+      private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Input<PrivateEndpointArgs> getPrivateEndpoint() {
-        return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
+    public Output<PrivateEndpointArgs> getPrivateEndpoint() {
+        return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointName")
-      private final @Nullable Input<String> privateEndpointName;
+      private final @Nullable Output<String> privateEndpointName;
 
-    public Input<String> getPrivateEndpointName() {
-        return this.privateEndpointName == null ? Input.empty() : this.privateEndpointName;
+    public Output<String> getPrivateEndpointName() {
+        return this.privateEndpointName == null ? Output.empty() : this.privateEndpointName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-      private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Input<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
+    public Output<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
-    public Input<Either<String,ResourceProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ResourceProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public PrivateEndpointConnectionArgs(
-        Input<String> azureResourceName,
-        @Nullable Input<PrivateEndpointArgs> privateEndpoint,
-        @Nullable Input<String> privateEndpointName,
-        @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState,
-        @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState,
-        Input<String> resourceGroupName) {
+        Output<String> azureResourceName,
+        @Nullable Output<PrivateEndpointArgs> privateEndpoint,
+        @Nullable Output<String> privateEndpointName,
+        @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState,
+        @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState,
+        Output<String> resourceGroupName) {
         this.azureResourceName = Objects.requireNonNull(azureResourceName, "expected parameter 'azureResourceName' to be non-null");
         this.privateEndpoint = privateEndpoint;
         this.privateEndpointName = privateEndpointName;
@@ -100,12 +100,12 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.azureResourceName = Input.empty();
-        this.privateEndpoint = Input.empty();
-        this.privateEndpointName = Input.empty();
-        this.privateLinkServiceConnectionState = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.azureResourceName = Output.empty();
+        this.privateEndpoint = Output.empty();
+        this.privateEndpointName = Output.empty();
+        this.privateLinkServiceConnectionState = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> azureResourceName;
-        private @Nullable Input<PrivateEndpointArgs> privateEndpoint;
-        private @Nullable Input<String> privateEndpointName;
-        private @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
-        private @Nullable Input<Either<String,ResourceProvisioningState>> provisioningState;
-        private Input<String> resourceGroupName;
+        private Output<String> azureResourceName;
+        private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
+        private @Nullable Output<String> privateEndpointName;
+        private @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
+        private @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder azureResourceName(Input<String> azureResourceName) {
+        public Builder azureResourceName(Output<String> azureResourceName) {
             this.azureResourceName = Objects.requireNonNull(azureResourceName);
             return this;
         }
 
         public Builder azureResourceName(String azureResourceName) {
-            this.azureResourceName = Input.of(Objects.requireNonNull(azureResourceName));
+            this.azureResourceName = Output.of(Objects.requireNonNull(azureResourceName));
             return this;
         }
 
-        public Builder privateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
+        public Builder privateEndpoint(@Nullable Output<PrivateEndpointArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
         public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
-            this.privateEndpoint = Input.ofNullable(privateEndpoint);
+            this.privateEndpoint = Output.ofNullable(privateEndpoint);
             return this;
         }
 
-        public Builder privateEndpointName(@Nullable Input<String> privateEndpointName) {
+        public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
 
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
-            this.privateEndpointName = Input.ofNullable(privateEndpointName);
+            this.privateEndpointName = Output.ofNullable(privateEndpointName);
             return this;
         }
 
-        public Builder privateLinkServiceConnectionState(@Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
         public Builder privateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ResourceProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ResourceProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public PrivateEndpointConnectionArgs build() {

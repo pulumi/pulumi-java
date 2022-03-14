@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs.CertificateSigningRequestConditionArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions;
+      private final @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
-    public Input<List<CertificateSigningRequestConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<CertificateSigningRequestConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     public CertificateSigningRequestStatusArgs(
-        @Nullable Input<String> certificate,
-        @Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions) {
+        @Nullable Output<String> certificate,
+        @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions) {
         this.certificate = certificate;
         this.conditions = conditions;
     }
 
     private CertificateSigningRequestStatusArgs() {
-        this.certificate = Input.empty();
-        this.conditions = Input.empty();
+        this.certificate = Output.empty();
+        this.conditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<CertificateSigningRequestConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
         public CertificateSigningRequestStatusArgs build() {

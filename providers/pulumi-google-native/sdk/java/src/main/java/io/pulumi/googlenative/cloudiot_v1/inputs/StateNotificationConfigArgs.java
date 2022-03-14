@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pubsubTopicName")
-      private final @Nullable Input<String> pubsubTopicName;
+      private final @Nullable Output<String> pubsubTopicName;
 
-    public Input<String> getPubsubTopicName() {
-        return this.pubsubTopicName == null ? Input.empty() : this.pubsubTopicName;
+    public Output<String> getPubsubTopicName() {
+        return this.pubsubTopicName == null ? Output.empty() : this.pubsubTopicName;
     }
 
-    public StateNotificationConfigArgs(@Nullable Input<String> pubsubTopicName) {
+    public StateNotificationConfigArgs(@Nullable Output<String> pubsubTopicName) {
         this.pubsubTopicName = pubsubTopicName;
     }
 
     private StateNotificationConfigArgs() {
-        this.pubsubTopicName = Input.empty();
+        this.pubsubTopicName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pubsubTopicName;
+        private @Nullable Output<String> pubsubTopicName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
     	      this.pubsubTopicName = defaults.pubsubTopicName;
         }
 
-        public Builder pubsubTopicName(@Nullable Input<String> pubsubTopicName) {
+        public Builder pubsubTopicName(@Nullable Output<String> pubsubTopicName) {
             this.pubsubTopicName = pubsubTopicName;
             return this;
         }
 
         public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
-            this.pubsubTopicName = Input.ofNullable(pubsubTopicName);
+            this.pubsubTopicName = Output.ofNullable(pubsubTopicName);
             return this;
         }
         public StateNotificationConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,18 +16,18 @@ public final class RuntimeMetricGetArgs extends io.pulumi.resources.ResourceArgs
     public static final RuntimeMetricGetArgs Empty = new RuntimeMetricGetArgs();
 
     @InputImport(name="systemMetrics")
-      private final @Nullable Input<Map<String,String>> systemMetrics;
+      private final @Nullable Output<Map<String,String>> systemMetrics;
 
-    public Input<Map<String,String>> getSystemMetrics() {
-        return this.systemMetrics == null ? Input.empty() : this.systemMetrics;
+    public Output<Map<String,String>> getSystemMetrics() {
+        return this.systemMetrics == null ? Output.empty() : this.systemMetrics;
     }
 
-    public RuntimeMetricGetArgs(@Nullable Input<Map<String,String>> systemMetrics) {
+    public RuntimeMetricGetArgs(@Nullable Output<Map<String,String>> systemMetrics) {
         this.systemMetrics = systemMetrics;
     }
 
     private RuntimeMetricGetArgs() {
-        this.systemMetrics = Input.empty();
+        this.systemMetrics = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class RuntimeMetricGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> systemMetrics;
+        private @Nullable Output<Map<String,String>> systemMetrics;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class RuntimeMetricGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.systemMetrics = defaults.systemMetrics;
         }
 
-        public Builder systemMetrics(@Nullable Input<Map<String,String>> systemMetrics) {
+        public Builder systemMetrics(@Nullable Output<Map<String,String>> systemMetrics) {
             this.systemMetrics = systemMetrics;
             return this;
         }
 
         public Builder systemMetrics(@Nullable Map<String,String> systemMetrics) {
-            this.systemMetrics = Input.ofNullable(systemMetrics);
+            this.systemMetrics = Output.ofNullable(systemMetrics);
             return this;
         }
         public RuntimeMetricGetArgs build() {

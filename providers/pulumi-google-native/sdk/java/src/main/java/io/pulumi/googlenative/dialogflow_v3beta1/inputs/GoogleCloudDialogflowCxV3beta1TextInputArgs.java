@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="text", required=true)
-      private final Input<String> text;
+      private final Output<String> text;
 
-    public Input<String> getText() {
+    public Output<String> getText() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3beta1TextInputArgs(Input<String> text) {
+    public GoogleCloudDialogflowCxV3beta1TextInputArgs(Output<String> text) {
         this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
     }
 
     private GoogleCloudDialogflowCxV3beta1TextInputArgs() {
-        this.text = Input.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> text;
+        private Output<String> text;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputArgs extends io.pulumi
     	      this.text = defaults.text;
         }
 
-        public Builder text(Input<String> text) {
+        public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
         public Builder text(String text) {
-            this.text = Input.of(Objects.requireNonNull(text));
+            this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1TextInputArgs build() {

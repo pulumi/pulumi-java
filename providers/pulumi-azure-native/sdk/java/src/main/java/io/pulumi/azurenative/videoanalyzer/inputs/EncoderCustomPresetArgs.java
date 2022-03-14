@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.AudioEncoderAacArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoEncoderH264Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audioEncoder")
-      private final @Nullable Input<AudioEncoderAacArgs> audioEncoder;
+      private final @Nullable Output<AudioEncoderAacArgs> audioEncoder;
 
-    public Input<AudioEncoderAacArgs> getAudioEncoder() {
-        return this.audioEncoder == null ? Input.empty() : this.audioEncoder;
+    public Output<AudioEncoderAacArgs> getAudioEncoder() {
+        return this.audioEncoder == null ? Output.empty() : this.audioEncoder;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -48,25 +48,25 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="videoEncoder")
-      private final @Nullable Input<VideoEncoderH264Args> videoEncoder;
+      private final @Nullable Output<VideoEncoderH264Args> videoEncoder;
 
-    public Input<VideoEncoderH264Args> getVideoEncoder() {
-        return this.videoEncoder == null ? Input.empty() : this.videoEncoder;
+    public Output<VideoEncoderH264Args> getVideoEncoder() {
+        return this.videoEncoder == null ? Output.empty() : this.videoEncoder;
     }
 
     public EncoderCustomPresetArgs(
-        @Nullable Input<AudioEncoderAacArgs> audioEncoder,
-        Input<String> type,
-        @Nullable Input<VideoEncoderH264Args> videoEncoder) {
+        @Nullable Output<AudioEncoderAacArgs> audioEncoder,
+        Output<String> type,
+        @Nullable Output<VideoEncoderH264Args> videoEncoder) {
         this.audioEncoder = audioEncoder;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.videoEncoder = videoEncoder;
     }
 
     private EncoderCustomPresetArgs() {
-        this.audioEncoder = Input.empty();
-        this.type = Input.empty();
-        this.videoEncoder = Input.empty();
+        this.audioEncoder = Output.empty();
+        this.type = Output.empty();
+        this.videoEncoder = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<AudioEncoderAacArgs> audioEncoder;
-        private Input<String> type;
-        private @Nullable Input<VideoEncoderH264Args> videoEncoder;
+        private @Nullable Output<AudioEncoderAacArgs> audioEncoder;
+        private Output<String> type;
+        private @Nullable Output<VideoEncoderH264Args> videoEncoder;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     	      this.videoEncoder = defaults.videoEncoder;
         }
 
-        public Builder audioEncoder(@Nullable Input<AudioEncoderAacArgs> audioEncoder) {
+        public Builder audioEncoder(@Nullable Output<AudioEncoderAacArgs> audioEncoder) {
             this.audioEncoder = audioEncoder;
             return this;
         }
 
         public Builder audioEncoder(@Nullable AudioEncoderAacArgs audioEncoder) {
-            this.audioEncoder = Input.ofNullable(audioEncoder);
+            this.audioEncoder = Output.ofNullable(audioEncoder);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder videoEncoder(@Nullable Input<VideoEncoderH264Args> videoEncoder) {
+        public Builder videoEncoder(@Nullable Output<VideoEncoderH264Args> videoEncoder) {
             this.videoEncoder = videoEncoder;
             return this;
         }
 
         public Builder videoEncoder(@Nullable VideoEncoderH264Args videoEncoder) {
-            this.videoEncoder = Input.ofNullable(videoEncoder);
+            this.videoEncoder = Output.ofNullable(videoEncoder);
             return this;
         }
         public EncoderCustomPresetArgs build() {

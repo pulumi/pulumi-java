@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.AuditLogConfigArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogConfigs")
-      private final @Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs;
+      private final @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
 
-    public Input<List<AuditLogConfigArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
+    public Output<List<AuditLogConfigArgs>> getAuditLogConfigs() {
+        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exemptedMembers")
-      private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Input<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
+    public Output<List<String>> getExemptedMembers() {
+        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public AuditConfigArgs(
-        @Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs,
-        @Nullable Input<List<String>> exemptedMembers,
-        @Nullable Input<String> service) {
+        @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs,
+        @Nullable Output<List<String>> exemptedMembers,
+        @Nullable Output<String> service) {
         this.auditLogConfigs = auditLogConfigs;
         this.exemptedMembers = exemptedMembers;
         this.service = service;
     }
 
     private AuditConfigArgs() {
-        this.auditLogConfigs = Input.empty();
-        this.exemptedMembers = Input.empty();
-        this.service = Input.empty();
+        this.auditLogConfigs = Output.empty();
+        this.exemptedMembers = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs;
-        private @Nullable Input<List<String>> exemptedMembers;
-        private @Nullable Input<String> service;
+        private @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
+        private @Nullable Output<List<String>> exemptedMembers;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder auditLogConfigs(@Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs) {
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
         public Builder auditLogConfigs(@Nullable List<AuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Input.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
             return this;
         }
 
-        public Builder exemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Input.ofNullable(exemptedMembers);
+            this.exemptedMembers = Output.ofNullable(exemptedMembers);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public AuditConfigArgs build() {

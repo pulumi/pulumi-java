@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
      * 
      */
     @InputImport(name="alarms")
-      private final @Nullable Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
+      private final @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
 
-    public Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> getAlarms() {
-        return this.alarms == null ? Input.empty() : this.alarms;
+    public Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> getAlarms() {
+        return this.alarms == null ? Output.empty() : this.alarms;
     }
 
-    public EndpointDeploymentConfigAutoRollbackConfigurationArgs(@Nullable Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms) {
+    public EndpointDeploymentConfigAutoRollbackConfigurationArgs(@Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms) {
         this.alarms = alarms;
     }
 
     private EndpointDeploymentConfigAutoRollbackConfigurationArgs() {
-        this.alarms = Input.empty();
+        this.alarms = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
+        private @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
     	      this.alarms = defaults.alarms;
         }
 
-        public Builder alarms(@Nullable Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms) {
+        public Builder alarms(@Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms) {
             this.alarms = alarms;
             return this;
         }
 
         public Builder alarms(@Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs> alarms) {
-            this.alarms = Input.ofNullable(alarms);
+            this.alarms = Output.ofNullable(alarms);
             return this;
         }
         public EndpointDeploymentConfigAutoRollbackConfigurationArgs build() {

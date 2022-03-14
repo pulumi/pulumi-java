@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsDiskType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsLicenseType;
@@ -30,10 +30,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="additionalLicenses")
-      private final @Nullable Input<List<String>> additionalLicenses;
+      private final @Nullable Output<List<String>> additionalLicenses;
 
-    public Input<List<String>> getAdditionalLicenses() {
-        return this.additionalLicenses == null ? Input.empty() : this.additionalLicenses;
+    public Output<List<String>> getAdditionalLicenses() {
+        return this.additionalLicenses == null ? Output.empty() : this.additionalLicenses;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="computeScheduling")
-      private final @Nullable Input<ComputeSchedulingArgs> computeScheduling;
+      private final @Nullable Output<ComputeSchedulingArgs> computeScheduling;
 
-    public Input<ComputeSchedulingArgs> getComputeScheduling() {
-        return this.computeScheduling == null ? Input.empty() : this.computeScheduling;
+    public Output<ComputeSchedulingArgs> getComputeScheduling() {
+        return this.computeScheduling == null ? Output.empty() : this.computeScheduling;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType;
+      private final @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
 
-    public Input<ComputeEngineTargetDefaultsDiskType> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<ComputeEngineTargetDefaultsDiskType> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType;
+      private final @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
 
-    public Input<ComputeEngineTargetDefaultsLicenseType> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<ComputeEngineTargetDefaultsLicenseType> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="machineTypeSeries")
-      private final @Nullable Input<String> machineTypeSeries;
+      private final @Nullable Output<String> machineTypeSeries;
 
-    public Input<String> getMachineTypeSeries() {
-        return this.machineTypeSeries == null ? Input.empty() : this.machineTypeSeries;
+    public Output<String> getMachineTypeSeries() {
+        return this.machineTypeSeries == null ? Output.empty() : this.machineTypeSeries;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkTags")
-      private final @Nullable Input<List<String>> networkTags;
+      private final @Nullable Output<List<String>> networkTags;
 
-    public Input<List<String>> getNetworkTags() {
-        return this.networkTags == null ? Input.empty() : this.networkTags;
+    public Output<List<String>> getNetworkTags() {
+        return this.networkTags == null ? Output.empty() : this.networkTags;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="secureBoot")
-      private final @Nullable Input<Boolean> secureBoot;
+      private final @Nullable Output<Boolean> secureBoot;
 
-    public Input<Boolean> getSecureBoot() {
-        return this.secureBoot == null ? Input.empty() : this.secureBoot;
+    public Output<Boolean> getSecureBoot() {
+        return this.secureBoot == null ? Output.empty() : this.secureBoot;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetProject")
-      private final @Nullable Input<String> targetProject;
+      private final @Nullable Output<String> targetProject;
 
-    public Input<String> getTargetProject() {
-        return this.targetProject == null ? Input.empty() : this.targetProject;
+    public Output<String> getTargetProject() {
+        return this.targetProject == null ? Output.empty() : this.targetProject;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmName")
-      private final @Nullable Input<String> vmName;
+      private final @Nullable Output<String> vmName;
 
-    public Input<String> getVmName() {
-        return this.vmName == null ? Input.empty() : this.vmName;
+    public Output<String> getVmName() {
+        return this.vmName == null ? Output.empty() : this.vmName;
     }
 
     /**
@@ -184,28 +184,28 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public ComputeEngineTargetDefaultsArgs(
-        @Nullable Input<List<String>> additionalLicenses,
-        @Nullable Input<ComputeSchedulingArgs> computeScheduling,
-        @Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType,
-        @Nullable Input<String> machineType,
-        @Nullable Input<String> machineTypeSeries,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Input<List<String>> networkTags,
-        @Nullable Input<Boolean> secureBoot,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> targetProject,
-        @Nullable Input<String> vmName,
-        @Nullable Input<String> zone) {
+        @Nullable Output<List<String>> additionalLicenses,
+        @Nullable Output<ComputeSchedulingArgs> computeScheduling,
+        @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType,
+        @Nullable Output<String> machineType,
+        @Nullable Output<String> machineTypeSeries,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces,
+        @Nullable Output<List<String>> networkTags,
+        @Nullable Output<Boolean> secureBoot,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> targetProject,
+        @Nullable Output<String> vmName,
+        @Nullable Output<String> zone) {
         this.additionalLicenses = additionalLicenses;
         this.computeScheduling = computeScheduling;
         this.diskType = diskType;
@@ -224,21 +224,21 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     }
 
     private ComputeEngineTargetDefaultsArgs() {
-        this.additionalLicenses = Input.empty();
-        this.computeScheduling = Input.empty();
-        this.diskType = Input.empty();
-        this.labels = Input.empty();
-        this.licenseType = Input.empty();
-        this.machineType = Input.empty();
-        this.machineTypeSeries = Input.empty();
-        this.metadata = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.networkTags = Input.empty();
-        this.secureBoot = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.targetProject = Input.empty();
-        this.vmName = Input.empty();
-        this.zone = Input.empty();
+        this.additionalLicenses = Output.empty();
+        this.computeScheduling = Output.empty();
+        this.diskType = Output.empty();
+        this.labels = Output.empty();
+        this.licenseType = Output.empty();
+        this.machineType = Output.empty();
+        this.machineTypeSeries = Output.empty();
+        this.metadata = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.networkTags = Output.empty();
+        this.secureBoot = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.targetProject = Output.empty();
+        this.vmName = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -250,21 +250,21 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> additionalLicenses;
-        private @Nullable Input<ComputeSchedulingArgs> computeScheduling;
-        private @Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<String> machineTypeSeries;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Input<List<String>> networkTags;
-        private @Nullable Input<Boolean> secureBoot;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> targetProject;
-        private @Nullable Input<String> vmName;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<List<String>> additionalLicenses;
+        private @Nullable Output<ComputeSchedulingArgs> computeScheduling;
+        private @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<String> machineTypeSeries;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
+        private @Nullable Output<List<String>> networkTags;
+        private @Nullable Output<Boolean> secureBoot;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> targetProject;
+        private @Nullable Output<String> vmName;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -289,153 +289,153 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     	      this.zone = defaults.zone;
         }
 
-        public Builder additionalLicenses(@Nullable Input<List<String>> additionalLicenses) {
+        public Builder additionalLicenses(@Nullable Output<List<String>> additionalLicenses) {
             this.additionalLicenses = additionalLicenses;
             return this;
         }
 
         public Builder additionalLicenses(@Nullable List<String> additionalLicenses) {
-            this.additionalLicenses = Input.ofNullable(additionalLicenses);
+            this.additionalLicenses = Output.ofNullable(additionalLicenses);
             return this;
         }
 
-        public Builder computeScheduling(@Nullable Input<ComputeSchedulingArgs> computeScheduling) {
+        public Builder computeScheduling(@Nullable Output<ComputeSchedulingArgs> computeScheduling) {
             this.computeScheduling = computeScheduling;
             return this;
         }
 
         public Builder computeScheduling(@Nullable ComputeSchedulingArgs computeScheduling) {
-            this.computeScheduling = Input.ofNullable(computeScheduling);
+            this.computeScheduling = Output.ofNullable(computeScheduling);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType) {
+        public Builder diskType(@Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable ComputeEngineTargetDefaultsDiskType diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType) {
+        public Builder licenseType(@Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable ComputeEngineTargetDefaultsLicenseType licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder machineTypeSeries(@Nullable Input<String> machineTypeSeries) {
+        public Builder machineTypeSeries(@Nullable Output<String> machineTypeSeries) {
             this.machineTypeSeries = machineTypeSeries;
             return this;
         }
 
         public Builder machineTypeSeries(@Nullable String machineTypeSeries) {
-            this.machineTypeSeries = Input.ofNullable(machineTypeSeries);
+            this.machineTypeSeries = Output.ofNullable(machineTypeSeries);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder networkTags(@Nullable Input<List<String>> networkTags) {
+        public Builder networkTags(@Nullable Output<List<String>> networkTags) {
             this.networkTags = networkTags;
             return this;
         }
 
         public Builder networkTags(@Nullable List<String> networkTags) {
-            this.networkTags = Input.ofNullable(networkTags);
+            this.networkTags = Output.ofNullable(networkTags);
             return this;
         }
 
-        public Builder secureBoot(@Nullable Input<Boolean> secureBoot) {
+        public Builder secureBoot(@Nullable Output<Boolean> secureBoot) {
             this.secureBoot = secureBoot;
             return this;
         }
 
         public Builder secureBoot(@Nullable Boolean secureBoot) {
-            this.secureBoot = Input.ofNullable(secureBoot);
+            this.secureBoot = Output.ofNullable(secureBoot);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder targetProject(@Nullable Input<String> targetProject) {
+        public Builder targetProject(@Nullable Output<String> targetProject) {
             this.targetProject = targetProject;
             return this;
         }
 
         public Builder targetProject(@Nullable String targetProject) {
-            this.targetProject = Input.ofNullable(targetProject);
+            this.targetProject = Output.ofNullable(targetProject);
             return this;
         }
 
-        public Builder vmName(@Nullable Input<String> vmName) {
+        public Builder vmName(@Nullable Output<String> vmName) {
             this.vmName = vmName;
             return this;
         }
 
         public Builder vmName(@Nullable String vmName) {
-            this.vmName = Input.ofNullable(vmName);
+            this.vmName = Output.ofNullable(vmName);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public ComputeEngineTargetDefaultsArgs build() {

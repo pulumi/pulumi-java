@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.gameservices;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -220,14 +219,14 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerConfig(String name, GameServerConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gameservices/gameServerConfig:GameServerConfig", name, args == null ? GameServerConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:gameservices/gameServerConfig:GameServerConfig", name, args == null ? GameServerConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GameServerConfig(String name, Input<String> id, @Nullable GameServerConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GameServerConfig(String name, Output<String> id, @Nullable GameServerConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:gameservices/gameServerConfig:GameServerConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -243,7 +242,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GameServerConfig get(String name, Input<String> id, @Nullable GameServerConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GameServerConfig get(String name, Output<String> id, @Nullable GameServerConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GameServerConfig(name, id, state, options);
     }
 }

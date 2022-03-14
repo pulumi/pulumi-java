@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<List<Object>> inputs;
+      private final @Nullable Output<List<Object>> inputs;
 
-    public Input<List<Object>> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<List<Object>> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<MarkdownPartMetadataSettingsArgs> settings;
+      private final @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
 
-    public Input<MarkdownPartMetadataSettingsArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<MarkdownPartMetadataSettingsArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public MarkdownPartMetadataArgs(
-        @Nullable Input<List<Object>> inputs,
-        @Nullable Input<MarkdownPartMetadataSettingsArgs> settings,
-        Input<String> type) {
+        @Nullable Output<List<Object>> inputs,
+        @Nullable Output<MarkdownPartMetadataSettingsArgs> settings,
+        Output<String> type) {
         this.inputs = inputs;
         this.settings = settings;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private MarkdownPartMetadataArgs() {
-        this.inputs = Input.empty();
-        this.settings = Input.empty();
-        this.type = Input.empty();
+        this.inputs = Output.empty();
+        this.settings = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> inputs;
-        private @Nullable Input<MarkdownPartMetadataSettingsArgs> settings;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> inputs;
+        private @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder inputs(@Nullable Input<List<Object>> inputs) {
+        public Builder inputs(@Nullable Output<List<Object>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder settings(@Nullable Input<MarkdownPartMetadataSettingsArgs> settings) {
+        public Builder settings(@Nullable Output<MarkdownPartMetadataSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable MarkdownPartMetadataSettingsArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public MarkdownPartMetadataArgs build() {

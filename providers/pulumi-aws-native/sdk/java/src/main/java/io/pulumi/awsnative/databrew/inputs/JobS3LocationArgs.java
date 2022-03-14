@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class JobS3LocationArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobS3LocationArgs Empty = new JobS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="bucketOwner")
-      private final @Nullable Input<String> bucketOwner;
+      private final @Nullable Output<String> bucketOwner;
 
-    public Input<String> getBucketOwner() {
-        return this.bucketOwner == null ? Input.empty() : this.bucketOwner;
+    public Output<String> getBucketOwner() {
+        return this.bucketOwner == null ? Output.empty() : this.bucketOwner;
     }
 
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     public JobS3LocationArgs(
-        Input<String> bucket,
-        @Nullable Input<String> bucketOwner,
-        @Nullable Input<String> key) {
+        Output<String> bucket,
+        @Nullable Output<String> bucketOwner,
+        @Nullable Output<String> key) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.bucketOwner = bucketOwner;
         this.key = key;
     }
 
     private JobS3LocationArgs() {
-        this.bucket = Input.empty();
-        this.bucketOwner = Input.empty();
-        this.key = Input.empty();
+        this.bucket = Output.empty();
+        this.bucketOwner = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class JobS3LocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<String> bucketOwner;
-        private @Nullable Input<String> key;
+        private Output<String> bucket;
+        private @Nullable Output<String> bucketOwner;
+        private @Nullable Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class JobS3LocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.key = defaults.key;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder bucketOwner(@Nullable Input<String> bucketOwner) {
+        public Builder bucketOwner(@Nullable Output<String> bucketOwner) {
             this.bucketOwner = bucketOwner;
             return this;
         }
 
         public Builder bucketOwner(@Nullable String bucketOwner) {
-            this.bucketOwner = Input.ofNullable(bucketOwner);
+            this.bucketOwner = Output.ofNullable(bucketOwner);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
         public JobS3LocationArgs build() {

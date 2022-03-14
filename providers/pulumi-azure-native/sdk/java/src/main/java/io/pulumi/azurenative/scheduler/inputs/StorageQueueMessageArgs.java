@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="queueName")
-      private final @Nullable Input<String> queueName;
+      private final @Nullable Output<String> queueName;
 
-    public Input<String> getQueueName() {
-        return this.queueName == null ? Input.empty() : this.queueName;
+    public Output<String> getQueueName() {
+        return this.queueName == null ? Output.empty() : this.queueName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sasToken")
-      private final @Nullable Input<String> sasToken;
+      private final @Nullable Output<String> sasToken;
 
-    public Input<String> getSasToken() {
-        return this.sasToken == null ? Input.empty() : this.sasToken;
+    public Output<String> getSasToken() {
+        return this.sasToken == null ? Output.empty() : this.sasToken;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="storageAccount")
-      private final @Nullable Input<String> storageAccount;
+      private final @Nullable Output<String> storageAccount;
 
-    public Input<String> getStorageAccount() {
-        return this.storageAccount == null ? Input.empty() : this.storageAccount;
+    public Output<String> getStorageAccount() {
+        return this.storageAccount == null ? Output.empty() : this.storageAccount;
     }
 
     public StorageQueueMessageArgs(
-        @Nullable Input<String> message,
-        @Nullable Input<String> queueName,
-        @Nullable Input<String> sasToken,
-        @Nullable Input<String> storageAccount) {
+        @Nullable Output<String> message,
+        @Nullable Output<String> queueName,
+        @Nullable Output<String> sasToken,
+        @Nullable Output<String> storageAccount) {
         this.message = message;
         this.queueName = queueName;
         this.sasToken = sasToken;
@@ -70,10 +70,10 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
     }
 
     private StorageQueueMessageArgs() {
-        this.message = Input.empty();
-        this.queueName = Input.empty();
-        this.sasToken = Input.empty();
-        this.storageAccount = Input.empty();
+        this.message = Output.empty();
+        this.queueName = Output.empty();
+        this.sasToken = Output.empty();
+        this.storageAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> queueName;
-        private @Nullable Input<String> sasToken;
-        private @Nullable Input<String> storageAccount;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> queueName;
+        private @Nullable Output<String> sasToken;
+        private @Nullable Output<String> storageAccount;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder queueName(@Nullable Input<String> queueName) {
+        public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
 
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Input.ofNullable(queueName);
+            this.queueName = Output.ofNullable(queueName);
             return this;
         }
 
-        public Builder sasToken(@Nullable Input<String> sasToken) {
+        public Builder sasToken(@Nullable Output<String> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
         public Builder sasToken(@Nullable String sasToken) {
-            this.sasToken = Input.ofNullable(sasToken);
+            this.sasToken = Output.ofNullable(sasToken);
             return this;
         }
 
-        public Builder storageAccount(@Nullable Input<String> storageAccount) {
+        public Builder storageAccount(@Nullable Output<String> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
         public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = Input.ofNullable(storageAccount);
+            this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
         public StorageQueueMessageArgs build() {

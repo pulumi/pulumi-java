@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class DataSourceVpcConfigurationArgs extends io.pulumi.resources.Re
     public static final DataSourceVpcConfigurationArgs Empty = new DataSourceVpcConfigurationArgs();
 
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
     public DataSourceVpcConfigurationArgs(
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnetIds) {
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnetIds) {
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
     }
 
     private DataSourceVpcConfigurationArgs() {
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DataSourceVpcConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnetIds;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnetIds;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DataSourceVpcConfigurationArgs extends io.pulumi.resources.Re
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
         public DataSourceVpcConfigurationArgs build() {

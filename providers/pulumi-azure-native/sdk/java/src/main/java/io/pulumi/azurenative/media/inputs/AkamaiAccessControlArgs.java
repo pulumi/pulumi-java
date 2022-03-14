@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.AkamaiSignatureHeaderAuthenticationKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="akamaiSignatureHeaderAuthenticationKeyList")
-      private final @Nullable Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
+      private final @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 
-    public Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> getAkamaiSignatureHeaderAuthenticationKeyList() {
-        return this.akamaiSignatureHeaderAuthenticationKeyList == null ? Input.empty() : this.akamaiSignatureHeaderAuthenticationKeyList;
+    public Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> getAkamaiSignatureHeaderAuthenticationKeyList() {
+        return this.akamaiSignatureHeaderAuthenticationKeyList == null ? Output.empty() : this.akamaiSignatureHeaderAuthenticationKeyList;
     }
 
-    public AkamaiAccessControlArgs(@Nullable Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList) {
+    public AkamaiAccessControlArgs(@Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList) {
         this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
     }
 
     private AkamaiAccessControlArgs() {
-        this.akamaiSignatureHeaderAuthenticationKeyList = Input.empty();
+        this.akamaiSignatureHeaderAuthenticationKeyList = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
+        private @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
     	      this.akamaiSignatureHeaderAuthenticationKeyList = defaults.akamaiSignatureHeaderAuthenticationKeyList;
         }
 
-        public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList) {
+        public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList) {
             this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
 
         public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable List<AkamaiSignatureHeaderAuthenticationKeyArgs> akamaiSignatureHeaderAuthenticationKeyList) {
-            this.akamaiSignatureHeaderAuthenticationKeyList = Input.ofNullable(akamaiSignatureHeaderAuthenticationKeyList);
+            this.akamaiSignatureHeaderAuthenticationKeyList = Output.ofNullable(akamaiSignatureHeaderAuthenticationKeyList);
             return this;
         }
         public AkamaiAccessControlArgs build() {

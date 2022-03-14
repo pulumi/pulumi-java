@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.aws.gamelift.inputs.BuildStorageLocationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingSystem")
-      private final @Nullable Input<String> operatingSystem;
+      private final @Nullable Output<String> operatingSystem;
 
-    public Input<String> getOperatingSystem() {
-        return this.operatingSystem == null ? Input.empty() : this.operatingSystem;
+    public Output<String> getOperatingSystem() {
+        return this.operatingSystem == null ? Output.empty() : this.operatingSystem;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocation")
-      private final @Nullable Input<BuildStorageLocationGetArgs> storageLocation;
+      private final @Nullable Output<BuildStorageLocationGetArgs> storageLocation;
 
-    public Input<BuildStorageLocationGetArgs> getStorageLocation() {
-        return this.storageLocation == null ? Input.empty() : this.storageLocation;
+    public Output<BuildStorageLocationGetArgs> getStorageLocation() {
+        return this.storageLocation == null ? Output.empty() : this.storageLocation;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public BuildState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> operatingSystem,
-        @Nullable Input<BuildStorageLocationGetArgs> storageLocation,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> operatingSystem,
+        @Nullable Output<BuildStorageLocationGetArgs> storageLocation,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> version) {
         this.arn = arn;
         this.name = name;
         this.operatingSystem = operatingSystem;
@@ -111,13 +111,13 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildState() {
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.operatingSystem = Input.empty();
-        this.storageLocation = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.version = Input.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.operatingSystem = Output.empty();
+        this.storageLocation = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> operatingSystem;
-        private @Nullable Input<BuildStorageLocationGetArgs> storageLocation;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> operatingSystem;
+        private @Nullable Output<BuildStorageLocationGetArgs> storageLocation;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder operatingSystem(@Nullable Input<String> operatingSystem) {
+        public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
 
         public Builder operatingSystem(@Nullable String operatingSystem) {
-            this.operatingSystem = Input.ofNullable(operatingSystem);
+            this.operatingSystem = Output.ofNullable(operatingSystem);
             return this;
         }
 
-        public Builder storageLocation(@Nullable Input<BuildStorageLocationGetArgs> storageLocation) {
+        public Builder storageLocation(@Nullable Output<BuildStorageLocationGetArgs> storageLocation) {
             this.storageLocation = storageLocation;
             return this;
         }
 
         public Builder storageLocation(@Nullable BuildStorageLocationGetArgs storageLocation) {
-            this.storageLocation = Input.ofNullable(storageLocation);
+            this.storageLocation = Output.ofNullable(storageLocation);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public BuildState build() {

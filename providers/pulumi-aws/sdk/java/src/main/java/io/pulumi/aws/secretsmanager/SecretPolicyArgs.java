@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockPublicPolicy")
-      private final @Nullable Input<Boolean> blockPublicPolicy;
+      private final @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Input<Boolean> getBlockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Input.empty() : this.blockPublicPolicy;
+    public Output<Boolean> getBlockPublicPolicy() {
+        return this.blockPublicPolicy == null ? Output.empty() : this.blockPublicPolicy;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -42,25 +42,25 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretArn", required=true)
-      private final Input<String> secretArn;
+      private final Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
+    public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
     public SecretPolicyArgs(
-        @Nullable Input<Boolean> blockPublicPolicy,
-        Input<String> policy,
-        Input<String> secretArn) {
+        @Nullable Output<Boolean> blockPublicPolicy,
+        Output<String> policy,
+        Output<String> secretArn) {
         this.blockPublicPolicy = blockPublicPolicy;
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
     }
 
     private SecretPolicyArgs() {
-        this.blockPublicPolicy = Input.empty();
-        this.policy = Input.empty();
-        this.secretArn = Input.empty();
+        this.blockPublicPolicy = Output.empty();
+        this.policy = Output.empty();
+        this.secretArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> blockPublicPolicy;
-        private Input<String> policy;
-        private Input<String> secretArn;
+        private @Nullable Output<Boolean> blockPublicPolicy;
+        private Output<String> policy;
+        private Output<String> secretArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder blockPublicPolicy(@Nullable Input<Boolean> blockPublicPolicy) {
+        public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
 
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Input.ofNullable(blockPublicPolicy);
+            this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
             return this;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder secretArn(Input<String> secretArn) {
+        public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
         public Builder secretArn(String secretArn) {
-            this.secretArn = Input.of(Objects.requireNonNull(secretArn));
+            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
         public SecretPolicyArgs build() {

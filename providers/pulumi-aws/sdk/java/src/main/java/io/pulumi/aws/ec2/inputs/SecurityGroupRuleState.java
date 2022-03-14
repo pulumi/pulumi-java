@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.enums.ProtocolType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cidrBlocks")
-      private final @Nullable Input<List<String>> cidrBlocks;
+      private final @Nullable Output<List<String>> cidrBlocks;
 
-    public Input<List<String>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
+    public Output<List<String>> getCidrBlocks() {
+        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fromPort")
-      private final @Nullable Input<Integer> fromPort;
+      private final @Nullable Output<Integer> fromPort;
 
-    public Input<Integer> getFromPort() {
-        return this.fromPort == null ? Input.empty() : this.fromPort;
+    public Output<Integer> getFromPort() {
+        return this.fromPort == null ? Output.empty() : this.fromPort;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipv6CidrBlocks")
-      private final @Nullable Input<List<String>> ipv6CidrBlocks;
+      private final @Nullable Output<List<String>> ipv6CidrBlocks;
 
-    public Input<List<String>> getIpv6CidrBlocks() {
-        return this.ipv6CidrBlocks == null ? Input.empty() : this.ipv6CidrBlocks;
+    public Output<List<String>> getIpv6CidrBlocks() {
+        return this.ipv6CidrBlocks == null ? Output.empty() : this.ipv6CidrBlocks;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="prefixListIds")
-      private final @Nullable Input<List<String>> prefixListIds;
+      private final @Nullable Output<List<String>> prefixListIds;
 
-    public Input<List<String>> getPrefixListIds() {
-        return this.prefixListIds == null ? Input.empty() : this.prefixListIds;
+    public Output<List<String>> getPrefixListIds() {
+        return this.prefixListIds == null ? Output.empty() : this.prefixListIds;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,ProtocolType>> protocol;
+      private final @Nullable Output<Either<String,ProtocolType>> protocol;
 
-    public Input<Either<String,ProtocolType>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,ProtocolType>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroupId")
-      private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
+    public Output<String> getSecurityGroupId() {
+        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="self")
-      private final @Nullable Input<Boolean> self;
+      private final @Nullable Output<Boolean> self;
 
-    public Input<Boolean> getSelf() {
-        return this.self == null ? Input.empty() : this.self;
+    public Output<Boolean> getSelf() {
+        return this.self == null ? Output.empty() : this.self;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceSecurityGroupId")
-      private final @Nullable Input<String> sourceSecurityGroupId;
+      private final @Nullable Output<String> sourceSecurityGroupId;
 
-    public Input<String> getSourceSecurityGroupId() {
-        return this.sourceSecurityGroupId == null ? Input.empty() : this.sourceSecurityGroupId;
+    public Output<String> getSourceSecurityGroupId() {
+        return this.sourceSecurityGroupId == null ? Output.empty() : this.sourceSecurityGroupId;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="toPort")
-      private final @Nullable Input<Integer> toPort;
+      private final @Nullable Output<Integer> toPort;
 
-    public Input<Integer> getToPort() {
-        return this.toPort == null ? Input.empty() : this.toPort;
+    public Output<Integer> getToPort() {
+        return this.toPort == null ? Output.empty() : this.toPort;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public SecurityGroupRuleState(
-        @Nullable Input<List<String>> cidrBlocks,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> fromPort,
-        @Nullable Input<List<String>> ipv6CidrBlocks,
-        @Nullable Input<List<String>> prefixListIds,
-        @Nullable Input<Either<String,ProtocolType>> protocol,
-        @Nullable Input<String> securityGroupId,
-        @Nullable Input<Boolean> self,
-        @Nullable Input<String> sourceSecurityGroupId,
-        @Nullable Input<Integer> toPort,
-        @Nullable Input<String> type) {
+        @Nullable Output<List<String>> cidrBlocks,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> fromPort,
+        @Nullable Output<List<String>> ipv6CidrBlocks,
+        @Nullable Output<List<String>> prefixListIds,
+        @Nullable Output<Either<String,ProtocolType>> protocol,
+        @Nullable Output<String> securityGroupId,
+        @Nullable Output<Boolean> self,
+        @Nullable Output<String> sourceSecurityGroupId,
+        @Nullable Output<Integer> toPort,
+        @Nullable Output<String> type) {
         this.cidrBlocks = cidrBlocks;
         this.description = description;
         this.fromPort = fromPort;
@@ -167,17 +167,17 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
     }
 
     private SecurityGroupRuleState() {
-        this.cidrBlocks = Input.empty();
-        this.description = Input.empty();
-        this.fromPort = Input.empty();
-        this.ipv6CidrBlocks = Input.empty();
-        this.prefixListIds = Input.empty();
-        this.protocol = Input.empty();
-        this.securityGroupId = Input.empty();
-        this.self = Input.empty();
-        this.sourceSecurityGroupId = Input.empty();
-        this.toPort = Input.empty();
-        this.type = Input.empty();
+        this.cidrBlocks = Output.empty();
+        this.description = Output.empty();
+        this.fromPort = Output.empty();
+        this.ipv6CidrBlocks = Output.empty();
+        this.prefixListIds = Output.empty();
+        this.protocol = Output.empty();
+        this.securityGroupId = Output.empty();
+        this.self = Output.empty();
+        this.sourceSecurityGroupId = Output.empty();
+        this.toPort = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> cidrBlocks;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> fromPort;
-        private @Nullable Input<List<String>> ipv6CidrBlocks;
-        private @Nullable Input<List<String>> prefixListIds;
-        private @Nullable Input<Either<String,ProtocolType>> protocol;
-        private @Nullable Input<String> securityGroupId;
-        private @Nullable Input<Boolean> self;
-        private @Nullable Input<String> sourceSecurityGroupId;
-        private @Nullable Input<Integer> toPort;
-        private @Nullable Input<String> type;
+        private @Nullable Output<List<String>> cidrBlocks;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> fromPort;
+        private @Nullable Output<List<String>> ipv6CidrBlocks;
+        private @Nullable Output<List<String>> prefixListIds;
+        private @Nullable Output<Either<String,ProtocolType>> protocol;
+        private @Nullable Output<String> securityGroupId;
+        private @Nullable Output<Boolean> self;
+        private @Nullable Output<String> sourceSecurityGroupId;
+        private @Nullable Output<Integer> toPort;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder cidrBlocks(@Nullable Input<List<String>> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable Output<List<String>> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
         public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
-            this.cidrBlocks = Input.ofNullable(cidrBlocks);
+            this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fromPort(@Nullable Input<Integer> fromPort) {
+        public Builder fromPort(@Nullable Output<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
         public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Input.ofNullable(fromPort);
+            this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
 
-        public Builder ipv6CidrBlocks(@Nullable Input<List<String>> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable Output<List<String>> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
         public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = Input.ofNullable(ipv6CidrBlocks);
+            this.ipv6CidrBlocks = Output.ofNullable(ipv6CidrBlocks);
             return this;
         }
 
-        public Builder prefixListIds(@Nullable Input<List<String>> prefixListIds) {
+        public Builder prefixListIds(@Nullable Output<List<String>> prefixListIds) {
             this.prefixListIds = prefixListIds;
             return this;
         }
 
         public Builder prefixListIds(@Nullable List<String> prefixListIds) {
-            this.prefixListIds = Input.ofNullable(prefixListIds);
+            this.prefixListIds = Output.ofNullable(prefixListIds);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,ProtocolType>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,ProtocolType>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,ProtocolType> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Input.ofNullable(securityGroupId);
+            this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder self(@Nullable Input<Boolean> self) {
+        public Builder self(@Nullable Output<Boolean> self) {
             this.self = self;
             return this;
         }
 
         public Builder self(@Nullable Boolean self) {
-            this.self = Input.ofNullable(self);
+            this.self = Output.ofNullable(self);
             return this;
         }
 
-        public Builder sourceSecurityGroupId(@Nullable Input<String> sourceSecurityGroupId) {
+        public Builder sourceSecurityGroupId(@Nullable Output<String> sourceSecurityGroupId) {
             this.sourceSecurityGroupId = sourceSecurityGroupId;
             return this;
         }
 
         public Builder sourceSecurityGroupId(@Nullable String sourceSecurityGroupId) {
-            this.sourceSecurityGroupId = Input.ofNullable(sourceSecurityGroupId);
+            this.sourceSecurityGroupId = Output.ofNullable(sourceSecurityGroupId);
             return this;
         }
 
-        public Builder toPort(@Nullable Input<Integer> toPort) {
+        public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
 
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Input.ofNullable(toPort);
+            this.toPort = Output.ofNullable(toPort);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SecurityGroupRuleState build() {

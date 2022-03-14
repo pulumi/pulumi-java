@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPath")
-      private final @Nullable Input<String> mountPath;
+      private final @Nullable Output<String> mountPath;
 
-    public Input<String> getMountPath() {
-        return this.mountPath == null ? Input.empty() : this.mountPath;
+    public Output<String> getMountPath() {
+        return this.mountPath == null ? Output.empty() : this.mountPath;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInGB")
-      private final @Nullable Input<Integer> sizeInGB;
+      private final @Nullable Output<Integer> sizeInGB;
 
-    public Input<Integer> getSizeInGB() {
-        return this.sizeInGB == null ? Input.empty() : this.sizeInGB;
+    public Output<Integer> getSizeInGB() {
+        return this.sizeInGB == null ? Output.empty() : this.sizeInGB;
     }
 
     public TemporaryDiskArgs(
-        @Nullable Input<String> mountPath,
-        @Nullable Input<Integer> sizeInGB) {
-        this.mountPath = mountPath == null ? Input.ofNullable("/tmp") : mountPath;
+        @Nullable Output<String> mountPath,
+        @Nullable Output<Integer> sizeInGB) {
+        this.mountPath = mountPath == null ? Output.ofNullable("/tmp") : mountPath;
         this.sizeInGB = sizeInGB;
     }
 
     private TemporaryDiskArgs() {
-        this.mountPath = Input.empty();
-        this.sizeInGB = Input.empty();
+        this.mountPath = Output.empty();
+        this.sizeInGB = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> mountPath;
-        private @Nullable Input<Integer> sizeInGB;
+        private @Nullable Output<String> mountPath;
+        private @Nullable Output<Integer> sizeInGB;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizeInGB = defaults.sizeInGB;
         }
 
-        public Builder mountPath(@Nullable Input<String> mountPath) {
+        public Builder mountPath(@Nullable Output<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Input.ofNullable(mountPath);
+            this.mountPath = Output.ofNullable(mountPath);
             return this;
         }
 
-        public Builder sizeInGB(@Nullable Input<Integer> sizeInGB) {
+        public Builder sizeInGB(@Nullable Output<Integer> sizeInGB) {
             this.sizeInGB = sizeInGB;
             return this;
         }
 
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
-            this.sizeInGB = Input.ofNullable(sizeInGB);
+            this.sizeInGB = Output.ofNullable(sizeInGB);
             return this;
         }
         public TemporaryDiskArgs build() {

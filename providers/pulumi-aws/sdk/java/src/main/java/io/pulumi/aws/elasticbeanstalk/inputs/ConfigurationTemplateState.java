@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateSettingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="application")
-      private final @Nullable Input<String> application;
+      private final @Nullable Output<String> application;
 
-    public Input<String> getApplication() {
-        return this.application == null ? Input.empty() : this.application;
+    public Output<String> getApplication() {
+        return this.application == null ? Output.empty() : this.application;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="environmentId")
-      private final @Nullable Input<String> environmentId;
+      private final @Nullable Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
-        return this.environmentId == null ? Input.empty() : this.environmentId;
+    public Output<String> getEnvironmentId() {
+        return this.environmentId == null ? Output.empty() : this.environmentId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings;
+      private final @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
 
-    public Input<List<ConfigurationTemplateSettingGetArgs>> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<List<ConfigurationTemplateSettingGetArgs>> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="solutionStackName")
-      private final @Nullable Input<String> solutionStackName;
+      private final @Nullable Output<String> solutionStackName;
 
-    public Input<String> getSolutionStackName() {
-        return this.solutionStackName == null ? Input.empty() : this.solutionStackName;
+    public Output<String> getSolutionStackName() {
+        return this.solutionStackName == null ? Output.empty() : this.solutionStackName;
     }
 
     public ConfigurationTemplateState(
-        @Nullable Input<String> application,
-        @Nullable Input<String> description,
-        @Nullable Input<String> environmentId,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings,
-        @Nullable Input<String> solutionStackName) {
+        @Nullable Output<String> application,
+        @Nullable Output<String> description,
+        @Nullable Output<String> environmentId,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings,
+        @Nullable Output<String> solutionStackName) {
         this.application = application;
         this.description = description;
         this.environmentId = environmentId;
@@ -101,12 +101,12 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
     }
 
     private ConfigurationTemplateState() {
-        this.application = Input.empty();
-        this.description = Input.empty();
-        this.environmentId = Input.empty();
-        this.name = Input.empty();
-        this.settings = Input.empty();
-        this.solutionStackName = Input.empty();
+        this.application = Output.empty();
+        this.description = Output.empty();
+        this.environmentId = Output.empty();
+        this.name = Output.empty();
+        this.settings = Output.empty();
+        this.solutionStackName = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> application;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> environmentId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings;
-        private @Nullable Input<String> solutionStackName;
+        private @Nullable Output<String> application;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> environmentId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
+        private @Nullable Output<String> solutionStackName;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
     	      this.solutionStackName = defaults.solutionStackName;
         }
 
-        public Builder application(@Nullable Input<String> application) {
+        public Builder application(@Nullable Output<String> application) {
             this.application = application;
             return this;
         }
 
         public Builder application(@Nullable String application) {
-            this.application = Input.ofNullable(application);
+            this.application = Output.ofNullable(application);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Input.ofNullable(environmentId);
+            this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder settings(@Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings) {
+        public Builder settings(@Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable List<ConfigurationTemplateSettingGetArgs> settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder solutionStackName(@Nullable Input<String> solutionStackName) {
+        public Builder solutionStackName(@Nullable Output<String> solutionStackName) {
             this.solutionStackName = solutionStackName;
             return this;
         }
 
         public Builder solutionStackName(@Nullable String solutionStackName) {
-            this.solutionStackName = Input.ofNullable(solutionStackName);
+            this.solutionStackName = Output.ofNullable(solutionStackName);
             return this;
         }
         public ConfigurationTemplateState build() {

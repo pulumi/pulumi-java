@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -42,10 +42,10 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<InventoryDestinationBucketEncryptionArgs> encryption;
+      private final @Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption;
 
-    public Input<InventoryDestinationBucketEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<InventoryDestinationBucketEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<String> format;
+      private final Output<String> format;
 
-    public Input<String> getFormat() {
+    public Output<String> getFormat() {
         return this.format;
     }
 
@@ -64,18 +64,18 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public InventoryDestinationBucketArgs(
-        @Nullable Input<String> accountId,
-        Input<String> bucketArn,
-        @Nullable Input<InventoryDestinationBucketEncryptionArgs> encryption,
-        Input<String> format,
-        @Nullable Input<String> prefix) {
+        @Nullable Output<String> accountId,
+        Output<String> bucketArn,
+        @Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption,
+        Output<String> format,
+        @Nullable Output<String> prefix) {
         this.accountId = accountId;
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.encryption = encryption;
@@ -84,11 +84,11 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     }
 
     private InventoryDestinationBucketArgs() {
-        this.accountId = Input.empty();
-        this.bucketArn = Input.empty();
-        this.encryption = Input.empty();
-        this.format = Input.empty();
-        this.prefix = Input.empty();
+        this.accountId = Output.empty();
+        this.bucketArn = Output.empty();
+        this.encryption = Output.empty();
+        this.format = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private Input<String> bucketArn;
-        private @Nullable Input<InventoryDestinationBucketEncryptionArgs> encryption;
-        private Input<String> format;
-        private @Nullable Input<String> prefix;
+        private @Nullable Output<String> accountId;
+        private Output<String> bucketArn;
+        private @Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption;
+        private Output<String> format;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder encryption(@Nullable Input<InventoryDestinationBucketEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable InventoryDestinationBucketEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder format(Input<String> format) {
+        public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(String format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public InventoryDestinationBucketArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checksum")
-      private final @Nullable Input<String> checksum;
+      private final @Nullable Output<String> checksum;
 
-    public Input<String> getChecksum() {
-        return this.checksum == null ? Input.empty() : this.checksum;
+    public Output<String> getChecksum() {
+        return this.checksum == null ? Output.empty() : this.checksum;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="names")
-      private final @Nullable Input<List<String>> names;
+      private final @Nullable Output<List<String>> names;
 
-    public Input<List<String>> getNames() {
-        return this.names == null ? Input.empty() : this.names;
+    public Output<List<String>> getNames() {
+        return this.names == null ? Output.empty() : this.names;
     }
 
     public ArtifactArgs(
-        @Nullable Input<String> checksum,
-        @Nullable Input<String> id,
-        @Nullable Input<List<String>> names) {
+        @Nullable Output<String> checksum,
+        @Nullable Output<String> id,
+        @Nullable Output<List<String>> names) {
         this.checksum = checksum;
         this.id = id;
         this.names = names;
     }
 
     private ArtifactArgs() {
-        this.checksum = Input.empty();
-        this.id = Input.empty();
-        this.names = Input.empty();
+        this.checksum = Output.empty();
+        this.id = Output.empty();
+        this.names = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> checksum;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<String>> names;
+        private @Nullable Output<String> checksum;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<String>> names;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.names = defaults.names;
         }
 
-        public Builder checksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Output<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Input.ofNullable(checksum);
+            this.checksum = Output.ofNullable(checksum);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder names(@Nullable Input<List<String>> names) {
+        public Builder names(@Nullable Output<List<String>> names) {
             this.names = names;
             return this;
         }
 
         public Builder names(@Nullable List<String> names) {
-            this.names = Input.ofNullable(names);
+            this.names = Output.ofNullable(names);
             return this;
         }
         public ArtifactArgs build() {

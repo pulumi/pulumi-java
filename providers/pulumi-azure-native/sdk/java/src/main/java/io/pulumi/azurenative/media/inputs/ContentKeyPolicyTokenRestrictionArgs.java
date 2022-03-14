@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicySymmetricTokenKeyArgs;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyTokenClaimArgs;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyX509CertificateTokenKeyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="alternateVerificationKeys")
-      private final @Nullable Input<List<Object>> alternateVerificationKeys;
+      private final @Nullable Output<List<Object>> alternateVerificationKeys;
 
-    public Input<List<Object>> getAlternateVerificationKeys() {
-        return this.alternateVerificationKeys == null ? Input.empty() : this.alternateVerificationKeys;
+    public Output<List<Object>> getAlternateVerificationKeys() {
+        return this.alternateVerificationKeys == null ? Output.empty() : this.alternateVerificationKeys;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="audience", required=true)
-      private final Input<String> audience;
+      private final Output<String> audience;
 
-    public Input<String> getAudience() {
+    public Output<String> getAudience() {
         return this.audience;
     }
 
@@ -53,9 +53,9 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="issuer", required=true)
-      private final Input<String> issuer;
+      private final Output<String> issuer;
 
-    public Input<String> getIssuer() {
+    public Output<String> getIssuer() {
         return this.issuer;
     }
 
@@ -65,9 +65,9 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -76,10 +76,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="openIdConnectDiscoveryDocument")
-      private final @Nullable Input<String> openIdConnectDiscoveryDocument;
+      private final @Nullable Output<String> openIdConnectDiscoveryDocument;
 
-    public Input<String> getOpenIdConnectDiscoveryDocument() {
-        return this.openIdConnectDiscoveryDocument == null ? Input.empty() : this.openIdConnectDiscoveryDocument;
+    public Output<String> getOpenIdConnectDiscoveryDocument() {
+        return this.openIdConnectDiscoveryDocument == null ? Output.empty() : this.openIdConnectDiscoveryDocument;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="primaryVerificationKey", required=true)
-      private final Input<Object> primaryVerificationKey;
+      private final Output<Object> primaryVerificationKey;
 
-    public Input<Object> getPrimaryVerificationKey() {
+    public Output<Object> getPrimaryVerificationKey() {
         return this.primaryVerificationKey;
     }
 
@@ -98,10 +98,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="requiredClaims")
-      private final @Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
+      private final @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
 
-    public Input<List<ContentKeyPolicyTokenClaimArgs>> getRequiredClaims() {
-        return this.requiredClaims == null ? Input.empty() : this.requiredClaims;
+    public Output<List<ContentKeyPolicyTokenClaimArgs>> getRequiredClaims() {
+        return this.requiredClaims == null ? Output.empty() : this.requiredClaims;
     }
 
     /**
@@ -109,21 +109,21 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="restrictionTokenType", required=true)
-      private final Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
+      private final Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
 
-    public Input<Either<String,ContentKeyPolicyRestrictionTokenType>> getRestrictionTokenType() {
+    public Output<Either<String,ContentKeyPolicyRestrictionTokenType>> getRestrictionTokenType() {
         return this.restrictionTokenType;
     }
 
     public ContentKeyPolicyTokenRestrictionArgs(
-        @Nullable Input<List<Object>> alternateVerificationKeys,
-        Input<String> audience,
-        Input<String> issuer,
-        Input<String> odataType,
-        @Nullable Input<String> openIdConnectDiscoveryDocument,
-        Input<Object> primaryVerificationKey,
-        @Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims,
-        Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
+        @Nullable Output<List<Object>> alternateVerificationKeys,
+        Output<String> audience,
+        Output<String> issuer,
+        Output<String> odataType,
+        @Nullable Output<String> openIdConnectDiscoveryDocument,
+        Output<Object> primaryVerificationKey,
+        @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims,
+        Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
         this.alternateVerificationKeys = alternateVerificationKeys;
         this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
         this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
@@ -135,14 +135,14 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     }
 
     private ContentKeyPolicyTokenRestrictionArgs() {
-        this.alternateVerificationKeys = Input.empty();
-        this.audience = Input.empty();
-        this.issuer = Input.empty();
-        this.odataType = Input.empty();
-        this.openIdConnectDiscoveryDocument = Input.empty();
-        this.primaryVerificationKey = Input.empty();
-        this.requiredClaims = Input.empty();
-        this.restrictionTokenType = Input.empty();
+        this.alternateVerificationKeys = Output.empty();
+        this.audience = Output.empty();
+        this.issuer = Output.empty();
+        this.odataType = Output.empty();
+        this.openIdConnectDiscoveryDocument = Output.empty();
+        this.primaryVerificationKey = Output.empty();
+        this.requiredClaims = Output.empty();
+        this.restrictionTokenType = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,14 +154,14 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> alternateVerificationKeys;
-        private Input<String> audience;
-        private Input<String> issuer;
-        private Input<String> odataType;
-        private @Nullable Input<String> openIdConnectDiscoveryDocument;
-        private Input<Object> primaryVerificationKey;
-        private @Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
-        private Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
+        private @Nullable Output<List<Object>> alternateVerificationKeys;
+        private Output<String> audience;
+        private Output<String> issuer;
+        private Output<String> odataType;
+        private @Nullable Output<String> openIdConnectDiscoveryDocument;
+        private Output<Object> primaryVerificationKey;
+        private @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
+        private Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
 
         public Builder() {
     	      // Empty
@@ -179,83 +179,83 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     	      this.restrictionTokenType = defaults.restrictionTokenType;
         }
 
-        public Builder alternateVerificationKeys(@Nullable Input<List<Object>> alternateVerificationKeys) {
+        public Builder alternateVerificationKeys(@Nullable Output<List<Object>> alternateVerificationKeys) {
             this.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
 
         public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
-            this.alternateVerificationKeys = Input.ofNullable(alternateVerificationKeys);
+            this.alternateVerificationKeys = Output.ofNullable(alternateVerificationKeys);
             return this;
         }
 
-        public Builder audience(Input<String> audience) {
+        public Builder audience(Output<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
         public Builder audience(String audience) {
-            this.audience = Input.of(Objects.requireNonNull(audience));
+            this.audience = Output.of(Objects.requireNonNull(audience));
             return this;
         }
 
-        public Builder issuer(Input<String> issuer) {
+        public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Input.of(Objects.requireNonNull(issuer));
+            this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder openIdConnectDiscoveryDocument(@Nullable Input<String> openIdConnectDiscoveryDocument) {
+        public Builder openIdConnectDiscoveryDocument(@Nullable Output<String> openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
 
         public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
-            this.openIdConnectDiscoveryDocument = Input.ofNullable(openIdConnectDiscoveryDocument);
+            this.openIdConnectDiscoveryDocument = Output.ofNullable(openIdConnectDiscoveryDocument);
             return this;
         }
 
-        public Builder primaryVerificationKey(Input<Object> primaryVerificationKey) {
+        public Builder primaryVerificationKey(Output<Object> primaryVerificationKey) {
             this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
             return this;
         }
 
         public Builder primaryVerificationKey(Object primaryVerificationKey) {
-            this.primaryVerificationKey = Input.of(Objects.requireNonNull(primaryVerificationKey));
+            this.primaryVerificationKey = Output.of(Objects.requireNonNull(primaryVerificationKey));
             return this;
         }
 
-        public Builder requiredClaims(@Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims) {
+        public Builder requiredClaims(@Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
 
         public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimArgs> requiredClaims) {
-            this.requiredClaims = Input.ofNullable(requiredClaims);
+            this.requiredClaims = Output.ofNullable(requiredClaims);
             return this;
         }
 
-        public Builder restrictionTokenType(Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
+        public Builder restrictionTokenType(Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }
 
         public Builder restrictionTokenType(Either<String,ContentKeyPolicyRestrictionTokenType> restrictionTokenType) {
-            this.restrictionTokenType = Input.of(Objects.requireNonNull(restrictionTokenType));
+            this.restrictionTokenType = Output.of(Objects.requireNonNull(restrictionTokenType));
             return this;
         }
         public ContentKeyPolicyTokenRestrictionArgs build() {

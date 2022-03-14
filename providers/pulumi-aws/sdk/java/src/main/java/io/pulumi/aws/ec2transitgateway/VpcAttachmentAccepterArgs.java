@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-      private final Input<String> transitGatewayAttachmentId;
+      private final Output<String> transitGatewayAttachmentId;
 
-    public Input<String> getTransitGatewayAttachmentId() {
+    public Output<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -43,10 +43,10 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTableAssociation")
-      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
+      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
-    public Input<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation == null ? Input.empty() : this.transitGatewayDefaultRouteTableAssociation;
+    public Output<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
+        return this.transitGatewayDefaultRouteTableAssociation == null ? Output.empty() : this.transitGatewayDefaultRouteTableAssociation;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTablePropagation")
-      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
+      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
-    public Input<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation == null ? Input.empty() : this.transitGatewayDefaultRouteTablePropagation;
+    public Output<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
+        return this.transitGatewayDefaultRouteTablePropagation == null ? Output.empty() : this.transitGatewayDefaultRouteTablePropagation;
     }
 
     public VpcAttachmentAccepterArgs(
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> transitGatewayAttachmentId,
-        @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation,
-        @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation) {
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> transitGatewayAttachmentId,
+        @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation,
+        @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
         this.tags = tags;
         this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
         this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
@@ -72,10 +72,10 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     }
 
     private VpcAttachmentAccepterArgs() {
-        this.tags = Input.empty();
-        this.transitGatewayAttachmentId = Input.empty();
-        this.transitGatewayDefaultRouteTableAssociation = Input.empty();
-        this.transitGatewayDefaultRouteTablePropagation = Input.empty();
+        this.tags = Output.empty();
+        this.transitGatewayAttachmentId = Output.empty();
+        this.transitGatewayDefaultRouteTableAssociation = Output.empty();
+        this.transitGatewayDefaultRouteTablePropagation = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> transitGatewayAttachmentId;
-        private @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
-        private @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> transitGatewayAttachmentId;
+        private @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
+        private @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     	      this.transitGatewayDefaultRouteTablePropagation = defaults.transitGatewayDefaultRouteTablePropagation;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
 
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Input.of(Objects.requireNonNull(transitGatewayAttachmentId));
+            this.transitGatewayAttachmentId = Output.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
         }
 
-        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation) {
+        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
 
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = Input.ofNullable(transitGatewayDefaultRouteTableAssociation);
+            this.transitGatewayDefaultRouteTableAssociation = Output.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
 
-        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation) {
+        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
 
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = Input.ofNullable(transitGatewayDefaultRouteTablePropagation);
+            this.transitGatewayDefaultRouteTablePropagation = Output.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
         }
         public VpcAttachmentAccepterArgs build() {

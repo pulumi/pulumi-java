@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="includeControlDetails")
-      private final @Nullable Input<Boolean> includeControlDetails;
+      private final @Nullable Output<Boolean> includeControlDetails;
 
-    public Input<Boolean> getIncludeControlDetails() {
-        return this.includeControlDetails == null ? Input.empty() : this.includeControlDetails;
+    public Output<Boolean> getIncludeControlDetails() {
+        return this.includeControlDetails == null ? Output.empty() : this.includeControlDetails;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="includeNullAndEmpty")
-      private final @Nullable Input<Boolean> includeNullAndEmpty;
+      private final @Nullable Output<Boolean> includeNullAndEmpty;
 
-    public Input<Boolean> getIncludeNullAndEmpty() {
-        return this.includeNullAndEmpty == null ? Input.empty() : this.includeNullAndEmpty;
+    public Output<Boolean> getIncludeNullAndEmpty() {
+        return this.includeNullAndEmpty == null ? Output.empty() : this.includeNullAndEmpty;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="includePartitionValue")
-      private final @Nullable Input<Boolean> includePartitionValue;
+      private final @Nullable Output<Boolean> includePartitionValue;
 
-    public Input<Boolean> getIncludePartitionValue() {
-        return this.includePartitionValue == null ? Input.empty() : this.includePartitionValue;
+    public Output<Boolean> getIncludePartitionValue() {
+        return this.includePartitionValue == null ? Output.empty() : this.includePartitionValue;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="includeTableAlterOperations")
-      private final @Nullable Input<Boolean> includeTableAlterOperations;
+      private final @Nullable Output<Boolean> includeTableAlterOperations;
 
-    public Input<Boolean> getIncludeTableAlterOperations() {
-        return this.includeTableAlterOperations == null ? Input.empty() : this.includeTableAlterOperations;
+    public Output<Boolean> getIncludeTableAlterOperations() {
+        return this.includeTableAlterOperations == null ? Output.empty() : this.includeTableAlterOperations;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="includeTransactionDetails")
-      private final @Nullable Input<Boolean> includeTransactionDetails;
+      private final @Nullable Output<Boolean> includeTransactionDetails;
 
-    public Input<Boolean> getIncludeTransactionDetails() {
-        return this.includeTransactionDetails == null ? Input.empty() : this.includeTransactionDetails;
+    public Output<Boolean> getIncludeTransactionDetails() {
+        return this.includeTransactionDetails == null ? Output.empty() : this.includeTransactionDetails;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="messageFormat")
-      private final @Nullable Input<String> messageFormat;
+      private final @Nullable Output<String> messageFormat;
 
-    public Input<String> getMessageFormat() {
-        return this.messageFormat == null ? Input.empty() : this.messageFormat;
+    public Output<String> getMessageFormat() {
+        return this.messageFormat == null ? Output.empty() : this.messageFormat;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="partitionIncludeSchemaTable")
-      private final @Nullable Input<Boolean> partitionIncludeSchemaTable;
+      private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
-    public Input<Boolean> getPartitionIncludeSchemaTable() {
-        return this.partitionIncludeSchemaTable == null ? Input.empty() : this.partitionIncludeSchemaTable;
+    public Output<Boolean> getPartitionIncludeSchemaTable() {
+        return this.partitionIncludeSchemaTable == null ? Output.empty() : this.partitionIncludeSchemaTable;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceAccessRoleArn")
-      private final @Nullable Input<String> serviceAccessRoleArn;
+      private final @Nullable Output<String> serviceAccessRoleArn;
 
-    public Input<String> getServiceAccessRoleArn() {
-        return this.serviceAccessRoleArn == null ? Input.empty() : this.serviceAccessRoleArn;
+    public Output<String> getServiceAccessRoleArn() {
+        return this.serviceAccessRoleArn == null ? Output.empty() : this.serviceAccessRoleArn;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="streamArn")
-      private final @Nullable Input<String> streamArn;
+      private final @Nullable Output<String> streamArn;
 
-    public Input<String> getStreamArn() {
-        return this.streamArn == null ? Input.empty() : this.streamArn;
+    public Output<String> getStreamArn() {
+        return this.streamArn == null ? Output.empty() : this.streamArn;
     }
 
     public EndpointKinesisSettingsGetArgs(
-        @Nullable Input<Boolean> includeControlDetails,
-        @Nullable Input<Boolean> includeNullAndEmpty,
-        @Nullable Input<Boolean> includePartitionValue,
-        @Nullable Input<Boolean> includeTableAlterOperations,
-        @Nullable Input<Boolean> includeTransactionDetails,
-        @Nullable Input<String> messageFormat,
-        @Nullable Input<Boolean> partitionIncludeSchemaTable,
-        @Nullable Input<String> serviceAccessRoleArn,
-        @Nullable Input<String> streamArn) {
+        @Nullable Output<Boolean> includeControlDetails,
+        @Nullable Output<Boolean> includeNullAndEmpty,
+        @Nullable Output<Boolean> includePartitionValue,
+        @Nullable Output<Boolean> includeTableAlterOperations,
+        @Nullable Output<Boolean> includeTransactionDetails,
+        @Nullable Output<String> messageFormat,
+        @Nullable Output<Boolean> partitionIncludeSchemaTable,
+        @Nullable Output<String> serviceAccessRoleArn,
+        @Nullable Output<String> streamArn) {
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;
         this.includePartitionValue = includePartitionValue;
@@ -136,15 +136,15 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
     }
 
     private EndpointKinesisSettingsGetArgs() {
-        this.includeControlDetails = Input.empty();
-        this.includeNullAndEmpty = Input.empty();
-        this.includePartitionValue = Input.empty();
-        this.includeTableAlterOperations = Input.empty();
-        this.includeTransactionDetails = Input.empty();
-        this.messageFormat = Input.empty();
-        this.partitionIncludeSchemaTable = Input.empty();
-        this.serviceAccessRoleArn = Input.empty();
-        this.streamArn = Input.empty();
+        this.includeControlDetails = Output.empty();
+        this.includeNullAndEmpty = Output.empty();
+        this.includePartitionValue = Output.empty();
+        this.includeTableAlterOperations = Output.empty();
+        this.includeTransactionDetails = Output.empty();
+        this.messageFormat = Output.empty();
+        this.partitionIncludeSchemaTable = Output.empty();
+        this.serviceAccessRoleArn = Output.empty();
+        this.streamArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> includeControlDetails;
-        private @Nullable Input<Boolean> includeNullAndEmpty;
-        private @Nullable Input<Boolean> includePartitionValue;
-        private @Nullable Input<Boolean> includeTableAlterOperations;
-        private @Nullable Input<Boolean> includeTransactionDetails;
-        private @Nullable Input<String> messageFormat;
-        private @Nullable Input<Boolean> partitionIncludeSchemaTable;
-        private @Nullable Input<String> serviceAccessRoleArn;
-        private @Nullable Input<String> streamArn;
+        private @Nullable Output<Boolean> includeControlDetails;
+        private @Nullable Output<Boolean> includeNullAndEmpty;
+        private @Nullable Output<Boolean> includePartitionValue;
+        private @Nullable Output<Boolean> includeTableAlterOperations;
+        private @Nullable Output<Boolean> includeTransactionDetails;
+        private @Nullable Output<String> messageFormat;
+        private @Nullable Output<Boolean> partitionIncludeSchemaTable;
+        private @Nullable Output<String> serviceAccessRoleArn;
+        private @Nullable Output<String> streamArn;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder includeControlDetails(@Nullable Input<Boolean> includeControlDetails) {
+        public Builder includeControlDetails(@Nullable Output<Boolean> includeControlDetails) {
             this.includeControlDetails = includeControlDetails;
             return this;
         }
 
         public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
-            this.includeControlDetails = Input.ofNullable(includeControlDetails);
+            this.includeControlDetails = Output.ofNullable(includeControlDetails);
             return this;
         }
 
-        public Builder includeNullAndEmpty(@Nullable Input<Boolean> includeNullAndEmpty) {
+        public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
             this.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
 
         public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
-            this.includeNullAndEmpty = Input.ofNullable(includeNullAndEmpty);
+            this.includeNullAndEmpty = Output.ofNullable(includeNullAndEmpty);
             return this;
         }
 
-        public Builder includePartitionValue(@Nullable Input<Boolean> includePartitionValue) {
+        public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
             this.includePartitionValue = includePartitionValue;
             return this;
         }
 
         public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
-            this.includePartitionValue = Input.ofNullable(includePartitionValue);
+            this.includePartitionValue = Output.ofNullable(includePartitionValue);
             return this;
         }
 
-        public Builder includeTableAlterOperations(@Nullable Input<Boolean> includeTableAlterOperations) {
+        public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
             this.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
 
         public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
-            this.includeTableAlterOperations = Input.ofNullable(includeTableAlterOperations);
+            this.includeTableAlterOperations = Output.ofNullable(includeTableAlterOperations);
             return this;
         }
 
-        public Builder includeTransactionDetails(@Nullable Input<Boolean> includeTransactionDetails) {
+        public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
             this.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
 
         public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
-            this.includeTransactionDetails = Input.ofNullable(includeTransactionDetails);
+            this.includeTransactionDetails = Output.ofNullable(includeTransactionDetails);
             return this;
         }
 
-        public Builder messageFormat(@Nullable Input<String> messageFormat) {
+        public Builder messageFormat(@Nullable Output<String> messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
         public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Input.ofNullable(messageFormat);
+            this.messageFormat = Output.ofNullable(messageFormat);
             return this;
         }
 
-        public Builder partitionIncludeSchemaTable(@Nullable Input<Boolean> partitionIncludeSchemaTable) {
+        public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
 
         public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
-            this.partitionIncludeSchemaTable = Input.ofNullable(partitionIncludeSchemaTable);
+            this.partitionIncludeSchemaTable = Output.ofNullable(partitionIncludeSchemaTable);
             return this;
         }
 
-        public Builder serviceAccessRoleArn(@Nullable Input<String> serviceAccessRoleArn) {
+        public Builder serviceAccessRoleArn(@Nullable Output<String> serviceAccessRoleArn) {
             this.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
 
         public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
-            this.serviceAccessRoleArn = Input.ofNullable(serviceAccessRoleArn);
+            this.serviceAccessRoleArn = Output.ofNullable(serviceAccessRoleArn);
             return this;
         }
 
-        public Builder streamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Output<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
         public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Input.ofNullable(streamArn);
+            this.streamArn = Output.ofNullable(streamArn);
             return this;
         }
         public EndpointKinesisSettingsGetArgs build() {

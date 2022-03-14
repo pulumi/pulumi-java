@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="customerSubscriptionName")
-      private final @Nullable Input<String> customerSubscriptionName;
+      private final @Nullable Output<String> customerSubscriptionName;
 
-    public Input<String> getCustomerSubscriptionName() {
-        return this.customerSubscriptionName == null ? Input.empty() : this.customerSubscriptionName;
+    public Output<String> getCustomerSubscriptionName() {
+        return this.customerSubscriptionName == null ? Output.empty() : this.customerSubscriptionName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="registrationName", required=true)
-      private final Input<String> registrationName;
+      private final Output<String> registrationName;
 
-    public Input<String> getRegistrationName() {
+    public Output<String> getRegistrationName() {
         return this.registrationName;
     }
 
@@ -41,9 +41,9 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
@@ -52,17 +52,17 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public CustomerSubscriptionArgs(
-        @Nullable Input<String> customerSubscriptionName,
-        Input<String> registrationName,
-        Input<String> resourceGroup,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> customerSubscriptionName,
+        Output<String> registrationName,
+        Output<String> resourceGroup,
+        @Nullable Output<String> tenantId) {
         this.customerSubscriptionName = customerSubscriptionName;
         this.registrationName = Objects.requireNonNull(registrationName, "expected parameter 'registrationName' to be non-null");
         this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
@@ -70,10 +70,10 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     }
 
     private CustomerSubscriptionArgs() {
-        this.customerSubscriptionName = Input.empty();
-        this.registrationName = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.tenantId = Input.empty();
+        this.customerSubscriptionName = Output.empty();
+        this.registrationName = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customerSubscriptionName;
-        private Input<String> registrationName;
-        private Input<String> resourceGroup;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> customerSubscriptionName;
+        private Output<String> registrationName;
+        private Output<String> resourceGroup;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder customerSubscriptionName(@Nullable Input<String> customerSubscriptionName) {
+        public Builder customerSubscriptionName(@Nullable Output<String> customerSubscriptionName) {
             this.customerSubscriptionName = customerSubscriptionName;
             return this;
         }
 
         public Builder customerSubscriptionName(@Nullable String customerSubscriptionName) {
-            this.customerSubscriptionName = Input.ofNullable(customerSubscriptionName);
+            this.customerSubscriptionName = Output.ofNullable(customerSubscriptionName);
             return this;
         }
 
-        public Builder registrationName(Input<String> registrationName) {
+        public Builder registrationName(Output<String> registrationName) {
             this.registrationName = Objects.requireNonNull(registrationName);
             return this;
         }
 
         public Builder registrationName(String registrationName) {
-            this.registrationName = Input.of(Objects.requireNonNull(registrationName));
+            this.registrationName = Output.of(Objects.requireNonNull(registrationName));
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public CustomerSubscriptionArgs build() {

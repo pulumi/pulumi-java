@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.DistributionArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distribution")
-      private final @Nullable Input<List<DistributionArgs>> distribution;
+      private final @Nullable Output<List<DistributionArgs>> distribution;
 
-    public Input<List<DistributionArgs>> getDistribution() {
-        return this.distribution == null ? Input.empty() : this.distribution;
+    public Output<List<DistributionArgs>> getDistribution() {
+        return this.distribution == null ? Output.empty() : this.distribution;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public PackageArgs(
-        @Nullable Input<List<DistributionArgs>> distribution,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<DistributionArgs>> distribution,
+        @Nullable Output<String> name) {
         this.distribution = distribution;
         this.name = name;
     }
 
     private PackageArgs() {
-        this.distribution = Input.empty();
-        this.name = Input.empty();
+        this.distribution = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DistributionArgs>> distribution;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<DistributionArgs>> distribution;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder distribution(@Nullable Input<List<DistributionArgs>> distribution) {
+        public Builder distribution(@Nullable Output<List<DistributionArgs>> distribution) {
             this.distribution = distribution;
             return this;
         }
 
         public Builder distribution(@Nullable List<DistributionArgs> distribution) {
-            this.distribution = Input.ofNullable(distribution);
+            this.distribution = Output.ofNullable(distribution);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public PackageArgs build() {

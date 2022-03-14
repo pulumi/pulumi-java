@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="domainNameLabel")
-      private final @Nullable Input<String> domainNameLabel;
+      private final @Nullable Output<String> domainNameLabel;
 
-    public Input<String> getDomainNameLabel() {
-        return this.domainNameLabel == null ? Input.empty() : this.domainNameLabel;
+    public Output<String> getDomainNameLabel() {
+        return this.domainNameLabel == null ? Output.empty() : this.domainNameLabel;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publicIpAllocationMethod")
-      private final @Nullable Input<String> publicIpAllocationMethod;
+      private final @Nullable Output<String> publicIpAllocationMethod;
 
-    public Input<String> getPublicIpAllocationMethod() {
-        return this.publicIpAllocationMethod == null ? Input.empty() : this.publicIpAllocationMethod;
+    public Output<String> getPublicIpAllocationMethod() {
+        return this.publicIpAllocationMethod == null ? Output.empty() : this.publicIpAllocationMethod;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -68,10 +68,10 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
@@ -90,20 +90,20 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<String> zones;
+      private final @Nullable Output<String> zones;
 
-    public Input<String> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<String> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public PublicIPAddressResourceSettingsArgs(
-        @Nullable Input<String> domainNameLabel,
-        @Nullable Input<String> fqdn,
-        @Nullable Input<String> publicIpAllocationMethod,
-        Input<String> resourceType,
-        @Nullable Input<String> sku,
-        Input<String> targetResourceName,
-        @Nullable Input<String> zones) {
+        @Nullable Output<String> domainNameLabel,
+        @Nullable Output<String> fqdn,
+        @Nullable Output<String> publicIpAllocationMethod,
+        Output<String> resourceType,
+        @Nullable Output<String> sku,
+        Output<String> targetResourceName,
+        @Nullable Output<String> zones) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.publicIpAllocationMethod = publicIpAllocationMethod;
@@ -114,13 +114,13 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     }
 
     private PublicIPAddressResourceSettingsArgs() {
-        this.domainNameLabel = Input.empty();
-        this.fqdn = Input.empty();
-        this.publicIpAllocationMethod = Input.empty();
-        this.resourceType = Input.empty();
-        this.sku = Input.empty();
-        this.targetResourceName = Input.empty();
-        this.zones = Input.empty();
+        this.domainNameLabel = Output.empty();
+        this.fqdn = Output.empty();
+        this.publicIpAllocationMethod = Output.empty();
+        this.resourceType = Output.empty();
+        this.sku = Output.empty();
+        this.targetResourceName = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainNameLabel;
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<String> publicIpAllocationMethod;
-        private Input<String> resourceType;
-        private @Nullable Input<String> sku;
-        private Input<String> targetResourceName;
-        private @Nullable Input<String> zones;
+        private @Nullable Output<String> domainNameLabel;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<String> publicIpAllocationMethod;
+        private Output<String> resourceType;
+        private @Nullable Output<String> sku;
+        private Output<String> targetResourceName;
+        private @Nullable Output<String> zones;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     	      this.zones = defaults.zones;
         }
 
-        public Builder domainNameLabel(@Nullable Input<String> domainNameLabel) {
+        public Builder domainNameLabel(@Nullable Output<String> domainNameLabel) {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
 
         public Builder domainNameLabel(@Nullable String domainNameLabel) {
-            this.domainNameLabel = Input.ofNullable(domainNameLabel);
+            this.domainNameLabel = Output.ofNullable(domainNameLabel);
             return this;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder publicIpAllocationMethod(@Nullable Input<String> publicIpAllocationMethod) {
+        public Builder publicIpAllocationMethod(@Nullable Output<String> publicIpAllocationMethod) {
             this.publicIpAllocationMethod = publicIpAllocationMethod;
             return this;
         }
 
         public Builder publicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
-            this.publicIpAllocationMethod = Input.ofNullable(publicIpAllocationMethod);
+            this.publicIpAllocationMethod = Output.ofNullable(publicIpAllocationMethod);
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder zones(@Nullable Input<String> zones) {
+        public Builder zones(@Nullable Output<String> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable String zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public PublicIPAddressResourceSettingsArgs build() {

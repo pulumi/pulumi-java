@@ -8,7 +8,7 @@ import io.pulumi.awsnative.glue.enums.SchemaDataFormat;
 import io.pulumi.awsnative.glue.inputs.SchemaRegistryArgs;
 import io.pulumi.awsnative.glue.inputs.SchemaTagArgs;
 import io.pulumi.awsnative.glue.inputs.SchemaVersionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     public static final SchemaArgs Empty = new SchemaArgs();
 
     @InputImport(name="checkpointVersion")
-      private final @Nullable Input<SchemaVersionArgs> checkpointVersion;
+      private final @Nullable Output<SchemaVersionArgs> checkpointVersion;
 
-    public Input<SchemaVersionArgs> getCheckpointVersion() {
-        return this.checkpointVersion == null ? Input.empty() : this.checkpointVersion;
+    public Output<SchemaVersionArgs> getCheckpointVersion() {
+        return this.checkpointVersion == null ? Output.empty() : this.checkpointVersion;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibility", required=true)
-      private final Input<SchemaCompatibility> compatibility;
+      private final Output<SchemaCompatibility> compatibility;
 
-    public Input<SchemaCompatibility> getCompatibility() {
+    public Output<SchemaCompatibility> getCompatibility() {
         return this.compatibility;
     }
 
@@ -43,9 +43,9 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFormat", required=true)
-      private final Input<SchemaDataFormat> dataFormat;
+      private final Output<SchemaDataFormat> dataFormat;
 
-    public Input<SchemaDataFormat> getDataFormat() {
+    public Output<SchemaDataFormat> getDataFormat() {
         return this.dataFormat;
     }
 
@@ -54,10 +54,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -65,17 +65,17 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="registry")
-      private final @Nullable Input<SchemaRegistryArgs> registry;
+      private final @Nullable Output<SchemaRegistryArgs> registry;
 
-    public Input<SchemaRegistryArgs> getRegistry() {
-        return this.registry == null ? Input.empty() : this.registry;
+    public Output<SchemaRegistryArgs> getRegistry() {
+        return this.registry == null ? Output.empty() : this.registry;
     }
 
     /**
@@ -83,9 +83,9 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaDefinition", required=true)
-      private final Input<String> schemaDefinition;
+      private final Output<String> schemaDefinition;
 
-    public Input<String> getSchemaDefinition() {
+    public Output<String> getSchemaDefinition() {
         return this.schemaDefinition;
     }
 
@@ -94,21 +94,21 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<SchemaTagArgs>> tags;
+      private final @Nullable Output<List<SchemaTagArgs>> tags;
 
-    public Input<List<SchemaTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SchemaTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SchemaArgs(
-        @Nullable Input<SchemaVersionArgs> checkpointVersion,
-        Input<SchemaCompatibility> compatibility,
-        Input<SchemaDataFormat> dataFormat,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<SchemaRegistryArgs> registry,
-        Input<String> schemaDefinition,
-        @Nullable Input<List<SchemaTagArgs>> tags) {
+        @Nullable Output<SchemaVersionArgs> checkpointVersion,
+        Output<SchemaCompatibility> compatibility,
+        Output<SchemaDataFormat> dataFormat,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<SchemaRegistryArgs> registry,
+        Output<String> schemaDefinition,
+        @Nullable Output<List<SchemaTagArgs>> tags) {
         this.checkpointVersion = checkpointVersion;
         this.compatibility = Objects.requireNonNull(compatibility, "expected parameter 'compatibility' to be non-null");
         this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
@@ -120,14 +120,14 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.checkpointVersion = Input.empty();
-        this.compatibility = Input.empty();
-        this.dataFormat = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.registry = Input.empty();
-        this.schemaDefinition = Input.empty();
-        this.tags = Input.empty();
+        this.checkpointVersion = Output.empty();
+        this.compatibility = Output.empty();
+        this.dataFormat = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.registry = Output.empty();
+        this.schemaDefinition = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,14 +139,14 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SchemaVersionArgs> checkpointVersion;
-        private Input<SchemaCompatibility> compatibility;
-        private Input<SchemaDataFormat> dataFormat;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SchemaRegistryArgs> registry;
-        private Input<String> schemaDefinition;
-        private @Nullable Input<List<SchemaTagArgs>> tags;
+        private @Nullable Output<SchemaVersionArgs> checkpointVersion;
+        private Output<SchemaCompatibility> compatibility;
+        private Output<SchemaDataFormat> dataFormat;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SchemaRegistryArgs> registry;
+        private Output<String> schemaDefinition;
+        private @Nullable Output<List<SchemaTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -164,83 +164,83 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder checkpointVersion(@Nullable Input<SchemaVersionArgs> checkpointVersion) {
+        public Builder checkpointVersion(@Nullable Output<SchemaVersionArgs> checkpointVersion) {
             this.checkpointVersion = checkpointVersion;
             return this;
         }
 
         public Builder checkpointVersion(@Nullable SchemaVersionArgs checkpointVersion) {
-            this.checkpointVersion = Input.ofNullable(checkpointVersion);
+            this.checkpointVersion = Output.ofNullable(checkpointVersion);
             return this;
         }
 
-        public Builder compatibility(Input<SchemaCompatibility> compatibility) {
+        public Builder compatibility(Output<SchemaCompatibility> compatibility) {
             this.compatibility = Objects.requireNonNull(compatibility);
             return this;
         }
 
         public Builder compatibility(SchemaCompatibility compatibility) {
-            this.compatibility = Input.of(Objects.requireNonNull(compatibility));
+            this.compatibility = Output.of(Objects.requireNonNull(compatibility));
             return this;
         }
 
-        public Builder dataFormat(Input<SchemaDataFormat> dataFormat) {
+        public Builder dataFormat(Output<SchemaDataFormat> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
         public Builder dataFormat(SchemaDataFormat dataFormat) {
-            this.dataFormat = Input.of(Objects.requireNonNull(dataFormat));
+            this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder registry(@Nullable Input<SchemaRegistryArgs> registry) {
+        public Builder registry(@Nullable Output<SchemaRegistryArgs> registry) {
             this.registry = registry;
             return this;
         }
 
         public Builder registry(@Nullable SchemaRegistryArgs registry) {
-            this.registry = Input.ofNullable(registry);
+            this.registry = Output.ofNullable(registry);
             return this;
         }
 
-        public Builder schemaDefinition(Input<String> schemaDefinition) {
+        public Builder schemaDefinition(Output<String> schemaDefinition) {
             this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
             return this;
         }
 
         public Builder schemaDefinition(String schemaDefinition) {
-            this.schemaDefinition = Input.of(Objects.requireNonNull(schemaDefinition));
+            this.schemaDefinition = Output.of(Objects.requireNonNull(schemaDefinition));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SchemaTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SchemaTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SchemaTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SchemaArgs build() {

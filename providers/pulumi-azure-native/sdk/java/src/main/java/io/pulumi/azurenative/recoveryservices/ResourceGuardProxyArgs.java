@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="resourceGuardProxyName")
-      private final @Nullable Input<String> resourceGuardProxyName;
+      private final @Nullable Output<String> resourceGuardProxyName;
 
-    public Input<String> getResourceGuardProxyName() {
-        return this.resourceGuardProxyName == null ? Input.empty() : this.resourceGuardProxyName;
+    public Output<String> getResourceGuardProxyName() {
+        return this.resourceGuardProxyName == null ? Output.empty() : this.resourceGuardProxyName;
     }
 
     /**
@@ -37,25 +37,25 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public ResourceGuardProxyArgs(
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceGuardProxyName,
-        Input<String> vaultName) {
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceGuardProxyName,
+        Output<String> vaultName) {
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceGuardProxyName = resourceGuardProxyName;
         this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
     }
 
     private ResourceGuardProxyArgs() {
-        this.resourceGroupName = Input.empty();
-        this.resourceGuardProxyName = Input.empty();
-        this.vaultName = Input.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceGuardProxyName = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceGuardProxyName;
-        private Input<String> vaultName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceGuardProxyName;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceGuardProxyName(@Nullable Input<String> resourceGuardProxyName) {
+        public Builder resourceGuardProxyName(@Nullable Output<String> resourceGuardProxyName) {
             this.resourceGuardProxyName = resourceGuardProxyName;
             return this;
         }
 
         public Builder resourceGuardProxyName(@Nullable String resourceGuardProxyName) {
-            this.resourceGuardProxyName = Input.ofNullable(resourceGuardProxyName);
+            this.resourceGuardProxyName = Output.ofNullable(resourceGuardProxyName);
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public ResourceGuardProxyArgs build() {

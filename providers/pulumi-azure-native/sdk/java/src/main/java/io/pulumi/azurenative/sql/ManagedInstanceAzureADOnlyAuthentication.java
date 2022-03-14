@@ -6,7 +6,6 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ManagedInstanceAzureADOnlyAuthenticationArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,23 +112,23 @@ public class ManagedInstanceAzureADOnlyAuthentication extends io.pulumi.resource
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedInstanceAzureADOnlyAuthentication(String name, ManagedInstanceAzureADOnlyAuthenticationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ManagedInstanceAzureADOnlyAuthentication", name, args == null ? ManagedInstanceAzureADOnlyAuthenticationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:ManagedInstanceAzureADOnlyAuthentication", name, args == null ? ManagedInstanceAzureADOnlyAuthenticationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedInstanceAzureADOnlyAuthentication(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedInstanceAzureADOnlyAuthentication(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ManagedInstanceAzureADOnlyAuthentication", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:ManagedInstanceAzureADOnlyAuthentication").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:ManagedInstanceAzureADOnlyAuthentication").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:ManagedInstanceAzureADOnlyAuthentication").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:ManagedInstanceAzureADOnlyAuthentication").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:ManagedInstanceAzureADOnlyAuthentication").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:ManagedInstanceAzureADOnlyAuthentication").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ManagedInstanceAzureADOnlyAuthentication").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ManagedInstanceAzureADOnlyAuthentication").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ManagedInstanceAzureADOnlyAuthentication").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ManagedInstanceAzureADOnlyAuthentication").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ManagedInstanceAzureADOnlyAuthentication").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ManagedInstanceAzureADOnlyAuthentication").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -143,7 +142,7 @@ public class ManagedInstanceAzureADOnlyAuthentication extends io.pulumi.resource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedInstanceAzureADOnlyAuthentication get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedInstanceAzureADOnlyAuthentication get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedInstanceAzureADOnlyAuthentication(name, id, options);
     }
 }

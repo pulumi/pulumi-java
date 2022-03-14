@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
     public static final ServiceConvergeConfigGetArgs Empty = new ServiceConvergeConfigGetArgs();
 
     @InputImport(name="delay")
-      private final @Nullable Input<String> delay;
+      private final @Nullable Output<String> delay;
 
-    public Input<String> getDelay() {
-        return this.delay == null ? Input.empty() : this.delay;
+    public Output<String> getDelay() {
+        return this.delay == null ? Output.empty() : this.delay;
     }
 
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public ServiceConvergeConfigGetArgs(
-        @Nullable Input<String> delay,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<String> delay,
+        @Nullable Output<String> timeout) {
         this.delay = delay;
         this.timeout = timeout;
     }
 
     private ServiceConvergeConfigGetArgs() {
-        this.delay = Input.empty();
-        this.timeout = Input.empty();
+        this.delay = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> delay;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<String> delay;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder delay(@Nullable Input<String> delay) {
+        public Builder delay(@Nullable Output<String> delay) {
             this.delay = delay;
             return this;
         }
 
         public Builder delay(@Nullable String delay) {
-            this.delay = Input.ofNullable(delay);
+            this.delay = Output.ofNullable(delay);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public ServiceConvergeConfigGetArgs build() {

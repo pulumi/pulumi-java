@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="updateAutoLearnPolicy")
-      private final @Nullable Input<Boolean> updateAutoLearnPolicy;
+      private final @Nullable Output<Boolean> updateAutoLearnPolicy;
 
-    public Input<Boolean> getUpdateAutoLearnPolicy() {
-        return this.updateAutoLearnPolicy == null ? Input.empty() : this.updateAutoLearnPolicy;
+    public Output<Boolean> getUpdateAutoLearnPolicy() {
+        return this.updateAutoLearnPolicy == null ? Output.empty() : this.updateAutoLearnPolicy;
     }
 
-    public ShieldedInstanceIntegrityPolicyArgs(@Nullable Input<Boolean> updateAutoLearnPolicy) {
+    public ShieldedInstanceIntegrityPolicyArgs(@Nullable Output<Boolean> updateAutoLearnPolicy) {
         this.updateAutoLearnPolicy = updateAutoLearnPolicy;
     }
 
     private ShieldedInstanceIntegrityPolicyArgs() {
-        this.updateAutoLearnPolicy = Input.empty();
+        this.updateAutoLearnPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> updateAutoLearnPolicy;
+        private @Nullable Output<Boolean> updateAutoLearnPolicy;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resourc
     	      this.updateAutoLearnPolicy = defaults.updateAutoLearnPolicy;
         }
 
-        public Builder updateAutoLearnPolicy(@Nullable Input<Boolean> updateAutoLearnPolicy) {
+        public Builder updateAutoLearnPolicy(@Nullable Output<Boolean> updateAutoLearnPolicy) {
             this.updateAutoLearnPolicy = updateAutoLearnPolicy;
             return this;
         }
 
         public Builder updateAutoLearnPolicy(@Nullable Boolean updateAutoLearnPolicy) {
-            this.updateAutoLearnPolicy = Input.ofNullable(updateAutoLearnPolicy);
+            this.updateAutoLearnPolicy = Output.ofNullable(updateAutoLearnPolicy);
             return this;
         }
         public ShieldedInstanceIntegrityPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profiles")
-      private final @Nullable Input<List<String>> profiles;
+      private final @Nullable Output<List<String>> profiles;
 
-    public Input<List<String>> getProfiles() {
-        return this.profiles == null ? Input.empty() : this.profiles;
+    public Output<List<String>> getProfiles() {
+        return this.profiles == null ? Output.empty() : this.profiles;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetId")
-      private final @Nullable Input<String> targetId;
+      private final @Nullable Output<String> targetId;
 
-    public Input<String> getTargetId() {
-        return this.targetId == null ? Input.empty() : this.targetId;
+    public Output<String> getTargetId() {
+        return this.targetId == null ? Output.empty() : this.targetId;
     }
 
     public StageArgs(
-        @Nullable Input<List<String>> profiles,
-        @Nullable Input<String> targetId) {
+        @Nullable Output<List<String>> profiles,
+        @Nullable Output<String> targetId) {
         this.profiles = profiles;
         this.targetId = targetId;
     }
 
     private StageArgs() {
-        this.profiles = Input.empty();
-        this.targetId = Input.empty();
+        this.profiles = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> profiles;
-        private @Nullable Input<String> targetId;
+        private @Nullable Output<List<String>> profiles;
+        private @Nullable Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder profiles(@Nullable Input<List<String>> profiles) {
+        public Builder profiles(@Nullable Output<List<String>> profiles) {
             this.profiles = profiles;
             return this;
         }
 
         public Builder profiles(@Nullable List<String> profiles) {
-            this.profiles = Input.ofNullable(profiles);
+            this.profiles = Output.ofNullable(profiles);
             return this;
         }
 
-        public Builder targetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Input.ofNullable(targetId);
+            this.targetId = Output.ofNullable(targetId);
             return this;
         }
         public StageArgs build() {

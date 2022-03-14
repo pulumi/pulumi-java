@@ -6,7 +6,6 @@ package io.pulumi.aws.sqs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sqs.QueueArgs;
 import io.pulumi.aws.sqs.inputs.QueueState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -372,14 +371,14 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Queue(String name, @Nullable QueueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sqs/queue:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sqs/queue:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Queue(String name, Input<String> id, @Nullable QueueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Queue(String name, Output<String> id, @Nullable QueueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sqs/queue:Queue", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -395,7 +394,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Queue get(String name, Input<String> id, @Nullable QueueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Queue get(String name, Output<String> id, @Nullable QueueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Queue(name, id, state, options);
     }
 }

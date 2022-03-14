@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="commonName")
-      private final @Nullable Input<String> commonName;
+      private final @Nullable Output<String> commonName;
 
-    public Input<String> getCommonName() {
-        return this.commonName == null ? Input.empty() : this.commonName;
+    public Output<String> getCommonName() {
+        return this.commonName == null ? Output.empty() : this.commonName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="country")
-      private final @Nullable Input<String> country;
+      private final @Nullable Output<String> country;
 
-    public Input<String> getCountry() {
-        return this.country == null ? Input.empty() : this.country;
+    public Output<String> getCountry() {
+        return this.country == null ? Output.empty() : this.country;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="distinguishedNameQualifier")
-      private final @Nullable Input<String> distinguishedNameQualifier;
+      private final @Nullable Output<String> distinguishedNameQualifier;
 
-    public Input<String> getDistinguishedNameQualifier() {
-        return this.distinguishedNameQualifier == null ? Input.empty() : this.distinguishedNameQualifier;
+    public Output<String> getDistinguishedNameQualifier() {
+        return this.distinguishedNameQualifier == null ? Output.empty() : this.distinguishedNameQualifier;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="generationQualifier")
-      private final @Nullable Input<String> generationQualifier;
+      private final @Nullable Output<String> generationQualifier;
 
-    public Input<String> getGenerationQualifier() {
-        return this.generationQualifier == null ? Input.empty() : this.generationQualifier;
+    public Output<String> getGenerationQualifier() {
+        return this.generationQualifier == null ? Output.empty() : this.generationQualifier;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="givenName")
-      private final @Nullable Input<String> givenName;
+      private final @Nullable Output<String> givenName;
 
-    public Input<String> getGivenName() {
-        return this.givenName == null ? Input.empty() : this.givenName;
+    public Output<String> getGivenName() {
+        return this.givenName == null ? Output.empty() : this.givenName;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="initials")
-      private final @Nullable Input<String> initials;
+      private final @Nullable Output<String> initials;
 
-    public Input<String> getInitials() {
-        return this.initials == null ? Input.empty() : this.initials;
+    public Output<String> getInitials() {
+        return this.initials == null ? Output.empty() : this.initials;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="locality")
-      private final @Nullable Input<String> locality;
+      private final @Nullable Output<String> locality;
 
-    public Input<String> getLocality() {
-        return this.locality == null ? Input.empty() : this.locality;
+    public Output<String> getLocality() {
+        return this.locality == null ? Output.empty() : this.locality;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="organization")
-      private final @Nullable Input<String> organization;
+      private final @Nullable Output<String> organization;
 
-    public Input<String> getOrganization() {
-        return this.organization == null ? Input.empty() : this.organization;
+    public Output<String> getOrganization() {
+        return this.organization == null ? Output.empty() : this.organization;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="organizationalUnit")
-      private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Output<String> organizationalUnit;
 
-    public Input<String> getOrganizationalUnit() {
-        return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
+    public Output<String> getOrganizationalUnit() {
+        return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="pseudonym")
-      private final @Nullable Input<String> pseudonym;
+      private final @Nullable Output<String> pseudonym;
 
-    public Input<String> getPseudonym() {
-        return this.pseudonym == null ? Input.empty() : this.pseudonym;
+    public Output<String> getPseudonym() {
+        return this.pseudonym == null ? Output.empty() : this.pseudonym;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="surname")
-      private final @Nullable Input<String> surname;
+      private final @Nullable Output<String> surname;
 
-    public Input<String> getSurname() {
-        return this.surname == null ? Input.empty() : this.surname;
+    public Output<String> getSurname() {
+        return this.surname == null ? Output.empty() : this.surname;
     }
 
     /**
@@ -151,26 +151,26 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs(
-        @Nullable Input<String> commonName,
-        @Nullable Input<String> country,
-        @Nullable Input<String> distinguishedNameQualifier,
-        @Nullable Input<String> generationQualifier,
-        @Nullable Input<String> givenName,
-        @Nullable Input<String> initials,
-        @Nullable Input<String> locality,
-        @Nullable Input<String> organization,
-        @Nullable Input<String> organizationalUnit,
-        @Nullable Input<String> pseudonym,
-        @Nullable Input<String> state,
-        @Nullable Input<String> surname,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> commonName,
+        @Nullable Output<String> country,
+        @Nullable Output<String> distinguishedNameQualifier,
+        @Nullable Output<String> generationQualifier,
+        @Nullable Output<String> givenName,
+        @Nullable Output<String> initials,
+        @Nullable Output<String> locality,
+        @Nullable Output<String> organization,
+        @Nullable Output<String> organizationalUnit,
+        @Nullable Output<String> pseudonym,
+        @Nullable Output<String> state,
+        @Nullable Output<String> surname,
+        @Nullable Output<String> title) {
         this.commonName = commonName;
         this.country = country;
         this.distinguishedNameQualifier = distinguishedNameQualifier;
@@ -187,19 +187,19 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     }
 
     private CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs() {
-        this.commonName = Input.empty();
-        this.country = Input.empty();
-        this.distinguishedNameQualifier = Input.empty();
-        this.generationQualifier = Input.empty();
-        this.givenName = Input.empty();
-        this.initials = Input.empty();
-        this.locality = Input.empty();
-        this.organization = Input.empty();
-        this.organizationalUnit = Input.empty();
-        this.pseudonym = Input.empty();
-        this.state = Input.empty();
-        this.surname = Input.empty();
-        this.title = Input.empty();
+        this.commonName = Output.empty();
+        this.country = Output.empty();
+        this.distinguishedNameQualifier = Output.empty();
+        this.generationQualifier = Output.empty();
+        this.givenName = Output.empty();
+        this.initials = Output.empty();
+        this.locality = Output.empty();
+        this.organization = Output.empty();
+        this.organizationalUnit = Output.empty();
+        this.pseudonym = Output.empty();
+        this.state = Output.empty();
+        this.surname = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -211,19 +211,19 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     }
 
     public static final class Builder {
-        private @Nullable Input<String> commonName;
-        private @Nullable Input<String> country;
-        private @Nullable Input<String> distinguishedNameQualifier;
-        private @Nullable Input<String> generationQualifier;
-        private @Nullable Input<String> givenName;
-        private @Nullable Input<String> initials;
-        private @Nullable Input<String> locality;
-        private @Nullable Input<String> organization;
-        private @Nullable Input<String> organizationalUnit;
-        private @Nullable Input<String> pseudonym;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> surname;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> commonName;
+        private @Nullable Output<String> country;
+        private @Nullable Output<String> distinguishedNameQualifier;
+        private @Nullable Output<String> generationQualifier;
+        private @Nullable Output<String> givenName;
+        private @Nullable Output<String> initials;
+        private @Nullable Output<String> locality;
+        private @Nullable Output<String> organization;
+        private @Nullable Output<String> organizationalUnit;
+        private @Nullable Output<String> pseudonym;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> surname;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -246,133 +246,133 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     	      this.title = defaults.title;
         }
 
-        public Builder commonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Input.ofNullable(commonName);
+            this.commonName = Output.ofNullable(commonName);
             return this;
         }
 
-        public Builder country(@Nullable Input<String> country) {
+        public Builder country(@Nullable Output<String> country) {
             this.country = country;
             return this;
         }
 
         public Builder country(@Nullable String country) {
-            this.country = Input.ofNullable(country);
+            this.country = Output.ofNullable(country);
             return this;
         }
 
-        public Builder distinguishedNameQualifier(@Nullable Input<String> distinguishedNameQualifier) {
+        public Builder distinguishedNameQualifier(@Nullable Output<String> distinguishedNameQualifier) {
             this.distinguishedNameQualifier = distinguishedNameQualifier;
             return this;
         }
 
         public Builder distinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
-            this.distinguishedNameQualifier = Input.ofNullable(distinguishedNameQualifier);
+            this.distinguishedNameQualifier = Output.ofNullable(distinguishedNameQualifier);
             return this;
         }
 
-        public Builder generationQualifier(@Nullable Input<String> generationQualifier) {
+        public Builder generationQualifier(@Nullable Output<String> generationQualifier) {
             this.generationQualifier = generationQualifier;
             return this;
         }
 
         public Builder generationQualifier(@Nullable String generationQualifier) {
-            this.generationQualifier = Input.ofNullable(generationQualifier);
+            this.generationQualifier = Output.ofNullable(generationQualifier);
             return this;
         }
 
-        public Builder givenName(@Nullable Input<String> givenName) {
+        public Builder givenName(@Nullable Output<String> givenName) {
             this.givenName = givenName;
             return this;
         }
 
         public Builder givenName(@Nullable String givenName) {
-            this.givenName = Input.ofNullable(givenName);
+            this.givenName = Output.ofNullable(givenName);
             return this;
         }
 
-        public Builder initials(@Nullable Input<String> initials) {
+        public Builder initials(@Nullable Output<String> initials) {
             this.initials = initials;
             return this;
         }
 
         public Builder initials(@Nullable String initials) {
-            this.initials = Input.ofNullable(initials);
+            this.initials = Output.ofNullable(initials);
             return this;
         }
 
-        public Builder locality(@Nullable Input<String> locality) {
+        public Builder locality(@Nullable Output<String> locality) {
             this.locality = locality;
             return this;
         }
 
         public Builder locality(@Nullable String locality) {
-            this.locality = Input.ofNullable(locality);
+            this.locality = Output.ofNullable(locality);
             return this;
         }
 
-        public Builder organization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
 
         public Builder organization(@Nullable String organization) {
-            this.organization = Input.ofNullable(organization);
+            this.organization = Output.ofNullable(organization);
             return this;
         }
 
-        public Builder organizationalUnit(@Nullable Input<String> organizationalUnit) {
+        public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Input.ofNullable(organizationalUnit);
+            this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
 
-        public Builder pseudonym(@Nullable Input<String> pseudonym) {
+        public Builder pseudonym(@Nullable Output<String> pseudonym) {
             this.pseudonym = pseudonym;
             return this;
         }
 
         public Builder pseudonym(@Nullable String pseudonym) {
-            this.pseudonym = Input.ofNullable(pseudonym);
+            this.pseudonym = Output.ofNullable(pseudonym);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder surname(@Nullable Input<String> surname) {
+        public Builder surname(@Nullable Output<String> surname) {
             this.surname = surname;
             return this;
         }
 
         public Builder surname(@Nullable String surname) {
-            this.surname = Input.ofNullable(surname);
+            this.surname = Output.ofNullable(surname);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs build() {

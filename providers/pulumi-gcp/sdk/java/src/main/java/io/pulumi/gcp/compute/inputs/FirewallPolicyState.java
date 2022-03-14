@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="firewallPolicyId")
-      private final @Nullable Input<String> firewallPolicyId;
+      private final @Nullable Output<String> firewallPolicyId;
 
-    public Input<String> getFirewallPolicyId() {
-        return this.firewallPolicyId == null ? Input.empty() : this.firewallPolicyId;
+    public Output<String> getFirewallPolicyId() {
+        return this.firewallPolicyId == null ? Output.empty() : this.firewallPolicyId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleTupleCount")
-      private final @Nullable Input<Integer> ruleTupleCount;
+      private final @Nullable Output<Integer> ruleTupleCount;
 
-    public Input<Integer> getRuleTupleCount() {
-        return this.ruleTupleCount == null ? Input.empty() : this.ruleTupleCount;
+    public Output<Integer> getRuleTupleCount() {
+        return this.ruleTupleCount == null ? Output.empty() : this.ruleTupleCount;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLinkWithId")
-      private final @Nullable Input<String> selfLinkWithId;
+      private final @Nullable Output<String> selfLinkWithId;
 
-    public Input<String> getSelfLinkWithId() {
-        return this.selfLinkWithId == null ? Input.empty() : this.selfLinkWithId;
+    public Output<String> getSelfLinkWithId() {
+        return this.selfLinkWithId == null ? Output.empty() : this.selfLinkWithId;
     }
 
     /**
@@ -119,23 +119,23 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="shortName")
-      private final @Nullable Input<String> shortName;
+      private final @Nullable Output<String> shortName;
 
-    public Input<String> getShortName() {
-        return this.shortName == null ? Input.empty() : this.shortName;
+    public Output<String> getShortName() {
+        return this.shortName == null ? Output.empty() : this.shortName;
     }
 
     public FirewallPolicyState(
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> firewallPolicyId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<Integer> ruleTupleCount,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> selfLinkWithId,
-        @Nullable Input<String> shortName) {
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> firewallPolicyId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<Integer> ruleTupleCount,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> selfLinkWithId,
+        @Nullable Output<String> shortName) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;
@@ -149,16 +149,16 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private FirewallPolicyState() {
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.fingerprint = Input.empty();
-        this.firewallPolicyId = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.ruleTupleCount = Input.empty();
-        this.selfLink = Input.empty();
-        this.selfLinkWithId = Input.empty();
-        this.shortName = Input.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.fingerprint = Output.empty();
+        this.firewallPolicyId = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.ruleTupleCount = Output.empty();
+        this.selfLink = Output.empty();
+        this.selfLinkWithId = Output.empty();
+        this.shortName = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,16 +170,16 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> firewallPolicyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<Integer> ruleTupleCount;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> selfLinkWithId;
-        private @Nullable Input<String> shortName;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> firewallPolicyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<Integer> ruleTupleCount;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> selfLinkWithId;
+        private @Nullable Output<String> shortName;
 
         public Builder() {
     	      // Empty
@@ -199,103 +199,103 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder firewallPolicyId(@Nullable Input<String> firewallPolicyId) {
+        public Builder firewallPolicyId(@Nullable Output<String> firewallPolicyId) {
             this.firewallPolicyId = firewallPolicyId;
             return this;
         }
 
         public Builder firewallPolicyId(@Nullable String firewallPolicyId) {
-            this.firewallPolicyId = Input.ofNullable(firewallPolicyId);
+            this.firewallPolicyId = Output.ofNullable(firewallPolicyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder ruleTupleCount(@Nullable Input<Integer> ruleTupleCount) {
+        public Builder ruleTupleCount(@Nullable Output<Integer> ruleTupleCount) {
             this.ruleTupleCount = ruleTupleCount;
             return this;
         }
 
         public Builder ruleTupleCount(@Nullable Integer ruleTupleCount) {
-            this.ruleTupleCount = Input.ofNullable(ruleTupleCount);
+            this.ruleTupleCount = Output.ofNullable(ruleTupleCount);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder selfLinkWithId(@Nullable Input<String> selfLinkWithId) {
+        public Builder selfLinkWithId(@Nullable Output<String> selfLinkWithId) {
             this.selfLinkWithId = selfLinkWithId;
             return this;
         }
 
         public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
-            this.selfLinkWithId = Input.ofNullable(selfLinkWithId);
+            this.selfLinkWithId = Output.ofNullable(selfLinkWithId);
             return this;
         }
 
-        public Builder shortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Input.ofNullable(shortName);
+            this.shortName = Output.ofNullable(shortName);
             return this;
         }
         public FirewallPolicyState build() {

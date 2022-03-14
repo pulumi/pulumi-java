@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockCustomResponseArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class RuleGroupRuleActionBlockArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="customResponse")
-      private final @Nullable Input<RuleGroupRuleActionBlockCustomResponseArgs> customResponse;
+      private final @Nullable Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse;
 
-    public Input<RuleGroupRuleActionBlockCustomResponseArgs> getCustomResponse() {
-        return this.customResponse == null ? Input.empty() : this.customResponse;
+    public Output<RuleGroupRuleActionBlockCustomResponseArgs> getCustomResponse() {
+        return this.customResponse == null ? Output.empty() : this.customResponse;
     }
 
-    public RuleGroupRuleActionBlockArgs(@Nullable Input<RuleGroupRuleActionBlockCustomResponseArgs> customResponse) {
+    public RuleGroupRuleActionBlockArgs(@Nullable Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse) {
         this.customResponse = customResponse;
     }
 
     private RuleGroupRuleActionBlockArgs() {
-        this.customResponse = Input.empty();
+        this.customResponse = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionBlockArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleActionBlockCustomResponseArgs> customResponse;
+        private @Nullable Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RuleGroupRuleActionBlockArgs extends io.pulumi.resources.Reso
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder customResponse(@Nullable Input<RuleGroupRuleActionBlockCustomResponseArgs> customResponse) {
+        public Builder customResponse(@Nullable Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse) {
             this.customResponse = customResponse;
             return this;
         }
 
         public Builder customResponse(@Nullable RuleGroupRuleActionBlockCustomResponseArgs customResponse) {
-            this.customResponse = Input.ofNullable(customResponse);
+            this.customResponse = Output.ofNullable(customResponse);
             return this;
         }
         public RuleGroupRuleActionBlockArgs build() {

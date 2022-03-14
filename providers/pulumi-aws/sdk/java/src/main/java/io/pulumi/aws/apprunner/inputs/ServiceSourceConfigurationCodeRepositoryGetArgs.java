@@ -5,7 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
      * 
      */
     @InputImport(name="codeConfiguration")
-      private final @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
+      private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
 
-    public Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> getCodeConfiguration() {
-        return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
+    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> getCodeConfiguration() {
+        return this.codeConfiguration == null ? Output.empty() : this.codeConfiguration;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-      private final Input<String> repositoryUrl;
+      private final Output<String> repositoryUrl;
 
-    public Input<String> getRepositoryUrl() {
+    public Output<String> getRepositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -43,25 +43,25 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
      * 
      */
     @InputImport(name="sourceCodeVersion", required=true)
-      private final Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
+      private final Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
 
-    public Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> getSourceCodeVersion() {
+    public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> getSourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 
     public ServiceSourceConfigurationCodeRepositoryGetArgs(
-        @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration,
-        Input<String> repositoryUrl,
-        Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion) {
+        @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration,
+        Output<String> repositoryUrl,
+        Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
         this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
         this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion, "expected parameter 'sourceCodeVersion' to be non-null");
     }
 
     private ServiceSourceConfigurationCodeRepositoryGetArgs() {
-        this.codeConfiguration = Input.empty();
-        this.repositoryUrl = Input.empty();
-        this.sourceCodeVersion = Input.empty();
+        this.codeConfiguration = Output.empty();
+        this.repositoryUrl = Output.empty();
+        this.sourceCodeVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
-        private Input<String> repositoryUrl;
-        private Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
+        private @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
+        private Output<String> repositoryUrl;
+        private Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
     	      this.sourceCodeVersion = defaults.sourceCodeVersion;
         }
 
-        public Builder codeConfiguration(@Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration) {
+        public Builder codeConfiguration(@Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
         public Builder codeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs codeConfiguration) {
-            this.codeConfiguration = Input.ofNullable(codeConfiguration);
+            this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
 
-        public Builder repositoryUrl(Input<String> repositoryUrl) {
+        public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Input.of(Objects.requireNonNull(repositoryUrl));
+            this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
 
-        public Builder sourceCodeVersion(Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion) {
+        public Builder sourceCodeVersion(Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }
 
         public Builder sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs sourceCodeVersion) {
-            this.sourceCodeVersion = Input.of(Objects.requireNonNull(sourceCodeVersion));
+            this.sourceCodeVersion = Output.of(Objects.requireNonNull(sourceCodeVersion));
             return this;
         }
         public ServiceSourceConfigurationCodeRepositoryGetArgs build() {

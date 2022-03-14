@@ -8,7 +8,6 @@ import io.pulumi.azurenative.kubernetes.ConnectedClusterArgs;
 import io.pulumi.azurenative.kubernetes.outputs.ConnectedClusterIdentityResponse;
 import io.pulumi.azurenative.kubernetes.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -326,21 +325,21 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectedCluster(String name, ConnectedClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kubernetes:ConnectedCluster", name, args == null ? ConnectedClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:kubernetes:ConnectedCluster", name, args == null ? ConnectedClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConnectedCluster(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConnectedCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kubernetes:ConnectedCluster", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:kubernetes/v20200101preview:ConnectedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:kubernetes/v20210301:ConnectedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:kubernetes/v20210401preview:ConnectedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:kubernetes/v20211001:ConnectedCluster").build())
+                Output.of(Alias.builder().setType("azure-native:kubernetes/v20200101preview:ConnectedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:kubernetes/v20210301:ConnectedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:kubernetes/v20210401preview:ConnectedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:kubernetes/v20211001:ConnectedCluster").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -354,7 +353,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConnectedCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConnectedCluster get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectedCluster(name, id, options);
     }
 }

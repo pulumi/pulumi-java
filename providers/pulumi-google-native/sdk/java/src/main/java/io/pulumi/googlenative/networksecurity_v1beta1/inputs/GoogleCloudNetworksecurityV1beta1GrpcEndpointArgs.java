@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
      * 
      */
     @InputImport(name="targetUri", required=true)
-      private final Input<String> targetUri;
+      private final Output<String> targetUri;
 
-    public Input<String> getTargetUri() {
+    public Output<String> getTargetUri() {
         return this.targetUri;
     }
 
-    public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(Input<String> targetUri) {
+    public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(Output<String> targetUri) {
         this.targetUri = Objects.requireNonNull(targetUri, "expected parameter 'targetUri' to be non-null");
     }
 
     private GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs() {
-        this.targetUri = Input.empty();
+        this.targetUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
     }
 
     public static final class Builder {
-        private Input<String> targetUri;
+        private Output<String> targetUri;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
     	      this.targetUri = defaults.targetUri;
         }
 
-        public Builder targetUri(Input<String> targetUri) {
+        public Builder targetUri(Output<String> targetUri) {
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
 
         public Builder targetUri(String targetUri) {
-            this.targetUri = Input.of(Objects.requireNonNull(targetUri));
+            this.targetUri = Output.of(Objects.requireNonNull(targetUri));
             return this;
         }
         public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs build() {

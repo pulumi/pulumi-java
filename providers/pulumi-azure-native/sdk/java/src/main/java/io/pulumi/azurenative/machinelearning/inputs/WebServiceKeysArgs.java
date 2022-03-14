@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primary")
-      private final @Nullable Input<String> primary;
+      private final @Nullable Output<String> primary;
 
-    public Input<String> getPrimary() {
-        return this.primary == null ? Input.empty() : this.primary;
+    public Output<String> getPrimary() {
+        return this.primary == null ? Output.empty() : this.primary;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondary")
-      private final @Nullable Input<String> secondary;
+      private final @Nullable Output<String> secondary;
 
-    public Input<String> getSecondary() {
-        return this.secondary == null ? Input.empty() : this.secondary;
+    public Output<String> getSecondary() {
+        return this.secondary == null ? Output.empty() : this.secondary;
     }
 
     public WebServiceKeysArgs(
-        @Nullable Input<String> primary,
-        @Nullable Input<String> secondary) {
+        @Nullable Output<String> primary,
+        @Nullable Output<String> secondary) {
         this.primary = primary;
         this.secondary = secondary;
     }
 
     private WebServiceKeysArgs() {
-        this.primary = Input.empty();
-        this.secondary = Input.empty();
+        this.primary = Output.empty();
+        this.secondary = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> primary;
-        private @Nullable Input<String> secondary;
+        private @Nullable Output<String> primary;
+        private @Nullable Output<String> secondary;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secondary = defaults.secondary;
         }
 
-        public Builder primary(@Nullable Input<String> primary) {
+        public Builder primary(@Nullable Output<String> primary) {
             this.primary = primary;
             return this;
         }
 
         public Builder primary(@Nullable String primary) {
-            this.primary = Input.ofNullable(primary);
+            this.primary = Output.ofNullable(primary);
             return this;
         }
 
-        public Builder secondary(@Nullable Input<String> secondary) {
+        public Builder secondary(@Nullable Output<String> secondary) {
             this.secondary = secondary;
             return this;
         }
 
         public Builder secondary(@Nullable String secondary) {
-            this.secondary = Input.ofNullable(secondary);
+            this.secondary = Output.ofNullable(secondary);
             return this;
         }
         public WebServiceKeysArgs build() {

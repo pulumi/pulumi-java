@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.OAuth2AuthenticationSettingsContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.OpenIdAuthenticationSettingsContractArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="oAuth2")
-      private final @Nullable Input<OAuth2AuthenticationSettingsContractArgs> oAuth2;
+      private final @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
 
-    public Input<OAuth2AuthenticationSettingsContractArgs> getOAuth2() {
-        return this.oAuth2 == null ? Input.empty() : this.oAuth2;
+    public Output<OAuth2AuthenticationSettingsContractArgs> getOAuth2() {
+        return this.oAuth2 == null ? Output.empty() : this.oAuth2;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="openid")
-      private final @Nullable Input<OpenIdAuthenticationSettingsContractArgs> openid;
+      private final @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
 
-    public Input<OpenIdAuthenticationSettingsContractArgs> getOpenid() {
-        return this.openid == null ? Input.empty() : this.openid;
+    public Output<OpenIdAuthenticationSettingsContractArgs> getOpenid() {
+        return this.openid == null ? Output.empty() : this.openid;
     }
 
     public AuthenticationSettingsContractArgs(
-        @Nullable Input<OAuth2AuthenticationSettingsContractArgs> oAuth2,
-        @Nullable Input<OpenIdAuthenticationSettingsContractArgs> openid) {
+        @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2,
+        @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid) {
         this.oAuth2 = oAuth2;
         this.openid = openid;
     }
 
     private AuthenticationSettingsContractArgs() {
-        this.oAuth2 = Input.empty();
-        this.openid = Input.empty();
+        this.oAuth2 = Output.empty();
+        this.openid = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<OAuth2AuthenticationSettingsContractArgs> oAuth2;
-        private @Nullable Input<OpenIdAuthenticationSettingsContractArgs> openid;
+        private @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
+        private @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
     	      this.openid = defaults.openid;
         }
 
-        public Builder oAuth2(@Nullable Input<OAuth2AuthenticationSettingsContractArgs> oAuth2) {
+        public Builder oAuth2(@Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2) {
             this.oAuth2 = oAuth2;
             return this;
         }
 
         public Builder oAuth2(@Nullable OAuth2AuthenticationSettingsContractArgs oAuth2) {
-            this.oAuth2 = Input.ofNullable(oAuth2);
+            this.oAuth2 = Output.ofNullable(oAuth2);
             return this;
         }
 
-        public Builder openid(@Nullable Input<OpenIdAuthenticationSettingsContractArgs> openid) {
+        public Builder openid(@Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid) {
             this.openid = openid;
             return this;
         }
 
         public Builder openid(@Nullable OpenIdAuthenticationSettingsContractArgs openid) {
-            this.openid = Input.ofNullable(openid);
+            this.openid = Output.ofNullable(openid);
             return this;
         }
         public AuthenticationSettingsContractArgs build() {

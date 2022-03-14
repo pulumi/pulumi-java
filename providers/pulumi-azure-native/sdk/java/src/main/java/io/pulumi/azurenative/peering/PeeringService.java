@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.PeeringServiceArgs;
 import io.pulumi.azurenative.peering.outputs.PeeringServiceSkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -212,24 +211,24 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PeeringService(String name, PeeringServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:PeeringService", name, args == null ? PeeringServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:peering:PeeringService", name, args == null ? PeeringServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PeeringService(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PeeringService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:peering:PeeringService", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:peering/v20190801preview:PeeringService").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20190901preview:PeeringService").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20200101preview:PeeringService").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20200401:PeeringService").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20201001:PeeringService").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20210101:PeeringService").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20210601:PeeringService").build())
+                Output.of(Alias.builder().setType("azure-native:peering/v20190801preview:PeeringService").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20190901preview:PeeringService").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20200101preview:PeeringService").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20200401:PeeringService").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20201001:PeeringService").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210101:PeeringService").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210601:PeeringService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -243,7 +242,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PeeringService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PeeringService get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PeeringService(name, id, options);
     }
 }

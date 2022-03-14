@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.WsdlImportMethod;
 import io.pulumi.azurenative.web.inputs.WsdlServiceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importMethod")
-      private final @Nullable Input<Either<String,WsdlImportMethod>> importMethod;
+      private final @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
 
-    public Input<Either<String,WsdlImportMethod>> getImportMethod() {
-        return this.importMethod == null ? Input.empty() : this.importMethod;
+    public Output<Either<String,WsdlImportMethod>> getImportMethod() {
+        return this.importMethod == null ? Output.empty() : this.importMethod;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<WsdlServiceArgs> service;
+      private final @Nullable Output<WsdlServiceArgs> service;
 
-    public Input<WsdlServiceArgs> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<WsdlServiceArgs> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public WsdlDefinitionArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<Either<String,WsdlImportMethod>> importMethod,
-        @Nullable Input<WsdlServiceArgs> service,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> content,
+        @Nullable Output<Either<String,WsdlImportMethod>> importMethod,
+        @Nullable Output<WsdlServiceArgs> service,
+        @Nullable Output<String> url) {
         this.content = content;
         this.importMethod = importMethod;
         this.service = service;
@@ -77,10 +77,10 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WsdlDefinitionArgs() {
-        this.content = Input.empty();
-        this.importMethod = Input.empty();
-        this.service = Input.empty();
-        this.url = Input.empty();
+        this.content = Output.empty();
+        this.importMethod = Output.empty();
+        this.service = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<Either<String,WsdlImportMethod>> importMethod;
-        private @Nullable Input<WsdlServiceArgs> service;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> content;
+        private @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
+        private @Nullable Output<WsdlServiceArgs> service;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder importMethod(@Nullable Input<Either<String,WsdlImportMethod>> importMethod) {
+        public Builder importMethod(@Nullable Output<Either<String,WsdlImportMethod>> importMethod) {
             this.importMethod = importMethod;
             return this;
         }
 
         public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
-            this.importMethod = Input.ofNullable(importMethod);
+            this.importMethod = Output.ofNullable(importMethod);
             return this;
         }
 
-        public Builder service(@Nullable Input<WsdlServiceArgs> service) {
+        public Builder service(@Nullable Output<WsdlServiceArgs> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable WsdlServiceArgs service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public WsdlDefinitionArgs build() {

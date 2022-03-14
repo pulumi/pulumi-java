@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.StorageMappingInputPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="fabricName", required=true)
-      private final Input<String> fabricName;
+      private final Output<String> fabricName;
 
-    public Input<String> getFabricName() {
+    public Output<String> getFabricName() {
         return this.fabricName;
     }
 
@@ -31,10 +31,10 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<StorageMappingInputPropertiesArgs> properties;
+      private final @Nullable Output<StorageMappingInputPropertiesArgs> properties;
 
-    public Input<StorageMappingInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<StorageMappingInputPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,9 +53,9 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -64,10 +64,10 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="storageClassificationMappingName")
-      private final @Nullable Input<String> storageClassificationMappingName;
+      private final @Nullable Output<String> storageClassificationMappingName;
 
-    public Input<String> getStorageClassificationMappingName() {
-        return this.storageClassificationMappingName == null ? Input.empty() : this.storageClassificationMappingName;
+    public Output<String> getStorageClassificationMappingName() {
+        return this.storageClassificationMappingName == null ? Output.empty() : this.storageClassificationMappingName;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="storageClassificationName", required=true)
-      private final Input<String> storageClassificationName;
+      private final Output<String> storageClassificationName;
 
-    public Input<String> getStorageClassificationName() {
+    public Output<String> getStorageClassificationName() {
         return this.storageClassificationName;
     }
 
     public ReplicationStorageClassificationMappingArgs(
-        Input<String> fabricName,
-        @Nullable Input<StorageMappingInputPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        @Nullable Input<String> storageClassificationMappingName,
-        Input<String> storageClassificationName) {
+        Output<String> fabricName,
+        @Nullable Output<StorageMappingInputPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        @Nullable Output<String> storageClassificationMappingName,
+        Output<String> storageClassificationName) {
         this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -97,12 +97,12 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
     }
 
     private ReplicationStorageClassificationMappingArgs() {
-        this.fabricName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.storageClassificationMappingName = Input.empty();
-        this.storageClassificationName = Input.empty();
+        this.fabricName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.storageClassificationMappingName = Output.empty();
+        this.storageClassificationName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> fabricName;
-        private @Nullable Input<StorageMappingInputPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private @Nullable Input<String> storageClassificationMappingName;
-        private Input<String> storageClassificationName;
+        private Output<String> fabricName;
+        private @Nullable Output<StorageMappingInputPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private @Nullable Output<String> storageClassificationMappingName;
+        private Output<String> storageClassificationName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
     	      this.storageClassificationName = defaults.storageClassificationName;
         }
 
-        public Builder fabricName(Input<String> fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Input.of(Objects.requireNonNull(fabricName));
+            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<StorageMappingInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<StorageMappingInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable StorageMappingInputPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder storageClassificationMappingName(@Nullable Input<String> storageClassificationMappingName) {
+        public Builder storageClassificationMappingName(@Nullable Output<String> storageClassificationMappingName) {
             this.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
 
         public Builder storageClassificationMappingName(@Nullable String storageClassificationMappingName) {
-            this.storageClassificationMappingName = Input.ofNullable(storageClassificationMappingName);
+            this.storageClassificationMappingName = Output.ofNullable(storageClassificationMappingName);
             return this;
         }
 
-        public Builder storageClassificationName(Input<String> storageClassificationName) {
+        public Builder storageClassificationName(Output<String> storageClassificationName) {
             this.storageClassificationName = Objects.requireNonNull(storageClassificationName);
             return this;
         }
 
         public Builder storageClassificationName(String storageClassificationName) {
-            this.storageClassificationName = Input.of(Objects.requireNonNull(storageClassificationName));
+            this.storageClassificationName = Output.of(Objects.requireNonNull(storageClassificationName));
             return this;
         }
         public ReplicationStorageClassificationMappingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.PacketMirroringFilterDirection;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cidrRanges")
-      private final @Nullable Input<List<String>> cidrRanges;
+      private final @Nullable Output<List<String>> cidrRanges;
 
-    public Input<List<String>> getCidrRanges() {
-        return this.cidrRanges == null ? Input.empty() : this.cidrRanges;
+    public Output<List<String>> getCidrRanges() {
+        return this.cidrRanges == null ? Output.empty() : this.cidrRanges;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="direction")
-      private final @Nullable Input<PacketMirroringFilterDirection> direction;
+      private final @Nullable Output<PacketMirroringFilterDirection> direction;
 
-    public Input<PacketMirroringFilterDirection> getDirection() {
-        return this.direction == null ? Input.empty() : this.direction;
+    public Output<PacketMirroringFilterDirection> getDirection() {
+        return this.direction == null ? Output.empty() : this.direction;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipProtocols")
-      private final @Nullable Input<List<String>> ipProtocols;
+      private final @Nullable Output<List<String>> ipProtocols;
 
-    public Input<List<String>> getIpProtocols() {
-        return this.ipProtocols == null ? Input.empty() : this.ipProtocols;
+    public Output<List<String>> getIpProtocols() {
+        return this.ipProtocols == null ? Output.empty() : this.ipProtocols;
     }
 
     public PacketMirroringFilterArgs(
-        @Nullable Input<List<String>> cidrRanges,
-        @Nullable Input<PacketMirroringFilterDirection> direction,
-        @Nullable Input<List<String>> ipProtocols) {
+        @Nullable Output<List<String>> cidrRanges,
+        @Nullable Output<PacketMirroringFilterDirection> direction,
+        @Nullable Output<List<String>> ipProtocols) {
         this.cidrRanges = cidrRanges;
         this.direction = direction;
         this.ipProtocols = ipProtocols;
     }
 
     private PacketMirroringFilterArgs() {
-        this.cidrRanges = Input.empty();
-        this.direction = Input.empty();
-        this.ipProtocols = Input.empty();
+        this.cidrRanges = Output.empty();
+        this.direction = Output.empty();
+        this.ipProtocols = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> cidrRanges;
-        private @Nullable Input<PacketMirroringFilterDirection> direction;
-        private @Nullable Input<List<String>> ipProtocols;
+        private @Nullable Output<List<String>> cidrRanges;
+        private @Nullable Output<PacketMirroringFilterDirection> direction;
+        private @Nullable Output<List<String>> ipProtocols;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
     	      this.ipProtocols = defaults.ipProtocols;
         }
 
-        public Builder cidrRanges(@Nullable Input<List<String>> cidrRanges) {
+        public Builder cidrRanges(@Nullable Output<List<String>> cidrRanges) {
             this.cidrRanges = cidrRanges;
             return this;
         }
 
         public Builder cidrRanges(@Nullable List<String> cidrRanges) {
-            this.cidrRanges = Input.ofNullable(cidrRanges);
+            this.cidrRanges = Output.ofNullable(cidrRanges);
             return this;
         }
 
-        public Builder direction(@Nullable Input<PacketMirroringFilterDirection> direction) {
+        public Builder direction(@Nullable Output<PacketMirroringFilterDirection> direction) {
             this.direction = direction;
             return this;
         }
 
         public Builder direction(@Nullable PacketMirroringFilterDirection direction) {
-            this.direction = Input.ofNullable(direction);
+            this.direction = Output.ofNullable(direction);
             return this;
         }
 
-        public Builder ipProtocols(@Nullable Input<List<String>> ipProtocols) {
+        public Builder ipProtocols(@Nullable Output<List<String>> ipProtocols) {
             this.ipProtocols = ipProtocols;
             return this;
         }
 
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
-            this.ipProtocols = Input.ofNullable(ipProtocols);
+            this.ipProtocols = Output.ofNullable(ipProtocols);
             return this;
         }
         public PacketMirroringFilterArgs build() {

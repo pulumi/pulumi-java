@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorCount")
-      private final @Nullable Input<Integer> acceleratorCount;
+      private final @Nullable Output<Integer> acceleratorCount;
 
-    public Input<Integer> getAcceleratorCount() {
-        return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
+    public Output<Integer> getAcceleratorCount() {
+        return this.acceleratorCount == null ? Output.empty() : this.acceleratorCount;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorType")
-      private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Output<String> acceleratorType;
 
-    public Input<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
+    public Output<String> getAcceleratorType() {
+        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
     }
 
     public AcceleratorConfigArgs(
-        @Nullable Input<Integer> acceleratorCount,
-        @Nullable Input<String> acceleratorType) {
+        @Nullable Output<Integer> acceleratorCount,
+        @Nullable Output<String> acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }
 
     private AcceleratorConfigArgs() {
-        this.acceleratorCount = Input.empty();
-        this.acceleratorType = Input.empty();
+        this.acceleratorCount = Output.empty();
+        this.acceleratorType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> acceleratorCount;
-        private @Nullable Input<String> acceleratorType;
+        private @Nullable Output<Integer> acceleratorCount;
+        private @Nullable Output<String> acceleratorType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder acceleratorCount(@Nullable Input<Integer> acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Output<Integer> acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
         public Builder acceleratorCount(@Nullable Integer acceleratorCount) {
-            this.acceleratorCount = Input.ofNullable(acceleratorCount);
+            this.acceleratorCount = Output.ofNullable(acceleratorCount);
             return this;
         }
 
-        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Input.ofNullable(acceleratorType);
+            this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
         public AcceleratorConfigArgs build() {

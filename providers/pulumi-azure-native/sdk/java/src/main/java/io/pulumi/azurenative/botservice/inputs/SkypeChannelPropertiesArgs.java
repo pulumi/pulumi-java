@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="callingWebHook")
-      private final @Nullable Input<String> callingWebHook;
+      private final @Nullable Output<String> callingWebHook;
 
-    public Input<String> getCallingWebHook() {
-        return this.callingWebHook == null ? Input.empty() : this.callingWebHook;
+    public Output<String> getCallingWebHook() {
+        return this.callingWebHook == null ? Output.empty() : this.callingWebHook;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableCalling")
-      private final @Nullable Input<Boolean> enableCalling;
+      private final @Nullable Output<Boolean> enableCalling;
 
-    public Input<Boolean> getEnableCalling() {
-        return this.enableCalling == null ? Input.empty() : this.enableCalling;
+    public Output<Boolean> getEnableCalling() {
+        return this.enableCalling == null ? Output.empty() : this.enableCalling;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableGroups")
-      private final @Nullable Input<Boolean> enableGroups;
+      private final @Nullable Output<Boolean> enableGroups;
 
-    public Input<Boolean> getEnableGroups() {
-        return this.enableGroups == null ? Input.empty() : this.enableGroups;
+    public Output<Boolean> getEnableGroups() {
+        return this.enableGroups == null ? Output.empty() : this.enableGroups;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableMediaCards")
-      private final @Nullable Input<Boolean> enableMediaCards;
+      private final @Nullable Output<Boolean> enableMediaCards;
 
-    public Input<Boolean> getEnableMediaCards() {
-        return this.enableMediaCards == null ? Input.empty() : this.enableMediaCards;
+    public Output<Boolean> getEnableMediaCards() {
+        return this.enableMediaCards == null ? Output.empty() : this.enableMediaCards;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableMessaging")
-      private final @Nullable Input<Boolean> enableMessaging;
+      private final @Nullable Output<Boolean> enableMessaging;
 
-    public Input<Boolean> getEnableMessaging() {
-        return this.enableMessaging == null ? Input.empty() : this.enableMessaging;
+    public Output<Boolean> getEnableMessaging() {
+        return this.enableMessaging == null ? Output.empty() : this.enableMessaging;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableScreenSharing")
-      private final @Nullable Input<Boolean> enableScreenSharing;
+      private final @Nullable Output<Boolean> enableScreenSharing;
 
-    public Input<Boolean> getEnableScreenSharing() {
-        return this.enableScreenSharing == null ? Input.empty() : this.enableScreenSharing;
+    public Output<Boolean> getEnableScreenSharing() {
+        return this.enableScreenSharing == null ? Output.empty() : this.enableScreenSharing;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableVideo")
-      private final @Nullable Input<Boolean> enableVideo;
+      private final @Nullable Output<Boolean> enableVideo;
 
-    public Input<Boolean> getEnableVideo() {
-        return this.enableVideo == null ? Input.empty() : this.enableVideo;
+    public Output<Boolean> getEnableVideo() {
+        return this.enableVideo == null ? Output.empty() : this.enableVideo;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="groupsMode")
-      private final @Nullable Input<String> groupsMode;
+      private final @Nullable Output<String> groupsMode;
 
-    public Input<String> getGroupsMode() {
-        return this.groupsMode == null ? Input.empty() : this.groupsMode;
+    public Output<String> getGroupsMode() {
+        return this.groupsMode == null ? Output.empty() : this.groupsMode;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="incomingCallRoute")
-      private final @Nullable Input<String> incomingCallRoute;
+      private final @Nullable Output<String> incomingCallRoute;
 
-    public Input<String> getIncomingCallRoute() {
-        return this.incomingCallRoute == null ? Input.empty() : this.incomingCallRoute;
+    public Output<String> getIncomingCallRoute() {
+        return this.incomingCallRoute == null ? Output.empty() : this.incomingCallRoute;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
     public SkypeChannelPropertiesArgs(
-        @Nullable Input<String> callingWebHook,
-        @Nullable Input<Boolean> enableCalling,
-        @Nullable Input<Boolean> enableGroups,
-        @Nullable Input<Boolean> enableMediaCards,
-        @Nullable Input<Boolean> enableMessaging,
-        @Nullable Input<Boolean> enableScreenSharing,
-        @Nullable Input<Boolean> enableVideo,
-        @Nullable Input<String> groupsMode,
-        @Nullable Input<String> incomingCallRoute,
-        Input<Boolean> isEnabled) {
+        @Nullable Output<String> callingWebHook,
+        @Nullable Output<Boolean> enableCalling,
+        @Nullable Output<Boolean> enableGroups,
+        @Nullable Output<Boolean> enableMediaCards,
+        @Nullable Output<Boolean> enableMessaging,
+        @Nullable Output<Boolean> enableScreenSharing,
+        @Nullable Output<Boolean> enableVideo,
+        @Nullable Output<String> groupsMode,
+        @Nullable Output<String> incomingCallRoute,
+        Output<Boolean> isEnabled) {
         this.callingWebHook = callingWebHook;
         this.enableCalling = enableCalling;
         this.enableGroups = enableGroups;
@@ -153,16 +153,16 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private SkypeChannelPropertiesArgs() {
-        this.callingWebHook = Input.empty();
-        this.enableCalling = Input.empty();
-        this.enableGroups = Input.empty();
-        this.enableMediaCards = Input.empty();
-        this.enableMessaging = Input.empty();
-        this.enableScreenSharing = Input.empty();
-        this.enableVideo = Input.empty();
-        this.groupsMode = Input.empty();
-        this.incomingCallRoute = Input.empty();
-        this.isEnabled = Input.empty();
+        this.callingWebHook = Output.empty();
+        this.enableCalling = Output.empty();
+        this.enableGroups = Output.empty();
+        this.enableMediaCards = Output.empty();
+        this.enableMessaging = Output.empty();
+        this.enableScreenSharing = Output.empty();
+        this.enableVideo = Output.empty();
+        this.groupsMode = Output.empty();
+        this.incomingCallRoute = Output.empty();
+        this.isEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> callingWebHook;
-        private @Nullable Input<Boolean> enableCalling;
-        private @Nullable Input<Boolean> enableGroups;
-        private @Nullable Input<Boolean> enableMediaCards;
-        private @Nullable Input<Boolean> enableMessaging;
-        private @Nullable Input<Boolean> enableScreenSharing;
-        private @Nullable Input<Boolean> enableVideo;
-        private @Nullable Input<String> groupsMode;
-        private @Nullable Input<String> incomingCallRoute;
-        private Input<Boolean> isEnabled;
+        private @Nullable Output<String> callingWebHook;
+        private @Nullable Output<Boolean> enableCalling;
+        private @Nullable Output<Boolean> enableGroups;
+        private @Nullable Output<Boolean> enableMediaCards;
+        private @Nullable Output<Boolean> enableMessaging;
+        private @Nullable Output<Boolean> enableScreenSharing;
+        private @Nullable Output<Boolean> enableVideo;
+        private @Nullable Output<String> groupsMode;
+        private @Nullable Output<String> incomingCallRoute;
+        private Output<Boolean> isEnabled;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder callingWebHook(@Nullable Input<String> callingWebHook) {
+        public Builder callingWebHook(@Nullable Output<String> callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
 
         public Builder callingWebHook(@Nullable String callingWebHook) {
-            this.callingWebHook = Input.ofNullable(callingWebHook);
+            this.callingWebHook = Output.ofNullable(callingWebHook);
             return this;
         }
 
-        public Builder enableCalling(@Nullable Input<Boolean> enableCalling) {
+        public Builder enableCalling(@Nullable Output<Boolean> enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
 
         public Builder enableCalling(@Nullable Boolean enableCalling) {
-            this.enableCalling = Input.ofNullable(enableCalling);
+            this.enableCalling = Output.ofNullable(enableCalling);
             return this;
         }
 
-        public Builder enableGroups(@Nullable Input<Boolean> enableGroups) {
+        public Builder enableGroups(@Nullable Output<Boolean> enableGroups) {
             this.enableGroups = enableGroups;
             return this;
         }
 
         public Builder enableGroups(@Nullable Boolean enableGroups) {
-            this.enableGroups = Input.ofNullable(enableGroups);
+            this.enableGroups = Output.ofNullable(enableGroups);
             return this;
         }
 
-        public Builder enableMediaCards(@Nullable Input<Boolean> enableMediaCards) {
+        public Builder enableMediaCards(@Nullable Output<Boolean> enableMediaCards) {
             this.enableMediaCards = enableMediaCards;
             return this;
         }
 
         public Builder enableMediaCards(@Nullable Boolean enableMediaCards) {
-            this.enableMediaCards = Input.ofNullable(enableMediaCards);
+            this.enableMediaCards = Output.ofNullable(enableMediaCards);
             return this;
         }
 
-        public Builder enableMessaging(@Nullable Input<Boolean> enableMessaging) {
+        public Builder enableMessaging(@Nullable Output<Boolean> enableMessaging) {
             this.enableMessaging = enableMessaging;
             return this;
         }
 
         public Builder enableMessaging(@Nullable Boolean enableMessaging) {
-            this.enableMessaging = Input.ofNullable(enableMessaging);
+            this.enableMessaging = Output.ofNullable(enableMessaging);
             return this;
         }
 
-        public Builder enableScreenSharing(@Nullable Input<Boolean> enableScreenSharing) {
+        public Builder enableScreenSharing(@Nullable Output<Boolean> enableScreenSharing) {
             this.enableScreenSharing = enableScreenSharing;
             return this;
         }
 
         public Builder enableScreenSharing(@Nullable Boolean enableScreenSharing) {
-            this.enableScreenSharing = Input.ofNullable(enableScreenSharing);
+            this.enableScreenSharing = Output.ofNullable(enableScreenSharing);
             return this;
         }
 
-        public Builder enableVideo(@Nullable Input<Boolean> enableVideo) {
+        public Builder enableVideo(@Nullable Output<Boolean> enableVideo) {
             this.enableVideo = enableVideo;
             return this;
         }
 
         public Builder enableVideo(@Nullable Boolean enableVideo) {
-            this.enableVideo = Input.ofNullable(enableVideo);
+            this.enableVideo = Output.ofNullable(enableVideo);
             return this;
         }
 
-        public Builder groupsMode(@Nullable Input<String> groupsMode) {
+        public Builder groupsMode(@Nullable Output<String> groupsMode) {
             this.groupsMode = groupsMode;
             return this;
         }
 
         public Builder groupsMode(@Nullable String groupsMode) {
-            this.groupsMode = Input.ofNullable(groupsMode);
+            this.groupsMode = Output.ofNullable(groupsMode);
             return this;
         }
 
-        public Builder incomingCallRoute(@Nullable Input<String> incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable Output<String> incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
-            this.incomingCallRoute = Input.ofNullable(incomingCallRoute);
+            this.incomingCallRoute = Output.ofNullable(incomingCallRoute);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
         public SkypeChannelPropertiesArgs build() {

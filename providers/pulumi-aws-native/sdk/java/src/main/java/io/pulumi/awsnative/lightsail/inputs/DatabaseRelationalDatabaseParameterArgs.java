@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="allowedValues")
-      private final @Nullable Input<String> allowedValues;
+      private final @Nullable Output<String> allowedValues;
 
-    public Input<String> getAllowedValues() {
-        return this.allowedValues == null ? Input.empty() : this.allowedValues;
+    public Output<String> getAllowedValues() {
+        return this.allowedValues == null ? Output.empty() : this.allowedValues;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="applyMethod")
-      private final @Nullable Input<String> applyMethod;
+      private final @Nullable Output<String> applyMethod;
 
-    public Input<String> getApplyMethod() {
-        return this.applyMethod == null ? Input.empty() : this.applyMethod;
+    public Output<String> getApplyMethod() {
+        return this.applyMethod == null ? Output.empty() : this.applyMethod;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="applyType")
-      private final @Nullable Input<String> applyType;
+      private final @Nullable Output<String> applyType;
 
-    public Input<String> getApplyType() {
-        return this.applyType == null ? Input.empty() : this.applyType;
+    public Output<String> getApplyType() {
+        return this.applyType == null ? Output.empty() : this.applyType;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="isModifiable")
-      private final @Nullable Input<Boolean> isModifiable;
+      private final @Nullable Output<Boolean> isModifiable;
 
-    public Input<Boolean> getIsModifiable() {
-        return this.isModifiable == null ? Input.empty() : this.isModifiable;
+    public Output<Boolean> getIsModifiable() {
+        return this.isModifiable == null ? Output.empty() : this.isModifiable;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="parameterName")
-      private final @Nullable Input<String> parameterName;
+      private final @Nullable Output<String> parameterName;
 
-    public Input<String> getParameterName() {
-        return this.parameterName == null ? Input.empty() : this.parameterName;
+    public Output<String> getParameterName() {
+        return this.parameterName == null ? Output.empty() : this.parameterName;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="parameterValue")
-      private final @Nullable Input<String> parameterValue;
+      private final @Nullable Output<String> parameterValue;
 
-    public Input<String> getParameterValue() {
-        return this.parameterValue == null ? Input.empty() : this.parameterValue;
+    public Output<String> getParameterValue() {
+        return this.parameterValue == null ? Output.empty() : this.parameterValue;
     }
 
     public DatabaseRelationalDatabaseParameterArgs(
-        @Nullable Input<String> allowedValues,
-        @Nullable Input<String> applyMethod,
-        @Nullable Input<String> applyType,
-        @Nullable Input<String> dataType,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isModifiable,
-        @Nullable Input<String> parameterName,
-        @Nullable Input<String> parameterValue) {
+        @Nullable Output<String> allowedValues,
+        @Nullable Output<String> applyMethod,
+        @Nullable Output<String> applyType,
+        @Nullable Output<String> dataType,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isModifiable,
+        @Nullable Output<String> parameterName,
+        @Nullable Output<String> parameterValue) {
         this.allowedValues = allowedValues;
         this.applyMethod = applyMethod;
         this.applyType = applyType;
@@ -127,14 +127,14 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
     }
 
     private DatabaseRelationalDatabaseParameterArgs() {
-        this.allowedValues = Input.empty();
-        this.applyMethod = Input.empty();
-        this.applyType = Input.empty();
-        this.dataType = Input.empty();
-        this.description = Input.empty();
-        this.isModifiable = Input.empty();
-        this.parameterName = Input.empty();
-        this.parameterValue = Input.empty();
+        this.allowedValues = Output.empty();
+        this.applyMethod = Output.empty();
+        this.applyType = Output.empty();
+        this.dataType = Output.empty();
+        this.description = Output.empty();
+        this.isModifiable = Output.empty();
+        this.parameterName = Output.empty();
+        this.parameterValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allowedValues;
-        private @Nullable Input<String> applyMethod;
-        private @Nullable Input<String> applyType;
-        private @Nullable Input<String> dataType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isModifiable;
-        private @Nullable Input<String> parameterName;
-        private @Nullable Input<String> parameterValue;
+        private @Nullable Output<String> allowedValues;
+        private @Nullable Output<String> applyMethod;
+        private @Nullable Output<String> applyType;
+        private @Nullable Output<String> dataType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isModifiable;
+        private @Nullable Output<String> parameterName;
+        private @Nullable Output<String> parameterValue;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder allowedValues(@Nullable Input<String> allowedValues) {
+        public Builder allowedValues(@Nullable Output<String> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
         public Builder allowedValues(@Nullable String allowedValues) {
-            this.allowedValues = Input.ofNullable(allowedValues);
+            this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder applyMethod(@Nullable Input<String> applyMethod) {
+        public Builder applyMethod(@Nullable Output<String> applyMethod) {
             this.applyMethod = applyMethod;
             return this;
         }
 
         public Builder applyMethod(@Nullable String applyMethod) {
-            this.applyMethod = Input.ofNullable(applyMethod);
+            this.applyMethod = Output.ofNullable(applyMethod);
             return this;
         }
 
-        public Builder applyType(@Nullable Input<String> applyType) {
+        public Builder applyType(@Nullable Output<String> applyType) {
             this.applyType = applyType;
             return this;
         }
 
         public Builder applyType(@Nullable String applyType) {
-            this.applyType = Input.ofNullable(applyType);
+            this.applyType = Output.ofNullable(applyType);
             return this;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isModifiable(@Nullable Input<Boolean> isModifiable) {
+        public Builder isModifiable(@Nullable Output<Boolean> isModifiable) {
             this.isModifiable = isModifiable;
             return this;
         }
 
         public Builder isModifiable(@Nullable Boolean isModifiable) {
-            this.isModifiable = Input.ofNullable(isModifiable);
+            this.isModifiable = Output.ofNullable(isModifiable);
             return this;
         }
 
-        public Builder parameterName(@Nullable Input<String> parameterName) {
+        public Builder parameterName(@Nullable Output<String> parameterName) {
             this.parameterName = parameterName;
             return this;
         }
 
         public Builder parameterName(@Nullable String parameterName) {
-            this.parameterName = Input.ofNullable(parameterName);
+            this.parameterName = Output.ofNullable(parameterName);
             return this;
         }
 
-        public Builder parameterValue(@Nullable Input<String> parameterValue) {
+        public Builder parameterValue(@Nullable Output<String> parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }
 
         public Builder parameterValue(@Nullable String parameterValue) {
-            this.parameterValue = Input.ofNullable(parameterValue);
+            this.parameterValue = Output.ofNullable(parameterValue);
             return this;
         }
         public DatabaseRelationalDatabaseParameterArgs build() {

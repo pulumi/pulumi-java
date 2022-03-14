@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,16 +19,16 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -37,16 +37,16 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -55,9 +55,9 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refers", required=true)
-      private final Input<String> refers;
+      private final Output<String> refers;
 
-    public Input<String> getRefers() {
+    public Output<String> getRefers() {
         return this.refers;
     }
 
@@ -66,19 +66,19 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public ReferenceArgs(
-        @Nullable Input<String> description,
-        Input<String> environmentId,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        Input<String> refers,
-        @Nullable Input<String> resourceType) {
+        @Nullable Output<String> description,
+        Output<String> environmentId,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        Output<String> refers,
+        @Nullable Output<String> resourceType) {
         this.description = description;
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
         this.name = name;
@@ -88,12 +88,12 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReferenceArgs() {
-        this.description = Input.empty();
-        this.environmentId = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.refers = Input.empty();
-        this.resourceType = Input.empty();
+        this.description = Output.empty();
+        this.environmentId = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.refers = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,12 +105,12 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> environmentId;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private Input<String> refers;
-        private @Nullable Input<String> resourceType;
+        private @Nullable Output<String> description;
+        private Output<String> environmentId;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private Output<String> refers;
+        private @Nullable Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -126,63 +126,63 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder refers(Input<String> refers) {
+        public Builder refers(Output<String> refers) {
             this.refers = Objects.requireNonNull(refers);
             return this;
         }
 
         public Builder refers(String refers) {
-            this.refers = Input.of(Objects.requireNonNull(refers));
+            this.refers = Output.of(Objects.requireNonNull(refers));
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public ReferenceArgs build() {

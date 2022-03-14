@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.accessanalyzer;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyzerName", required=true)
-      private final Input<String> analyzerName;
+      private final Output<String> analyzerName;
 
-    public Input<String> getAnalyzerName() {
+    public Output<String> getAnalyzerName() {
         return this.analyzerName;
     }
 
@@ -31,10 +31,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AnalyzerArgs(
-        Input<String> analyzerName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> type) {
+        Output<String> analyzerName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> type) {
         this.analyzerName = Objects.requireNonNull(analyzerName, "expected parameter 'analyzerName' to be non-null");
         this.tags = tags;
         this.type = type;
     }
 
     private AnalyzerArgs() {
-        this.analyzerName = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.analyzerName = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> analyzerName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> type;
+        private Output<String> analyzerName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder analyzerName(Input<String> analyzerName) {
+        public Builder analyzerName(Output<String> analyzerName) {
             this.analyzerName = Objects.requireNonNull(analyzerName);
             return this;
         }
 
         public Builder analyzerName(String analyzerName) {
-            this.analyzerName = Input.of(Objects.requireNonNull(analyzerName));
+            this.analyzerName = Output.of(Objects.requireNonNull(analyzerName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AnalyzerArgs build() {

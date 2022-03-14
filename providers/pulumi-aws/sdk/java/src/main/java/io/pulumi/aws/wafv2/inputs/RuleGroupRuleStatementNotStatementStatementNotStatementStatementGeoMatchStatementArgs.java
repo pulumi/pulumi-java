@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      * 
      */
     @InputImport(name="countryCodes", required=true)
-      private final Input<List<String>> countryCodes;
+      private final Output<List<String>> countryCodes;
 
-    public Input<List<String>> getCountryCodes() {
+    public Output<List<String>> getCountryCodes() {
         return this.countryCodes;
     }
 
@@ -32,22 +32,22 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      * 
      */
     @InputImport(name="forwardedIpConfig")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> getForwardedIpConfig() {
-        return this.forwardedIpConfig == null ? Input.empty() : this.forwardedIpConfig;
+    public Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> getForwardedIpConfig() {
+        return this.forwardedIpConfig == null ? Output.empty() : this.forwardedIpConfig;
     }
 
     public RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs(
-        Input<List<String>> countryCodes,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
+        Output<List<String>> countryCodes,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
         this.countryCodes = Objects.requireNonNull(countryCodes, "expected parameter 'countryCodes' to be non-null");
         this.forwardedIpConfig = forwardedIpConfig;
     }
 
     private RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs() {
-        this.countryCodes = Input.empty();
-        this.forwardedIpConfig = Input.empty();
+        this.countryCodes = Output.empty();
+        this.forwardedIpConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     }
 
     public static final class Builder {
-        private Input<List<String>> countryCodes;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
+        private Output<List<String>> countryCodes;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     	      this.forwardedIpConfig = defaults.forwardedIpConfig;
         }
 
-        public Builder countryCodes(Input<List<String>> countryCodes) {
+        public Builder countryCodes(Output<List<String>> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
         public Builder countryCodes(List<String> countryCodes) {
-            this.countryCodes = Input.of(Objects.requireNonNull(countryCodes));
+            this.countryCodes = Output.of(Objects.requireNonNull(countryCodes));
             return this;
         }
 
-        public Builder forwardedIpConfig(@Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
 
         public Builder forwardedIpConfig(@Nullable RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs forwardedIpConfig) {
-            this.forwardedIpConfig = Input.ofNullable(forwardedIpConfig);
+            this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
             return this;
         }
         public RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs build() {

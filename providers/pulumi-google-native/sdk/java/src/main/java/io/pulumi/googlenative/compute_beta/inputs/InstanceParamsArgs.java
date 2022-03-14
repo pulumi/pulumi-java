@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceManagerTags")
-      private final @Nullable Input<Map<String,String>> resourceManagerTags;
+      private final @Nullable Output<Map<String,String>> resourceManagerTags;
 
-    public Input<Map<String,String>> getResourceManagerTags() {
-        return this.resourceManagerTags == null ? Input.empty() : this.resourceManagerTags;
+    public Output<Map<String,String>> getResourceManagerTags() {
+        return this.resourceManagerTags == null ? Output.empty() : this.resourceManagerTags;
     }
 
-    public InstanceParamsArgs(@Nullable Input<Map<String,String>> resourceManagerTags) {
+    public InstanceParamsArgs(@Nullable Output<Map<String,String>> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
     }
 
     private InstanceParamsArgs() {
-        this.resourceManagerTags = Input.empty();
+        this.resourceManagerTags = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> resourceManagerTags;
+        private @Nullable Output<Map<String,String>> resourceManagerTags;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceManagerTags = defaults.resourceManagerTags;
         }
 
-        public Builder resourceManagerTags(@Nullable Input<Map<String,String>> resourceManagerTags) {
+        public Builder resourceManagerTags(@Nullable Output<Map<String,String>> resourceManagerTags) {
             this.resourceManagerTags = resourceManagerTags;
             return this;
         }
 
         public Builder resourceManagerTags(@Nullable Map<String,String> resourceManagerTags) {
-            this.resourceManagerTags = Input.ofNullable(resourceManagerTags);
+            this.resourceManagerTags = Output.ofNullable(resourceManagerTags);
             return this;
         }
         public InstanceParamsArgs build() {

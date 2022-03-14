@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisKind", required=true)
-      private final Input<DiscoveryAnalysisKind> analysisKind;
+      private final Output<DiscoveryAnalysisKind> analysisKind;
 
-    public Input<DiscoveryAnalysisKind> getAnalysisKind() {
+    public Output<DiscoveryAnalysisKind> getAnalysisKind() {
         return this.analysisKind;
     }
 
-    public DiscoveryArgs(Input<DiscoveryAnalysisKind> analysisKind) {
+    public DiscoveryArgs(Output<DiscoveryAnalysisKind> analysisKind) {
         this.analysisKind = Objects.requireNonNull(analysisKind, "expected parameter 'analysisKind' to be non-null");
     }
 
     private DiscoveryArgs() {
-        this.analysisKind = Input.empty();
+        this.analysisKind = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DiscoveryAnalysisKind> analysisKind;
+        private Output<DiscoveryAnalysisKind> analysisKind;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.analysisKind = defaults.analysisKind;
         }
 
-        public Builder analysisKind(Input<DiscoveryAnalysisKind> analysisKind) {
+        public Builder analysisKind(Output<DiscoveryAnalysisKind> analysisKind) {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
 
         public Builder analysisKind(DiscoveryAnalysisKind analysisKind) {
-            this.analysisKind = Input.of(Objects.requireNonNull(analysisKind));
+            this.analysisKind = Output.of(Objects.requireNonNull(analysisKind));
             return this;
         }
         public DiscoveryArgs build() {

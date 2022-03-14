@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="checkInterval")
-      private final @Nullable Input<String> checkInterval;
+      private final @Nullable Output<String> checkInterval;
 
-    public Input<String> getCheckInterval() {
-        return this.checkInterval == null ? Input.empty() : this.checkInterval;
+    public Output<String> getCheckInterval() {
+        return this.checkInterval == null ? Output.empty() : this.checkInterval;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="failureThreshold")
-      private final @Nullable Input<Double> failureThreshold;
+      private final @Nullable Output<Double> failureThreshold;
 
-    public Input<Double> getFailureThreshold() {
-        return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
+    public Output<Double> getFailureThreshold() {
+        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="initialDelay")
-      private final @Nullable Input<String> initialDelay;
+      private final @Nullable Output<String> initialDelay;
 
-    public Input<String> getInitialDelay() {
-        return this.initialDelay == null ? Input.empty() : this.initialDelay;
+    public Output<String> getInitialDelay() {
+        return this.initialDelay == null ? Output.empty() : this.initialDelay;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -76,10 +76,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="successThreshold")
-      private final @Nullable Input<Double> successThreshold;
+      private final @Nullable Output<Double> successThreshold;
 
-    public Input<Double> getSuccessThreshold() {
-        return this.successThreshold == null ? Input.empty() : this.successThreshold;
+    public Output<Double> getSuccessThreshold() {
+        return this.successThreshold == null ? Output.empty() : this.successThreshold;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public FlexibleAppVersionLivenessCheckArgs(
-        @Nullable Input<String> checkInterval,
-        @Nullable Input<Double> failureThreshold,
-        @Nullable Input<String> host,
-        @Nullable Input<String> initialDelay,
-        Input<String> path,
-        @Nullable Input<Double> successThreshold,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<String> checkInterval,
+        @Nullable Output<Double> failureThreshold,
+        @Nullable Output<String> host,
+        @Nullable Output<String> initialDelay,
+        Output<String> path,
+        @Nullable Output<Double> successThreshold,
+        @Nullable Output<String> timeout) {
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;
         this.host = host;
@@ -111,13 +111,13 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
     }
 
     private FlexibleAppVersionLivenessCheckArgs() {
-        this.checkInterval = Input.empty();
-        this.failureThreshold = Input.empty();
-        this.host = Input.empty();
-        this.initialDelay = Input.empty();
-        this.path = Input.empty();
-        this.successThreshold = Input.empty();
-        this.timeout = Input.empty();
+        this.checkInterval = Output.empty();
+        this.failureThreshold = Output.empty();
+        this.host = Output.empty();
+        this.initialDelay = Output.empty();
+        this.path = Output.empty();
+        this.successThreshold = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> checkInterval;
-        private @Nullable Input<Double> failureThreshold;
-        private @Nullable Input<String> host;
-        private @Nullable Input<String> initialDelay;
-        private Input<String> path;
-        private @Nullable Input<Double> successThreshold;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<String> checkInterval;
+        private @Nullable Output<Double> failureThreshold;
+        private @Nullable Output<String> host;
+        private @Nullable Output<String> initialDelay;
+        private Output<String> path;
+        private @Nullable Output<Double> successThreshold;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class FlexibleAppVersionLivenessCheckArgs extends io.pulumi.resourc
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder checkInterval(@Nullable Input<String> checkInterval) {
+        public Builder checkInterval(@Nullable Output<String> checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
 
         public Builder checkInterval(@Nullable String checkInterval) {
-            this.checkInterval = Input.ofNullable(checkInterval);
+            this.checkInterval = Output.ofNullable(checkInterval);
             return this;
         }
 
-        public Builder failureThreshold(@Nullable Input<Double> failureThreshold) {
+        public Builder failureThreshold(@Nullable Output<Double> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
         public Builder failureThreshold(@Nullable Double failureThreshold) {
-            this.failureThreshold = Input.ofNullable(failureThreshold);
+            this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder initialDelay(@Nullable Input<String> initialDelay) {
+        public Builder initialDelay(@Nullable Output<String> initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
 
         public Builder initialDelay(@Nullable String initialDelay) {
-            this.initialDelay = Input.ofNullable(initialDelay);
+            this.initialDelay = Output.ofNullable(initialDelay);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder successThreshold(@Nullable Input<Double> successThreshold) {
+        public Builder successThreshold(@Nullable Output<Double> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
         public Builder successThreshold(@Nullable Double successThreshold) {
-            this.successThreshold = Input.ofNullable(successThreshold);
+            this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public FlexibleAppVersionLivenessCheckArgs build() {

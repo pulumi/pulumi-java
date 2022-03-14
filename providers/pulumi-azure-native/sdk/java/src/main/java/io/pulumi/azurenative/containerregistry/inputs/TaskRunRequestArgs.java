@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.OverrideTaskStepPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolName")
-      private final @Nullable Input<String> agentPoolName;
+      private final @Nullable Output<String> agentPoolName;
 
-    public Input<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
+    public Output<String> getAgentPoolName() {
+        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isArchiveEnabled")
-      private final @Nullable Input<Boolean> isArchiveEnabled;
+      private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Input<Boolean> getIsArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
+    public Output<Boolean> getIsArchiveEnabled() {
+        return this.isArchiveEnabled == null ? Output.empty() : this.isArchiveEnabled;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logTemplate")
-      private final @Nullable Input<String> logTemplate;
+      private final @Nullable Output<String> logTemplate;
 
-    public Input<String> getLogTemplate() {
-        return this.logTemplate == null ? Input.empty() : this.logTemplate;
+    public Output<String> getLogTemplate() {
+        return this.logTemplate == null ? Output.empty() : this.logTemplate;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideTaskStepProperties")
-      private final @Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
+      private final @Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
 
-    public Input<OverrideTaskStepPropertiesArgs> getOverrideTaskStepProperties() {
-        return this.overrideTaskStepProperties == null ? Input.empty() : this.overrideTaskStepProperties;
+    public Output<OverrideTaskStepPropertiesArgs> getOverrideTaskStepProperties() {
+        return this.overrideTaskStepProperties == null ? Output.empty() : this.overrideTaskStepProperties;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskId", required=true)
-      private final Input<String> taskId;
+      private final Output<String> taskId;
 
-    public Input<String> getTaskId() {
+    public Output<String> getTaskId() {
         return this.taskId;
     }
 
@@ -81,21 +81,21 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TaskRunRequestArgs(
-        @Nullable Input<String> agentPoolName,
-        @Nullable Input<Boolean> isArchiveEnabled,
-        @Nullable Input<String> logTemplate,
-        @Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties,
-        Input<String> taskId,
-        Input<String> type) {
+        @Nullable Output<String> agentPoolName,
+        @Nullable Output<Boolean> isArchiveEnabled,
+        @Nullable Output<String> logTemplate,
+        @Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties,
+        Output<String> taskId,
+        Output<String> type) {
         this.agentPoolName = agentPoolName;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Input.ofNullable(false) : isArchiveEnabled;
+        this.isArchiveEnabled = isArchiveEnabled == null ? Output.ofNullable(false) : isArchiveEnabled;
         this.logTemplate = logTemplate;
         this.overrideTaskStepProperties = overrideTaskStepProperties;
         this.taskId = Objects.requireNonNull(taskId, "expected parameter 'taskId' to be non-null");
@@ -103,12 +103,12 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskRunRequestArgs() {
-        this.agentPoolName = Input.empty();
-        this.isArchiveEnabled = Input.empty();
-        this.logTemplate = Input.empty();
-        this.overrideTaskStepProperties = Input.empty();
-        this.taskId = Input.empty();
-        this.type = Input.empty();
+        this.agentPoolName = Output.empty();
+        this.isArchiveEnabled = Output.empty();
+        this.logTemplate = Output.empty();
+        this.overrideTaskStepProperties = Output.empty();
+        this.taskId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agentPoolName;
-        private @Nullable Input<Boolean> isArchiveEnabled;
-        private @Nullable Input<String> logTemplate;
-        private @Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
-        private Input<String> taskId;
-        private Input<String> type;
+        private @Nullable Output<String> agentPoolName;
+        private @Nullable Output<Boolean> isArchiveEnabled;
+        private @Nullable Output<String> logTemplate;
+        private @Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
+        private Output<String> taskId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Input.ofNullable(agentPoolName);
+            this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder isArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = Input.ofNullable(isArchiveEnabled);
+            this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
             return this;
         }
 
-        public Builder logTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Input.ofNullable(logTemplate);
+            this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder overrideTaskStepProperties(@Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties) {
+        public Builder overrideTaskStepProperties(@Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties) {
             this.overrideTaskStepProperties = overrideTaskStepProperties;
             return this;
         }
 
         public Builder overrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesArgs overrideTaskStepProperties) {
-            this.overrideTaskStepProperties = Input.ofNullable(overrideTaskStepProperties);
+            this.overrideTaskStepProperties = Output.ofNullable(overrideTaskStepProperties);
             return this;
         }
 
-        public Builder taskId(Input<String> taskId) {
+        public Builder taskId(Output<String> taskId) {
             this.taskId = Objects.requireNonNull(taskId);
             return this;
         }
 
         public Builder taskId(String taskId) {
-            this.taskId = Input.of(Objects.requireNonNull(taskId));
+            this.taskId = Output.of(Objects.requireNonNull(taskId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TaskRunRequestArgs build() {

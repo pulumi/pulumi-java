@@ -19,7 +19,6 @@ import io.pulumi.azurenative.documentdb.outputs.PrivateEndpointConnectionRespons
 import io.pulumi.azurenative.documentdb.outputs.VirtualNetworkRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -561,38 +560,38 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabaseAccount(String name, DatabaseAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:DatabaseAccount", name, args == null ? DatabaseAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:DatabaseAccount", name, args == null ? DatabaseAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DatabaseAccount(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DatabaseAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:DatabaseAccount", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150401:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150408:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20151106:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160319:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160331:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20190801:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20191212:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200301:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200401:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200901:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210115:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210315:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:DatabaseAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:DatabaseAccount").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:DatabaseAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:DatabaseAccount").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -606,7 +605,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatabaseAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DatabaseAccount get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DatabaseAccount(name, id, options);
     }
 }

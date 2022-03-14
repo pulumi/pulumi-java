@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks;
 
 import io.pulumi.aws.opsworks.inputs.GangliaLayerCloudwatchConfigurationArgs;
 import io.pulumi.aws.opsworks.inputs.GangliaLayerEbsVolumeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAssignElasticIps")
-      private final @Nullable Input<Boolean> autoAssignElasticIps;
+      private final @Nullable Output<Boolean> autoAssignElasticIps;
 
-    public Input<Boolean> getAutoAssignElasticIps() {
-        return this.autoAssignElasticIps == null ? Input.empty() : this.autoAssignElasticIps;
+    public Output<Boolean> getAutoAssignElasticIps() {
+        return this.autoAssignElasticIps == null ? Output.empty() : this.autoAssignElasticIps;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAssignPublicIps")
-      private final @Nullable Input<Boolean> autoAssignPublicIps;
+      private final @Nullable Output<Boolean> autoAssignPublicIps;
 
-    public Input<Boolean> getAutoAssignPublicIps() {
-        return this.autoAssignPublicIps == null ? Input.empty() : this.autoAssignPublicIps;
+    public Output<Boolean> getAutoAssignPublicIps() {
+        return this.autoAssignPublicIps == null ? Output.empty() : this.autoAssignPublicIps;
     }
 
     /**
@@ -47,31 +47,31 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoHealing")
-      private final @Nullable Input<Boolean> autoHealing;
+      private final @Nullable Output<Boolean> autoHealing;
 
-    public Input<Boolean> getAutoHealing() {
-        return this.autoHealing == null ? Input.empty() : this.autoHealing;
+    public Output<Boolean> getAutoHealing() {
+        return this.autoHealing == null ? Output.empty() : this.autoHealing;
     }
 
     @InputImport(name="cloudwatchConfiguration")
-      private final @Nullable Input<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
+      private final @Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Input<GangliaLayerCloudwatchConfigurationArgs> getCloudwatchConfiguration() {
-        return this.cloudwatchConfiguration == null ? Input.empty() : this.cloudwatchConfiguration;
+    public Output<GangliaLayerCloudwatchConfigurationArgs> getCloudwatchConfiguration() {
+        return this.cloudwatchConfiguration == null ? Output.empty() : this.cloudwatchConfiguration;
     }
 
     @InputImport(name="customConfigureRecipes")
-      private final @Nullable Input<List<String>> customConfigureRecipes;
+      private final @Nullable Output<List<String>> customConfigureRecipes;
 
-    public Input<List<String>> getCustomConfigureRecipes() {
-        return this.customConfigureRecipes == null ? Input.empty() : this.customConfigureRecipes;
+    public Output<List<String>> getCustomConfigureRecipes() {
+        return this.customConfigureRecipes == null ? Output.empty() : this.customConfigureRecipes;
     }
 
     @InputImport(name="customDeployRecipes")
-      private final @Nullable Input<List<String>> customDeployRecipes;
+      private final @Nullable Output<List<String>> customDeployRecipes;
 
-    public Input<List<String>> getCustomDeployRecipes() {
-        return this.customDeployRecipes == null ? Input.empty() : this.customDeployRecipes;
+    public Output<List<String>> getCustomDeployRecipes() {
+        return this.customDeployRecipes == null ? Output.empty() : this.customDeployRecipes;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customInstanceProfileArn")
-      private final @Nullable Input<String> customInstanceProfileArn;
+      private final @Nullable Output<String> customInstanceProfileArn;
 
-    public Input<String> getCustomInstanceProfileArn() {
-        return this.customInstanceProfileArn == null ? Input.empty() : this.customInstanceProfileArn;
+    public Output<String> getCustomInstanceProfileArn() {
+        return this.customInstanceProfileArn == null ? Output.empty() : this.customInstanceProfileArn;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customJson")
-      private final @Nullable Input<String> customJson;
+      private final @Nullable Output<String> customJson;
 
-    public Input<String> getCustomJson() {
-        return this.customJson == null ? Input.empty() : this.customJson;
+    public Output<String> getCustomJson() {
+        return this.customJson == null ? Output.empty() : this.customJson;
     }
 
     /**
@@ -101,31 +101,31 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customSecurityGroupIds")
-      private final @Nullable Input<List<String>> customSecurityGroupIds;
+      private final @Nullable Output<List<String>> customSecurityGroupIds;
 
-    public Input<List<String>> getCustomSecurityGroupIds() {
-        return this.customSecurityGroupIds == null ? Input.empty() : this.customSecurityGroupIds;
+    public Output<List<String>> getCustomSecurityGroupIds() {
+        return this.customSecurityGroupIds == null ? Output.empty() : this.customSecurityGroupIds;
     }
 
     @InputImport(name="customSetupRecipes")
-      private final @Nullable Input<List<String>> customSetupRecipes;
+      private final @Nullable Output<List<String>> customSetupRecipes;
 
-    public Input<List<String>> getCustomSetupRecipes() {
-        return this.customSetupRecipes == null ? Input.empty() : this.customSetupRecipes;
+    public Output<List<String>> getCustomSetupRecipes() {
+        return this.customSetupRecipes == null ? Output.empty() : this.customSetupRecipes;
     }
 
     @InputImport(name="customShutdownRecipes")
-      private final @Nullable Input<List<String>> customShutdownRecipes;
+      private final @Nullable Output<List<String>> customShutdownRecipes;
 
-    public Input<List<String>> getCustomShutdownRecipes() {
-        return this.customShutdownRecipes == null ? Input.empty() : this.customShutdownRecipes;
+    public Output<List<String>> getCustomShutdownRecipes() {
+        return this.customShutdownRecipes == null ? Output.empty() : this.customShutdownRecipes;
     }
 
     @InputImport(name="customUndeployRecipes")
-      private final @Nullable Input<List<String>> customUndeployRecipes;
+      private final @Nullable Output<List<String>> customUndeployRecipes;
 
-    public Input<List<String>> getCustomUndeployRecipes() {
-        return this.customUndeployRecipes == null ? Input.empty() : this.customUndeployRecipes;
+    public Output<List<String>> getCustomUndeployRecipes() {
+        return this.customUndeployRecipes == null ? Output.empty() : this.customUndeployRecipes;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drainElbOnShutdown")
-      private final @Nullable Input<Boolean> drainElbOnShutdown;
+      private final @Nullable Output<Boolean> drainElbOnShutdown;
 
-    public Input<Boolean> getDrainElbOnShutdown() {
-        return this.drainElbOnShutdown == null ? Input.empty() : this.drainElbOnShutdown;
+    public Output<Boolean> getDrainElbOnShutdown() {
+        return this.drainElbOnShutdown == null ? Output.empty() : this.drainElbOnShutdown;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsVolumes")
-      private final @Nullable Input<List<GangliaLayerEbsVolumeArgs>> ebsVolumes;
+      private final @Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes;
 
-    public Input<List<GangliaLayerEbsVolumeArgs>> getEbsVolumes() {
-        return this.ebsVolumes == null ? Input.empty() : this.ebsVolumes;
+    public Output<List<GangliaLayerEbsVolumeArgs>> getEbsVolumes() {
+        return this.ebsVolumes == null ? Output.empty() : this.ebsVolumes;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticLoadBalancer")
-      private final @Nullable Input<String> elasticLoadBalancer;
+      private final @Nullable Output<String> elasticLoadBalancer;
 
-    public Input<String> getElasticLoadBalancer() {
-        return this.elasticLoadBalancer == null ? Input.empty() : this.elasticLoadBalancer;
+    public Output<String> getElasticLoadBalancer() {
+        return this.elasticLoadBalancer == null ? Output.empty() : this.elasticLoadBalancer;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installUpdatesOnBoot")
-      private final @Nullable Input<Boolean> installUpdatesOnBoot;
+      private final @Nullable Output<Boolean> installUpdatesOnBoot;
 
-    public Input<Boolean> getInstallUpdatesOnBoot() {
-        return this.installUpdatesOnBoot == null ? Input.empty() : this.installUpdatesOnBoot;
+    public Output<Boolean> getInstallUpdatesOnBoot() {
+        return this.installUpdatesOnBoot == null ? Output.empty() : this.installUpdatesOnBoot;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceShutdownTimeout")
-      private final @Nullable Input<Integer> instanceShutdownTimeout;
+      private final @Nullable Output<Integer> instanceShutdownTimeout;
 
-    public Input<Integer> getInstanceShutdownTimeout() {
-        return this.instanceShutdownTimeout == null ? Input.empty() : this.instanceShutdownTimeout;
+    public Output<Integer> getInstanceShutdownTimeout() {
+        return this.instanceShutdownTimeout == null ? Output.empty() : this.instanceShutdownTimeout;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -199,9 +199,9 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -210,9 +210,9 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId", required=true)
-      private final Input<String> stackId;
+      private final Output<String> stackId;
 
-    public Input<String> getStackId() {
+    public Output<String> getStackId() {
         return this.stackId;
     }
 
@@ -221,10 +221,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemPackages")
-      private final @Nullable Input<List<String>> systemPackages;
+      private final @Nullable Output<List<String>> systemPackages;
 
-    public Input<List<String>> getSystemPackages() {
-        return this.systemPackages == null ? Input.empty() : this.systemPackages;
+    public Output<List<String>> getSystemPackages() {
+        return this.systemPackages == null ? Output.empty() : this.systemPackages;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -243,10 +243,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -254,10 +254,10 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useEbsOptimizedInstances")
-      private final @Nullable Input<Boolean> useEbsOptimizedInstances;
+      private final @Nullable Output<Boolean> useEbsOptimizedInstances;
 
-    public Input<Boolean> getUseEbsOptimizedInstances() {
-        return this.useEbsOptimizedInstances == null ? Input.empty() : this.useEbsOptimizedInstances;
+    public Output<Boolean> getUseEbsOptimizedInstances() {
+        return this.useEbsOptimizedInstances == null ? Output.empty() : this.useEbsOptimizedInstances;
     }
 
     /**
@@ -265,38 +265,38 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public GangliaLayerArgs(
-        @Nullable Input<Boolean> autoAssignElasticIps,
-        @Nullable Input<Boolean> autoAssignPublicIps,
-        @Nullable Input<Boolean> autoHealing,
-        @Nullable Input<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration,
-        @Nullable Input<List<String>> customConfigureRecipes,
-        @Nullable Input<List<String>> customDeployRecipes,
-        @Nullable Input<String> customInstanceProfileArn,
-        @Nullable Input<String> customJson,
-        @Nullable Input<List<String>> customSecurityGroupIds,
-        @Nullable Input<List<String>> customSetupRecipes,
-        @Nullable Input<List<String>> customShutdownRecipes,
-        @Nullable Input<List<String>> customUndeployRecipes,
-        @Nullable Input<Boolean> drainElbOnShutdown,
-        @Nullable Input<List<GangliaLayerEbsVolumeArgs>> ebsVolumes,
-        @Nullable Input<String> elasticLoadBalancer,
-        @Nullable Input<Boolean> installUpdatesOnBoot,
-        @Nullable Input<Integer> instanceShutdownTimeout,
-        @Nullable Input<String> name,
-        Input<String> password,
-        Input<String> stackId,
-        @Nullable Input<List<String>> systemPackages,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> url,
-        @Nullable Input<Boolean> useEbsOptimizedInstances,
-        @Nullable Input<String> username) {
+        @Nullable Output<Boolean> autoAssignElasticIps,
+        @Nullable Output<Boolean> autoAssignPublicIps,
+        @Nullable Output<Boolean> autoHealing,
+        @Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration,
+        @Nullable Output<List<String>> customConfigureRecipes,
+        @Nullable Output<List<String>> customDeployRecipes,
+        @Nullable Output<String> customInstanceProfileArn,
+        @Nullable Output<String> customJson,
+        @Nullable Output<List<String>> customSecurityGroupIds,
+        @Nullable Output<List<String>> customSetupRecipes,
+        @Nullable Output<List<String>> customShutdownRecipes,
+        @Nullable Output<List<String>> customUndeployRecipes,
+        @Nullable Output<Boolean> drainElbOnShutdown,
+        @Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes,
+        @Nullable Output<String> elasticLoadBalancer,
+        @Nullable Output<Boolean> installUpdatesOnBoot,
+        @Nullable Output<Integer> instanceShutdownTimeout,
+        @Nullable Output<String> name,
+        Output<String> password,
+        Output<String> stackId,
+        @Nullable Output<List<String>> systemPackages,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> url,
+        @Nullable Output<Boolean> useEbsOptimizedInstances,
+        @Nullable Output<String> username) {
         this.autoAssignElasticIps = autoAssignElasticIps;
         this.autoAssignPublicIps = autoAssignPublicIps;
         this.autoHealing = autoHealing;
@@ -325,31 +325,31 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GangliaLayerArgs() {
-        this.autoAssignElasticIps = Input.empty();
-        this.autoAssignPublicIps = Input.empty();
-        this.autoHealing = Input.empty();
-        this.cloudwatchConfiguration = Input.empty();
-        this.customConfigureRecipes = Input.empty();
-        this.customDeployRecipes = Input.empty();
-        this.customInstanceProfileArn = Input.empty();
-        this.customJson = Input.empty();
-        this.customSecurityGroupIds = Input.empty();
-        this.customSetupRecipes = Input.empty();
-        this.customShutdownRecipes = Input.empty();
-        this.customUndeployRecipes = Input.empty();
-        this.drainElbOnShutdown = Input.empty();
-        this.ebsVolumes = Input.empty();
-        this.elasticLoadBalancer = Input.empty();
-        this.installUpdatesOnBoot = Input.empty();
-        this.instanceShutdownTimeout = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.stackId = Input.empty();
-        this.systemPackages = Input.empty();
-        this.tags = Input.empty();
-        this.url = Input.empty();
-        this.useEbsOptimizedInstances = Input.empty();
-        this.username = Input.empty();
+        this.autoAssignElasticIps = Output.empty();
+        this.autoAssignPublicIps = Output.empty();
+        this.autoHealing = Output.empty();
+        this.cloudwatchConfiguration = Output.empty();
+        this.customConfigureRecipes = Output.empty();
+        this.customDeployRecipes = Output.empty();
+        this.customInstanceProfileArn = Output.empty();
+        this.customJson = Output.empty();
+        this.customSecurityGroupIds = Output.empty();
+        this.customSetupRecipes = Output.empty();
+        this.customShutdownRecipes = Output.empty();
+        this.customUndeployRecipes = Output.empty();
+        this.drainElbOnShutdown = Output.empty();
+        this.ebsVolumes = Output.empty();
+        this.elasticLoadBalancer = Output.empty();
+        this.installUpdatesOnBoot = Output.empty();
+        this.instanceShutdownTimeout = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.stackId = Output.empty();
+        this.systemPackages = Output.empty();
+        this.tags = Output.empty();
+        this.url = Output.empty();
+        this.useEbsOptimizedInstances = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -361,31 +361,31 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoAssignElasticIps;
-        private @Nullable Input<Boolean> autoAssignPublicIps;
-        private @Nullable Input<Boolean> autoHealing;
-        private @Nullable Input<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
-        private @Nullable Input<List<String>> customConfigureRecipes;
-        private @Nullable Input<List<String>> customDeployRecipes;
-        private @Nullable Input<String> customInstanceProfileArn;
-        private @Nullable Input<String> customJson;
-        private @Nullable Input<List<String>> customSecurityGroupIds;
-        private @Nullable Input<List<String>> customSetupRecipes;
-        private @Nullable Input<List<String>> customShutdownRecipes;
-        private @Nullable Input<List<String>> customUndeployRecipes;
-        private @Nullable Input<Boolean> drainElbOnShutdown;
-        private @Nullable Input<List<GangliaLayerEbsVolumeArgs>> ebsVolumes;
-        private @Nullable Input<String> elasticLoadBalancer;
-        private @Nullable Input<Boolean> installUpdatesOnBoot;
-        private @Nullable Input<Integer> instanceShutdownTimeout;
-        private @Nullable Input<String> name;
-        private Input<String> password;
-        private Input<String> stackId;
-        private @Nullable Input<List<String>> systemPackages;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> url;
-        private @Nullable Input<Boolean> useEbsOptimizedInstances;
-        private @Nullable Input<String> username;
+        private @Nullable Output<Boolean> autoAssignElasticIps;
+        private @Nullable Output<Boolean> autoAssignPublicIps;
+        private @Nullable Output<Boolean> autoHealing;
+        private @Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
+        private @Nullable Output<List<String>> customConfigureRecipes;
+        private @Nullable Output<List<String>> customDeployRecipes;
+        private @Nullable Output<String> customInstanceProfileArn;
+        private @Nullable Output<String> customJson;
+        private @Nullable Output<List<String>> customSecurityGroupIds;
+        private @Nullable Output<List<String>> customSetupRecipes;
+        private @Nullable Output<List<String>> customShutdownRecipes;
+        private @Nullable Output<List<String>> customUndeployRecipes;
+        private @Nullable Output<Boolean> drainElbOnShutdown;
+        private @Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes;
+        private @Nullable Output<String> elasticLoadBalancer;
+        private @Nullable Output<Boolean> installUpdatesOnBoot;
+        private @Nullable Output<Integer> instanceShutdownTimeout;
+        private @Nullable Output<String> name;
+        private Output<String> password;
+        private Output<String> stackId;
+        private @Nullable Output<List<String>> systemPackages;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> url;
+        private @Nullable Output<Boolean> useEbsOptimizedInstances;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -420,253 +420,253 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder autoAssignElasticIps(@Nullable Input<Boolean> autoAssignElasticIps) {
+        public Builder autoAssignElasticIps(@Nullable Output<Boolean> autoAssignElasticIps) {
             this.autoAssignElasticIps = autoAssignElasticIps;
             return this;
         }
 
         public Builder autoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
-            this.autoAssignElasticIps = Input.ofNullable(autoAssignElasticIps);
+            this.autoAssignElasticIps = Output.ofNullable(autoAssignElasticIps);
             return this;
         }
 
-        public Builder autoAssignPublicIps(@Nullable Input<Boolean> autoAssignPublicIps) {
+        public Builder autoAssignPublicIps(@Nullable Output<Boolean> autoAssignPublicIps) {
             this.autoAssignPublicIps = autoAssignPublicIps;
             return this;
         }
 
         public Builder autoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
-            this.autoAssignPublicIps = Input.ofNullable(autoAssignPublicIps);
+            this.autoAssignPublicIps = Output.ofNullable(autoAssignPublicIps);
             return this;
         }
 
-        public Builder autoHealing(@Nullable Input<Boolean> autoHealing) {
+        public Builder autoHealing(@Nullable Output<Boolean> autoHealing) {
             this.autoHealing = autoHealing;
             return this;
         }
 
         public Builder autoHealing(@Nullable Boolean autoHealing) {
-            this.autoHealing = Input.ofNullable(autoHealing);
+            this.autoHealing = Output.ofNullable(autoHealing);
             return this;
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Input<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             this.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
         public Builder cloudwatchConfiguration(@Nullable GangliaLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
-            this.cloudwatchConfiguration = Input.ofNullable(cloudwatchConfiguration);
+            this.cloudwatchConfiguration = Output.ofNullable(cloudwatchConfiguration);
             return this;
         }
 
-        public Builder customConfigureRecipes(@Nullable Input<List<String>> customConfigureRecipes) {
+        public Builder customConfigureRecipes(@Nullable Output<List<String>> customConfigureRecipes) {
             this.customConfigureRecipes = customConfigureRecipes;
             return this;
         }
 
         public Builder customConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
-            this.customConfigureRecipes = Input.ofNullable(customConfigureRecipes);
+            this.customConfigureRecipes = Output.ofNullable(customConfigureRecipes);
             return this;
         }
 
-        public Builder customDeployRecipes(@Nullable Input<List<String>> customDeployRecipes) {
+        public Builder customDeployRecipes(@Nullable Output<List<String>> customDeployRecipes) {
             this.customDeployRecipes = customDeployRecipes;
             return this;
         }
 
         public Builder customDeployRecipes(@Nullable List<String> customDeployRecipes) {
-            this.customDeployRecipes = Input.ofNullable(customDeployRecipes);
+            this.customDeployRecipes = Output.ofNullable(customDeployRecipes);
             return this;
         }
 
-        public Builder customInstanceProfileArn(@Nullable Input<String> customInstanceProfileArn) {
+        public Builder customInstanceProfileArn(@Nullable Output<String> customInstanceProfileArn) {
             this.customInstanceProfileArn = customInstanceProfileArn;
             return this;
         }
 
         public Builder customInstanceProfileArn(@Nullable String customInstanceProfileArn) {
-            this.customInstanceProfileArn = Input.ofNullable(customInstanceProfileArn);
+            this.customInstanceProfileArn = Output.ofNullable(customInstanceProfileArn);
             return this;
         }
 
-        public Builder customJson(@Nullable Input<String> customJson) {
+        public Builder customJson(@Nullable Output<String> customJson) {
             this.customJson = customJson;
             return this;
         }
 
         public Builder customJson(@Nullable String customJson) {
-            this.customJson = Input.ofNullable(customJson);
+            this.customJson = Output.ofNullable(customJson);
             return this;
         }
 
-        public Builder customSecurityGroupIds(@Nullable Input<List<String>> customSecurityGroupIds) {
+        public Builder customSecurityGroupIds(@Nullable Output<List<String>> customSecurityGroupIds) {
             this.customSecurityGroupIds = customSecurityGroupIds;
             return this;
         }
 
         public Builder customSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
-            this.customSecurityGroupIds = Input.ofNullable(customSecurityGroupIds);
+            this.customSecurityGroupIds = Output.ofNullable(customSecurityGroupIds);
             return this;
         }
 
-        public Builder customSetupRecipes(@Nullable Input<List<String>> customSetupRecipes) {
+        public Builder customSetupRecipes(@Nullable Output<List<String>> customSetupRecipes) {
             this.customSetupRecipes = customSetupRecipes;
             return this;
         }
 
         public Builder customSetupRecipes(@Nullable List<String> customSetupRecipes) {
-            this.customSetupRecipes = Input.ofNullable(customSetupRecipes);
+            this.customSetupRecipes = Output.ofNullable(customSetupRecipes);
             return this;
         }
 
-        public Builder customShutdownRecipes(@Nullable Input<List<String>> customShutdownRecipes) {
+        public Builder customShutdownRecipes(@Nullable Output<List<String>> customShutdownRecipes) {
             this.customShutdownRecipes = customShutdownRecipes;
             return this;
         }
 
         public Builder customShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
-            this.customShutdownRecipes = Input.ofNullable(customShutdownRecipes);
+            this.customShutdownRecipes = Output.ofNullable(customShutdownRecipes);
             return this;
         }
 
-        public Builder customUndeployRecipes(@Nullable Input<List<String>> customUndeployRecipes) {
+        public Builder customUndeployRecipes(@Nullable Output<List<String>> customUndeployRecipes) {
             this.customUndeployRecipes = customUndeployRecipes;
             return this;
         }
 
         public Builder customUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
-            this.customUndeployRecipes = Input.ofNullable(customUndeployRecipes);
+            this.customUndeployRecipes = Output.ofNullable(customUndeployRecipes);
             return this;
         }
 
-        public Builder drainElbOnShutdown(@Nullable Input<Boolean> drainElbOnShutdown) {
+        public Builder drainElbOnShutdown(@Nullable Output<Boolean> drainElbOnShutdown) {
             this.drainElbOnShutdown = drainElbOnShutdown;
             return this;
         }
 
         public Builder drainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
-            this.drainElbOnShutdown = Input.ofNullable(drainElbOnShutdown);
+            this.drainElbOnShutdown = Output.ofNullable(drainElbOnShutdown);
             return this;
         }
 
-        public Builder ebsVolumes(@Nullable Input<List<GangliaLayerEbsVolumeArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes) {
             this.ebsVolumes = ebsVolumes;
             return this;
         }
 
         public Builder ebsVolumes(@Nullable List<GangliaLayerEbsVolumeArgs> ebsVolumes) {
-            this.ebsVolumes = Input.ofNullable(ebsVolumes);
+            this.ebsVolumes = Output.ofNullable(ebsVolumes);
             return this;
         }
 
-        public Builder elasticLoadBalancer(@Nullable Input<String> elasticLoadBalancer) {
+        public Builder elasticLoadBalancer(@Nullable Output<String> elasticLoadBalancer) {
             this.elasticLoadBalancer = elasticLoadBalancer;
             return this;
         }
 
         public Builder elasticLoadBalancer(@Nullable String elasticLoadBalancer) {
-            this.elasticLoadBalancer = Input.ofNullable(elasticLoadBalancer);
+            this.elasticLoadBalancer = Output.ofNullable(elasticLoadBalancer);
             return this;
         }
 
-        public Builder installUpdatesOnBoot(@Nullable Input<Boolean> installUpdatesOnBoot) {
+        public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
             this.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
 
         public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
-            this.installUpdatesOnBoot = Input.ofNullable(installUpdatesOnBoot);
+            this.installUpdatesOnBoot = Output.ofNullable(installUpdatesOnBoot);
             return this;
         }
 
-        public Builder instanceShutdownTimeout(@Nullable Input<Integer> instanceShutdownTimeout) {
+        public Builder instanceShutdownTimeout(@Nullable Output<Integer> instanceShutdownTimeout) {
             this.instanceShutdownTimeout = instanceShutdownTimeout;
             return this;
         }
 
         public Builder instanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
-            this.instanceShutdownTimeout = Input.ofNullable(instanceShutdownTimeout);
+            this.instanceShutdownTimeout = Output.ofNullable(instanceShutdownTimeout);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder stackId(Input<String> stackId) {
+        public Builder stackId(Output<String> stackId) {
             this.stackId = Objects.requireNonNull(stackId);
             return this;
         }
 
         public Builder stackId(String stackId) {
-            this.stackId = Input.of(Objects.requireNonNull(stackId));
+            this.stackId = Output.of(Objects.requireNonNull(stackId));
             return this;
         }
 
-        public Builder systemPackages(@Nullable Input<List<String>> systemPackages) {
+        public Builder systemPackages(@Nullable Output<List<String>> systemPackages) {
             this.systemPackages = systemPackages;
             return this;
         }
 
         public Builder systemPackages(@Nullable List<String> systemPackages) {
-            this.systemPackages = Input.ofNullable(systemPackages);
+            this.systemPackages = Output.ofNullable(systemPackages);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder useEbsOptimizedInstances(@Nullable Input<Boolean> useEbsOptimizedInstances) {
+        public Builder useEbsOptimizedInstances(@Nullable Output<Boolean> useEbsOptimizedInstances) {
             this.useEbsOptimizedInstances = useEbsOptimizedInstances;
             return this;
         }
 
         public Builder useEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
-            this.useEbsOptimizedInstances = Input.ofNullable(useEbsOptimizedInstances);
+            this.useEbsOptimizedInstances = Output.ofNullable(useEbsOptimizedInstances);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public GangliaLayerArgs build() {

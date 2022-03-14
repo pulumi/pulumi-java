@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectorType", required=true)
-      private final Input<String> connectorType;
+      private final Output<String> connectorType;
 
-    public Input<String> getConnectorType() {
+    public Output<String> getConnectorType() {
         return this.connectorType;
     }
 
@@ -31,10 +31,10 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="domains")
-      private final @Nullable Input<List<String>> domains;
+      private final @Nullable Output<List<String>> domains;
 
-    public Input<List<String>> getDomains() {
-        return this.domains == null ? Input.empty() : this.domains;
+    public Output<List<String>> getDomains() {
+        return this.domains == null ? Output.empty() : this.domains;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceIdentifier")
-      private final @Nullable Input<String> resourceIdentifier;
+      private final @Nullable Output<String> resourceIdentifier;
 
-    public Input<String> getResourceIdentifier() {
-        return this.resourceIdentifier == null ? Input.empty() : this.resourceIdentifier;
+    public Output<String> getResourceIdentifier() {
+        return this.resourceIdentifier == null ? Output.empty() : this.resourceIdentifier;
     }
 
     public StackStorageConnectorGetArgs(
-        Input<String> connectorType,
-        @Nullable Input<List<String>> domains,
-        @Nullable Input<String> resourceIdentifier) {
+        Output<String> connectorType,
+        @Nullable Output<List<String>> domains,
+        @Nullable Output<String> resourceIdentifier) {
         this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
         this.domains = domains;
         this.resourceIdentifier = resourceIdentifier;
     }
 
     private StackStorageConnectorGetArgs() {
-        this.connectorType = Input.empty();
-        this.domains = Input.empty();
-        this.resourceIdentifier = Input.empty();
+        this.connectorType = Output.empty();
+        this.domains = Output.empty();
+        this.resourceIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> connectorType;
-        private @Nullable Input<List<String>> domains;
-        private @Nullable Input<String> resourceIdentifier;
+        private Output<String> connectorType;
+        private @Nullable Output<List<String>> domains;
+        private @Nullable Output<String> resourceIdentifier;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
     	      this.resourceIdentifier = defaults.resourceIdentifier;
         }
 
-        public Builder connectorType(Input<String> connectorType) {
+        public Builder connectorType(Output<String> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
         public Builder connectorType(String connectorType) {
-            this.connectorType = Input.of(Objects.requireNonNull(connectorType));
+            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder domains(@Nullable Input<List<String>> domains) {
+        public Builder domains(@Nullable Output<List<String>> domains) {
             this.domains = domains;
             return this;
         }
 
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Input.ofNullable(domains);
+            this.domains = Output.ofNullable(domains);
             return this;
         }
 
-        public Builder resourceIdentifier(@Nullable Input<String> resourceIdentifier) {
+        public Builder resourceIdentifier(@Nullable Output<String> resourceIdentifier) {
             this.resourceIdentifier = resourceIdentifier;
             return this;
         }
 
         public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
-            this.resourceIdentifier = Input.ofNullable(resourceIdentifier);
+            this.resourceIdentifier = Output.ofNullable(resourceIdentifier);
             return this;
         }
         public StackStorageConnectorGetArgs build() {

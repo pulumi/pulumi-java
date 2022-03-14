@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.aws.cognito.inputs.UserPoolClientAnalyticsConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolClientTokenValidityUnitsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTokenValidity")
-      private final @Nullable Input<Integer> accessTokenValidity;
+      private final @Nullable Output<Integer> accessTokenValidity;
 
-    public Input<Integer> getAccessTokenValidity() {
-        return this.accessTokenValidity == null ? Input.empty() : this.accessTokenValidity;
+    public Output<Integer> getAccessTokenValidity() {
+        return this.accessTokenValidity == null ? Output.empty() : this.accessTokenValidity;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOauthFlows")
-      private final @Nullable Input<List<String>> allowedOauthFlows;
+      private final @Nullable Output<List<String>> allowedOauthFlows;
 
-    public Input<List<String>> getAllowedOauthFlows() {
-        return this.allowedOauthFlows == null ? Input.empty() : this.allowedOauthFlows;
+    public Output<List<String>> getAllowedOauthFlows() {
+        return this.allowedOauthFlows == null ? Output.empty() : this.allowedOauthFlows;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOauthFlowsUserPoolClient")
-      private final @Nullable Input<Boolean> allowedOauthFlowsUserPoolClient;
+      private final @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
 
-    public Input<Boolean> getAllowedOauthFlowsUserPoolClient() {
-        return this.allowedOauthFlowsUserPoolClient == null ? Input.empty() : this.allowedOauthFlowsUserPoolClient;
+    public Output<Boolean> getAllowedOauthFlowsUserPoolClient() {
+        return this.allowedOauthFlowsUserPoolClient == null ? Output.empty() : this.allowedOauthFlowsUserPoolClient;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOauthScopes")
-      private final @Nullable Input<List<String>> allowedOauthScopes;
+      private final @Nullable Output<List<String>> allowedOauthScopes;
 
-    public Input<List<String>> getAllowedOauthScopes() {
-        return this.allowedOauthScopes == null ? Input.empty() : this.allowedOauthScopes;
+    public Output<List<String>> getAllowedOauthScopes() {
+        return this.allowedOauthScopes == null ? Output.empty() : this.allowedOauthScopes;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsConfiguration")
-      private final @Nullable Input<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
+      private final @Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
 
-    public Input<UserPoolClientAnalyticsConfigurationArgs> getAnalyticsConfiguration() {
-        return this.analyticsConfiguration == null ? Input.empty() : this.analyticsConfiguration;
+    public Output<UserPoolClientAnalyticsConfigurationArgs> getAnalyticsConfiguration() {
+        return this.analyticsConfiguration == null ? Output.empty() : this.analyticsConfiguration;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callbackUrls")
-      private final @Nullable Input<List<String>> callbackUrls;
+      private final @Nullable Output<List<String>> callbackUrls;
 
-    public Input<List<String>> getCallbackUrls() {
-        return this.callbackUrls == null ? Input.empty() : this.callbackUrls;
+    public Output<List<String>> getCallbackUrls() {
+        return this.callbackUrls == null ? Output.empty() : this.callbackUrls;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRedirectUri")
-      private final @Nullable Input<String> defaultRedirectUri;
+      private final @Nullable Output<String> defaultRedirectUri;
 
-    public Input<String> getDefaultRedirectUri() {
-        return this.defaultRedirectUri == null ? Input.empty() : this.defaultRedirectUri;
+    public Output<String> getDefaultRedirectUri() {
+        return this.defaultRedirectUri == null ? Output.empty() : this.defaultRedirectUri;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTokenRevocation")
-      private final @Nullable Input<Boolean> enableTokenRevocation;
+      private final @Nullable Output<Boolean> enableTokenRevocation;
 
-    public Input<Boolean> getEnableTokenRevocation() {
-        return this.enableTokenRevocation == null ? Input.empty() : this.enableTokenRevocation;
+    public Output<Boolean> getEnableTokenRevocation() {
+        return this.enableTokenRevocation == null ? Output.empty() : this.enableTokenRevocation;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="explicitAuthFlows")
-      private final @Nullable Input<List<String>> explicitAuthFlows;
+      private final @Nullable Output<List<String>> explicitAuthFlows;
 
-    public Input<List<String>> getExplicitAuthFlows() {
-        return this.explicitAuthFlows == null ? Input.empty() : this.explicitAuthFlows;
+    public Output<List<String>> getExplicitAuthFlows() {
+        return this.explicitAuthFlows == null ? Output.empty() : this.explicitAuthFlows;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generateSecret")
-      private final @Nullable Input<Boolean> generateSecret;
+      private final @Nullable Output<Boolean> generateSecret;
 
-    public Input<Boolean> getGenerateSecret() {
-        return this.generateSecret == null ? Input.empty() : this.generateSecret;
+    public Output<Boolean> getGenerateSecret() {
+        return this.generateSecret == null ? Output.empty() : this.generateSecret;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idTokenValidity")
-      private final @Nullable Input<Integer> idTokenValidity;
+      private final @Nullable Output<Integer> idTokenValidity;
 
-    public Input<Integer> getIdTokenValidity() {
-        return this.idTokenValidity == null ? Input.empty() : this.idTokenValidity;
+    public Output<Integer> getIdTokenValidity() {
+        return this.idTokenValidity == null ? Output.empty() : this.idTokenValidity;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logoutUrls")
-      private final @Nullable Input<List<String>> logoutUrls;
+      private final @Nullable Output<List<String>> logoutUrls;
 
-    public Input<List<String>> getLogoutUrls() {
-        return this.logoutUrls == null ? Input.empty() : this.logoutUrls;
+    public Output<List<String>> getLogoutUrls() {
+        return this.logoutUrls == null ? Output.empty() : this.logoutUrls;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preventUserExistenceErrors")
-      private final @Nullable Input<String> preventUserExistenceErrors;
+      private final @Nullable Output<String> preventUserExistenceErrors;
 
-    public Input<String> getPreventUserExistenceErrors() {
-        return this.preventUserExistenceErrors == null ? Input.empty() : this.preventUserExistenceErrors;
+    public Output<String> getPreventUserExistenceErrors() {
+        return this.preventUserExistenceErrors == null ? Output.empty() : this.preventUserExistenceErrors;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readAttributes")
-      private final @Nullable Input<List<String>> readAttributes;
+      private final @Nullable Output<List<String>> readAttributes;
 
-    public Input<List<String>> getReadAttributes() {
-        return this.readAttributes == null ? Input.empty() : this.readAttributes;
+    public Output<List<String>> getReadAttributes() {
+        return this.readAttributes == null ? Output.empty() : this.readAttributes;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshTokenValidity")
-      private final @Nullable Input<Integer> refreshTokenValidity;
+      private final @Nullable Output<Integer> refreshTokenValidity;
 
-    public Input<Integer> getRefreshTokenValidity() {
-        return this.refreshTokenValidity == null ? Input.empty() : this.refreshTokenValidity;
+    public Output<Integer> getRefreshTokenValidity() {
+        return this.refreshTokenValidity == null ? Output.empty() : this.refreshTokenValidity;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedIdentityProviders")
-      private final @Nullable Input<List<String>> supportedIdentityProviders;
+      private final @Nullable Output<List<String>> supportedIdentityProviders;
 
-    public Input<List<String>> getSupportedIdentityProviders() {
-        return this.supportedIdentityProviders == null ? Input.empty() : this.supportedIdentityProviders;
+    public Output<List<String>> getSupportedIdentityProviders() {
+        return this.supportedIdentityProviders == null ? Output.empty() : this.supportedIdentityProviders;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenValidityUnits")
-      private final @Nullable Input<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
+      private final @Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
 
-    public Input<UserPoolClientTokenValidityUnitsArgs> getTokenValidityUnits() {
-        return this.tokenValidityUnits == null ? Input.empty() : this.tokenValidityUnits;
+    public Output<UserPoolClientTokenValidityUnitsArgs> getTokenValidityUnits() {
+        return this.tokenValidityUnits == null ? Output.empty() : this.tokenValidityUnits;
     }
 
     /**
@@ -222,9 +222,9 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolId", required=true)
-      private final Input<String> userPoolId;
+      private final Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
+    public Output<String> getUserPoolId() {
         return this.userPoolId;
     }
 
@@ -233,33 +233,33 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeAttributes")
-      private final @Nullable Input<List<String>> writeAttributes;
+      private final @Nullable Output<List<String>> writeAttributes;
 
-    public Input<List<String>> getWriteAttributes() {
-        return this.writeAttributes == null ? Input.empty() : this.writeAttributes;
+    public Output<List<String>> getWriteAttributes() {
+        return this.writeAttributes == null ? Output.empty() : this.writeAttributes;
     }
 
     public UserPoolClientArgs(
-        @Nullable Input<Integer> accessTokenValidity,
-        @Nullable Input<List<String>> allowedOauthFlows,
-        @Nullable Input<Boolean> allowedOauthFlowsUserPoolClient,
-        @Nullable Input<List<String>> allowedOauthScopes,
-        @Nullable Input<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration,
-        @Nullable Input<List<String>> callbackUrls,
-        @Nullable Input<String> defaultRedirectUri,
-        @Nullable Input<Boolean> enableTokenRevocation,
-        @Nullable Input<List<String>> explicitAuthFlows,
-        @Nullable Input<Boolean> generateSecret,
-        @Nullable Input<Integer> idTokenValidity,
-        @Nullable Input<List<String>> logoutUrls,
-        @Nullable Input<String> name,
-        @Nullable Input<String> preventUserExistenceErrors,
-        @Nullable Input<List<String>> readAttributes,
-        @Nullable Input<Integer> refreshTokenValidity,
-        @Nullable Input<List<String>> supportedIdentityProviders,
-        @Nullable Input<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits,
-        Input<String> userPoolId,
-        @Nullable Input<List<String>> writeAttributes) {
+        @Nullable Output<Integer> accessTokenValidity,
+        @Nullable Output<List<String>> allowedOauthFlows,
+        @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient,
+        @Nullable Output<List<String>> allowedOauthScopes,
+        @Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration,
+        @Nullable Output<List<String>> callbackUrls,
+        @Nullable Output<String> defaultRedirectUri,
+        @Nullable Output<Boolean> enableTokenRevocation,
+        @Nullable Output<List<String>> explicitAuthFlows,
+        @Nullable Output<Boolean> generateSecret,
+        @Nullable Output<Integer> idTokenValidity,
+        @Nullable Output<List<String>> logoutUrls,
+        @Nullable Output<String> name,
+        @Nullable Output<String> preventUserExistenceErrors,
+        @Nullable Output<List<String>> readAttributes,
+        @Nullable Output<Integer> refreshTokenValidity,
+        @Nullable Output<List<String>> supportedIdentityProviders,
+        @Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits,
+        Output<String> userPoolId,
+        @Nullable Output<List<String>> writeAttributes) {
         this.accessTokenValidity = accessTokenValidity;
         this.allowedOauthFlows = allowedOauthFlows;
         this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
@@ -283,26 +283,26 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPoolClientArgs() {
-        this.accessTokenValidity = Input.empty();
-        this.allowedOauthFlows = Input.empty();
-        this.allowedOauthFlowsUserPoolClient = Input.empty();
-        this.allowedOauthScopes = Input.empty();
-        this.analyticsConfiguration = Input.empty();
-        this.callbackUrls = Input.empty();
-        this.defaultRedirectUri = Input.empty();
-        this.enableTokenRevocation = Input.empty();
-        this.explicitAuthFlows = Input.empty();
-        this.generateSecret = Input.empty();
-        this.idTokenValidity = Input.empty();
-        this.logoutUrls = Input.empty();
-        this.name = Input.empty();
-        this.preventUserExistenceErrors = Input.empty();
-        this.readAttributes = Input.empty();
-        this.refreshTokenValidity = Input.empty();
-        this.supportedIdentityProviders = Input.empty();
-        this.tokenValidityUnits = Input.empty();
-        this.userPoolId = Input.empty();
-        this.writeAttributes = Input.empty();
+        this.accessTokenValidity = Output.empty();
+        this.allowedOauthFlows = Output.empty();
+        this.allowedOauthFlowsUserPoolClient = Output.empty();
+        this.allowedOauthScopes = Output.empty();
+        this.analyticsConfiguration = Output.empty();
+        this.callbackUrls = Output.empty();
+        this.defaultRedirectUri = Output.empty();
+        this.enableTokenRevocation = Output.empty();
+        this.explicitAuthFlows = Output.empty();
+        this.generateSecret = Output.empty();
+        this.idTokenValidity = Output.empty();
+        this.logoutUrls = Output.empty();
+        this.name = Output.empty();
+        this.preventUserExistenceErrors = Output.empty();
+        this.readAttributes = Output.empty();
+        this.refreshTokenValidity = Output.empty();
+        this.supportedIdentityProviders = Output.empty();
+        this.tokenValidityUnits = Output.empty();
+        this.userPoolId = Output.empty();
+        this.writeAttributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -314,26 +314,26 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> accessTokenValidity;
-        private @Nullable Input<List<String>> allowedOauthFlows;
-        private @Nullable Input<Boolean> allowedOauthFlowsUserPoolClient;
-        private @Nullable Input<List<String>> allowedOauthScopes;
-        private @Nullable Input<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
-        private @Nullable Input<List<String>> callbackUrls;
-        private @Nullable Input<String> defaultRedirectUri;
-        private @Nullable Input<Boolean> enableTokenRevocation;
-        private @Nullable Input<List<String>> explicitAuthFlows;
-        private @Nullable Input<Boolean> generateSecret;
-        private @Nullable Input<Integer> idTokenValidity;
-        private @Nullable Input<List<String>> logoutUrls;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> preventUserExistenceErrors;
-        private @Nullable Input<List<String>> readAttributes;
-        private @Nullable Input<Integer> refreshTokenValidity;
-        private @Nullable Input<List<String>> supportedIdentityProviders;
-        private @Nullable Input<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
-        private Input<String> userPoolId;
-        private @Nullable Input<List<String>> writeAttributes;
+        private @Nullable Output<Integer> accessTokenValidity;
+        private @Nullable Output<List<String>> allowedOauthFlows;
+        private @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
+        private @Nullable Output<List<String>> allowedOauthScopes;
+        private @Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
+        private @Nullable Output<List<String>> callbackUrls;
+        private @Nullable Output<String> defaultRedirectUri;
+        private @Nullable Output<Boolean> enableTokenRevocation;
+        private @Nullable Output<List<String>> explicitAuthFlows;
+        private @Nullable Output<Boolean> generateSecret;
+        private @Nullable Output<Integer> idTokenValidity;
+        private @Nullable Output<List<String>> logoutUrls;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> preventUserExistenceErrors;
+        private @Nullable Output<List<String>> readAttributes;
+        private @Nullable Output<Integer> refreshTokenValidity;
+        private @Nullable Output<List<String>> supportedIdentityProviders;
+        private @Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
+        private Output<String> userPoolId;
+        private @Nullable Output<List<String>> writeAttributes;
 
         public Builder() {
     	      // Empty
@@ -363,203 +363,203 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeAttributes = defaults.writeAttributes;
         }
 
-        public Builder accessTokenValidity(@Nullable Input<Integer> accessTokenValidity) {
+        public Builder accessTokenValidity(@Nullable Output<Integer> accessTokenValidity) {
             this.accessTokenValidity = accessTokenValidity;
             return this;
         }
 
         public Builder accessTokenValidity(@Nullable Integer accessTokenValidity) {
-            this.accessTokenValidity = Input.ofNullable(accessTokenValidity);
+            this.accessTokenValidity = Output.ofNullable(accessTokenValidity);
             return this;
         }
 
-        public Builder allowedOauthFlows(@Nullable Input<List<String>> allowedOauthFlows) {
+        public Builder allowedOauthFlows(@Nullable Output<List<String>> allowedOauthFlows) {
             this.allowedOauthFlows = allowedOauthFlows;
             return this;
         }
 
         public Builder allowedOauthFlows(@Nullable List<String> allowedOauthFlows) {
-            this.allowedOauthFlows = Input.ofNullable(allowedOauthFlows);
+            this.allowedOauthFlows = Output.ofNullable(allowedOauthFlows);
             return this;
         }
 
-        public Builder allowedOauthFlowsUserPoolClient(@Nullable Input<Boolean> allowedOauthFlowsUserPoolClient) {
+        public Builder allowedOauthFlowsUserPoolClient(@Nullable Output<Boolean> allowedOauthFlowsUserPoolClient) {
             this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
             return this;
         }
 
         public Builder allowedOauthFlowsUserPoolClient(@Nullable Boolean allowedOauthFlowsUserPoolClient) {
-            this.allowedOauthFlowsUserPoolClient = Input.ofNullable(allowedOauthFlowsUserPoolClient);
+            this.allowedOauthFlowsUserPoolClient = Output.ofNullable(allowedOauthFlowsUserPoolClient);
             return this;
         }
 
-        public Builder allowedOauthScopes(@Nullable Input<List<String>> allowedOauthScopes) {
+        public Builder allowedOauthScopes(@Nullable Output<List<String>> allowedOauthScopes) {
             this.allowedOauthScopes = allowedOauthScopes;
             return this;
         }
 
         public Builder allowedOauthScopes(@Nullable List<String> allowedOauthScopes) {
-            this.allowedOauthScopes = Input.ofNullable(allowedOauthScopes);
+            this.allowedOauthScopes = Output.ofNullable(allowedOauthScopes);
             return this;
         }
 
-        public Builder analyticsConfiguration(@Nullable Input<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration) {
+        public Builder analyticsConfiguration(@Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration) {
             this.analyticsConfiguration = analyticsConfiguration;
             return this;
         }
 
         public Builder analyticsConfiguration(@Nullable UserPoolClientAnalyticsConfigurationArgs analyticsConfiguration) {
-            this.analyticsConfiguration = Input.ofNullable(analyticsConfiguration);
+            this.analyticsConfiguration = Output.ofNullable(analyticsConfiguration);
             return this;
         }
 
-        public Builder callbackUrls(@Nullable Input<List<String>> callbackUrls) {
+        public Builder callbackUrls(@Nullable Output<List<String>> callbackUrls) {
             this.callbackUrls = callbackUrls;
             return this;
         }
 
         public Builder callbackUrls(@Nullable List<String> callbackUrls) {
-            this.callbackUrls = Input.ofNullable(callbackUrls);
+            this.callbackUrls = Output.ofNullable(callbackUrls);
             return this;
         }
 
-        public Builder defaultRedirectUri(@Nullable Input<String> defaultRedirectUri) {
+        public Builder defaultRedirectUri(@Nullable Output<String> defaultRedirectUri) {
             this.defaultRedirectUri = defaultRedirectUri;
             return this;
         }
 
         public Builder defaultRedirectUri(@Nullable String defaultRedirectUri) {
-            this.defaultRedirectUri = Input.ofNullable(defaultRedirectUri);
+            this.defaultRedirectUri = Output.ofNullable(defaultRedirectUri);
             return this;
         }
 
-        public Builder enableTokenRevocation(@Nullable Input<Boolean> enableTokenRevocation) {
+        public Builder enableTokenRevocation(@Nullable Output<Boolean> enableTokenRevocation) {
             this.enableTokenRevocation = enableTokenRevocation;
             return this;
         }
 
         public Builder enableTokenRevocation(@Nullable Boolean enableTokenRevocation) {
-            this.enableTokenRevocation = Input.ofNullable(enableTokenRevocation);
+            this.enableTokenRevocation = Output.ofNullable(enableTokenRevocation);
             return this;
         }
 
-        public Builder explicitAuthFlows(@Nullable Input<List<String>> explicitAuthFlows) {
+        public Builder explicitAuthFlows(@Nullable Output<List<String>> explicitAuthFlows) {
             this.explicitAuthFlows = explicitAuthFlows;
             return this;
         }
 
         public Builder explicitAuthFlows(@Nullable List<String> explicitAuthFlows) {
-            this.explicitAuthFlows = Input.ofNullable(explicitAuthFlows);
+            this.explicitAuthFlows = Output.ofNullable(explicitAuthFlows);
             return this;
         }
 
-        public Builder generateSecret(@Nullable Input<Boolean> generateSecret) {
+        public Builder generateSecret(@Nullable Output<Boolean> generateSecret) {
             this.generateSecret = generateSecret;
             return this;
         }
 
         public Builder generateSecret(@Nullable Boolean generateSecret) {
-            this.generateSecret = Input.ofNullable(generateSecret);
+            this.generateSecret = Output.ofNullable(generateSecret);
             return this;
         }
 
-        public Builder idTokenValidity(@Nullable Input<Integer> idTokenValidity) {
+        public Builder idTokenValidity(@Nullable Output<Integer> idTokenValidity) {
             this.idTokenValidity = idTokenValidity;
             return this;
         }
 
         public Builder idTokenValidity(@Nullable Integer idTokenValidity) {
-            this.idTokenValidity = Input.ofNullable(idTokenValidity);
+            this.idTokenValidity = Output.ofNullable(idTokenValidity);
             return this;
         }
 
-        public Builder logoutUrls(@Nullable Input<List<String>> logoutUrls) {
+        public Builder logoutUrls(@Nullable Output<List<String>> logoutUrls) {
             this.logoutUrls = logoutUrls;
             return this;
         }
 
         public Builder logoutUrls(@Nullable List<String> logoutUrls) {
-            this.logoutUrls = Input.ofNullable(logoutUrls);
+            this.logoutUrls = Output.ofNullable(logoutUrls);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder preventUserExistenceErrors(@Nullable Input<String> preventUserExistenceErrors) {
+        public Builder preventUserExistenceErrors(@Nullable Output<String> preventUserExistenceErrors) {
             this.preventUserExistenceErrors = preventUserExistenceErrors;
             return this;
         }
 
         public Builder preventUserExistenceErrors(@Nullable String preventUserExistenceErrors) {
-            this.preventUserExistenceErrors = Input.ofNullable(preventUserExistenceErrors);
+            this.preventUserExistenceErrors = Output.ofNullable(preventUserExistenceErrors);
             return this;
         }
 
-        public Builder readAttributes(@Nullable Input<List<String>> readAttributes) {
+        public Builder readAttributes(@Nullable Output<List<String>> readAttributes) {
             this.readAttributes = readAttributes;
             return this;
         }
 
         public Builder readAttributes(@Nullable List<String> readAttributes) {
-            this.readAttributes = Input.ofNullable(readAttributes);
+            this.readAttributes = Output.ofNullable(readAttributes);
             return this;
         }
 
-        public Builder refreshTokenValidity(@Nullable Input<Integer> refreshTokenValidity) {
+        public Builder refreshTokenValidity(@Nullable Output<Integer> refreshTokenValidity) {
             this.refreshTokenValidity = refreshTokenValidity;
             return this;
         }
 
         public Builder refreshTokenValidity(@Nullable Integer refreshTokenValidity) {
-            this.refreshTokenValidity = Input.ofNullable(refreshTokenValidity);
+            this.refreshTokenValidity = Output.ofNullable(refreshTokenValidity);
             return this;
         }
 
-        public Builder supportedIdentityProviders(@Nullable Input<List<String>> supportedIdentityProviders) {
+        public Builder supportedIdentityProviders(@Nullable Output<List<String>> supportedIdentityProviders) {
             this.supportedIdentityProviders = supportedIdentityProviders;
             return this;
         }
 
         public Builder supportedIdentityProviders(@Nullable List<String> supportedIdentityProviders) {
-            this.supportedIdentityProviders = Input.ofNullable(supportedIdentityProviders);
+            this.supportedIdentityProviders = Output.ofNullable(supportedIdentityProviders);
             return this;
         }
 
-        public Builder tokenValidityUnits(@Nullable Input<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits) {
+        public Builder tokenValidityUnits(@Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits) {
             this.tokenValidityUnits = tokenValidityUnits;
             return this;
         }
 
         public Builder tokenValidityUnits(@Nullable UserPoolClientTokenValidityUnitsArgs tokenValidityUnits) {
-            this.tokenValidityUnits = Input.ofNullable(tokenValidityUnits);
+            this.tokenValidityUnits = Output.ofNullable(tokenValidityUnits);
             return this;
         }
 
-        public Builder userPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
+            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
         }
 
-        public Builder writeAttributes(@Nullable Input<List<String>> writeAttributes) {
+        public Builder writeAttributes(@Nullable Output<List<String>> writeAttributes) {
             this.writeAttributes = writeAttributes;
             return this;
         }
 
         public Builder writeAttributes(@Nullable List<String> writeAttributes) {
-            this.writeAttributes = Input.ofNullable(writeAttributes);
+            this.writeAttributes = Output.ofNullable(writeAttributes);
             return this;
         }
         public UserPoolClientArgs build() {

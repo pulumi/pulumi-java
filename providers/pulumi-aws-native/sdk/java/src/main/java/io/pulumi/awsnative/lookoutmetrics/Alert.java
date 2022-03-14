@@ -6,7 +6,6 @@ package io.pulumi.awsnative.lookoutmetrics;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lookoutmetrics.AlertArgs;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AlertAction;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -143,14 +142,14 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Alert(String name, AlertArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lookoutmetrics:Alert", name, args == null ? AlertArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:lookoutmetrics:Alert", name, args == null ? AlertArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Alert(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Alert(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:lookoutmetrics:Alert", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -165,7 +164,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Alert get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Alert get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Alert(name, id, options);
     }
 }

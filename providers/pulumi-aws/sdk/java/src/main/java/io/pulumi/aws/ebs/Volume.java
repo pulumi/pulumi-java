@@ -6,7 +6,6 @@ package io.pulumi.aws.ebs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ebs.VolumeArgs;
 import io.pulumi.aws.ebs.inputs.VolumeState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -245,14 +244,14 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Volume(String name, VolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ebs/volume:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ebs/volume:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Volume(String name, Input<String> id, @Nullable VolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Volume(String name, Output<String> id, @Nullable VolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ebs/volume:Volume", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -268,7 +267,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Volume get(String name, Input<String> id, @Nullable VolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Volume get(String name, Output<String> id, @Nullable VolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Volume(name, id, state, options);
     }
 }

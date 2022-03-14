@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
     public static final JitSchedulingPolicyArgs Empty = new JitSchedulingPolicyArgs();
 
     @InputImport(name="duration", required=true)
-      private final Input<String> duration;
+      private final Output<String> duration;
 
-    public Input<String> getDuration() {
+    public Output<String> getDuration() {
         return this.duration;
     }
 
@@ -29,22 +29,22 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
     public JitSchedulingPolicyArgs(
-        Input<String> duration,
-        Input<String> startTime) {
+        Output<String> duration,
+        Output<String> startTime) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private JitSchedulingPolicyArgs() {
-        this.duration = Input.empty();
-        this.startTime = Input.empty();
+        this.duration = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> duration;
-        private Input<String> startTime;
+        private Output<String> duration;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder duration(Input<String> duration) {
+        public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
         public Builder duration(String duration) {
-            this.duration = Input.of(Objects.requireNonNull(duration));
+            this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public JitSchedulingPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appPackageUrl", required=true)
-      private final Input<String> appPackageUrl;
+      private final Output<String> appPackageUrl;
 
-    public Input<String> getAppPackageUrl() {
+    public Output<String> getAppPackageUrl() {
         return this.appPackageUrl;
     }
 
@@ -31,9 +31,9 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="applicationTypeName", required=true)
-      private final Input<String> applicationTypeName;
+      private final Output<String> applicationTypeName;
 
-    public Input<String> getApplicationTypeName() {
+    public Output<String> getApplicationTypeName() {
         return this.applicationTypeName;
     }
 
@@ -42,9 +42,9 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -53,10 +53,10 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,10 +75,10 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ApplicationTypeVersionArgs(
-        Input<String> appPackageUrl,
-        Input<String> applicationTypeName,
-        Input<String> clusterName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> version) {
+        Output<String> appPackageUrl,
+        Output<String> applicationTypeName,
+        Output<String> clusterName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> version) {
         this.appPackageUrl = Objects.requireNonNull(appPackageUrl, "expected parameter 'appPackageUrl' to be non-null");
         this.applicationTypeName = Objects.requireNonNull(applicationTypeName, "expected parameter 'applicationTypeName' to be non-null");
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
@@ -110,13 +110,13 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
     }
 
     private ApplicationTypeVersionArgs() {
-        this.appPackageUrl = Input.empty();
-        this.applicationTypeName = Input.empty();
-        this.clusterName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.version = Input.empty();
+        this.appPackageUrl = Output.empty();
+        this.applicationTypeName = Output.empty();
+        this.clusterName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> appPackageUrl;
-        private Input<String> applicationTypeName;
-        private Input<String> clusterName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> version;
+        private Output<String> appPackageUrl;
+        private Output<String> applicationTypeName;
+        private Output<String> clusterName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder appPackageUrl(Input<String> appPackageUrl) {
+        public Builder appPackageUrl(Output<String> appPackageUrl) {
             this.appPackageUrl = Objects.requireNonNull(appPackageUrl);
             return this;
         }
 
         public Builder appPackageUrl(String appPackageUrl) {
-            this.appPackageUrl = Input.of(Objects.requireNonNull(appPackageUrl));
+            this.appPackageUrl = Output.of(Objects.requireNonNull(appPackageUrl));
             return this;
         }
 
-        public Builder applicationTypeName(Input<String> applicationTypeName) {
+        public Builder applicationTypeName(Output<String> applicationTypeName) {
             this.applicationTypeName = Objects.requireNonNull(applicationTypeName);
             return this;
         }
 
         public Builder applicationTypeName(String applicationTypeName) {
-            this.applicationTypeName = Input.of(Objects.requireNonNull(applicationTypeName));
+            this.applicationTypeName = Output.of(Objects.requireNonNull(applicationTypeName));
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ApplicationTypeVersionArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.TrackerArgs;
 import io.pulumi.awsnative.location.enums.TrackerPositionFiltering;
 import io.pulumi.awsnative.location.enums.TrackerPricingPlan;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -119,14 +118,14 @@ public class Tracker extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Tracker(String name, @Nullable TrackerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:location:Tracker", name, args == null ? TrackerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:location:Tracker", name, args == null ? TrackerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Tracker(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Tracker(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:location:Tracker", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -141,7 +140,7 @@ public class Tracker extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Tracker get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Tracker get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Tracker(name, id, options);
     }
 }

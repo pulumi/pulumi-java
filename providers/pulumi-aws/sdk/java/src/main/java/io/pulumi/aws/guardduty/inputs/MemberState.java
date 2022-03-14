@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.guardduty.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorId")
-      private final @Nullable Input<String> detectorId;
+      private final @Nullable Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
-        return this.detectorId == null ? Input.empty() : this.detectorId;
+    public Output<String> getDetectorId() {
+        return this.detectorId == null ? Output.empty() : this.detectorId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableEmailNotification")
-      private final @Nullable Input<Boolean> disableEmailNotification;
+      private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Input<Boolean> getDisableEmailNotification() {
-        return this.disableEmailNotification == null ? Input.empty() : this.disableEmailNotification;
+    public Output<Boolean> getDisableEmailNotification() {
+        return this.disableEmailNotification == null ? Output.empty() : this.disableEmailNotification;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationMessage")
-      private final @Nullable Input<String> invitationMessage;
+      private final @Nullable Output<String> invitationMessage;
 
-    public Input<String> getInvitationMessage() {
-        return this.invitationMessage == null ? Input.empty() : this.invitationMessage;
+    public Output<String> getInvitationMessage() {
+        return this.invitationMessage == null ? Output.empty() : this.invitationMessage;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-      private final @Nullable Input<Boolean> invite;
+      private final @Nullable Output<Boolean> invite;
 
-    public Input<Boolean> getInvite() {
-        return this.invite == null ? Input.empty() : this.invite;
+    public Output<Boolean> getInvite() {
+        return this.invite == null ? Output.empty() : this.invite;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationshipStatus")
-      private final @Nullable Input<String> relationshipStatus;
+      private final @Nullable Output<String> relationshipStatus;
 
-    public Input<String> getRelationshipStatus() {
-        return this.relationshipStatus == null ? Input.empty() : this.relationshipStatus;
+    public Output<String> getRelationshipStatus() {
+        return this.relationshipStatus == null ? Output.empty() : this.relationshipStatus;
     }
 
     public MemberState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> detectorId,
-        @Nullable Input<Boolean> disableEmailNotification,
-        @Nullable Input<String> email,
-        @Nullable Input<String> invitationMessage,
-        @Nullable Input<Boolean> invite,
-        @Nullable Input<String> relationshipStatus) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> detectorId,
+        @Nullable Output<Boolean> disableEmailNotification,
+        @Nullable Output<String> email,
+        @Nullable Output<String> invitationMessage,
+        @Nullable Output<Boolean> invite,
+        @Nullable Output<String> relationshipStatus) {
         this.accountId = accountId;
         this.detectorId = detectorId;
         this.disableEmailNotification = disableEmailNotification;
@@ -110,13 +110,13 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberState() {
-        this.accountId = Input.empty();
-        this.detectorId = Input.empty();
-        this.disableEmailNotification = Input.empty();
-        this.email = Input.empty();
-        this.invitationMessage = Input.empty();
-        this.invite = Input.empty();
-        this.relationshipStatus = Input.empty();
+        this.accountId = Output.empty();
+        this.detectorId = Output.empty();
+        this.disableEmailNotification = Output.empty();
+        this.email = Output.empty();
+        this.invitationMessage = Output.empty();
+        this.invite = Output.empty();
+        this.relationshipStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> detectorId;
-        private @Nullable Input<Boolean> disableEmailNotification;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> invitationMessage;
-        private @Nullable Input<Boolean> invite;
-        private @Nullable Input<String> relationshipStatus;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> detectorId;
+        private @Nullable Output<Boolean> disableEmailNotification;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> invitationMessage;
+        private @Nullable Output<Boolean> invite;
+        private @Nullable Output<String> relationshipStatus;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.relationshipStatus = defaults.relationshipStatus;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder detectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Input.ofNullable(detectorId);
+            this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
 
-        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
+            this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder invitationMessage(@Nullable Input<String> invitationMessage) {
+        public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
 
         public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Input.ofNullable(invitationMessage);
+            this.invitationMessage = Output.ofNullable(invitationMessage);
             return this;
         }
 
-        public Builder invite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Input.ofNullable(invite);
+            this.invite = Output.ofNullable(invite);
             return this;
         }
 
-        public Builder relationshipStatus(@Nullable Input<String> relationshipStatus) {
+        public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
             this.relationshipStatus = relationshipStatus;
             return this;
         }
 
         public Builder relationshipStatus(@Nullable String relationshipStatus) {
-            this.relationshipStatus = Input.ofNullable(relationshipStatus);
+            this.relationshipStatus = Output.ofNullable(relationshipStatus);
             return this;
         }
         public MemberState build() {

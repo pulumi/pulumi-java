@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class BucketGrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class BucketGrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions", required=true)
-      private final Input<List<String>> permissions;
+      private final Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
+    public Output<List<String>> getPermissions() {
         return this.permissions;
     }
 
@@ -42,9 +42,9 @@ public final class BucketGrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -53,17 +53,17 @@ public final class BucketGrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public BucketGrantArgs(
-        @Nullable Input<String> id,
-        Input<List<String>> permissions,
-        Input<String> type,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> id,
+        Output<List<String>> permissions,
+        Output<String> type,
+        @Nullable Output<String> uri) {
         this.id = id;
         this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -71,10 +71,10 @@ public final class BucketGrantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketGrantArgs() {
-        this.id = Input.empty();
-        this.permissions = Input.empty();
-        this.type = Input.empty();
-        this.uri = Input.empty();
+        this.id = Output.empty();
+        this.permissions = Output.empty();
+        this.type = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class BucketGrantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<List<String>> permissions;
-        private Input<String> type;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> id;
+        private Output<List<String>> permissions;
+        private Output<String> type;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class BucketGrantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder permissions(Input<List<String>> permissions) {
+        public Builder permissions(Output<List<String>> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
         public Builder permissions(List<String> permissions) {
-            this.permissions = Input.of(Objects.requireNonNull(permissions));
+            this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public BucketGrantArgs build() {

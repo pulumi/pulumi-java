@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authToken")
-      private final @Nullable Input<String> authToken;
+      private final @Nullable Output<String> authToken;
 
-    public Input<String> getAuthToken() {
-        return this.authToken == null ? Input.empty() : this.authToken;
+    public Output<String> getAuthToken() {
+        return this.authToken == null ? Output.empty() : this.authToken;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<String> repository;
+      private final @Nullable Output<String> repository;
 
-    public Input<String> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<String> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     public RGitHubPackageArgs(
-        @Nullable Input<String> authToken,
-        @Nullable Input<String> repository) {
+        @Nullable Output<String> authToken,
+        @Nullable Output<String> repository) {
         this.authToken = authToken;
         this.repository = repository;
     }
 
     private RGitHubPackageArgs() {
-        this.authToken = Input.empty();
-        this.repository = Input.empty();
+        this.authToken = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authToken;
-        private @Nullable Input<String> repository;
+        private @Nullable Output<String> authToken;
+        private @Nullable Output<String> repository;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repository = defaults.repository;
         }
 
-        public Builder authToken(@Nullable Input<String> authToken) {
+        public Builder authToken(@Nullable Output<String> authToken) {
             this.authToken = authToken;
             return this;
         }
 
         public Builder authToken(@Nullable String authToken) {
-            this.authToken = Input.ofNullable(authToken);
+            this.authToken = Output.ofNullable(authToken);
             return this;
         }
 
-        public Builder repository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable String repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
         public RGitHubPackageArgs build() {

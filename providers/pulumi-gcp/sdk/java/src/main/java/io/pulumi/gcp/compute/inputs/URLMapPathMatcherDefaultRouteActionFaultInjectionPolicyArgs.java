@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs;
@@ -21,10 +21,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs e
      * 
      */
     @InputImport(name="abort")
-      private final @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort;
+      private final @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort;
 
-    public Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> getAbort() {
-        return this.abort == null ? Input.empty() : this.abort;
+    public Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> getAbort() {
+        return this.abort == null ? Output.empty() : this.abort;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs e
      * 
      */
     @InputImport(name="delay")
-      private final @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay;
+      private final @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay;
 
-    public Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> getDelay() {
-        return this.delay == null ? Input.empty() : this.delay;
+    public Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> getDelay() {
+        return this.delay == null ? Output.empty() : this.delay;
     }
 
     public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs(
-        @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort,
-        @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay) {
+        @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort,
+        @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay) {
         this.abort = abort;
         this.delay = delay;
     }
 
     private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs() {
-        this.abort = Input.empty();
-        this.delay = Input.empty();
+        this.abort = Output.empty();
+        this.delay = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort;
-        private @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay;
+        private @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort;
+        private @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs e
     	      this.delay = defaults.delay;
         }
 
-        public Builder abort(@Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort) {
+        public Builder abort(@Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs> abort) {
             this.abort = abort;
             return this;
         }
 
         public Builder abort(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs abort) {
-            this.abort = Input.ofNullable(abort);
+            this.abort = Output.ofNullable(abort);
             return this;
         }
 
-        public Builder delay(@Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay) {
+        public Builder delay(@Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs> delay) {
             this.delay = delay;
             return this;
         }
 
         public Builder delay(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs delay) {
-            this.delay = Input.ofNullable(delay);
+            this.delay = Output.ofNullable(delay);
             return this;
         }
         public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs build() {

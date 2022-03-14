@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rule", required=true)
-      private final Input<String> rule;
+      private final Output<String> rule;
 
-    public Input<String> getRule() {
+    public Output<String> getRule() {
         return this.rule;
     }
 
@@ -35,22 +35,22 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="seLinuxOptions")
-      private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
+      private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Input<SELinuxOptionsArgs> getSeLinuxOptions() {
-        return this.seLinuxOptions == null ? Input.empty() : this.seLinuxOptions;
+    public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
+        return this.seLinuxOptions == null ? Output.empty() : this.seLinuxOptions;
     }
 
     public SELinuxStrategyOptionsArgs(
-        Input<String> rule,
-        @Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
+        Output<String> rule,
+        @Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
         this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
         this.seLinuxOptions = seLinuxOptions;
     }
 
     private SELinuxStrategyOptionsArgs() {
-        this.rule = Input.empty();
-        this.seLinuxOptions = Input.empty();
+        this.rule = Output.empty();
+        this.seLinuxOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> rule;
-        private @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
+        private Output<String> rule;
+        private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
     	      this.seLinuxOptions = defaults.seLinuxOptions;
         }
 
-        public Builder rule(Input<String> rule) {
+        public Builder rule(Output<String> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
         public Builder rule(String rule) {
-            this.rule = Input.of(Objects.requireNonNull(rule));
+            this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
         }
 
-        public Builder seLinuxOptions(@Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
-            this.seLinuxOptions = Input.ofNullable(seLinuxOptions);
+            this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
             return this;
         }
         public SELinuxStrategyOptionsArgs build() {

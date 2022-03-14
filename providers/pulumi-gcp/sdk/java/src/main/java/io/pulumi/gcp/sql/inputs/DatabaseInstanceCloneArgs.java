@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pointInTime")
-      private final @Nullable Input<String> pointInTime;
+      private final @Nullable Output<String> pointInTime;
 
-    public Input<String> getPointInTime() {
-        return this.pointInTime == null ? Input.empty() : this.pointInTime;
+    public Output<String> getPointInTime() {
+        return this.pointInTime == null ? Output.empty() : this.pointInTime;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceInstanceName", required=true)
-      private final Input<String> sourceInstanceName;
+      private final Output<String> sourceInstanceName;
 
-    public Input<String> getSourceInstanceName() {
+    public Output<String> getSourceInstanceName() {
         return this.sourceInstanceName;
     }
 
     public DatabaseInstanceCloneArgs(
-        @Nullable Input<String> pointInTime,
-        Input<String> sourceInstanceName) {
+        @Nullable Output<String> pointInTime,
+        Output<String> sourceInstanceName) {
         this.pointInTime = pointInTime;
         this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName, "expected parameter 'sourceInstanceName' to be non-null");
     }
 
     private DatabaseInstanceCloneArgs() {
-        this.pointInTime = Input.empty();
-        this.sourceInstanceName = Input.empty();
+        this.pointInTime = Output.empty();
+        this.sourceInstanceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pointInTime;
-        private Input<String> sourceInstanceName;
+        private @Nullable Output<String> pointInTime;
+        private Output<String> sourceInstanceName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
     	      this.sourceInstanceName = defaults.sourceInstanceName;
         }
 
-        public Builder pointInTime(@Nullable Input<String> pointInTime) {
+        public Builder pointInTime(@Nullable Output<String> pointInTime) {
             this.pointInTime = pointInTime;
             return this;
         }
 
         public Builder pointInTime(@Nullable String pointInTime) {
-            this.pointInTime = Input.ofNullable(pointInTime);
+            this.pointInTime = Output.ofNullable(pointInTime);
             return this;
         }
 
-        public Builder sourceInstanceName(Input<String> sourceInstanceName) {
+        public Builder sourceInstanceName(Output<String> sourceInstanceName) {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }
 
         public Builder sourceInstanceName(String sourceInstanceName) {
-            this.sourceInstanceName = Input.of(Objects.requireNonNull(sourceInstanceName));
+            this.sourceInstanceName = Output.of(Objects.requireNonNull(sourceInstanceName));
             return this;
         }
         public DatabaseInstanceCloneArgs build() {

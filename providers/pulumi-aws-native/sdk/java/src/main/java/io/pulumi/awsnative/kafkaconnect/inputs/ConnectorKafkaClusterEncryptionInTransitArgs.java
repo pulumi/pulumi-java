@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterEncryptionInTransitType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
     public static final ConnectorKafkaClusterEncryptionInTransitArgs Empty = new ConnectorKafkaClusterEncryptionInTransitArgs();
 
     @InputImport(name="encryptionType", required=true)
-      private final Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
+      private final Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
 
-    public Input<ConnectorKafkaClusterEncryptionInTransitType> getEncryptionType() {
+    public Output<ConnectorKafkaClusterEncryptionInTransitType> getEncryptionType() {
         return this.encryptionType;
     }
 
-    public ConnectorKafkaClusterEncryptionInTransitArgs(Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
+    public ConnectorKafkaClusterEncryptionInTransitArgs(Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
         this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
     }
 
     private ConnectorKafkaClusterEncryptionInTransitArgs() {
-        this.encryptionType = Input.empty();
+        this.encryptionType = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
+        private Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
     	      this.encryptionType = defaults.encryptionType;
         }
 
-        public Builder encryptionType(Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
+        public Builder encryptionType(Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
         public Builder encryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
-            this.encryptionType = Input.of(Objects.requireNonNull(encryptionType));
+            this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
             return this;
         }
         public ConnectorKafkaClusterEncryptionInTransitArgs build() {

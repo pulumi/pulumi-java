@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.CatalogDatabaseTargetDatabaseGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="locationUri")
-      private final @Nullable Input<String> locationUri;
+      private final @Nullable Output<String> locationUri;
 
-    public Input<String> getLocationUri() {
-        return this.locationUri == null ? Input.empty() : this.locationUri;
+    public Output<String> getLocationUri() {
+        return this.locationUri == null ? Output.empty() : this.locationUri;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetDatabase")
-      private final @Nullable Input<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase;
+      private final @Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase;
 
-    public Input<CatalogDatabaseTargetDatabaseGetArgs> getTargetDatabase() {
-        return this.targetDatabase == null ? Input.empty() : this.targetDatabase;
+    public Output<CatalogDatabaseTargetDatabaseGetArgs> getTargetDatabase() {
+        return this.targetDatabase == null ? Output.empty() : this.targetDatabase;
     }
 
     public CatalogDatabaseState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> catalogId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> locationUri,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> catalogId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> locationUri,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
         this.arn = arn;
         this.catalogId = catalogId;
         this.description = description;
@@ -111,13 +111,13 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
     }
 
     private CatalogDatabaseState() {
-        this.arn = Input.empty();
-        this.catalogId = Input.empty();
-        this.description = Input.empty();
-        this.locationUri = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.targetDatabase = Input.empty();
+        this.arn = Output.empty();
+        this.catalogId = Output.empty();
+        this.description = Output.empty();
+        this.locationUri = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.targetDatabase = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> catalogId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> locationUri;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> catalogId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> locationUri;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
     	      this.targetDatabase = defaults.targetDatabase;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder locationUri(@Nullable Input<String> locationUri) {
+        public Builder locationUri(@Nullable Output<String> locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
         public Builder locationUri(@Nullable String locationUri) {
-            this.locationUri = Input.ofNullable(locationUri);
+            this.locationUri = Output.ofNullable(locationUri);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder targetDatabase(@Nullable Input<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
+        public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
 
         public Builder targetDatabase(@Nullable CatalogDatabaseTargetDatabaseGetArgs targetDatabase) {
-            this.targetDatabase = Input.ofNullable(targetDatabase);
+            this.targetDatabase = Output.ofNullable(targetDatabase);
             return this;
         }
         public CatalogDatabaseState build() {

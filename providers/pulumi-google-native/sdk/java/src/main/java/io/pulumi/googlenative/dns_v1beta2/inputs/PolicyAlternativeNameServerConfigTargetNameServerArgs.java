@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.enums.PolicyAlternativeNameServerConfigTargetNameServerForwardingPath;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="forwardingPath")
-      private final @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
+      private final @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
-    public Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> getForwardingPath() {
-        return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
+    public Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> getForwardingPath() {
+        return this.forwardingPath == null ? Output.empty() : this.forwardingPath;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="ipv4Address")
-      private final @Nullable Input<String> ipv4Address;
+      private final @Nullable Output<String> ipv4Address;
 
-    public Input<String> getIpv4Address() {
-        return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
+    public Output<String> getIpv4Address() {
+        return this.ipv4Address == null ? Output.empty() : this.ipv4Address;
     }
 
     /**
@@ -42,24 +42,24 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="ipv6Address")
-      private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Output<String> ipv6Address;
 
-    public Input<String> getIpv6Address() {
-        return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
+    public Output<String> getIpv6Address() {
+        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public PolicyAlternativeNameServerConfigTargetNameServerArgs(
-        @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath,
-        @Nullable Input<String> ipv4Address,
-        @Nullable Input<String> ipv6Address,
-        @Nullable Input<String> kind) {
+        @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath,
+        @Nullable Output<String> ipv4Address,
+        @Nullable Output<String> ipv6Address,
+        @Nullable Output<String> kind) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
         this.ipv6Address = ipv6Address;
@@ -67,10 +67,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     }
 
     private PolicyAlternativeNameServerConfigTargetNameServerArgs() {
-        this.forwardingPath = Input.empty();
-        this.ipv4Address = Input.empty();
-        this.ipv6Address = Input.empty();
-        this.kind = Input.empty();
+        this.forwardingPath = Output.empty();
+        this.ipv4Address = Output.empty();
+        this.ipv6Address = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
-        private @Nullable Input<String> ipv4Address;
-        private @Nullable Input<String> ipv6Address;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
+        private @Nullable Output<String> ipv4Address;
+        private @Nullable Output<String> ipv6Address;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     	      this.kind = defaults.kind;
         }
 
-        public Builder forwardingPath(@Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath) {
+        public Builder forwardingPath(@Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath) {
             this.forwardingPath = forwardingPath;
             return this;
         }
 
         public Builder forwardingPath(@Nullable PolicyAlternativeNameServerConfigTargetNameServerForwardingPath forwardingPath) {
-            this.forwardingPath = Input.ofNullable(forwardingPath);
+            this.forwardingPath = Output.ofNullable(forwardingPath);
             return this;
         }
 
-        public Builder ipv4Address(@Nullable Input<String> ipv4Address) {
+        public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
 
         public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = Input.ofNullable(ipv4Address);
+            this.ipv4Address = Output.ofNullable(ipv4Address);
             return this;
         }
 
-        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Input.ofNullable(ipv6Address);
+            this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {

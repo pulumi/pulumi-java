@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectLambdaAccessPoint", required=true)
-      private final Input<String> objectLambdaAccessPoint;
+      private final Output<String> objectLambdaAccessPoint;
 
-    public Input<String> getObjectLambdaAccessPoint() {
+    public Output<String> getObjectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
 
@@ -30,22 +30,22 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyDocument", required=true)
-      private final Input<Object> policyDocument;
+      private final Output<Object> policyDocument;
 
-    public Input<Object> getPolicyDocument() {
+    public Output<Object> getPolicyDocument() {
         return this.policyDocument;
     }
 
     public AccessPointPolicyArgs(
-        Input<String> objectLambdaAccessPoint,
-        Input<Object> policyDocument) {
+        Output<String> objectLambdaAccessPoint,
+        Output<Object> policyDocument) {
         this.objectLambdaAccessPoint = Objects.requireNonNull(objectLambdaAccessPoint, "expected parameter 'objectLambdaAccessPoint' to be non-null");
         this.policyDocument = Objects.requireNonNull(policyDocument, "expected parameter 'policyDocument' to be non-null");
     }
 
     private AccessPointPolicyArgs() {
-        this.objectLambdaAccessPoint = Input.empty();
-        this.policyDocument = Input.empty();
+        this.objectLambdaAccessPoint = Output.empty();
+        this.policyDocument = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> objectLambdaAccessPoint;
-        private Input<Object> policyDocument;
+        private Output<String> objectLambdaAccessPoint;
+        private Output<Object> policyDocument;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.policyDocument = defaults.policyDocument;
         }
 
-        public Builder objectLambdaAccessPoint(Input<String> objectLambdaAccessPoint) {
+        public Builder objectLambdaAccessPoint(Output<String> objectLambdaAccessPoint) {
             this.objectLambdaAccessPoint = Objects.requireNonNull(objectLambdaAccessPoint);
             return this;
         }
 
         public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
-            this.objectLambdaAccessPoint = Input.of(Objects.requireNonNull(objectLambdaAccessPoint));
+            this.objectLambdaAccessPoint = Output.of(Objects.requireNonNull(objectLambdaAccessPoint));
             return this;
         }
 
-        public Builder policyDocument(Input<Object> policyDocument) {
+        public Builder policyDocument(Output<Object> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
 
         public Builder policyDocument(Object policyDocument) {
-            this.policyDocument = Input.of(Objects.requireNonNull(policyDocument));
+            this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
             return this;
         }
         public AccessPointPolicyArgs build() {

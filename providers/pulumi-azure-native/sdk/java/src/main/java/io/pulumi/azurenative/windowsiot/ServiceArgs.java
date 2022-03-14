@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.windowsiot;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminDomainName")
-      private final @Nullable Input<String> adminDomainName;
+      private final @Nullable Output<String> adminDomainName;
 
-    public Input<String> getAdminDomainName() {
-        return this.adminDomainName == null ? Input.empty() : this.adminDomainName;
+    public Output<String> getAdminDomainName() {
+        return this.adminDomainName == null ? Output.empty() : this.adminDomainName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingDomainName")
-      private final @Nullable Input<String> billingDomainName;
+      private final @Nullable Output<String> billingDomainName;
 
-    public Input<String> getBillingDomainName() {
-        return this.billingDomainName == null ? Input.empty() : this.billingDomainName;
+    public Output<String> getBillingDomainName() {
+        return this.billingDomainName == null ? Output.empty() : this.billingDomainName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-      private final @Nullable Input<String> notes;
+      private final @Nullable Output<String> notes;
 
-    public Input<String> getNotes() {
-        return this.notes == null ? Input.empty() : this.notes;
+    public Output<String> getNotes() {
+        return this.notes == null ? Output.empty() : this.notes;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quantity")
-      private final @Nullable Input<Double> quantity;
+      private final @Nullable Output<Double> quantity;
 
-    public Input<Double> getQuantity() {
-        return this.quantity == null ? Input.empty() : this.quantity;
+    public Output<Double> getQuantity() {
+        return this.quantity == null ? Output.empty() : this.quantity;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -98,21 +98,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ServiceArgs(
-        @Nullable Input<String> adminDomainName,
-        @Nullable Input<String> billingDomainName,
-        @Nullable Input<String> deviceName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> notes,
-        @Nullable Input<Double> quantity,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> adminDomainName,
+        @Nullable Output<String> billingDomainName,
+        @Nullable Output<String> deviceName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> notes,
+        @Nullable Output<Double> quantity,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.adminDomainName = adminDomainName;
         this.billingDomainName = billingDomainName;
         this.deviceName = deviceName;
@@ -124,14 +124,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.adminDomainName = Input.empty();
-        this.billingDomainName = Input.empty();
-        this.deviceName = Input.empty();
-        this.location = Input.empty();
-        this.notes = Input.empty();
-        this.quantity = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.adminDomainName = Output.empty();
+        this.billingDomainName = Output.empty();
+        this.deviceName = Output.empty();
+        this.location = Output.empty();
+        this.notes = Output.empty();
+        this.quantity = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminDomainName;
-        private @Nullable Input<String> billingDomainName;
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> notes;
-        private @Nullable Input<Double> quantity;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> adminDomainName;
+        private @Nullable Output<String> billingDomainName;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> notes;
+        private @Nullable Output<Double> quantity;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder adminDomainName(@Nullable Input<String> adminDomainName) {
+        public Builder adminDomainName(@Nullable Output<String> adminDomainName) {
             this.adminDomainName = adminDomainName;
             return this;
         }
 
         public Builder adminDomainName(@Nullable String adminDomainName) {
-            this.adminDomainName = Input.ofNullable(adminDomainName);
+            this.adminDomainName = Output.ofNullable(adminDomainName);
             return this;
         }
 
-        public Builder billingDomainName(@Nullable Input<String> billingDomainName) {
+        public Builder billingDomainName(@Nullable Output<String> billingDomainName) {
             this.billingDomainName = billingDomainName;
             return this;
         }
 
         public Builder billingDomainName(@Nullable String billingDomainName) {
-            this.billingDomainName = Input.ofNullable(billingDomainName);
+            this.billingDomainName = Output.ofNullable(billingDomainName);
             return this;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder notes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
 
         public Builder notes(@Nullable String notes) {
-            this.notes = Input.ofNullable(notes);
+            this.notes = Output.ofNullable(notes);
             return this;
         }
 
-        public Builder quantity(@Nullable Input<Double> quantity) {
+        public Builder quantity(@Nullable Output<Double> quantity) {
             this.quantity = quantity;
             return this;
         }
 
         public Builder quantity(@Nullable Double quantity) {
-            this.quantity = Input.ofNullable(quantity);
+            this.quantity = Output.ofNullable(quantity);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ServiceArgs build() {

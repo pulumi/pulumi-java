@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesArgs extends io.
     public static final FieldLevelEncryptionProfileEncryptionEntitiesArgs Empty = new FieldLevelEncryptionProfileEncryptionEntitiesArgs();
 
     @InputImport(name="items")
-      private final @Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items;
+      private final @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items;
 
-    public Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public FieldLevelEncryptionProfileEncryptionEntitiesArgs(@Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items) {
+    public FieldLevelEncryptionProfileEncryptionEntitiesArgs(@Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items) {
         this.items = items;
     }
 
     private FieldLevelEncryptionProfileEncryptionEntitiesArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items;
+        private @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesArgs extends io.
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items) {
+        public Builder items(@Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public FieldLevelEncryptionProfileEncryptionEntitiesArgs build() {

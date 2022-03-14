@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.MatchVariable;
 import io.pulumi.azurenative.cdn.enums.Operator;
 import io.pulumi.azurenative.cdn.enums.TransformType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchValue", required=true)
-      private final Input<List<String>> matchValue;
+      private final Output<List<String>> matchValue;
 
-    public Input<List<String>> getMatchValue() {
+    public Output<List<String>> getMatchValue() {
         return this.matchValue;
     }
 
@@ -40,9 +40,9 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchVariable", required=true)
-      private final Input<Either<String,MatchVariable>> matchVariable;
+      private final Output<Either<String,MatchVariable>> matchVariable;
 
-    public Input<Either<String,MatchVariable>> getMatchVariable() {
+    public Output<Either<String,MatchVariable>> getMatchVariable() {
         return this.matchVariable;
     }
 
@@ -51,10 +51,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="negateCondition")
-      private final @Nullable Input<Boolean> negateCondition;
+      private final @Nullable Output<Boolean> negateCondition;
 
-    public Input<Boolean> getNegateCondition() {
-        return this.negateCondition == null ? Input.empty() : this.negateCondition;
+    public Output<Boolean> getNegateCondition() {
+        return this.negateCondition == null ? Output.empty() : this.negateCondition;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,Operator>> operator;
+      private final Output<Either<String,Operator>> operator;
 
-    public Input<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> getOperator() {
         return this.operator;
     }
 
@@ -73,10 +73,10 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<String> selector;
+      private final @Nullable Output<String> selector;
 
-    public Input<String> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<String> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transforms")
-      private final @Nullable Input<List<Either<String,TransformType>>> transforms;
+      private final @Nullable Output<List<Either<String,TransformType>>> transforms;
 
-    public Input<List<Either<String,TransformType>>> getTransforms() {
-        return this.transforms == null ? Input.empty() : this.transforms;
+    public Output<List<Either<String,TransformType>>> getTransforms() {
+        return this.transforms == null ? Output.empty() : this.transforms;
     }
 
     public MatchConditionArgs(
-        Input<List<String>> matchValue,
-        Input<Either<String,MatchVariable>> matchVariable,
-        @Nullable Input<Boolean> negateCondition,
-        Input<Either<String,Operator>> operator,
-        @Nullable Input<String> selector,
-        @Nullable Input<List<Either<String,TransformType>>> transforms) {
+        Output<List<String>> matchValue,
+        Output<Either<String,MatchVariable>> matchVariable,
+        @Nullable Output<Boolean> negateCondition,
+        Output<Either<String,Operator>> operator,
+        @Nullable Output<String> selector,
+        @Nullable Output<List<Either<String,TransformType>>> transforms) {
         this.matchValue = Objects.requireNonNull(matchValue, "expected parameter 'matchValue' to be non-null");
         this.matchVariable = Objects.requireNonNull(matchVariable, "expected parameter 'matchVariable' to be non-null");
         this.negateCondition = negateCondition;
@@ -106,12 +106,12 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MatchConditionArgs() {
-        this.matchValue = Input.empty();
-        this.matchVariable = Input.empty();
-        this.negateCondition = Input.empty();
-        this.operator = Input.empty();
-        this.selector = Input.empty();
-        this.transforms = Input.empty();
+        this.matchValue = Output.empty();
+        this.matchVariable = Output.empty();
+        this.negateCondition = Output.empty();
+        this.operator = Output.empty();
+        this.selector = Output.empty();
+        this.transforms = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> matchValue;
-        private Input<Either<String,MatchVariable>> matchVariable;
-        private @Nullable Input<Boolean> negateCondition;
-        private Input<Either<String,Operator>> operator;
-        private @Nullable Input<String> selector;
-        private @Nullable Input<List<Either<String,TransformType>>> transforms;
+        private Output<List<String>> matchValue;
+        private Output<Either<String,MatchVariable>> matchVariable;
+        private @Nullable Output<Boolean> negateCondition;
+        private Output<Either<String,Operator>> operator;
+        private @Nullable Output<String> selector;
+        private @Nullable Output<List<Either<String,TransformType>>> transforms;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder matchValue(Input<List<String>> matchValue) {
+        public Builder matchValue(Output<List<String>> matchValue) {
             this.matchValue = Objects.requireNonNull(matchValue);
             return this;
         }
 
         public Builder matchValue(List<String> matchValue) {
-            this.matchValue = Input.of(Objects.requireNonNull(matchValue));
+            this.matchValue = Output.of(Objects.requireNonNull(matchValue));
             return this;
         }
 
-        public Builder matchVariable(Input<Either<String,MatchVariable>> matchVariable) {
+        public Builder matchVariable(Output<Either<String,MatchVariable>> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
         public Builder matchVariable(Either<String,MatchVariable> matchVariable) {
-            this.matchVariable = Input.of(Objects.requireNonNull(matchVariable));
+            this.matchVariable = Output.of(Objects.requireNonNull(matchVariable));
             return this;
         }
 
-        public Builder negateCondition(@Nullable Input<Boolean> negateCondition) {
+        public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Input.ofNullable(negateCondition);
+            this.negateCondition = Output.ofNullable(negateCondition);
             return this;
         }
 
-        public Builder operator(Input<Either<String,Operator>> operator) {
+        public Builder operator(Output<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,Operator> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder selector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder transforms(@Nullable Input<List<Either<String,TransformType>>> transforms) {
+        public Builder transforms(@Nullable Output<List<Either<String,TransformType>>> transforms) {
             this.transforms = transforms;
             return this;
         }
 
         public Builder transforms(@Nullable List<Either<String,TransformType>> transforms) {
-            this.transforms = Input.ofNullable(transforms);
+            this.transforms = Output.ofNullable(transforms);
             return this;
         }
         public MatchConditionArgs build() {

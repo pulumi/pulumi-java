@@ -8,7 +8,6 @@ import io.pulumi.azurenative.resources.TemplateSpecVersionArgs;
 import io.pulumi.azurenative.resources.outputs.LinkedTemplateArtifactResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,20 +213,20 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TemplateSpecVersion(String name, TemplateSpecVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:TemplateSpecVersion", name, args == null ? TemplateSpecVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:resources:TemplateSpecVersion", name, args == null ? TemplateSpecVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TemplateSpecVersion(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TemplateSpecVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:TemplateSpecVersion", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:resources/v20190601preview:TemplateSpecVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210301preview:TemplateSpecVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210501:TemplateSpecVersion").build())
+                Output.of(Alias.builder().setType("azure-native:resources/v20190601preview:TemplateSpecVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210301preview:TemplateSpecVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210501:TemplateSpecVersion").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -241,7 +240,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TemplateSpecVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TemplateSpecVersion get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TemplateSpecVersion(name, id, options);
     }
 }

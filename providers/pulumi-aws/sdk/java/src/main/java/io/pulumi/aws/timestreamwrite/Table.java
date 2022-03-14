@@ -8,7 +8,6 @@ import io.pulumi.aws.timestreamwrite.TableArgs;
 import io.pulumi.aws.timestreamwrite.inputs.TableState;
 import io.pulumi.aws.timestreamwrite.outputs.TableMagneticStoreWriteProperties;
 import io.pulumi.aws.timestreamwrite.outputs.TableRetentionProperties;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -169,14 +168,14 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Table(String name, TableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:timestreamwrite/table:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:timestreamwrite/table:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Table(String name, Input<String> id, @Nullable TableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Table(String name, Output<String> id, @Nullable TableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:timestreamwrite/table:Table", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -192,7 +191,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Table get(String name, Input<String> id, @Nullable TableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Table get(String name, Output<String> id, @Nullable TableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Table(name, id, state, options);
     }
 }

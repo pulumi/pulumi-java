@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.RouterNatNatIpAllocateOption;
 import io.pulumi.googlenative.compute_beta.enums.RouterNatSourceSubnetworkIpRangesToNat;
@@ -31,10 +31,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drainNatIps")
-      private final @Nullable Input<List<String>> drainNatIps;
+      private final @Nullable Output<List<String>> drainNatIps;
 
-    public Input<List<String>> getDrainNatIps() {
-        return this.drainNatIps == null ? Input.empty() : this.drainNatIps;
+    public Output<List<String>> getDrainNatIps() {
+        return this.drainNatIps == null ? Output.empty() : this.drainNatIps;
     }
 
     /**
@@ -42,17 +42,17 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDynamicPortAllocation")
-      private final @Nullable Input<Boolean> enableDynamicPortAllocation;
+      private final @Nullable Output<Boolean> enableDynamicPortAllocation;
 
-    public Input<Boolean> getEnableDynamicPortAllocation() {
-        return this.enableDynamicPortAllocation == null ? Input.empty() : this.enableDynamicPortAllocation;
+    public Output<Boolean> getEnableDynamicPortAllocation() {
+        return this.enableDynamicPortAllocation == null ? Output.empty() : this.enableDynamicPortAllocation;
     }
 
     @InputImport(name="enableEndpointIndependentMapping")
-      private final @Nullable Input<Boolean> enableEndpointIndependentMapping;
+      private final @Nullable Output<Boolean> enableEndpointIndependentMapping;
 
-    public Input<Boolean> getEnableEndpointIndependentMapping() {
-        return this.enableEndpointIndependentMapping == null ? Input.empty() : this.enableEndpointIndependentMapping;
+    public Output<Boolean> getEnableEndpointIndependentMapping() {
+        return this.enableEndpointIndependentMapping == null ? Output.empty() : this.enableEndpointIndependentMapping;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="icmpIdleTimeoutSec")
-      private final @Nullable Input<Integer> icmpIdleTimeoutSec;
+      private final @Nullable Output<Integer> icmpIdleTimeoutSec;
 
-    public Input<Integer> getIcmpIdleTimeoutSec() {
-        return this.icmpIdleTimeoutSec == null ? Input.empty() : this.icmpIdleTimeoutSec;
+    public Output<Integer> getIcmpIdleTimeoutSec() {
+        return this.icmpIdleTimeoutSec == null ? Output.empty() : this.icmpIdleTimeoutSec;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-      private final @Nullable Input<RouterNatLogConfigArgs> logConfig;
+      private final @Nullable Output<RouterNatLogConfigArgs> logConfig;
 
-    public Input<RouterNatLogConfigArgs> getLogConfig() {
-        return this.logConfig == null ? Input.empty() : this.logConfig;
+    public Output<RouterNatLogConfigArgs> getLogConfig() {
+        return this.logConfig == null ? Output.empty() : this.logConfig;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPortsPerVm")
-      private final @Nullable Input<Integer> maxPortsPerVm;
+      private final @Nullable Output<Integer> maxPortsPerVm;
 
-    public Input<Integer> getMaxPortsPerVm() {
-        return this.maxPortsPerVm == null ? Input.empty() : this.maxPortsPerVm;
+    public Output<Integer> getMaxPortsPerVm() {
+        return this.maxPortsPerVm == null ? Output.empty() : this.maxPortsPerVm;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minPortsPerVm")
-      private final @Nullable Input<Integer> minPortsPerVm;
+      private final @Nullable Output<Integer> minPortsPerVm;
 
-    public Input<Integer> getMinPortsPerVm() {
-        return this.minPortsPerVm == null ? Input.empty() : this.minPortsPerVm;
+    public Output<Integer> getMinPortsPerVm() {
+        return this.minPortsPerVm == null ? Output.empty() : this.minPortsPerVm;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natIpAllocateOption")
-      private final @Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption;
+      private final @Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption;
 
-    public Input<RouterNatNatIpAllocateOption> getNatIpAllocateOption() {
-        return this.natIpAllocateOption == null ? Input.empty() : this.natIpAllocateOption;
+    public Output<RouterNatNatIpAllocateOption> getNatIpAllocateOption() {
+        return this.natIpAllocateOption == null ? Output.empty() : this.natIpAllocateOption;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natIps")
-      private final @Nullable Input<List<String>> natIps;
+      private final @Nullable Output<List<String>> natIps;
 
-    public Input<List<String>> getNatIps() {
-        return this.natIps == null ? Input.empty() : this.natIps;
+    public Output<List<String>> getNatIps() {
+        return this.natIps == null ? Output.empty() : this.natIps;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<RouterNatRuleArgs>> rules;
+      private final @Nullable Output<List<RouterNatRuleArgs>> rules;
 
-    public Input<List<RouterNatRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<RouterNatRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSubnetworkIpRangesToNat")
-      private final @Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
+      private final @Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
 
-    public Input<RouterNatSourceSubnetworkIpRangesToNat> getSourceSubnetworkIpRangesToNat() {
-        return this.sourceSubnetworkIpRangesToNat == null ? Input.empty() : this.sourceSubnetworkIpRangesToNat;
+    public Output<RouterNatSourceSubnetworkIpRangesToNat> getSourceSubnetworkIpRangesToNat() {
+        return this.sourceSubnetworkIpRangesToNat == null ? Output.empty() : this.sourceSubnetworkIpRangesToNat;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetworks")
-      private final @Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks;
+      private final @Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks;
 
-    public Input<List<RouterNatSubnetworkToNatArgs>> getSubnetworks() {
-        return this.subnetworks == null ? Input.empty() : this.subnetworks;
+    public Output<List<RouterNatSubnetworkToNatArgs>> getSubnetworks() {
+        return this.subnetworks == null ? Output.empty() : this.subnetworks;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpEstablishedIdleTimeoutSec")
-      private final @Nullable Input<Integer> tcpEstablishedIdleTimeoutSec;
+      private final @Nullable Output<Integer> tcpEstablishedIdleTimeoutSec;
 
-    public Input<Integer> getTcpEstablishedIdleTimeoutSec() {
-        return this.tcpEstablishedIdleTimeoutSec == null ? Input.empty() : this.tcpEstablishedIdleTimeoutSec;
+    public Output<Integer> getTcpEstablishedIdleTimeoutSec() {
+        return this.tcpEstablishedIdleTimeoutSec == null ? Output.empty() : this.tcpEstablishedIdleTimeoutSec;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpTimeWaitTimeoutSec")
-      private final @Nullable Input<Integer> tcpTimeWaitTimeoutSec;
+      private final @Nullable Output<Integer> tcpTimeWaitTimeoutSec;
 
-    public Input<Integer> getTcpTimeWaitTimeoutSec() {
-        return this.tcpTimeWaitTimeoutSec == null ? Input.empty() : this.tcpTimeWaitTimeoutSec;
+    public Output<Integer> getTcpTimeWaitTimeoutSec() {
+        return this.tcpTimeWaitTimeoutSec == null ? Output.empty() : this.tcpTimeWaitTimeoutSec;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpTransitoryIdleTimeoutSec")
-      private final @Nullable Input<Integer> tcpTransitoryIdleTimeoutSec;
+      private final @Nullable Output<Integer> tcpTransitoryIdleTimeoutSec;
 
-    public Input<Integer> getTcpTransitoryIdleTimeoutSec() {
-        return this.tcpTransitoryIdleTimeoutSec == null ? Input.empty() : this.tcpTransitoryIdleTimeoutSec;
+    public Output<Integer> getTcpTransitoryIdleTimeoutSec() {
+        return this.tcpTransitoryIdleTimeoutSec == null ? Output.empty() : this.tcpTransitoryIdleTimeoutSec;
     }
 
     /**
@@ -203,30 +203,30 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="udpIdleTimeoutSec")
-      private final @Nullable Input<Integer> udpIdleTimeoutSec;
+      private final @Nullable Output<Integer> udpIdleTimeoutSec;
 
-    public Input<Integer> getUdpIdleTimeoutSec() {
-        return this.udpIdleTimeoutSec == null ? Input.empty() : this.udpIdleTimeoutSec;
+    public Output<Integer> getUdpIdleTimeoutSec() {
+        return this.udpIdleTimeoutSec == null ? Output.empty() : this.udpIdleTimeoutSec;
     }
 
     public RouterNatArgs(
-        @Nullable Input<List<String>> drainNatIps,
-        @Nullable Input<Boolean> enableDynamicPortAllocation,
-        @Nullable Input<Boolean> enableEndpointIndependentMapping,
-        @Nullable Input<Integer> icmpIdleTimeoutSec,
-        @Nullable Input<RouterNatLogConfigArgs> logConfig,
-        @Nullable Input<Integer> maxPortsPerVm,
-        @Nullable Input<Integer> minPortsPerVm,
-        @Nullable Input<String> name,
-        @Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption,
-        @Nullable Input<List<String>> natIps,
-        @Nullable Input<List<RouterNatRuleArgs>> rules,
-        @Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat,
-        @Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks,
-        @Nullable Input<Integer> tcpEstablishedIdleTimeoutSec,
-        @Nullable Input<Integer> tcpTimeWaitTimeoutSec,
-        @Nullable Input<Integer> tcpTransitoryIdleTimeoutSec,
-        @Nullable Input<Integer> udpIdleTimeoutSec) {
+        @Nullable Output<List<String>> drainNatIps,
+        @Nullable Output<Boolean> enableDynamicPortAllocation,
+        @Nullable Output<Boolean> enableEndpointIndependentMapping,
+        @Nullable Output<Integer> icmpIdleTimeoutSec,
+        @Nullable Output<RouterNatLogConfigArgs> logConfig,
+        @Nullable Output<Integer> maxPortsPerVm,
+        @Nullable Output<Integer> minPortsPerVm,
+        @Nullable Output<String> name,
+        @Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption,
+        @Nullable Output<List<String>> natIps,
+        @Nullable Output<List<RouterNatRuleArgs>> rules,
+        @Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat,
+        @Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks,
+        @Nullable Output<Integer> tcpEstablishedIdleTimeoutSec,
+        @Nullable Output<Integer> tcpTimeWaitTimeoutSec,
+        @Nullable Output<Integer> tcpTransitoryIdleTimeoutSec,
+        @Nullable Output<Integer> udpIdleTimeoutSec) {
         this.drainNatIps = drainNatIps;
         this.enableDynamicPortAllocation = enableDynamicPortAllocation;
         this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
@@ -247,23 +247,23 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterNatArgs() {
-        this.drainNatIps = Input.empty();
-        this.enableDynamicPortAllocation = Input.empty();
-        this.enableEndpointIndependentMapping = Input.empty();
-        this.icmpIdleTimeoutSec = Input.empty();
-        this.logConfig = Input.empty();
-        this.maxPortsPerVm = Input.empty();
-        this.minPortsPerVm = Input.empty();
-        this.name = Input.empty();
-        this.natIpAllocateOption = Input.empty();
-        this.natIps = Input.empty();
-        this.rules = Input.empty();
-        this.sourceSubnetworkIpRangesToNat = Input.empty();
-        this.subnetworks = Input.empty();
-        this.tcpEstablishedIdleTimeoutSec = Input.empty();
-        this.tcpTimeWaitTimeoutSec = Input.empty();
-        this.tcpTransitoryIdleTimeoutSec = Input.empty();
-        this.udpIdleTimeoutSec = Input.empty();
+        this.drainNatIps = Output.empty();
+        this.enableDynamicPortAllocation = Output.empty();
+        this.enableEndpointIndependentMapping = Output.empty();
+        this.icmpIdleTimeoutSec = Output.empty();
+        this.logConfig = Output.empty();
+        this.maxPortsPerVm = Output.empty();
+        this.minPortsPerVm = Output.empty();
+        this.name = Output.empty();
+        this.natIpAllocateOption = Output.empty();
+        this.natIps = Output.empty();
+        this.rules = Output.empty();
+        this.sourceSubnetworkIpRangesToNat = Output.empty();
+        this.subnetworks = Output.empty();
+        this.tcpEstablishedIdleTimeoutSec = Output.empty();
+        this.tcpTimeWaitTimeoutSec = Output.empty();
+        this.tcpTransitoryIdleTimeoutSec = Output.empty();
+        this.udpIdleTimeoutSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -275,23 +275,23 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> drainNatIps;
-        private @Nullable Input<Boolean> enableDynamicPortAllocation;
-        private @Nullable Input<Boolean> enableEndpointIndependentMapping;
-        private @Nullable Input<Integer> icmpIdleTimeoutSec;
-        private @Nullable Input<RouterNatLogConfigArgs> logConfig;
-        private @Nullable Input<Integer> maxPortsPerVm;
-        private @Nullable Input<Integer> minPortsPerVm;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption;
-        private @Nullable Input<List<String>> natIps;
-        private @Nullable Input<List<RouterNatRuleArgs>> rules;
-        private @Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
-        private @Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks;
-        private @Nullable Input<Integer> tcpEstablishedIdleTimeoutSec;
-        private @Nullable Input<Integer> tcpTimeWaitTimeoutSec;
-        private @Nullable Input<Integer> tcpTransitoryIdleTimeoutSec;
-        private @Nullable Input<Integer> udpIdleTimeoutSec;
+        private @Nullable Output<List<String>> drainNatIps;
+        private @Nullable Output<Boolean> enableDynamicPortAllocation;
+        private @Nullable Output<Boolean> enableEndpointIndependentMapping;
+        private @Nullable Output<Integer> icmpIdleTimeoutSec;
+        private @Nullable Output<RouterNatLogConfigArgs> logConfig;
+        private @Nullable Output<Integer> maxPortsPerVm;
+        private @Nullable Output<Integer> minPortsPerVm;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption;
+        private @Nullable Output<List<String>> natIps;
+        private @Nullable Output<List<RouterNatRuleArgs>> rules;
+        private @Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
+        private @Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks;
+        private @Nullable Output<Integer> tcpEstablishedIdleTimeoutSec;
+        private @Nullable Output<Integer> tcpTimeWaitTimeoutSec;
+        private @Nullable Output<Integer> tcpTransitoryIdleTimeoutSec;
+        private @Nullable Output<Integer> udpIdleTimeoutSec;
 
         public Builder() {
     	      // Empty
@@ -318,173 +318,173 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.udpIdleTimeoutSec = defaults.udpIdleTimeoutSec;
         }
 
-        public Builder drainNatIps(@Nullable Input<List<String>> drainNatIps) {
+        public Builder drainNatIps(@Nullable Output<List<String>> drainNatIps) {
             this.drainNatIps = drainNatIps;
             return this;
         }
 
         public Builder drainNatIps(@Nullable List<String> drainNatIps) {
-            this.drainNatIps = Input.ofNullable(drainNatIps);
+            this.drainNatIps = Output.ofNullable(drainNatIps);
             return this;
         }
 
-        public Builder enableDynamicPortAllocation(@Nullable Input<Boolean> enableDynamicPortAllocation) {
+        public Builder enableDynamicPortAllocation(@Nullable Output<Boolean> enableDynamicPortAllocation) {
             this.enableDynamicPortAllocation = enableDynamicPortAllocation;
             return this;
         }
 
         public Builder enableDynamicPortAllocation(@Nullable Boolean enableDynamicPortAllocation) {
-            this.enableDynamicPortAllocation = Input.ofNullable(enableDynamicPortAllocation);
+            this.enableDynamicPortAllocation = Output.ofNullable(enableDynamicPortAllocation);
             return this;
         }
 
-        public Builder enableEndpointIndependentMapping(@Nullable Input<Boolean> enableEndpointIndependentMapping) {
+        public Builder enableEndpointIndependentMapping(@Nullable Output<Boolean> enableEndpointIndependentMapping) {
             this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
             return this;
         }
 
         public Builder enableEndpointIndependentMapping(@Nullable Boolean enableEndpointIndependentMapping) {
-            this.enableEndpointIndependentMapping = Input.ofNullable(enableEndpointIndependentMapping);
+            this.enableEndpointIndependentMapping = Output.ofNullable(enableEndpointIndependentMapping);
             return this;
         }
 
-        public Builder icmpIdleTimeoutSec(@Nullable Input<Integer> icmpIdleTimeoutSec) {
+        public Builder icmpIdleTimeoutSec(@Nullable Output<Integer> icmpIdleTimeoutSec) {
             this.icmpIdleTimeoutSec = icmpIdleTimeoutSec;
             return this;
         }
 
         public Builder icmpIdleTimeoutSec(@Nullable Integer icmpIdleTimeoutSec) {
-            this.icmpIdleTimeoutSec = Input.ofNullable(icmpIdleTimeoutSec);
+            this.icmpIdleTimeoutSec = Output.ofNullable(icmpIdleTimeoutSec);
             return this;
         }
 
-        public Builder logConfig(@Nullable Input<RouterNatLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<RouterNatLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
         public Builder logConfig(@Nullable RouterNatLogConfigArgs logConfig) {
-            this.logConfig = Input.ofNullable(logConfig);
+            this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
 
-        public Builder maxPortsPerVm(@Nullable Input<Integer> maxPortsPerVm) {
+        public Builder maxPortsPerVm(@Nullable Output<Integer> maxPortsPerVm) {
             this.maxPortsPerVm = maxPortsPerVm;
             return this;
         }
 
         public Builder maxPortsPerVm(@Nullable Integer maxPortsPerVm) {
-            this.maxPortsPerVm = Input.ofNullable(maxPortsPerVm);
+            this.maxPortsPerVm = Output.ofNullable(maxPortsPerVm);
             return this;
         }
 
-        public Builder minPortsPerVm(@Nullable Input<Integer> minPortsPerVm) {
+        public Builder minPortsPerVm(@Nullable Output<Integer> minPortsPerVm) {
             this.minPortsPerVm = minPortsPerVm;
             return this;
         }
 
         public Builder minPortsPerVm(@Nullable Integer minPortsPerVm) {
-            this.minPortsPerVm = Input.ofNullable(minPortsPerVm);
+            this.minPortsPerVm = Output.ofNullable(minPortsPerVm);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder natIpAllocateOption(@Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption) {
+        public Builder natIpAllocateOption(@Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption) {
             this.natIpAllocateOption = natIpAllocateOption;
             return this;
         }
 
         public Builder natIpAllocateOption(@Nullable RouterNatNatIpAllocateOption natIpAllocateOption) {
-            this.natIpAllocateOption = Input.ofNullable(natIpAllocateOption);
+            this.natIpAllocateOption = Output.ofNullable(natIpAllocateOption);
             return this;
         }
 
-        public Builder natIps(@Nullable Input<List<String>> natIps) {
+        public Builder natIps(@Nullable Output<List<String>> natIps) {
             this.natIps = natIps;
             return this;
         }
 
         public Builder natIps(@Nullable List<String> natIps) {
-            this.natIps = Input.ofNullable(natIps);
+            this.natIps = Output.ofNullable(natIps);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<RouterNatRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<RouterNatRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<RouterNatRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder sourceSubnetworkIpRangesToNat(@Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat) {
+        public Builder sourceSubnetworkIpRangesToNat(@Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat) {
             this.sourceSubnetworkIpRangesToNat = sourceSubnetworkIpRangesToNat;
             return this;
         }
 
         public Builder sourceSubnetworkIpRangesToNat(@Nullable RouterNatSourceSubnetworkIpRangesToNat sourceSubnetworkIpRangesToNat) {
-            this.sourceSubnetworkIpRangesToNat = Input.ofNullable(sourceSubnetworkIpRangesToNat);
+            this.sourceSubnetworkIpRangesToNat = Output.ofNullable(sourceSubnetworkIpRangesToNat);
             return this;
         }
 
-        public Builder subnetworks(@Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks) {
+        public Builder subnetworks(@Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks) {
             this.subnetworks = subnetworks;
             return this;
         }
 
         public Builder subnetworks(@Nullable List<RouterNatSubnetworkToNatArgs> subnetworks) {
-            this.subnetworks = Input.ofNullable(subnetworks);
+            this.subnetworks = Output.ofNullable(subnetworks);
             return this;
         }
 
-        public Builder tcpEstablishedIdleTimeoutSec(@Nullable Input<Integer> tcpEstablishedIdleTimeoutSec) {
+        public Builder tcpEstablishedIdleTimeoutSec(@Nullable Output<Integer> tcpEstablishedIdleTimeoutSec) {
             this.tcpEstablishedIdleTimeoutSec = tcpEstablishedIdleTimeoutSec;
             return this;
         }
 
         public Builder tcpEstablishedIdleTimeoutSec(@Nullable Integer tcpEstablishedIdleTimeoutSec) {
-            this.tcpEstablishedIdleTimeoutSec = Input.ofNullable(tcpEstablishedIdleTimeoutSec);
+            this.tcpEstablishedIdleTimeoutSec = Output.ofNullable(tcpEstablishedIdleTimeoutSec);
             return this;
         }
 
-        public Builder tcpTimeWaitTimeoutSec(@Nullable Input<Integer> tcpTimeWaitTimeoutSec) {
+        public Builder tcpTimeWaitTimeoutSec(@Nullable Output<Integer> tcpTimeWaitTimeoutSec) {
             this.tcpTimeWaitTimeoutSec = tcpTimeWaitTimeoutSec;
             return this;
         }
 
         public Builder tcpTimeWaitTimeoutSec(@Nullable Integer tcpTimeWaitTimeoutSec) {
-            this.tcpTimeWaitTimeoutSec = Input.ofNullable(tcpTimeWaitTimeoutSec);
+            this.tcpTimeWaitTimeoutSec = Output.ofNullable(tcpTimeWaitTimeoutSec);
             return this;
         }
 
-        public Builder tcpTransitoryIdleTimeoutSec(@Nullable Input<Integer> tcpTransitoryIdleTimeoutSec) {
+        public Builder tcpTransitoryIdleTimeoutSec(@Nullable Output<Integer> tcpTransitoryIdleTimeoutSec) {
             this.tcpTransitoryIdleTimeoutSec = tcpTransitoryIdleTimeoutSec;
             return this;
         }
 
         public Builder tcpTransitoryIdleTimeoutSec(@Nullable Integer tcpTransitoryIdleTimeoutSec) {
-            this.tcpTransitoryIdleTimeoutSec = Input.ofNullable(tcpTransitoryIdleTimeoutSec);
+            this.tcpTransitoryIdleTimeoutSec = Output.ofNullable(tcpTransitoryIdleTimeoutSec);
             return this;
         }
 
-        public Builder udpIdleTimeoutSec(@Nullable Input<Integer> udpIdleTimeoutSec) {
+        public Builder udpIdleTimeoutSec(@Nullable Output<Integer> udpIdleTimeoutSec) {
             this.udpIdleTimeoutSec = udpIdleTimeoutSec;
             return this;
         }
 
         public Builder udpIdleTimeoutSec(@Nullable Integer udpIdleTimeoutSec) {
-            this.udpIdleTimeoutSec = Input.ofNullable(udpIdleTimeoutSec);
+            this.udpIdleTimeoutSec = Output.ofNullable(udpIdleTimeoutSec);
             return this;
         }
         public RouterNatArgs build() {

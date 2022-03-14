@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.azurenative.dbformysql.enums.ServerKeyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,9 +43,9 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverKeyType", required=true)
-      private final Input<Either<String,ServerKeyType>> serverKeyType;
+      private final Output<Either<String,ServerKeyType>> serverKeyType;
 
-    public Input<Either<String,ServerKeyType>> getServerKeyType() {
+    public Output<Either<String,ServerKeyType>> getServerKeyType() {
         return this.serverKeyType;
     }
 
@@ -54,9 +54,9 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -65,18 +65,18 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public ServerKeyArgs(
-        @Nullable Input<String> keyName,
-        Input<String> resourceGroupName,
-        Input<Either<String,ServerKeyType>> serverKeyType,
-        Input<String> serverName,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> keyName,
+        Output<String> resourceGroupName,
+        Output<Either<String,ServerKeyType>> serverKeyType,
+        Output<String> serverName,
+        @Nullable Output<String> uri) {
         this.keyName = keyName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serverKeyType = Objects.requireNonNull(serverKeyType, "expected parameter 'serverKeyType' to be non-null");
@@ -85,11 +85,11 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerKeyArgs() {
-        this.keyName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverKeyType = Input.empty();
-        this.serverName = Input.empty();
-        this.uri = Input.empty();
+        this.keyName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverKeyType = Output.empty();
+        this.serverName = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyName;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,ServerKeyType>> serverKeyType;
-        private Input<String> serverName;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> keyName;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,ServerKeyType>> serverKeyType;
+        private Output<String> serverName;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverKeyType(Input<Either<String,ServerKeyType>> serverKeyType) {
+        public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
 
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
-            this.serverKeyType = Input.of(Objects.requireNonNull(serverKeyType));
+            this.serverKeyType = Output.of(Objects.requireNonNull(serverKeyType));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public ServerKeyArgs build() {

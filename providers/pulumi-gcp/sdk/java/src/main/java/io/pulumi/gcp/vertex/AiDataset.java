@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.vertex;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -206,14 +205,14 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AiDataset(String name, AiDatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AiDataset(String name, Input<String> id, @Nullable AiDatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AiDataset(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:vertex/aiDataset:AiDataset", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -229,7 +228,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AiDataset get(String name, Input<String> id, @Nullable AiDatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AiDataset get(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AiDataset(name, id, state, options);
     }
 }

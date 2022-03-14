@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accent")
-      private final @Nullable Input<String> accent;
+      private final @Nullable Output<String> accent;
 
-    public Input<String> getAccent() {
-        return this.accent == null ? Input.empty() : this.accent;
+    public Output<String> getAccent() {
+        return this.accent == null ? Output.empty() : this.accent;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accentForeground")
-      private final @Nullable Input<String> accentForeground;
+      private final @Nullable Output<String> accentForeground;
 
-    public Input<String> getAccentForeground() {
-        return this.accentForeground == null ? Input.empty() : this.accentForeground;
+    public Output<String> getAccentForeground() {
+        return this.accentForeground == null ? Output.empty() : this.accentForeground;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="danger")
-      private final @Nullable Input<String> danger;
+      private final @Nullable Output<String> danger;
 
-    public Input<String> getDanger() {
-        return this.danger == null ? Input.empty() : this.danger;
+    public Output<String> getDanger() {
+        return this.danger == null ? Output.empty() : this.danger;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dangerForeground")
-      private final @Nullable Input<String> dangerForeground;
+      private final @Nullable Output<String> dangerForeground;
 
-    public Input<String> getDangerForeground() {
-        return this.dangerForeground == null ? Input.empty() : this.dangerForeground;
+    public Output<String> getDangerForeground() {
+        return this.dangerForeground == null ? Output.empty() : this.dangerForeground;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dimension")
-      private final @Nullable Input<String> dimension;
+      private final @Nullable Output<String> dimension;
 
-    public Input<String> getDimension() {
-        return this.dimension == null ? Input.empty() : this.dimension;
+    public Output<String> getDimension() {
+        return this.dimension == null ? Output.empty() : this.dimension;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dimensionForeground")
-      private final @Nullable Input<String> dimensionForeground;
+      private final @Nullable Output<String> dimensionForeground;
 
-    public Input<String> getDimensionForeground() {
-        return this.dimensionForeground == null ? Input.empty() : this.dimensionForeground;
+    public Output<String> getDimensionForeground() {
+        return this.dimensionForeground == null ? Output.empty() : this.dimensionForeground;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="measure")
-      private final @Nullable Input<String> measure;
+      private final @Nullable Output<String> measure;
 
-    public Input<String> getMeasure() {
-        return this.measure == null ? Input.empty() : this.measure;
+    public Output<String> getMeasure() {
+        return this.measure == null ? Output.empty() : this.measure;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="measureForeground")
-      private final @Nullable Input<String> measureForeground;
+      private final @Nullable Output<String> measureForeground;
 
-    public Input<String> getMeasureForeground() {
-        return this.measureForeground == null ? Input.empty() : this.measureForeground;
+    public Output<String> getMeasureForeground() {
+        return this.measureForeground == null ? Output.empty() : this.measureForeground;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="primaryBackground")
-      private final @Nullable Input<String> primaryBackground;
+      private final @Nullable Output<String> primaryBackground;
 
-    public Input<String> getPrimaryBackground() {
-        return this.primaryBackground == null ? Input.empty() : this.primaryBackground;
+    public Output<String> getPrimaryBackground() {
+        return this.primaryBackground == null ? Output.empty() : this.primaryBackground;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="primaryForeground")
-      private final @Nullable Input<String> primaryForeground;
+      private final @Nullable Output<String> primaryForeground;
 
-    public Input<String> getPrimaryForeground() {
-        return this.primaryForeground == null ? Input.empty() : this.primaryForeground;
+    public Output<String> getPrimaryForeground() {
+        return this.primaryForeground == null ? Output.empty() : this.primaryForeground;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secondaryBackground")
-      private final @Nullable Input<String> secondaryBackground;
+      private final @Nullable Output<String> secondaryBackground;
 
-    public Input<String> getSecondaryBackground() {
-        return this.secondaryBackground == null ? Input.empty() : this.secondaryBackground;
+    public Output<String> getSecondaryBackground() {
+        return this.secondaryBackground == null ? Output.empty() : this.secondaryBackground;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secondaryForeground")
-      private final @Nullable Input<String> secondaryForeground;
+      private final @Nullable Output<String> secondaryForeground;
 
-    public Input<String> getSecondaryForeground() {
-        return this.secondaryForeground == null ? Input.empty() : this.secondaryForeground;
+    public Output<String> getSecondaryForeground() {
+        return this.secondaryForeground == null ? Output.empty() : this.secondaryForeground;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="success")
-      private final @Nullable Input<String> success;
+      private final @Nullable Output<String> success;
 
-    public Input<String> getSuccess() {
-        return this.success == null ? Input.empty() : this.success;
+    public Output<String> getSuccess() {
+        return this.success == null ? Output.empty() : this.success;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="successForeground")
-      private final @Nullable Input<String> successForeground;
+      private final @Nullable Output<String> successForeground;
 
-    public Input<String> getSuccessForeground() {
-        return this.successForeground == null ? Input.empty() : this.successForeground;
+    public Output<String> getSuccessForeground() {
+        return this.successForeground == null ? Output.empty() : this.successForeground;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="warning")
-      private final @Nullable Input<String> warning;
+      private final @Nullable Output<String> warning;
 
-    public Input<String> getWarning() {
-        return this.warning == null ? Input.empty() : this.warning;
+    public Output<String> getWarning() {
+        return this.warning == null ? Output.empty() : this.warning;
     }
 
     /**
@@ -202,29 +202,29 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="warningForeground")
-      private final @Nullable Input<String> warningForeground;
+      private final @Nullable Output<String> warningForeground;
 
-    public Input<String> getWarningForeground() {
-        return this.warningForeground == null ? Input.empty() : this.warningForeground;
+    public Output<String> getWarningForeground() {
+        return this.warningForeground == null ? Output.empty() : this.warningForeground;
     }
 
     public ThemeUIColorPaletteArgs(
-        @Nullable Input<String> accent,
-        @Nullable Input<String> accentForeground,
-        @Nullable Input<String> danger,
-        @Nullable Input<String> dangerForeground,
-        @Nullable Input<String> dimension,
-        @Nullable Input<String> dimensionForeground,
-        @Nullable Input<String> measure,
-        @Nullable Input<String> measureForeground,
-        @Nullable Input<String> primaryBackground,
-        @Nullable Input<String> primaryForeground,
-        @Nullable Input<String> secondaryBackground,
-        @Nullable Input<String> secondaryForeground,
-        @Nullable Input<String> success,
-        @Nullable Input<String> successForeground,
-        @Nullable Input<String> warning,
-        @Nullable Input<String> warningForeground) {
+        @Nullable Output<String> accent,
+        @Nullable Output<String> accentForeground,
+        @Nullable Output<String> danger,
+        @Nullable Output<String> dangerForeground,
+        @Nullable Output<String> dimension,
+        @Nullable Output<String> dimensionForeground,
+        @Nullable Output<String> measure,
+        @Nullable Output<String> measureForeground,
+        @Nullable Output<String> primaryBackground,
+        @Nullable Output<String> primaryForeground,
+        @Nullable Output<String> secondaryBackground,
+        @Nullable Output<String> secondaryForeground,
+        @Nullable Output<String> success,
+        @Nullable Output<String> successForeground,
+        @Nullable Output<String> warning,
+        @Nullable Output<String> warningForeground) {
         this.accent = accent;
         this.accentForeground = accentForeground;
         this.danger = danger;
@@ -244,22 +244,22 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     }
 
     private ThemeUIColorPaletteArgs() {
-        this.accent = Input.empty();
-        this.accentForeground = Input.empty();
-        this.danger = Input.empty();
-        this.dangerForeground = Input.empty();
-        this.dimension = Input.empty();
-        this.dimensionForeground = Input.empty();
-        this.measure = Input.empty();
-        this.measureForeground = Input.empty();
-        this.primaryBackground = Input.empty();
-        this.primaryForeground = Input.empty();
-        this.secondaryBackground = Input.empty();
-        this.secondaryForeground = Input.empty();
-        this.success = Input.empty();
-        this.successForeground = Input.empty();
-        this.warning = Input.empty();
-        this.warningForeground = Input.empty();
+        this.accent = Output.empty();
+        this.accentForeground = Output.empty();
+        this.danger = Output.empty();
+        this.dangerForeground = Output.empty();
+        this.dimension = Output.empty();
+        this.dimensionForeground = Output.empty();
+        this.measure = Output.empty();
+        this.measureForeground = Output.empty();
+        this.primaryBackground = Output.empty();
+        this.primaryForeground = Output.empty();
+        this.secondaryBackground = Output.empty();
+        this.secondaryForeground = Output.empty();
+        this.success = Output.empty();
+        this.successForeground = Output.empty();
+        this.warning = Output.empty();
+        this.warningForeground = Output.empty();
     }
 
     public static Builder builder() {
@@ -271,22 +271,22 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accent;
-        private @Nullable Input<String> accentForeground;
-        private @Nullable Input<String> danger;
-        private @Nullable Input<String> dangerForeground;
-        private @Nullable Input<String> dimension;
-        private @Nullable Input<String> dimensionForeground;
-        private @Nullable Input<String> measure;
-        private @Nullable Input<String> measureForeground;
-        private @Nullable Input<String> primaryBackground;
-        private @Nullable Input<String> primaryForeground;
-        private @Nullable Input<String> secondaryBackground;
-        private @Nullable Input<String> secondaryForeground;
-        private @Nullable Input<String> success;
-        private @Nullable Input<String> successForeground;
-        private @Nullable Input<String> warning;
-        private @Nullable Input<String> warningForeground;
+        private @Nullable Output<String> accent;
+        private @Nullable Output<String> accentForeground;
+        private @Nullable Output<String> danger;
+        private @Nullable Output<String> dangerForeground;
+        private @Nullable Output<String> dimension;
+        private @Nullable Output<String> dimensionForeground;
+        private @Nullable Output<String> measure;
+        private @Nullable Output<String> measureForeground;
+        private @Nullable Output<String> primaryBackground;
+        private @Nullable Output<String> primaryForeground;
+        private @Nullable Output<String> secondaryBackground;
+        private @Nullable Output<String> secondaryForeground;
+        private @Nullable Output<String> success;
+        private @Nullable Output<String> successForeground;
+        private @Nullable Output<String> warning;
+        private @Nullable Output<String> warningForeground;
 
         public Builder() {
     	      // Empty
@@ -312,163 +312,163 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     	      this.warningForeground = defaults.warningForeground;
         }
 
-        public Builder accent(@Nullable Input<String> accent) {
+        public Builder accent(@Nullable Output<String> accent) {
             this.accent = accent;
             return this;
         }
 
         public Builder accent(@Nullable String accent) {
-            this.accent = Input.ofNullable(accent);
+            this.accent = Output.ofNullable(accent);
             return this;
         }
 
-        public Builder accentForeground(@Nullable Input<String> accentForeground) {
+        public Builder accentForeground(@Nullable Output<String> accentForeground) {
             this.accentForeground = accentForeground;
             return this;
         }
 
         public Builder accentForeground(@Nullable String accentForeground) {
-            this.accentForeground = Input.ofNullable(accentForeground);
+            this.accentForeground = Output.ofNullable(accentForeground);
             return this;
         }
 
-        public Builder danger(@Nullable Input<String> danger) {
+        public Builder danger(@Nullable Output<String> danger) {
             this.danger = danger;
             return this;
         }
 
         public Builder danger(@Nullable String danger) {
-            this.danger = Input.ofNullable(danger);
+            this.danger = Output.ofNullable(danger);
             return this;
         }
 
-        public Builder dangerForeground(@Nullable Input<String> dangerForeground) {
+        public Builder dangerForeground(@Nullable Output<String> dangerForeground) {
             this.dangerForeground = dangerForeground;
             return this;
         }
 
         public Builder dangerForeground(@Nullable String dangerForeground) {
-            this.dangerForeground = Input.ofNullable(dangerForeground);
+            this.dangerForeground = Output.ofNullable(dangerForeground);
             return this;
         }
 
-        public Builder dimension(@Nullable Input<String> dimension) {
+        public Builder dimension(@Nullable Output<String> dimension) {
             this.dimension = dimension;
             return this;
         }
 
         public Builder dimension(@Nullable String dimension) {
-            this.dimension = Input.ofNullable(dimension);
+            this.dimension = Output.ofNullable(dimension);
             return this;
         }
 
-        public Builder dimensionForeground(@Nullable Input<String> dimensionForeground) {
+        public Builder dimensionForeground(@Nullable Output<String> dimensionForeground) {
             this.dimensionForeground = dimensionForeground;
             return this;
         }
 
         public Builder dimensionForeground(@Nullable String dimensionForeground) {
-            this.dimensionForeground = Input.ofNullable(dimensionForeground);
+            this.dimensionForeground = Output.ofNullable(dimensionForeground);
             return this;
         }
 
-        public Builder measure(@Nullable Input<String> measure) {
+        public Builder measure(@Nullable Output<String> measure) {
             this.measure = measure;
             return this;
         }
 
         public Builder measure(@Nullable String measure) {
-            this.measure = Input.ofNullable(measure);
+            this.measure = Output.ofNullable(measure);
             return this;
         }
 
-        public Builder measureForeground(@Nullable Input<String> measureForeground) {
+        public Builder measureForeground(@Nullable Output<String> measureForeground) {
             this.measureForeground = measureForeground;
             return this;
         }
 
         public Builder measureForeground(@Nullable String measureForeground) {
-            this.measureForeground = Input.ofNullable(measureForeground);
+            this.measureForeground = Output.ofNullable(measureForeground);
             return this;
         }
 
-        public Builder primaryBackground(@Nullable Input<String> primaryBackground) {
+        public Builder primaryBackground(@Nullable Output<String> primaryBackground) {
             this.primaryBackground = primaryBackground;
             return this;
         }
 
         public Builder primaryBackground(@Nullable String primaryBackground) {
-            this.primaryBackground = Input.ofNullable(primaryBackground);
+            this.primaryBackground = Output.ofNullable(primaryBackground);
             return this;
         }
 
-        public Builder primaryForeground(@Nullable Input<String> primaryForeground) {
+        public Builder primaryForeground(@Nullable Output<String> primaryForeground) {
             this.primaryForeground = primaryForeground;
             return this;
         }
 
         public Builder primaryForeground(@Nullable String primaryForeground) {
-            this.primaryForeground = Input.ofNullable(primaryForeground);
+            this.primaryForeground = Output.ofNullable(primaryForeground);
             return this;
         }
 
-        public Builder secondaryBackground(@Nullable Input<String> secondaryBackground) {
+        public Builder secondaryBackground(@Nullable Output<String> secondaryBackground) {
             this.secondaryBackground = secondaryBackground;
             return this;
         }
 
         public Builder secondaryBackground(@Nullable String secondaryBackground) {
-            this.secondaryBackground = Input.ofNullable(secondaryBackground);
+            this.secondaryBackground = Output.ofNullable(secondaryBackground);
             return this;
         }
 
-        public Builder secondaryForeground(@Nullable Input<String> secondaryForeground) {
+        public Builder secondaryForeground(@Nullable Output<String> secondaryForeground) {
             this.secondaryForeground = secondaryForeground;
             return this;
         }
 
         public Builder secondaryForeground(@Nullable String secondaryForeground) {
-            this.secondaryForeground = Input.ofNullable(secondaryForeground);
+            this.secondaryForeground = Output.ofNullable(secondaryForeground);
             return this;
         }
 
-        public Builder success(@Nullable Input<String> success) {
+        public Builder success(@Nullable Output<String> success) {
             this.success = success;
             return this;
         }
 
         public Builder success(@Nullable String success) {
-            this.success = Input.ofNullable(success);
+            this.success = Output.ofNullable(success);
             return this;
         }
 
-        public Builder successForeground(@Nullable Input<String> successForeground) {
+        public Builder successForeground(@Nullable Output<String> successForeground) {
             this.successForeground = successForeground;
             return this;
         }
 
         public Builder successForeground(@Nullable String successForeground) {
-            this.successForeground = Input.ofNullable(successForeground);
+            this.successForeground = Output.ofNullable(successForeground);
             return this;
         }
 
-        public Builder warning(@Nullable Input<String> warning) {
+        public Builder warning(@Nullable Output<String> warning) {
             this.warning = warning;
             return this;
         }
 
         public Builder warning(@Nullable String warning) {
-            this.warning = Input.ofNullable(warning);
+            this.warning = Output.ofNullable(warning);
             return this;
         }
 
-        public Builder warningForeground(@Nullable Input<String> warningForeground) {
+        public Builder warningForeground(@Nullable Output<String> warningForeground) {
             this.warningForeground = warningForeground;
             return this;
         }
 
         public Builder warningForeground(@Nullable String warningForeground) {
-            this.warningForeground = Input.ofNullable(warningForeground);
+            this.warningForeground = Output.ofNullable(warningForeground);
             return this;
         }
         public ThemeUIColorPaletteArgs build() {

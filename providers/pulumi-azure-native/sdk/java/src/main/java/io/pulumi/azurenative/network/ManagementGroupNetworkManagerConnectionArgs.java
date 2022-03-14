@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="managementGroupId", required=true)
-      private final Input<String> managementGroupId;
+      private final Output<String> managementGroupId;
 
-    public Input<String> getManagementGroupId() {
+    public Output<String> getManagementGroupId() {
         return this.managementGroupId;
     }
 
@@ -41,10 +41,10 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkManagerConnectionName")
-      private final @Nullable Input<String> networkManagerConnectionName;
+      private final @Nullable Output<String> networkManagerConnectionName;
 
-    public Input<String> getNetworkManagerConnectionName() {
-        return this.networkManagerConnectionName == null ? Input.empty() : this.networkManagerConnectionName;
+    public Output<String> getNetworkManagerConnectionName() {
+        return this.networkManagerConnectionName == null ? Output.empty() : this.networkManagerConnectionName;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkManagerId")
-      private final @Nullable Input<String> networkManagerId;
+      private final @Nullable Output<String> networkManagerId;
 
-    public Input<String> getNetworkManagerId() {
-        return this.networkManagerId == null ? Input.empty() : this.networkManagerId;
+    public Output<String> getNetworkManagerId() {
+        return this.networkManagerId == null ? Output.empty() : this.networkManagerId;
     }
 
     public ManagementGroupNetworkManagerConnectionArgs(
-        @Nullable Input<String> description,
-        Input<String> managementGroupId,
-        @Nullable Input<String> networkManagerConnectionName,
-        @Nullable Input<String> networkManagerId) {
+        @Nullable Output<String> description,
+        Output<String> managementGroupId,
+        @Nullable Output<String> networkManagerConnectionName,
+        @Nullable Output<String> networkManagerId) {
         this.description = description;
         this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
         this.networkManagerConnectionName = networkManagerConnectionName;
@@ -70,10 +70,10 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     }
 
     private ManagementGroupNetworkManagerConnectionArgs() {
-        this.description = Input.empty();
-        this.managementGroupId = Input.empty();
-        this.networkManagerConnectionName = Input.empty();
-        this.networkManagerId = Input.empty();
+        this.description = Output.empty();
+        this.managementGroupId = Output.empty();
+        this.networkManagerConnectionName = Output.empty();
+        this.networkManagerId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> managementGroupId;
-        private @Nullable Input<String> networkManagerConnectionName;
-        private @Nullable Input<String> networkManagerId;
+        private @Nullable Output<String> description;
+        private Output<String> managementGroupId;
+        private @Nullable Output<String> networkManagerConnectionName;
+        private @Nullable Output<String> networkManagerId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     	      this.networkManagerId = defaults.networkManagerId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder managementGroupId(Input<String> managementGroupId) {
+        public Builder managementGroupId(Output<String> managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
 
         public Builder managementGroupId(String managementGroupId) {
-            this.managementGroupId = Input.of(Objects.requireNonNull(managementGroupId));
+            this.managementGroupId = Output.of(Objects.requireNonNull(managementGroupId));
             return this;
         }
 
-        public Builder networkManagerConnectionName(@Nullable Input<String> networkManagerConnectionName) {
+        public Builder networkManagerConnectionName(@Nullable Output<String> networkManagerConnectionName) {
             this.networkManagerConnectionName = networkManagerConnectionName;
             return this;
         }
 
         public Builder networkManagerConnectionName(@Nullable String networkManagerConnectionName) {
-            this.networkManagerConnectionName = Input.ofNullable(networkManagerConnectionName);
+            this.networkManagerConnectionName = Output.ofNullable(networkManagerConnectionName);
             return this;
         }
 
-        public Builder networkManagerId(@Nullable Input<String> networkManagerId) {
+        public Builder networkManagerId(@Nullable Output<String> networkManagerId) {
             this.networkManagerId = networkManagerId;
             return this;
         }
 
         public Builder networkManagerId(@Nullable String networkManagerId) {
-            this.networkManagerId = Input.ofNullable(networkManagerId);
+            this.networkManagerId = Output.ofNullable(networkManagerId);
             return this;
         }
         public ManagementGroupNetworkManagerConnectionArgs build() {

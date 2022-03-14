@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkRoutingConfigRoutingMode;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="routingMode")
-      private final @Nullable Input<NetworkRoutingConfigRoutingMode> routingMode;
+      private final @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
 
-    public Input<NetworkRoutingConfigRoutingMode> getRoutingMode() {
-        return this.routingMode == null ? Input.empty() : this.routingMode;
+    public Output<NetworkRoutingConfigRoutingMode> getRoutingMode() {
+        return this.routingMode == null ? Output.empty() : this.routingMode;
     }
 
-    public NetworkRoutingConfigArgs(@Nullable Input<NetworkRoutingConfigRoutingMode> routingMode) {
+    public NetworkRoutingConfigArgs(@Nullable Output<NetworkRoutingConfigRoutingMode> routingMode) {
         this.routingMode = routingMode;
     }
 
     private NetworkRoutingConfigArgs() {
-        this.routingMode = Input.empty();
+        this.routingMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkRoutingConfigRoutingMode> routingMode;
+        private @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
     	      this.routingMode = defaults.routingMode;
         }
 
-        public Builder routingMode(@Nullable Input<NetworkRoutingConfigRoutingMode> routingMode) {
+        public Builder routingMode(@Nullable Output<NetworkRoutingConfigRoutingMode> routingMode) {
             this.routingMode = routingMode;
             return this;
         }
 
         public Builder routingMode(@Nullable NetworkRoutingConfigRoutingMode routingMode) {
-            this.routingMode = Input.ofNullable(routingMode);
+            this.routingMode = Output.ofNullable(routingMode);
             return this;
         }
         public NetworkRoutingConfigArgs build() {

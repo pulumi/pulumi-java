@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containerName", required=true)
-      private final Input<String> containerName;
+      private final Output<String> containerName;
 
-    public Input<String> getContainerName() {
+    public Output<String> getContainerName() {
         return this.containerName;
     }
 
@@ -31,9 +31,9 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containerPort", required=true)
-      private final Input<Integer> containerPort;
+      private final Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
+    public Output<Integer> getContainerPort() {
         return this.containerPort;
     }
 
@@ -42,10 +42,10 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="elbName")
-      private final @Nullable Input<String> elbName;
+      private final @Nullable Output<String> elbName;
 
-    public Input<String> getElbName() {
-        return this.elbName == null ? Input.empty() : this.elbName;
+    public Output<String> getElbName() {
+        return this.elbName == null ? Output.empty() : this.elbName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetGroupArn")
-      private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Output<String> targetGroupArn;
 
-    public Input<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
+    public Output<String> getTargetGroupArn() {
+        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
     }
 
     public ServiceLoadBalancerArgs(
-        Input<String> containerName,
-        Input<Integer> containerPort,
-        @Nullable Input<String> elbName,
-        @Nullable Input<String> targetGroupArn) {
+        Output<String> containerName,
+        Output<Integer> containerPort,
+        @Nullable Output<String> elbName,
+        @Nullable Output<String> targetGroupArn) {
         this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
         this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
         this.elbName = elbName;
@@ -71,10 +71,10 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServiceLoadBalancerArgs() {
-        this.containerName = Input.empty();
-        this.containerPort = Input.empty();
-        this.elbName = Input.empty();
-        this.targetGroupArn = Input.empty();
+        this.containerName = Output.empty();
+        this.containerPort = Output.empty();
+        this.elbName = Output.empty();
+        this.targetGroupArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> containerName;
-        private Input<Integer> containerPort;
-        private @Nullable Input<String> elbName;
-        private @Nullable Input<String> targetGroupArn;
+        private Output<String> containerName;
+        private Output<Integer> containerPort;
+        private @Nullable Output<String> elbName;
+        private @Nullable Output<String> targetGroupArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     	      this.targetGroupArn = defaults.targetGroupArn;
         }
 
-        public Builder containerName(Input<String> containerName) {
+        public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Input.of(Objects.requireNonNull(containerName));
+            this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder containerPort(Input<Integer> containerPort) {
+        public Builder containerPort(Output<Integer> containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Input.of(Objects.requireNonNull(containerPort));
+            this.containerPort = Output.of(Objects.requireNonNull(containerPort));
             return this;
         }
 
-        public Builder elbName(@Nullable Input<String> elbName) {
+        public Builder elbName(@Nullable Output<String> elbName) {
             this.elbName = elbName;
             return this;
         }
 
         public Builder elbName(@Nullable String elbName) {
-            this.elbName = Input.ofNullable(elbName);
+            this.elbName = Output.ofNullable(elbName);
             return this;
         }
 
-        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Input.ofNullable(targetGroupArn);
+            this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
         public ServiceLoadBalancerArgs build() {

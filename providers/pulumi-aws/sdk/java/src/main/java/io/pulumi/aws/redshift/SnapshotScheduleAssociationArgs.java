@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-      private final Input<String> clusterIdentifier;
+      private final Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
+    public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -29,22 +29,22 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scheduleIdentifier", required=true)
-      private final Input<String> scheduleIdentifier;
+      private final Output<String> scheduleIdentifier;
 
-    public Input<String> getScheduleIdentifier() {
+    public Output<String> getScheduleIdentifier() {
         return this.scheduleIdentifier;
     }
 
     public SnapshotScheduleAssociationArgs(
-        Input<String> clusterIdentifier,
-        Input<String> scheduleIdentifier) {
+        Output<String> clusterIdentifier,
+        Output<String> scheduleIdentifier) {
         this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
         this.scheduleIdentifier = Objects.requireNonNull(scheduleIdentifier, "expected parameter 'scheduleIdentifier' to be non-null");
     }
 
     private SnapshotScheduleAssociationArgs() {
-        this.clusterIdentifier = Input.empty();
-        this.scheduleIdentifier = Input.empty();
+        this.clusterIdentifier = Output.empty();
+        this.scheduleIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> clusterIdentifier;
-        private Input<String> scheduleIdentifier;
+        private Output<String> clusterIdentifier;
+        private Output<String> scheduleIdentifier;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
     	      this.scheduleIdentifier = defaults.scheduleIdentifier;
         }
 
-        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
+            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder scheduleIdentifier(Input<String> scheduleIdentifier) {
+        public Builder scheduleIdentifier(Output<String> scheduleIdentifier) {
             this.scheduleIdentifier = Objects.requireNonNull(scheduleIdentifier);
             return this;
         }
 
         public Builder scheduleIdentifier(String scheduleIdentifier) {
-            this.scheduleIdentifier = Input.of(Objects.requireNonNull(scheduleIdentifier));
+            this.scheduleIdentifier = Output.of(Objects.requireNonNull(scheduleIdentifier));
             return this;
         }
         public SnapshotScheduleAssociationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.memorydb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     public static final AclArgs Empty = new AclArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -61,18 +61,18 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userNames")
-      private final @Nullable Input<List<String>> userNames;
+      private final @Nullable Output<List<String>> userNames;
 
-    public Input<List<String>> getUserNames() {
-        return this.userNames == null ? Input.empty() : this.userNames;
+    public Output<List<String>> getUserNames() {
+        return this.userNames == null ? Output.empty() : this.userNames;
     }
 
     public AclArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<String>> userNames) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<String>> userNames) {
         this.name = name;
         this.namePrefix = namePrefix;
         this.tags = tags;
@@ -81,11 +81,11 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AclArgs() {
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userNames = Input.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,11 +97,11 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<String>> userNames;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<String>> userNames;
 
         public Builder() {
     	      // Empty
@@ -116,53 +116,53 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userNames = defaults.userNames;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userNames(@Nullable Input<List<String>> userNames) {
+        public Builder userNames(@Nullable Output<List<String>> userNames) {
             this.userNames = userNames;
             return this;
         }
 
         public Builder userNames(@Nullable List<String> userNames) {
-            this.userNames = Input.ofNullable(userNames);
+            this.userNames = Output.ofNullable(userNames);
             return this;
         }
         public AclArgs build() {

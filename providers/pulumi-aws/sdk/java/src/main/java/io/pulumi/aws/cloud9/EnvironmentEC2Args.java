@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloud9;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automaticStopTimeMinutes")
-      private final @Nullable Input<Integer> automaticStopTimeMinutes;
+      private final @Nullable Output<Integer> automaticStopTimeMinutes;
 
-    public Input<Integer> getAutomaticStopTimeMinutes() {
-        return this.automaticStopTimeMinutes == null ? Input.empty() : this.automaticStopTimeMinutes;
+    public Output<Integer> getAutomaticStopTimeMinutes() {
+        return this.automaticStopTimeMinutes == null ? Output.empty() : this.automaticStopTimeMinutes;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -54,10 +54,10 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerArn")
-      private final @Nullable Input<String> ownerArn;
+      private final @Nullable Output<String> ownerArn;
 
-    public Input<String> getOwnerArn() {
-        return this.ownerArn == null ? Input.empty() : this.ownerArn;
+    public Output<String> getOwnerArn() {
+        return this.ownerArn == null ? Output.empty() : this.ownerArn;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EnvironmentEC2Args(
-        @Nullable Input<Integer> automaticStopTimeMinutes,
-        @Nullable Input<String> description,
-        Input<String> instanceType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerArn,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Integer> automaticStopTimeMinutes,
+        @Nullable Output<String> description,
+        Output<String> instanceType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerArn,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags) {
         this.automaticStopTimeMinutes = automaticStopTimeMinutes;
         this.description = description;
         this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
@@ -111,13 +111,13 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentEC2Args() {
-        this.automaticStopTimeMinutes = Input.empty();
-        this.description = Input.empty();
-        this.instanceType = Input.empty();
-        this.name = Input.empty();
-        this.ownerArn = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
+        this.automaticStopTimeMinutes = Output.empty();
+        this.description = Output.empty();
+        this.instanceType = Output.empty();
+        this.name = Output.empty();
+        this.ownerArn = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> automaticStopTimeMinutes;
-        private @Nullable Input<String> description;
-        private Input<String> instanceType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerArn;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Integer> automaticStopTimeMinutes;
+        private @Nullable Output<String> description;
+        private Output<String> instanceType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerArn;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder automaticStopTimeMinutes(@Nullable Input<Integer> automaticStopTimeMinutes) {
+        public Builder automaticStopTimeMinutes(@Nullable Output<Integer> automaticStopTimeMinutes) {
             this.automaticStopTimeMinutes = automaticStopTimeMinutes;
             return this;
         }
 
         public Builder automaticStopTimeMinutes(@Nullable Integer automaticStopTimeMinutes) {
-            this.automaticStopTimeMinutes = Input.ofNullable(automaticStopTimeMinutes);
+            this.automaticStopTimeMinutes = Output.ofNullable(automaticStopTimeMinutes);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerArn(@Nullable Input<String> ownerArn) {
+        public Builder ownerArn(@Nullable Output<String> ownerArn) {
             this.ownerArn = ownerArn;
             return this;
         }
 
         public Builder ownerArn(@Nullable String ownerArn) {
-            this.ownerArn = Input.ofNullable(ownerArn);
+            this.ownerArn = Output.ofNullable(ownerArn);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EnvironmentEC2Args build() {

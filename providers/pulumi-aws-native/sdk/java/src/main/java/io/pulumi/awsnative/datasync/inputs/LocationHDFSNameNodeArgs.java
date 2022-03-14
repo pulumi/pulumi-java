@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hostname", required=true)
-      private final Input<String> hostname;
+      private final Output<String> hostname;
 
-    public Input<String> getHostname() {
+    public Output<String> getHostname() {
         return this.hostname;
     }
 
@@ -34,22 +34,22 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
     public LocationHDFSNameNodeArgs(
-        Input<String> hostname,
-        Input<Integer> port) {
+        Output<String> hostname,
+        Output<Integer> port) {
         this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private LocationHDFSNameNodeArgs() {
-        this.hostname = Input.empty();
-        this.port = Input.empty();
+        this.hostname = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> hostname;
-        private Input<Integer> port;
+        private Output<String> hostname;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
     	      this.port = defaults.port;
         }
 
-        public Builder hostname(Input<String> hostname) {
+        public Builder hostname(Output<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
         public Builder hostname(String hostname) {
-            this.hostname = Input.of(Objects.requireNonNull(hostname));
+            this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public LocationHDFSNameNodeArgs build() {

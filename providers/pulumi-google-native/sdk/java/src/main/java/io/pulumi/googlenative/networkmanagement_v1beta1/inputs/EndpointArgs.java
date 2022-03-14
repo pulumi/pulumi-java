@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1beta1.enums.EndpointNetworkType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.CloudFunctionEndpointArgs;
@@ -26,10 +26,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudFunction")
-      private final @Nullable Input<CloudFunctionEndpointArgs> cloudFunction;
+      private final @Nullable Output<CloudFunctionEndpointArgs> cloudFunction;
 
-    public Input<CloudFunctionEndpointArgs> getCloudFunction() {
-        return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
+    public Output<CloudFunctionEndpointArgs> getCloudFunction() {
+        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudSqlInstance")
-      private final @Nullable Input<String> cloudSqlInstance;
+      private final @Nullable Output<String> cloudSqlInstance;
 
-    public Input<String> getCloudSqlInstance() {
-        return this.cloudSqlInstance == null ? Input.empty() : this.cloudSqlInstance;
+    public Output<String> getCloudSqlInstance() {
+        return this.cloudSqlInstance == null ? Output.empty() : this.cloudSqlInstance;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gkeMasterCluster")
-      private final @Nullable Input<String> gkeMasterCluster;
+      private final @Nullable Output<String> gkeMasterCluster;
 
-    public Input<String> getGkeMasterCluster() {
-        return this.gkeMasterCluster == null ? Input.empty() : this.gkeMasterCluster;
+    public Output<String> getGkeMasterCluster() {
+        return this.gkeMasterCluster == null ? Output.empty() : this.gkeMasterCluster;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkType")
-      private final @Nullable Input<EndpointNetworkType> networkType;
+      private final @Nullable Output<EndpointNetworkType> networkType;
 
-    public Input<EndpointNetworkType> getNetworkType() {
-        return this.networkType == null ? Input.empty() : this.networkType;
+    public Output<EndpointNetworkType> getNetworkType() {
+        return this.networkType == null ? Output.empty() : this.networkType;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public EndpointArgs(
-        @Nullable Input<CloudFunctionEndpointArgs> cloudFunction,
-        @Nullable Input<String> cloudSqlInstance,
-        @Nullable Input<String> gkeMasterCluster,
-        @Nullable Input<String> instance,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> network,
-        @Nullable Input<EndpointNetworkType> networkType,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project) {
+        @Nullable Output<CloudFunctionEndpointArgs> cloudFunction,
+        @Nullable Output<String> cloudSqlInstance,
+        @Nullable Output<String> gkeMasterCluster,
+        @Nullable Output<String> instance,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> network,
+        @Nullable Output<EndpointNetworkType> networkType,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project) {
         this.cloudFunction = cloudFunction;
         this.cloudSqlInstance = cloudSqlInstance;
         this.gkeMasterCluster = gkeMasterCluster;
@@ -142,15 +142,15 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.cloudFunction = Input.empty();
-        this.cloudSqlInstance = Input.empty();
-        this.gkeMasterCluster = Input.empty();
-        this.instance = Input.empty();
-        this.ipAddress = Input.empty();
-        this.network = Input.empty();
-        this.networkType = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
+        this.cloudFunction = Output.empty();
+        this.cloudSqlInstance = Output.empty();
+        this.gkeMasterCluster = Output.empty();
+        this.instance = Output.empty();
+        this.ipAddress = Output.empty();
+        this.network = Output.empty();
+        this.networkType = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudFunctionEndpointArgs> cloudFunction;
-        private @Nullable Input<String> cloudSqlInstance;
-        private @Nullable Input<String> gkeMasterCluster;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> network;
-        private @Nullable Input<EndpointNetworkType> networkType;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
+        private @Nullable Output<CloudFunctionEndpointArgs> cloudFunction;
+        private @Nullable Output<String> cloudSqlInstance;
+        private @Nullable Output<String> gkeMasterCluster;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> network;
+        private @Nullable Output<EndpointNetworkType> networkType;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder cloudFunction(@Nullable Input<CloudFunctionEndpointArgs> cloudFunction) {
+        public Builder cloudFunction(@Nullable Output<CloudFunctionEndpointArgs> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
         public Builder cloudFunction(@Nullable CloudFunctionEndpointArgs cloudFunction) {
-            this.cloudFunction = Input.ofNullable(cloudFunction);
+            this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
 
-        public Builder cloudSqlInstance(@Nullable Input<String> cloudSqlInstance) {
+        public Builder cloudSqlInstance(@Nullable Output<String> cloudSqlInstance) {
             this.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
 
         public Builder cloudSqlInstance(@Nullable String cloudSqlInstance) {
-            this.cloudSqlInstance = Input.ofNullable(cloudSqlInstance);
+            this.cloudSqlInstance = Output.ofNullable(cloudSqlInstance);
             return this;
         }
 
-        public Builder gkeMasterCluster(@Nullable Input<String> gkeMasterCluster) {
+        public Builder gkeMasterCluster(@Nullable Output<String> gkeMasterCluster) {
             this.gkeMasterCluster = gkeMasterCluster;
             return this;
         }
 
         public Builder gkeMasterCluster(@Nullable String gkeMasterCluster) {
-            this.gkeMasterCluster = Input.ofNullable(gkeMasterCluster);
+            this.gkeMasterCluster = Output.ofNullable(gkeMasterCluster);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder networkType(@Nullable Input<EndpointNetworkType> networkType) {
+        public Builder networkType(@Nullable Output<EndpointNetworkType> networkType) {
             this.networkType = networkType;
             return this;
         }
 
         public Builder networkType(@Nullable EndpointNetworkType networkType) {
-            this.networkType = Input.ofNullable(networkType);
+            this.networkType = Output.ofNullable(networkType);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public EndpointArgs build() {

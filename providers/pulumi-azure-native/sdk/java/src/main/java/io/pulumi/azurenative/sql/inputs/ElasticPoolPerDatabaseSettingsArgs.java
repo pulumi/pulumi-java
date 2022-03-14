@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxCapacity")
-      private final @Nullable Input<Double> maxCapacity;
+      private final @Nullable Output<Double> maxCapacity;
 
-    public Input<Double> getMaxCapacity() {
-        return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
+    public Output<Double> getMaxCapacity() {
+        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minCapacity")
-      private final @Nullable Input<Double> minCapacity;
+      private final @Nullable Output<Double> minCapacity;
 
-    public Input<Double> getMinCapacity() {
-        return this.minCapacity == null ? Input.empty() : this.minCapacity;
+    public Output<Double> getMinCapacity() {
+        return this.minCapacity == null ? Output.empty() : this.minCapacity;
     }
 
     public ElasticPoolPerDatabaseSettingsArgs(
-        @Nullable Input<Double> maxCapacity,
-        @Nullable Input<Double> minCapacity) {
+        @Nullable Output<Double> maxCapacity,
+        @Nullable Output<Double> minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }
 
     private ElasticPoolPerDatabaseSettingsArgs() {
-        this.maxCapacity = Input.empty();
-        this.minCapacity = Input.empty();
+        this.maxCapacity = Output.empty();
+        this.minCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> maxCapacity;
-        private @Nullable Input<Double> minCapacity;
+        private @Nullable Output<Double> maxCapacity;
+        private @Nullable Output<Double> minCapacity;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder maxCapacity(@Nullable Input<Double> maxCapacity) {
+        public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
         public Builder maxCapacity(@Nullable Double maxCapacity) {
-            this.maxCapacity = Input.ofNullable(maxCapacity);
+            this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder minCapacity(@Nullable Input<Double> minCapacity) {
+        public Builder minCapacity(@Nullable Output<Double> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
         public Builder minCapacity(@Nullable Double minCapacity) {
-            this.minCapacity = Input.ofNullable(minCapacity);
+            this.minCapacity = Output.ofNullable(minCapacity);
             return this;
         }
         public ElasticPoolPerDatabaseSettingsArgs build() {

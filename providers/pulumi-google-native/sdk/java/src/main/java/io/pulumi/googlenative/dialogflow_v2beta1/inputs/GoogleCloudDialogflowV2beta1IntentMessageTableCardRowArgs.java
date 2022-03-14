@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
      * 
      */
     @InputImport(name="cells")
-      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
+      private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
 
-    public Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> getCells() {
-        return this.cells == null ? Input.empty() : this.cells;
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> getCells() {
+        return this.cells == null ? Output.empty() : this.cells;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
      * 
      */
     @InputImport(name="dividerAfter")
-      private final @Nullable Input<Boolean> dividerAfter;
+      private final @Nullable Output<Boolean> dividerAfter;
 
-    public Input<Boolean> getDividerAfter() {
-        return this.dividerAfter == null ? Input.empty() : this.dividerAfter;
+    public Output<Boolean> getDividerAfter() {
+        return this.dividerAfter == null ? Output.empty() : this.dividerAfter;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs(
-        @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells,
-        @Nullable Input<Boolean> dividerAfter) {
+        @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells,
+        @Nullable Output<Boolean> dividerAfter) {
         this.cells = cells;
         this.dividerAfter = dividerAfter;
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs() {
-        this.cells = Input.empty();
-        this.dividerAfter = Input.empty();
+        this.cells = Output.empty();
+        this.dividerAfter = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
-        private @Nullable Input<Boolean> dividerAfter;
+        private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
+        private @Nullable Output<Boolean> dividerAfter;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
     	      this.dividerAfter = defaults.dividerAfter;
         }
 
-        public Builder cells(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells) {
+        public Builder cells(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells) {
             this.cells = cells;
             return this;
         }
 
         public Builder cells(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs> cells) {
-            this.cells = Input.ofNullable(cells);
+            this.cells = Output.ofNullable(cells);
             return this;
         }
 
-        public Builder dividerAfter(@Nullable Input<Boolean> dividerAfter) {
+        public Builder dividerAfter(@Nullable Output<Boolean> dividerAfter) {
             this.dividerAfter = dividerAfter;
             return this;
         }
 
         public Builder dividerAfter(@Nullable Boolean dividerAfter) {
-            this.dividerAfter = Input.ofNullable(dividerAfter);
+            this.dividerAfter = Output.ofNullable(dividerAfter);
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs build() {

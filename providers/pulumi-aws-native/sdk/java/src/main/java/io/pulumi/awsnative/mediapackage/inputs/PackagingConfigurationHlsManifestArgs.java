@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsManifestAdMarkers;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="adMarkers")
-      private final @Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers;
+      private final @Nullable Output<PackagingConfigurationHlsManifestAdMarkers> adMarkers;
 
-    public Input<PackagingConfigurationHlsManifestAdMarkers> getAdMarkers() {
-        return this.adMarkers == null ? Input.empty() : this.adMarkers;
+    public Output<PackagingConfigurationHlsManifestAdMarkers> getAdMarkers() {
+        return this.adMarkers == null ? Output.empty() : this.adMarkers;
     }
 
     /**
@@ -38,17 +38,17 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="includeIframeOnlyStream")
-      private final @Nullable Input<Boolean> includeIframeOnlyStream;
+      private final @Nullable Output<Boolean> includeIframeOnlyStream;
 
-    public Input<Boolean> getIncludeIframeOnlyStream() {
-        return this.includeIframeOnlyStream == null ? Input.empty() : this.includeIframeOnlyStream;
+    public Output<Boolean> getIncludeIframeOnlyStream() {
+        return this.includeIframeOnlyStream == null ? Output.empty() : this.includeIframeOnlyStream;
     }
 
     @InputImport(name="manifestName")
-      private final @Nullable Input<String> manifestName;
+      private final @Nullable Output<String> manifestName;
 
-    public Input<String> getManifestName() {
-        return this.manifestName == null ? Input.empty() : this.manifestName;
+    public Output<String> getManifestName() {
+        return this.manifestName == null ? Output.empty() : this.manifestName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="programDateTimeIntervalSeconds")
-      private final @Nullable Input<Integer> programDateTimeIntervalSeconds;
+      private final @Nullable Output<Integer> programDateTimeIntervalSeconds;
 
-    public Input<Integer> getProgramDateTimeIntervalSeconds() {
-        return this.programDateTimeIntervalSeconds == null ? Input.empty() : this.programDateTimeIntervalSeconds;
+    public Output<Integer> getProgramDateTimeIntervalSeconds() {
+        return this.programDateTimeIntervalSeconds == null ? Output.empty() : this.programDateTimeIntervalSeconds;
     }
 
     /**
@@ -67,26 +67,26 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="repeatExtXKey")
-      private final @Nullable Input<Boolean> repeatExtXKey;
+      private final @Nullable Output<Boolean> repeatExtXKey;
 
-    public Input<Boolean> getRepeatExtXKey() {
-        return this.repeatExtXKey == null ? Input.empty() : this.repeatExtXKey;
+    public Output<Boolean> getRepeatExtXKey() {
+        return this.repeatExtXKey == null ? Output.empty() : this.repeatExtXKey;
     }
 
     @InputImport(name="streamSelection")
-      private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
+      private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
-    public Input<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
-        return this.streamSelection == null ? Input.empty() : this.streamSelection;
+    public Output<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
+        return this.streamSelection == null ? Output.empty() : this.streamSelection;
     }
 
     public PackagingConfigurationHlsManifestArgs(
-        @Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers,
-        @Nullable Input<Boolean> includeIframeOnlyStream,
-        @Nullable Input<String> manifestName,
-        @Nullable Input<Integer> programDateTimeIntervalSeconds,
-        @Nullable Input<Boolean> repeatExtXKey,
-        @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
+        @Nullable Output<PackagingConfigurationHlsManifestAdMarkers> adMarkers,
+        @Nullable Output<Boolean> includeIframeOnlyStream,
+        @Nullable Output<String> manifestName,
+        @Nullable Output<Integer> programDateTimeIntervalSeconds,
+        @Nullable Output<Boolean> repeatExtXKey,
+        @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
         this.adMarkers = adMarkers;
         this.includeIframeOnlyStream = includeIframeOnlyStream;
         this.manifestName = manifestName;
@@ -96,12 +96,12 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     }
 
     private PackagingConfigurationHlsManifestArgs() {
-        this.adMarkers = Input.empty();
-        this.includeIframeOnlyStream = Input.empty();
-        this.manifestName = Input.empty();
-        this.programDateTimeIntervalSeconds = Input.empty();
-        this.repeatExtXKey = Input.empty();
-        this.streamSelection = Input.empty();
+        this.adMarkers = Output.empty();
+        this.includeIframeOnlyStream = Output.empty();
+        this.manifestName = Output.empty();
+        this.programDateTimeIntervalSeconds = Output.empty();
+        this.repeatExtXKey = Output.empty();
+        this.streamSelection = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers;
-        private @Nullable Input<Boolean> includeIframeOnlyStream;
-        private @Nullable Input<String> manifestName;
-        private @Nullable Input<Integer> programDateTimeIntervalSeconds;
-        private @Nullable Input<Boolean> repeatExtXKey;
-        private @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
+        private @Nullable Output<PackagingConfigurationHlsManifestAdMarkers> adMarkers;
+        private @Nullable Output<Boolean> includeIframeOnlyStream;
+        private @Nullable Output<String> manifestName;
+        private @Nullable Output<Integer> programDateTimeIntervalSeconds;
+        private @Nullable Output<Boolean> repeatExtXKey;
+        private @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder adMarkers(@Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers) {
+        public Builder adMarkers(@Nullable Output<PackagingConfigurationHlsManifestAdMarkers> adMarkers) {
             this.adMarkers = adMarkers;
             return this;
         }
 
         public Builder adMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
-            this.adMarkers = Input.ofNullable(adMarkers);
+            this.adMarkers = Output.ofNullable(adMarkers);
             return this;
         }
 
-        public Builder includeIframeOnlyStream(@Nullable Input<Boolean> includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Output<Boolean> includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
-            this.includeIframeOnlyStream = Input.ofNullable(includeIframeOnlyStream);
+            this.includeIframeOnlyStream = Output.ofNullable(includeIframeOnlyStream);
             return this;
         }
 
-        public Builder manifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Input.ofNullable(manifestName);
+            this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
 
-        public Builder programDateTimeIntervalSeconds(@Nullable Input<Integer> programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Output<Integer> programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
-            this.programDateTimeIntervalSeconds = Input.ofNullable(programDateTimeIntervalSeconds);
+            this.programDateTimeIntervalSeconds = Output.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
 
-        public Builder repeatExtXKey(@Nullable Input<Boolean> repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Output<Boolean> repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
-            this.repeatExtXKey = Input.ofNullable(repeatExtXKey);
+            this.repeatExtXKey = Output.ofNullable(repeatExtXKey);
             return this;
         }
 
-        public Builder streamSelection(@Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
-            this.streamSelection = Input.ofNullable(streamSelection);
+            this.streamSelection = Output.ofNullable(streamSelection);
             return this;
         }
         public PackagingConfigurationHlsManifestArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricCosts")
-      private final @Nullable Input<Map<String,String>> metricCosts;
+      private final @Nullable Output<Map<String,String>> metricCosts;
 
-    public Input<Map<String,String>> getMetricCosts() {
-        return this.metricCosts == null ? Input.empty() : this.metricCosts;
+    public Output<Map<String,String>> getMetricCosts() {
+        return this.metricCosts == null ? Output.empty() : this.metricCosts;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<String> selector;
+      private final @Nullable Output<String> selector;
 
-    public Input<String> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<String> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     public MetricRuleArgs(
-        @Nullable Input<Map<String,String>> metricCosts,
-        @Nullable Input<String> selector) {
+        @Nullable Output<Map<String,String>> metricCosts,
+        @Nullable Output<String> selector) {
         this.metricCosts = metricCosts;
         this.selector = selector;
     }
 
     private MetricRuleArgs() {
-        this.metricCosts = Input.empty();
-        this.selector = Input.empty();
+        this.metricCosts = Output.empty();
+        this.selector = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> metricCosts;
-        private @Nullable Input<String> selector;
+        private @Nullable Output<Map<String,String>> metricCosts;
+        private @Nullable Output<String> selector;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder metricCosts(@Nullable Input<Map<String,String>> metricCosts) {
+        public Builder metricCosts(@Nullable Output<Map<String,String>> metricCosts) {
             this.metricCosts = metricCosts;
             return this;
         }
 
         public Builder metricCosts(@Nullable Map<String,String> metricCosts) {
-            this.metricCosts = Input.ofNullable(metricCosts);
+            this.metricCosts = Output.ofNullable(metricCosts);
             return this;
         }
 
-        public Builder selector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
         public MetricRuleArgs build() {

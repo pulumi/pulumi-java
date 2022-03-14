@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="destIpRanges")
-      private final @Nullable Input<List<String>> destIpRanges;
+      private final @Nullable Output<List<String>> destIpRanges;
 
-    public Input<List<String>> getDestIpRanges() {
-        return this.destIpRanges == null ? Input.empty() : this.destIpRanges;
+    public Output<List<String>> getDestIpRanges() {
+        return this.destIpRanges == null ? Output.empty() : this.destIpRanges;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="layer4Configs", required=true)
-      private final Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
+      private final Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
 
-    public Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> getLayer4Configs() {
+    public Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> getLayer4Configs() {
         return this.layer4Configs;
     }
 
@@ -46,25 +46,25 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="srcIpRanges")
-      private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Input<List<String>> getSrcIpRanges() {
-        return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;
+    public Output<List<String>> getSrcIpRanges() {
+        return this.srcIpRanges == null ? Output.empty() : this.srcIpRanges;
     }
 
     public OrganizationSecurityPolicyRuleMatchConfigArgs(
-        @Nullable Input<List<String>> destIpRanges,
-        Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs,
-        @Nullable Input<List<String>> srcIpRanges) {
+        @Nullable Output<List<String>> destIpRanges,
+        Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs,
+        @Nullable Output<List<String>> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = Objects.requireNonNull(layer4Configs, "expected parameter 'layer4Configs' to be non-null");
         this.srcIpRanges = srcIpRanges;
     }
 
     private OrganizationSecurityPolicyRuleMatchConfigArgs() {
-        this.destIpRanges = Input.empty();
-        this.layer4Configs = Input.empty();
-        this.srcIpRanges = Input.empty();
+        this.destIpRanges = Output.empty();
+        this.layer4Configs = Output.empty();
+        this.srcIpRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> destIpRanges;
-        private Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
-        private @Nullable Input<List<String>> srcIpRanges;
+        private @Nullable Output<List<String>> destIpRanges;
+        private Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
+        private @Nullable Output<List<String>> srcIpRanges;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder destIpRanges(@Nullable Input<List<String>> destIpRanges) {
+        public Builder destIpRanges(@Nullable Output<List<String>> destIpRanges) {
             this.destIpRanges = destIpRanges;
             return this;
         }
 
         public Builder destIpRanges(@Nullable List<String> destIpRanges) {
-            this.destIpRanges = Input.ofNullable(destIpRanges);
+            this.destIpRanges = Output.ofNullable(destIpRanges);
             return this;
         }
 
-        public Builder layer4Configs(Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs) {
+        public Builder layer4Configs(Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
         public Builder layer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs> layer4Configs) {
-            this.layer4Configs = Input.of(Objects.requireNonNull(layer4Configs));
+            this.layer4Configs = Output.of(Objects.requireNonNull(layer4Configs));
             return this;
         }
 
-        public Builder srcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
 
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Input.ofNullable(srcIpRanges);
+            this.srcIpRanges = Output.ofNullable(srcIpRanges);
             return this;
         }
         public OrganizationSecurityPolicyRuleMatchConfigArgs build() {

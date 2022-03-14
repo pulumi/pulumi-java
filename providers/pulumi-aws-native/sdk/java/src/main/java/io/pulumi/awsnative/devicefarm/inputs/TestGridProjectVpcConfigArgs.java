@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.devicefarm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -34,32 +34,32 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public TestGridProjectVpcConfigArgs(
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnetIds,
-        Input<String> vpcId) {
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnetIds,
+        Output<String> vpcId) {
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private TestGridProjectVpcConfigArgs() {
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcId = Input.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnetIds;
-        private Input<String> vpcId;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnetIds;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public TestGridProjectVpcConfigArgs build() {

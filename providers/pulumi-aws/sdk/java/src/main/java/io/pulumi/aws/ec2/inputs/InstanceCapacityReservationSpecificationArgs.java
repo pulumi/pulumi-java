@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.InstanceCapacityReservationSpecificationCapacityReservationTargetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class InstanceCapacityReservationSpecificationArgs extends io.pulum
      * 
      */
     @InputImport(name="capacityReservationPreference")
-      private final @Nullable Input<String> capacityReservationPreference;
+      private final @Nullable Output<String> capacityReservationPreference;
 
-    public Input<String> getCapacityReservationPreference() {
-        return this.capacityReservationPreference == null ? Input.empty() : this.capacityReservationPreference;
+    public Output<String> getCapacityReservationPreference() {
+        return this.capacityReservationPreference == null ? Output.empty() : this.capacityReservationPreference;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class InstanceCapacityReservationSpecificationArgs extends io.pulum
      * 
      */
     @InputImport(name="capacityReservationTarget")
-      private final @Nullable Input<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
+      private final @Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
 
-    public Input<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> getCapacityReservationTarget() {
-        return this.capacityReservationTarget == null ? Input.empty() : this.capacityReservationTarget;
+    public Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> getCapacityReservationTarget() {
+        return this.capacityReservationTarget == null ? Output.empty() : this.capacityReservationTarget;
     }
 
     public InstanceCapacityReservationSpecificationArgs(
-        @Nullable Input<String> capacityReservationPreference,
-        @Nullable Input<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
+        @Nullable Output<String> capacityReservationPreference,
+        @Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
         this.capacityReservationPreference = capacityReservationPreference;
         this.capacityReservationTarget = capacityReservationTarget;
     }
 
     private InstanceCapacityReservationSpecificationArgs() {
-        this.capacityReservationPreference = Input.empty();
-        this.capacityReservationTarget = Input.empty();
+        this.capacityReservationPreference = Output.empty();
+        this.capacityReservationTarget = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class InstanceCapacityReservationSpecificationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> capacityReservationPreference;
-        private @Nullable Input<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
+        private @Nullable Output<String> capacityReservationPreference;
+        private @Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class InstanceCapacityReservationSpecificationArgs extends io.pulum
     	      this.capacityReservationTarget = defaults.capacityReservationTarget;
         }
 
-        public Builder capacityReservationPreference(@Nullable Input<String> capacityReservationPreference) {
+        public Builder capacityReservationPreference(@Nullable Output<String> capacityReservationPreference) {
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
 
         public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
-            this.capacityReservationPreference = Input.ofNullable(capacityReservationPreference);
+            this.capacityReservationPreference = Output.ofNullable(capacityReservationPreference);
             return this;
         }
 
-        public Builder capacityReservationTarget(@Nullable Input<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
+        public Builder capacityReservationTarget(@Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
 
         public Builder capacityReservationTarget(@Nullable InstanceCapacityReservationSpecificationCapacityReservationTargetArgs capacityReservationTarget) {
-            this.capacityReservationTarget = Input.ofNullable(capacityReservationTarget);
+            this.capacityReservationTarget = Output.ofNullable(capacityReservationTarget);
             return this;
         }
         public InstanceCapacityReservationSpecificationArgs build() {

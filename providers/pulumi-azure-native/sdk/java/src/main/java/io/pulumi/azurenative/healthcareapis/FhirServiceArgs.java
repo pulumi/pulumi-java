@@ -11,7 +11,7 @@ import io.pulumi.azurenative.healthcareapis.inputs.FhirServiceCorsConfigurationA
 import io.pulumi.azurenative.healthcareapis.inputs.FhirServiceExportConfigurationArgs;
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicies")
-      private final @Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
+      private final @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
 
-    public Input<List<FhirServiceAccessPolicyEntryArgs>> getAccessPolicies() {
-        return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
+    public Output<List<FhirServiceAccessPolicyEntryArgs>> getAccessPolicies() {
+        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acrConfiguration")
-      private final @Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration;
+      private final @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
 
-    public Input<FhirServiceAcrConfigurationArgs> getAcrConfiguration() {
-        return this.acrConfiguration == null ? Input.empty() : this.acrConfiguration;
+    public Output<FhirServiceAcrConfigurationArgs> getAcrConfiguration() {
+        return this.acrConfiguration == null ? Output.empty() : this.acrConfiguration;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationConfiguration")
-      private final @Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
+      private final @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Input<FhirServiceAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
+    public Output<FhirServiceAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
+        return this.authenticationConfiguration == null ? Output.empty() : this.authenticationConfiguration;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="corsConfiguration")
-      private final @Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration;
+      private final @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
 
-    public Input<FhirServiceCorsConfigurationArgs> getCorsConfiguration() {
-        return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
+    public Output<FhirServiceCorsConfigurationArgs> getCorsConfiguration() {
+        return this.corsConfiguration == null ? Output.empty() : this.corsConfiguration;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportConfiguration")
-      private final @Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration;
+      private final @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
 
-    public Input<FhirServiceExportConfigurationArgs> getExportConfiguration() {
-        return this.exportConfiguration == null ? Input.empty() : this.exportConfiguration;
+    public Output<FhirServiceExportConfigurationArgs> getExportConfiguration() {
+        return this.exportConfiguration == null ? Output.empty() : this.exportConfiguration;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fhirServiceName")
-      private final @Nullable Input<String> fhirServiceName;
+      private final @Nullable Output<String> fhirServiceName;
 
-    public Input<String> getFhirServiceName() {
-        return this.fhirServiceName == null ? Input.empty() : this.fhirServiceName;
+    public Output<String> getFhirServiceName() {
+        return this.fhirServiceName == null ? Output.empty() : this.fhirServiceName;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
+      private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
-    public Input<ServiceManagedIdentityIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ServiceManagedIdentityIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,FhirServiceKind>> kind;
+      private final @Nullable Output<Either<String,FhirServiceKind>> kind;
 
-    public Input<Either<String,FhirServiceKind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,FhirServiceKind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -128,9 +128,9 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,10 +139,10 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -150,25 +150,25 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public FhirServiceArgs(
-        @Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies,
-        @Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration,
-        @Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration,
-        @Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration,
-        @Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration,
-        @Nullable Input<String> fhirServiceName,
-        @Nullable Input<ServiceManagedIdentityIdentityArgs> identity,
-        @Nullable Input<Either<String,FhirServiceKind>> kind,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workspaceName) {
+        @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies,
+        @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration,
+        @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration,
+        @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration,
+        @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration,
+        @Nullable Output<String> fhirServiceName,
+        @Nullable Output<ServiceManagedIdentityIdentityArgs> identity,
+        @Nullable Output<Either<String,FhirServiceKind>> kind,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workspaceName) {
         this.accessPolicies = accessPolicies;
         this.acrConfiguration = acrConfiguration;
         this.authenticationConfiguration = authenticationConfiguration;
@@ -184,18 +184,18 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FhirServiceArgs() {
-        this.accessPolicies = Input.empty();
-        this.acrConfiguration = Input.empty();
-        this.authenticationConfiguration = Input.empty();
-        this.corsConfiguration = Input.empty();
-        this.exportConfiguration = Input.empty();
-        this.fhirServiceName = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.accessPolicies = Output.empty();
+        this.acrConfiguration = Output.empty();
+        this.authenticationConfiguration = Output.empty();
+        this.corsConfiguration = Output.empty();
+        this.exportConfiguration = Output.empty();
+        this.fhirServiceName = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -207,18 +207,18 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
-        private @Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration;
-        private @Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
-        private @Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration;
-        private @Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration;
-        private @Nullable Input<String> fhirServiceName;
-        private @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
-        private @Nullable Input<Either<String,FhirServiceKind>> kind;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workspaceName;
+        private @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
+        private @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
+        private @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
+        private @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
+        private @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
+        private @Nullable Output<String> fhirServiceName;
+        private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
+        private @Nullable Output<Either<String,FhirServiceKind>> kind;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -240,123 +240,123 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder accessPolicies(@Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies) {
+        public Builder accessPolicies(@Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
         public Builder accessPolicies(@Nullable List<FhirServiceAccessPolicyEntryArgs> accessPolicies) {
-            this.accessPolicies = Input.ofNullable(accessPolicies);
+            this.accessPolicies = Output.ofNullable(accessPolicies);
             return this;
         }
 
-        public Builder acrConfiguration(@Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration) {
+        public Builder acrConfiguration(@Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration) {
             this.acrConfiguration = acrConfiguration;
             return this;
         }
 
         public Builder acrConfiguration(@Nullable FhirServiceAcrConfigurationArgs acrConfiguration) {
-            this.acrConfiguration = Input.ofNullable(acrConfiguration);
+            this.acrConfiguration = Output.ofNullable(acrConfiguration);
             return this;
         }
 
-        public Builder authenticationConfiguration(@Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
         public Builder authenticationConfiguration(@Nullable FhirServiceAuthenticationConfigurationArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
+            this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder corsConfiguration(@Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration) {
+        public Builder corsConfiguration(@Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
 
         public Builder corsConfiguration(@Nullable FhirServiceCorsConfigurationArgs corsConfiguration) {
-            this.corsConfiguration = Input.ofNullable(corsConfiguration);
+            this.corsConfiguration = Output.ofNullable(corsConfiguration);
             return this;
         }
 
-        public Builder exportConfiguration(@Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration) {
+        public Builder exportConfiguration(@Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
         }
 
         public Builder exportConfiguration(@Nullable FhirServiceExportConfigurationArgs exportConfiguration) {
-            this.exportConfiguration = Input.ofNullable(exportConfiguration);
+            this.exportConfiguration = Output.ofNullable(exportConfiguration);
             return this;
         }
 
-        public Builder fhirServiceName(@Nullable Input<String> fhirServiceName) {
+        public Builder fhirServiceName(@Nullable Output<String> fhirServiceName) {
             this.fhirServiceName = fhirServiceName;
             return this;
         }
 
         public Builder fhirServiceName(@Nullable String fhirServiceName) {
-            this.fhirServiceName = Input.ofNullable(fhirServiceName);
+            this.fhirServiceName = Output.ofNullable(fhirServiceName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ServiceManagedIdentityIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,FhirServiceKind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,FhirServiceKind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,FhirServiceKind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public FhirServiceArgs build() {

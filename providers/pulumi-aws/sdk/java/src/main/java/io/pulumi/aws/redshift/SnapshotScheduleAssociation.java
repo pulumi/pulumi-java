@@ -6,7 +6,6 @@ package io.pulumi.aws.redshift;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.redshift.SnapshotScheduleAssociationArgs;
 import io.pulumi.aws.redshift.inputs.SnapshotScheduleAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -94,14 +93,14 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotScheduleAssociation(String name, SnapshotScheduleAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:redshift/snapshotScheduleAssociation:SnapshotScheduleAssociation", name, args == null ? SnapshotScheduleAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:redshift/snapshotScheduleAssociation:SnapshotScheduleAssociation", name, args == null ? SnapshotScheduleAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SnapshotScheduleAssociation(String name, Input<String> id, @Nullable SnapshotScheduleAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SnapshotScheduleAssociation(String name, Output<String> id, @Nullable SnapshotScheduleAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:redshift/snapshotScheduleAssociation:SnapshotScheduleAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -117,7 +116,7 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SnapshotScheduleAssociation get(String name, Input<String> id, @Nullable SnapshotScheduleAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SnapshotScheduleAssociation get(String name, Output<String> id, @Nullable SnapshotScheduleAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SnapshotScheduleAssociation(name, id, state, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventhub.inputs;
 
 import io.pulumi.azurenative.eventhub.enums.ClusterSkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,ClusterSkuName>> name;
+      private final Output<Either<String,ClusterSkuName>> name;
 
-    public Input<Either<String,ClusterSkuName>> getName() {
+    public Output<Either<String,ClusterSkuName>> getName() {
         return this.name;
     }
 
     public ClusterSkuArgs(
-        @Nullable Input<Integer> capacity,
-        Input<Either<String,ClusterSkuName>> name) {
+        @Nullable Output<Integer> capacity,
+        Output<Either<String,ClusterSkuName>> name) {
         this.capacity = capacity;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ClusterSkuArgs() {
-        this.capacity = Input.empty();
-        this.name = Input.empty();
+        this.capacity = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
-        private Input<Either<String,ClusterSkuName>> name;
+        private @Nullable Output<Integer> capacity;
+        private Output<Either<String,ClusterSkuName>> name;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder name(Input<Either<String,ClusterSkuName>> name) {
+        public Builder name(Output<Either<String,ClusterSkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,ClusterSkuName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ClusterSkuArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.PatchScheduleArgs;
 import io.pulumi.azurenative.cache.outputs.ScheduleEntryResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,23 +112,23 @@ public class PatchSchedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PatchSchedule(String name, PatchScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cache:PatchSchedule", name, args == null ? PatchScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cache:PatchSchedule", name, args == null ? PatchScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PatchSchedule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PatchSchedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cache:PatchSchedule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cache/v20171001:PatchSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20180301:PatchSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20190701:PatchSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20200601:PatchSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20201201:PatchSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20210601:PatchSchedule").build())
+                Output.of(Alias.builder().setType("azure-native:cache/v20171001:PatchSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20180301:PatchSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20190701:PatchSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20200601:PatchSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20201201:PatchSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20210601:PatchSchedule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -143,7 +142,7 @@ public class PatchSchedule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PatchSchedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PatchSchedule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PatchSchedule(name, id, options);
     }
 }

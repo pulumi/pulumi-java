@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cidr")
-      private final @Nullable Input<String> cidr;
+      private final @Nullable Output<String> cidr;
 
-    public Input<String> getCidr() {
-        return this.cidr == null ? Input.empty() : this.cidr;
+    public Output<String> getCidr() {
+        return this.cidr == null ? Output.empty() : this.cidr;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroupId")
-      private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
+    public Output<String> getSecurityGroupId() {
+        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroupName")
-      private final @Nullable Input<String> securityGroupName;
+      private final @Nullable Output<String> securityGroupName;
 
-    public Input<String> getSecurityGroupName() {
-        return this.securityGroupName == null ? Input.empty() : this.securityGroupName;
+    public Output<String> getSecurityGroupName() {
+        return this.securityGroupName == null ? Output.empty() : this.securityGroupName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroupOwnerId")
-      private final @Nullable Input<String> securityGroupOwnerId;
+      private final @Nullable Output<String> securityGroupOwnerId;
 
-    public Input<String> getSecurityGroupOwnerId() {
-        return this.securityGroupOwnerId == null ? Input.empty() : this.securityGroupOwnerId;
+    public Output<String> getSecurityGroupOwnerId() {
+        return this.securityGroupOwnerId == null ? Output.empty() : this.securityGroupOwnerId;
     }
 
     public SecurityGroupIngressGetArgs(
-        @Nullable Input<String> cidr,
-        @Nullable Input<String> securityGroupId,
-        @Nullable Input<String> securityGroupName,
-        @Nullable Input<String> securityGroupOwnerId) {
+        @Nullable Output<String> cidr,
+        @Nullable Output<String> securityGroupId,
+        @Nullable Output<String> securityGroupName,
+        @Nullable Output<String> securityGroupOwnerId) {
         this.cidr = cidr;
         this.securityGroupId = securityGroupId;
         this.securityGroupName = securityGroupName;
@@ -71,10 +71,10 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     }
 
     private SecurityGroupIngressGetArgs() {
-        this.cidr = Input.empty();
-        this.securityGroupId = Input.empty();
-        this.securityGroupName = Input.empty();
-        this.securityGroupOwnerId = Input.empty();
+        this.cidr = Output.empty();
+        this.securityGroupId = Output.empty();
+        this.securityGroupName = Output.empty();
+        this.securityGroupOwnerId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cidr;
-        private @Nullable Input<String> securityGroupId;
-        private @Nullable Input<String> securityGroupName;
-        private @Nullable Input<String> securityGroupOwnerId;
+        private @Nullable Output<String> cidr;
+        private @Nullable Output<String> securityGroupId;
+        private @Nullable Output<String> securityGroupName;
+        private @Nullable Output<String> securityGroupOwnerId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     	      this.securityGroupOwnerId = defaults.securityGroupOwnerId;
         }
 
-        public Builder cidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Output<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Input.ofNullable(cidr);
+            this.cidr = Output.ofNullable(cidr);
             return this;
         }
 
-        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Input.ofNullable(securityGroupId);
+            this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder securityGroupName(@Nullable Input<String> securityGroupName) {
+        public Builder securityGroupName(@Nullable Output<String> securityGroupName) {
             this.securityGroupName = securityGroupName;
             return this;
         }
 
         public Builder securityGroupName(@Nullable String securityGroupName) {
-            this.securityGroupName = Input.ofNullable(securityGroupName);
+            this.securityGroupName = Output.ofNullable(securityGroupName);
             return this;
         }
 
-        public Builder securityGroupOwnerId(@Nullable Input<String> securityGroupOwnerId) {
+        public Builder securityGroupOwnerId(@Nullable Output<String> securityGroupOwnerId) {
             this.securityGroupOwnerId = securityGroupOwnerId;
             return this;
         }
 
         public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
-            this.securityGroupOwnerId = Input.ofNullable(securityGroupOwnerId);
+            this.securityGroupOwnerId = Output.ofNullable(securityGroupOwnerId);
             return this;
         }
         public SecurityGroupIngressGetArgs build() {

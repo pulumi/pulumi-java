@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.enums.ManagerType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ManagerType> type;
+      private final Output<ManagerType> type;
 
-    public Input<ManagerType> getType() {
+    public Output<ManagerType> getType() {
         return this.type;
     }
 
-    public ManagerIntrinsicSettingsArgs(Input<ManagerType> type) {
+    public ManagerIntrinsicSettingsArgs(Output<ManagerType> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ManagerIntrinsicSettingsArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<ManagerType> type;
+        private Output<ManagerType> type;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<ManagerType> type) {
+        public Builder type(Output<ManagerType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ManagerType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ManagerIntrinsicSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class BotAbortStatementMessageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -31,9 +31,9 @@ public final class BotAbortStatementMessageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<String> contentType;
+      private final Output<String> contentType;
 
-    public Input<String> getContentType() {
+    public Output<String> getContentType() {
         return this.contentType;
     }
 
@@ -43,25 +43,25 @@ public final class BotAbortStatementMessageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="groupNumber")
-      private final @Nullable Input<Integer> groupNumber;
+      private final @Nullable Output<Integer> groupNumber;
 
-    public Input<Integer> getGroupNumber() {
-        return this.groupNumber == null ? Input.empty() : this.groupNumber;
+    public Output<Integer> getGroupNumber() {
+        return this.groupNumber == null ? Output.empty() : this.groupNumber;
     }
 
     public BotAbortStatementMessageArgs(
-        Input<String> content,
-        Input<String> contentType,
-        @Nullable Input<Integer> groupNumber) {
+        Output<String> content,
+        Output<String> contentType,
+        @Nullable Output<Integer> groupNumber) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
         this.groupNumber = groupNumber;
     }
 
     private BotAbortStatementMessageArgs() {
-        this.content = Input.empty();
-        this.contentType = Input.empty();
-        this.groupNumber = Input.empty();
+        this.content = Output.empty();
+        this.contentType = Output.empty();
+        this.groupNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class BotAbortStatementMessageArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> content;
-        private Input<String> contentType;
-        private @Nullable Input<Integer> groupNumber;
+        private Output<String> content;
+        private Output<String> contentType;
+        private @Nullable Output<Integer> groupNumber;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class BotAbortStatementMessageArgs extends io.pulumi.resources.Reso
     	      this.groupNumber = defaults.groupNumber;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder contentType(Input<String> contentType) {
+        public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder groupNumber(@Nullable Input<Integer> groupNumber) {
+        public Builder groupNumber(@Nullable Output<Integer> groupNumber) {
             this.groupNumber = groupNumber;
             return this;
         }
 
         public Builder groupNumber(@Nullable Integer groupNumber) {
-            this.groupNumber = Input.ofNullable(groupNumber);
+            this.groupNumber = Output.ofNullable(groupNumber);
             return this;
         }
         public BotAbortStatementMessageArgs build() {

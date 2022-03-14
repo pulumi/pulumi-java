@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRulePutAssetPropertyValueEntryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     public static final TopicRuleIotSiteWiseActionArgs Empty = new TopicRuleIotSiteWiseActionArgs();
 
     @InputImport(name="putAssetPropertyValueEntries", required=true)
-      private final Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
+      private final Output<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
 
-    public Input<List<TopicRulePutAssetPropertyValueEntryArgs>> getPutAssetPropertyValueEntries() {
+    public Output<List<TopicRulePutAssetPropertyValueEntryArgs>> getPutAssetPropertyValueEntries() {
         return this.putAssetPropertyValueEntries;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public TopicRuleIotSiteWiseActionArgs(
-        Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries,
-        Input<String> roleArn) {
+        Output<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries,
+        Output<String> roleArn) {
         this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries, "expected parameter 'putAssetPropertyValueEntries' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private TopicRuleIotSiteWiseActionArgs() {
-        this.putAssetPropertyValueEntries = Input.empty();
-        this.roleArn = Input.empty();
+        this.putAssetPropertyValueEntries = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
-        private Input<String> roleArn;
+        private Output<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder putAssetPropertyValueEntries(Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries) {
+        public Builder putAssetPropertyValueEntries(Output<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries) {
             this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries);
             return this;
         }
 
         public Builder putAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntryArgs> putAssetPropertyValueEntries) {
-            this.putAssetPropertyValueEntries = Input.of(Objects.requireNonNull(putAssetPropertyValueEntries));
+            this.putAssetPropertyValueEntries = Output.of(Objects.requireNonNull(putAssetPropertyValueEntries));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public TopicRuleIotSiteWiseActionArgs build() {

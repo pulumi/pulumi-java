@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public RestorePolicyPropertiesArgs(
-        @Nullable Input<Integer> days,
-        Input<Boolean> enabled) {
+        @Nullable Output<Integer> days,
+        Output<Boolean> enabled) {
         this.days = days;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private RestorePolicyPropertiesArgs() {
-        this.days = Input.empty();
-        this.enabled = Input.empty();
+        this.days = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> days;
-        private Input<Boolean> enabled;
+        private @Nullable Output<Integer> days;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public RestorePolicyPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressType")
-      private final @Nullable Input<String> addressType;
+      private final @Nullable Output<String> addressType;
 
-    public Input<String> getAddressType() {
-        return this.addressType == null ? Input.empty() : this.addressType;
+    public Output<String> getAddressType() {
+        return this.addressType == null ? Output.empty() : this.addressType;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipVersion")
-      private final @Nullable Input<String> ipVersion;
+      private final @Nullable Output<String> ipVersion;
 
-    public Input<String> getIpVersion() {
-        return this.ipVersion == null ? Input.empty() : this.ipVersion;
+    public Output<String> getIpVersion() {
+        return this.ipVersion == null ? Output.empty() : this.ipVersion;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixLength")
-      private final @Nullable Input<Integer> prefixLength;
+      private final @Nullable Output<Integer> prefixLength;
 
-    public Input<Integer> getPrefixLength() {
-        return this.prefixLength == null ? Input.empty() : this.prefixLength;
+    public Output<Integer> getPrefixLength() {
+        return this.prefixLength == null ? Output.empty() : this.prefixLength;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -142,23 +142,23 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-      private final @Nullable Input<String> purpose;
+      private final @Nullable Output<String> purpose;
 
-    public Input<String> getPurpose() {
-        return this.purpose == null ? Input.empty() : this.purpose;
+    public Output<String> getPurpose() {
+        return this.purpose == null ? Output.empty() : this.purpose;
     }
 
     public GlobalAddressArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> addressType,
-        @Nullable Input<String> description,
-        @Nullable Input<String> ipVersion,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<Integer> prefixLength,
-        @Nullable Input<String> project,
-        @Nullable Input<String> purpose) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> addressType,
+        @Nullable Output<String> description,
+        @Nullable Output<String> ipVersion,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<Integer> prefixLength,
+        @Nullable Output<String> project,
+        @Nullable Output<String> purpose) {
         this.address = address;
         this.addressType = addressType;
         this.description = description;
@@ -172,16 +172,16 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalAddressArgs() {
-        this.address = Input.empty();
-        this.addressType = Input.empty();
-        this.description = Input.empty();
-        this.ipVersion = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.prefixLength = Input.empty();
-        this.project = Input.empty();
-        this.purpose = Input.empty();
+        this.address = Output.empty();
+        this.addressType = Output.empty();
+        this.description = Output.empty();
+        this.ipVersion = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.prefixLength = Output.empty();
+        this.project = Output.empty();
+        this.purpose = Output.empty();
     }
 
     public static Builder builder() {
@@ -193,16 +193,16 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> addressType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> ipVersion;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Integer> prefixLength;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> purpose;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> addressType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> ipVersion;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Integer> prefixLength;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> purpose;
 
         public Builder() {
     	      // Empty
@@ -222,103 +222,103 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.purpose = defaults.purpose;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder addressType(@Nullable Input<String> addressType) {
+        public Builder addressType(@Nullable Output<String> addressType) {
             this.addressType = addressType;
             return this;
         }
 
         public Builder addressType(@Nullable String addressType) {
-            this.addressType = Input.ofNullable(addressType);
+            this.addressType = Output.ofNullable(addressType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipVersion(@Nullable Input<String> ipVersion) {
+        public Builder ipVersion(@Nullable Output<String> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
 
         public Builder ipVersion(@Nullable String ipVersion) {
-            this.ipVersion = Input.ofNullable(ipVersion);
+            this.ipVersion = Output.ofNullable(ipVersion);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder prefixLength(@Nullable Input<Integer> prefixLength) {
+        public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
         public Builder prefixLength(@Nullable Integer prefixLength) {
-            this.prefixLength = Input.ofNullable(prefixLength);
+            this.prefixLength = Output.ofNullable(prefixLength);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder purpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Input.ofNullable(purpose);
+            this.purpose = Output.ofNullable(purpose);
             return this;
         }
         public GlobalAddressArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
      * 
      */
     @InputImport(name="simpleResponses", required=true)
-      private final Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
+      private final Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
 
-    public Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> getSimpleResponses() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> getSimpleResponses() {
         return this.simpleResponses;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
+    public GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
         this.simpleResponses = Objects.requireNonNull(simpleResponses, "expected parameter 'simpleResponses' to be non-null");
     }
 
     private GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs() {
-        this.simpleResponses = Input.empty();
+        this.simpleResponses = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
+        private Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
     	      this.simpleResponses = defaults.simpleResponses;
         }
 
-        public Builder simpleResponses(Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
+        public Builder simpleResponses(Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
 
         public Builder simpleResponses(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs> simpleResponses) {
-            this.simpleResponses = Input.of(Objects.requireNonNull(simpleResponses));
+            this.simpleResponses = Output.of(Objects.requireNonNull(simpleResponses));
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs build() {

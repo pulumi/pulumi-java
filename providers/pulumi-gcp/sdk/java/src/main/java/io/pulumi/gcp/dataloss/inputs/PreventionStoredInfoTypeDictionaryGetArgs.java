@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryWordListGetArgs;
@@ -21,10 +21,10 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cloudStoragePath")
-      private final @Nullable Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
+      private final @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
 
-    public Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> getCloudStoragePath() {
-        return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
+    public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> getCloudStoragePath() {
+        return this.cloudStoragePath == null ? Output.empty() : this.cloudStoragePath;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="wordList")
-      private final @Nullable Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
+      private final @Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
 
-    public Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> getWordList() {
-        return this.wordList == null ? Input.empty() : this.wordList;
+    public Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> getWordList() {
+        return this.wordList == null ? Output.empty() : this.wordList;
     }
 
     public PreventionStoredInfoTypeDictionaryGetArgs(
-        @Nullable Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath,
-        @Nullable Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList) {
+        @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath,
+        @Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }
 
     private PreventionStoredInfoTypeDictionaryGetArgs() {
-        this.cloudStoragePath = Input.empty();
-        this.wordList = Input.empty();
+        this.cloudStoragePath = Output.empty();
+        this.wordList = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
-        private @Nullable Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
+        private @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
+        private @Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder cloudStoragePath(@Nullable Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath) {
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
         public Builder cloudStoragePath(@Nullable PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
-            this.cloudStoragePath = Input.ofNullable(cloudStoragePath);
+            this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
             return this;
         }
 
-        public Builder wordList(@Nullable Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList) {
+        public Builder wordList(@Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
 
         public Builder wordList(@Nullable PreventionStoredInfoTypeDictionaryWordListGetArgs wordList) {
-            this.wordList = Input.ofNullable(wordList);
+            this.wordList = Output.ofNullable(wordList);
             return this;
         }
         public PreventionStoredInfoTypeDictionaryGetArgs build() {

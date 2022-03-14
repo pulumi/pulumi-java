@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cassandra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
     public static final TableColumnArgs Empty = new TableColumnArgs();
 
     @InputImport(name="columnName", required=true)
-      private final Input<String> columnName;
+      private final Output<String> columnName;
 
-    public Input<String> getColumnName() {
+    public Output<String> getColumnName() {
         return this.columnName;
     }
 
     @InputImport(name="columnType", required=true)
-      private final Input<String> columnType;
+      private final Output<String> columnType;
 
-    public Input<String> getColumnType() {
+    public Output<String> getColumnType() {
         return this.columnType;
     }
 
     public TableColumnArgs(
-        Input<String> columnName,
-        Input<String> columnType) {
+        Output<String> columnName,
+        Output<String> columnType) {
         this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
         this.columnType = Objects.requireNonNull(columnType, "expected parameter 'columnType' to be non-null");
     }
 
     private TableColumnArgs() {
-        this.columnName = Input.empty();
-        this.columnType = Input.empty();
+        this.columnName = Output.empty();
+        this.columnType = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> columnName;
-        private Input<String> columnType;
+        private Output<String> columnName;
+        private Output<String> columnType;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.columnType = defaults.columnType;
         }
 
-        public Builder columnName(Input<String> columnName) {
+        public Builder columnName(Output<String> columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
         public Builder columnName(String columnName) {
-            this.columnName = Input.of(Objects.requireNonNull(columnName));
+            this.columnName = Output.of(Objects.requireNonNull(columnName));
             return this;
         }
 
-        public Builder columnType(Input<String> columnType) {
+        public Builder columnType(Output<String> columnType) {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
         }
 
         public Builder columnType(String columnType) {
-            this.columnType = Input.of(Objects.requireNonNull(columnType));
+            this.columnType = Output.of(Objects.requireNonNull(columnType));
             return this;
         }
         public TableColumnArgs build() {

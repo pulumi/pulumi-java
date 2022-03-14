@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loadBalancerName")
-      private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Output<String> loadBalancerName;
 
-    public Input<String> getLoadBalancerName() {
-        return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
+    public Output<String> getLoadBalancerName() {
+        return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loadBalancerPort")
-      private final @Nullable Input<Integer> loadBalancerPort;
+      private final @Nullable Output<Integer> loadBalancerPort;
 
-    public Input<Integer> getLoadBalancerPort() {
-        return this.loadBalancerPort == null ? Input.empty() : this.loadBalancerPort;
+    public Output<Integer> getLoadBalancerPort() {
+        return this.loadBalancerPort == null ? Output.empty() : this.loadBalancerPort;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyNames")
-      private final @Nullable Input<List<String>> policyNames;
+      private final @Nullable Output<List<String>> policyNames;
 
-    public Input<List<String>> getPolicyNames() {
-        return this.policyNames == null ? Input.empty() : this.policyNames;
+    public Output<List<String>> getPolicyNames() {
+        return this.policyNames == null ? Output.empty() : this.policyNames;
     }
 
     public ListenerPolicyState(
-        @Nullable Input<String> loadBalancerName,
-        @Nullable Input<Integer> loadBalancerPort,
-        @Nullable Input<List<String>> policyNames) {
+        @Nullable Output<String> loadBalancerName,
+        @Nullable Output<Integer> loadBalancerPort,
+        @Nullable Output<List<String>> policyNames) {
         this.loadBalancerName = loadBalancerName;
         this.loadBalancerPort = loadBalancerPort;
         this.policyNames = policyNames;
     }
 
     private ListenerPolicyState() {
-        this.loadBalancerName = Input.empty();
-        this.loadBalancerPort = Input.empty();
-        this.policyNames = Input.empty();
+        this.loadBalancerName = Output.empty();
+        this.loadBalancerPort = Output.empty();
+        this.policyNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> loadBalancerName;
-        private @Nullable Input<Integer> loadBalancerPort;
-        private @Nullable Input<List<String>> policyNames;
+        private @Nullable Output<String> loadBalancerName;
+        private @Nullable Output<Integer> loadBalancerPort;
+        private @Nullable Output<List<String>> policyNames;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.policyNames = defaults.policyNames;
         }
 
-        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Input.ofNullable(loadBalancerName);
+            this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder loadBalancerPort(@Nullable Input<Integer> loadBalancerPort) {
+        public Builder loadBalancerPort(@Nullable Output<Integer> loadBalancerPort) {
             this.loadBalancerPort = loadBalancerPort;
             return this;
         }
 
         public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
-            this.loadBalancerPort = Input.ofNullable(loadBalancerPort);
+            this.loadBalancerPort = Output.ofNullable(loadBalancerPort);
             return this;
         }
 
-        public Builder policyNames(@Nullable Input<List<String>> policyNames) {
+        public Builder policyNames(@Nullable Output<List<String>> policyNames) {
             this.policyNames = policyNames;
             return this;
         }
 
         public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Input.ofNullable(policyNames);
+            this.policyNames = Output.ofNullable(policyNames);
             return this;
         }
         public ListenerPolicyState build() {

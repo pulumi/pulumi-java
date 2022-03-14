@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkUrl", required=true)
-      private final Input<String> networkUrl;
+      private final Output<String> networkUrl;
 
-    public Input<String> getNetworkUrl() {
+    public Output<String> getNetworkUrl() {
         return this.networkUrl;
     }
 
-    public PolicyNetworkArgs(Input<String> networkUrl) {
+    public PolicyNetworkArgs(Output<String> networkUrl) {
         this.networkUrl = Objects.requireNonNull(networkUrl, "expected parameter 'networkUrl' to be non-null");
     }
 
     private PolicyNetworkArgs() {
-        this.networkUrl = Input.empty();
+        this.networkUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> networkUrl;
+        private Output<String> networkUrl;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder networkUrl(Input<String> networkUrl) {
+        public Builder networkUrl(Output<String> networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
 
         public Builder networkUrl(String networkUrl) {
-            this.networkUrl = Input.of(Objects.requireNonNull(networkUrl));
+            this.networkUrl = Output.of(Objects.requireNonNull(networkUrl));
             return this;
         }
         public PolicyNetworkArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="city")
-      private final @Nullable Input<String> city;
+      private final @Nullable Output<String> city;
 
-    public Input<String> getCity() {
-        return this.city == null ? Input.empty() : this.city;
+    public Output<String> getCity() {
+        return this.city == null ? Output.empty() : this.city;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="countryOrRegion")
-      private final @Nullable Input<String> countryOrRegion;
+      private final @Nullable Output<String> countryOrRegion;
 
-    public Input<String> getCountryOrRegion() {
-        return this.countryOrRegion == null ? Input.empty() : this.countryOrRegion;
+    public Output<String> getCountryOrRegion() {
+        return this.countryOrRegion == null ? Output.empty() : this.countryOrRegion;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="phone")
-      private final @Nullable Input<String> phone;
+      private final @Nullable Output<String> phone;
 
-    public Input<String> getPhone() {
-        return this.phone == null ? Input.empty() : this.phone;
+    public Output<String> getPhone() {
+        return this.phone == null ? Output.empty() : this.phone;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="postalCode")
-      private final @Nullable Input<String> postalCode;
+      private final @Nullable Output<String> postalCode;
 
-    public Input<String> getPostalCode() {
-        return this.postalCode == null ? Input.empty() : this.postalCode;
+    public Output<String> getPostalCode() {
+        return this.postalCode == null ? Output.empty() : this.postalCode;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="recipientName")
-      private final @Nullable Input<String> recipientName;
+      private final @Nullable Output<String> recipientName;
 
-    public Input<String> getRecipientName() {
-        return this.recipientName == null ? Input.empty() : this.recipientName;
+    public Output<String> getRecipientName() {
+        return this.recipientName == null ? Output.empty() : this.recipientName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="stateOrProvince")
-      private final @Nullable Input<String> stateOrProvince;
+      private final @Nullable Output<String> stateOrProvince;
 
-    public Input<String> getStateOrProvince() {
-        return this.stateOrProvince == null ? Input.empty() : this.stateOrProvince;
+    public Output<String> getStateOrProvince() {
+        return this.stateOrProvince == null ? Output.empty() : this.stateOrProvince;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="streetAddress1")
-      private final @Nullable Input<String> streetAddress1;
+      private final @Nullable Output<String> streetAddress1;
 
-    public Input<String> getStreetAddress1() {
-        return this.streetAddress1 == null ? Input.empty() : this.streetAddress1;
+    public Output<String> getStreetAddress1() {
+        return this.streetAddress1 == null ? Output.empty() : this.streetAddress1;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="streetAddress2")
-      private final @Nullable Input<String> streetAddress2;
+      private final @Nullable Output<String> streetAddress2;
 
-    public Input<String> getStreetAddress2() {
-        return this.streetAddress2 == null ? Input.empty() : this.streetAddress2;
+    public Output<String> getStreetAddress2() {
+        return this.streetAddress2 == null ? Output.empty() : this.streetAddress2;
     }
 
     public ShippingInformationArgs(
-        @Nullable Input<String> city,
-        @Nullable Input<String> countryOrRegion,
-        @Nullable Input<String> phone,
-        @Nullable Input<String> postalCode,
-        @Nullable Input<String> recipientName,
-        @Nullable Input<String> stateOrProvince,
-        @Nullable Input<String> streetAddress1,
-        @Nullable Input<String> streetAddress2) {
+        @Nullable Output<String> city,
+        @Nullable Output<String> countryOrRegion,
+        @Nullable Output<String> phone,
+        @Nullable Output<String> postalCode,
+        @Nullable Output<String> recipientName,
+        @Nullable Output<String> stateOrProvince,
+        @Nullable Output<String> streetAddress1,
+        @Nullable Output<String> streetAddress2) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.phone = phone;
@@ -126,14 +126,14 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ShippingInformationArgs() {
-        this.city = Input.empty();
-        this.countryOrRegion = Input.empty();
-        this.phone = Input.empty();
-        this.postalCode = Input.empty();
-        this.recipientName = Input.empty();
-        this.stateOrProvince = Input.empty();
-        this.streetAddress1 = Input.empty();
-        this.streetAddress2 = Input.empty();
+        this.city = Output.empty();
+        this.countryOrRegion = Output.empty();
+        this.phone = Output.empty();
+        this.postalCode = Output.empty();
+        this.recipientName = Output.empty();
+        this.stateOrProvince = Output.empty();
+        this.streetAddress1 = Output.empty();
+        this.streetAddress2 = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> city;
-        private @Nullable Input<String> countryOrRegion;
-        private @Nullable Input<String> phone;
-        private @Nullable Input<String> postalCode;
-        private @Nullable Input<String> recipientName;
-        private @Nullable Input<String> stateOrProvince;
-        private @Nullable Input<String> streetAddress1;
-        private @Nullable Input<String> streetAddress2;
+        private @Nullable Output<String> city;
+        private @Nullable Output<String> countryOrRegion;
+        private @Nullable Output<String> phone;
+        private @Nullable Output<String> postalCode;
+        private @Nullable Output<String> recipientName;
+        private @Nullable Output<String> stateOrProvince;
+        private @Nullable Output<String> streetAddress1;
+        private @Nullable Output<String> streetAddress2;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
     	      this.streetAddress2 = defaults.streetAddress2;
         }
 
-        public Builder city(@Nullable Input<String> city) {
+        public Builder city(@Nullable Output<String> city) {
             this.city = city;
             return this;
         }
 
         public Builder city(@Nullable String city) {
-            this.city = Input.ofNullable(city);
+            this.city = Output.ofNullable(city);
             return this;
         }
 
-        public Builder countryOrRegion(@Nullable Input<String> countryOrRegion) {
+        public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
 
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = Input.ofNullable(countryOrRegion);
+            this.countryOrRegion = Output.ofNullable(countryOrRegion);
             return this;
         }
 
-        public Builder phone(@Nullable Input<String> phone) {
+        public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
 
         public Builder phone(@Nullable String phone) {
-            this.phone = Input.ofNullable(phone);
+            this.phone = Output.ofNullable(phone);
             return this;
         }
 
-        public Builder postalCode(@Nullable Input<String> postalCode) {
+        public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Input.ofNullable(postalCode);
+            this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
 
-        public Builder recipientName(@Nullable Input<String> recipientName) {
+        public Builder recipientName(@Nullable Output<String> recipientName) {
             this.recipientName = recipientName;
             return this;
         }
 
         public Builder recipientName(@Nullable String recipientName) {
-            this.recipientName = Input.ofNullable(recipientName);
+            this.recipientName = Output.ofNullable(recipientName);
             return this;
         }
 
-        public Builder stateOrProvince(@Nullable Input<String> stateOrProvince) {
+        public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
 
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = Input.ofNullable(stateOrProvince);
+            this.stateOrProvince = Output.ofNullable(stateOrProvince);
             return this;
         }
 
-        public Builder streetAddress1(@Nullable Input<String> streetAddress1) {
+        public Builder streetAddress1(@Nullable Output<String> streetAddress1) {
             this.streetAddress1 = streetAddress1;
             return this;
         }
 
         public Builder streetAddress1(@Nullable String streetAddress1) {
-            this.streetAddress1 = Input.ofNullable(streetAddress1);
+            this.streetAddress1 = Output.ofNullable(streetAddress1);
             return this;
         }
 
-        public Builder streetAddress2(@Nullable Input<String> streetAddress2) {
+        public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
 
         public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = Input.ofNullable(streetAddress2);
+            this.streetAddress2 = Output.ofNullable(streetAddress2);
             return this;
         }
         public ShippingInformationArgs build() {

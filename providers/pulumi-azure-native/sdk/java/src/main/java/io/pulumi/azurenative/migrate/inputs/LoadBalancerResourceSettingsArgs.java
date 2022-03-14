@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.LBBackendAddressPoolResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.LBFrontendIPConfigurationResourceSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="backendAddressPools")
-      private final @Nullable Input<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
+      private final @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
-    public Input<List<LBBackendAddressPoolResourceSettingsArgs>> getBackendAddressPools() {
-        return this.backendAddressPools == null ? Input.empty() : this.backendAddressPools;
+    public Output<List<LBBackendAddressPoolResourceSettingsArgs>> getBackendAddressPools() {
+        return this.backendAddressPools == null ? Output.empty() : this.backendAddressPools;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="frontendIPConfigurations")
-      private final @Nullable Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
+      private final @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
-    public Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> getFrontendIPConfigurations() {
-        return this.frontendIPConfigurations == null ? Input.empty() : this.frontendIPConfigurations;
+    public Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> getFrontendIPConfigurations() {
+        return this.frontendIPConfigurations == null ? Output.empty() : this.frontendIPConfigurations;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -60,10 +60,10 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
@@ -83,19 +83,19 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<String> zones;
+      private final @Nullable Output<String> zones;
 
-    public Input<String> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<String> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public LoadBalancerResourceSettingsArgs(
-        @Nullable Input<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools,
-        @Nullable Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations,
-        Input<String> resourceType,
-        @Nullable Input<String> sku,
-        Input<String> targetResourceName,
-        @Nullable Input<String> zones) {
+        @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools,
+        @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations,
+        Output<String> resourceType,
+        @Nullable Output<String> sku,
+        Output<String> targetResourceName,
+        @Nullable Output<String> zones) {
         this.backendAddressPools = backendAddressPools;
         this.frontendIPConfigurations = frontendIPConfigurations;
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
@@ -105,12 +105,12 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
     }
 
     private LoadBalancerResourceSettingsArgs() {
-        this.backendAddressPools = Input.empty();
-        this.frontendIPConfigurations = Input.empty();
-        this.resourceType = Input.empty();
-        this.sku = Input.empty();
-        this.targetResourceName = Input.empty();
-        this.zones = Input.empty();
+        this.backendAddressPools = Output.empty();
+        this.frontendIPConfigurations = Output.empty();
+        this.resourceType = Output.empty();
+        this.sku = Output.empty();
+        this.targetResourceName = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
-        private @Nullable Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
-        private Input<String> resourceType;
-        private @Nullable Input<String> sku;
-        private Input<String> targetResourceName;
-        private @Nullable Input<String> zones;
+        private @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
+        private @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
+        private Output<String> resourceType;
+        private @Nullable Output<String> sku;
+        private Output<String> targetResourceName;
+        private @Nullable Output<String> zones;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
     	      this.zones = defaults.zones;
         }
 
-        public Builder backendAddressPools(@Nullable Input<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools) {
+        public Builder backendAddressPools(@Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools) {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
 
         public Builder backendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsArgs> backendAddressPools) {
-            this.backendAddressPools = Input.ofNullable(backendAddressPools);
+            this.backendAddressPools = Output.ofNullable(backendAddressPools);
             return this;
         }
 
-        public Builder frontendIPConfigurations(@Nullable Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(@Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
         public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Input.ofNullable(frontendIPConfigurations);
+            this.frontendIPConfigurations = Output.ofNullable(frontendIPConfigurations);
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder zones(@Nullable Input<String> zones) {
+        public Builder zones(@Nullable Output<String> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable String zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public LoadBalancerResourceSettingsArgs build() {

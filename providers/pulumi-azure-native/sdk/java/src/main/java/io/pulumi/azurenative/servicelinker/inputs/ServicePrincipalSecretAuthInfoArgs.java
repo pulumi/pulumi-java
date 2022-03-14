@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="authType", required=true)
-      private final Input<String> authType;
+      private final Output<String> authType;
 
-    public Input<String> getAuthType() {
+    public Output<String> getAuthType() {
         return this.authType;
     }
 
@@ -34,9 +34,9 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -45,9 +45,9 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -56,17 +56,17 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<String> secret;
+      private final Output<String> secret;
 
-    public Input<String> getSecret() {
+    public Output<String> getSecret() {
         return this.secret;
     }
 
     public ServicePrincipalSecretAuthInfoArgs(
-        Input<String> authType,
-        Input<String> clientId,
-        Input<String> principalId,
-        Input<String> secret) {
+        Output<String> authType,
+        Output<String> clientId,
+        Output<String> principalId,
+        Output<String> secret) {
         this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
@@ -74,10 +74,10 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     }
 
     private ServicePrincipalSecretAuthInfoArgs() {
-        this.authType = Input.empty();
-        this.clientId = Input.empty();
-        this.principalId = Input.empty();
-        this.secret = Input.empty();
+        this.authType = Output.empty();
+        this.clientId = Output.empty();
+        this.principalId = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> authType;
-        private Input<String> clientId;
-        private Input<String> principalId;
-        private Input<String> secret;
+        private Output<String> authType;
+        private Output<String> clientId;
+        private Output<String> principalId;
+        private Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     	      this.secret = defaults.secret;
         }
 
-        public Builder authType(Input<String> authType) {
+        public Builder authType(Output<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
         public Builder authType(String authType) {
-            this.authType = Input.of(Objects.requireNonNull(authType));
+            this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder secret(Input<String> secret) {
+        public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(String secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
         public ServicePrincipalSecretAuthInfoArgs build() {

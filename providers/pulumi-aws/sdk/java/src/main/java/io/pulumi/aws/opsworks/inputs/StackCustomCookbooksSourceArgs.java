@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<String> revision;
+      private final @Nullable Output<String> revision;
 
-    public Input<String> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<String> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sshKey")
-      private final @Nullable Input<String> sshKey;
+      private final @Nullable Output<String> sshKey;
 
-    public Input<String> getSshKey() {
-        return this.sshKey == null ? Input.empty() : this.sshKey;
+    public Output<String> getSshKey() {
+        return this.sshKey == null ? Output.empty() : this.sshKey;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -63,9 +63,9 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
@@ -74,19 +74,19 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public StackCustomCookbooksSourceArgs(
-        @Nullable Input<String> password,
-        @Nullable Input<String> revision,
-        @Nullable Input<String> sshKey,
-        Input<String> type,
-        Input<String> url,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> password,
+        @Nullable Output<String> revision,
+        @Nullable Output<String> sshKey,
+        Output<String> type,
+        Output<String> url,
+        @Nullable Output<String> username) {
         this.password = password;
         this.revision = revision;
         this.sshKey = sshKey;
@@ -96,12 +96,12 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
     }
 
     private StackCustomCookbooksSourceArgs() {
-        this.password = Input.empty();
-        this.revision = Input.empty();
-        this.sshKey = Input.empty();
-        this.type = Input.empty();
-        this.url = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.revision = Output.empty();
+        this.sshKey = Output.empty();
+        this.type = Output.empty();
+        this.url = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> revision;
-        private @Nullable Input<String> sshKey;
-        private Input<String> type;
-        private Input<String> url;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> revision;
+        private @Nullable Output<String> sshKey;
+        private Output<String> type;
+        private Output<String> url;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder revision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable String revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder sshKey(@Nullable Input<String> sshKey) {
+        public Builder sshKey(@Nullable Output<String> sshKey) {
             this.sshKey = sshKey;
             return this;
         }
 
         public Builder sshKey(@Nullable String sshKey) {
-            this.sshKey = Input.ofNullable(sshKey);
+            this.sshKey = Output.ofNullable(sshKey);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public StackCustomCookbooksSourceArgs build() {

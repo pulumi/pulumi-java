@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.EntityKeyArgs;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.MembershipRoleArgs;
@@ -18,9 +18,9 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     public static final MembershipArgs Empty = new MembershipArgs();
 
     @InputImport(name="groupId", required=true)
-      private final Input<String> groupId;
+      private final Output<String> groupId;
 
-    public Input<String> getGroupId() {
+    public Output<String> getGroupId() {
         return this.groupId;
     }
 
@@ -29,10 +29,10 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberKey")
-      private final @Nullable Input<EntityKeyArgs> memberKey;
+      private final @Nullable Output<EntityKeyArgs> memberKey;
 
-    public Input<EntityKeyArgs> getMemberKey() {
-        return this.memberKey == null ? Input.empty() : this.memberKey;
+    public Output<EntityKeyArgs> getMemberKey() {
+        return this.memberKey == null ? Output.empty() : this.memberKey;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredMemberKey", required=true)
-      private final Input<EntityKeyArgs> preferredMemberKey;
+      private final Output<EntityKeyArgs> preferredMemberKey;
 
-    public Input<EntityKeyArgs> getPreferredMemberKey() {
+    public Output<EntityKeyArgs> getPreferredMemberKey() {
         return this.preferredMemberKey;
     }
 
@@ -51,17 +51,17 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<MembershipRoleArgs>> roles;
+      private final @Nullable Output<List<MembershipRoleArgs>> roles;
 
-    public Input<List<MembershipRoleArgs>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<MembershipRoleArgs>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     public MembershipArgs(
-        Input<String> groupId,
-        @Nullable Input<EntityKeyArgs> memberKey,
-        Input<EntityKeyArgs> preferredMemberKey,
-        @Nullable Input<List<MembershipRoleArgs>> roles) {
+        Output<String> groupId,
+        @Nullable Output<EntityKeyArgs> memberKey,
+        Output<EntityKeyArgs> preferredMemberKey,
+        @Nullable Output<List<MembershipRoleArgs>> roles) {
         this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
         this.memberKey = memberKey;
         this.preferredMemberKey = Objects.requireNonNull(preferredMemberKey, "expected parameter 'preferredMemberKey' to be non-null");
@@ -69,10 +69,10 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MembershipArgs() {
-        this.groupId = Input.empty();
-        this.memberKey = Input.empty();
-        this.preferredMemberKey = Input.empty();
-        this.roles = Input.empty();
+        this.groupId = Output.empty();
+        this.memberKey = Output.empty();
+        this.preferredMemberKey = Output.empty();
+        this.roles = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> groupId;
-        private @Nullable Input<EntityKeyArgs> memberKey;
-        private Input<EntityKeyArgs> preferredMemberKey;
-        private @Nullable Input<List<MembershipRoleArgs>> roles;
+        private Output<String> groupId;
+        private @Nullable Output<EntityKeyArgs> memberKey;
+        private Output<EntityKeyArgs> preferredMemberKey;
+        private @Nullable Output<List<MembershipRoleArgs>> roles;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roles = defaults.roles;
         }
 
-        public Builder groupId(Input<String> groupId) {
+        public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Input.of(Objects.requireNonNull(groupId));
+            this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder memberKey(@Nullable Input<EntityKeyArgs> memberKey) {
+        public Builder memberKey(@Nullable Output<EntityKeyArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
 
         public Builder memberKey(@Nullable EntityKeyArgs memberKey) {
-            this.memberKey = Input.ofNullable(memberKey);
+            this.memberKey = Output.ofNullable(memberKey);
             return this;
         }
 
-        public Builder preferredMemberKey(Input<EntityKeyArgs> preferredMemberKey) {
+        public Builder preferredMemberKey(Output<EntityKeyArgs> preferredMemberKey) {
             this.preferredMemberKey = Objects.requireNonNull(preferredMemberKey);
             return this;
         }
 
         public Builder preferredMemberKey(EntityKeyArgs preferredMemberKey) {
-            this.preferredMemberKey = Input.of(Objects.requireNonNull(preferredMemberKey));
+            this.preferredMemberKey = Output.of(Objects.requireNonNull(preferredMemberKey));
             return this;
         }
 
-        public Builder roles(@Nullable Input<List<MembershipRoleArgs>> roles) {
+        public Builder roles(@Nullable Output<List<MembershipRoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<MembershipRoleArgs> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
         public MembershipArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ciphertextBlob")
-      private final @Nullable Input<String> ciphertextBlob;
+      private final @Nullable Output<String> ciphertextBlob;
 
-    public Input<String> getCiphertextBlob() {
-        return this.ciphertextBlob == null ? Input.empty() : this.ciphertextBlob;
+    public Output<String> getCiphertextBlob() {
+        return this.ciphertextBlob == null ? Output.empty() : this.ciphertextBlob;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<Map<String,String>> context;
+      private final @Nullable Output<Map<String,String>> context;
 
-    public Input<Map<String,String>> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<Map<String,String>> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plaintext")
-      private final @Nullable Input<String> plaintext;
+      private final @Nullable Output<String> plaintext;
 
-    public Input<String> getPlaintext() {
-        return this.plaintext == null ? Input.empty() : this.plaintext;
+    public Output<String> getPlaintext() {
+        return this.plaintext == null ? Output.empty() : this.plaintext;
     }
 
     public CiphertextState(
-        @Nullable Input<String> ciphertextBlob,
-        @Nullable Input<Map<String,String>> context,
-        @Nullable Input<String> keyId,
-        @Nullable Input<String> plaintext) {
+        @Nullable Output<String> ciphertextBlob,
+        @Nullable Output<Map<String,String>> context,
+        @Nullable Output<String> keyId,
+        @Nullable Output<String> plaintext) {
         this.ciphertextBlob = ciphertextBlob;
         this.context = context;
         this.keyId = keyId;
@@ -71,10 +71,10 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CiphertextState() {
-        this.ciphertextBlob = Input.empty();
-        this.context = Input.empty();
-        this.keyId = Input.empty();
-        this.plaintext = Input.empty();
+        this.ciphertextBlob = Output.empty();
+        this.context = Output.empty();
+        this.keyId = Output.empty();
+        this.plaintext = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ciphertextBlob;
-        private @Nullable Input<Map<String,String>> context;
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<String> plaintext;
+        private @Nullable Output<String> ciphertextBlob;
+        private @Nullable Output<Map<String,String>> context;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<String> plaintext;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder ciphertextBlob(@Nullable Input<String> ciphertextBlob) {
+        public Builder ciphertextBlob(@Nullable Output<String> ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
             return this;
         }
 
         public Builder ciphertextBlob(@Nullable String ciphertextBlob) {
-            this.ciphertextBlob = Input.ofNullable(ciphertextBlob);
+            this.ciphertextBlob = Output.ofNullable(ciphertextBlob);
             return this;
         }
 
-        public Builder context(@Nullable Input<Map<String,String>> context) {
+        public Builder context(@Nullable Output<Map<String,String>> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable Map<String,String> context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder plaintext(@Nullable Input<String> plaintext) {
+        public Builder plaintext(@Nullable Output<String> plaintext) {
             this.plaintext = plaintext;
             return this;
         }
 
         public Builder plaintext(@Nullable String plaintext) {
-            this.plaintext = Input.ofNullable(plaintext);
+            this.plaintext = Output.ofNullable(plaintext);
             return this;
         }
         public CiphertextState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode", required=true)
-      private final Input<String> authMode;
+      private final Output<String> authMode;
 
-    public Input<String> getAuthMode() {
+    public Output<String> getAuthMode() {
         return this.authMode;
     }
 
@@ -32,9 +32,9 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultS3Location", required=true)
-      private final Input<String> defaultS3Location;
+      private final Output<String> defaultS3Location;
 
-    public Input<String> getDefaultS3Location() {
+    public Output<String> getDefaultS3Location() {
         return this.defaultS3Location;
     }
 
@@ -43,10 +43,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineSecurityGroupId", required=true)
-      private final Input<String> engineSecurityGroupId;
+      private final Output<String> engineSecurityGroupId;
 
-    public Input<String> getEngineSecurityGroupId() {
+    public Output<String> getEngineSecurityGroupId() {
         return this.engineSecurityGroupId;
     }
 
@@ -65,10 +65,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idpAuthUrl")
-      private final @Nullable Input<String> idpAuthUrl;
+      private final @Nullable Output<String> idpAuthUrl;
 
-    public Input<String> getIdpAuthUrl() {
-        return this.idpAuthUrl == null ? Input.empty() : this.idpAuthUrl;
+    public Output<String> getIdpAuthUrl() {
+        return this.idpAuthUrl == null ? Output.empty() : this.idpAuthUrl;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idpRelayStateParameterName")
-      private final @Nullable Input<String> idpRelayStateParameterName;
+      private final @Nullable Output<String> idpRelayStateParameterName;
 
-    public Input<String> getIdpRelayStateParameterName() {
-        return this.idpRelayStateParameterName == null ? Input.empty() : this.idpRelayStateParameterName;
+    public Output<String> getIdpRelayStateParameterName() {
+        return this.idpRelayStateParameterName == null ? Output.empty() : this.idpRelayStateParameterName;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole", required=true)
-      private final Input<String> serviceRole;
+      private final Output<String> serviceRole;
 
-    public Input<String> getServiceRole() {
+    public Output<String> getServiceRole() {
         return this.serviceRole;
     }
 
@@ -109,9 +109,9 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -120,17 +120,17 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userRole")
-      private final @Nullable Input<String> userRole;
+      private final @Nullable Output<String> userRole;
 
-    public Input<String> getUserRole() {
-        return this.userRole == null ? Input.empty() : this.userRole;
+    public Output<String> getUserRole() {
+        return this.userRole == null ? Output.empty() : this.userRole;
     }
 
     /**
@@ -149,9 +149,9 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
@@ -160,27 +160,27 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceSecurityGroupId", required=true)
-      private final Input<String> workspaceSecurityGroupId;
+      private final Output<String> workspaceSecurityGroupId;
 
-    public Input<String> getWorkspaceSecurityGroupId() {
+    public Output<String> getWorkspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId;
     }
 
     public StudioArgs(
-        Input<String> authMode,
-        Input<String> defaultS3Location,
-        @Nullable Input<String> description,
-        Input<String> engineSecurityGroupId,
-        @Nullable Input<String> idpAuthUrl,
-        @Nullable Input<String> idpRelayStateParameterName,
-        @Nullable Input<String> name,
-        Input<String> serviceRole,
-        Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> userRole,
-        Input<String> vpcId,
-        Input<String> workspaceSecurityGroupId) {
+        Output<String> authMode,
+        Output<String> defaultS3Location,
+        @Nullable Output<String> description,
+        Output<String> engineSecurityGroupId,
+        @Nullable Output<String> idpAuthUrl,
+        @Nullable Output<String> idpRelayStateParameterName,
+        @Nullable Output<String> name,
+        Output<String> serviceRole,
+        Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> userRole,
+        Output<String> vpcId,
+        Output<String> workspaceSecurityGroupId) {
         this.authMode = Objects.requireNonNull(authMode, "expected parameter 'authMode' to be non-null");
         this.defaultS3Location = Objects.requireNonNull(defaultS3Location, "expected parameter 'defaultS3Location' to be non-null");
         this.description = description;
@@ -198,20 +198,20 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StudioArgs() {
-        this.authMode = Input.empty();
-        this.defaultS3Location = Input.empty();
-        this.description = Input.empty();
-        this.engineSecurityGroupId = Input.empty();
-        this.idpAuthUrl = Input.empty();
-        this.idpRelayStateParameterName = Input.empty();
-        this.name = Input.empty();
-        this.serviceRole = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userRole = Input.empty();
-        this.vpcId = Input.empty();
-        this.workspaceSecurityGroupId = Input.empty();
+        this.authMode = Output.empty();
+        this.defaultS3Location = Output.empty();
+        this.description = Output.empty();
+        this.engineSecurityGroupId = Output.empty();
+        this.idpAuthUrl = Output.empty();
+        this.idpRelayStateParameterName = Output.empty();
+        this.name = Output.empty();
+        this.serviceRole = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userRole = Output.empty();
+        this.vpcId = Output.empty();
+        this.workspaceSecurityGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -223,20 +223,20 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> authMode;
-        private Input<String> defaultS3Location;
-        private @Nullable Input<String> description;
-        private Input<String> engineSecurityGroupId;
-        private @Nullable Input<String> idpAuthUrl;
-        private @Nullable Input<String> idpRelayStateParameterName;
-        private @Nullable Input<String> name;
-        private Input<String> serviceRole;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> userRole;
-        private Input<String> vpcId;
-        private Input<String> workspaceSecurityGroupId;
+        private Output<String> authMode;
+        private Output<String> defaultS3Location;
+        private @Nullable Output<String> description;
+        private Output<String> engineSecurityGroupId;
+        private @Nullable Output<String> idpAuthUrl;
+        private @Nullable Output<String> idpRelayStateParameterName;
+        private @Nullable Output<String> name;
+        private Output<String> serviceRole;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> userRole;
+        private Output<String> vpcId;
+        private Output<String> workspaceSecurityGroupId;
 
         public Builder() {
     	      // Empty
@@ -260,143 +260,143 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
         }
 
-        public Builder authMode(Input<String> authMode) {
+        public Builder authMode(Output<String> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
         public Builder authMode(String authMode) {
-            this.authMode = Input.of(Objects.requireNonNull(authMode));
+            this.authMode = Output.of(Objects.requireNonNull(authMode));
             return this;
         }
 
-        public Builder defaultS3Location(Input<String> defaultS3Location) {
+        public Builder defaultS3Location(Output<String> defaultS3Location) {
             this.defaultS3Location = Objects.requireNonNull(defaultS3Location);
             return this;
         }
 
         public Builder defaultS3Location(String defaultS3Location) {
-            this.defaultS3Location = Input.of(Objects.requireNonNull(defaultS3Location));
+            this.defaultS3Location = Output.of(Objects.requireNonNull(defaultS3Location));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder engineSecurityGroupId(Input<String> engineSecurityGroupId) {
+        public Builder engineSecurityGroupId(Output<String> engineSecurityGroupId) {
             this.engineSecurityGroupId = Objects.requireNonNull(engineSecurityGroupId);
             return this;
         }
 
         public Builder engineSecurityGroupId(String engineSecurityGroupId) {
-            this.engineSecurityGroupId = Input.of(Objects.requireNonNull(engineSecurityGroupId));
+            this.engineSecurityGroupId = Output.of(Objects.requireNonNull(engineSecurityGroupId));
             return this;
         }
 
-        public Builder idpAuthUrl(@Nullable Input<String> idpAuthUrl) {
+        public Builder idpAuthUrl(@Nullable Output<String> idpAuthUrl) {
             this.idpAuthUrl = idpAuthUrl;
             return this;
         }
 
         public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
-            this.idpAuthUrl = Input.ofNullable(idpAuthUrl);
+            this.idpAuthUrl = Output.ofNullable(idpAuthUrl);
             return this;
         }
 
-        public Builder idpRelayStateParameterName(@Nullable Input<String> idpRelayStateParameterName) {
+        public Builder idpRelayStateParameterName(@Nullable Output<String> idpRelayStateParameterName) {
             this.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
 
         public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
-            this.idpRelayStateParameterName = Input.ofNullable(idpRelayStateParameterName);
+            this.idpRelayStateParameterName = Output.ofNullable(idpRelayStateParameterName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder serviceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
         public Builder serviceRole(String serviceRole) {
-            this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
+            this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userRole(@Nullable Input<String> userRole) {
+        public Builder userRole(@Nullable Output<String> userRole) {
             this.userRole = userRole;
             return this;
         }
 
         public Builder userRole(@Nullable String userRole) {
-            this.userRole = Input.ofNullable(userRole);
+            this.userRole = Output.ofNullable(userRole);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
 
-        public Builder workspaceSecurityGroupId(Input<String> workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(Output<String> workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
             return this;
         }
 
         public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
-            this.workspaceSecurityGroupId = Input.of(Objects.requireNonNull(workspaceSecurityGroupId));
+            this.workspaceSecurityGroupId = Output.of(Objects.requireNonNull(workspaceSecurityGroupId));
             return this;
         }
         public StudioArgs build() {

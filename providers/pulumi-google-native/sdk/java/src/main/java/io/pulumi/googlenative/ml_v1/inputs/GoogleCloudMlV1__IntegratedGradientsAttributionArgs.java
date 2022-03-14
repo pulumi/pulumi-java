@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
      * 
      */
     @InputImport(name="numIntegralSteps")
-      private final @Nullable Input<Integer> numIntegralSteps;
+      private final @Nullable Output<Integer> numIntegralSteps;
 
-    public Input<Integer> getNumIntegralSteps() {
-        return this.numIntegralSteps == null ? Input.empty() : this.numIntegralSteps;
+    public Output<Integer> getNumIntegralSteps() {
+        return this.numIntegralSteps == null ? Output.empty() : this.numIntegralSteps;
     }
 
-    public GoogleCloudMlV1__IntegratedGradientsAttributionArgs(@Nullable Input<Integer> numIntegralSteps) {
+    public GoogleCloudMlV1__IntegratedGradientsAttributionArgs(@Nullable Output<Integer> numIntegralSteps) {
         this.numIntegralSteps = numIntegralSteps;
     }
 
     private GoogleCloudMlV1__IntegratedGradientsAttributionArgs() {
-        this.numIntegralSteps = Input.empty();
+        this.numIntegralSteps = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numIntegralSteps;
+        private @Nullable Output<Integer> numIntegralSteps;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
     	      this.numIntegralSteps = defaults.numIntegralSteps;
         }
 
-        public Builder numIntegralSteps(@Nullable Input<Integer> numIntegralSteps) {
+        public Builder numIntegralSteps(@Nullable Output<Integer> numIntegralSteps) {
             this.numIntegralSteps = numIntegralSteps;
             return this;
         }
 
         public Builder numIntegralSteps(@Nullable Integer numIntegralSteps) {
-            this.numIntegralSteps = Input.ofNullable(numIntegralSteps);
+            this.numIntegralSteps = Output.ofNullable(numIntegralSteps);
             return this;
         }
         public GoogleCloudMlV1__IntegratedGradientsAttributionArgs build() {

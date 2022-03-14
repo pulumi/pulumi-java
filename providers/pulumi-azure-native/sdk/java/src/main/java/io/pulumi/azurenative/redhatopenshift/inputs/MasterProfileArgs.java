@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     public MasterProfileArgs(
-        @Nullable Input<String> subnetId,
-        @Nullable Input<String> vmSize) {
+        @Nullable Output<String> subnetId,
+        @Nullable Output<String> vmSize) {
         this.subnetId = subnetId;
         this.vmSize = vmSize;
     }
 
     private MasterProfileArgs() {
-        this.subnetId = Input.empty();
-        this.vmSize = Input.empty();
+        this.subnetId = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<String> vmSize;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<String> vmSize;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public MasterProfileArgs build() {

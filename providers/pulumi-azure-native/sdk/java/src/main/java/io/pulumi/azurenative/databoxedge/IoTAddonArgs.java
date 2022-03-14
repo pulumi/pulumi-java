@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.inputs.IoTDeviceInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-      private final @Nullable Input<String> addonName;
+      private final @Nullable Output<String> addonName;
 
-    public Input<String> getAddonName() {
-        return this.addonName == null ? Input.empty() : this.addonName;
+    public Output<String> getAddonName() {
+        return this.addonName == null ? Output.empty() : this.addonName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -42,9 +42,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTDeviceDetails", required=true)
-      private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
+      private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
-    public Input<IoTDeviceInfoArgs> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
 
@@ -53,9 +53,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTEdgeDeviceDetails", required=true)
-      private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+      private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
-    public Input<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
 
@@ -65,9 +65,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -76,9 +76,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,20 +87,20 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName", required=true)
-      private final Input<String> roleName;
+      private final Output<String> roleName;
 
-    public Input<String> getRoleName() {
+    public Output<String> getRoleName() {
         return this.roleName;
     }
 
     public IoTAddonArgs(
-        @Nullable Input<String> addonName,
-        Input<String> deviceName,
-        Input<IoTDeviceInfoArgs> ioTDeviceDetails,
-        Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails,
-        Input<String> kind,
-        Input<String> resourceGroupName,
-        Input<String> roleName) {
+        @Nullable Output<String> addonName,
+        Output<String> deviceName,
+        Output<IoTDeviceInfoArgs> ioTDeviceDetails,
+        Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails,
+        Output<String> kind,
+        Output<String> resourceGroupName,
+        Output<String> roleName) {
         this.addonName = addonName;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails, "expected parameter 'ioTDeviceDetails' to be non-null");
@@ -111,13 +111,13 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IoTAddonArgs() {
-        this.addonName = Input.empty();
-        this.deviceName = Input.empty();
-        this.ioTDeviceDetails = Input.empty();
-        this.ioTEdgeDeviceDetails = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roleName = Input.empty();
+        this.addonName = Output.empty();
+        this.deviceName = Output.empty();
+        this.ioTDeviceDetails = Output.empty();
+        this.ioTEdgeDeviceDetails = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addonName;
-        private Input<String> deviceName;
-        private Input<IoTDeviceInfoArgs> ioTDeviceDetails;
-        private Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
-        private Input<String> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> roleName;
+        private @Nullable Output<String> addonName;
+        private Output<String> deviceName;
+        private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
+        private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+        private Output<String> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> roleName;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleName = defaults.roleName;
         }
 
-        public Builder addonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Output<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Input.ofNullable(addonName);
+            this.addonName = Output.ofNullable(addonName);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder ioTDeviceDetails(Input<IoTDeviceInfoArgs> ioTDeviceDetails) {
+        public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
             this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
             return this;
         }
 
         public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
-            this.ioTDeviceDetails = Input.of(Objects.requireNonNull(ioTDeviceDetails));
+            this.ioTDeviceDetails = Output.of(Objects.requireNonNull(ioTDeviceDetails));
             return this;
         }
 
-        public Builder ioTEdgeDeviceDetails(Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
+        public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
             return this;
         }
 
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
-            this.ioTEdgeDeviceDetails = Input.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
+            this.ioTEdgeDeviceDetails = Output.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roleName(Input<String> roleName) {
+        public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
 
         public Builder roleName(String roleName) {
-            this.roleName = Input.of(Objects.requireNonNull(roleName));
+            this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
         }
         public IoTAddonArgs build() {

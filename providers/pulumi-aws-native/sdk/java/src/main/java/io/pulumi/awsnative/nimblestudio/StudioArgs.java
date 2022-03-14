@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio;
 
 import io.pulumi.awsnative.nimblestudio.inputs.StudioEncryptionConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminRoleArn", required=true)
-      private final Input<String> adminRoleArn;
+      private final Output<String> adminRoleArn;
 
-    public Input<String> getAdminRoleArn() {
+    public Output<String> getAdminRoleArn() {
         return this.adminRoleArn;
     }
 
@@ -32,17 +32,17 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="studioEncryptionConfiguration")
-      private final @Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
+      private final @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
 
-    public Input<StudioEncryptionConfigurationArgs> getStudioEncryptionConfiguration() {
-        return this.studioEncryptionConfiguration == null ? Input.empty() : this.studioEncryptionConfiguration;
+    public Output<StudioEncryptionConfigurationArgs> getStudioEncryptionConfiguration() {
+        return this.studioEncryptionConfiguration == null ? Output.empty() : this.studioEncryptionConfiguration;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioName")
-      private final @Nullable Input<String> studioName;
+      private final @Nullable Output<String> studioName;
 
-    public Input<String> getStudioName() {
-        return this.studioName == null ? Input.empty() : this.studioName;
+    public Output<String> getStudioName() {
+        return this.studioName == null ? Output.empty() : this.studioName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<StudioTagsArgs> tags;
+      private final @Nullable Output<StudioTagsArgs> tags;
 
-    public Input<StudioTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<StudioTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -68,19 +68,19 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userRoleArn", required=true)
-      private final Input<String> userRoleArn;
+      private final Output<String> userRoleArn;
 
-    public Input<String> getUserRoleArn() {
+    public Output<String> getUserRoleArn() {
         return this.userRoleArn;
     }
 
     public StudioArgs(
-        Input<String> adminRoleArn,
-        Input<String> displayName,
-        @Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration,
-        @Nullable Input<String> studioName,
-        @Nullable Input<StudioTagsArgs> tags,
-        Input<String> userRoleArn) {
+        Output<String> adminRoleArn,
+        Output<String> displayName,
+        @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration,
+        @Nullable Output<String> studioName,
+        @Nullable Output<StudioTagsArgs> tags,
+        Output<String> userRoleArn) {
         this.adminRoleArn = Objects.requireNonNull(adminRoleArn, "expected parameter 'adminRoleArn' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.studioEncryptionConfiguration = studioEncryptionConfiguration;
@@ -90,12 +90,12 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StudioArgs() {
-        this.adminRoleArn = Input.empty();
-        this.displayName = Input.empty();
-        this.studioEncryptionConfiguration = Input.empty();
-        this.studioName = Input.empty();
-        this.tags = Input.empty();
-        this.userRoleArn = Input.empty();
+        this.adminRoleArn = Output.empty();
+        this.displayName = Output.empty();
+        this.studioEncryptionConfiguration = Output.empty();
+        this.studioName = Output.empty();
+        this.tags = Output.empty();
+        this.userRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,12 +107,12 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> adminRoleArn;
-        private Input<String> displayName;
-        private @Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
-        private @Nullable Input<String> studioName;
-        private @Nullable Input<StudioTagsArgs> tags;
-        private Input<String> userRoleArn;
+        private Output<String> adminRoleArn;
+        private Output<String> displayName;
+        private @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
+        private @Nullable Output<String> studioName;
+        private @Nullable Output<StudioTagsArgs> tags;
+        private Output<String> userRoleArn;
 
         public Builder() {
     	      // Empty
@@ -128,63 +128,63 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userRoleArn = defaults.userRoleArn;
         }
 
-        public Builder adminRoleArn(Input<String> adminRoleArn) {
+        public Builder adminRoleArn(Output<String> adminRoleArn) {
             this.adminRoleArn = Objects.requireNonNull(adminRoleArn);
             return this;
         }
 
         public Builder adminRoleArn(String adminRoleArn) {
-            this.adminRoleArn = Input.of(Objects.requireNonNull(adminRoleArn));
+            this.adminRoleArn = Output.of(Objects.requireNonNull(adminRoleArn));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder studioEncryptionConfiguration(@Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration) {
+        public Builder studioEncryptionConfiguration(@Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration) {
             this.studioEncryptionConfiguration = studioEncryptionConfiguration;
             return this;
         }
 
         public Builder studioEncryptionConfiguration(@Nullable StudioEncryptionConfigurationArgs studioEncryptionConfiguration) {
-            this.studioEncryptionConfiguration = Input.ofNullable(studioEncryptionConfiguration);
+            this.studioEncryptionConfiguration = Output.ofNullable(studioEncryptionConfiguration);
             return this;
         }
 
-        public Builder studioName(@Nullable Input<String> studioName) {
+        public Builder studioName(@Nullable Output<String> studioName) {
             this.studioName = studioName;
             return this;
         }
 
         public Builder studioName(@Nullable String studioName) {
-            this.studioName = Input.ofNullable(studioName);
+            this.studioName = Output.ofNullable(studioName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<StudioTagsArgs> tags) {
+        public Builder tags(@Nullable Output<StudioTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable StudioTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userRoleArn(Input<String> userRoleArn) {
+        public Builder userRoleArn(Output<String> userRoleArn) {
             this.userRoleArn = Objects.requireNonNull(userRoleArn);
             return this;
         }
 
         public Builder userRoleArn(String userRoleArn) {
-            this.userRoleArn = Input.of(Objects.requireNonNull(userRoleArn));
+            this.userRoleArn = Output.of(Objects.requireNonNull(userRoleArn));
             return this;
         }
         public StudioArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sns;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="confirmationTimeoutInMinutes")
-      private final @Nullable Input<Integer> confirmationTimeoutInMinutes;
+      private final @Nullable Output<Integer> confirmationTimeoutInMinutes;
 
-    public Input<Integer> getConfirmationTimeoutInMinutes() {
-        return this.confirmationTimeoutInMinutes == null ? Input.empty() : this.confirmationTimeoutInMinutes;
+    public Output<Integer> getConfirmationTimeoutInMinutes() {
+        return this.confirmationTimeoutInMinutes == null ? Output.empty() : this.confirmationTimeoutInMinutes;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deliveryPolicy")
-      private final @Nullable Input<String> deliveryPolicy;
+      private final @Nullable Output<String> deliveryPolicy;
 
-    public Input<String> getDeliveryPolicy() {
-        return this.deliveryPolicy == null ? Input.empty() : this.deliveryPolicy;
+    public Output<String> getDeliveryPolicy() {
+        return this.deliveryPolicy == null ? Output.empty() : this.deliveryPolicy;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<String> endpoint;
+      private final Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
+    public Output<String> getEndpoint() {
         return this.endpoint;
     }
 
@@ -54,10 +54,10 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpointAutoConfirms")
-      private final @Nullable Input<Boolean> endpointAutoConfirms;
+      private final @Nullable Output<Boolean> endpointAutoConfirms;
 
-    public Input<Boolean> getEndpointAutoConfirms() {
-        return this.endpointAutoConfirms == null ? Input.empty() : this.endpointAutoConfirms;
+    public Output<Boolean> getEndpointAutoConfirms() {
+        return this.endpointAutoConfirms == null ? Output.empty() : this.endpointAutoConfirms;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filterPolicy")
-      private final @Nullable Input<String> filterPolicy;
+      private final @Nullable Output<String> filterPolicy;
 
-    public Input<String> getFilterPolicy() {
-        return this.filterPolicy == null ? Input.empty() : this.filterPolicy;
+    public Output<String> getFilterPolicy() {
+        return this.filterPolicy == null ? Output.empty() : this.filterPolicy;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<String> protocol;
+      private final Output<String> protocol;
 
-    public Input<String> getProtocol() {
+    public Output<String> getProtocol() {
         return this.protocol;
     }
 
@@ -87,10 +87,10 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rawMessageDelivery")
-      private final @Nullable Input<Boolean> rawMessageDelivery;
+      private final @Nullable Output<Boolean> rawMessageDelivery;
 
-    public Input<Boolean> getRawMessageDelivery() {
-        return this.rawMessageDelivery == null ? Input.empty() : this.rawMessageDelivery;
+    public Output<Boolean> getRawMessageDelivery() {
+        return this.rawMessageDelivery == null ? Output.empty() : this.rawMessageDelivery;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="redrivePolicy")
-      private final @Nullable Input<String> redrivePolicy;
+      private final @Nullable Output<String> redrivePolicy;
 
-    public Input<String> getRedrivePolicy() {
-        return this.redrivePolicy == null ? Input.empty() : this.redrivePolicy;
+    public Output<String> getRedrivePolicy() {
+        return this.redrivePolicy == null ? Output.empty() : this.redrivePolicy;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subscriptionRoleArn")
-      private final @Nullable Input<String> subscriptionRoleArn;
+      private final @Nullable Output<String> subscriptionRoleArn;
 
-    public Input<String> getSubscriptionRoleArn() {
-        return this.subscriptionRoleArn == null ? Input.empty() : this.subscriptionRoleArn;
+    public Output<String> getSubscriptionRoleArn() {
+        return this.subscriptionRoleArn == null ? Output.empty() : this.subscriptionRoleArn;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public TopicSubscriptionArgs(
-        @Nullable Input<Integer> confirmationTimeoutInMinutes,
-        @Nullable Input<String> deliveryPolicy,
-        Input<String> endpoint,
-        @Nullable Input<Boolean> endpointAutoConfirms,
-        @Nullable Input<String> filterPolicy,
-        Input<String> protocol,
-        @Nullable Input<Boolean> rawMessageDelivery,
-        @Nullable Input<String> redrivePolicy,
-        @Nullable Input<String> subscriptionRoleArn,
-        Input<String> topic) {
+        @Nullable Output<Integer> confirmationTimeoutInMinutes,
+        @Nullable Output<String> deliveryPolicy,
+        Output<String> endpoint,
+        @Nullable Output<Boolean> endpointAutoConfirms,
+        @Nullable Output<String> filterPolicy,
+        Output<String> protocol,
+        @Nullable Output<Boolean> rawMessageDelivery,
+        @Nullable Output<String> redrivePolicy,
+        @Nullable Output<String> subscriptionRoleArn,
+        Output<String> topic) {
         this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
         this.deliveryPolicy = deliveryPolicy;
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
@@ -150,16 +150,16 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TopicSubscriptionArgs() {
-        this.confirmationTimeoutInMinutes = Input.empty();
-        this.deliveryPolicy = Input.empty();
-        this.endpoint = Input.empty();
-        this.endpointAutoConfirms = Input.empty();
-        this.filterPolicy = Input.empty();
-        this.protocol = Input.empty();
-        this.rawMessageDelivery = Input.empty();
-        this.redrivePolicy = Input.empty();
-        this.subscriptionRoleArn = Input.empty();
-        this.topic = Input.empty();
+        this.confirmationTimeoutInMinutes = Output.empty();
+        this.deliveryPolicy = Output.empty();
+        this.endpoint = Output.empty();
+        this.endpointAutoConfirms = Output.empty();
+        this.filterPolicy = Output.empty();
+        this.protocol = Output.empty();
+        this.rawMessageDelivery = Output.empty();
+        this.redrivePolicy = Output.empty();
+        this.subscriptionRoleArn = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> confirmationTimeoutInMinutes;
-        private @Nullable Input<String> deliveryPolicy;
-        private Input<String> endpoint;
-        private @Nullable Input<Boolean> endpointAutoConfirms;
-        private @Nullable Input<String> filterPolicy;
-        private Input<String> protocol;
-        private @Nullable Input<Boolean> rawMessageDelivery;
-        private @Nullable Input<String> redrivePolicy;
-        private @Nullable Input<String> subscriptionRoleArn;
-        private Input<String> topic;
+        private @Nullable Output<Integer> confirmationTimeoutInMinutes;
+        private @Nullable Output<String> deliveryPolicy;
+        private Output<String> endpoint;
+        private @Nullable Output<Boolean> endpointAutoConfirms;
+        private @Nullable Output<String> filterPolicy;
+        private Output<String> protocol;
+        private @Nullable Output<Boolean> rawMessageDelivery;
+        private @Nullable Output<String> redrivePolicy;
+        private @Nullable Output<String> subscriptionRoleArn;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -200,97 +200,97 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.topic = defaults.topic;
         }
 
-        public Builder confirmationTimeoutInMinutes(@Nullable Input<Integer> confirmationTimeoutInMinutes) {
+        public Builder confirmationTimeoutInMinutes(@Nullable Output<Integer> confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
 
         public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
-            this.confirmationTimeoutInMinutes = Input.ofNullable(confirmationTimeoutInMinutes);
+            this.confirmationTimeoutInMinutes = Output.ofNullable(confirmationTimeoutInMinutes);
             return this;
         }
 
-        public Builder deliveryPolicy(@Nullable Input<String> deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
 
         public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
-            this.deliveryPolicy = Input.ofNullable(deliveryPolicy);
+            this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
             return this;
         }
 
-        public Builder endpoint(Input<String> endpoint) {
+        public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder endpointAutoConfirms(@Nullable Input<Boolean> endpointAutoConfirms) {
+        public Builder endpointAutoConfirms(@Nullable Output<Boolean> endpointAutoConfirms) {
             this.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
 
         public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
-            this.endpointAutoConfirms = Input.ofNullable(endpointAutoConfirms);
+            this.endpointAutoConfirms = Output.ofNullable(endpointAutoConfirms);
             return this;
         }
 
-        public Builder filterPolicy(@Nullable Input<String> filterPolicy) {
+        public Builder filterPolicy(@Nullable Output<String> filterPolicy) {
             this.filterPolicy = filterPolicy;
             return this;
         }
 
         public Builder filterPolicy(@Nullable String filterPolicy) {
-            this.filterPolicy = Input.ofNullable(filterPolicy);
+            this.filterPolicy = Output.ofNullable(filterPolicy);
             return this;
         }
 
-        public Builder protocol(Input<String> protocol) {
+        public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(String protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder rawMessageDelivery(@Nullable Input<Boolean> rawMessageDelivery) {
+        public Builder rawMessageDelivery(@Nullable Output<Boolean> rawMessageDelivery) {
             this.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
 
         public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
-            this.rawMessageDelivery = Input.ofNullable(rawMessageDelivery);
+            this.rawMessageDelivery = Output.ofNullable(rawMessageDelivery);
             return this;
         }
 
-        public Builder redrivePolicy(@Nullable Input<String> redrivePolicy) {
+        public Builder redrivePolicy(@Nullable Output<String> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
 
         public Builder redrivePolicy(@Nullable String redrivePolicy) {
-            this.redrivePolicy = Input.ofNullable(redrivePolicy);
+            this.redrivePolicy = Output.ofNullable(redrivePolicy);
             return this;
         }
 
-        public Builder subscriptionRoleArn(@Nullable Input<String> subscriptionRoleArn) {
+        public Builder subscriptionRoleArn(@Nullable Output<String> subscriptionRoleArn) {
             this.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
 
         public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
-            this.subscriptionRoleArn = Input.ofNullable(subscriptionRoleArn);
+            this.subscriptionRoleArn = Output.ofNullable(subscriptionRoleArn);
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

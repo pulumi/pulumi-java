@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.ConsistentHashLoadBalancerSettingsHttpCookieArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpCookie")
-      private final @Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie;
+      private final @Nullable Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie;
 
-    public Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> getHttpCookie() {
-        return this.httpCookie == null ? Input.empty() : this.httpCookie;
+    public Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> getHttpCookie() {
+        return this.httpCookie == null ? Output.empty() : this.httpCookie;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpHeaderName")
-      private final @Nullable Input<String> httpHeaderName;
+      private final @Nullable Output<String> httpHeaderName;
 
-    public Input<String> getHttpHeaderName() {
-        return this.httpHeaderName == null ? Input.empty() : this.httpHeaderName;
+    public Output<String> getHttpHeaderName() {
+        return this.httpHeaderName == null ? Output.empty() : this.httpHeaderName;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minimumRingSize")
-      private final @Nullable Input<String> minimumRingSize;
+      private final @Nullable Output<String> minimumRingSize;
 
-    public Input<String> getMinimumRingSize() {
-        return this.minimumRingSize == null ? Input.empty() : this.minimumRingSize;
+    public Output<String> getMinimumRingSize() {
+        return this.minimumRingSize == null ? Output.empty() : this.minimumRingSize;
     }
 
     public ConsistentHashLoadBalancerSettingsArgs(
-        @Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie,
-        @Nullable Input<String> httpHeaderName,
-        @Nullable Input<String> minimumRingSize) {
+        @Nullable Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie,
+        @Nullable Output<String> httpHeaderName,
+        @Nullable Output<String> minimumRingSize) {
         this.httpCookie = httpCookie;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;
     }
 
     private ConsistentHashLoadBalancerSettingsArgs() {
-        this.httpCookie = Input.empty();
-        this.httpHeaderName = Input.empty();
-        this.minimumRingSize = Input.empty();
+        this.httpCookie = Output.empty();
+        this.httpHeaderName = Output.empty();
+        this.minimumRingSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie;
-        private @Nullable Input<String> httpHeaderName;
-        private @Nullable Input<String> minimumRingSize;
+        private @Nullable Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie;
+        private @Nullable Output<String> httpHeaderName;
+        private @Nullable Output<String> minimumRingSize;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
     	      this.minimumRingSize = defaults.minimumRingSize;
         }
 
-        public Builder httpCookie(@Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie) {
+        public Builder httpCookie(@Nullable Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie) {
             this.httpCookie = httpCookie;
             return this;
         }
 
         public Builder httpCookie(@Nullable ConsistentHashLoadBalancerSettingsHttpCookieArgs httpCookie) {
-            this.httpCookie = Input.ofNullable(httpCookie);
+            this.httpCookie = Output.ofNullable(httpCookie);
             return this;
         }
 
-        public Builder httpHeaderName(@Nullable Input<String> httpHeaderName) {
+        public Builder httpHeaderName(@Nullable Output<String> httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
 
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
-            this.httpHeaderName = Input.ofNullable(httpHeaderName);
+            this.httpHeaderName = Output.ofNullable(httpHeaderName);
             return this;
         }
 
-        public Builder minimumRingSize(@Nullable Input<String> minimumRingSize) {
+        public Builder minimumRingSize(@Nullable Output<String> minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
 
         public Builder minimumRingSize(@Nullable String minimumRingSize) {
-            this.minimumRingSize = Input.ofNullable(minimumRingSize);
+            this.minimumRingSize = Output.ofNullable(minimumRingSize);
             return this;
         }
         public ConsistentHashLoadBalancerSettingsArgs build() {

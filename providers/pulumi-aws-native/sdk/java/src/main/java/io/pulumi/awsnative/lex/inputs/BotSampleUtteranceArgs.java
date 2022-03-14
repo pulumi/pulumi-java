@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
     public static final BotSampleUtteranceArgs Empty = new BotSampleUtteranceArgs();
 
     @InputImport(name="utterance", required=true)
-      private final Input<String> utterance;
+      private final Output<String> utterance;
 
-    public Input<String> getUtterance() {
+    public Output<String> getUtterance() {
         return this.utterance;
     }
 
-    public BotSampleUtteranceArgs(Input<String> utterance) {
+    public BotSampleUtteranceArgs(Output<String> utterance) {
         this.utterance = Objects.requireNonNull(utterance, "expected parameter 'utterance' to be non-null");
     }
 
     private BotSampleUtteranceArgs() {
-        this.utterance = Input.empty();
+        this.utterance = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> utterance;
+        private Output<String> utterance;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
     	      this.utterance = defaults.utterance;
         }
 
-        public Builder utterance(Input<String> utterance) {
+        public Builder utterance(Output<String> utterance) {
             this.utterance = Objects.requireNonNull(utterance);
             return this;
         }
 
         public Builder utterance(String utterance) {
-            this.utterance = Input.of(Objects.requireNonNull(utterance));
+            this.utterance = Output.of(Objects.requireNonNull(utterance));
             return this;
         }
         public BotSampleUtteranceArgs build() {

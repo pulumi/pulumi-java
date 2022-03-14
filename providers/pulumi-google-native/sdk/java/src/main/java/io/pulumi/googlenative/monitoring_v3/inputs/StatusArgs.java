@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<Integer> code;
+      private final @Nullable Output<Integer> code;
 
-    public Input<Integer> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<Integer> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<List<Map<String,String>>> details;
+      private final @Nullable Output<List<Map<String,String>>> details;
 
-    public Input<List<Map<String,String>>> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<List<Map<String,String>>> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     public StatusArgs(
-        @Nullable Input<Integer> code,
-        @Nullable Input<List<Map<String,String>>> details,
-        @Nullable Input<String> message) {
+        @Nullable Output<Integer> code,
+        @Nullable Output<List<Map<String,String>>> details,
+        @Nullable Output<String> message) {
         this.code = code;
         this.details = details;
         this.message = message;
     }
 
     private StatusArgs() {
-        this.code = Input.empty();
-        this.details = Input.empty();
-        this.message = Input.empty();
+        this.code = Output.empty();
+        this.details = Output.empty();
+        this.message = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> code;
-        private @Nullable Input<List<Map<String,String>>> details;
-        private @Nullable Input<String> message;
+        private @Nullable Output<Integer> code;
+        private @Nullable Output<List<Map<String,String>>> details;
+        private @Nullable Output<String> message;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.message = defaults.message;
         }
 
-        public Builder code(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Output<Integer> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable Integer code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder details(@Nullable Input<List<Map<String,String>>> details) {
+        public Builder details(@Nullable Output<List<Map<String,String>>> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable List<Map<String,String>> details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
         public StatusArgs build() {

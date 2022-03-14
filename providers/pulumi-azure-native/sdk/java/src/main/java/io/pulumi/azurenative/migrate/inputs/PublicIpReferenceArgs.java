@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-      private final Input<String> sourceArmResourceId;
+      private final Output<String> sourceArmResourceId;
 
-    public Input<String> getSourceArmResourceId() {
+    public Output<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
-    public PublicIpReferenceArgs(Input<String> sourceArmResourceId) {
+    public PublicIpReferenceArgs(Output<String> sourceArmResourceId) {
         this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
     }
 
     private PublicIpReferenceArgs() {
-        this.sourceArmResourceId = Input.empty();
+        this.sourceArmResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> sourceArmResourceId;
+        private Output<String> sourceArmResourceId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArg
     	      this.sourceArmResourceId = defaults.sourceArmResourceId;
         }
 
-        public Builder sourceArmResourceId(Input<String> sourceArmResourceId) {
+        public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
 
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
+            this.sourceArmResourceId = Output.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }
         public PublicIpReferenceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tableId", required=true)
-      private final Input<String> tableId;
+      private final Output<String> tableId;
 
-    public Input<String> getTableId() {
+    public Output<String> getTableId() {
         return this.tableId;
     }
 
     public JobLoadDestinationTableArgs(
-        @Nullable Input<String> datasetId,
-        @Nullable Input<String> projectId,
-        Input<String> tableId) {
+        @Nullable Output<String> datasetId,
+        @Nullable Output<String> projectId,
+        Output<String> tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
     }
 
     private JobLoadDestinationTableArgs() {
-        this.datasetId = Input.empty();
-        this.projectId = Input.empty();
-        this.tableId = Input.empty();
+        this.datasetId = Output.empty();
+        this.projectId = Output.empty();
+        this.tableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetId;
-        private @Nullable Input<String> projectId;
-        private Input<String> tableId;
+        private @Nullable Output<String> datasetId;
+        private @Nullable Output<String> projectId;
+        private Output<String> tableId;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
 
-        public Builder tableId(Input<String> tableId) {
+        public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
         public Builder tableId(String tableId) {
-            this.tableId = Input.of(Objects.requireNonNull(tableId));
+            this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
         public JobLoadDestinationTableArgs build() {

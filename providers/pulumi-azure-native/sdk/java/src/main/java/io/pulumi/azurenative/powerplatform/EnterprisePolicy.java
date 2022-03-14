@@ -11,7 +11,6 @@ import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseLockbox;
 import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseNetworkInjection;
 import io.pulumi.azurenative.powerplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -216,18 +215,18 @@ public class EnterprisePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnterprisePolicy(String name, EnterprisePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:powerplatform:EnterprisePolicy", name, args == null ? EnterprisePolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:powerplatform:EnterprisePolicy", name, args == null ? EnterprisePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EnterprisePolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EnterprisePolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:powerplatform:EnterprisePolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:powerplatform/v20201030preview:EnterprisePolicy").build())
+                Output.of(Alias.builder().setType("azure-native:powerplatform/v20201030preview:EnterprisePolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -241,7 +240,7 @@ public class EnterprisePolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnterprisePolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EnterprisePolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnterprisePolicy(name, id, options);
     }
 }

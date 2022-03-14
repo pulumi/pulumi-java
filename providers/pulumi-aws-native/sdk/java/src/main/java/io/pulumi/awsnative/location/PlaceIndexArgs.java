@@ -5,7 +5,7 @@ package io.pulumi.awsnative.location;
 
 import io.pulumi.awsnative.location.enums.PlaceIndexPricingPlan;
 import io.pulumi.awsnative.location.inputs.PlaceIndexDataSourceConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,46 +17,46 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     public static final PlaceIndexArgs Empty = new PlaceIndexArgs();
 
     @InputImport(name="dataSource", required=true)
-      private final Input<String> dataSource;
+      private final Output<String> dataSource;
 
-    public Input<String> getDataSource() {
+    public Output<String> getDataSource() {
         return this.dataSource;
     }
 
     @InputImport(name="dataSourceConfiguration")
-      private final @Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
+      private final @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
 
-    public Input<PlaceIndexDataSourceConfigurationArgs> getDataSourceConfiguration() {
-        return this.dataSourceConfiguration == null ? Input.empty() : this.dataSourceConfiguration;
+    public Output<PlaceIndexDataSourceConfigurationArgs> getDataSourceConfiguration() {
+        return this.dataSourceConfiguration == null ? Output.empty() : this.dataSourceConfiguration;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="indexName", required=true)
-      private final Input<String> indexName;
+      private final Output<String> indexName;
 
-    public Input<String> getIndexName() {
+    public Output<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="pricingPlan")
-      private final @Nullable Input<PlaceIndexPricingPlan> pricingPlan;
+      private final @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
 
-    public Input<PlaceIndexPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
+    public Output<PlaceIndexPricingPlan> getPricingPlan() {
+        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
     public PlaceIndexArgs(
-        Input<String> dataSource,
-        @Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration,
-        @Nullable Input<String> description,
-        Input<String> indexName,
-        @Nullable Input<PlaceIndexPricingPlan> pricingPlan) {
+        Output<String> dataSource,
+        @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration,
+        @Nullable Output<String> description,
+        Output<String> indexName,
+        @Nullable Output<PlaceIndexPricingPlan> pricingPlan) {
         this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
         this.dataSourceConfiguration = dataSourceConfiguration;
         this.description = description;
@@ -65,11 +65,11 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlaceIndexArgs() {
-        this.dataSource = Input.empty();
-        this.dataSourceConfiguration = Input.empty();
-        this.description = Input.empty();
-        this.indexName = Input.empty();
-        this.pricingPlan = Input.empty();
+        this.dataSource = Output.empty();
+        this.dataSourceConfiguration = Output.empty();
+        this.description = Output.empty();
+        this.indexName = Output.empty();
+        this.pricingPlan = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dataSource;
-        private @Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
-        private @Nullable Input<String> description;
-        private Input<String> indexName;
-        private @Nullable Input<PlaceIndexPricingPlan> pricingPlan;
+        private Output<String> dataSource;
+        private @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
+        private @Nullable Output<String> description;
+        private Output<String> indexName;
+        private @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pricingPlan = defaults.pricingPlan;
         }
 
-        public Builder dataSource(Input<String> dataSource) {
+        public Builder dataSource(Output<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
         public Builder dataSource(String dataSource) {
-            this.dataSource = Input.of(Objects.requireNonNull(dataSource));
+            this.dataSource = Output.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder dataSourceConfiguration(@Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration) {
+        public Builder dataSourceConfiguration(@Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration) {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
 
         public Builder dataSourceConfiguration(@Nullable PlaceIndexDataSourceConfigurationArgs dataSourceConfiguration) {
-            this.dataSourceConfiguration = Input.ofNullable(dataSourceConfiguration);
+            this.dataSourceConfiguration = Output.ofNullable(dataSourceConfiguration);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder indexName(Input<String> indexName) {
+        public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
         public Builder indexName(String indexName) {
-            this.indexName = Input.of(Objects.requireNonNull(indexName));
+            this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder pricingPlan(@Nullable Input<PlaceIndexPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Output<PlaceIndexPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
         public Builder pricingPlan(@Nullable PlaceIndexPricingPlan pricingPlan) {
-            this.pricingPlan = Input.ofNullable(pricingPlan);
+            this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
         public PlaceIndexArgs build() {

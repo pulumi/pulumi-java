@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
     public CustomCopyOptionArgs(
-        @Nullable Input<String> duration,
-        Input<String> objectType) {
+        @Nullable Output<String> duration,
+        Output<String> objectType) {
         this.duration = duration;
         this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
     }
 
     private CustomCopyOptionArgs() {
-        this.duration = Input.empty();
-        this.objectType = Input.empty();
+        this.duration = Output.empty();
+        this.objectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> duration;
-        private Input<String> objectType;
+        private @Nullable Output<String> duration;
+        private Output<String> objectType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
         public CustomCopyOptionArgs build() {

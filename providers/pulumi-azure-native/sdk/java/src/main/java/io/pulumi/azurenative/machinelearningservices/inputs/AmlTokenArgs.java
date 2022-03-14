@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityType", required=true)
-      private final Input<String> identityType;
+      private final Output<String> identityType;
 
-    public Input<String> getIdentityType() {
+    public Output<String> getIdentityType() {
         return this.identityType;
     }
 
-    public AmlTokenArgs(Input<String> identityType) {
+    public AmlTokenArgs(Output<String> identityType) {
         this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
     }
 
     private AmlTokenArgs() {
-        this.identityType = Input.empty();
+        this.identityType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> identityType;
+        private Output<String> identityType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder identityType(Input<String> identityType) {
+        public Builder identityType(Output<String> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
         public Builder identityType(String identityType) {
-            this.identityType = Input.of(Objects.requireNonNull(identityType));
+            this.identityType = Output.of(Objects.requireNonNull(identityType));
             return this;
         }
         public AmlTokenArgs build() {

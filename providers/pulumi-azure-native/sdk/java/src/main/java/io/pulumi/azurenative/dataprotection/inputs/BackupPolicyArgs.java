@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.AzureBackupRuleArgs;
 import io.pulumi.azurenative.dataprotection.inputs.AzureRetentionRuleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasourceTypes", required=true)
-      private final Input<List<String>> datasourceTypes;
+      private final Output<List<String>> datasourceTypes;
 
-    public Input<List<String>> getDatasourceTypes() {
+    public Output<List<String>> getDatasourceTypes() {
         return this.datasourceTypes;
     }
 
@@ -37,9 +37,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
@@ -48,25 +48,25 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyRules", required=true)
-      private final Input<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
+      private final Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
 
-    public Input<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> getPolicyRules() {
+    public Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> getPolicyRules() {
         return this.policyRules;
     }
 
     public BackupPolicyArgs(
-        Input<List<String>> datasourceTypes,
-        Input<String> objectType,
-        Input<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
+        Output<List<String>> datasourceTypes,
+        Output<String> objectType,
+        Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
         this.datasourceTypes = Objects.requireNonNull(datasourceTypes, "expected parameter 'datasourceTypes' to be non-null");
         this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
         this.policyRules = Objects.requireNonNull(policyRules, "expected parameter 'policyRules' to be non-null");
     }
 
     private BackupPolicyArgs() {
-        this.datasourceTypes = Input.empty();
-        this.objectType = Input.empty();
-        this.policyRules = Input.empty();
+        this.datasourceTypes = Output.empty();
+        this.objectType = Output.empty();
+        this.policyRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> datasourceTypes;
-        private Input<String> objectType;
-        private Input<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
+        private Output<List<String>> datasourceTypes;
+        private Output<String> objectType;
+        private Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyRules = defaults.policyRules;
         }
 
-        public Builder datasourceTypes(Input<List<String>> datasourceTypes) {
+        public Builder datasourceTypes(Output<List<String>> datasourceTypes) {
             this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
             return this;
         }
 
         public Builder datasourceTypes(List<String> datasourceTypes) {
-            this.datasourceTypes = Input.of(Objects.requireNonNull(datasourceTypes));
+            this.datasourceTypes = Output.of(Objects.requireNonNull(datasourceTypes));
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder policyRules(Input<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
+        public Builder policyRules(Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
             this.policyRules = Objects.requireNonNull(policyRules);
             return this;
         }
 
         public Builder policyRules(List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>> policyRules) {
-            this.policyRules = Input.of(Objects.requireNonNull(policyRules));
+            this.policyRules = Output.of(Objects.requireNonNull(policyRules));
             return this;
         }
         public BackupPolicyArgs build() {

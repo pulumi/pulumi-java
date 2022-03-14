@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotAliasConversationLogSettingsArgs;
 import io.pulumi.awsnative.lex.inputs.BotAliasLocaleSettingsItemArgs;
 import io.pulumi.awsnative.lex.inputs.BotAliasTagArgs;
 import io.pulumi.awsnative.lex.inputs.SentimentAnalysisSettingsPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,17 +20,17 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotAliasArgs Empty = new BotAliasArgs();
 
     @InputImport(name="botAliasLocaleSettings")
-      private final @Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
+      private final @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
 
-    public Input<List<BotAliasLocaleSettingsItemArgs>> getBotAliasLocaleSettings() {
-        return this.botAliasLocaleSettings == null ? Input.empty() : this.botAliasLocaleSettings;
+    public Output<List<BotAliasLocaleSettingsItemArgs>> getBotAliasLocaleSettings() {
+        return this.botAliasLocaleSettings == null ? Output.empty() : this.botAliasLocaleSettings;
     }
 
     @InputImport(name="botAliasName")
-      private final @Nullable Input<String> botAliasName;
+      private final @Nullable Output<String> botAliasName;
 
-    public Input<String> getBotAliasName() {
-        return this.botAliasName == null ? Input.empty() : this.botAliasName;
+    public Output<String> getBotAliasName() {
+        return this.botAliasName == null ? Output.empty() : this.botAliasName;
     }
 
     /**
@@ -38,38 +38,38 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botAliasTags")
-      private final @Nullable Input<List<BotAliasTagArgs>> botAliasTags;
+      private final @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
 
-    public Input<List<BotAliasTagArgs>> getBotAliasTags() {
-        return this.botAliasTags == null ? Input.empty() : this.botAliasTags;
+    public Output<List<BotAliasTagArgs>> getBotAliasTags() {
+        return this.botAliasTags == null ? Output.empty() : this.botAliasTags;
     }
 
     @InputImport(name="botId", required=true)
-      private final Input<String> botId;
+      private final Output<String> botId;
 
-    public Input<String> getBotId() {
+    public Output<String> getBotId() {
         return this.botId;
     }
 
     @InputImport(name="botVersion")
-      private final @Nullable Input<String> botVersion;
+      private final @Nullable Output<String> botVersion;
 
-    public Input<String> getBotVersion() {
-        return this.botVersion == null ? Input.empty() : this.botVersion;
+    public Output<String> getBotVersion() {
+        return this.botVersion == null ? Output.empty() : this.botVersion;
     }
 
     @InputImport(name="conversationLogSettings")
-      private final @Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings;
+      private final @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings;
 
-    public Input<BotAliasConversationLogSettingsArgs> getConversationLogSettings() {
-        return this.conversationLogSettings == null ? Input.empty() : this.conversationLogSettings;
+    public Output<BotAliasConversationLogSettingsArgs> getConversationLogSettings() {
+        return this.conversationLogSettings == null ? Output.empty() : this.conversationLogSettings;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -77,21 +77,21 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sentimentAnalysisSettings")
-      private final @Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
+      private final @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 
-    public Input<SentimentAnalysisSettingsPropertiesArgs> getSentimentAnalysisSettings() {
-        return this.sentimentAnalysisSettings == null ? Input.empty() : this.sentimentAnalysisSettings;
+    public Output<SentimentAnalysisSettingsPropertiesArgs> getSentimentAnalysisSettings() {
+        return this.sentimentAnalysisSettings == null ? Output.empty() : this.sentimentAnalysisSettings;
     }
 
     public BotAliasArgs(
-        @Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings,
-        @Nullable Input<String> botAliasName,
-        @Nullable Input<List<BotAliasTagArgs>> botAliasTags,
-        Input<String> botId,
-        @Nullable Input<String> botVersion,
-        @Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings,
-        @Nullable Input<String> description,
-        @Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
+        @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings,
+        @Nullable Output<String> botAliasName,
+        @Nullable Output<List<BotAliasTagArgs>> botAliasTags,
+        Output<String> botId,
+        @Nullable Output<String> botVersion,
+        @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings,
+        @Nullable Output<String> description,
+        @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
         this.botAliasLocaleSettings = botAliasLocaleSettings;
         this.botAliasName = botAliasName;
         this.botAliasTags = botAliasTags;
@@ -103,14 +103,14 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotAliasArgs() {
-        this.botAliasLocaleSettings = Input.empty();
-        this.botAliasName = Input.empty();
-        this.botAliasTags = Input.empty();
-        this.botId = Input.empty();
-        this.botVersion = Input.empty();
-        this.conversationLogSettings = Input.empty();
-        this.description = Input.empty();
-        this.sentimentAnalysisSettings = Input.empty();
+        this.botAliasLocaleSettings = Output.empty();
+        this.botAliasName = Output.empty();
+        this.botAliasTags = Output.empty();
+        this.botId = Output.empty();
+        this.botVersion = Output.empty();
+        this.conversationLogSettings = Output.empty();
+        this.description = Output.empty();
+        this.sentimentAnalysisSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,14 +122,14 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
-        private @Nullable Input<String> botAliasName;
-        private @Nullable Input<List<BotAliasTagArgs>> botAliasTags;
-        private Input<String> botId;
-        private @Nullable Input<String> botVersion;
-        private @Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings;
-        private @Nullable Input<String> description;
-        private @Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
+        private @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
+        private @Nullable Output<String> botAliasName;
+        private @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
+        private Output<String> botId;
+        private @Nullable Output<String> botVersion;
+        private @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings;
+        private @Nullable Output<String> description;
+        private @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 
         public Builder() {
     	      // Empty
@@ -147,83 +147,83 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sentimentAnalysisSettings = defaults.sentimentAnalysisSettings;
         }
 
-        public Builder botAliasLocaleSettings(@Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings) {
+        public Builder botAliasLocaleSettings(@Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings) {
             this.botAliasLocaleSettings = botAliasLocaleSettings;
             return this;
         }
 
         public Builder botAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItemArgs> botAliasLocaleSettings) {
-            this.botAliasLocaleSettings = Input.ofNullable(botAliasLocaleSettings);
+            this.botAliasLocaleSettings = Output.ofNullable(botAliasLocaleSettings);
             return this;
         }
 
-        public Builder botAliasName(@Nullable Input<String> botAliasName) {
+        public Builder botAliasName(@Nullable Output<String> botAliasName) {
             this.botAliasName = botAliasName;
             return this;
         }
 
         public Builder botAliasName(@Nullable String botAliasName) {
-            this.botAliasName = Input.ofNullable(botAliasName);
+            this.botAliasName = Output.ofNullable(botAliasName);
             return this;
         }
 
-        public Builder botAliasTags(@Nullable Input<List<BotAliasTagArgs>> botAliasTags) {
+        public Builder botAliasTags(@Nullable Output<List<BotAliasTagArgs>> botAliasTags) {
             this.botAliasTags = botAliasTags;
             return this;
         }
 
         public Builder botAliasTags(@Nullable List<BotAliasTagArgs> botAliasTags) {
-            this.botAliasTags = Input.ofNullable(botAliasTags);
+            this.botAliasTags = Output.ofNullable(botAliasTags);
             return this;
         }
 
-        public Builder botId(Input<String> botId) {
+        public Builder botId(Output<String> botId) {
             this.botId = Objects.requireNonNull(botId);
             return this;
         }
 
         public Builder botId(String botId) {
-            this.botId = Input.of(Objects.requireNonNull(botId));
+            this.botId = Output.of(Objects.requireNonNull(botId));
             return this;
         }
 
-        public Builder botVersion(@Nullable Input<String> botVersion) {
+        public Builder botVersion(@Nullable Output<String> botVersion) {
             this.botVersion = botVersion;
             return this;
         }
 
         public Builder botVersion(@Nullable String botVersion) {
-            this.botVersion = Input.ofNullable(botVersion);
+            this.botVersion = Output.ofNullable(botVersion);
             return this;
         }
 
-        public Builder conversationLogSettings(@Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings) {
+        public Builder conversationLogSettings(@Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings) {
             this.conversationLogSettings = conversationLogSettings;
             return this;
         }
 
         public Builder conversationLogSettings(@Nullable BotAliasConversationLogSettingsArgs conversationLogSettings) {
-            this.conversationLogSettings = Input.ofNullable(conversationLogSettings);
+            this.conversationLogSettings = Output.ofNullable(conversationLogSettings);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder sentimentAnalysisSettings(@Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
+        public Builder sentimentAnalysisSettings(@Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
             this.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }
 
         public Builder sentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsPropertiesArgs sentimentAnalysisSettings) {
-            this.sentimentAnalysisSettings = Input.ofNullable(sentimentAnalysisSettings);
+            this.sentimentAnalysisSettings = Output.ofNullable(sentimentAnalysisSettings);
             return this;
         }
         public BotAliasArgs build() {

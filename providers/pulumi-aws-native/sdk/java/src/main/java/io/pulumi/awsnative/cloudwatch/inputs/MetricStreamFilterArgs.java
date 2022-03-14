@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
-    public MetricStreamFilterArgs(Input<String> namespace) {
+    public MetricStreamFilterArgs(Output<String> namespace) {
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
     }
 
     private MetricStreamFilterArgs() {
-        this.namespace = Input.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> namespace;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceAr
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public MetricStreamFilterArgs build() {

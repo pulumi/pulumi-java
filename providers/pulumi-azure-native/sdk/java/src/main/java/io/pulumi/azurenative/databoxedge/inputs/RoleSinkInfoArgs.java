@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleId", required=true)
-      private final Input<String> roleId;
+      private final Output<String> roleId;
 
-    public Input<String> getRoleId() {
+    public Output<String> getRoleId() {
         return this.roleId;
     }
 
-    public RoleSinkInfoArgs(Input<String> roleId) {
+    public RoleSinkInfoArgs(Output<String> roleId) {
         this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
     }
 
     private RoleSinkInfoArgs() {
-        this.roleId = Input.empty();
+        this.roleId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> roleId;
+        private Output<String> roleId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleId = defaults.roleId;
         }
 
-        public Builder roleId(Input<String> roleId) {
+        public Builder roleId(Output<String> roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
         public Builder roleId(String roleId) {
-            this.roleId = Input.of(Objects.requireNonNull(roleId));
+            this.roleId = Output.of(Objects.requireNonNull(roleId));
             return this;
         }
         public RoleSinkInfoArgs build() {

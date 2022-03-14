@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxEntityTypeEntityGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxEntityTypeExcludedPhraseGetArgs;
@@ -26,10 +26,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoExpansionMode")
-      private final @Nullable Input<String> autoExpansionMode;
+      private final @Nullable Output<String> autoExpansionMode;
 
-    public Input<String> getAutoExpansionMode() {
-        return this.autoExpansionMode == null ? Input.empty() : this.autoExpansionMode;
+    public Output<String> getAutoExpansionMode() {
+        return this.autoExpansionMode == null ? Output.empty() : this.autoExpansionMode;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFuzzyExtraction")
-      private final @Nullable Input<Boolean> enableFuzzyExtraction;
+      private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Input<Boolean> getEnableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
+    public Output<Boolean> getEnableFuzzyExtraction() {
+        return this.enableFuzzyExtraction == null ? Output.empty() : this.enableFuzzyExtraction;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entities")
-      private final @Nullable Input<List<CxEntityTypeEntityGetArgs>> entities;
+      private final @Nullable Output<List<CxEntityTypeEntityGetArgs>> entities;
 
-    public Input<List<CxEntityTypeEntityGetArgs>> getEntities() {
-        return this.entities == null ? Input.empty() : this.entities;
+    public Output<List<CxEntityTypeEntityGetArgs>> getEntities() {
+        return this.entities == null ? Output.empty() : this.entities;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludedPhrases")
-      private final @Nullable Input<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
+      private final @Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
 
-    public Input<List<CxEntityTypeExcludedPhraseGetArgs>> getExcludedPhrases() {
-        return this.excludedPhrases == null ? Input.empty() : this.excludedPhrases;
+    public Output<List<CxEntityTypeExcludedPhraseGetArgs>> getExcludedPhrases() {
+        return this.excludedPhrases == null ? Output.empty() : this.excludedPhrases;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -138,23 +138,23 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redact")
-      private final @Nullable Input<Boolean> redact;
+      private final @Nullable Output<Boolean> redact;
 
-    public Input<Boolean> getRedact() {
-        return this.redact == null ? Input.empty() : this.redact;
+    public Output<Boolean> getRedact() {
+        return this.redact == null ? Output.empty() : this.redact;
     }
 
     public CxEntityTypeState(
-        @Nullable Input<String> autoExpansionMode,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Boolean> enableFuzzyExtraction,
-        @Nullable Input<List<CxEntityTypeEntityGetArgs>> entities,
-        @Nullable Input<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<Boolean> redact) {
+        @Nullable Output<String> autoExpansionMode,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Boolean> enableFuzzyExtraction,
+        @Nullable Output<List<CxEntityTypeEntityGetArgs>> entities,
+        @Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<Boolean> redact) {
         this.autoExpansionMode = autoExpansionMode;
         this.displayName = displayName;
         this.enableFuzzyExtraction = enableFuzzyExtraction;
@@ -168,16 +168,16 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxEntityTypeState() {
-        this.autoExpansionMode = Input.empty();
-        this.displayName = Input.empty();
-        this.enableFuzzyExtraction = Input.empty();
-        this.entities = Input.empty();
-        this.excludedPhrases = Input.empty();
-        this.kind = Input.empty();
-        this.languageCode = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.redact = Input.empty();
+        this.autoExpansionMode = Output.empty();
+        this.displayName = Output.empty();
+        this.enableFuzzyExtraction = Output.empty();
+        this.entities = Output.empty();
+        this.excludedPhrases = Output.empty();
+        this.kind = Output.empty();
+        this.languageCode = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.redact = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,16 +189,16 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoExpansionMode;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Boolean> enableFuzzyExtraction;
-        private @Nullable Input<List<CxEntityTypeEntityGetArgs>> entities;
-        private @Nullable Input<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<Boolean> redact;
+        private @Nullable Output<String> autoExpansionMode;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Boolean> enableFuzzyExtraction;
+        private @Nullable Output<List<CxEntityTypeEntityGetArgs>> entities;
+        private @Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<Boolean> redact;
 
         public Builder() {
     	      // Empty
@@ -218,103 +218,103 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
     	      this.redact = defaults.redact;
         }
 
-        public Builder autoExpansionMode(@Nullable Input<String> autoExpansionMode) {
+        public Builder autoExpansionMode(@Nullable Output<String> autoExpansionMode) {
             this.autoExpansionMode = autoExpansionMode;
             return this;
         }
 
         public Builder autoExpansionMode(@Nullable String autoExpansionMode) {
-            this.autoExpansionMode = Input.ofNullable(autoExpansionMode);
+            this.autoExpansionMode = Output.ofNullable(autoExpansionMode);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder enableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Input.ofNullable(enableFuzzyExtraction);
+            this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
             return this;
         }
 
-        public Builder entities(@Nullable Input<List<CxEntityTypeEntityGetArgs>> entities) {
+        public Builder entities(@Nullable Output<List<CxEntityTypeEntityGetArgs>> entities) {
             this.entities = entities;
             return this;
         }
 
         public Builder entities(@Nullable List<CxEntityTypeEntityGetArgs> entities) {
-            this.entities = Input.ofNullable(entities);
+            this.entities = Output.ofNullable(entities);
             return this;
         }
 
-        public Builder excludedPhrases(@Nullable Input<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases) {
+        public Builder excludedPhrases(@Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases) {
             this.excludedPhrases = excludedPhrases;
             return this;
         }
 
         public Builder excludedPhrases(@Nullable List<CxEntityTypeExcludedPhraseGetArgs> excludedPhrases) {
-            this.excludedPhrases = Input.ofNullable(excludedPhrases);
+            this.excludedPhrases = Output.ofNullable(excludedPhrases);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder redact(@Nullable Input<Boolean> redact) {
+        public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
 
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Input.ofNullable(redact);
+            this.redact = Output.ofNullable(redact);
             return this;
         }
         public CxEntityTypeState build() {

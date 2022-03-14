@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latitude")
-      private final @Nullable Input<String> latitude;
+      private final @Nullable Output<String> latitude;
 
-    public Input<String> getLatitude() {
-        return this.latitude == null ? Input.empty() : this.latitude;
+    public Output<String> getLatitude() {
+        return this.latitude == null ? Output.empty() : this.latitude;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longitude")
-      private final @Nullable Input<String> longitude;
+      private final @Nullable Output<String> longitude;
 
-    public Input<String> getLongitude() {
-        return this.longitude == null ? Input.empty() : this.longitude;
+    public Output<String> getLongitude() {
+        return this.longitude == null ? Output.empty() : this.longitude;
     }
 
     public DeviceLocationArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> latitude,
-        @Nullable Input<String> longitude) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> latitude,
+        @Nullable Output<String> longitude) {
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
     private DeviceLocationArgs() {
-        this.address = Input.empty();
-        this.latitude = Input.empty();
-        this.longitude = Input.empty();
+        this.address = Output.empty();
+        this.latitude = Output.empty();
+        this.longitude = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> latitude;
-        private @Nullable Input<String> longitude;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> latitude;
+        private @Nullable Output<String> longitude;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.longitude = defaults.longitude;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder latitude(@Nullable Input<String> latitude) {
+        public Builder latitude(@Nullable Output<String> latitude) {
             this.latitude = latitude;
             return this;
         }
 
         public Builder latitude(@Nullable String latitude) {
-            this.latitude = Input.ofNullable(latitude);
+            this.latitude = Output.ofNullable(latitude);
             return this;
         }
 
-        public Builder longitude(@Nullable Input<String> longitude) {
+        public Builder longitude(@Nullable Output<String> longitude) {
             this.longitude = longitude;
             return this;
         }
 
         public Builder longitude(@Nullable String longitude) {
-            this.longitude = Input.ofNullable(longitude);
+            this.longitude = Output.ofNullable(longitude);
             return this;
         }
         public DeviceLocationArgs build() {

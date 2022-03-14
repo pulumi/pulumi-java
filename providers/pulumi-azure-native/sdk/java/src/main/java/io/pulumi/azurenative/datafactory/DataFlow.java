@@ -9,7 +9,6 @@ import io.pulumi.azurenative.datafactory.outputs.FlowletResponse;
 import io.pulumi.azurenative.datafactory.outputs.MappingDataFlowResponse;
 import io.pulumi.azurenative.datafactory.outputs.WranglingDataFlowResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -130,18 +129,18 @@ public class DataFlow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataFlow(String name, DataFlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datafactory:DataFlow", name, args == null ? DataFlowArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:datafactory:DataFlow", name, args == null ? DataFlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DataFlow(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DataFlow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datafactory:DataFlow", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:datafactory/v20180601:DataFlow").build())
+                Output.of(Alias.builder().setType("azure-native:datafactory/v20180601:DataFlow").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -155,7 +154,7 @@ public class DataFlow extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataFlow get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DataFlow get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataFlow(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-      private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Input<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
+    public Output<String> getDiskEncryptionSetId() {
+        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="lun", required=true)
-      private final Input<Integer> lun;
+      private final Output<Integer> lun;
 
-    public Input<Integer> getLun() {
+    public Output<Integer> getLun() {
         return this.lun;
     }
 
     public DataDiskImageEncryptionArgs(
-        @Nullable Input<String> diskEncryptionSetId,
-        Input<Integer> lun) {
+        @Nullable Output<String> diskEncryptionSetId,
+        Output<Integer> lun) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
     }
 
     private DataDiskImageEncryptionArgs() {
-        this.diskEncryptionSetId = Input.empty();
-        this.lun = Input.empty();
+        this.diskEncryptionSetId = Output.empty();
+        this.lun = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskEncryptionSetId;
-        private Input<Integer> lun;
+        private @Nullable Output<String> diskEncryptionSetId;
+        private Output<Integer> lun;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
     	      this.lun = defaults.lun;
         }
 
-        public Builder diskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Input.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
             return this;
         }
 
-        public Builder lun(Input<Integer> lun) {
+        public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
         public Builder lun(Integer lun) {
-            this.lun = Input.of(Objects.requireNonNull(lun));
+            this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
         public DataDiskImageEncryptionArgs build() {

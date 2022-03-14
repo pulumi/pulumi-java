@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class InsightFiltersNetworkSourceIpv6Args extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cidr", required=true)
-      private final Input<String> cidr;
+      private final Output<String> cidr;
 
-    public Input<String> getCidr() {
+    public Output<String> getCidr() {
         return this.cidr;
     }
 
-    public InsightFiltersNetworkSourceIpv6Args(Input<String> cidr) {
+    public InsightFiltersNetworkSourceIpv6Args(Output<String> cidr) {
         this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
     }
 
     private InsightFiltersNetworkSourceIpv6Args() {
-        this.cidr = Input.empty();
+        this.cidr = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InsightFiltersNetworkSourceIpv6Args extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> cidr;
+        private Output<String> cidr;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InsightFiltersNetworkSourceIpv6Args extends io.pulumi.resourc
     	      this.cidr = defaults.cidr;
         }
 
-        public Builder cidr(Input<String> cidr) {
+        public Builder cidr(Output<String> cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Input.of(Objects.requireNonNull(cidr));
+            this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
         public InsightFiltersNetworkSourceIpv6Args build() {

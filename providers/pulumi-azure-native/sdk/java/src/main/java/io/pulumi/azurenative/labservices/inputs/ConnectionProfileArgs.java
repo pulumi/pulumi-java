@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.enums.ConnectionType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientRdpAccess")
-      private final @Nullable Input<ConnectionType> clientRdpAccess;
+      private final @Nullable Output<ConnectionType> clientRdpAccess;
 
-    public Input<ConnectionType> getClientRdpAccess() {
-        return this.clientRdpAccess == null ? Input.empty() : this.clientRdpAccess;
+    public Output<ConnectionType> getClientRdpAccess() {
+        return this.clientRdpAccess == null ? Output.empty() : this.clientRdpAccess;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientSshAccess")
-      private final @Nullable Input<ConnectionType> clientSshAccess;
+      private final @Nullable Output<ConnectionType> clientSshAccess;
 
-    public Input<ConnectionType> getClientSshAccess() {
-        return this.clientSshAccess == null ? Input.empty() : this.clientSshAccess;
+    public Output<ConnectionType> getClientSshAccess() {
+        return this.clientSshAccess == null ? Output.empty() : this.clientSshAccess;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webRdpAccess")
-      private final @Nullable Input<ConnectionType> webRdpAccess;
+      private final @Nullable Output<ConnectionType> webRdpAccess;
 
-    public Input<ConnectionType> getWebRdpAccess() {
-        return this.webRdpAccess == null ? Input.empty() : this.webRdpAccess;
+    public Output<ConnectionType> getWebRdpAccess() {
+        return this.webRdpAccess == null ? Output.empty() : this.webRdpAccess;
     }
 
     /**
@@ -56,28 +56,28 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webSshAccess")
-      private final @Nullable Input<ConnectionType> webSshAccess;
+      private final @Nullable Output<ConnectionType> webSshAccess;
 
-    public Input<ConnectionType> getWebSshAccess() {
-        return this.webSshAccess == null ? Input.empty() : this.webSshAccess;
+    public Output<ConnectionType> getWebSshAccess() {
+        return this.webSshAccess == null ? Output.empty() : this.webSshAccess;
     }
 
     public ConnectionProfileArgs(
-        @Nullable Input<ConnectionType> clientRdpAccess,
-        @Nullable Input<ConnectionType> clientSshAccess,
-        @Nullable Input<ConnectionType> webRdpAccess,
-        @Nullable Input<ConnectionType> webSshAccess) {
-        this.clientRdpAccess = clientRdpAccess == null ? Input.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientRdpAccess;
-        this.clientSshAccess = clientSshAccess == null ? Input.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientSshAccess;
-        this.webRdpAccess = webRdpAccess == null ? Input.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webRdpAccess;
-        this.webSshAccess = webSshAccess == null ? Input.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webSshAccess;
+        @Nullable Output<ConnectionType> clientRdpAccess,
+        @Nullable Output<ConnectionType> clientSshAccess,
+        @Nullable Output<ConnectionType> webRdpAccess,
+        @Nullable Output<ConnectionType> webSshAccess) {
+        this.clientRdpAccess = clientRdpAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientRdpAccess;
+        this.clientSshAccess = clientSshAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientSshAccess;
+        this.webRdpAccess = webRdpAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webRdpAccess;
+        this.webSshAccess = webSshAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webSshAccess;
     }
 
     private ConnectionProfileArgs() {
-        this.clientRdpAccess = Input.empty();
-        this.clientSshAccess = Input.empty();
-        this.webRdpAccess = Input.empty();
-        this.webSshAccess = Input.empty();
+        this.clientRdpAccess = Output.empty();
+        this.clientSshAccess = Output.empty();
+        this.webRdpAccess = Output.empty();
+        this.webSshAccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ConnectionType> clientRdpAccess;
-        private @Nullable Input<ConnectionType> clientSshAccess;
-        private @Nullable Input<ConnectionType> webRdpAccess;
-        private @Nullable Input<ConnectionType> webSshAccess;
+        private @Nullable Output<ConnectionType> clientRdpAccess;
+        private @Nullable Output<ConnectionType> clientSshAccess;
+        private @Nullable Output<ConnectionType> webRdpAccess;
+        private @Nullable Output<ConnectionType> webSshAccess;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     	      this.webSshAccess = defaults.webSshAccess;
         }
 
-        public Builder clientRdpAccess(@Nullable Input<ConnectionType> clientRdpAccess) {
+        public Builder clientRdpAccess(@Nullable Output<ConnectionType> clientRdpAccess) {
             this.clientRdpAccess = clientRdpAccess;
             return this;
         }
 
         public Builder clientRdpAccess(@Nullable ConnectionType clientRdpAccess) {
-            this.clientRdpAccess = Input.ofNullable(clientRdpAccess);
+            this.clientRdpAccess = Output.ofNullable(clientRdpAccess);
             return this;
         }
 
-        public Builder clientSshAccess(@Nullable Input<ConnectionType> clientSshAccess) {
+        public Builder clientSshAccess(@Nullable Output<ConnectionType> clientSshAccess) {
             this.clientSshAccess = clientSshAccess;
             return this;
         }
 
         public Builder clientSshAccess(@Nullable ConnectionType clientSshAccess) {
-            this.clientSshAccess = Input.ofNullable(clientSshAccess);
+            this.clientSshAccess = Output.ofNullable(clientSshAccess);
             return this;
         }
 
-        public Builder webRdpAccess(@Nullable Input<ConnectionType> webRdpAccess) {
+        public Builder webRdpAccess(@Nullable Output<ConnectionType> webRdpAccess) {
             this.webRdpAccess = webRdpAccess;
             return this;
         }
 
         public Builder webRdpAccess(@Nullable ConnectionType webRdpAccess) {
-            this.webRdpAccess = Input.ofNullable(webRdpAccess);
+            this.webRdpAccess = Output.ofNullable(webRdpAccess);
             return this;
         }
 
-        public Builder webSshAccess(@Nullable Input<ConnectionType> webSshAccess) {
+        public Builder webSshAccess(@Nullable Output<ConnectionType> webSshAccess) {
             this.webSshAccess = webSshAccess;
             return this;
         }
 
         public Builder webSshAccess(@Nullable ConnectionType webSshAccess) {
-            this.webSshAccess = Input.ofNullable(webSshAccess);
+            this.webSshAccess = Output.ofNullable(webSshAccess);
             return this;
         }
         public ConnectionProfileArgs build() {

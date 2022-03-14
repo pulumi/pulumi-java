@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayIds")
-      private final @Nullable Input<List<String>> gatewayIds;
+      private final @Nullable Output<List<String>> gatewayIds;
 
-    public Input<List<String>> getGatewayIds() {
-        return this.gatewayIds == null ? Input.empty() : this.gatewayIds;
+    public Output<List<String>> getGatewayIds() {
+        return this.gatewayIds == null ? Output.empty() : this.gatewayIds;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="httpsOnly")
-      private final @Nullable Input<Boolean> httpsOnly;
+      private final @Nullable Output<Boolean> httpsOnly;
 
-    public Input<Boolean> getHttpsOnly() {
-        return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
+    public Output<Boolean> getHttpsOnly() {
+        return this.httpsOnly == null ? Output.empty() : this.httpsOnly;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="public")
-      private final @Nullable Input<Boolean> $public;
+      private final @Nullable Output<Boolean> $public;
 
-    public Input<Boolean> get$public() {
-        return this.$public == null ? Input.empty() : this.$public;
+    public Output<Boolean> get$public() {
+        return this.$public == null ? Output.empty() : this.$public;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceUrls")
-      private final @Nullable Input<List<String>> sourceUrls;
+      private final @Nullable Output<List<String>> sourceUrls;
 
-    public Input<List<String>> getSourceUrls() {
-        return this.sourceUrls == null ? Input.empty() : this.sourceUrls;
+    public Output<List<String>> getSourceUrls() {
+        return this.sourceUrls == null ? Output.empty() : this.sourceUrls;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ssoProperties")
-      private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
+      private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
-    public Input<SsoPropertiesArgs> getSsoProperties() {
-        return this.ssoProperties == null ? Input.empty() : this.ssoProperties;
+    public Output<SsoPropertiesArgs> getSsoProperties() {
+        return this.ssoProperties == null ? Output.empty() : this.ssoProperties;
     }
 
     public ApiPortalPropertiesArgs(
-        @Nullable Input<List<String>> gatewayIds,
-        @Nullable Input<Boolean> httpsOnly,
-        @Nullable Input<Boolean> $public,
-        @Nullable Input<List<String>> sourceUrls,
-        @Nullable Input<SsoPropertiesArgs> ssoProperties) {
+        @Nullable Output<List<String>> gatewayIds,
+        @Nullable Output<Boolean> httpsOnly,
+        @Nullable Output<Boolean> $public,
+        @Nullable Output<List<String>> sourceUrls,
+        @Nullable Output<SsoPropertiesArgs> ssoProperties) {
         this.gatewayIds = gatewayIds;
         this.httpsOnly = httpsOnly;
         this.$public = $public;
@@ -90,11 +90,11 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     private ApiPortalPropertiesArgs() {
-        this.gatewayIds = Input.empty();
-        this.httpsOnly = Input.empty();
-        this.$public = Input.empty();
-        this.sourceUrls = Input.empty();
-        this.ssoProperties = Input.empty();
+        this.gatewayIds = Output.empty();
+        this.httpsOnly = Output.empty();
+        this.$public = Output.empty();
+        this.sourceUrls = Output.empty();
+        this.ssoProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> gatewayIds;
-        private @Nullable Input<Boolean> httpsOnly;
-        private @Nullable Input<Boolean> $public;
-        private @Nullable Input<List<String>> sourceUrls;
-        private @Nullable Input<SsoPropertiesArgs> ssoProperties;
+        private @Nullable Output<List<String>> gatewayIds;
+        private @Nullable Output<Boolean> httpsOnly;
+        private @Nullable Output<Boolean> $public;
+        private @Nullable Output<List<String>> sourceUrls;
+        private @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.ssoProperties = defaults.ssoProperties;
         }
 
-        public Builder gatewayIds(@Nullable Input<List<String>> gatewayIds) {
+        public Builder gatewayIds(@Nullable Output<List<String>> gatewayIds) {
             this.gatewayIds = gatewayIds;
             return this;
         }
 
         public Builder gatewayIds(@Nullable List<String> gatewayIds) {
-            this.gatewayIds = Input.ofNullable(gatewayIds);
+            this.gatewayIds = Output.ofNullable(gatewayIds);
             return this;
         }
 
-        public Builder httpsOnly(@Nullable Input<Boolean> httpsOnly) {
+        public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            this.httpsOnly = Input.ofNullable(httpsOnly);
+            this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
 
-        public Builder $public(@Nullable Input<Boolean> $public) {
+        public Builder $public(@Nullable Output<Boolean> $public) {
             this.$public = $public;
             return this;
         }
 
         public Builder $public(@Nullable Boolean $public) {
-            this.$public = Input.ofNullable($public);
+            this.$public = Output.ofNullable($public);
             return this;
         }
 
-        public Builder sourceUrls(@Nullable Input<List<String>> sourceUrls) {
+        public Builder sourceUrls(@Nullable Output<List<String>> sourceUrls) {
             this.sourceUrls = sourceUrls;
             return this;
         }
 
         public Builder sourceUrls(@Nullable List<String> sourceUrls) {
-            this.sourceUrls = Input.ofNullable(sourceUrls);
+            this.sourceUrls = Output.ofNullable(sourceUrls);
             return this;
         }
 
-        public Builder ssoProperties(@Nullable Input<SsoPropertiesArgs> ssoProperties) {
+        public Builder ssoProperties(@Nullable Output<SsoPropertiesArgs> ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
 
         public Builder ssoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
-            this.ssoProperties = Input.ofNullable(ssoProperties);
+            this.ssoProperties = Output.ofNullable(ssoProperties);
             return this;
         }
         public ApiPortalPropertiesArgs build() {

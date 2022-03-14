@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth")
-      private final @Nullable Input<List<ScaleRuleAuthArgs>> auth;
+      private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
-    public Input<List<ScaleRuleAuthArgs>> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<List<ScaleRuleAuthArgs>> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueLength")
-      private final @Nullable Input<Integer> queueLength;
+      private final @Nullable Output<Integer> queueLength;
 
-    public Input<Integer> getQueueLength() {
-        return this.queueLength == null ? Input.empty() : this.queueLength;
+    public Output<Integer> getQueueLength() {
+        return this.queueLength == null ? Output.empty() : this.queueLength;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueName")
-      private final @Nullable Input<String> queueName;
+      private final @Nullable Output<String> queueName;
 
-    public Input<String> getQueueName() {
-        return this.queueName == null ? Input.empty() : this.queueName;
+    public Output<String> getQueueName() {
+        return this.queueName == null ? Output.empty() : this.queueName;
     }
 
     public QueueScaleRuleArgs(
-        @Nullable Input<List<ScaleRuleAuthArgs>> auth,
-        @Nullable Input<Integer> queueLength,
-        @Nullable Input<String> queueName) {
+        @Nullable Output<List<ScaleRuleAuthArgs>> auth,
+        @Nullable Output<Integer> queueLength,
+        @Nullable Output<String> queueName) {
         this.auth = auth;
         this.queueLength = queueLength;
         this.queueName = queueName;
     }
 
     private QueueScaleRuleArgs() {
-        this.auth = Input.empty();
-        this.queueLength = Input.empty();
-        this.queueName = Input.empty();
+        this.auth = Output.empty();
+        this.queueLength = Output.empty();
+        this.queueName = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ScaleRuleAuthArgs>> auth;
-        private @Nullable Input<Integer> queueLength;
-        private @Nullable Input<String> queueName;
+        private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
+        private @Nullable Output<Integer> queueLength;
+        private @Nullable Output<String> queueName;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queueName = defaults.queueName;
         }
 
-        public Builder auth(@Nullable Input<List<ScaleRuleAuthArgs>> auth) {
+        public Builder auth(@Nullable Output<List<ScaleRuleAuthArgs>> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder queueLength(@Nullable Input<Integer> queueLength) {
+        public Builder queueLength(@Nullable Output<Integer> queueLength) {
             this.queueLength = queueLength;
             return this;
         }
 
         public Builder queueLength(@Nullable Integer queueLength) {
-            this.queueLength = Input.ofNullable(queueLength);
+            this.queueLength = Output.ofNullable(queueLength);
             return this;
         }
 
-        public Builder queueName(@Nullable Input<String> queueName) {
+        public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
 
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Input.ofNullable(queueName);
+            this.queueName = Output.ofNullable(queueName);
             return this;
         }
         public QueueScaleRuleArgs build() {

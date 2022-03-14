@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterMasterAuthorizedNetworksConfigCidrBlockArgs;
 import java.util.List;
@@ -21,18 +21,18 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cidrBlocks")
-      private final @Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
+      private final @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
-    public Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
+    public Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {
+        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
     }
 
-    public ClusterMasterAuthorizedNetworksConfigArgs(@Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks) {
+    public ClusterMasterAuthorizedNetworksConfigArgs(@Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks) {
         this.cidrBlocks = cidrBlocks;
     }
 
     private ClusterMasterAuthorizedNetworksConfigArgs() {
-        this.cidrBlocks = Input.empty();
+        this.cidrBlocks = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
+        private @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
     	      this.cidrBlocks = defaults.cidrBlocks;
         }
 
-        public Builder cidrBlocks(@Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
         public Builder cidrBlocks(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs> cidrBlocks) {
-            this.cidrBlocks = Input.ofNullable(cidrBlocks);
+            this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
         public ClusterMasterAuthorizedNetworksConfigArgs build() {

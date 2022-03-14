@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingLimitsArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingTargetsArgs;
@@ -23,9 +23,9 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoscalingLimits", required=true)
-      private final Input<AutoscalingLimitsArgs> autoscalingLimits;
+      private final Output<AutoscalingLimitsArgs> autoscalingLimits;
 
-    public Input<AutoscalingLimitsArgs> getAutoscalingLimits() {
+    public Output<AutoscalingLimitsArgs> getAutoscalingLimits() {
         return this.autoscalingLimits;
     }
 
@@ -34,22 +34,22 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoscalingTargets", required=true)
-      private final Input<AutoscalingTargetsArgs> autoscalingTargets;
+      private final Output<AutoscalingTargetsArgs> autoscalingTargets;
 
-    public Input<AutoscalingTargetsArgs> getAutoscalingTargets() {
+    public Output<AutoscalingTargetsArgs> getAutoscalingTargets() {
         return this.autoscalingTargets;
     }
 
     public ClusterAutoscalingConfigArgs(
-        Input<AutoscalingLimitsArgs> autoscalingLimits,
-        Input<AutoscalingTargetsArgs> autoscalingTargets) {
+        Output<AutoscalingLimitsArgs> autoscalingLimits,
+        Output<AutoscalingTargetsArgs> autoscalingTargets) {
         this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits, "expected parameter 'autoscalingLimits' to be non-null");
         this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets, "expected parameter 'autoscalingTargets' to be non-null");
     }
 
     private ClusterAutoscalingConfigArgs() {
-        this.autoscalingLimits = Input.empty();
-        this.autoscalingTargets = Input.empty();
+        this.autoscalingLimits = Output.empty();
+        this.autoscalingTargets = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<AutoscalingLimitsArgs> autoscalingLimits;
-        private Input<AutoscalingTargetsArgs> autoscalingTargets;
+        private Output<AutoscalingLimitsArgs> autoscalingLimits;
+        private Output<AutoscalingTargetsArgs> autoscalingTargets;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
     	      this.autoscalingTargets = defaults.autoscalingTargets;
         }
 
-        public Builder autoscalingLimits(Input<AutoscalingLimitsArgs> autoscalingLimits) {
+        public Builder autoscalingLimits(Output<AutoscalingLimitsArgs> autoscalingLimits) {
             this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits);
             return this;
         }
 
         public Builder autoscalingLimits(AutoscalingLimitsArgs autoscalingLimits) {
-            this.autoscalingLimits = Input.of(Objects.requireNonNull(autoscalingLimits));
+            this.autoscalingLimits = Output.of(Objects.requireNonNull(autoscalingLimits));
             return this;
         }
 
-        public Builder autoscalingTargets(Input<AutoscalingTargetsArgs> autoscalingTargets) {
+        public Builder autoscalingTargets(Output<AutoscalingTargetsArgs> autoscalingTargets) {
             this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
             return this;
         }
 
         public Builder autoscalingTargets(AutoscalingTargetsArgs autoscalingTargets) {
-            this.autoscalingTargets = Input.of(Objects.requireNonNull(autoscalingTargets));
+            this.autoscalingTargets = Output.of(Objects.requireNonNull(autoscalingTargets));
             return this;
         }
         public ClusterAutoscalingConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionColumnName")
-      private final @Nullable Input<Object> partitionColumnName;
+      private final @Nullable Output<Object> partitionColumnName;
 
-    public Input<Object> getPartitionColumnName() {
-        return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
+    public Output<Object> getPartitionColumnName() {
+        return this.partitionColumnName == null ? Output.empty() : this.partitionColumnName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionLowerBound")
-      private final @Nullable Input<Object> partitionLowerBound;
+      private final @Nullable Output<Object> partitionLowerBound;
 
-    public Input<Object> getPartitionLowerBound() {
-        return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
+    public Output<Object> getPartitionLowerBound() {
+        return this.partitionLowerBound == null ? Output.empty() : this.partitionLowerBound;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionNames")
-      private final @Nullable Input<List<Object>> partitionNames;
+      private final @Nullable Output<List<Object>> partitionNames;
 
-    public Input<List<Object>> getPartitionNames() {
-        return this.partitionNames == null ? Input.empty() : this.partitionNames;
+    public Output<List<Object>> getPartitionNames() {
+        return this.partitionNames == null ? Output.empty() : this.partitionNames;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionUpperBound")
-      private final @Nullable Input<Object> partitionUpperBound;
+      private final @Nullable Output<Object> partitionUpperBound;
 
-    public Input<Object> getPartitionUpperBound() {
-        return this.partitionUpperBound == null ? Input.empty() : this.partitionUpperBound;
+    public Output<Object> getPartitionUpperBound() {
+        return this.partitionUpperBound == null ? Output.empty() : this.partitionUpperBound;
     }
 
     public AmazonRdsForOraclePartitionSettingsArgs(
-        @Nullable Input<Object> partitionColumnName,
-        @Nullable Input<Object> partitionLowerBound,
-        @Nullable Input<List<Object>> partitionNames,
-        @Nullable Input<Object> partitionUpperBound) {
+        @Nullable Output<Object> partitionColumnName,
+        @Nullable Output<Object> partitionLowerBound,
+        @Nullable Output<List<Object>> partitionNames,
+        @Nullable Output<Object> partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionNames = partitionNames;
@@ -75,10 +75,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
     }
 
     private AmazonRdsForOraclePartitionSettingsArgs() {
-        this.partitionColumnName = Input.empty();
-        this.partitionLowerBound = Input.empty();
-        this.partitionNames = Input.empty();
-        this.partitionUpperBound = Input.empty();
+        this.partitionColumnName = Output.empty();
+        this.partitionLowerBound = Output.empty();
+        this.partitionNames = Output.empty();
+        this.partitionUpperBound = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> partitionColumnName;
-        private @Nullable Input<Object> partitionLowerBound;
-        private @Nullable Input<List<Object>> partitionNames;
-        private @Nullable Input<Object> partitionUpperBound;
+        private @Nullable Output<Object> partitionColumnName;
+        private @Nullable Output<Object> partitionLowerBound;
+        private @Nullable Output<List<Object>> partitionNames;
+        private @Nullable Output<Object> partitionUpperBound;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder partitionColumnName(@Nullable Input<Object> partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = Input.ofNullable(partitionColumnName);
+            this.partitionColumnName = Output.ofNullable(partitionColumnName);
             return this;
         }
 
-        public Builder partitionLowerBound(@Nullable Input<Object> partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
-            this.partitionLowerBound = Input.ofNullable(partitionLowerBound);
+            this.partitionLowerBound = Output.ofNullable(partitionLowerBound);
             return this;
         }
 
-        public Builder partitionNames(@Nullable Input<List<Object>> partitionNames) {
+        public Builder partitionNames(@Nullable Output<List<Object>> partitionNames) {
             this.partitionNames = partitionNames;
             return this;
         }
 
         public Builder partitionNames(@Nullable List<Object> partitionNames) {
-            this.partitionNames = Input.ofNullable(partitionNames);
+            this.partitionNames = Output.ofNullable(partitionNames);
             return this;
         }
 
-        public Builder partitionUpperBound(@Nullable Input<Object> partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
 
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
-            this.partitionUpperBound = Input.ofNullable(partitionUpperBound);
+            this.partitionUpperBound = Output.ofNullable(partitionUpperBound);
             return this;
         }
         public AmazonRdsForOraclePartitionSettingsArgs build() {

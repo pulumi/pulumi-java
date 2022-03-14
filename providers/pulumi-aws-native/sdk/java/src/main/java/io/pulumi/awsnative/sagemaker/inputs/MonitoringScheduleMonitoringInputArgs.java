@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleEndpointInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class MonitoringScheduleMonitoringInputArgs extends io.pulumi.resou
     public static final MonitoringScheduleMonitoringInputArgs Empty = new MonitoringScheduleMonitoringInputArgs();
 
     @InputImport(name="endpointInput", required=true)
-      private final Input<MonitoringScheduleEndpointInputArgs> endpointInput;
+      private final Output<MonitoringScheduleEndpointInputArgs> endpointInput;
 
-    public Input<MonitoringScheduleEndpointInputArgs> getEndpointInput() {
+    public Output<MonitoringScheduleEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;
     }
 
-    public MonitoringScheduleMonitoringInputArgs(Input<MonitoringScheduleEndpointInputArgs> endpointInput) {
+    public MonitoringScheduleMonitoringInputArgs(Output<MonitoringScheduleEndpointInputArgs> endpointInput) {
         this.endpointInput = Objects.requireNonNull(endpointInput, "expected parameter 'endpointInput' to be non-null");
     }
 
     private MonitoringScheduleMonitoringInputArgs() {
-        this.endpointInput = Input.empty();
+        this.endpointInput = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MonitoringScheduleMonitoringInputArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<MonitoringScheduleEndpointInputArgs> endpointInput;
+        private Output<MonitoringScheduleEndpointInputArgs> endpointInput;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MonitoringScheduleMonitoringInputArgs extends io.pulumi.resou
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder endpointInput(Input<MonitoringScheduleEndpointInputArgs> endpointInput) {
+        public Builder endpointInput(Output<MonitoringScheduleEndpointInputArgs> endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
 
         public Builder endpointInput(MonitoringScheduleEndpointInputArgs endpointInput) {
-            this.endpointInput = Input.of(Objects.requireNonNull(endpointInput));
+            this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
             return this;
         }
         public MonitoringScheduleMonitoringInputArgs build() {

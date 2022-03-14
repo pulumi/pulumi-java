@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.aws.ses.inputs.ConfigurationSetDeliveryOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deliveryOptions")
-      private final @Nullable Input<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
+      private final @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
 
-    public Input<ConfigurationSetDeliveryOptionsArgs> getDeliveryOptions() {
-        return this.deliveryOptions == null ? Input.empty() : this.deliveryOptions;
+    public Output<ConfigurationSetDeliveryOptionsArgs> getDeliveryOptions() {
+        return this.deliveryOptions == null ? Output.empty() : this.deliveryOptions;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reputationMetricsEnabled")
-      private final @Nullable Input<Boolean> reputationMetricsEnabled;
+      private final @Nullable Output<Boolean> reputationMetricsEnabled;
 
-    public Input<Boolean> getReputationMetricsEnabled() {
-        return this.reputationMetricsEnabled == null ? Input.empty() : this.reputationMetricsEnabled;
+    public Output<Boolean> getReputationMetricsEnabled() {
+        return this.reputationMetricsEnabled == null ? Output.empty() : this.reputationMetricsEnabled;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sendingEnabled")
-      private final @Nullable Input<Boolean> sendingEnabled;
+      private final @Nullable Output<Boolean> sendingEnabled;
 
-    public Input<Boolean> getSendingEnabled() {
-        return this.sendingEnabled == null ? Input.empty() : this.sendingEnabled;
+    public Output<Boolean> getSendingEnabled() {
+        return this.sendingEnabled == null ? Output.empty() : this.sendingEnabled;
     }
 
     public ConfigurationSetArgs(
-        @Nullable Input<ConfigurationSetDeliveryOptionsArgs> deliveryOptions,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> reputationMetricsEnabled,
-        @Nullable Input<Boolean> sendingEnabled) {
+        @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> reputationMetricsEnabled,
+        @Nullable Output<Boolean> sendingEnabled) {
         this.deliveryOptions = deliveryOptions;
         this.name = name;
         this.reputationMetricsEnabled = reputationMetricsEnabled;
@@ -72,10 +72,10 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConfigurationSetArgs() {
-        this.deliveryOptions = Input.empty();
-        this.name = Input.empty();
-        this.reputationMetricsEnabled = Input.empty();
-        this.sendingEnabled = Input.empty();
+        this.deliveryOptions = Output.empty();
+        this.name = Output.empty();
+        this.reputationMetricsEnabled = Output.empty();
+        this.sendingEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> reputationMetricsEnabled;
-        private @Nullable Input<Boolean> sendingEnabled;
+        private @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> reputationMetricsEnabled;
+        private @Nullable Output<Boolean> sendingEnabled;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
     	      this.sendingEnabled = defaults.sendingEnabled;
         }
 
-        public Builder deliveryOptions(@Nullable Input<ConfigurationSetDeliveryOptionsArgs> deliveryOptions) {
+        public Builder deliveryOptions(@Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions) {
             this.deliveryOptions = deliveryOptions;
             return this;
         }
 
         public Builder deliveryOptions(@Nullable ConfigurationSetDeliveryOptionsArgs deliveryOptions) {
-            this.deliveryOptions = Input.ofNullable(deliveryOptions);
+            this.deliveryOptions = Output.ofNullable(deliveryOptions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder reputationMetricsEnabled(@Nullable Input<Boolean> reputationMetricsEnabled) {
+        public Builder reputationMetricsEnabled(@Nullable Output<Boolean> reputationMetricsEnabled) {
             this.reputationMetricsEnabled = reputationMetricsEnabled;
             return this;
         }
 
         public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
-            this.reputationMetricsEnabled = Input.ofNullable(reputationMetricsEnabled);
+            this.reputationMetricsEnabled = Output.ofNullable(reputationMetricsEnabled);
             return this;
         }
 
-        public Builder sendingEnabled(@Nullable Input<Boolean> sendingEnabled) {
+        public Builder sendingEnabled(@Nullable Output<Boolean> sendingEnabled) {
             this.sendingEnabled = sendingEnabled;
             return this;
         }
 
         public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
-            this.sendingEnabled = Input.ofNullable(sendingEnabled);
+            this.sendingEnabled = Output.ofNullable(sendingEnabled);
             return this;
         }
         public ConfigurationSetArgs build() {

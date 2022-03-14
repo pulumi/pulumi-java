@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudSecret")
-      private final @Nullable Input<String> cloudSecret;
+      private final @Nullable Output<String> cloudSecret;
 
-    public Input<String> getCloudSecret() {
-        return this.cloudSecret == null ? Input.empty() : this.cloudSecret;
+    public Output<String> getCloudSecret() {
+        return this.cloudSecret == null ? Output.empty() : this.cloudSecret;
     }
 
-    public SecretArgs(@Nullable Input<String> cloudSecret) {
+    public SecretArgs(@Nullable Output<String> cloudSecret) {
         this.cloudSecret = cloudSecret;
     }
 
     private SecretArgs() {
-        this.cloudSecret = Input.empty();
+        this.cloudSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudSecret;
+        private @Nullable Output<String> cloudSecret;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudSecret = defaults.cloudSecret;
         }
 
-        public Builder cloudSecret(@Nullable Input<String> cloudSecret) {
+        public Builder cloudSecret(@Nullable Output<String> cloudSecret) {
             this.cloudSecret = cloudSecret;
             return this;
         }
 
         public Builder cloudSecret(@Nullable String cloudSecret) {
-            this.cloudSecret = Input.ofNullable(cloudSecret);
+            this.cloudSecret = Output.ofNullable(cloudSecret);
             return this;
         }
         public SecretArgs build() {

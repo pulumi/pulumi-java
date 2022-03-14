@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -34,10 +34,10 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labelReferenceInStreamingPolicy")
-      private final @Nullable Input<String> labelReferenceInStreamingPolicy;
+      private final @Nullable Output<String> labelReferenceInStreamingPolicy;
 
-    public Input<String> getLabelReferenceInStreamingPolicy() {
-        return this.labelReferenceInStreamingPolicy == null ? Input.empty() : this.labelReferenceInStreamingPolicy;
+    public Output<String> getLabelReferenceInStreamingPolicy() {
+        return this.labelReferenceInStreamingPolicy == null ? Output.empty() : this.labelReferenceInStreamingPolicy;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public StreamingLocatorContentKeyArgs(
-        Input<String> id,
-        @Nullable Input<String> labelReferenceInStreamingPolicy,
-        @Nullable Input<String> value) {
+        Output<String> id,
+        @Nullable Output<String> labelReferenceInStreamingPolicy,
+        @Nullable Output<String> value) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
         this.value = value;
     }
 
     private StreamingLocatorContentKeyArgs() {
-        this.id = Input.empty();
-        this.labelReferenceInStreamingPolicy = Input.empty();
-        this.value = Input.empty();
+        this.id = Output.empty();
+        this.labelReferenceInStreamingPolicy = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<String> labelReferenceInStreamingPolicy;
-        private @Nullable Input<String> value;
+        private Output<String> id;
+        private @Nullable Output<String> labelReferenceInStreamingPolicy;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
     	      this.value = defaults.value;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder labelReferenceInStreamingPolicy(@Nullable Input<String> labelReferenceInStreamingPolicy) {
+        public Builder labelReferenceInStreamingPolicy(@Nullable Output<String> labelReferenceInStreamingPolicy) {
             this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
 
         public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
-            this.labelReferenceInStreamingPolicy = Input.ofNullable(labelReferenceInStreamingPolicy);
+            this.labelReferenceInStreamingPolicy = Output.ofNullable(labelReferenceInStreamingPolicy);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public StreamingLocatorContentKeyArgs build() {

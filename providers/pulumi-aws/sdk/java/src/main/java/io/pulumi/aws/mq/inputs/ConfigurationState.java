@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationStrategy")
-      private final @Nullable Input<String> authenticationStrategy;
+      private final @Nullable Output<String> authenticationStrategy;
 
-    public Input<String> getAuthenticationStrategy() {
-        return this.authenticationStrategy == null ? Input.empty() : this.authenticationStrategy;
+    public Output<String> getAuthenticationStrategy() {
+        return this.authenticationStrategy == null ? Output.empty() : this.authenticationStrategy;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType")
-      private final @Nullable Input<String> engineType;
+      private final @Nullable Output<String> engineType;
 
-    public Input<String> getEngineType() {
-        return this.engineType == null ? Input.empty() : this.engineType;
+    public Output<String> getEngineType() {
+        return this.engineType == null ? Output.empty() : this.engineType;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-      private final @Nullable Input<Integer> latestRevision;
+      private final @Nullable Output<Integer> latestRevision;
 
-    public Input<Integer> getLatestRevision() {
-        return this.latestRevision == null ? Input.empty() : this.latestRevision;
+    public Output<Integer> getLatestRevision() {
+        return this.latestRevision == null ? Output.empty() : this.latestRevision;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ConfigurationState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> authenticationStrategy,
-        @Nullable Input<String> data,
-        @Nullable Input<String> description,
-        @Nullable Input<String> engineType,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<Integer> latestRevision,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> authenticationStrategy,
+        @Nullable Output<String> data,
+        @Nullable Output<String> description,
+        @Nullable Output<String> engineType,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<Integer> latestRevision,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.authenticationStrategy = authenticationStrategy;
         this.data = data;
@@ -150,16 +150,16 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationState() {
-        this.arn = Input.empty();
-        this.authenticationStrategy = Input.empty();
-        this.data = Input.empty();
-        this.description = Input.empty();
-        this.engineType = Input.empty();
-        this.engineVersion = Input.empty();
-        this.latestRevision = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.authenticationStrategy = Output.empty();
+        this.data = Output.empty();
+        this.description = Output.empty();
+        this.engineType = Output.empty();
+        this.engineVersion = Output.empty();
+        this.latestRevision = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> authenticationStrategy;
-        private @Nullable Input<String> data;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> engineType;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<Integer> latestRevision;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> authenticationStrategy;
+        private @Nullable Output<String> data;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> engineType;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<Integer> latestRevision;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder authenticationStrategy(@Nullable Input<String> authenticationStrategy) {
+        public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
             this.authenticationStrategy = authenticationStrategy;
             return this;
         }
 
         public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
-            this.authenticationStrategy = Input.ofNullable(authenticationStrategy);
+            this.authenticationStrategy = Output.ofNullable(authenticationStrategy);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder engineType(@Nullable Input<String> engineType) {
+        public Builder engineType(@Nullable Output<String> engineType) {
             this.engineType = engineType;
             return this;
         }
 
         public Builder engineType(@Nullable String engineType) {
-            this.engineType = Input.ofNullable(engineType);
+            this.engineType = Output.ofNullable(engineType);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder latestRevision(@Nullable Input<Integer> latestRevision) {
+        public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
         public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Input.ofNullable(latestRevision);
+            this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ConfigurationState build() {

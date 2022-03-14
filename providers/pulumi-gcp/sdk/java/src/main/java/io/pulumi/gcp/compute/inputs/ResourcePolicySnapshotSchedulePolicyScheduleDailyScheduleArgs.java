@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
      * 
      */
     @InputImport(name="daysInCycle", required=true)
-      private final Input<Integer> daysInCycle;
+      private final Output<Integer> daysInCycle;
 
-    public Input<Integer> getDaysInCycle() {
+    public Output<Integer> getDaysInCycle() {
         return this.daysInCycle;
     }
 
@@ -30,22 +30,22 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
     public ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs(
-        Input<Integer> daysInCycle,
-        Input<String> startTime) {
+        Output<Integer> daysInCycle,
+        Output<String> startTime) {
         this.daysInCycle = Objects.requireNonNull(daysInCycle, "expected parameter 'daysInCycle' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs() {
-        this.daysInCycle = Input.empty();
-        this.startTime = Input.empty();
+        this.daysInCycle = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
     }
 
     public static final class Builder {
-        private Input<Integer> daysInCycle;
-        private Input<String> startTime;
+        private Output<Integer> daysInCycle;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder daysInCycle(Input<Integer> daysInCycle) {
+        public Builder daysInCycle(Output<Integer> daysInCycle) {
             this.daysInCycle = Objects.requireNonNull(daysInCycle);
             return this;
         }
 
         public Builder daysInCycle(Integer daysInCycle) {
-            this.daysInCycle = Input.of(Objects.requireNonNull(daysInCycle));
+            this.daysInCycle = Output.of(Objects.requireNonNull(daysInCycle));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs build() {

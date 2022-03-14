@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,46 +16,46 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
     public static final FlowVeevaSourcePropertiesArgs Empty = new FlowVeevaSourcePropertiesArgs();
 
     @InputImport(name="documentType")
-      private final @Nullable Input<String> documentType;
+      private final @Nullable Output<String> documentType;
 
-    public Input<String> getDocumentType() {
-        return this.documentType == null ? Input.empty() : this.documentType;
+    public Output<String> getDocumentType() {
+        return this.documentType == null ? Output.empty() : this.documentType;
     }
 
     @InputImport(name="includeAllVersions")
-      private final @Nullable Input<Boolean> includeAllVersions;
+      private final @Nullable Output<Boolean> includeAllVersions;
 
-    public Input<Boolean> getIncludeAllVersions() {
-        return this.includeAllVersions == null ? Input.empty() : this.includeAllVersions;
+    public Output<Boolean> getIncludeAllVersions() {
+        return this.includeAllVersions == null ? Output.empty() : this.includeAllVersions;
     }
 
     @InputImport(name="includeRenditions")
-      private final @Nullable Input<Boolean> includeRenditions;
+      private final @Nullable Output<Boolean> includeRenditions;
 
-    public Input<Boolean> getIncludeRenditions() {
-        return this.includeRenditions == null ? Input.empty() : this.includeRenditions;
+    public Output<Boolean> getIncludeRenditions() {
+        return this.includeRenditions == null ? Output.empty() : this.includeRenditions;
     }
 
     @InputImport(name="includeSourceFiles")
-      private final @Nullable Input<Boolean> includeSourceFiles;
+      private final @Nullable Output<Boolean> includeSourceFiles;
 
-    public Input<Boolean> getIncludeSourceFiles() {
-        return this.includeSourceFiles == null ? Input.empty() : this.includeSourceFiles;
+    public Output<Boolean> getIncludeSourceFiles() {
+        return this.includeSourceFiles == null ? Output.empty() : this.includeSourceFiles;
     }
 
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
     public FlowVeevaSourcePropertiesArgs(
-        @Nullable Input<String> documentType,
-        @Nullable Input<Boolean> includeAllVersions,
-        @Nullable Input<Boolean> includeRenditions,
-        @Nullable Input<Boolean> includeSourceFiles,
-        Input<String> object) {
+        @Nullable Output<String> documentType,
+        @Nullable Output<Boolean> includeAllVersions,
+        @Nullable Output<Boolean> includeRenditions,
+        @Nullable Output<Boolean> includeSourceFiles,
+        Output<String> object) {
         this.documentType = documentType;
         this.includeAllVersions = includeAllVersions;
         this.includeRenditions = includeRenditions;
@@ -64,11 +64,11 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private FlowVeevaSourcePropertiesArgs() {
-        this.documentType = Input.empty();
-        this.includeAllVersions = Input.empty();
-        this.includeRenditions = Input.empty();
-        this.includeSourceFiles = Input.empty();
-        this.object = Input.empty();
+        this.documentType = Output.empty();
+        this.includeAllVersions = Output.empty();
+        this.includeRenditions = Output.empty();
+        this.includeSourceFiles = Output.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> documentType;
-        private @Nullable Input<Boolean> includeAllVersions;
-        private @Nullable Input<Boolean> includeRenditions;
-        private @Nullable Input<Boolean> includeSourceFiles;
-        private Input<String> object;
+        private @Nullable Output<String> documentType;
+        private @Nullable Output<Boolean> includeAllVersions;
+        private @Nullable Output<Boolean> includeRenditions;
+        private @Nullable Output<Boolean> includeSourceFiles;
+        private Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
     	      this.object = defaults.object;
         }
 
-        public Builder documentType(@Nullable Input<String> documentType) {
+        public Builder documentType(@Nullable Output<String> documentType) {
             this.documentType = documentType;
             return this;
         }
 
         public Builder documentType(@Nullable String documentType) {
-            this.documentType = Input.ofNullable(documentType);
+            this.documentType = Output.ofNullable(documentType);
             return this;
         }
 
-        public Builder includeAllVersions(@Nullable Input<Boolean> includeAllVersions) {
+        public Builder includeAllVersions(@Nullable Output<Boolean> includeAllVersions) {
             this.includeAllVersions = includeAllVersions;
             return this;
         }
 
         public Builder includeAllVersions(@Nullable Boolean includeAllVersions) {
-            this.includeAllVersions = Input.ofNullable(includeAllVersions);
+            this.includeAllVersions = Output.ofNullable(includeAllVersions);
             return this;
         }
 
-        public Builder includeRenditions(@Nullable Input<Boolean> includeRenditions) {
+        public Builder includeRenditions(@Nullable Output<Boolean> includeRenditions) {
             this.includeRenditions = includeRenditions;
             return this;
         }
 
         public Builder includeRenditions(@Nullable Boolean includeRenditions) {
-            this.includeRenditions = Input.ofNullable(includeRenditions);
+            this.includeRenditions = Output.ofNullable(includeRenditions);
             return this;
         }
 
-        public Builder includeSourceFiles(@Nullable Input<Boolean> includeSourceFiles) {
+        public Builder includeSourceFiles(@Nullable Output<Boolean> includeSourceFiles) {
             this.includeSourceFiles = includeSourceFiles;
             return this;
         }
 
         public Builder includeSourceFiles(@Nullable Boolean includeSourceFiles) {
-            this.includeSourceFiles = Input.ofNullable(includeSourceFiles);
+            this.includeSourceFiles = Output.ofNullable(includeSourceFiles);
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
         public FlowVeevaSourcePropertiesArgs build() {

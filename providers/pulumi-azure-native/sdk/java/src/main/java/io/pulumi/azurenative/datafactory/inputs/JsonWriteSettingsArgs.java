@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filePattern")
-      private final @Nullable Input<Object> filePattern;
+      private final @Nullable Output<Object> filePattern;
 
-    public Input<Object> getFilePattern() {
-        return this.filePattern == null ? Input.empty() : this.filePattern;
+    public Output<Object> getFilePattern() {
+        return this.filePattern == null ? Output.empty() : this.filePattern;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public JsonWriteSettingsArgs(
-        @Nullable Input<Object> filePattern,
-        Input<String> type) {
+        @Nullable Output<Object> filePattern,
+        Output<String> type) {
         this.filePattern = filePattern;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private JsonWriteSettingsArgs() {
-        this.filePattern = Input.empty();
-        this.type = Input.empty();
+        this.filePattern = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> filePattern;
-        private Input<String> type;
+        private @Nullable Output<Object> filePattern;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder filePattern(@Nullable Input<Object> filePattern) {
+        public Builder filePattern(@Nullable Output<Object> filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
         public Builder filePattern(@Nullable Object filePattern) {
-            this.filePattern = Input.ofNullable(filePattern);
+            this.filePattern = Output.ofNullable(filePattern);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public JsonWriteSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firebase;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
-    public ProjectArgs(@Nullable Input<String> project) {
+    public ProjectArgs(@Nullable Output<String> project) {
         this.project = project;
     }
 
     private ProjectArgs() {
-        this.project = Input.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ProjectArgs build() {

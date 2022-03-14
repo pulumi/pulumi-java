@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterRuleArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<SystemParameterRuleArgs>> rules;
+      private final @Nullable Output<List<SystemParameterRuleArgs>> rules;
 
-    public Input<List<SystemParameterRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<SystemParameterRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
-    public SystemParametersArgs(@Nullable Input<List<SystemParameterRuleArgs>> rules) {
+    public SystemParametersArgs(@Nullable Output<List<SystemParameterRuleArgs>> rules) {
         this.rules = rules;
     }
 
     private SystemParametersArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SystemParameterRuleArgs>> rules;
+        private @Nullable Output<List<SystemParameterRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(@Nullable Input<List<SystemParameterRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<SystemParameterRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<SystemParameterRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public SystemParametersArgs build() {

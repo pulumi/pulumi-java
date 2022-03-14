@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceName")
-      private final @Nullable Input<String> referenceName;
+      private final @Nullable Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
-        return this.referenceName == null ? Input.empty() : this.referenceName;
+    public Output<String> getReferenceName() {
+        return this.referenceName == null ? Output.empty() : this.referenceName;
     }
 
-    public DelegationSetArgs(@Nullable Input<String> referenceName) {
+    public DelegationSetArgs(@Nullable Output<String> referenceName) {
         this.referenceName = referenceName;
     }
 
     private DelegationSetArgs() {
-        this.referenceName = Input.empty();
+        this.referenceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> referenceName;
+        private @Nullable Output<String> referenceName;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.referenceName = defaults.referenceName;
         }
 
-        public Builder referenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Output<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Input.ofNullable(referenceName);
+            this.referenceName = Output.ofNullable(referenceName);
             return this;
         }
         public DelegationSetArgs build() {

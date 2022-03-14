@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.FieldDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -33,10 +33,10 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionTypeName")
-      private final @Nullable Input<String> connectionTypeName;
+      private final @Nullable Output<String> connectionTypeName;
 
-    public Input<String> getConnectionTypeName() {
-        return this.connectionTypeName == null ? Input.empty() : this.connectionTypeName;
+    public Output<String> getConnectionTypeName() {
+        return this.connectionTypeName == null ? Output.empty() : this.connectionTypeName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldDefinitions", required=true)
-      private final Input<Map<String,FieldDefinitionArgs>> fieldDefinitions;
+      private final Output<Map<String,FieldDefinitionArgs>> fieldDefinitions;
 
-    public Input<Map<String,FieldDefinitionArgs>> getFieldDefinitions() {
+    public Output<Map<String,FieldDefinitionArgs>> getFieldDefinitions() {
         return this.fieldDefinitions;
     }
 
@@ -55,10 +55,10 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isGlobal")
-      private final @Nullable Input<Boolean> isGlobal;
+      private final @Nullable Output<Boolean> isGlobal;
 
-    public Input<Boolean> getIsGlobal() {
-        return this.isGlobal == null ? Input.empty() : this.isGlobal;
+    public Output<Boolean> getIsGlobal() {
+        return this.isGlobal == null ? Output.empty() : this.isGlobal;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -77,19 +77,19 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ConnectionTypeArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<String> connectionTypeName,
-        Input<Map<String,FieldDefinitionArgs>> fieldDefinitions,
-        @Nullable Input<Boolean> isGlobal,
-        Input<String> name,
-        Input<String> resourceGroupName) {
+        Output<String> automationAccountName,
+        @Nullable Output<String> connectionTypeName,
+        Output<Map<String,FieldDefinitionArgs>> fieldDefinitions,
+        @Nullable Output<Boolean> isGlobal,
+        Output<String> name,
+        Output<String> resourceGroupName) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.connectionTypeName = connectionTypeName;
         this.fieldDefinitions = Objects.requireNonNull(fieldDefinitions, "expected parameter 'fieldDefinitions' to be non-null");
@@ -99,12 +99,12 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionTypeArgs() {
-        this.automationAccountName = Input.empty();
-        this.connectionTypeName = Input.empty();
-        this.fieldDefinitions = Input.empty();
-        this.isGlobal = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.connectionTypeName = Output.empty();
+        this.fieldDefinitions = Output.empty();
+        this.isGlobal = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> connectionTypeName;
-        private Input<Map<String,FieldDefinitionArgs>> fieldDefinitions;
-        private @Nullable Input<Boolean> isGlobal;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> connectionTypeName;
+        private Output<Map<String,FieldDefinitionArgs>> fieldDefinitions;
+        private @Nullable Output<Boolean> isGlobal;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder connectionTypeName(@Nullable Input<String> connectionTypeName) {
+        public Builder connectionTypeName(@Nullable Output<String> connectionTypeName) {
             this.connectionTypeName = connectionTypeName;
             return this;
         }
 
         public Builder connectionTypeName(@Nullable String connectionTypeName) {
-            this.connectionTypeName = Input.ofNullable(connectionTypeName);
+            this.connectionTypeName = Output.ofNullable(connectionTypeName);
             return this;
         }
 
-        public Builder fieldDefinitions(Input<Map<String,FieldDefinitionArgs>> fieldDefinitions) {
+        public Builder fieldDefinitions(Output<Map<String,FieldDefinitionArgs>> fieldDefinitions) {
             this.fieldDefinitions = Objects.requireNonNull(fieldDefinitions);
             return this;
         }
 
         public Builder fieldDefinitions(Map<String,FieldDefinitionArgs> fieldDefinitions) {
-            this.fieldDefinitions = Input.of(Objects.requireNonNull(fieldDefinitions));
+            this.fieldDefinitions = Output.of(Objects.requireNonNull(fieldDefinitions));
             return this;
         }
 
-        public Builder isGlobal(@Nullable Input<Boolean> isGlobal) {
+        public Builder isGlobal(@Nullable Output<Boolean> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
         public Builder isGlobal(@Nullable Boolean isGlobal) {
-            this.isGlobal = Input.ofNullable(isGlobal);
+            this.isGlobal = Output.ofNullable(isGlobal);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ConnectionTypeArgs build() {

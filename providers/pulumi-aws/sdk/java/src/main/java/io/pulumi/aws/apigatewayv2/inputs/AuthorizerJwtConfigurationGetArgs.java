@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="audiences")
-      private final @Nullable Input<List<String>> audiences;
+      private final @Nullable Output<List<String>> audiences;
 
-    public Input<List<String>> getAudiences() {
-        return this.audiences == null ? Input.empty() : this.audiences;
+    public Output<List<String>> getAudiences() {
+        return this.audiences == null ? Output.empty() : this.audiences;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     public AuthorizerJwtConfigurationGetArgs(
-        @Nullable Input<List<String>> audiences,
-        @Nullable Input<String> issuer) {
+        @Nullable Output<List<String>> audiences,
+        @Nullable Output<String> issuer) {
         this.audiences = audiences;
         this.issuer = issuer;
     }
 
     private AuthorizerJwtConfigurationGetArgs() {
-        this.audiences = Input.empty();
-        this.issuer = Input.empty();
+        this.audiences = Output.empty();
+        this.issuer = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> audiences;
-        private @Nullable Input<String> issuer;
+        private @Nullable Output<List<String>> audiences;
+        private @Nullable Output<String> issuer;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder audiences(@Nullable Input<List<String>> audiences) {
+        public Builder audiences(@Nullable Output<List<String>> audiences) {
             this.audiences = audiences;
             return this;
         }
 
         public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Input.ofNullable(audiences);
+            this.audiences = Output.ofNullable(audiences);
             return this;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
         public AuthorizerJwtConfigurationGetArgs build() {

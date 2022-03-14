@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="configurationProfileId")
-      private final @Nullable Input<String> configurationProfileId;
+      private final @Nullable Output<String> configurationProfileId;
 
-    public Input<String> getConfigurationProfileId() {
-        return this.configurationProfileId == null ? Input.empty() : this.configurationProfileId;
+    public Output<String> getConfigurationProfileId() {
+        return this.configurationProfileId == null ? Output.empty() : this.configurationProfileId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="locationUri")
-      private final @Nullable Input<String> locationUri;
+      private final @Nullable Output<String> locationUri;
 
-    public Input<String> getLocationUri() {
-        return this.locationUri == null ? Input.empty() : this.locationUri;
+    public Output<String> getLocationUri() {
+        return this.locationUri == null ? Output.empty() : this.locationUri;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retrievalRoleArn")
-      private final @Nullable Input<String> retrievalRoleArn;
+      private final @Nullable Output<String> retrievalRoleArn;
 
-    public Input<String> getRetrievalRoleArn() {
-        return this.retrievalRoleArn == null ? Input.empty() : this.retrievalRoleArn;
+    public Output<String> getRetrievalRoleArn() {
+        return this.retrievalRoleArn == null ? Output.empty() : this.retrievalRoleArn;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validators")
-      private final @Nullable Input<List<ConfigurationProfileValidatorGetArgs>> validators;
+      private final @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators;
 
-    public Input<List<ConfigurationProfileValidatorGetArgs>> getValidators() {
-        return this.validators == null ? Input.empty() : this.validators;
+    public Output<List<ConfigurationProfileValidatorGetArgs>> getValidators() {
+        return this.validators == null ? Output.empty() : this.validators;
     }
 
     public ConfigurationProfileState(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> configurationProfileId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> locationUri,
-        @Nullable Input<String> name,
-        @Nullable Input<String> retrievalRoleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<ConfigurationProfileValidatorGetArgs>> validators) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> configurationProfileId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> locationUri,
+        @Nullable Output<String> name,
+        @Nullable Output<String> retrievalRoleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators) {
         this.applicationId = applicationId;
         this.arn = arn;
         this.configurationProfileId = configurationProfileId;
@@ -151,16 +151,16 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
     }
 
     private ConfigurationProfileState() {
-        this.applicationId = Input.empty();
-        this.arn = Input.empty();
-        this.configurationProfileId = Input.empty();
-        this.description = Input.empty();
-        this.locationUri = Input.empty();
-        this.name = Input.empty();
-        this.retrievalRoleArn = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.validators = Input.empty();
+        this.applicationId = Output.empty();
+        this.arn = Output.empty();
+        this.configurationProfileId = Output.empty();
+        this.description = Output.empty();
+        this.locationUri = Output.empty();
+        this.name = Output.empty();
+        this.retrievalRoleArn = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.validators = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> configurationProfileId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> locationUri;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> retrievalRoleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<ConfigurationProfileValidatorGetArgs>> validators;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> configurationProfileId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> locationUri;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> retrievalRoleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
     	      this.validators = defaults.validators;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder configurationProfileId(@Nullable Input<String> configurationProfileId) {
+        public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
             this.configurationProfileId = configurationProfileId;
             return this;
         }
 
         public Builder configurationProfileId(@Nullable String configurationProfileId) {
-            this.configurationProfileId = Input.ofNullable(configurationProfileId);
+            this.configurationProfileId = Output.ofNullable(configurationProfileId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder locationUri(@Nullable Input<String> locationUri) {
+        public Builder locationUri(@Nullable Output<String> locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
         public Builder locationUri(@Nullable String locationUri) {
-            this.locationUri = Input.ofNullable(locationUri);
+            this.locationUri = Output.ofNullable(locationUri);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder retrievalRoleArn(@Nullable Input<String> retrievalRoleArn) {
+        public Builder retrievalRoleArn(@Nullable Output<String> retrievalRoleArn) {
             this.retrievalRoleArn = retrievalRoleArn;
             return this;
         }
 
         public Builder retrievalRoleArn(@Nullable String retrievalRoleArn) {
-            this.retrievalRoleArn = Input.ofNullable(retrievalRoleArn);
+            this.retrievalRoleArn = Output.ofNullable(retrievalRoleArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder validators(@Nullable Input<List<ConfigurationProfileValidatorGetArgs>> validators) {
+        public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators) {
             this.validators = validators;
             return this;
         }
 
         public Builder validators(@Nullable List<ConfigurationProfileValidatorGetArgs> validators) {
-            this.validators = Input.ofNullable(validators);
+            this.validators = Output.ofNullable(validators);
             return this;
         }
         public ConfigurationProfileState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     public static final ContainerPublicDomainNameArgs Empty = new ContainerPublicDomainNameArgs();
 
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainNames")
-      private final @Nullable Input<List<String>> domainNames;
+      private final @Nullable Output<List<String>> domainNames;
 
-    public Input<List<String>> getDomainNames() {
-        return this.domainNames == null ? Input.empty() : this.domainNames;
+    public Output<List<String>> getDomainNames() {
+        return this.domainNames == null ? Output.empty() : this.domainNames;
     }
 
     public ContainerPublicDomainNameArgs(
-        @Nullable Input<String> certificateName,
-        @Nullable Input<List<String>> domainNames) {
+        @Nullable Output<String> certificateName,
+        @Nullable Output<List<String>> domainNames) {
         this.certificateName = certificateName;
         this.domainNames = domainNames;
     }
 
     private ContainerPublicDomainNameArgs() {
-        this.certificateName = Input.empty();
-        this.domainNames = Input.empty();
+        this.certificateName = Output.empty();
+        this.domainNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateName;
-        private @Nullable Input<List<String>> domainNames;
+        private @Nullable Output<String> certificateName;
+        private @Nullable Output<List<String>> domainNames;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     	      this.domainNames = defaults.domainNames;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder domainNames(@Nullable Input<List<String>> domainNames) {
+        public Builder domainNames(@Nullable Output<List<String>> domainNames) {
             this.domainNames = domainNames;
             return this;
         }
 
         public Builder domainNames(@Nullable List<String> domainNames) {
-            this.domainNames = Input.ofNullable(domainNames);
+            this.domainNames = Output.ofNullable(domainNames);
             return this;
         }
         public ContainerPublicDomainNameArgs build() {

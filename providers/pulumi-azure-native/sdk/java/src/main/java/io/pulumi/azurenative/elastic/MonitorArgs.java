@@ -6,7 +6,7 @@ package io.pulumi.azurenative.elastic;
 import io.pulumi.azurenative.elastic.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.elastic.inputs.MonitorPropertiesArgs;
 import io.pulumi.azurenative.elastic.inputs.ResourceSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityPropertiesArgs> identity;
+      private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Input<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityPropertiesArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorName")
-      private final @Nullable Input<String> monitorName;
+      private final @Nullable Output<String> monitorName;
 
-    public Input<String> getMonitorName() {
-        return this.monitorName == null ? Input.empty() : this.monitorName;
+    public Output<String> getMonitorName() {
+        return this.monitorName == null ? Output.empty() : this.monitorName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<MonitorPropertiesArgs> properties;
+      private final @Nullable Output<MonitorPropertiesArgs> properties;
 
-    public Input<MonitorPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<MonitorPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,10 +78,10 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ResourceSkuArgs> sku;
+      private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Input<ResourceSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ResourceSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MonitorArgs(
-        @Nullable Input<IdentityPropertiesArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<String> monitorName,
-        @Nullable Input<MonitorPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<ResourceSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<IdentityPropertiesArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<String> monitorName,
+        @Nullable Output<MonitorPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<ResourceSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.identity = identity;
         this.location = location;
         this.monitorName = monitorName;
@@ -113,13 +113,13 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MonitorArgs() {
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.monitorName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.monitorName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IdentityPropertiesArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> monitorName;
-        private @Nullable Input<MonitorPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ResourceSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<IdentityPropertiesArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> monitorName;
+        private @Nullable Output<MonitorPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ResourceSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder monitorName(@Nullable Input<String> monitorName) {
+        public Builder monitorName(@Nullable Output<String> monitorName) {
             this.monitorName = monitorName;
             return this;
         }
 
         public Builder monitorName(@Nullable String monitorName) {
-            this.monitorName = Input.ofNullable(monitorName);
+            this.monitorName = Output.ofNullable(monitorName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<MonitorPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<MonitorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable MonitorPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<ResourceSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ResourceSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MonitorArgs build() {

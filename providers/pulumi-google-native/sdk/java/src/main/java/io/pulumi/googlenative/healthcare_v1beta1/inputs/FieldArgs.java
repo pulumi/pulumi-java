@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxOccurs")
-      private final @Nullable Input<Integer> maxOccurs;
+      private final @Nullable Output<Integer> maxOccurs;
 
-    public Input<Integer> getMaxOccurs() {
-        return this.maxOccurs == null ? Input.empty() : this.maxOccurs;
+    public Output<Integer> getMaxOccurs() {
+        return this.maxOccurs == null ? Output.empty() : this.maxOccurs;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minOccurs")
-      private final @Nullable Input<Integer> minOccurs;
+      private final @Nullable Output<Integer> minOccurs;
 
-    public Input<Integer> getMinOccurs() {
-        return this.minOccurs == null ? Input.empty() : this.minOccurs;
+    public Output<Integer> getMinOccurs() {
+        return this.minOccurs == null ? Output.empty() : this.minOccurs;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<String> table;
+      private final @Nullable Output<String> table;
 
-    public Input<String> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<String> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public FieldArgs(
-        @Nullable Input<Integer> maxOccurs,
-        @Nullable Input<Integer> minOccurs,
-        @Nullable Input<String> name,
-        @Nullable Input<String> table,
-        @Nullable Input<String> type) {
+        @Nullable Output<Integer> maxOccurs,
+        @Nullable Output<Integer> minOccurs,
+        @Nullable Output<String> name,
+        @Nullable Output<String> table,
+        @Nullable Output<String> type) {
         this.maxOccurs = maxOccurs;
         this.minOccurs = minOccurs;
         this.name = name;
@@ -88,11 +88,11 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FieldArgs() {
-        this.maxOccurs = Input.empty();
-        this.minOccurs = Input.empty();
-        this.name = Input.empty();
-        this.table = Input.empty();
-        this.type = Input.empty();
+        this.maxOccurs = Output.empty();
+        this.minOccurs = Output.empty();
+        this.name = Output.empty();
+        this.table = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxOccurs;
-        private @Nullable Input<Integer> minOccurs;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> table;
-        private @Nullable Input<String> type;
+        private @Nullable Output<Integer> maxOccurs;
+        private @Nullable Output<Integer> minOccurs;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> table;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder maxOccurs(@Nullable Input<Integer> maxOccurs) {
+        public Builder maxOccurs(@Nullable Output<Integer> maxOccurs) {
             this.maxOccurs = maxOccurs;
             return this;
         }
 
         public Builder maxOccurs(@Nullable Integer maxOccurs) {
-            this.maxOccurs = Input.ofNullable(maxOccurs);
+            this.maxOccurs = Output.ofNullable(maxOccurs);
             return this;
         }
 
-        public Builder minOccurs(@Nullable Input<Integer> minOccurs) {
+        public Builder minOccurs(@Nullable Output<Integer> minOccurs) {
             this.minOccurs = minOccurs;
             return this;
         }
 
         public Builder minOccurs(@Nullable Integer minOccurs) {
-            this.minOccurs = Input.ofNullable(minOccurs);
+            this.minOccurs = Output.ofNullable(minOccurs);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder table(@Nullable Input<String> table) {
+        public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable String table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public FieldArgs build() {

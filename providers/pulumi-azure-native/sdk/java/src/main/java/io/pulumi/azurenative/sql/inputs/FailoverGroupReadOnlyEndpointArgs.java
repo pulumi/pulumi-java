@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.enums.ReadOnlyEndpointFailoverPolicy;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="failoverPolicy")
-      private final @Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
+      private final @Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
 
-    public Input<Either<String,ReadOnlyEndpointFailoverPolicy>> getFailoverPolicy() {
-        return this.failoverPolicy == null ? Input.empty() : this.failoverPolicy;
+    public Output<Either<String,ReadOnlyEndpointFailoverPolicy>> getFailoverPolicy() {
+        return this.failoverPolicy == null ? Output.empty() : this.failoverPolicy;
     }
 
-    public FailoverGroupReadOnlyEndpointArgs(@Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
+    public FailoverGroupReadOnlyEndpointArgs(@Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
         this.failoverPolicy = failoverPolicy;
     }
 
     private FailoverGroupReadOnlyEndpointArgs() {
-        this.failoverPolicy = Input.empty();
+        this.failoverPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
+        private @Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
     	      this.failoverPolicy = defaults.failoverPolicy;
         }
 
-        public Builder failoverPolicy(@Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
+        public Builder failoverPolicy(@Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
         }
 
         public Builder failoverPolicy(@Nullable Either<String,ReadOnlyEndpointFailoverPolicy> failoverPolicy) {
-            this.failoverPolicy = Input.ofNullable(failoverPolicy);
+            this.failoverPolicy = Output.ofNullable(failoverPolicy);
             return this;
         }
         public FailoverGroupReadOnlyEndpointArgs build() {

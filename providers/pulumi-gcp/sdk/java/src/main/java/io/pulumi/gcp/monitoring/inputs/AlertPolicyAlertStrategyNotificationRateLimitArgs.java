@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<String> period;
+      private final @Nullable Output<String> period;
 
-    public Input<String> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<String> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
-    public AlertPolicyAlertStrategyNotificationRateLimitArgs(@Nullable Input<String> period) {
+    public AlertPolicyAlertStrategyNotificationRateLimitArgs(@Nullable Output<String> period) {
         this.period = period;
     }
 
     private AlertPolicyAlertStrategyNotificationRateLimitArgs() {
-        this.period = Input.empty();
+        this.period = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> period;
+        private @Nullable Output<String> period;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
     	      this.period = defaults.period;
         }
 
-        public Builder period(@Nullable Input<String> period) {
+        public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable String period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
         public AlertPolicyAlertStrategyNotificationRateLimitArgs build() {

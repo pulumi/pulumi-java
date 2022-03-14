@@ -9,7 +9,6 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateEndpointRespon
 import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,19 +156,19 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnectionByHostPool(String name, PrivateEndpointConnectionByHostPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool", name, args == null ? PrivateEndpointConnectionByHostPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool", name, args == null ? PrivateEndpointConnectionByHostPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateEndpointConnectionByHostPool(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateEndpointConnectionByHostPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:PrivateEndpointConnectionByHostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByHostPool").build())
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:PrivateEndpointConnectionByHostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:PrivateEndpointConnectionByHostPool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -183,7 +182,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateEndpointConnectionByHostPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateEndpointConnectionByHostPool get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnectionByHostPool(name, id, options);
     }
 }

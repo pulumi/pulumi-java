@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address", required=true)
-      private final Input<String> address;
+      private final Output<String> address;
 
-    public Input<String> getAddress() {
+    public Output<String> getAddress() {
         return this.address;
     }
 
@@ -40,22 +40,22 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public NodeAddressArgs(
-        Input<String> address,
-        Input<String> type) {
+        Output<String> address,
+        Output<String> type) {
         this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private NodeAddressArgs() {
-        this.address = Input.empty();
-        this.type = Input.empty();
+        this.address = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> address;
-        private Input<String> type;
+        private Output<String> address;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder address(Input<String> address) {
+        public Builder address(Output<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
         public Builder address(String address) {
-            this.address = Input.of(Objects.requireNonNull(address));
+            this.address = Output.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public NodeAddressArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVaultUri")
-      private final @Nullable Input<String> keyVaultUri;
+      private final @Nullable Output<String> keyVaultUri;
 
-    public Input<String> getKeyVaultUri() {
-        return this.keyVaultUri == null ? Input.empty() : this.keyVaultUri;
+    public Output<String> getKeyVaultUri() {
+        return this.keyVaultUri == null ? Output.empty() : this.keyVaultUri;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVersion")
-      private final @Nullable Input<String> keyVersion;
+      private final @Nullable Output<String> keyVersion;
 
-    public Input<String> getKeyVersion() {
-        return this.keyVersion == null ? Input.empty() : this.keyVersion;
+    public Output<String> getKeyVersion() {
+        return this.keyVersion == null ? Output.empty() : this.keyVersion;
     }
 
     public KeyVaultPropertiesArgs(
-        @Nullable Input<String> keyName,
-        @Nullable Input<String> keyVaultUri,
-        @Nullable Input<String> keyVersion) {
+        @Nullable Output<String> keyName,
+        @Nullable Output<String> keyVaultUri,
+        @Nullable Output<String> keyVersion) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
     }
 
     private KeyVaultPropertiesArgs() {
-        this.keyName = Input.empty();
-        this.keyVaultUri = Input.empty();
-        this.keyVersion = Input.empty();
+        this.keyName = Output.empty();
+        this.keyVaultUri = Output.empty();
+        this.keyVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<String> keyVaultUri;
-        private @Nullable Input<String> keyVersion;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<String> keyVaultUri;
+        private @Nullable Output<String> keyVersion;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.keyVersion = defaults.keyVersion;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder keyVaultUri(@Nullable Input<String> keyVaultUri) {
+        public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
 
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = Input.ofNullable(keyVaultUri);
+            this.keyVaultUri = Output.ofNullable(keyVaultUri);
             return this;
         }
 
-        public Builder keyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Input.ofNullable(keyVersion);
+            this.keyVersion = Output.ofNullable(keyVersion);
             return this;
         }
         public KeyVaultPropertiesArgs build() {

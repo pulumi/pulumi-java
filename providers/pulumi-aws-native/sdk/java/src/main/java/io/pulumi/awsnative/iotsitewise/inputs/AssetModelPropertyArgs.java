@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataType;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyTypeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataType", required=true)
-      private final Input<AssetModelDataType> dataType;
+      private final Output<AssetModelDataType> dataType;
 
-    public Input<AssetModelDataType> getDataType() {
+    public Output<AssetModelDataType> getDataType() {
         return this.dataType;
     }
 
@@ -37,10 +37,10 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataTypeSpec")
-      private final @Nullable Input<AssetModelDataTypeSpec> dataTypeSpec;
+      private final @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
 
-    public Input<AssetModelDataTypeSpec> getDataTypeSpec() {
-        return this.dataTypeSpec == null ? Input.empty() : this.dataTypeSpec;
+    public Output<AssetModelDataTypeSpec> getDataTypeSpec() {
+        return this.dataTypeSpec == null ? Output.empty() : this.dataTypeSpec;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logicalId", required=true)
-      private final Input<String> logicalId;
+      private final Output<String> logicalId;
 
-    public Input<String> getLogicalId() {
+    public Output<String> getLogicalId() {
         return this.logicalId;
     }
 
@@ -59,9 +59,9 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -70,9 +70,9 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<AssetModelPropertyTypeArgs> type;
+      private final Output<AssetModelPropertyTypeArgs> type;
 
-    public Input<AssetModelPropertyTypeArgs> getType() {
+    public Output<AssetModelPropertyTypeArgs> getType() {
         return this.type;
     }
 
@@ -81,19 +81,19 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     public AssetModelPropertyArgs(
-        Input<AssetModelDataType> dataType,
-        @Nullable Input<AssetModelDataTypeSpec> dataTypeSpec,
-        Input<String> logicalId,
-        Input<String> name,
-        Input<AssetModelPropertyTypeArgs> type,
-        @Nullable Input<String> unit) {
+        Output<AssetModelDataType> dataType,
+        @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec,
+        Output<String> logicalId,
+        Output<String> name,
+        Output<AssetModelPropertyTypeArgs> type,
+        @Nullable Output<String> unit) {
         this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
         this.dataTypeSpec = dataTypeSpec;
         this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
@@ -103,12 +103,12 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AssetModelPropertyArgs() {
-        this.dataType = Input.empty();
-        this.dataTypeSpec = Input.empty();
-        this.logicalId = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
-        this.unit = Input.empty();
+        this.dataType = Output.empty();
+        this.dataTypeSpec = Output.empty();
+        this.logicalId = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
+        this.unit = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<AssetModelDataType> dataType;
-        private @Nullable Input<AssetModelDataTypeSpec> dataTypeSpec;
-        private Input<String> logicalId;
-        private Input<String> name;
-        private Input<AssetModelPropertyTypeArgs> type;
-        private @Nullable Input<String> unit;
+        private Output<AssetModelDataType> dataType;
+        private @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
+        private Output<String> logicalId;
+        private Output<String> name;
+        private Output<AssetModelPropertyTypeArgs> type;
+        private @Nullable Output<String> unit;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     	      this.unit = defaults.unit;
         }
 
-        public Builder dataType(Input<AssetModelDataType> dataType) {
+        public Builder dataType(Output<AssetModelDataType> dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
         public Builder dataType(AssetModelDataType dataType) {
-            this.dataType = Input.of(Objects.requireNonNull(dataType));
+            this.dataType = Output.of(Objects.requireNonNull(dataType));
             return this;
         }
 
-        public Builder dataTypeSpec(@Nullable Input<AssetModelDataTypeSpec> dataTypeSpec) {
+        public Builder dataTypeSpec(@Nullable Output<AssetModelDataTypeSpec> dataTypeSpec) {
             this.dataTypeSpec = dataTypeSpec;
             return this;
         }
 
         public Builder dataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
-            this.dataTypeSpec = Input.ofNullable(dataTypeSpec);
+            this.dataTypeSpec = Output.ofNullable(dataTypeSpec);
             return this;
         }
 
-        public Builder logicalId(Input<String> logicalId) {
+        public Builder logicalId(Output<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
         public Builder logicalId(String logicalId) {
-            this.logicalId = Input.of(Objects.requireNonNull(logicalId));
+            this.logicalId = Output.of(Objects.requireNonNull(logicalId));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<AssetModelPropertyTypeArgs> type) {
+        public Builder type(Output<AssetModelPropertyTypeArgs> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(AssetModelPropertyTypeArgs type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
         public AssetModelPropertyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ClusterSelectorArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.ManagedClusterArgs;
@@ -24,10 +24,10 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clusterSelector")
-      private final @Nullable Input<ClusterSelectorArgs> clusterSelector;
+      private final @Nullable Output<ClusterSelectorArgs> clusterSelector;
 
-    public Input<ClusterSelectorArgs> getClusterSelector() {
-        return this.clusterSelector == null ? Input.empty() : this.clusterSelector;
+    public Output<ClusterSelectorArgs> getClusterSelector() {
+        return this.clusterSelector == null ? Output.empty() : this.clusterSelector;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="managedCluster")
-      private final @Nullable Input<ManagedClusterArgs> managedCluster;
+      private final @Nullable Output<ManagedClusterArgs> managedCluster;
 
-    public Input<ManagedClusterArgs> getManagedCluster() {
-        return this.managedCluster == null ? Input.empty() : this.managedCluster;
+    public Output<ManagedClusterArgs> getManagedCluster() {
+        return this.managedCluster == null ? Output.empty() : this.managedCluster;
     }
 
     public WorkflowTemplatePlacementArgs(
-        @Nullable Input<ClusterSelectorArgs> clusterSelector,
-        @Nullable Input<ManagedClusterArgs> managedCluster) {
+        @Nullable Output<ClusterSelectorArgs> clusterSelector,
+        @Nullable Output<ManagedClusterArgs> managedCluster) {
         this.clusterSelector = clusterSelector;
         this.managedCluster = managedCluster;
     }
 
     private WorkflowTemplatePlacementArgs() {
-        this.clusterSelector = Input.empty();
-        this.managedCluster = Input.empty();
+        this.clusterSelector = Output.empty();
+        this.managedCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterSelectorArgs> clusterSelector;
-        private @Nullable Input<ManagedClusterArgs> managedCluster;
+        private @Nullable Output<ClusterSelectorArgs> clusterSelector;
+        private @Nullable Output<ManagedClusterArgs> managedCluster;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
     	      this.managedCluster = defaults.managedCluster;
         }
 
-        public Builder clusterSelector(@Nullable Input<ClusterSelectorArgs> clusterSelector) {
+        public Builder clusterSelector(@Nullable Output<ClusterSelectorArgs> clusterSelector) {
             this.clusterSelector = clusterSelector;
             return this;
         }
 
         public Builder clusterSelector(@Nullable ClusterSelectorArgs clusterSelector) {
-            this.clusterSelector = Input.ofNullable(clusterSelector);
+            this.clusterSelector = Output.ofNullable(clusterSelector);
             return this;
         }
 
-        public Builder managedCluster(@Nullable Input<ManagedClusterArgs> managedCluster) {
+        public Builder managedCluster(@Nullable Output<ManagedClusterArgs> managedCluster) {
             this.managedCluster = managedCluster;
             return this;
         }
 
         public Builder managedCluster(@Nullable ManagedClusterArgs managedCluster) {
-            this.managedCluster = Input.ofNullable(managedCluster);
+            this.managedCluster = Output.ofNullable(managedCluster);
             return this;
         }
         public WorkflowTemplatePlacementArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="connections")
-      private final @Nullable Input<List<String>> connections;
+      private final @Nullable Output<List<String>> connections;
 
-    public Input<List<String>> getConnections() {
-        return this.connections == null ? Input.empty() : this.connections;
+    public Output<List<String>> getConnections() {
+        return this.connections == null ? Output.empty() : this.connections;
     }
 
-    public GoogleCloudRunOpV2CloudSqlInstanceArgs(@Nullable Input<List<String>> connections) {
+    public GoogleCloudRunOpV2CloudSqlInstanceArgs(@Nullable Output<List<String>> connections) {
         this.connections = connections;
     }
 
     private GoogleCloudRunOpV2CloudSqlInstanceArgs() {
-        this.connections = Input.empty();
+        this.connections = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> connections;
+        private @Nullable Output<List<String>> connections;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
     	      this.connections = defaults.connections;
         }
 
-        public Builder connections(@Nullable Input<List<String>> connections) {
+        public Builder connections(@Nullable Output<List<String>> connections) {
             this.connections = connections;
             return this;
         }
 
         public Builder connections(@Nullable List<String> connections) {
-            this.connections = Input.ofNullable(connections);
+            this.connections = Output.ofNullable(connections);
             return this;
         }
         public GoogleCloudRunOpV2CloudSqlInstanceArgs build() {

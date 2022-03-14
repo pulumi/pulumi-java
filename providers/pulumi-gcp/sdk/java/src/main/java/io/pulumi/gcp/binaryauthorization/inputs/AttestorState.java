@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNoteGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestationAuthorityNote")
-      private final @Nullable Input<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote;
+      private final @Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote;
 
-    public Input<AttestorAttestationAuthorityNoteGetArgs> getAttestationAuthorityNote() {
-        return this.attestationAuthorityNote == null ? Input.empty() : this.attestationAuthorityNote;
+    public Output<AttestorAttestationAuthorityNoteGetArgs> getAttestationAuthorityNote() {
+        return this.attestationAuthorityNote == null ? Output.empty() : this.attestationAuthorityNote;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public AttestorState(
-        @Nullable Input<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.attestationAuthorityNote = attestationAuthorityNote;
         this.description = description;
         this.name = name;
@@ -74,10 +74,10 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttestorState() {
-        this.attestationAuthorityNote = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.attestationAuthorityNote = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder attestationAuthorityNote(@Nullable Input<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote) {
+        public Builder attestationAuthorityNote(@Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote) {
             this.attestationAuthorityNote = attestationAuthorityNote;
             return this;
         }
 
         public Builder attestationAuthorityNote(@Nullable AttestorAttestationAuthorityNoteGetArgs attestationAuthorityNote) {
-            this.attestationAuthorityNote = Input.ofNullable(attestationAuthorityNote);
+            this.attestationAuthorityNote = Output.ofNullable(attestationAuthorityNote);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public AttestorState build() {

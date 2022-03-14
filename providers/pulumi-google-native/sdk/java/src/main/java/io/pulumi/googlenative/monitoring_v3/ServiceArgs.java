@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.AppEngineArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.CloudEndpointsArgs;
@@ -27,10 +27,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngine")
-      private final @Nullable Input<AppEngineArgs> appEngine;
+      private final @Nullable Output<AppEngineArgs> appEngine;
 
-    public Input<AppEngineArgs> getAppEngine() {
-        return this.appEngine == null ? Input.empty() : this.appEngine;
+    public Output<AppEngineArgs> getAppEngine() {
+        return this.appEngine == null ? Output.empty() : this.appEngine;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudEndpoints")
-      private final @Nullable Input<CloudEndpointsArgs> cloudEndpoints;
+      private final @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
 
-    public Input<CloudEndpointsArgs> getCloudEndpoints() {
-        return this.cloudEndpoints == null ? Input.empty() : this.cloudEndpoints;
+    public Output<CloudEndpointsArgs> getCloudEndpoints() {
+        return this.cloudEndpoints == null ? Output.empty() : this.cloudEndpoints;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIstio")
-      private final @Nullable Input<ClusterIstioArgs> clusterIstio;
+      private final @Nullable Output<ClusterIstioArgs> clusterIstio;
 
-    public Input<ClusterIstioArgs> getClusterIstio() {
-        return this.clusterIstio == null ? Input.empty() : this.clusterIstio;
+    public Output<ClusterIstioArgs> getClusterIstio() {
+        return this.clusterIstio == null ? Output.empty() : this.clusterIstio;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-      private final @Nullable Input<CustomArgs> custom;
+      private final @Nullable Output<CustomArgs> custom;
 
-    public Input<CustomArgs> getCustom() {
-        return this.custom == null ? Input.empty() : this.custom;
+    public Output<CustomArgs> getCustom() {
+        return this.custom == null ? Output.empty() : this.custom;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="istioCanonicalService")
-      private final @Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService;
+      private final @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
 
-    public Input<IstioCanonicalServiceArgs> getIstioCanonicalService() {
-        return this.istioCanonicalService == null ? Input.empty() : this.istioCanonicalService;
+    public Output<IstioCanonicalServiceArgs> getIstioCanonicalService() {
+        return this.istioCanonicalService == null ? Output.empty() : this.istioCanonicalService;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshIstio")
-      private final @Nullable Input<MeshIstioArgs> meshIstio;
+      private final @Nullable Output<MeshIstioArgs> meshIstio;
 
-    public Input<MeshIstioArgs> getMeshIstio() {
-        return this.meshIstio == null ? Input.empty() : this.meshIstio;
+    public Output<MeshIstioArgs> getMeshIstio() {
+        return this.meshIstio == null ? Output.empty() : this.meshIstio;
     }
 
     /**
@@ -104,17 +104,17 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="serviceId")
-      private final @Nullable Input<String> serviceId;
+      private final @Nullable Output<String> serviceId;
 
-    public Input<String> getServiceId() {
-        return this.serviceId == null ? Input.empty() : this.serviceId;
+    public Output<String> getServiceId() {
+        return this.serviceId == null ? Output.empty() : this.serviceId;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="telemetry")
-      private final @Nullable Input<TelemetryArgs> telemetry;
+      private final @Nullable Output<TelemetryArgs> telemetry;
 
-    public Input<TelemetryArgs> getTelemetry() {
-        return this.telemetry == null ? Input.empty() : this.telemetry;
+    public Output<TelemetryArgs> getTelemetry() {
+        return this.telemetry == null ? Output.empty() : this.telemetry;
     }
 
     /**
@@ -133,40 +133,40 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLabels")
-      private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Input<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Input.empty() : this.userLabels;
+    public Output<Map<String,String>> getUserLabels() {
+        return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
     @InputImport(name="v3Id", required=true)
-      private final Input<String> v3Id;
+      private final Output<String> v3Id;
 
-    public Input<String> getV3Id() {
+    public Output<String> getV3Id() {
         return this.v3Id;
     }
 
     @InputImport(name="v3Id1", required=true)
-      private final Input<String> v3Id1;
+      private final Output<String> v3Id1;
 
-    public Input<String> getV3Id1() {
+    public Output<String> getV3Id1() {
         return this.v3Id1;
     }
 
     public ServiceArgs(
-        @Nullable Input<AppEngineArgs> appEngine,
-        @Nullable Input<CloudEndpointsArgs> cloudEndpoints,
-        @Nullable Input<ClusterIstioArgs> clusterIstio,
-        @Nullable Input<CustomArgs> custom,
-        @Nullable Input<String> displayName,
-        @Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService,
-        @Nullable Input<MeshIstioArgs> meshIstio,
-        @Nullable Input<String> name,
-        @Nullable Input<String> serviceId,
-        @Nullable Input<TelemetryArgs> telemetry,
-        @Nullable Input<Map<String,String>> userLabels,
-        Input<String> v3Id,
-        Input<String> v3Id1) {
+        @Nullable Output<AppEngineArgs> appEngine,
+        @Nullable Output<CloudEndpointsArgs> cloudEndpoints,
+        @Nullable Output<ClusterIstioArgs> clusterIstio,
+        @Nullable Output<CustomArgs> custom,
+        @Nullable Output<String> displayName,
+        @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService,
+        @Nullable Output<MeshIstioArgs> meshIstio,
+        @Nullable Output<String> name,
+        @Nullable Output<String> serviceId,
+        @Nullable Output<TelemetryArgs> telemetry,
+        @Nullable Output<Map<String,String>> userLabels,
+        Output<String> v3Id,
+        Output<String> v3Id1) {
         this.appEngine = appEngine;
         this.cloudEndpoints = cloudEndpoints;
         this.clusterIstio = clusterIstio;
@@ -183,19 +183,19 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.appEngine = Input.empty();
-        this.cloudEndpoints = Input.empty();
-        this.clusterIstio = Input.empty();
-        this.custom = Input.empty();
-        this.displayName = Input.empty();
-        this.istioCanonicalService = Input.empty();
-        this.meshIstio = Input.empty();
-        this.name = Input.empty();
-        this.serviceId = Input.empty();
-        this.telemetry = Input.empty();
-        this.userLabels = Input.empty();
-        this.v3Id = Input.empty();
-        this.v3Id1 = Input.empty();
+        this.appEngine = Output.empty();
+        this.cloudEndpoints = Output.empty();
+        this.clusterIstio = Output.empty();
+        this.custom = Output.empty();
+        this.displayName = Output.empty();
+        this.istioCanonicalService = Output.empty();
+        this.meshIstio = Output.empty();
+        this.name = Output.empty();
+        this.serviceId = Output.empty();
+        this.telemetry = Output.empty();
+        this.userLabels = Output.empty();
+        this.v3Id = Output.empty();
+        this.v3Id1 = Output.empty();
     }
 
     public static Builder builder() {
@@ -207,19 +207,19 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AppEngineArgs> appEngine;
-        private @Nullable Input<CloudEndpointsArgs> cloudEndpoints;
-        private @Nullable Input<ClusterIstioArgs> clusterIstio;
-        private @Nullable Input<CustomArgs> custom;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService;
-        private @Nullable Input<MeshIstioArgs> meshIstio;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> serviceId;
-        private @Nullable Input<TelemetryArgs> telemetry;
-        private @Nullable Input<Map<String,String>> userLabels;
-        private Input<String> v3Id;
-        private Input<String> v3Id1;
+        private @Nullable Output<AppEngineArgs> appEngine;
+        private @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
+        private @Nullable Output<ClusterIstioArgs> clusterIstio;
+        private @Nullable Output<CustomArgs> custom;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
+        private @Nullable Output<MeshIstioArgs> meshIstio;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> serviceId;
+        private @Nullable Output<TelemetryArgs> telemetry;
+        private @Nullable Output<Map<String,String>> userLabels;
+        private Output<String> v3Id;
+        private Output<String> v3Id1;
 
         public Builder() {
     	      // Empty
@@ -242,133 +242,133 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v3Id1 = defaults.v3Id1;
         }
 
-        public Builder appEngine(@Nullable Input<AppEngineArgs> appEngine) {
+        public Builder appEngine(@Nullable Output<AppEngineArgs> appEngine) {
             this.appEngine = appEngine;
             return this;
         }
 
         public Builder appEngine(@Nullable AppEngineArgs appEngine) {
-            this.appEngine = Input.ofNullable(appEngine);
+            this.appEngine = Output.ofNullable(appEngine);
             return this;
         }
 
-        public Builder cloudEndpoints(@Nullable Input<CloudEndpointsArgs> cloudEndpoints) {
+        public Builder cloudEndpoints(@Nullable Output<CloudEndpointsArgs> cloudEndpoints) {
             this.cloudEndpoints = cloudEndpoints;
             return this;
         }
 
         public Builder cloudEndpoints(@Nullable CloudEndpointsArgs cloudEndpoints) {
-            this.cloudEndpoints = Input.ofNullable(cloudEndpoints);
+            this.cloudEndpoints = Output.ofNullable(cloudEndpoints);
             return this;
         }
 
-        public Builder clusterIstio(@Nullable Input<ClusterIstioArgs> clusterIstio) {
+        public Builder clusterIstio(@Nullable Output<ClusterIstioArgs> clusterIstio) {
             this.clusterIstio = clusterIstio;
             return this;
         }
 
         public Builder clusterIstio(@Nullable ClusterIstioArgs clusterIstio) {
-            this.clusterIstio = Input.ofNullable(clusterIstio);
+            this.clusterIstio = Output.ofNullable(clusterIstio);
             return this;
         }
 
-        public Builder custom(@Nullable Input<CustomArgs> custom) {
+        public Builder custom(@Nullable Output<CustomArgs> custom) {
             this.custom = custom;
             return this;
         }
 
         public Builder custom(@Nullable CustomArgs custom) {
-            this.custom = Input.ofNullable(custom);
+            this.custom = Output.ofNullable(custom);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder istioCanonicalService(@Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService) {
+        public Builder istioCanonicalService(@Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService) {
             this.istioCanonicalService = istioCanonicalService;
             return this;
         }
 
         public Builder istioCanonicalService(@Nullable IstioCanonicalServiceArgs istioCanonicalService) {
-            this.istioCanonicalService = Input.ofNullable(istioCanonicalService);
+            this.istioCanonicalService = Output.ofNullable(istioCanonicalService);
             return this;
         }
 
-        public Builder meshIstio(@Nullable Input<MeshIstioArgs> meshIstio) {
+        public Builder meshIstio(@Nullable Output<MeshIstioArgs> meshIstio) {
             this.meshIstio = meshIstio;
             return this;
         }
 
         public Builder meshIstio(@Nullable MeshIstioArgs meshIstio) {
-            this.meshIstio = Input.ofNullable(meshIstio);
+            this.meshIstio = Output.ofNullable(meshIstio);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder serviceId(@Nullable Input<String> serviceId) {
+        public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Input.ofNullable(serviceId);
+            this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
 
-        public Builder telemetry(@Nullable Input<TelemetryArgs> telemetry) {
+        public Builder telemetry(@Nullable Output<TelemetryArgs> telemetry) {
             this.telemetry = telemetry;
             return this;
         }
 
         public Builder telemetry(@Nullable TelemetryArgs telemetry) {
-            this.telemetry = Input.ofNullable(telemetry);
+            this.telemetry = Output.ofNullable(telemetry);
             return this;
         }
 
-        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Input.ofNullable(userLabels);
+            this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
 
-        public Builder v3Id(Input<String> v3Id) {
+        public Builder v3Id(Output<String> v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
 
         public Builder v3Id(String v3Id) {
-            this.v3Id = Input.of(Objects.requireNonNull(v3Id));
+            this.v3Id = Output.of(Objects.requireNonNull(v3Id));
             return this;
         }
 
-        public Builder v3Id1(Input<String> v3Id1) {
+        public Builder v3Id1(Output<String> v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
 
         public Builder v3Id1(String v3Id1) {
-            this.v3Id1 = Input.of(Objects.requireNonNull(v3Id1));
+            this.v3Id1 = Output.of(Objects.requireNonNull(v3Id1));
             return this;
         }
         public ServiceArgs build() {

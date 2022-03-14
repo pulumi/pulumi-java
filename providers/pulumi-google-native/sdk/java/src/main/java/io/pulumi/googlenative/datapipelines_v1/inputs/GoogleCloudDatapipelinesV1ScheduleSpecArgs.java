@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public GoogleCloudDatapipelinesV1ScheduleSpecArgs(
-        @Nullable Input<String> schedule,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<String> schedule,
+        @Nullable Output<String> timeZone) {
         this.schedule = schedule;
         this.timeZone = timeZone;
     }
 
     private GoogleCloudDatapipelinesV1ScheduleSpecArgs() {
-        this.schedule = Input.empty();
-        this.timeZone = Input.empty();
+        this.schedule = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public GoogleCloudDatapipelinesV1ScheduleSpecArgs build() {

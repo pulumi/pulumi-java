@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.enums.Encoding;
 import io.pulumi.azurenative.streamanalytics.enums.JsonOutputSerializationFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<Either<String,Encoding>> encoding;
+      private final @Nullable Output<Either<String,Encoding>> encoding;
 
-    public Input<Either<String,Encoding>> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<Either<String,Encoding>> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<Either<String,JsonOutputSerializationFormat>> format;
+      private final @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
 
-    public Input<Either<String,JsonOutputSerializationFormat>> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<Either<String,JsonOutputSerializationFormat>> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public JsonSerializationArgs(
-        @Nullable Input<Either<String,Encoding>> encoding,
-        @Nullable Input<Either<String,JsonOutputSerializationFormat>> format,
-        Input<String> type) {
+        @Nullable Output<Either<String,Encoding>> encoding,
+        @Nullable Output<Either<String,JsonOutputSerializationFormat>> format,
+        Output<String> type) {
         this.encoding = encoding;
         this.format = format;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private JsonSerializationArgs() {
-        this.encoding = Input.empty();
-        this.format = Input.empty();
-        this.type = Input.empty();
+        this.encoding = Output.empty();
+        this.format = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Encoding>> encoding;
-        private @Nullable Input<Either<String,JsonOutputSerializationFormat>> format;
-        private Input<String> type;
+        private @Nullable Output<Either<String,Encoding>> encoding;
+        private @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder encoding(@Nullable Input<Either<String,Encoding>> encoding) {
+        public Builder encoding(@Nullable Output<Either<String,Encoding>> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable Either<String,Encoding> encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder format(@Nullable Input<Either<String,JsonOutputSerializationFormat>> format) {
+        public Builder format(@Nullable Output<Either<String,JsonOutputSerializationFormat>> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable Either<String,JsonOutputSerializationFormat> format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public JsonSerializationArgs build() {

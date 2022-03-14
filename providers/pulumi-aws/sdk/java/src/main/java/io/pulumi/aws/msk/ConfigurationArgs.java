@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaVersions")
-      private final @Nullable Input<List<String>> kafkaVersions;
+      private final @Nullable Output<List<String>> kafkaVersions;
 
-    public Input<List<String>> getKafkaVersions() {
-        return this.kafkaVersions == null ? Input.empty() : this.kafkaVersions;
+    public Output<List<String>> getKafkaVersions() {
+        return this.kafkaVersions == null ? Output.empty() : this.kafkaVersions;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverProperties", required=true)
-      private final Input<String> serverProperties;
+      private final Output<String> serverProperties;
 
-    public Input<String> getServerProperties() {
+    public Output<String> getServerProperties() {
         return this.serverProperties;
     }
 
     public ConfigurationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> kafkaVersions,
-        @Nullable Input<String> name,
-        Input<String> serverProperties) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> kafkaVersions,
+        @Nullable Output<String> name,
+        Output<String> serverProperties) {
         this.description = description;
         this.kafkaVersions = kafkaVersions;
         this.name = name;
@@ -71,10 +71,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationArgs() {
-        this.description = Input.empty();
-        this.kafkaVersions = Input.empty();
-        this.name = Input.empty();
-        this.serverProperties = Input.empty();
+        this.description = Output.empty();
+        this.kafkaVersions = Output.empty();
+        this.name = Output.empty();
+        this.serverProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> kafkaVersions;
-        private @Nullable Input<String> name;
-        private Input<String> serverProperties;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> kafkaVersions;
+        private @Nullable Output<String> name;
+        private Output<String> serverProperties;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverProperties = defaults.serverProperties;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kafkaVersions(@Nullable Input<List<String>> kafkaVersions) {
+        public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
             this.kafkaVersions = kafkaVersions;
             return this;
         }
 
         public Builder kafkaVersions(@Nullable List<String> kafkaVersions) {
-            this.kafkaVersions = Input.ofNullable(kafkaVersions);
+            this.kafkaVersions = Output.ofNullable(kafkaVersions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder serverProperties(Input<String> serverProperties) {
+        public Builder serverProperties(Output<String> serverProperties) {
             this.serverProperties = Objects.requireNonNull(serverProperties);
             return this;
         }
 
         public Builder serverProperties(String serverProperties) {
-            this.serverProperties = Input.of(Objects.requireNonNull(serverProperties));
+            this.serverProperties = Output.of(Objects.requireNonNull(serverProperties));
             return this;
         }
         public ConfigurationArgs build() {

@@ -10,7 +10,6 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAlternatePathHint;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisExplanation;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPathComponent;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,14 +141,14 @@ public class NetworkInsightsAnalysis extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInsightsAnalysis(String name, NetworkInsightsAnalysisArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:NetworkInsightsAnalysis", name, args == null ? NetworkInsightsAnalysisArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:ec2:NetworkInsightsAnalysis", name, args == null ? NetworkInsightsAnalysisArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NetworkInsightsAnalysis(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NetworkInsightsAnalysis(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:NetworkInsightsAnalysis", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -164,7 +163,7 @@ public class NetworkInsightsAnalysis extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkInsightsAnalysis get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkInsightsAnalysis get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkInsightsAnalysis(name, id, options);
     }
 }

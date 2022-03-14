@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Input<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectionString")
-      private final @Nullable Input<String> connectionString;
+      private final @Nullable Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
-        return this.connectionString == null ? Input.empty() : this.connectionString;
+    public Output<String> getConnectionString() {
+        return this.connectionString == null ? Output.empty() : this.connectionString;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endpointUri")
-      private final @Nullable Input<String> endpointUri;
+      private final @Nullable Output<String> endpointUri;
 
-    public Input<String> getEndpointUri() {
-        return this.endpointUri == null ? Input.empty() : this.endpointUri;
+    public Output<String> getEndpointUri() {
+        return this.endpointUri == null ? Output.empty() : this.endpointUri;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="entityPath")
-      private final @Nullable Input<String> entityPath;
+      private final @Nullable Output<String> entityPath;
 
-    public Input<String> getEntityPath() {
-        return this.entityPath == null ? Input.empty() : this.entityPath;
+    public Output<String> getEntityPath() {
+        return this.entityPath == null ? Output.empty() : this.entityPath;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -91,10 +91,10 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<String> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     public RoutingEventHubPropertiesArgs(
-        @Nullable Input<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Input<String> connectionString,
-        @Nullable Input<String> endpointUri,
-        @Nullable Input<String> entityPath,
-        @Nullable Input<String> id,
-        Input<String> name,
-        @Nullable Input<String> resourceGroup,
-        @Nullable Input<String> subscriptionId) {
+        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
+        @Nullable Output<String> connectionString,
+        @Nullable Output<String> endpointUri,
+        @Nullable Output<String> entityPath,
+        @Nullable Output<String> id,
+        Output<String> name,
+        @Nullable Output<String> resourceGroup,
+        @Nullable Output<String> subscriptionId) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.endpointUri = endpointUri;
@@ -128,14 +128,14 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private RoutingEventHubPropertiesArgs() {
-        this.authenticationType = Input.empty();
-        this.connectionString = Input.empty();
-        this.endpointUri = Input.empty();
-        this.entityPath = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.authenticationType = Output.empty();
+        this.connectionString = Output.empty();
+        this.endpointUri = Output.empty();
+        this.entityPath = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Input<String> connectionString;
-        private @Nullable Input<String> endpointUri;
-        private @Nullable Input<String> entityPath;
-        private @Nullable Input<String> id;
-        private Input<String> name;
-        private @Nullable Input<String> resourceGroup;
-        private @Nullable Input<String> subscriptionId;
+        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+        private @Nullable Output<String> connectionString;
+        private @Nullable Output<String> endpointUri;
+        private @Nullable Output<String> entityPath;
+        private @Nullable Output<String> id;
+        private Output<String> name;
+        private @Nullable Output<String> resourceGroup;
+        private @Nullable Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder connectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Input.ofNullable(connectionString);
+            this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
 
-        public Builder endpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Output<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Input.ofNullable(endpointUri);
+            this.endpointUri = Output.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder entityPath(@Nullable Input<String> entityPath) {
+        public Builder entityPath(@Nullable Output<String> entityPath) {
             this.entityPath = entityPath;
             return this;
         }
 
         public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = Input.ofNullable(entityPath);
+            this.entityPath = Output.ofNullable(entityPath);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
         public RoutingEventHubPropertiesArgs build() {

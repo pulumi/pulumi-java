@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lakeResources")
-      private final @Nullable Input<Map<String,String>> lakeResources;
+      private final @Nullable Output<Map<String,String>> lakeResources;
 
-    public Input<Map<String,String>> getLakeResources() {
-        return this.lakeResources == null ? Input.empty() : this.lakeResources;
+    public Output<Map<String,String>> getLakeResources() {
+        return this.lakeResources == null ? Output.empty() : this.lakeResources;
     }
 
-    public DataplexConfigArgs(@Nullable Input<Map<String,String>> lakeResources) {
+    public DataplexConfigArgs(@Nullable Output<Map<String,String>> lakeResources) {
         this.lakeResources = lakeResources;
     }
 
     private DataplexConfigArgs() {
-        this.lakeResources = Input.empty();
+        this.lakeResources = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> lakeResources;
+        private @Nullable Output<Map<String,String>> lakeResources;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lakeResources = defaults.lakeResources;
         }
 
-        public Builder lakeResources(@Nullable Input<Map<String,String>> lakeResources) {
+        public Builder lakeResources(@Nullable Output<Map<String,String>> lakeResources) {
             this.lakeResources = lakeResources;
             return this;
         }
 
         public Builder lakeResources(@Nullable Map<String,String> lakeResources) {
-            this.lakeResources = Input.ofNullable(lakeResources);
+            this.lakeResources = Output.ofNullable(lakeResources);
             return this;
         }
         public DataplexConfigArgs build() {

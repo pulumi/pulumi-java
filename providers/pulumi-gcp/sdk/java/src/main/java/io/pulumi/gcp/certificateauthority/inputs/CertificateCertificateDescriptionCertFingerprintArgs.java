@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
     public static final CertificateCertificateDescriptionCertFingerprintArgs Empty = new CertificateCertificateDescriptionCertFingerprintArgs();
 
     @InputImport(name="sha256Hash")
-      private final @Nullable Input<String> sha256Hash;
+      private final @Nullable Output<String> sha256Hash;
 
-    public Input<String> getSha256Hash() {
-        return this.sha256Hash == null ? Input.empty() : this.sha256Hash;
+    public Output<String> getSha256Hash() {
+        return this.sha256Hash == null ? Output.empty() : this.sha256Hash;
     }
 
-    public CertificateCertificateDescriptionCertFingerprintArgs(@Nullable Input<String> sha256Hash) {
+    public CertificateCertificateDescriptionCertFingerprintArgs(@Nullable Output<String> sha256Hash) {
         this.sha256Hash = sha256Hash;
     }
 
     private CertificateCertificateDescriptionCertFingerprintArgs() {
-        this.sha256Hash = Input.empty();
+        this.sha256Hash = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sha256Hash;
+        private @Nullable Output<String> sha256Hash;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
     	      this.sha256Hash = defaults.sha256Hash;
         }
 
-        public Builder sha256Hash(@Nullable Input<String> sha256Hash) {
+        public Builder sha256Hash(@Nullable Output<String> sha256Hash) {
             this.sha256Hash = sha256Hash;
             return this;
         }
 
         public Builder sha256Hash(@Nullable String sha256Hash) {
-            this.sha256Hash = Input.ofNullable(sha256Hash);
+            this.sha256Hash = Output.ofNullable(sha256Hash);
             return this;
         }
         public CertificateCertificateDescriptionCertFingerprintArgs build() {

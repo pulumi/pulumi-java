@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
@@ -28,10 +28,10 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<List<EnvVarArgs>> env;
+      private final @Nullable Output<List<EnvVarArgs>> env;
 
-    public Input<List<EnvVarArgs>> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<List<EnvVarArgs>> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envFrom")
-      private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
+      private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
-    public Input<List<EnvFromSourceArgs>> getEnvFrom() {
-        return this.envFrom == null ? Input.empty() : this.envFrom;
+    public Output<List<EnvFromSourceArgs>> getEnvFrom() {
+        return this.envFrom == null ? Output.empty() : this.envFrom;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<LabelSelectorArgs> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeMounts")
-      private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+      private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Input<List<VolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
+    public Output<List<VolumeMountArgs>> getVolumeMounts() {
+        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
     }
 
     /**
@@ -72,18 +72,18 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Input<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<VolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public PodPresetSpecArgs(
-        @Nullable Input<List<EnvVarArgs>> env,
-        @Nullable Input<List<EnvFromSourceArgs>> envFrom,
-        @Nullable Input<LabelSelectorArgs> selector,
-        @Nullable Input<List<VolumeMountArgs>> volumeMounts,
-        @Nullable Input<List<VolumeArgs>> volumes) {
+        @Nullable Output<List<EnvVarArgs>> env,
+        @Nullable Output<List<EnvFromSourceArgs>> envFrom,
+        @Nullable Output<LabelSelectorArgs> selector,
+        @Nullable Output<List<VolumeMountArgs>> volumeMounts,
+        @Nullable Output<List<VolumeArgs>> volumes) {
         this.env = env;
         this.envFrom = envFrom;
         this.selector = selector;
@@ -92,11 +92,11 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PodPresetSpecArgs() {
-        this.env = Input.empty();
-        this.envFrom = Input.empty();
-        this.selector = Input.empty();
-        this.volumeMounts = Input.empty();
-        this.volumes = Input.empty();
+        this.env = Output.empty();
+        this.envFrom = Output.empty();
+        this.selector = Output.empty();
+        this.volumeMounts = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EnvVarArgs>> env;
-        private @Nullable Input<List<EnvFromSourceArgs>> envFrom;
-        private @Nullable Input<LabelSelectorArgs> selector;
-        private @Nullable Input<List<VolumeMountArgs>> volumeMounts;
-        private @Nullable Input<List<VolumeArgs>> volumes;
+        private @Nullable Output<List<EnvVarArgs>> env;
+        private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
+        private @Nullable Output<LabelSelectorArgs> selector;
+        private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+        private @Nullable Output<List<VolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder env(@Nullable Input<List<EnvVarArgs>> env) {
+        public Builder env(@Nullable Output<List<EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable List<EnvVarArgs> env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder envFrom(@Nullable Input<List<EnvFromSourceArgs>> envFrom) {
+        public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
 
         public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
-            this.envFrom = Input.ofNullable(envFrom);
+            this.envFrom = Output.ofNullable(envFrom);
             return this;
         }
 
-        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder volumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Input.ofNullable(volumeMounts);
+            this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public PodPresetSpecArgs build() {

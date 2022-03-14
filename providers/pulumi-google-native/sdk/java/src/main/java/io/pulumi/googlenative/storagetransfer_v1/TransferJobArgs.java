@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.enums.TransferJobStatus;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.LoggingConfigArgs;
@@ -24,10 +24,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestOperationName")
-      private final @Nullable Input<String> latestOperationName;
+      private final @Nullable Output<String> latestOperationName;
 
-    public Input<String> getLatestOperationName() {
-        return this.latestOperationName == null ? Input.empty() : this.latestOperationName;
+    public Output<String> getLatestOperationName() {
+        return this.latestOperationName == null ? Output.empty() : this.latestOperationName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<LoggingConfigArgs> loggingConfig;
+      private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Input<LoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<LoggingConfigArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-      private final @Nullable Input<NotificationConfigArgs> notificationConfig;
+      private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Input<NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
+    public Output<NotificationConfigArgs> getNotificationConfig() {
+        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<ScheduleArgs> schedule;
+      private final @Nullable Output<ScheduleArgs> schedule;
 
-    public Input<ScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<ScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<TransferJobStatus> status;
+      private final @Nullable Output<TransferJobStatus> status;
 
-    public Input<TransferJobStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<TransferJobStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferSpec")
-      private final @Nullable Input<TransferSpecArgs> transferSpec;
+      private final @Nullable Output<TransferSpecArgs> transferSpec;
 
-    public Input<TransferSpecArgs> getTransferSpec() {
-        return this.transferSpec == null ? Input.empty() : this.transferSpec;
+    public Output<TransferSpecArgs> getTransferSpec() {
+        return this.transferSpec == null ? Output.empty() : this.transferSpec;
     }
 
     public TransferJobArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> latestOperationName,
-        @Nullable Input<LoggingConfigArgs> loggingConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<NotificationConfigArgs> notificationConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<ScheduleArgs> schedule,
-        @Nullable Input<TransferJobStatus> status,
-        @Nullable Input<TransferSpecArgs> transferSpec) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> latestOperationName,
+        @Nullable Output<LoggingConfigArgs> loggingConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<NotificationConfigArgs> notificationConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<ScheduleArgs> schedule,
+        @Nullable Output<TransferJobStatus> status,
+        @Nullable Output<TransferSpecArgs> transferSpec) {
         this.description = description;
         this.latestOperationName = latestOperationName;
         this.loggingConfig = loggingConfig;
@@ -140,15 +140,15 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransferJobArgs() {
-        this.description = Input.empty();
-        this.latestOperationName = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.name = Input.empty();
-        this.notificationConfig = Input.empty();
-        this.project = Input.empty();
-        this.schedule = Input.empty();
-        this.status = Input.empty();
-        this.transferSpec = Input.empty();
+        this.description = Output.empty();
+        this.latestOperationName = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.name = Output.empty();
+        this.notificationConfig = Output.empty();
+        this.project = Output.empty();
+        this.schedule = Output.empty();
+        this.status = Output.empty();
+        this.transferSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> latestOperationName;
-        private @Nullable Input<LoggingConfigArgs> loggingConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<NotificationConfigArgs> notificationConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ScheduleArgs> schedule;
-        private @Nullable Input<TransferJobStatus> status;
-        private @Nullable Input<TransferSpecArgs> transferSpec;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> latestOperationName;
+        private @Nullable Output<LoggingConfigArgs> loggingConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<NotificationConfigArgs> notificationConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ScheduleArgs> schedule;
+        private @Nullable Output<TransferJobStatus> status;
+        private @Nullable Output<TransferSpecArgs> transferSpec;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transferSpec = defaults.transferSpec;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder latestOperationName(@Nullable Input<String> latestOperationName) {
+        public Builder latestOperationName(@Nullable Output<String> latestOperationName) {
             this.latestOperationName = latestOperationName;
             return this;
         }
 
         public Builder latestOperationName(@Nullable String latestOperationName) {
-            this.latestOperationName = Input.ofNullable(latestOperationName);
+            this.latestOperationName = Output.ofNullable(latestOperationName);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<LoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<LoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable LoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationConfig(@Nullable Input<NotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Input.ofNullable(notificationConfig);
+            this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<ScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable ScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder status(@Nullable Input<TransferJobStatus> status) {
+        public Builder status(@Nullable Output<TransferJobStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable TransferJobStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder transferSpec(@Nullable Input<TransferSpecArgs> transferSpec) {
+        public Builder transferSpec(@Nullable Output<TransferSpecArgs> transferSpec) {
             this.transferSpec = transferSpec;
             return this;
         }
 
         public Builder transferSpec(@Nullable TransferSpecArgs transferSpec) {
-            this.transferSpec = Input.ofNullable(transferSpec);
+            this.transferSpec = Output.ofNullable(transferSpec);
             return this;
         }
         public TransferJobArgs build() {

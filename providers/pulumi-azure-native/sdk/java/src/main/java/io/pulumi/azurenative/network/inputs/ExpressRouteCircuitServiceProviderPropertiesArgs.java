@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * 
      */
     @InputImport(name="bandwidthInMbps")
-      private final @Nullable Input<Integer> bandwidthInMbps;
+      private final @Nullable Output<Integer> bandwidthInMbps;
 
-    public Input<Integer> getBandwidthInMbps() {
-        return this.bandwidthInMbps == null ? Input.empty() : this.bandwidthInMbps;
+    public Output<Integer> getBandwidthInMbps() {
+        return this.bandwidthInMbps == null ? Output.empty() : this.bandwidthInMbps;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * 
      */
     @InputImport(name="peeringLocation")
-      private final @Nullable Input<String> peeringLocation;
+      private final @Nullable Output<String> peeringLocation;
 
-    public Input<String> getPeeringLocation() {
-        return this.peeringLocation == null ? Input.empty() : this.peeringLocation;
+    public Output<String> getPeeringLocation() {
+        return this.peeringLocation == null ? Output.empty() : this.peeringLocation;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * 
      */
     @InputImport(name="serviceProviderName")
-      private final @Nullable Input<String> serviceProviderName;
+      private final @Nullable Output<String> serviceProviderName;
 
-    public Input<String> getServiceProviderName() {
-        return this.serviceProviderName == null ? Input.empty() : this.serviceProviderName;
+    public Output<String> getServiceProviderName() {
+        return this.serviceProviderName == null ? Output.empty() : this.serviceProviderName;
     }
 
     public ExpressRouteCircuitServiceProviderPropertiesArgs(
-        @Nullable Input<Integer> bandwidthInMbps,
-        @Nullable Input<String> peeringLocation,
-        @Nullable Input<String> serviceProviderName) {
+        @Nullable Output<Integer> bandwidthInMbps,
+        @Nullable Output<String> peeringLocation,
+        @Nullable Output<String> serviceProviderName) {
         this.bandwidthInMbps = bandwidthInMbps;
         this.peeringLocation = peeringLocation;
         this.serviceProviderName = serviceProviderName;
     }
 
     private ExpressRouteCircuitServiceProviderPropertiesArgs() {
-        this.bandwidthInMbps = Input.empty();
-        this.peeringLocation = Input.empty();
-        this.serviceProviderName = Input.empty();
+        this.bandwidthInMbps = Output.empty();
+        this.peeringLocation = Output.empty();
+        this.serviceProviderName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bandwidthInMbps;
-        private @Nullable Input<String> peeringLocation;
-        private @Nullable Input<String> serviceProviderName;
+        private @Nullable Output<Integer> bandwidthInMbps;
+        private @Nullable Output<String> peeringLocation;
+        private @Nullable Output<String> serviceProviderName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
     	      this.serviceProviderName = defaults.serviceProviderName;
         }
 
-        public Builder bandwidthInMbps(@Nullable Input<Integer> bandwidthInMbps) {
+        public Builder bandwidthInMbps(@Nullable Output<Integer> bandwidthInMbps) {
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
         public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
-            this.bandwidthInMbps = Input.ofNullable(bandwidthInMbps);
+            this.bandwidthInMbps = Output.ofNullable(bandwidthInMbps);
             return this;
         }
 
-        public Builder peeringLocation(@Nullable Input<String> peeringLocation) {
+        public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
         public Builder peeringLocation(@Nullable String peeringLocation) {
-            this.peeringLocation = Input.ofNullable(peeringLocation);
+            this.peeringLocation = Output.ofNullable(peeringLocation);
             return this;
         }
 
-        public Builder serviceProviderName(@Nullable Input<String> serviceProviderName) {
+        public Builder serviceProviderName(@Nullable Output<String> serviceProviderName) {
             this.serviceProviderName = serviceProviderName;
             return this;
         }
 
         public Builder serviceProviderName(@Nullable String serviceProviderName) {
-            this.serviceProviderName = Input.ofNullable(serviceProviderName);
+            this.serviceProviderName = Output.ofNullable(serviceProviderName);
             return this;
         }
         public ExpressRouteCircuitServiceProviderPropertiesArgs build() {

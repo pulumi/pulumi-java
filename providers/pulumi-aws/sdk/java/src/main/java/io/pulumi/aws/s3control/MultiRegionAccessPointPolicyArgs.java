@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     public static final MultiRegionAccessPointPolicyArgs Empty = new MultiRegionAccessPointPolicyArgs();
 
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="details", required=true)
-      private final Input<MultiRegionAccessPointPolicyDetailsArgs> details;
+      private final Output<MultiRegionAccessPointPolicyDetailsArgs> details;
 
-    public Input<MultiRegionAccessPointPolicyDetailsArgs> getDetails() {
+    public Output<MultiRegionAccessPointPolicyDetailsArgs> getDetails() {
         return this.details;
     }
 
     public MultiRegionAccessPointPolicyArgs(
-        @Nullable Input<String> accountId,
-        Input<MultiRegionAccessPointPolicyDetailsArgs> details) {
+        @Nullable Output<String> accountId,
+        Output<MultiRegionAccessPointPolicyDetailsArgs> details) {
         this.accountId = accountId;
         this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
     }
 
     private MultiRegionAccessPointPolicyArgs() {
-        this.accountId = Input.empty();
-        this.details = Input.empty();
+        this.accountId = Output.empty();
+        this.details = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private Input<MultiRegionAccessPointPolicyDetailsArgs> details;
+        private @Nullable Output<String> accountId;
+        private Output<MultiRegionAccessPointPolicyDetailsArgs> details;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     	      this.details = defaults.details;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder details(Input<MultiRegionAccessPointPolicyDetailsArgs> details) {
+        public Builder details(Output<MultiRegionAccessPointPolicyDetailsArgs> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
         public Builder details(MultiRegionAccessPointPolicyDetailsArgs details) {
-            this.details = Input.of(Objects.requireNonNull(details));
+            this.details = Output.of(Objects.requireNonNull(details));
             return this;
         }
         public MultiRegionAccessPointPolicyArgs build() {

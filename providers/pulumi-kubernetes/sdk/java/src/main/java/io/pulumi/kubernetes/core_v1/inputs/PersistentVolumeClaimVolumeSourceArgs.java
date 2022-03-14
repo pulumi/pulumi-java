@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="claimName", required=true)
-      private final Input<String> claimName;
+      private final Output<String> claimName;
 
-    public Input<String> getClaimName() {
+    public Output<String> getClaimName() {
         return this.claimName;
     }
 
@@ -35,22 +35,22 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     public PersistentVolumeClaimVolumeSourceArgs(
-        Input<String> claimName,
-        @Nullable Input<Boolean> readOnly) {
+        Output<String> claimName,
+        @Nullable Output<Boolean> readOnly) {
         this.claimName = Objects.requireNonNull(claimName, "expected parameter 'claimName' to be non-null");
         this.readOnly = readOnly;
     }
 
     private PersistentVolumeClaimVolumeSourceArgs() {
-        this.claimName = Input.empty();
-        this.readOnly = Input.empty();
+        this.claimName = Output.empty();
+        this.readOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> claimName;
-        private @Nullable Input<Boolean> readOnly;
+        private Output<String> claimName;
+        private @Nullable Output<Boolean> readOnly;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder claimName(Input<String> claimName) {
+        public Builder claimName(Output<String> claimName) {
             this.claimName = Objects.requireNonNull(claimName);
             return this;
         }
 
         public Builder claimName(String claimName) {
-            this.claimName = Input.of(Objects.requireNonNull(claimName));
+            this.claimName = Output.of(Objects.requireNonNull(claimName));
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
         public PersistentVolumeClaimVolumeSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<String> destination;
+      private final Output<String> destination;
 
-    public Input<String> getDestination() {
+    public Output<String> getDestination() {
         return this.destination;
     }
 
@@ -30,10 +30,10 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="logType", required=true)
-      private final Input<String> logType;
+      private final Output<String> logType;
 
-    public Input<String> getLogType() {
+    public Output<String> getLogType() {
         return this.logType;
     }
 
@@ -52,9 +52,9 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
@@ -63,18 +63,18 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourcePrefix")
-      private final @Nullable Input<String> resourcePrefix;
+      private final @Nullable Output<String> resourcePrefix;
 
-    public Input<String> getResourcePrefix() {
-        return this.resourcePrefix == null ? Input.empty() : this.resourcePrefix;
+    public Output<String> getResourcePrefix() {
+        return this.resourcePrefix == null ? Output.empty() : this.resourcePrefix;
     }
 
     public BotAliasConversationLogsLogSettingArgs(
-        Input<String> destination,
-        @Nullable Input<String> kmsKeyArn,
-        Input<String> logType,
-        Input<String> resourceArn,
-        @Nullable Input<String> resourcePrefix) {
+        Output<String> destination,
+        @Nullable Output<String> kmsKeyArn,
+        Output<String> logType,
+        Output<String> resourceArn,
+        @Nullable Output<String> resourcePrefix) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.kmsKeyArn = kmsKeyArn;
         this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
@@ -83,11 +83,11 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     }
 
     private BotAliasConversationLogsLogSettingArgs() {
-        this.destination = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.logType = Input.empty();
-        this.resourceArn = Input.empty();
-        this.resourcePrefix = Input.empty();
+        this.destination = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.logType = Output.empty();
+        this.resourceArn = Output.empty();
+        this.resourcePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> destination;
-        private @Nullable Input<String> kmsKeyArn;
-        private Input<String> logType;
-        private Input<String> resourceArn;
-        private @Nullable Input<String> resourcePrefix;
+        private Output<String> destination;
+        private @Nullable Output<String> kmsKeyArn;
+        private Output<String> logType;
+        private Output<String> resourceArn;
+        private @Nullable Output<String> resourcePrefix;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     	      this.resourcePrefix = defaults.resourcePrefix;
         }
 
-        public Builder destination(Input<String> destination) {
+        public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(String destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder logType(Input<String> logType) {
+        public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
         public Builder logType(String logType) {
-            this.logType = Input.of(Objects.requireNonNull(logType));
+            this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder resourcePrefix(@Nullable Input<String> resourcePrefix) {
+        public Builder resourcePrefix(@Nullable Output<String> resourcePrefix) {
             this.resourcePrefix = resourcePrefix;
             return this;
         }
 
         public Builder resourcePrefix(@Nullable String resourcePrefix) {
-            this.resourcePrefix = Input.ofNullable(resourcePrefix);
+            this.resourcePrefix = Output.ofNullable(resourcePrefix);
             return this;
         }
         public BotAliasConversationLogsLogSettingArgs build() {

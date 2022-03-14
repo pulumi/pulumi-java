@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.LinkedWorkspacePropsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkName")
-      private final @Nullable Input<String> linkName;
+      private final @Nullable Output<String> linkName;
 
-    public Input<String> getLinkName() {
-        return this.linkName == null ? Input.empty() : this.linkName;
+    public Output<String> getLinkName() {
+        return this.linkName == null ? Output.empty() : this.linkName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<LinkedWorkspacePropsArgs> properties;
+      private final @Nullable Output<LinkedWorkspacePropsArgs> properties;
 
-    public Input<LinkedWorkspacePropsArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<LinkedWorkspacePropsArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public LinkedWorkspaceArgs(
-        @Nullable Input<String> linkName,
-        @Nullable Input<String> name,
-        @Nullable Input<LinkedWorkspacePropsArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<String> linkName,
+        @Nullable Output<String> name,
+        @Nullable Output<LinkedWorkspacePropsArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.linkName = linkName;
         this.name = name;
         this.properties = properties;
@@ -84,11 +84,11 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private LinkedWorkspaceArgs() {
-        this.linkName = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.linkName = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> linkName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<LinkedWorkspacePropsArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> linkName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<LinkedWorkspacePropsArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder linkName(@Nullable Input<String> linkName) {
+        public Builder linkName(@Nullable Output<String> linkName) {
             this.linkName = linkName;
             return this;
         }
 
         public Builder linkName(@Nullable String linkName) {
-            this.linkName = Input.ofNullable(linkName);
+            this.linkName = Output.ofNullable(linkName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<LinkedWorkspacePropsArgs> properties) {
+        public Builder properties(@Nullable Output<LinkedWorkspacePropsArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable LinkedWorkspacePropsArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public LinkedWorkspaceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.coordination.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acquireTime")
-      private final @Nullable Input<String> acquireTime;
+      private final @Nullable Output<String> acquireTime;
 
-    public Input<String> getAcquireTime() {
-        return this.acquireTime == null ? Input.empty() : this.acquireTime;
+    public Output<String> getAcquireTime() {
+        return this.acquireTime == null ? Output.empty() : this.acquireTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="holderIdentity")
-      private final @Nullable Input<String> holderIdentity;
+      private final @Nullable Output<String> holderIdentity;
 
-    public Input<String> getHolderIdentity() {
-        return this.holderIdentity == null ? Input.empty() : this.holderIdentity;
+    public Output<String> getHolderIdentity() {
+        return this.holderIdentity == null ? Output.empty() : this.holderIdentity;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leaseDurationSeconds")
-      private final @Nullable Input<Integer> leaseDurationSeconds;
+      private final @Nullable Output<Integer> leaseDurationSeconds;
 
-    public Input<Integer> getLeaseDurationSeconds() {
-        return this.leaseDurationSeconds == null ? Input.empty() : this.leaseDurationSeconds;
+    public Output<Integer> getLeaseDurationSeconds() {
+        return this.leaseDurationSeconds == null ? Output.empty() : this.leaseDurationSeconds;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leaseTransitions")
-      private final @Nullable Input<Integer> leaseTransitions;
+      private final @Nullable Output<Integer> leaseTransitions;
 
-    public Input<Integer> getLeaseTransitions() {
-        return this.leaseTransitions == null ? Input.empty() : this.leaseTransitions;
+    public Output<Integer> getLeaseTransitions() {
+        return this.leaseTransitions == null ? Output.empty() : this.leaseTransitions;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="renewTime")
-      private final @Nullable Input<String> renewTime;
+      private final @Nullable Output<String> renewTime;
 
-    public Input<String> getRenewTime() {
-        return this.renewTime == null ? Input.empty() : this.renewTime;
+    public Output<String> getRenewTime() {
+        return this.renewTime == null ? Output.empty() : this.renewTime;
     }
 
     public LeaseSpecArgs(
-        @Nullable Input<String> acquireTime,
-        @Nullable Input<String> holderIdentity,
-        @Nullable Input<Integer> leaseDurationSeconds,
-        @Nullable Input<Integer> leaseTransitions,
-        @Nullable Input<String> renewTime) {
+        @Nullable Output<String> acquireTime,
+        @Nullable Output<String> holderIdentity,
+        @Nullable Output<Integer> leaseDurationSeconds,
+        @Nullable Output<Integer> leaseTransitions,
+        @Nullable Output<String> renewTime) {
         this.acquireTime = acquireTime;
         this.holderIdentity = holderIdentity;
         this.leaseDurationSeconds = leaseDurationSeconds;
@@ -88,11 +88,11 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LeaseSpecArgs() {
-        this.acquireTime = Input.empty();
-        this.holderIdentity = Input.empty();
-        this.leaseDurationSeconds = Input.empty();
-        this.leaseTransitions = Input.empty();
-        this.renewTime = Input.empty();
+        this.acquireTime = Output.empty();
+        this.holderIdentity = Output.empty();
+        this.leaseDurationSeconds = Output.empty();
+        this.leaseTransitions = Output.empty();
+        this.renewTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acquireTime;
-        private @Nullable Input<String> holderIdentity;
-        private @Nullable Input<Integer> leaseDurationSeconds;
-        private @Nullable Input<Integer> leaseTransitions;
-        private @Nullable Input<String> renewTime;
+        private @Nullable Output<String> acquireTime;
+        private @Nullable Output<String> holderIdentity;
+        private @Nullable Output<Integer> leaseDurationSeconds;
+        private @Nullable Output<Integer> leaseTransitions;
+        private @Nullable Output<String> renewTime;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.renewTime = defaults.renewTime;
         }
 
-        public Builder acquireTime(@Nullable Input<String> acquireTime) {
+        public Builder acquireTime(@Nullable Output<String> acquireTime) {
             this.acquireTime = acquireTime;
             return this;
         }
 
         public Builder acquireTime(@Nullable String acquireTime) {
-            this.acquireTime = Input.ofNullable(acquireTime);
+            this.acquireTime = Output.ofNullable(acquireTime);
             return this;
         }
 
-        public Builder holderIdentity(@Nullable Input<String> holderIdentity) {
+        public Builder holderIdentity(@Nullable Output<String> holderIdentity) {
             this.holderIdentity = holderIdentity;
             return this;
         }
 
         public Builder holderIdentity(@Nullable String holderIdentity) {
-            this.holderIdentity = Input.ofNullable(holderIdentity);
+            this.holderIdentity = Output.ofNullable(holderIdentity);
             return this;
         }
 
-        public Builder leaseDurationSeconds(@Nullable Input<Integer> leaseDurationSeconds) {
+        public Builder leaseDurationSeconds(@Nullable Output<Integer> leaseDurationSeconds) {
             this.leaseDurationSeconds = leaseDurationSeconds;
             return this;
         }
 
         public Builder leaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
-            this.leaseDurationSeconds = Input.ofNullable(leaseDurationSeconds);
+            this.leaseDurationSeconds = Output.ofNullable(leaseDurationSeconds);
             return this;
         }
 
-        public Builder leaseTransitions(@Nullable Input<Integer> leaseTransitions) {
+        public Builder leaseTransitions(@Nullable Output<Integer> leaseTransitions) {
             this.leaseTransitions = leaseTransitions;
             return this;
         }
 
         public Builder leaseTransitions(@Nullable Integer leaseTransitions) {
-            this.leaseTransitions = Input.ofNullable(leaseTransitions);
+            this.leaseTransitions = Output.ofNullable(leaseTransitions);
             return this;
         }
 
-        public Builder renewTime(@Nullable Input<String> renewTime) {
+        public Builder renewTime(@Nullable Output<String> renewTime) {
             this.renewTime = renewTime;
             return this;
         }
 
         public Builder renewTime(@Nullable String renewTime) {
-            this.renewTime = Input.ofNullable(renewTime);
+            this.renewTime = Output.ofNullable(renewTime);
             return this;
         }
         public LeaseSpecArgs build() {

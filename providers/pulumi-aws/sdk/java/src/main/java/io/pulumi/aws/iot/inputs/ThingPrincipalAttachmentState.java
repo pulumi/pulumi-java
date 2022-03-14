@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="thing")
-      private final @Nullable Input<String> thing;
+      private final @Nullable Output<String> thing;
 
-    public Input<String> getThing() {
-        return this.thing == null ? Input.empty() : this.thing;
+    public Output<String> getThing() {
+        return this.thing == null ? Output.empty() : this.thing;
     }
 
     public ThingPrincipalAttachmentState(
-        @Nullable Input<String> principal,
-        @Nullable Input<String> thing) {
+        @Nullable Output<String> principal,
+        @Nullable Output<String> thing) {
         this.principal = principal;
         this.thing = thing;
     }
 
     private ThingPrincipalAttachmentState() {
-        this.principal = Input.empty();
-        this.thing = Input.empty();
+        this.principal = Output.empty();
+        this.thing = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> principal;
-        private @Nullable Input<String> thing;
+        private @Nullable Output<String> principal;
+        private @Nullable Output<String> thing;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
     	      this.thing = defaults.thing;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
 
-        public Builder thing(@Nullable Input<String> thing) {
+        public Builder thing(@Nullable Output<String> thing) {
             this.thing = thing;
             return this;
         }
 
         public Builder thing(@Nullable String thing) {
-            this.thing = Input.ofNullable(thing);
+            this.thing = Output.ofNullable(thing);
             return this;
         }
         public ThingPrincipalAttachmentState build() {

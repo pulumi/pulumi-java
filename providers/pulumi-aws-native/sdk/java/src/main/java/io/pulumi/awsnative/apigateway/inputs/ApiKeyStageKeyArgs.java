@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId")
-      private final @Nullable Input<String> restApiId;
+      private final @Nullable Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
-        return this.restApiId == null ? Input.empty() : this.restApiId;
+    public Output<String> getRestApiId() {
+        return this.restApiId == null ? Output.empty() : this.restApiId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-      private final @Nullable Input<String> stageName;
+      private final @Nullable Output<String> stageName;
 
-    public Input<String> getStageName() {
-        return this.stageName == null ? Input.empty() : this.stageName;
+    public Output<String> getStageName() {
+        return this.stageName == null ? Output.empty() : this.stageName;
     }
 
     public ApiKeyStageKeyArgs(
-        @Nullable Input<String> restApiId,
-        @Nullable Input<String> stageName) {
+        @Nullable Output<String> restApiId,
+        @Nullable Output<String> stageName) {
         this.restApiId = restApiId;
         this.stageName = stageName;
     }
 
     private ApiKeyStageKeyArgs() {
-        this.restApiId = Input.empty();
-        this.stageName = Input.empty();
+        this.restApiId = Output.empty();
+        this.stageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> restApiId;
-        private @Nullable Input<String> stageName;
+        private @Nullable Output<String> restApiId;
+        private @Nullable Output<String> stageName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder restApiId(@Nullable Input<String> restApiId) {
+        public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Input.ofNullable(restApiId);
+            this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
 
-        public Builder stageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Input.ofNullable(stageName);
+            this.stageName = Output.ofNullable(stageName);
             return this;
         }
         public ApiKeyStageKeyArgs build() {

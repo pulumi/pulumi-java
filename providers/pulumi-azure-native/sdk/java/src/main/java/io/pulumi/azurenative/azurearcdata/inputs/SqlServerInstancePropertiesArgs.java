@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerResourceId", required=true)
-      private final Input<String> containerResourceId;
+      private final Output<String> containerResourceId;
 
-    public Input<String> getContainerResourceId() {
+    public Output<String> getContainerResourceId() {
         return this.containerResourceId;
     }
 
@@ -45,10 +45,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="currentVersion")
-      private final @Nullable Input<String> currentVersion;
+      private final @Nullable Output<String> currentVersion;
 
-    public Input<String> getCurrentVersion() {
-        return this.currentVersion == null ? Input.empty() : this.currentVersion;
+    public Output<String> getCurrentVersion() {
+        return this.currentVersion == null ? Output.empty() : this.currentVersion;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="edition")
-      private final @Nullable Input<String> edition;
+      private final @Nullable Output<String> edition;
 
-    public Input<String> getEdition() {
-        return this.edition == null ? Input.empty() : this.edition;
+    public Output<String> getEdition() {
+        return this.edition == null ? Output.empty() : this.edition;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceName")
-      private final @Nullable Input<String> instanceName;
+      private final @Nullable Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
-        return this.instanceName == null ? Input.empty() : this.instanceName;
+    public Output<String> getInstanceName() {
+        return this.instanceName == null ? Output.empty() : this.instanceName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<String> licenseType;
+      private final @Nullable Output<String> licenseType;
 
-    public Input<String> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<String> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="patchLevel")
-      private final @Nullable Input<String> patchLevel;
+      private final @Nullable Output<String> patchLevel;
 
-    public Input<String> getPatchLevel() {
-        return this.patchLevel == null ? Input.empty() : this.patchLevel;
+    public Output<String> getPatchLevel() {
+        return this.patchLevel == null ? Output.empty() : this.patchLevel;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="productId")
-      private final @Nullable Input<String> productId;
+      private final @Nullable Output<String> productId;
 
-    public Input<String> getProductId() {
-        return this.productId == null ? Input.empty() : this.productId;
+    public Output<String> getProductId() {
+        return this.productId == null ? Output.empty() : this.productId;
     }
 
     /**
@@ -111,9 +111,9 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<String> status;
+      private final Output<String> status;
 
-    public Input<String> getStatus() {
+    public Output<String> getStatus() {
         return this.status;
     }
 
@@ -122,10 +122,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tcpDynamicPorts")
-      private final @Nullable Input<String> tcpDynamicPorts;
+      private final @Nullable Output<String> tcpDynamicPorts;
 
-    public Input<String> getTcpDynamicPorts() {
-        return this.tcpDynamicPorts == null ? Input.empty() : this.tcpDynamicPorts;
+    public Output<String> getTcpDynamicPorts() {
+        return this.tcpDynamicPorts == null ? Output.empty() : this.tcpDynamicPorts;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tcpStaticPorts")
-      private final @Nullable Input<String> tcpStaticPorts;
+      private final @Nullable Output<String> tcpStaticPorts;
 
-    public Input<String> getTcpStaticPorts() {
-        return this.tcpStaticPorts == null ? Input.empty() : this.tcpStaticPorts;
+    public Output<String> getTcpStaticPorts() {
+        return this.tcpStaticPorts == null ? Output.empty() : this.tcpStaticPorts;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vCore")
-      private final @Nullable Input<String> vCore;
+      private final @Nullable Output<String> vCore;
 
-    public Input<String> getVCore() {
-        return this.vCore == null ? Input.empty() : this.vCore;
+    public Output<String> getVCore() {
+        return this.vCore == null ? Output.empty() : this.vCore;
     }
 
     /**
@@ -155,26 +155,26 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SqlServerInstancePropertiesArgs(
-        @Nullable Input<String> collation,
-        Input<String> containerResourceId,
-        @Nullable Input<String> currentVersion,
-        @Nullable Input<String> edition,
-        @Nullable Input<String> instanceName,
-        @Nullable Input<String> licenseType,
-        @Nullable Input<String> patchLevel,
-        @Nullable Input<String> productId,
-        Input<String> status,
-        @Nullable Input<String> tcpDynamicPorts,
-        @Nullable Input<String> tcpStaticPorts,
-        @Nullable Input<String> vCore,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> collation,
+        Output<String> containerResourceId,
+        @Nullable Output<String> currentVersion,
+        @Nullable Output<String> edition,
+        @Nullable Output<String> instanceName,
+        @Nullable Output<String> licenseType,
+        @Nullable Output<String> patchLevel,
+        @Nullable Output<String> productId,
+        Output<String> status,
+        @Nullable Output<String> tcpDynamicPorts,
+        @Nullable Output<String> tcpStaticPorts,
+        @Nullable Output<String> vCore,
+        @Nullable Output<String> version) {
         this.collation = collation;
         this.containerResourceId = Objects.requireNonNull(containerResourceId, "expected parameter 'containerResourceId' to be non-null");
         this.currentVersion = currentVersion;
@@ -191,19 +191,19 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     }
 
     private SqlServerInstancePropertiesArgs() {
-        this.collation = Input.empty();
-        this.containerResourceId = Input.empty();
-        this.currentVersion = Input.empty();
-        this.edition = Input.empty();
-        this.instanceName = Input.empty();
-        this.licenseType = Input.empty();
-        this.patchLevel = Input.empty();
-        this.productId = Input.empty();
-        this.status = Input.empty();
-        this.tcpDynamicPorts = Input.empty();
-        this.tcpStaticPorts = Input.empty();
-        this.vCore = Input.empty();
-        this.version = Input.empty();
+        this.collation = Output.empty();
+        this.containerResourceId = Output.empty();
+        this.currentVersion = Output.empty();
+        this.edition = Output.empty();
+        this.instanceName = Output.empty();
+        this.licenseType = Output.empty();
+        this.patchLevel = Output.empty();
+        this.productId = Output.empty();
+        this.status = Output.empty();
+        this.tcpDynamicPorts = Output.empty();
+        this.tcpStaticPorts = Output.empty();
+        this.vCore = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -215,19 +215,19 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collation;
-        private Input<String> containerResourceId;
-        private @Nullable Input<String> currentVersion;
-        private @Nullable Input<String> edition;
-        private @Nullable Input<String> instanceName;
-        private @Nullable Input<String> licenseType;
-        private @Nullable Input<String> patchLevel;
-        private @Nullable Input<String> productId;
-        private Input<String> status;
-        private @Nullable Input<String> tcpDynamicPorts;
-        private @Nullable Input<String> tcpStaticPorts;
-        private @Nullable Input<String> vCore;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> collation;
+        private Output<String> containerResourceId;
+        private @Nullable Output<String> currentVersion;
+        private @Nullable Output<String> edition;
+        private @Nullable Output<String> instanceName;
+        private @Nullable Output<String> licenseType;
+        private @Nullable Output<String> patchLevel;
+        private @Nullable Output<String> productId;
+        private Output<String> status;
+        private @Nullable Output<String> tcpDynamicPorts;
+        private @Nullable Output<String> tcpStaticPorts;
+        private @Nullable Output<String> vCore;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -250,133 +250,133 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     	      this.version = defaults.version;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder containerResourceId(Input<String> containerResourceId) {
+        public Builder containerResourceId(Output<String> containerResourceId) {
             this.containerResourceId = Objects.requireNonNull(containerResourceId);
             return this;
         }
 
         public Builder containerResourceId(String containerResourceId) {
-            this.containerResourceId = Input.of(Objects.requireNonNull(containerResourceId));
+            this.containerResourceId = Output.of(Objects.requireNonNull(containerResourceId));
             return this;
         }
 
-        public Builder currentVersion(@Nullable Input<String> currentVersion) {
+        public Builder currentVersion(@Nullable Output<String> currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
         public Builder currentVersion(@Nullable String currentVersion) {
-            this.currentVersion = Input.ofNullable(currentVersion);
+            this.currentVersion = Output.ofNullable(currentVersion);
             return this;
         }
 
-        public Builder edition(@Nullable Input<String> edition) {
+        public Builder edition(@Nullable Output<String> edition) {
             this.edition = edition;
             return this;
         }
 
         public Builder edition(@Nullable String edition) {
-            this.edition = Input.ofNullable(edition);
+            this.edition = Output.ofNullable(edition);
             return this;
         }
 
-        public Builder instanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Input.ofNullable(instanceName);
+            this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Output<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder patchLevel(@Nullable Input<String> patchLevel) {
+        public Builder patchLevel(@Nullable Output<String> patchLevel) {
             this.patchLevel = patchLevel;
             return this;
         }
 
         public Builder patchLevel(@Nullable String patchLevel) {
-            this.patchLevel = Input.ofNullable(patchLevel);
+            this.patchLevel = Output.ofNullable(patchLevel);
             return this;
         }
 
-        public Builder productId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
 
         public Builder productId(@Nullable String productId) {
-            this.productId = Input.ofNullable(productId);
+            this.productId = Output.ofNullable(productId);
             return this;
         }
 
-        public Builder status(Input<String> status) {
+        public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(String status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder tcpDynamicPorts(@Nullable Input<String> tcpDynamicPorts) {
+        public Builder tcpDynamicPorts(@Nullable Output<String> tcpDynamicPorts) {
             this.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
 
         public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
-            this.tcpDynamicPorts = Input.ofNullable(tcpDynamicPorts);
+            this.tcpDynamicPorts = Output.ofNullable(tcpDynamicPorts);
             return this;
         }
 
-        public Builder tcpStaticPorts(@Nullable Input<String> tcpStaticPorts) {
+        public Builder tcpStaticPorts(@Nullable Output<String> tcpStaticPorts) {
             this.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
 
         public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
-            this.tcpStaticPorts = Input.ofNullable(tcpStaticPorts);
+            this.tcpStaticPorts = Output.ofNullable(tcpStaticPorts);
             return this;
         }
 
-        public Builder vCore(@Nullable Input<String> vCore) {
+        public Builder vCore(@Nullable Output<String> vCore) {
             this.vCore = vCore;
             return this;
         }
 
         public Builder vCore(@Nullable String vCore) {
-            this.vCore = Input.ofNullable(vCore);
+            this.vCore = Output.ofNullable(vCore);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SqlServerInstancePropertiesArgs build() {

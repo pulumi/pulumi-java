@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs();
 
     @InputImport(name="dailyMaintenanceWindow")
-      private final @Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
+      private final @Nullable Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
 
-    public Input<ResourcePolicyDailyCycleArgs> getDailyMaintenanceWindow() {
-        return this.dailyMaintenanceWindow == null ? Input.empty() : this.dailyMaintenanceWindow;
+    public Output<ResourcePolicyDailyCycleArgs> getDailyMaintenanceWindow() {
+        return this.dailyMaintenanceWindow == null ? Output.empty() : this.dailyMaintenanceWindow;
     }
 
-    public ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs(@Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow) {
+    public ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs(@Nullable Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
     }
 
     private ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs() {
-        this.dailyMaintenanceWindow = Input.empty();
+        this.dailyMaintenanceWindow = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
+        private @Nullable Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     	      this.dailyMaintenanceWindow = defaults.dailyMaintenanceWindow;
         }
 
-        public Builder dailyMaintenanceWindow(@Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
         public Builder dailyMaintenanceWindow(@Nullable ResourcePolicyDailyCycleArgs dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Input.ofNullable(dailyMaintenanceWindow);
+            this.dailyMaintenanceWindow = Output.ofNullable(dailyMaintenanceWindow);
             return this;
         }
         public ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs build() {

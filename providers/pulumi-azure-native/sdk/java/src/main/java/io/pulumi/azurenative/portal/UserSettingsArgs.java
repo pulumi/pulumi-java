@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.UserPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<UserPropertiesArgs> properties;
+      private final Output<UserPropertiesArgs> properties;
 
-    public Input<UserPropertiesArgs> getProperties() {
+    public Output<UserPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -31,22 +31,22 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettingsName")
-      private final @Nullable Input<String> userSettingsName;
+      private final @Nullable Output<String> userSettingsName;
 
-    public Input<String> getUserSettingsName() {
-        return this.userSettingsName == null ? Input.empty() : this.userSettingsName;
+    public Output<String> getUserSettingsName() {
+        return this.userSettingsName == null ? Output.empty() : this.userSettingsName;
     }
 
     public UserSettingsArgs(
-        Input<UserPropertiesArgs> properties,
-        @Nullable Input<String> userSettingsName) {
+        Output<UserPropertiesArgs> properties,
+        @Nullable Output<String> userSettingsName) {
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.userSettingsName = userSettingsName;
     }
 
     private UserSettingsArgs() {
-        this.properties = Input.empty();
-        this.userSettingsName = Input.empty();
+        this.properties = Output.empty();
+        this.userSettingsName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<UserPropertiesArgs> properties;
-        private @Nullable Input<String> userSettingsName;
+        private Output<UserPropertiesArgs> properties;
+        private @Nullable Output<String> userSettingsName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userSettingsName = defaults.userSettingsName;
         }
 
-        public Builder properties(Input<UserPropertiesArgs> properties) {
+        public Builder properties(Output<UserPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(UserPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder userSettingsName(@Nullable Input<String> userSettingsName) {
+        public Builder userSettingsName(@Nullable Output<String> userSettingsName) {
             this.userSettingsName = userSettingsName;
             return this;
         }
 
         public Builder userSettingsName(@Nullable String userSettingsName) {
-            this.userSettingsName = Input.ofNullable(userSettingsName);
+            this.userSettingsName = Output.ofNullable(userSettingsName);
             return this;
         }
         public UserSettingsArgs build() {

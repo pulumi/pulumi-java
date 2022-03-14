@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateBootDiskInitializeParamsGetArgs;
 import java.lang.Boolean;
@@ -17,70 +17,70 @@ public final class InstanceFromTemplateBootDiskGetArgs extends io.pulumi.resourc
     public static final InstanceFromTemplateBootDiskGetArgs Empty = new InstanceFromTemplateBootDiskGetArgs();
 
     @InputImport(name="autoDelete")
-      private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Output<Boolean> autoDelete;
 
-    public Input<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Input.empty() : this.autoDelete;
+    public Output<Boolean> getAutoDelete() {
+        return this.autoDelete == null ? Output.empty() : this.autoDelete;
     }
 
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     @InputImport(name="diskEncryptionKeyRaw")
-      private final @Nullable Input<String> diskEncryptionKeyRaw;
+      private final @Nullable Output<String> diskEncryptionKeyRaw;
 
-    public Input<String> getDiskEncryptionKeyRaw() {
-        return this.diskEncryptionKeyRaw == null ? Input.empty() : this.diskEncryptionKeyRaw;
+    public Output<String> getDiskEncryptionKeyRaw() {
+        return this.diskEncryptionKeyRaw == null ? Output.empty() : this.diskEncryptionKeyRaw;
     }
 
     @InputImport(name="diskEncryptionKeySha256")
-      private final @Nullable Input<String> diskEncryptionKeySha256;
+      private final @Nullable Output<String> diskEncryptionKeySha256;
 
-    public Input<String> getDiskEncryptionKeySha256() {
-        return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
+    public Output<String> getDiskEncryptionKeySha256() {
+        return this.diskEncryptionKeySha256 == null ? Output.empty() : this.diskEncryptionKeySha256;
     }
 
     @InputImport(name="initializeParams")
-      private final @Nullable Input<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams;
+      private final @Nullable Output<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams;
 
-    public Input<InstanceFromTemplateBootDiskInitializeParamsGetArgs> getInitializeParams() {
-        return this.initializeParams == null ? Input.empty() : this.initializeParams;
+    public Output<InstanceFromTemplateBootDiskInitializeParamsGetArgs> getInitializeParams() {
+        return this.initializeParams == null ? Output.empty() : this.initializeParams;
     }
 
     @InputImport(name="kmsKeySelfLink")
-      private final @Nullable Input<String> kmsKeySelfLink;
+      private final @Nullable Output<String> kmsKeySelfLink;
 
-    public Input<String> getKmsKeySelfLink() {
-        return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
+    public Output<String> getKmsKeySelfLink() {
+        return this.kmsKeySelfLink == null ? Output.empty() : this.kmsKeySelfLink;
     }
 
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public InstanceFromTemplateBootDiskGetArgs(
-        @Nullable Input<Boolean> autoDelete,
-        @Nullable Input<String> deviceName,
-        @Nullable Input<String> diskEncryptionKeyRaw,
-        @Nullable Input<String> diskEncryptionKeySha256,
-        @Nullable Input<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams,
-        @Nullable Input<String> kmsKeySelfLink,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> source) {
+        @Nullable Output<Boolean> autoDelete,
+        @Nullable Output<String> deviceName,
+        @Nullable Output<String> diskEncryptionKeyRaw,
+        @Nullable Output<String> diskEncryptionKeySha256,
+        @Nullable Output<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams,
+        @Nullable Output<String> kmsKeySelfLink,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> source) {
         this.autoDelete = autoDelete;
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
@@ -92,14 +92,14 @@ public final class InstanceFromTemplateBootDiskGetArgs extends io.pulumi.resourc
     }
 
     private InstanceFromTemplateBootDiskGetArgs() {
-        this.autoDelete = Input.empty();
-        this.deviceName = Input.empty();
-        this.diskEncryptionKeyRaw = Input.empty();
-        this.diskEncryptionKeySha256 = Input.empty();
-        this.initializeParams = Input.empty();
-        this.kmsKeySelfLink = Input.empty();
-        this.mode = Input.empty();
-        this.source = Input.empty();
+        this.autoDelete = Output.empty();
+        this.deviceName = Output.empty();
+        this.diskEncryptionKeyRaw = Output.empty();
+        this.diskEncryptionKeySha256 = Output.empty();
+        this.initializeParams = Output.empty();
+        this.kmsKeySelfLink = Output.empty();
+        this.mode = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,14 +111,14 @@ public final class InstanceFromTemplateBootDiskGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoDelete;
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<String> diskEncryptionKeyRaw;
-        private @Nullable Input<String> diskEncryptionKeySha256;
-        private @Nullable Input<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams;
-        private @Nullable Input<String> kmsKeySelfLink;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> source;
+        private @Nullable Output<Boolean> autoDelete;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<String> diskEncryptionKeyRaw;
+        private @Nullable Output<String> diskEncryptionKeySha256;
+        private @Nullable Output<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams;
+        private @Nullable Output<String> kmsKeySelfLink;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -136,83 +136,83 @@ public final class InstanceFromTemplateBootDiskGetArgs extends io.pulumi.resourc
     	      this.source = defaults.source;
         }
 
-        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Input.ofNullable(autoDelete);
+            this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder diskEncryptionKeyRaw(@Nullable Input<String> diskEncryptionKeyRaw) {
+        public Builder diskEncryptionKeyRaw(@Nullable Output<String> diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
 
         public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
-            this.diskEncryptionKeyRaw = Input.ofNullable(diskEncryptionKeyRaw);
+            this.diskEncryptionKeyRaw = Output.ofNullable(diskEncryptionKeyRaw);
             return this;
         }
 
-        public Builder diskEncryptionKeySha256(@Nullable Input<String> diskEncryptionKeySha256) {
+        public Builder diskEncryptionKeySha256(@Nullable Output<String> diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
 
         public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
-            this.diskEncryptionKeySha256 = Input.ofNullable(diskEncryptionKeySha256);
+            this.diskEncryptionKeySha256 = Output.ofNullable(diskEncryptionKeySha256);
             return this;
         }
 
-        public Builder initializeParams(@Nullable Input<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams) {
+        public Builder initializeParams(@Nullable Output<InstanceFromTemplateBootDiskInitializeParamsGetArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
         public Builder initializeParams(@Nullable InstanceFromTemplateBootDiskInitializeParamsGetArgs initializeParams) {
-            this.initializeParams = Input.ofNullable(initializeParams);
+            this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
 
-        public Builder kmsKeySelfLink(@Nullable Input<String> kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable Output<String> kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Input.ofNullable(kmsKeySelfLink);
+            this.kmsKeySelfLink = Output.ofNullable(kmsKeySelfLink);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public InstanceFromTemplateBootDiskGetArgs build() {

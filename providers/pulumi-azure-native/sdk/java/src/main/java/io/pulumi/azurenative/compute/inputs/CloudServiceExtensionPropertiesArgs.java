@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultAndSecretReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Input<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
+    public Output<Boolean> getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="forceUpdateTag")
-      private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Output<String> forceUpdateTag;
 
-    public Input<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
+    public Output<String> getForceUpdateTag() {
+        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedSettings")
-      private final @Nullable Input<String> protectedSettings;
+      private final @Nullable Output<String> protectedSettings;
 
-    public Input<String> getProtectedSettings() {
-        return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
+    public Output<String> getProtectedSettings() {
+        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
     }
 
     @InputImport(name="protectedSettingsFromKeyVault")
-      private final @Nullable Input<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault;
+      private final @Nullable Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault;
 
-    public Input<CloudServiceVaultAndSecretReferenceArgs> getProtectedSettingsFromKeyVault() {
-        return this.protectedSettingsFromKeyVault == null ? Input.empty() : this.protectedSettingsFromKeyVault;
+    public Output<CloudServiceVaultAndSecretReferenceArgs> getProtectedSettingsFromKeyVault() {
+        return this.protectedSettingsFromKeyVault == null ? Output.empty() : this.protectedSettingsFromKeyVault;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rolesAppliedTo")
-      private final @Nullable Input<List<String>> rolesAppliedTo;
+      private final @Nullable Output<List<String>> rolesAppliedTo;
 
-    public Input<List<String>> getRolesAppliedTo() {
-        return this.rolesAppliedTo == null ? Input.empty() : this.rolesAppliedTo;
+    public Output<List<String>> getRolesAppliedTo() {
+        return this.rolesAppliedTo == null ? Output.empty() : this.rolesAppliedTo;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<String> settings;
+      private final @Nullable Output<String> settings;
 
-    public Input<String> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<String> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="typeHandlerVersion")
-      private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Output<String> typeHandlerVersion;
 
-    public Input<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
+    public Output<String> getTypeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
     }
 
     public CloudServiceExtensionPropertiesArgs(
-        @Nullable Input<Boolean> autoUpgradeMinorVersion,
-        @Nullable Input<String> forceUpdateTag,
-        @Nullable Input<String> protectedSettings,
-        @Nullable Input<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault,
-        @Nullable Input<String> publisher,
-        @Nullable Input<List<String>> rolesAppliedTo,
-        @Nullable Input<String> settings,
-        @Nullable Input<String> type,
-        @Nullable Input<String> typeHandlerVersion) {
+        @Nullable Output<Boolean> autoUpgradeMinorVersion,
+        @Nullable Output<String> forceUpdateTag,
+        @Nullable Output<String> protectedSettings,
+        @Nullable Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault,
+        @Nullable Output<String> publisher,
+        @Nullable Output<List<String>> rolesAppliedTo,
+        @Nullable Output<String> settings,
+        @Nullable Output<String> type,
+        @Nullable Output<String> typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.forceUpdateTag = forceUpdateTag;
         this.protectedSettings = protectedSettings;
@@ -142,15 +142,15 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     }
 
     private CloudServiceExtensionPropertiesArgs() {
-        this.autoUpgradeMinorVersion = Input.empty();
-        this.forceUpdateTag = Input.empty();
-        this.protectedSettings = Input.empty();
-        this.protectedSettingsFromKeyVault = Input.empty();
-        this.publisher = Input.empty();
-        this.rolesAppliedTo = Input.empty();
-        this.settings = Input.empty();
-        this.type = Input.empty();
-        this.typeHandlerVersion = Input.empty();
+        this.autoUpgradeMinorVersion = Output.empty();
+        this.forceUpdateTag = Output.empty();
+        this.protectedSettings = Output.empty();
+        this.protectedSettingsFromKeyVault = Output.empty();
+        this.publisher = Output.empty();
+        this.rolesAppliedTo = Output.empty();
+        this.settings = Output.empty();
+        this.type = Output.empty();
+        this.typeHandlerVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoUpgradeMinorVersion;
-        private @Nullable Input<String> forceUpdateTag;
-        private @Nullable Input<String> protectedSettings;
-        private @Nullable Input<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault;
-        private @Nullable Input<String> publisher;
-        private @Nullable Input<List<String>> rolesAppliedTo;
-        private @Nullable Input<String> settings;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> typeHandlerVersion;
+        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
+        private @Nullable Output<String> forceUpdateTag;
+        private @Nullable Output<String> protectedSettings;
+        private @Nullable Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault;
+        private @Nullable Output<String> publisher;
+        private @Nullable Output<List<String>> rolesAppliedTo;
+        private @Nullable Output<String> settings;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> typeHandlerVersion;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder protectedSettings(@Nullable Input<String> protectedSettings) {
+        public Builder protectedSettings(@Nullable Output<String> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
         public Builder protectedSettings(@Nullable String protectedSettings) {
-            this.protectedSettings = Input.ofNullable(protectedSettings);
+            this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder protectedSettingsFromKeyVault(@Nullable Input<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault) {
+        public Builder protectedSettingsFromKeyVault(@Nullable Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault) {
             this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
             return this;
         }
 
         public Builder protectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceArgs protectedSettingsFromKeyVault) {
-            this.protectedSettingsFromKeyVault = Input.ofNullable(protectedSettingsFromKeyVault);
+            this.protectedSettingsFromKeyVault = Output.ofNullable(protectedSettingsFromKeyVault);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder rolesAppliedTo(@Nullable Input<List<String>> rolesAppliedTo) {
+        public Builder rolesAppliedTo(@Nullable Output<List<String>> rolesAppliedTo) {
             this.rolesAppliedTo = rolesAppliedTo;
             return this;
         }
 
         public Builder rolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
-            this.rolesAppliedTo = Input.ofNullable(rolesAppliedTo);
+            this.rolesAppliedTo = Output.ofNullable(rolesAppliedTo);
             return this;
         }
 
-        public Builder settings(@Nullable Input<String> settings) {
+        public Builder settings(@Nullable Output<String> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable String settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
         }
         public CloudServiceExtensionPropertiesArgs build() {

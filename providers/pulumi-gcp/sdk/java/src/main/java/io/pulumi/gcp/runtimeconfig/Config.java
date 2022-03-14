@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.runtimeconfig;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -116,14 +115,14 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Config(String name, @Nullable ConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:runtimeconfig/config:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:runtimeconfig/config:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Config(String name, Input<String> id, @Nullable ConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Config(String name, Output<String> id, @Nullable ConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:runtimeconfig/config:Config", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -139,7 +138,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Config get(String name, Input<String> id, @Nullable ConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Config get(String name, Output<String> id, @Nullable ConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Config(name, id, state, options);
     }
 }

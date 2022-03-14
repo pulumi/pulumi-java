@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @InputImport(name="exactMatch")
-      private final @Nullable Input<String> exactMatch;
+      private final @Nullable Output<String> exactMatch;
 
-    public Input<String> getExactMatch() {
-        return this.exactMatch == null ? Input.empty() : this.exactMatch;
+    public Output<String> getExactMatch() {
+        return this.exactMatch == null ? Output.empty() : this.exactMatch;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -42,25 +42,25 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @InputImport(name="presentMatch")
-      private final @Nullable Input<Boolean> presentMatch;
+      private final @Nullable Output<Boolean> presentMatch;
 
-    public Input<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Input.empty() : this.presentMatch;
+    public Output<Boolean> getPresentMatch() {
+        return this.presentMatch == null ? Output.empty() : this.presentMatch;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
-        @Nullable Input<String> exactMatch,
-        Input<String> name,
-        @Nullable Input<Boolean> presentMatch) {
+        @Nullable Output<String> exactMatch,
+        Output<String> name,
+        @Nullable Output<Boolean> presentMatch) {
         this.exactMatch = exactMatch;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.presentMatch = presentMatch;
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs() {
-        this.exactMatch = Input.empty();
-        this.name = Input.empty();
-        this.presentMatch = Input.empty();
+        this.exactMatch = Output.empty();
+        this.name = Output.empty();
+        this.presentMatch = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exactMatch;
-        private Input<String> name;
-        private @Nullable Input<Boolean> presentMatch;
+        private @Nullable Output<String> exactMatch;
+        private Output<String> name;
+        private @Nullable Output<Boolean> presentMatch;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     	      this.presentMatch = defaults.presentMatch;
         }
 
-        public Builder exactMatch(@Nullable Input<String> exactMatch) {
+        public Builder exactMatch(@Nullable Output<String> exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Input.ofNullable(exactMatch);
+            this.exactMatch = Output.ofNullable(exactMatch);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder presentMatch(@Nullable Input<Boolean> presentMatch) {
+        public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Input.ofNullable(presentMatch);
+            this.presentMatch = Output.ofNullable(presentMatch);
             return this;
         }
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs build() {

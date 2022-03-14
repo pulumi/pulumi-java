@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="containerID")
-      private final @Nullable Input<String> containerID;
+      private final @Nullable Output<String> containerID;
 
-    public Input<String> getContainerID() {
-        return this.containerID == null ? Input.empty() : this.containerID;
+    public Output<String> getContainerID() {
+        return this.containerID == null ? Output.empty() : this.containerID;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
@@ -48,9 +48,9 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="imageID", required=true)
-      private final Input<String> imageID;
+      private final Output<String> imageID;
 
-    public Input<String> getImageID() {
+    public Output<String> getImageID() {
         return this.imageID;
     }
 
@@ -59,10 +59,10 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lastState")
-      private final @Nullable Input<ContainerStateArgs> lastState;
+      private final @Nullable Output<ContainerStateArgs> lastState;
 
-    public Input<ContainerStateArgs> getLastState() {
-        return this.lastState == null ? Input.empty() : this.lastState;
+    public Output<ContainerStateArgs> getLastState() {
+        return this.lastState == null ? Output.empty() : this.lastState;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -81,9 +81,9 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ready", required=true)
-      private final Input<Boolean> ready;
+      private final Output<Boolean> ready;
 
-    public Input<Boolean> getReady() {
+    public Output<Boolean> getReady() {
         return this.ready;
     }
 
@@ -92,9 +92,9 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restartCount", required=true)
-      private final Input<Integer> restartCount;
+      private final Output<Integer> restartCount;
 
-    public Input<Integer> getRestartCount() {
+    public Output<Integer> getRestartCount() {
         return this.restartCount;
     }
 
@@ -103,10 +103,10 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="started")
-      private final @Nullable Input<Boolean> started;
+      private final @Nullable Output<Boolean> started;
 
-    public Input<Boolean> getStarted() {
-        return this.started == null ? Input.empty() : this.started;
+    public Output<Boolean> getStarted() {
+        return this.started == null ? Output.empty() : this.started;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<ContainerStateArgs> state;
+      private final @Nullable Output<ContainerStateArgs> state;
 
-    public Input<ContainerStateArgs> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<ContainerStateArgs> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public ContainerStatusArgs(
-        @Nullable Input<String> containerID,
-        Input<String> image,
-        Input<String> imageID,
-        @Nullable Input<ContainerStateArgs> lastState,
-        Input<String> name,
-        Input<Boolean> ready,
-        Input<Integer> restartCount,
-        @Nullable Input<Boolean> started,
-        @Nullable Input<ContainerStateArgs> state) {
+        @Nullable Output<String> containerID,
+        Output<String> image,
+        Output<String> imageID,
+        @Nullable Output<ContainerStateArgs> lastState,
+        Output<String> name,
+        Output<Boolean> ready,
+        Output<Integer> restartCount,
+        @Nullable Output<Boolean> started,
+        @Nullable Output<ContainerStateArgs> state) {
         this.containerID = containerID;
         this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
         this.imageID = Objects.requireNonNull(imageID, "expected parameter 'imageID' to be non-null");
@@ -142,15 +142,15 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContainerStatusArgs() {
-        this.containerID = Input.empty();
-        this.image = Input.empty();
-        this.imageID = Input.empty();
-        this.lastState = Input.empty();
-        this.name = Input.empty();
-        this.ready = Input.empty();
-        this.restartCount = Input.empty();
-        this.started = Input.empty();
-        this.state = Input.empty();
+        this.containerID = Output.empty();
+        this.image = Output.empty();
+        this.imageID = Output.empty();
+        this.lastState = Output.empty();
+        this.name = Output.empty();
+        this.ready = Output.empty();
+        this.restartCount = Output.empty();
+        this.started = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerID;
-        private Input<String> image;
-        private Input<String> imageID;
-        private @Nullable Input<ContainerStateArgs> lastState;
-        private Input<String> name;
-        private Input<Boolean> ready;
-        private Input<Integer> restartCount;
-        private @Nullable Input<Boolean> started;
-        private @Nullable Input<ContainerStateArgs> state;
+        private @Nullable Output<String> containerID;
+        private Output<String> image;
+        private Output<String> imageID;
+        private @Nullable Output<ContainerStateArgs> lastState;
+        private Output<String> name;
+        private Output<Boolean> ready;
+        private Output<Integer> restartCount;
+        private @Nullable Output<Boolean> started;
+        private @Nullable Output<ContainerStateArgs> state;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder containerID(@Nullable Input<String> containerID) {
+        public Builder containerID(@Nullable Output<String> containerID) {
             this.containerID = containerID;
             return this;
         }
 
         public Builder containerID(@Nullable String containerID) {
-            this.containerID = Input.ofNullable(containerID);
+            this.containerID = Output.ofNullable(containerID);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder imageID(Input<String> imageID) {
+        public Builder imageID(Output<String> imageID) {
             this.imageID = Objects.requireNonNull(imageID);
             return this;
         }
 
         public Builder imageID(String imageID) {
-            this.imageID = Input.of(Objects.requireNonNull(imageID));
+            this.imageID = Output.of(Objects.requireNonNull(imageID));
             return this;
         }
 
-        public Builder lastState(@Nullable Input<ContainerStateArgs> lastState) {
+        public Builder lastState(@Nullable Output<ContainerStateArgs> lastState) {
             this.lastState = lastState;
             return this;
         }
 
         public Builder lastState(@Nullable ContainerStateArgs lastState) {
-            this.lastState = Input.ofNullable(lastState);
+            this.lastState = Output.ofNullable(lastState);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder ready(Input<Boolean> ready) {
+        public Builder ready(Output<Boolean> ready) {
             this.ready = Objects.requireNonNull(ready);
             return this;
         }
 
         public Builder ready(Boolean ready) {
-            this.ready = Input.of(Objects.requireNonNull(ready));
+            this.ready = Output.of(Objects.requireNonNull(ready));
             return this;
         }
 
-        public Builder restartCount(Input<Integer> restartCount) {
+        public Builder restartCount(Output<Integer> restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }
 
         public Builder restartCount(Integer restartCount) {
-            this.restartCount = Input.of(Objects.requireNonNull(restartCount));
+            this.restartCount = Output.of(Objects.requireNonNull(restartCount));
             return this;
         }
 
-        public Builder started(@Nullable Input<Boolean> started) {
+        public Builder started(@Nullable Output<Boolean> started) {
             this.started = started;
             return this;
         }
 
         public Builder started(@Nullable Boolean started) {
-            this.started = Input.ofNullable(started);
+            this.started = Output.ofNullable(started);
             return this;
         }
 
-        public Builder state(@Nullable Input<ContainerStateArgs> state) {
+        public Builder state(@Nullable Output<ContainerStateArgs> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable ContainerStateArgs state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public ContainerStatusArgs build() {

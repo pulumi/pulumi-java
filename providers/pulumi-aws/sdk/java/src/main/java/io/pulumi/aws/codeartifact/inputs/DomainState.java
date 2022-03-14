@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetSizeBytes")
-      private final @Nullable Input<Integer> assetSizeBytes;
+      private final @Nullable Output<Integer> assetSizeBytes;
 
-    public Input<Integer> getAssetSizeBytes() {
-        return this.assetSizeBytes == null ? Input.empty() : this.assetSizeBytes;
+    public Output<Integer> getAssetSizeBytes() {
+        return this.assetSizeBytes == null ? Output.empty() : this.assetSizeBytes;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-      private final @Nullable Input<String> encryptionKey;
+      private final @Nullable Output<String> encryptionKey;
 
-    public Input<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
+    public Output<String> getEncryptionKey() {
+        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryCount")
-      private final @Nullable Input<Integer> repositoryCount;
+      private final @Nullable Output<Integer> repositoryCount;
 
-    public Input<Integer> getRepositoryCount() {
-        return this.repositoryCount == null ? Input.empty() : this.repositoryCount;
+    public Output<Integer> getRepositoryCount() {
+        return this.repositoryCount == null ? Output.empty() : this.repositoryCount;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DomainState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Integer> assetSizeBytes,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> encryptionKey,
-        @Nullable Input<String> owner,
-        @Nullable Input<Integer> repositoryCount,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Integer> assetSizeBytes,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> encryptionKey,
+        @Nullable Output<String> owner,
+        @Nullable Output<Integer> repositoryCount,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.assetSizeBytes = assetSizeBytes;
         this.createdTime = createdTime;
@@ -137,15 +137,15 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainState() {
-        this.arn = Input.empty();
-        this.assetSizeBytes = Input.empty();
-        this.createdTime = Input.empty();
-        this.domain = Input.empty();
-        this.encryptionKey = Input.empty();
-        this.owner = Input.empty();
-        this.repositoryCount = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.assetSizeBytes = Output.empty();
+        this.createdTime = Output.empty();
+        this.domain = Output.empty();
+        this.encryptionKey = Output.empty();
+        this.owner = Output.empty();
+        this.repositoryCount = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Integer> assetSizeBytes;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> encryptionKey;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<Integer> repositoryCount;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Integer> assetSizeBytes;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> encryptionKey;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<Integer> repositoryCount;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder assetSizeBytes(@Nullable Input<Integer> assetSizeBytes) {
+        public Builder assetSizeBytes(@Nullable Output<Integer> assetSizeBytes) {
             this.assetSizeBytes = assetSizeBytes;
             return this;
         }
 
         public Builder assetSizeBytes(@Nullable Integer assetSizeBytes) {
-            this.assetSizeBytes = Input.ofNullable(assetSizeBytes);
+            this.assetSizeBytes = Output.ofNullable(assetSizeBytes);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Input.ofNullable(encryptionKey);
+            this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder repositoryCount(@Nullable Input<Integer> repositoryCount) {
+        public Builder repositoryCount(@Nullable Output<Integer> repositoryCount) {
             this.repositoryCount = repositoryCount;
             return this;
         }
 
         public Builder repositoryCount(@Nullable Integer repositoryCount) {
-            this.repositoryCount = Input.ofNullable(repositoryCount);
+            this.repositoryCount = Output.ofNullable(repositoryCount);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DomainState build() {

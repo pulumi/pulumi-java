@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebase_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appUrls")
-      private final @Nullable Input<List<String>> appUrls;
+      private final @Nullable Output<List<String>> appUrls;
 
-    public Input<List<String>> getAppUrls() {
-        return this.appUrls == null ? Input.empty() : this.appUrls;
+    public Output<List<String>> getAppUrls() {
+        return this.appUrls == null ? Output.empty() : this.appUrls;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public WebAppArgs(
-        @Nullable Input<String> appId,
-        @Nullable Input<List<String>> appUrls,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> appId,
+        @Nullable Output<List<String>> appUrls,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.appId = appId;
         this.appUrls = appUrls;
         this.displayName = displayName;
@@ -84,11 +84,11 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAppArgs() {
-        this.appId = Input.empty();
-        this.appUrls = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.appId = Output.empty();
+        this.appUrls = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appId;
-        private @Nullable Input<List<String>> appUrls;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<List<String>> appUrls;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder appUrls(@Nullable Input<List<String>> appUrls) {
+        public Builder appUrls(@Nullable Output<List<String>> appUrls) {
             this.appUrls = appUrls;
             return this;
         }
 
         public Builder appUrls(@Nullable List<String> appUrls) {
-            this.appUrls = Input.ofNullable(appUrls);
+            this.appUrls = Output.ofNullable(appUrls);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public WebAppArgs build() {

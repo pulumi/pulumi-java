@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.NonResourcePolicyRuleArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.ResourcePolicyRuleArgs;
@@ -26,10 +26,10 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="nonResourceRules")
-      private final @Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules;
+      private final @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
 
-    public Input<List<NonResourcePolicyRuleArgs>> getNonResourceRules() {
-        return this.nonResourceRules == null ? Input.empty() : this.nonResourceRules;
+    public Output<List<NonResourcePolicyRuleArgs>> getNonResourceRules() {
+        return this.nonResourceRules == null ? Output.empty() : this.nonResourceRules;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceRules")
-      private final @Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules;
+      private final @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
 
-    public Input<List<ResourcePolicyRuleArgs>> getResourceRules() {
-        return this.resourceRules == null ? Input.empty() : this.resourceRules;
+    public Output<List<ResourcePolicyRuleArgs>> getResourceRules() {
+        return this.resourceRules == null ? Output.empty() : this.resourceRules;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subjects", required=true)
-      private final Input<List<SubjectArgs>> subjects;
+      private final Output<List<SubjectArgs>> subjects;
 
-    public Input<List<SubjectArgs>> getSubjects() {
+    public Output<List<SubjectArgs>> getSubjects() {
         return this.subjects;
     }
 
     public PolicyRulesWithSubjectsArgs(
-        @Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules,
-        @Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules,
-        Input<List<SubjectArgs>> subjects) {
+        @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules,
+        @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules,
+        Output<List<SubjectArgs>> subjects) {
         this.nonResourceRules = nonResourceRules;
         this.resourceRules = resourceRules;
         this.subjects = Objects.requireNonNull(subjects, "expected parameter 'subjects' to be non-null");
     }
 
     private PolicyRulesWithSubjectsArgs() {
-        this.nonResourceRules = Input.empty();
-        this.resourceRules = Input.empty();
-        this.subjects = Input.empty();
+        this.nonResourceRules = Output.empty();
+        this.resourceRules = Output.empty();
+        this.subjects = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules;
-        private @Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules;
-        private Input<List<SubjectArgs>> subjects;
+        private @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
+        private @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
+        private Output<List<SubjectArgs>> subjects;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder nonResourceRules(@Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules) {
+        public Builder nonResourceRules(@Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules) {
             this.nonResourceRules = nonResourceRules;
             return this;
         }
 
         public Builder nonResourceRules(@Nullable List<NonResourcePolicyRuleArgs> nonResourceRules) {
-            this.nonResourceRules = Input.ofNullable(nonResourceRules);
+            this.nonResourceRules = Output.ofNullable(nonResourceRules);
             return this;
         }
 
-        public Builder resourceRules(@Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules) {
+        public Builder resourceRules(@Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules) {
             this.resourceRules = resourceRules;
             return this;
         }
 
         public Builder resourceRules(@Nullable List<ResourcePolicyRuleArgs> resourceRules) {
-            this.resourceRules = Input.ofNullable(resourceRules);
+            this.resourceRules = Output.ofNullable(resourceRules);
             return this;
         }
 
-        public Builder subjects(Input<List<SubjectArgs>> subjects) {
+        public Builder subjects(Output<List<SubjectArgs>> subjects) {
             this.subjects = Objects.requireNonNull(subjects);
             return this;
         }
 
         public Builder subjects(List<SubjectArgs> subjects) {
-            this.subjects = Input.of(Objects.requireNonNull(subjects));
+            this.subjects = Output.of(Objects.requireNonNull(subjects));
             return this;
         }
         public PolicyRulesWithSubjectsArgs build() {

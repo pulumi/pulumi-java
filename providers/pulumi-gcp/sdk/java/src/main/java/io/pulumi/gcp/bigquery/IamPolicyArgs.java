@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final IamPolicyArgs Empty = new IamPolicyArgs();
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -27,9 +27,9 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -39,24 +39,24 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="tableId", required=true)
-      private final Input<String> tableId;
+      private final Output<String> tableId;
 
-    public Input<String> getTableId() {
+    public Output<String> getTableId() {
         return this.tableId;
     }
 
     public IamPolicyArgs(
-        Input<String> datasetId,
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        Input<String> tableId) {
+        Output<String> datasetId,
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        Output<String> tableId) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
@@ -64,10 +64,10 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IamPolicyArgs() {
-        this.datasetId = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.tableId = Input.empty();
+        this.datasetId = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.tableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,10 +79,10 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private Input<String> tableId;
+        private Output<String> datasetId;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private Output<String> tableId;
 
         public Builder() {
     	      // Empty
@@ -96,43 +96,43 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tableId(Input<String> tableId) {
+        public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
         public Builder tableId(String tableId) {
-            this.tableId = Input.of(Objects.requireNonNull(tableId));
+            this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
         public IamPolicyArgs build() {

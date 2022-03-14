@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="disk")
-      private final @Nullable Input<String> disk;
+      private final @Nullable Output<String> disk;
 
-    public Input<String> getDisk() {
-        return this.disk == null ? Input.empty() : this.disk;
+    public Output<String> getDisk() {
+        return this.disk == null ? Output.empty() : this.disk;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public DiskResourcePolicyAttachmentState(
-        @Nullable Input<String> disk,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> disk,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> zone) {
         this.disk = disk;
         this.name = name;
         this.project = project;
@@ -72,10 +72,10 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
     }
 
     private DiskResourcePolicyAttachmentState() {
-        this.disk = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.zone = Input.empty();
+        this.disk = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> disk;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> disk;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class DiskResourcePolicyAttachmentState extends io.pulumi.resources
     	      this.zone = defaults.zone;
         }
 
-        public Builder disk(@Nullable Input<String> disk) {
+        public Builder disk(@Nullable Output<String> disk) {
             this.disk = disk;
             return this;
         }
 
         public Builder disk(@Nullable String disk) {
-            this.disk = Input.ofNullable(disk);
+            this.disk = Output.ofNullable(disk);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public DiskResourcePolicyAttachmentState build() {

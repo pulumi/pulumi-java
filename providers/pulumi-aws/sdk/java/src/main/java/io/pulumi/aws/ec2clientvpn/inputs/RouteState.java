@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2clientvpn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientVpnEndpointId")
-      private final @Nullable Input<String> clientVpnEndpointId;
+      private final @Nullable Output<String> clientVpnEndpointId;
 
-    public Input<String> getClientVpnEndpointId() {
-        return this.clientVpnEndpointId == null ? Input.empty() : this.clientVpnEndpointId;
+    public Output<String> getClientVpnEndpointId() {
+        return this.clientVpnEndpointId == null ? Output.empty() : this.clientVpnEndpointId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationCidrBlock")
-      private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Output<String> destinationCidrBlock;
 
-    public Input<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
+    public Output<String> getDestinationCidrBlock() {
+        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin")
-      private final @Nullable Input<String> origin;
+      private final @Nullable Output<String> origin;
 
-    public Input<String> getOrigin() {
-        return this.origin == null ? Input.empty() : this.origin;
+    public Output<String> getOrigin() {
+        return this.origin == null ? Output.empty() : this.origin;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetVpcSubnetId")
-      private final @Nullable Input<String> targetVpcSubnetId;
+      private final @Nullable Output<String> targetVpcSubnetId;
 
-    public Input<String> getTargetVpcSubnetId() {
-        return this.targetVpcSubnetId == null ? Input.empty() : this.targetVpcSubnetId;
+    public Output<String> getTargetVpcSubnetId() {
+        return this.targetVpcSubnetId == null ? Output.empty() : this.targetVpcSubnetId;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RouteState(
-        @Nullable Input<String> clientVpnEndpointId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> destinationCidrBlock,
-        @Nullable Input<String> origin,
-        @Nullable Input<String> targetVpcSubnetId,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> clientVpnEndpointId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> destinationCidrBlock,
+        @Nullable Output<String> origin,
+        @Nullable Output<String> targetVpcSubnetId,
+        @Nullable Output<String> type) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         this.description = description;
         this.destinationCidrBlock = destinationCidrBlock;
@@ -96,12 +96,12 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteState() {
-        this.clientVpnEndpointId = Input.empty();
-        this.description = Input.empty();
-        this.destinationCidrBlock = Input.empty();
-        this.origin = Input.empty();
-        this.targetVpcSubnetId = Input.empty();
-        this.type = Input.empty();
+        this.clientVpnEndpointId = Output.empty();
+        this.description = Output.empty();
+        this.destinationCidrBlock = Output.empty();
+        this.origin = Output.empty();
+        this.targetVpcSubnetId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientVpnEndpointId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> destinationCidrBlock;
-        private @Nullable Input<String> origin;
-        private @Nullable Input<String> targetVpcSubnetId;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> clientVpnEndpointId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> destinationCidrBlock;
+        private @Nullable Output<String> origin;
+        private @Nullable Output<String> targetVpcSubnetId;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder clientVpnEndpointId(@Nullable Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(@Nullable Output<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
 
         public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Input.ofNullable(clientVpnEndpointId);
+            this.clientVpnEndpointId = Output.ofNullable(clientVpnEndpointId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder origin(@Nullable Input<String> origin) {
+        public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
 
         public Builder origin(@Nullable String origin) {
-            this.origin = Input.ofNullable(origin);
+            this.origin = Output.ofNullable(origin);
             return this;
         }
 
-        public Builder targetVpcSubnetId(@Nullable Input<String> targetVpcSubnetId) {
+        public Builder targetVpcSubnetId(@Nullable Output<String> targetVpcSubnetId) {
             this.targetVpcSubnetId = targetVpcSubnetId;
             return this;
         }
 
         public Builder targetVpcSubnetId(@Nullable String targetVpcSubnetId) {
-            this.targetVpcSubnetId = Input.ofNullable(targetVpcSubnetId);
+            this.targetVpcSubnetId = Output.ofNullable(targetVpcSubnetId);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RouteState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.FixedOrPercentArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-      private final Input<FixedOrPercentArgs> disruptionBudget;
+      private final Output<FixedOrPercentArgs> disruptionBudget;
 
-    public Input<FixedOrPercentArgs> getDisruptionBudget() {
+    public Output<FixedOrPercentArgs> getDisruptionBudget() {
         return this.disruptionBudget;
     }
 
@@ -34,22 +34,22 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minWaitDuration", required=true)
-      private final Input<String> minWaitDuration;
+      private final Output<String> minWaitDuration;
 
-    public Input<String> getMinWaitDuration() {
+    public Output<String> getMinWaitDuration() {
         return this.minWaitDuration;
     }
 
     public OSPolicyAssignmentRolloutArgs(
-        Input<FixedOrPercentArgs> disruptionBudget,
-        Input<String> minWaitDuration) {
+        Output<FixedOrPercentArgs> disruptionBudget,
+        Output<String> minWaitDuration) {
         this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
         this.minWaitDuration = Objects.requireNonNull(minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
     }
 
     private OSPolicyAssignmentRolloutArgs() {
-        this.disruptionBudget = Input.empty();
-        this.minWaitDuration = Input.empty();
+        this.disruptionBudget = Output.empty();
+        this.minWaitDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<FixedOrPercentArgs> disruptionBudget;
-        private Input<String> minWaitDuration;
+        private Output<FixedOrPercentArgs> disruptionBudget;
+        private Output<String> minWaitDuration;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
     	      this.minWaitDuration = defaults.minWaitDuration;
         }
 
-        public Builder disruptionBudget(Input<FixedOrPercentArgs> disruptionBudget) {
+        public Builder disruptionBudget(Output<FixedOrPercentArgs> disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
         public Builder disruptionBudget(FixedOrPercentArgs disruptionBudget) {
-            this.disruptionBudget = Input.of(Objects.requireNonNull(disruptionBudget));
+            this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
             return this;
         }
 
-        public Builder minWaitDuration(Input<String> minWaitDuration) {
+        public Builder minWaitDuration(Output<String> minWaitDuration) {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }
 
         public Builder minWaitDuration(String minWaitDuration) {
-            this.minWaitDuration = Input.of(Objects.requireNonNull(minWaitDuration));
+            this.minWaitDuration = Output.of(Objects.requireNonNull(minWaitDuration));
             return this;
         }
         public OSPolicyAssignmentRolloutArgs build() {

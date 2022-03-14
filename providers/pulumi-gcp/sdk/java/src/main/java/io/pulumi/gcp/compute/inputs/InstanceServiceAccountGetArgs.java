@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class InstanceServiceAccountGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class InstanceServiceAccountGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scopes", required=true)
-      private final Input<List<String>> scopes;
+      private final Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
+    public Output<List<String>> getScopes() {
         return this.scopes;
     }
 
     public InstanceServiceAccountGetArgs(
-        @Nullable Input<String> email,
-        Input<List<String>> scopes) {
+        @Nullable Output<String> email,
+        Output<List<String>> scopes) {
         this.email = email;
         this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
     }
 
     private InstanceServiceAccountGetArgs() {
-        this.email = Input.empty();
-        this.scopes = Input.empty();
+        this.email = Output.empty();
+        this.scopes = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class InstanceServiceAccountGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private Input<List<String>> scopes;
+        private @Nullable Output<String> email;
+        private Output<List<String>> scopes;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class InstanceServiceAccountGetArgs extends io.pulumi.resources.Res
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder scopes(Input<List<String>> scopes) {
+        public Builder scopes(Output<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
         public Builder scopes(List<String> scopes) {
-            this.scopes = Input.of(Objects.requireNonNull(scopes));
+            this.scopes = Output.of(Objects.requireNonNull(scopes));
             return this;
         }
         public InstanceServiceAccountGetArgs build() {

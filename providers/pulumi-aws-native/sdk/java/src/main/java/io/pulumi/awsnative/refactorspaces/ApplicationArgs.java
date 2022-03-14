@@ -6,7 +6,7 @@ package io.pulumi.awsnative.refactorspaces;
 import io.pulumi.awsnative.refactorspaces.enums.ApplicationProxyType;
 import io.pulumi.awsnative.refactorspaces.inputs.ApplicationApiGatewayProxyInputArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ApplicationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,31 +19,31 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     @InputImport(name="apiGatewayProxy")
-      private final @Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
+      private final @Nullable Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
 
-    public Input<ApplicationApiGatewayProxyInputArgs> getApiGatewayProxy() {
-        return this.apiGatewayProxy == null ? Input.empty() : this.apiGatewayProxy;
+    public Output<ApplicationApiGatewayProxyInputArgs> getApiGatewayProxy() {
+        return this.apiGatewayProxy == null ? Output.empty() : this.apiGatewayProxy;
     }
 
     @InputImport(name="environmentIdentifier")
-      private final @Nullable Input<String> environmentIdentifier;
+      private final @Nullable Output<String> environmentIdentifier;
 
-    public Input<String> getEnvironmentIdentifier() {
-        return this.environmentIdentifier == null ? Input.empty() : this.environmentIdentifier;
+    public Output<String> getEnvironmentIdentifier() {
+        return this.environmentIdentifier == null ? Output.empty() : this.environmentIdentifier;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="proxyType")
-      private final @Nullable Input<ApplicationProxyType> proxyType;
+      private final @Nullable Output<ApplicationProxyType> proxyType;
 
-    public Input<ApplicationProxyType> getProxyType() {
-        return this.proxyType == null ? Input.empty() : this.proxyType;
+    public Output<ApplicationProxyType> getProxyType() {
+        return this.proxyType == null ? Output.empty() : this.proxyType;
     }
 
     /**
@@ -51,26 +51,26 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ApplicationTagArgs>> tags;
+      private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Input<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ApplicationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public ApplicationArgs(
-        @Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy,
-        @Nullable Input<String> environmentIdentifier,
-        @Nullable Input<String> name,
-        @Nullable Input<ApplicationProxyType> proxyType,
-        @Nullable Input<List<ApplicationTagArgs>> tags,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy,
+        @Nullable Output<String> environmentIdentifier,
+        @Nullable Output<String> name,
+        @Nullable Output<ApplicationProxyType> proxyType,
+        @Nullable Output<List<ApplicationTagArgs>> tags,
+        @Nullable Output<String> vpcId) {
         this.apiGatewayProxy = apiGatewayProxy;
         this.environmentIdentifier = environmentIdentifier;
         this.name = name;
@@ -80,12 +80,12 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.apiGatewayProxy = Input.empty();
-        this.environmentIdentifier = Input.empty();
-        this.name = Input.empty();
-        this.proxyType = Input.empty();
-        this.tags = Input.empty();
-        this.vpcId = Input.empty();
+        this.apiGatewayProxy = Output.empty();
+        this.environmentIdentifier = Output.empty();
+        this.name = Output.empty();
+        this.proxyType = Output.empty();
+        this.tags = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,12 +97,12 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
-        private @Nullable Input<String> environmentIdentifier;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ApplicationProxyType> proxyType;
-        private @Nullable Input<List<ApplicationTagArgs>> tags;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
+        private @Nullable Output<String> environmentIdentifier;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ApplicationProxyType> proxyType;
+        private @Nullable Output<List<ApplicationTagArgs>> tags;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -118,63 +118,63 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder apiGatewayProxy(@Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy) {
+        public Builder apiGatewayProxy(@Nullable Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy) {
             this.apiGatewayProxy = apiGatewayProxy;
             return this;
         }
 
         public Builder apiGatewayProxy(@Nullable ApplicationApiGatewayProxyInputArgs apiGatewayProxy) {
-            this.apiGatewayProxy = Input.ofNullable(apiGatewayProxy);
+            this.apiGatewayProxy = Output.ofNullable(apiGatewayProxy);
             return this;
         }
 
-        public Builder environmentIdentifier(@Nullable Input<String> environmentIdentifier) {
+        public Builder environmentIdentifier(@Nullable Output<String> environmentIdentifier) {
             this.environmentIdentifier = environmentIdentifier;
             return this;
         }
 
         public Builder environmentIdentifier(@Nullable String environmentIdentifier) {
-            this.environmentIdentifier = Input.ofNullable(environmentIdentifier);
+            this.environmentIdentifier = Output.ofNullable(environmentIdentifier);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder proxyType(@Nullable Input<ApplicationProxyType> proxyType) {
+        public Builder proxyType(@Nullable Output<ApplicationProxyType> proxyType) {
             this.proxyType = proxyType;
             return this;
         }
 
         public Builder proxyType(@Nullable ApplicationProxyType proxyType) {
-            this.proxyType = Input.ofNullable(proxyType);
+            this.proxyType = Output.ofNullable(proxyType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public ApplicationArgs build() {

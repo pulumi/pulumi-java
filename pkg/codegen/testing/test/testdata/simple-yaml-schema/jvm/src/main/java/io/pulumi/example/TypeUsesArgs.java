@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.enums.RubberTreeVariety;
 import io.pulumi.example.inputs.ObjectArgs;
@@ -18,38 +18,38 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     public static final TypeUsesArgs Empty = new TypeUsesArgs();
 
     @InputImport(name="bar")
-      private final @Nullable Input<SomeOtherObjectArgs> bar;
+      private final @Nullable Output<SomeOtherObjectArgs> bar;
 
-    public Input<SomeOtherObjectArgs> getBar() {
-        return this.bar == null ? Input.empty() : this.bar;
+    public Output<SomeOtherObjectArgs> getBar() {
+        return this.bar == null ? Output.empty() : this.bar;
     }
 
     @InputImport(name="baz")
-      private final @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz;
+      private final @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
 
-    public Input<ObjectWithNodeOptionalInputsArgs> getBaz() {
-        return this.baz == null ? Input.empty() : this.baz;
+    public Output<ObjectWithNodeOptionalInputsArgs> getBaz() {
+        return this.baz == null ? Output.empty() : this.baz;
     }
 
     @InputImport(name="foo")
-      private final @Nullable Input<ObjectArgs> foo;
+      private final @Nullable Output<ObjectArgs> foo;
 
-    public Input<ObjectArgs> getFoo() {
-        return this.foo == null ? Input.empty() : this.foo;
+    public Output<ObjectArgs> getFoo() {
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     @InputImport(name="qux")
-      private final @Nullable Input<RubberTreeVariety> qux;
+      private final @Nullable Output<RubberTreeVariety> qux;
 
-    public Input<RubberTreeVariety> getQux() {
-        return this.qux == null ? Input.empty() : this.qux;
+    public Output<RubberTreeVariety> getQux() {
+        return this.qux == null ? Output.empty() : this.qux;
     }
 
     public TypeUsesArgs(
-        @Nullable Input<SomeOtherObjectArgs> bar,
-        @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz,
-        @Nullable Input<ObjectArgs> foo,
-        @Nullable Input<RubberTreeVariety> qux) {
+        @Nullable Output<SomeOtherObjectArgs> bar,
+        @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz,
+        @Nullable Output<ObjectArgs> foo,
+        @Nullable Output<RubberTreeVariety> qux) {
         this.bar = bar;
         this.baz = baz;
         this.foo = foo;
@@ -57,10 +57,10 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TypeUsesArgs() {
-        this.bar = Input.empty();
-        this.baz = Input.empty();
-        this.foo = Input.empty();
-        this.qux = Input.empty();
+        this.bar = Output.empty();
+        this.baz = Output.empty();
+        this.foo = Output.empty();
+        this.qux = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SomeOtherObjectArgs> bar;
-        private @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz;
-        private @Nullable Input<ObjectArgs> foo;
-        private @Nullable Input<RubberTreeVariety> qux;
+        private @Nullable Output<SomeOtherObjectArgs> bar;
+        private @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
+        private @Nullable Output<ObjectArgs> foo;
+        private @Nullable Output<RubberTreeVariety> qux;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.qux = defaults.qux;
         }
 
-        public Builder bar(@Nullable Input<SomeOtherObjectArgs> bar) {
+        public Builder bar(@Nullable Output<SomeOtherObjectArgs> bar) {
             this.bar = bar;
             return this;
         }
 
         public Builder bar(@Nullable SomeOtherObjectArgs bar) {
-            this.bar = Input.ofNullable(bar);
+            this.bar = Output.ofNullable(bar);
             return this;
         }
 
-        public Builder baz(@Nullable Input<ObjectWithNodeOptionalInputsArgs> baz) {
+        public Builder baz(@Nullable Output<ObjectWithNodeOptionalInputsArgs> baz) {
             this.baz = baz;
             return this;
         }
 
         public Builder baz(@Nullable ObjectWithNodeOptionalInputsArgs baz) {
-            this.baz = Input.ofNullable(baz);
+            this.baz = Output.ofNullable(baz);
             return this;
         }
 
-        public Builder foo(@Nullable Input<ObjectArgs> foo) {
+        public Builder foo(@Nullable Output<ObjectArgs> foo) {
             this.foo = foo;
             return this;
         }
 
         public Builder foo(@Nullable ObjectArgs foo) {
-            this.foo = Input.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }
 
-        public Builder qux(@Nullable Input<RubberTreeVariety> qux) {
+        public Builder qux(@Nullable Output<RubberTreeVariety> qux) {
             this.qux = qux;
             return this;
         }
 
         public Builder qux(@Nullable RubberTreeVariety qux) {
-            this.qux = Input.ofNullable(qux);
+            this.qux = Output.ofNullable(qux);
             return this;
         }
         public TypeUsesArgs build() {

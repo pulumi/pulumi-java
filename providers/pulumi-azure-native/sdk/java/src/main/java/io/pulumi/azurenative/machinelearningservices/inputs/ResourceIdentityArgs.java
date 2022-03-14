@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.ResourceIdentityAssignment;
 import io.pulumi.azurenative.machinelearningservices.inputs.UserAssignedIdentityMetaArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ResourceIdentityAssignment>> type;
+      private final @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
 
-    public Input<Either<String,ResourceIdentityAssignment>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ResourceIdentityAssignment>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userAssignedIdentities")
-      private final @Nullable Input<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
+      private final @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
 
-    public Input<Map<String,UserAssignedIdentityMetaArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
+    public Output<Map<String,UserAssignedIdentityMetaArgs>> getUserAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
     }
 
     public ResourceIdentityArgs(
-        @Nullable Input<Either<String,ResourceIdentityAssignment>> type,
-        @Nullable Input<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
+        @Nullable Output<Either<String,ResourceIdentityAssignment>> type,
+        @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
     private ResourceIdentityArgs() {
-        this.type = Input.empty();
-        this.userAssignedIdentities = Input.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ResourceIdentityAssignment>> type;
-        private @Nullable Input<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
+        private @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
+        private @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder type(@Nullable Input<Either<String,ResourceIdentityAssignment>> type) {
+        public Builder type(@Nullable Output<Either<String,ResourceIdentityAssignment>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ResourceIdentityAssignment> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userAssignedIdentities(@Nullable Input<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityMetaArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
         public ResourceIdentityArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -44,10 +44,10 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionConfigs", required=true)
-      private final Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
+      private final Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
 
-    public Input<List<CxEnvironmentVersionConfigArgs>> getVersionConfigs() {
+    public Output<List<CxEnvironmentVersionConfigArgs>> getVersionConfigs() {
         return this.versionConfigs;
     }
 
     public CxEnvironmentArgs(
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<String> parent,
-        Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs) {
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<String> parent,
+        Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs) {
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.parent = parent;
@@ -74,10 +74,10 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxEnvironmentArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.parent = Input.empty();
-        this.versionConfigs = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.parent = Output.empty();
+        this.versionConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<String> parent;
-        private Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<String> parent;
+        private Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionConfigs = defaults.versionConfigs;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder versionConfigs(Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs) {
+        public Builder versionConfigs(Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs) {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
 
         public Builder versionConfigs(List<CxEnvironmentVersionConfigArgs> versionConfigs) {
-            this.versionConfigs = Input.of(Objects.requireNonNull(versionConfigs));
+            this.versionConfigs = Output.of(Objects.requireNonNull(versionConfigs));
             return this;
         }
         public CxEnvironmentArgs build() {

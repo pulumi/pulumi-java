@@ -8,7 +8,6 @@ import io.pulumi.azurenative.insights.WebTestArgs;
 import io.pulumi.azurenative.insights.outputs.WebTestGeolocationResponse;
 import io.pulumi.azurenative.insights.outputs.WebTestPropertiesResponseConfiguration;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -299,20 +298,20 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebTest(String name, WebTestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:WebTest", name, args == null ? WebTestArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:insights:WebTest", name, args == null ? WebTestArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebTest(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebTest(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:WebTest", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:insights/v20150501:WebTest").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20180501preview:WebTest").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20201005preview:WebTest").build())
+                Output.of(Alias.builder().setType("azure-native:insights/v20150501:WebTest").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20180501preview:WebTest").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20201005preview:WebTest").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -326,7 +325,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebTest get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebTest get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebTest(name, id, options);
     }
 }

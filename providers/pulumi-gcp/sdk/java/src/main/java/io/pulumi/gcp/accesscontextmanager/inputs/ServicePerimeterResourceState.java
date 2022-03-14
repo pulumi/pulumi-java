@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="perimeterName")
-      private final @Nullable Input<String> perimeterName;
+      private final @Nullable Output<String> perimeterName;
 
-    public Input<String> getPerimeterName() {
-        return this.perimeterName == null ? Input.empty() : this.perimeterName;
+    public Output<String> getPerimeterName() {
+        return this.perimeterName == null ? Output.empty() : this.perimeterName;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<String> resource;
+      private final @Nullable Output<String> resource;
 
-    public Input<String> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<String> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     public ServicePerimeterResourceState(
-        @Nullable Input<String> perimeterName,
-        @Nullable Input<String> resource) {
+        @Nullable Output<String> perimeterName,
+        @Nullable Output<String> resource) {
         this.perimeterName = perimeterName;
         this.resource = resource;
     }
 
     private ServicePerimeterResourceState() {
-        this.perimeterName = Input.empty();
-        this.resource = Input.empty();
+        this.perimeterName = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> perimeterName;
-        private @Nullable Input<String> resource;
+        private @Nullable Output<String> perimeterName;
+        private @Nullable Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
     	      this.resource = defaults.resource;
         }
 
-        public Builder perimeterName(@Nullable Input<String> perimeterName) {
+        public Builder perimeterName(@Nullable Output<String> perimeterName) {
             this.perimeterName = perimeterName;
             return this;
         }
 
         public Builder perimeterName(@Nullable String perimeterName) {
-            this.perimeterName = Input.ofNullable(perimeterName);
+            this.perimeterName = Output.ofNullable(perimeterName);
             return this;
         }
 
-        public Builder resource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
         public ServicePerimeterResourceState build() {

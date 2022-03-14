@@ -4,7 +4,7 @@
 package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedErrorGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,17 +22,17 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     @InputImport(name="errors")
-      private final @Nullable Input<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
+      private final @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
 
-    public Input<List<EnvironmentLastUpdatedErrorGetArgs>> getErrors() {
-        return this.errors == null ? Input.empty() : this.errors;
+    public Output<List<EnvironmentLastUpdatedErrorGetArgs>> getErrors() {
+        return this.errors == null ? Output.empty() : this.errors;
     }
 
     /**
@@ -40,25 +40,25 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public EnvironmentLastUpdatedGetArgs(
-        @Nullable Input<String> createdAt,
-        @Nullable Input<List<EnvironmentLastUpdatedErrorGetArgs>> errors,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> createdAt,
+        @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors,
+        @Nullable Output<String> status) {
         this.createdAt = createdAt;
         this.errors = errors;
         this.status = status;
     }
 
     private EnvironmentLastUpdatedGetArgs() {
-        this.createdAt = Input.empty();
-        this.errors = Input.empty();
-        this.status = Input.empty();
+        this.createdAt = Output.empty();
+        this.errors = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
     	      this.status = defaults.status;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder errors(@Nullable Input<List<EnvironmentLastUpdatedErrorGetArgs>> errors) {
+        public Builder errors(@Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors) {
             this.errors = errors;
             return this;
         }
 
         public Builder errors(@Nullable List<EnvironmentLastUpdatedErrorGetArgs> errors) {
-            this.errors = Input.ofNullable(errors);
+            this.errors = Output.ofNullable(errors);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public EnvironmentLastUpdatedGetArgs build() {

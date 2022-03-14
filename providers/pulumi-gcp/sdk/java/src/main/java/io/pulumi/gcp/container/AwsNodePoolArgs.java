@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AwsNodePoolAutoscalingArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigArgs;
@@ -23,10 +23,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscaling", required=true)
-      private final Input<AwsNodePoolAutoscalingArgs> autoscaling;
+      private final Output<AwsNodePoolAutoscalingArgs> autoscaling;
 
-    public Input<AwsNodePoolAutoscalingArgs> getAutoscaling() {
+    public Output<AwsNodePoolAutoscalingArgs> getAutoscaling() {
         return this.autoscaling;
     }
 
@@ -45,9 +45,9 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-      private final Input<String> cluster;
+      private final Output<String> cluster;
 
-    public Input<String> getCluster() {
+    public Output<String> getCluster() {
         return this.cluster;
     }
 
@@ -56,9 +56,9 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<AwsNodePoolConfigArgs> config;
+      private final Output<AwsNodePoolConfigArgs> config;
 
-    public Input<AwsNodePoolConfigArgs> getConfig() {
+    public Output<AwsNodePoolConfigArgs> getConfig() {
         return this.config;
     }
 
@@ -67,9 +67,9 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -78,9 +78,9 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPodsConstraint", required=true)
-      private final Input<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
+      private final Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
-    public Input<AwsNodePoolMaxPodsConstraintArgs> getMaxPodsConstraint() {
+    public Output<AwsNodePoolMaxPodsConstraintArgs> getMaxPodsConstraint() {
         return this.maxPodsConstraint;
     }
 
@@ -89,10 +89,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -111,9 +111,9 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
@@ -122,23 +122,23 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public AwsNodePoolArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        Input<AwsNodePoolAutoscalingArgs> autoscaling,
-        Input<String> cluster,
-        Input<AwsNodePoolConfigArgs> config,
-        Input<String> location,
-        Input<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> subnetId,
-        Input<String> version) {
+        @Nullable Output<Map<String,String>> annotations,
+        Output<AwsNodePoolAutoscalingArgs> autoscaling,
+        Output<String> cluster,
+        Output<AwsNodePoolConfigArgs> config,
+        Output<String> location,
+        Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> subnetId,
+        Output<String> version) {
         this.annotations = annotations;
         this.autoscaling = Objects.requireNonNull(autoscaling, "expected parameter 'autoscaling' to be non-null");
         this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
@@ -152,16 +152,16 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsNodePoolArgs() {
-        this.annotations = Input.empty();
-        this.autoscaling = Input.empty();
-        this.cluster = Input.empty();
-        this.config = Input.empty();
-        this.location = Input.empty();
-        this.maxPodsConstraint = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.subnetId = Input.empty();
-        this.version = Input.empty();
+        this.annotations = Output.empty();
+        this.autoscaling = Output.empty();
+        this.cluster = Output.empty();
+        this.config = Output.empty();
+        this.location = Output.empty();
+        this.maxPodsConstraint = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.subnetId = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private Input<AwsNodePoolAutoscalingArgs> autoscaling;
-        private Input<String> cluster;
-        private Input<AwsNodePoolConfigArgs> config;
-        private Input<String> location;
-        private Input<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> subnetId;
-        private Input<String> version;
+        private @Nullable Output<Map<String,String>> annotations;
+        private Output<AwsNodePoolAutoscalingArgs> autoscaling;
+        private Output<String> cluster;
+        private Output<AwsNodePoolConfigArgs> config;
+        private Output<String> location;
+        private Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> subnetId;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder autoscaling(Input<AwsNodePoolAutoscalingArgs> autoscaling) {
+        public Builder autoscaling(Output<AwsNodePoolAutoscalingArgs> autoscaling) {
             this.autoscaling = Objects.requireNonNull(autoscaling);
             return this;
         }
 
         public Builder autoscaling(AwsNodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Input.of(Objects.requireNonNull(autoscaling));
+            this.autoscaling = Output.of(Objects.requireNonNull(autoscaling));
             return this;
         }
 
-        public Builder cluster(Input<String> cluster) {
+        public Builder cluster(Output<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Input.of(Objects.requireNonNull(cluster));
+            this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder config(Input<AwsNodePoolConfigArgs> config) {
+        public Builder config(Output<AwsNodePoolConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(AwsNodePoolConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder maxPodsConstraint(Input<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
             this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
             return this;
         }
 
         public Builder maxPodsConstraint(AwsNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
-            this.maxPodsConstraint = Input.of(Objects.requireNonNull(maxPodsConstraint));
+            this.maxPodsConstraint = Output.of(Objects.requireNonNull(maxPodsConstraint));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public AwsNodePoolArgs build() {

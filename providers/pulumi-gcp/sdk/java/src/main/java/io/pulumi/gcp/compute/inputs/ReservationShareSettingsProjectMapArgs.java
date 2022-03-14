@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -30,22 +30,22 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     public ReservationShareSettingsProjectMapArgs(
-        Input<String> id,
-        @Nullable Input<String> projectId) {
+        Output<String> id,
+        @Nullable Output<String> projectId) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.projectId = projectId;
     }
 
     private ReservationShareSettingsProjectMapArgs() {
-        this.id = Input.empty();
-        this.projectId = Input.empty();
+        this.id = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<String> projectId;
+        private Output<String> id;
+        private @Nullable Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
         public ReservationShareSettingsProjectMapArgs build() {

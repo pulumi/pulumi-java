@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="voiceId", required=true)
-      private final Input<String> voiceId;
+      private final Output<String> voiceId;
 
-    public Input<String> getVoiceId() {
+    public Output<String> getVoiceId() {
         return this.voiceId;
     }
 
-    public BotVoiceSettingsArgs(Input<String> voiceId) {
+    public BotVoiceSettingsArgs(Output<String> voiceId) {
         this.voiceId = Objects.requireNonNull(voiceId, "expected parameter 'voiceId' to be non-null");
     }
 
     private BotVoiceSettingsArgs() {
-        this.voiceId = Input.empty();
+        this.voiceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> voiceId;
+        private Output<String> voiceId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.voiceId = defaults.voiceId;
         }
 
-        public Builder voiceId(Input<String> voiceId) {
+        public Builder voiceId(Output<String> voiceId) {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
         }
 
         public Builder voiceId(String voiceId) {
-            this.voiceId = Input.of(Objects.requireNonNull(voiceId));
+            this.voiceId = Output.of(Objects.requireNonNull(voiceId));
             return this;
         }
         public BotVoiceSettingsArgs build() {

@@ -10,7 +10,6 @@ import io.pulumi.azurenative.costmanagement.outputs.ExportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportExecutionListResultResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportScheduleResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -200,25 +199,25 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Export(String name, ExportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:costmanagement:Export", name, args == null ? ExportArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:costmanagement:Export", name, args == null ? ExportArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Export(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Export(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:costmanagement:Export", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20190101:Export").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20190901:Export").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20191001:Export").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20191101:Export").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20200601:Export").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20201201preview:Export").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20210101:Export").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20211001:Export").build())
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20190101:Export").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20190901:Export").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20191001:Export").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20191101:Export").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20200601:Export").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20201201preview:Export").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20210101:Export").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20211001:Export").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -232,7 +231,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Export get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Export get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Export(name, id, options);
     }
 }

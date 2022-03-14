@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs;
 import java.lang.Boolean;
@@ -22,17 +22,17 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="allocatedIpRange")
-      private final @Nullable Input<String> allocatedIpRange;
+      private final @Nullable Output<String> allocatedIpRange;
 
-    public Input<String> getAllocatedIpRange() {
-        return this.allocatedIpRange == null ? Input.empty() : this.allocatedIpRange;
+    public Output<String> getAllocatedIpRange() {
+        return this.allocatedIpRange == null ? Output.empty() : this.allocatedIpRange;
     }
 
     @InputImport(name="authorizedNetworks")
-      private final @Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
+      private final @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
 
-    public Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> getAuthorizedNetworks() {
-        return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
+    public Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> getAuthorizedNetworks() {
+        return this.authorizedNetworks == null ? Output.empty() : this.authorizedNetworks;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="ipv4Enabled")
-      private final @Nullable Input<Boolean> ipv4Enabled;
+      private final @Nullable Output<Boolean> ipv4Enabled;
 
-    public Input<Boolean> getIpv4Enabled() {
-        return this.ipv4Enabled == null ? Input.empty() : this.ipv4Enabled;
+    public Output<Boolean> getIpv4Enabled() {
+        return this.ipv4Enabled == null ? Output.empty() : this.ipv4Enabled;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="privateNetwork")
-      private final @Nullable Input<String> privateNetwork;
+      private final @Nullable Output<String> privateNetwork;
 
-    public Input<String> getPrivateNetwork() {
-        return this.privateNetwork == null ? Input.empty() : this.privateNetwork;
+    public Output<String> getPrivateNetwork() {
+        return this.privateNetwork == null ? Output.empty() : this.privateNetwork;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="requireSsl")
-      private final @Nullable Input<Boolean> requireSsl;
+      private final @Nullable Output<Boolean> requireSsl;
 
-    public Input<Boolean> getRequireSsl() {
-        return this.requireSsl == null ? Input.empty() : this.requireSsl;
+    public Output<Boolean> getRequireSsl() {
+        return this.requireSsl == null ? Output.empty() : this.requireSsl;
     }
 
     public DatabaseInstanceSettingsIpConfigurationArgs(
-        @Nullable Input<String> allocatedIpRange,
-        @Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks,
-        @Nullable Input<Boolean> ipv4Enabled,
-        @Nullable Input<String> privateNetwork,
-        @Nullable Input<Boolean> requireSsl) {
+        @Nullable Output<String> allocatedIpRange,
+        @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks,
+        @Nullable Output<Boolean> ipv4Enabled,
+        @Nullable Output<String> privateNetwork,
+        @Nullable Output<Boolean> requireSsl) {
         this.allocatedIpRange = allocatedIpRange;
         this.authorizedNetworks = authorizedNetworks;
         this.ipv4Enabled = ipv4Enabled;
@@ -88,11 +88,11 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
     }
 
     private DatabaseInstanceSettingsIpConfigurationArgs() {
-        this.allocatedIpRange = Input.empty();
-        this.authorizedNetworks = Input.empty();
-        this.ipv4Enabled = Input.empty();
-        this.privateNetwork = Input.empty();
-        this.requireSsl = Input.empty();
+        this.allocatedIpRange = Output.empty();
+        this.authorizedNetworks = Output.empty();
+        this.ipv4Enabled = Output.empty();
+        this.privateNetwork = Output.empty();
+        this.requireSsl = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allocatedIpRange;
-        private @Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
-        private @Nullable Input<Boolean> ipv4Enabled;
-        private @Nullable Input<String> privateNetwork;
-        private @Nullable Input<Boolean> requireSsl;
+        private @Nullable Output<String> allocatedIpRange;
+        private @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
+        private @Nullable Output<Boolean> ipv4Enabled;
+        private @Nullable Output<String> privateNetwork;
+        private @Nullable Output<Boolean> requireSsl;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder allocatedIpRange(@Nullable Input<String> allocatedIpRange) {
+        public Builder allocatedIpRange(@Nullable Output<String> allocatedIpRange) {
             this.allocatedIpRange = allocatedIpRange;
             return this;
         }
 
         public Builder allocatedIpRange(@Nullable String allocatedIpRange) {
-            this.allocatedIpRange = Input.ofNullable(allocatedIpRange);
+            this.allocatedIpRange = Output.ofNullable(allocatedIpRange);
             return this;
         }
 
-        public Builder authorizedNetworks(@Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
         public Builder authorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs> authorizedNetworks) {
-            this.authorizedNetworks = Input.ofNullable(authorizedNetworks);
+            this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
 
-        public Builder ipv4Enabled(@Nullable Input<Boolean> ipv4Enabled) {
+        public Builder ipv4Enabled(@Nullable Output<Boolean> ipv4Enabled) {
             this.ipv4Enabled = ipv4Enabled;
             return this;
         }
 
         public Builder ipv4Enabled(@Nullable Boolean ipv4Enabled) {
-            this.ipv4Enabled = Input.ofNullable(ipv4Enabled);
+            this.ipv4Enabled = Output.ofNullable(ipv4Enabled);
             return this;
         }
 
-        public Builder privateNetwork(@Nullable Input<String> privateNetwork) {
+        public Builder privateNetwork(@Nullable Output<String> privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
 
         public Builder privateNetwork(@Nullable String privateNetwork) {
-            this.privateNetwork = Input.ofNullable(privateNetwork);
+            this.privateNetwork = Output.ofNullable(privateNetwork);
             return this;
         }
 
-        public Builder requireSsl(@Nullable Input<Boolean> requireSsl) {
+        public Builder requireSsl(@Nullable Output<Boolean> requireSsl) {
             this.requireSsl = requireSsl;
             return this;
         }
 
         public Builder requireSsl(@Nullable Boolean requireSsl) {
-            this.requireSsl = Input.ofNullable(requireSsl);
+            this.requireSsl = Output.ofNullable(requireSsl);
             return this;
         }
         public DatabaseInstanceSettingsIpConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="snapshotAnalysis")
-      private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
+      private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 
-    public Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> getSnapshotAnalysis() {
-        return this.snapshotAnalysis == null ? Input.empty() : this.snapshotAnalysis;
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> getSnapshotAnalysis() {
+        return this.snapshotAnalysis == null ? Output.empty() : this.snapshotAnalysis;
     }
 
-    public AiFeatureStoreEntityTypeMonitoringConfigGetArgs(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis) {
+    public AiFeatureStoreEntityTypeMonitoringConfigGetArgs(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis) {
         this.snapshotAnalysis = snapshotAnalysis;
     }
 
     private AiFeatureStoreEntityTypeMonitoringConfigGetArgs() {
-        this.snapshotAnalysis = Input.empty();
+        this.snapshotAnalysis = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
+        private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
     	      this.snapshotAnalysis = defaults.snapshotAnalysis;
         }
 
-        public Builder snapshotAnalysis(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis) {
+        public Builder snapshotAnalysis(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis) {
             this.snapshotAnalysis = snapshotAnalysis;
             return this;
         }
 
         public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs snapshotAnalysis) {
-            this.snapshotAnalysis = Input.ofNullable(snapshotAnalysis);
+            this.snapshotAnalysis = Output.ofNullable(snapshotAnalysis);
             return this;
         }
         public AiFeatureStoreEntityTypeMonitoringConfigGetArgs build() {

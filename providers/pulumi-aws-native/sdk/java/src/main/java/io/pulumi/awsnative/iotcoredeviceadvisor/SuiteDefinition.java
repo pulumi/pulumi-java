@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotcoredeviceadvisor.SuiteDefinitionArgs;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionConfigurationProperties;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,14 +123,14 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SuiteDefinition(String name, SuiteDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotcoredeviceadvisor:SuiteDefinition", name, args == null ? SuiteDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:iotcoredeviceadvisor:SuiteDefinition", name, args == null ? SuiteDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SuiteDefinition(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SuiteDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iotcoredeviceadvisor:SuiteDefinition", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -146,7 +145,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SuiteDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SuiteDefinition get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SuiteDefinition(name, id, options);
     }
 }

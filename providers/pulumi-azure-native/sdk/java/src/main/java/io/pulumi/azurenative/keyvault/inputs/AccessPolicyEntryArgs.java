@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.PermissionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<String> objectId;
+      private final Output<String> objectId;
 
-    public Input<String> getObjectId() {
+    public Output<String> getObjectId() {
         return this.objectId;
     }
 
@@ -46,9 +46,9 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="permissions", required=true)
-      private final Input<PermissionsArgs> permissions;
+      private final Output<PermissionsArgs> permissions;
 
-    public Input<PermissionsArgs> getPermissions() {
+    public Output<PermissionsArgs> getPermissions() {
         return this.permissions;
     }
 
@@ -57,17 +57,17 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tenantId", required=true)
-      private final Input<String> tenantId;
+      private final Output<String> tenantId;
 
-    public Input<String> getTenantId() {
+    public Output<String> getTenantId() {
         return this.tenantId;
     }
 
     public AccessPolicyEntryArgs(
-        @Nullable Input<String> applicationId,
-        Input<String> objectId,
-        Input<PermissionsArgs> permissions,
-        Input<String> tenantId) {
+        @Nullable Output<String> applicationId,
+        Output<String> objectId,
+        Output<PermissionsArgs> permissions,
+        Output<String> tenantId) {
         this.applicationId = applicationId;
         this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
         this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
@@ -75,10 +75,10 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccessPolicyEntryArgs() {
-        this.applicationId = Input.empty();
-        this.objectId = Input.empty();
-        this.permissions = Input.empty();
-        this.tenantId = Input.empty();
+        this.applicationId = Output.empty();
+        this.objectId = Output.empty();
+        this.permissions = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private Input<String> objectId;
-        private Input<PermissionsArgs> permissions;
-        private Input<String> tenantId;
+        private @Nullable Output<String> applicationId;
+        private Output<String> objectId;
+        private Output<PermissionsArgs> permissions;
+        private Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder objectId(Input<String> objectId) {
+        public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder permissions(Input<PermissionsArgs> permissions) {
+        public Builder permissions(Output<PermissionsArgs> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
         public Builder permissions(PermissionsArgs permissions) {
-            this.permissions = Input.of(Objects.requireNonNull(permissions));
+            this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder tenantId(Input<String> tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Input.of(Objects.requireNonNull(tenantId));
+            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
         public AccessPolicyEntryArgs build() {

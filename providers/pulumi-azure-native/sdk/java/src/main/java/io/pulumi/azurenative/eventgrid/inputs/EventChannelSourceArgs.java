@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
-    public EventChannelSourceArgs(@Nullable Input<String> source) {
+    public EventChannelSourceArgs(@Nullable Output<String> source) {
         this.source = source;
     }
 
     private EventChannelSourceArgs() {
-        this.source = Input.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> source;
+        private @Nullable Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.source = defaults.source;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public EventChannelSourceArgs build() {

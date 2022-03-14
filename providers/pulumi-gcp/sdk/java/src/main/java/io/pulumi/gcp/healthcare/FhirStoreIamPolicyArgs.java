@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fhirStoreId", required=true)
-      private final Input<String> fhirStoreId;
+      private final Output<String> fhirStoreId;
 
-    public Input<String> getFhirStoreId() {
+    public Output<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
 
@@ -33,22 +33,22 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public FhirStoreIamPolicyArgs(
-        Input<String> fhirStoreId,
-        Input<String> policyData) {
+        Output<String> fhirStoreId,
+        Output<String> policyData) {
         this.fhirStoreId = Objects.requireNonNull(fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private FhirStoreIamPolicyArgs() {
-        this.fhirStoreId = Input.empty();
-        this.policyData = Input.empty();
+        this.fhirStoreId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> fhirStoreId;
-        private Input<String> policyData;
+        private Output<String> fhirStoreId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder fhirStoreId(Input<String> fhirStoreId) {
+        public Builder fhirStoreId(Output<String> fhirStoreId) {
             this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
             return this;
         }
 
         public Builder fhirStoreId(String fhirStoreId) {
-            this.fhirStoreId = Input.of(Objects.requireNonNull(fhirStoreId));
+            this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public FhirStoreIamPolicyArgs build() {

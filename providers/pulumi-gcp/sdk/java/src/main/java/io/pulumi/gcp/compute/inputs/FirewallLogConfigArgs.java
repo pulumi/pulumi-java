@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata", required=true)
-      private final Input<String> metadata;
+      private final Output<String> metadata;
 
-    public Input<String> getMetadata() {
+    public Output<String> getMetadata() {
         return this.metadata;
     }
 
-    public FirewallLogConfigArgs(Input<String> metadata) {
+    public FirewallLogConfigArgs(Output<String> metadata) {
         this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
     }
 
     private FirewallLogConfigArgs() {
-        this.metadata = Input.empty();
+        this.metadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> metadata;
+        private Output<String> metadata;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder metadata(Input<String> metadata) {
+        public Builder metadata(Output<String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
         public Builder metadata(String metadata) {
-            this.metadata = Input.of(Objects.requireNonNull(metadata));
+            this.metadata = Output.of(Objects.requireNonNull(metadata));
             return this;
         }
         public FirewallLogConfigArgs build() {

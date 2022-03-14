@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="administratorAccountId", required=true)
-      private final Input<String> administratorAccountId;
+      private final Output<String> administratorAccountId;
 
-    public Input<String> getAdministratorAccountId() {
+    public Output<String> getAdministratorAccountId() {
         return this.administratorAccountId;
     }
 
-    public InvitationAccepterArgs(Input<String> administratorAccountId) {
+    public InvitationAccepterArgs(Output<String> administratorAccountId) {
         this.administratorAccountId = Objects.requireNonNull(administratorAccountId, "expected parameter 'administratorAccountId' to be non-null");
     }
 
     private InvitationAccepterArgs() {
-        this.administratorAccountId = Input.empty();
+        this.administratorAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> administratorAccountId;
+        private Output<String> administratorAccountId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     	      this.administratorAccountId = defaults.administratorAccountId;
         }
 
-        public Builder administratorAccountId(Input<String> administratorAccountId) {
+        public Builder administratorAccountId(Output<String> administratorAccountId) {
             this.administratorAccountId = Objects.requireNonNull(administratorAccountId);
             return this;
         }
 
         public Builder administratorAccountId(String administratorAccountId) {
-            this.administratorAccountId = Input.of(Objects.requireNonNull(administratorAccountId));
+            this.administratorAccountId = Output.of(Objects.requireNonNull(administratorAccountId));
             return this;
         }
         public InvitationAccepterArgs build() {

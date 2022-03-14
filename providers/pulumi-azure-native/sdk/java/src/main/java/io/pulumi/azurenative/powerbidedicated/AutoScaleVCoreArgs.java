@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbidedicated;
 
 import io.pulumi.azurenative.powerbidedicated.inputs.AutoScaleVCoreSkuArgs;
 import io.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityLimit")
-      private final @Nullable Input<Integer> capacityLimit;
+      private final @Nullable Output<Integer> capacityLimit;
 
-    public Input<Integer> getCapacityLimit() {
-        return this.capacityLimit == null ? Input.empty() : this.capacityLimit;
+    public Output<Integer> getCapacityLimit() {
+        return this.capacityLimit == null ? Output.empty() : this.capacityLimit;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityObjectId")
-      private final @Nullable Input<String> capacityObjectId;
+      private final @Nullable Output<String> capacityObjectId;
 
-    public Input<String> getCapacityObjectId() {
-        return this.capacityObjectId == null ? Input.empty() : this.capacityObjectId;
+    public Output<String> getCapacityObjectId() {
+        return this.capacityObjectId == null ? Output.empty() : this.capacityObjectId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,9 +67,9 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<AutoScaleVCoreSkuArgs> sku;
+      private final Output<AutoScaleVCoreSkuArgs> sku;
 
-    public Input<AutoScaleVCoreSkuArgs> getSku() {
+    public Output<AutoScaleVCoreSkuArgs> getSku() {
         return this.sku;
     }
 
@@ -78,10 +78,10 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemData")
-      private final @Nullable Input<SystemDataArgs> systemData;
+      private final @Nullable Output<SystemDataArgs> systemData;
 
-    public Input<SystemDataArgs> getSystemData() {
-        return this.systemData == null ? Input.empty() : this.systemData;
+    public Output<SystemDataArgs> getSystemData() {
+        return this.systemData == null ? Output.empty() : this.systemData;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vcoreName")
-      private final @Nullable Input<String> vcoreName;
+      private final @Nullable Output<String> vcoreName;
 
-    public Input<String> getVcoreName() {
-        return this.vcoreName == null ? Input.empty() : this.vcoreName;
+    public Output<String> getVcoreName() {
+        return this.vcoreName == null ? Output.empty() : this.vcoreName;
     }
 
     public AutoScaleVCoreArgs(
-        @Nullable Input<Integer> capacityLimit,
-        @Nullable Input<String> capacityObjectId,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<AutoScaleVCoreSkuArgs> sku,
-        @Nullable Input<SystemDataArgs> systemData,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vcoreName) {
+        @Nullable Output<Integer> capacityLimit,
+        @Nullable Output<String> capacityObjectId,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<AutoScaleVCoreSkuArgs> sku,
+        @Nullable Output<SystemDataArgs> systemData,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vcoreName) {
         this.capacityLimit = capacityLimit;
         this.capacityObjectId = capacityObjectId;
         this.location = location;
@@ -126,14 +126,14 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutoScaleVCoreArgs() {
-        this.capacityLimit = Input.empty();
-        this.capacityObjectId = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.systemData = Input.empty();
-        this.tags = Input.empty();
-        this.vcoreName = Input.empty();
+        this.capacityLimit = Output.empty();
+        this.capacityObjectId = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.systemData = Output.empty();
+        this.tags = Output.empty();
+        this.vcoreName = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacityLimit;
-        private @Nullable Input<String> capacityObjectId;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<AutoScaleVCoreSkuArgs> sku;
-        private @Nullable Input<SystemDataArgs> systemData;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vcoreName;
+        private @Nullable Output<Integer> capacityLimit;
+        private @Nullable Output<String> capacityObjectId;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<AutoScaleVCoreSkuArgs> sku;
+        private @Nullable Output<SystemDataArgs> systemData;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vcoreName;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vcoreName = defaults.vcoreName;
         }
 
-        public Builder capacityLimit(@Nullable Input<Integer> capacityLimit) {
+        public Builder capacityLimit(@Nullable Output<Integer> capacityLimit) {
             this.capacityLimit = capacityLimit;
             return this;
         }
 
         public Builder capacityLimit(@Nullable Integer capacityLimit) {
-            this.capacityLimit = Input.ofNullable(capacityLimit);
+            this.capacityLimit = Output.ofNullable(capacityLimit);
             return this;
         }
 
-        public Builder capacityObjectId(@Nullable Input<String> capacityObjectId) {
+        public Builder capacityObjectId(@Nullable Output<String> capacityObjectId) {
             this.capacityObjectId = capacityObjectId;
             return this;
         }
 
         public Builder capacityObjectId(@Nullable String capacityObjectId) {
-            this.capacityObjectId = Input.ofNullable(capacityObjectId);
+            this.capacityObjectId = Output.ofNullable(capacityObjectId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<AutoScaleVCoreSkuArgs> sku) {
+        public Builder sku(Output<AutoScaleVCoreSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(AutoScaleVCoreSkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder systemData(@Nullable Input<SystemDataArgs> systemData) {
+        public Builder systemData(@Nullable Output<SystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
 
         public Builder systemData(@Nullable SystemDataArgs systemData) {
-            this.systemData = Input.ofNullable(systemData);
+            this.systemData = Output.ofNullable(systemData);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vcoreName(@Nullable Input<String> vcoreName) {
+        public Builder vcoreName(@Nullable Output<String> vcoreName) {
             this.vcoreName = vcoreName;
             return this;
         }
 
         public Builder vcoreName(@Nullable String vcoreName) {
-            this.vcoreName = Input.ofNullable(vcoreName);
+            this.vcoreName = Output.ofNullable(vcoreName);
             return this;
         }
         public AutoScaleVCoreArgs build() {

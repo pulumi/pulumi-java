@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.enums.ApigatewayAuditLogConfigLogType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ApigatewayAuditLogConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="exemptedMembers")
-      private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Input<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
+    public Output<List<String>> getExemptedMembers() {
+        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ApigatewayAuditLogConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logType")
-      private final @Nullable Input<ApigatewayAuditLogConfigLogType> logType;
+      private final @Nullable Output<ApigatewayAuditLogConfigLogType> logType;
 
-    public Input<ApigatewayAuditLogConfigLogType> getLogType() {
-        return this.logType == null ? Input.empty() : this.logType;
+    public Output<ApigatewayAuditLogConfigLogType> getLogType() {
+        return this.logType == null ? Output.empty() : this.logType;
     }
 
     public ApigatewayAuditLogConfigArgs(
-        @Nullable Input<List<String>> exemptedMembers,
-        @Nullable Input<ApigatewayAuditLogConfigLogType> logType) {
+        @Nullable Output<List<String>> exemptedMembers,
+        @Nullable Output<ApigatewayAuditLogConfigLogType> logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }
 
     private ApigatewayAuditLogConfigArgs() {
-        this.exemptedMembers = Input.empty();
-        this.logType = Input.empty();
+        this.exemptedMembers = Output.empty();
+        this.logType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ApigatewayAuditLogConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> exemptedMembers;
-        private @Nullable Input<ApigatewayAuditLogConfigLogType> logType;
+        private @Nullable Output<List<String>> exemptedMembers;
+        private @Nullable Output<ApigatewayAuditLogConfigLogType> logType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ApigatewayAuditLogConfigArgs extends io.pulumi.resources.Reso
     	      this.logType = defaults.logType;
         }
 
-        public Builder exemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Input.ofNullable(exemptedMembers);
+            this.exemptedMembers = Output.ofNullable(exemptedMembers);
             return this;
         }
 
-        public Builder logType(@Nullable Input<ApigatewayAuditLogConfigLogType> logType) {
+        public Builder logType(@Nullable Output<ApigatewayAuditLogConfigLogType> logType) {
             this.logType = logType;
             return this;
         }
 
         public Builder logType(@Nullable ApigatewayAuditLogConfigLogType logType) {
-            this.logType = Input.ofNullable(logType);
+            this.logType = Output.ofNullable(logType);
             return this;
         }
         public ApigatewayAuditLogConfigArgs build() {

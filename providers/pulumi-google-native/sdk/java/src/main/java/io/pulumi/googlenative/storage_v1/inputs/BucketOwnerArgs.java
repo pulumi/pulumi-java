@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entity")
-      private final @Nullable Input<String> entity;
+      private final @Nullable Output<String> entity;
 
-    public Input<String> getEntity() {
-        return this.entity == null ? Input.empty() : this.entity;
+    public Output<String> getEntity() {
+        return this.entity == null ? Output.empty() : this.entity;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityId")
-      private final @Nullable Input<String> entityId;
+      private final @Nullable Output<String> entityId;
 
-    public Input<String> getEntityId() {
-        return this.entityId == null ? Input.empty() : this.entityId;
+    public Output<String> getEntityId() {
+        return this.entityId == null ? Output.empty() : this.entityId;
     }
 
     public BucketOwnerArgs(
-        @Nullable Input<String> entity,
-        @Nullable Input<String> entityId) {
+        @Nullable Output<String> entity,
+        @Nullable Output<String> entityId) {
         this.entity = entity;
         this.entityId = entityId;
     }
 
     private BucketOwnerArgs() {
-        this.entity = Input.empty();
-        this.entityId = Input.empty();
+        this.entity = Output.empty();
+        this.entityId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> entity;
-        private @Nullable Input<String> entityId;
+        private @Nullable Output<String> entity;
+        private @Nullable Output<String> entityId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.entityId = defaults.entityId;
         }
 
-        public Builder entity(@Nullable Input<String> entity) {
+        public Builder entity(@Nullable Output<String> entity) {
             this.entity = entity;
             return this;
         }
 
         public Builder entity(@Nullable String entity) {
-            this.entity = Input.ofNullable(entity);
+            this.entity = Output.ofNullable(entity);
             return this;
         }
 
-        public Builder entityId(@Nullable Input<String> entityId) {
+        public Builder entityId(@Nullable Output<String> entityId) {
             this.entityId = entityId;
             return this;
         }
 
         public Builder entityId(@Nullable String entityId) {
-            this.entityId = Input.ofNullable(entityId);
+            this.entityId = Output.ofNullable(entityId);
             return this;
         }
         public BucketOwnerArgs build() {

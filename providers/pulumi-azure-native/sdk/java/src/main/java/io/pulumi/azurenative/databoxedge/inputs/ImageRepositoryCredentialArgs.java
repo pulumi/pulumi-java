@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="imageRepositoryUrl", required=true)
-      private final Input<String> imageRepositoryUrl;
+      private final Output<String> imageRepositoryUrl;
 
-    public Input<String> getImageRepositoryUrl() {
+    public Output<String> getImageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
 
@@ -35,10 +35,10 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<AsymmetricEncryptedSecretArgs> password;
+      private final @Nullable Output<AsymmetricEncryptedSecretArgs> password;
 
-    public Input<AsymmetricEncryptedSecretArgs> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<AsymmetricEncryptedSecretArgs> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public ImageRepositoryCredentialArgs(
-        Input<String> imageRepositoryUrl,
-        @Nullable Input<AsymmetricEncryptedSecretArgs> password,
-        Input<String> userName) {
+        Output<String> imageRepositoryUrl,
+        @Nullable Output<AsymmetricEncryptedSecretArgs> password,
+        Output<String> userName) {
         this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl, "expected parameter 'imageRepositoryUrl' to be non-null");
         this.password = password;
         this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
     }
 
     private ImageRepositoryCredentialArgs() {
-        this.imageRepositoryUrl = Input.empty();
-        this.password = Input.empty();
-        this.userName = Input.empty();
+        this.imageRepositoryUrl = Output.empty();
+        this.password = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> imageRepositoryUrl;
-        private @Nullable Input<AsymmetricEncryptedSecretArgs> password;
-        private Input<String> userName;
+        private Output<String> imageRepositoryUrl;
+        private @Nullable Output<AsymmetricEncryptedSecretArgs> password;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
     	      this.userName = defaults.userName;
         }
 
-        public Builder imageRepositoryUrl(Input<String> imageRepositoryUrl) {
+        public Builder imageRepositoryUrl(Output<String> imageRepositoryUrl) {
             this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl);
             return this;
         }
 
         public Builder imageRepositoryUrl(String imageRepositoryUrl) {
-            this.imageRepositoryUrl = Input.of(Objects.requireNonNull(imageRepositoryUrl));
+            this.imageRepositoryUrl = Output.of(Objects.requireNonNull(imageRepositoryUrl));
             return this;
         }
 
-        public Builder password(@Nullable Input<AsymmetricEncryptedSecretArgs> password) {
+        public Builder password(@Nullable Output<AsymmetricEncryptedSecretArgs> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable AsymmetricEncryptedSecretArgs password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public ImageRepositoryCredentialArgs build() {

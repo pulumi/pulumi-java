@@ -8,7 +8,7 @@ import io.pulumi.azurenative.peering.inputs.PeeringPropertiesDirectArgs;
 import io.pulumi.azurenative.peering.inputs.PeeringPropertiesExchangeArgs;
 import io.pulumi.azurenative.peering.inputs.PeeringSkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direct")
-      private final @Nullable Input<PeeringPropertiesDirectArgs> direct;
+      private final @Nullable Output<PeeringPropertiesDirectArgs> direct;
 
-    public Input<PeeringPropertiesDirectArgs> getDirect() {
-        return this.direct == null ? Input.empty() : this.direct;
+    public Output<PeeringPropertiesDirectArgs> getDirect() {
+        return this.direct == null ? Output.empty() : this.direct;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exchange")
-      private final @Nullable Input<PeeringPropertiesExchangeArgs> exchange;
+      private final @Nullable Output<PeeringPropertiesExchangeArgs> exchange;
 
-    public Input<PeeringPropertiesExchangeArgs> getExchange() {
-        return this.exchange == null ? Input.empty() : this.exchange;
+    public Output<PeeringPropertiesExchangeArgs> getExchange() {
+        return this.exchange == null ? Output.empty() : this.exchange;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,Kind>> kind;
+      private final Output<Either<String,Kind>> kind;
 
-    public Input<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> getKind() {
         return this.kind;
     }
 
@@ -58,10 +58,10 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringLocation")
-      private final @Nullable Input<String> peeringLocation;
+      private final @Nullable Output<String> peeringLocation;
 
-    public Input<String> getPeeringLocation() {
-        return this.peeringLocation == null ? Input.empty() : this.peeringLocation;
+    public Output<String> getPeeringLocation() {
+        return this.peeringLocation == null ? Output.empty() : this.peeringLocation;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringName")
-      private final @Nullable Input<String> peeringName;
+      private final @Nullable Output<String> peeringName;
 
-    public Input<String> getPeeringName() {
-        return this.peeringName == null ? Input.empty() : this.peeringName;
+    public Output<String> getPeeringName() {
+        return this.peeringName == null ? Output.empty() : this.peeringName;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,9 +102,9 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<PeeringSkuArgs> sku;
+      private final Output<PeeringSkuArgs> sku;
 
-    public Input<PeeringSkuArgs> getSku() {
+    public Output<PeeringSkuArgs> getSku() {
         return this.sku;
     }
 
@@ -113,22 +113,22 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PeeringArgs(
-        @Nullable Input<PeeringPropertiesDirectArgs> direct,
-        @Nullable Input<PeeringPropertiesExchangeArgs> exchange,
-        Input<Either<String,Kind>> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> peeringLocation,
-        @Nullable Input<String> peeringName,
-        Input<String> resourceGroupName,
-        Input<PeeringSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<PeeringPropertiesDirectArgs> direct,
+        @Nullable Output<PeeringPropertiesExchangeArgs> exchange,
+        Output<Either<String,Kind>> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> peeringLocation,
+        @Nullable Output<String> peeringName,
+        Output<String> resourceGroupName,
+        Output<PeeringSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.direct = direct;
         this.exchange = exchange;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -141,15 +141,15 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PeeringArgs() {
-        this.direct = Input.empty();
-        this.exchange = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.peeringLocation = Input.empty();
-        this.peeringName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.direct = Output.empty();
+        this.exchange = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.peeringLocation = Output.empty();
+        this.peeringName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PeeringPropertiesDirectArgs> direct;
-        private @Nullable Input<PeeringPropertiesExchangeArgs> exchange;
-        private Input<Either<String,Kind>> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> peeringLocation;
-        private @Nullable Input<String> peeringName;
-        private Input<String> resourceGroupName;
-        private Input<PeeringSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<PeeringPropertiesDirectArgs> direct;
+        private @Nullable Output<PeeringPropertiesExchangeArgs> exchange;
+        private Output<Either<String,Kind>> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> peeringLocation;
+        private @Nullable Output<String> peeringName;
+        private Output<String> resourceGroupName;
+        private Output<PeeringSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder direct(@Nullable Input<PeeringPropertiesDirectArgs> direct) {
+        public Builder direct(@Nullable Output<PeeringPropertiesDirectArgs> direct) {
             this.direct = direct;
             return this;
         }
 
         public Builder direct(@Nullable PeeringPropertiesDirectArgs direct) {
-            this.direct = Input.ofNullable(direct);
+            this.direct = Output.ofNullable(direct);
             return this;
         }
 
-        public Builder exchange(@Nullable Input<PeeringPropertiesExchangeArgs> exchange) {
+        public Builder exchange(@Nullable Output<PeeringPropertiesExchangeArgs> exchange) {
             this.exchange = exchange;
             return this;
         }
 
         public Builder exchange(@Nullable PeeringPropertiesExchangeArgs exchange) {
-            this.exchange = Input.ofNullable(exchange);
+            this.exchange = Output.ofNullable(exchange);
             return this;
         }
 
-        public Builder kind(Input<Either<String,Kind>> kind) {
+        public Builder kind(Output<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,Kind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder peeringLocation(@Nullable Input<String> peeringLocation) {
+        public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
         public Builder peeringLocation(@Nullable String peeringLocation) {
-            this.peeringLocation = Input.ofNullable(peeringLocation);
+            this.peeringLocation = Output.ofNullable(peeringLocation);
             return this;
         }
 
-        public Builder peeringName(@Nullable Input<String> peeringName) {
+        public Builder peeringName(@Nullable Output<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
         public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Input.ofNullable(peeringName);
+            this.peeringName = Output.ofNullable(peeringName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<PeeringSkuArgs> sku) {
+        public Builder sku(Output<PeeringSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(PeeringSkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PeeringArgs build() {

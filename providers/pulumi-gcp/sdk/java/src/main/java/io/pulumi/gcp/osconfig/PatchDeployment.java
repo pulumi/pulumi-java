@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.osconfig;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -304,14 +303,14 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PatchDeployment(String name, PatchDeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:osconfig/patchDeployment:PatchDeployment", name, args == null ? PatchDeploymentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:osconfig/patchDeployment:PatchDeployment", name, args == null ? PatchDeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PatchDeployment(String name, Input<String> id, @Nullable PatchDeploymentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PatchDeployment(String name, Output<String> id, @Nullable PatchDeploymentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:osconfig/patchDeployment:PatchDeployment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -327,7 +326,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PatchDeployment get(String name, Input<String> id, @Nullable PatchDeploymentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PatchDeployment get(String name, Output<String> id, @Nullable PatchDeploymentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PatchDeployment(name, id, state, options);
     }
 }

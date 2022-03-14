@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<CloudServiceRoleSkuArgs> sku;
+      private final @Nullable Output<CloudServiceRoleSkuArgs> sku;
 
-    public Input<CloudServiceRoleSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<CloudServiceRoleSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     public CloudServiceRoleProfilePropertiesArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<CloudServiceRoleSkuArgs> sku) {
+        @Nullable Output<String> name,
+        @Nullable Output<CloudServiceRoleSkuArgs> sku) {
         this.name = name;
         this.sku = sku;
     }
 
     private CloudServiceRoleProfilePropertiesArgs() {
-        this.name = Input.empty();
-        this.sku = Input.empty();
+        this.name = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<CloudServiceRoleSkuArgs> sku;
+        private @Nullable Output<String> name;
+        private @Nullable Output<CloudServiceRoleSkuArgs> sku;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
     	      this.sku = defaults.sku;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sku(@Nullable Input<CloudServiceRoleSkuArgs> sku) {
+        public Builder sku(@Nullable Output<CloudServiceRoleSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable CloudServiceRoleSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
         public CloudServiceRoleProfilePropertiesArgs build() {

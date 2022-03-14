@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingPurgeDataTypesItem;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingRedactionScope;
@@ -25,10 +25,10 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deidentifyTemplate")
-      private final @Nullable Input<String> deidentifyTemplate;
+      private final @Nullable Output<String> deidentifyTemplate;
 
-    public Input<String> getDeidentifyTemplate() {
-        return this.deidentifyTemplate == null ? Input.empty() : this.deidentifyTemplate;
+    public Output<String> getDeidentifyTemplate() {
+        return this.deidentifyTemplate == null ? Output.empty() : this.deidentifyTemplate;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -47,10 +47,10 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="insightsExportSettings")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
 
-    public Input<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> getInsightsExportSettings() {
-        return this.insightsExportSettings == null ? Input.empty() : this.insightsExportSettings;
+    public Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> getInsightsExportSettings() {
+        return this.insightsExportSettings == null ? Output.empty() : this.insightsExportSettings;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="inspectTemplate")
-      private final @Nullable Input<String> inspectTemplate;
+      private final @Nullable Output<String> inspectTemplate;
 
-    public Input<String> getInspectTemplate() {
-        return this.inspectTemplate == null ? Input.empty() : this.inspectTemplate;
+    public Output<String> getInspectTemplate() {
+        return this.inspectTemplate == null ? Output.empty() : this.inspectTemplate;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -76,17 +76,17 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="purgeDataTypes")
-      private final @Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
+      private final @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
 
-    public Input<List<SecuritySettingPurgeDataTypesItem>> getPurgeDataTypes() {
-        return this.purgeDataTypes == null ? Input.empty() : this.purgeDataTypes;
+    public Output<List<SecuritySettingPurgeDataTypesItem>> getPurgeDataTypes() {
+        return this.purgeDataTypes == null ? Output.empty() : this.purgeDataTypes;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="redactionScope")
-      private final @Nullable Input<SecuritySettingRedactionScope> redactionScope;
+      private final @Nullable Output<SecuritySettingRedactionScope> redactionScope;
 
-    public Input<SecuritySettingRedactionScope> getRedactionScope() {
-        return this.redactionScope == null ? Input.empty() : this.redactionScope;
+    public Output<SecuritySettingRedactionScope> getRedactionScope() {
+        return this.redactionScope == null ? Output.empty() : this.redactionScope;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="redactionStrategy")
-      private final @Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy;
+      private final @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
 
-    public Input<SecuritySettingRedactionStrategy> getRedactionStrategy() {
-        return this.redactionStrategy == null ? Input.empty() : this.redactionStrategy;
+    public Output<SecuritySettingRedactionStrategy> getRedactionStrategy() {
+        return this.redactionStrategy == null ? Output.empty() : this.redactionStrategy;
     }
 
     /**
@@ -127,24 +127,24 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retentionWindowDays")
-      private final @Nullable Input<Integer> retentionWindowDays;
+      private final @Nullable Output<Integer> retentionWindowDays;
 
-    public Input<Integer> getRetentionWindowDays() {
-        return this.retentionWindowDays == null ? Input.empty() : this.retentionWindowDays;
+    public Output<Integer> getRetentionWindowDays() {
+        return this.retentionWindowDays == null ? Output.empty() : this.retentionWindowDays;
     }
 
     public SecuritySettingArgs(
-        @Nullable Input<String> deidentifyTemplate,
-        Input<String> displayName,
-        @Nullable Input<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings,
-        @Nullable Input<String> inspectTemplate,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes,
-        @Nullable Input<SecuritySettingRedactionScope> redactionScope,
-        @Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy,
-        @Nullable Input<Integer> retentionWindowDays) {
+        @Nullable Output<String> deidentifyTemplate,
+        Output<String> displayName,
+        @Nullable Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings,
+        @Nullable Output<String> inspectTemplate,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes,
+        @Nullable Output<SecuritySettingRedactionScope> redactionScope,
+        @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy,
+        @Nullable Output<Integer> retentionWindowDays) {
         this.deidentifyTemplate = deidentifyTemplate;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.insightsExportSettings = insightsExportSettings;
@@ -159,17 +159,17 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecuritySettingArgs() {
-        this.deidentifyTemplate = Input.empty();
-        this.displayName = Input.empty();
-        this.insightsExportSettings = Input.empty();
-        this.inspectTemplate = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.purgeDataTypes = Input.empty();
-        this.redactionScope = Input.empty();
-        this.redactionStrategy = Input.empty();
-        this.retentionWindowDays = Input.empty();
+        this.deidentifyTemplate = Output.empty();
+        this.displayName = Output.empty();
+        this.insightsExportSettings = Output.empty();
+        this.inspectTemplate = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.purgeDataTypes = Output.empty();
+        this.redactionScope = Output.empty();
+        this.redactionStrategy = Output.empty();
+        this.retentionWindowDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -181,17 +181,17 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deidentifyTemplate;
-        private Input<String> displayName;
-        private @Nullable Input<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
-        private @Nullable Input<String> inspectTemplate;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
-        private @Nullable Input<SecuritySettingRedactionScope> redactionScope;
-        private @Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy;
-        private @Nullable Input<Integer> retentionWindowDays;
+        private @Nullable Output<String> deidentifyTemplate;
+        private Output<String> displayName;
+        private @Nullable Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
+        private @Nullable Output<String> inspectTemplate;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
+        private @Nullable Output<SecuritySettingRedactionScope> redactionScope;
+        private @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
+        private @Nullable Output<Integer> retentionWindowDays;
 
         public Builder() {
     	      // Empty
@@ -212,113 +212,113 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.retentionWindowDays = defaults.retentionWindowDays;
         }
 
-        public Builder deidentifyTemplate(@Nullable Input<String> deidentifyTemplate) {
+        public Builder deidentifyTemplate(@Nullable Output<String> deidentifyTemplate) {
             this.deidentifyTemplate = deidentifyTemplate;
             return this;
         }
 
         public Builder deidentifyTemplate(@Nullable String deidentifyTemplate) {
-            this.deidentifyTemplate = Input.ofNullable(deidentifyTemplate);
+            this.deidentifyTemplate = Output.ofNullable(deidentifyTemplate);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder insightsExportSettings(@Nullable Input<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings) {
+        public Builder insightsExportSettings(@Nullable Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings) {
             this.insightsExportSettings = insightsExportSettings;
             return this;
         }
 
         public Builder insightsExportSettings(@Nullable GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs insightsExportSettings) {
-            this.insightsExportSettings = Input.ofNullable(insightsExportSettings);
+            this.insightsExportSettings = Output.ofNullable(insightsExportSettings);
             return this;
         }
 
-        public Builder inspectTemplate(@Nullable Input<String> inspectTemplate) {
+        public Builder inspectTemplate(@Nullable Output<String> inspectTemplate) {
             this.inspectTemplate = inspectTemplate;
             return this;
         }
 
         public Builder inspectTemplate(@Nullable String inspectTemplate) {
-            this.inspectTemplate = Input.ofNullable(inspectTemplate);
+            this.inspectTemplate = Output.ofNullable(inspectTemplate);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder purgeDataTypes(@Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes) {
+        public Builder purgeDataTypes(@Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes) {
             this.purgeDataTypes = purgeDataTypes;
             return this;
         }
 
         public Builder purgeDataTypes(@Nullable List<SecuritySettingPurgeDataTypesItem> purgeDataTypes) {
-            this.purgeDataTypes = Input.ofNullable(purgeDataTypes);
+            this.purgeDataTypes = Output.ofNullable(purgeDataTypes);
             return this;
         }
 
-        public Builder redactionScope(@Nullable Input<SecuritySettingRedactionScope> redactionScope) {
+        public Builder redactionScope(@Nullable Output<SecuritySettingRedactionScope> redactionScope) {
             this.redactionScope = redactionScope;
             return this;
         }
 
         public Builder redactionScope(@Nullable SecuritySettingRedactionScope redactionScope) {
-            this.redactionScope = Input.ofNullable(redactionScope);
+            this.redactionScope = Output.ofNullable(redactionScope);
             return this;
         }
 
-        public Builder redactionStrategy(@Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy) {
+        public Builder redactionStrategy(@Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy) {
             this.redactionStrategy = redactionStrategy;
             return this;
         }
 
         public Builder redactionStrategy(@Nullable SecuritySettingRedactionStrategy redactionStrategy) {
-            this.redactionStrategy = Input.ofNullable(redactionStrategy);
+            this.redactionStrategy = Output.ofNullable(redactionStrategy);
             return this;
         }
 
-        public Builder retentionWindowDays(@Nullable Input<Integer> retentionWindowDays) {
+        public Builder retentionWindowDays(@Nullable Output<Integer> retentionWindowDays) {
             this.retentionWindowDays = retentionWindowDays;
             return this;
         }
 
         public Builder retentionWindowDays(@Nullable Integer retentionWindowDays) {
-            this.retentionWindowDays = Input.ofNullable(retentionWindowDays);
+            this.retentionWindowDays = Output.ofNullable(retentionWindowDays);
             return this;
         }
         public SecuritySettingArgs build() {

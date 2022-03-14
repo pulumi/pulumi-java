@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<String> method;
+      private final @Nullable Output<String> method;
 
-    public Input<String> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<String> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requestUri")
-      private final @Nullable Input<String> requestUri;
+      private final @Nullable Output<String> requestUri;
 
-    public Input<String> getRequestUri() {
-        return this.requestUri == null ? Input.empty() : this.requestUri;
+    public Output<String> getRequestUri() {
+        return this.requestUri == null ? Output.empty() : this.requestUri;
     }
 
     public ApiConnectionTestLinkArgs(
-        @Nullable Input<String> method,
-        @Nullable Input<String> requestUri) {
+        @Nullable Output<String> method,
+        @Nullable Output<String> requestUri) {
         this.method = method;
         this.requestUri = requestUri;
     }
 
     private ApiConnectionTestLinkArgs() {
-        this.method = Input.empty();
-        this.requestUri = Input.empty();
+        this.method = Output.empty();
+        this.requestUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> method;
-        private @Nullable Input<String> requestUri;
+        private @Nullable Output<String> method;
+        private @Nullable Output<String> requestUri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
     	      this.requestUri = defaults.requestUri;
         }
 
-        public Builder method(@Nullable Input<String> method) {
+        public Builder method(@Nullable Output<String> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable String method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder requestUri(@Nullable Input<String> requestUri) {
+        public Builder requestUri(@Nullable Output<String> requestUri) {
             this.requestUri = requestUri;
             return this;
         }
 
         public Builder requestUri(@Nullable String requestUri) {
-            this.requestUri = Input.ofNullable(requestUri);
+            this.requestUri = Output.ofNullable(requestUri);
             return this;
         }
         public ApiConnectionTestLinkArgs build() {

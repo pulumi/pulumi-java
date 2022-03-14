@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="html")
-      private final @Nullable Input<String> html;
+      private final @Nullable Output<String> html;
 
-    public Input<String> getHtml() {
-        return this.html == null ? Input.empty() : this.html;
+    public Output<String> getHtml() {
+        return this.html == null ? Output.empty() : this.html;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject")
-      private final @Nullable Input<String> subject;
+      private final @Nullable Output<String> subject;
 
-    public Input<String> getSubject() {
-        return this.subject == null ? Input.empty() : this.subject;
+    public Output<String> getSubject() {
+        return this.subject == null ? Output.empty() : this.subject;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<String> text;
+      private final @Nullable Output<String> text;
 
-    public Input<String> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<String> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
     public TemplateState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> html,
-        @Nullable Input<String> name,
-        @Nullable Input<String> subject,
-        @Nullable Input<String> text) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> html,
+        @Nullable Output<String> name,
+        @Nullable Output<String> subject,
+        @Nullable Output<String> text) {
         this.arn = arn;
         this.html = html;
         this.name = name;
@@ -83,11 +83,11 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateState() {
-        this.arn = Input.empty();
-        this.html = Input.empty();
-        this.name = Input.empty();
-        this.subject = Input.empty();
-        this.text = Input.empty();
+        this.arn = Output.empty();
+        this.html = Output.empty();
+        this.name = Output.empty();
+        this.subject = Output.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> html;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> subject;
-        private @Nullable Input<String> text;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> html;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> subject;
+        private @Nullable Output<String> text;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
     	      this.text = defaults.text;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder html(@Nullable Input<String> html) {
+        public Builder html(@Nullable Output<String> html) {
             this.html = html;
             return this;
         }
 
         public Builder html(@Nullable String html) {
-            this.html = Input.ofNullable(html);
+            this.html = Output.ofNullable(html);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder subject(@Nullable Input<String> subject) {
+        public Builder subject(@Nullable Output<String> subject) {
             this.subject = subject;
             return this;
         }
 
         public Builder subject(@Nullable String subject) {
-            this.subject = Input.ofNullable(subject);
+            this.subject = Output.ofNullable(subject);
             return this;
         }
 
-        public Builder text(@Nullable Input<String> text) {
+        public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable String text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public TemplateState build() {

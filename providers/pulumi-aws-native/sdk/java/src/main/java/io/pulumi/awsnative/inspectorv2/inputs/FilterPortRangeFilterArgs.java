@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inspectorv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
     public static final FilterPortRangeFilterArgs Empty = new FilterPortRangeFilterArgs();
 
     @InputImport(name="beginInclusive")
-      private final @Nullable Input<Integer> beginInclusive;
+      private final @Nullable Output<Integer> beginInclusive;
 
-    public Input<Integer> getBeginInclusive() {
-        return this.beginInclusive == null ? Input.empty() : this.beginInclusive;
+    public Output<Integer> getBeginInclusive() {
+        return this.beginInclusive == null ? Output.empty() : this.beginInclusive;
     }
 
     @InputImport(name="endInclusive")
-      private final @Nullable Input<Integer> endInclusive;
+      private final @Nullable Output<Integer> endInclusive;
 
-    public Input<Integer> getEndInclusive() {
-        return this.endInclusive == null ? Input.empty() : this.endInclusive;
+    public Output<Integer> getEndInclusive() {
+        return this.endInclusive == null ? Output.empty() : this.endInclusive;
     }
 
     public FilterPortRangeFilterArgs(
-        @Nullable Input<Integer> beginInclusive,
-        @Nullable Input<Integer> endInclusive) {
+        @Nullable Output<Integer> beginInclusive,
+        @Nullable Output<Integer> endInclusive) {
         this.beginInclusive = beginInclusive;
         this.endInclusive = endInclusive;
     }
 
     private FilterPortRangeFilterArgs() {
-        this.beginInclusive = Input.empty();
-        this.endInclusive = Input.empty();
+        this.beginInclusive = Output.empty();
+        this.endInclusive = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> beginInclusive;
-        private @Nullable Input<Integer> endInclusive;
+        private @Nullable Output<Integer> beginInclusive;
+        private @Nullable Output<Integer> endInclusive;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
     	      this.endInclusive = defaults.endInclusive;
         }
 
-        public Builder beginInclusive(@Nullable Input<Integer> beginInclusive) {
+        public Builder beginInclusive(@Nullable Output<Integer> beginInclusive) {
             this.beginInclusive = beginInclusive;
             return this;
         }
 
         public Builder beginInclusive(@Nullable Integer beginInclusive) {
-            this.beginInclusive = Input.ofNullable(beginInclusive);
+            this.beginInclusive = Output.ofNullable(beginInclusive);
             return this;
         }
 
-        public Builder endInclusive(@Nullable Input<Integer> endInclusive) {
+        public Builder endInclusive(@Nullable Output<Integer> endInclusive) {
             this.endInclusive = endInclusive;
             return this;
         }
 
         public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = Input.ofNullable(endInclusive);
+            this.endInclusive = Output.ofNullable(endInclusive);
             return this;
         }
         public FilterPortRangeFilterArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.MLTransformParametersFindMatchesParametersGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="findMatchesParameters", required=true)
-      private final Input<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
+      private final Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
 
-    public Input<MLTransformParametersFindMatchesParametersGetArgs> getFindMatchesParameters() {
+    public Output<MLTransformParametersFindMatchesParametersGetArgs> getFindMatchesParameters() {
         return this.findMatchesParameters;
     }
 
@@ -30,22 +30,22 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="transformType", required=true)
-      private final Input<String> transformType;
+      private final Output<String> transformType;
 
-    public Input<String> getTransformType() {
+    public Output<String> getTransformType() {
         return this.transformType;
     }
 
     public MLTransformParametersGetArgs(
-        Input<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters,
-        Input<String> transformType) {
+        Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters,
+        Output<String> transformType) {
         this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters, "expected parameter 'findMatchesParameters' to be non-null");
         this.transformType = Objects.requireNonNull(transformType, "expected parameter 'transformType' to be non-null");
     }
 
     private MLTransformParametersGetArgs() {
-        this.findMatchesParameters = Input.empty();
-        this.transformType = Input.empty();
+        this.findMatchesParameters = Output.empty();
+        this.transformType = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
-        private Input<String> transformType;
+        private Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
+        private Output<String> transformType;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
     	      this.transformType = defaults.transformType;
         }
 
-        public Builder findMatchesParameters(Input<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters) {
+        public Builder findMatchesParameters(Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters) {
             this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters);
             return this;
         }
 
         public Builder findMatchesParameters(MLTransformParametersFindMatchesParametersGetArgs findMatchesParameters) {
-            this.findMatchesParameters = Input.of(Objects.requireNonNull(findMatchesParameters));
+            this.findMatchesParameters = Output.of(Objects.requireNonNull(findMatchesParameters));
             return this;
         }
 
-        public Builder transformType(Input<String> transformType) {
+        public Builder transformType(Output<String> transformType) {
             this.transformType = Objects.requireNonNull(transformType);
             return this;
         }
 
         public Builder transformType(String transformType) {
-            this.transformType = Input.of(Objects.requireNonNull(transformType));
+            this.transformType = Output.of(Objects.requireNonNull(transformType));
             return this;
         }
         public MLTransformParametersGetArgs build() {

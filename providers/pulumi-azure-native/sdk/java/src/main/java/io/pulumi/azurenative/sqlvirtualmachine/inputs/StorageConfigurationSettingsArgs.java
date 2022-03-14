@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.enums.DiskConfigurationType;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.StorageWorkloadType;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SQLStorageSettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskConfigurationType")
-      private final @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType;
+      private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
-    public Input<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
-        return this.diskConfigurationType == null ? Input.empty() : this.diskConfigurationType;
+    public Output<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
+        return this.diskConfigurationType == null ? Output.empty() : this.diskConfigurationType;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sqlDataSettings")
-      private final @Nullable Input<SQLStorageSettingsArgs> sqlDataSettings;
+      private final @Nullable Output<SQLStorageSettingsArgs> sqlDataSettings;
 
-    public Input<SQLStorageSettingsArgs> getSqlDataSettings() {
-        return this.sqlDataSettings == null ? Input.empty() : this.sqlDataSettings;
+    public Output<SQLStorageSettingsArgs> getSqlDataSettings() {
+        return this.sqlDataSettings == null ? Output.empty() : this.sqlDataSettings;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sqlLogSettings")
-      private final @Nullable Input<SQLStorageSettingsArgs> sqlLogSettings;
+      private final @Nullable Output<SQLStorageSettingsArgs> sqlLogSettings;
 
-    public Input<SQLStorageSettingsArgs> getSqlLogSettings() {
-        return this.sqlLogSettings == null ? Input.empty() : this.sqlLogSettings;
+    public Output<SQLStorageSettingsArgs> getSqlLogSettings() {
+        return this.sqlLogSettings == null ? Output.empty() : this.sqlLogSettings;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sqlTempDbSettings")
-      private final @Nullable Input<SQLStorageSettingsArgs> sqlTempDbSettings;
+      private final @Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings;
 
-    public Input<SQLStorageSettingsArgs> getSqlTempDbSettings() {
-        return this.sqlTempDbSettings == null ? Input.empty() : this.sqlTempDbSettings;
+    public Output<SQLStorageSettingsArgs> getSqlTempDbSettings() {
+        return this.sqlTempDbSettings == null ? Output.empty() : this.sqlTempDbSettings;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageWorkloadType")
-      private final @Nullable Input<Either<String,StorageWorkloadType>> storageWorkloadType;
+      private final @Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType;
 
-    public Input<Either<String,StorageWorkloadType>> getStorageWorkloadType() {
-        return this.storageWorkloadType == null ? Input.empty() : this.storageWorkloadType;
+    public Output<Either<String,StorageWorkloadType>> getStorageWorkloadType() {
+        return this.storageWorkloadType == null ? Output.empty() : this.storageWorkloadType;
     }
 
     public StorageConfigurationSettingsArgs(
-        @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType,
-        @Nullable Input<SQLStorageSettingsArgs> sqlDataSettings,
-        @Nullable Input<SQLStorageSettingsArgs> sqlLogSettings,
-        @Nullable Input<SQLStorageSettingsArgs> sqlTempDbSettings,
-        @Nullable Input<Either<String,StorageWorkloadType>> storageWorkloadType) {
+        @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType,
+        @Nullable Output<SQLStorageSettingsArgs> sqlDataSettings,
+        @Nullable Output<SQLStorageSettingsArgs> sqlLogSettings,
+        @Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings,
+        @Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType) {
         this.diskConfigurationType = diskConfigurationType;
         this.sqlDataSettings = sqlDataSettings;
         this.sqlLogSettings = sqlLogSettings;
@@ -91,11 +91,11 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
     }
 
     private StorageConfigurationSettingsArgs() {
-        this.diskConfigurationType = Input.empty();
-        this.sqlDataSettings = Input.empty();
-        this.sqlLogSettings = Input.empty();
-        this.sqlTempDbSettings = Input.empty();
-        this.storageWorkloadType = Input.empty();
+        this.diskConfigurationType = Output.empty();
+        this.sqlDataSettings = Output.empty();
+        this.sqlLogSettings = Output.empty();
+        this.sqlTempDbSettings = Output.empty();
+        this.storageWorkloadType = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType;
-        private @Nullable Input<SQLStorageSettingsArgs> sqlDataSettings;
-        private @Nullable Input<SQLStorageSettingsArgs> sqlLogSettings;
-        private @Nullable Input<SQLStorageSettingsArgs> sqlTempDbSettings;
-        private @Nullable Input<Either<String,StorageWorkloadType>> storageWorkloadType;
+        private @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
+        private @Nullable Output<SQLStorageSettingsArgs> sqlDataSettings;
+        private @Nullable Output<SQLStorageSettingsArgs> sqlLogSettings;
+        private @Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings;
+        private @Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
     	      this.storageWorkloadType = defaults.storageWorkloadType;
         }
 
-        public Builder diskConfigurationType(@Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType) {
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
         public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
-            this.diskConfigurationType = Input.ofNullable(diskConfigurationType);
+            this.diskConfigurationType = Output.ofNullable(diskConfigurationType);
             return this;
         }
 
-        public Builder sqlDataSettings(@Nullable Input<SQLStorageSettingsArgs> sqlDataSettings) {
+        public Builder sqlDataSettings(@Nullable Output<SQLStorageSettingsArgs> sqlDataSettings) {
             this.sqlDataSettings = sqlDataSettings;
             return this;
         }
 
         public Builder sqlDataSettings(@Nullable SQLStorageSettingsArgs sqlDataSettings) {
-            this.sqlDataSettings = Input.ofNullable(sqlDataSettings);
+            this.sqlDataSettings = Output.ofNullable(sqlDataSettings);
             return this;
         }
 
-        public Builder sqlLogSettings(@Nullable Input<SQLStorageSettingsArgs> sqlLogSettings) {
+        public Builder sqlLogSettings(@Nullable Output<SQLStorageSettingsArgs> sqlLogSettings) {
             this.sqlLogSettings = sqlLogSettings;
             return this;
         }
 
         public Builder sqlLogSettings(@Nullable SQLStorageSettingsArgs sqlLogSettings) {
-            this.sqlLogSettings = Input.ofNullable(sqlLogSettings);
+            this.sqlLogSettings = Output.ofNullable(sqlLogSettings);
             return this;
         }
 
-        public Builder sqlTempDbSettings(@Nullable Input<SQLStorageSettingsArgs> sqlTempDbSettings) {
+        public Builder sqlTempDbSettings(@Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings) {
             this.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
 
         public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsArgs sqlTempDbSettings) {
-            this.sqlTempDbSettings = Input.ofNullable(sqlTempDbSettings);
+            this.sqlTempDbSettings = Output.ofNullable(sqlTempDbSettings);
             return this;
         }
 
-        public Builder storageWorkloadType(@Nullable Input<Either<String,StorageWorkloadType>> storageWorkloadType) {
+        public Builder storageWorkloadType(@Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType) {
             this.storageWorkloadType = storageWorkloadType;
             return this;
         }
 
         public Builder storageWorkloadType(@Nullable Either<String,StorageWorkloadType> storageWorkloadType) {
-            this.storageWorkloadType = Input.ofNullable(storageWorkloadType);
+            this.storageWorkloadType = Output.ofNullable(storageWorkloadType);
             return this;
         }
         public StorageConfigurationSettingsArgs build() {

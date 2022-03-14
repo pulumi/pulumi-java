@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateData")
-      private final @Nullable Input<String> certificateData;
+      private final @Nullable Output<String> certificateData;
 
-    public Input<String> getCertificateData() {
-        return this.certificateData == null ? Input.empty() : this.certificateData;
+    public Output<String> getCertificateData() {
+        return this.certificateData == null ? Output.empty() : this.certificateData;
     }
 
-    public SshPublicKeyArgs(@Nullable Input<String> certificateData) {
+    public SshPublicKeyArgs(@Nullable Output<String> certificateData) {
         this.certificateData = certificateData;
     }
 
     private SshPublicKeyArgs() {
-        this.certificateData = Input.empty();
+        this.certificateData = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateData;
+        private @Nullable Output<String> certificateData;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.certificateData = defaults.certificateData;
         }
 
-        public Builder certificateData(@Nullable Input<String> certificateData) {
+        public Builder certificateData(@Nullable Output<String> certificateData) {
             this.certificateData = certificateData;
             return this;
         }
 
         public Builder certificateData(@Nullable String certificateData) {
-            this.certificateData = Input.ofNullable(certificateData);
+            this.certificateData = Output.ofNullable(certificateData);
             return this;
         }
         public SshPublicKeyArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.CookieExpirationArgs;
 import io.pulumi.azurenative.web.inputs.LoginRoutesArgs;
 import io.pulumi.azurenative.web.inputs.NonceArgs;
 import io.pulumi.azurenative.web.inputs.TokenStoreArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedExternalRedirectUrls")
-      private final @Nullable Input<List<String>> allowedExternalRedirectUrls;
+      private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
-    public Input<List<String>> getAllowedExternalRedirectUrls() {
-        return this.allowedExternalRedirectUrls == null ? Input.empty() : this.allowedExternalRedirectUrls;
+    public Output<List<String>> getAllowedExternalRedirectUrls() {
+        return this.allowedExternalRedirectUrls == null ? Output.empty() : this.allowedExternalRedirectUrls;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cookieExpiration")
-      private final @Nullable Input<CookieExpirationArgs> cookieExpiration;
+      private final @Nullable Output<CookieExpirationArgs> cookieExpiration;
 
-    public Input<CookieExpirationArgs> getCookieExpiration() {
-        return this.cookieExpiration == null ? Input.empty() : this.cookieExpiration;
+    public Output<CookieExpirationArgs> getCookieExpiration() {
+        return this.cookieExpiration == null ? Output.empty() : this.cookieExpiration;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonce")
-      private final @Nullable Input<NonceArgs> nonce;
+      private final @Nullable Output<NonceArgs> nonce;
 
-    public Input<NonceArgs> getNonce() {
-        return this.nonce == null ? Input.empty() : this.nonce;
+    public Output<NonceArgs> getNonce() {
+        return this.nonce == null ? Output.empty() : this.nonce;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveUrlFragmentsForLogins")
-      private final @Nullable Input<Boolean> preserveUrlFragmentsForLogins;
+      private final @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
 
-    public Input<Boolean> getPreserveUrlFragmentsForLogins() {
-        return this.preserveUrlFragmentsForLogins == null ? Input.empty() : this.preserveUrlFragmentsForLogins;
+    public Output<Boolean> getPreserveUrlFragmentsForLogins() {
+        return this.preserveUrlFragmentsForLogins == null ? Output.empty() : this.preserveUrlFragmentsForLogins;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-      private final @Nullable Input<LoginRoutesArgs> routes;
+      private final @Nullable Output<LoginRoutesArgs> routes;
 
-    public Input<LoginRoutesArgs> getRoutes() {
-        return this.routes == null ? Input.empty() : this.routes;
+    public Output<LoginRoutesArgs> getRoutes() {
+        return this.routes == null ? Output.empty() : this.routes;
     }
 
     /**
@@ -86,19 +86,19 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenStore")
-      private final @Nullable Input<TokenStoreArgs> tokenStore;
+      private final @Nullable Output<TokenStoreArgs> tokenStore;
 
-    public Input<TokenStoreArgs> getTokenStore() {
-        return this.tokenStore == null ? Input.empty() : this.tokenStore;
+    public Output<TokenStoreArgs> getTokenStore() {
+        return this.tokenStore == null ? Output.empty() : this.tokenStore;
     }
 
     public LoginArgs(
-        @Nullable Input<List<String>> allowedExternalRedirectUrls,
-        @Nullable Input<CookieExpirationArgs> cookieExpiration,
-        @Nullable Input<NonceArgs> nonce,
-        @Nullable Input<Boolean> preserveUrlFragmentsForLogins,
-        @Nullable Input<LoginRoutesArgs> routes,
-        @Nullable Input<TokenStoreArgs> tokenStore) {
+        @Nullable Output<List<String>> allowedExternalRedirectUrls,
+        @Nullable Output<CookieExpirationArgs> cookieExpiration,
+        @Nullable Output<NonceArgs> nonce,
+        @Nullable Output<Boolean> preserveUrlFragmentsForLogins,
+        @Nullable Output<LoginRoutesArgs> routes,
+        @Nullable Output<TokenStoreArgs> tokenStore) {
         this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
         this.cookieExpiration = cookieExpiration;
         this.nonce = nonce;
@@ -108,12 +108,12 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoginArgs() {
-        this.allowedExternalRedirectUrls = Input.empty();
-        this.cookieExpiration = Input.empty();
-        this.nonce = Input.empty();
-        this.preserveUrlFragmentsForLogins = Input.empty();
-        this.routes = Input.empty();
-        this.tokenStore = Input.empty();
+        this.allowedExternalRedirectUrls = Output.empty();
+        this.cookieExpiration = Output.empty();
+        this.nonce = Output.empty();
+        this.preserveUrlFragmentsForLogins = Output.empty();
+        this.routes = Output.empty();
+        this.tokenStore = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,12 +125,12 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedExternalRedirectUrls;
-        private @Nullable Input<CookieExpirationArgs> cookieExpiration;
-        private @Nullable Input<NonceArgs> nonce;
-        private @Nullable Input<Boolean> preserveUrlFragmentsForLogins;
-        private @Nullable Input<LoginRoutesArgs> routes;
-        private @Nullable Input<TokenStoreArgs> tokenStore;
+        private @Nullable Output<List<String>> allowedExternalRedirectUrls;
+        private @Nullable Output<CookieExpirationArgs> cookieExpiration;
+        private @Nullable Output<NonceArgs> nonce;
+        private @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
+        private @Nullable Output<LoginRoutesArgs> routes;
+        private @Nullable Output<TokenStoreArgs> tokenStore;
 
         public Builder() {
     	      // Empty
@@ -146,63 +146,63 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenStore = defaults.tokenStore;
         }
 
-        public Builder allowedExternalRedirectUrls(@Nullable Input<List<String>> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable Output<List<String>> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
         public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
-            this.allowedExternalRedirectUrls = Input.ofNullable(allowedExternalRedirectUrls);
+            this.allowedExternalRedirectUrls = Output.ofNullable(allowedExternalRedirectUrls);
             return this;
         }
 
-        public Builder cookieExpiration(@Nullable Input<CookieExpirationArgs> cookieExpiration) {
+        public Builder cookieExpiration(@Nullable Output<CookieExpirationArgs> cookieExpiration) {
             this.cookieExpiration = cookieExpiration;
             return this;
         }
 
         public Builder cookieExpiration(@Nullable CookieExpirationArgs cookieExpiration) {
-            this.cookieExpiration = Input.ofNullable(cookieExpiration);
+            this.cookieExpiration = Output.ofNullable(cookieExpiration);
             return this;
         }
 
-        public Builder nonce(@Nullable Input<NonceArgs> nonce) {
+        public Builder nonce(@Nullable Output<NonceArgs> nonce) {
             this.nonce = nonce;
             return this;
         }
 
         public Builder nonce(@Nullable NonceArgs nonce) {
-            this.nonce = Input.ofNullable(nonce);
+            this.nonce = Output.ofNullable(nonce);
             return this;
         }
 
-        public Builder preserveUrlFragmentsForLogins(@Nullable Input<Boolean> preserveUrlFragmentsForLogins) {
+        public Builder preserveUrlFragmentsForLogins(@Nullable Output<Boolean> preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
 
         public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
-            this.preserveUrlFragmentsForLogins = Input.ofNullable(preserveUrlFragmentsForLogins);
+            this.preserveUrlFragmentsForLogins = Output.ofNullable(preserveUrlFragmentsForLogins);
             return this;
         }
 
-        public Builder routes(@Nullable Input<LoginRoutesArgs> routes) {
+        public Builder routes(@Nullable Output<LoginRoutesArgs> routes) {
             this.routes = routes;
             return this;
         }
 
         public Builder routes(@Nullable LoginRoutesArgs routes) {
-            this.routes = Input.ofNullable(routes);
+            this.routes = Output.ofNullable(routes);
             return this;
         }
 
-        public Builder tokenStore(@Nullable Input<TokenStoreArgs> tokenStore) {
+        public Builder tokenStore(@Nullable Output<TokenStoreArgs> tokenStore) {
             this.tokenStore = tokenStore;
             return this;
         }
 
         public Builder tokenStore(@Nullable TokenStoreArgs tokenStore) {
-            this.tokenStore = Input.ofNullable(tokenStore);
+            this.tokenStore = Output.ofNullable(tokenStore);
             return this;
         }
         public LoginArgs build() {

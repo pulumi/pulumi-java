@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetResourceId")
-      private final @Nullable Input<String> subnetResourceId;
+      private final @Nullable Output<String> subnetResourceId;
 
-    public Input<String> getSubnetResourceId() {
-        return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;
+    public Output<String> getSubnetResourceId() {
+        return this.subnetResourceId == null ? Output.empty() : this.subnetResourceId;
     }
 
-    public VirtualNetworkConfigurationArgs(@Nullable Input<String> subnetResourceId) {
+    public VirtualNetworkConfigurationArgs(@Nullable Output<String> subnetResourceId) {
         this.subnetResourceId = subnetResourceId;
     }
 
     private VirtualNetworkConfigurationArgs() {
-        this.subnetResourceId = Input.empty();
+        this.subnetResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> subnetResourceId;
+        private @Nullable Output<String> subnetResourceId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.subnetResourceId = defaults.subnetResourceId;
         }
 
-        public Builder subnetResourceId(@Nullable Input<String> subnetResourceId) {
+        public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
 
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = Input.ofNullable(subnetResourceId);
+            this.subnetResourceId = Output.ofNullable(subnetResourceId);
             return this;
         }
         public VirtualNetworkConfigurationArgs build() {

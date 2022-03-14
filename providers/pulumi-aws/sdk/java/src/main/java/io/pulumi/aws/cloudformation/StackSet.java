@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudformation.StackSetArgs;
 import io.pulumi.aws.cloudformation.inputs.StackSetState;
 import io.pulumi.aws.cloudformation.outputs.StackSetAutoDeployment;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -271,14 +270,14 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StackSet(String name, @Nullable StackSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudformation/stackSet:StackSet", name, args == null ? StackSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudformation/stackSet:StackSet", name, args == null ? StackSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private StackSet(String name, Input<String> id, @Nullable StackSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private StackSet(String name, Output<String> id, @Nullable StackSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudformation/stackSet:StackSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -294,7 +293,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StackSet get(String name, Input<String> id, @Nullable StackSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static StackSet get(String name, Output<String> id, @Nullable StackSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StackSet(name, id, state, options);
     }
 }

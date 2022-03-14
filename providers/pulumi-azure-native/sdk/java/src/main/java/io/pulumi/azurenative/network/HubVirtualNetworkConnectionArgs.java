@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowHubToRemoteVnetTransit")
-      private final @Nullable Input<Boolean> allowHubToRemoteVnetTransit;
+      private final @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
 
-    public Input<Boolean> getAllowHubToRemoteVnetTransit() {
-        return this.allowHubToRemoteVnetTransit == null ? Input.empty() : this.allowHubToRemoteVnetTransit;
+    public Output<Boolean> getAllowHubToRemoteVnetTransit() {
+        return this.allowHubToRemoteVnetTransit == null ? Output.empty() : this.allowHubToRemoteVnetTransit;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowRemoteVnetToUseHubVnetGateways")
-      private final @Nullable Input<Boolean> allowRemoteVnetToUseHubVnetGateways;
+      private final @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
 
-    public Input<Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
-        return this.allowRemoteVnetToUseHubVnetGateways == null ? Input.empty() : this.allowRemoteVnetToUseHubVnetGateways;
+    public Output<Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
+        return this.allowRemoteVnetToUseHubVnetGateways == null ? Output.empty() : this.allowRemoteVnetToUseHubVnetGateways;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enableInternetSecurity")
-      private final @Nullable Input<Boolean> enableInternetSecurity;
+      private final @Nullable Output<Boolean> enableInternetSecurity;
 
-    public Input<Boolean> getEnableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
+    public Output<Boolean> getEnableInternetSecurity() {
+        return this.enableInternetSecurity == null ? Output.empty() : this.enableInternetSecurity;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="remoteVirtualNetwork")
-      private final @Nullable Input<SubResourceArgs> remoteVirtualNetwork;
+      private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
-    public Input<SubResourceArgs> getRemoteVirtualNetwork() {
-        return this.remoteVirtualNetwork == null ? Input.empty() : this.remoteVirtualNetwork;
+    public Output<SubResourceArgs> getRemoteVirtualNetwork() {
+        return this.remoteVirtualNetwork == null ? Output.empty() : this.remoteVirtualNetwork;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,10 +110,10 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="routingConfiguration")
-      private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
+      private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
-    public Input<RoutingConfigurationArgs> getRoutingConfiguration() {
-        return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
+    public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
+        return this.routingConfiguration == null ? Output.empty() : this.routingConfiguration;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-      private final Input<String> virtualHubName;
+      private final Output<String> virtualHubName;
 
-    public Input<String> getVirtualHubName() {
+    public Output<String> getVirtualHubName() {
         return this.virtualHubName;
     }
 
     public HubVirtualNetworkConnectionArgs(
-        @Nullable Input<Boolean> allowHubToRemoteVnetTransit,
-        @Nullable Input<Boolean> allowRemoteVnetToUseHubVnetGateways,
-        @Nullable Input<String> connectionName,
-        @Nullable Input<Boolean> enableInternetSecurity,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<SubResourceArgs> remoteVirtualNetwork,
-        Input<String> resourceGroupName,
-        @Nullable Input<RoutingConfigurationArgs> routingConfiguration,
-        Input<String> virtualHubName) {
+        @Nullable Output<Boolean> allowHubToRemoteVnetTransit,
+        @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways,
+        @Nullable Output<String> connectionName,
+        @Nullable Output<Boolean> enableInternetSecurity,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<SubResourceArgs> remoteVirtualNetwork,
+        Output<String> resourceGroupName,
+        @Nullable Output<RoutingConfigurationArgs> routingConfiguration,
+        Output<String> virtualHubName) {
         this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
         this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
         this.connectionName = connectionName;
@@ -151,16 +151,16 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
     }
 
     private HubVirtualNetworkConnectionArgs() {
-        this.allowHubToRemoteVnetTransit = Input.empty();
-        this.allowRemoteVnetToUseHubVnetGateways = Input.empty();
-        this.connectionName = Input.empty();
-        this.enableInternetSecurity = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.remoteVirtualNetwork = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routingConfiguration = Input.empty();
-        this.virtualHubName = Input.empty();
+        this.allowHubToRemoteVnetTransit = Output.empty();
+        this.allowRemoteVnetToUseHubVnetGateways = Output.empty();
+        this.connectionName = Output.empty();
+        this.enableInternetSecurity = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.remoteVirtualNetwork = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routingConfiguration = Output.empty();
+        this.virtualHubName = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowHubToRemoteVnetTransit;
-        private @Nullable Input<Boolean> allowRemoteVnetToUseHubVnetGateways;
-        private @Nullable Input<String> connectionName;
-        private @Nullable Input<Boolean> enableInternetSecurity;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SubResourceArgs> remoteVirtualNetwork;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
-        private Input<String> virtualHubName;
+        private @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
+        private @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
+        private @Nullable Output<String> connectionName;
+        private @Nullable Output<Boolean> enableInternetSecurity;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
+        private Output<String> virtualHubName;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder allowHubToRemoteVnetTransit(@Nullable Input<Boolean> allowHubToRemoteVnetTransit) {
+        public Builder allowHubToRemoteVnetTransit(@Nullable Output<Boolean> allowHubToRemoteVnetTransit) {
             this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
             return this;
         }
 
         public Builder allowHubToRemoteVnetTransit(@Nullable Boolean allowHubToRemoteVnetTransit) {
-            this.allowHubToRemoteVnetTransit = Input.ofNullable(allowHubToRemoteVnetTransit);
+            this.allowHubToRemoteVnetTransit = Output.ofNullable(allowHubToRemoteVnetTransit);
             return this;
         }
 
-        public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Input<Boolean> allowRemoteVnetToUseHubVnetGateways) {
+        public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways) {
             this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
             return this;
         }
 
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Boolean allowRemoteVnetToUseHubVnetGateways) {
-            this.allowRemoteVnetToUseHubVnetGateways = Input.ofNullable(allowRemoteVnetToUseHubVnetGateways);
+            this.allowRemoteVnetToUseHubVnetGateways = Output.ofNullable(allowRemoteVnetToUseHubVnetGateways);
             return this;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder enableInternetSecurity(@Nullable Input<Boolean> enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = Input.ofNullable(enableInternetSecurity);
+            this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder remoteVirtualNetwork(@Nullable Input<SubResourceArgs> remoteVirtualNetwork) {
+        public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
 
         public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = Input.ofNullable(remoteVirtualNetwork);
+            this.remoteVirtualNetwork = Output.ofNullable(remoteVirtualNetwork);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routingConfiguration(@Nullable Input<RoutingConfigurationArgs> routingConfiguration) {
+        public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
 
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
-            this.routingConfiguration = Input.ofNullable(routingConfiguration);
+            this.routingConfiguration = Output.ofNullable(routingConfiguration);
             return this;
         }
 
-        public Builder virtualHubName(Input<String> virtualHubName) {
+        public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
 
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
+            this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
         }
         public HubVirtualNetworkConnectionArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.JobS3TableOutputOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,54 +18,54 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     public static final JobDataCatalogOutputArgs Empty = new JobDataCatalogOutputArgs();
 
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="databaseOptions")
-      private final @Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
+      private final @Nullable Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
-    public Input<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
-        return this.databaseOptions == null ? Input.empty() : this.databaseOptions;
+    public Output<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
+        return this.databaseOptions == null ? Output.empty() : this.databaseOptions;
     }
 
     @InputImport(name="overwrite")
-      private final @Nullable Input<Boolean> overwrite;
+      private final @Nullable Output<Boolean> overwrite;
 
-    public Input<Boolean> getOverwrite() {
-        return this.overwrite == null ? Input.empty() : this.overwrite;
+    public Output<Boolean> getOverwrite() {
+        return this.overwrite == null ? Output.empty() : this.overwrite;
     }
 
     @InputImport(name="s3Options")
-      private final @Nullable Input<JobS3TableOutputOptionsArgs> s3Options;
+      private final @Nullable Output<JobS3TableOutputOptionsArgs> s3Options;
 
-    public Input<JobS3TableOutputOptionsArgs> getS3Options() {
-        return this.s3Options == null ? Input.empty() : this.s3Options;
+    public Output<JobS3TableOutputOptionsArgs> getS3Options() {
+        return this.s3Options == null ? Output.empty() : this.s3Options;
     }
 
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public JobDataCatalogOutputArgs(
-        @Nullable Input<String> catalogId,
-        Input<String> databaseName,
-        @Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions,
-        @Nullable Input<Boolean> overwrite,
-        @Nullable Input<JobS3TableOutputOptionsArgs> s3Options,
-        Input<String> tableName) {
+        @Nullable Output<String> catalogId,
+        Output<String> databaseName,
+        @Nullable Output<JobDatabaseTableOutputOptionsArgs> databaseOptions,
+        @Nullable Output<Boolean> overwrite,
+        @Nullable Output<JobS3TableOutputOptionsArgs> s3Options,
+        Output<String> tableName) {
         this.catalogId = catalogId;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.databaseOptions = databaseOptions;
@@ -75,12 +75,12 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     }
 
     private JobDataCatalogOutputArgs() {
-        this.catalogId = Input.empty();
-        this.databaseName = Input.empty();
-        this.databaseOptions = Input.empty();
-        this.overwrite = Input.empty();
-        this.s3Options = Input.empty();
-        this.tableName = Input.empty();
+        this.catalogId = Output.empty();
+        this.databaseName = Output.empty();
+        this.databaseOptions = Output.empty();
+        this.overwrite = Output.empty();
+        this.s3Options = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,12 +92,12 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private Input<String> databaseName;
-        private @Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
-        private @Nullable Input<Boolean> overwrite;
-        private @Nullable Input<JobS3TableOutputOptionsArgs> s3Options;
-        private Input<String> tableName;
+        private @Nullable Output<String> catalogId;
+        private Output<String> databaseName;
+        private @Nullable Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
+        private @Nullable Output<Boolean> overwrite;
+        private @Nullable Output<JobS3TableOutputOptionsArgs> s3Options;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -113,63 +113,63 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder databaseOptions(@Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
+        public Builder databaseOptions(@Nullable Output<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
             this.databaseOptions = databaseOptions;
             return this;
         }
 
         public Builder databaseOptions(@Nullable JobDatabaseTableOutputOptionsArgs databaseOptions) {
-            this.databaseOptions = Input.ofNullable(databaseOptions);
+            this.databaseOptions = Output.ofNullable(databaseOptions);
             return this;
         }
 
-        public Builder overwrite(@Nullable Input<Boolean> overwrite) {
+        public Builder overwrite(@Nullable Output<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Input.ofNullable(overwrite);
+            this.overwrite = Output.ofNullable(overwrite);
             return this;
         }
 
-        public Builder s3Options(@Nullable Input<JobS3TableOutputOptionsArgs> s3Options) {
+        public Builder s3Options(@Nullable Output<JobS3TableOutputOptionsArgs> s3Options) {
             this.s3Options = s3Options;
             return this;
         }
 
         public Builder s3Options(@Nullable JobS3TableOutputOptionsArgs s3Options) {
-            this.s3Options = Input.ofNullable(s3Options);
+            this.s3Options = Output.ofNullable(s3Options);
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public JobDataCatalogOutputArgs build() {

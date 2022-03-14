@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger.inputs;
 
 import io.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cert")
-      private final @Nullable Input<String> cert;
+      private final @Nullable Output<String> cert;
 
-    public Input<String> getCert() {
-        return this.cert == null ? Input.empty() : this.cert;
+    public Output<String> getCert() {
+        return this.cert == null ? Output.empty() : this.cert;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ledgerRoleName")
-      private final @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
+      private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
-    public Input<Either<String,LedgerRoleName>> getLedgerRoleName() {
-        return this.ledgerRoleName == null ? Input.empty() : this.ledgerRoleName;
+    public Output<Either<String,LedgerRoleName>> getLedgerRoleName() {
+        return this.ledgerRoleName == null ? Output.empty() : this.ledgerRoleName;
     }
 
     public CertBasedSecurityPrincipalArgs(
-        @Nullable Input<String> cert,
-        @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName) {
+        @Nullable Output<String> cert,
+        @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
         this.cert = cert;
         this.ledgerRoleName = ledgerRoleName;
     }
 
     private CertBasedSecurityPrincipalArgs() {
-        this.cert = Input.empty();
-        this.ledgerRoleName = Input.empty();
+        this.cert = Output.empty();
+        this.ledgerRoleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cert;
-        private @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
+        private @Nullable Output<String> cert;
+        private @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
     	      this.ledgerRoleName = defaults.ledgerRoleName;
         }
 
-        public Builder cert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Output<String> cert) {
             this.cert = cert;
             return this;
         }
 
         public Builder cert(@Nullable String cert) {
-            this.cert = Input.ofNullable(cert);
+            this.cert = Output.ofNullable(cert);
             return this;
         }
 
-        public Builder ledgerRoleName(@Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
 
         public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
-            this.ledgerRoleName = Input.ofNullable(ledgerRoleName);
+            this.ledgerRoleName = Output.ofNullable(ledgerRoleName);
             return this;
         }
         public CertBasedSecurityPrincipalArgs build() {

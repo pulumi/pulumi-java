@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketOwnershipControlsRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rule")
-      private final @Nullable Input<BucketOwnershipControlsRuleGetArgs> rule;
+      private final @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
 
-    public Input<BucketOwnershipControlsRuleGetArgs> getRule() {
-        return this.rule == null ? Input.empty() : this.rule;
+    public Output<BucketOwnershipControlsRuleGetArgs> getRule() {
+        return this.rule == null ? Output.empty() : this.rule;
     }
 
     public BucketOwnershipControlsState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<BucketOwnershipControlsRuleGetArgs> rule) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule) {
         this.bucket = bucket;
         this.rule = rule;
     }
 
     private BucketOwnershipControlsState() {
-        this.bucket = Input.empty();
-        this.rule = Input.empty();
+        this.bucket = Output.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<BucketOwnershipControlsRuleGetArgs> rule;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
     	      this.rule = defaults.rule;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder rule(@Nullable Input<BucketOwnershipControlsRuleGetArgs> rule) {
+        public Builder rule(@Nullable Output<BucketOwnershipControlsRuleGetArgs> rule) {
             this.rule = rule;
             return this;
         }
 
         public Builder rule(@Nullable BucketOwnershipControlsRuleGetArgs rule) {
-            this.rule = Input.ofNullable(rule);
+            this.rule = Output.ofNullable(rule);
             return this;
         }
         public BucketOwnershipControlsState build() {

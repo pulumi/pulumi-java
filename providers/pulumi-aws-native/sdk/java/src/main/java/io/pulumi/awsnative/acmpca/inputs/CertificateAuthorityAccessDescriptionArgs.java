@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessMethodArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityGeneralNameArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -19,29 +19,29 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
     public static final CertificateAuthorityAccessDescriptionArgs Empty = new CertificateAuthorityAccessDescriptionArgs();
 
     @InputImport(name="accessLocation", required=true)
-      private final Input<CertificateAuthorityGeneralNameArgs> accessLocation;
+      private final Output<CertificateAuthorityGeneralNameArgs> accessLocation;
 
-    public Input<CertificateAuthorityGeneralNameArgs> getAccessLocation() {
+    public Output<CertificateAuthorityGeneralNameArgs> getAccessLocation() {
         return this.accessLocation;
     }
 
     @InputImport(name="accessMethod", required=true)
-      private final Input<CertificateAuthorityAccessMethodArgs> accessMethod;
+      private final Output<CertificateAuthorityAccessMethodArgs> accessMethod;
 
-    public Input<CertificateAuthorityAccessMethodArgs> getAccessMethod() {
+    public Output<CertificateAuthorityAccessMethodArgs> getAccessMethod() {
         return this.accessMethod;
     }
 
     public CertificateAuthorityAccessDescriptionArgs(
-        Input<CertificateAuthorityGeneralNameArgs> accessLocation,
-        Input<CertificateAuthorityAccessMethodArgs> accessMethod) {
+        Output<CertificateAuthorityGeneralNameArgs> accessLocation,
+        Output<CertificateAuthorityAccessMethodArgs> accessMethod) {
         this.accessLocation = Objects.requireNonNull(accessLocation, "expected parameter 'accessLocation' to be non-null");
         this.accessMethod = Objects.requireNonNull(accessMethod, "expected parameter 'accessMethod' to be non-null");
     }
 
     private CertificateAuthorityAccessDescriptionArgs() {
-        this.accessLocation = Input.empty();
-        this.accessMethod = Input.empty();
+        this.accessLocation = Output.empty();
+        this.accessMethod = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<CertificateAuthorityGeneralNameArgs> accessLocation;
-        private Input<CertificateAuthorityAccessMethodArgs> accessMethod;
+        private Output<CertificateAuthorityGeneralNameArgs> accessLocation;
+        private Output<CertificateAuthorityAccessMethodArgs> accessMethod;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
     	      this.accessMethod = defaults.accessMethod;
         }
 
-        public Builder accessLocation(Input<CertificateAuthorityGeneralNameArgs> accessLocation) {
+        public Builder accessLocation(Output<CertificateAuthorityGeneralNameArgs> accessLocation) {
             this.accessLocation = Objects.requireNonNull(accessLocation);
             return this;
         }
 
         public Builder accessLocation(CertificateAuthorityGeneralNameArgs accessLocation) {
-            this.accessLocation = Input.of(Objects.requireNonNull(accessLocation));
+            this.accessLocation = Output.of(Objects.requireNonNull(accessLocation));
             return this;
         }
 
-        public Builder accessMethod(Input<CertificateAuthorityAccessMethodArgs> accessMethod) {
+        public Builder accessMethod(Output<CertificateAuthorityAccessMethodArgs> accessMethod) {
             this.accessMethod = Objects.requireNonNull(accessMethod);
             return this;
         }
 
         public Builder accessMethod(CertificateAuthorityAccessMethodArgs accessMethod) {
-            this.accessMethod = Input.of(Objects.requireNonNull(accessMethod));
+            this.accessMethod = Output.of(Objects.requireNonNull(accessMethod));
             return this;
         }
         public CertificateAuthorityAccessDescriptionArgs build() {

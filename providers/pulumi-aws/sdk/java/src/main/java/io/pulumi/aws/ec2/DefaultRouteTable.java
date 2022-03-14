@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.DefaultRouteTableArgs;
 import io.pulumi.aws.ec2.inputs.DefaultRouteTableState;
 import io.pulumi.aws.ec2.outputs.DefaultRouteTableRoute;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -191,14 +190,14 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultRouteTable(String name, DefaultRouteTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/defaultRouteTable:DefaultRouteTable", name, args == null ? DefaultRouteTableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/defaultRouteTable:DefaultRouteTable", name, args == null ? DefaultRouteTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DefaultRouteTable(String name, Input<String> id, @Nullable DefaultRouteTableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DefaultRouteTable(String name, Output<String> id, @Nullable DefaultRouteTableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/defaultRouteTable:DefaultRouteTable", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -214,7 +213,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DefaultRouteTable get(String name, Input<String> id, @Nullable DefaultRouteTableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DefaultRouteTable get(String name, Output<String> id, @Nullable DefaultRouteTableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefaultRouteTable(name, id, state, options);
     }
 }

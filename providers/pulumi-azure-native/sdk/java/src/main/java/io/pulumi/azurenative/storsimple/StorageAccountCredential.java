@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.StorageAccountCredentialArgs;
 import io.pulumi.azurenative.storsimple.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -170,19 +169,19 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public StorageAccountCredential(String name, StorageAccountCredentialArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storsimple:StorageAccountCredential", name, args == null ? StorageAccountCredentialArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storsimple:StorageAccountCredential", name, args == null ? StorageAccountCredentialArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private StorageAccountCredential(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private StorageAccountCredential(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storsimple:StorageAccountCredential", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storsimple/v20161001:StorageAccountCredential").build()),
-                Input.of(Alias.builder().setType("azure-native:storsimple/v20170601:StorageAccountCredential").build())
+                Output.of(Alias.builder().setType("azure-native:storsimple/v20161001:StorageAccountCredential").build()),
+                Output.of(Alias.builder().setType("azure-native:storsimple/v20170601:StorageAccountCredential").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -196,7 +195,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StorageAccountCredential get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static StorageAccountCredential get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageAccountCredential(name, id, options);
     }
 }

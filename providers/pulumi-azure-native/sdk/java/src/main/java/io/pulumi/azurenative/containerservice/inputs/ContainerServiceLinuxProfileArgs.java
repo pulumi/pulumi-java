@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ContainerServiceSshConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminUsername", required=true)
-      private final Input<String> adminUsername;
+      private final Output<String> adminUsername;
 
-    public Input<String> getAdminUsername() {
+    public Output<String> getAdminUsername() {
         return this.adminUsername;
     }
 
@@ -34,22 +34,22 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ssh", required=true)
-      private final Input<ContainerServiceSshConfigurationArgs> ssh;
+      private final Output<ContainerServiceSshConfigurationArgs> ssh;
 
-    public Input<ContainerServiceSshConfigurationArgs> getSsh() {
+    public Output<ContainerServiceSshConfigurationArgs> getSsh() {
         return this.ssh;
     }
 
     public ContainerServiceLinuxProfileArgs(
-        Input<String> adminUsername,
-        Input<ContainerServiceSshConfigurationArgs> ssh) {
+        Output<String> adminUsername,
+        Output<ContainerServiceSshConfigurationArgs> ssh) {
         this.adminUsername = Objects.requireNonNull(adminUsername, "expected parameter 'adminUsername' to be non-null");
         this.ssh = Objects.requireNonNull(ssh, "expected parameter 'ssh' to be non-null");
     }
 
     private ContainerServiceLinuxProfileArgs() {
-        this.adminUsername = Input.empty();
-        this.ssh = Input.empty();
+        this.adminUsername = Output.empty();
+        this.ssh = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> adminUsername;
-        private Input<ContainerServiceSshConfigurationArgs> ssh;
+        private Output<String> adminUsername;
+        private Output<ContainerServiceSshConfigurationArgs> ssh;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder adminUsername(Input<String> adminUsername) {
+        public Builder adminUsername(Output<String> adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
         public Builder adminUsername(String adminUsername) {
-            this.adminUsername = Input.of(Objects.requireNonNull(adminUsername));
+            this.adminUsername = Output.of(Objects.requireNonNull(adminUsername));
             return this;
         }
 
-        public Builder ssh(Input<ContainerServiceSshConfigurationArgs> ssh) {
+        public Builder ssh(Output<ContainerServiceSshConfigurationArgs> ssh) {
             this.ssh = Objects.requireNonNull(ssh);
             return this;
         }
 
         public Builder ssh(ContainerServiceSshConfigurationArgs ssh) {
-            this.ssh = Input.of(Objects.requireNonNull(ssh));
+            this.ssh = Output.of(Objects.requireNonNull(ssh));
             return this;
         }
         public ContainerServiceLinuxProfileArgs build() {

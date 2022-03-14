@@ -6,7 +6,6 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.GeofenceCollectionArgs;
 import io.pulumi.awsnative.location.enums.GeofenceCollectionPricingPlan;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,14 +111,14 @@ public class GeofenceCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GeofenceCollection(String name, GeofenceCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:location:GeofenceCollection", name, args == null ? GeofenceCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:location:GeofenceCollection", name, args == null ? GeofenceCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GeofenceCollection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GeofenceCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:location:GeofenceCollection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -134,7 +133,7 @@ public class GeofenceCollection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GeofenceCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GeofenceCollection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GeofenceCollection(name, id, options);
     }
 }

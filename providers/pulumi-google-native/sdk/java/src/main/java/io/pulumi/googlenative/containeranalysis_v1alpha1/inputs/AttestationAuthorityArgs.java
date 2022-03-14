@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.AttestationAuthorityHintArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
     public static final AttestationAuthorityArgs Empty = new AttestationAuthorityArgs();
 
     @InputImport(name="hint")
-      private final @Nullable Input<AttestationAuthorityHintArgs> hint;
+      private final @Nullable Output<AttestationAuthorityHintArgs> hint;
 
-    public Input<AttestationAuthorityHintArgs> getHint() {
-        return this.hint == null ? Input.empty() : this.hint;
+    public Output<AttestationAuthorityHintArgs> getHint() {
+        return this.hint == null ? Output.empty() : this.hint;
     }
 
-    public AttestationAuthorityArgs(@Nullable Input<AttestationAuthorityHintArgs> hint) {
+    public AttestationAuthorityArgs(@Nullable Output<AttestationAuthorityHintArgs> hint) {
         this.hint = hint;
     }
 
     private AttestationAuthorityArgs() {
-        this.hint = Input.empty();
+        this.hint = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AttestationAuthorityHintArgs> hint;
+        private @Nullable Output<AttestationAuthorityHintArgs> hint;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
     	      this.hint = defaults.hint;
         }
 
-        public Builder hint(@Nullable Input<AttestationAuthorityHintArgs> hint) {
+        public Builder hint(@Nullable Output<AttestationAuthorityHintArgs> hint) {
             this.hint = hint;
             return this;
         }
 
         public Builder hint(@Nullable AttestationAuthorityHintArgs hint) {
-            this.hint = Input.ofNullable(hint);
+            this.hint = Output.ofNullable(hint);
             return this;
         }
         public AttestationAuthorityArgs build() {

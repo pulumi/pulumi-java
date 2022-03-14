@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.GitFileSourceRepoType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoType")
-      private final @Nullable Input<GitFileSourceRepoType> repoType;
+      private final @Nullable Output<GitFileSourceRepoType> repoType;
 
-    public Input<GitFileSourceRepoType> getRepoType() {
-        return this.repoType == null ? Input.empty() : this.repoType;
+    public Output<GitFileSourceRepoType> getRepoType() {
+        return this.repoType == null ? Output.empty() : this.repoType;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<String> revision;
+      private final @Nullable Output<String> revision;
 
-    public Input<String> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<String> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public GitFileSourceArgs(
-        @Nullable Input<String> path,
-        @Nullable Input<GitFileSourceRepoType> repoType,
-        @Nullable Input<String> revision,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> path,
+        @Nullable Output<GitFileSourceRepoType> repoType,
+        @Nullable Output<String> revision,
+        @Nullable Output<String> uri) {
         this.path = path;
         this.repoType = repoType;
         this.revision = revision;
@@ -75,10 +75,10 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GitFileSourceArgs() {
-        this.path = Input.empty();
-        this.repoType = Input.empty();
-        this.revision = Input.empty();
-        this.uri = Input.empty();
+        this.path = Output.empty();
+        this.repoType = Output.empty();
+        this.revision = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
-        private @Nullable Input<GitFileSourceRepoType> repoType;
-        private @Nullable Input<String> revision;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> path;
+        private @Nullable Output<GitFileSourceRepoType> repoType;
+        private @Nullable Output<String> revision;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder repoType(@Nullable Input<GitFileSourceRepoType> repoType) {
+        public Builder repoType(@Nullable Output<GitFileSourceRepoType> repoType) {
             this.repoType = repoType;
             return this;
         }
 
         public Builder repoType(@Nullable GitFileSourceRepoType repoType) {
-            this.repoType = Input.ofNullable(repoType);
+            this.repoType = Output.ofNullable(repoType);
             return this;
         }
 
-        public Builder revision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable String revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public GitFileSourceArgs build() {

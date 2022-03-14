@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.dataproc;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -294,14 +293,14 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetastoreService(String name, MetastoreServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MetastoreService(String name, Input<String> id, @Nullable MetastoreServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MetastoreService(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataproc/metastoreService:MetastoreService", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -317,7 +316,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MetastoreService get(String name, Input<String> id, @Nullable MetastoreServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MetastoreService get(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MetastoreService(name, id, state, options);
     }
 }

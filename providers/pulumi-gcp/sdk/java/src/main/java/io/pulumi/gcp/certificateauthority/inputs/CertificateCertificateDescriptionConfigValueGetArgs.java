@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageGetArgs;
 import java.util.List;
@@ -21,18 +21,18 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends i
      * 
      */
     @InputImport(name="keyUsages")
-      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
+      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
 
-    public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> getKeyUsages() {
-        return this.keyUsages == null ? Input.empty() : this.keyUsages;
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> getKeyUsages() {
+        return this.keyUsages == null ? Output.empty() : this.keyUsages;
     }
 
-    public CertificateCertificateDescriptionConfigValueGetArgs(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages) {
+    public CertificateCertificateDescriptionConfigValueGetArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages) {
         this.keyUsages = keyUsages;
     }
 
     private CertificateCertificateDescriptionConfigValueGetArgs() {
-        this.keyUsages = Input.empty();
+        this.keyUsages = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
+        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends i
     	      this.keyUsages = defaults.keyUsages;
         }
 
-        public Builder keyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages) {
+        public Builder keyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages) {
             this.keyUsages = keyUsages;
             return this;
         }
 
         public Builder keyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs> keyUsages) {
-            this.keyUsages = Input.ofNullable(keyUsages);
+            this.keyUsages = Output.ofNullable(keyUsages);
             return this;
         }
         public CertificateCertificateDescriptionConfigValueGetArgs build() {

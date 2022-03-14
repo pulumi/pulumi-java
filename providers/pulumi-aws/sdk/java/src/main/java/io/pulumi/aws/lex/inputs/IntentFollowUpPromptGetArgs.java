@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptPromptGetArgs;
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -19,9 +19,9 @@ public final class IntentFollowUpPromptGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="prompt", required=true)
-      private final Input<IntentFollowUpPromptPromptGetArgs> prompt;
+      private final Output<IntentFollowUpPromptPromptGetArgs> prompt;
 
-    public Input<IntentFollowUpPromptPromptGetArgs> getPrompt() {
+    public Output<IntentFollowUpPromptPromptGetArgs> getPrompt() {
         return this.prompt;
     }
 
@@ -32,22 +32,22 @@ public final class IntentFollowUpPromptGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rejectionStatement", required=true)
-      private final Input<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
+      private final Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
 
-    public Input<IntentFollowUpPromptRejectionStatementGetArgs> getRejectionStatement() {
+    public Output<IntentFollowUpPromptRejectionStatementGetArgs> getRejectionStatement() {
         return this.rejectionStatement;
     }
 
     public IntentFollowUpPromptGetArgs(
-        Input<IntentFollowUpPromptPromptGetArgs> prompt,
-        Input<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
+        Output<IntentFollowUpPromptPromptGetArgs> prompt,
+        Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
         this.prompt = Objects.requireNonNull(prompt, "expected parameter 'prompt' to be non-null");
         this.rejectionStatement = Objects.requireNonNull(rejectionStatement, "expected parameter 'rejectionStatement' to be non-null");
     }
 
     private IntentFollowUpPromptGetArgs() {
-        this.prompt = Input.empty();
-        this.rejectionStatement = Input.empty();
+        this.prompt = Output.empty();
+        this.rejectionStatement = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class IntentFollowUpPromptGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<IntentFollowUpPromptPromptGetArgs> prompt;
-        private Input<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
+        private Output<IntentFollowUpPromptPromptGetArgs> prompt;
+        private Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class IntentFollowUpPromptGetArgs extends io.pulumi.resources.Resou
     	      this.rejectionStatement = defaults.rejectionStatement;
         }
 
-        public Builder prompt(Input<IntentFollowUpPromptPromptGetArgs> prompt) {
+        public Builder prompt(Output<IntentFollowUpPromptPromptGetArgs> prompt) {
             this.prompt = Objects.requireNonNull(prompt);
             return this;
         }
 
         public Builder prompt(IntentFollowUpPromptPromptGetArgs prompt) {
-            this.prompt = Input.of(Objects.requireNonNull(prompt));
+            this.prompt = Output.of(Objects.requireNonNull(prompt));
             return this;
         }
 
-        public Builder rejectionStatement(Input<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
+        public Builder rejectionStatement(Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
             this.rejectionStatement = Objects.requireNonNull(rejectionStatement);
             return this;
         }
 
         public Builder rejectionStatement(IntentFollowUpPromptRejectionStatementGetArgs rejectionStatement) {
-            this.rejectionStatement = Input.of(Objects.requireNonNull(rejectionStatement));
+            this.rejectionStatement = Output.of(Objects.requireNonNull(rejectionStatement));
             return this;
         }
         public IntentFollowUpPromptGetArgs build() {

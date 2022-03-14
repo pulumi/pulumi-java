@@ -8,7 +8,6 @@ import io.pulumi.azurenative.alertsmanagement.HealthAlertArgs;
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertActionResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertCriteriaResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,18 +213,18 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HealthAlert(String name, HealthAlertArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:alertsmanagement:HealthAlert", name, args == null ? HealthAlertArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:alertsmanagement:HealthAlert", name, args == null ? HealthAlertArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HealthAlert(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HealthAlert(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:alertsmanagement:HealthAlert", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:alertsmanagement/v20200804preview:HealthAlert").build())
+                Output.of(Alias.builder().setType("azure-native:alertsmanagement/v20200804preview:HealthAlert").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -239,7 +238,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HealthAlert get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HealthAlert get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HealthAlert(name, id, options);
     }
 }

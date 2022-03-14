@@ -8,7 +8,6 @@ import io.pulumi.aws.cloudfront.FieldLevelEncryptionConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigState;
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigContentTypeProfileConfig;
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigQueryArgProfileConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,14 +139,14 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public FieldLevelEncryptionConfig(String name, FieldLevelEncryptionConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig", name, args == null ? FieldLevelEncryptionConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig", name, args == null ? FieldLevelEncryptionConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FieldLevelEncryptionConfig(String name, Input<String> id, @Nullable FieldLevelEncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FieldLevelEncryptionConfig(String name, Output<String> id, @Nullable FieldLevelEncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -163,7 +162,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FieldLevelEncryptionConfig get(String name, Input<String> id, @Nullable FieldLevelEncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FieldLevelEncryptionConfig get(String name, Output<String> id, @Nullable FieldLevelEncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FieldLevelEncryptionConfig(name, id, state, options);
     }
 }

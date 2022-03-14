@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class PipelineChannelArgs extends io.pulumi.resources.ResourceArgs 
     public static final PipelineChannelArgs Empty = new PipelineChannelArgs();
 
     @InputImport(name="channelName", required=true)
-      private final Input<String> channelName;
+      private final Output<String> channelName;
 
-    public Input<String> getChannelName() {
+    public Output<String> getChannelName() {
         return this.channelName;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-      private final @Nullable Input<String> next;
+      private final @Nullable Output<String> next;
 
-    public Input<String> getNext() {
-        return this.next == null ? Input.empty() : this.next;
+    public Output<String> getNext() {
+        return this.next == null ? Output.empty() : this.next;
     }
 
     public PipelineChannelArgs(
-        Input<String> channelName,
-        Input<String> name,
-        @Nullable Input<String> next) {
+        Output<String> channelName,
+        Output<String> name,
+        @Nullable Output<String> next) {
         this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.next = next;
     }
 
     private PipelineChannelArgs() {
-        this.channelName = Input.empty();
-        this.name = Input.empty();
-        this.next = Input.empty();
+        this.channelName = Output.empty();
+        this.name = Output.empty();
+        this.next = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class PipelineChannelArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> channelName;
-        private Input<String> name;
-        private @Nullable Input<String> next;
+        private Output<String> channelName;
+        private Output<String> name;
+        private @Nullable Output<String> next;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class PipelineChannelArgs extends io.pulumi.resources.ResourceArgs 
     	      this.next = defaults.next;
         }
 
-        public Builder channelName(Input<String> channelName) {
+        public Builder channelName(Output<String> channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Input.of(Objects.requireNonNull(channelName));
+            this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder next(@Nullable Input<String> next) {
+        public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
 
         public Builder next(@Nullable String next) {
-            this.next = Input.ofNullable(next);
+            this.next = Output.ofNullable(next);
             return this;
         }
         public PipelineChannelArgs build() {

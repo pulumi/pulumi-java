@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="distributionGroups")
-      private final @Nullable Input<List<String>> distributionGroups;
+      private final @Nullable Output<List<String>> distributionGroups;
 
-    public Input<List<String>> getDistributionGroups() {
-        return this.distributionGroups == null ? Input.empty() : this.distributionGroups;
+    public Output<List<String>> getDistributionGroups() {
+        return this.distributionGroups == null ? Output.empty() : this.distributionGroups;
     }
 
-    public DistributionGroupListReceiverValueArgs(@Nullable Input<List<String>> distributionGroups) {
+    public DistributionGroupListReceiverValueArgs(@Nullable Output<List<String>> distributionGroups) {
         this.distributionGroups = distributionGroups;
     }
 
     private DistributionGroupListReceiverValueArgs() {
-        this.distributionGroups = Input.empty();
+        this.distributionGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> distributionGroups;
+        private @Nullable Output<List<String>> distributionGroups;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
     	      this.distributionGroups = defaults.distributionGroups;
         }
 
-        public Builder distributionGroups(@Nullable Input<List<String>> distributionGroups) {
+        public Builder distributionGroups(@Nullable Output<List<String>> distributionGroups) {
             this.distributionGroups = distributionGroups;
             return this;
         }
 
         public Builder distributionGroups(@Nullable List<String> distributionGroups) {
-            this.distributionGroups = Input.ofNullable(distributionGroups);
+            this.distributionGroups = Output.ofNullable(distributionGroups);
             return this;
         }
         public DistributionGroupListReceiverValueArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
     public static final AssetModelAttributeArgs Empty = new AssetModelAttributeArgs();
 
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
-    public AssetModelAttributeArgs(@Nullable Input<String> defaultValue) {
+    public AssetModelAttributeArgs(@Nullable Output<String> defaultValue) {
         this.defaultValue = defaultValue;
     }
 
     private AssetModelAttributeArgs() {
-        this.defaultValue = Input.empty();
+        this.defaultValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultValue;
+        private @Nullable Output<String> defaultValue;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
         public AssetModelAttributeArgs build() {

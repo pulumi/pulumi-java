@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class EventSourceMappingFilterCriteriaArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
+      private final @Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
 
-    public Input<List<EventSourceMappingFilterCriteriaFilterArgs>> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<List<EventSourceMappingFilterCriteriaFilterArgs>> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
-    public EventSourceMappingFilterCriteriaArgs(@Nullable Input<List<EventSourceMappingFilterCriteriaFilterArgs>> filters) {
+    public EventSourceMappingFilterCriteriaArgs(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters) {
         this.filters = filters;
     }
 
     private EventSourceMappingFilterCriteriaArgs() {
-        this.filters = Input.empty();
+        this.filters = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class EventSourceMappingFilterCriteriaArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
+        private @Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class EventSourceMappingFilterCriteriaArgs extends io.pulumi.resour
     	      this.filters = defaults.filters;
         }
 
-        public Builder filters(@Nullable Input<List<EventSourceMappingFilterCriteriaFilterArgs>> filters) {
+        public Builder filters(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<EventSourceMappingFilterCriteriaFilterArgs> filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
         public EventSourceMappingFilterCriteriaArgs build() {

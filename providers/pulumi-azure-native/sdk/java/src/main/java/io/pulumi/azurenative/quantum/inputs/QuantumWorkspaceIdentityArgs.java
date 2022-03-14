@@ -5,7 +5,7 @@ package io.pulumi.azurenative.quantum.inputs;
 
 import io.pulumi.azurenative.quantum.enums.ResourceIdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ResourceIdentityType>> type;
+      private final @Nullable Output<Either<String,ResourceIdentityType>> type;
 
-    public Input<Either<String,ResourceIdentityType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ResourceIdentityType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public QuantumWorkspaceIdentityArgs(@Nullable Input<Either<String,ResourceIdentityType>> type) {
+    public QuantumWorkspaceIdentityArgs(@Nullable Output<Either<String,ResourceIdentityType>> type) {
         this.type = type;
     }
 
     private QuantumWorkspaceIdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ResourceIdentityType>> type;
+        private @Nullable Output<Either<String,ResourceIdentityType>> type;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<Either<String,ResourceIdentityType>> type) {
+        public Builder type(@Nullable Output<Either<String,ResourceIdentityType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ResourceIdentityType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public QuantumWorkspaceIdentityArgs build() {

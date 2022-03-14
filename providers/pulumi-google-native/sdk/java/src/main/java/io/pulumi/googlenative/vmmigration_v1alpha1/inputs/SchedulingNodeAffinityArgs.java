@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.SchedulingNodeAffinityOperator;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<SchedulingNodeAffinityOperator> operator;
+      private final @Nullable Output<SchedulingNodeAffinityOperator> operator;
 
-    public Input<SchedulingNodeAffinityOperator> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<SchedulingNodeAffinityOperator> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public SchedulingNodeAffinityArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<SchedulingNodeAffinityOperator> operator,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<String> key,
+        @Nullable Output<SchedulingNodeAffinityOperator> operator,
+        @Nullable Output<List<String>> values) {
         this.key = key;
         this.operator = operator;
         this.values = values;
     }
 
     private SchedulingNodeAffinityArgs() {
-        this.key = Input.empty();
-        this.operator = Input.empty();
-        this.values = Input.empty();
+        this.key = Output.empty();
+        this.operator = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<SchedulingNodeAffinityOperator> operator;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<String> key;
+        private @Nullable Output<SchedulingNodeAffinityOperator> operator;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
     	      this.values = defaults.values;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder operator(@Nullable Input<SchedulingNodeAffinityOperator> operator) {
+        public Builder operator(@Nullable Output<SchedulingNodeAffinityOperator> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable SchedulingNodeAffinityOperator operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public SchedulingNodeAffinityArgs build() {

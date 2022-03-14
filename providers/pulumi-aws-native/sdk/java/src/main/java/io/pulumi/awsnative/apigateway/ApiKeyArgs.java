@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.awsnative.apigateway.inputs.ApiKeyStageKeyArgs;
 import io.pulumi.awsnative.apigateway.inputs.ApiKeyTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerId")
-      private final @Nullable Input<String> customerId;
+      private final @Nullable Output<String> customerId;
 
-    public Input<String> getCustomerId() {
-        return this.customerId == null ? Input.empty() : this.customerId;
+    public Output<String> getCustomerId() {
+        return this.customerId == null ? Output.empty() : this.customerId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generateDistinctId")
-      private final @Nullable Input<Boolean> generateDistinctId;
+      private final @Nullable Output<Boolean> generateDistinctId;
 
-    public Input<Boolean> getGenerateDistinctId() {
-        return this.generateDistinctId == null ? Input.empty() : this.generateDistinctId;
+    public Output<Boolean> getGenerateDistinctId() {
+        return this.generateDistinctId == null ? Output.empty() : this.generateDistinctId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageKeys")
-      private final @Nullable Input<List<ApiKeyStageKeyArgs>> stageKeys;
+      private final @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
 
-    public Input<List<ApiKeyStageKeyArgs>> getStageKeys() {
-        return this.stageKeys == null ? Input.empty() : this.stageKeys;
+    public Output<List<ApiKeyStageKeyArgs>> getStageKeys() {
+        return this.stageKeys == null ? Output.empty() : this.stageKeys;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ApiKeyTagArgs>> tags;
+      private final @Nullable Output<List<ApiKeyTagArgs>> tags;
 
-    public Input<List<ApiKeyTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ApiKeyTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ApiKeyArgs(
-        @Nullable Input<String> customerId,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Boolean> generateDistinctId,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ApiKeyStageKeyArgs>> stageKeys,
-        @Nullable Input<List<ApiKeyTagArgs>> tags,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> customerId,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Boolean> generateDistinctId,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys,
+        @Nullable Output<List<ApiKeyTagArgs>> tags,
+        @Nullable Output<String> value) {
         this.customerId = customerId;
         this.description = description;
         this.enabled = enabled;
@@ -126,14 +126,14 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiKeyArgs() {
-        this.customerId = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.generateDistinctId = Input.empty();
-        this.name = Input.empty();
-        this.stageKeys = Input.empty();
-        this.tags = Input.empty();
-        this.value = Input.empty();
+        this.customerId = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.generateDistinctId = Output.empty();
+        this.name = Output.empty();
+        this.stageKeys = Output.empty();
+        this.tags = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customerId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Boolean> generateDistinctId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ApiKeyStageKeyArgs>> stageKeys;
-        private @Nullable Input<List<ApiKeyTagArgs>> tags;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> customerId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Boolean> generateDistinctId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
+        private @Nullable Output<List<ApiKeyTagArgs>> tags;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder customerId(@Nullable Input<String> customerId) {
+        public Builder customerId(@Nullable Output<String> customerId) {
             this.customerId = customerId;
             return this;
         }
 
         public Builder customerId(@Nullable String customerId) {
-            this.customerId = Input.ofNullable(customerId);
+            this.customerId = Output.ofNullable(customerId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder generateDistinctId(@Nullable Input<Boolean> generateDistinctId) {
+        public Builder generateDistinctId(@Nullable Output<Boolean> generateDistinctId) {
             this.generateDistinctId = generateDistinctId;
             return this;
         }
 
         public Builder generateDistinctId(@Nullable Boolean generateDistinctId) {
-            this.generateDistinctId = Input.ofNullable(generateDistinctId);
+            this.generateDistinctId = Output.ofNullable(generateDistinctId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder stageKeys(@Nullable Input<List<ApiKeyStageKeyArgs>> stageKeys) {
+        public Builder stageKeys(@Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys) {
             this.stageKeys = stageKeys;
             return this;
         }
 
         public Builder stageKeys(@Nullable List<ApiKeyStageKeyArgs> stageKeys) {
-            this.stageKeys = Input.ofNullable(stageKeys);
+            this.stageKeys = Output.ofNullable(stageKeys);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ApiKeyTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ApiKeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ApiKeyTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ApiKeyArgs build() {

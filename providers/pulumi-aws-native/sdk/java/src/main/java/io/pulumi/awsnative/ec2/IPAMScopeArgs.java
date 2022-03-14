@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.IPAMScopeTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     public static final IPAMScopeArgs Empty = new IPAMScopeArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -28,9 +28,9 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamId", required=true)
-      private final Input<String> ipamId;
+      private final Output<String> ipamId;
 
-    public Input<String> getIpamId() {
+    public Output<String> getIpamId() {
         return this.ipamId;
     }
 
@@ -39,25 +39,25 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<IPAMScopeTagArgs>> tags;
+      private final @Nullable Output<List<IPAMScopeTagArgs>> tags;
 
-    public Input<List<IPAMScopeTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<IPAMScopeTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IPAMScopeArgs(
-        @Nullable Input<String> description,
-        Input<String> ipamId,
-        @Nullable Input<List<IPAMScopeTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<String> ipamId,
+        @Nullable Output<List<IPAMScopeTagArgs>> tags) {
         this.description = description;
         this.ipamId = Objects.requireNonNull(ipamId, "expected parameter 'ipamId' to be non-null");
         this.tags = tags;
     }
 
     private IPAMScopeArgs() {
-        this.description = Input.empty();
-        this.ipamId = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.ipamId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> ipamId;
-        private @Nullable Input<List<IPAMScopeTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> ipamId;
+        private @Nullable Output<List<IPAMScopeTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipamId(Input<String> ipamId) {
+        public Builder ipamId(Output<String> ipamId) {
             this.ipamId = Objects.requireNonNull(ipamId);
             return this;
         }
 
         public Builder ipamId(String ipamId) {
-            this.ipamId = Input.of(Objects.requireNonNull(ipamId));
+            this.ipamId = Output.of(Objects.requireNonNull(ipamId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<IPAMScopeTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<IPAMScopeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<IPAMScopeTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IPAMScopeArgs build() {

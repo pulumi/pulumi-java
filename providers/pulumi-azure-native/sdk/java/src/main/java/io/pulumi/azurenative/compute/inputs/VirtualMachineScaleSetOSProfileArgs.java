@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.LinuxConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="adminPassword")
-      private final @Nullable Input<String> adminPassword;
+      private final @Nullable Output<String> adminPassword;
 
-    public Input<String> getAdminPassword() {
-        return this.adminPassword == null ? Input.empty() : this.adminPassword;
+    public Output<String> getAdminPassword() {
+        return this.adminPassword == null ? Output.empty() : this.adminPassword;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="adminUsername")
-      private final @Nullable Input<String> adminUsername;
+      private final @Nullable Output<String> adminUsername;
 
-    public Input<String> getAdminUsername() {
-        return this.adminUsername == null ? Input.empty() : this.adminUsername;
+    public Output<String> getAdminUsername() {
+        return this.adminUsername == null ? Output.empty() : this.adminUsername;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="computerNamePrefix")
-      private final @Nullable Input<String> computerNamePrefix;
+      private final @Nullable Output<String> computerNamePrefix;
 
-    public Input<String> getComputerNamePrefix() {
-        return this.computerNamePrefix == null ? Input.empty() : this.computerNamePrefix;
+    public Output<String> getComputerNamePrefix() {
+        return this.computerNamePrefix == null ? Output.empty() : this.computerNamePrefix;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customData")
-      private final @Nullable Input<String> customData;
+      private final @Nullable Output<String> customData;
 
-    public Input<String> getCustomData() {
-        return this.customData == null ? Input.empty() : this.customData;
+    public Output<String> getCustomData() {
+        return this.customData == null ? Output.empty() : this.customData;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="linuxConfiguration")
-      private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
+      private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Input<LinuxConfigurationArgs> getLinuxConfiguration() {
-        return this.linuxConfiguration == null ? Input.empty() : this.linuxConfiguration;
+    public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
+        return this.linuxConfiguration == null ? Output.empty() : this.linuxConfiguration;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<List<VaultSecretGroupArgs>> secrets;
+      private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
-    public Input<List<VaultSecretGroupArgs>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<VaultSecretGroupArgs>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="windowsConfiguration")
-      private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+      private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Input<WindowsConfigurationArgs> getWindowsConfiguration() {
-        return this.windowsConfiguration == null ? Input.empty() : this.windowsConfiguration;
+    public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
+        return this.windowsConfiguration == null ? Output.empty() : this.windowsConfiguration;
     }
 
     public VirtualMachineScaleSetOSProfileArgs(
-        @Nullable Input<String> adminPassword,
-        @Nullable Input<String> adminUsername,
-        @Nullable Input<String> computerNamePrefix,
-        @Nullable Input<String> customData,
-        @Nullable Input<LinuxConfigurationArgs> linuxConfiguration,
-        @Nullable Input<List<VaultSecretGroupArgs>> secrets,
-        @Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        @Nullable Output<String> adminPassword,
+        @Nullable Output<String> adminUsername,
+        @Nullable Output<String> computerNamePrefix,
+        @Nullable Output<String> customData,
+        @Nullable Output<LinuxConfigurationArgs> linuxConfiguration,
+        @Nullable Output<List<VaultSecretGroupArgs>> secrets,
+        @Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.computerNamePrefix = computerNamePrefix;
@@ -117,13 +117,13 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
     }
 
     private VirtualMachineScaleSetOSProfileArgs() {
-        this.adminPassword = Input.empty();
-        this.adminUsername = Input.empty();
-        this.computerNamePrefix = Input.empty();
-        this.customData = Input.empty();
-        this.linuxConfiguration = Input.empty();
-        this.secrets = Input.empty();
-        this.windowsConfiguration = Input.empty();
+        this.adminPassword = Output.empty();
+        this.adminUsername = Output.empty();
+        this.computerNamePrefix = Output.empty();
+        this.customData = Output.empty();
+        this.linuxConfiguration = Output.empty();
+        this.secrets = Output.empty();
+        this.windowsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminPassword;
-        private @Nullable Input<String> adminUsername;
-        private @Nullable Input<String> computerNamePrefix;
-        private @Nullable Input<String> customData;
-        private @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
-        private @Nullable Input<List<VaultSecretGroupArgs>> secrets;
-        private @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+        private @Nullable Output<String> adminPassword;
+        private @Nullable Output<String> adminUsername;
+        private @Nullable Output<String> computerNamePrefix;
+        private @Nullable Output<String> customData;
+        private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
+        private @Nullable Output<List<VaultSecretGroupArgs>> secrets;
+        private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder adminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Output<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Input.ofNullable(adminPassword);
+            this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder adminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Output<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Input.ofNullable(adminUsername);
+            this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder computerNamePrefix(@Nullable Input<String> computerNamePrefix) {
+        public Builder computerNamePrefix(@Nullable Output<String> computerNamePrefix) {
             this.computerNamePrefix = computerNamePrefix;
             return this;
         }
 
         public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
-            this.computerNamePrefix = Input.ofNullable(computerNamePrefix);
+            this.computerNamePrefix = Output.ofNullable(computerNamePrefix);
             return this;
         }
 
-        public Builder customData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
 
         public Builder customData(@Nullable String customData) {
-            this.customData = Input.ofNullable(customData);
+            this.customData = Output.ofNullable(customData);
             return this;
         }
 
-        public Builder linuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Input.ofNullable(linuxConfiguration);
+            this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<List<VaultSecretGroupArgs>> secrets) {
+        public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
 
-        public Builder windowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
 
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
+            this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
             return this;
         }
         public VirtualMachineScaleSetOSProfileArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSsh")
-      private final @Nullable Input<Boolean> allowSsh;
+      private final @Nullable Output<Boolean> allowSsh;
 
-    public Input<Boolean> getAllowSsh() {
-        return this.allowSsh == null ? Input.empty() : this.allowSsh;
+    public Output<Boolean> getAllowSsh() {
+        return this.allowSsh == null ? Output.empty() : this.allowSsh;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSudo")
-      private final @Nullable Input<Boolean> allowSudo;
+      private final @Nullable Output<Boolean> allowSudo;
 
-    public Input<Boolean> getAllowSudo() {
-        return this.allowSudo == null ? Input.empty() : this.allowSudo;
+    public Output<Boolean> getAllowSudo() {
+        return this.allowSudo == null ? Output.empty() : this.allowSudo;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<String> level;
+      private final @Nullable Output<String> level;
 
-    public Input<String> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<String> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId")
-      private final @Nullable Input<String> stackId;
+      private final @Nullable Output<String> stackId;
 
-    public Input<String> getStackId() {
-        return this.stackId == null ? Input.empty() : this.stackId;
+    public Output<String> getStackId() {
+        return this.stackId == null ? Output.empty() : this.stackId;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userArn")
-      private final @Nullable Input<String> userArn;
+      private final @Nullable Output<String> userArn;
 
-    public Input<String> getUserArn() {
-        return this.userArn == null ? Input.empty() : this.userArn;
+    public Output<String> getUserArn() {
+        return this.userArn == null ? Output.empty() : this.userArn;
     }
 
     public PermissionState(
-        @Nullable Input<Boolean> allowSsh,
-        @Nullable Input<Boolean> allowSudo,
-        @Nullable Input<String> level,
-        @Nullable Input<String> stackId,
-        @Nullable Input<String> userArn) {
+        @Nullable Output<Boolean> allowSsh,
+        @Nullable Output<Boolean> allowSudo,
+        @Nullable Output<String> level,
+        @Nullable Output<String> stackId,
+        @Nullable Output<String> userArn) {
         this.allowSsh = allowSsh;
         this.allowSudo = allowSudo;
         this.level = level;
@@ -84,11 +84,11 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionState() {
-        this.allowSsh = Input.empty();
-        this.allowSudo = Input.empty();
-        this.level = Input.empty();
-        this.stackId = Input.empty();
-        this.userArn = Input.empty();
+        this.allowSsh = Output.empty();
+        this.allowSudo = Output.empty();
+        this.level = Output.empty();
+        this.stackId = Output.empty();
+        this.userArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowSsh;
-        private @Nullable Input<Boolean> allowSudo;
-        private @Nullable Input<String> level;
-        private @Nullable Input<String> stackId;
-        private @Nullable Input<String> userArn;
+        private @Nullable Output<Boolean> allowSsh;
+        private @Nullable Output<Boolean> allowSudo;
+        private @Nullable Output<String> level;
+        private @Nullable Output<String> stackId;
+        private @Nullable Output<String> userArn;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder allowSsh(@Nullable Input<Boolean> allowSsh) {
+        public Builder allowSsh(@Nullable Output<Boolean> allowSsh) {
             this.allowSsh = allowSsh;
             return this;
         }
 
         public Builder allowSsh(@Nullable Boolean allowSsh) {
-            this.allowSsh = Input.ofNullable(allowSsh);
+            this.allowSsh = Output.ofNullable(allowSsh);
             return this;
         }
 
-        public Builder allowSudo(@Nullable Input<Boolean> allowSudo) {
+        public Builder allowSudo(@Nullable Output<Boolean> allowSudo) {
             this.allowSudo = allowSudo;
             return this;
         }
 
         public Builder allowSudo(@Nullable Boolean allowSudo) {
-            this.allowSudo = Input.ofNullable(allowSudo);
+            this.allowSudo = Output.ofNullable(allowSudo);
             return this;
         }
 
-        public Builder level(@Nullable Input<String> level) {
+        public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable String level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
 
-        public Builder stackId(@Nullable Input<String> stackId) {
+        public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
 
         public Builder stackId(@Nullable String stackId) {
-            this.stackId = Input.ofNullable(stackId);
+            this.stackId = Output.ofNullable(stackId);
             return this;
         }
 
-        public Builder userArn(@Nullable Input<String> userArn) {
+        public Builder userArn(@Nullable Output<String> userArn) {
             this.userArn = userArn;
             return this;
         }
 
         public Builder userArn(@Nullable String userArn) {
-            this.userArn = Input.ofNullable(userArn);
+            this.userArn = Output.ofNullable(userArn);
             return this;
         }
         public PermissionState build() {

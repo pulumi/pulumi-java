@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs ext
      * 
      */
     @InputImport(name="accessLevel")
-      private final @Nullable Input<String> accessLevel;
+      private final @Nullable Output<String> accessLevel;
 
-    public Input<String> getAccessLevel() {
-        return this.accessLevel == null ? Input.empty() : this.accessLevel;
+    public Output<String> getAccessLevel() {
+        return this.accessLevel == null ? Output.empty() : this.accessLevel;
     }
 
     /**
@@ -42,22 +42,22 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs ext
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<String> resource;
+      private final @Nullable Output<String> resource;
 
-    public Input<String> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<String> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     public ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs(
-        @Nullable Input<String> accessLevel,
-        @Nullable Input<String> resource) {
+        @Nullable Output<String> accessLevel,
+        @Nullable Output<String> resource) {
         this.accessLevel = accessLevel;
         this.resource = resource;
     }
 
     private ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs() {
-        this.accessLevel = Input.empty();
-        this.resource = Input.empty();
+        this.accessLevel = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,8 +69,8 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessLevel;
-        private @Nullable Input<String> resource;
+        private @Nullable Output<String> accessLevel;
+        private @Nullable Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -82,23 +82,23 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs ext
     	      this.resource = defaults.resource;
         }
 
-        public Builder accessLevel(@Nullable Input<String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             this.accessLevel = accessLevel;
             return this;
         }
 
         public Builder accessLevel(@Nullable String accessLevel) {
-            this.accessLevel = Input.ofNullable(accessLevel);
+            this.accessLevel = Output.ofNullable(accessLevel);
             return this;
         }
 
-        public Builder resource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
         public ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs build() {

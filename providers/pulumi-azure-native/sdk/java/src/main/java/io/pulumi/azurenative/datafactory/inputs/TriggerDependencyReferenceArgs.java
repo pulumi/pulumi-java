@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="referenceTrigger", required=true)
-      private final Input<TriggerReferenceArgs> referenceTrigger;
+      private final Output<TriggerReferenceArgs> referenceTrigger;
 
-    public Input<TriggerReferenceArgs> getReferenceTrigger() {
+    public Output<TriggerReferenceArgs> getReferenceTrigger() {
         return this.referenceTrigger;
     }
 
@@ -35,22 +35,22 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TriggerDependencyReferenceArgs(
-        Input<TriggerReferenceArgs> referenceTrigger,
-        Input<String> type) {
+        Output<TriggerReferenceArgs> referenceTrigger,
+        Output<String> type) {
         this.referenceTrigger = Objects.requireNonNull(referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private TriggerDependencyReferenceArgs() {
-        this.referenceTrigger = Input.empty();
-        this.type = Input.empty();
+        this.referenceTrigger = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<TriggerReferenceArgs> referenceTrigger;
-        private Input<String> type;
+        private Output<TriggerReferenceArgs> referenceTrigger;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder referenceTrigger(Input<TriggerReferenceArgs> referenceTrigger) {
+        public Builder referenceTrigger(Output<TriggerReferenceArgs> referenceTrigger) {
             this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
             return this;
         }
 
         public Builder referenceTrigger(TriggerReferenceArgs referenceTrigger) {
-            this.referenceTrigger = Input.of(Objects.requireNonNull(referenceTrigger));
+            this.referenceTrigger = Output.of(Objects.requireNonNull(referenceTrigger));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TriggerDependencyReferenceArgs build() {

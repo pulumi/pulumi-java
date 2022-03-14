@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,39 +20,39 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
     public static final ModelDefinitionModelOptionsArgs Empty = new ModelDefinitionModelOptionsArgs();
 
     @InputImport(name="labels")
-      private final @Nullable Input<List<String>> labels;
+      private final @Nullable Output<List<String>> labels;
 
-    public Input<List<String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="lossType")
-      private final @Nullable Input<String> lossType;
+      private final @Nullable Output<String> lossType;
 
-    public Input<String> getLossType() {
-        return this.lossType == null ? Input.empty() : this.lossType;
+    public Output<String> getLossType() {
+        return this.lossType == null ? Output.empty() : this.lossType;
     }
 
     @InputImport(name="modelType")
-      private final @Nullable Input<String> modelType;
+      private final @Nullable Output<String> modelType;
 
-    public Input<String> getModelType() {
-        return this.modelType == null ? Input.empty() : this.modelType;
+    public Output<String> getModelType() {
+        return this.modelType == null ? Output.empty() : this.modelType;
     }
 
     public ModelDefinitionModelOptionsArgs(
-        @Nullable Input<List<String>> labels,
-        @Nullable Input<String> lossType,
-        @Nullable Input<String> modelType) {
+        @Nullable Output<List<String>> labels,
+        @Nullable Output<String> lossType,
+        @Nullable Output<String> modelType) {
         this.labels = labels;
         this.lossType = lossType;
         this.modelType = modelType;
     }
 
     private ModelDefinitionModelOptionsArgs() {
-        this.labels = Input.empty();
-        this.lossType = Input.empty();
-        this.modelType = Input.empty();
+        this.labels = Output.empty();
+        this.lossType = Output.empty();
+        this.modelType = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,9 +64,9 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> labels;
-        private @Nullable Input<String> lossType;
-        private @Nullable Input<String> modelType;
+        private @Nullable Output<List<String>> labels;
+        private @Nullable Output<String> lossType;
+        private @Nullable Output<String> modelType;
 
         public Builder() {
     	      // Empty
@@ -79,33 +79,33 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder labels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lossType(@Nullable Input<String> lossType) {
+        public Builder lossType(@Nullable Output<String> lossType) {
             this.lossType = lossType;
             return this;
         }
 
         public Builder lossType(@Nullable String lossType) {
-            this.lossType = Input.ofNullable(lossType);
+            this.lossType = Output.ofNullable(lossType);
             return this;
         }
 
-        public Builder modelType(@Nullable Input<String> modelType) {
+        public Builder modelType(@Nullable Output<String> modelType) {
             this.modelType = modelType;
             return this;
         }
 
         public Builder modelType(@Nullable String modelType) {
-            this.modelType = Input.ofNullable(modelType);
+            this.modelType = Output.ofNullable(modelType);
             return this;
         }
         public ModelDefinitionModelOptionsArgs build() {

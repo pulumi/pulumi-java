@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
      * 
      */
     @InputImport(name="synonyms")
-      private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Output<List<String>> synonyms;
 
-    public Input<List<String>> getSynonyms() {
-        return this.synonyms == null ? Input.empty() : this.synonyms;
+    public Output<List<String>> getSynonyms() {
+        return this.synonyms == null ? Output.empty() : this.synonyms;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs(
-        Input<String> key,
-        @Nullable Input<List<String>> synonyms) {
+        Output<String> key,
+        @Nullable Output<List<String>> synonyms) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.synonyms = synonyms;
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs() {
-        this.key = Input.empty();
-        this.synonyms = Input.empty();
+        this.key = Output.empty();
+        this.synonyms = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<List<String>> synonyms;
+        private Output<String> key;
+        private @Nullable Output<List<String>> synonyms;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder synonyms(@Nullable Input<List<String>> synonyms) {
+        public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
         public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Input.ofNullable(synonyms);
+            this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs build() {

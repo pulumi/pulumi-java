@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<String> identity;
+      private final @Nullable Output<String> identity;
 
-    public Input<String> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<String> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public IdentityPolicyState(
-        @Nullable Input<String> identity,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> identity,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policy) {
         this.identity = identity;
         this.name = name;
         this.policy = policy;
     }
 
     private IdentityPolicyState() {
-        this.identity = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
+        this.identity = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identity;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> identity;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.policy = defaults.policy;
         }
 
-        public Builder identity(@Nullable Input<String> identity) {
+        public Builder identity(@Nullable Output<String> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable String identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public IdentityPolicyState build() {

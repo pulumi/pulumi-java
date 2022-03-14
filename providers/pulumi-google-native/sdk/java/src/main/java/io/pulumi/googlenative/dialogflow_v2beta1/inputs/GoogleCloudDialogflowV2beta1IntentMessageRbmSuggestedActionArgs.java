@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs;
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * 
      */
     @InputImport(name="dial")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> getDial() {
-        return this.dial == null ? Input.empty() : this.dial;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> getDial() {
+        return this.dial == null ? Output.empty() : this.dial;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * 
      */
     @InputImport(name="openUrl")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> getOpenUrl() {
-        return this.openUrl == null ? Input.empty() : this.openUrl;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> getOpenUrl() {
+        return this.openUrl == null ? Output.empty() : this.openUrl;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * 
      */
     @InputImport(name="postbackData")
-      private final @Nullable Input<String> postbackData;
+      private final @Nullable Output<String> postbackData;
 
-    public Input<String> getPostbackData() {
-        return this.postbackData == null ? Input.empty() : this.postbackData;
+    public Output<String> getPostbackData() {
+        return this.postbackData == null ? Output.empty() : this.postbackData;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * 
      */
     @InputImport(name="shareLocation")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> getShareLocation() {
-        return this.shareLocation == null ? Input.empty() : this.shareLocation;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> getShareLocation() {
+        return this.shareLocation == null ? Output.empty() : this.shareLocation;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<String> text;
+      private final @Nullable Output<String> text;
 
-    public Input<String> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<String> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs(
-        @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial,
-        @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl,
-        @Nullable Input<String> postbackData,
-        @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation,
-        @Nullable Input<String> text) {
+        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial,
+        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl,
+        @Nullable Output<String> postbackData,
+        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation,
+        @Nullable Output<String> text) {
         this.dial = dial;
         this.openUrl = openUrl;
         this.postbackData = postbackData;
@@ -90,11 +90,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs() {
-        this.dial = Input.empty();
-        this.openUrl = Input.empty();
-        this.postbackData = Input.empty();
-        this.shareLocation = Input.empty();
-        this.text = Input.empty();
+        this.dial = Output.empty();
+        this.openUrl = Output.empty();
+        this.postbackData = Output.empty();
+        this.shareLocation = Output.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
-        private @Nullable Input<String> postbackData;
-        private @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
-        private @Nullable Input<String> text;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
+        private @Nullable Output<String> postbackData;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
+        private @Nullable Output<String> text;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     	      this.text = defaults.text;
         }
 
-        public Builder dial(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial) {
+        public Builder dial(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial) {
             this.dial = dial;
             return this;
         }
 
         public Builder dial(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs dial) {
-            this.dial = Input.ofNullable(dial);
+            this.dial = Output.ofNullable(dial);
             return this;
         }
 
-        public Builder openUrl(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl) {
+        public Builder openUrl(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl) {
             this.openUrl = openUrl;
             return this;
         }
 
         public Builder openUrl(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs openUrl) {
-            this.openUrl = Input.ofNullable(openUrl);
+            this.openUrl = Output.ofNullable(openUrl);
             return this;
         }
 
-        public Builder postbackData(@Nullable Input<String> postbackData) {
+        public Builder postbackData(@Nullable Output<String> postbackData) {
             this.postbackData = postbackData;
             return this;
         }
 
         public Builder postbackData(@Nullable String postbackData) {
-            this.postbackData = Input.ofNullable(postbackData);
+            this.postbackData = Output.ofNullable(postbackData);
             return this;
         }
 
-        public Builder shareLocation(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation) {
+        public Builder shareLocation(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation) {
             this.shareLocation = shareLocation;
             return this;
         }
 
         public Builder shareLocation(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs shareLocation) {
-            this.shareLocation = Input.ofNullable(shareLocation);
+            this.shareLocation = Output.ofNullable(shareLocation);
             return this;
         }
 
-        public Builder text(@Nullable Input<String> text) {
+        public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable String text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs build() {

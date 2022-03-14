@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class QueryListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queries", required=true)
-      private final Input<List<String>> queries;
+      private final Output<List<String>> queries;
 
-    public Input<List<String>> getQueries() {
+    public Output<List<String>> getQueries() {
         return this.queries;
     }
 
-    public QueryListArgs(Input<List<String>> queries) {
+    public QueryListArgs(Output<List<String>> queries) {
         this.queries = Objects.requireNonNull(queries, "expected parameter 'queries' to be non-null");
     }
 
     private QueryListArgs() {
-        this.queries = Input.empty();
+        this.queries = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class QueryListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> queries;
+        private Output<List<String>> queries;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class QueryListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queries = defaults.queries;
         }
 
-        public Builder queries(Input<List<String>> queries) {
+        public Builder queries(Output<List<String>> queries) {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
 
         public Builder queries(List<String> queries) {
-            this.queries = Input.of(Objects.requireNonNull(queries));
+            this.queries = Output.of(Objects.requireNonNull(queries));
             return this;
         }
         public QueryListArgs build() {

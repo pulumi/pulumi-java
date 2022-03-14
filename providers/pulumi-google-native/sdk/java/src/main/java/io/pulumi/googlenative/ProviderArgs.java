@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.Utilities;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appendUserAgent")
-      private final @Nullable Input<String> appendUserAgent;
+      private final @Nullable Output<String> appendUserAgent;
 
-    public Input<String> getAppendUserAgent() {
-        return this.appendUserAgent == null ? Input.empty() : this.appendUserAgent;
+    public Output<String> getAppendUserAgent() {
+        return this.appendUserAgent == null ? Output.empty() : this.appendUserAgent;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disablePartnerName", json=true)
-      private final @Nullable Input<Boolean> disablePartnerName;
+      private final @Nullable Output<Boolean> disablePartnerName;
 
-    public Input<Boolean> getDisablePartnerName() {
-        return this.disablePartnerName == null ? Input.empty() : this.disablePartnerName;
+    public Output<Boolean> getDisablePartnerName() {
+        return this.disablePartnerName == null ? Output.empty() : this.disablePartnerName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerName")
-      private final @Nullable Input<String> partnerName;
+      private final @Nullable Output<String> partnerName;
 
-    public Input<String> getPartnerName() {
-        return this.partnerName == null ? Input.empty() : this.partnerName;
+    public Output<String> getPartnerName() {
+        return this.partnerName == null ? Output.empty() : this.partnerName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -76,34 +76,34 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public ProviderArgs(
-        @Nullable Input<String> appendUserAgent,
-        @Nullable Input<Boolean> disablePartnerName,
-        @Nullable Input<String> partnerName,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> zone) {
-        this.appendUserAgent = appendUserAgent == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_APPEND_USER_AGENT").orElse(null)) : appendUserAgent;
-        this.disablePartnerName = disablePartnerName == null ? Input.ofNullable(Utilities.getEnvBoolean("GOOGLE_DISABLE_PARTNER_NAME").orElse(null)) : disablePartnerName;
-        this.partnerName = partnerName == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_PARTNER_NAME").orElse(null)) : partnerName;
-        this.project = project == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
-        this.region = region == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
-        this.zone = zone == null ? Input.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
+        @Nullable Output<String> appendUserAgent,
+        @Nullable Output<Boolean> disablePartnerName,
+        @Nullable Output<String> partnerName,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> zone) {
+        this.appendUserAgent = appendUserAgent == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_APPEND_USER_AGENT").orElse(null)) : appendUserAgent;
+        this.disablePartnerName = disablePartnerName == null ? Output.ofNullable(Utilities.getEnvBoolean("GOOGLE_DISABLE_PARTNER_NAME").orElse(null)) : disablePartnerName;
+        this.partnerName = partnerName == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_PARTNER_NAME").orElse(null)) : partnerName;
+        this.project = project == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
+        this.region = region == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
+        this.zone = zone == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
     }
 
     private ProviderArgs() {
-        this.appendUserAgent = Input.empty();
-        this.disablePartnerName = Input.empty();
-        this.partnerName = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.zone = Input.empty();
+        this.appendUserAgent = Output.empty();
+        this.disablePartnerName = Output.empty();
+        this.partnerName = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appendUserAgent;
-        private @Nullable Input<Boolean> disablePartnerName;
-        private @Nullable Input<String> partnerName;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> appendUserAgent;
+        private @Nullable Output<Boolean> disablePartnerName;
+        private @Nullable Output<String> partnerName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder appendUserAgent(@Nullable Input<String> appendUserAgent) {
+        public Builder appendUserAgent(@Nullable Output<String> appendUserAgent) {
             this.appendUserAgent = appendUserAgent;
             return this;
         }
 
         public Builder appendUserAgent(@Nullable String appendUserAgent) {
-            this.appendUserAgent = Input.ofNullable(appendUserAgent);
+            this.appendUserAgent = Output.ofNullable(appendUserAgent);
             return this;
         }
 
-        public Builder disablePartnerName(@Nullable Input<Boolean> disablePartnerName) {
+        public Builder disablePartnerName(@Nullable Output<Boolean> disablePartnerName) {
             this.disablePartnerName = disablePartnerName;
             return this;
         }
 
         public Builder disablePartnerName(@Nullable Boolean disablePartnerName) {
-            this.disablePartnerName = Input.ofNullable(disablePartnerName);
+            this.disablePartnerName = Output.ofNullable(disablePartnerName);
             return this;
         }
 
-        public Builder partnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Input.ofNullable(partnerName);
+            this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public ProviderArgs build() {

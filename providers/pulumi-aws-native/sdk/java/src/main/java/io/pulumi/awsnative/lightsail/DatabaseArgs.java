@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.awsnative.lightsail.inputs.DatabaseRelationalDatabaseParameterArgs;
 import io.pulumi.awsnative.lightsail.inputs.DatabaseTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupRetention")
-      private final @Nullable Input<Boolean> backupRetention;
+      private final @Nullable Output<Boolean> backupRetention;
 
-    public Input<Boolean> getBackupRetention() {
-        return this.backupRetention == null ? Input.empty() : this.backupRetention;
+    public Output<Boolean> getBackupRetention() {
+        return this.backupRetention == null ? Output.empty() : this.backupRetention;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caCertificateIdentifier")
-      private final @Nullable Input<String> caCertificateIdentifier;
+      private final @Nullable Output<String> caCertificateIdentifier;
 
-    public Input<String> getCaCertificateIdentifier() {
-        return this.caCertificateIdentifier == null ? Input.empty() : this.caCertificateIdentifier;
+    public Output<String> getCaCertificateIdentifier() {
+        return this.caCertificateIdentifier == null ? Output.empty() : this.caCertificateIdentifier;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterDatabaseName", required=true)
-      private final Input<String> masterDatabaseName;
+      private final Output<String> masterDatabaseName;
 
-    public Input<String> getMasterDatabaseName() {
+    public Output<String> getMasterDatabaseName() {
         return this.masterDatabaseName;
     }
 
@@ -67,10 +67,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterUserPassword")
-      private final @Nullable Input<String> masterUserPassword;
+      private final @Nullable Output<String> masterUserPassword;
 
-    public Input<String> getMasterUserPassword() {
-        return this.masterUserPassword == null ? Input.empty() : this.masterUserPassword;
+    public Output<String> getMasterUserPassword() {
+        return this.masterUserPassword == null ? Output.empty() : this.masterUserPassword;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterUsername", required=true)
-      private final Input<String> masterUsername;
+      private final Output<String> masterUsername;
 
-    public Input<String> getMasterUsername() {
+    public Output<String> getMasterUsername() {
         return this.masterUsername;
     }
 
@@ -89,10 +89,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredBackupWindow")
-      private final @Nullable Input<String> preferredBackupWindow;
+      private final @Nullable Output<String> preferredBackupWindow;
 
-    public Input<String> getPreferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
+    public Output<String> getPreferredBackupWindow() {
+        return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-      private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Input<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
+    public Output<String> getPreferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publiclyAccessible")
-      private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Input<Boolean> getPubliclyAccessible() {
-        return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
+    public Output<Boolean> getPubliclyAccessible() {
+        return this.publiclyAccessible == null ? Output.empty() : this.publiclyAccessible;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseBlueprintId", required=true)
-      private final Input<String> relationalDatabaseBlueprintId;
+      private final Output<String> relationalDatabaseBlueprintId;
 
-    public Input<String> getRelationalDatabaseBlueprintId() {
+    public Output<String> getRelationalDatabaseBlueprintId() {
         return this.relationalDatabaseBlueprintId;
     }
 
@@ -133,9 +133,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseBundleId", required=true)
-      private final Input<String> relationalDatabaseBundleId;
+      private final Output<String> relationalDatabaseBundleId;
 
-    public Input<String> getRelationalDatabaseBundleId() {
+    public Output<String> getRelationalDatabaseBundleId() {
         return this.relationalDatabaseBundleId;
     }
 
@@ -144,9 +144,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseName", required=true)
-      private final Input<String> relationalDatabaseName;
+      private final Output<String> relationalDatabaseName;
 
-    public Input<String> getRelationalDatabaseName() {
+    public Output<String> getRelationalDatabaseName() {
         return this.relationalDatabaseName;
     }
 
@@ -155,10 +155,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseParameters")
-      private final @Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
+      private final @Nullable Output<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
 
-    public Input<List<DatabaseRelationalDatabaseParameterArgs>> getRelationalDatabaseParameters() {
-        return this.relationalDatabaseParameters == null ? Input.empty() : this.relationalDatabaseParameters;
+    public Output<List<DatabaseRelationalDatabaseParameterArgs>> getRelationalDatabaseParameters() {
+        return this.relationalDatabaseParameters == null ? Output.empty() : this.relationalDatabaseParameters;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotateMasterUserPassword")
-      private final @Nullable Input<Boolean> rotateMasterUserPassword;
+      private final @Nullable Output<Boolean> rotateMasterUserPassword;
 
-    public Input<Boolean> getRotateMasterUserPassword() {
-        return this.rotateMasterUserPassword == null ? Input.empty() : this.rotateMasterUserPassword;
+    public Output<Boolean> getRotateMasterUserPassword() {
+        return this.rotateMasterUserPassword == null ? Output.empty() : this.rotateMasterUserPassword;
     }
 
     /**
@@ -177,28 +177,28 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DatabaseTagArgs>> tags;
+      private final @Nullable Output<List<DatabaseTagArgs>> tags;
 
-    public Input<List<DatabaseTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DatabaseTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DatabaseArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<Boolean> backupRetention,
-        @Nullable Input<String> caCertificateIdentifier,
-        Input<String> masterDatabaseName,
-        @Nullable Input<String> masterUserPassword,
-        Input<String> masterUsername,
-        @Nullable Input<String> preferredBackupWindow,
-        @Nullable Input<String> preferredMaintenanceWindow,
-        @Nullable Input<Boolean> publiclyAccessible,
-        Input<String> relationalDatabaseBlueprintId,
-        Input<String> relationalDatabaseBundleId,
-        Input<String> relationalDatabaseName,
-        @Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters,
-        @Nullable Input<Boolean> rotateMasterUserPassword,
-        @Nullable Input<List<DatabaseTagArgs>> tags) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<Boolean> backupRetention,
+        @Nullable Output<String> caCertificateIdentifier,
+        Output<String> masterDatabaseName,
+        @Nullable Output<String> masterUserPassword,
+        Output<String> masterUsername,
+        @Nullable Output<String> preferredBackupWindow,
+        @Nullable Output<String> preferredMaintenanceWindow,
+        @Nullable Output<Boolean> publiclyAccessible,
+        Output<String> relationalDatabaseBlueprintId,
+        Output<String> relationalDatabaseBundleId,
+        Output<String> relationalDatabaseName,
+        @Nullable Output<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters,
+        @Nullable Output<Boolean> rotateMasterUserPassword,
+        @Nullable Output<List<DatabaseTagArgs>> tags) {
         this.availabilityZone = availabilityZone;
         this.backupRetention = backupRetention;
         this.caCertificateIdentifier = caCertificateIdentifier;
@@ -217,21 +217,21 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.availabilityZone = Input.empty();
-        this.backupRetention = Input.empty();
-        this.caCertificateIdentifier = Input.empty();
-        this.masterDatabaseName = Input.empty();
-        this.masterUserPassword = Input.empty();
-        this.masterUsername = Input.empty();
-        this.preferredBackupWindow = Input.empty();
-        this.preferredMaintenanceWindow = Input.empty();
-        this.publiclyAccessible = Input.empty();
-        this.relationalDatabaseBlueprintId = Input.empty();
-        this.relationalDatabaseBundleId = Input.empty();
-        this.relationalDatabaseName = Input.empty();
-        this.relationalDatabaseParameters = Input.empty();
-        this.rotateMasterUserPassword = Input.empty();
-        this.tags = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.backupRetention = Output.empty();
+        this.caCertificateIdentifier = Output.empty();
+        this.masterDatabaseName = Output.empty();
+        this.masterUserPassword = Output.empty();
+        this.masterUsername = Output.empty();
+        this.preferredBackupWindow = Output.empty();
+        this.preferredMaintenanceWindow = Output.empty();
+        this.publiclyAccessible = Output.empty();
+        this.relationalDatabaseBlueprintId = Output.empty();
+        this.relationalDatabaseBundleId = Output.empty();
+        this.relationalDatabaseName = Output.empty();
+        this.relationalDatabaseParameters = Output.empty();
+        this.rotateMasterUserPassword = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -243,21 +243,21 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<Boolean> backupRetention;
-        private @Nullable Input<String> caCertificateIdentifier;
-        private Input<String> masterDatabaseName;
-        private @Nullable Input<String> masterUserPassword;
-        private Input<String> masterUsername;
-        private @Nullable Input<String> preferredBackupWindow;
-        private @Nullable Input<String> preferredMaintenanceWindow;
-        private @Nullable Input<Boolean> publiclyAccessible;
-        private Input<String> relationalDatabaseBlueprintId;
-        private Input<String> relationalDatabaseBundleId;
-        private Input<String> relationalDatabaseName;
-        private @Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
-        private @Nullable Input<Boolean> rotateMasterUserPassword;
-        private @Nullable Input<List<DatabaseTagArgs>> tags;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<Boolean> backupRetention;
+        private @Nullable Output<String> caCertificateIdentifier;
+        private Output<String> masterDatabaseName;
+        private @Nullable Output<String> masterUserPassword;
+        private Output<String> masterUsername;
+        private @Nullable Output<String> preferredBackupWindow;
+        private @Nullable Output<String> preferredMaintenanceWindow;
+        private @Nullable Output<Boolean> publiclyAccessible;
+        private Output<String> relationalDatabaseBlueprintId;
+        private Output<String> relationalDatabaseBundleId;
+        private Output<String> relationalDatabaseName;
+        private @Nullable Output<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
+        private @Nullable Output<Boolean> rotateMasterUserPassword;
+        private @Nullable Output<List<DatabaseTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -282,153 +282,153 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder backupRetention(@Nullable Input<Boolean> backupRetention) {
+        public Builder backupRetention(@Nullable Output<Boolean> backupRetention) {
             this.backupRetention = backupRetention;
             return this;
         }
 
         public Builder backupRetention(@Nullable Boolean backupRetention) {
-            this.backupRetention = Input.ofNullable(backupRetention);
+            this.backupRetention = Output.ofNullable(backupRetention);
             return this;
         }
 
-        public Builder caCertificateIdentifier(@Nullable Input<String> caCertificateIdentifier) {
+        public Builder caCertificateIdentifier(@Nullable Output<String> caCertificateIdentifier) {
             this.caCertificateIdentifier = caCertificateIdentifier;
             return this;
         }
 
         public Builder caCertificateIdentifier(@Nullable String caCertificateIdentifier) {
-            this.caCertificateIdentifier = Input.ofNullable(caCertificateIdentifier);
+            this.caCertificateIdentifier = Output.ofNullable(caCertificateIdentifier);
             return this;
         }
 
-        public Builder masterDatabaseName(Input<String> masterDatabaseName) {
+        public Builder masterDatabaseName(Output<String> masterDatabaseName) {
             this.masterDatabaseName = Objects.requireNonNull(masterDatabaseName);
             return this;
         }
 
         public Builder masterDatabaseName(String masterDatabaseName) {
-            this.masterDatabaseName = Input.of(Objects.requireNonNull(masterDatabaseName));
+            this.masterDatabaseName = Output.of(Objects.requireNonNull(masterDatabaseName));
             return this;
         }
 
-        public Builder masterUserPassword(@Nullable Input<String> masterUserPassword) {
+        public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
 
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
-            this.masterUserPassword = Input.ofNullable(masterUserPassword);
+            this.masterUserPassword = Output.ofNullable(masterUserPassword);
             return this;
         }
 
-        public Builder masterUsername(Input<String> masterUsername) {
+        public Builder masterUsername(Output<String> masterUsername) {
             this.masterUsername = Objects.requireNonNull(masterUsername);
             return this;
         }
 
         public Builder masterUsername(String masterUsername) {
-            this.masterUsername = Input.of(Objects.requireNonNull(masterUsername));
+            this.masterUsername = Output.of(Objects.requireNonNull(masterUsername));
             return this;
         }
 
-        public Builder preferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Input.ofNullable(preferredBackupWindow);
+            this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
 
-        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
+            this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder relationalDatabaseBlueprintId(Input<String> relationalDatabaseBlueprintId) {
+        public Builder relationalDatabaseBlueprintId(Output<String> relationalDatabaseBlueprintId) {
             this.relationalDatabaseBlueprintId = Objects.requireNonNull(relationalDatabaseBlueprintId);
             return this;
         }
 
         public Builder relationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
-            this.relationalDatabaseBlueprintId = Input.of(Objects.requireNonNull(relationalDatabaseBlueprintId));
+            this.relationalDatabaseBlueprintId = Output.of(Objects.requireNonNull(relationalDatabaseBlueprintId));
             return this;
         }
 
-        public Builder relationalDatabaseBundleId(Input<String> relationalDatabaseBundleId) {
+        public Builder relationalDatabaseBundleId(Output<String> relationalDatabaseBundleId) {
             this.relationalDatabaseBundleId = Objects.requireNonNull(relationalDatabaseBundleId);
             return this;
         }
 
         public Builder relationalDatabaseBundleId(String relationalDatabaseBundleId) {
-            this.relationalDatabaseBundleId = Input.of(Objects.requireNonNull(relationalDatabaseBundleId));
+            this.relationalDatabaseBundleId = Output.of(Objects.requireNonNull(relationalDatabaseBundleId));
             return this;
         }
 
-        public Builder relationalDatabaseName(Input<String> relationalDatabaseName) {
+        public Builder relationalDatabaseName(Output<String> relationalDatabaseName) {
             this.relationalDatabaseName = Objects.requireNonNull(relationalDatabaseName);
             return this;
         }
 
         public Builder relationalDatabaseName(String relationalDatabaseName) {
-            this.relationalDatabaseName = Input.of(Objects.requireNonNull(relationalDatabaseName));
+            this.relationalDatabaseName = Output.of(Objects.requireNonNull(relationalDatabaseName));
             return this;
         }
 
-        public Builder relationalDatabaseParameters(@Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters) {
+        public Builder relationalDatabaseParameters(@Nullable Output<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters) {
             this.relationalDatabaseParameters = relationalDatabaseParameters;
             return this;
         }
 
         public Builder relationalDatabaseParameters(@Nullable List<DatabaseRelationalDatabaseParameterArgs> relationalDatabaseParameters) {
-            this.relationalDatabaseParameters = Input.ofNullable(relationalDatabaseParameters);
+            this.relationalDatabaseParameters = Output.ofNullable(relationalDatabaseParameters);
             return this;
         }
 
-        public Builder rotateMasterUserPassword(@Nullable Input<Boolean> rotateMasterUserPassword) {
+        public Builder rotateMasterUserPassword(@Nullable Output<Boolean> rotateMasterUserPassword) {
             this.rotateMasterUserPassword = rotateMasterUserPassword;
             return this;
         }
 
         public Builder rotateMasterUserPassword(@Nullable Boolean rotateMasterUserPassword) {
-            this.rotateMasterUserPassword = Input.ofNullable(rotateMasterUserPassword);
+            this.rotateMasterUserPassword = Output.ofNullable(rotateMasterUserPassword);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DatabaseTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DatabaseTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DatabaseTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DatabaseArgs build() {

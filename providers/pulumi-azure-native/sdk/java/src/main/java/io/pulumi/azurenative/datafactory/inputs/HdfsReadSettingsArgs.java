@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DistcpSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -26,10 +26,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deleteFilesAfterCompletion")
-      private final @Nullable Input<Object> deleteFilesAfterCompletion;
+      private final @Nullable Output<Object> deleteFilesAfterCompletion;
 
-    public Input<Object> getDeleteFilesAfterCompletion() {
-        return this.deleteFilesAfterCompletion == null ? Input.empty() : this.deleteFilesAfterCompletion;
+    public Output<Object> getDeleteFilesAfterCompletion() {
+        return this.deleteFilesAfterCompletion == null ? Output.empty() : this.deleteFilesAfterCompletion;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="distcpSettings")
-      private final @Nullable Input<DistcpSettingsArgs> distcpSettings;
+      private final @Nullable Output<DistcpSettingsArgs> distcpSettings;
 
-    public Input<DistcpSettingsArgs> getDistcpSettings() {
-        return this.distcpSettings == null ? Input.empty() : this.distcpSettings;
+    public Output<DistcpSettingsArgs> getDistcpSettings() {
+        return this.distcpSettings == null ? Output.empty() : this.distcpSettings;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enablePartitionDiscovery")
-      private final @Nullable Input<Boolean> enablePartitionDiscovery;
+      private final @Nullable Output<Boolean> enablePartitionDiscovery;
 
-    public Input<Boolean> getEnablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Input.empty() : this.enablePartitionDiscovery;
+    public Output<Boolean> getEnablePartitionDiscovery() {
+        return this.enablePartitionDiscovery == null ? Output.empty() : this.enablePartitionDiscovery;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fileListPath")
-      private final @Nullable Input<Object> fileListPath;
+      private final @Nullable Output<Object> fileListPath;
 
-    public Input<Object> getFileListPath() {
-        return this.fileListPath == null ? Input.empty() : this.fileListPath;
+    public Output<Object> getFileListPath() {
+        return this.fileListPath == null ? Output.empty() : this.fileListPath;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="modifiedDatetimeEnd")
-      private final @Nullable Input<Object> modifiedDatetimeEnd;
+      private final @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Input<Object> getModifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Input.empty() : this.modifiedDatetimeEnd;
+    public Output<Object> getModifiedDatetimeEnd() {
+        return this.modifiedDatetimeEnd == null ? Output.empty() : this.modifiedDatetimeEnd;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="modifiedDatetimeStart")
-      private final @Nullable Input<Object> modifiedDatetimeStart;
+      private final @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Input<Object> getModifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Input.empty() : this.modifiedDatetimeStart;
+    public Output<Object> getModifiedDatetimeStart() {
+        return this.modifiedDatetimeStart == null ? Output.empty() : this.modifiedDatetimeStart;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="partitionRootPath")
-      private final @Nullable Input<Object> partitionRootPath;
+      private final @Nullable Output<Object> partitionRootPath;
 
-    public Input<Object> getPartitionRootPath() {
-        return this.partitionRootPath == null ? Input.empty() : this.partitionRootPath;
+    public Output<Object> getPartitionRootPath() {
+        return this.partitionRootPath == null ? Output.empty() : this.partitionRootPath;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recursive")
-      private final @Nullable Input<Object> recursive;
+      private final @Nullable Output<Object> recursive;
 
-    public Input<Object> getRecursive() {
-        return this.recursive == null ? Input.empty() : this.recursive;
+    public Output<Object> getRecursive() {
+        return this.recursive == null ? Output.empty() : this.recursive;
     }
 
     /**
@@ -137,9 +137,9 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -148,10 +148,10 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="wildcardFileName")
-      private final @Nullable Input<Object> wildcardFileName;
+      private final @Nullable Output<Object> wildcardFileName;
 
-    public Input<Object> getWildcardFileName() {
-        return this.wildcardFileName == null ? Input.empty() : this.wildcardFileName;
+    public Output<Object> getWildcardFileName() {
+        return this.wildcardFileName == null ? Output.empty() : this.wildcardFileName;
     }
 
     /**
@@ -159,26 +159,26 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="wildcardFolderPath")
-      private final @Nullable Input<Object> wildcardFolderPath;
+      private final @Nullable Output<Object> wildcardFolderPath;
 
-    public Input<Object> getWildcardFolderPath() {
-        return this.wildcardFolderPath == null ? Input.empty() : this.wildcardFolderPath;
+    public Output<Object> getWildcardFolderPath() {
+        return this.wildcardFolderPath == null ? Output.empty() : this.wildcardFolderPath;
     }
 
     public HdfsReadSettingsArgs(
-        @Nullable Input<Object> deleteFilesAfterCompletion,
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<DistcpSettingsArgs> distcpSettings,
-        @Nullable Input<Boolean> enablePartitionDiscovery,
-        @Nullable Input<Object> fileListPath,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> modifiedDatetimeEnd,
-        @Nullable Input<Object> modifiedDatetimeStart,
-        @Nullable Input<Object> partitionRootPath,
-        @Nullable Input<Object> recursive,
-        Input<String> type,
-        @Nullable Input<Object> wildcardFileName,
-        @Nullable Input<Object> wildcardFolderPath) {
+        @Nullable Output<Object> deleteFilesAfterCompletion,
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<DistcpSettingsArgs> distcpSettings,
+        @Nullable Output<Boolean> enablePartitionDiscovery,
+        @Nullable Output<Object> fileListPath,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> modifiedDatetimeEnd,
+        @Nullable Output<Object> modifiedDatetimeStart,
+        @Nullable Output<Object> partitionRootPath,
+        @Nullable Output<Object> recursive,
+        Output<String> type,
+        @Nullable Output<Object> wildcardFileName,
+        @Nullable Output<Object> wildcardFolderPath) {
         this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
         this.disableMetricsCollection = disableMetricsCollection;
         this.distcpSettings = distcpSettings;
@@ -195,19 +195,19 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HdfsReadSettingsArgs() {
-        this.deleteFilesAfterCompletion = Input.empty();
-        this.disableMetricsCollection = Input.empty();
-        this.distcpSettings = Input.empty();
-        this.enablePartitionDiscovery = Input.empty();
-        this.fileListPath = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.modifiedDatetimeEnd = Input.empty();
-        this.modifiedDatetimeStart = Input.empty();
-        this.partitionRootPath = Input.empty();
-        this.recursive = Input.empty();
-        this.type = Input.empty();
-        this.wildcardFileName = Input.empty();
-        this.wildcardFolderPath = Input.empty();
+        this.deleteFilesAfterCompletion = Output.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.distcpSettings = Output.empty();
+        this.enablePartitionDiscovery = Output.empty();
+        this.fileListPath = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.modifiedDatetimeEnd = Output.empty();
+        this.modifiedDatetimeStart = Output.empty();
+        this.partitionRootPath = Output.empty();
+        this.recursive = Output.empty();
+        this.type = Output.empty();
+        this.wildcardFileName = Output.empty();
+        this.wildcardFolderPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -219,19 +219,19 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> deleteFilesAfterCompletion;
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<DistcpSettingsArgs> distcpSettings;
-        private @Nullable Input<Boolean> enablePartitionDiscovery;
-        private @Nullable Input<Object> fileListPath;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> modifiedDatetimeEnd;
-        private @Nullable Input<Object> modifiedDatetimeStart;
-        private @Nullable Input<Object> partitionRootPath;
-        private @Nullable Input<Object> recursive;
-        private Input<String> type;
-        private @Nullable Input<Object> wildcardFileName;
-        private @Nullable Input<Object> wildcardFolderPath;
+        private @Nullable Output<Object> deleteFilesAfterCompletion;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<DistcpSettingsArgs> distcpSettings;
+        private @Nullable Output<Boolean> enablePartitionDiscovery;
+        private @Nullable Output<Object> fileListPath;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> modifiedDatetimeEnd;
+        private @Nullable Output<Object> modifiedDatetimeStart;
+        private @Nullable Output<Object> partitionRootPath;
+        private @Nullable Output<Object> recursive;
+        private Output<String> type;
+        private @Nullable Output<Object> wildcardFileName;
+        private @Nullable Output<Object> wildcardFolderPath;
 
         public Builder() {
     	      // Empty
@@ -254,133 +254,133 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.wildcardFolderPath = defaults.wildcardFolderPath;
         }
 
-        public Builder deleteFilesAfterCompletion(@Nullable Input<Object> deleteFilesAfterCompletion) {
+        public Builder deleteFilesAfterCompletion(@Nullable Output<Object> deleteFilesAfterCompletion) {
             this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
 
         public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
-            this.deleteFilesAfterCompletion = Input.ofNullable(deleteFilesAfterCompletion);
+            this.deleteFilesAfterCompletion = Output.ofNullable(deleteFilesAfterCompletion);
             return this;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder distcpSettings(@Nullable Input<DistcpSettingsArgs> distcpSettings) {
+        public Builder distcpSettings(@Nullable Output<DistcpSettingsArgs> distcpSettings) {
             this.distcpSettings = distcpSettings;
             return this;
         }
 
         public Builder distcpSettings(@Nullable DistcpSettingsArgs distcpSettings) {
-            this.distcpSettings = Input.ofNullable(distcpSettings);
+            this.distcpSettings = Output.ofNullable(distcpSettings);
             return this;
         }
 
-        public Builder enablePartitionDiscovery(@Nullable Input<Boolean> enablePartitionDiscovery) {
+        public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = Input.ofNullable(enablePartitionDiscovery);
+            this.enablePartitionDiscovery = Output.ofNullable(enablePartitionDiscovery);
             return this;
         }
 
-        public Builder fileListPath(@Nullable Input<Object> fileListPath) {
+        public Builder fileListPath(@Nullable Output<Object> fileListPath) {
             this.fileListPath = fileListPath;
             return this;
         }
 
         public Builder fileListPath(@Nullable Object fileListPath) {
-            this.fileListPath = Input.ofNullable(fileListPath);
+            this.fileListPath = Output.ofNullable(fileListPath);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder modifiedDatetimeEnd(@Nullable Input<Object> modifiedDatetimeEnd) {
+        public Builder modifiedDatetimeEnd(@Nullable Output<Object> modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = Input.ofNullable(modifiedDatetimeEnd);
+            this.modifiedDatetimeEnd = Output.ofNullable(modifiedDatetimeEnd);
             return this;
         }
 
-        public Builder modifiedDatetimeStart(@Nullable Input<Object> modifiedDatetimeStart) {
+        public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = Input.ofNullable(modifiedDatetimeStart);
+            this.modifiedDatetimeStart = Output.ofNullable(modifiedDatetimeStart);
             return this;
         }
 
-        public Builder partitionRootPath(@Nullable Input<Object> partitionRootPath) {
+        public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
 
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = Input.ofNullable(partitionRootPath);
+            this.partitionRootPath = Output.ofNullable(partitionRootPath);
             return this;
         }
 
-        public Builder recursive(@Nullable Input<Object> recursive) {
+        public Builder recursive(@Nullable Output<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
 
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Input.ofNullable(recursive);
+            this.recursive = Output.ofNullable(recursive);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder wildcardFileName(@Nullable Input<Object> wildcardFileName) {
+        public Builder wildcardFileName(@Nullable Output<Object> wildcardFileName) {
             this.wildcardFileName = wildcardFileName;
             return this;
         }
 
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
-            this.wildcardFileName = Input.ofNullable(wildcardFileName);
+            this.wildcardFileName = Output.ofNullable(wildcardFileName);
             return this;
         }
 
-        public Builder wildcardFolderPath(@Nullable Input<Object> wildcardFolderPath) {
+        public Builder wildcardFolderPath(@Nullable Output<Object> wildcardFolderPath) {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
 
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
-            this.wildcardFolderPath = Input.ofNullable(wildcardFolderPath);
+            this.wildcardFolderPath = Output.ofNullable(wildcardFolderPath);
             return this;
         }
         public HdfsReadSettingsArgs build() {

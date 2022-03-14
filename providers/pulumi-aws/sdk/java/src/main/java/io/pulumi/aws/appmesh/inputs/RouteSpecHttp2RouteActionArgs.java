@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteActionWeightedTargetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class RouteSpecHttp2RouteActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="weightedTargets", required=true)
-      private final Input<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets;
+      private final Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets;
 
-    public Input<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> getWeightedTargets() {
+    public Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> getWeightedTargets() {
         return this.weightedTargets;
     }
 
-    public RouteSpecHttp2RouteActionArgs(Input<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets) {
+    public RouteSpecHttp2RouteActionArgs(Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets) {
         this.weightedTargets = Objects.requireNonNull(weightedTargets, "expected parameter 'weightedTargets' to be non-null");
     }
 
     private RouteSpecHttp2RouteActionArgs() {
-        this.weightedTargets = Input.empty();
+        this.weightedTargets = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class RouteSpecHttp2RouteActionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets;
+        private Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class RouteSpecHttp2RouteActionArgs extends io.pulumi.resources.Res
     	      this.weightedTargets = defaults.weightedTargets;
         }
 
-        public Builder weightedTargets(Input<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets) {
+        public Builder weightedTargets(Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets) {
             this.weightedTargets = Objects.requireNonNull(weightedTargets);
             return this;
         }
 
         public Builder weightedTargets(List<RouteSpecHttp2RouteActionWeightedTargetArgs> weightedTargets) {
-            this.weightedTargets = Input.of(Objects.requireNonNull(weightedTargets));
+            this.weightedTargets = Output.of(Objects.requireNonNull(weightedTargets));
             return this;
         }
         public RouteSpecHttp2RouteActionArgs build() {

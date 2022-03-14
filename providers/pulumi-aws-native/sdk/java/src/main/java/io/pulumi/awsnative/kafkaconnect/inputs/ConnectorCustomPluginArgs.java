@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customPluginArn", required=true)
-      private final Input<String> customPluginArn;
+      private final Output<String> customPluginArn;
 
-    public Input<String> getCustomPluginArn() {
+    public Output<String> getCustomPluginArn() {
         return this.customPluginArn;
     }
 
@@ -34,22 +34,22 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="revision", required=true)
-      private final Input<Integer> revision;
+      private final Output<Integer> revision;
 
-    public Input<Integer> getRevision() {
+    public Output<Integer> getRevision() {
         return this.revision;
     }
 
     public ConnectorCustomPluginArgs(
-        Input<String> customPluginArn,
-        Input<Integer> revision) {
+        Output<String> customPluginArn,
+        Output<Integer> revision) {
         this.customPluginArn = Objects.requireNonNull(customPluginArn, "expected parameter 'customPluginArn' to be non-null");
         this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
     }
 
     private ConnectorCustomPluginArgs() {
-        this.customPluginArn = Input.empty();
-        this.revision = Input.empty();
+        this.customPluginArn = Output.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> customPluginArn;
-        private Input<Integer> revision;
+        private Output<String> customPluginArn;
+        private Output<Integer> revision;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
     	      this.revision = defaults.revision;
         }
 
-        public Builder customPluginArn(Input<String> customPluginArn) {
+        public Builder customPluginArn(Output<String> customPluginArn) {
             this.customPluginArn = Objects.requireNonNull(customPluginArn);
             return this;
         }
 
         public Builder customPluginArn(String customPluginArn) {
-            this.customPluginArn = Input.of(Objects.requireNonNull(customPluginArn));
+            this.customPluginArn = Output.of(Objects.requireNonNull(customPluginArn));
             return this;
         }
 
-        public Builder revision(Input<Integer> revision) {
+        public Builder revision(Output<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
         public Builder revision(Integer revision) {
-            this.revision = Input.of(Objects.requireNonNull(revision));
+            this.revision = Output.of(Objects.requireNonNull(revision));
             return this;
         }
         public ConnectorCustomPluginArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class ExperimentTreatmentObjectArgs extends io.pulumi.resources.Res
     public static final ExperimentTreatmentObjectArgs Empty = new ExperimentTreatmentObjectArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="feature", required=true)
-      private final Input<String> feature;
+      private final Output<String> feature;
 
-    public Input<String> getFeature() {
+    public Output<String> getFeature() {
         return this.feature;
     }
 
     @InputImport(name="treatmentName", required=true)
-      private final Input<String> treatmentName;
+      private final Output<String> treatmentName;
 
-    public Input<String> getTreatmentName() {
+    public Output<String> getTreatmentName() {
         return this.treatmentName;
     }
 
     @InputImport(name="variation", required=true)
-      private final Input<String> variation;
+      private final Output<String> variation;
 
-    public Input<String> getVariation() {
+    public Output<String> getVariation() {
         return this.variation;
     }
 
     public ExperimentTreatmentObjectArgs(
-        @Nullable Input<String> description,
-        Input<String> feature,
-        Input<String> treatmentName,
-        Input<String> variation) {
+        @Nullable Output<String> description,
+        Output<String> feature,
+        Output<String> treatmentName,
+        Output<String> variation) {
         this.description = description;
         this.feature = Objects.requireNonNull(feature, "expected parameter 'feature' to be non-null");
         this.treatmentName = Objects.requireNonNull(treatmentName, "expected parameter 'treatmentName' to be non-null");
@@ -54,10 +54,10 @@ public final class ExperimentTreatmentObjectArgs extends io.pulumi.resources.Res
     }
 
     private ExperimentTreatmentObjectArgs() {
-        this.description = Input.empty();
-        this.feature = Input.empty();
-        this.treatmentName = Input.empty();
-        this.variation = Input.empty();
+        this.description = Output.empty();
+        this.feature = Output.empty();
+        this.treatmentName = Output.empty();
+        this.variation = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class ExperimentTreatmentObjectArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> feature;
-        private Input<String> treatmentName;
-        private Input<String> variation;
+        private @Nullable Output<String> description;
+        private Output<String> feature;
+        private Output<String> treatmentName;
+        private Output<String> variation;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class ExperimentTreatmentObjectArgs extends io.pulumi.resources.Res
     	      this.variation = defaults.variation;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder feature(Input<String> feature) {
+        public Builder feature(Output<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
         public Builder feature(String feature) {
-            this.feature = Input.of(Objects.requireNonNull(feature));
+            this.feature = Output.of(Objects.requireNonNull(feature));
             return this;
         }
 
-        public Builder treatmentName(Input<String> treatmentName) {
+        public Builder treatmentName(Output<String> treatmentName) {
             this.treatmentName = Objects.requireNonNull(treatmentName);
             return this;
         }
 
         public Builder treatmentName(String treatmentName) {
-            this.treatmentName = Input.of(Objects.requireNonNull(treatmentName));
+            this.treatmentName = Output.of(Objects.requireNonNull(treatmentName));
             return this;
         }
 
-        public Builder variation(Input<String> variation) {
+        public Builder variation(Output<String> variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
 
         public Builder variation(String variation) {
-            this.variation = Input.of(Objects.requireNonNull(variation));
+            this.variation = Output.of(Objects.requireNonNull(variation));
             return this;
         }
         public ExperimentTreatmentObjectArgs build() {

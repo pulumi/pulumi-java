@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 import io.pulumi.azurenative.powerplatform.enums.State;
 import io.pulumi.azurenative.powerplatform.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVault")
-      private final @Nullable Input<KeyVaultPropertiesArgs> keyVault;
+      private final @Nullable Output<KeyVaultPropertiesArgs> keyVault;
 
-    public Input<KeyVaultPropertiesArgs> getKeyVault() {
-        return this.keyVault == null ? Input.empty() : this.keyVault;
+    public Output<KeyVaultPropertiesArgs> getKeyVault() {
+        return this.keyVault == null ? Output.empty() : this.keyVault;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,State>> state;
+      private final @Nullable Output<Either<String,State>> state;
 
-    public Input<Either<String,State>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,State>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public PropertiesEncryptionArgs(
-        @Nullable Input<KeyVaultPropertiesArgs> keyVault,
-        @Nullable Input<Either<String,State>> state) {
+        @Nullable Output<KeyVaultPropertiesArgs> keyVault,
+        @Nullable Output<Either<String,State>> state) {
         this.keyVault = keyVault;
         this.state = state;
     }
 
     private PropertiesEncryptionArgs() {
-        this.keyVault = Input.empty();
-        this.state = Input.empty();
+        this.keyVault = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyVaultPropertiesArgs> keyVault;
-        private @Nullable Input<Either<String,State>> state;
+        private @Nullable Output<KeyVaultPropertiesArgs> keyVault;
+        private @Nullable Output<Either<String,State>> state;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
     	      this.state = defaults.state;
         }
 
-        public Builder keyVault(@Nullable Input<KeyVaultPropertiesArgs> keyVault) {
+        public Builder keyVault(@Nullable Output<KeyVaultPropertiesArgs> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
         public Builder keyVault(@Nullable KeyVaultPropertiesArgs keyVault) {
-            this.keyVault = Input.ofNullable(keyVault);
+            this.keyVault = Output.ofNullable(keyVault);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,State>> state) {
+        public Builder state(@Nullable Output<Either<String,State>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public PropertiesEncryptionArgs build() {

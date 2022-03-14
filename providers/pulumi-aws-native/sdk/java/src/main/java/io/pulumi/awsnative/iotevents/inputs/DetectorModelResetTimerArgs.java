@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DetectorModelResetTimerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timerName", required=true)
-      private final Input<String> timerName;
+      private final Output<String> timerName;
 
-    public Input<String> getTimerName() {
+    public Output<String> getTimerName() {
         return this.timerName;
     }
 
-    public DetectorModelResetTimerArgs(Input<String> timerName) {
+    public DetectorModelResetTimerArgs(Output<String> timerName) {
         this.timerName = Objects.requireNonNull(timerName, "expected parameter 'timerName' to be non-null");
     }
 
     private DetectorModelResetTimerArgs() {
-        this.timerName = Input.empty();
+        this.timerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DetectorModelResetTimerArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> timerName;
+        private Output<String> timerName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DetectorModelResetTimerArgs extends io.pulumi.resources.Resou
     	      this.timerName = defaults.timerName;
         }
 
-        public Builder timerName(Input<String> timerName) {
+        public Builder timerName(Output<String> timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
 
         public Builder timerName(String timerName) {
-            this.timerName = Input.of(Objects.requireNonNull(timerName));
+            this.timerName = Output.of(Objects.requireNonNull(timerName));
             return this;
         }
         public DetectorModelResetTimerArgs build() {

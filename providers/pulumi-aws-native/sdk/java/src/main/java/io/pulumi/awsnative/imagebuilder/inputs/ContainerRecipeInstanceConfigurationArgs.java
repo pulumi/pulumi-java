@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceBlockDeviceMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="blockDeviceMappings")
-      private final @Nullable Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
+    public Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
+        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     public ContainerRecipeInstanceConfigurationArgs(
-        @Nullable Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings,
-        @Nullable Input<String> image) {
+        @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings,
+        @Nullable Output<String> image) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.image = image;
     }
 
     private ContainerRecipeInstanceConfigurationArgs() {
-        this.blockDeviceMappings = Input.empty();
-        this.image = Input.empty();
+        this.blockDeviceMappings = Output.empty();
+        this.image = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
-        private @Nullable Input<String> image;
+        private @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
+        private @Nullable Output<String> image;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
     	      this.image = defaults.image;
         }
 
-        public Builder blockDeviceMappings(@Nullable Input<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
         public Builder blockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
         public ContainerRecipeInstanceConfigurationArgs build() {

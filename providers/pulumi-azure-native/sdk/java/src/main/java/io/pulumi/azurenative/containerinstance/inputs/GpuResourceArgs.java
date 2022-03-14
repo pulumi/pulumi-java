@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.enums.GpuSku;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
@@ -36,22 +36,22 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<Either<String,GpuSku>> sku;
+      private final Output<Either<String,GpuSku>> sku;
 
-    public Input<Either<String,GpuSku>> getSku() {
+    public Output<Either<String,GpuSku>> getSku() {
         return this.sku;
     }
 
     public GpuResourceArgs(
-        Input<Integer> count,
-        Input<Either<String,GpuSku>> sku) {
+        Output<Integer> count,
+        Output<Either<String,GpuSku>> sku) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
     }
 
     private GpuResourceArgs() {
-        this.count = Input.empty();
-        this.sku = Input.empty();
+        this.count = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private Input<Either<String,GpuSku>> sku;
+        private Output<Integer> count;
+        private Output<Either<String,GpuSku>> sku;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder sku(Input<Either<String,GpuSku>> sku) {
+        public Builder sku(Output<Either<String,GpuSku>> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(Either<String,GpuSku> sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
         public GpuResourceArgs build() {

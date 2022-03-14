@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretRotationArgs;
@@ -25,10 +25,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-      private final @Nullable Input<String> expireTime;
+      private final @Nullable Output<String> expireTime;
 
-    public Input<String> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<String> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replication", required=true)
-      private final Input<SecretReplicationArgs> replication;
+      private final Output<SecretReplicationArgs> replication;
 
-    public Input<SecretReplicationArgs> getReplication() {
+    public Output<SecretReplicationArgs> getReplication() {
         return this.replication;
     }
 
@@ -80,10 +80,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotation")
-      private final @Nullable Input<SecretRotationArgs> rotation;
+      private final @Nullable Output<SecretRotationArgs> rotation;
 
-    public Input<SecretRotationArgs> getRotation() {
-        return this.rotation == null ? Input.empty() : this.rotation;
+    public Output<SecretRotationArgs> getRotation() {
+        return this.rotation == null ? Output.empty() : this.rotation;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretId", required=true)
-      private final Input<String> secretId;
+      private final Output<String> secretId;
 
-    public Input<String> getSecretId() {
+    public Output<String> getSecretId() {
         return this.secretId;
     }
 
@@ -103,10 +103,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topics")
-      private final @Nullable Input<List<SecretTopicArgs>> topics;
+      private final @Nullable Output<List<SecretTopicArgs>> topics;
 
-    public Input<List<SecretTopicArgs>> getTopics() {
-        return this.topics == null ? Input.empty() : this.topics;
+    public Output<List<SecretTopicArgs>> getTopics() {
+        return this.topics == null ? Output.empty() : this.topics;
     }
 
     /**
@@ -115,21 +115,21 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public SecretArgs(
-        @Nullable Input<String> expireTime,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> project,
-        Input<SecretReplicationArgs> replication,
-        @Nullable Input<SecretRotationArgs> rotation,
-        Input<String> secretId,
-        @Nullable Input<List<SecretTopicArgs>> topics,
-        @Nullable Input<String> ttl) {
+        @Nullable Output<String> expireTime,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> project,
+        Output<SecretReplicationArgs> replication,
+        @Nullable Output<SecretRotationArgs> rotation,
+        Output<String> secretId,
+        @Nullable Output<List<SecretTopicArgs>> topics,
+        @Nullable Output<String> ttl) {
         this.expireTime = expireTime;
         this.labels = labels;
         this.project = project;
@@ -141,14 +141,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.expireTime = Input.empty();
-        this.labels = Input.empty();
-        this.project = Input.empty();
-        this.replication = Input.empty();
-        this.rotation = Input.empty();
-        this.secretId = Input.empty();
-        this.topics = Input.empty();
-        this.ttl = Input.empty();
+        this.expireTime = Output.empty();
+        this.labels = Output.empty();
+        this.project = Output.empty();
+        this.replication = Output.empty();
+        this.rotation = Output.empty();
+        this.secretId = Output.empty();
+        this.topics = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,14 +160,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expireTime;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> project;
-        private Input<SecretReplicationArgs> replication;
-        private @Nullable Input<SecretRotationArgs> rotation;
-        private Input<String> secretId;
-        private @Nullable Input<List<SecretTopicArgs>> topics;
-        private @Nullable Input<String> ttl;
+        private @Nullable Output<String> expireTime;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> project;
+        private Output<SecretReplicationArgs> replication;
+        private @Nullable Output<SecretRotationArgs> rotation;
+        private Output<String> secretId;
+        private @Nullable Output<List<SecretTopicArgs>> topics;
+        private @Nullable Output<String> ttl;
 
         public Builder() {
     	      // Empty
@@ -185,83 +185,83 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder expireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder replication(Input<SecretReplicationArgs> replication) {
+        public Builder replication(Output<SecretReplicationArgs> replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
 
         public Builder replication(SecretReplicationArgs replication) {
-            this.replication = Input.of(Objects.requireNonNull(replication));
+            this.replication = Output.of(Objects.requireNonNull(replication));
             return this;
         }
 
-        public Builder rotation(@Nullable Input<SecretRotationArgs> rotation) {
+        public Builder rotation(@Nullable Output<SecretRotationArgs> rotation) {
             this.rotation = rotation;
             return this;
         }
 
         public Builder rotation(@Nullable SecretRotationArgs rotation) {
-            this.rotation = Input.ofNullable(rotation);
+            this.rotation = Output.ofNullable(rotation);
             return this;
         }
 
-        public Builder secretId(Input<String> secretId) {
+        public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
         public Builder secretId(String secretId) {
-            this.secretId = Input.of(Objects.requireNonNull(secretId));
+            this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
 
-        public Builder topics(@Nullable Input<List<SecretTopicArgs>> topics) {
+        public Builder topics(@Nullable Output<List<SecretTopicArgs>> topics) {
             this.topics = topics;
             return this;
         }
 
         public Builder topics(@Nullable List<SecretTopicArgs> topics) {
-            this.topics = Input.ofNullable(topics);
+            this.topics = Output.ofNullable(topics);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public SecretArgs build() {

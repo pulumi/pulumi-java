@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.appengine;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -106,14 +105,14 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationUrlDispatchRules(String name, ApplicationUrlDispatchRulesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules", name, args == null ? ApplicationUrlDispatchRulesArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules", name, args == null ? ApplicationUrlDispatchRulesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApplicationUrlDispatchRules(String name, Input<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApplicationUrlDispatchRules(String name, Output<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -129,7 +128,7 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationUrlDispatchRules get(String name, Input<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationUrlDispatchRules get(String name, Output<String> id, @Nullable ApplicationUrlDispatchRulesState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationUrlDispatchRules(name, id, state, options);
     }
 }

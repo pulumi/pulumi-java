@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.KeyValuePairArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,9 +35,9 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<List<KeyValuePairArgs>> parameters;
+      private final Output<List<KeyValuePairArgs>> parameters;
 
-    public Input<List<KeyValuePairArgs>> getParameters() {
+    public Output<List<KeyValuePairArgs>> getParameters() {
         return this.parameters;
     }
 
@@ -46,9 +46,9 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectorId", required=true)
-      private final Input<String> selectorId;
+      private final Output<String> selectorId;
 
-    public Input<String> getSelectorId() {
+    public Output<String> getSelectorId() {
         return this.selectorId;
     }
 
@@ -58,17 +58,17 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DiscreteActionArgs(
-        Input<String> name,
-        Input<List<KeyValuePairArgs>> parameters,
-        Input<String> selectorId,
-        Input<String> type) {
+        Output<String> name,
+        Output<List<KeyValuePairArgs>> parameters,
+        Output<String> selectorId,
+        Output<String> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.selectorId = Objects.requireNonNull(selectorId, "expected parameter 'selectorId' to be non-null");
@@ -76,10 +76,10 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiscreteActionArgs() {
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.selectorId = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.selectorId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<List<KeyValuePairArgs>> parameters;
-        private Input<String> selectorId;
-        private Input<String> type;
+        private Output<String> name;
+        private Output<List<KeyValuePairArgs>> parameters;
+        private Output<String> selectorId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(Input<List<KeyValuePairArgs>> parameters) {
+        public Builder parameters(Output<List<KeyValuePairArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(List<KeyValuePairArgs> parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder selectorId(Input<String> selectorId) {
+        public Builder selectorId(Output<String> selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
 
         public Builder selectorId(String selectorId) {
-            this.selectorId = Input.of(Objects.requireNonNull(selectorId));
+            this.selectorId = Output.of(Objects.requireNonNull(selectorId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DiscreteActionArgs build() {

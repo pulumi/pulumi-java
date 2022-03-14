@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebaserules_v1.inputs.FileArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="files", required=true)
-      private final Input<List<FileArgs>> files;
+      private final Output<List<FileArgs>> files;
 
-    public Input<List<FileArgs>> getFiles() {
+    public Output<List<FileArgs>> getFiles() {
         return this.files;
     }
 
-    public SourceArgs(Input<List<FileArgs>> files) {
+    public SourceArgs(Output<List<FileArgs>> files) {
         this.files = Objects.requireNonNull(files, "expected parameter 'files' to be non-null");
     }
 
     private SourceArgs() {
-        this.files = Input.empty();
+        this.files = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<FileArgs>> files;
+        private Output<List<FileArgs>> files;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.files = defaults.files;
         }
 
-        public Builder files(Input<List<FileArgs>> files) {
+        public Builder files(Output<List<FileArgs>> files) {
             this.files = Objects.requireNonNull(files);
             return this;
         }
 
         public Builder files(List<FileArgs> files) {
-            this.files = Input.of(Objects.requireNonNull(files));
+            this.files = Output.of(Objects.requireNonNull(files));
             return this;
         }
         public SourceArgs build() {

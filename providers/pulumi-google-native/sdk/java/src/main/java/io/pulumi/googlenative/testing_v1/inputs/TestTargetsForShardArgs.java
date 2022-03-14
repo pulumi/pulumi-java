@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="testTargets")
-      private final @Nullable Input<List<String>> testTargets;
+      private final @Nullable Output<List<String>> testTargets;
 
-    public Input<List<String>> getTestTargets() {
-        return this.testTargets == null ? Input.empty() : this.testTargets;
+    public Output<List<String>> getTestTargets() {
+        return this.testTargets == null ? Output.empty() : this.testTargets;
     }
 
-    public TestTargetsForShardArgs(@Nullable Input<List<String>> testTargets) {
+    public TestTargetsForShardArgs(@Nullable Output<List<String>> testTargets) {
         this.testTargets = testTargets;
     }
 
     private TestTargetsForShardArgs() {
-        this.testTargets = Input.empty();
+        this.testTargets = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> testTargets;
+        private @Nullable Output<List<String>> testTargets;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
     	      this.testTargets = defaults.testTargets;
         }
 
-        public Builder testTargets(@Nullable Input<List<String>> testTargets) {
+        public Builder testTargets(@Nullable Output<List<String>> testTargets) {
             this.testTargets = testTargets;
             return this;
         }
 
         public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Input.ofNullable(testTargets);
+            this.testTargets = Output.ofNullable(testTargets);
             return this;
         }
         public TestTargetsForShardArgs build() {

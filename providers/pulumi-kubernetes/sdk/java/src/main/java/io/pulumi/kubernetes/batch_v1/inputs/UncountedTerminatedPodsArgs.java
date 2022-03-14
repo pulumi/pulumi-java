@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="failed")
-      private final @Nullable Input<List<String>> failed;
+      private final @Nullable Output<List<String>> failed;
 
-    public Input<List<String>> getFailed() {
-        return this.failed == null ? Input.empty() : this.failed;
+    public Output<List<String>> getFailed() {
+        return this.failed == null ? Output.empty() : this.failed;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="succeeded")
-      private final @Nullable Input<List<String>> succeeded;
+      private final @Nullable Output<List<String>> succeeded;
 
-    public Input<List<String>> getSucceeded() {
-        return this.succeeded == null ? Input.empty() : this.succeeded;
+    public Output<List<String>> getSucceeded() {
+        return this.succeeded == null ? Output.empty() : this.succeeded;
     }
 
     public UncountedTerminatedPodsArgs(
-        @Nullable Input<List<String>> failed,
-        @Nullable Input<List<String>> succeeded) {
+        @Nullable Output<List<String>> failed,
+        @Nullable Output<List<String>> succeeded) {
         this.failed = failed;
         this.succeeded = succeeded;
     }
 
     private UncountedTerminatedPodsArgs() {
-        this.failed = Input.empty();
-        this.succeeded = Input.empty();
+        this.failed = Output.empty();
+        this.succeeded = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> failed;
-        private @Nullable Input<List<String>> succeeded;
+        private @Nullable Output<List<String>> failed;
+        private @Nullable Output<List<String>> succeeded;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder failed(@Nullable Input<List<String>> failed) {
+        public Builder failed(@Nullable Output<List<String>> failed) {
             this.failed = failed;
             return this;
         }
 
         public Builder failed(@Nullable List<String> failed) {
-            this.failed = Input.ofNullable(failed);
+            this.failed = Output.ofNullable(failed);
             return this;
         }
 
-        public Builder succeeded(@Nullable Input<List<String>> succeeded) {
+        public Builder succeeded(@Nullable Output<List<String>> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
         public Builder succeeded(@Nullable List<String> succeeded) {
-            this.succeeded = Input.ofNullable(succeeded);
+            this.succeeded = Output.ofNullable(succeeded);
             return this;
         }
         public UncountedTerminatedPodsArgs build() {

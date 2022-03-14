@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="physicalPath")
-      private final @Nullable Input<String> physicalPath;
+      private final @Nullable Output<String> physicalPath;
 
-    public Input<String> getPhysicalPath() {
-        return this.physicalPath == null ? Input.empty() : this.physicalPath;
+    public Output<String> getPhysicalPath() {
+        return this.physicalPath == null ? Output.empty() : this.physicalPath;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="virtualPath")
-      private final @Nullable Input<String> virtualPath;
+      private final @Nullable Output<String> virtualPath;
 
-    public Input<String> getVirtualPath() {
-        return this.virtualPath == null ? Input.empty() : this.virtualPath;
+    public Output<String> getVirtualPath() {
+        return this.virtualPath == null ? Output.empty() : this.virtualPath;
     }
 
     public VirtualDirectoryArgs(
-        @Nullable Input<String> physicalPath,
-        @Nullable Input<String> virtualPath) {
+        @Nullable Output<String> physicalPath,
+        @Nullable Output<String> virtualPath) {
         this.physicalPath = physicalPath;
         this.virtualPath = virtualPath;
     }
 
     private VirtualDirectoryArgs() {
-        this.physicalPath = Input.empty();
-        this.virtualPath = Input.empty();
+        this.physicalPath = Output.empty();
+        this.virtualPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> physicalPath;
-        private @Nullable Input<String> virtualPath;
+        private @Nullable Output<String> physicalPath;
+        private @Nullable Output<String> virtualPath;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
     	      this.virtualPath = defaults.virtualPath;
         }
 
-        public Builder physicalPath(@Nullable Input<String> physicalPath) {
+        public Builder physicalPath(@Nullable Output<String> physicalPath) {
             this.physicalPath = physicalPath;
             return this;
         }
 
         public Builder physicalPath(@Nullable String physicalPath) {
-            this.physicalPath = Input.ofNullable(physicalPath);
+            this.physicalPath = Output.ofNullable(physicalPath);
             return this;
         }
 
-        public Builder virtualPath(@Nullable Input<String> virtualPath) {
+        public Builder virtualPath(@Nullable Output<String> virtualPath) {
             this.virtualPath = virtualPath;
             return this;
         }
 
         public Builder virtualPath(@Nullable String virtualPath) {
-            this.virtualPath = Input.ofNullable(virtualPath);
+            this.virtualPath = Output.ofNullable(virtualPath);
             return this;
         }
         public VirtualDirectoryArgs build() {

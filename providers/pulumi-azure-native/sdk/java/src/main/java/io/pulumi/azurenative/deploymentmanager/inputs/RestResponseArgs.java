@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseRegexArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<RestResponseRegexArgs> regex;
+      private final @Nullable Output<RestResponseRegexArgs> regex;
 
-    public Input<RestResponseRegexArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<RestResponseRegexArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successStatusCodes")
-      private final @Nullable Input<List<String>> successStatusCodes;
+      private final @Nullable Output<List<String>> successStatusCodes;
 
-    public Input<List<String>> getSuccessStatusCodes() {
-        return this.successStatusCodes == null ? Input.empty() : this.successStatusCodes;
+    public Output<List<String>> getSuccessStatusCodes() {
+        return this.successStatusCodes == null ? Output.empty() : this.successStatusCodes;
     }
 
     public RestResponseArgs(
-        @Nullable Input<RestResponseRegexArgs> regex,
-        @Nullable Input<List<String>> successStatusCodes) {
+        @Nullable Output<RestResponseRegexArgs> regex,
+        @Nullable Output<List<String>> successStatusCodes) {
         this.regex = regex;
         this.successStatusCodes = successStatusCodes;
     }
 
     private RestResponseArgs() {
-        this.regex = Input.empty();
-        this.successStatusCodes = Input.empty();
+        this.regex = Output.empty();
+        this.successStatusCodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RestResponseRegexArgs> regex;
-        private @Nullable Input<List<String>> successStatusCodes;
+        private @Nullable Output<RestResponseRegexArgs> regex;
+        private @Nullable Output<List<String>> successStatusCodes;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.successStatusCodes = defaults.successStatusCodes;
         }
 
-        public Builder regex(@Nullable Input<RestResponseRegexArgs> regex) {
+        public Builder regex(@Nullable Output<RestResponseRegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable RestResponseRegexArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
 
-        public Builder successStatusCodes(@Nullable Input<List<String>> successStatusCodes) {
+        public Builder successStatusCodes(@Nullable Output<List<String>> successStatusCodes) {
             this.successStatusCodes = successStatusCodes;
             return this;
         }
 
         public Builder successStatusCodes(@Nullable List<String> successStatusCodes) {
-            this.successStatusCodes = Input.ofNullable(successStatusCodes);
+            this.successStatusCodes = Output.ofNullable(successStatusCodes);
             return this;
         }
         public RestResponseArgs build() {

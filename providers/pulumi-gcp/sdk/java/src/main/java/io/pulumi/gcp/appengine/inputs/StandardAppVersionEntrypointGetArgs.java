@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class StandardAppVersionEntrypointGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="shell", required=true)
-      private final Input<String> shell;
+      private final Output<String> shell;
 
-    public Input<String> getShell() {
+    public Output<String> getShell() {
         return this.shell;
     }
 
-    public StandardAppVersionEntrypointGetArgs(Input<String> shell) {
+    public StandardAppVersionEntrypointGetArgs(Output<String> shell) {
         this.shell = Objects.requireNonNull(shell, "expected parameter 'shell' to be non-null");
     }
 
     private StandardAppVersionEntrypointGetArgs() {
-        this.shell = Input.empty();
+        this.shell = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class StandardAppVersionEntrypointGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> shell;
+        private Output<String> shell;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class StandardAppVersionEntrypointGetArgs extends io.pulumi.resourc
     	      this.shell = defaults.shell;
         }
 
-        public Builder shell(Input<String> shell) {
+        public Builder shell(Output<String> shell) {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
 
         public Builder shell(String shell) {
-            this.shell = Input.of(Objects.requireNonNull(shell));
+            this.shell = Output.of(Objects.requireNonNull(shell));
             return this;
         }
         public StandardAppVersionEntrypointGetArgs build() {

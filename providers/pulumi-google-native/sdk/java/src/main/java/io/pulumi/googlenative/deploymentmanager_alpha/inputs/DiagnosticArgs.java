@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.DiagnosticLevel;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<DiagnosticLevel> level;
+      private final @Nullable Output<DiagnosticLevel> level;
 
-    public Input<DiagnosticLevel> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<DiagnosticLevel> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     public DiagnosticArgs(
-        @Nullable Input<String> field,
-        @Nullable Input<DiagnosticLevel> level) {
+        @Nullable Output<String> field,
+        @Nullable Output<DiagnosticLevel> level) {
         this.field = field;
         this.level = level;
     }
 
     private DiagnosticArgs() {
-        this.field = Input.empty();
-        this.level = Input.empty();
+        this.field = Output.empty();
+        this.level = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> field;
-        private @Nullable Input<DiagnosticLevel> level;
+        private @Nullable Output<String> field;
+        private @Nullable Output<DiagnosticLevel> level;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     	      this.level = defaults.level;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder level(@Nullable Input<DiagnosticLevel> level) {
+        public Builder level(@Nullable Output<DiagnosticLevel> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable DiagnosticLevel level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
         public DiagnosticArgs build() {

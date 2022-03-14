@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.gameservices;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -208,14 +207,14 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerCluster(String name, GameServerClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gameservices/gameServerCluster:GameServerCluster", name, args == null ? GameServerClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:gameservices/gameServerCluster:GameServerCluster", name, args == null ? GameServerClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GameServerCluster(String name, Input<String> id, @Nullable GameServerClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GameServerCluster(String name, Output<String> id, @Nullable GameServerClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:gameservices/gameServerCluster:GameServerCluster", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -231,7 +230,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GameServerCluster get(String name, Input<String> id, @Nullable GameServerClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GameServerCluster get(String name, Output<String> id, @Nullable GameServerClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GameServerCluster(name, id, state, options);
     }
 }

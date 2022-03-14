@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetReceivedBytesPerSecond")
-      private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
+      private final @Nullable Output<Integer> targetReceivedBytesPerSecond;
 
-    public Input<Integer> getTargetReceivedBytesPerSecond() {
-        return this.targetReceivedBytesPerSecond == null ? Input.empty() : this.targetReceivedBytesPerSecond;
+    public Output<Integer> getTargetReceivedBytesPerSecond() {
+        return this.targetReceivedBytesPerSecond == null ? Output.empty() : this.targetReceivedBytesPerSecond;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetReceivedPacketsPerSecond")
-      private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
+      private final @Nullable Output<Integer> targetReceivedPacketsPerSecond;
 
-    public Input<Integer> getTargetReceivedPacketsPerSecond() {
-        return this.targetReceivedPacketsPerSecond == null ? Input.empty() : this.targetReceivedPacketsPerSecond;
+    public Output<Integer> getTargetReceivedPacketsPerSecond() {
+        return this.targetReceivedPacketsPerSecond == null ? Output.empty() : this.targetReceivedPacketsPerSecond;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetSentBytesPerSecond")
-      private final @Nullable Input<Integer> targetSentBytesPerSecond;
+      private final @Nullable Output<Integer> targetSentBytesPerSecond;
 
-    public Input<Integer> getTargetSentBytesPerSecond() {
-        return this.targetSentBytesPerSecond == null ? Input.empty() : this.targetSentBytesPerSecond;
+    public Output<Integer> getTargetSentBytesPerSecond() {
+        return this.targetSentBytesPerSecond == null ? Output.empty() : this.targetSentBytesPerSecond;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetSentPacketsPerSecond")
-      private final @Nullable Input<Integer> targetSentPacketsPerSecond;
+      private final @Nullable Output<Integer> targetSentPacketsPerSecond;
 
-    public Input<Integer> getTargetSentPacketsPerSecond() {
-        return this.targetSentPacketsPerSecond == null ? Input.empty() : this.targetSentPacketsPerSecond;
+    public Output<Integer> getTargetSentPacketsPerSecond() {
+        return this.targetSentPacketsPerSecond == null ? Output.empty() : this.targetSentPacketsPerSecond;
     }
 
     public FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs(
-        @Nullable Input<Integer> targetReceivedBytesPerSecond,
-        @Nullable Input<Integer> targetReceivedPacketsPerSecond,
-        @Nullable Input<Integer> targetSentBytesPerSecond,
-        @Nullable Input<Integer> targetSentPacketsPerSecond) {
+        @Nullable Output<Integer> targetReceivedBytesPerSecond,
+        @Nullable Output<Integer> targetReceivedPacketsPerSecond,
+        @Nullable Output<Integer> targetSentBytesPerSecond,
+        @Nullable Output<Integer> targetSentPacketsPerSecond) {
         this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
         this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
         this.targetSentBytesPerSecond = targetSentBytesPerSecond;
@@ -70,10 +70,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     }
 
     private FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs() {
-        this.targetReceivedBytesPerSecond = Input.empty();
-        this.targetReceivedPacketsPerSecond = Input.empty();
-        this.targetSentBytesPerSecond = Input.empty();
-        this.targetSentPacketsPerSecond = Input.empty();
+        this.targetReceivedBytesPerSecond = Output.empty();
+        this.targetReceivedPacketsPerSecond = Output.empty();
+        this.targetSentBytesPerSecond = Output.empty();
+        this.targetSentPacketsPerSecond = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> targetReceivedBytesPerSecond;
-        private @Nullable Input<Integer> targetReceivedPacketsPerSecond;
-        private @Nullable Input<Integer> targetSentBytesPerSecond;
-        private @Nullable Input<Integer> targetSentPacketsPerSecond;
+        private @Nullable Output<Integer> targetReceivedBytesPerSecond;
+        private @Nullable Output<Integer> targetReceivedPacketsPerSecond;
+        private @Nullable Output<Integer> targetSentBytesPerSecond;
+        private @Nullable Output<Integer> targetSentPacketsPerSecond;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     	      this.targetSentPacketsPerSecond = defaults.targetSentPacketsPerSecond;
         }
 
-        public Builder targetReceivedBytesPerSecond(@Nullable Input<Integer> targetReceivedBytesPerSecond) {
+        public Builder targetReceivedBytesPerSecond(@Nullable Output<Integer> targetReceivedBytesPerSecond) {
             this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
 
         public Builder targetReceivedBytesPerSecond(@Nullable Integer targetReceivedBytesPerSecond) {
-            this.targetReceivedBytesPerSecond = Input.ofNullable(targetReceivedBytesPerSecond);
+            this.targetReceivedBytesPerSecond = Output.ofNullable(targetReceivedBytesPerSecond);
             return this;
         }
 
-        public Builder targetReceivedPacketsPerSecond(@Nullable Input<Integer> targetReceivedPacketsPerSecond) {
+        public Builder targetReceivedPacketsPerSecond(@Nullable Output<Integer> targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
 
         public Builder targetReceivedPacketsPerSecond(@Nullable Integer targetReceivedPacketsPerSecond) {
-            this.targetReceivedPacketsPerSecond = Input.ofNullable(targetReceivedPacketsPerSecond);
+            this.targetReceivedPacketsPerSecond = Output.ofNullable(targetReceivedPacketsPerSecond);
             return this;
         }
 
-        public Builder targetSentBytesPerSecond(@Nullable Input<Integer> targetSentBytesPerSecond) {
+        public Builder targetSentBytesPerSecond(@Nullable Output<Integer> targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
 
         public Builder targetSentBytesPerSecond(@Nullable Integer targetSentBytesPerSecond) {
-            this.targetSentBytesPerSecond = Input.ofNullable(targetSentBytesPerSecond);
+            this.targetSentBytesPerSecond = Output.ofNullable(targetSentBytesPerSecond);
             return this;
         }
 
-        public Builder targetSentPacketsPerSecond(@Nullable Input<Integer> targetSentPacketsPerSecond) {
+        public Builder targetSentPacketsPerSecond(@Nullable Output<Integer> targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
         }
 
         public Builder targetSentPacketsPerSecond(@Nullable Integer targetSentPacketsPerSecond) {
-            this.targetSentPacketsPerSecond = Input.ofNullable(targetSentPacketsPerSecond);
+            this.targetSentPacketsPerSecond = Output.ofNullable(targetSentPacketsPerSecond);
             return this;
         }
         public FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs build() {

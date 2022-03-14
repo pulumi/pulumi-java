@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.enums.ProductAvailability;
 import io.pulumi.googlenative.retail_v2beta.enums.ProductType;
@@ -31,10 +31,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<GoogleCloudRetailV2betaAudienceArgs> audience;
+      private final @Nullable Output<GoogleCloudRetailV2betaAudienceArgs> audience;
 
-    public Input<GoogleCloudRetailV2betaAudienceArgs> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<GoogleCloudRetailV2betaAudienceArgs> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availability")
-      private final @Nullable Input<ProductAvailability> availability;
+      private final @Nullable Output<ProductAvailability> availability;
 
-    public Input<ProductAvailability> getAvailability() {
-        return this.availability == null ? Input.empty() : this.availability;
+    public Output<ProductAvailability> getAvailability() {
+        return this.availability == null ? Output.empty() : this.availability;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableQuantity")
-      private final @Nullable Input<Integer> availableQuantity;
+      private final @Nullable Output<Integer> availableQuantity;
 
-    public Input<Integer> getAvailableQuantity() {
-        return this.availableQuantity == null ? Input.empty() : this.availableQuantity;
+    public Output<Integer> getAvailableQuantity() {
+        return this.availableQuantity == null ? Output.empty() : this.availableQuantity;
     }
 
     /**
@@ -75,16 +75,16 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableTime")
-      private final @Nullable Input<String> availableTime;
+      private final @Nullable Output<String> availableTime;
 
-    public Input<String> getAvailableTime() {
-        return this.availableTime == null ? Input.empty() : this.availableTime;
+    public Output<String> getAvailableTime() {
+        return this.availableTime == null ? Output.empty() : this.availableTime;
     }
 
     @InputImport(name="branchId", required=true)
-      private final Input<String> branchId;
+      private final Output<String> branchId;
 
-    public Input<String> getBranchId() {
+    public Output<String> getBranchId() {
         return this.branchId;
     }
 
@@ -93,16 +93,16 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brands")
-      private final @Nullable Input<List<String>> brands;
+      private final @Nullable Output<List<String>> brands;
 
-    public Input<List<String>> getBrands() {
-        return this.brands == null ? Input.empty() : this.brands;
+    public Output<List<String>> getBrands() {
+        return this.brands == null ? Output.empty() : this.brands;
     }
 
     @InputImport(name="catalogId", required=true)
-      private final Input<String> catalogId;
+      private final Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
+    public Output<String> getCatalogId() {
         return this.catalogId;
     }
 
@@ -111,10 +111,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categories")
-      private final @Nullable Input<List<String>> categories;
+      private final @Nullable Output<List<String>> categories;
 
-    public Input<List<String>> getCategories() {
-        return this.categories == null ? Input.empty() : this.categories;
+    public Output<List<String>> getCategories() {
+        return this.categories == null ? Output.empty() : this.categories;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collectionMemberIds")
-      private final @Nullable Input<List<String>> collectionMemberIds;
+      private final @Nullable Output<List<String>> collectionMemberIds;
 
-    public Input<List<String>> getCollectionMemberIds() {
-        return this.collectionMemberIds == null ? Input.empty() : this.collectionMemberIds;
+    public Output<List<String>> getCollectionMemberIds() {
+        return this.collectionMemberIds == null ? Output.empty() : this.collectionMemberIds;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="colorInfo")
-      private final @Nullable Input<GoogleCloudRetailV2betaColorInfoArgs> colorInfo;
+      private final @Nullable Output<GoogleCloudRetailV2betaColorInfoArgs> colorInfo;
 
-    public Input<GoogleCloudRetailV2betaColorInfoArgs> getColorInfo() {
-        return this.colorInfo == null ? Input.empty() : this.colorInfo;
+    public Output<GoogleCloudRetailV2betaColorInfoArgs> getColorInfo() {
+        return this.colorInfo == null ? Output.empty() : this.colorInfo;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<String>> conditions;
+      private final @Nullable Output<List<String>> conditions;
 
-    public Input<List<String>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<String>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-      private final @Nullable Input<String> expireTime;
+      private final @Nullable Output<String> expireTime;
 
-    public Input<String> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<String> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fulfillmentInfo")
-      private final @Nullable Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo;
+      private final @Nullable Output<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo;
 
-    public Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> getFulfillmentInfo() {
-        return this.fulfillmentInfo == null ? Input.empty() : this.fulfillmentInfo;
+    public Output<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> getFulfillmentInfo() {
+        return this.fulfillmentInfo == null ? Output.empty() : this.fulfillmentInfo;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gtin")
-      private final @Nullable Input<String> gtin;
+      private final @Nullable Output<String> gtin;
 
-    public Input<String> getGtin() {
-        return this.gtin == null ? Input.empty() : this.gtin;
+    public Output<String> getGtin() {
+        return this.gtin == null ? Output.empty() : this.gtin;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-      private final @Nullable Input<List<GoogleCloudRetailV2betaImageArgs>> images;
+      private final @Nullable Output<List<GoogleCloudRetailV2betaImageArgs>> images;
 
-    public Input<List<GoogleCloudRetailV2betaImageArgs>> getImages() {
-        return this.images == null ? Input.empty() : this.images;
+    public Output<List<GoogleCloudRetailV2betaImageArgs>> getImages() {
+        return this.images == null ? Output.empty() : this.images;
     }
 
     /**
@@ -221,17 +221,17 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -239,10 +239,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materials")
-      private final @Nullable Input<List<String>> materials;
+      private final @Nullable Output<List<String>> materials;
 
-    public Input<List<String>> getMaterials() {
-        return this.materials == null ? Input.empty() : this.materials;
+    public Output<List<String>> getMaterials() {
+        return this.materials == null ? Output.empty() : this.materials;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patterns")
-      private final @Nullable Input<List<String>> patterns;
+      private final @Nullable Output<List<String>> patterns;
 
-    public Input<List<String>> getPatterns() {
-        return this.patterns == null ? Input.empty() : this.patterns;
+    public Output<List<String>> getPatterns() {
+        return this.patterns == null ? Output.empty() : this.patterns;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priceInfo")
-      private final @Nullable Input<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo;
+      private final @Nullable Output<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo;
 
-    public Input<GoogleCloudRetailV2betaPriceInfoArgs> getPriceInfo() {
-        return this.priceInfo == null ? Input.empty() : this.priceInfo;
+    public Output<GoogleCloudRetailV2betaPriceInfoArgs> getPriceInfo() {
+        return this.priceInfo == null ? Output.empty() : this.priceInfo;
     }
 
     /**
@@ -283,24 +283,24 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryProductId")
-      private final @Nullable Input<String> primaryProductId;
+      private final @Nullable Output<String> primaryProductId;
 
-    public Input<String> getPrimaryProductId() {
-        return this.primaryProductId == null ? Input.empty() : this.primaryProductId;
+    public Output<String> getPrimaryProductId() {
+        return this.primaryProductId == null ? Output.empty() : this.primaryProductId;
     }
 
     @InputImport(name="productId", required=true)
-      private final Input<String> productId;
+      private final Output<String> productId;
 
-    public Input<String> getProductId() {
+    public Output<String> getProductId() {
         return this.productId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -308,10 +308,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="promotions")
-      private final @Nullable Input<List<GoogleCloudRetailV2betaPromotionArgs>> promotions;
+      private final @Nullable Output<List<GoogleCloudRetailV2betaPromotionArgs>> promotions;
 
-    public Input<List<GoogleCloudRetailV2betaPromotionArgs>> getPromotions() {
-        return this.promotions == null ? Input.empty() : this.promotions;
+    public Output<List<GoogleCloudRetailV2betaPromotionArgs>> getPromotions() {
+        return this.promotions == null ? Output.empty() : this.promotions;
     }
 
     /**
@@ -319,10 +319,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishTime")
-      private final @Nullable Input<String> publishTime;
+      private final @Nullable Output<String> publishTime;
 
-    public Input<String> getPublishTime() {
-        return this.publishTime == null ? Input.empty() : this.publishTime;
+    public Output<String> getPublishTime() {
+        return this.publishTime == null ? Output.empty() : this.publishTime;
     }
 
     /**
@@ -330,10 +330,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rating")
-      private final @Nullable Input<GoogleCloudRetailV2betaRatingArgs> rating;
+      private final @Nullable Output<GoogleCloudRetailV2betaRatingArgs> rating;
 
-    public Input<GoogleCloudRetailV2betaRatingArgs> getRating() {
-        return this.rating == null ? Input.empty() : this.rating;
+    public Output<GoogleCloudRetailV2betaRatingArgs> getRating() {
+        return this.rating == null ? Output.empty() : this.rating;
     }
 
     /**
@@ -341,10 +341,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retrievableFields")
-      private final @Nullable Input<String> retrievableFields;
+      private final @Nullable Output<String> retrievableFields;
 
-    public Input<String> getRetrievableFields() {
-        return this.retrievableFields == null ? Input.empty() : this.retrievableFields;
+    public Output<String> getRetrievableFields() {
+        return this.retrievableFields == null ? Output.empty() : this.retrievableFields;
     }
 
     /**
@@ -352,10 +352,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizes")
-      private final @Nullable Input<List<String>> sizes;
+      private final @Nullable Output<List<String>> sizes;
 
-    public Input<List<String>> getSizes() {
-        return this.sizes == null ? Input.empty() : this.sizes;
+    public Output<List<String>> getSizes() {
+        return this.sizes == null ? Output.empty() : this.sizes;
     }
 
     /**
@@ -363,10 +363,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -374,9 +374,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
@@ -385,10 +385,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -396,10 +396,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ProductType> type;
+      private final @Nullable Output<ProductType> type;
 
-    public Input<ProductType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ProductType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -407,50 +407,50 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public ProductArgs(
-        @Nullable Input<Map<String,String>> attributes,
-        @Nullable Input<GoogleCloudRetailV2betaAudienceArgs> audience,
-        @Nullable Input<ProductAvailability> availability,
-        @Nullable Input<Integer> availableQuantity,
-        @Nullable Input<String> availableTime,
-        Input<String> branchId,
-        @Nullable Input<List<String>> brands,
-        Input<String> catalogId,
-        @Nullable Input<List<String>> categories,
-        @Nullable Input<List<String>> collectionMemberIds,
-        @Nullable Input<GoogleCloudRetailV2betaColorInfoArgs> colorInfo,
-        @Nullable Input<List<String>> conditions,
-        @Nullable Input<String> description,
-        @Nullable Input<String> expireTime,
-        @Nullable Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo,
-        @Nullable Input<String> gtin,
-        @Nullable Input<String> id,
-        @Nullable Input<List<GoogleCloudRetailV2betaImageArgs>> images,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> location,
-        @Nullable Input<List<String>> materials,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> patterns,
-        @Nullable Input<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo,
-        @Nullable Input<String> primaryProductId,
-        Input<String> productId,
-        @Nullable Input<String> project,
-        @Nullable Input<List<GoogleCloudRetailV2betaPromotionArgs>> promotions,
-        @Nullable Input<String> publishTime,
-        @Nullable Input<GoogleCloudRetailV2betaRatingArgs> rating,
-        @Nullable Input<String> retrievableFields,
-        @Nullable Input<List<String>> sizes,
-        @Nullable Input<List<String>> tags,
-        Input<String> title,
-        @Nullable Input<String> ttl,
-        @Nullable Input<ProductType> type,
-        @Nullable Input<String> uri) {
+        @Nullable Output<Map<String,String>> attributes,
+        @Nullable Output<GoogleCloudRetailV2betaAudienceArgs> audience,
+        @Nullable Output<ProductAvailability> availability,
+        @Nullable Output<Integer> availableQuantity,
+        @Nullable Output<String> availableTime,
+        Output<String> branchId,
+        @Nullable Output<List<String>> brands,
+        Output<String> catalogId,
+        @Nullable Output<List<String>> categories,
+        @Nullable Output<List<String>> collectionMemberIds,
+        @Nullable Output<GoogleCloudRetailV2betaColorInfoArgs> colorInfo,
+        @Nullable Output<List<String>> conditions,
+        @Nullable Output<String> description,
+        @Nullable Output<String> expireTime,
+        @Nullable Output<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo,
+        @Nullable Output<String> gtin,
+        @Nullable Output<String> id,
+        @Nullable Output<List<GoogleCloudRetailV2betaImageArgs>> images,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> location,
+        @Nullable Output<List<String>> materials,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> patterns,
+        @Nullable Output<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo,
+        @Nullable Output<String> primaryProductId,
+        Output<String> productId,
+        @Nullable Output<String> project,
+        @Nullable Output<List<GoogleCloudRetailV2betaPromotionArgs>> promotions,
+        @Nullable Output<String> publishTime,
+        @Nullable Output<GoogleCloudRetailV2betaRatingArgs> rating,
+        @Nullable Output<String> retrievableFields,
+        @Nullable Output<List<String>> sizes,
+        @Nullable Output<List<String>> tags,
+        Output<String> title,
+        @Nullable Output<String> ttl,
+        @Nullable Output<ProductType> type,
+        @Nullable Output<String> uri) {
         this.attributes = attributes;
         this.audience = audience;
         this.availability = availability;
@@ -491,43 +491,43 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductArgs() {
-        this.attributes = Input.empty();
-        this.audience = Input.empty();
-        this.availability = Input.empty();
-        this.availableQuantity = Input.empty();
-        this.availableTime = Input.empty();
-        this.branchId = Input.empty();
-        this.brands = Input.empty();
-        this.catalogId = Input.empty();
-        this.categories = Input.empty();
-        this.collectionMemberIds = Input.empty();
-        this.colorInfo = Input.empty();
-        this.conditions = Input.empty();
-        this.description = Input.empty();
-        this.expireTime = Input.empty();
-        this.fulfillmentInfo = Input.empty();
-        this.gtin = Input.empty();
-        this.id = Input.empty();
-        this.images = Input.empty();
-        this.languageCode = Input.empty();
-        this.location = Input.empty();
-        this.materials = Input.empty();
-        this.name = Input.empty();
-        this.patterns = Input.empty();
-        this.priceInfo = Input.empty();
-        this.primaryProductId = Input.empty();
-        this.productId = Input.empty();
-        this.project = Input.empty();
-        this.promotions = Input.empty();
-        this.publishTime = Input.empty();
-        this.rating = Input.empty();
-        this.retrievableFields = Input.empty();
-        this.sizes = Input.empty();
-        this.tags = Input.empty();
-        this.title = Input.empty();
-        this.ttl = Input.empty();
-        this.type = Input.empty();
-        this.uri = Input.empty();
+        this.attributes = Output.empty();
+        this.audience = Output.empty();
+        this.availability = Output.empty();
+        this.availableQuantity = Output.empty();
+        this.availableTime = Output.empty();
+        this.branchId = Output.empty();
+        this.brands = Output.empty();
+        this.catalogId = Output.empty();
+        this.categories = Output.empty();
+        this.collectionMemberIds = Output.empty();
+        this.colorInfo = Output.empty();
+        this.conditions = Output.empty();
+        this.description = Output.empty();
+        this.expireTime = Output.empty();
+        this.fulfillmentInfo = Output.empty();
+        this.gtin = Output.empty();
+        this.id = Output.empty();
+        this.images = Output.empty();
+        this.languageCode = Output.empty();
+        this.location = Output.empty();
+        this.materials = Output.empty();
+        this.name = Output.empty();
+        this.patterns = Output.empty();
+        this.priceInfo = Output.empty();
+        this.primaryProductId = Output.empty();
+        this.productId = Output.empty();
+        this.project = Output.empty();
+        this.promotions = Output.empty();
+        this.publishTime = Output.empty();
+        this.rating = Output.empty();
+        this.retrievableFields = Output.empty();
+        this.sizes = Output.empty();
+        this.tags = Output.empty();
+        this.title = Output.empty();
+        this.ttl = Output.empty();
+        this.type = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -539,43 +539,43 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributes;
-        private @Nullable Input<GoogleCloudRetailV2betaAudienceArgs> audience;
-        private @Nullable Input<ProductAvailability> availability;
-        private @Nullable Input<Integer> availableQuantity;
-        private @Nullable Input<String> availableTime;
-        private Input<String> branchId;
-        private @Nullable Input<List<String>> brands;
-        private Input<String> catalogId;
-        private @Nullable Input<List<String>> categories;
-        private @Nullable Input<List<String>> collectionMemberIds;
-        private @Nullable Input<GoogleCloudRetailV2betaColorInfoArgs> colorInfo;
-        private @Nullable Input<List<String>> conditions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> expireTime;
-        private @Nullable Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo;
-        private @Nullable Input<String> gtin;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<GoogleCloudRetailV2betaImageArgs>> images;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<String>> materials;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> patterns;
-        private @Nullable Input<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo;
-        private @Nullable Input<String> primaryProductId;
-        private Input<String> productId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<GoogleCloudRetailV2betaPromotionArgs>> promotions;
-        private @Nullable Input<String> publishTime;
-        private @Nullable Input<GoogleCloudRetailV2betaRatingArgs> rating;
-        private @Nullable Input<String> retrievableFields;
-        private @Nullable Input<List<String>> sizes;
-        private @Nullable Input<List<String>> tags;
-        private Input<String> title;
-        private @Nullable Input<String> ttl;
-        private @Nullable Input<ProductType> type;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<Map<String,String>> attributes;
+        private @Nullable Output<GoogleCloudRetailV2betaAudienceArgs> audience;
+        private @Nullable Output<ProductAvailability> availability;
+        private @Nullable Output<Integer> availableQuantity;
+        private @Nullable Output<String> availableTime;
+        private Output<String> branchId;
+        private @Nullable Output<List<String>> brands;
+        private Output<String> catalogId;
+        private @Nullable Output<List<String>> categories;
+        private @Nullable Output<List<String>> collectionMemberIds;
+        private @Nullable Output<GoogleCloudRetailV2betaColorInfoArgs> colorInfo;
+        private @Nullable Output<List<String>> conditions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> expireTime;
+        private @Nullable Output<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo;
+        private @Nullable Output<String> gtin;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<GoogleCloudRetailV2betaImageArgs>> images;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<String>> materials;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> patterns;
+        private @Nullable Output<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo;
+        private @Nullable Output<String> primaryProductId;
+        private Output<String> productId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<GoogleCloudRetailV2betaPromotionArgs>> promotions;
+        private @Nullable Output<String> publishTime;
+        private @Nullable Output<GoogleCloudRetailV2betaRatingArgs> rating;
+        private @Nullable Output<String> retrievableFields;
+        private @Nullable Output<List<String>> sizes;
+        private @Nullable Output<List<String>> tags;
+        private Output<String> title;
+        private @Nullable Output<String> ttl;
+        private @Nullable Output<ProductType> type;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -622,373 +622,373 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder audience(@Nullable Input<GoogleCloudRetailV2betaAudienceArgs> audience) {
+        public Builder audience(@Nullable Output<GoogleCloudRetailV2betaAudienceArgs> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable GoogleCloudRetailV2betaAudienceArgs audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder availability(@Nullable Input<ProductAvailability> availability) {
+        public Builder availability(@Nullable Output<ProductAvailability> availability) {
             this.availability = availability;
             return this;
         }
 
         public Builder availability(@Nullable ProductAvailability availability) {
-            this.availability = Input.ofNullable(availability);
+            this.availability = Output.ofNullable(availability);
             return this;
         }
 
-        public Builder availableQuantity(@Nullable Input<Integer> availableQuantity) {
+        public Builder availableQuantity(@Nullable Output<Integer> availableQuantity) {
             this.availableQuantity = availableQuantity;
             return this;
         }
 
         public Builder availableQuantity(@Nullable Integer availableQuantity) {
-            this.availableQuantity = Input.ofNullable(availableQuantity);
+            this.availableQuantity = Output.ofNullable(availableQuantity);
             return this;
         }
 
-        public Builder availableTime(@Nullable Input<String> availableTime) {
+        public Builder availableTime(@Nullable Output<String> availableTime) {
             this.availableTime = availableTime;
             return this;
         }
 
         public Builder availableTime(@Nullable String availableTime) {
-            this.availableTime = Input.ofNullable(availableTime);
+            this.availableTime = Output.ofNullable(availableTime);
             return this;
         }
 
-        public Builder branchId(Input<String> branchId) {
+        public Builder branchId(Output<String> branchId) {
             this.branchId = Objects.requireNonNull(branchId);
             return this;
         }
 
         public Builder branchId(String branchId) {
-            this.branchId = Input.of(Objects.requireNonNull(branchId));
+            this.branchId = Output.of(Objects.requireNonNull(branchId));
             return this;
         }
 
-        public Builder brands(@Nullable Input<List<String>> brands) {
+        public Builder brands(@Nullable Output<List<String>> brands) {
             this.brands = brands;
             return this;
         }
 
         public Builder brands(@Nullable List<String> brands) {
-            this.brands = Input.ofNullable(brands);
+            this.brands = Output.ofNullable(brands);
             return this;
         }
 
-        public Builder catalogId(Input<String> catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Input.of(Objects.requireNonNull(catalogId));
+            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder categories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Output<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Input.ofNullable(categories);
+            this.categories = Output.ofNullable(categories);
             return this;
         }
 
-        public Builder collectionMemberIds(@Nullable Input<List<String>> collectionMemberIds) {
+        public Builder collectionMemberIds(@Nullable Output<List<String>> collectionMemberIds) {
             this.collectionMemberIds = collectionMemberIds;
             return this;
         }
 
         public Builder collectionMemberIds(@Nullable List<String> collectionMemberIds) {
-            this.collectionMemberIds = Input.ofNullable(collectionMemberIds);
+            this.collectionMemberIds = Output.ofNullable(collectionMemberIds);
             return this;
         }
 
-        public Builder colorInfo(@Nullable Input<GoogleCloudRetailV2betaColorInfoArgs> colorInfo) {
+        public Builder colorInfo(@Nullable Output<GoogleCloudRetailV2betaColorInfoArgs> colorInfo) {
             this.colorInfo = colorInfo;
             return this;
         }
 
         public Builder colorInfo(@Nullable GoogleCloudRetailV2betaColorInfoArgs colorInfo) {
-            this.colorInfo = Input.ofNullable(colorInfo);
+            this.colorInfo = Output.ofNullable(colorInfo);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<String>> conditions) {
+        public Builder conditions(@Nullable Output<List<String>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<String> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder fulfillmentInfo(@Nullable Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo) {
+        public Builder fulfillmentInfo(@Nullable Output<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo) {
             this.fulfillmentInfo = fulfillmentInfo;
             return this;
         }
 
         public Builder fulfillmentInfo(@Nullable List<GoogleCloudRetailV2betaFulfillmentInfoArgs> fulfillmentInfo) {
-            this.fulfillmentInfo = Input.ofNullable(fulfillmentInfo);
+            this.fulfillmentInfo = Output.ofNullable(fulfillmentInfo);
             return this;
         }
 
-        public Builder gtin(@Nullable Input<String> gtin) {
+        public Builder gtin(@Nullable Output<String> gtin) {
             this.gtin = gtin;
             return this;
         }
 
         public Builder gtin(@Nullable String gtin) {
-            this.gtin = Input.ofNullable(gtin);
+            this.gtin = Output.ofNullable(gtin);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder images(@Nullable Input<List<GoogleCloudRetailV2betaImageArgs>> images) {
+        public Builder images(@Nullable Output<List<GoogleCloudRetailV2betaImageArgs>> images) {
             this.images = images;
             return this;
         }
 
         public Builder images(@Nullable List<GoogleCloudRetailV2betaImageArgs> images) {
-            this.images = Input.ofNullable(images);
+            this.images = Output.ofNullable(images);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder materials(@Nullable Input<List<String>> materials) {
+        public Builder materials(@Nullable Output<List<String>> materials) {
             this.materials = materials;
             return this;
         }
 
         public Builder materials(@Nullable List<String> materials) {
-            this.materials = Input.ofNullable(materials);
+            this.materials = Output.ofNullable(materials);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder patterns(@Nullable Input<List<String>> patterns) {
+        public Builder patterns(@Nullable Output<List<String>> patterns) {
             this.patterns = patterns;
             return this;
         }
 
         public Builder patterns(@Nullable List<String> patterns) {
-            this.patterns = Input.ofNullable(patterns);
+            this.patterns = Output.ofNullable(patterns);
             return this;
         }
 
-        public Builder priceInfo(@Nullable Input<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo) {
+        public Builder priceInfo(@Nullable Output<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo) {
             this.priceInfo = priceInfo;
             return this;
         }
 
         public Builder priceInfo(@Nullable GoogleCloudRetailV2betaPriceInfoArgs priceInfo) {
-            this.priceInfo = Input.ofNullable(priceInfo);
+            this.priceInfo = Output.ofNullable(priceInfo);
             return this;
         }
 
-        public Builder primaryProductId(@Nullable Input<String> primaryProductId) {
+        public Builder primaryProductId(@Nullable Output<String> primaryProductId) {
             this.primaryProductId = primaryProductId;
             return this;
         }
 
         public Builder primaryProductId(@Nullable String primaryProductId) {
-            this.primaryProductId = Input.ofNullable(primaryProductId);
+            this.primaryProductId = Output.ofNullable(primaryProductId);
             return this;
         }
 
-        public Builder productId(Input<String> productId) {
+        public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
         public Builder productId(String productId) {
-            this.productId = Input.of(Objects.requireNonNull(productId));
+            this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder promotions(@Nullable Input<List<GoogleCloudRetailV2betaPromotionArgs>> promotions) {
+        public Builder promotions(@Nullable Output<List<GoogleCloudRetailV2betaPromotionArgs>> promotions) {
             this.promotions = promotions;
             return this;
         }
 
         public Builder promotions(@Nullable List<GoogleCloudRetailV2betaPromotionArgs> promotions) {
-            this.promotions = Input.ofNullable(promotions);
+            this.promotions = Output.ofNullable(promotions);
             return this;
         }
 
-        public Builder publishTime(@Nullable Input<String> publishTime) {
+        public Builder publishTime(@Nullable Output<String> publishTime) {
             this.publishTime = publishTime;
             return this;
         }
 
         public Builder publishTime(@Nullable String publishTime) {
-            this.publishTime = Input.ofNullable(publishTime);
+            this.publishTime = Output.ofNullable(publishTime);
             return this;
         }
 
-        public Builder rating(@Nullable Input<GoogleCloudRetailV2betaRatingArgs> rating) {
+        public Builder rating(@Nullable Output<GoogleCloudRetailV2betaRatingArgs> rating) {
             this.rating = rating;
             return this;
         }
 
         public Builder rating(@Nullable GoogleCloudRetailV2betaRatingArgs rating) {
-            this.rating = Input.ofNullable(rating);
+            this.rating = Output.ofNullable(rating);
             return this;
         }
 
-        public Builder retrievableFields(@Nullable Input<String> retrievableFields) {
+        public Builder retrievableFields(@Nullable Output<String> retrievableFields) {
             this.retrievableFields = retrievableFields;
             return this;
         }
 
         public Builder retrievableFields(@Nullable String retrievableFields) {
-            this.retrievableFields = Input.ofNullable(retrievableFields);
+            this.retrievableFields = Output.ofNullable(retrievableFields);
             return this;
         }
 
-        public Builder sizes(@Nullable Input<List<String>> sizes) {
+        public Builder sizes(@Nullable Output<List<String>> sizes) {
             this.sizes = sizes;
             return this;
         }
 
         public Builder sizes(@Nullable List<String> sizes) {
-            this.sizes = Input.ofNullable(sizes);
+            this.sizes = Output.ofNullable(sizes);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder type(@Nullable Input<ProductType> type) {
+        public Builder type(@Nullable Output<ProductType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ProductType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public ProductArgs build() {

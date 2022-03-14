@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="providerName")
-      private final @Nullable Input<String> providerName;
+      private final @Nullable Output<String> providerName;
 
-    public Input<String> getProviderName() {
-        return this.providerName == null ? Input.empty() : this.providerName;
+    public Output<String> getProviderName() {
+        return this.providerName == null ? Output.empty() : this.providerName;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="serverSideTokenCheck")
-      private final @Nullable Input<Boolean> serverSideTokenCheck;
+      private final @Nullable Output<Boolean> serverSideTokenCheck;
 
-    public Input<Boolean> getServerSideTokenCheck() {
-        return this.serverSideTokenCheck == null ? Input.empty() : this.serverSideTokenCheck;
+    public Output<Boolean> getServerSideTokenCheck() {
+        return this.serverSideTokenCheck == null ? Output.empty() : this.serverSideTokenCheck;
     }
 
     public IdentityPoolCognitoIdentityProviderArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> providerName,
-        @Nullable Input<Boolean> serverSideTokenCheck) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> providerName,
+        @Nullable Output<Boolean> serverSideTokenCheck) {
         this.clientId = clientId;
         this.providerName = providerName;
         this.serverSideTokenCheck = serverSideTokenCheck;
     }
 
     private IdentityPoolCognitoIdentityProviderArgs() {
-        this.clientId = Input.empty();
-        this.providerName = Input.empty();
-        this.serverSideTokenCheck = Input.empty();
+        this.clientId = Output.empty();
+        this.providerName = Output.empty();
+        this.serverSideTokenCheck = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> providerName;
-        private @Nullable Input<Boolean> serverSideTokenCheck;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> providerName;
+        private @Nullable Output<Boolean> serverSideTokenCheck;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
     	      this.serverSideTokenCheck = defaults.serverSideTokenCheck;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder providerName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Input.ofNullable(providerName);
+            this.providerName = Output.ofNullable(providerName);
             return this;
         }
 
-        public Builder serverSideTokenCheck(@Nullable Input<Boolean> serverSideTokenCheck) {
+        public Builder serverSideTokenCheck(@Nullable Output<Boolean> serverSideTokenCheck) {
             this.serverSideTokenCheck = serverSideTokenCheck;
             return this;
         }
 
         public Builder serverSideTokenCheck(@Nullable Boolean serverSideTokenCheck) {
-            this.serverSideTokenCheck = Input.ofNullable(serverSideTokenCheck);
+            this.serverSideTokenCheck = Output.ofNullable(serverSideTokenCheck);
             return this;
         }
         public IdentityPoolCognitoIdentityProviderArgs build() {

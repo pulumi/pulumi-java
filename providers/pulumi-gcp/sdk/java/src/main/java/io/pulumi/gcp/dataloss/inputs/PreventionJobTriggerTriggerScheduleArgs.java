@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recurrencePeriodDuration")
-      private final @Nullable Input<String> recurrencePeriodDuration;
+      private final @Nullable Output<String> recurrencePeriodDuration;
 
-    public Input<String> getRecurrencePeriodDuration() {
-        return this.recurrencePeriodDuration == null ? Input.empty() : this.recurrencePeriodDuration;
+    public Output<String> getRecurrencePeriodDuration() {
+        return this.recurrencePeriodDuration == null ? Output.empty() : this.recurrencePeriodDuration;
     }
 
-    public PreventionJobTriggerTriggerScheduleArgs(@Nullable Input<String> recurrencePeriodDuration) {
+    public PreventionJobTriggerTriggerScheduleArgs(@Nullable Output<String> recurrencePeriodDuration) {
         this.recurrencePeriodDuration = recurrencePeriodDuration;
     }
 
     private PreventionJobTriggerTriggerScheduleArgs() {
-        this.recurrencePeriodDuration = Input.empty();
+        this.recurrencePeriodDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> recurrencePeriodDuration;
+        private @Nullable Output<String> recurrencePeriodDuration;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
     	      this.recurrencePeriodDuration = defaults.recurrencePeriodDuration;
         }
 
-        public Builder recurrencePeriodDuration(@Nullable Input<String> recurrencePeriodDuration) {
+        public Builder recurrencePeriodDuration(@Nullable Output<String> recurrencePeriodDuration) {
             this.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
 
         public Builder recurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = Input.ofNullable(recurrencePeriodDuration);
+            this.recurrencePeriodDuration = Output.ofNullable(recurrencePeriodDuration);
             return this;
         }
         public PreventionJobTriggerTriggerScheduleArgs build() {

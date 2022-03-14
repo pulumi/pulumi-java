@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.ResourceGuardProxyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.ResourceGuardProxyBaseResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,22 +154,22 @@ public class ResourceGuardProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceGuardProxy(String name, ResourceGuardProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ResourceGuardProxy", name, args == null ? ResourceGuardProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:recoveryservices:ResourceGuardProxy", name, args == null ? ResourceGuardProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResourceGuardProxy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResourceGuardProxy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ResourceGuardProxy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210201preview:ResourceGuardProxy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ResourceGuardProxy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ResourceGuardProxy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ResourceGuardProxy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ResourceGuardProxy").build())
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210201preview:ResourceGuardProxy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ResourceGuardProxy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ResourceGuardProxy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ResourceGuardProxy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ResourceGuardProxy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -184,7 +183,7 @@ public class ResourceGuardProxy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourceGuardProxy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResourceGuardProxy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceGuardProxy(name, id, options);
     }
 }

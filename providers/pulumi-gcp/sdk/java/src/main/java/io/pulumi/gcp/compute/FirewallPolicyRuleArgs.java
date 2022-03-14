@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchArgs;
 import java.lang.Boolean;
@@ -23,9 +23,9 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -34,10 +34,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<String> direction;
+      private final Output<String> direction;
 
-    public Input<String> getDirection() {
+    public Output<String> getDirection() {
         return this.direction;
     }
 
@@ -56,10 +56,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableLogging")
-      private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Output<Boolean> enableLogging;
 
-    public Input<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Input.empty() : this.enableLogging;
+    public Output<Boolean> getEnableLogging() {
+        return this.enableLogging == null ? Output.empty() : this.enableLogging;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="firewallPolicy", required=true)
-      private final Input<String> firewallPolicy;
+      private final Output<String> firewallPolicy;
 
-    public Input<String> getFirewallPolicy() {
+    public Output<String> getFirewallPolicy() {
         return this.firewallPolicy;
     }
 
@@ -89,9 +89,9 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="match", required=true)
-      private final Input<FirewallPolicyRuleMatchArgs> match;
+      private final Output<FirewallPolicyRuleMatchArgs> match;
 
-    public Input<FirewallPolicyRuleMatchArgs> getMatch() {
+    public Output<FirewallPolicyRuleMatchArgs> getMatch() {
         return this.match;
     }
 
@@ -100,9 +100,9 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -111,10 +111,10 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetResources")
-      private final @Nullable Input<List<String>> targetResources;
+      private final @Nullable Output<List<String>> targetResources;
 
-    public Input<List<String>> getTargetResources() {
-        return this.targetResources == null ? Input.empty() : this.targetResources;
+    public Output<List<String>> getTargetResources() {
+        return this.targetResources == null ? Output.empty() : this.targetResources;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetServiceAccounts")
-      private final @Nullable Input<List<String>> targetServiceAccounts;
+      private final @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Input<List<String>> getTargetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
+    public Output<List<String>> getTargetServiceAccounts() {
+        return this.targetServiceAccounts == null ? Output.empty() : this.targetServiceAccounts;
     }
 
     public FirewallPolicyRuleArgs(
-        Input<String> action,
-        @Nullable Input<String> description,
-        Input<String> direction,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<Boolean> enableLogging,
-        Input<String> firewallPolicy,
-        Input<FirewallPolicyRuleMatchArgs> match,
-        Input<Integer> priority,
-        @Nullable Input<List<String>> targetResources,
-        @Nullable Input<List<String>> targetServiceAccounts) {
+        Output<String> action,
+        @Nullable Output<String> description,
+        Output<String> direction,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<Boolean> enableLogging,
+        Output<String> firewallPolicy,
+        Output<FirewallPolicyRuleMatchArgs> match,
+        Output<Integer> priority,
+        @Nullable Output<List<String>> targetResources,
+        @Nullable Output<List<String>> targetServiceAccounts) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.description = description;
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
@@ -152,16 +152,16 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FirewallPolicyRuleArgs() {
-        this.action = Input.empty();
-        this.description = Input.empty();
-        this.direction = Input.empty();
-        this.disabled = Input.empty();
-        this.enableLogging = Input.empty();
-        this.firewallPolicy = Input.empty();
-        this.match = Input.empty();
-        this.priority = Input.empty();
-        this.targetResources = Input.empty();
-        this.targetServiceAccounts = Input.empty();
+        this.action = Output.empty();
+        this.description = Output.empty();
+        this.direction = Output.empty();
+        this.disabled = Output.empty();
+        this.enableLogging = Output.empty();
+        this.firewallPolicy = Output.empty();
+        this.match = Output.empty();
+        this.priority = Output.empty();
+        this.targetResources = Output.empty();
+        this.targetServiceAccounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private @Nullable Input<String> description;
-        private Input<String> direction;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<Boolean> enableLogging;
-        private Input<String> firewallPolicy;
-        private Input<FirewallPolicyRuleMatchArgs> match;
-        private Input<Integer> priority;
-        private @Nullable Input<List<String>> targetResources;
-        private @Nullable Input<List<String>> targetServiceAccounts;
+        private Output<String> action;
+        private @Nullable Output<String> description;
+        private Output<String> direction;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<Boolean> enableLogging;
+        private Output<String> firewallPolicy;
+        private Output<FirewallPolicyRuleMatchArgs> match;
+        private Output<Integer> priority;
+        private @Nullable Output<List<String>> targetResources;
+        private @Nullable Output<List<String>> targetServiceAccounts;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.targetServiceAccounts = defaults.targetServiceAccounts;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder direction(Input<String> direction) {
+        public Builder direction(Output<String> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(String direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Input.ofNullable(enableLogging);
+            this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder firewallPolicy(Input<String> firewallPolicy) {
+        public Builder firewallPolicy(Output<String> firewallPolicy) {
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
 
         public Builder firewallPolicy(String firewallPolicy) {
-            this.firewallPolicy = Input.of(Objects.requireNonNull(firewallPolicy));
+            this.firewallPolicy = Output.of(Objects.requireNonNull(firewallPolicy));
             return this;
         }
 
-        public Builder match(Input<FirewallPolicyRuleMatchArgs> match) {
+        public Builder match(Output<FirewallPolicyRuleMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
         public Builder match(FirewallPolicyRuleMatchArgs match) {
-            this.match = Input.of(Objects.requireNonNull(match));
+            this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder targetResources(@Nullable Input<List<String>> targetResources) {
+        public Builder targetResources(@Nullable Output<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
 
         public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Input.ofNullable(targetResources);
+            this.targetResources = Output.ofNullable(targetResources);
             return this;
         }
 
-        public Builder targetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
+            this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
             return this;
         }
         public FirewallPolicyRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,9 +20,9 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inverted", required=true)
-      private final Input<Boolean> inverted;
+      private final Output<Boolean> inverted;
 
-    public Input<Boolean> getInverted() {
+    public Output<Boolean> getInverted() {
         return this.inverted;
     }
 
@@ -31,9 +31,9 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="threshold", required=true)
-      private final Input<Integer> threshold;
+      private final Output<Integer> threshold;
 
-    public Input<Integer> getThreshold() {
+    public Output<Integer> getThreshold() {
         return this.threshold;
     }
 
@@ -42,25 +42,25 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SafetyRuleRuleConfigArgs(
-        Input<Boolean> inverted,
-        Input<Integer> threshold,
-        Input<String> type) {
+        Output<Boolean> inverted,
+        Output<Integer> threshold,
+        Output<String> type) {
         this.inverted = Objects.requireNonNull(inverted, "expected parameter 'inverted' to be non-null");
         this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SafetyRuleRuleConfigArgs() {
-        this.inverted = Input.empty();
-        this.threshold = Input.empty();
-        this.type = Input.empty();
+        this.inverted = Output.empty();
+        this.threshold = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Boolean> inverted;
-        private Input<Integer> threshold;
-        private Input<String> type;
+        private Output<Boolean> inverted;
+        private Output<Integer> threshold;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder inverted(Input<Boolean> inverted) {
+        public Builder inverted(Output<Boolean> inverted) {
             this.inverted = Objects.requireNonNull(inverted);
             return this;
         }
 
         public Builder inverted(Boolean inverted) {
-            this.inverted = Input.of(Objects.requireNonNull(inverted));
+            this.inverted = Output.of(Objects.requireNonNull(inverted));
             return this;
         }
 
-        public Builder threshold(Input<Integer> threshold) {
+        public Builder threshold(Output<Integer> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
         public Builder threshold(Integer threshold) {
-            this.threshold = Input.of(Objects.requireNonNull(threshold));
+            this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SafetyRuleRuleConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingGetArgs extends 
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-      private final Input<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
+      private final Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
-    public Input<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> getInsertHeaders() {
+    public Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> getInsertHeaders() {
         return this.insertHeaders;
     }
 
-    public WebAclDefaultActionAllowCustomRequestHandlingGetArgs(Input<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
+    public WebAclDefaultActionAllowCustomRequestHandlingGetArgs(Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
         this.insertHeaders = Objects.requireNonNull(insertHeaders, "expected parameter 'insertHeaders' to be non-null");
     }
 
     private WebAclDefaultActionAllowCustomRequestHandlingGetArgs() {
-        this.insertHeaders = Input.empty();
+        this.insertHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingGetArgs extends 
     }
 
     public static final class Builder {
-        private Input<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
+        private Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingGetArgs extends 
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder insertHeaders(Input<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
+        public Builder insertHeaders(Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
 
         public Builder insertHeaders(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
-            this.insertHeaders = Input.of(Objects.requireNonNull(insertHeaders));
+            this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
         public WebAclDefaultActionAllowCustomRequestHandlingGetArgs build() {

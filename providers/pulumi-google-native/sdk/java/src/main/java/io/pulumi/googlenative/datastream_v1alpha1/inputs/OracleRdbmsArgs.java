@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleSchemaArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oracleSchemas")
-      private final @Nullable Input<List<OracleSchemaArgs>> oracleSchemas;
+      private final @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
 
-    public Input<List<OracleSchemaArgs>> getOracleSchemas() {
-        return this.oracleSchemas == null ? Input.empty() : this.oracleSchemas;
+    public Output<List<OracleSchemaArgs>> getOracleSchemas() {
+        return this.oracleSchemas == null ? Output.empty() : this.oracleSchemas;
     }
 
-    public OracleRdbmsArgs(@Nullable Input<List<OracleSchemaArgs>> oracleSchemas) {
+    public OracleRdbmsArgs(@Nullable Output<List<OracleSchemaArgs>> oracleSchemas) {
         this.oracleSchemas = oracleSchemas;
     }
 
     private OracleRdbmsArgs() {
-        this.oracleSchemas = Input.empty();
+        this.oracleSchemas = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OracleSchemaArgs>> oracleSchemas;
+        private @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.oracleSchemas = defaults.oracleSchemas;
         }
 
-        public Builder oracleSchemas(@Nullable Input<List<OracleSchemaArgs>> oracleSchemas) {
+        public Builder oracleSchemas(@Nullable Output<List<OracleSchemaArgs>> oracleSchemas) {
             this.oracleSchemas = oracleSchemas;
             return this;
         }
 
         public Builder oracleSchemas(@Nullable List<OracleSchemaArgs> oracleSchemas) {
-            this.oracleSchemas = Input.ofNullable(oracleSchemas);
+            this.oracleSchemas = Output.ofNullable(oracleSchemas);
             return this;
         }
         public OracleRdbmsArgs build() {

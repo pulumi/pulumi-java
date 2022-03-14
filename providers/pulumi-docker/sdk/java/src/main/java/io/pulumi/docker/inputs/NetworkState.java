@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.NetworkIpamConfigGetArgs;
 import io.pulumi.docker.inputs.NetworkLabelGetArgs;
@@ -25,10 +25,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachable")
-      private final @Nullable Input<Boolean> attachable;
+      private final @Nullable Output<Boolean> attachable;
 
-    public Input<Boolean> getAttachable() {
-        return this.attachable == null ? Input.empty() : this.attachable;
+    public Output<Boolean> getAttachable() {
+        return this.attachable == null ? Output.empty() : this.attachable;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checkDuplicate")
-      private final @Nullable Input<Boolean> checkDuplicate;
+      private final @Nullable Output<Boolean> checkDuplicate;
 
-    public Input<Boolean> getCheckDuplicate() {
-        return this.checkDuplicate == null ? Input.empty() : this.checkDuplicate;
+    public Output<Boolean> getCheckDuplicate() {
+        return this.checkDuplicate == null ? Output.empty() : this.checkDuplicate;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driver")
-      private final @Nullable Input<String> driver;
+      private final @Nullable Output<String> driver;
 
-    public Input<String> getDriver() {
-        return this.driver == null ? Input.empty() : this.driver;
+    public Output<String> getDriver() {
+        return this.driver == null ? Output.empty() : this.driver;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-      private final @Nullable Input<Boolean> ingress;
+      private final @Nullable Output<Boolean> ingress;
 
-    public Input<Boolean> getIngress() {
-        return this.ingress == null ? Input.empty() : this.ingress;
+    public Output<Boolean> getIngress() {
+        return this.ingress == null ? Output.empty() : this.ingress;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internal")
-      private final @Nullable Input<Boolean> internal;
+      private final @Nullable Output<Boolean> internal;
 
-    public Input<Boolean> getInternal() {
-        return this.internal == null ? Input.empty() : this.internal;
+    public Output<Boolean> getInternal() {
+        return this.internal == null ? Output.empty() : this.internal;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamConfigs")
-      private final @Nullable Input<List<NetworkIpamConfigGetArgs>> ipamConfigs;
+      private final @Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs;
 
-    public Input<List<NetworkIpamConfigGetArgs>> getIpamConfigs() {
-        return this.ipamConfigs == null ? Input.empty() : this.ipamConfigs;
+    public Output<List<NetworkIpamConfigGetArgs>> getIpamConfigs() {
+        return this.ipamConfigs == null ? Output.empty() : this.ipamConfigs;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamDriver")
-      private final @Nullable Input<String> ipamDriver;
+      private final @Nullable Output<String> ipamDriver;
 
-    public Input<String> getIpamDriver() {
-        return this.ipamDriver == null ? Input.empty() : this.ipamDriver;
+    public Output<String> getIpamDriver() {
+        return this.ipamDriver == null ? Output.empty() : this.ipamDriver;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6")
-      private final @Nullable Input<Boolean> ipv6;
+      private final @Nullable Output<Boolean> ipv6;
 
-    public Input<Boolean> getIpv6() {
-        return this.ipv6 == null ? Input.empty() : this.ipv6;
+    public Output<Boolean> getIpv6() {
+        return this.ipv6 == null ? Output.empty() : this.ipv6;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<NetworkLabelGetArgs>> labels;
+      private final @Nullable Output<List<NetworkLabelGetArgs>> labels;
 
-    public Input<List<NetworkLabelGetArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<NetworkLabelGetArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<Map<String,Object>> options;
+      private final @Nullable Output<Map<String,Object>> options;
 
-    public Input<Map<String,Object>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<Map<String,Object>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -148,25 +148,25 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public NetworkState(
-        @Nullable Input<Boolean> attachable,
-        @Nullable Input<Boolean> checkDuplicate,
-        @Nullable Input<String> driver,
-        @Nullable Input<Boolean> ingress,
-        @Nullable Input<Boolean> internal,
-        @Nullable Input<List<NetworkIpamConfigGetArgs>> ipamConfigs,
-        @Nullable Input<String> ipamDriver,
-        @Nullable Input<Boolean> ipv6,
-        @Nullable Input<List<NetworkLabelGetArgs>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,Object>> options,
-        @Nullable Input<String> scope) {
+        @Nullable Output<Boolean> attachable,
+        @Nullable Output<Boolean> checkDuplicate,
+        @Nullable Output<String> driver,
+        @Nullable Output<Boolean> ingress,
+        @Nullable Output<Boolean> internal,
+        @Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs,
+        @Nullable Output<String> ipamDriver,
+        @Nullable Output<Boolean> ipv6,
+        @Nullable Output<List<NetworkLabelGetArgs>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,Object>> options,
+        @Nullable Output<String> scope) {
         this.attachable = attachable;
         this.checkDuplicate = checkDuplicate;
         this.driver = driver;
@@ -182,18 +182,18 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkState() {
-        this.attachable = Input.empty();
-        this.checkDuplicate = Input.empty();
-        this.driver = Input.empty();
-        this.ingress = Input.empty();
-        this.internal = Input.empty();
-        this.ipamConfigs = Input.empty();
-        this.ipamDriver = Input.empty();
-        this.ipv6 = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.options = Input.empty();
-        this.scope = Input.empty();
+        this.attachable = Output.empty();
+        this.checkDuplicate = Output.empty();
+        this.driver = Output.empty();
+        this.ingress = Output.empty();
+        this.internal = Output.empty();
+        this.ipamConfigs = Output.empty();
+        this.ipamDriver = Output.empty();
+        this.ipv6 = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.options = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -205,18 +205,18 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> attachable;
-        private @Nullable Input<Boolean> checkDuplicate;
-        private @Nullable Input<String> driver;
-        private @Nullable Input<Boolean> ingress;
-        private @Nullable Input<Boolean> internal;
-        private @Nullable Input<List<NetworkIpamConfigGetArgs>> ipamConfigs;
-        private @Nullable Input<String> ipamDriver;
-        private @Nullable Input<Boolean> ipv6;
-        private @Nullable Input<List<NetworkLabelGetArgs>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,Object>> options;
-        private @Nullable Input<String> scope;
+        private @Nullable Output<Boolean> attachable;
+        private @Nullable Output<Boolean> checkDuplicate;
+        private @Nullable Output<String> driver;
+        private @Nullable Output<Boolean> ingress;
+        private @Nullable Output<Boolean> internal;
+        private @Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs;
+        private @Nullable Output<String> ipamDriver;
+        private @Nullable Output<Boolean> ipv6;
+        private @Nullable Output<List<NetworkLabelGetArgs>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,Object>> options;
+        private @Nullable Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -238,123 +238,123 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder attachable(@Nullable Input<Boolean> attachable) {
+        public Builder attachable(@Nullable Output<Boolean> attachable) {
             this.attachable = attachable;
             return this;
         }
 
         public Builder attachable(@Nullable Boolean attachable) {
-            this.attachable = Input.ofNullable(attachable);
+            this.attachable = Output.ofNullable(attachable);
             return this;
         }
 
-        public Builder checkDuplicate(@Nullable Input<Boolean> checkDuplicate) {
+        public Builder checkDuplicate(@Nullable Output<Boolean> checkDuplicate) {
             this.checkDuplicate = checkDuplicate;
             return this;
         }
 
         public Builder checkDuplicate(@Nullable Boolean checkDuplicate) {
-            this.checkDuplicate = Input.ofNullable(checkDuplicate);
+            this.checkDuplicate = Output.ofNullable(checkDuplicate);
             return this;
         }
 
-        public Builder driver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Output<String> driver) {
             this.driver = driver;
             return this;
         }
 
         public Builder driver(@Nullable String driver) {
-            this.driver = Input.ofNullable(driver);
+            this.driver = Output.ofNullable(driver);
             return this;
         }
 
-        public Builder ingress(@Nullable Input<Boolean> ingress) {
+        public Builder ingress(@Nullable Output<Boolean> ingress) {
             this.ingress = ingress;
             return this;
         }
 
         public Builder ingress(@Nullable Boolean ingress) {
-            this.ingress = Input.ofNullable(ingress);
+            this.ingress = Output.ofNullable(ingress);
             return this;
         }
 
-        public Builder internal(@Nullable Input<Boolean> internal) {
+        public Builder internal(@Nullable Output<Boolean> internal) {
             this.internal = internal;
             return this;
         }
 
         public Builder internal(@Nullable Boolean internal) {
-            this.internal = Input.ofNullable(internal);
+            this.internal = Output.ofNullable(internal);
             return this;
         }
 
-        public Builder ipamConfigs(@Nullable Input<List<NetworkIpamConfigGetArgs>> ipamConfigs) {
+        public Builder ipamConfigs(@Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs) {
             this.ipamConfigs = ipamConfigs;
             return this;
         }
 
         public Builder ipamConfigs(@Nullable List<NetworkIpamConfigGetArgs> ipamConfigs) {
-            this.ipamConfigs = Input.ofNullable(ipamConfigs);
+            this.ipamConfigs = Output.ofNullable(ipamConfigs);
             return this;
         }
 
-        public Builder ipamDriver(@Nullable Input<String> ipamDriver) {
+        public Builder ipamDriver(@Nullable Output<String> ipamDriver) {
             this.ipamDriver = ipamDriver;
             return this;
         }
 
         public Builder ipamDriver(@Nullable String ipamDriver) {
-            this.ipamDriver = Input.ofNullable(ipamDriver);
+            this.ipamDriver = Output.ofNullable(ipamDriver);
             return this;
         }
 
-        public Builder ipv6(@Nullable Input<Boolean> ipv6) {
+        public Builder ipv6(@Nullable Output<Boolean> ipv6) {
             this.ipv6 = ipv6;
             return this;
         }
 
         public Builder ipv6(@Nullable Boolean ipv6) {
-            this.ipv6 = Input.ofNullable(ipv6);
+            this.ipv6 = Output.ofNullable(ipv6);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<NetworkLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<NetworkLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<NetworkLabelGetArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder options(@Nullable Input<Map<String,Object>> options) {
+        public Builder options(@Nullable Output<Map<String,Object>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable Map<String,Object> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public NetworkState build() {

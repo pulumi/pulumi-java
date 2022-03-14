@@ -11,7 +11,6 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -488,30 +487,30 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HostPool(String name, HostPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:desktopvirtualization:HostPool", name, args == null ? HostPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:desktopvirtualization:HostPool", name, args == null ? HostPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HostPool(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HostPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:desktopvirtualization:HostPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190123preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190924preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20191210preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20200921preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201019preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201102preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:HostPool").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:HostPool").build())
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190123preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190924preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20191210preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20200921preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201019preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201102preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:HostPool").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:HostPool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -525,7 +524,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HostPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HostPool get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HostPool(name, id, options);
     }
 }

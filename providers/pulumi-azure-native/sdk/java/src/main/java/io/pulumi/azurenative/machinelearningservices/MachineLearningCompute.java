@@ -17,7 +17,6 @@ import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.VirtualMachineResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -195,36 +194,36 @@ public class MachineLearningCompute extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MachineLearningCompute(String name, MachineLearningComputeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:MachineLearningCompute", name, args == null ? MachineLearningComputeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:machinelearningservices:MachineLearningCompute", name, args == null ? MachineLearningComputeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MachineLearningCompute(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MachineLearningCompute(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:MachineLearningCompute", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20180301preview:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20181119:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20190501:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20190601:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20191101:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200101:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200218preview:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200301:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200401:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200501preview:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200515preview:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200601:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200801:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20200901preview:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20210101:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20210301preview:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20210401:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20210701:MachineLearningCompute").build()),
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20220101preview:MachineLearningCompute").build())
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20180301preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20181119:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20190501:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20190601:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20191101:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200101:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200218preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200301:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200401:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200501preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200515preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200601:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200801:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20200901preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210101:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210301preview:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210401:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210701:MachineLearningCompute").build()),
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20220101preview:MachineLearningCompute").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -238,7 +237,7 @@ public class MachineLearningCompute extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MachineLearningCompute get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MachineLearningCompute get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MachineLearningCompute(name, id, options);
     }
 }

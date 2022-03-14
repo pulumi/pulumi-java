@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageTriggerArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SourceTriggerArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TimerTriggerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="baseImageTrigger")
-      private final @Nullable Input<BaseImageTriggerArgs> baseImageTrigger;
+      private final @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
 
-    public Input<BaseImageTriggerArgs> getBaseImageTrigger() {
-        return this.baseImageTrigger == null ? Input.empty() : this.baseImageTrigger;
+    public Output<BaseImageTriggerArgs> getBaseImageTrigger() {
+        return this.baseImageTrigger == null ? Output.empty() : this.baseImageTrigger;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceTriggers")
-      private final @Nullable Input<List<SourceTriggerArgs>> sourceTriggers;
+      private final @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
 
-    public Input<List<SourceTriggerArgs>> getSourceTriggers() {
-        return this.sourceTriggers == null ? Input.empty() : this.sourceTriggers;
+    public Output<List<SourceTriggerArgs>> getSourceTriggers() {
+        return this.sourceTriggers == null ? Output.empty() : this.sourceTriggers;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timerTriggers")
-      private final @Nullable Input<List<TimerTriggerArgs>> timerTriggers;
+      private final @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
 
-    public Input<List<TimerTriggerArgs>> getTimerTriggers() {
-        return this.timerTriggers == null ? Input.empty() : this.timerTriggers;
+    public Output<List<TimerTriggerArgs>> getTimerTriggers() {
+        return this.timerTriggers == null ? Output.empty() : this.timerTriggers;
     }
 
     public TriggerPropertiesArgs(
-        @Nullable Input<BaseImageTriggerArgs> baseImageTrigger,
-        @Nullable Input<List<SourceTriggerArgs>> sourceTriggers,
-        @Nullable Input<List<TimerTriggerArgs>> timerTriggers) {
+        @Nullable Output<BaseImageTriggerArgs> baseImageTrigger,
+        @Nullable Output<List<SourceTriggerArgs>> sourceTriggers,
+        @Nullable Output<List<TimerTriggerArgs>> timerTriggers) {
         this.baseImageTrigger = baseImageTrigger;
         this.sourceTriggers = sourceTriggers;
         this.timerTriggers = timerTriggers;
     }
 
     private TriggerPropertiesArgs() {
-        this.baseImageTrigger = Input.empty();
-        this.sourceTriggers = Input.empty();
-        this.timerTriggers = Input.empty();
+        this.baseImageTrigger = Output.empty();
+        this.sourceTriggers = Output.empty();
+        this.timerTriggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<BaseImageTriggerArgs> baseImageTrigger;
-        private @Nullable Input<List<SourceTriggerArgs>> sourceTriggers;
-        private @Nullable Input<List<TimerTriggerArgs>> timerTriggers;
+        private @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
+        private @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
+        private @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.timerTriggers = defaults.timerTriggers;
         }
 
-        public Builder baseImageTrigger(@Nullable Input<BaseImageTriggerArgs> baseImageTrigger) {
+        public Builder baseImageTrigger(@Nullable Output<BaseImageTriggerArgs> baseImageTrigger) {
             this.baseImageTrigger = baseImageTrigger;
             return this;
         }
 
         public Builder baseImageTrigger(@Nullable BaseImageTriggerArgs baseImageTrigger) {
-            this.baseImageTrigger = Input.ofNullable(baseImageTrigger);
+            this.baseImageTrigger = Output.ofNullable(baseImageTrigger);
             return this;
         }
 
-        public Builder sourceTriggers(@Nullable Input<List<SourceTriggerArgs>> sourceTriggers) {
+        public Builder sourceTriggers(@Nullable Output<List<SourceTriggerArgs>> sourceTriggers) {
             this.sourceTriggers = sourceTriggers;
             return this;
         }
 
         public Builder sourceTriggers(@Nullable List<SourceTriggerArgs> sourceTriggers) {
-            this.sourceTriggers = Input.ofNullable(sourceTriggers);
+            this.sourceTriggers = Output.ofNullable(sourceTriggers);
             return this;
         }
 
-        public Builder timerTriggers(@Nullable Input<List<TimerTriggerArgs>> timerTriggers) {
+        public Builder timerTriggers(@Nullable Output<List<TimerTriggerArgs>> timerTriggers) {
             this.timerTriggers = timerTriggers;
             return this;
         }
 
         public Builder timerTriggers(@Nullable List<TimerTriggerArgs> timerTriggers) {
-            this.timerTriggers = Input.ofNullable(timerTriggers);
+            this.timerTriggers = Output.ofNullable(timerTriggers);
             return this;
         }
         public TriggerPropertiesArgs build() {

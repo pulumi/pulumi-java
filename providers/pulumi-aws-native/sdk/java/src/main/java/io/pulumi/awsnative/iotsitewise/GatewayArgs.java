@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayCapabilitySummaryArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayPlatformArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayCapabilitySummaries")
-      private final @Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
+      private final @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
-    public Input<List<GatewayCapabilitySummaryArgs>> getGatewayCapabilitySummaries() {
-        return this.gatewayCapabilitySummaries == null ? Input.empty() : this.gatewayCapabilitySummaries;
+    public Output<List<GatewayCapabilitySummaryArgs>> getGatewayCapabilitySummaries() {
+        return this.gatewayCapabilitySummaries == null ? Output.empty() : this.gatewayCapabilitySummaries;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName")
-      private final @Nullable Input<String> gatewayName;
+      private final @Nullable Output<String> gatewayName;
 
-    public Input<String> getGatewayName() {
-        return this.gatewayName == null ? Input.empty() : this.gatewayName;
+    public Output<String> getGatewayName() {
+        return this.gatewayName == null ? Output.empty() : this.gatewayName;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayPlatform", required=true)
-      private final Input<GatewayPlatformArgs> gatewayPlatform;
+      private final Output<GatewayPlatformArgs> gatewayPlatform;
 
-    public Input<GatewayPlatformArgs> getGatewayPlatform() {
+    public Output<GatewayPlatformArgs> getGatewayPlatform() {
         return this.gatewayPlatform;
     }
 
@@ -56,17 +56,17 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<GatewayTagArgs>> tags;
+      private final @Nullable Output<List<GatewayTagArgs>> tags;
 
-    public Input<List<GatewayTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<GatewayTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GatewayArgs(
-        @Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries,
-        @Nullable Input<String> gatewayName,
-        Input<GatewayPlatformArgs> gatewayPlatform,
-        @Nullable Input<List<GatewayTagArgs>> tags) {
+        @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries,
+        @Nullable Output<String> gatewayName,
+        Output<GatewayPlatformArgs> gatewayPlatform,
+        @Nullable Output<List<GatewayTagArgs>> tags) {
         this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
         this.gatewayName = gatewayName;
         this.gatewayPlatform = Objects.requireNonNull(gatewayPlatform, "expected parameter 'gatewayPlatform' to be non-null");
@@ -74,10 +74,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayArgs() {
-        this.gatewayCapabilitySummaries = Input.empty();
-        this.gatewayName = Input.empty();
-        this.gatewayPlatform = Input.empty();
-        this.tags = Input.empty();
+        this.gatewayCapabilitySummaries = Output.empty();
+        this.gatewayName = Output.empty();
+        this.gatewayPlatform = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
-        private @Nullable Input<String> gatewayName;
-        private Input<GatewayPlatformArgs> gatewayPlatform;
-        private @Nullable Input<List<GatewayTagArgs>> tags;
+        private @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
+        private @Nullable Output<String> gatewayName;
+        private Output<GatewayPlatformArgs> gatewayPlatform;
+        private @Nullable Output<List<GatewayTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder gatewayCapabilitySummaries(@Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries) {
+        public Builder gatewayCapabilitySummaries(@Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries) {
             this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
 
         public Builder gatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
-            this.gatewayCapabilitySummaries = Input.ofNullable(gatewayCapabilitySummaries);
+            this.gatewayCapabilitySummaries = Output.ofNullable(gatewayCapabilitySummaries);
             return this;
         }
 
-        public Builder gatewayName(@Nullable Input<String> gatewayName) {
+        public Builder gatewayName(@Nullable Output<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Input.ofNullable(gatewayName);
+            this.gatewayName = Output.ofNullable(gatewayName);
             return this;
         }
 
-        public Builder gatewayPlatform(Input<GatewayPlatformArgs> gatewayPlatform) {
+        public Builder gatewayPlatform(Output<GatewayPlatformArgs> gatewayPlatform) {
             this.gatewayPlatform = Objects.requireNonNull(gatewayPlatform);
             return this;
         }
 
         public Builder gatewayPlatform(GatewayPlatformArgs gatewayPlatform) {
-            this.gatewayPlatform = Input.of(Objects.requireNonNull(gatewayPlatform));
+            this.gatewayPlatform = Output.of(Objects.requireNonNull(gatewayPlatform));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<GatewayTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<GatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<GatewayTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GatewayArgs build() {

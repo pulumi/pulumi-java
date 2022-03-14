@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.enums.SizeTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -48,25 +48,25 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="sizeDisk", required=true)
-      private final Input<Either<String,SizeTypes>> sizeDisk;
+      private final Output<Either<String,SizeTypes>> sizeDisk;
 
-    public Input<Either<String,SizeTypes>> getSizeDisk() {
+    public Output<Either<String,SizeTypes>> getSizeDisk() {
         return this.sizeDisk;
     }
 
     public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(
-        @Nullable Input<String> description,
-        Input<String> kind,
-        Input<Either<String,SizeTypes>> sizeDisk) {
+        @Nullable Output<String> description,
+        Output<String> kind,
+        Output<Either<String,SizeTypes>> sizeDisk) {
         this.description = description;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.sizeDisk = Objects.requireNonNull(sizeDisk, "expected parameter 'sizeDisk' to be non-null");
     }
 
     private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs() {
-        this.description = Input.empty();
-        this.kind = Input.empty();
-        this.sizeDisk = Input.empty();
+        this.description = Output.empty();
+        this.kind = Output.empty();
+        this.sizeDisk = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> kind;
-        private Input<Either<String,SizeTypes>> sizeDisk;
+        private @Nullable Output<String> description;
+        private Output<String> kind;
+        private Output<Either<String,SizeTypes>> sizeDisk;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     	      this.sizeDisk = defaults.sizeDisk;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder sizeDisk(Input<Either<String,SizeTypes>> sizeDisk) {
+        public Builder sizeDisk(Output<Either<String,SizeTypes>> sizeDisk) {
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }
 
         public Builder sizeDisk(Either<String,SizeTypes> sizeDisk) {
-            this.sizeDisk = Input.of(Objects.requireNonNull(sizeDisk));
+            this.sizeDisk = Output.of(Objects.requireNonNull(sizeDisk));
             return this;
         }
         public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs build() {

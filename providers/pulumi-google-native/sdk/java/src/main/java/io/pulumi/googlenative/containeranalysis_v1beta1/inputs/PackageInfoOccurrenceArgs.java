@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filename")
-      private final @Nullable Input<String> filename;
+      private final @Nullable Output<String> filename;
 
-    public Input<String> getFilename() {
-        return this.filename == null ? Input.empty() : this.filename;
+    public Output<String> getFilename() {
+        return this.filename == null ? Output.empty() : this.filename;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="licenseConcluded")
-      private final @Nullable Input<LicenseArgs> licenseConcluded;
+      private final @Nullable Output<LicenseArgs> licenseConcluded;
 
-    public Input<LicenseArgs> getLicenseConcluded() {
-        return this.licenseConcluded == null ? Input.empty() : this.licenseConcluded;
+    public Output<LicenseArgs> getLicenseConcluded() {
+        return this.licenseConcluded == null ? Output.empty() : this.licenseConcluded;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceInfo")
-      private final @Nullable Input<String> sourceInfo;
+      private final @Nullable Output<String> sourceInfo;
 
-    public Input<String> getSourceInfo() {
-        return this.sourceInfo == null ? Input.empty() : this.sourceInfo;
+    public Output<String> getSourceInfo() {
+        return this.sourceInfo == null ? Output.empty() : this.sourceInfo;
     }
 
     public PackageInfoOccurrenceArgs(
-        @Nullable Input<String> comment,
-        @Nullable Input<String> filename,
-        @Nullable Input<String> id,
-        @Nullable Input<LicenseArgs> licenseConcluded,
-        @Nullable Input<String> sourceInfo) {
+        @Nullable Output<String> comment,
+        @Nullable Output<String> filename,
+        @Nullable Output<String> id,
+        @Nullable Output<LicenseArgs> licenseConcluded,
+        @Nullable Output<String> sourceInfo) {
         this.comment = comment;
         this.filename = filename;
         this.id = id;
@@ -88,11 +88,11 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     }
 
     private PackageInfoOccurrenceArgs() {
-        this.comment = Input.empty();
-        this.filename = Input.empty();
-        this.id = Input.empty();
-        this.licenseConcluded = Input.empty();
-        this.sourceInfo = Input.empty();
+        this.comment = Output.empty();
+        this.filename = Output.empty();
+        this.id = Output.empty();
+        this.licenseConcluded = Output.empty();
+        this.sourceInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> filename;
-        private @Nullable Input<String> id;
-        private @Nullable Input<LicenseArgs> licenseConcluded;
-        private @Nullable Input<String> sourceInfo;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> filename;
+        private @Nullable Output<String> id;
+        private @Nullable Output<LicenseArgs> licenseConcluded;
+        private @Nullable Output<String> sourceInfo;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     	      this.sourceInfo = defaults.sourceInfo;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder filename(@Nullable Input<String> filename) {
+        public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
 
         public Builder filename(@Nullable String filename) {
-            this.filename = Input.ofNullable(filename);
+            this.filename = Output.ofNullable(filename);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder licenseConcluded(@Nullable Input<LicenseArgs> licenseConcluded) {
+        public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
             this.licenseConcluded = licenseConcluded;
             return this;
         }
 
         public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
-            this.licenseConcluded = Input.ofNullable(licenseConcluded);
+            this.licenseConcluded = Output.ofNullable(licenseConcluded);
             return this;
         }
 
-        public Builder sourceInfo(@Nullable Input<String> sourceInfo) {
+        public Builder sourceInfo(@Nullable Output<String> sourceInfo) {
             this.sourceInfo = sourceInfo;
             return this;
         }
 
         public Builder sourceInfo(@Nullable String sourceInfo) {
-            this.sourceInfo = Input.ofNullable(sourceInfo);
+            this.sourceInfo = Output.ofNullable(sourceInfo);
             return this;
         }
         public PackageInfoOccurrenceArgs build() {

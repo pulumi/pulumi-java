@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.ConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertContext")
-      private final @Nullable Input<ConditionArgs> alertContext;
+      private final @Nullable Output<ConditionArgs> alertContext;
 
-    public Input<ConditionArgs> getAlertContext() {
-        return this.alertContext == null ? Input.empty() : this.alertContext;
+    public Output<ConditionArgs> getAlertContext() {
+        return this.alertContext == null ? Output.empty() : this.alertContext;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertRuleId")
-      private final @Nullable Input<ConditionArgs> alertRuleId;
+      private final @Nullable Output<ConditionArgs> alertRuleId;
 
-    public Input<ConditionArgs> getAlertRuleId() {
-        return this.alertRuleId == null ? Input.empty() : this.alertRuleId;
+    public Output<ConditionArgs> getAlertRuleId() {
+        return this.alertRuleId == null ? Output.empty() : this.alertRuleId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<ConditionArgs> description;
+      private final @Nullable Output<ConditionArgs> description;
 
-    public Input<ConditionArgs> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<ConditionArgs> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorCondition")
-      private final @Nullable Input<ConditionArgs> monitorCondition;
+      private final @Nullable Output<ConditionArgs> monitorCondition;
 
-    public Input<ConditionArgs> getMonitorCondition() {
-        return this.monitorCondition == null ? Input.empty() : this.monitorCondition;
+    public Output<ConditionArgs> getMonitorCondition() {
+        return this.monitorCondition == null ? Output.empty() : this.monitorCondition;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorService")
-      private final @Nullable Input<ConditionArgs> monitorService;
+      private final @Nullable Output<ConditionArgs> monitorService;
 
-    public Input<ConditionArgs> getMonitorService() {
-        return this.monitorService == null ? Input.empty() : this.monitorService;
+    public Output<ConditionArgs> getMonitorService() {
+        return this.monitorService == null ? Output.empty() : this.monitorService;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity")
-      private final @Nullable Input<ConditionArgs> severity;
+      private final @Nullable Output<ConditionArgs> severity;
 
-    public Input<ConditionArgs> getSeverity() {
-        return this.severity == null ? Input.empty() : this.severity;
+    public Output<ConditionArgs> getSeverity() {
+        return this.severity == null ? Output.empty() : this.severity;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceType")
-      private final @Nullable Input<ConditionArgs> targetResourceType;
+      private final @Nullable Output<ConditionArgs> targetResourceType;
 
-    public Input<ConditionArgs> getTargetResourceType() {
-        return this.targetResourceType == null ? Input.empty() : this.targetResourceType;
+    public Output<ConditionArgs> getTargetResourceType() {
+        return this.targetResourceType == null ? Output.empty() : this.targetResourceType;
     }
 
     public ConditionsArgs(
-        @Nullable Input<ConditionArgs> alertContext,
-        @Nullable Input<ConditionArgs> alertRuleId,
-        @Nullable Input<ConditionArgs> description,
-        @Nullable Input<ConditionArgs> monitorCondition,
-        @Nullable Input<ConditionArgs> monitorService,
-        @Nullable Input<ConditionArgs> severity,
-        @Nullable Input<ConditionArgs> targetResourceType) {
+        @Nullable Output<ConditionArgs> alertContext,
+        @Nullable Output<ConditionArgs> alertRuleId,
+        @Nullable Output<ConditionArgs> description,
+        @Nullable Output<ConditionArgs> monitorCondition,
+        @Nullable Output<ConditionArgs> monitorService,
+        @Nullable Output<ConditionArgs> severity,
+        @Nullable Output<ConditionArgs> targetResourceType) {
         this.alertContext = alertContext;
         this.alertRuleId = alertRuleId;
         this.description = description;
@@ -113,13 +113,13 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionsArgs() {
-        this.alertContext = Input.empty();
-        this.alertRuleId = Input.empty();
-        this.description = Input.empty();
-        this.monitorCondition = Input.empty();
-        this.monitorService = Input.empty();
-        this.severity = Input.empty();
-        this.targetResourceType = Input.empty();
+        this.alertContext = Output.empty();
+        this.alertRuleId = Output.empty();
+        this.description = Output.empty();
+        this.monitorCondition = Output.empty();
+        this.monitorService = Output.empty();
+        this.severity = Output.empty();
+        this.targetResourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ConditionArgs> alertContext;
-        private @Nullable Input<ConditionArgs> alertRuleId;
-        private @Nullable Input<ConditionArgs> description;
-        private @Nullable Input<ConditionArgs> monitorCondition;
-        private @Nullable Input<ConditionArgs> monitorService;
-        private @Nullable Input<ConditionArgs> severity;
-        private @Nullable Input<ConditionArgs> targetResourceType;
+        private @Nullable Output<ConditionArgs> alertContext;
+        private @Nullable Output<ConditionArgs> alertRuleId;
+        private @Nullable Output<ConditionArgs> description;
+        private @Nullable Output<ConditionArgs> monitorCondition;
+        private @Nullable Output<ConditionArgs> monitorService;
+        private @Nullable Output<ConditionArgs> severity;
+        private @Nullable Output<ConditionArgs> targetResourceType;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetResourceType = defaults.targetResourceType;
         }
 
-        public Builder alertContext(@Nullable Input<ConditionArgs> alertContext) {
+        public Builder alertContext(@Nullable Output<ConditionArgs> alertContext) {
             this.alertContext = alertContext;
             return this;
         }
 
         public Builder alertContext(@Nullable ConditionArgs alertContext) {
-            this.alertContext = Input.ofNullable(alertContext);
+            this.alertContext = Output.ofNullable(alertContext);
             return this;
         }
 
-        public Builder alertRuleId(@Nullable Input<ConditionArgs> alertRuleId) {
+        public Builder alertRuleId(@Nullable Output<ConditionArgs> alertRuleId) {
             this.alertRuleId = alertRuleId;
             return this;
         }
 
         public Builder alertRuleId(@Nullable ConditionArgs alertRuleId) {
-            this.alertRuleId = Input.ofNullable(alertRuleId);
+            this.alertRuleId = Output.ofNullable(alertRuleId);
             return this;
         }
 
-        public Builder description(@Nullable Input<ConditionArgs> description) {
+        public Builder description(@Nullable Output<ConditionArgs> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable ConditionArgs description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder monitorCondition(@Nullable Input<ConditionArgs> monitorCondition) {
+        public Builder monitorCondition(@Nullable Output<ConditionArgs> monitorCondition) {
             this.monitorCondition = monitorCondition;
             return this;
         }
 
         public Builder monitorCondition(@Nullable ConditionArgs monitorCondition) {
-            this.monitorCondition = Input.ofNullable(monitorCondition);
+            this.monitorCondition = Output.ofNullable(monitorCondition);
             return this;
         }
 
-        public Builder monitorService(@Nullable Input<ConditionArgs> monitorService) {
+        public Builder monitorService(@Nullable Output<ConditionArgs> monitorService) {
             this.monitorService = monitorService;
             return this;
         }
 
         public Builder monitorService(@Nullable ConditionArgs monitorService) {
-            this.monitorService = Input.ofNullable(monitorService);
+            this.monitorService = Output.ofNullable(monitorService);
             return this;
         }
 
-        public Builder severity(@Nullable Input<ConditionArgs> severity) {
+        public Builder severity(@Nullable Output<ConditionArgs> severity) {
             this.severity = severity;
             return this;
         }
 
         public Builder severity(@Nullable ConditionArgs severity) {
-            this.severity = Input.ofNullable(severity);
+            this.severity = Output.ofNullable(severity);
             return this;
         }
 
-        public Builder targetResourceType(@Nullable Input<ConditionArgs> targetResourceType) {
+        public Builder targetResourceType(@Nullable Output<ConditionArgs> targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
 
         public Builder targetResourceType(@Nullable ConditionArgs targetResourceType) {
-            this.targetResourceType = Input.ofNullable(targetResourceType);
+            this.targetResourceType = Output.ofNullable(targetResourceType);
             return this;
         }
         public ConditionsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.inputs.SqlServerDatabaseDetailsArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="charset")
-      private final @Nullable Input<String> charset;
+      private final @Nullable Output<String> charset;
 
-    public Input<String> getCharset() {
-        return this.charset == null ? Input.empty() : this.charset;
+    public Output<String> getCharset() {
+        return this.charset == null ? Output.empty() : this.charset;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
@@ -53,10 +53,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -86,28 +86,28 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     @InputImport(name="sqlserverDatabaseDetails")
-      private final @Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
+      private final @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
 
-    public Input<SqlServerDatabaseDetailsArgs> getSqlserverDatabaseDetails() {
-        return this.sqlserverDatabaseDetails == null ? Input.empty() : this.sqlserverDatabaseDetails;
+    public Output<SqlServerDatabaseDetailsArgs> getSqlserverDatabaseDetails() {
+        return this.sqlserverDatabaseDetails == null ? Output.empty() : this.sqlserverDatabaseDetails;
     }
 
     public DatabaseArgs(
-        @Nullable Input<String> charset,
-        @Nullable Input<String> collation,
-        Input<String> instance,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
+        @Nullable Output<String> charset,
+        @Nullable Output<String> collation,
+        Output<String> instance,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
         this.charset = charset;
         this.collation = collation;
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
@@ -119,14 +119,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.charset = Input.empty();
-        this.collation = Input.empty();
-        this.instance = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
-        this.sqlserverDatabaseDetails = Input.empty();
+        this.charset = Output.empty();
+        this.collation = Output.empty();
+        this.instance = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
+        this.sqlserverDatabaseDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,14 +138,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> charset;
-        private @Nullable Input<String> collation;
-        private Input<String> instance;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
+        private @Nullable Output<String> charset;
+        private @Nullable Output<String> collation;
+        private Output<String> instance;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
 
         public Builder() {
     	      // Empty
@@ -163,83 +163,83 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sqlserverDatabaseDetails = defaults.sqlserverDatabaseDetails;
         }
 
-        public Builder charset(@Nullable Input<String> charset) {
+        public Builder charset(@Nullable Output<String> charset) {
             this.charset = charset;
             return this;
         }
 
         public Builder charset(@Nullable String charset) {
-            this.charset = Input.ofNullable(charset);
+            this.charset = Output.ofNullable(charset);
             return this;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder sqlserverDatabaseDetails(@Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
+        public Builder sqlserverDatabaseDetails(@Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
             this.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
             return this;
         }
 
         public Builder sqlserverDatabaseDetails(@Nullable SqlServerDatabaseDetailsArgs sqlserverDatabaseDetails) {
-            this.sqlserverDatabaseDetails = Input.ofNullable(sqlserverDatabaseDetails);
+            this.sqlserverDatabaseDetails = Output.ofNullable(sqlserverDatabaseDetails);
             return this;
         }
         public DatabaseArgs build() {

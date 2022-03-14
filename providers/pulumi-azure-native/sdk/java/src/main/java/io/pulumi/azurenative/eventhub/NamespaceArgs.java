@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.eventhub.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isAutoInflateEnabled")
-      private final @Nullable Input<Boolean> isAutoInflateEnabled;
+      private final @Nullable Output<Boolean> isAutoInflateEnabled;
 
-    public Input<Boolean> getIsAutoInflateEnabled() {
-        return this.isAutoInflateEnabled == null ? Input.empty() : this.isAutoInflateEnabled;
+    public Output<Boolean> getIsAutoInflateEnabled() {
+        return this.isAutoInflateEnabled == null ? Output.empty() : this.isAutoInflateEnabled;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaEnabled")
-      private final @Nullable Input<Boolean> kafkaEnabled;
+      private final @Nullable Output<Boolean> kafkaEnabled;
 
-    public Input<Boolean> getKafkaEnabled() {
-        return this.kafkaEnabled == null ? Input.empty() : this.kafkaEnabled;
+    public Output<Boolean> getKafkaEnabled() {
+        return this.kafkaEnabled == null ? Output.empty() : this.kafkaEnabled;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumThroughputUnits")
-      private final @Nullable Input<Integer> maximumThroughputUnits;
+      private final @Nullable Output<Integer> maximumThroughputUnits;
 
-    public Input<Integer> getMaximumThroughputUnits() {
-        return this.maximumThroughputUnits == null ? Input.empty() : this.maximumThroughputUnits;
+    public Output<Integer> getMaximumThroughputUnits() {
+        return this.maximumThroughputUnits == null ? Output.empty() : this.maximumThroughputUnits;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName")
-      private final @Nullable Input<String> namespaceName;
+      private final @Nullable Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
-        return this.namespaceName == null ? Input.empty() : this.namespaceName;
+    public Output<String> getNamespaceName() {
+        return this.namespaceName == null ? Output.empty() : this.namespaceName;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,10 +89,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NamespaceArgs(
-        @Nullable Input<Boolean> isAutoInflateEnabled,
-        @Nullable Input<Boolean> kafkaEnabled,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> maximumThroughputUnits,
-        @Nullable Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> isAutoInflateEnabled,
+        @Nullable Output<Boolean> kafkaEnabled,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> maximumThroughputUnits,
+        @Nullable Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.isAutoInflateEnabled = isAutoInflateEnabled;
         this.kafkaEnabled = kafkaEnabled;
         this.location = location;
@@ -126,14 +126,14 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamespaceArgs() {
-        this.isAutoInflateEnabled = Input.empty();
-        this.kafkaEnabled = Input.empty();
-        this.location = Input.empty();
-        this.maximumThroughputUnits = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.isAutoInflateEnabled = Output.empty();
+        this.kafkaEnabled = Output.empty();
+        this.location = Output.empty();
+        this.maximumThroughputUnits = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isAutoInflateEnabled;
-        private @Nullable Input<Boolean> kafkaEnabled;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> maximumThroughputUnits;
-        private @Nullable Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> isAutoInflateEnabled;
+        private @Nullable Output<Boolean> kafkaEnabled;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> maximumThroughputUnits;
+        private @Nullable Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder isAutoInflateEnabled(@Nullable Input<Boolean> isAutoInflateEnabled) {
+        public Builder isAutoInflateEnabled(@Nullable Output<Boolean> isAutoInflateEnabled) {
             this.isAutoInflateEnabled = isAutoInflateEnabled;
             return this;
         }
 
         public Builder isAutoInflateEnabled(@Nullable Boolean isAutoInflateEnabled) {
-            this.isAutoInflateEnabled = Input.ofNullable(isAutoInflateEnabled);
+            this.isAutoInflateEnabled = Output.ofNullable(isAutoInflateEnabled);
             return this;
         }
 
-        public Builder kafkaEnabled(@Nullable Input<Boolean> kafkaEnabled) {
+        public Builder kafkaEnabled(@Nullable Output<Boolean> kafkaEnabled) {
             this.kafkaEnabled = kafkaEnabled;
             return this;
         }
 
         public Builder kafkaEnabled(@Nullable Boolean kafkaEnabled) {
-            this.kafkaEnabled = Input.ofNullable(kafkaEnabled);
+            this.kafkaEnabled = Output.ofNullable(kafkaEnabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maximumThroughputUnits(@Nullable Input<Integer> maximumThroughputUnits) {
+        public Builder maximumThroughputUnits(@Nullable Output<Integer> maximumThroughputUnits) {
             this.maximumThroughputUnits = maximumThroughputUnits;
             return this;
         }
 
         public Builder maximumThroughputUnits(@Nullable Integer maximumThroughputUnits) {
-            this.maximumThroughputUnits = Input.ofNullable(maximumThroughputUnits);
+            this.maximumThroughputUnits = Output.ofNullable(maximumThroughputUnits);
             return this;
         }
 
-        public Builder namespaceName(@Nullable Input<String> namespaceName) {
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
             this.namespaceName = namespaceName;
             return this;
         }
 
         public Builder namespaceName(@Nullable String namespaceName) {
-            this.namespaceName = Input.ofNullable(namespaceName);
+            this.namespaceName = Output.ofNullable(namespaceName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NamespaceArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filePath", required=true)
-      private final Input<Object> filePath;
+      private final Output<Object> filePath;
 
-    public Input<Object> getFilePath() {
+    public Output<Object> getFilePath() {
         return this.filePath;
     }
 
@@ -34,22 +34,22 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
     public AzureMLWebServiceFileArgs(
-        Input<Object> filePath,
-        Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        Output<Object> filePath,
+        Output<LinkedServiceReferenceArgs> linkedServiceName) {
         this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
         this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
     }
 
     private AzureMLWebServiceFileArgs() {
-        this.filePath = Input.empty();
-        this.linkedServiceName = Input.empty();
+        this.filePath = Output.empty();
+        this.linkedServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Object> filePath;
-        private Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<Object> filePath;
+        private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
     	      this.linkedServiceName = defaults.linkedServiceName;
         }
 
-        public Builder filePath(Input<Object> filePath) {
+        public Builder filePath(Output<Object> filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
         public Builder filePath(Object filePath) {
-            this.filePath = Input.of(Objects.requireNonNull(filePath));
+            this.filePath = Output.of(Objects.requireNonNull(filePath));
             return this;
         }
 
-        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
         public AzureMLWebServiceFileArgs build() {

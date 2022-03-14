@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlCredentialGetArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="credential", required=true)
-      private final Input<ConnectionCloudSqlCredentialGetArgs> credential;
+      private final Output<ConnectionCloudSqlCredentialGetArgs> credential;
 
-    public Input<ConnectionCloudSqlCredentialGetArgs> getCredential() {
+    public Output<ConnectionCloudSqlCredentialGetArgs> getCredential() {
         return this.credential;
     }
 
@@ -31,9 +31,9 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -42,9 +42,9 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -54,17 +54,17 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ConnectionCloudSqlGetArgs(
-        Input<ConnectionCloudSqlCredentialGetArgs> credential,
-        Input<String> database,
-        Input<String> instanceId,
-        Input<String> type) {
+        Output<ConnectionCloudSqlCredentialGetArgs> credential,
+        Output<String> database,
+        Output<String> instanceId,
+        Output<String> type) {
         this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
@@ -72,10 +72,10 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectionCloudSqlGetArgs() {
-        this.credential = Input.empty();
-        this.database = Input.empty();
-        this.instanceId = Input.empty();
-        this.type = Input.empty();
+        this.credential = Output.empty();
+        this.database = Output.empty();
+        this.instanceId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<ConnectionCloudSqlCredentialGetArgs> credential;
-        private Input<String> database;
-        private Input<String> instanceId;
-        private Input<String> type;
+        private Output<ConnectionCloudSqlCredentialGetArgs> credential;
+        private Output<String> database;
+        private Output<String> instanceId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder credential(Input<ConnectionCloudSqlCredentialGetArgs> credential) {
+        public Builder credential(Output<ConnectionCloudSqlCredentialGetArgs> credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
         public Builder credential(ConnectionCloudSqlCredentialGetArgs credential) {
-            this.credential = Input.of(Objects.requireNonNull(credential));
+            this.credential = Output.of(Objects.requireNonNull(credential));
             return this;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ConnectionCloudSqlGetArgs build() {

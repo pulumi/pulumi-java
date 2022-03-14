@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__HyperparameterSpecAlgorithm;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__HyperparameterSpecGoal;
@@ -29,10 +29,10 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="algorithm")
-      private final @Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm;
+      private final @Nullable Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm;
 
-    public Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Input.empty() : this.algorithm;
+    public Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> getAlgorithm() {
+        return this.algorithm == null ? Output.empty() : this.algorithm;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="enableTrialEarlyStopping")
-      private final @Nullable Input<Boolean> enableTrialEarlyStopping;
+      private final @Nullable Output<Boolean> enableTrialEarlyStopping;
 
-    public Input<Boolean> getEnableTrialEarlyStopping() {
-        return this.enableTrialEarlyStopping == null ? Input.empty() : this.enableTrialEarlyStopping;
+    public Output<Boolean> getEnableTrialEarlyStopping() {
+        return this.enableTrialEarlyStopping == null ? Output.empty() : this.enableTrialEarlyStopping;
     }
 
     /**
@@ -51,9 +51,9 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="goal", required=true)
-      private final Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal;
+      private final Output<GoogleCloudMlV1__HyperparameterSpecGoal> goal;
 
-    public Input<GoogleCloudMlV1__HyperparameterSpecGoal> getGoal() {
+    public Output<GoogleCloudMlV1__HyperparameterSpecGoal> getGoal() {
         return this.goal;
     }
 
@@ -62,10 +62,10 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="hyperparameterMetricTag")
-      private final @Nullable Input<String> hyperparameterMetricTag;
+      private final @Nullable Output<String> hyperparameterMetricTag;
 
-    public Input<String> getHyperparameterMetricTag() {
-        return this.hyperparameterMetricTag == null ? Input.empty() : this.hyperparameterMetricTag;
+    public Output<String> getHyperparameterMetricTag() {
+        return this.hyperparameterMetricTag == null ? Output.empty() : this.hyperparameterMetricTag;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxFailedTrials")
-      private final @Nullable Input<Integer> maxFailedTrials;
+      private final @Nullable Output<Integer> maxFailedTrials;
 
-    public Input<Integer> getMaxFailedTrials() {
-        return this.maxFailedTrials == null ? Input.empty() : this.maxFailedTrials;
+    public Output<Integer> getMaxFailedTrials() {
+        return this.maxFailedTrials == null ? Output.empty() : this.maxFailedTrials;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxParallelTrials")
-      private final @Nullable Input<Integer> maxParallelTrials;
+      private final @Nullable Output<Integer> maxParallelTrials;
 
-    public Input<Integer> getMaxParallelTrials() {
-        return this.maxParallelTrials == null ? Input.empty() : this.maxParallelTrials;
+    public Output<Integer> getMaxParallelTrials() {
+        return this.maxParallelTrials == null ? Output.empty() : this.maxParallelTrials;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxTrials")
-      private final @Nullable Input<Integer> maxTrials;
+      private final @Nullable Output<Integer> maxTrials;
 
-    public Input<Integer> getMaxTrials() {
-        return this.maxTrials == null ? Input.empty() : this.maxTrials;
+    public Output<Integer> getMaxTrials() {
+        return this.maxTrials == null ? Output.empty() : this.maxTrials;
     }
 
     /**
@@ -106,9 +106,9 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="params", required=true)
-      private final Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params;
+      private final Output<List<GoogleCloudMlV1__ParameterSpecArgs>> params;
 
-    public Input<List<GoogleCloudMlV1__ParameterSpecArgs>> getParams() {
+    public Output<List<GoogleCloudMlV1__ParameterSpecArgs>> getParams() {
         return this.params;
     }
 
@@ -117,22 +117,22 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resumePreviousJobId")
-      private final @Nullable Input<String> resumePreviousJobId;
+      private final @Nullable Output<String> resumePreviousJobId;
 
-    public Input<String> getResumePreviousJobId() {
-        return this.resumePreviousJobId == null ? Input.empty() : this.resumePreviousJobId;
+    public Output<String> getResumePreviousJobId() {
+        return this.resumePreviousJobId == null ? Output.empty() : this.resumePreviousJobId;
     }
 
     public GoogleCloudMlV1__HyperparameterSpecArgs(
-        @Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm,
-        @Nullable Input<Boolean> enableTrialEarlyStopping,
-        Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal,
-        @Nullable Input<String> hyperparameterMetricTag,
-        @Nullable Input<Integer> maxFailedTrials,
-        @Nullable Input<Integer> maxParallelTrials,
-        @Nullable Input<Integer> maxTrials,
-        Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params,
-        @Nullable Input<String> resumePreviousJobId) {
+        @Nullable Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm,
+        @Nullable Output<Boolean> enableTrialEarlyStopping,
+        Output<GoogleCloudMlV1__HyperparameterSpecGoal> goal,
+        @Nullable Output<String> hyperparameterMetricTag,
+        @Nullable Output<Integer> maxFailedTrials,
+        @Nullable Output<Integer> maxParallelTrials,
+        @Nullable Output<Integer> maxTrials,
+        Output<List<GoogleCloudMlV1__ParameterSpecArgs>> params,
+        @Nullable Output<String> resumePreviousJobId) {
         this.algorithm = algorithm;
         this.enableTrialEarlyStopping = enableTrialEarlyStopping;
         this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
@@ -145,15 +145,15 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     }
 
     private GoogleCloudMlV1__HyperparameterSpecArgs() {
-        this.algorithm = Input.empty();
-        this.enableTrialEarlyStopping = Input.empty();
-        this.goal = Input.empty();
-        this.hyperparameterMetricTag = Input.empty();
-        this.maxFailedTrials = Input.empty();
-        this.maxParallelTrials = Input.empty();
-        this.maxTrials = Input.empty();
-        this.params = Input.empty();
-        this.resumePreviousJobId = Input.empty();
+        this.algorithm = Output.empty();
+        this.enableTrialEarlyStopping = Output.empty();
+        this.goal = Output.empty();
+        this.hyperparameterMetricTag = Output.empty();
+        this.maxFailedTrials = Output.empty();
+        this.maxParallelTrials = Output.empty();
+        this.maxTrials = Output.empty();
+        this.params = Output.empty();
+        this.resumePreviousJobId = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,15 +165,15 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm;
-        private @Nullable Input<Boolean> enableTrialEarlyStopping;
-        private Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal;
-        private @Nullable Input<String> hyperparameterMetricTag;
-        private @Nullable Input<Integer> maxFailedTrials;
-        private @Nullable Input<Integer> maxParallelTrials;
-        private @Nullable Input<Integer> maxTrials;
-        private Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params;
-        private @Nullable Input<String> resumePreviousJobId;
+        private @Nullable Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm;
+        private @Nullable Output<Boolean> enableTrialEarlyStopping;
+        private Output<GoogleCloudMlV1__HyperparameterSpecGoal> goal;
+        private @Nullable Output<String> hyperparameterMetricTag;
+        private @Nullable Output<Integer> maxFailedTrials;
+        private @Nullable Output<Integer> maxParallelTrials;
+        private @Nullable Output<Integer> maxTrials;
+        private Output<List<GoogleCloudMlV1__ParameterSpecArgs>> params;
+        private @Nullable Output<String> resumePreviousJobId;
 
         public Builder() {
     	      // Empty
@@ -192,93 +192,93 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     	      this.resumePreviousJobId = defaults.resumePreviousJobId;
         }
 
-        public Builder algorithm(@Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
         public Builder algorithm(@Nullable GoogleCloudMlV1__HyperparameterSpecAlgorithm algorithm) {
-            this.algorithm = Input.ofNullable(algorithm);
+            this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
 
-        public Builder enableTrialEarlyStopping(@Nullable Input<Boolean> enableTrialEarlyStopping) {
+        public Builder enableTrialEarlyStopping(@Nullable Output<Boolean> enableTrialEarlyStopping) {
             this.enableTrialEarlyStopping = enableTrialEarlyStopping;
             return this;
         }
 
         public Builder enableTrialEarlyStopping(@Nullable Boolean enableTrialEarlyStopping) {
-            this.enableTrialEarlyStopping = Input.ofNullable(enableTrialEarlyStopping);
+            this.enableTrialEarlyStopping = Output.ofNullable(enableTrialEarlyStopping);
             return this;
         }
 
-        public Builder goal(Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal) {
+        public Builder goal(Output<GoogleCloudMlV1__HyperparameterSpecGoal> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
         public Builder goal(GoogleCloudMlV1__HyperparameterSpecGoal goal) {
-            this.goal = Input.of(Objects.requireNonNull(goal));
+            this.goal = Output.of(Objects.requireNonNull(goal));
             return this;
         }
 
-        public Builder hyperparameterMetricTag(@Nullable Input<String> hyperparameterMetricTag) {
+        public Builder hyperparameterMetricTag(@Nullable Output<String> hyperparameterMetricTag) {
             this.hyperparameterMetricTag = hyperparameterMetricTag;
             return this;
         }
 
         public Builder hyperparameterMetricTag(@Nullable String hyperparameterMetricTag) {
-            this.hyperparameterMetricTag = Input.ofNullable(hyperparameterMetricTag);
+            this.hyperparameterMetricTag = Output.ofNullable(hyperparameterMetricTag);
             return this;
         }
 
-        public Builder maxFailedTrials(@Nullable Input<Integer> maxFailedTrials) {
+        public Builder maxFailedTrials(@Nullable Output<Integer> maxFailedTrials) {
             this.maxFailedTrials = maxFailedTrials;
             return this;
         }
 
         public Builder maxFailedTrials(@Nullable Integer maxFailedTrials) {
-            this.maxFailedTrials = Input.ofNullable(maxFailedTrials);
+            this.maxFailedTrials = Output.ofNullable(maxFailedTrials);
             return this;
         }
 
-        public Builder maxParallelTrials(@Nullable Input<Integer> maxParallelTrials) {
+        public Builder maxParallelTrials(@Nullable Output<Integer> maxParallelTrials) {
             this.maxParallelTrials = maxParallelTrials;
             return this;
         }
 
         public Builder maxParallelTrials(@Nullable Integer maxParallelTrials) {
-            this.maxParallelTrials = Input.ofNullable(maxParallelTrials);
+            this.maxParallelTrials = Output.ofNullable(maxParallelTrials);
             return this;
         }
 
-        public Builder maxTrials(@Nullable Input<Integer> maxTrials) {
+        public Builder maxTrials(@Nullable Output<Integer> maxTrials) {
             this.maxTrials = maxTrials;
             return this;
         }
 
         public Builder maxTrials(@Nullable Integer maxTrials) {
-            this.maxTrials = Input.ofNullable(maxTrials);
+            this.maxTrials = Output.ofNullable(maxTrials);
             return this;
         }
 
-        public Builder params(Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params) {
+        public Builder params(Output<List<GoogleCloudMlV1__ParameterSpecArgs>> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
 
         public Builder params(List<GoogleCloudMlV1__ParameterSpecArgs> params) {
-            this.params = Input.of(Objects.requireNonNull(params));
+            this.params = Output.of(Objects.requireNonNull(params));
             return this;
         }
 
-        public Builder resumePreviousJobId(@Nullable Input<String> resumePreviousJobId) {
+        public Builder resumePreviousJobId(@Nullable Output<String> resumePreviousJobId) {
             this.resumePreviousJobId = resumePreviousJobId;
             return this;
         }
 
         public Builder resumePreviousJobId(@Nullable String resumePreviousJobId) {
-            this.resumePreviousJobId = Input.ofNullable(resumePreviousJobId);
+            this.resumePreviousJobId = Output.ofNullable(resumePreviousJobId);
             return this;
         }
         public GoogleCloudMlV1__HyperparameterSpecArgs build() {

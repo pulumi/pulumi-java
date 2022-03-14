@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceName")
-      private final @Nullable Input<String> instanceName;
+      private final @Nullable Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
-        return this.instanceName == null ? Input.empty() : this.instanceName;
+    public Output<String> getInstanceName() {
+        return this.instanceName == null ? Output.empty() : this.instanceName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="staticIpName")
-      private final @Nullable Input<String> staticIpName;
+      private final @Nullable Output<String> staticIpName;
 
-    public Input<String> getStaticIpName() {
-        return this.staticIpName == null ? Input.empty() : this.staticIpName;
+    public Output<String> getStaticIpName() {
+        return this.staticIpName == null ? Output.empty() : this.staticIpName;
     }
 
     public StaticIpAttachmentState(
-        @Nullable Input<String> instanceName,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> staticIpName) {
+        @Nullable Output<String> instanceName,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> staticIpName) {
         this.instanceName = instanceName;
         this.ipAddress = ipAddress;
         this.staticIpName = staticIpName;
     }
 
     private StaticIpAttachmentState() {
-        this.instanceName = Input.empty();
-        this.ipAddress = Input.empty();
-        this.staticIpName = Input.empty();
+        this.instanceName = Output.empty();
+        this.ipAddress = Output.empty();
+        this.staticIpName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceName;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> staticIpName;
+        private @Nullable Output<String> instanceName;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> staticIpName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
     	      this.staticIpName = defaults.staticIpName;
         }
 
-        public Builder instanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Input.ofNullable(instanceName);
+            this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder staticIpName(@Nullable Input<String> staticIpName) {
+        public Builder staticIpName(@Nullable Output<String> staticIpName) {
             this.staticIpName = staticIpName;
             return this;
         }
 
         public Builder staticIpName(@Nullable String staticIpName) {
-            this.staticIpName = Input.ofNullable(staticIpName);
+            this.staticIpName = Output.ofNullable(staticIpName);
             return this;
         }
         public StaticIpAttachmentState build() {

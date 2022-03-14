@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs();
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value;
+      private final Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value;
 
-    public Input<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> getValue() {
+    public Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> getValue() {
         return this.value;
     }
 
     public InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs(
-        Input<String> key,
-        Input<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value) {
+        Output<String> key,
+        Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs() {
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private Input<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value;
+        private Output<String> key;
+        private Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     	      this.value = defaults.value;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value) {
+        public Builder value(Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs build() {

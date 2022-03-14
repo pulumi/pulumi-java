@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerSecretsArgs;
 import java.lang.String;
@@ -20,17 +20,17 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="apiKey", required=true)
-      private final Input<String> apiKey;
+      private final Output<String> apiKey;
 
-    public Input<String> getApiKey() {
+    public Output<String> getApiKey() {
         return this.apiKey;
     }
 
     @InputImport(name="bitbucketServerConfigId")
-      private final @Nullable Input<String> bitbucketServerConfigId;
+      private final @Nullable Output<String> bitbucketServerConfigId;
 
-    public Input<String> getBitbucketServerConfigId() {
-        return this.bitbucketServerConfigId == null ? Input.empty() : this.bitbucketServerConfigId;
+    public Output<String> getBitbucketServerConfigId() {
+        return this.bitbucketServerConfigId == null ? Output.empty() : this.bitbucketServerConfigId;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostUri", required=true)
-      private final Input<String> hostUri;
+      private final Output<String> hostUri;
 
-    public Input<String> getHostUri() {
+    public Output<String> getHostUri() {
         return this.hostUri;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,17 +78,17 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="peeredNetwork")
-      private final @Nullable Input<String> peeredNetwork;
+      private final @Nullable Output<String> peeredNetwork;
 
-    public Input<String> getPeeredNetwork() {
-        return this.peeredNetwork == null ? Input.empty() : this.peeredNetwork;
+    public Output<String> getPeeredNetwork() {
+        return this.peeredNetwork == null ? Output.empty() : this.peeredNetwork;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secrets", required=true)
-      private final Input<BitbucketServerSecretsArgs> secrets;
+      private final Output<BitbucketServerSecretsArgs> secrets;
 
-    public Input<BitbucketServerSecretsArgs> getSecrets() {
+    public Output<BitbucketServerSecretsArgs> getSecrets() {
         return this.secrets;
     }
 
@@ -107,10 +107,10 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sslCa")
-      private final @Nullable Input<String> sslCa;
+      private final @Nullable Output<String> sslCa;
 
-    public Input<String> getSslCa() {
-        return this.sslCa == null ? Input.empty() : this.sslCa;
+    public Output<String> getSslCa() {
+        return this.sslCa == null ? Output.empty() : this.sslCa;
     }
 
     /**
@@ -118,24 +118,24 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public BitbucketServerConfigArgs(
-        Input<String> apiKey,
-        @Nullable Input<String> bitbucketServerConfigId,
-        @Nullable Input<String> createTime,
-        Input<String> hostUri,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> peeredNetwork,
-        @Nullable Input<String> project,
-        Input<BitbucketServerSecretsArgs> secrets,
-        @Nullable Input<String> sslCa,
-        @Nullable Input<String> username) {
+        Output<String> apiKey,
+        @Nullable Output<String> bitbucketServerConfigId,
+        @Nullable Output<String> createTime,
+        Output<String> hostUri,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> peeredNetwork,
+        @Nullable Output<String> project,
+        Output<BitbucketServerSecretsArgs> secrets,
+        @Nullable Output<String> sslCa,
+        @Nullable Output<String> username) {
         this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
         this.bitbucketServerConfigId = bitbucketServerConfigId;
         this.createTime = createTime;
@@ -150,17 +150,17 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private BitbucketServerConfigArgs() {
-        this.apiKey = Input.empty();
-        this.bitbucketServerConfigId = Input.empty();
-        this.createTime = Input.empty();
-        this.hostUri = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.peeredNetwork = Input.empty();
-        this.project = Input.empty();
-        this.secrets = Input.empty();
-        this.sslCa = Input.empty();
-        this.username = Input.empty();
+        this.apiKey = Output.empty();
+        this.bitbucketServerConfigId = Output.empty();
+        this.createTime = Output.empty();
+        this.hostUri = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.peeredNetwork = Output.empty();
+        this.project = Output.empty();
+        this.secrets = Output.empty();
+        this.sslCa = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,17 +172,17 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> apiKey;
-        private @Nullable Input<String> bitbucketServerConfigId;
-        private @Nullable Input<String> createTime;
-        private Input<String> hostUri;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> peeredNetwork;
-        private @Nullable Input<String> project;
-        private Input<BitbucketServerSecretsArgs> secrets;
-        private @Nullable Input<String> sslCa;
-        private @Nullable Input<String> username;
+        private Output<String> apiKey;
+        private @Nullable Output<String> bitbucketServerConfigId;
+        private @Nullable Output<String> createTime;
+        private Output<String> hostUri;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> peeredNetwork;
+        private @Nullable Output<String> project;
+        private Output<BitbucketServerSecretsArgs> secrets;
+        private @Nullable Output<String> sslCa;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -203,113 +203,113 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     	      this.username = defaults.username;
         }
 
-        public Builder apiKey(Input<String> apiKey) {
+        public Builder apiKey(Output<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Input.of(Objects.requireNonNull(apiKey));
+            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder bitbucketServerConfigId(@Nullable Input<String> bitbucketServerConfigId) {
+        public Builder bitbucketServerConfigId(@Nullable Output<String> bitbucketServerConfigId) {
             this.bitbucketServerConfigId = bitbucketServerConfigId;
             return this;
         }
 
         public Builder bitbucketServerConfigId(@Nullable String bitbucketServerConfigId) {
-            this.bitbucketServerConfigId = Input.ofNullable(bitbucketServerConfigId);
+            this.bitbucketServerConfigId = Output.ofNullable(bitbucketServerConfigId);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder hostUri(Input<String> hostUri) {
+        public Builder hostUri(Output<String> hostUri) {
             this.hostUri = Objects.requireNonNull(hostUri);
             return this;
         }
 
         public Builder hostUri(String hostUri) {
-            this.hostUri = Input.of(Objects.requireNonNull(hostUri));
+            this.hostUri = Output.of(Objects.requireNonNull(hostUri));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder peeredNetwork(@Nullable Input<String> peeredNetwork) {
+        public Builder peeredNetwork(@Nullable Output<String> peeredNetwork) {
             this.peeredNetwork = peeredNetwork;
             return this;
         }
 
         public Builder peeredNetwork(@Nullable String peeredNetwork) {
-            this.peeredNetwork = Input.ofNullable(peeredNetwork);
+            this.peeredNetwork = Output.ofNullable(peeredNetwork);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder secrets(Input<BitbucketServerSecretsArgs> secrets) {
+        public Builder secrets(Output<BitbucketServerSecretsArgs> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
 
         public Builder secrets(BitbucketServerSecretsArgs secrets) {
-            this.secrets = Input.of(Objects.requireNonNull(secrets));
+            this.secrets = Output.of(Objects.requireNonNull(secrets));
             return this;
         }
 
-        public Builder sslCa(@Nullable Input<String> sslCa) {
+        public Builder sslCa(@Nullable Output<String> sslCa) {
             this.sslCa = sslCa;
             return this;
         }
 
         public Builder sslCa(@Nullable String sslCa) {
-            this.sslCa = Input.ofNullable(sslCa);
+            this.sslCa = Output.ofNullable(sslCa);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public BitbucketServerConfigArgs build() {

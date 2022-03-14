@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsProjectMapArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="projectMaps")
-      private final @Nullable Input<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
+      private final @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
 
-    public Input<List<ReservationShareSettingsProjectMapArgs>> getProjectMaps() {
-        return this.projectMaps == null ? Input.empty() : this.projectMaps;
+    public Output<List<ReservationShareSettingsProjectMapArgs>> getProjectMaps() {
+        return this.projectMaps == null ? Output.empty() : this.projectMaps;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="shareType")
-      private final @Nullable Input<String> shareType;
+      private final @Nullable Output<String> shareType;
 
-    public Input<String> getShareType() {
-        return this.shareType == null ? Input.empty() : this.shareType;
+    public Output<String> getShareType() {
+        return this.shareType == null ? Output.empty() : this.shareType;
     }
 
     public ReservationShareSettingsArgs(
-        @Nullable Input<List<ReservationShareSettingsProjectMapArgs>> projectMaps,
-        @Nullable Input<String> shareType) {
+        @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps,
+        @Nullable Output<String> shareType) {
         this.projectMaps = projectMaps;
         this.shareType = shareType;
     }
 
     private ReservationShareSettingsArgs() {
-        this.projectMaps = Input.empty();
-        this.shareType = Input.empty();
+        this.projectMaps = Output.empty();
+        this.shareType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
-        private @Nullable Input<String> shareType;
+        private @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
+        private @Nullable Output<String> shareType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
     	      this.shareType = defaults.shareType;
         }
 
-        public Builder projectMaps(@Nullable Input<List<ReservationShareSettingsProjectMapArgs>> projectMaps) {
+        public Builder projectMaps(@Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps) {
             this.projectMaps = projectMaps;
             return this;
         }
 
         public Builder projectMaps(@Nullable List<ReservationShareSettingsProjectMapArgs> projectMaps) {
-            this.projectMaps = Input.ofNullable(projectMaps);
+            this.projectMaps = Output.ofNullable(projectMaps);
             return this;
         }
 
-        public Builder shareType(@Nullable Input<String> shareType) {
+        public Builder shareType(@Nullable Output<String> shareType) {
             this.shareType = shareType;
             return this;
         }
 
         public Builder shareType(@Nullable String shareType) {
-            this.shareType = Input.ofNullable(shareType);
+            this.shareType = Output.ofNullable(shareType);
             return this;
         }
         public ReservationShareSettingsArgs build() {

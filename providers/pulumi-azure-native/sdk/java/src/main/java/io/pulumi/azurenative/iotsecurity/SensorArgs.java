@@ -5,7 +5,7 @@ package io.pulumi.azurenative.iotsecurity;
 
 import io.pulumi.azurenative.iotsecurity.enums.SensorType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -33,10 +33,10 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sensorName")
-      private final @Nullable Input<String> sensorName;
+      private final @Nullable Output<String> sensorName;
 
-    public Input<String> getSensorName() {
-        return this.sensorName == null ? Input.empty() : this.sensorName;
+    public Output<String> getSensorName() {
+        return this.sensorName == null ? Output.empty() : this.sensorName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sensorType")
-      private final @Nullable Input<Either<String,SensorType>> sensorType;
+      private final @Nullable Output<Either<String,SensorType>> sensorType;
 
-    public Input<Either<String,SensorType>> getSensorType() {
-        return this.sensorType == null ? Input.empty() : this.sensorType;
+    public Output<Either<String,SensorType>> getSensorType() {
+        return this.sensorType == null ? Output.empty() : this.sensorType;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tiAutomaticUpdates")
-      private final @Nullable Input<Boolean> tiAutomaticUpdates;
+      private final @Nullable Output<Boolean> tiAutomaticUpdates;
 
-    public Input<Boolean> getTiAutomaticUpdates() {
-        return this.tiAutomaticUpdates == null ? Input.empty() : this.tiAutomaticUpdates;
+    public Output<Boolean> getTiAutomaticUpdates() {
+        return this.tiAutomaticUpdates == null ? Output.empty() : this.tiAutomaticUpdates;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public SensorArgs(
-        Input<String> scope,
-        @Nullable Input<String> sensorName,
-        @Nullable Input<Either<String,SensorType>> sensorType,
-        @Nullable Input<Boolean> tiAutomaticUpdates,
-        @Nullable Input<String> zone) {
+        Output<String> scope,
+        @Nullable Output<String> sensorName,
+        @Nullable Output<Either<String,SensorType>> sensorType,
+        @Nullable Output<Boolean> tiAutomaticUpdates,
+        @Nullable Output<String> zone) {
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.sensorName = sensorName;
         this.sensorType = sensorType;
@@ -86,11 +86,11 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SensorArgs() {
-        this.scope = Input.empty();
-        this.sensorName = Input.empty();
-        this.sensorType = Input.empty();
-        this.tiAutomaticUpdates = Input.empty();
-        this.zone = Input.empty();
+        this.scope = Output.empty();
+        this.sensorName = Output.empty();
+        this.sensorType = Output.empty();
+        this.tiAutomaticUpdates = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> scope;
-        private @Nullable Input<String> sensorName;
-        private @Nullable Input<Either<String,SensorType>> sensorType;
-        private @Nullable Input<Boolean> tiAutomaticUpdates;
-        private @Nullable Input<String> zone;
+        private Output<String> scope;
+        private @Nullable Output<String> sensorName;
+        private @Nullable Output<Either<String,SensorType>> sensorType;
+        private @Nullable Output<Boolean> tiAutomaticUpdates;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder sensorName(@Nullable Input<String> sensorName) {
+        public Builder sensorName(@Nullable Output<String> sensorName) {
             this.sensorName = sensorName;
             return this;
         }
 
         public Builder sensorName(@Nullable String sensorName) {
-            this.sensorName = Input.ofNullable(sensorName);
+            this.sensorName = Output.ofNullable(sensorName);
             return this;
         }
 
-        public Builder sensorType(@Nullable Input<Either<String,SensorType>> sensorType) {
+        public Builder sensorType(@Nullable Output<Either<String,SensorType>> sensorType) {
             this.sensorType = sensorType;
             return this;
         }
 
         public Builder sensorType(@Nullable Either<String,SensorType> sensorType) {
-            this.sensorType = Input.ofNullable(sensorType);
+            this.sensorType = Output.ofNullable(sensorType);
             return this;
         }
 
-        public Builder tiAutomaticUpdates(@Nullable Input<Boolean> tiAutomaticUpdates) {
+        public Builder tiAutomaticUpdates(@Nullable Output<Boolean> tiAutomaticUpdates) {
             this.tiAutomaticUpdates = tiAutomaticUpdates;
             return this;
         }
 
         public Builder tiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
-            this.tiAutomaticUpdates = Input.ofNullable(tiAutomaticUpdates);
+            this.tiAutomaticUpdates = Output.ofNullable(tiAutomaticUpdates);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public SensorArgs build() {

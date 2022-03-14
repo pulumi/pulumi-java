@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmYarnConfigArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cooldownPeriod")
-      private final @Nullable Input<String> cooldownPeriod;
+      private final @Nullable Output<String> cooldownPeriod;
 
-    public Input<String> getCooldownPeriod() {
-        return this.cooldownPeriod == null ? Input.empty() : this.cooldownPeriod;
+    public Output<String> getCooldownPeriod() {
+        return this.cooldownPeriod == null ? Output.empty() : this.cooldownPeriod;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="yarnConfig", required=true)
-      private final Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig;
+      private final Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig;
 
-    public Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> getYarnConfig() {
+    public Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> getYarnConfig() {
         return this.yarnConfig;
     }
 
     public AutoscalingPolicyBasicAlgorithmArgs(
-        @Nullable Input<String> cooldownPeriod,
-        Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig) {
+        @Nullable Output<String> cooldownPeriod,
+        Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig) {
         this.cooldownPeriod = cooldownPeriod;
         this.yarnConfig = Objects.requireNonNull(yarnConfig, "expected parameter 'yarnConfig' to be non-null");
     }
 
     private AutoscalingPolicyBasicAlgorithmArgs() {
-        this.cooldownPeriod = Input.empty();
-        this.yarnConfig = Input.empty();
+        this.cooldownPeriod = Output.empty();
+        this.yarnConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cooldownPeriod;
-        private Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig;
+        private @Nullable Output<String> cooldownPeriod;
+        private Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
     	      this.yarnConfig = defaults.yarnConfig;
         }
 
-        public Builder cooldownPeriod(@Nullable Input<String> cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Output<String> cooldownPeriod) {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
         public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
-            this.cooldownPeriod = Input.ofNullable(cooldownPeriod);
+            this.cooldownPeriod = Output.ofNullable(cooldownPeriod);
             return this;
         }
 
-        public Builder yarnConfig(Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig) {
+        public Builder yarnConfig(Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig) {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
 
         public Builder yarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfigArgs yarnConfig) {
-            this.yarnConfig = Input.of(Objects.requireNonNull(yarnConfig));
+            this.yarnConfig = Output.of(Objects.requireNonNull(yarnConfig));
             return this;
         }
         public AutoscalingPolicyBasicAlgorithmArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<String> memory;
+      private final @Nullable Output<String> memory;
 
-    public Input<String> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<String> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     public ContainerResourcesArgs(
-        @Nullable Input<Double> cpu,
-        @Nullable Input<String> memory) {
+        @Nullable Output<Double> cpu,
+        @Nullable Output<String> memory) {
         this.cpu = cpu;
         this.memory = memory;
     }
 
     private ContainerResourcesArgs() {
-        this.cpu = Input.empty();
-        this.memory = Input.empty();
+        this.cpu = Output.empty();
+        this.memory = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<String> memory;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<String> memory;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
     	      this.memory = defaults.memory;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder memory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable String memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
         public ContainerResourcesArgs build() {

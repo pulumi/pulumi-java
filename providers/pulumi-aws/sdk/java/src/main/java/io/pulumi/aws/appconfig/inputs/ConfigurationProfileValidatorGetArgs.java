@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConfigurationProfileValidatorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ConfigurationProfileValidatorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ConfigurationProfileValidatorGetArgs(
-        @Nullable Input<String> content,
-        Input<String> type) {
+        @Nullable Output<String> content,
+        Output<String> type) {
         this.content = content;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ConfigurationProfileValidatorGetArgs() {
-        this.content = Input.empty();
-        this.type = Input.empty();
+        this.content = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ConfigurationProfileValidatorGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private Input<String> type;
+        private @Nullable Output<String> content;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ConfigurationProfileValidatorGetArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ConfigurationProfileValidatorGetArgs build() {

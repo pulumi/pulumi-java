@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managedInstanceResourceId", required=true)
-      private final Input<String> managedInstanceResourceId;
+      private final Output<String> managedInstanceResourceId;
 
-    public Input<String> getManagedInstanceResourceId() {
+    public Output<String> getManagedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
 
@@ -34,10 +34,10 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -57,17 +57,17 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public MiSqlConnectionInfoArgs(
-        Input<String> managedInstanceResourceId,
-        @Nullable Input<String> password,
-        Input<String> type,
-        @Nullable Input<String> userName) {
+        Output<String> managedInstanceResourceId,
+        @Nullable Output<String> password,
+        Output<String> type,
+        @Nullable Output<String> userName) {
         this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId, "expected parameter 'managedInstanceResourceId' to be non-null");
         this.password = password;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -75,10 +75,10 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     private MiSqlConnectionInfoArgs() {
-        this.managedInstanceResourceId = Input.empty();
-        this.password = Input.empty();
-        this.type = Input.empty();
-        this.userName = Input.empty();
+        this.managedInstanceResourceId = Output.empty();
+        this.password = Output.empty();
+        this.type = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> managedInstanceResourceId;
-        private @Nullable Input<String> password;
-        private Input<String> type;
-        private @Nullable Input<String> userName;
+        private Output<String> managedInstanceResourceId;
+        private @Nullable Output<String> password;
+        private Output<String> type;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     	      this.userName = defaults.userName;
         }
 
-        public Builder managedInstanceResourceId(Input<String> managedInstanceResourceId) {
+        public Builder managedInstanceResourceId(Output<String> managedInstanceResourceId) {
             this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId);
             return this;
         }
 
         public Builder managedInstanceResourceId(String managedInstanceResourceId) {
-            this.managedInstanceResourceId = Input.of(Objects.requireNonNull(managedInstanceResourceId));
+            this.managedInstanceResourceId = Output.of(Objects.requireNonNull(managedInstanceResourceId));
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public MiSqlConnectionInfoArgs build() {

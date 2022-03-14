@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="groupIpAddress", required=true)
-      private final Input<String> groupIpAddress;
+      private final Output<String> groupIpAddress;
 
-    public Input<String> getGroupIpAddress() {
+    public Output<String> getGroupIpAddress() {
         return this.groupIpAddress;
     }
 
@@ -29,9 +29,9 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-      private final Input<String> networkInterfaceId;
+      private final Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
+    public Output<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -40,25 +40,25 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
-      private final Input<String> transitGatewayMulticastDomainId;
+      private final Output<String> transitGatewayMulticastDomainId;
 
-    public Input<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
     public TransitGatewayMulticastGroupMemberArgs(
-        Input<String> groupIpAddress,
-        Input<String> networkInterfaceId,
-        Input<String> transitGatewayMulticastDomainId) {
+        Output<String> groupIpAddress,
+        Output<String> networkInterfaceId,
+        Output<String> transitGatewayMulticastDomainId) {
         this.groupIpAddress = Objects.requireNonNull(groupIpAddress, "expected parameter 'groupIpAddress' to be non-null");
         this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
         this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
     }
 
     private TransitGatewayMulticastGroupMemberArgs() {
-        this.groupIpAddress = Input.empty();
-        this.networkInterfaceId = Input.empty();
-        this.transitGatewayMulticastDomainId = Input.empty();
+        this.groupIpAddress = Output.empty();
+        this.networkInterfaceId = Output.empty();
+        this.transitGatewayMulticastDomainId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> groupIpAddress;
-        private Input<String> networkInterfaceId;
-        private Input<String> transitGatewayMulticastDomainId;
+        private Output<String> groupIpAddress;
+        private Output<String> networkInterfaceId;
+        private Output<String> transitGatewayMulticastDomainId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
     	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
         }
 
-        public Builder groupIpAddress(Input<String> groupIpAddress) {
+        public Builder groupIpAddress(Output<String> groupIpAddress) {
             this.groupIpAddress = Objects.requireNonNull(groupIpAddress);
             return this;
         }
 
         public Builder groupIpAddress(String groupIpAddress) {
-            this.groupIpAddress = Input.of(Objects.requireNonNull(groupIpAddress));
+            this.groupIpAddress = Output.of(Objects.requireNonNull(groupIpAddress));
             return this;
         }
 
-        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
+            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
 
-        public Builder transitGatewayMulticastDomainId(Input<String> transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(Output<String> transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }
 
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
-            this.transitGatewayMulticastDomainId = Input.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
+            this.transitGatewayMulticastDomainId = Output.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
             return this;
         }
         public TransitGatewayMulticastGroupMemberArgs build() {

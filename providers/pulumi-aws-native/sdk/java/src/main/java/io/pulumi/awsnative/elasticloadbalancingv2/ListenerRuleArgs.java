@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleActionArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRuleConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,38 +18,38 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final ListenerRuleArgs Empty = new ListenerRuleArgs();
 
     @InputImport(name="actions", required=true)
-      private final Input<List<ListenerRuleActionArgs>> actions;
+      private final Output<List<ListenerRuleActionArgs>> actions;
 
-    public Input<List<ListenerRuleActionArgs>> getActions() {
+    public Output<List<ListenerRuleActionArgs>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="conditions", required=true)
-      private final Input<List<ListenerRuleRuleConditionArgs>> conditions;
+      private final Output<List<ListenerRuleRuleConditionArgs>> conditions;
 
-    public Input<List<ListenerRuleRuleConditionArgs>> getConditions() {
+    public Output<List<ListenerRuleRuleConditionArgs>> getConditions() {
         return this.conditions;
     }
 
     @InputImport(name="listenerArn", required=true)
-      private final Input<String> listenerArn;
+      private final Output<String> listenerArn;
 
-    public Input<String> getListenerArn() {
+    public Output<String> getListenerArn() {
         return this.listenerArn;
     }
 
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
     public ListenerRuleArgs(
-        Input<List<ListenerRuleActionArgs>> actions,
-        Input<List<ListenerRuleRuleConditionArgs>> conditions,
-        Input<String> listenerArn,
-        Input<Integer> priority) {
+        Output<List<ListenerRuleActionArgs>> actions,
+        Output<List<ListenerRuleRuleConditionArgs>> conditions,
+        Output<String> listenerArn,
+        Output<Integer> priority) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
         this.listenerArn = Objects.requireNonNull(listenerArn, "expected parameter 'listenerArn' to be non-null");
@@ -57,10 +57,10 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerRuleArgs() {
-        this.actions = Input.empty();
-        this.conditions = Input.empty();
-        this.listenerArn = Input.empty();
-        this.priority = Input.empty();
+        this.actions = Output.empty();
+        this.conditions = Output.empty();
+        this.listenerArn = Output.empty();
+        this.priority = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<ListenerRuleActionArgs>> actions;
-        private Input<List<ListenerRuleRuleConditionArgs>> conditions;
-        private Input<String> listenerArn;
-        private Input<Integer> priority;
+        private Output<List<ListenerRuleActionArgs>> actions;
+        private Output<List<ListenerRuleRuleConditionArgs>> conditions;
+        private Output<String> listenerArn;
+        private Output<Integer> priority;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.priority = defaults.priority;
         }
 
-        public Builder actions(Input<List<ListenerRuleActionArgs>> actions) {
+        public Builder actions(Output<List<ListenerRuleActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<ListenerRuleActionArgs> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder conditions(Input<List<ListenerRuleRuleConditionArgs>> conditions) {
+        public Builder conditions(Output<List<ListenerRuleRuleConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
         public Builder conditions(List<ListenerRuleRuleConditionArgs> conditions) {
-            this.conditions = Input.of(Objects.requireNonNull(conditions));
+            this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder listenerArn(Input<String> listenerArn) {
+        public Builder listenerArn(Output<String> listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }
 
         public Builder listenerArn(String listenerArn) {
-            this.listenerArn = Input.of(Objects.requireNonNull(listenerArn));
+            this.listenerArn = Output.of(Objects.requireNonNull(listenerArn));
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
         public ListenerRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ruleSetName")
-      private final @Nullable Input<String> ruleSetName;
+      private final @Nullable Output<String> ruleSetName;
 
-    public Input<String> getRuleSetName() {
-        return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
+    public Output<String> getRuleSetName() {
+        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
     }
 
     public ActiveReceiptRuleSetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> ruleSetName) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> ruleSetName) {
         this.arn = arn;
         this.ruleSetName = ruleSetName;
     }
 
     private ActiveReceiptRuleSetState() {
-        this.arn = Input.empty();
-        this.ruleSetName = Input.empty();
+        this.arn = Output.empty();
+        this.ruleSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> ruleSetName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> ruleSetName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder ruleSetName(@Nullable Input<String> ruleSetName) {
+        public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
 
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Input.ofNullable(ruleSetName);
+            this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
         }
         public ActiveReceiptRuleSetState build() {

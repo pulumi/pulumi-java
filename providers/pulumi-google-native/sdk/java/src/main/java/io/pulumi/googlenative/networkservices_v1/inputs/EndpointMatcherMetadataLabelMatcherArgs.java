@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkservices_v1.enums.EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria;
 import io.pulumi.googlenative.networkservices_v1.inputs.EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs;
@@ -25,10 +25,10 @@ public final class EndpointMatcherMetadataLabelMatcherArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="metadataLabelMatchCriteria")
-      private final @Nullable Input<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
+      private final @Nullable Output<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
 
-    public Input<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> getMetadataLabelMatchCriteria() {
-        return this.metadataLabelMatchCriteria == null ? Input.empty() : this.metadataLabelMatchCriteria;
+    public Output<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> getMetadataLabelMatchCriteria() {
+        return this.metadataLabelMatchCriteria == null ? Output.empty() : this.metadataLabelMatchCriteria;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class EndpointMatcherMetadataLabelMatcherArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="metadataLabels")
-      private final @Nullable Input<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels;
+      private final @Nullable Output<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels;
 
-    public Input<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> getMetadataLabels() {
-        return this.metadataLabels == null ? Input.empty() : this.metadataLabels;
+    public Output<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> getMetadataLabels() {
+        return this.metadataLabels == null ? Output.empty() : this.metadataLabels;
     }
 
     public EndpointMatcherMetadataLabelMatcherArgs(
-        @Nullable Input<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria,
-        @Nullable Input<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels) {
+        @Nullable Output<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria,
+        @Nullable Output<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels) {
         this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
         this.metadataLabels = metadataLabels;
     }
 
     private EndpointMatcherMetadataLabelMatcherArgs() {
-        this.metadataLabelMatchCriteria = Input.empty();
-        this.metadataLabels = Input.empty();
+        this.metadataLabelMatchCriteria = Output.empty();
+        this.metadataLabels = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EndpointMatcherMetadataLabelMatcherArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
-        private @Nullable Input<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels;
+        private @Nullable Output<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
+        private @Nullable Output<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EndpointMatcherMetadataLabelMatcherArgs extends io.pulumi.res
     	      this.metadataLabels = defaults.metadataLabels;
         }
 
-        public Builder metadataLabelMatchCriteria(@Nullable Input<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(@Nullable Output<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
             return this;
         }
 
         public Builder metadataLabelMatchCriteria(@Nullable EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
-            this.metadataLabelMatchCriteria = Input.ofNullable(metadataLabelMatchCriteria);
+            this.metadataLabelMatchCriteria = Output.ofNullable(metadataLabelMatchCriteria);
             return this;
         }
 
-        public Builder metadataLabels(@Nullable Input<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels) {
+        public Builder metadataLabels(@Nullable Output<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels) {
             this.metadataLabels = metadataLabels;
             return this;
         }
 
         public Builder metadataLabels(@Nullable List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs> metadataLabels) {
-            this.metadataLabels = Input.ofNullable(metadataLabels);
+            this.metadataLabels = Output.ofNullable(metadataLabels);
             return this;
         }
         public EndpointMatcherMetadataLabelMatcherArgs build() {

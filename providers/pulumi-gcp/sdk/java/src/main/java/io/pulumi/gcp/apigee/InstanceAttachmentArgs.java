@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environment", required=true)
-      private final Input<String> environment;
+      private final Output<String> environment;
 
-    public Input<String> getEnvironment() {
+    public Output<String> getEnvironment() {
         return this.environment;
     }
 
@@ -30,22 +30,22 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
     public InstanceAttachmentArgs(
-        Input<String> environment,
-        Input<String> instanceId) {
+        Output<String> environment,
+        Output<String> instanceId) {
         this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
     }
 
     private InstanceAttachmentArgs() {
-        this.environment = Input.empty();
-        this.instanceId = Input.empty();
+        this.environment = Output.empty();
+        this.instanceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> environment;
-        private Input<String> instanceId;
+        private Output<String> environment;
+        private Output<String> instanceId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.instanceId = defaults.instanceId;
         }
 
-        public Builder environment(Input<String> environment) {
+        public Builder environment(Output<String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
         public Builder environment(String environment) {
-            this.environment = Input.of(Objects.requireNonNull(environment));
+            this.environment = Output.of(Objects.requireNonNull(environment));
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
         public InstanceAttachmentArgs build() {

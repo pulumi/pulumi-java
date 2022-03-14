@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.inputs.AttestorPublicKeyArgs;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class UserOwnedDrydockNoteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="noteReference", required=true)
-      private final Input<String> noteReference;
+      private final Output<String> noteReference;
 
-    public Input<String> getNoteReference() {
+    public Output<String> getNoteReference() {
         return this.noteReference;
     }
 
@@ -36,22 +36,22 @@ public final class UserOwnedDrydockNoteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicKeys")
-      private final @Nullable Input<List<AttestorPublicKeyArgs>> publicKeys;
+      private final @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
 
-    public Input<List<AttestorPublicKeyArgs>> getPublicKeys() {
-        return this.publicKeys == null ? Input.empty() : this.publicKeys;
+    public Output<List<AttestorPublicKeyArgs>> getPublicKeys() {
+        return this.publicKeys == null ? Output.empty() : this.publicKeys;
     }
 
     public UserOwnedDrydockNoteArgs(
-        Input<String> noteReference,
-        @Nullable Input<List<AttestorPublicKeyArgs>> publicKeys) {
+        Output<String> noteReference,
+        @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys) {
         this.noteReference = Objects.requireNonNull(noteReference, "expected parameter 'noteReference' to be non-null");
         this.publicKeys = publicKeys;
     }
 
     private UserOwnedDrydockNoteArgs() {
-        this.noteReference = Input.empty();
-        this.publicKeys = Input.empty();
+        this.noteReference = Output.empty();
+        this.publicKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class UserOwnedDrydockNoteArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> noteReference;
-        private @Nullable Input<List<AttestorPublicKeyArgs>> publicKeys;
+        private Output<String> noteReference;
+        private @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class UserOwnedDrydockNoteArgs extends io.pulumi.resources.Resource
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder noteReference(Input<String> noteReference) {
+        public Builder noteReference(Output<String> noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
 
         public Builder noteReference(String noteReference) {
-            this.noteReference = Input.of(Objects.requireNonNull(noteReference));
+            this.noteReference = Output.of(Objects.requireNonNull(noteReference));
             return this;
         }
 
-        public Builder publicKeys(@Nullable Input<List<AttestorPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Output<List<AttestorPublicKeyArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
         public Builder publicKeys(@Nullable List<AttestorPublicKeyArgs> publicKeys) {
-            this.publicKeys = Input.ofNullable(publicKeys);
+            this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
         public UserOwnedDrydockNoteArgs build() {

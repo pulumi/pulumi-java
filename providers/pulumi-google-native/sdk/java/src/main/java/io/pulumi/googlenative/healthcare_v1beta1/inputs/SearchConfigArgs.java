@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SearchParameterArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchParameters")
-      private final @Nullable Input<List<SearchParameterArgs>> searchParameters;
+      private final @Nullable Output<List<SearchParameterArgs>> searchParameters;
 
-    public Input<List<SearchParameterArgs>> getSearchParameters() {
-        return this.searchParameters == null ? Input.empty() : this.searchParameters;
+    public Output<List<SearchParameterArgs>> getSearchParameters() {
+        return this.searchParameters == null ? Output.empty() : this.searchParameters;
     }
 
-    public SearchConfigArgs(@Nullable Input<List<SearchParameterArgs>> searchParameters) {
+    public SearchConfigArgs(@Nullable Output<List<SearchParameterArgs>> searchParameters) {
         this.searchParameters = searchParameters;
     }
 
     private SearchConfigArgs() {
-        this.searchParameters = Input.empty();
+        this.searchParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SearchParameterArgs>> searchParameters;
+        private @Nullable Output<List<SearchParameterArgs>> searchParameters;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.searchParameters = defaults.searchParameters;
         }
 
-        public Builder searchParameters(@Nullable Input<List<SearchParameterArgs>> searchParameters) {
+        public Builder searchParameters(@Nullable Output<List<SearchParameterArgs>> searchParameters) {
             this.searchParameters = searchParameters;
             return this;
         }
 
         public Builder searchParameters(@Nullable List<SearchParameterArgs> searchParameters) {
-            this.searchParameters = Input.ofNullable(searchParameters);
+            this.searchParameters = Output.ofNullable(searchParameters);
             return this;
         }
         public SearchConfigArgs build() {

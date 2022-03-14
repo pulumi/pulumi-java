@@ -6,7 +6,6 @@ package io.pulumi.aws.datasync;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.datasync.LocationFsxLustreArgs;
 import io.pulumi.aws.datasync.inputs.LocationFsxLustreState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,14 +181,14 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationFsxLustre(String name, LocationFsxLustreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/locationFsxLustre:LocationFsxLustre", name, args == null ? LocationFsxLustreArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:datasync/locationFsxLustre:LocationFsxLustre", name, args == null ? LocationFsxLustreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LocationFsxLustre(String name, Input<String> id, @Nullable LocationFsxLustreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LocationFsxLustre(String name, Output<String> id, @Nullable LocationFsxLustreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:datasync/locationFsxLustre:LocationFsxLustre", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -205,7 +204,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocationFsxLustre get(String name, Input<String> id, @Nullable LocationFsxLustreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LocationFsxLustre get(String name, Output<String> id, @Nullable LocationFsxLustreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocationFsxLustre(name, id, state, options);
     }
 }

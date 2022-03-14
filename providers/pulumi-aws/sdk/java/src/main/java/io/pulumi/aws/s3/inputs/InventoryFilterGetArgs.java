@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InventoryFilterGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
-    public InventoryFilterGetArgs(@Nullable Input<String> prefix) {
+    public InventoryFilterGetArgs(@Nullable Output<String> prefix) {
         this.prefix = prefix;
     }
 
     private InventoryFilterGetArgs() {
-        this.prefix = Input.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InventoryFilterGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> prefix;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InventoryFilterGetArgs extends io.pulumi.resources.ResourceAr
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public InventoryFilterGetArgs build() {

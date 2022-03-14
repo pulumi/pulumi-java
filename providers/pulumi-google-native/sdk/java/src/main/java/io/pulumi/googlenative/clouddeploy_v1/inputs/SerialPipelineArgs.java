@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.StageArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stages")
-      private final @Nullable Input<List<StageArgs>> stages;
+      private final @Nullable Output<List<StageArgs>> stages;
 
-    public Input<List<StageArgs>> getStages() {
-        return this.stages == null ? Input.empty() : this.stages;
+    public Output<List<StageArgs>> getStages() {
+        return this.stages == null ? Output.empty() : this.stages;
     }
 
-    public SerialPipelineArgs(@Nullable Input<List<StageArgs>> stages) {
+    public SerialPipelineArgs(@Nullable Output<List<StageArgs>> stages) {
         this.stages = stages;
     }
 
     private SerialPipelineArgs() {
-        this.stages = Input.empty();
+        this.stages = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StageArgs>> stages;
+        private @Nullable Output<List<StageArgs>> stages;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stages = defaults.stages;
         }
 
-        public Builder stages(@Nullable Input<List<StageArgs>> stages) {
+        public Builder stages(@Nullable Output<List<StageArgs>> stages) {
             this.stages = stages;
             return this;
         }
 
         public Builder stages(@Nullable List<StageArgs> stages) {
-            this.stages = Input.ofNullable(stages);
+            this.stages = Output.ofNullable(stages);
             return this;
         }
         public SerialPipelineArgs build() {

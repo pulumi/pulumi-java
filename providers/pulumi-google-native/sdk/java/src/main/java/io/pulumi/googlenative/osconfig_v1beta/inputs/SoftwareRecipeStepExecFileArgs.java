@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedExitCodes")
-      private final @Nullable Input<List<Integer>> allowedExitCodes;
+      private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Input<List<Integer>> getAllowedExitCodes() {
-        return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
+    public Output<List<Integer>> getAllowedExitCodes() {
+        return this.allowedExitCodes == null ? Output.empty() : this.allowedExitCodes;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="artifactId")
-      private final @Nullable Input<String> artifactId;
+      private final @Nullable Output<String> artifactId;
 
-    public Input<String> getArtifactId() {
-        return this.artifactId == null ? Input.empty() : this.artifactId;
+    public Output<String> getArtifactId() {
+        return this.artifactId == null ? Output.empty() : this.artifactId;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="localPath")
-      private final @Nullable Input<String> localPath;
+      private final @Nullable Output<String> localPath;
 
-    public Input<String> getLocalPath() {
-        return this.localPath == null ? Input.empty() : this.localPath;
+    public Output<String> getLocalPath() {
+        return this.localPath == null ? Output.empty() : this.localPath;
     }
 
     public SoftwareRecipeStepExecFileArgs(
-        @Nullable Input<List<Integer>> allowedExitCodes,
-        @Nullable Input<List<String>> args,
-        @Nullable Input<String> artifactId,
-        @Nullable Input<String> localPath) {
+        @Nullable Output<List<Integer>> allowedExitCodes,
+        @Nullable Output<List<String>> args,
+        @Nullable Output<String> artifactId,
+        @Nullable Output<String> localPath) {
         this.allowedExitCodes = allowedExitCodes;
         this.args = args;
         this.artifactId = artifactId;
@@ -76,10 +76,10 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
     }
 
     private SoftwareRecipeStepExecFileArgs() {
-        this.allowedExitCodes = Input.empty();
-        this.args = Input.empty();
-        this.artifactId = Input.empty();
-        this.localPath = Input.empty();
+        this.allowedExitCodes = Output.empty();
+        this.args = Output.empty();
+        this.artifactId = Output.empty();
+        this.localPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> allowedExitCodes;
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<String> artifactId;
-        private @Nullable Input<String> localPath;
+        private @Nullable Output<List<Integer>> allowedExitCodes;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<String> artifactId;
+        private @Nullable Output<String> localPath;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder allowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Input.ofNullable(allowedExitCodes);
+            this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
             return this;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder artifactId(@Nullable Input<String> artifactId) {
+        public Builder artifactId(@Nullable Output<String> artifactId) {
             this.artifactId = artifactId;
             return this;
         }
 
         public Builder artifactId(@Nullable String artifactId) {
-            this.artifactId = Input.ofNullable(artifactId);
+            this.artifactId = Output.ofNullable(artifactId);
             return this;
         }
 
-        public Builder localPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Input.ofNullable(localPath);
+            this.localPath = Output.ofNullable(localPath);
             return this;
         }
         public SoftwareRecipeStepExecFileArgs build() {

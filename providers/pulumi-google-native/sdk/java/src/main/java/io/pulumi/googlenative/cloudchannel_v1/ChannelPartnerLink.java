@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.cloudchannel_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -173,14 +172,14 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ChannelPartnerLink(String name, ChannelPartnerLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudchannel/v1:ChannelPartnerLink", name, args == null ? ChannelPartnerLinkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:cloudchannel/v1:ChannelPartnerLink", name, args == null ? ChannelPartnerLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ChannelPartnerLink(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ChannelPartnerLink(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudchannel/v1:ChannelPartnerLink", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -195,7 +194,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ChannelPartnerLink get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ChannelPartnerLink get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ChannelPartnerLink(name, id, options);
     }
 }

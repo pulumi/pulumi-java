@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-      private final @Nullable Input<String> creationDate;
+      private final @Nullable Output<String> creationDate;
 
-    public Input<String> getCreationDate() {
-        return this.creationDate == null ? Input.empty() : this.creationDate;
+    public Output<String> getCreationDate() {
+        return this.creationDate == null ? Output.empty() : this.creationDate;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludeFilters")
-      private final @Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
+      private final @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
 
-    public Input<List<MetricStreamExcludeFilterGetArgs>> getExcludeFilters() {
-        return this.excludeFilters == null ? Input.empty() : this.excludeFilters;
+    public Output<List<MetricStreamExcludeFilterGetArgs>> getExcludeFilters() {
+        return this.excludeFilters == null ? Output.empty() : this.excludeFilters;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firehoseArn")
-      private final @Nullable Input<String> firehoseArn;
+      private final @Nullable Output<String> firehoseArn;
 
-    public Input<String> getFirehoseArn() {
-        return this.firehoseArn == null ? Input.empty() : this.firehoseArn;
+    public Output<String> getFirehoseArn() {
+        return this.firehoseArn == null ? Output.empty() : this.firehoseArn;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeFilters")
-      private final @Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
+      private final @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
 
-    public Input<List<MetricStreamIncludeFilterGetArgs>> getIncludeFilters() {
-        return this.includeFilters == null ? Input.empty() : this.includeFilters;
+    public Output<List<MetricStreamIncludeFilterGetArgs>> getIncludeFilters() {
+        return this.includeFilters == null ? Output.empty() : this.includeFilters;
     }
 
     /**
@@ -78,17 +78,17 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdateDate")
-      private final @Nullable Input<String> lastUpdateDate;
+      private final @Nullable Output<String> lastUpdateDate;
 
-    public Input<String> getLastUpdateDate() {
-        return this.lastUpdateDate == null ? Input.empty() : this.lastUpdateDate;
+    public Output<String> getLastUpdateDate() {
+        return this.lastUpdateDate == null ? Output.empty() : this.lastUpdateDate;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFormat")
-      private final @Nullable Input<String> outputFormat;
+      private final @Nullable Output<String> outputFormat;
 
-    public Input<String> getOutputFormat() {
-        return this.outputFormat == null ? Input.empty() : this.outputFormat;
+    public Output<String> getOutputFormat() {
+        return this.outputFormat == null ? Output.empty() : this.outputFormat;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -151,26 +151,26 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public MetricStreamState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> creationDate,
-        @Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters,
-        @Nullable Input<String> firehoseArn,
-        @Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters,
-        @Nullable Input<String> lastUpdateDate,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> outputFormat,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> creationDate,
+        @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters,
+        @Nullable Output<String> firehoseArn,
+        @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters,
+        @Nullable Output<String> lastUpdateDate,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> outputFormat,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.excludeFilters = excludeFilters;
@@ -187,19 +187,19 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricStreamState() {
-        this.arn = Input.empty();
-        this.creationDate = Input.empty();
-        this.excludeFilters = Input.empty();
-        this.firehoseArn = Input.empty();
-        this.includeFilters = Input.empty();
-        this.lastUpdateDate = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.outputFormat = Input.empty();
-        this.roleArn = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.creationDate = Output.empty();
+        this.excludeFilters = Output.empty();
+        this.firehoseArn = Output.empty();
+        this.includeFilters = Output.empty();
+        this.lastUpdateDate = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.outputFormat = Output.empty();
+        this.roleArn = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -211,19 +211,19 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> creationDate;
-        private @Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
-        private @Nullable Input<String> firehoseArn;
-        private @Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
-        private @Nullable Input<String> lastUpdateDate;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> outputFormat;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> creationDate;
+        private @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
+        private @Nullable Output<String> firehoseArn;
+        private @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
+        private @Nullable Output<String> lastUpdateDate;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> outputFormat;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -246,133 +246,133 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder creationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Input.ofNullable(creationDate);
+            this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
 
-        public Builder excludeFilters(@Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
+        public Builder excludeFilters(@Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
 
         public Builder excludeFilters(@Nullable List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
-            this.excludeFilters = Input.ofNullable(excludeFilters);
+            this.excludeFilters = Output.ofNullable(excludeFilters);
             return this;
         }
 
-        public Builder firehoseArn(@Nullable Input<String> firehoseArn) {
+        public Builder firehoseArn(@Nullable Output<String> firehoseArn) {
             this.firehoseArn = firehoseArn;
             return this;
         }
 
         public Builder firehoseArn(@Nullable String firehoseArn) {
-            this.firehoseArn = Input.ofNullable(firehoseArn);
+            this.firehoseArn = Output.ofNullable(firehoseArn);
             return this;
         }
 
-        public Builder includeFilters(@Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
+        public Builder includeFilters(@Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
 
         public Builder includeFilters(@Nullable List<MetricStreamIncludeFilterGetArgs> includeFilters) {
-            this.includeFilters = Input.ofNullable(includeFilters);
+            this.includeFilters = Output.ofNullable(includeFilters);
             return this;
         }
 
-        public Builder lastUpdateDate(@Nullable Input<String> lastUpdateDate) {
+        public Builder lastUpdateDate(@Nullable Output<String> lastUpdateDate) {
             this.lastUpdateDate = lastUpdateDate;
             return this;
         }
 
         public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
-            this.lastUpdateDate = Input.ofNullable(lastUpdateDate);
+            this.lastUpdateDate = Output.ofNullable(lastUpdateDate);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder outputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Input.ofNullable(outputFormat);
+            this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public MetricStreamState build() {

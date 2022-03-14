@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.FactoryIdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,FactoryIdentityType>> type;
+      private final Output<Either<String,FactoryIdentityType>> type;
 
-    public Input<Either<String,FactoryIdentityType>> getType() {
+    public Output<Either<String,FactoryIdentityType>> getType() {
         return this.type;
     }
 
@@ -38,22 +38,22 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userAssignedIdentities")
-      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Input<Map<String,Object>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
+    public Output<Map<String,Object>> getUserAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
     }
 
     public FactoryIdentityArgs(
-        Input<Either<String,FactoryIdentityType>> type,
-        @Nullable Input<Map<String,Object>> userAssignedIdentities) {
+        Output<Either<String,FactoryIdentityType>> type,
+        @Nullable Output<Map<String,Object>> userAssignedIdentities) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
     private FactoryIdentityArgs() {
-        this.type = Input.empty();
-        this.userAssignedIdentities = Input.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Either<String,FactoryIdentityType>> type;
-        private @Nullable Input<Map<String,Object>> userAssignedIdentities;
+        private Output<Either<String,FactoryIdentityType>> type;
+        private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder type(Input<Either<String,FactoryIdentityType>> type) {
+        public Builder type(Output<Either<String,FactoryIdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,FactoryIdentityType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
         public FactoryIdentityArgs build() {

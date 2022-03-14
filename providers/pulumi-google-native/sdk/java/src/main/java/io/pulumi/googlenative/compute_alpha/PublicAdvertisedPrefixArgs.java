@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.PublicAdvertisedPrefixStatus;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsVerificationIp")
-      private final @Nullable Input<String> dnsVerificationIp;
+      private final @Nullable Output<String> dnsVerificationIp;
 
-    public Input<String> getDnsVerificationIp() {
-        return this.dnsVerificationIp == null ? Input.empty() : this.dnsVerificationIp;
+    public Output<String> getDnsVerificationIp() {
+        return this.dnsVerificationIp == null ? Output.empty() : this.dnsVerificationIp;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     /**
@@ -53,24 +53,24 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -78,20 +78,20 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<PublicAdvertisedPrefixStatus> status;
+      private final @Nullable Output<PublicAdvertisedPrefixStatus> status;
 
-    public Input<PublicAdvertisedPrefixStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<PublicAdvertisedPrefixStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public PublicAdvertisedPrefixArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> dnsVerificationIp,
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<PublicAdvertisedPrefixStatus> status) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> dnsVerificationIp,
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<PublicAdvertisedPrefixStatus> status) {
         this.description = description;
         this.dnsVerificationIp = dnsVerificationIp;
         this.ipCidrRange = ipCidrRange;
@@ -102,13 +102,13 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
     }
 
     private PublicAdvertisedPrefixArgs() {
-        this.description = Input.empty();
-        this.dnsVerificationIp = Input.empty();
-        this.ipCidrRange = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.status = Input.empty();
+        this.description = Output.empty();
+        this.dnsVerificationIp = Output.empty();
+        this.ipCidrRange = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,13 +120,13 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> dnsVerificationIp;
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<PublicAdvertisedPrefixStatus> status;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> dnsVerificationIp;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<PublicAdvertisedPrefixStatus> status;
 
         public Builder() {
     	      // Empty
@@ -143,73 +143,73 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
     	      this.status = defaults.status;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dnsVerificationIp(@Nullable Input<String> dnsVerificationIp) {
+        public Builder dnsVerificationIp(@Nullable Output<String> dnsVerificationIp) {
             this.dnsVerificationIp = dnsVerificationIp;
             return this;
         }
 
         public Builder dnsVerificationIp(@Nullable String dnsVerificationIp) {
-            this.dnsVerificationIp = Input.ofNullable(dnsVerificationIp);
+            this.dnsVerificationIp = Output.ofNullable(dnsVerificationIp);
             return this;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder status(@Nullable Input<PublicAdvertisedPrefixStatus> status) {
+        public Builder status(@Nullable Output<PublicAdvertisedPrefixStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable PublicAdvertisedPrefixStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public PublicAdvertisedPrefixArgs build() {

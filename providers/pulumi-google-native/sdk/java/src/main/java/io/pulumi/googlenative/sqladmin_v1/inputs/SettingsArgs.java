@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.enums.SettingsActivationPolicy;
 import io.pulumi.googlenative.sqladmin_v1.enums.SettingsAvailabilityType;
@@ -40,10 +40,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationPolicy")
-      private final @Nullable Input<SettingsActivationPolicy> activationPolicy;
+      private final @Nullable Output<SettingsActivationPolicy> activationPolicy;
 
-    public Input<SettingsActivationPolicy> getActivationPolicy() {
-        return this.activationPolicy == null ? Input.empty() : this.activationPolicy;
+    public Output<SettingsActivationPolicy> getActivationPolicy() {
+        return this.activationPolicy == null ? Output.empty() : this.activationPolicy;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeDirectoryConfig")
-      private final @Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
+      private final @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
 
-    public Input<SqlActiveDirectoryConfigArgs> getActiveDirectoryConfig() {
-        return this.activeDirectoryConfig == null ? Input.empty() : this.activeDirectoryConfig;
+    public Output<SqlActiveDirectoryConfigArgs> getActiveDirectoryConfig() {
+        return this.activeDirectoryConfig == null ? Output.empty() : this.activeDirectoryConfig;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityType")
-      private final @Nullable Input<SettingsAvailabilityType> availabilityType;
+      private final @Nullable Output<SettingsAvailabilityType> availabilityType;
 
-    public Input<SettingsAvailabilityType> getAvailabilityType() {
-        return this.availabilityType == null ? Input.empty() : this.availabilityType;
+    public Output<SettingsAvailabilityType> getAvailabilityType() {
+        return this.availabilityType == null ? Output.empty() : this.availabilityType;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupConfiguration")
-      private final @Nullable Input<BackupConfigurationArgs> backupConfiguration;
+      private final @Nullable Output<BackupConfigurationArgs> backupConfiguration;
 
-    public Input<BackupConfigurationArgs> getBackupConfiguration() {
-        return this.backupConfiguration == null ? Input.empty() : this.backupConfiguration;
+    public Output<BackupConfigurationArgs> getBackupConfiguration() {
+        return this.backupConfiguration == null ? Output.empty() : this.backupConfiguration;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crashSafeReplicationEnabled")
-      private final @Nullable Input<Boolean> crashSafeReplicationEnabled;
+      private final @Nullable Output<Boolean> crashSafeReplicationEnabled;
 
-    public Input<Boolean> getCrashSafeReplicationEnabled() {
-        return this.crashSafeReplicationEnabled == null ? Input.empty() : this.crashSafeReplicationEnabled;
+    public Output<Boolean> getCrashSafeReplicationEnabled() {
+        return this.crashSafeReplicationEnabled == null ? Output.empty() : this.crashSafeReplicationEnabled;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskSizeGb")
-      private final @Nullable Input<String> dataDiskSizeGb;
+      private final @Nullable Output<String> dataDiskSizeGb;
 
-    public Input<String> getDataDiskSizeGb() {
-        return this.dataDiskSizeGb == null ? Input.empty() : this.dataDiskSizeGb;
+    public Output<String> getDataDiskSizeGb() {
+        return this.dataDiskSizeGb == null ? Output.empty() : this.dataDiskSizeGb;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskType")
-      private final @Nullable Input<SettingsDataDiskType> dataDiskType;
+      private final @Nullable Output<SettingsDataDiskType> dataDiskType;
 
-    public Input<SettingsDataDiskType> getDataDiskType() {
-        return this.dataDiskType == null ? Input.empty() : this.dataDiskType;
+    public Output<SettingsDataDiskType> getDataDiskType() {
+        return this.dataDiskType == null ? Output.empty() : this.dataDiskType;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseFlags")
-      private final @Nullable Input<List<DatabaseFlagsArgs>> databaseFlags;
+      private final @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
 
-    public Input<List<DatabaseFlagsArgs>> getDatabaseFlags() {
-        return this.databaseFlags == null ? Input.empty() : this.databaseFlags;
+    public Output<List<DatabaseFlagsArgs>> getDatabaseFlags() {
+        return this.databaseFlags == null ? Output.empty() : this.databaseFlags;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseReplicationEnabled")
-      private final @Nullable Input<Boolean> databaseReplicationEnabled;
+      private final @Nullable Output<Boolean> databaseReplicationEnabled;
 
-    public Input<Boolean> getDatabaseReplicationEnabled() {
-        return this.databaseReplicationEnabled == null ? Input.empty() : this.databaseReplicationEnabled;
+    public Output<Boolean> getDatabaseReplicationEnabled() {
+        return this.databaseReplicationEnabled == null ? Output.empty() : this.databaseReplicationEnabled;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="denyMaintenancePeriods")
-      private final @Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
+      private final @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
 
-    public Input<List<DenyMaintenancePeriodArgs>> getDenyMaintenancePeriods() {
-        return this.denyMaintenancePeriods == null ? Input.empty() : this.denyMaintenancePeriods;
+    public Output<List<DenyMaintenancePeriodArgs>> getDenyMaintenancePeriods() {
+        return this.denyMaintenancePeriods == null ? Output.empty() : this.denyMaintenancePeriods;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insightsConfig")
-      private final @Nullable Input<InsightsConfigArgs> insightsConfig;
+      private final @Nullable Output<InsightsConfigArgs> insightsConfig;
 
-    public Input<InsightsConfigArgs> getInsightsConfig() {
-        return this.insightsConfig == null ? Input.empty() : this.insightsConfig;
+    public Output<InsightsConfigArgs> getInsightsConfig() {
+        return this.insightsConfig == null ? Output.empty() : this.insightsConfig;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfiguration")
-      private final @Nullable Input<IpConfigurationArgs> ipConfiguration;
+      private final @Nullable Output<IpConfigurationArgs> ipConfiguration;
 
-    public Input<IpConfigurationArgs> getIpConfiguration() {
-        return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
+    public Output<IpConfigurationArgs> getIpConfiguration() {
+        return this.ipConfiguration == null ? Output.empty() : this.ipConfiguration;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -194,10 +194,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationPreference")
-      private final @Nullable Input<LocationPreferenceArgs> locationPreference;
+      private final @Nullable Output<LocationPreferenceArgs> locationPreference;
 
-    public Input<LocationPreferenceArgs> getLocationPreference() {
-        return this.locationPreference == null ? Input.empty() : this.locationPreference;
+    public Output<LocationPreferenceArgs> getLocationPreference() {
+        return this.locationPreference == null ? Output.empty() : this.locationPreference;
     }
 
     /**
@@ -205,10 +205,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Input<MaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -216,10 +216,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwordValidationPolicy")
-      private final @Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy;
+      private final @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
 
-    public Input<PasswordValidationPolicyArgs> getPasswordValidationPolicy() {
-        return this.passwordValidationPolicy == null ? Input.empty() : this.passwordValidationPolicy;
+    public Output<PasswordValidationPolicyArgs> getPasswordValidationPolicy() {
+        return this.passwordValidationPolicy == null ? Output.empty() : this.passwordValidationPolicy;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pricingPlan")
-      private final @Nullable Input<SettingsPricingPlan> pricingPlan;
+      private final @Nullable Output<SettingsPricingPlan> pricingPlan;
 
-    public Input<SettingsPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
+    public Output<SettingsPricingPlan> getPricingPlan() {
+        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
     /**
@@ -238,10 +238,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settingsVersion")
-      private final @Nullable Input<String> settingsVersion;
+      private final @Nullable Output<String> settingsVersion;
 
-    public Input<String> getSettingsVersion() {
-        return this.settingsVersion == null ? Input.empty() : this.settingsVersion;
+    public Output<String> getSettingsVersion() {
+        return this.settingsVersion == null ? Output.empty() : this.settingsVersion;
     }
 
     /**
@@ -249,10 +249,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerAuditConfig")
-      private final @Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig;
+      private final @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
 
-    public Input<SqlServerAuditConfigArgs> getSqlServerAuditConfig() {
-        return this.sqlServerAuditConfig == null ? Input.empty() : this.sqlServerAuditConfig;
+    public Output<SqlServerAuditConfigArgs> getSqlServerAuditConfig() {
+        return this.sqlServerAuditConfig == null ? Output.empty() : this.sqlServerAuditConfig;
     }
 
     /**
@@ -260,10 +260,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAutoResize")
-      private final @Nullable Input<Boolean> storageAutoResize;
+      private final @Nullable Output<Boolean> storageAutoResize;
 
-    public Input<Boolean> getStorageAutoResize() {
-        return this.storageAutoResize == null ? Input.empty() : this.storageAutoResize;
+    public Output<Boolean> getStorageAutoResize() {
+        return this.storageAutoResize == null ? Output.empty() : this.storageAutoResize;
     }
 
     /**
@@ -271,10 +271,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAutoResizeLimit")
-      private final @Nullable Input<String> storageAutoResizeLimit;
+      private final @Nullable Output<String> storageAutoResizeLimit;
 
-    public Input<String> getStorageAutoResizeLimit() {
-        return this.storageAutoResizeLimit == null ? Input.empty() : this.storageAutoResizeLimit;
+    public Output<String> getStorageAutoResizeLimit() {
+        return this.storageAutoResizeLimit == null ? Output.empty() : this.storageAutoResizeLimit;
     }
 
     /**
@@ -282,10 +282,10 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     /**
@@ -293,37 +293,37 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLabels")
-      private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Input<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Input.empty() : this.userLabels;
+    public Output<Map<String,String>> getUserLabels() {
+        return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
     public SettingsArgs(
-        @Nullable Input<SettingsActivationPolicy> activationPolicy,
-        @Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig,
-        @Nullable Input<SettingsAvailabilityType> availabilityType,
-        @Nullable Input<BackupConfigurationArgs> backupConfiguration,
-        @Nullable Input<String> collation,
-        @Nullable Input<Boolean> crashSafeReplicationEnabled,
-        @Nullable Input<String> dataDiskSizeGb,
-        @Nullable Input<SettingsDataDiskType> dataDiskType,
-        @Nullable Input<List<DatabaseFlagsArgs>> databaseFlags,
-        @Nullable Input<Boolean> databaseReplicationEnabled,
-        @Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods,
-        @Nullable Input<InsightsConfigArgs> insightsConfig,
-        @Nullable Input<IpConfigurationArgs> ipConfiguration,
-        @Nullable Input<String> kind,
-        @Nullable Input<LocationPreferenceArgs> locationPreference,
-        @Nullable Input<MaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy,
-        @Nullable Input<SettingsPricingPlan> pricingPlan,
-        @Nullable Input<String> settingsVersion,
-        @Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig,
-        @Nullable Input<Boolean> storageAutoResize,
-        @Nullable Input<String> storageAutoResizeLimit,
-        @Nullable Input<String> tier,
-        @Nullable Input<Map<String,String>> userLabels) {
+        @Nullable Output<SettingsActivationPolicy> activationPolicy,
+        @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig,
+        @Nullable Output<SettingsAvailabilityType> availabilityType,
+        @Nullable Output<BackupConfigurationArgs> backupConfiguration,
+        @Nullable Output<String> collation,
+        @Nullable Output<Boolean> crashSafeReplicationEnabled,
+        @Nullable Output<String> dataDiskSizeGb,
+        @Nullable Output<SettingsDataDiskType> dataDiskType,
+        @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags,
+        @Nullable Output<Boolean> databaseReplicationEnabled,
+        @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods,
+        @Nullable Output<InsightsConfigArgs> insightsConfig,
+        @Nullable Output<IpConfigurationArgs> ipConfiguration,
+        @Nullable Output<String> kind,
+        @Nullable Output<LocationPreferenceArgs> locationPreference,
+        @Nullable Output<MaintenanceWindowArgs> maintenanceWindow,
+        @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy,
+        @Nullable Output<SettingsPricingPlan> pricingPlan,
+        @Nullable Output<String> settingsVersion,
+        @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig,
+        @Nullable Output<Boolean> storageAutoResize,
+        @Nullable Output<String> storageAutoResizeLimit,
+        @Nullable Output<String> tier,
+        @Nullable Output<Map<String,String>> userLabels) {
         this.activationPolicy = activationPolicy;
         this.activeDirectoryConfig = activeDirectoryConfig;
         this.availabilityType = availabilityType;
@@ -351,30 +351,30 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SettingsArgs() {
-        this.activationPolicy = Input.empty();
-        this.activeDirectoryConfig = Input.empty();
-        this.availabilityType = Input.empty();
-        this.backupConfiguration = Input.empty();
-        this.collation = Input.empty();
-        this.crashSafeReplicationEnabled = Input.empty();
-        this.dataDiskSizeGb = Input.empty();
-        this.dataDiskType = Input.empty();
-        this.databaseFlags = Input.empty();
-        this.databaseReplicationEnabled = Input.empty();
-        this.denyMaintenancePeriods = Input.empty();
-        this.insightsConfig = Input.empty();
-        this.ipConfiguration = Input.empty();
-        this.kind = Input.empty();
-        this.locationPreference = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.passwordValidationPolicy = Input.empty();
-        this.pricingPlan = Input.empty();
-        this.settingsVersion = Input.empty();
-        this.sqlServerAuditConfig = Input.empty();
-        this.storageAutoResize = Input.empty();
-        this.storageAutoResizeLimit = Input.empty();
-        this.tier = Input.empty();
-        this.userLabels = Input.empty();
+        this.activationPolicy = Output.empty();
+        this.activeDirectoryConfig = Output.empty();
+        this.availabilityType = Output.empty();
+        this.backupConfiguration = Output.empty();
+        this.collation = Output.empty();
+        this.crashSafeReplicationEnabled = Output.empty();
+        this.dataDiskSizeGb = Output.empty();
+        this.dataDiskType = Output.empty();
+        this.databaseFlags = Output.empty();
+        this.databaseReplicationEnabled = Output.empty();
+        this.denyMaintenancePeriods = Output.empty();
+        this.insightsConfig = Output.empty();
+        this.ipConfiguration = Output.empty();
+        this.kind = Output.empty();
+        this.locationPreference = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.passwordValidationPolicy = Output.empty();
+        this.pricingPlan = Output.empty();
+        this.settingsVersion = Output.empty();
+        this.sqlServerAuditConfig = Output.empty();
+        this.storageAutoResize = Output.empty();
+        this.storageAutoResizeLimit = Output.empty();
+        this.tier = Output.empty();
+        this.userLabels = Output.empty();
     }
 
     public static Builder builder() {
@@ -386,30 +386,30 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SettingsActivationPolicy> activationPolicy;
-        private @Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
-        private @Nullable Input<SettingsAvailabilityType> availabilityType;
-        private @Nullable Input<BackupConfigurationArgs> backupConfiguration;
-        private @Nullable Input<String> collation;
-        private @Nullable Input<Boolean> crashSafeReplicationEnabled;
-        private @Nullable Input<String> dataDiskSizeGb;
-        private @Nullable Input<SettingsDataDiskType> dataDiskType;
-        private @Nullable Input<List<DatabaseFlagsArgs>> databaseFlags;
-        private @Nullable Input<Boolean> databaseReplicationEnabled;
-        private @Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
-        private @Nullable Input<InsightsConfigArgs> insightsConfig;
-        private @Nullable Input<IpConfigurationArgs> ipConfiguration;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<LocationPreferenceArgs> locationPreference;
-        private @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy;
-        private @Nullable Input<SettingsPricingPlan> pricingPlan;
-        private @Nullable Input<String> settingsVersion;
-        private @Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig;
-        private @Nullable Input<Boolean> storageAutoResize;
-        private @Nullable Input<String> storageAutoResizeLimit;
-        private @Nullable Input<String> tier;
-        private @Nullable Input<Map<String,String>> userLabels;
+        private @Nullable Output<SettingsActivationPolicy> activationPolicy;
+        private @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
+        private @Nullable Output<SettingsAvailabilityType> availabilityType;
+        private @Nullable Output<BackupConfigurationArgs> backupConfiguration;
+        private @Nullable Output<String> collation;
+        private @Nullable Output<Boolean> crashSafeReplicationEnabled;
+        private @Nullable Output<String> dataDiskSizeGb;
+        private @Nullable Output<SettingsDataDiskType> dataDiskType;
+        private @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
+        private @Nullable Output<Boolean> databaseReplicationEnabled;
+        private @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
+        private @Nullable Output<InsightsConfigArgs> insightsConfig;
+        private @Nullable Output<IpConfigurationArgs> ipConfiguration;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<LocationPreferenceArgs> locationPreference;
+        private @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
+        private @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
+        private @Nullable Output<SettingsPricingPlan> pricingPlan;
+        private @Nullable Output<String> settingsVersion;
+        private @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
+        private @Nullable Output<Boolean> storageAutoResize;
+        private @Nullable Output<String> storageAutoResizeLimit;
+        private @Nullable Output<String> tier;
+        private @Nullable Output<Map<String,String>> userLabels;
 
         public Builder() {
     	      // Empty
@@ -443,243 +443,243 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userLabels = defaults.userLabels;
         }
 
-        public Builder activationPolicy(@Nullable Input<SettingsActivationPolicy> activationPolicy) {
+        public Builder activationPolicy(@Nullable Output<SettingsActivationPolicy> activationPolicy) {
             this.activationPolicy = activationPolicy;
             return this;
         }
 
         public Builder activationPolicy(@Nullable SettingsActivationPolicy activationPolicy) {
-            this.activationPolicy = Input.ofNullable(activationPolicy);
+            this.activationPolicy = Output.ofNullable(activationPolicy);
             return this;
         }
 
-        public Builder activeDirectoryConfig(@Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig) {
+        public Builder activeDirectoryConfig(@Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig) {
             this.activeDirectoryConfig = activeDirectoryConfig;
             return this;
         }
 
         public Builder activeDirectoryConfig(@Nullable SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
-            this.activeDirectoryConfig = Input.ofNullable(activeDirectoryConfig);
+            this.activeDirectoryConfig = Output.ofNullable(activeDirectoryConfig);
             return this;
         }
 
-        public Builder availabilityType(@Nullable Input<SettingsAvailabilityType> availabilityType) {
+        public Builder availabilityType(@Nullable Output<SettingsAvailabilityType> availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
 
         public Builder availabilityType(@Nullable SettingsAvailabilityType availabilityType) {
-            this.availabilityType = Input.ofNullable(availabilityType);
+            this.availabilityType = Output.ofNullable(availabilityType);
             return this;
         }
 
-        public Builder backupConfiguration(@Nullable Input<BackupConfigurationArgs> backupConfiguration) {
+        public Builder backupConfiguration(@Nullable Output<BackupConfigurationArgs> backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
 
         public Builder backupConfiguration(@Nullable BackupConfigurationArgs backupConfiguration) {
-            this.backupConfiguration = Input.ofNullable(backupConfiguration);
+            this.backupConfiguration = Output.ofNullable(backupConfiguration);
             return this;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder crashSafeReplicationEnabled(@Nullable Input<Boolean> crashSafeReplicationEnabled) {
+        public Builder crashSafeReplicationEnabled(@Nullable Output<Boolean> crashSafeReplicationEnabled) {
             this.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
             return this;
         }
 
         public Builder crashSafeReplicationEnabled(@Nullable Boolean crashSafeReplicationEnabled) {
-            this.crashSafeReplicationEnabled = Input.ofNullable(crashSafeReplicationEnabled);
+            this.crashSafeReplicationEnabled = Output.ofNullable(crashSafeReplicationEnabled);
             return this;
         }
 
-        public Builder dataDiskSizeGb(@Nullable Input<String> dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable Output<String> dataDiskSizeGb) {
             this.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
 
         public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
-            this.dataDiskSizeGb = Input.ofNullable(dataDiskSizeGb);
+            this.dataDiskSizeGb = Output.ofNullable(dataDiskSizeGb);
             return this;
         }
 
-        public Builder dataDiskType(@Nullable Input<SettingsDataDiskType> dataDiskType) {
+        public Builder dataDiskType(@Nullable Output<SettingsDataDiskType> dataDiskType) {
             this.dataDiskType = dataDiskType;
             return this;
         }
 
         public Builder dataDiskType(@Nullable SettingsDataDiskType dataDiskType) {
-            this.dataDiskType = Input.ofNullable(dataDiskType);
+            this.dataDiskType = Output.ofNullable(dataDiskType);
             return this;
         }
 
-        public Builder databaseFlags(@Nullable Input<List<DatabaseFlagsArgs>> databaseFlags) {
+        public Builder databaseFlags(@Nullable Output<List<DatabaseFlagsArgs>> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
 
         public Builder databaseFlags(@Nullable List<DatabaseFlagsArgs> databaseFlags) {
-            this.databaseFlags = Input.ofNullable(databaseFlags);
+            this.databaseFlags = Output.ofNullable(databaseFlags);
             return this;
         }
 
-        public Builder databaseReplicationEnabled(@Nullable Input<Boolean> databaseReplicationEnabled) {
+        public Builder databaseReplicationEnabled(@Nullable Output<Boolean> databaseReplicationEnabled) {
             this.databaseReplicationEnabled = databaseReplicationEnabled;
             return this;
         }
 
         public Builder databaseReplicationEnabled(@Nullable Boolean databaseReplicationEnabled) {
-            this.databaseReplicationEnabled = Input.ofNullable(databaseReplicationEnabled);
+            this.databaseReplicationEnabled = Output.ofNullable(databaseReplicationEnabled);
             return this;
         }
 
-        public Builder denyMaintenancePeriods(@Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods) {
+        public Builder denyMaintenancePeriods(@Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods) {
             this.denyMaintenancePeriods = denyMaintenancePeriods;
             return this;
         }
 
         public Builder denyMaintenancePeriods(@Nullable List<DenyMaintenancePeriodArgs> denyMaintenancePeriods) {
-            this.denyMaintenancePeriods = Input.ofNullable(denyMaintenancePeriods);
+            this.denyMaintenancePeriods = Output.ofNullable(denyMaintenancePeriods);
             return this;
         }
 
-        public Builder insightsConfig(@Nullable Input<InsightsConfigArgs> insightsConfig) {
+        public Builder insightsConfig(@Nullable Output<InsightsConfigArgs> insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
 
         public Builder insightsConfig(@Nullable InsightsConfigArgs insightsConfig) {
-            this.insightsConfig = Input.ofNullable(insightsConfig);
+            this.insightsConfig = Output.ofNullable(insightsConfig);
             return this;
         }
 
-        public Builder ipConfiguration(@Nullable Input<IpConfigurationArgs> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Output<IpConfigurationArgs> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
         public Builder ipConfiguration(@Nullable IpConfigurationArgs ipConfiguration) {
-            this.ipConfiguration = Input.ofNullable(ipConfiguration);
+            this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder locationPreference(@Nullable Input<LocationPreferenceArgs> locationPreference) {
+        public Builder locationPreference(@Nullable Output<LocationPreferenceArgs> locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
 
         public Builder locationPreference(@Nullable LocationPreferenceArgs locationPreference) {
-            this.locationPreference = Input.ofNullable(locationPreference);
+            this.locationPreference = Output.ofNullable(locationPreference);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<MaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder passwordValidationPolicy(@Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy) {
+        public Builder passwordValidationPolicy(@Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy) {
             this.passwordValidationPolicy = passwordValidationPolicy;
             return this;
         }
 
         public Builder passwordValidationPolicy(@Nullable PasswordValidationPolicyArgs passwordValidationPolicy) {
-            this.passwordValidationPolicy = Input.ofNullable(passwordValidationPolicy);
+            this.passwordValidationPolicy = Output.ofNullable(passwordValidationPolicy);
             return this;
         }
 
-        public Builder pricingPlan(@Nullable Input<SettingsPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Output<SettingsPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
         public Builder pricingPlan(@Nullable SettingsPricingPlan pricingPlan) {
-            this.pricingPlan = Input.ofNullable(pricingPlan);
+            this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder settingsVersion(@Nullable Input<String> settingsVersion) {
+        public Builder settingsVersion(@Nullable Output<String> settingsVersion) {
             this.settingsVersion = settingsVersion;
             return this;
         }
 
         public Builder settingsVersion(@Nullable String settingsVersion) {
-            this.settingsVersion = Input.ofNullable(settingsVersion);
+            this.settingsVersion = Output.ofNullable(settingsVersion);
             return this;
         }
 
-        public Builder sqlServerAuditConfig(@Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig) {
+        public Builder sqlServerAuditConfig(@Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig) {
             this.sqlServerAuditConfig = sqlServerAuditConfig;
             return this;
         }
 
         public Builder sqlServerAuditConfig(@Nullable SqlServerAuditConfigArgs sqlServerAuditConfig) {
-            this.sqlServerAuditConfig = Input.ofNullable(sqlServerAuditConfig);
+            this.sqlServerAuditConfig = Output.ofNullable(sqlServerAuditConfig);
             return this;
         }
 
-        public Builder storageAutoResize(@Nullable Input<Boolean> storageAutoResize) {
+        public Builder storageAutoResize(@Nullable Output<Boolean> storageAutoResize) {
             this.storageAutoResize = storageAutoResize;
             return this;
         }
 
         public Builder storageAutoResize(@Nullable Boolean storageAutoResize) {
-            this.storageAutoResize = Input.ofNullable(storageAutoResize);
+            this.storageAutoResize = Output.ofNullable(storageAutoResize);
             return this;
         }
 
-        public Builder storageAutoResizeLimit(@Nullable Input<String> storageAutoResizeLimit) {
+        public Builder storageAutoResizeLimit(@Nullable Output<String> storageAutoResizeLimit) {
             this.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
 
         public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
-            this.storageAutoResizeLimit = Input.ofNullable(storageAutoResizeLimit);
+            this.storageAutoResizeLimit = Output.ofNullable(storageAutoResizeLimit);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
 
-        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Input.ofNullable(userLabels);
+            this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
         public SettingsArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.AgentPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,10 +30,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentConfiguration")
-      private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
+      private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Input<AgentPropertiesArgs> getAgentConfiguration() {
-        return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
+    public Output<AgentPropertiesArgs> getAgentConfiguration() {
+        return this.agentConfiguration == null ? Output.empty() : this.agentConfiguration;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentPoolName")
-      private final @Nullable Input<String> agentPoolName;
+      private final @Nullable Output<String> agentPoolName;
 
-    public Input<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
+    public Output<String> getAgentPoolName() {
+        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<List<ArgumentArgs>> arguments;
+      private final @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Input<List<ArgumentArgs>> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<List<ArgumentArgs>> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<CredentialsArgs> credentials;
+      private final @Nullable Output<CredentialsArgs> credentials;
 
-    public Input<CredentialsArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<CredentialsArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dockerFilePath", required=true)
-      private final Input<String> dockerFilePath;
+      private final Output<String> dockerFilePath;
 
-    public Input<String> getDockerFilePath() {
+    public Output<String> getDockerFilePath() {
         return this.dockerFilePath;
     }
 
@@ -85,10 +85,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imageNames")
-      private final @Nullable Input<List<String>> imageNames;
+      private final @Nullable Output<List<String>> imageNames;
 
-    public Input<List<String>> getImageNames() {
-        return this.imageNames == null ? Input.empty() : this.imageNames;
+    public Output<List<String>> getImageNames() {
+        return this.imageNames == null ? Output.empty() : this.imageNames;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isArchiveEnabled")
-      private final @Nullable Input<Boolean> isArchiveEnabled;
+      private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Input<Boolean> getIsArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
+    public Output<Boolean> getIsArchiveEnabled() {
+        return this.isArchiveEnabled == null ? Output.empty() : this.isArchiveEnabled;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isPushEnabled")
-      private final @Nullable Input<Boolean> isPushEnabled;
+      private final @Nullable Output<Boolean> isPushEnabled;
 
-    public Input<Boolean> getIsPushEnabled() {
-        return this.isPushEnabled == null ? Input.empty() : this.isPushEnabled;
+    public Output<Boolean> getIsPushEnabled() {
+        return this.isPushEnabled == null ? Output.empty() : this.isPushEnabled;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logTemplate")
-      private final @Nullable Input<String> logTemplate;
+      private final @Nullable Output<String> logTemplate;
 
-    public Input<String> getLogTemplate() {
-        return this.logTemplate == null ? Input.empty() : this.logTemplate;
+    public Output<String> getLogTemplate() {
+        return this.logTemplate == null ? Output.empty() : this.logTemplate;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="noCache")
-      private final @Nullable Input<Boolean> noCache;
+      private final @Nullable Output<Boolean> noCache;
 
-    public Input<Boolean> getNoCache() {
-        return this.noCache == null ? Input.empty() : this.noCache;
+    public Output<Boolean> getNoCache() {
+        return this.noCache == null ? Output.empty() : this.noCache;
     }
 
     /**
@@ -140,9 +140,9 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="platform", required=true)
-      private final Input<PlatformPropertiesArgs> platform;
+      private final Output<PlatformPropertiesArgs> platform;
 
-    public Input<PlatformPropertiesArgs> getPlatform() {
+    public Output<PlatformPropertiesArgs> getPlatform() {
         return this.platform;
     }
 
@@ -152,10 +152,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceLocation")
-      private final @Nullable Input<String> sourceLocation;
+      private final @Nullable Output<String> sourceLocation;
 
-    public Input<String> getSourceLocation() {
-        return this.sourceLocation == null ? Input.empty() : this.sourceLocation;
+    public Output<String> getSourceLocation() {
+        return this.sourceLocation == null ? Output.empty() : this.sourceLocation;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -186,61 +186,61 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DockerBuildRequestArgs(
-        @Nullable Input<AgentPropertiesArgs> agentConfiguration,
-        @Nullable Input<String> agentPoolName,
-        @Nullable Input<List<ArgumentArgs>> arguments,
-        @Nullable Input<CredentialsArgs> credentials,
-        Input<String> dockerFilePath,
-        @Nullable Input<List<String>> imageNames,
-        @Nullable Input<Boolean> isArchiveEnabled,
-        @Nullable Input<Boolean> isPushEnabled,
-        @Nullable Input<String> logTemplate,
-        @Nullable Input<Boolean> noCache,
-        Input<PlatformPropertiesArgs> platform,
-        @Nullable Input<String> sourceLocation,
-        @Nullable Input<String> target,
-        @Nullable Input<Integer> timeout,
-        Input<String> type) {
+        @Nullable Output<AgentPropertiesArgs> agentConfiguration,
+        @Nullable Output<String> agentPoolName,
+        @Nullable Output<List<ArgumentArgs>> arguments,
+        @Nullable Output<CredentialsArgs> credentials,
+        Output<String> dockerFilePath,
+        @Nullable Output<List<String>> imageNames,
+        @Nullable Output<Boolean> isArchiveEnabled,
+        @Nullable Output<Boolean> isPushEnabled,
+        @Nullable Output<String> logTemplate,
+        @Nullable Output<Boolean> noCache,
+        Output<PlatformPropertiesArgs> platform,
+        @Nullable Output<String> sourceLocation,
+        @Nullable Output<String> target,
+        @Nullable Output<Integer> timeout,
+        Output<String> type) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.arguments = arguments;
         this.credentials = credentials;
         this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
         this.imageNames = imageNames;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Input.ofNullable(false) : isArchiveEnabled;
-        this.isPushEnabled = isPushEnabled == null ? Input.ofNullable(true) : isPushEnabled;
+        this.isArchiveEnabled = isArchiveEnabled == null ? Output.ofNullable(false) : isArchiveEnabled;
+        this.isPushEnabled = isPushEnabled == null ? Output.ofNullable(true) : isPushEnabled;
         this.logTemplate = logTemplate;
-        this.noCache = noCache == null ? Input.ofNullable(false) : noCache;
+        this.noCache = noCache == null ? Output.ofNullable(false) : noCache;
         this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
         this.sourceLocation = sourceLocation;
         this.target = target;
-        this.timeout = timeout == null ? Input.ofNullable(3600) : timeout;
+        this.timeout = timeout == null ? Output.ofNullable(3600) : timeout;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private DockerBuildRequestArgs() {
-        this.agentConfiguration = Input.empty();
-        this.agentPoolName = Input.empty();
-        this.arguments = Input.empty();
-        this.credentials = Input.empty();
-        this.dockerFilePath = Input.empty();
-        this.imageNames = Input.empty();
-        this.isArchiveEnabled = Input.empty();
-        this.isPushEnabled = Input.empty();
-        this.logTemplate = Input.empty();
-        this.noCache = Input.empty();
-        this.platform = Input.empty();
-        this.sourceLocation = Input.empty();
-        this.target = Input.empty();
-        this.timeout = Input.empty();
-        this.type = Input.empty();
+        this.agentConfiguration = Output.empty();
+        this.agentPoolName = Output.empty();
+        this.arguments = Output.empty();
+        this.credentials = Output.empty();
+        this.dockerFilePath = Output.empty();
+        this.imageNames = Output.empty();
+        this.isArchiveEnabled = Output.empty();
+        this.isPushEnabled = Output.empty();
+        this.logTemplate = Output.empty();
+        this.noCache = Output.empty();
+        this.platform = Output.empty();
+        this.sourceLocation = Output.empty();
+        this.target = Output.empty();
+        this.timeout = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -252,21 +252,21 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<AgentPropertiesArgs> agentConfiguration;
-        private @Nullable Input<String> agentPoolName;
-        private @Nullable Input<List<ArgumentArgs>> arguments;
-        private @Nullable Input<CredentialsArgs> credentials;
-        private Input<String> dockerFilePath;
-        private @Nullable Input<List<String>> imageNames;
-        private @Nullable Input<Boolean> isArchiveEnabled;
-        private @Nullable Input<Boolean> isPushEnabled;
-        private @Nullable Input<String> logTemplate;
-        private @Nullable Input<Boolean> noCache;
-        private Input<PlatformPropertiesArgs> platform;
-        private @Nullable Input<String> sourceLocation;
-        private @Nullable Input<String> target;
-        private @Nullable Input<Integer> timeout;
-        private Input<String> type;
+        private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
+        private @Nullable Output<String> agentPoolName;
+        private @Nullable Output<List<ArgumentArgs>> arguments;
+        private @Nullable Output<CredentialsArgs> credentials;
+        private Output<String> dockerFilePath;
+        private @Nullable Output<List<String>> imageNames;
+        private @Nullable Output<Boolean> isArchiveEnabled;
+        private @Nullable Output<Boolean> isPushEnabled;
+        private @Nullable Output<String> logTemplate;
+        private @Nullable Output<Boolean> noCache;
+        private Output<PlatformPropertiesArgs> platform;
+        private @Nullable Output<String> sourceLocation;
+        private @Nullable Output<String> target;
+        private @Nullable Output<Integer> timeout;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -291,153 +291,153 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder agentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
+        public Builder agentConfiguration(@Nullable Output<AgentPropertiesArgs> agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
-            this.agentConfiguration = Input.ofNullable(agentConfiguration);
+            this.agentConfiguration = Output.ofNullable(agentConfiguration);
             return this;
         }
 
-        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Input.ofNullable(agentPoolName);
+            this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder arguments(@Nullable Input<List<ArgumentArgs>> arguments) {
+        public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<CredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable CredentialsArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder dockerFilePath(Input<String> dockerFilePath) {
+        public Builder dockerFilePath(Output<String> dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
 
         public Builder dockerFilePath(String dockerFilePath) {
-            this.dockerFilePath = Input.of(Objects.requireNonNull(dockerFilePath));
+            this.dockerFilePath = Output.of(Objects.requireNonNull(dockerFilePath));
             return this;
         }
 
-        public Builder imageNames(@Nullable Input<List<String>> imageNames) {
+        public Builder imageNames(@Nullable Output<List<String>> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
 
         public Builder imageNames(@Nullable List<String> imageNames) {
-            this.imageNames = Input.ofNullable(imageNames);
+            this.imageNames = Output.ofNullable(imageNames);
             return this;
         }
 
-        public Builder isArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = Input.ofNullable(isArchiveEnabled);
+            this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
             return this;
         }
 
-        public Builder isPushEnabled(@Nullable Input<Boolean> isPushEnabled) {
+        public Builder isPushEnabled(@Nullable Output<Boolean> isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
 
         public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
-            this.isPushEnabled = Input.ofNullable(isPushEnabled);
+            this.isPushEnabled = Output.ofNullable(isPushEnabled);
             return this;
         }
 
-        public Builder logTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Input.ofNullable(logTemplate);
+            this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder noCache(@Nullable Input<Boolean> noCache) {
+        public Builder noCache(@Nullable Output<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
 
         public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Input.ofNullable(noCache);
+            this.noCache = Output.ofNullable(noCache);
             return this;
         }
 
-        public Builder platform(Input<PlatformPropertiesArgs> platform) {
+        public Builder platform(Output<PlatformPropertiesArgs> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
         public Builder platform(PlatformPropertiesArgs platform) {
-            this.platform = Input.of(Objects.requireNonNull(platform));
+            this.platform = Output.of(Objects.requireNonNull(platform));
             return this;
         }
 
-        public Builder sourceLocation(@Nullable Input<String> sourceLocation) {
+        public Builder sourceLocation(@Nullable Output<String> sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
 
         public Builder sourceLocation(@Nullable String sourceLocation) {
-            this.sourceLocation = Input.ofNullable(sourceLocation);
+            this.sourceLocation = Output.ofNullable(sourceLocation);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DockerBuildRequestArgs build() {

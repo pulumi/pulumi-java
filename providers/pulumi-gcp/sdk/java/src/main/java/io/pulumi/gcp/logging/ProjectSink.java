@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.logging;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -226,14 +225,14 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectSink(String name, ProjectSinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/projectSink:ProjectSink", name, args == null ? ProjectSinkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:logging/projectSink:ProjectSink", name, args == null ? ProjectSinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProjectSink(String name, Input<String> id, @Nullable ProjectSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProjectSink(String name, Output<String> id, @Nullable ProjectSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:logging/projectSink:ProjectSink", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -249,7 +248,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProjectSink get(String name, Input<String> id, @Nullable ProjectSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProjectSink get(String name, Output<String> id, @Nullable ProjectSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProjectSink(name, id, state, options);
     }
 }

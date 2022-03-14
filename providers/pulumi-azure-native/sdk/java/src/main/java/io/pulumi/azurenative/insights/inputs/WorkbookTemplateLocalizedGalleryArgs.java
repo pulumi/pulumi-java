@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="galleries")
-      private final @Nullable Input<List<WorkbookTemplateGalleryArgs>> galleries;
+      private final @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
-    public Input<List<WorkbookTemplateGalleryArgs>> getGalleries() {
-        return this.galleries == null ? Input.empty() : this.galleries;
+    public Output<List<WorkbookTemplateGalleryArgs>> getGalleries() {
+        return this.galleries == null ? Output.empty() : this.galleries;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="templateData")
-      private final @Nullable Input<Object> templateData;
+      private final @Nullable Output<Object> templateData;
 
-    public Input<Object> getTemplateData() {
-        return this.templateData == null ? Input.empty() : this.templateData;
+    public Output<Object> getTemplateData() {
+        return this.templateData == null ? Output.empty() : this.templateData;
     }
 
     public WorkbookTemplateLocalizedGalleryArgs(
-        @Nullable Input<List<WorkbookTemplateGalleryArgs>> galleries,
-        @Nullable Input<Object> templateData) {
+        @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries,
+        @Nullable Output<Object> templateData) {
         this.galleries = galleries;
         this.templateData = templateData;
     }
 
     private WorkbookTemplateLocalizedGalleryArgs() {
-        this.galleries = Input.empty();
-        this.templateData = Input.empty();
+        this.galleries = Output.empty();
+        this.templateData = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WorkbookTemplateGalleryArgs>> galleries;
-        private @Nullable Input<Object> templateData;
+        private @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
+        private @Nullable Output<Object> templateData;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
     	      this.templateData = defaults.templateData;
         }
 
-        public Builder galleries(@Nullable Input<List<WorkbookTemplateGalleryArgs>> galleries) {
+        public Builder galleries(@Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries) {
             this.galleries = galleries;
             return this;
         }
 
         public Builder galleries(@Nullable List<WorkbookTemplateGalleryArgs> galleries) {
-            this.galleries = Input.ofNullable(galleries);
+            this.galleries = Output.ofNullable(galleries);
             return this;
         }
 
-        public Builder templateData(@Nullable Input<Object> templateData) {
+        public Builder templateData(@Nullable Output<Object> templateData) {
             this.templateData = templateData;
             return this;
         }
 
         public Builder templateData(@Nullable Object templateData) {
-            this.templateData = Input.ofNullable(templateData);
+            this.templateData = Output.ofNullable(templateData);
             return this;
         }
         public WorkbookTemplateLocalizedGalleryArgs build() {

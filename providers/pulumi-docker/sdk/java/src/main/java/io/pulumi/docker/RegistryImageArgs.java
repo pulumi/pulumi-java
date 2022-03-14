@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.RegistryImageBuildArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-      private final @Nullable Input<RegistryImageBuildArgs> build;
+      private final @Nullable Output<RegistryImageBuildArgs> build;
 
-    public Input<RegistryImageBuildArgs> getBuild() {
-        return this.build == null ? Input.empty() : this.build;
+    public Output<RegistryImageBuildArgs> getBuild() {
+        return this.build == null ? Output.empty() : this.build;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insecureSkipVerify")
-      private final @Nullable Input<Boolean> insecureSkipVerify;
+      private final @Nullable Output<Boolean> insecureSkipVerify;
 
-    public Input<Boolean> getInsecureSkipVerify() {
-        return this.insecureSkipVerify == null ? Input.empty() : this.insecureSkipVerify;
+    public Output<Boolean> getInsecureSkipVerify() {
+        return this.insecureSkipVerify == null ? Output.empty() : this.insecureSkipVerify;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepRemotely")
-      private final @Nullable Input<Boolean> keepRemotely;
+      private final @Nullable Output<Boolean> keepRemotely;
 
-    public Input<Boolean> getKeepRemotely() {
-        return this.keepRemotely == null ? Input.empty() : this.keepRemotely;
+    public Output<Boolean> getKeepRemotely() {
+        return this.keepRemotely == null ? Output.empty() : this.keepRemotely;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public RegistryImageArgs(
-        @Nullable Input<RegistryImageBuildArgs> build,
-        @Nullable Input<Boolean> insecureSkipVerify,
-        @Nullable Input<Boolean> keepRemotely,
-        @Nullable Input<String> name) {
+        @Nullable Output<RegistryImageBuildArgs> build,
+        @Nullable Output<Boolean> insecureSkipVerify,
+        @Nullable Output<Boolean> keepRemotely,
+        @Nullable Output<String> name) {
         this.build = build;
         this.insecureSkipVerify = insecureSkipVerify;
         this.keepRemotely = keepRemotely;
@@ -73,10 +73,10 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistryImageArgs() {
-        this.build = Input.empty();
-        this.insecureSkipVerify = Input.empty();
-        this.keepRemotely = Input.empty();
-        this.name = Input.empty();
+        this.build = Output.empty();
+        this.insecureSkipVerify = Output.empty();
+        this.keepRemotely = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RegistryImageBuildArgs> build;
-        private @Nullable Input<Boolean> insecureSkipVerify;
-        private @Nullable Input<Boolean> keepRemotely;
-        private @Nullable Input<String> name;
+        private @Nullable Output<RegistryImageBuildArgs> build;
+        private @Nullable Output<Boolean> insecureSkipVerify;
+        private @Nullable Output<Boolean> keepRemotely;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder build(@Nullable Input<RegistryImageBuildArgs> build) {
+        public Builder build(@Nullable Output<RegistryImageBuildArgs> build) {
             this.build = build;
             return this;
         }
 
         public Builder build(@Nullable RegistryImageBuildArgs build) {
-            this.build = Input.ofNullable(build);
+            this.build = Output.ofNullable(build);
             return this;
         }
 
-        public Builder insecureSkipVerify(@Nullable Input<Boolean> insecureSkipVerify) {
+        public Builder insecureSkipVerify(@Nullable Output<Boolean> insecureSkipVerify) {
             this.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
 
         public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
-            this.insecureSkipVerify = Input.ofNullable(insecureSkipVerify);
+            this.insecureSkipVerify = Output.ofNullable(insecureSkipVerify);
             return this;
         }
 
-        public Builder keepRemotely(@Nullable Input<Boolean> keepRemotely) {
+        public Builder keepRemotely(@Nullable Output<Boolean> keepRemotely) {
             this.keepRemotely = keepRemotely;
             return this;
         }
 
         public Builder keepRemotely(@Nullable Boolean keepRemotely) {
-            this.keepRemotely = Input.ofNullable(keepRemotely);
+            this.keepRemotely = Output.ofNullable(keepRemotely);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public RegistryImageArgs build() {

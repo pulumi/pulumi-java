@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentImageRequ
 import io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentImageRequestEnvironmentReferenceArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ImageAssetArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="assets")
-      private final @Nullable Input<List<ImageAssetArgs>> assets;
+      private final @Nullable Output<List<ImageAssetArgs>> assets;
 
-    public Input<List<ImageAssetArgs>> getAssets() {
-        return this.assets == null ? Input.empty() : this.assets;
+    public Output<List<ImageAssetArgs>> getAssets() {
+        return this.assets == null ? Output.empty() : this.assets;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="driverProgram")
-      private final @Nullable Input<String> driverProgram;
+      private final @Nullable Output<String> driverProgram;
 
-    public Input<String> getDriverProgram() {
-        return this.driverProgram == null ? Input.empty() : this.driverProgram;
+    public Output<String> getDriverProgram() {
+        return this.driverProgram == null ? Output.empty() : this.driverProgram;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment;
+      private final @Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment;
 
-    public Input<EnvironmentImageRequestEnvironmentArgs> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<EnvironmentImageRequestEnvironmentArgs> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="environmentReference")
-      private final @Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
+      private final @Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
 
-    public Input<EnvironmentImageRequestEnvironmentReferenceArgs> getEnvironmentReference() {
-        return this.environmentReference == null ? Input.empty() : this.environmentReference;
+    public Output<EnvironmentImageRequestEnvironmentReferenceArgs> getEnvironmentReference() {
+        return this.environmentReference == null ? Output.empty() : this.environmentReference;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="modelIds")
-      private final @Nullable Input<List<String>> modelIds;
+      private final @Nullable Output<List<String>> modelIds;
 
-    public Input<List<String>> getModelIds() {
-        return this.modelIds == null ? Input.empty() : this.modelIds;
+    public Output<List<String>> getModelIds() {
+        return this.modelIds == null ? Output.empty() : this.modelIds;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="models")
-      private final @Nullable Input<List<ModelArgs>> models;
+      private final @Nullable Output<List<ModelArgs>> models;
 
-    public Input<List<ModelArgs>> getModels() {
-        return this.models == null ? Input.empty() : this.models;
+    public Output<List<ModelArgs>> getModels() {
+        return this.models == null ? Output.empty() : this.models;
     }
 
     public CreateServiceRequestEnvironmentImageRequestArgs(
-        @Nullable Input<List<ImageAssetArgs>> assets,
-        @Nullable Input<String> driverProgram,
-        @Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment,
-        @Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference,
-        @Nullable Input<List<String>> modelIds,
-        @Nullable Input<List<ModelArgs>> models) {
+        @Nullable Output<List<ImageAssetArgs>> assets,
+        @Nullable Output<String> driverProgram,
+        @Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment,
+        @Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference,
+        @Nullable Output<List<String>> modelIds,
+        @Nullable Output<List<ModelArgs>> models) {
         this.assets = assets;
         this.driverProgram = driverProgram;
         this.environment = environment;
@@ -105,12 +105,12 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
     }
 
     private CreateServiceRequestEnvironmentImageRequestArgs() {
-        this.assets = Input.empty();
-        this.driverProgram = Input.empty();
-        this.environment = Input.empty();
-        this.environmentReference = Input.empty();
-        this.modelIds = Input.empty();
-        this.models = Input.empty();
+        this.assets = Output.empty();
+        this.driverProgram = Output.empty();
+        this.environment = Output.empty();
+        this.environmentReference = Output.empty();
+        this.modelIds = Output.empty();
+        this.models = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImageAssetArgs>> assets;
-        private @Nullable Input<String> driverProgram;
-        private @Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment;
-        private @Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
-        private @Nullable Input<List<String>> modelIds;
-        private @Nullable Input<List<ModelArgs>> models;
+        private @Nullable Output<List<ImageAssetArgs>> assets;
+        private @Nullable Output<String> driverProgram;
+        private @Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment;
+        private @Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
+        private @Nullable Output<List<String>> modelIds;
+        private @Nullable Output<List<ModelArgs>> models;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
     	      this.models = defaults.models;
         }
 
-        public Builder assets(@Nullable Input<List<ImageAssetArgs>> assets) {
+        public Builder assets(@Nullable Output<List<ImageAssetArgs>> assets) {
             this.assets = assets;
             return this;
         }
 
         public Builder assets(@Nullable List<ImageAssetArgs> assets) {
-            this.assets = Input.ofNullable(assets);
+            this.assets = Output.ofNullable(assets);
             return this;
         }
 
-        public Builder driverProgram(@Nullable Input<String> driverProgram) {
+        public Builder driverProgram(@Nullable Output<String> driverProgram) {
             this.driverProgram = driverProgram;
             return this;
         }
 
         public Builder driverProgram(@Nullable String driverProgram) {
-            this.driverProgram = Input.ofNullable(driverProgram);
+            this.driverProgram = Output.ofNullable(driverProgram);
             return this;
         }
 
-        public Builder environment(@Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment) {
+        public Builder environment(@Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable EnvironmentImageRequestEnvironmentArgs environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder environmentReference(@Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference) {
+        public Builder environmentReference(@Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference) {
             this.environmentReference = environmentReference;
             return this;
         }
 
         public Builder environmentReference(@Nullable EnvironmentImageRequestEnvironmentReferenceArgs environmentReference) {
-            this.environmentReference = Input.ofNullable(environmentReference);
+            this.environmentReference = Output.ofNullable(environmentReference);
             return this;
         }
 
-        public Builder modelIds(@Nullable Input<List<String>> modelIds) {
+        public Builder modelIds(@Nullable Output<List<String>> modelIds) {
             this.modelIds = modelIds;
             return this;
         }
 
         public Builder modelIds(@Nullable List<String> modelIds) {
-            this.modelIds = Input.ofNullable(modelIds);
+            this.modelIds = Output.ofNullable(modelIds);
             return this;
         }
 
-        public Builder models(@Nullable Input<List<ModelArgs>> models) {
+        public Builder models(@Nullable Output<List<ModelArgs>> models) {
             this.models = models;
             return this;
         }
 
         public Builder models(@Nullable List<ModelArgs> models) {
-            this.models = Input.ofNullable(models);
+            this.models = Output.ofNullable(models);
             return this;
         }
         public CreateServiceRequestEnvironmentImageRequestArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.DockerExecutorArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineParameterArgs;
@@ -23,10 +23,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="docker")
-      private final @Nullable Input<DockerExecutorArgs> docker;
+      private final @Nullable Output<DockerExecutorArgs> docker;
 
-    public Input<DockerExecutorArgs> getDocker() {
-        return this.docker == null ? Input.empty() : this.docker;
+    public Output<DockerExecutorArgs> getDocker() {
+        return this.docker == null ? Output.empty() : this.docker;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputParameters")
-      private final @Nullable Input<List<PipelineParameterArgs>> inputParameters;
+      private final @Nullable Output<List<PipelineParameterArgs>> inputParameters;
 
-    public Input<List<PipelineParameterArgs>> getInputParameters() {
-        return this.inputParameters == null ? Input.empty() : this.inputParameters;
+    public Output<List<PipelineParameterArgs>> getInputParameters() {
+        return this.inputParameters == null ? Output.empty() : this.inputParameters;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputParameters")
-      private final @Nullable Input<List<PipelineParameterArgs>> outputParameters;
+      private final @Nullable Output<List<PipelineParameterArgs>> outputParameters;
 
-    public Input<List<PipelineParameterArgs>> getOutputParameters() {
-        return this.outputParameters == null ? Input.empty() : this.outputParameters;
+    public Output<List<PipelineParameterArgs>> getOutputParameters() {
+        return this.outputParameters == null ? Output.empty() : this.outputParameters;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineId")
-      private final @Nullable Input<String> pipelineId;
+      private final @Nullable Output<String> pipelineId;
 
-    public Input<String> getPipelineId() {
-        return this.pipelineId == null ? Input.empty() : this.pipelineId;
+    public Output<String> getPipelineId() {
+        return this.pipelineId == null ? Output.empty() : this.pipelineId;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-      private final Input<PipelineResourcesArgs> resources;
+      private final Output<PipelineResourcesArgs> resources;
 
-    public Input<PipelineResourcesArgs> getResources() {
+    public Output<PipelineResourcesArgs> getResources() {
         return this.resources;
     }
 
     public PipelineArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<DockerExecutorArgs> docker,
-        @Nullable Input<List<PipelineParameterArgs>> inputParameters,
-        @Nullable Input<String> name,
-        @Nullable Input<List<PipelineParameterArgs>> outputParameters,
-        @Nullable Input<String> pipelineId,
-        @Nullable Input<String> project,
-        Input<PipelineResourcesArgs> resources) {
+        @Nullable Output<String> description,
+        @Nullable Output<DockerExecutorArgs> docker,
+        @Nullable Output<List<PipelineParameterArgs>> inputParameters,
+        @Nullable Output<String> name,
+        @Nullable Output<List<PipelineParameterArgs>> outputParameters,
+        @Nullable Output<String> pipelineId,
+        @Nullable Output<String> project,
+        Output<PipelineResourcesArgs> resources) {
         this.description = description;
         this.docker = docker;
         this.inputParameters = inputParameters;
@@ -126,14 +126,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.description = Input.empty();
-        this.docker = Input.empty();
-        this.inputParameters = Input.empty();
-        this.name = Input.empty();
-        this.outputParameters = Input.empty();
-        this.pipelineId = Input.empty();
-        this.project = Input.empty();
-        this.resources = Input.empty();
+        this.description = Output.empty();
+        this.docker = Output.empty();
+        this.inputParameters = Output.empty();
+        this.name = Output.empty();
+        this.outputParameters = Output.empty();
+        this.pipelineId = Output.empty();
+        this.project = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<DockerExecutorArgs> docker;
-        private @Nullable Input<List<PipelineParameterArgs>> inputParameters;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PipelineParameterArgs>> outputParameters;
-        private @Nullable Input<String> pipelineId;
-        private @Nullable Input<String> project;
-        private Input<PipelineResourcesArgs> resources;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DockerExecutorArgs> docker;
+        private @Nullable Output<List<PipelineParameterArgs>> inputParameters;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PipelineParameterArgs>> outputParameters;
+        private @Nullable Output<String> pipelineId;
+        private @Nullable Output<String> project;
+        private Output<PipelineResourcesArgs> resources;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resources = defaults.resources;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder docker(@Nullable Input<DockerExecutorArgs> docker) {
+        public Builder docker(@Nullable Output<DockerExecutorArgs> docker) {
             this.docker = docker;
             return this;
         }
 
         public Builder docker(@Nullable DockerExecutorArgs docker) {
-            this.docker = Input.ofNullable(docker);
+            this.docker = Output.ofNullable(docker);
             return this;
         }
 
-        public Builder inputParameters(@Nullable Input<List<PipelineParameterArgs>> inputParameters) {
+        public Builder inputParameters(@Nullable Output<List<PipelineParameterArgs>> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
 
         public Builder inputParameters(@Nullable List<PipelineParameterArgs> inputParameters) {
-            this.inputParameters = Input.ofNullable(inputParameters);
+            this.inputParameters = Output.ofNullable(inputParameters);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputParameters(@Nullable Input<List<PipelineParameterArgs>> outputParameters) {
+        public Builder outputParameters(@Nullable Output<List<PipelineParameterArgs>> outputParameters) {
             this.outputParameters = outputParameters;
             return this;
         }
 
         public Builder outputParameters(@Nullable List<PipelineParameterArgs> outputParameters) {
-            this.outputParameters = Input.ofNullable(outputParameters);
+            this.outputParameters = Output.ofNullable(outputParameters);
             return this;
         }
 
-        public Builder pipelineId(@Nullable Input<String> pipelineId) {
+        public Builder pipelineId(@Nullable Output<String> pipelineId) {
             this.pipelineId = pipelineId;
             return this;
         }
 
         public Builder pipelineId(@Nullable String pipelineId) {
-            this.pipelineId = Input.ofNullable(pipelineId);
+            this.pipelineId = Output.ofNullable(pipelineId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder resources(Input<PipelineResourcesArgs> resources) {
+        public Builder resources(Output<PipelineResourcesArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
         public Builder resources(PipelineResourcesArgs resources) {
-            this.resources = Input.of(Objects.requireNonNull(resources));
+            this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
         public PipelineArgs build() {

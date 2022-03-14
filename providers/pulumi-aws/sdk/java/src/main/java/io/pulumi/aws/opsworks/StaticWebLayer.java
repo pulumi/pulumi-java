@@ -8,7 +8,6 @@ import io.pulumi.aws.opsworks.StaticWebLayerArgs;
 import io.pulumi.aws.opsworks.inputs.StaticWebLayerState;
 import io.pulumi.aws.opsworks.outputs.StaticWebLayerCloudwatchConfiguration;
 import io.pulumi.aws.opsworks.outputs.StaticWebLayerEbsVolume;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -354,14 +353,14 @@ public class StaticWebLayer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StaticWebLayer(String name, StaticWebLayerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/staticWebLayer:StaticWebLayer", name, args == null ? StaticWebLayerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:opsworks/staticWebLayer:StaticWebLayer", name, args == null ? StaticWebLayerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private StaticWebLayer(String name, Input<String> id, @Nullable StaticWebLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private StaticWebLayer(String name, Output<String> id, @Nullable StaticWebLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:opsworks/staticWebLayer:StaticWebLayer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -377,7 +376,7 @@ public class StaticWebLayer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StaticWebLayer get(String name, Input<String> id, @Nullable StaticWebLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static StaticWebLayer get(String name, Output<String> id, @Nullable StaticWebLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StaticWebLayer(name, id, state, options);
     }
 }

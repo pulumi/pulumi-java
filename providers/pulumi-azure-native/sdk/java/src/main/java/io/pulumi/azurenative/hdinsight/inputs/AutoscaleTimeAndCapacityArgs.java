@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxInstanceCount")
-      private final @Nullable Input<Integer> maxInstanceCount;
+      private final @Nullable Output<Integer> maxInstanceCount;
 
-    public Input<Integer> getMaxInstanceCount() {
-        return this.maxInstanceCount == null ? Input.empty() : this.maxInstanceCount;
+    public Output<Integer> getMaxInstanceCount() {
+        return this.maxInstanceCount == null ? Output.empty() : this.maxInstanceCount;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minInstanceCount")
-      private final @Nullable Input<Integer> minInstanceCount;
+      private final @Nullable Output<Integer> minInstanceCount;
 
-    public Input<Integer> getMinInstanceCount() {
-        return this.minInstanceCount == null ? Input.empty() : this.minInstanceCount;
+    public Output<Integer> getMinInstanceCount() {
+        return this.minInstanceCount == null ? Output.empty() : this.minInstanceCount;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
     public AutoscaleTimeAndCapacityArgs(
-        @Nullable Input<Integer> maxInstanceCount,
-        @Nullable Input<Integer> minInstanceCount,
-        @Nullable Input<String> time) {
+        @Nullable Output<Integer> maxInstanceCount,
+        @Nullable Output<Integer> minInstanceCount,
+        @Nullable Output<String> time) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
         this.time = time;
     }
 
     private AutoscaleTimeAndCapacityArgs() {
-        this.maxInstanceCount = Input.empty();
-        this.minInstanceCount = Input.empty();
-        this.time = Input.empty();
+        this.maxInstanceCount = Output.empty();
+        this.minInstanceCount = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxInstanceCount;
-        private @Nullable Input<Integer> minInstanceCount;
-        private @Nullable Input<String> time;
+        private @Nullable Output<Integer> maxInstanceCount;
+        private @Nullable Output<Integer> minInstanceCount;
+        private @Nullable Output<String> time;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     	      this.time = defaults.time;
         }
 
-        public Builder maxInstanceCount(@Nullable Input<Integer> maxInstanceCount) {
+        public Builder maxInstanceCount(@Nullable Output<Integer> maxInstanceCount) {
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
-            this.maxInstanceCount = Input.ofNullable(maxInstanceCount);
+            this.maxInstanceCount = Output.ofNullable(maxInstanceCount);
             return this;
         }
 
-        public Builder minInstanceCount(@Nullable Input<Integer> minInstanceCount) {
+        public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
 
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Input.ofNullable(minInstanceCount);
+            this.minInstanceCount = Output.ofNullable(minInstanceCount);
             return this;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
         public AutoscaleTimeAndCapacityArgs build() {

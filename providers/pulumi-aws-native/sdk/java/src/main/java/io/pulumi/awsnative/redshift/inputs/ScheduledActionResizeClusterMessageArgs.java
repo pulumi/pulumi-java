@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,46 +21,46 @@ public final class ScheduledActionResizeClusterMessageArgs extends io.pulumi.res
     public static final ScheduledActionResizeClusterMessageArgs Empty = new ScheduledActionResizeClusterMessageArgs();
 
     @InputImport(name="classic")
-      private final @Nullable Input<Boolean> classic;
+      private final @Nullable Output<Boolean> classic;
 
-    public Input<Boolean> getClassic() {
-        return this.classic == null ? Input.empty() : this.classic;
+    public Output<Boolean> getClassic() {
+        return this.classic == null ? Output.empty() : this.classic;
     }
 
     @InputImport(name="clusterIdentifier", required=true)
-      private final Input<String> clusterIdentifier;
+      private final Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
+    public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @InputImport(name="clusterType")
-      private final @Nullable Input<String> clusterType;
+      private final @Nullable Output<String> clusterType;
 
-    public Input<String> getClusterType() {
-        return this.clusterType == null ? Input.empty() : this.clusterType;
+    public Output<String> getClusterType() {
+        return this.clusterType == null ? Output.empty() : this.clusterType;
     }
 
     @InputImport(name="nodeType")
-      private final @Nullable Input<String> nodeType;
+      private final @Nullable Output<String> nodeType;
 
-    public Input<String> getNodeType() {
-        return this.nodeType == null ? Input.empty() : this.nodeType;
+    public Output<String> getNodeType() {
+        return this.nodeType == null ? Output.empty() : this.nodeType;
     }
 
     @InputImport(name="numberOfNodes")
-      private final @Nullable Input<Integer> numberOfNodes;
+      private final @Nullable Output<Integer> numberOfNodes;
 
-    public Input<Integer> getNumberOfNodes() {
-        return this.numberOfNodes == null ? Input.empty() : this.numberOfNodes;
+    public Output<Integer> getNumberOfNodes() {
+        return this.numberOfNodes == null ? Output.empty() : this.numberOfNodes;
     }
 
     public ScheduledActionResizeClusterMessageArgs(
-        @Nullable Input<Boolean> classic,
-        Input<String> clusterIdentifier,
-        @Nullable Input<String> clusterType,
-        @Nullable Input<String> nodeType,
-        @Nullable Input<Integer> numberOfNodes) {
+        @Nullable Output<Boolean> classic,
+        Output<String> clusterIdentifier,
+        @Nullable Output<String> clusterType,
+        @Nullable Output<String> nodeType,
+        @Nullable Output<Integer> numberOfNodes) {
         this.classic = classic;
         this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
         this.clusterType = clusterType;
@@ -69,11 +69,11 @@ public final class ScheduledActionResizeClusterMessageArgs extends io.pulumi.res
     }
 
     private ScheduledActionResizeClusterMessageArgs() {
-        this.classic = Input.empty();
-        this.clusterIdentifier = Input.empty();
-        this.clusterType = Input.empty();
-        this.nodeType = Input.empty();
-        this.numberOfNodes = Input.empty();
+        this.classic = Output.empty();
+        this.clusterIdentifier = Output.empty();
+        this.clusterType = Output.empty();
+        this.nodeType = Output.empty();
+        this.numberOfNodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,11 +85,11 @@ public final class ScheduledActionResizeClusterMessageArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> classic;
-        private Input<String> clusterIdentifier;
-        private @Nullable Input<String> clusterType;
-        private @Nullable Input<String> nodeType;
-        private @Nullable Input<Integer> numberOfNodes;
+        private @Nullable Output<Boolean> classic;
+        private Output<String> clusterIdentifier;
+        private @Nullable Output<String> clusterType;
+        private @Nullable Output<String> nodeType;
+        private @Nullable Output<Integer> numberOfNodes;
 
         public Builder() {
     	      // Empty
@@ -104,53 +104,53 @@ public final class ScheduledActionResizeClusterMessageArgs extends io.pulumi.res
     	      this.numberOfNodes = defaults.numberOfNodes;
         }
 
-        public Builder classic(@Nullable Input<Boolean> classic) {
+        public Builder classic(@Nullable Output<Boolean> classic) {
             this.classic = classic;
             return this;
         }
 
         public Builder classic(@Nullable Boolean classic) {
-            this.classic = Input.ofNullable(classic);
+            this.classic = Output.ofNullable(classic);
             return this;
         }
 
-        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
+            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder clusterType(@Nullable Input<String> clusterType) {
+        public Builder clusterType(@Nullable Output<String> clusterType) {
             this.clusterType = clusterType;
             return this;
         }
 
         public Builder clusterType(@Nullable String clusterType) {
-            this.clusterType = Input.ofNullable(clusterType);
+            this.clusterType = Output.ofNullable(clusterType);
             return this;
         }
 
-        public Builder nodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Input.ofNullable(nodeType);
+            this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
 
-        public Builder numberOfNodes(@Nullable Input<Integer> numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Input.ofNullable(numberOfNodes);
+            this.numberOfNodes = Output.ofNullable(numberOfNodes);
             return this;
         }
         public ScheduledActionResizeClusterMessageArgs build() {

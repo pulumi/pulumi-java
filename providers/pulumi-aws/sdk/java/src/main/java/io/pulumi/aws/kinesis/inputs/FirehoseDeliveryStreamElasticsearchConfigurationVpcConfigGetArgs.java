@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -31,9 +31,9 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -42,24 +42,24 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs(
-        Input<String> roleArn,
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnetIds,
-        @Nullable Input<String> vpcId) {
+        Output<String> roleArn,
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnetIds,
+        @Nullable Output<String> vpcId) {
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
@@ -67,10 +67,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
     }
 
     private FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs() {
-        this.roleArn = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcId = Input.empty();
+        this.roleArn = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
     }
 
     public static final class Builder {
-        private Input<String> roleArn;
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<String> vpcId;
+        private Output<String> roleArn;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs build() {

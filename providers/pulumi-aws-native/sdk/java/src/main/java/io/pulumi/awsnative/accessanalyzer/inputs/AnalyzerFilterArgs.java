@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.accessanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,46 +17,46 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
     public static final AnalyzerFilterArgs Empty = new AnalyzerFilterArgs();
 
     @InputImport(name="contains")
-      private final @Nullable Input<List<String>> contains;
+      private final @Nullable Output<List<String>> contains;
 
-    public Input<List<String>> getContains() {
-        return this.contains == null ? Input.empty() : this.contains;
+    public Output<List<String>> getContains() {
+        return this.contains == null ? Output.empty() : this.contains;
     }
 
     @InputImport(name="eq")
-      private final @Nullable Input<List<String>> eq;
+      private final @Nullable Output<List<String>> eq;
 
-    public Input<List<String>> getEq() {
-        return this.eq == null ? Input.empty() : this.eq;
+    public Output<List<String>> getEq() {
+        return this.eq == null ? Output.empty() : this.eq;
     }
 
     @InputImport(name="exists")
-      private final @Nullable Input<Boolean> exists;
+      private final @Nullable Output<Boolean> exists;
 
-    public Input<Boolean> getExists() {
-        return this.exists == null ? Input.empty() : this.exists;
+    public Output<Boolean> getExists() {
+        return this.exists == null ? Output.empty() : this.exists;
     }
 
     @InputImport(name="neq")
-      private final @Nullable Input<List<String>> neq;
+      private final @Nullable Output<List<String>> neq;
 
-    public Input<List<String>> getNeq() {
-        return this.neq == null ? Input.empty() : this.neq;
+    public Output<List<String>> getNeq() {
+        return this.neq == null ? Output.empty() : this.neq;
     }
 
     @InputImport(name="property", required=true)
-      private final Input<String> property;
+      private final Output<String> property;
 
-    public Input<String> getProperty() {
+    public Output<String> getProperty() {
         return this.property;
     }
 
     public AnalyzerFilterArgs(
-        @Nullable Input<List<String>> contains,
-        @Nullable Input<List<String>> eq,
-        @Nullable Input<Boolean> exists,
-        @Nullable Input<List<String>> neq,
-        Input<String> property) {
+        @Nullable Output<List<String>> contains,
+        @Nullable Output<List<String>> eq,
+        @Nullable Output<Boolean> exists,
+        @Nullable Output<List<String>> neq,
+        Output<String> property) {
         this.contains = contains;
         this.eq = eq;
         this.exists = exists;
@@ -65,11 +65,11 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalyzerFilterArgs() {
-        this.contains = Input.empty();
-        this.eq = Input.empty();
-        this.exists = Input.empty();
-        this.neq = Input.empty();
-        this.property = Input.empty();
+        this.contains = Output.empty();
+        this.eq = Output.empty();
+        this.exists = Output.empty();
+        this.neq = Output.empty();
+        this.property = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> contains;
-        private @Nullable Input<List<String>> eq;
-        private @Nullable Input<Boolean> exists;
-        private @Nullable Input<List<String>> neq;
-        private Input<String> property;
+        private @Nullable Output<List<String>> contains;
+        private @Nullable Output<List<String>> eq;
+        private @Nullable Output<Boolean> exists;
+        private @Nullable Output<List<String>> neq;
+        private Output<String> property;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.property = defaults.property;
         }
 
-        public Builder contains(@Nullable Input<List<String>> contains) {
+        public Builder contains(@Nullable Output<List<String>> contains) {
             this.contains = contains;
             return this;
         }
 
         public Builder contains(@Nullable List<String> contains) {
-            this.contains = Input.ofNullable(contains);
+            this.contains = Output.ofNullable(contains);
             return this;
         }
 
-        public Builder eq(@Nullable Input<List<String>> eq) {
+        public Builder eq(@Nullable Output<List<String>> eq) {
             this.eq = eq;
             return this;
         }
 
         public Builder eq(@Nullable List<String> eq) {
-            this.eq = Input.ofNullable(eq);
+            this.eq = Output.ofNullable(eq);
             return this;
         }
 
-        public Builder exists(@Nullable Input<Boolean> exists) {
+        public Builder exists(@Nullable Output<Boolean> exists) {
             this.exists = exists;
             return this;
         }
 
         public Builder exists(@Nullable Boolean exists) {
-            this.exists = Input.ofNullable(exists);
+            this.exists = Output.ofNullable(exists);
             return this;
         }
 
-        public Builder neq(@Nullable Input<List<String>> neq) {
+        public Builder neq(@Nullable Output<List<String>> neq) {
             this.neq = neq;
             return this;
         }
 
         public Builder neq(@Nullable List<String> neq) {
-            this.neq = Input.ofNullable(neq);
+            this.neq = Output.ofNullable(neq);
             return this;
         }
 
-        public Builder property(Input<String> property) {
+        public Builder property(Output<String> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
         public Builder property(String property) {
-            this.property = Input.of(Objects.requireNonNull(property));
+            this.property = Output.of(Objects.requireNonNull(property));
             return this;
         }
         public AnalyzerFilterArgs build() {

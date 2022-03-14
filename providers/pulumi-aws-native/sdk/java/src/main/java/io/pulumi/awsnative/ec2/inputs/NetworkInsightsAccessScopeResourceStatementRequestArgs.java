@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     public static final NetworkInsightsAccessScopeResourceStatementRequestArgs Empty = new NetworkInsightsAccessScopeResourceStatementRequestArgs();
 
     @InputImport(name="resourceTypes")
-      private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Output<List<String>> resourceTypes;
 
-    public Input<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
+    public Output<List<String>> getResourceTypes() {
+        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
     }
 
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     public NetworkInsightsAccessScopeResourceStatementRequestArgs(
-        @Nullable Input<List<String>> resourceTypes,
-        @Nullable Input<List<String>> resources) {
+        @Nullable Output<List<String>> resourceTypes,
+        @Nullable Output<List<String>> resources) {
         this.resourceTypes = resourceTypes;
         this.resources = resources;
     }
 
     private NetworkInsightsAccessScopeResourceStatementRequestArgs() {
-        this.resourceTypes = Input.empty();
-        this.resources = Input.empty();
+        this.resourceTypes = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> resourceTypes;
-        private @Nullable Input<List<String>> resources;
+        private @Nullable Output<List<String>> resourceTypes;
+        private @Nullable Output<List<String>> resources;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     	      this.resources = defaults.resources;
         }
 
-        public Builder resourceTypes(@Nullable Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Input.ofNullable(resourceTypes);
+            this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
         public NetworkInsightsAccessScopeResourceStatementRequestArgs build() {

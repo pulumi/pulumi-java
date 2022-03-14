@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.enums.ParameterType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="default")
-      private final @Nullable Input<String> $default;
+      private final @Nullable Output<String> $default;
 
-    public Input<String> get$default() {
-        return this.$default == null ? Input.empty() : this.$default;
+    public Output<String> get$default() {
+        return this.$default == null ? Output.empty() : this.$default;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -58,17 +58,17 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ParameterType>> type;
+      private final Output<Either<String,ParameterType>> type;
 
-    public Input<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> getType() {
         return this.type;
     }
 
     public ParameterDeclarationArgs(
-        @Nullable Input<String> $default,
-        @Nullable Input<String> description,
-        Input<String> name,
-        Input<Either<String,ParameterType>> type) {
+        @Nullable Output<String> $default,
+        @Nullable Output<String> description,
+        Output<String> name,
+        Output<Either<String,ParameterType>> type) {
         this.$default = $default;
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -76,10 +76,10 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     }
 
     private ParameterDeclarationArgs() {
-        this.$default = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.$default = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> $default;
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private Input<Either<String,ParameterType>> type;
+        private @Nullable Output<String> $default;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private Output<Either<String,ParameterType>> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder $default(@Nullable Input<String> $default) {
+        public Builder $default(@Nullable Output<String> $default) {
             this.$default = $default;
             return this;
         }
 
         public Builder $default(@Nullable String $default) {
-            this.$default = Input.ofNullable($default);
+            this.$default = Output.ofNullable($default);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<Either<String,ParameterType>> type) {
+        public Builder type(Output<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ParameterType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ParameterDeclarationArgs build() {

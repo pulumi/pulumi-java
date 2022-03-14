@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGet
      * 
      */
     @InputImport(name="tableReference", required=true)
-      private final Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
+      private final Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
 
-    public Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> getTableReference() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> getTableReference() {
         return this.tableReference;
     }
 
-    public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs(Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference) {
+    public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs(Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference) {
         this.tableReference = Objects.requireNonNull(tableReference, "expected parameter 'tableReference' to be non-null");
     }
 
     private PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs() {
-        this.tableReference = Input.empty();
+        this.tableReference = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGet
     }
 
     public static final class Builder {
-        private Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
+        private Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGet
     	      this.tableReference = defaults.tableReference;
         }
 
-        public Builder tableReference(Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference) {
+        public Builder tableReference(Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference) {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }
 
         public Builder tableReference(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs tableReference) {
-            this.tableReference = Input.of(Objects.requireNonNull(tableReference));
+            this.tableReference = Output.of(Objects.requireNonNull(tableReference));
             return this;
         }
         public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs build() {

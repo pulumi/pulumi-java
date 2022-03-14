@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowDestinationConnectorPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectorProfileName")
-      private final @Nullable Input<String> connectorProfileName;
+      private final @Nullable Output<String> connectorProfileName;
 
-    public Input<String> getConnectorProfileName() {
-        return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
+    public Output<String> getConnectorProfileName() {
+        return this.connectorProfileName == null ? Output.empty() : this.connectorProfileName;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectorType", required=true)
-      private final Input<FlowConnectorType> connectorType;
+      private final Output<FlowConnectorType> connectorType;
 
-    public Input<FlowConnectorType> getConnectorType() {
+    public Output<FlowConnectorType> getConnectorType() {
         return this.connectorType;
     }
 
@@ -47,25 +47,25 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destinationConnectorProperties", required=true)
-      private final Input<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
+      private final Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
 
-    public Input<FlowDestinationConnectorPropertiesArgs> getDestinationConnectorProperties() {
+    public Output<FlowDestinationConnectorPropertiesArgs> getDestinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
 
     public FlowDestinationFlowConfigArgs(
-        @Nullable Input<String> connectorProfileName,
-        Input<FlowConnectorType> connectorType,
-        Input<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
+        @Nullable Output<String> connectorProfileName,
+        Output<FlowConnectorType> connectorType,
+        Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
         this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties, "expected parameter 'destinationConnectorProperties' to be non-null");
     }
 
     private FlowDestinationFlowConfigArgs() {
-        this.connectorProfileName = Input.empty();
-        this.connectorType = Input.empty();
-        this.destinationConnectorProperties = Input.empty();
+        this.connectorProfileName = Output.empty();
+        this.connectorType = Output.empty();
+        this.destinationConnectorProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectorProfileName;
-        private Input<FlowConnectorType> connectorType;
-        private Input<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
+        private @Nullable Output<String> connectorProfileName;
+        private Output<FlowConnectorType> connectorType;
+        private Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
     	      this.destinationConnectorProperties = defaults.destinationConnectorProperties;
         }
 
-        public Builder connectorProfileName(@Nullable Input<String> connectorProfileName) {
+        public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = Input.ofNullable(connectorProfileName);
+            this.connectorProfileName = Output.ofNullable(connectorProfileName);
             return this;
         }
 
-        public Builder connectorType(Input<FlowConnectorType> connectorType) {
+        public Builder connectorType(Output<FlowConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
         public Builder connectorType(FlowConnectorType connectorType) {
-            this.connectorType = Input.of(Objects.requireNonNull(connectorType));
+            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder destinationConnectorProperties(Input<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
+        public Builder destinationConnectorProperties(Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }
 
         public Builder destinationConnectorProperties(FlowDestinationConnectorPropertiesArgs destinationConnectorProperties) {
-            this.destinationConnectorProperties = Input.of(Objects.requireNonNull(destinationConnectorProperties));
+            this.destinationConnectorProperties = Output.of(Objects.requireNonNull(destinationConnectorProperties));
             return this;
         }
         public FlowDestinationFlowConfigArgs build() {

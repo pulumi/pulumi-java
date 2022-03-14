@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,11 +23,11 @@ public final class ProjectSecondarySourceAuthArgs extends io.pulumi.resources.Re
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @InputImport(name="resource")
-      private final @Nullable Input<String> resource;
+      private final @Nullable Output<String> resource;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Input<String> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<String> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     /**
@@ -39,23 +39,23 @@ public final class ProjectSecondarySourceAuthArgs extends io.pulumi.resources.Re
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ProjectSecondarySourceAuthArgs(
-        @Nullable Input<String> resource,
-        Input<String> type) {
+        @Nullable Output<String> resource,
+        Output<String> type) {
         this.resource = resource;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ProjectSecondarySourceAuthArgs() {
-        this.resource = Input.empty();
-        this.type = Input.empty();
+        this.resource = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class ProjectSecondarySourceAuthArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resource;
-        private Input<String> type;
+        private @Nullable Output<String> resource;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class ProjectSecondarySourceAuthArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder resource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ProjectSecondarySourceAuthArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public AppImageConfigKernelGatewayImageConfigKernelSpecArgs(
-        @Nullable Input<String> displayName,
-        Input<String> name) {
+        @Nullable Output<String> displayName,
+        Output<String> name) {
         this.displayName = displayName;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private AppImageConfigKernelGatewayImageConfigKernelSpecArgs() {
-        this.displayName = Input.empty();
-        this.name = Input.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private Input<String> name;
+        private @Nullable Output<String> displayName;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
     	      this.name = defaults.name;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public AppImageConfigKernelGatewayImageConfigKernelSpecArgs build() {

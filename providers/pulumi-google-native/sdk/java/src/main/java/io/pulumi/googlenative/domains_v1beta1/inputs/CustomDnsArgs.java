@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1beta1.inputs.DsRecordArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsRecords")
-      private final @Nullable Input<List<DsRecordArgs>> dsRecords;
+      private final @Nullable Output<List<DsRecordArgs>> dsRecords;
 
-    public Input<List<DsRecordArgs>> getDsRecords() {
-        return this.dsRecords == null ? Input.empty() : this.dsRecords;
+    public Output<List<DsRecordArgs>> getDsRecords() {
+        return this.dsRecords == null ? Output.empty() : this.dsRecords;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameServers", required=true)
-      private final Input<List<String>> nameServers;
+      private final Output<List<String>> nameServers;
 
-    public Input<List<String>> getNameServers() {
+    public Output<List<String>> getNameServers() {
         return this.nameServers;
     }
 
     public CustomDnsArgs(
-        @Nullable Input<List<DsRecordArgs>> dsRecords,
-        Input<List<String>> nameServers) {
+        @Nullable Output<List<DsRecordArgs>> dsRecords,
+        Output<List<String>> nameServers) {
         this.dsRecords = dsRecords;
         this.nameServers = Objects.requireNonNull(nameServers, "expected parameter 'nameServers' to be non-null");
     }
 
     private CustomDnsArgs() {
-        this.dsRecords = Input.empty();
-        this.nameServers = Input.empty();
+        this.dsRecords = Output.empty();
+        this.nameServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DsRecordArgs>> dsRecords;
-        private Input<List<String>> nameServers;
+        private @Nullable Output<List<DsRecordArgs>> dsRecords;
+        private Output<List<String>> nameServers;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nameServers = defaults.nameServers;
         }
 
-        public Builder dsRecords(@Nullable Input<List<DsRecordArgs>> dsRecords) {
+        public Builder dsRecords(@Nullable Output<List<DsRecordArgs>> dsRecords) {
             this.dsRecords = dsRecords;
             return this;
         }
 
         public Builder dsRecords(@Nullable List<DsRecordArgs> dsRecords) {
-            this.dsRecords = Input.ofNullable(dsRecords);
+            this.dsRecords = Output.ofNullable(dsRecords);
             return this;
         }
 
-        public Builder nameServers(Input<List<String>> nameServers) {
+        public Builder nameServers(Output<List<String>> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
         public Builder nameServers(List<String> nameServers) {
-            this.nameServers = Input.of(Objects.requireNonNull(nameServers));
+            this.nameServers = Output.of(Objects.requireNonNull(nameServers));
             return this;
         }
         public CustomDnsArgs build() {

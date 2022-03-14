@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readinessCheckName")
-      private final @Nullable Input<String> readinessCheckName;
+      private final @Nullable Output<String> readinessCheckName;
 
-    public Input<String> getReadinessCheckName() {
-        return this.readinessCheckName == null ? Input.empty() : this.readinessCheckName;
+    public Output<String> getReadinessCheckName() {
+        return this.readinessCheckName == null ? Output.empty() : this.readinessCheckName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceSetName")
-      private final @Nullable Input<String> resourceSetName;
+      private final @Nullable Output<String> resourceSetName;
 
-    public Input<String> getResourceSetName() {
-        return this.resourceSetName == null ? Input.empty() : this.resourceSetName;
+    public Output<String> getResourceSetName() {
+        return this.resourceSetName == null ? Output.empty() : this.resourceSetName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ReadinessCheckState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> readinessCheckName,
-        @Nullable Input<String> resourceSetName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> readinessCheckName,
+        @Nullable Output<String> resourceSetName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.readinessCheckName = readinessCheckName;
         this.resourceSetName = resourceSetName;
@@ -84,11 +84,11 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ReadinessCheckState() {
-        this.arn = Input.empty();
-        this.readinessCheckName = Input.empty();
-        this.resourceSetName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.readinessCheckName = Output.empty();
+        this.resourceSetName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> readinessCheckName;
-        private @Nullable Input<String> resourceSetName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> readinessCheckName;
+        private @Nullable Output<String> resourceSetName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder readinessCheckName(@Nullable Input<String> readinessCheckName) {
+        public Builder readinessCheckName(@Nullable Output<String> readinessCheckName) {
             this.readinessCheckName = readinessCheckName;
             return this;
         }
 
         public Builder readinessCheckName(@Nullable String readinessCheckName) {
-            this.readinessCheckName = Input.ofNullable(readinessCheckName);
+            this.readinessCheckName = Output.ofNullable(readinessCheckName);
             return this;
         }
 
-        public Builder resourceSetName(@Nullable Input<String> resourceSetName) {
+        public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
             this.resourceSetName = resourceSetName;
             return this;
         }
 
         public Builder resourceSetName(@Nullable String resourceSetName) {
-            this.resourceSetName = Input.ofNullable(resourceSetName);
+            this.resourceSetName = Output.ofNullable(resourceSetName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ReadinessCheckState build() {

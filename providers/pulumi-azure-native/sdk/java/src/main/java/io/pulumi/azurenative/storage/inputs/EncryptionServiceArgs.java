@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.enums.KeyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyType")
-      private final @Nullable Input<Either<String,KeyType>> keyType;
+      private final @Nullable Output<Either<String,KeyType>> keyType;
 
-    public Input<Either<String,KeyType>> getKeyType() {
-        return this.keyType == null ? Input.empty() : this.keyType;
+    public Output<Either<String,KeyType>> getKeyType() {
+        return this.keyType == null ? Output.empty() : this.keyType;
     }
 
     public EncryptionServiceArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Either<String,KeyType>> keyType) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Either<String,KeyType>> keyType) {
         this.enabled = enabled;
         this.keyType = keyType;
     }
 
     private EncryptionServiceArgs() {
-        this.enabled = Input.empty();
-        this.keyType = Input.empty();
+        this.enabled = Output.empty();
+        this.keyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Either<String,KeyType>> keyType;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Either<String,KeyType>> keyType;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder keyType(@Nullable Input<Either<String,KeyType>> keyType) {
+        public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
             this.keyType = keyType;
             return this;
         }
 
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = Input.ofNullable(keyType);
+            this.keyType = Output.ofNullable(keyType);
             return this;
         }
         public EncryptionServiceArgs build() {

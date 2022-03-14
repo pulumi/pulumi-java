@@ -6,7 +6,7 @@ package io.pulumi.azurenative.peering.inputs;
 import io.pulumi.azurenative.peering.enums.SessionAddressProvider;
 import io.pulumi.azurenative.peering.inputs.BgpSessionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidthInMbps")
-      private final @Nullable Input<Integer> bandwidthInMbps;
+      private final @Nullable Output<Integer> bandwidthInMbps;
 
-    public Input<Integer> getBandwidthInMbps() {
-        return this.bandwidthInMbps == null ? Input.empty() : this.bandwidthInMbps;
+    public Output<Integer> getBandwidthInMbps() {
+        return this.bandwidthInMbps == null ? Output.empty() : this.bandwidthInMbps;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bgpSession")
-      private final @Nullable Input<BgpSessionArgs> bgpSession;
+      private final @Nullable Output<BgpSessionArgs> bgpSession;
 
-    public Input<BgpSessionArgs> getBgpSession() {
-        return this.bgpSession == null ? Input.empty() : this.bgpSession;
+    public Output<BgpSessionArgs> getBgpSession() {
+        return this.bgpSession == null ? Output.empty() : this.bgpSession;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionIdentifier")
-      private final @Nullable Input<String> connectionIdentifier;
+      private final @Nullable Output<String> connectionIdentifier;
 
-    public Input<String> getConnectionIdentifier() {
-        return this.connectionIdentifier == null ? Input.empty() : this.connectionIdentifier;
+    public Output<String> getConnectionIdentifier() {
+        return this.connectionIdentifier == null ? Output.empty() : this.connectionIdentifier;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="peeringDBFacilityId")
-      private final @Nullable Input<Integer> peeringDBFacilityId;
+      private final @Nullable Output<Integer> peeringDBFacilityId;
 
-    public Input<Integer> getPeeringDBFacilityId() {
-        return this.peeringDBFacilityId == null ? Input.empty() : this.peeringDBFacilityId;
+    public Output<Integer> getPeeringDBFacilityId() {
+        return this.peeringDBFacilityId == null ? Output.empty() : this.peeringDBFacilityId;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionAddressProvider")
-      private final @Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider;
+      private final @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
 
-    public Input<Either<String,SessionAddressProvider>> getSessionAddressProvider() {
-        return this.sessionAddressProvider == null ? Input.empty() : this.sessionAddressProvider;
+    public Output<Either<String,SessionAddressProvider>> getSessionAddressProvider() {
+        return this.sessionAddressProvider == null ? Output.empty() : this.sessionAddressProvider;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useForPeeringService")
-      private final @Nullable Input<Boolean> useForPeeringService;
+      private final @Nullable Output<Boolean> useForPeeringService;
 
-    public Input<Boolean> getUseForPeeringService() {
-        return this.useForPeeringService == null ? Input.empty() : this.useForPeeringService;
+    public Output<Boolean> getUseForPeeringService() {
+        return this.useForPeeringService == null ? Output.empty() : this.useForPeeringService;
     }
 
     public DirectConnectionArgs(
-        @Nullable Input<Integer> bandwidthInMbps,
-        @Nullable Input<BgpSessionArgs> bgpSession,
-        @Nullable Input<String> connectionIdentifier,
-        @Nullable Input<Integer> peeringDBFacilityId,
-        @Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider,
-        @Nullable Input<Boolean> useForPeeringService) {
+        @Nullable Output<Integer> bandwidthInMbps,
+        @Nullable Output<BgpSessionArgs> bgpSession,
+        @Nullable Output<String> connectionIdentifier,
+        @Nullable Output<Integer> peeringDBFacilityId,
+        @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider,
+        @Nullable Output<Boolean> useForPeeringService) {
         this.bandwidthInMbps = bandwidthInMbps;
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;
@@ -105,12 +105,12 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DirectConnectionArgs() {
-        this.bandwidthInMbps = Input.empty();
-        this.bgpSession = Input.empty();
-        this.connectionIdentifier = Input.empty();
-        this.peeringDBFacilityId = Input.empty();
-        this.sessionAddressProvider = Input.empty();
-        this.useForPeeringService = Input.empty();
+        this.bandwidthInMbps = Output.empty();
+        this.bgpSession = Output.empty();
+        this.connectionIdentifier = Output.empty();
+        this.peeringDBFacilityId = Output.empty();
+        this.sessionAddressProvider = Output.empty();
+        this.useForPeeringService = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bandwidthInMbps;
-        private @Nullable Input<BgpSessionArgs> bgpSession;
-        private @Nullable Input<String> connectionIdentifier;
-        private @Nullable Input<Integer> peeringDBFacilityId;
-        private @Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider;
-        private @Nullable Input<Boolean> useForPeeringService;
+        private @Nullable Output<Integer> bandwidthInMbps;
+        private @Nullable Output<BgpSessionArgs> bgpSession;
+        private @Nullable Output<String> connectionIdentifier;
+        private @Nullable Output<Integer> peeringDBFacilityId;
+        private @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
+        private @Nullable Output<Boolean> useForPeeringService;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
     	      this.useForPeeringService = defaults.useForPeeringService;
         }
 
-        public Builder bandwidthInMbps(@Nullable Input<Integer> bandwidthInMbps) {
+        public Builder bandwidthInMbps(@Nullable Output<Integer> bandwidthInMbps) {
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
         public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
-            this.bandwidthInMbps = Input.ofNullable(bandwidthInMbps);
+            this.bandwidthInMbps = Output.ofNullable(bandwidthInMbps);
             return this;
         }
 
-        public Builder bgpSession(@Nullable Input<BgpSessionArgs> bgpSession) {
+        public Builder bgpSession(@Nullable Output<BgpSessionArgs> bgpSession) {
             this.bgpSession = bgpSession;
             return this;
         }
 
         public Builder bgpSession(@Nullable BgpSessionArgs bgpSession) {
-            this.bgpSession = Input.ofNullable(bgpSession);
+            this.bgpSession = Output.ofNullable(bgpSession);
             return this;
         }
 
-        public Builder connectionIdentifier(@Nullable Input<String> connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable Output<String> connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
-            this.connectionIdentifier = Input.ofNullable(connectionIdentifier);
+            this.connectionIdentifier = Output.ofNullable(connectionIdentifier);
             return this;
         }
 
-        public Builder peeringDBFacilityId(@Nullable Input<Integer> peeringDBFacilityId) {
+        public Builder peeringDBFacilityId(@Nullable Output<Integer> peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
 
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
-            this.peeringDBFacilityId = Input.ofNullable(peeringDBFacilityId);
+            this.peeringDBFacilityId = Output.ofNullable(peeringDBFacilityId);
             return this;
         }
 
-        public Builder sessionAddressProvider(@Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider) {
+        public Builder sessionAddressProvider(@Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider) {
             this.sessionAddressProvider = sessionAddressProvider;
             return this;
         }
 
         public Builder sessionAddressProvider(@Nullable Either<String,SessionAddressProvider> sessionAddressProvider) {
-            this.sessionAddressProvider = Input.ofNullable(sessionAddressProvider);
+            this.sessionAddressProvider = Output.ofNullable(sessionAddressProvider);
             return this;
         }
 
-        public Builder useForPeeringService(@Nullable Input<Boolean> useForPeeringService) {
+        public Builder useForPeeringService(@Nullable Output<Boolean> useForPeeringService) {
             this.useForPeeringService = useForPeeringService;
             return this;
         }
 
         public Builder useForPeeringService(@Nullable Boolean useForPeeringService) {
-            this.useForPeeringService = Input.ofNullable(useForPeeringService);
+            this.useForPeeringService = Output.ofNullable(useForPeeringService);
             return this;
         }
         public DirectConnectionArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.devtestlab.inputs.SubnetArgs;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetOverrideArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedSubnets")
-      private final @Nullable Input<List<SubnetArgs>> allowedSubnets;
+      private final @Nullable Output<List<SubnetArgs>> allowedSubnets;
 
-    public Input<List<SubnetArgs>> getAllowedSubnets() {
-        return this.allowedSubnets == null ? Input.empty() : this.allowedSubnets;
+    public Output<List<SubnetArgs>> getAllowedSubnets() {
+        return this.allowedSubnets == null ? Output.empty() : this.allowedSubnets;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalProviderResourceId")
-      private final @Nullable Input<String> externalProviderResourceId;
+      private final @Nullable Output<String> externalProviderResourceId;
 
-    public Input<String> getExternalProviderResourceId() {
-        return this.externalProviderResourceId == null ? Input.empty() : this.externalProviderResourceId;
+    public Output<String> getExternalProviderResourceId() {
+        return this.externalProviderResourceId == null ? Output.empty() : this.externalProviderResourceId;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -67,10 +67,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,10 +100,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetOverrides")
-      private final @Nullable Input<List<SubnetOverrideArgs>> subnetOverrides;
+      private final @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides;
 
-    public Input<List<SubnetOverrideArgs>> getSubnetOverrides() {
-        return this.subnetOverrides == null ? Input.empty() : this.subnetOverrides;
+    public Output<List<SubnetOverrideArgs>> getSubnetOverrides() {
+        return this.subnetOverrides == null ? Output.empty() : this.subnetOverrides;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public VirtualNetworkArgs(
-        @Nullable Input<List<SubnetArgs>> allowedSubnets,
-        @Nullable Input<String> description,
-        @Nullable Input<String> externalProviderResourceId,
-        Input<String> labName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<SubnetOverrideArgs>> subnetOverrides,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<SubnetArgs>> allowedSubnets,
+        @Nullable Output<String> description,
+        @Nullable Output<String> externalProviderResourceId,
+        Output<String> labName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides,
+        @Nullable Output<Map<String,String>> tags) {
         this.allowedSubnets = allowedSubnets;
         this.description = description;
         this.externalProviderResourceId = externalProviderResourceId;
@@ -139,15 +139,15 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualNetworkArgs() {
-        this.allowedSubnets = Input.empty();
-        this.description = Input.empty();
-        this.externalProviderResourceId = Input.empty();
-        this.labName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subnetOverrides = Input.empty();
-        this.tags = Input.empty();
+        this.allowedSubnets = Output.empty();
+        this.description = Output.empty();
+        this.externalProviderResourceId = Output.empty();
+        this.labName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subnetOverrides = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SubnetArgs>> allowedSubnets;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> externalProviderResourceId;
-        private Input<String> labName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<SubnetOverrideArgs>> subnetOverrides;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<SubnetArgs>> allowedSubnets;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> externalProviderResourceId;
+        private Output<String> labName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder allowedSubnets(@Nullable Input<List<SubnetArgs>> allowedSubnets) {
+        public Builder allowedSubnets(@Nullable Output<List<SubnetArgs>> allowedSubnets) {
             this.allowedSubnets = allowedSubnets;
             return this;
         }
 
         public Builder allowedSubnets(@Nullable List<SubnetArgs> allowedSubnets) {
-            this.allowedSubnets = Input.ofNullable(allowedSubnets);
+            this.allowedSubnets = Output.ofNullable(allowedSubnets);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder externalProviderResourceId(@Nullable Input<String> externalProviderResourceId) {
+        public Builder externalProviderResourceId(@Nullable Output<String> externalProviderResourceId) {
             this.externalProviderResourceId = externalProviderResourceId;
             return this;
         }
 
         public Builder externalProviderResourceId(@Nullable String externalProviderResourceId) {
-            this.externalProviderResourceId = Input.ofNullable(externalProviderResourceId);
+            this.externalProviderResourceId = Output.ofNullable(externalProviderResourceId);
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subnetOverrides(@Nullable Input<List<SubnetOverrideArgs>> subnetOverrides) {
+        public Builder subnetOverrides(@Nullable Output<List<SubnetOverrideArgs>> subnetOverrides) {
             this.subnetOverrides = subnetOverrides;
             return this;
         }
 
         public Builder subnetOverrides(@Nullable List<SubnetOverrideArgs> subnetOverrides) {
-            this.subnetOverrides = Input.ofNullable(subnetOverrides);
+            this.subnetOverrides = Output.ofNullable(subnetOverrides);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public VirtualNetworkArgs build() {

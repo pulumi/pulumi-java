@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -30,9 +30,9 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
@@ -44,25 +44,25 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="restorePolicy")
-      private final @Nullable Input<String> restorePolicy;
+      private final @Nullable Output<String> restorePolicy;
 
-    public Input<String> getRestorePolicy() {
-        return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
+    public Output<String> getRestorePolicy() {
+        return this.restorePolicy == null ? Output.empty() : this.restorePolicy;
     }
 
     public DefaultServiceAccountsArgs(
-        Input<String> action,
-        Input<String> project,
-        @Nullable Input<String> restorePolicy) {
+        Output<String> action,
+        Output<String> project,
+        @Nullable Output<String> restorePolicy) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
         this.restorePolicy = restorePolicy;
     }
 
     private DefaultServiceAccountsArgs() {
-        this.action = Input.empty();
-        this.project = Input.empty();
-        this.restorePolicy = Input.empty();
+        this.action = Output.empty();
+        this.project = Output.empty();
+        this.restorePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private Input<String> project;
-        private @Nullable Input<String> restorePolicy;
+        private Output<String> action;
+        private Output<String> project;
+        private @Nullable Output<String> restorePolicy;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
     	      this.restorePolicy = defaults.restorePolicy;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder restorePolicy(@Nullable Input<String> restorePolicy) {
+        public Builder restorePolicy(@Nullable Output<String> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
         public Builder restorePolicy(@Nullable String restorePolicy) {
-            this.restorePolicy = Input.ofNullable(restorePolicy);
+            this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
         public DefaultServiceAccountsArgs build() {

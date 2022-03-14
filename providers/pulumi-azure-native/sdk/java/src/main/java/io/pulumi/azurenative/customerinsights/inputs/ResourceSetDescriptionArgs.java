@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="elements")
-      private final @Nullable Input<List<String>> elements;
+      private final @Nullable Output<List<String>> elements;
 
-    public Input<List<String>> getElements() {
-        return this.elements == null ? Input.empty() : this.elements;
+    public Output<List<String>> getElements() {
+        return this.elements == null ? Output.empty() : this.elements;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="exceptions")
-      private final @Nullable Input<List<String>> exceptions;
+      private final @Nullable Output<List<String>> exceptions;
 
-    public Input<List<String>> getExceptions() {
-        return this.exceptions == null ? Input.empty() : this.exceptions;
+    public Output<List<String>> getExceptions() {
+        return this.exceptions == null ? Output.empty() : this.exceptions;
     }
 
     public ResourceSetDescriptionArgs(
-        @Nullable Input<List<String>> elements,
-        @Nullable Input<List<String>> exceptions) {
+        @Nullable Output<List<String>> elements,
+        @Nullable Output<List<String>> exceptions) {
         this.elements = elements;
         this.exceptions = exceptions;
     }
 
     private ResourceSetDescriptionArgs() {
-        this.elements = Input.empty();
-        this.exceptions = Input.empty();
+        this.elements = Output.empty();
+        this.exceptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> elements;
-        private @Nullable Input<List<String>> exceptions;
+        private @Nullable Output<List<String>> elements;
+        private @Nullable Output<List<String>> exceptions;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     	      this.exceptions = defaults.exceptions;
         }
 
-        public Builder elements(@Nullable Input<List<String>> elements) {
+        public Builder elements(@Nullable Output<List<String>> elements) {
             this.elements = elements;
             return this;
         }
 
         public Builder elements(@Nullable List<String> elements) {
-            this.elements = Input.ofNullable(elements);
+            this.elements = Output.ofNullable(elements);
             return this;
         }
 
-        public Builder exceptions(@Nullable Input<List<String>> exceptions) {
+        public Builder exceptions(@Nullable Output<List<String>> exceptions) {
             this.exceptions = exceptions;
             return this;
         }
 
         public Builder exceptions(@Nullable List<String> exceptions) {
-            this.exceptions = Input.ofNullable(exceptions);
+            this.exceptions = Output.ofNullable(exceptions);
             return this;
         }
         public ResourceSetDescriptionArgs build() {

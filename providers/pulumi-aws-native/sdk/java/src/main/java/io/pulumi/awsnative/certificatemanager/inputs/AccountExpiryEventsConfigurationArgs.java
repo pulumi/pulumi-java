@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.certificatemanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     public static final AccountExpiryEventsConfigurationArgs Empty = new AccountExpiryEventsConfigurationArgs();
 
     @InputImport(name="daysBeforeExpiry")
-      private final @Nullable Input<Integer> daysBeforeExpiry;
+      private final @Nullable Output<Integer> daysBeforeExpiry;
 
-    public Input<Integer> getDaysBeforeExpiry() {
-        return this.daysBeforeExpiry == null ? Input.empty() : this.daysBeforeExpiry;
+    public Output<Integer> getDaysBeforeExpiry() {
+        return this.daysBeforeExpiry == null ? Output.empty() : this.daysBeforeExpiry;
     }
 
-    public AccountExpiryEventsConfigurationArgs(@Nullable Input<Integer> daysBeforeExpiry) {
+    public AccountExpiryEventsConfigurationArgs(@Nullable Output<Integer> daysBeforeExpiry) {
         this.daysBeforeExpiry = daysBeforeExpiry;
     }
 
     private AccountExpiryEventsConfigurationArgs() {
-        this.daysBeforeExpiry = Input.empty();
+        this.daysBeforeExpiry = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> daysBeforeExpiry;
+        private @Nullable Output<Integer> daysBeforeExpiry;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     	      this.daysBeforeExpiry = defaults.daysBeforeExpiry;
         }
 
-        public Builder daysBeforeExpiry(@Nullable Input<Integer> daysBeforeExpiry) {
+        public Builder daysBeforeExpiry(@Nullable Output<Integer> daysBeforeExpiry) {
             this.daysBeforeExpiry = daysBeforeExpiry;
             return this;
         }
 
         public Builder daysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
-            this.daysBeforeExpiry = Input.ofNullable(daysBeforeExpiry);
+            this.daysBeforeExpiry = Output.ofNullable(daysBeforeExpiry);
             return this;
         }
         public AccountExpiryEventsConfigurationArgs build() {

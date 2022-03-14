@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.transfer;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body", required=true)
-      private final Input<String> body;
+      private final Output<String> body;
 
-    public Input<String> getBody() {
+    public Output<String> getBody() {
         return this.body;
     }
 
@@ -29,9 +29,9 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-      private final Input<String> serverId;
+      private final Output<String> serverId;
 
-    public Input<String> getServerId() {
+    public Output<String> getServerId() {
         return this.serverId;
     }
 
@@ -40,25 +40,25 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public SshKeyArgs(
-        Input<String> body,
-        Input<String> serverId,
-        Input<String> userName) {
+        Output<String> body,
+        Output<String> serverId,
+        Output<String> userName) {
         this.body = Objects.requireNonNull(body, "expected parameter 'body' to be non-null");
         this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
         this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
     }
 
     private SshKeyArgs() {
-        this.body = Input.empty();
-        this.serverId = Input.empty();
-        this.userName = Input.empty();
+        this.body = Output.empty();
+        this.serverId = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> body;
-        private Input<String> serverId;
-        private Input<String> userName;
+        private Output<String> body;
+        private Output<String> serverId;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder body(Input<String> body) {
+        public Builder body(Output<String> body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
         public Builder body(String body) {
-            this.body = Input.of(Objects.requireNonNull(body));
+            this.body = Output.of(Objects.requireNonNull(body));
             return this;
         }
 
-        public Builder serverId(Input<String> serverId) {
+        public Builder serverId(Output<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
         public Builder serverId(String serverId) {
-            this.serverId = Input.of(Objects.requireNonNull(serverId));
+            this.serverId = Output.of(Objects.requireNonNull(serverId));
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public SshKeyArgs build() {

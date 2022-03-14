@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.IamAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auditLogConfigs")
-      private final @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+      private final @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
-    public Input<List<IamAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
+    public Output<List<IamAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
+        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="orgId")
-      private final @Nullable Input<String> orgId;
+      private final @Nullable Output<String> orgId;
 
-    public Input<String> getOrgId() {
-        return this.orgId == null ? Input.empty() : this.orgId;
+    public Output<String> getOrgId() {
+        return this.orgId == null ? Output.empty() : this.orgId;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public IamAuditConfigState(
-        @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> orgId,
-        @Nullable Input<String> service) {
+        @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> orgId,
+        @Nullable Output<String> service) {
         this.auditLogConfigs = auditLogConfigs;
         this.etag = etag;
         this.orgId = orgId;
@@ -72,10 +72,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     private IamAuditConfigState() {
-        this.auditLogConfigs = Input.empty();
-        this.etag = Input.empty();
-        this.orgId = Input.empty();
-        this.service = Input.empty();
+        this.auditLogConfigs = Output.empty();
+        this.etag = Output.empty();
+        this.orgId = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> orgId;
-        private @Nullable Input<String> service;
+        private @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> orgId;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder auditLogConfigs(@Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
         public Builder auditLogConfigs(@Nullable List<IamAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
-            this.auditLogConfigs = Input.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder orgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Input.ofNullable(orgId);
+            this.orgId = Output.ofNullable(orgId);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public IamAuditConfigState build() {

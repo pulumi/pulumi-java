@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,9 +33,9 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<String> parameters;
+      private final Output<String> parameters;
 
-    public Input<String> getParameters() {
+    public Output<String> getParameters() {
         return this.parameters;
     }
 
@@ -44,25 +44,25 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public ScriptActionArgs(
-        Input<String> name,
-        Input<String> parameters,
-        Input<String> uri) {
+        Output<String> name,
+        Output<String> parameters,
+        Output<String> uri) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private ScriptActionArgs() {
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.uri = Input.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> parameters;
-        private Input<String> uri;
+        private Output<String> name;
+        private Output<String> parameters;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(Input<String> parameters) {
+        public Builder parameters(Output<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(String parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public ScriptActionArgs build() {

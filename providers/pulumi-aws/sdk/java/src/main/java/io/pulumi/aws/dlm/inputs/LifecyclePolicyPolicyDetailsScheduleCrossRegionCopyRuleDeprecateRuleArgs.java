@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dlm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
      * 
      */
     @InputImport(name="interval", required=true)
-      private final Input<Integer> interval;
+      private final Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
+    public Output<Integer> getInterval() {
         return this.interval;
     }
 
@@ -30,22 +30,22 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
      * 
      */
     @InputImport(name="intervalUnit", required=true)
-      private final Input<String> intervalUnit;
+      private final Output<String> intervalUnit;
 
-    public Input<String> getIntervalUnit() {
+    public Output<String> getIntervalUnit() {
         return this.intervalUnit;
     }
 
     public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs(
-        Input<Integer> interval,
-        Input<String> intervalUnit) {
+        Output<Integer> interval,
+        Output<String> intervalUnit) {
         this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
         this.intervalUnit = Objects.requireNonNull(intervalUnit, "expected parameter 'intervalUnit' to be non-null");
     }
 
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs() {
-        this.interval = Input.empty();
-        this.intervalUnit = Input.empty();
+        this.interval = Output.empty();
+        this.intervalUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     }
 
     public static final class Builder {
-        private Input<Integer> interval;
-        private Input<String> intervalUnit;
+        private Output<Integer> interval;
+        private Output<String> intervalUnit;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     	      this.intervalUnit = defaults.intervalUnit;
         }
 
-        public Builder interval(Input<Integer> interval) {
+        public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
         public Builder interval(Integer interval) {
-            this.interval = Input.of(Objects.requireNonNull(interval));
+            this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder intervalUnit(Input<String> intervalUnit) {
+        public Builder intervalUnit(Output<String> intervalUnit) {
             this.intervalUnit = Objects.requireNonNull(intervalUnit);
             return this;
         }
 
         public Builder intervalUnit(String intervalUnit) {
-            this.intervalUnit = Input.of(Objects.requireNonNull(intervalUnit));
+            this.intervalUnit = Output.of(Objects.requireNonNull(intervalUnit));
             return this;
         }
         public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs build() {

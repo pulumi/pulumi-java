@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ScramSecretAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterArn", required=true)
-      private final Input<String> clusterArn;
+      private final Output<String> clusterArn;
 
-    public Input<String> getClusterArn() {
+    public Output<String> getClusterArn() {
         return this.clusterArn;
     }
 
@@ -30,22 +30,22 @@ public final class ScramSecretAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="secretArnLists", required=true)
-      private final Input<List<String>> secretArnLists;
+      private final Output<List<String>> secretArnLists;
 
-    public Input<List<String>> getSecretArnLists() {
+    public Output<List<String>> getSecretArnLists() {
         return this.secretArnLists;
     }
 
     public ScramSecretAssociationArgs(
-        Input<String> clusterArn,
-        Input<List<String>> secretArnLists) {
+        Output<String> clusterArn,
+        Output<List<String>> secretArnLists) {
         this.clusterArn = Objects.requireNonNull(clusterArn, "expected parameter 'clusterArn' to be non-null");
         this.secretArnLists = Objects.requireNonNull(secretArnLists, "expected parameter 'secretArnLists' to be non-null");
     }
 
     private ScramSecretAssociationArgs() {
-        this.clusterArn = Input.empty();
-        this.secretArnLists = Input.empty();
+        this.clusterArn = Output.empty();
+        this.secretArnLists = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ScramSecretAssociationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> clusterArn;
-        private Input<List<String>> secretArnLists;
+        private Output<String> clusterArn;
+        private Output<List<String>> secretArnLists;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ScramSecretAssociationArgs extends io.pulumi.resources.Resour
     	      this.secretArnLists = defaults.secretArnLists;
         }
 
-        public Builder clusterArn(Input<String> clusterArn) {
+        public Builder clusterArn(Output<String> clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
 
         public Builder clusterArn(String clusterArn) {
-            this.clusterArn = Input.of(Objects.requireNonNull(clusterArn));
+            this.clusterArn = Output.of(Objects.requireNonNull(clusterArn));
             return this;
         }
 
-        public Builder secretArnLists(Input<List<String>> secretArnLists) {
+        public Builder secretArnLists(Output<List<String>> secretArnLists) {
             this.secretArnLists = Objects.requireNonNull(secretArnLists);
             return this;
         }
 
         public Builder secretArnLists(List<String> secretArnLists) {
-            this.secretArnLists = Input.of(Objects.requireNonNull(secretArnLists));
+            this.secretArnLists = Output.of(Objects.requireNonNull(secretArnLists));
             return this;
         }
         public ScramSecretAssociationArgs build() {

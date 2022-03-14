@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigArgs;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceMaintenanceWindowArgs;
@@ -24,10 +24,10 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hiveMetastoreConfig")
-      private final @Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
+      private final @Nullable Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
 
-    public Input<MetastoreServiceHiveMetastoreConfigArgs> getHiveMetastoreConfig() {
-        return this.hiveMetastoreConfig == null ? Input.empty() : this.hiveMetastoreConfig;
+    public Output<MetastoreServiceHiveMetastoreConfigArgs> getHiveMetastoreConfig() {
+        return this.hiveMetastoreConfig == null ? Output.empty() : this.hiveMetastoreConfig;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
 
-    public Input<MetastoreServiceMaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<MetastoreServiceMaintenanceWindowArgs> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -108,9 +108,9 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
@@ -120,22 +120,22 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public MetastoreServiceArgs(
-        @Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Input<String> network,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project,
-        Input<String> serviceId,
-        @Nullable Input<String> tier) {
+        @Nullable Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow,
+        @Nullable Output<String> network,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project,
+        Output<String> serviceId,
+        @Nullable Output<String> tier) {
         this.hiveMetastoreConfig = hiveMetastoreConfig;
         this.labels = labels;
         this.location = location;
@@ -148,15 +148,15 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MetastoreServiceArgs() {
-        this.hiveMetastoreConfig = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.network = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
-        this.serviceId = Input.empty();
-        this.tier = Input.empty();
+        this.hiveMetastoreConfig = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.network = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
+        this.serviceId = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,15 +168,15 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
-        private Input<String> serviceId;
-        private @Nullable Input<String> tier;
+        private @Nullable Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
+        private Output<String> serviceId;
+        private @Nullable Output<String> tier;
 
         public Builder() {
     	      // Empty
@@ -195,93 +195,93 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tier = defaults.tier;
         }
 
-        public Builder hiveMetastoreConfig(@Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig) {
             this.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
 
         public Builder hiveMetastoreConfig(@Nullable MetastoreServiceHiveMetastoreConfigArgs hiveMetastoreConfig) {
-            this.hiveMetastoreConfig = Input.ofNullable(hiveMetastoreConfig);
+            this.hiveMetastoreConfig = Output.ofNullable(hiveMetastoreConfig);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable MetastoreServiceMaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public MetastoreServiceArgs build() {

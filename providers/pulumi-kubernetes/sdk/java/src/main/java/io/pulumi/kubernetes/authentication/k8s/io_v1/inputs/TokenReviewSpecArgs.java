@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="audiences")
-      private final @Nullable Input<List<String>> audiences;
+      private final @Nullable Output<List<String>> audiences;
 
-    public Input<List<String>> getAudiences() {
-        return this.audiences == null ? Input.empty() : this.audiences;
+    public Output<List<String>> getAudiences() {
+        return this.audiences == null ? Output.empty() : this.audiences;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="token")
-      private final @Nullable Input<String> token;
+      private final @Nullable Output<String> token;
 
-    public Input<String> getToken() {
-        return this.token == null ? Input.empty() : this.token;
+    public Output<String> getToken() {
+        return this.token == null ? Output.empty() : this.token;
     }
 
     public TokenReviewSpecArgs(
-        @Nullable Input<List<String>> audiences,
-        @Nullable Input<String> token) {
+        @Nullable Output<List<String>> audiences,
+        @Nullable Output<String> token) {
         this.audiences = audiences;
         this.token = token;
     }
 
     private TokenReviewSpecArgs() {
-        this.audiences = Input.empty();
-        this.token = Input.empty();
+        this.audiences = Output.empty();
+        this.token = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> audiences;
-        private @Nullable Input<String> token;
+        private @Nullable Output<List<String>> audiences;
+        private @Nullable Output<String> token;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     	      this.token = defaults.token;
         }
 
-        public Builder audiences(@Nullable Input<List<String>> audiences) {
+        public Builder audiences(@Nullable Output<List<String>> audiences) {
             this.audiences = audiences;
             return this;
         }
 
         public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Input.ofNullable(audiences);
+            this.audiences = Output.ofNullable(audiences);
             return this;
         }
 
-        public Builder token(@Nullable Input<String> token) {
+        public Builder token(@Nullable Output<String> token) {
             this.token = token;
             return this;
         }
 
         public Builder token(@Nullable String token) {
-            this.token = Input.ofNullable(token);
+            this.token = Output.ofNullable(token);
             return this;
         }
         public TokenReviewSpecArgs build() {

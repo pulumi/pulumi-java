@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -33,30 +33,30 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="tagTemplateId", required=true)
-      private final Input<String> tagTemplateId;
+      private final Output<String> tagTemplateId;
 
-    public Input<String> getTagTemplateId() {
+    public Output<String> getTagTemplateId() {
         return this.tagTemplateId;
     }
 
@@ -65,19 +65,19 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public TagTemplateIamPolicyArgs(
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        Input<String> tagTemplateId,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        Output<String> tagTemplateId,
+        @Nullable Output<Integer> version) {
         this.bindings = bindings;
         this.etag = etag;
         this.location = location;
@@ -87,12 +87,12 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private TagTemplateIamPolicyArgs() {
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.tagTemplateId = Input.empty();
-        this.version = Input.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.tagTemplateId = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,12 +104,12 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private Input<String> tagTemplateId;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private Output<String> tagTemplateId;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -125,63 +125,63 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     	      this.version = defaults.version;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tagTemplateId(Input<String> tagTemplateId) {
+        public Builder tagTemplateId(Output<String> tagTemplateId) {
             this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
             return this;
         }
 
         public Builder tagTemplateId(String tagTemplateId) {
-            this.tagTemplateId = Input.of(Objects.requireNonNull(tagTemplateId));
+            this.tagTemplateId = Output.of(Objects.requireNonNull(tagTemplateId));
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public TagTemplateIamPolicyArgs build() {

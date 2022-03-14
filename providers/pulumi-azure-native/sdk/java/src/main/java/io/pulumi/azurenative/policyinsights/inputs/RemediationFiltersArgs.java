@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
-    public RemediationFiltersArgs(@Nullable Input<List<String>> locations) {
+    public RemediationFiltersArgs(@Nullable Output<List<String>> locations) {
         this.locations = locations;
     }
 
     private RemediationFiltersArgs() {
-        this.locations = Input.empty();
+        this.locations = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> locations;
+        private @Nullable Output<List<String>> locations;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
     	      this.locations = defaults.locations;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
         public RemediationFiltersArgs build() {

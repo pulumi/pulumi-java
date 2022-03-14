@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<String> platform;
+      private final @Nullable Output<String> platform;
 
-    public Input<String> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<String> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<String> resource;
+      private final @Nullable Output<String> resource;
 
-    public Input<String> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<String> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="urlMask")
-      private final @Nullable Input<String> urlMask;
+      private final @Nullable Output<String> urlMask;
 
-    public Input<String> getUrlMask() {
-        return this.urlMask == null ? Input.empty() : this.urlMask;
+    public Output<String> getUrlMask() {
+        return this.urlMask == null ? Output.empty() : this.urlMask;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public NetworkEndpointGroupServerlessDeploymentArgs(
-        @Nullable Input<String> platform,
-        @Nullable Input<String> resource,
-        @Nullable Input<String> urlMask,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> platform,
+        @Nullable Output<String> resource,
+        @Nullable Output<String> urlMask,
+        @Nullable Output<String> version) {
         this.platform = platform;
         this.resource = resource;
         this.urlMask = urlMask;
@@ -74,10 +74,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     }
 
     private NetworkEndpointGroupServerlessDeploymentArgs() {
-        this.platform = Input.empty();
-        this.resource = Input.empty();
-        this.urlMask = Input.empty();
-        this.version = Input.empty();
+        this.platform = Output.empty();
+        this.resource = Output.empty();
+        this.urlMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> platform;
-        private @Nullable Input<String> resource;
-        private @Nullable Input<String> urlMask;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> platform;
+        private @Nullable Output<String> resource;
+        private @Nullable Output<String> urlMask;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     	      this.version = defaults.version;
         }
 
-        public Builder platform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable String platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder resource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
 
-        public Builder urlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
         public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Input.ofNullable(urlMask);
+            this.urlMask = Output.ofNullable(urlMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public NetworkEndpointGroupServerlessDeploymentArgs build() {

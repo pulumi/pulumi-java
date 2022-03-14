@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchName")
-      private final @Nullable Input<String> branchName;
+      private final @Nullable Output<String> branchName;
 
-    public Input<String> getBranchName() {
-        return this.branchName == null ? Input.empty() : this.branchName;
+    public Output<String> getBranchName() {
+        return this.branchName == null ? Output.empty() : this.branchName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitSha")
-      private final @Nullable Input<String> commitSha;
+      private final @Nullable Output<String> commitSha;
 
-    public Input<String> getCommitSha() {
-        return this.commitSha == null ? Input.empty() : this.commitSha;
+    public Output<String> getCommitSha() {
+        return this.commitSha == null ? Output.empty() : this.commitSha;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoName")
-      private final @Nullable Input<String> repoName;
+      private final @Nullable Output<String> repoName;
 
-    public Input<String> getRepoName() {
-        return this.repoName == null ? Input.empty() : this.repoName;
+    public Output<String> getRepoName() {
+        return this.repoName == null ? Output.empty() : this.repoName;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagName")
-      private final @Nullable Input<String> tagName;
+      private final @Nullable Output<String> tagName;
 
-    public Input<String> getTagName() {
-        return this.tagName == null ? Input.empty() : this.tagName;
+    public Output<String> getTagName() {
+        return this.tagName == null ? Output.empty() : this.tagName;
     }
 
     public RepoSourceArgs(
-        @Nullable Input<String> branchName,
-        @Nullable Input<String> commitSha,
-        @Nullable Input<String> project,
-        @Nullable Input<String> repoName,
-        @Nullable Input<String> tagName) {
+        @Nullable Output<String> branchName,
+        @Nullable Output<String> commitSha,
+        @Nullable Output<String> project,
+        @Nullable Output<String> repoName,
+        @Nullable Output<String> tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.project = project;
@@ -87,11 +87,11 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepoSourceArgs() {
-        this.branchName = Input.empty();
-        this.commitSha = Input.empty();
-        this.project = Input.empty();
-        this.repoName = Input.empty();
-        this.tagName = Input.empty();
+        this.branchName = Output.empty();
+        this.commitSha = Output.empty();
+        this.project = Output.empty();
+        this.repoName = Output.empty();
+        this.tagName = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branchName;
-        private @Nullable Input<String> commitSha;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> repoName;
-        private @Nullable Input<String> tagName;
+        private @Nullable Output<String> branchName;
+        private @Nullable Output<String> commitSha;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> repoName;
+        private @Nullable Output<String> tagName;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder branchName(@Nullable Input<String> branchName) {
+        public Builder branchName(@Nullable Output<String> branchName) {
             this.branchName = branchName;
             return this;
         }
 
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = Input.ofNullable(branchName);
+            this.branchName = Output.ofNullable(branchName);
             return this;
         }
 
-        public Builder commitSha(@Nullable Input<String> commitSha) {
+        public Builder commitSha(@Nullable Output<String> commitSha) {
             this.commitSha = commitSha;
             return this;
         }
 
         public Builder commitSha(@Nullable String commitSha) {
-            this.commitSha = Input.ofNullable(commitSha);
+            this.commitSha = Output.ofNullable(commitSha);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder repoName(@Nullable Input<String> repoName) {
+        public Builder repoName(@Nullable Output<String> repoName) {
             this.repoName = repoName;
             return this;
         }
 
         public Builder repoName(@Nullable String repoName) {
-            this.repoName = Input.ofNullable(repoName);
+            this.repoName = Output.ofNullable(repoName);
             return this;
         }
 
-        public Builder tagName(@Nullable Input<String> tagName) {
+        public Builder tagName(@Nullable Output<String> tagName) {
             this.tagName = tagName;
             return this;
         }
 
         public Builder tagName(@Nullable String tagName) {
-            this.tagName = Input.ofNullable(tagName);
+            this.tagName = Output.ofNullable(tagName);
             return this;
         }
         public RepoSourceArgs build() {

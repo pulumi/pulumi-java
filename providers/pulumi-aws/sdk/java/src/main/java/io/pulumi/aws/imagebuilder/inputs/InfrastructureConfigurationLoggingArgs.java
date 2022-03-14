@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingS3LogsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="s3Logs", required=true)
-      private final Input<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
+      private final Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
 
-    public Input<InfrastructureConfigurationLoggingS3LogsArgs> getS3Logs() {
+    public Output<InfrastructureConfigurationLoggingS3LogsArgs> getS3Logs() {
         return this.s3Logs;
     }
 
-    public InfrastructureConfigurationLoggingArgs(Input<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs) {
+    public InfrastructureConfigurationLoggingArgs(Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs) {
         this.s3Logs = Objects.requireNonNull(s3Logs, "expected parameter 's3Logs' to be non-null");
     }
 
     private InfrastructureConfigurationLoggingArgs() {
-        this.s3Logs = Input.empty();
+        this.s3Logs = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
+        private Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder s3Logs(Input<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs) {
+        public Builder s3Logs(Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs) {
             this.s3Logs = Objects.requireNonNull(s3Logs);
             return this;
         }
 
         public Builder s3Logs(InfrastructureConfigurationLoggingS3LogsArgs s3Logs) {
-            this.s3Logs = Input.of(Objects.requireNonNull(s3Logs));
+            this.s3Logs = Output.of(Objects.requireNonNull(s3Logs));
             return this;
         }
         public InfrastructureConfigurationLoggingArgs build() {

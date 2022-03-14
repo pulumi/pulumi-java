@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class ThingGroupPropertiesAttributePayloadArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
-    public ThingGroupPropertiesAttributePayloadArgs(@Nullable Input<Map<String,String>> attributes) {
+    public ThingGroupPropertiesAttributePayloadArgs(@Nullable Output<Map<String,String>> attributes) {
         this.attributes = attributes;
     }
 
     private ThingGroupPropertiesAttributePayloadArgs() {
-        this.attributes = Input.empty();
+        this.attributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ThingGroupPropertiesAttributePayloadArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributes;
+        private @Nullable Output<Map<String,String>> attributes;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ThingGroupPropertiesAttributePayloadArgs extends io.pulumi.re
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
         public ThingGroupPropertiesAttributePayloadArgs build() {

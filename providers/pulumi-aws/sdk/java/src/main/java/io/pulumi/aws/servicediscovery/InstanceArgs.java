@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicediscovery;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,9 +19,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes", required=true)
-      private final Input<Map<String,String>> attributes;
+      private final Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> getAttributes() {
         return this.attributes;
     }
 
@@ -30,9 +30,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -41,25 +41,25 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
     public InstanceArgs(
-        Input<Map<String,String>> attributes,
-        Input<String> instanceId,
-        Input<String> serviceId) {
+        Output<Map<String,String>> attributes,
+        Output<String> instanceId,
+        Output<String> serviceId) {
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
         this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
     }
 
     private InstanceArgs() {
-        this.attributes = Input.empty();
-        this.instanceId = Input.empty();
-        this.serviceId = Input.empty();
+        this.attributes = Output.empty();
+        this.instanceId = Output.empty();
+        this.serviceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> attributes;
-        private Input<String> instanceId;
-        private Input<String> serviceId;
+        private Output<Map<String,String>> attributes;
+        private Output<String> instanceId;
+        private Output<String> serviceId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder attributes(Input<Map<String,String>> attributes) {
+        public Builder attributes(Output<Map<String,String>> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
         public Builder attributes(Map<String,String> attributes) {
-            this.attributes = Input.of(Objects.requireNonNull(attributes));
+            this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
         public InstanceArgs build() {

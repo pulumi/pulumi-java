@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AwsCloudTrailDataConnectorDataTypesLogsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="logs")
-      private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
+      private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
 
-    public Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> getLogs() {
-        return this.logs == null ? Input.empty() : this.logs;
+    public Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> getLogs() {
+        return this.logs == null ? Output.empty() : this.logs;
     }
 
-    public AwsCloudTrailDataConnectorDataTypesArgs(@Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs) {
+    public AwsCloudTrailDataConnectorDataTypesArgs(@Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs) {
         this.logs = logs;
     }
 
     private AwsCloudTrailDataConnectorDataTypesArgs() {
-        this.logs = Input.empty();
+        this.logs = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
+        private @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
     	      this.logs = defaults.logs;
         }
 
-        public Builder logs(@Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs) {
+        public Builder logs(@Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs) {
             this.logs = logs;
             return this;
         }
 
         public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesLogsArgs logs) {
-            this.logs = Input.ofNullable(logs);
+            this.logs = Output.ofNullable(logs);
             return this;
         }
         public AwsCloudTrailDataConnectorDataTypesArgs build() {

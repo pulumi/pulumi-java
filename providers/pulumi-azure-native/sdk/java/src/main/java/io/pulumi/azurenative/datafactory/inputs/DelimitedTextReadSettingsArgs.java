@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="compressionProperties")
-      private final @Nullable Input<Object> compressionProperties;
+      private final @Nullable Output<Object> compressionProperties;
 
-    public Input<Object> getCompressionProperties() {
-        return this.compressionProperties == null ? Input.empty() : this.compressionProperties;
+    public Output<Object> getCompressionProperties() {
+        return this.compressionProperties == null ? Output.empty() : this.compressionProperties;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="skipLineCount")
-      private final @Nullable Input<Object> skipLineCount;
+      private final @Nullable Output<Object> skipLineCount;
 
-    public Input<Object> getSkipLineCount() {
-        return this.skipLineCount == null ? Input.empty() : this.skipLineCount;
+    public Output<Object> getSkipLineCount() {
+        return this.skipLineCount == null ? Output.empty() : this.skipLineCount;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DelimitedTextReadSettingsArgs(
-        @Nullable Input<Object> compressionProperties,
-        @Nullable Input<Object> skipLineCount,
-        Input<String> type) {
+        @Nullable Output<Object> compressionProperties,
+        @Nullable Output<Object> skipLineCount,
+        Output<String> type) {
         this.compressionProperties = compressionProperties;
         this.skipLineCount = skipLineCount;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private DelimitedTextReadSettingsArgs() {
-        this.compressionProperties = Input.empty();
-        this.skipLineCount = Input.empty();
-        this.type = Input.empty();
+        this.compressionProperties = Output.empty();
+        this.skipLineCount = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> compressionProperties;
-        private @Nullable Input<Object> skipLineCount;
-        private Input<String> type;
+        private @Nullable Output<Object> compressionProperties;
+        private @Nullable Output<Object> skipLineCount;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder compressionProperties(@Nullable Input<Object> compressionProperties) {
+        public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Input.ofNullable(compressionProperties);
+            this.compressionProperties = Output.ofNullable(compressionProperties);
             return this;
         }
 
-        public Builder skipLineCount(@Nullable Input<Object> skipLineCount) {
+        public Builder skipLineCount(@Nullable Output<Object> skipLineCount) {
             this.skipLineCount = skipLineCount;
             return this;
         }
 
         public Builder skipLineCount(@Nullable Object skipLineCount) {
-            this.skipLineCount = Input.ofNullable(skipLineCount);
+            this.skipLineCount = Output.ofNullable(skipLineCount);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DelimitedTextReadSettingsArgs build() {

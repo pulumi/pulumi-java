@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -35,9 +35,9 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxCount", required=true)
-      private final Input<Integer> maxCount;
+      private final Output<Integer> maxCount;
 
-    public Input<Integer> getMaxCount() {
+    public Output<Integer> getMaxCount() {
         return this.maxCount;
     }
 
@@ -46,9 +46,9 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minCount", required=true)
-      private final Input<Integer> minCount;
+      private final Output<Integer> minCount;
 
-    public Input<Integer> getMinCount() {
+    public Output<Integer> getMinCount() {
         return this.minCount;
     }
 
@@ -57,17 +57,17 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="scaleIncrement", required=true)
-      private final Input<Integer> scaleIncrement;
+      private final Output<Integer> scaleIncrement;
 
-    public Input<Integer> getScaleIncrement() {
+    public Output<Integer> getScaleIncrement() {
         return this.scaleIncrement;
     }
 
     public AddRemoveReplicaScalingMechanismArgs(
-        Input<String> kind,
-        Input<Integer> maxCount,
-        Input<Integer> minCount,
-        Input<Integer> scaleIncrement) {
+        Output<String> kind,
+        Output<Integer> maxCount,
+        Output<Integer> minCount,
+        Output<Integer> scaleIncrement) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.maxCount = Objects.requireNonNull(maxCount, "expected parameter 'maxCount' to be non-null");
         this.minCount = Objects.requireNonNull(minCount, "expected parameter 'minCount' to be non-null");
@@ -75,10 +75,10 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     }
 
     private AddRemoveReplicaScalingMechanismArgs() {
-        this.kind = Input.empty();
-        this.maxCount = Input.empty();
-        this.minCount = Input.empty();
-        this.scaleIncrement = Input.empty();
+        this.kind = Output.empty();
+        this.maxCount = Output.empty();
+        this.minCount = Output.empty();
+        this.scaleIncrement = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> kind;
-        private Input<Integer> maxCount;
-        private Input<Integer> minCount;
-        private Input<Integer> scaleIncrement;
+        private Output<String> kind;
+        private Output<Integer> maxCount;
+        private Output<Integer> minCount;
+        private Output<Integer> scaleIncrement;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     	      this.scaleIncrement = defaults.scaleIncrement;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder maxCount(Input<Integer> maxCount) {
+        public Builder maxCount(Output<Integer> maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
 
         public Builder maxCount(Integer maxCount) {
-            this.maxCount = Input.of(Objects.requireNonNull(maxCount));
+            this.maxCount = Output.of(Objects.requireNonNull(maxCount));
             return this;
         }
 
-        public Builder minCount(Input<Integer> minCount) {
+        public Builder minCount(Output<Integer> minCount) {
             this.minCount = Objects.requireNonNull(minCount);
             return this;
         }
 
         public Builder minCount(Integer minCount) {
-            this.minCount = Input.of(Objects.requireNonNull(minCount));
+            this.minCount = Output.of(Objects.requireNonNull(minCount));
             return this;
         }
 
-        public Builder scaleIncrement(Input<Integer> scaleIncrement) {
+        public Builder scaleIncrement(Output<Integer> scaleIncrement) {
             this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
             return this;
         }
 
         public Builder scaleIncrement(Integer scaleIncrement) {
-            this.scaleIncrement = Input.of(Objects.requireNonNull(scaleIncrement));
+            this.scaleIncrement = Output.of(Objects.requireNonNull(scaleIncrement));
             return this;
         }
         public AddRemoveReplicaScalingMechanismArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RegionHealthCheckServiceHealthStatusAggregationPolicy;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="healthChecks")
-      private final @Nullable Input<List<String>> healthChecks;
+      private final @Nullable Output<List<String>> healthChecks;
 
-    public Input<List<String>> getHealthChecks() {
-        return this.healthChecks == null ? Input.empty() : this.healthChecks;
+    public Output<List<String>> getHealthChecks() {
+        return this.healthChecks == null ? Output.empty() : this.healthChecks;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="healthStatusAggregationPolicy")
-      private final @Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy;
+      private final @Nullable Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy;
 
-    public Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> getHealthStatusAggregationPolicy() {
-        return this.healthStatusAggregationPolicy == null ? Input.empty() : this.healthStatusAggregationPolicy;
+    public Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> getHealthStatusAggregationPolicy() {
+        return this.healthStatusAggregationPolicy == null ? Output.empty() : this.healthStatusAggregationPolicy;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkEndpointGroups")
-      private final @Nullable Input<List<String>> networkEndpointGroups;
+      private final @Nullable Output<List<String>> networkEndpointGroups;
 
-    public Input<List<String>> getNetworkEndpointGroups() {
-        return this.networkEndpointGroups == null ? Input.empty() : this.networkEndpointGroups;
+    public Output<List<String>> getNetworkEndpointGroups() {
+        return this.networkEndpointGroups == null ? Output.empty() : this.networkEndpointGroups;
     }
 
     /**
@@ -76,43 +76,43 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notificationEndpoints")
-      private final @Nullable Input<List<String>> notificationEndpoints;
+      private final @Nullable Output<List<String>> notificationEndpoints;
 
-    public Input<List<String>> getNotificationEndpoints() {
-        return this.notificationEndpoints == null ? Input.empty() : this.notificationEndpoints;
+    public Output<List<String>> getNotificationEndpoints() {
+        return this.notificationEndpoints == null ? Output.empty() : this.notificationEndpoints;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     public RegionHealthCheckServiceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> healthChecks,
-        @Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> networkEndpointGroups,
-        @Nullable Input<List<String>> notificationEndpoints,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> healthChecks,
+        @Nullable Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> networkEndpointGroups,
+        @Nullable Output<List<String>> notificationEndpoints,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId) {
         this.description = description;
         this.healthChecks = healthChecks;
         this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
@@ -125,15 +125,15 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     }
 
     private RegionHealthCheckServiceArgs() {
-        this.description = Input.empty();
-        this.healthChecks = Input.empty();
-        this.healthStatusAggregationPolicy = Input.empty();
-        this.name = Input.empty();
-        this.networkEndpointGroups = Input.empty();
-        this.notificationEndpoints = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
+        this.description = Output.empty();
+        this.healthChecks = Output.empty();
+        this.healthStatusAggregationPolicy = Output.empty();
+        this.name = Output.empty();
+        this.networkEndpointGroups = Output.empty();
+        this.notificationEndpoints = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,15 +145,15 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> healthChecks;
-        private @Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> networkEndpointGroups;
-        private @Nullable Input<List<String>> notificationEndpoints;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> healthChecks;
+        private @Nullable Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> networkEndpointGroups;
+        private @Nullable Output<List<String>> notificationEndpoints;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
 
         public Builder() {
     	      // Empty
@@ -172,93 +172,93 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder healthChecks(@Nullable Input<List<String>> healthChecks) {
+        public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
 
         public Builder healthChecks(@Nullable List<String> healthChecks) {
-            this.healthChecks = Input.ofNullable(healthChecks);
+            this.healthChecks = Output.ofNullable(healthChecks);
             return this;
         }
 
-        public Builder healthStatusAggregationPolicy(@Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy) {
+        public Builder healthStatusAggregationPolicy(@Nullable Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
             return this;
         }
 
         public Builder healthStatusAggregationPolicy(@Nullable RegionHealthCheckServiceHealthStatusAggregationPolicy healthStatusAggregationPolicy) {
-            this.healthStatusAggregationPolicy = Input.ofNullable(healthStatusAggregationPolicy);
+            this.healthStatusAggregationPolicy = Output.ofNullable(healthStatusAggregationPolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkEndpointGroups(@Nullable Input<List<String>> networkEndpointGroups) {
+        public Builder networkEndpointGroups(@Nullable Output<List<String>> networkEndpointGroups) {
             this.networkEndpointGroups = networkEndpointGroups;
             return this;
         }
 
         public Builder networkEndpointGroups(@Nullable List<String> networkEndpointGroups) {
-            this.networkEndpointGroups = Input.ofNullable(networkEndpointGroups);
+            this.networkEndpointGroups = Output.ofNullable(networkEndpointGroups);
             return this;
         }
 
-        public Builder notificationEndpoints(@Nullable Input<List<String>> notificationEndpoints) {
+        public Builder notificationEndpoints(@Nullable Output<List<String>> notificationEndpoints) {
             this.notificationEndpoints = notificationEndpoints;
             return this;
         }
 
         public Builder notificationEndpoints(@Nullable List<String> notificationEndpoints) {
-            this.notificationEndpoints = Input.ofNullable(notificationEndpoints);
+            this.notificationEndpoints = Output.ofNullable(notificationEndpoints);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
         public RegionHealthCheckServiceArgs build() {

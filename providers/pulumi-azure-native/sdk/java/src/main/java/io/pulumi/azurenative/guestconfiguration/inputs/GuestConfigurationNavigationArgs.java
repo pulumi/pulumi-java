@@ -8,7 +8,7 @@ import io.pulumi.azurenative.guestconfiguration.enums.Kind;
 import io.pulumi.azurenative.guestconfiguration.inputs.ConfigurationParameterArgs;
 import io.pulumi.azurenative.guestconfiguration.inputs.ConfigurationSettingArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="assignmentType")
-      private final @Nullable Input<Either<String,AssignmentType>> assignmentType;
+      private final @Nullable Output<Either<String,AssignmentType>> assignmentType;
 
-    public Input<Either<String,AssignmentType>> getAssignmentType() {
-        return this.assignmentType == null ? Input.empty() : this.assignmentType;
+    public Output<Either<String,AssignmentType>> getAssignmentType() {
+        return this.assignmentType == null ? Output.empty() : this.assignmentType;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="configurationParameter")
-      private final @Nullable Input<List<ConfigurationParameterArgs>> configurationParameter;
+      private final @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
 
-    public Input<List<ConfigurationParameterArgs>> getConfigurationParameter() {
-        return this.configurationParameter == null ? Input.empty() : this.configurationParameter;
+    public Output<List<ConfigurationParameterArgs>> getConfigurationParameter() {
+        return this.configurationParameter == null ? Output.empty() : this.configurationParameter;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="configurationProtectedParameter")
-      private final @Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter;
+      private final @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
 
-    public Input<List<ConfigurationParameterArgs>> getConfigurationProtectedParameter() {
-        return this.configurationProtectedParameter == null ? Input.empty() : this.configurationProtectedParameter;
+    public Output<List<ConfigurationParameterArgs>> getConfigurationProtectedParameter() {
+        return this.configurationProtectedParameter == null ? Output.empty() : this.configurationProtectedParameter;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="configurationSetting")
-      private final @Nullable Input<ConfigurationSettingArgs> configurationSetting;
+      private final @Nullable Output<ConfigurationSettingArgs> configurationSetting;
 
-    public Input<ConfigurationSettingArgs> getConfigurationSetting() {
-        return this.configurationSetting == null ? Input.empty() : this.configurationSetting;
+    public Output<ConfigurationSettingArgs> getConfigurationSetting() {
+        return this.configurationSetting == null ? Output.empty() : this.configurationSetting;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="contentHash")
-      private final @Nullable Input<String> contentHash;
+      private final @Nullable Output<String> contentHash;
 
-    public Input<String> getContentHash() {
-        return this.contentHash == null ? Input.empty() : this.contentHash;
+    public Output<String> getContentHash() {
+        return this.contentHash == null ? Output.empty() : this.contentHash;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="contentUri")
-      private final @Nullable Input<String> contentUri;
+      private final @Nullable Output<String> contentUri;
 
-    public Input<String> getContentUri() {
-        return this.contentUri == null ? Input.empty() : this.contentUri;
+    public Output<String> getContentUri() {
+        return this.contentUri == null ? Output.empty() : this.contentUri;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,Kind>> kind;
+      private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Input<Either<String,Kind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,Kind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -117,22 +117,22 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public GuestConfigurationNavigationArgs(
-        @Nullable Input<Either<String,AssignmentType>> assignmentType,
-        @Nullable Input<List<ConfigurationParameterArgs>> configurationParameter,
-        @Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter,
-        @Nullable Input<ConfigurationSettingArgs> configurationSetting,
-        @Nullable Input<String> contentHash,
-        @Nullable Input<String> contentUri,
-        @Nullable Input<Either<String,Kind>> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> version) {
+        @Nullable Output<Either<String,AssignmentType>> assignmentType,
+        @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter,
+        @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter,
+        @Nullable Output<ConfigurationSettingArgs> configurationSetting,
+        @Nullable Output<String> contentHash,
+        @Nullable Output<String> contentUri,
+        @Nullable Output<Either<String,Kind>> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> version) {
         this.assignmentType = assignmentType;
         this.configurationParameter = configurationParameter;
         this.configurationProtectedParameter = configurationProtectedParameter;
@@ -145,15 +145,15 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     }
 
     private GuestConfigurationNavigationArgs() {
-        this.assignmentType = Input.empty();
-        this.configurationParameter = Input.empty();
-        this.configurationProtectedParameter = Input.empty();
-        this.configurationSetting = Input.empty();
-        this.contentHash = Input.empty();
-        this.contentUri = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.version = Input.empty();
+        this.assignmentType = Output.empty();
+        this.configurationParameter = Output.empty();
+        this.configurationProtectedParameter = Output.empty();
+        this.configurationSetting = Output.empty();
+        this.contentHash = Output.empty();
+        this.contentUri = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,15 +165,15 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,AssignmentType>> assignmentType;
-        private @Nullable Input<List<ConfigurationParameterArgs>> configurationParameter;
-        private @Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter;
-        private @Nullable Input<ConfigurationSettingArgs> configurationSetting;
-        private @Nullable Input<String> contentHash;
-        private @Nullable Input<String> contentUri;
-        private @Nullable Input<Either<String,Kind>> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> version;
+        private @Nullable Output<Either<String,AssignmentType>> assignmentType;
+        private @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
+        private @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
+        private @Nullable Output<ConfigurationSettingArgs> configurationSetting;
+        private @Nullable Output<String> contentHash;
+        private @Nullable Output<String> contentUri;
+        private @Nullable Output<Either<String,Kind>> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -192,93 +192,93 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     	      this.version = defaults.version;
         }
 
-        public Builder assignmentType(@Nullable Input<Either<String,AssignmentType>> assignmentType) {
+        public Builder assignmentType(@Nullable Output<Either<String,AssignmentType>> assignmentType) {
             this.assignmentType = assignmentType;
             return this;
         }
 
         public Builder assignmentType(@Nullable Either<String,AssignmentType> assignmentType) {
-            this.assignmentType = Input.ofNullable(assignmentType);
+            this.assignmentType = Output.ofNullable(assignmentType);
             return this;
         }
 
-        public Builder configurationParameter(@Nullable Input<List<ConfigurationParameterArgs>> configurationParameter) {
+        public Builder configurationParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationParameter) {
             this.configurationParameter = configurationParameter;
             return this;
         }
 
         public Builder configurationParameter(@Nullable List<ConfigurationParameterArgs> configurationParameter) {
-            this.configurationParameter = Input.ofNullable(configurationParameter);
+            this.configurationParameter = Output.ofNullable(configurationParameter);
             return this;
         }
 
-        public Builder configurationProtectedParameter(@Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter) {
+        public Builder configurationProtectedParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter) {
             this.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
 
         public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterArgs> configurationProtectedParameter) {
-            this.configurationProtectedParameter = Input.ofNullable(configurationProtectedParameter);
+            this.configurationProtectedParameter = Output.ofNullable(configurationProtectedParameter);
             return this;
         }
 
-        public Builder configurationSetting(@Nullable Input<ConfigurationSettingArgs> configurationSetting) {
+        public Builder configurationSetting(@Nullable Output<ConfigurationSettingArgs> configurationSetting) {
             this.configurationSetting = configurationSetting;
             return this;
         }
 
         public Builder configurationSetting(@Nullable ConfigurationSettingArgs configurationSetting) {
-            this.configurationSetting = Input.ofNullable(configurationSetting);
+            this.configurationSetting = Output.ofNullable(configurationSetting);
             return this;
         }
 
-        public Builder contentHash(@Nullable Input<String> contentHash) {
+        public Builder contentHash(@Nullable Output<String> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
         public Builder contentHash(@Nullable String contentHash) {
-            this.contentHash = Input.ofNullable(contentHash);
+            this.contentHash = Output.ofNullable(contentHash);
             return this;
         }
 
-        public Builder contentUri(@Nullable Input<String> contentUri) {
+        public Builder contentUri(@Nullable Output<String> contentUri) {
             this.contentUri = contentUri;
             return this;
         }
 
         public Builder contentUri(@Nullable String contentUri) {
-            this.contentUri = Input.ofNullable(contentUri);
+            this.contentUri = Output.ofNullable(contentUri);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,Kind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public GuestConfigurationNavigationArgs build() {

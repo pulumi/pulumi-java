@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Object> name;
+      private final @Nullable Output<Object> name;
 
-    public Input<Object> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Object> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Object> value;
+      private final @Nullable Output<Object> value;
 
-    public Input<Object> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Object> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public MetadataItemArgs(
-        @Nullable Input<Object> name,
-        @Nullable Input<Object> value) {
+        @Nullable Output<Object> name,
+        @Nullable Output<Object> value) {
         this.name = name;
         this.value = value;
     }
 
     private MetadataItemArgs() {
-        this.name = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> name;
-        private @Nullable Input<Object> value;
+        private @Nullable Output<Object> name;
+        private @Nullable Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder name(@Nullable Input<Object> name) {
+        public Builder name(@Nullable Output<Object> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Object name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder value(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public MetadataItemArgs build() {

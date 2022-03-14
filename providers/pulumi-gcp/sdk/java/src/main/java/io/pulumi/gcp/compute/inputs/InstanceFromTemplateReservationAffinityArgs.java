@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateReservationAffinitySpecificReservationArgs;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class InstanceFromTemplateReservationAffinityArgs extends io.pulumi
     public static final InstanceFromTemplateReservationAffinityArgs Empty = new InstanceFromTemplateReservationAffinityArgs();
 
     @InputImport(name="specificReservation")
-      private final @Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation;
+      private final @Nullable Output<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation;
 
-    public Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> getSpecificReservation() {
-        return this.specificReservation == null ? Input.empty() : this.specificReservation;
+    public Output<InstanceFromTemplateReservationAffinitySpecificReservationArgs> getSpecificReservation() {
+        return this.specificReservation == null ? Output.empty() : this.specificReservation;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public InstanceFromTemplateReservationAffinityArgs(
-        @Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation,
-        Input<String> type) {
+        @Nullable Output<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation,
+        Output<String> type) {
         this.specificReservation = specificReservation;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private InstanceFromTemplateReservationAffinityArgs() {
-        this.specificReservation = Input.empty();
-        this.type = Input.empty();
+        this.specificReservation = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class InstanceFromTemplateReservationAffinityArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation;
-        private Input<String> type;
+        private @Nullable Output<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class InstanceFromTemplateReservationAffinityArgs extends io.pulumi
     	      this.type = defaults.type;
         }
 
-        public Builder specificReservation(@Nullable Input<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation) {
+        public Builder specificReservation(@Nullable Output<InstanceFromTemplateReservationAffinitySpecificReservationArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
         public Builder specificReservation(@Nullable InstanceFromTemplateReservationAffinitySpecificReservationArgs specificReservation) {
-            this.specificReservation = Input.ofNullable(specificReservation);
+            this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public InstanceFromTemplateReservationAffinityArgs build() {

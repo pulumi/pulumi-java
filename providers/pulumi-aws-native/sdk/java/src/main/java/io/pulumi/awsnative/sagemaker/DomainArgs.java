@@ -7,7 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.DomainAppNetworkAccessType;
 import io.pulumi.awsnative.sagemaker.enums.DomainAuthMode;
 import io.pulumi.awsnative.sagemaker.inputs.DomainTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainUserSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appNetworkAccessType")
-      private final @Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType;
+      private final @Nullable Output<DomainAppNetworkAccessType> appNetworkAccessType;
 
-    public Input<DomainAppNetworkAccessType> getAppNetworkAccessType() {
-        return this.appNetworkAccessType == null ? Input.empty() : this.appNetworkAccessType;
+    public Output<DomainAppNetworkAccessType> getAppNetworkAccessType() {
+        return this.appNetworkAccessType == null ? Output.empty() : this.appNetworkAccessType;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode", required=true)
-      private final Input<DomainAuthMode> authMode;
+      private final Output<DomainAuthMode> authMode;
 
-    public Input<DomainAuthMode> getAuthMode() {
+    public Output<DomainAuthMode> getAuthMode() {
         return this.authMode;
     }
 
@@ -46,9 +46,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUserSettings", required=true)
-      private final Input<DomainUserSettingsArgs> defaultUserSettings;
+      private final Output<DomainUserSettingsArgs> defaultUserSettings;
 
-    public Input<DomainUserSettingsArgs> getDefaultUserSettings() {
+    public Output<DomainUserSettingsArgs> getDefaultUserSettings() {
         return this.defaultUserSettings;
     }
 
@@ -57,10 +57,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -90,10 +90,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DomainTagArgs>> tags;
+      private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Input<List<DomainTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DomainTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public DomainArgs(
-        @Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType,
-        Input<DomainAuthMode> authMode,
-        Input<DomainUserSettingsArgs> defaultUserSettings,
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> kmsKeyId,
-        Input<List<String>> subnetIds,
-        @Nullable Input<List<DomainTagArgs>> tags,
-        Input<String> vpcId) {
+        @Nullable Output<DomainAppNetworkAccessType> appNetworkAccessType,
+        Output<DomainAuthMode> authMode,
+        Output<DomainUserSettingsArgs> defaultUserSettings,
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> kmsKeyId,
+        Output<List<String>> subnetIds,
+        @Nullable Output<List<DomainTagArgs>> tags,
+        Output<String> vpcId) {
         this.appNetworkAccessType = appNetworkAccessType;
         this.authMode = Objects.requireNonNull(authMode, "expected parameter 'authMode' to be non-null");
         this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings, "expected parameter 'defaultUserSettings' to be non-null");
@@ -127,14 +127,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.appNetworkAccessType = Input.empty();
-        this.authMode = Input.empty();
-        this.defaultUserSettings = Input.empty();
-        this.domainName = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.vpcId = Input.empty();
+        this.appNetworkAccessType = Output.empty();
+        this.authMode = Output.empty();
+        this.defaultUserSettings = Output.empty();
+        this.domainName = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType;
-        private Input<DomainAuthMode> authMode;
-        private Input<DomainUserSettingsArgs> defaultUserSettings;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> kmsKeyId;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<List<DomainTagArgs>> tags;
-        private Input<String> vpcId;
+        private @Nullable Output<DomainAppNetworkAccessType> appNetworkAccessType;
+        private Output<DomainAuthMode> authMode;
+        private Output<DomainUserSettingsArgs> defaultUserSettings;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> kmsKeyId;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<List<DomainTagArgs>> tags;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder appNetworkAccessType(@Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable Output<DomainAppNetworkAccessType> appNetworkAccessType) {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
 
         public Builder appNetworkAccessType(@Nullable DomainAppNetworkAccessType appNetworkAccessType) {
-            this.appNetworkAccessType = Input.ofNullable(appNetworkAccessType);
+            this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
             return this;
         }
 
-        public Builder authMode(Input<DomainAuthMode> authMode) {
+        public Builder authMode(Output<DomainAuthMode> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
         public Builder authMode(DomainAuthMode authMode) {
-            this.authMode = Input.of(Objects.requireNonNull(authMode));
+            this.authMode = Output.of(Objects.requireNonNull(authMode));
             return this;
         }
 
-        public Builder defaultUserSettings(Input<DomainUserSettingsArgs> defaultUserSettings) {
+        public Builder defaultUserSettings(Output<DomainUserSettingsArgs> defaultUserSettings) {
             this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings);
             return this;
         }
 
         public Builder defaultUserSettings(DomainUserSettingsArgs defaultUserSettings) {
-            this.defaultUserSettings = Input.of(Objects.requireNonNull(defaultUserSettings));
+            this.defaultUserSettings = Output.of(Objects.requireNonNull(defaultUserSettings));
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DomainTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public DomainArgs build() {

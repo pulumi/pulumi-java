@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<List<String>> value;
+      private final Output<List<String>> value;
 
-    public Input<List<String>> getValue() {
+    public Output<List<String>> getValue() {
         return this.value;
     }
 
     public ImageRecipeComponentParameterArgs(
-        Input<String> name,
-        Input<List<String>> value) {
+        Output<String> name,
+        Output<List<String>> value) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ImageRecipeComponentParameterArgs() {
-        this.name = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<List<String>> value;
+        private Output<String> name;
+        private Output<List<String>> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
     	      this.value = defaults.value;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder value(Input<List<String>> value) {
+        public Builder value(Output<List<String>> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(List<String> value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ImageRecipeComponentParameterArgs build() {

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.databoxedge.inputs.IoTDeviceInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.IoTEdgeAgentInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeResource")
-      private final @Nullable Input<ComputeResourceArgs> computeResource;
+      private final @Nullable Output<ComputeResourceArgs> computeResource;
 
-    public Input<ComputeResourceArgs> getComputeResource() {
-        return this.computeResource == null ? Input.empty() : this.computeResource;
+    public Output<ComputeResourceArgs> getComputeResource() {
+        return this.computeResource == null ? Output.empty() : this.computeResource;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -49,9 +49,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPlatform", required=true)
-      private final Input<Either<String,PlatformType>> hostPlatform;
+      private final Output<Either<String,PlatformType>> hostPlatform;
 
-    public Input<Either<String,PlatformType>> getHostPlatform() {
+    public Output<Either<String,PlatformType>> getHostPlatform() {
         return this.hostPlatform;
     }
 
@@ -60,9 +60,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTDeviceDetails", required=true)
-      private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
+      private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
-    public Input<IoTDeviceInfoArgs> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
 
@@ -71,10 +71,10 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTEdgeAgentInfo")
-      private final @Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
+      private final @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
-    public Input<IoTEdgeAgentInfoArgs> getIoTEdgeAgentInfo() {
-        return this.ioTEdgeAgentInfo == null ? Input.empty() : this.ioTEdgeAgentInfo;
+    public Output<IoTEdgeAgentInfoArgs> getIoTEdgeAgentInfo() {
+        return this.ioTEdgeAgentInfo == null ? Output.empty() : this.ioTEdgeAgentInfo;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTEdgeDeviceDetails", required=true)
-      private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+      private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
-    public Input<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
 
@@ -94,9 +94,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -105,10 +105,10 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -116,9 +116,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -127,9 +127,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleStatus", required=true)
-      private final Input<Either<String,RoleStatus>> roleStatus;
+      private final Output<Either<String,RoleStatus>> roleStatus;
 
-    public Input<Either<String,RoleStatus>> getRoleStatus() {
+    public Output<Either<String,RoleStatus>> getRoleStatus() {
         return this.roleStatus;
     }
 
@@ -138,24 +138,24 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareMappings")
-      private final @Nullable Input<List<MountPointMapArgs>> shareMappings;
+      private final @Nullable Output<List<MountPointMapArgs>> shareMappings;
 
-    public Input<List<MountPointMapArgs>> getShareMappings() {
-        return this.shareMappings == null ? Input.empty() : this.shareMappings;
+    public Output<List<MountPointMapArgs>> getShareMappings() {
+        return this.shareMappings == null ? Output.empty() : this.shareMappings;
     }
 
     public IoTRoleArgs(
-        @Nullable Input<ComputeResourceArgs> computeResource,
-        Input<String> deviceName,
-        Input<Either<String,PlatformType>> hostPlatform,
-        Input<IoTDeviceInfoArgs> ioTDeviceDetails,
-        @Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo,
-        Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails,
-        Input<String> kind,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<Either<String,RoleStatus>> roleStatus,
-        @Nullable Input<List<MountPointMapArgs>> shareMappings) {
+        @Nullable Output<ComputeResourceArgs> computeResource,
+        Output<String> deviceName,
+        Output<Either<String,PlatformType>> hostPlatform,
+        Output<IoTDeviceInfoArgs> ioTDeviceDetails,
+        @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo,
+        Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails,
+        Output<String> kind,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<Either<String,RoleStatus>> roleStatus,
+        @Nullable Output<List<MountPointMapArgs>> shareMappings) {
         this.computeResource = computeResource;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.hostPlatform = Objects.requireNonNull(hostPlatform, "expected parameter 'hostPlatform' to be non-null");
@@ -170,17 +170,17 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IoTRoleArgs() {
-        this.computeResource = Input.empty();
-        this.deviceName = Input.empty();
-        this.hostPlatform = Input.empty();
-        this.ioTDeviceDetails = Input.empty();
-        this.ioTEdgeAgentInfo = Input.empty();
-        this.ioTEdgeDeviceDetails = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roleStatus = Input.empty();
-        this.shareMappings = Input.empty();
+        this.computeResource = Output.empty();
+        this.deviceName = Output.empty();
+        this.hostPlatform = Output.empty();
+        this.ioTDeviceDetails = Output.empty();
+        this.ioTEdgeAgentInfo = Output.empty();
+        this.ioTEdgeDeviceDetails = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roleStatus = Output.empty();
+        this.shareMappings = Output.empty();
     }
 
     public static Builder builder() {
@@ -192,17 +192,17 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ComputeResourceArgs> computeResource;
-        private Input<String> deviceName;
-        private Input<Either<String,PlatformType>> hostPlatform;
-        private Input<IoTDeviceInfoArgs> ioTDeviceDetails;
-        private @Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
-        private Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
-        private Input<String> kind;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,RoleStatus>> roleStatus;
-        private @Nullable Input<List<MountPointMapArgs>> shareMappings;
+        private @Nullable Output<ComputeResourceArgs> computeResource;
+        private Output<String> deviceName;
+        private Output<Either<String,PlatformType>> hostPlatform;
+        private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
+        private @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
+        private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+        private Output<String> kind;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,RoleStatus>> roleStatus;
+        private @Nullable Output<List<MountPointMapArgs>> shareMappings;
 
         public Builder() {
     	      // Empty
@@ -223,113 +223,113 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareMappings = defaults.shareMappings;
         }
 
-        public Builder computeResource(@Nullable Input<ComputeResourceArgs> computeResource) {
+        public Builder computeResource(@Nullable Output<ComputeResourceArgs> computeResource) {
             this.computeResource = computeResource;
             return this;
         }
 
         public Builder computeResource(@Nullable ComputeResourceArgs computeResource) {
-            this.computeResource = Input.ofNullable(computeResource);
+            this.computeResource = Output.ofNullable(computeResource);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder hostPlatform(Input<Either<String,PlatformType>> hostPlatform) {
+        public Builder hostPlatform(Output<Either<String,PlatformType>> hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
 
         public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
-            this.hostPlatform = Input.of(Objects.requireNonNull(hostPlatform));
+            this.hostPlatform = Output.of(Objects.requireNonNull(hostPlatform));
             return this;
         }
 
-        public Builder ioTDeviceDetails(Input<IoTDeviceInfoArgs> ioTDeviceDetails) {
+        public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
             this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
             return this;
         }
 
         public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
-            this.ioTDeviceDetails = Input.of(Objects.requireNonNull(ioTDeviceDetails));
+            this.ioTDeviceDetails = Output.of(Objects.requireNonNull(ioTDeviceDetails));
             return this;
         }
 
-        public Builder ioTEdgeAgentInfo(@Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo) {
+        public Builder ioTEdgeAgentInfo(@Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo) {
             this.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
             return this;
         }
 
         public Builder ioTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoArgs ioTEdgeAgentInfo) {
-            this.ioTEdgeAgentInfo = Input.ofNullable(ioTEdgeAgentInfo);
+            this.ioTEdgeAgentInfo = Output.ofNullable(ioTEdgeAgentInfo);
             return this;
         }
 
-        public Builder ioTEdgeDeviceDetails(Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
+        public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
             return this;
         }
 
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
-            this.ioTEdgeDeviceDetails = Input.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
+            this.ioTEdgeDeviceDetails = Output.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roleStatus(Input<Either<String,RoleStatus>> roleStatus) {
+        public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
-            this.roleStatus = Input.of(Objects.requireNonNull(roleStatus));
+            this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
             return this;
         }
 
-        public Builder shareMappings(@Nullable Input<List<MountPointMapArgs>> shareMappings) {
+        public Builder shareMappings(@Nullable Output<List<MountPointMapArgs>> shareMappings) {
             this.shareMappings = shareMappings;
             return this;
         }
 
         public Builder shareMappings(@Nullable List<MountPointMapArgs> shareMappings) {
-            this.shareMappings = Input.ofNullable(shareMappings);
+            this.shareMappings = Output.ofNullable(shareMappings);
             return this;
         }
         public IoTRoleArgs build() {

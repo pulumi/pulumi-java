@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyArn")
-      private final @Nullable Input<String> policyArn;
+      private final @Nullable Output<String> policyArn;
 
-    public Input<String> getPolicyArn() {
-        return this.policyArn == null ? Input.empty() : this.policyArn;
+    public Output<String> getPolicyArn() {
+        return this.policyArn == null ? Output.empty() : this.policyArn;
     }
 
     public GroupPolicyAttachmentState(
-        @Nullable Input<String> group,
-        @Nullable Input<String> policyArn) {
+        @Nullable Output<String> group,
+        @Nullable Output<String> policyArn) {
         this.group = group;
         this.policyArn = policyArn;
     }
 
     private GroupPolicyAttachmentState() {
-        this.group = Input.empty();
-        this.policyArn = Input.empty();
+        this.group = Output.empty();
+        this.policyArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> group;
-        private @Nullable Input<String> policyArn;
+        private @Nullable Output<String> group;
+        private @Nullable Output<String> policyArn;
 
         public Builder() {
     	      // Empty
@@ -70,18 +70,18 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     	      this.policyArn = defaults.policyArn;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder policyArn(@Nullable Input<String> policyArn) {
+        public Builder policyArn(@Nullable Output<String> policyArn) {
             this.policyArn = policyArn;
             return this;
         }
 
         public Builder policyArn(@Nullable String policyArn) {
-            this.policyArn = Input.ofNullable(policyArn);
+            this.policyArn = Output.ofNullable(policyArn);
             return this;
         }
         public GroupPolicyAttachmentState build() {

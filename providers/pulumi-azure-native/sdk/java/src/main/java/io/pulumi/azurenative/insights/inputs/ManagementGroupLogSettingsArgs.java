@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="category", required=true)
-      private final Input<String> category;
+      private final Output<String> category;
 
-    public Input<String> getCategory() {
+    public Output<String> getCategory() {
         return this.category;
     }
 
@@ -34,22 +34,22 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public ManagementGroupLogSettingsArgs(
-        Input<String> category,
-        Input<Boolean> enabled) {
+        Output<String> category,
+        Output<Boolean> enabled) {
         this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private ManagementGroupLogSettingsArgs() {
-        this.category = Input.empty();
-        this.enabled = Input.empty();
+        this.category = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> category;
-        private Input<Boolean> enabled;
+        private Output<String> category;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder category(Input<String> category) {
+        public Builder category(Output<String> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
         public Builder category(String category) {
-            this.category = Input.of(Objects.requireNonNull(category));
+            this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public ManagementGroupLogSettingsArgs build() {

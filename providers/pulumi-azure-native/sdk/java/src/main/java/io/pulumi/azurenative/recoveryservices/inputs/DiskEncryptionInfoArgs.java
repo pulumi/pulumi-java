@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionKeyInfoArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.KeyEncryptionKeyInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskEncryptionKeyInfo")
-      private final @Nullable Input<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
+      private final @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
-    public Input<DiskEncryptionKeyInfoArgs> getDiskEncryptionKeyInfo() {
-        return this.diskEncryptionKeyInfo == null ? Input.empty() : this.diskEncryptionKeyInfo;
+    public Output<DiskEncryptionKeyInfoArgs> getDiskEncryptionKeyInfo() {
+        return this.diskEncryptionKeyInfo == null ? Output.empty() : this.diskEncryptionKeyInfo;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyEncryptionKeyInfo")
-      private final @Nullable Input<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
+      private final @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
-    public Input<KeyEncryptionKeyInfoArgs> getKeyEncryptionKeyInfo() {
-        return this.keyEncryptionKeyInfo == null ? Input.empty() : this.keyEncryptionKeyInfo;
+    public Output<KeyEncryptionKeyInfoArgs> getKeyEncryptionKeyInfo() {
+        return this.keyEncryptionKeyInfo == null ? Output.empty() : this.keyEncryptionKeyInfo;
     }
 
     public DiskEncryptionInfoArgs(
-        @Nullable Input<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo,
-        @Nullable Input<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
+        @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo,
+        @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
         this.diskEncryptionKeyInfo = diskEncryptionKeyInfo;
         this.keyEncryptionKeyInfo = keyEncryptionKeyInfo;
     }
 
     private DiskEncryptionInfoArgs() {
-        this.diskEncryptionKeyInfo = Input.empty();
-        this.keyEncryptionKeyInfo = Input.empty();
+        this.diskEncryptionKeyInfo = Output.empty();
+        this.keyEncryptionKeyInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
-        private @Nullable Input<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
+        private @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
+        private @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
     	      this.keyEncryptionKeyInfo = defaults.keyEncryptionKeyInfo;
         }
 
-        public Builder diskEncryptionKeyInfo(@Nullable Input<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo) {
+        public Builder diskEncryptionKeyInfo(@Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo) {
             this.diskEncryptionKeyInfo = diskEncryptionKeyInfo;
             return this;
         }
 
         public Builder diskEncryptionKeyInfo(@Nullable DiskEncryptionKeyInfoArgs diskEncryptionKeyInfo) {
-            this.diskEncryptionKeyInfo = Input.ofNullable(diskEncryptionKeyInfo);
+            this.diskEncryptionKeyInfo = Output.ofNullable(diskEncryptionKeyInfo);
             return this;
         }
 
-        public Builder keyEncryptionKeyInfo(@Nullable Input<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
+        public Builder keyEncryptionKeyInfo(@Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
             this.keyEncryptionKeyInfo = keyEncryptionKeyInfo;
             return this;
         }
 
         public Builder keyEncryptionKeyInfo(@Nullable KeyEncryptionKeyInfoArgs keyEncryptionKeyInfo) {
-            this.keyEncryptionKeyInfo = Input.ofNullable(keyEncryptionKeyInfo);
+            this.keyEncryptionKeyInfo = Output.ofNullable(keyEncryptionKeyInfo);
             return this;
         }
         public DiskEncryptionInfoArgs build() {

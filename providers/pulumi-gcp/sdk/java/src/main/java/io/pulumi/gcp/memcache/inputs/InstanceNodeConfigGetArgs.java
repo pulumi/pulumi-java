@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.memcache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class InstanceNodeConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cpuCount", required=true)
-      private final Input<Integer> cpuCount;
+      private final Output<Integer> cpuCount;
 
-    public Input<Integer> getCpuCount() {
+    public Output<Integer> getCpuCount() {
         return this.cpuCount;
     }
 
@@ -29,22 +29,22 @@ public final class InstanceNodeConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="memorySizeMb", required=true)
-      private final Input<Integer> memorySizeMb;
+      private final Output<Integer> memorySizeMb;
 
-    public Input<Integer> getMemorySizeMb() {
+    public Output<Integer> getMemorySizeMb() {
         return this.memorySizeMb;
     }
 
     public InstanceNodeConfigGetArgs(
-        Input<Integer> cpuCount,
-        Input<Integer> memorySizeMb) {
+        Output<Integer> cpuCount,
+        Output<Integer> memorySizeMb) {
         this.cpuCount = Objects.requireNonNull(cpuCount, "expected parameter 'cpuCount' to be non-null");
         this.memorySizeMb = Objects.requireNonNull(memorySizeMb, "expected parameter 'memorySizeMb' to be non-null");
     }
 
     private InstanceNodeConfigGetArgs() {
-        this.cpuCount = Input.empty();
-        this.memorySizeMb = Input.empty();
+        this.cpuCount = Output.empty();
+        this.memorySizeMb = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class InstanceNodeConfigGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Integer> cpuCount;
-        private Input<Integer> memorySizeMb;
+        private Output<Integer> cpuCount;
+        private Output<Integer> memorySizeMb;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class InstanceNodeConfigGetArgs extends io.pulumi.resources.Resourc
     	      this.memorySizeMb = defaults.memorySizeMb;
         }
 
-        public Builder cpuCount(Input<Integer> cpuCount) {
+        public Builder cpuCount(Output<Integer> cpuCount) {
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
 
         public Builder cpuCount(Integer cpuCount) {
-            this.cpuCount = Input.of(Objects.requireNonNull(cpuCount));
+            this.cpuCount = Output.of(Objects.requireNonNull(cpuCount));
             return this;
         }
 
-        public Builder memorySizeMb(Input<Integer> memorySizeMb) {
+        public Builder memorySizeMb(Output<Integer> memorySizeMb) {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
 
         public Builder memorySizeMb(Integer memorySizeMb) {
-            this.memorySizeMb = Input.of(Objects.requireNonNull(memorySizeMb));
+            this.memorySizeMb = Output.of(Objects.requireNonNull(memorySizeMb));
             return this;
         }
         public InstanceNodeConfigGetArgs build() {

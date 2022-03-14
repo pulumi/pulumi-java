@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serverUrl")
-      private final @Nullable Input<String> serverUrl;
+      private final @Nullable Output<String> serverUrl;
 
-    public Input<String> getServerUrl() {
-        return this.serverUrl == null ? Input.empty() : this.serverUrl;
+    public Output<String> getServerUrl() {
+        return this.serverUrl == null ? Output.empty() : this.serverUrl;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public GitHubActionContainerConfigurationArgs(
-        @Nullable Input<String> imageName,
-        @Nullable Input<String> password,
-        @Nullable Input<String> serverUrl,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> imageName,
+        @Nullable Output<String> password,
+        @Nullable Output<String> serverUrl,
+        @Nullable Output<String> username) {
         this.imageName = imageName;
         this.password = password;
         this.serverUrl = serverUrl;
@@ -74,10 +74,10 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     }
 
     private GitHubActionContainerConfigurationArgs() {
-        this.imageName = Input.empty();
-        this.password = Input.empty();
-        this.serverUrl = Input.empty();
-        this.username = Input.empty();
+        this.imageName = Output.empty();
+        this.password = Output.empty();
+        this.serverUrl = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageName;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> serverUrl;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> imageName;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> serverUrl;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     	      this.username = defaults.username;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder serverUrl(@Nullable Input<String> serverUrl) {
+        public Builder serverUrl(@Nullable Output<String> serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
 
         public Builder serverUrl(@Nullable String serverUrl) {
-            this.serverUrl = Input.ofNullable(serverUrl);
+            this.serverUrl = Output.ofNullable(serverUrl);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public GitHubActionContainerConfigurationArgs build() {

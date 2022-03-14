@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -32,10 +32,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAttributes")
-      private final @Nullable Input<Map<String,String>> customAttributes;
+      private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Input<Map<String,String>> getCustomAttributes() {
-        return this.customAttributes == null ? Input.empty() : this.customAttributes;
+    public Output<Map<String,String>> getCustomAttributes() {
+        return this.customAttributes == null ? Output.empty() : this.customAttributes;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTypes")
-      private final @Nullable Input<List<String>> eventTypes;
+      private final @Nullable Output<List<String>> eventTypes;
 
-    public Input<List<String>> getEventTypes() {
-        return this.eventTypes == null ? Input.empty() : this.eventTypes;
+    public Output<List<String>> getEventTypes() {
+        return this.eventTypes == null ? Output.empty() : this.eventTypes;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectNamePrefix")
-      private final @Nullable Input<String> objectNamePrefix;
+      private final @Nullable Output<String> objectNamePrefix;
 
-    public Input<String> getObjectNamePrefix() {
-        return this.objectNamePrefix == null ? Input.empty() : this.objectNamePrefix;
+    public Output<String> getObjectNamePrefix() {
+        return this.objectNamePrefix == null ? Output.empty() : this.objectNamePrefix;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payloadFormat", required=true)
-      private final Input<String> payloadFormat;
+      private final Output<String> payloadFormat;
 
-    public Input<String> getPayloadFormat() {
+    public Output<String> getPayloadFormat() {
         return this.payloadFormat;
     }
 
@@ -79,19 +79,19 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public NotificationArgs(
-        Input<String> bucket,
-        @Nullable Input<Map<String,String>> customAttributes,
-        @Nullable Input<List<String>> eventTypes,
-        @Nullable Input<String> objectNamePrefix,
-        Input<String> payloadFormat,
-        Input<String> topic) {
+        Output<String> bucket,
+        @Nullable Output<Map<String,String>> customAttributes,
+        @Nullable Output<List<String>> eventTypes,
+        @Nullable Output<String> objectNamePrefix,
+        Output<String> payloadFormat,
+        Output<String> topic) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.customAttributes = customAttributes;
         this.eventTypes = eventTypes;
@@ -101,12 +101,12 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationArgs() {
-        this.bucket = Input.empty();
-        this.customAttributes = Input.empty();
-        this.eventTypes = Input.empty();
-        this.objectNamePrefix = Input.empty();
-        this.payloadFormat = Input.empty();
-        this.topic = Input.empty();
+        this.bucket = Output.empty();
+        this.customAttributes = Output.empty();
+        this.eventTypes = Output.empty();
+        this.objectNamePrefix = Output.empty();
+        this.payloadFormat = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<Map<String,String>> customAttributes;
-        private @Nullable Input<List<String>> eventTypes;
-        private @Nullable Input<String> objectNamePrefix;
-        private Input<String> payloadFormat;
-        private Input<String> topic;
+        private Output<String> bucket;
+        private @Nullable Output<Map<String,String>> customAttributes;
+        private @Nullable Output<List<String>> eventTypes;
+        private @Nullable Output<String> objectNamePrefix;
+        private Output<String> payloadFormat;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder customAttributes(@Nullable Input<Map<String,String>> customAttributes) {
+        public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
 
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Input.ofNullable(customAttributes);
+            this.customAttributes = Output.ofNullable(customAttributes);
             return this;
         }
 
-        public Builder eventTypes(@Nullable Input<List<String>> eventTypes) {
+        public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
 
         public Builder eventTypes(@Nullable List<String> eventTypes) {
-            this.eventTypes = Input.ofNullable(eventTypes);
+            this.eventTypes = Output.ofNullable(eventTypes);
             return this;
         }
 
-        public Builder objectNamePrefix(@Nullable Input<String> objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
         public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
-            this.objectNamePrefix = Input.ofNullable(objectNamePrefix);
+            this.objectNamePrefix = Output.ofNullable(objectNamePrefix);
             return this;
         }
 
-        public Builder payloadFormat(Input<String> payloadFormat) {
+        public Builder payloadFormat(Output<String> payloadFormat) {
             this.payloadFormat = Objects.requireNonNull(payloadFormat);
             return this;
         }
 
         public Builder payloadFormat(String payloadFormat) {
-            this.payloadFormat = Input.of(Objects.requireNonNull(payloadFormat));
+            this.payloadFormat = Output.of(Objects.requireNonNull(payloadFormat));
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public NotificationArgs build() {

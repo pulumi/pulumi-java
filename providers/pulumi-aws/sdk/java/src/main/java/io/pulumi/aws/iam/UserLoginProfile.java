@@ -6,7 +6,6 @@ package io.pulumi.aws.iam;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.UserLoginProfileArgs;
 import io.pulumi.aws.iam.inputs.UserLoginProfileState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -174,14 +173,14 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserLoginProfile(String name, UserLoginProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/userLoginProfile:UserLoginProfile", name, args == null ? UserLoginProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:iam/userLoginProfile:UserLoginProfile", name, args == null ? UserLoginProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private UserLoginProfile(String name, Input<String> id, @Nullable UserLoginProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private UserLoginProfile(String name, Output<String> id, @Nullable UserLoginProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:iam/userLoginProfile:UserLoginProfile", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -197,7 +196,7 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UserLoginProfile get(String name, Input<String> id, @Nullable UserLoginProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static UserLoginProfile get(String name, Output<String> id, @Nullable UserLoginProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UserLoginProfile(name, id, state, options);
     }
 }

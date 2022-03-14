@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="issueClientCertificate")
-      private final @Nullable Input<Boolean> issueClientCertificate;
+      private final @Nullable Output<Boolean> issueClientCertificate;
 
-    public Input<Boolean> getIssueClientCertificate() {
-        return this.issueClientCertificate == null ? Input.empty() : this.issueClientCertificate;
+    public Output<Boolean> getIssueClientCertificate() {
+        return this.issueClientCertificate == null ? Output.empty() : this.issueClientCertificate;
     }
 
-    public ClientCertificateConfigArgs(@Nullable Input<Boolean> issueClientCertificate) {
+    public ClientCertificateConfigArgs(@Nullable Output<Boolean> issueClientCertificate) {
         this.issueClientCertificate = issueClientCertificate;
     }
 
     private ClientCertificateConfigArgs() {
-        this.issueClientCertificate = Input.empty();
+        this.issueClientCertificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> issueClientCertificate;
+        private @Nullable Output<Boolean> issueClientCertificate;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
     	      this.issueClientCertificate = defaults.issueClientCertificate;
         }
 
-        public Builder issueClientCertificate(@Nullable Input<Boolean> issueClientCertificate) {
+        public Builder issueClientCertificate(@Nullable Output<Boolean> issueClientCertificate) {
             this.issueClientCertificate = issueClientCertificate;
             return this;
         }
 
         public Builder issueClientCertificate(@Nullable Boolean issueClientCertificate) {
-            this.issueClientCertificate = Input.ofNullable(issueClientCertificate);
+            this.issueClientCertificate = Output.ofNullable(issueClientCertificate);
             return this;
         }
         public ClientCertificateConfigArgs build() {

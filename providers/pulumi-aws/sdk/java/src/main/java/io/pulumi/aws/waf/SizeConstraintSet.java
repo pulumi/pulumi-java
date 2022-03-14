@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.waf.SizeConstraintSetArgs;
 import io.pulumi.aws.waf.inputs.SizeConstraintSetState;
 import io.pulumi.aws.waf.outputs.SizeConstraintSetSizeConstraint;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,14 +111,14 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SizeConstraintSet(String name, @Nullable SizeConstraintSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:waf/sizeConstraintSet:SizeConstraintSet", name, args == null ? SizeConstraintSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:waf/sizeConstraintSet:SizeConstraintSet", name, args == null ? SizeConstraintSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SizeConstraintSet(String name, Input<String> id, @Nullable SizeConstraintSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SizeConstraintSet(String name, Output<String> id, @Nullable SizeConstraintSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:waf/sizeConstraintSet:SizeConstraintSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -135,7 +134,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SizeConstraintSet get(String name, Input<String> id, @Nullable SizeConstraintSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SizeConstraintSet get(String name, Output<String> id, @Nullable SizeConstraintSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SizeConstraintSet(name, id, state, options);
     }
 }

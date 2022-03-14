@@ -9,7 +9,7 @@ import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingArg
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingArgs;
 import io.pulumi.azurenative.security.inputs.SecurityConnectorPropertiesOrganizationalDataArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudName")
-      private final @Nullable Input<Either<String,CloudName>> cloudName;
+      private final @Nullable Output<Either<String,CloudName>> cloudName;
 
-    public Input<Either<String,CloudName>> getCloudName() {
-        return this.cloudName == null ? Input.empty() : this.cloudName;
+    public Output<Either<String,CloudName>> getCloudName() {
+        return this.cloudName == null ? Output.empty() : this.cloudName;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hierarchyIdentifier")
-      private final @Nullable Input<String> hierarchyIdentifier;
+      private final @Nullable Output<String> hierarchyIdentifier;
 
-    public Input<String> getHierarchyIdentifier() {
-        return this.hierarchyIdentifier == null ? Input.empty() : this.hierarchyIdentifier;
+    public Output<String> getHierarchyIdentifier() {
+        return this.hierarchyIdentifier == null ? Output.empty() : this.hierarchyIdentifier;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="offerings")
-      private final @Nullable Input<List<Object>> offerings;
+      private final @Nullable Output<List<Object>> offerings;
 
-    public Input<List<Object>> getOfferings() {
-        return this.offerings == null ? Input.empty() : this.offerings;
+    public Output<List<Object>> getOfferings() {
+        return this.offerings == null ? Output.empty() : this.offerings;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="organizationalData")
-      private final @Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
+      private final @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
 
-    public Input<SecurityConnectorPropertiesOrganizationalDataArgs> getOrganizationalData() {
-        return this.organizationalData == null ? Input.empty() : this.organizationalData;
+    public Output<SecurityConnectorPropertiesOrganizationalDataArgs> getOrganizationalData() {
+        return this.organizationalData == null ? Output.empty() : this.organizationalData;
     }
 
     /**
@@ -94,9 +94,9 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,10 +105,10 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityConnectorName")
-      private final @Nullable Input<String> securityConnectorName;
+      private final @Nullable Output<String> securityConnectorName;
 
-    public Input<String> getSecurityConnectorName() {
-        return this.securityConnectorName == null ? Input.empty() : this.securityConnectorName;
+    public Output<String> getSecurityConnectorName() {
+        return this.securityConnectorName == null ? Output.empty() : this.securityConnectorName;
     }
 
     /**
@@ -116,22 +116,22 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SecurityConnectorArgs(
-        @Nullable Input<Either<String,CloudName>> cloudName,
-        @Nullable Input<String> hierarchyIdentifier,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<List<Object>> offerings,
-        @Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> securityConnectorName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Either<String,CloudName>> cloudName,
+        @Nullable Output<String> hierarchyIdentifier,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<List<Object>> offerings,
+        @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> securityConnectorName,
+        @Nullable Output<Map<String,String>> tags) {
         this.cloudName = cloudName;
         this.hierarchyIdentifier = hierarchyIdentifier;
         this.kind = kind;
@@ -144,15 +144,15 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SecurityConnectorArgs() {
-        this.cloudName = Input.empty();
-        this.hierarchyIdentifier = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.offerings = Input.empty();
-        this.organizationalData = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityConnectorName = Input.empty();
-        this.tags = Input.empty();
+        this.cloudName = Output.empty();
+        this.hierarchyIdentifier = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.offerings = Output.empty();
+        this.organizationalData = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityConnectorName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -164,15 +164,15 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,CloudName>> cloudName;
-        private @Nullable Input<String> hierarchyIdentifier;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<Object>> offerings;
-        private @Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> securityConnectorName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,CloudName>> cloudName;
+        private @Nullable Output<String> hierarchyIdentifier;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<Object>> offerings;
+        private @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> securityConnectorName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -191,93 +191,93 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder cloudName(@Nullable Input<Either<String,CloudName>> cloudName) {
+        public Builder cloudName(@Nullable Output<Either<String,CloudName>> cloudName) {
             this.cloudName = cloudName;
             return this;
         }
 
         public Builder cloudName(@Nullable Either<String,CloudName> cloudName) {
-            this.cloudName = Input.ofNullable(cloudName);
+            this.cloudName = Output.ofNullable(cloudName);
             return this;
         }
 
-        public Builder hierarchyIdentifier(@Nullable Input<String> hierarchyIdentifier) {
+        public Builder hierarchyIdentifier(@Nullable Output<String> hierarchyIdentifier) {
             this.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
 
         public Builder hierarchyIdentifier(@Nullable String hierarchyIdentifier) {
-            this.hierarchyIdentifier = Input.ofNullable(hierarchyIdentifier);
+            this.hierarchyIdentifier = Output.ofNullable(hierarchyIdentifier);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder offerings(@Nullable Input<List<Object>> offerings) {
+        public Builder offerings(@Nullable Output<List<Object>> offerings) {
             this.offerings = offerings;
             return this;
         }
 
         public Builder offerings(@Nullable List<Object> offerings) {
-            this.offerings = Input.ofNullable(offerings);
+            this.offerings = Output.ofNullable(offerings);
             return this;
         }
 
-        public Builder organizationalData(@Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData) {
+        public Builder organizationalData(@Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData) {
             this.organizationalData = organizationalData;
             return this;
         }
 
         public Builder organizationalData(@Nullable SecurityConnectorPropertiesOrganizationalDataArgs organizationalData) {
-            this.organizationalData = Input.ofNullable(organizationalData);
+            this.organizationalData = Output.ofNullable(organizationalData);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityConnectorName(@Nullable Input<String> securityConnectorName) {
+        public Builder securityConnectorName(@Nullable Output<String> securityConnectorName) {
             this.securityConnectorName = securityConnectorName;
             return this;
         }
 
         public Builder securityConnectorName(@Nullable String securityConnectorName) {
-            this.securityConnectorName = Input.ofNullable(securityConnectorName);
+            this.securityConnectorName = Output.ofNullable(securityConnectorName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SecurityConnectorArgs build() {

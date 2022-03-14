@@ -1,11 +1,12 @@
 package io.pulumi;
 
-import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
@@ -24,8 +25,6 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
-
-import io.pulumi.deployment.MocksTest;
 
 class StackTest {
 
@@ -58,17 +57,17 @@ class StackTest {
         assertThat(result.t2).containsKey("foo");
         assertThat(result.t2.get("foo")).isPresent();
         assertThat(
-                InputOutputTests.waitFor(result.t1.explicitName)
+                OutputTests.waitFor(result.t1.explicitName)
         ).isSameAs(
-                InputOutputTests.waitFor((Output) result.t2.get("foo").get())
+                OutputTests.waitFor((Output) result.t2.get("foo").get())
         );
 
         assertThat(result.t2).containsKey("implicitName");
         assertThat(result.t2.get("implicitName")).isPresent();
         assertThat(
-                InputOutputTests.waitFor(result.t1.implicitName)
+                OutputTests.waitFor(result.t1.implicitName)
         ).isSameAs(
-                InputOutputTests.waitFor(((Output) result.t2.get("implicitName").get()))
+                OutputTests.waitFor(((Output) result.t2.get("implicitName").get()))
         );
     }
 
@@ -116,7 +115,7 @@ class StackTest {
         // TODO: is this OK that we're called twice?
         verify(mock.deployment, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
 
-        var values = InputOutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
+        var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
         return Tuples.of(stack, values);
     }
 

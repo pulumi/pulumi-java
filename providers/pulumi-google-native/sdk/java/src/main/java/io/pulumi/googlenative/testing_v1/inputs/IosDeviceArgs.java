@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosModelId", required=true)
-      private final Input<String> iosModelId;
+      private final Output<String> iosModelId;
 
-    public Input<String> getIosModelId() {
+    public Output<String> getIosModelId() {
         return this.iosModelId;
     }
 
@@ -33,9 +33,9 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosVersionId", required=true)
-      private final Input<String> iosVersionId;
+      private final Output<String> iosVersionId;
 
-    public Input<String> getIosVersionId() {
+    public Output<String> getIosVersionId() {
         return this.iosVersionId;
     }
 
@@ -44,9 +44,9 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale", required=true)
-      private final Input<String> locale;
+      private final Output<String> locale;
 
-    public Input<String> getLocale() {
+    public Output<String> getLocale() {
         return this.locale;
     }
 
@@ -55,17 +55,17 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orientation", required=true)
-      private final Input<String> orientation;
+      private final Output<String> orientation;
 
-    public Input<String> getOrientation() {
+    public Output<String> getOrientation() {
         return this.orientation;
     }
 
     public IosDeviceArgs(
-        Input<String> iosModelId,
-        Input<String> iosVersionId,
-        Input<String> locale,
-        Input<String> orientation) {
+        Output<String> iosModelId,
+        Output<String> iosVersionId,
+        Output<String> locale,
+        Output<String> orientation) {
         this.iosModelId = Objects.requireNonNull(iosModelId, "expected parameter 'iosModelId' to be non-null");
         this.iosVersionId = Objects.requireNonNull(iosVersionId, "expected parameter 'iosVersionId' to be non-null");
         this.locale = Objects.requireNonNull(locale, "expected parameter 'locale' to be non-null");
@@ -73,10 +73,10 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosDeviceArgs() {
-        this.iosModelId = Input.empty();
-        this.iosVersionId = Input.empty();
-        this.locale = Input.empty();
-        this.orientation = Input.empty();
+        this.iosModelId = Output.empty();
+        this.iosVersionId = Output.empty();
+        this.locale = Output.empty();
+        this.orientation = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> iosModelId;
-        private Input<String> iosVersionId;
-        private Input<String> locale;
-        private Input<String> orientation;
+        private Output<String> iosModelId;
+        private Output<String> iosVersionId;
+        private Output<String> locale;
+        private Output<String> orientation;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orientation = defaults.orientation;
         }
 
-        public Builder iosModelId(Input<String> iosModelId) {
+        public Builder iosModelId(Output<String> iosModelId) {
             this.iosModelId = Objects.requireNonNull(iosModelId);
             return this;
         }
 
         public Builder iosModelId(String iosModelId) {
-            this.iosModelId = Input.of(Objects.requireNonNull(iosModelId));
+            this.iosModelId = Output.of(Objects.requireNonNull(iosModelId));
             return this;
         }
 
-        public Builder iosVersionId(Input<String> iosVersionId) {
+        public Builder iosVersionId(Output<String> iosVersionId) {
             this.iosVersionId = Objects.requireNonNull(iosVersionId);
             return this;
         }
 
         public Builder iosVersionId(String iosVersionId) {
-            this.iosVersionId = Input.of(Objects.requireNonNull(iosVersionId));
+            this.iosVersionId = Output.of(Objects.requireNonNull(iosVersionId));
             return this;
         }
 
-        public Builder locale(Input<String> locale) {
+        public Builder locale(Output<String> locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
         public Builder locale(String locale) {
-            this.locale = Input.of(Objects.requireNonNull(locale));
+            this.locale = Output.of(Objects.requireNonNull(locale));
             return this;
         }
 
-        public Builder orientation(Input<String> orientation) {
+        public Builder orientation(Output<String> orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
 
         public Builder orientation(String orientation) {
-            this.orientation = Input.of(Objects.requireNonNull(orientation));
+            this.orientation = Output.of(Objects.requireNonNull(orientation));
             return this;
         }
         public IosDeviceArgs build() {

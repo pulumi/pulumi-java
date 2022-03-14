@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup;
 
 import io.pulumi.awsnative.backup.inputs.BackupVaultLockConfigurationTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupVaultNotificationObjectTypeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -18,54 +18,54 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupVaultArgs Empty = new BackupVaultArgs();
 
     @InputImport(name="accessPolicy")
-      private final @Nullable Input<Object> accessPolicy;
+      private final @Nullable Output<Object> accessPolicy;
 
-    public Input<Object> getAccessPolicy() {
-        return this.accessPolicy == null ? Input.empty() : this.accessPolicy;
+    public Output<Object> getAccessPolicy() {
+        return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
     }
 
     @InputImport(name="backupVaultName")
-      private final @Nullable Input<String> backupVaultName;
+      private final @Nullable Output<String> backupVaultName;
 
-    public Input<String> getBackupVaultName() {
-        return this.backupVaultName == null ? Input.empty() : this.backupVaultName;
+    public Output<String> getBackupVaultName() {
+        return this.backupVaultName == null ? Output.empty() : this.backupVaultName;
     }
 
     @InputImport(name="backupVaultTags")
-      private final @Nullable Input<Object> backupVaultTags;
+      private final @Nullable Output<Object> backupVaultTags;
 
-    public Input<Object> getBackupVaultTags() {
-        return this.backupVaultTags == null ? Input.empty() : this.backupVaultTags;
+    public Output<Object> getBackupVaultTags() {
+        return this.backupVaultTags == null ? Output.empty() : this.backupVaultTags;
     }
 
     @InputImport(name="encryptionKeyArn")
-      private final @Nullable Input<String> encryptionKeyArn;
+      private final @Nullable Output<String> encryptionKeyArn;
 
-    public Input<String> getEncryptionKeyArn() {
-        return this.encryptionKeyArn == null ? Input.empty() : this.encryptionKeyArn;
+    public Output<String> getEncryptionKeyArn() {
+        return this.encryptionKeyArn == null ? Output.empty() : this.encryptionKeyArn;
     }
 
     @InputImport(name="lockConfiguration")
-      private final @Nullable Input<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
+      private final @Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
 
-    public Input<BackupVaultLockConfigurationTypeArgs> getLockConfiguration() {
-        return this.lockConfiguration == null ? Input.empty() : this.lockConfiguration;
+    public Output<BackupVaultLockConfigurationTypeArgs> getLockConfiguration() {
+        return this.lockConfiguration == null ? Output.empty() : this.lockConfiguration;
     }
 
     @InputImport(name="notifications")
-      private final @Nullable Input<BackupVaultNotificationObjectTypeArgs> notifications;
+      private final @Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications;
 
-    public Input<BackupVaultNotificationObjectTypeArgs> getNotifications() {
-        return this.notifications == null ? Input.empty() : this.notifications;
+    public Output<BackupVaultNotificationObjectTypeArgs> getNotifications() {
+        return this.notifications == null ? Output.empty() : this.notifications;
     }
 
     public BackupVaultArgs(
-        @Nullable Input<Object> accessPolicy,
-        @Nullable Input<String> backupVaultName,
-        @Nullable Input<Object> backupVaultTags,
-        @Nullable Input<String> encryptionKeyArn,
-        @Nullable Input<BackupVaultLockConfigurationTypeArgs> lockConfiguration,
-        @Nullable Input<BackupVaultNotificationObjectTypeArgs> notifications) {
+        @Nullable Output<Object> accessPolicy,
+        @Nullable Output<String> backupVaultName,
+        @Nullable Output<Object> backupVaultTags,
+        @Nullable Output<String> encryptionKeyArn,
+        @Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration,
+        @Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications) {
         this.accessPolicy = accessPolicy;
         this.backupVaultName = backupVaultName;
         this.backupVaultTags = backupVaultTags;
@@ -75,12 +75,12 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupVaultArgs() {
-        this.accessPolicy = Input.empty();
-        this.backupVaultName = Input.empty();
-        this.backupVaultTags = Input.empty();
-        this.encryptionKeyArn = Input.empty();
-        this.lockConfiguration = Input.empty();
-        this.notifications = Input.empty();
+        this.accessPolicy = Output.empty();
+        this.backupVaultName = Output.empty();
+        this.backupVaultTags = Output.empty();
+        this.encryptionKeyArn = Output.empty();
+        this.lockConfiguration = Output.empty();
+        this.notifications = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,12 +92,12 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> accessPolicy;
-        private @Nullable Input<String> backupVaultName;
-        private @Nullable Input<Object> backupVaultTags;
-        private @Nullable Input<String> encryptionKeyArn;
-        private @Nullable Input<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
-        private @Nullable Input<BackupVaultNotificationObjectTypeArgs> notifications;
+        private @Nullable Output<Object> accessPolicy;
+        private @Nullable Output<String> backupVaultName;
+        private @Nullable Output<Object> backupVaultTags;
+        private @Nullable Output<String> encryptionKeyArn;
+        private @Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
+        private @Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications;
 
         public Builder() {
     	      // Empty
@@ -113,63 +113,63 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notifications = defaults.notifications;
         }
 
-        public Builder accessPolicy(@Nullable Input<Object> accessPolicy) {
+        public Builder accessPolicy(@Nullable Output<Object> accessPolicy) {
             this.accessPolicy = accessPolicy;
             return this;
         }
 
         public Builder accessPolicy(@Nullable Object accessPolicy) {
-            this.accessPolicy = Input.ofNullable(accessPolicy);
+            this.accessPolicy = Output.ofNullable(accessPolicy);
             return this;
         }
 
-        public Builder backupVaultName(@Nullable Input<String> backupVaultName) {
+        public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
             this.backupVaultName = backupVaultName;
             return this;
         }
 
         public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Input.ofNullable(backupVaultName);
+            this.backupVaultName = Output.ofNullable(backupVaultName);
             return this;
         }
 
-        public Builder backupVaultTags(@Nullable Input<Object> backupVaultTags) {
+        public Builder backupVaultTags(@Nullable Output<Object> backupVaultTags) {
             this.backupVaultTags = backupVaultTags;
             return this;
         }
 
         public Builder backupVaultTags(@Nullable Object backupVaultTags) {
-            this.backupVaultTags = Input.ofNullable(backupVaultTags);
+            this.backupVaultTags = Output.ofNullable(backupVaultTags);
             return this;
         }
 
-        public Builder encryptionKeyArn(@Nullable Input<String> encryptionKeyArn) {
+        public Builder encryptionKeyArn(@Nullable Output<String> encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
 
         public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
-            this.encryptionKeyArn = Input.ofNullable(encryptionKeyArn);
+            this.encryptionKeyArn = Output.ofNullable(encryptionKeyArn);
             return this;
         }
 
-        public Builder lockConfiguration(@Nullable Input<BackupVaultLockConfigurationTypeArgs> lockConfiguration) {
+        public Builder lockConfiguration(@Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration) {
             this.lockConfiguration = lockConfiguration;
             return this;
         }
 
         public Builder lockConfiguration(@Nullable BackupVaultLockConfigurationTypeArgs lockConfiguration) {
-            this.lockConfiguration = Input.ofNullable(lockConfiguration);
+            this.lockConfiguration = Output.ofNullable(lockConfiguration);
             return this;
         }
 
-        public Builder notifications(@Nullable Input<BackupVaultNotificationObjectTypeArgs> notifications) {
+        public Builder notifications(@Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications) {
             this.notifications = notifications;
             return this;
         }
 
         public Builder notifications(@Nullable BackupVaultNotificationObjectTypeArgs notifications) {
-            this.notifications = Input.ofNullable(notifications);
+            this.notifications = Output.ofNullable(notifications);
             return this;
         }
         public BackupVaultArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="types", required=true)
-      private final Input<String> types;
+      private final Output<String> types;
 
-    public Input<String> getTypes() {
+    public Output<String> getTypes() {
         return this.types;
     }
 
-    public DomainNameEndpointConfigurationArgs(Input<String> types) {
+    public DomainNameEndpointConfigurationArgs(Output<String> types) {
         this.types = Objects.requireNonNull(types, "expected parameter 'types' to be non-null");
     }
 
     private DomainNameEndpointConfigurationArgs() {
-        this.types = Input.empty();
+        this.types = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> types;
+        private Output<String> types;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     	      this.types = defaults.types;
         }
 
-        public Builder types(Input<String> types) {
+        public Builder types(Output<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
         public Builder types(String types) {
-            this.types = Input.of(Objects.requireNonNull(types));
+            this.types = Output.of(Objects.requireNonNull(types));
             return this;
         }
         public DomainNameEndpointConfigurationArgs build() {

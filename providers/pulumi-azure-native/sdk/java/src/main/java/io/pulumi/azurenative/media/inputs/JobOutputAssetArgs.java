@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName", required=true)
-      private final Input<String> assetName;
+      private final Output<String> assetName;
 
-    public Input<String> getAssetName() {
+    public Output<String> getAssetName() {
         return this.assetName;
     }
 
@@ -34,10 +34,10 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public JobOutputAssetArgs(
-        Input<String> assetName,
-        @Nullable Input<String> label,
-        Input<String> odataType) {
+        Output<String> assetName,
+        @Nullable Output<String> label,
+        Output<String> odataType) {
         this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
         this.label = label;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private JobOutputAssetArgs() {
-        this.assetName = Input.empty();
-        this.label = Input.empty();
-        this.odataType = Input.empty();
+        this.assetName = Output.empty();
+        this.label = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> assetName;
-        private @Nullable Input<String> label;
-        private Input<String> odataType;
+        private Output<String> assetName;
+        private @Nullable Output<String> label;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder assetName(Input<String> assetName) {
+        public Builder assetName(Output<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
         public Builder assetName(String assetName) {
-            this.assetName = Input.of(Objects.requireNonNull(assetName));
+            this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public JobOutputAssetArgs build() {

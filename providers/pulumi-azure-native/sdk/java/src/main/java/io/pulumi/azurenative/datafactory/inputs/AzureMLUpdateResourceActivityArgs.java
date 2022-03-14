@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -73,10 +73,10 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -84,9 +84,9 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="trainedModelFilePath", required=true)
-      private final Input<Object> trainedModelFilePath;
+      private final Output<Object> trainedModelFilePath;
 
-    public Input<Object> getTrainedModelFilePath() {
+    public Output<Object> getTrainedModelFilePath() {
         return this.trainedModelFilePath;
     }
 
@@ -95,9 +95,9 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="trainedModelLinkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> trainedModelLinkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> trainedModelLinkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getTrainedModelLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getTrainedModelLinkedServiceName() {
         return this.trainedModelLinkedServiceName;
     }
 
@@ -106,9 +106,9 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="trainedModelName", required=true)
-      private final Input<Object> trainedModelName;
+      private final Output<Object> trainedModelName;
 
-    public Input<Object> getTrainedModelName() {
+    public Output<Object> getTrainedModelName() {
         return this.trainedModelName;
     }
 
@@ -118,9 +118,9 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -129,23 +129,23 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public AzureMLUpdateResourceActivityArgs(
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        Input<Object> trainedModelFilePath,
-        Input<LinkedServiceReferenceArgs> trainedModelLinkedServiceName,
-        Input<Object> trainedModelName,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        Output<Object> trainedModelFilePath,
+        Output<LinkedServiceReferenceArgs> trainedModelLinkedServiceName,
+        Output<Object> trainedModelName,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;
@@ -159,16 +159,16 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
     }
 
     private AzureMLUpdateResourceActivityArgs() {
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.trainedModelFilePath = Input.empty();
-        this.trainedModelLinkedServiceName = Input.empty();
-        this.trainedModelName = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.trainedModelFilePath = Output.empty();
+        this.trainedModelLinkedServiceName = Output.empty();
+        this.trainedModelName = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -180,16 +180,16 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private Input<Object> trainedModelFilePath;
-        private Input<LinkedServiceReferenceArgs> trainedModelLinkedServiceName;
-        private Input<Object> trainedModelName;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private Output<Object> trainedModelFilePath;
+        private Output<LinkedServiceReferenceArgs> trainedModelLinkedServiceName;
+        private Output<Object> trainedModelName;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -209,103 +209,103 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder trainedModelFilePath(Input<Object> trainedModelFilePath) {
+        public Builder trainedModelFilePath(Output<Object> trainedModelFilePath) {
             this.trainedModelFilePath = Objects.requireNonNull(trainedModelFilePath);
             return this;
         }
 
         public Builder trainedModelFilePath(Object trainedModelFilePath) {
-            this.trainedModelFilePath = Input.of(Objects.requireNonNull(trainedModelFilePath));
+            this.trainedModelFilePath = Output.of(Objects.requireNonNull(trainedModelFilePath));
             return this;
         }
 
-        public Builder trainedModelLinkedServiceName(Input<LinkedServiceReferenceArgs> trainedModelLinkedServiceName) {
+        public Builder trainedModelLinkedServiceName(Output<LinkedServiceReferenceArgs> trainedModelLinkedServiceName) {
             this.trainedModelLinkedServiceName = Objects.requireNonNull(trainedModelLinkedServiceName);
             return this;
         }
 
         public Builder trainedModelLinkedServiceName(LinkedServiceReferenceArgs trainedModelLinkedServiceName) {
-            this.trainedModelLinkedServiceName = Input.of(Objects.requireNonNull(trainedModelLinkedServiceName));
+            this.trainedModelLinkedServiceName = Output.of(Objects.requireNonNull(trainedModelLinkedServiceName));
             return this;
         }
 
-        public Builder trainedModelName(Input<Object> trainedModelName) {
+        public Builder trainedModelName(Output<Object> trainedModelName) {
             this.trainedModelName = Objects.requireNonNull(trainedModelName);
             return this;
         }
 
         public Builder trainedModelName(Object trainedModelName) {
-            this.trainedModelName = Input.of(Objects.requireNonNull(trainedModelName));
+            this.trainedModelName = Output.of(Objects.requireNonNull(trainedModelName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public AzureMLUpdateResourceActivityArgs build() {

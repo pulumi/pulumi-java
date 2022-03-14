@@ -5,7 +5,7 @@ package io.pulumi.aws.transfer;
 
 import io.pulumi.aws.transfer.inputs.AccessHomeDirectoryMappingArgs;
 import io.pulumi.aws.transfer.inputs.AccessPosixProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId", required=true)
-      private final Input<String> externalId;
+      private final Output<String> externalId;
 
-    public Input<String> getExternalId() {
+    public Output<String> getExternalId() {
         return this.externalId;
     }
 
@@ -33,10 +33,10 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectory")
-      private final @Nullable Input<String> homeDirectory;
+      private final @Nullable Output<String> homeDirectory;
 
-    public Input<String> getHomeDirectory() {
-        return this.homeDirectory == null ? Input.empty() : this.homeDirectory;
+    public Output<String> getHomeDirectory() {
+        return this.homeDirectory == null ? Output.empty() : this.homeDirectory;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryMappings")
-      private final @Nullable Input<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
+      private final @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
-    public Input<List<AccessHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
-        return this.homeDirectoryMappings == null ? Input.empty() : this.homeDirectoryMappings;
+    public Output<List<AccessHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
+        return this.homeDirectoryMappings == null ? Output.empty() : this.homeDirectoryMappings;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryType")
-      private final @Nullable Input<String> homeDirectoryType;
+      private final @Nullable Output<String> homeDirectoryType;
 
-    public Input<String> getHomeDirectoryType() {
-        return this.homeDirectoryType == null ? Input.empty() : this.homeDirectoryType;
+    public Output<String> getHomeDirectoryType() {
+        return this.homeDirectoryType == null ? Output.empty() : this.homeDirectoryType;
     }
 
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixProfile")
-      private final @Nullable Input<AccessPosixProfileArgs> posixProfile;
+      private final @Nullable Output<AccessPosixProfileArgs> posixProfile;
 
-    public Input<AccessPosixProfileArgs> getPosixProfile() {
-        return this.posixProfile == null ? Input.empty() : this.posixProfile;
+    public Output<AccessPosixProfileArgs> getPosixProfile() {
+        return this.posixProfile == null ? Output.empty() : this.posixProfile;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -95,21 +95,21 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-      private final Input<String> serverId;
+      private final Output<String> serverId;
 
-    public Input<String> getServerId() {
+    public Output<String> getServerId() {
         return this.serverId;
     }
 
     public AccessArgs(
-        Input<String> externalId,
-        @Nullable Input<String> homeDirectory,
-        @Nullable Input<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings,
-        @Nullable Input<String> homeDirectoryType,
-        @Nullable Input<String> policy,
-        @Nullable Input<AccessPosixProfileArgs> posixProfile,
-        @Nullable Input<String> role,
-        Input<String> serverId) {
+        Output<String> externalId,
+        @Nullable Output<String> homeDirectory,
+        @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings,
+        @Nullable Output<String> homeDirectoryType,
+        @Nullable Output<String> policy,
+        @Nullable Output<AccessPosixProfileArgs> posixProfile,
+        @Nullable Output<String> role,
+        Output<String> serverId) {
         this.externalId = Objects.requireNonNull(externalId, "expected parameter 'externalId' to be non-null");
         this.homeDirectory = homeDirectory;
         this.homeDirectoryMappings = homeDirectoryMappings;
@@ -121,14 +121,14 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessArgs() {
-        this.externalId = Input.empty();
-        this.homeDirectory = Input.empty();
-        this.homeDirectoryMappings = Input.empty();
-        this.homeDirectoryType = Input.empty();
-        this.policy = Input.empty();
-        this.posixProfile = Input.empty();
-        this.role = Input.empty();
-        this.serverId = Input.empty();
+        this.externalId = Output.empty();
+        this.homeDirectory = Output.empty();
+        this.homeDirectoryMappings = Output.empty();
+        this.homeDirectoryType = Output.empty();
+        this.policy = Output.empty();
+        this.posixProfile = Output.empty();
+        this.role = Output.empty();
+        this.serverId = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,14 +140,14 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> externalId;
-        private @Nullable Input<String> homeDirectory;
-        private @Nullable Input<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
-        private @Nullable Input<String> homeDirectoryType;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<AccessPosixProfileArgs> posixProfile;
-        private @Nullable Input<String> role;
-        private Input<String> serverId;
+        private Output<String> externalId;
+        private @Nullable Output<String> homeDirectory;
+        private @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
+        private @Nullable Output<String> homeDirectoryType;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<AccessPosixProfileArgs> posixProfile;
+        private @Nullable Output<String> role;
+        private Output<String> serverId;
 
         public Builder() {
     	      // Empty
@@ -165,83 +165,83 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverId = defaults.serverId;
         }
 
-        public Builder externalId(Input<String> externalId) {
+        public Builder externalId(Output<String> externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
         public Builder externalId(String externalId) {
-            this.externalId = Input.of(Objects.requireNonNull(externalId));
+            this.externalId = Output.of(Objects.requireNonNull(externalId));
             return this;
         }
 
-        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
         public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Input.ofNullable(homeDirectory);
+            this.homeDirectory = Output.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder homeDirectoryMappings(@Nullable Input<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
 
         public Builder homeDirectoryMappings(@Nullable List<AccessHomeDirectoryMappingArgs> homeDirectoryMappings) {
-            this.homeDirectoryMappings = Input.ofNullable(homeDirectoryMappings);
+            this.homeDirectoryMappings = Output.ofNullable(homeDirectoryMappings);
             return this;
         }
 
-        public Builder homeDirectoryType(@Nullable Input<String> homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable Output<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
 
         public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
-            this.homeDirectoryType = Input.ofNullable(homeDirectoryType);
+            this.homeDirectoryType = Output.ofNullable(homeDirectoryType);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder posixProfile(@Nullable Input<AccessPosixProfileArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Output<AccessPosixProfileArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
 
         public Builder posixProfile(@Nullable AccessPosixProfileArgs posixProfile) {
-            this.posixProfile = Input.ofNullable(posixProfile);
+            this.posixProfile = Output.ofNullable(posixProfile);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder serverId(Input<String> serverId) {
+        public Builder serverId(Output<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
         public Builder serverId(String serverId) {
-            this.serverId = Input.of(Objects.requireNonNull(serverId));
+            this.serverId = Output.of(Objects.requireNonNull(serverId));
             return this;
         }
         public AccessArgs build() {

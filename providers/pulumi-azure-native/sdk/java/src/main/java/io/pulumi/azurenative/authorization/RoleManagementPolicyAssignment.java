@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.RoleManagementPolicyAssignmentArgs;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,18 +154,18 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public RoleManagementPolicyAssignment(String name, RoleManagementPolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:RoleManagementPolicyAssignment", name, args == null ? RoleManagementPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:RoleManagementPolicyAssignment", name, args == null ? RoleManagementPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RoleManagementPolicyAssignment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RoleManagementPolicyAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:RoleManagementPolicyAssignment", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20201001preview:RoleManagementPolicyAssignment").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20201001preview:RoleManagementPolicyAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -180,7 +179,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RoleManagementPolicyAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RoleManagementPolicyAssignment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoleManagementPolicyAssignment(name, id, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.JobDatabaseOutputDatabaseOutputMode;
 import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,9 +17,9 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     public static final JobDatabaseOutputArgs Empty = new JobDatabaseOutputArgs();
 
     @InputImport(name="databaseOptions", required=true)
-      private final Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
+      private final Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
-    public Input<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
+    public Output<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
         return this.databaseOptions;
     }
 
@@ -28,10 +28,10 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseOutputMode")
-      private final @Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
+      private final @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
 
-    public Input<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
-        return this.databaseOutputMode == null ? Input.empty() : this.databaseOutputMode;
+    public Output<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
+        return this.databaseOutputMode == null ? Output.empty() : this.databaseOutputMode;
     }
 
     /**
@@ -39,25 +39,25 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="glueConnectionName", required=true)
-      private final Input<String> glueConnectionName;
+      private final Output<String> glueConnectionName;
 
-    public Input<String> getGlueConnectionName() {
+    public Output<String> getGlueConnectionName() {
         return this.glueConnectionName;
     }
 
     public JobDatabaseOutputArgs(
-        Input<JobDatabaseTableOutputOptionsArgs> databaseOptions,
-        @Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode,
-        Input<String> glueConnectionName) {
+        Output<JobDatabaseTableOutputOptionsArgs> databaseOptions,
+        @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode,
+        Output<String> glueConnectionName) {
         this.databaseOptions = Objects.requireNonNull(databaseOptions, "expected parameter 'databaseOptions' to be non-null");
         this.databaseOutputMode = databaseOutputMode;
         this.glueConnectionName = Objects.requireNonNull(glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
     }
 
     private JobDatabaseOutputArgs() {
-        this.databaseOptions = Input.empty();
-        this.databaseOutputMode = Input.empty();
-        this.glueConnectionName = Input.empty();
+        this.databaseOptions = Output.empty();
+        this.databaseOutputMode = Output.empty();
+        this.glueConnectionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
-        private @Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
-        private Input<String> glueConnectionName;
+        private Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
+        private @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
+        private Output<String> glueConnectionName;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     	      this.glueConnectionName = defaults.glueConnectionName;
         }
 
-        public Builder databaseOptions(Input<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
+        public Builder databaseOptions(Output<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
             this.databaseOptions = Objects.requireNonNull(databaseOptions);
             return this;
         }
 
         public Builder databaseOptions(JobDatabaseTableOutputOptionsArgs databaseOptions) {
-            this.databaseOptions = Input.of(Objects.requireNonNull(databaseOptions));
+            this.databaseOptions = Output.of(Objects.requireNonNull(databaseOptions));
             return this;
         }
 
-        public Builder databaseOutputMode(@Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode) {
+        public Builder databaseOutputMode(@Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode) {
             this.databaseOutputMode = databaseOutputMode;
             return this;
         }
 
         public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
-            this.databaseOutputMode = Input.ofNullable(databaseOutputMode);
+            this.databaseOutputMode = Output.ofNullable(databaseOutputMode);
             return this;
         }
 
-        public Builder glueConnectionName(Input<String> glueConnectionName) {
+        public Builder glueConnectionName(Output<String> glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
 
         public Builder glueConnectionName(String glueConnectionName) {
-            this.glueConnectionName = Input.of(Objects.requireNonNull(glueConnectionName));
+            this.glueConnectionName = Output.of(Objects.requireNonNull(glueConnectionName));
             return this;
         }
         public JobDatabaseOutputArgs build() {

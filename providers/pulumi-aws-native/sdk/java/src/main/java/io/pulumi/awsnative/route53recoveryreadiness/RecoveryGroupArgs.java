@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.RecoveryGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cells")
-      private final @Nullable Input<List<String>> cells;
+      private final @Nullable Output<List<String>> cells;
 
-    public Input<List<String>> getCells() {
-        return this.cells == null ? Input.empty() : this.cells;
+    public Output<List<String>> getCells() {
+        return this.cells == null ? Output.empty() : this.cells;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryGroupName")
-      private final @Nullable Input<String> recoveryGroupName;
+      private final @Nullable Output<String> recoveryGroupName;
 
-    public Input<String> getRecoveryGroupName() {
-        return this.recoveryGroupName == null ? Input.empty() : this.recoveryGroupName;
+    public Output<String> getRecoveryGroupName() {
+        return this.recoveryGroupName == null ? Output.empty() : this.recoveryGroupName;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RecoveryGroupTagArgs>> tags;
+      private final @Nullable Output<List<RecoveryGroupTagArgs>> tags;
 
-    public Input<List<RecoveryGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RecoveryGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RecoveryGroupArgs(
-        @Nullable Input<List<String>> cells,
-        @Nullable Input<String> recoveryGroupName,
-        @Nullable Input<List<RecoveryGroupTagArgs>> tags) {
+        @Nullable Output<List<String>> cells,
+        @Nullable Output<String> recoveryGroupName,
+        @Nullable Output<List<RecoveryGroupTagArgs>> tags) {
         this.cells = cells;
         this.recoveryGroupName = recoveryGroupName;
         this.tags = tags;
     }
 
     private RecoveryGroupArgs() {
-        this.cells = Input.empty();
-        this.recoveryGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.cells = Output.empty();
+        this.recoveryGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> cells;
-        private @Nullable Input<String> recoveryGroupName;
-        private @Nullable Input<List<RecoveryGroupTagArgs>> tags;
+        private @Nullable Output<List<String>> cells;
+        private @Nullable Output<String> recoveryGroupName;
+        private @Nullable Output<List<RecoveryGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder cells(@Nullable Input<List<String>> cells) {
+        public Builder cells(@Nullable Output<List<String>> cells) {
             this.cells = cells;
             return this;
         }
 
         public Builder cells(@Nullable List<String> cells) {
-            this.cells = Input.ofNullable(cells);
+            this.cells = Output.ofNullable(cells);
             return this;
         }
 
-        public Builder recoveryGroupName(@Nullable Input<String> recoveryGroupName) {
+        public Builder recoveryGroupName(@Nullable Output<String> recoveryGroupName) {
             this.recoveryGroupName = recoveryGroupName;
             return this;
         }
 
         public Builder recoveryGroupName(@Nullable String recoveryGroupName) {
-            this.recoveryGroupName = Input.ofNullable(recoveryGroupName);
+            this.recoveryGroupName = Output.ofNullable(recoveryGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RecoveryGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RecoveryGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RecoveryGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RecoveryGroupArgs build() {

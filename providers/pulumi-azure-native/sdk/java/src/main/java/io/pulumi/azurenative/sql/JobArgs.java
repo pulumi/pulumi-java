@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.inputs.JobScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-      private final Input<String> jobAgentName;
+      private final Output<String> jobAgentName;
 
-    public Input<String> getJobAgentName() {
+    public Output<String> getJobAgentName() {
         return this.jobAgentName;
     }
 
@@ -42,10 +42,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-      private final @Nullable Input<String> jobName;
+      private final @Nullable Output<String> jobName;
 
-    public Input<String> getJobName() {
-        return this.jobName == null ? Input.empty() : this.jobName;
+    public Output<String> getJobName() {
+        return this.jobName == null ? Output.empty() : this.jobName;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,10 +64,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<JobScheduleArgs> schedule;
+      private final @Nullable Output<JobScheduleArgs> schedule;
 
-    public Input<JobScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<JobScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -75,20 +75,20 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public JobArgs(
-        @Nullable Input<String> description,
-        Input<String> jobAgentName,
-        @Nullable Input<String> jobName,
-        Input<String> resourceGroupName,
-        @Nullable Input<JobScheduleArgs> schedule,
-        Input<String> serverName) {
-        this.description = description == null ? Input.ofNullable("") : description;
+        @Nullable Output<String> description,
+        Output<String> jobAgentName,
+        @Nullable Output<String> jobName,
+        Output<String> resourceGroupName,
+        @Nullable Output<JobScheduleArgs> schedule,
+        Output<String> serverName) {
+        this.description = description == null ? Output.ofNullable("") : description;
         this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
         this.jobName = jobName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -97,12 +97,12 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.description = Input.empty();
-        this.jobAgentName = Input.empty();
-        this.jobName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schedule = Input.empty();
-        this.serverName = Input.empty();
+        this.description = Output.empty();
+        this.jobAgentName = Output.empty();
+        this.jobName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schedule = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> jobAgentName;
-        private @Nullable Input<String> jobName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<JobScheduleArgs> schedule;
-        private Input<String> serverName;
+        private @Nullable Output<String> description;
+        private Output<String> jobAgentName;
+        private @Nullable Output<String> jobName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<JobScheduleArgs> schedule;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder jobAgentName(Input<String> jobAgentName) {
+        public Builder jobAgentName(Output<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Input.of(Objects.requireNonNull(jobAgentName));
+            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
 
-        public Builder jobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Input.ofNullable(jobName);
+            this.jobName = Output.ofNullable(jobName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schedule(@Nullable Input<JobScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<JobScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable JobScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public JobArgs build() {

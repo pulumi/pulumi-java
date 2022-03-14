@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.container;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -342,14 +341,14 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AwsCluster(String name, AwsClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/awsCluster:AwsCluster", name, args == null ? AwsClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:container/awsCluster:AwsCluster", name, args == null ? AwsClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AwsCluster(String name, Input<String> id, @Nullable AwsClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AwsCluster(String name, Output<String> id, @Nullable AwsClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:container/awsCluster:AwsCluster", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -365,7 +364,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AwsCluster get(String name, Input<String> id, @Nullable AwsClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AwsCluster get(String name, Output<String> id, @Nullable AwsClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AwsCluster(name, id, state, options);
     }
 }

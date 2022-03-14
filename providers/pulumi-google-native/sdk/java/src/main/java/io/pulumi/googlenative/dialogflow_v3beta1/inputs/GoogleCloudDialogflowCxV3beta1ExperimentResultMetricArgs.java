@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType;
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="confidenceInterval")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
 
-    public Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> getConfidenceInterval() {
-        return this.confidenceInterval == null ? Input.empty() : this.confidenceInterval;
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> getConfidenceInterval() {
+        return this.confidenceInterval == null ? Output.empty() : this.confidenceInterval;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Double> count;
+      private final @Nullable Output<Double> count;
 
-    public Input<Double> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Double> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="countType")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
 
-    public Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> getCountType() {
-        return this.countType == null ? Input.empty() : this.countType;
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> getCountType() {
+        return this.countType == null ? Output.empty() : this.countType;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="ratio")
-      private final @Nullable Input<Double> ratio;
+      private final @Nullable Output<Double> ratio;
 
-    public Input<Double> getRatio() {
-        return this.ratio == null ? Input.empty() : this.ratio;
+    public Output<Double> getRatio() {
+        return this.ratio == null ? Output.empty() : this.ratio;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
 
-    public Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs(
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval,
-        @Nullable Input<Double> count,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType,
-        @Nullable Input<Double> ratio,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type) {
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval,
+        @Nullable Output<Double> count,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType,
+        @Nullable Output<Double> ratio,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type) {
         this.confidenceInterval = confidenceInterval;
         this.count = count;
         this.countType = countType;
@@ -90,11 +90,11 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     }
 
     private GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs() {
-        this.confidenceInterval = Input.empty();
-        this.count = Input.empty();
-        this.countType = Input.empty();
-        this.ratio = Input.empty();
-        this.type = Input.empty();
+        this.confidenceInterval = Output.empty();
+        this.count = Output.empty();
+        this.countType = Output.empty();
+        this.ratio = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
-        private @Nullable Input<Double> count;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
-        private @Nullable Input<Double> ratio;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
+        private @Nullable Output<Double> count;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
+        private @Nullable Output<Double> ratio;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     	      this.type = defaults.type;
         }
 
-        public Builder confidenceInterval(@Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval) {
+        public Builder confidenceInterval(@Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval) {
             this.confidenceInterval = confidenceInterval;
             return this;
         }
 
         public Builder confidenceInterval(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs confidenceInterval) {
-            this.confidenceInterval = Input.ofNullable(confidenceInterval);
+            this.confidenceInterval = Output.ofNullable(confidenceInterval);
             return this;
         }
 
-        public Builder count(@Nullable Input<Double> count) {
+        public Builder count(@Nullable Output<Double> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Double count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder countType(@Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType) {
+        public Builder countType(@Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType) {
             this.countType = countType;
             return this;
         }
 
         public Builder countType(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType countType) {
-            this.countType = Input.ofNullable(countType);
+            this.countType = Output.ofNullable(countType);
             return this;
         }
 
-        public Builder ratio(@Nullable Input<Double> ratio) {
+        public Builder ratio(@Nullable Output<Double> ratio) {
             this.ratio = ratio;
             return this;
         }
 
         public Builder ratio(@Nullable Double ratio) {
-            this.ratio = Input.ofNullable(ratio);
+            this.ratio = Output.ofNullable(ratio);
             return this;
         }
 
-        public Builder type(@Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type) {
+        public Builder type(@Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs build() {

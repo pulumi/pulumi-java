@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.ProviderRegistrationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     public static final ProviderRegistrationArgs Empty = new ProviderRegistrationArgs();
 
     @InputImport(name="properties")
-      private final @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
+      private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
-    public Input<ProviderRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ProviderRegistrationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="providerNamespace")
-      private final @Nullable Input<String> providerNamespace;
+      private final @Nullable Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
-        return this.providerNamespace == null ? Input.empty() : this.providerNamespace;
+    public Output<String> getProviderNamespace() {
+        return this.providerNamespace == null ? Output.empty() : this.providerNamespace;
     }
 
     public ProviderRegistrationArgs(
-        @Nullable Input<ProviderRegistrationPropertiesArgs> properties,
-        @Nullable Input<String> providerNamespace) {
+        @Nullable Output<ProviderRegistrationPropertiesArgs> properties,
+        @Nullable Output<String> providerNamespace) {
         this.properties = properties;
         this.providerNamespace = providerNamespace;
     }
 
     private ProviderRegistrationArgs() {
-        this.properties = Input.empty();
-        this.providerNamespace = Input.empty();
+        this.properties = Output.empty();
+        this.providerNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
-        private @Nullable Input<String> providerNamespace;
+        private @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
+        private @Nullable Output<String> providerNamespace;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder properties(@Nullable Input<ProviderRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ProviderRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerNamespace(@Nullable Input<String> providerNamespace) {
+        public Builder providerNamespace(@Nullable Output<String> providerNamespace) {
             this.providerNamespace = providerNamespace;
             return this;
         }
 
         public Builder providerNamespace(@Nullable String providerNamespace) {
-            this.providerNamespace = Input.ofNullable(providerNamespace);
+            this.providerNamespace = Output.ofNullable(providerNamespace);
             return this;
         }
         public ProviderRegistrationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="chapEnabled")
-      private final @Nullable Input<Boolean> chapEnabled;
+      private final @Nullable Output<Boolean> chapEnabled;
 
-    public Input<Boolean> getChapEnabled() {
-        return this.chapEnabled == null ? Input.empty() : this.chapEnabled;
+    public Output<Boolean> getChapEnabled() {
+        return this.chapEnabled == null ? Output.empty() : this.chapEnabled;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskId")
-      private final @Nullable Input<String> diskId;
+      private final @Nullable Output<String> diskId;
 
-    public Input<String> getDiskId() {
-        return this.diskId == null ? Input.empty() : this.diskId;
+    public Output<String> getDiskId() {
+        return this.diskId == null ? Output.empty() : this.diskId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gatewayArn")
-      private final @Nullable Input<String> gatewayArn;
+      private final @Nullable Output<String> gatewayArn;
 
-    public Input<String> getGatewayArn() {
-        return this.gatewayArn == null ? Input.empty() : this.gatewayArn;
+    public Output<String> getGatewayArn() {
+        return this.gatewayArn == null ? Output.empty() : this.gatewayArn;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsEncrypted")
-      private final @Nullable Input<Boolean> kmsEncrypted;
+      private final @Nullable Output<Boolean> kmsEncrypted;
 
-    public Input<Boolean> getKmsEncrypted() {
-        return this.kmsEncrypted == null ? Input.empty() : this.kmsEncrypted;
+    public Output<Boolean> getKmsEncrypted() {
+        return this.kmsEncrypted == null ? Output.empty() : this.kmsEncrypted;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lunNumber")
-      private final @Nullable Input<Integer> lunNumber;
+      private final @Nullable Output<Integer> lunNumber;
 
-    public Input<Integer> getLunNumber() {
-        return this.lunNumber == null ? Input.empty() : this.lunNumber;
+    public Output<Integer> getLunNumber() {
+        return this.lunNumber == null ? Output.empty() : this.lunNumber;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkInterfaceId")
-      private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
+    public Output<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkInterfacePort")
-      private final @Nullable Input<Integer> networkInterfacePort;
+      private final @Nullable Output<Integer> networkInterfacePort;
 
-    public Input<Integer> getNetworkInterfacePort() {
-        return this.networkInterfacePort == null ? Input.empty() : this.networkInterfacePort;
+    public Output<Integer> getNetworkInterfacePort() {
+        return this.networkInterfacePort == null ? Output.empty() : this.networkInterfacePort;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preserveExistingData")
-      private final @Nullable Input<Boolean> preserveExistingData;
+      private final @Nullable Output<Boolean> preserveExistingData;
 
-    public Input<Boolean> getPreserveExistingData() {
-        return this.preserveExistingData == null ? Input.empty() : this.preserveExistingData;
+    public Output<Boolean> getPreserveExistingData() {
+        return this.preserveExistingData == null ? Output.empty() : this.preserveExistingData;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="snapshotId")
-      private final @Nullable Input<String> snapshotId;
+      private final @Nullable Output<String> snapshotId;
 
-    public Input<String> getSnapshotId() {
-        return this.snapshotId == null ? Input.empty() : this.snapshotId;
+    public Output<String> getSnapshotId() {
+        return this.snapshotId == null ? Output.empty() : this.snapshotId;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetArn")
-      private final @Nullable Input<String> targetArn;
+      private final @Nullable Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
-        return this.targetArn == null ? Input.empty() : this.targetArn;
+    public Output<String> getTargetArn() {
+        return this.targetArn == null ? Output.empty() : this.targetArn;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetName")
-      private final @Nullable Input<String> targetName;
+      private final @Nullable Output<String> targetName;
 
-    public Input<String> getTargetName() {
-        return this.targetName == null ? Input.empty() : this.targetName;
+    public Output<String> getTargetName() {
+        return this.targetName == null ? Output.empty() : this.targetName;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeAttachmentStatus")
-      private final @Nullable Input<String> volumeAttachmentStatus;
+      private final @Nullable Output<String> volumeAttachmentStatus;
 
-    public Input<String> getVolumeAttachmentStatus() {
-        return this.volumeAttachmentStatus == null ? Input.empty() : this.volumeAttachmentStatus;
+    public Output<String> getVolumeAttachmentStatus() {
+        return this.volumeAttachmentStatus == null ? Output.empty() : this.volumeAttachmentStatus;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeId")
-      private final @Nullable Input<String> volumeId;
+      private final @Nullable Output<String> volumeId;
 
-    public Input<String> getVolumeId() {
-        return this.volumeId == null ? Input.empty() : this.volumeId;
+    public Output<String> getVolumeId() {
+        return this.volumeId == null ? Output.empty() : this.volumeId;
     }
 
     /**
@@ -209,10 +209,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeSizeInBytes")
-      private final @Nullable Input<Integer> volumeSizeInBytes;
+      private final @Nullable Output<Integer> volumeSizeInBytes;
 
-    public Input<Integer> getVolumeSizeInBytes() {
-        return this.volumeSizeInBytes == null ? Input.empty() : this.volumeSizeInBytes;
+    public Output<Integer> getVolumeSizeInBytes() {
+        return this.volumeSizeInBytes == null ? Output.empty() : this.volumeSizeInBytes;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeStatus")
-      private final @Nullable Input<String> volumeStatus;
+      private final @Nullable Output<String> volumeStatus;
 
-    public Input<String> getVolumeStatus() {
-        return this.volumeStatus == null ? Input.empty() : this.volumeStatus;
+    public Output<String> getVolumeStatus() {
+        return this.volumeStatus == null ? Output.empty() : this.volumeStatus;
     }
 
     /**
@@ -231,33 +231,33 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public StoredIscsiVolumeState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> chapEnabled,
-        @Nullable Input<String> diskId,
-        @Nullable Input<String> gatewayArn,
-        @Nullable Input<Boolean> kmsEncrypted,
-        @Nullable Input<String> kmsKey,
-        @Nullable Input<Integer> lunNumber,
-        @Nullable Input<String> networkInterfaceId,
-        @Nullable Input<Integer> networkInterfacePort,
-        @Nullable Input<Boolean> preserveExistingData,
-        @Nullable Input<String> snapshotId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> targetArn,
-        @Nullable Input<String> targetName,
-        @Nullable Input<String> volumeAttachmentStatus,
-        @Nullable Input<String> volumeId,
-        @Nullable Input<Integer> volumeSizeInBytes,
-        @Nullable Input<String> volumeStatus,
-        @Nullable Input<String> volumeType) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> chapEnabled,
+        @Nullable Output<String> diskId,
+        @Nullable Output<String> gatewayArn,
+        @Nullable Output<Boolean> kmsEncrypted,
+        @Nullable Output<String> kmsKey,
+        @Nullable Output<Integer> lunNumber,
+        @Nullable Output<String> networkInterfaceId,
+        @Nullable Output<Integer> networkInterfacePort,
+        @Nullable Output<Boolean> preserveExistingData,
+        @Nullable Output<String> snapshotId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> targetArn,
+        @Nullable Output<String> targetName,
+        @Nullable Output<String> volumeAttachmentStatus,
+        @Nullable Output<String> volumeId,
+        @Nullable Output<Integer> volumeSizeInBytes,
+        @Nullable Output<String> volumeStatus,
+        @Nullable Output<String> volumeType) {
         this.arn = arn;
         this.chapEnabled = chapEnabled;
         this.diskId = diskId;
@@ -281,26 +281,26 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
     }
 
     private StoredIscsiVolumeState() {
-        this.arn = Input.empty();
-        this.chapEnabled = Input.empty();
-        this.diskId = Input.empty();
-        this.gatewayArn = Input.empty();
-        this.kmsEncrypted = Input.empty();
-        this.kmsKey = Input.empty();
-        this.lunNumber = Input.empty();
-        this.networkInterfaceId = Input.empty();
-        this.networkInterfacePort = Input.empty();
-        this.preserveExistingData = Input.empty();
-        this.snapshotId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.targetArn = Input.empty();
-        this.targetName = Input.empty();
-        this.volumeAttachmentStatus = Input.empty();
-        this.volumeId = Input.empty();
-        this.volumeSizeInBytes = Input.empty();
-        this.volumeStatus = Input.empty();
-        this.volumeType = Input.empty();
+        this.arn = Output.empty();
+        this.chapEnabled = Output.empty();
+        this.diskId = Output.empty();
+        this.gatewayArn = Output.empty();
+        this.kmsEncrypted = Output.empty();
+        this.kmsKey = Output.empty();
+        this.lunNumber = Output.empty();
+        this.networkInterfaceId = Output.empty();
+        this.networkInterfacePort = Output.empty();
+        this.preserveExistingData = Output.empty();
+        this.snapshotId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.targetArn = Output.empty();
+        this.targetName = Output.empty();
+        this.volumeAttachmentStatus = Output.empty();
+        this.volumeId = Output.empty();
+        this.volumeSizeInBytes = Output.empty();
+        this.volumeStatus = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -312,26 +312,26 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> chapEnabled;
-        private @Nullable Input<String> diskId;
-        private @Nullable Input<String> gatewayArn;
-        private @Nullable Input<Boolean> kmsEncrypted;
-        private @Nullable Input<String> kmsKey;
-        private @Nullable Input<Integer> lunNumber;
-        private @Nullable Input<String> networkInterfaceId;
-        private @Nullable Input<Integer> networkInterfacePort;
-        private @Nullable Input<Boolean> preserveExistingData;
-        private @Nullable Input<String> snapshotId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> targetArn;
-        private @Nullable Input<String> targetName;
-        private @Nullable Input<String> volumeAttachmentStatus;
-        private @Nullable Input<String> volumeId;
-        private @Nullable Input<Integer> volumeSizeInBytes;
-        private @Nullable Input<String> volumeStatus;
-        private @Nullable Input<String> volumeType;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> chapEnabled;
+        private @Nullable Output<String> diskId;
+        private @Nullable Output<String> gatewayArn;
+        private @Nullable Output<Boolean> kmsEncrypted;
+        private @Nullable Output<String> kmsKey;
+        private @Nullable Output<Integer> lunNumber;
+        private @Nullable Output<String> networkInterfaceId;
+        private @Nullable Output<Integer> networkInterfacePort;
+        private @Nullable Output<Boolean> preserveExistingData;
+        private @Nullable Output<String> snapshotId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> targetArn;
+        private @Nullable Output<String> targetName;
+        private @Nullable Output<String> volumeAttachmentStatus;
+        private @Nullable Output<String> volumeId;
+        private @Nullable Output<Integer> volumeSizeInBytes;
+        private @Nullable Output<String> volumeStatus;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -361,203 +361,203 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder chapEnabled(@Nullable Input<Boolean> chapEnabled) {
+        public Builder chapEnabled(@Nullable Output<Boolean> chapEnabled) {
             this.chapEnabled = chapEnabled;
             return this;
         }
 
         public Builder chapEnabled(@Nullable Boolean chapEnabled) {
-            this.chapEnabled = Input.ofNullable(chapEnabled);
+            this.chapEnabled = Output.ofNullable(chapEnabled);
             return this;
         }
 
-        public Builder diskId(@Nullable Input<String> diskId) {
+        public Builder diskId(@Nullable Output<String> diskId) {
             this.diskId = diskId;
             return this;
         }
 
         public Builder diskId(@Nullable String diskId) {
-            this.diskId = Input.ofNullable(diskId);
+            this.diskId = Output.ofNullable(diskId);
             return this;
         }
 
-        public Builder gatewayArn(@Nullable Input<String> gatewayArn) {
+        public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
 
         public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Input.ofNullable(gatewayArn);
+            this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
         }
 
-        public Builder kmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
 
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Input.ofNullable(kmsEncrypted);
+            this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
             return this;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder lunNumber(@Nullable Input<Integer> lunNumber) {
+        public Builder lunNumber(@Nullable Output<Integer> lunNumber) {
             this.lunNumber = lunNumber;
             return this;
         }
 
         public Builder lunNumber(@Nullable Integer lunNumber) {
-            this.lunNumber = Input.ofNullable(lunNumber);
+            this.lunNumber = Output.ofNullable(lunNumber);
             return this;
         }
 
-        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder networkInterfacePort(@Nullable Input<Integer> networkInterfacePort) {
+        public Builder networkInterfacePort(@Nullable Output<Integer> networkInterfacePort) {
             this.networkInterfacePort = networkInterfacePort;
             return this;
         }
 
         public Builder networkInterfacePort(@Nullable Integer networkInterfacePort) {
-            this.networkInterfacePort = Input.ofNullable(networkInterfacePort);
+            this.networkInterfacePort = Output.ofNullable(networkInterfacePort);
             return this;
         }
 
-        public Builder preserveExistingData(@Nullable Input<Boolean> preserveExistingData) {
+        public Builder preserveExistingData(@Nullable Output<Boolean> preserveExistingData) {
             this.preserveExistingData = preserveExistingData;
             return this;
         }
 
         public Builder preserveExistingData(@Nullable Boolean preserveExistingData) {
-            this.preserveExistingData = Input.ofNullable(preserveExistingData);
+            this.preserveExistingData = Output.ofNullable(preserveExistingData);
             return this;
         }
 
-        public Builder snapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Input.ofNullable(snapshotId);
+            this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder targetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Input.ofNullable(targetArn);
+            this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
 
-        public Builder targetName(@Nullable Input<String> targetName) {
+        public Builder targetName(@Nullable Output<String> targetName) {
             this.targetName = targetName;
             return this;
         }
 
         public Builder targetName(@Nullable String targetName) {
-            this.targetName = Input.ofNullable(targetName);
+            this.targetName = Output.ofNullable(targetName);
             return this;
         }
 
-        public Builder volumeAttachmentStatus(@Nullable Input<String> volumeAttachmentStatus) {
+        public Builder volumeAttachmentStatus(@Nullable Output<String> volumeAttachmentStatus) {
             this.volumeAttachmentStatus = volumeAttachmentStatus;
             return this;
         }
 
         public Builder volumeAttachmentStatus(@Nullable String volumeAttachmentStatus) {
-            this.volumeAttachmentStatus = Input.ofNullable(volumeAttachmentStatus);
+            this.volumeAttachmentStatus = Output.ofNullable(volumeAttachmentStatus);
             return this;
         }
 
-        public Builder volumeId(@Nullable Input<String> volumeId) {
+        public Builder volumeId(@Nullable Output<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Input.ofNullable(volumeId);
+            this.volumeId = Output.ofNullable(volumeId);
             return this;
         }
 
-        public Builder volumeSizeInBytes(@Nullable Input<Integer> volumeSizeInBytes) {
+        public Builder volumeSizeInBytes(@Nullable Output<Integer> volumeSizeInBytes) {
             this.volumeSizeInBytes = volumeSizeInBytes;
             return this;
         }
 
         public Builder volumeSizeInBytes(@Nullable Integer volumeSizeInBytes) {
-            this.volumeSizeInBytes = Input.ofNullable(volumeSizeInBytes);
+            this.volumeSizeInBytes = Output.ofNullable(volumeSizeInBytes);
             return this;
         }
 
-        public Builder volumeStatus(@Nullable Input<String> volumeStatus) {
+        public Builder volumeStatus(@Nullable Output<String> volumeStatus) {
             this.volumeStatus = volumeStatus;
             return this;
         }
 
         public Builder volumeStatus(@Nullable String volumeStatus) {
-            this.volumeStatus = Input.ofNullable(volumeStatus);
+            this.volumeStatus = Output.ofNullable(volumeStatus);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public StoredIscsiVolumeState build() {

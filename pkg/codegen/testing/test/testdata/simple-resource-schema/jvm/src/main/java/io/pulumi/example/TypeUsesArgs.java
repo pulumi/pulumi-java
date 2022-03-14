@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.inputs.ObjectArgs;
 import io.pulumi.example.inputs.ObjectWithNodeOptionalInputsArgs;
@@ -17,39 +17,39 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     public static final TypeUsesArgs Empty = new TypeUsesArgs();
 
     @InputImport(name="bar")
-      private final @Nullable Input<SomeOtherObjectArgs> bar;
+      private final @Nullable Output<SomeOtherObjectArgs> bar;
 
-    public Input<SomeOtherObjectArgs> getBar() {
-        return this.bar == null ? Input.empty() : this.bar;
+    public Output<SomeOtherObjectArgs> getBar() {
+        return this.bar == null ? Output.empty() : this.bar;
     }
 
     @InputImport(name="baz")
-      private final @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz;
+      private final @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
 
-    public Input<ObjectWithNodeOptionalInputsArgs> getBaz() {
-        return this.baz == null ? Input.empty() : this.baz;
+    public Output<ObjectWithNodeOptionalInputsArgs> getBaz() {
+        return this.baz == null ? Output.empty() : this.baz;
     }
 
     @InputImport(name="foo")
-      private final @Nullable Input<ObjectArgs> foo;
+      private final @Nullable Output<ObjectArgs> foo;
 
-    public Input<ObjectArgs> getFoo() {
-        return this.foo == null ? Input.empty() : this.foo;
+    public Output<ObjectArgs> getFoo() {
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     public TypeUsesArgs(
-        @Nullable Input<SomeOtherObjectArgs> bar,
-        @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz,
-        @Nullable Input<ObjectArgs> foo) {
+        @Nullable Output<SomeOtherObjectArgs> bar,
+        @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz,
+        @Nullable Output<ObjectArgs> foo) {
         this.bar = bar;
         this.baz = baz;
         this.foo = foo;
     }
 
     private TypeUsesArgs() {
-        this.bar = Input.empty();
-        this.baz = Input.empty();
-        this.foo = Input.empty();
+        this.bar = Output.empty();
+        this.baz = Output.empty();
+        this.foo = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SomeOtherObjectArgs> bar;
-        private @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz;
-        private @Nullable Input<ObjectArgs> foo;
+        private @Nullable Output<SomeOtherObjectArgs> bar;
+        private @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
+        private @Nullable Output<ObjectArgs> foo;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.foo = defaults.foo;
         }
 
-        public Builder bar(@Nullable Input<SomeOtherObjectArgs> bar) {
+        public Builder bar(@Nullable Output<SomeOtherObjectArgs> bar) {
             this.bar = bar;
             return this;
         }
 
         public Builder bar(@Nullable SomeOtherObjectArgs bar) {
-            this.bar = Input.ofNullable(bar);
+            this.bar = Output.ofNullable(bar);
             return this;
         }
 
-        public Builder baz(@Nullable Input<ObjectWithNodeOptionalInputsArgs> baz) {
+        public Builder baz(@Nullable Output<ObjectWithNodeOptionalInputsArgs> baz) {
             this.baz = baz;
             return this;
         }
 
         public Builder baz(@Nullable ObjectWithNodeOptionalInputsArgs baz) {
-            this.baz = Input.ofNullable(baz);
+            this.baz = Output.ofNullable(baz);
             return this;
         }
 
-        public Builder foo(@Nullable Input<ObjectArgs> foo) {
+        public Builder foo(@Nullable Output<ObjectArgs> foo) {
             this.foo = foo;
             return this;
         }
 
         public Builder foo(@Nullable ObjectArgs foo) {
-            this.foo = Input.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }
         public TypeUsesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -34,9 +34,9 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicSigningKey", required=true)
-      private final Input<String> publicSigningKey;
+      private final Output<String> publicSigningKey;
 
-    public Input<String> getPublicSigningKey() {
+    public Output<String> getPublicSigningKey() {
         return this.publicSigningKey;
     }
 
@@ -45,25 +45,25 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="signingCertificateThumbprint")
-      private final @Nullable Input<String> signingCertificateThumbprint;
+      private final @Nullable Output<String> signingCertificateThumbprint;
 
-    public Input<String> getSigningCertificateThumbprint() {
-        return this.signingCertificateThumbprint == null ? Input.empty() : this.signingCertificateThumbprint;
+    public Output<String> getSigningCertificateThumbprint() {
+        return this.signingCertificateThumbprint == null ? Output.empty() : this.signingCertificateThumbprint;
     }
 
     public OnPremisePropertyArgs(
-        Input<String> id,
-        Input<String> publicSigningKey,
-        @Nullable Input<String> signingCertificateThumbprint) {
+        Output<String> id,
+        Output<String> publicSigningKey,
+        @Nullable Output<String> signingCertificateThumbprint) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.publicSigningKey = Objects.requireNonNull(publicSigningKey, "expected parameter 'publicSigningKey' to be non-null");
         this.signingCertificateThumbprint = signingCertificateThumbprint;
     }
 
     private OnPremisePropertyArgs() {
-        this.id = Input.empty();
-        this.publicSigningKey = Input.empty();
-        this.signingCertificateThumbprint = Input.empty();
+        this.id = Output.empty();
+        this.publicSigningKey = Output.empty();
+        this.signingCertificateThumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<String> publicSigningKey;
-        private @Nullable Input<String> signingCertificateThumbprint;
+        private Output<String> id;
+        private Output<String> publicSigningKey;
+        private @Nullable Output<String> signingCertificateThumbprint;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
     	      this.signingCertificateThumbprint = defaults.signingCertificateThumbprint;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder publicSigningKey(Input<String> publicSigningKey) {
+        public Builder publicSigningKey(Output<String> publicSigningKey) {
             this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
             return this;
         }
 
         public Builder publicSigningKey(String publicSigningKey) {
-            this.publicSigningKey = Input.of(Objects.requireNonNull(publicSigningKey));
+            this.publicSigningKey = Output.of(Objects.requireNonNull(publicSigningKey));
             return this;
         }
 
-        public Builder signingCertificateThumbprint(@Nullable Input<String> signingCertificateThumbprint) {
+        public Builder signingCertificateThumbprint(@Nullable Output<String> signingCertificateThumbprint) {
             this.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }
 
         public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
-            this.signingCertificateThumbprint = Input.ofNullable(signingCertificateThumbprint);
+            this.signingCertificateThumbprint = Output.ofNullable(signingCertificateThumbprint);
             return this;
         }
         public OnPremisePropertyArgs build() {

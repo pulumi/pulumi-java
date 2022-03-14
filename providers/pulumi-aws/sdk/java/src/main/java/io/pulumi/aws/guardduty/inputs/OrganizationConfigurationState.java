@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoEnable")
-      private final @Nullable Input<Boolean> autoEnable;
+      private final @Nullable Output<Boolean> autoEnable;
 
-    public Input<Boolean> getAutoEnable() {
-        return this.autoEnable == null ? Input.empty() : this.autoEnable;
+    public Output<Boolean> getAutoEnable() {
+        return this.autoEnable == null ? Output.empty() : this.autoEnable;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="datasources")
-      private final @Nullable Input<OrganizationConfigurationDatasourcesGetArgs> datasources;
+      private final @Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources;
 
-    public Input<OrganizationConfigurationDatasourcesGetArgs> getDatasources() {
-        return this.datasources == null ? Input.empty() : this.datasources;
+    public Output<OrganizationConfigurationDatasourcesGetArgs> getDatasources() {
+        return this.datasources == null ? Output.empty() : this.datasources;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="detectorId")
-      private final @Nullable Input<String> detectorId;
+      private final @Nullable Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
-        return this.detectorId == null ? Input.empty() : this.detectorId;
+    public Output<String> getDetectorId() {
+        return this.detectorId == null ? Output.empty() : this.detectorId;
     }
 
     public OrganizationConfigurationState(
-        @Nullable Input<Boolean> autoEnable,
-        @Nullable Input<OrganizationConfigurationDatasourcesGetArgs> datasources,
-        @Nullable Input<String> detectorId) {
+        @Nullable Output<Boolean> autoEnable,
+        @Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources,
+        @Nullable Output<String> detectorId) {
         this.autoEnable = autoEnable;
         this.datasources = datasources;
         this.detectorId = detectorId;
     }
 
     private OrganizationConfigurationState() {
-        this.autoEnable = Input.empty();
-        this.datasources = Input.empty();
-        this.detectorId = Input.empty();
+        this.autoEnable = Output.empty();
+        this.datasources = Output.empty();
+        this.detectorId = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoEnable;
-        private @Nullable Input<OrganizationConfigurationDatasourcesGetArgs> datasources;
-        private @Nullable Input<String> detectorId;
+        private @Nullable Output<Boolean> autoEnable;
+        private @Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources;
+        private @Nullable Output<String> detectorId;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     	      this.detectorId = defaults.detectorId;
         }
 
-        public Builder autoEnable(@Nullable Input<Boolean> autoEnable) {
+        public Builder autoEnable(@Nullable Output<Boolean> autoEnable) {
             this.autoEnable = autoEnable;
             return this;
         }
 
         public Builder autoEnable(@Nullable Boolean autoEnable) {
-            this.autoEnable = Input.ofNullable(autoEnable);
+            this.autoEnable = Output.ofNullable(autoEnable);
             return this;
         }
 
-        public Builder datasources(@Nullable Input<OrganizationConfigurationDatasourcesGetArgs> datasources) {
+        public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
 
         public Builder datasources(@Nullable OrganizationConfigurationDatasourcesGetArgs datasources) {
-            this.datasources = Input.ofNullable(datasources);
+            this.datasources = Output.ofNullable(datasources);
             return this;
         }
 
-        public Builder detectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Input.ofNullable(detectorId);
+            this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
         public OrganizationConfigurationState build() {

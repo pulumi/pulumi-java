@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class RuleGroupStatelessRuleArgs extends io.pulumi.resources.Resour
     public static final RuleGroupStatelessRuleArgs Empty = new RuleGroupStatelessRuleArgs();
 
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
     @InputImport(name="ruleDefinition", required=true)
-      private final Input<RuleGroupRuleDefinitionArgs> ruleDefinition;
+      private final Output<RuleGroupRuleDefinitionArgs> ruleDefinition;
 
-    public Input<RuleGroupRuleDefinitionArgs> getRuleDefinition() {
+    public Output<RuleGroupRuleDefinitionArgs> getRuleDefinition() {
         return this.ruleDefinition;
     }
 
     public RuleGroupStatelessRuleArgs(
-        Input<Integer> priority,
-        Input<RuleGroupRuleDefinitionArgs> ruleDefinition) {
+        Output<Integer> priority,
+        Output<RuleGroupRuleDefinitionArgs> ruleDefinition) {
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
         this.ruleDefinition = Objects.requireNonNull(ruleDefinition, "expected parameter 'ruleDefinition' to be non-null");
     }
 
     private RuleGroupStatelessRuleArgs() {
-        this.priority = Input.empty();
-        this.ruleDefinition = Input.empty();
+        this.priority = Output.empty();
+        this.ruleDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class RuleGroupStatelessRuleArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Integer> priority;
-        private Input<RuleGroupRuleDefinitionArgs> ruleDefinition;
+        private Output<Integer> priority;
+        private Output<RuleGroupRuleDefinitionArgs> ruleDefinition;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class RuleGroupStatelessRuleArgs extends io.pulumi.resources.Resour
     	      this.ruleDefinition = defaults.ruleDefinition;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder ruleDefinition(Input<RuleGroupRuleDefinitionArgs> ruleDefinition) {
+        public Builder ruleDefinition(Output<RuleGroupRuleDefinitionArgs> ruleDefinition) {
             this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
             return this;
         }
 
         public Builder ruleDefinition(RuleGroupRuleDefinitionArgs ruleDefinition) {
-            this.ruleDefinition = Input.of(Objects.requireNonNull(ruleDefinition));
+            this.ruleDefinition = Output.of(Objects.requireNonNull(ruleDefinition));
             return this;
         }
         public RuleGroupStatelessRuleArgs build() {

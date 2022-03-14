@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="copyBehavior")
-      private final @Nullable Input<Object> copyBehavior;
+      private final @Nullable Output<Object> copyBehavior;
 
-    public Input<Object> getCopyBehavior() {
-        return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
+    public Output<Object> getCopyBehavior() {
+        return this.copyBehavior == null ? Output.empty() : this.copyBehavior;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expiryDateTime")
-      private final @Nullable Input<Object> expiryDateTime;
+      private final @Nullable Output<Object> expiryDateTime;
 
-    public Input<Object> getExpiryDateTime() {
-        return this.expiryDateTime == null ? Input.empty() : this.expiryDateTime;
+    public Output<Object> getExpiryDateTime() {
+        return this.expiryDateTime == null ? Output.empty() : this.expiryDateTime;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureDataLakeStoreWriteSettingsArgs(
-        @Nullable Input<Object> copyBehavior,
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<Object> expiryDateTime,
-        @Nullable Input<Object> maxConcurrentConnections,
-        Input<String> type) {
+        @Nullable Output<Object> copyBehavior,
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<Object> expiryDateTime,
+        @Nullable Output<Object> maxConcurrentConnections,
+        Output<String> type) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.expiryDateTime = expiryDateTime;
@@ -89,11 +89,11 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
     }
 
     private AzureDataLakeStoreWriteSettingsArgs() {
-        this.copyBehavior = Input.empty();
-        this.disableMetricsCollection = Input.empty();
-        this.expiryDateTime = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.type = Input.empty();
+        this.copyBehavior = Output.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.expiryDateTime = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> copyBehavior;
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<Object> expiryDateTime;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private Input<String> type;
+        private @Nullable Output<Object> copyBehavior;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<Object> expiryDateTime;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder copyBehavior(@Nullable Input<Object> copyBehavior) {
+        public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Input.ofNullable(copyBehavior);
+            this.copyBehavior = Output.ofNullable(copyBehavior);
             return this;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder expiryDateTime(@Nullable Input<Object> expiryDateTime) {
+        public Builder expiryDateTime(@Nullable Output<Object> expiryDateTime) {
             this.expiryDateTime = expiryDateTime;
             return this;
         }
 
         public Builder expiryDateTime(@Nullable Object expiryDateTime) {
-            this.expiryDateTime = Input.ofNullable(expiryDateTime);
+            this.expiryDateTime = Output.ofNullable(expiryDateTime);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureDataLakeStoreWriteSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafregional;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regexPatternStrings")
-      private final @Nullable Input<List<String>> regexPatternStrings;
+      private final @Nullable Output<List<String>> regexPatternStrings;
 
-    public Input<List<String>> getRegexPatternStrings() {
-        return this.regexPatternStrings == null ? Input.empty() : this.regexPatternStrings;
+    public Output<List<String>> getRegexPatternStrings() {
+        return this.regexPatternStrings == null ? Output.empty() : this.regexPatternStrings;
     }
 
     public RegexPatternSetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> regexPatternStrings) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> regexPatternStrings) {
         this.name = name;
         this.regexPatternStrings = regexPatternStrings;
     }
 
     private RegexPatternSetArgs() {
-        this.name = Input.empty();
-        this.regexPatternStrings = Input.empty();
+        this.name = Output.empty();
+        this.regexPatternStrings = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> regexPatternStrings;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> regexPatternStrings;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.regexPatternStrings = defaults.regexPatternStrings;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder regexPatternStrings(@Nullable Input<List<String>> regexPatternStrings) {
+        public Builder regexPatternStrings(@Nullable Output<List<String>> regexPatternStrings) {
             this.regexPatternStrings = regexPatternStrings;
             return this;
         }
 
         public Builder regexPatternStrings(@Nullable List<String> regexPatternStrings) {
-            this.regexPatternStrings = Input.ofNullable(regexPatternStrings);
+            this.regexPatternStrings = Output.ofNullable(regexPatternStrings);
             return this;
         }
         public RegexPatternSetArgs build() {

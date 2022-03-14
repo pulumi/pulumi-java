@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicedirectory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     public NamespaceIamPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policyData) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policyData) {
         this.etag = etag;
         this.name = name;
         this.policyData = policyData;
     }
 
     private NamespaceIamPolicyState() {
-        this.etag = Input.empty();
-        this.name = Input.empty();
-        this.policyData = Input.empty();
+        this.etag = Output.empty();
+        this.name = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policyData;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
         public NamespaceIamPolicyState build() {

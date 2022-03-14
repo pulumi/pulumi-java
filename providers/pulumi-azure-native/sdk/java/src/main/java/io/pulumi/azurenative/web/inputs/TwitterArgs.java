@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.TwitterRegistrationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registration")
-      private final @Nullable Input<TwitterRegistrationArgs> registration;
+      private final @Nullable Output<TwitterRegistrationArgs> registration;
 
-    public Input<TwitterRegistrationArgs> getRegistration() {
-        return this.registration == null ? Input.empty() : this.registration;
+    public Output<TwitterRegistrationArgs> getRegistration() {
+        return this.registration == null ? Output.empty() : this.registration;
     }
 
     public TwitterArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<TwitterRegistrationArgs> registration) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<TwitterRegistrationArgs> registration) {
         this.enabled = enabled;
         this.registration = registration;
     }
 
     private TwitterArgs() {
-        this.enabled = Input.empty();
-        this.registration = Input.empty();
+        this.enabled = Output.empty();
+        this.registration = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<TwitterRegistrationArgs> registration;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<TwitterRegistrationArgs> registration;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registration = defaults.registration;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder registration(@Nullable Input<TwitterRegistrationArgs> registration) {
+        public Builder registration(@Nullable Output<TwitterRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
         public Builder registration(@Nullable TwitterRegistrationArgs registration) {
-            this.registration = Input.ofNullable(registration);
+            this.registration = Output.ofNullable(registration);
             return this;
         }
         public TwitterArgs build() {

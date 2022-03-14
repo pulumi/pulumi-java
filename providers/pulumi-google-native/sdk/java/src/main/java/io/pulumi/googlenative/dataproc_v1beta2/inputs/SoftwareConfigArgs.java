@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.enums.SoftwareConfigOptionalComponentsItem;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageVersion")
-      private final @Nullable Input<String> imageVersion;
+      private final @Nullable Output<String> imageVersion;
 
-    public Input<String> getImageVersion() {
-        return this.imageVersion == null ? Input.empty() : this.imageVersion;
+    public Output<String> getImageVersion() {
+        return this.imageVersion == null ? Output.empty() : this.imageVersion;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionalComponents")
-      private final @Nullable Input<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
+      private final @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
-    public Input<List<SoftwareConfigOptionalComponentsItem>> getOptionalComponents() {
-        return this.optionalComponents == null ? Input.empty() : this.optionalComponents;
+    public Output<List<SoftwareConfigOptionalComponentsItem>> getOptionalComponents() {
+        return this.optionalComponents == null ? Output.empty() : this.optionalComponents;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public SoftwareConfigArgs(
-        @Nullable Input<String> imageVersion,
-        @Nullable Input<List<SoftwareConfigOptionalComponentsItem>> optionalComponents,
-        @Nullable Input<Map<String,String>> properties) {
+        @Nullable Output<String> imageVersion,
+        @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents,
+        @Nullable Output<Map<String,String>> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.properties = properties;
     }
 
     private SoftwareConfigArgs() {
-        this.imageVersion = Input.empty();
-        this.optionalComponents = Input.empty();
-        this.properties = Input.empty();
+        this.imageVersion = Output.empty();
+        this.optionalComponents = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageVersion;
-        private @Nullable Input<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
-        private @Nullable Input<Map<String,String>> properties;
+        private @Nullable Output<String> imageVersion;
+        private @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
+        private @Nullable Output<Map<String,String>> properties;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder imageVersion(@Nullable Input<String> imageVersion) {
+        public Builder imageVersion(@Nullable Output<String> imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
 
         public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Input.ofNullable(imageVersion);
+            this.imageVersion = Output.ofNullable(imageVersion);
             return this;
         }
 
-        public Builder optionalComponents(@Nullable Input<List<SoftwareConfigOptionalComponentsItem>> optionalComponents) {
+        public Builder optionalComponents(@Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
 
         public Builder optionalComponents(@Nullable List<SoftwareConfigOptionalComponentsItem> optionalComponents) {
-            this.optionalComponents = Input.ofNullable(optionalComponents);
+            this.optionalComponents = Output.ofNullable(optionalComponents);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public SoftwareConfigArgs build() {

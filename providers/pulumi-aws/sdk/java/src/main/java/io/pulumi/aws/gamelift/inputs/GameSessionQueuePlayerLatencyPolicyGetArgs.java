@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.gamelift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
-      private final Input<Integer> maximumIndividualPlayerLatencyMilliseconds;
+      private final Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
 
-    public Input<Integer> getMaximumIndividualPlayerLatencyMilliseconds() {
+    public Output<Integer> getMaximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
     }
 
@@ -30,22 +30,22 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="policyDurationSeconds")
-      private final @Nullable Input<Integer> policyDurationSeconds;
+      private final @Nullable Output<Integer> policyDurationSeconds;
 
-    public Input<Integer> getPolicyDurationSeconds() {
-        return this.policyDurationSeconds == null ? Input.empty() : this.policyDurationSeconds;
+    public Output<Integer> getPolicyDurationSeconds() {
+        return this.policyDurationSeconds == null ? Output.empty() : this.policyDurationSeconds;
     }
 
     public GameSessionQueuePlayerLatencyPolicyGetArgs(
-        Input<Integer> maximumIndividualPlayerLatencyMilliseconds,
-        @Nullable Input<Integer> policyDurationSeconds) {
+        Output<Integer> maximumIndividualPlayerLatencyMilliseconds,
+        @Nullable Output<Integer> policyDurationSeconds) {
         this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds, "expected parameter 'maximumIndividualPlayerLatencyMilliseconds' to be non-null");
         this.policyDurationSeconds = policyDurationSeconds;
     }
 
     private GameSessionQueuePlayerLatencyPolicyGetArgs() {
-        this.maximumIndividualPlayerLatencyMilliseconds = Input.empty();
-        this.policyDurationSeconds = Input.empty();
+        this.maximumIndividualPlayerLatencyMilliseconds = Output.empty();
+        this.policyDurationSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<Integer> maximumIndividualPlayerLatencyMilliseconds;
-        private @Nullable Input<Integer> policyDurationSeconds;
+        private Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
+        private @Nullable Output<Integer> policyDurationSeconds;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
     	      this.policyDurationSeconds = defaults.policyDurationSeconds;
         }
 
-        public Builder maximumIndividualPlayerLatencyMilliseconds(Input<Integer> maximumIndividualPlayerLatencyMilliseconds) {
+        public Builder maximumIndividualPlayerLatencyMilliseconds(Output<Integer> maximumIndividualPlayerLatencyMilliseconds) {
             this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds);
             return this;
         }
 
         public Builder maximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
-            this.maximumIndividualPlayerLatencyMilliseconds = Input.of(Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds));
+            this.maximumIndividualPlayerLatencyMilliseconds = Output.of(Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds));
             return this;
         }
 
-        public Builder policyDurationSeconds(@Nullable Input<Integer> policyDurationSeconds) {
+        public Builder policyDurationSeconds(@Nullable Output<Integer> policyDurationSeconds) {
             this.policyDurationSeconds = policyDurationSeconds;
             return this;
         }
 
         public Builder policyDurationSeconds(@Nullable Integer policyDurationSeconds) {
-            this.policyDurationSeconds = Input.ofNullable(policyDurationSeconds);
+            this.policyDurationSeconds = Output.ofNullable(policyDurationSeconds);
             return this;
         }
         public GameSessionQueuePlayerLatencyPolicyGetArgs build() {

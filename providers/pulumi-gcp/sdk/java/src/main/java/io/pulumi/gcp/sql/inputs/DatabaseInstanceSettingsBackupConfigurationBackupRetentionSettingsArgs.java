@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @InputImport(name="retainedBackups", required=true)
-      private final Input<Integer> retainedBackups;
+      private final Output<Integer> retainedBackups;
 
-    public Input<Integer> getRetainedBackups() {
+    public Output<Integer> getRetainedBackups() {
         return this.retainedBackups;
     }
 
@@ -32,22 +32,22 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @InputImport(name="retentionUnit")
-      private final @Nullable Input<String> retentionUnit;
+      private final @Nullable Output<String> retentionUnit;
 
-    public Input<String> getRetentionUnit() {
-        return this.retentionUnit == null ? Input.empty() : this.retentionUnit;
+    public Output<String> getRetentionUnit() {
+        return this.retentionUnit == null ? Output.empty() : this.retentionUnit;
     }
 
     public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs(
-        Input<Integer> retainedBackups,
-        @Nullable Input<String> retentionUnit) {
+        Output<Integer> retainedBackups,
+        @Nullable Output<String> retentionUnit) {
         this.retainedBackups = Objects.requireNonNull(retainedBackups, "expected parameter 'retainedBackups' to be non-null");
         this.retentionUnit = retentionUnit;
     }
 
     private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs() {
-        this.retainedBackups = Input.empty();
-        this.retentionUnit = Input.empty();
+        this.retainedBackups = Output.empty();
+        this.retentionUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     }
 
     public static final class Builder {
-        private Input<Integer> retainedBackups;
-        private @Nullable Input<String> retentionUnit;
+        private Output<Integer> retainedBackups;
+        private @Nullable Output<String> retentionUnit;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     	      this.retentionUnit = defaults.retentionUnit;
         }
 
-        public Builder retainedBackups(Input<Integer> retainedBackups) {
+        public Builder retainedBackups(Output<Integer> retainedBackups) {
             this.retainedBackups = Objects.requireNonNull(retainedBackups);
             return this;
         }
 
         public Builder retainedBackups(Integer retainedBackups) {
-            this.retainedBackups = Input.of(Objects.requireNonNull(retainedBackups));
+            this.retainedBackups = Output.of(Objects.requireNonNull(retainedBackups));
             return this;
         }
 
-        public Builder retentionUnit(@Nullable Input<String> retentionUnit) {
+        public Builder retentionUnit(@Nullable Output<String> retentionUnit) {
             this.retentionUnit = retentionUnit;
             return this;
         }
 
         public Builder retentionUnit(@Nullable String retentionUnit) {
-            this.retentionUnit = Input.ofNullable(retentionUnit);
+            this.retentionUnit = Output.ofNullable(retentionUnit);
             return this;
         }
         public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs build() {

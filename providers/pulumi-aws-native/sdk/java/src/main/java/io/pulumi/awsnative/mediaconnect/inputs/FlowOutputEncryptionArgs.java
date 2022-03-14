@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionKeyType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="algorithm")
-      private final @Nullable Input<FlowOutputEncryptionAlgorithm> algorithm;
+      private final @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
 
-    public Input<FlowOutputEncryptionAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Input.empty() : this.algorithm;
+    public Output<FlowOutputEncryptionAlgorithm> getAlgorithm() {
+        return this.algorithm == null ? Output.empty() : this.algorithm;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyType")
-      private final @Nullable Input<FlowOutputEncryptionKeyType> keyType;
+      private final @Nullable Output<FlowOutputEncryptionKeyType> keyType;
 
-    public Input<FlowOutputEncryptionKeyType> getKeyType() {
-        return this.keyType == null ? Input.empty() : this.keyType;
+    public Output<FlowOutputEncryptionKeyType> getKeyType() {
+        return this.keyType == null ? Output.empty() : this.keyType;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -58,17 +58,17 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secretArn", required=true)
-      private final Input<String> secretArn;
+      private final Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
+    public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
     public FlowOutputEncryptionArgs(
-        @Nullable Input<FlowOutputEncryptionAlgorithm> algorithm,
-        @Nullable Input<FlowOutputEncryptionKeyType> keyType,
-        Input<String> roleArn,
-        Input<String> secretArn) {
+        @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm,
+        @Nullable Output<FlowOutputEncryptionKeyType> keyType,
+        Output<String> roleArn,
+        Output<String> secretArn) {
         this.algorithm = algorithm;
         this.keyType = keyType;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
@@ -76,10 +76,10 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     }
 
     private FlowOutputEncryptionArgs() {
-        this.algorithm = Input.empty();
-        this.keyType = Input.empty();
-        this.roleArn = Input.empty();
-        this.secretArn = Input.empty();
+        this.algorithm = Output.empty();
+        this.keyType = Output.empty();
+        this.roleArn = Output.empty();
+        this.secretArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowOutputEncryptionAlgorithm> algorithm;
-        private @Nullable Input<FlowOutputEncryptionKeyType> keyType;
-        private Input<String> roleArn;
-        private Input<String> secretArn;
+        private @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
+        private @Nullable Output<FlowOutputEncryptionKeyType> keyType;
+        private Output<String> roleArn;
+        private Output<String> secretArn;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder algorithm(@Nullable Input<FlowOutputEncryptionAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Output<FlowOutputEncryptionAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
         public Builder algorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
-            this.algorithm = Input.ofNullable(algorithm);
+            this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
 
-        public Builder keyType(@Nullable Input<FlowOutputEncryptionKeyType> keyType) {
+        public Builder keyType(@Nullable Output<FlowOutputEncryptionKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
 
         public Builder keyType(@Nullable FlowOutputEncryptionKeyType keyType) {
-            this.keyType = Input.ofNullable(keyType);
+            this.keyType = Output.ofNullable(keyType);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder secretArn(Input<String> secretArn) {
+        public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
         public Builder secretArn(String secretArn) {
-            this.secretArn = Input.of(Objects.requireNonNull(secretArn));
+            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
         public FlowOutputEncryptionArgs build() {

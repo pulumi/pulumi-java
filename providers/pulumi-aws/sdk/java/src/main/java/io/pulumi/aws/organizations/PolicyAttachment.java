@@ -6,7 +6,6 @@ package io.pulumi.aws.organizations;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.organizations.PolicyAttachmentArgs;
 import io.pulumi.aws.organizations.inputs.PolicyAttachmentState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -96,14 +95,14 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyAttachment(String name, PolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:organizations/policyAttachment:PolicyAttachment", name, args == null ? PolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:organizations/policyAttachment:PolicyAttachment", name, args == null ? PolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PolicyAttachment(String name, Input<String> id, @Nullable PolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PolicyAttachment(String name, Output<String> id, @Nullable PolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:organizations/policyAttachment:PolicyAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -119,7 +118,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PolicyAttachment get(String name, Input<String> id, @Nullable PolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PolicyAttachment get(String name, Output<String> id, @Nullable PolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PolicyAttachment(name, id, state, options);
     }
 }

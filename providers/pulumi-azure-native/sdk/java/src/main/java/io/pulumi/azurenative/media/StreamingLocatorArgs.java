@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.StreamingLocatorContentKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alternativeMediaId")
-      private final @Nullable Input<String> alternativeMediaId;
+      private final @Nullable Output<String> alternativeMediaId;
 
-    public Input<String> getAlternativeMediaId() {
-        return this.alternativeMediaId == null ? Input.empty() : this.alternativeMediaId;
+    public Output<String> getAlternativeMediaId() {
+        return this.alternativeMediaId == null ? Output.empty() : this.alternativeMediaId;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="assetName", required=true)
-      private final Input<String> assetName;
+      private final Output<String> assetName;
 
-    public Input<String> getAssetName() {
+    public Output<String> getAssetName() {
         return this.assetName;
     }
 
@@ -54,10 +54,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="contentKeys")
-      private final @Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys;
+      private final @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys;
 
-    public Input<List<StreamingLocatorContentKeyArgs>> getContentKeys() {
-        return this.contentKeys == null ? Input.empty() : this.contentKeys;
+    public Output<List<StreamingLocatorContentKeyArgs>> getContentKeys() {
+        return this.contentKeys == null ? Output.empty() : this.contentKeys;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultContentKeyPolicyName")
-      private final @Nullable Input<String> defaultContentKeyPolicyName;
+      private final @Nullable Output<String> defaultContentKeyPolicyName;
 
-    public Input<String> getDefaultContentKeyPolicyName() {
-        return this.defaultContentKeyPolicyName == null ? Input.empty() : this.defaultContentKeyPolicyName;
+    public Output<String> getDefaultContentKeyPolicyName() {
+        return this.defaultContentKeyPolicyName == null ? Output.empty() : this.defaultContentKeyPolicyName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<List<String>> filters;
+      private final @Nullable Output<List<String>> filters;
 
-    public Input<List<String>> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<List<String>> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -109,10 +109,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingLocatorId")
-      private final @Nullable Input<String> streamingLocatorId;
+      private final @Nullable Output<String> streamingLocatorId;
 
-    public Input<String> getStreamingLocatorId() {
-        return this.streamingLocatorId == null ? Input.empty() : this.streamingLocatorId;
+    public Output<String> getStreamingLocatorId() {
+        return this.streamingLocatorId == null ? Output.empty() : this.streamingLocatorId;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingLocatorName")
-      private final @Nullable Input<String> streamingLocatorName;
+      private final @Nullable Output<String> streamingLocatorName;
 
-    public Input<String> getStreamingLocatorName() {
-        return this.streamingLocatorName == null ? Input.empty() : this.streamingLocatorName;
+    public Output<String> getStreamingLocatorName() {
+        return this.streamingLocatorName == null ? Output.empty() : this.streamingLocatorName;
     }
 
     /**
@@ -142,25 +142,25 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingPolicyName", required=true)
-      private final Input<String> streamingPolicyName;
+      private final Output<String> streamingPolicyName;
 
-    public Input<String> getStreamingPolicyName() {
+    public Output<String> getStreamingPolicyName() {
         return this.streamingPolicyName;
     }
 
     public StreamingLocatorArgs(
-        Input<String> accountName,
-        @Nullable Input<String> alternativeMediaId,
-        Input<String> assetName,
-        @Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys,
-        @Nullable Input<String> defaultContentKeyPolicyName,
-        @Nullable Input<String> endTime,
-        @Nullable Input<List<String>> filters,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> startTime,
-        @Nullable Input<String> streamingLocatorId,
-        @Nullable Input<String> streamingLocatorName,
-        Input<String> streamingPolicyName) {
+        Output<String> accountName,
+        @Nullable Output<String> alternativeMediaId,
+        Output<String> assetName,
+        @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys,
+        @Nullable Output<String> defaultContentKeyPolicyName,
+        @Nullable Output<String> endTime,
+        @Nullable Output<List<String>> filters,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> startTime,
+        @Nullable Output<String> streamingLocatorId,
+        @Nullable Output<String> streamingLocatorName,
+        Output<String> streamingPolicyName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.alternativeMediaId = alternativeMediaId;
         this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
@@ -176,18 +176,18 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private StreamingLocatorArgs() {
-        this.accountName = Input.empty();
-        this.alternativeMediaId = Input.empty();
-        this.assetName = Input.empty();
-        this.contentKeys = Input.empty();
-        this.defaultContentKeyPolicyName = Input.empty();
-        this.endTime = Input.empty();
-        this.filters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.startTime = Input.empty();
-        this.streamingLocatorId = Input.empty();
-        this.streamingLocatorName = Input.empty();
-        this.streamingPolicyName = Input.empty();
+        this.accountName = Output.empty();
+        this.alternativeMediaId = Output.empty();
+        this.assetName = Output.empty();
+        this.contentKeys = Output.empty();
+        this.defaultContentKeyPolicyName = Output.empty();
+        this.endTime = Output.empty();
+        this.filters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.startTime = Output.empty();
+        this.streamingLocatorId = Output.empty();
+        this.streamingLocatorName = Output.empty();
+        this.streamingPolicyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,18 +199,18 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> alternativeMediaId;
-        private Input<String> assetName;
-        private @Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys;
-        private @Nullable Input<String> defaultContentKeyPolicyName;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<List<String>> filters;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<String> streamingLocatorId;
-        private @Nullable Input<String> streamingLocatorName;
-        private Input<String> streamingPolicyName;
+        private Output<String> accountName;
+        private @Nullable Output<String> alternativeMediaId;
+        private Output<String> assetName;
+        private @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys;
+        private @Nullable Output<String> defaultContentKeyPolicyName;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<List<String>> filters;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<String> streamingLocatorId;
+        private @Nullable Output<String> streamingLocatorName;
+        private Output<String> streamingPolicyName;
 
         public Builder() {
     	      // Empty
@@ -232,123 +232,123 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
     	      this.streamingPolicyName = defaults.streamingPolicyName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder alternativeMediaId(@Nullable Input<String> alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable Output<String> alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
 
         public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
-            this.alternativeMediaId = Input.ofNullable(alternativeMediaId);
+            this.alternativeMediaId = Output.ofNullable(alternativeMediaId);
             return this;
         }
 
-        public Builder assetName(Input<String> assetName) {
+        public Builder assetName(Output<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
         public Builder assetName(String assetName) {
-            this.assetName = Input.of(Objects.requireNonNull(assetName));
+            this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder contentKeys(@Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys) {
+        public Builder contentKeys(@Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
         public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyArgs> contentKeys) {
-            this.contentKeys = Input.ofNullable(contentKeys);
+            this.contentKeys = Output.ofNullable(contentKeys);
             return this;
         }
 
-        public Builder defaultContentKeyPolicyName(@Nullable Input<String> defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(@Nullable Output<String> defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
 
         public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
-            this.defaultContentKeyPolicyName = Input.ofNullable(defaultContentKeyPolicyName);
+            this.defaultContentKeyPolicyName = Output.ofNullable(defaultContentKeyPolicyName);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder filters(@Nullable Input<List<String>> filters) {
+        public Builder filters(@Nullable Output<List<String>> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<String> filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder streamingLocatorId(@Nullable Input<String> streamingLocatorId) {
+        public Builder streamingLocatorId(@Nullable Output<String> streamingLocatorId) {
             this.streamingLocatorId = streamingLocatorId;
             return this;
         }
 
         public Builder streamingLocatorId(@Nullable String streamingLocatorId) {
-            this.streamingLocatorId = Input.ofNullable(streamingLocatorId);
+            this.streamingLocatorId = Output.ofNullable(streamingLocatorId);
             return this;
         }
 
-        public Builder streamingLocatorName(@Nullable Input<String> streamingLocatorName) {
+        public Builder streamingLocatorName(@Nullable Output<String> streamingLocatorName) {
             this.streamingLocatorName = streamingLocatorName;
             return this;
         }
 
         public Builder streamingLocatorName(@Nullable String streamingLocatorName) {
-            this.streamingLocatorName = Input.ofNullable(streamingLocatorName);
+            this.streamingLocatorName = Output.ofNullable(streamingLocatorName);
             return this;
         }
 
-        public Builder streamingPolicyName(Input<String> streamingPolicyName) {
+        public Builder streamingPolicyName(Output<String> streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
 
         public Builder streamingPolicyName(String streamingPolicyName) {
-            this.streamingPolicyName = Input.of(Objects.requireNonNull(streamingPolicyName));
+            this.streamingPolicyName = Output.of(Objects.requireNonNull(streamingPolicyName));
             return this;
         }
         public StreamingLocatorArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.enums.PublicCertificateLocation;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="blob")
-      private final @Nullable Input<String> blob;
+      private final @Nullable Output<String> blob;
 
-    public Input<String> getBlob() {
-        return this.blob == null ? Input.empty() : this.blob;
+    public Output<String> getBlob() {
+        return this.blob == null ? Output.empty() : this.blob;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -53,10 +53,10 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publicCertificateLocation")
-      private final @Nullable Input<PublicCertificateLocation> publicCertificateLocation;
+      private final @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
 
-    public Input<PublicCertificateLocation> getPublicCertificateLocation() {
-        return this.publicCertificateLocation == null ? Input.empty() : this.publicCertificateLocation;
+    public Output<PublicCertificateLocation> getPublicCertificateLocation() {
+        return this.publicCertificateLocation == null ? Output.empty() : this.publicCertificateLocation;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publicCertificateName")
-      private final @Nullable Input<String> publicCertificateName;
+      private final @Nullable Output<String> publicCertificateName;
 
-    public Input<String> getPublicCertificateName() {
-        return this.publicCertificateName == null ? Input.empty() : this.publicCertificateName;
+    public Output<String> getPublicCertificateName() {
+        return this.publicCertificateName == null ? Output.empty() : this.publicCertificateName;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public WebAppPublicCertificateArgs(
-        @Nullable Input<String> blob,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        @Nullable Input<PublicCertificateLocation> publicCertificateLocation,
-        @Nullable Input<String> publicCertificateName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> blob,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        @Nullable Output<PublicCertificateLocation> publicCertificateLocation,
+        @Nullable Output<String> publicCertificateName,
+        Output<String> resourceGroupName) {
         this.blob = blob;
         this.kind = kind;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -97,12 +97,12 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     }
 
     private WebAppPublicCertificateArgs() {
-        this.blob = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.publicCertificateLocation = Input.empty();
-        this.publicCertificateName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.blob = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.publicCertificateLocation = Output.empty();
+        this.publicCertificateName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> blob;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private @Nullable Input<PublicCertificateLocation> publicCertificateLocation;
-        private @Nullable Input<String> publicCertificateName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> blob;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
+        private @Nullable Output<String> publicCertificateName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder blob(@Nullable Input<String> blob) {
+        public Builder blob(@Nullable Output<String> blob) {
             this.blob = blob;
             return this;
         }
 
         public Builder blob(@Nullable String blob) {
-            this.blob = Input.ofNullable(blob);
+            this.blob = Output.ofNullable(blob);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder publicCertificateLocation(@Nullable Input<PublicCertificateLocation> publicCertificateLocation) {
+        public Builder publicCertificateLocation(@Nullable Output<PublicCertificateLocation> publicCertificateLocation) {
             this.publicCertificateLocation = publicCertificateLocation;
             return this;
         }
 
         public Builder publicCertificateLocation(@Nullable PublicCertificateLocation publicCertificateLocation) {
-            this.publicCertificateLocation = Input.ofNullable(publicCertificateLocation);
+            this.publicCertificateLocation = Output.ofNullable(publicCertificateLocation);
             return this;
         }
 
-        public Builder publicCertificateName(@Nullable Input<String> publicCertificateName) {
+        public Builder publicCertificateName(@Nullable Output<String> publicCertificateName) {
             this.publicCertificateName = publicCertificateName;
             return this;
         }
 
         public Builder publicCertificateName(@Nullable String publicCertificateName) {
-            this.publicCertificateName = Input.ofNullable(publicCertificateName);
+            this.publicCertificateName = Output.ofNullable(publicCertificateName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public WebAppPublicCertificateArgs build() {

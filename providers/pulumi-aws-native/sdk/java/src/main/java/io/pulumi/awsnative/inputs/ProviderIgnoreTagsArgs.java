@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyPrefixes")
-      private final @Nullable Input<List<String>> keyPrefixes;
+      private final @Nullable Output<List<String>> keyPrefixes;
 
-    public Input<List<String>> getKeyPrefixes() {
-        return this.keyPrefixes == null ? Input.empty() : this.keyPrefixes;
+    public Output<List<String>> getKeyPrefixes() {
+        return this.keyPrefixes == null ? Output.empty() : this.keyPrefixes;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<List<String>> keys;
+      private final @Nullable Output<List<String>> keys;
 
-    public Input<List<String>> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<List<String>> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     public ProviderIgnoreTagsArgs(
-        @Nullable Input<List<String>> keyPrefixes,
-        @Nullable Input<List<String>> keys) {
+        @Nullable Output<List<String>> keyPrefixes,
+        @Nullable Output<List<String>> keys) {
         this.keyPrefixes = keyPrefixes;
         this.keys = keys;
     }
 
     private ProviderIgnoreTagsArgs() {
-        this.keyPrefixes = Input.empty();
-        this.keys = Input.empty();
+        this.keyPrefixes = Output.empty();
+        this.keys = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> keyPrefixes;
-        private @Nullable Input<List<String>> keys;
+        private @Nullable Output<List<String>> keyPrefixes;
+        private @Nullable Output<List<String>> keys;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
     	      this.keys = defaults.keys;
         }
 
-        public Builder keyPrefixes(@Nullable Input<List<String>> keyPrefixes) {
+        public Builder keyPrefixes(@Nullable Output<List<String>> keyPrefixes) {
             this.keyPrefixes = keyPrefixes;
             return this;
         }
 
         public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
-            this.keyPrefixes = Input.ofNullable(keyPrefixes);
+            this.keyPrefixes = Output.ofNullable(keyPrefixes);
             return this;
         }
 
-        public Builder keys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
         public ProviderIgnoreTagsArgs build() {

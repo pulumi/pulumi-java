@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasAudioLogDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
     public static final BotAliasAudioLogSettingArgs Empty = new BotAliasAudioLogSettingArgs();
 
     @InputImport(name="destination", required=true)
-      private final Input<BotAliasAudioLogDestinationArgs> destination;
+      private final Output<BotAliasAudioLogDestinationArgs> destination;
 
-    public Input<BotAliasAudioLogDestinationArgs> getDestination() {
+    public Output<BotAliasAudioLogDestinationArgs> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public BotAliasAudioLogSettingArgs(
-        Input<BotAliasAudioLogDestinationArgs> destination,
-        Input<Boolean> enabled) {
+        Output<BotAliasAudioLogDestinationArgs> destination,
+        Output<Boolean> enabled) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private BotAliasAudioLogSettingArgs() {
-        this.destination = Input.empty();
-        this.enabled = Input.empty();
+        this.destination = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<BotAliasAudioLogDestinationArgs> destination;
-        private Input<Boolean> enabled;
+        private Output<BotAliasAudioLogDestinationArgs> destination;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder destination(Input<BotAliasAudioLogDestinationArgs> destination) {
+        public Builder destination(Output<BotAliasAudioLogDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(BotAliasAudioLogDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public BotAliasAudioLogSettingArgs build() {

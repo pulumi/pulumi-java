@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibilityLevel")
-      private final @Nullable Input<Integer> compatibilityLevel;
+      private final @Nullable Output<Integer> compatibilityLevel;
 
-    public Input<Integer> getCompatibilityLevel() {
-        return this.compatibilityLevel == null ? Input.empty() : this.compatibilityLevel;
+    public Output<Integer> getCompatibilityLevel() {
+        return this.compatibilityLevel == null ? Output.empty() : this.compatibilityLevel;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresPreprocessing")
-      private final @Nullable Input<Boolean> requiresPreprocessing;
+      private final @Nullable Output<Boolean> requiresPreprocessing;
 
-    public Input<Boolean> getRequiresPreprocessing() {
-        return this.requiresPreprocessing == null ? Input.empty() : this.requiresPreprocessing;
+    public Output<Boolean> getRequiresPreprocessing() {
+        return this.requiresPreprocessing == null ? Output.empty() : this.requiresPreprocessing;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlExpression")
-      private final @Nullable Input<String> sqlExpression;
+      private final @Nullable Output<String> sqlExpression;
 
-    public Input<String> getSqlExpression() {
-        return this.sqlExpression == null ? Input.empty() : this.sqlExpression;
+    public Output<String> getSqlExpression() {
+        return this.sqlExpression == null ? Output.empty() : this.sqlExpression;
     }
 
     public ActionArgs(
-        @Nullable Input<Integer> compatibilityLevel,
-        @Nullable Input<Boolean> requiresPreprocessing,
-        @Nullable Input<String> sqlExpression) {
+        @Nullable Output<Integer> compatibilityLevel,
+        @Nullable Output<Boolean> requiresPreprocessing,
+        @Nullable Output<String> sqlExpression) {
         this.compatibilityLevel = compatibilityLevel;
-        this.requiresPreprocessing = requiresPreprocessing == null ? Input.ofNullable(true) : requiresPreprocessing;
+        this.requiresPreprocessing = requiresPreprocessing == null ? Output.ofNullable(true) : requiresPreprocessing;
         this.sqlExpression = sqlExpression;
     }
 
     private ActionArgs() {
-        this.compatibilityLevel = Input.empty();
-        this.requiresPreprocessing = Input.empty();
-        this.sqlExpression = Input.empty();
+        this.compatibilityLevel = Output.empty();
+        this.requiresPreprocessing = Output.empty();
+        this.sqlExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> compatibilityLevel;
-        private @Nullable Input<Boolean> requiresPreprocessing;
-        private @Nullable Input<String> sqlExpression;
+        private @Nullable Output<Integer> compatibilityLevel;
+        private @Nullable Output<Boolean> requiresPreprocessing;
+        private @Nullable Output<String> sqlExpression;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sqlExpression = defaults.sqlExpression;
         }
 
-        public Builder compatibilityLevel(@Nullable Input<Integer> compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable Output<Integer> compatibilityLevel) {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
-            this.compatibilityLevel = Input.ofNullable(compatibilityLevel);
+            this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
             return this;
         }
 
-        public Builder requiresPreprocessing(@Nullable Input<Boolean> requiresPreprocessing) {
+        public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
 
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
-            this.requiresPreprocessing = Input.ofNullable(requiresPreprocessing);
+            this.requiresPreprocessing = Output.ofNullable(requiresPreprocessing);
             return this;
         }
 
-        public Builder sqlExpression(@Nullable Input<String> sqlExpression) {
+        public Builder sqlExpression(@Nullable Output<String> sqlExpression) {
             this.sqlExpression = sqlExpression;
             return this;
         }
 
         public Builder sqlExpression(@Nullable String sqlExpression) {
-            this.sqlExpression = Input.ofNullable(sqlExpression);
+            this.sqlExpression = Output.ofNullable(sqlExpression);
             return this;
         }
         public ActionArgs build() {

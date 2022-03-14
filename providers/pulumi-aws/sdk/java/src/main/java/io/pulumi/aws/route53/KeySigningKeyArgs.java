@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-      private final Input<String> hostedZoneId;
+      private final Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
+    public Output<String> getHostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -30,9 +30,9 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyManagementServiceArn", required=true)
-      private final Input<String> keyManagementServiceArn;
+      private final Output<String> keyManagementServiceArn;
 
-    public Input<String> getKeyManagementServiceArn() {
+    public Output<String> getKeyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
 
@@ -41,10 +41,10 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public KeySigningKeyArgs(
-        Input<String> hostedZoneId,
-        Input<String> keyManagementServiceArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> status) {
+        Output<String> hostedZoneId,
+        Output<String> keyManagementServiceArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> status) {
         this.hostedZoneId = Objects.requireNonNull(hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
         this.keyManagementServiceArn = Objects.requireNonNull(keyManagementServiceArn, "expected parameter 'keyManagementServiceArn' to be non-null");
         this.name = name;
@@ -70,10 +70,10 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeySigningKeyArgs() {
-        this.hostedZoneId = Input.empty();
-        this.keyManagementServiceArn = Input.empty();
-        this.name = Input.empty();
-        this.status = Input.empty();
+        this.hostedZoneId = Output.empty();
+        this.keyManagementServiceArn = Output.empty();
+        this.name = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> hostedZoneId;
-        private Input<String> keyManagementServiceArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> status;
+        private Output<String> hostedZoneId;
+        private Output<String> keyManagementServiceArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder hostedZoneId(Input<String> hostedZoneId) {
+        public Builder hostedZoneId(Output<String> hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
         public Builder hostedZoneId(String hostedZoneId) {
-            this.hostedZoneId = Input.of(Objects.requireNonNull(hostedZoneId));
+            this.hostedZoneId = Output.of(Objects.requireNonNull(hostedZoneId));
             return this;
         }
 
-        public Builder keyManagementServiceArn(Input<String> keyManagementServiceArn) {
+        public Builder keyManagementServiceArn(Output<String> keyManagementServiceArn) {
             this.keyManagementServiceArn = Objects.requireNonNull(keyManagementServiceArn);
             return this;
         }
 
         public Builder keyManagementServiceArn(String keyManagementServiceArn) {
-            this.keyManagementServiceArn = Input.of(Objects.requireNonNull(keyManagementServiceArn));
+            this.keyManagementServiceArn = Output.of(Objects.requireNonNull(keyManagementServiceArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public KeySigningKeyArgs build() {

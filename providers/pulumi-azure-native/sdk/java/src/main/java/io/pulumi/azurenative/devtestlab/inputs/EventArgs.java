@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.NotificationChannelEventType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventName")
-      private final @Nullable Input<Either<String,NotificationChannelEventType>> eventName;
+      private final @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
 
-    public Input<Either<String,NotificationChannelEventType>> getEventName() {
-        return this.eventName == null ? Input.empty() : this.eventName;
+    public Output<Either<String,NotificationChannelEventType>> getEventName() {
+        return this.eventName == null ? Output.empty() : this.eventName;
     }
 
-    public EventArgs(@Nullable Input<Either<String,NotificationChannelEventType>> eventName) {
+    public EventArgs(@Nullable Output<Either<String,NotificationChannelEventType>> eventName) {
         this.eventName = eventName;
     }
 
     private EventArgs() {
-        this.eventName = Input.empty();
+        this.eventName = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,NotificationChannelEventType>> eventName;
+        private @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     	      this.eventName = defaults.eventName;
         }
 
-        public Builder eventName(@Nullable Input<Either<String,NotificationChannelEventType>> eventName) {
+        public Builder eventName(@Nullable Output<Either<String,NotificationChannelEventType>> eventName) {
             this.eventName = eventName;
             return this;
         }
 
         public Builder eventName(@Nullable Either<String,NotificationChannelEventType> eventName) {
-            this.eventName = Input.ofNullable(eventName);
+            this.eventName = Output.ofNullable(eventName);
             return this;
         }
         public EventArgs build() {

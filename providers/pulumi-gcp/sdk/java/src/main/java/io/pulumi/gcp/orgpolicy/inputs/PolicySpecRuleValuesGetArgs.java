@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allowedValues")
-      private final @Nullable Input<List<String>> allowedValues;
+      private final @Nullable Output<List<String>> allowedValues;
 
-    public Input<List<String>> getAllowedValues() {
-        return this.allowedValues == null ? Input.empty() : this.allowedValues;
+    public Output<List<String>> getAllowedValues() {
+        return this.allowedValues == null ? Output.empty() : this.allowedValues;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deniedValues")
-      private final @Nullable Input<List<String>> deniedValues;
+      private final @Nullable Output<List<String>> deniedValues;
 
-    public Input<List<String>> getDeniedValues() {
-        return this.deniedValues == null ? Input.empty() : this.deniedValues;
+    public Output<List<String>> getDeniedValues() {
+        return this.deniedValues == null ? Output.empty() : this.deniedValues;
     }
 
     public PolicySpecRuleValuesGetArgs(
-        @Nullable Input<List<String>> allowedValues,
-        @Nullable Input<List<String>> deniedValues) {
+        @Nullable Output<List<String>> allowedValues,
+        @Nullable Output<List<String>> deniedValues) {
         this.allowedValues = allowedValues;
         this.deniedValues = deniedValues;
     }
 
     private PolicySpecRuleValuesGetArgs() {
-        this.allowedValues = Input.empty();
-        this.deniedValues = Input.empty();
+        this.allowedValues = Output.empty();
+        this.deniedValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedValues;
-        private @Nullable Input<List<String>> deniedValues;
+        private @Nullable Output<List<String>> allowedValues;
+        private @Nullable Output<List<String>> deniedValues;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
     	      this.deniedValues = defaults.deniedValues;
         }
 
-        public Builder allowedValues(@Nullable Input<List<String>> allowedValues) {
+        public Builder allowedValues(@Nullable Output<List<String>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
         public Builder allowedValues(@Nullable List<String> allowedValues) {
-            this.allowedValues = Input.ofNullable(allowedValues);
+            this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder deniedValues(@Nullable Input<List<String>> deniedValues) {
+        public Builder deniedValues(@Nullable Output<List<String>> deniedValues) {
             this.deniedValues = deniedValues;
             return this;
         }
 
         public Builder deniedValues(@Nullable List<String> deniedValues) {
-            this.deniedValues = Input.ofNullable(deniedValues);
+            this.deniedValues = Output.ofNullable(deniedValues);
             return this;
         }
         public PolicySpecRuleValuesGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="height")
-      private final @Nullable Input<Integer> height;
+      private final @Nullable Output<Integer> height;
 
-    public Input<Integer> getHeight() {
-        return this.height == null ? Input.empty() : this.height;
+    public Output<Integer> getHeight() {
+        return this.height == null ? Output.empty() : this.height;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
@@ -46,25 +46,25 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="width")
-      private final @Nullable Input<Integer> width;
+      private final @Nullable Output<Integer> width;
 
-    public Input<Integer> getWidth() {
-        return this.width == null ? Input.empty() : this.width;
+    public Output<Integer> getWidth() {
+        return this.width == null ? Output.empty() : this.width;
     }
 
     public GoogleCloudRetailV2betaImageArgs(
-        @Nullable Input<Integer> height,
-        Input<String> uri,
-        @Nullable Input<Integer> width) {
+        @Nullable Output<Integer> height,
+        Output<String> uri,
+        @Nullable Output<Integer> width) {
         this.height = height;
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
         this.width = width;
     }
 
     private GoogleCloudRetailV2betaImageArgs() {
-        this.height = Input.empty();
-        this.uri = Input.empty();
-        this.width = Input.empty();
+        this.height = Output.empty();
+        this.uri = Output.empty();
+        this.width = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> height;
-        private Input<String> uri;
-        private @Nullable Input<Integer> width;
+        private @Nullable Output<Integer> height;
+        private Output<String> uri;
+        private @Nullable Output<Integer> width;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
     	      this.width = defaults.width;
         }
 
-        public Builder height(@Nullable Input<Integer> height) {
+        public Builder height(@Nullable Output<Integer> height) {
             this.height = height;
             return this;
         }
 
         public Builder height(@Nullable Integer height) {
-            this.height = Input.ofNullable(height);
+            this.height = Output.ofNullable(height);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
 
-        public Builder width(@Nullable Input<Integer> width) {
+        public Builder width(@Nullable Output<Integer> width) {
             this.width = width;
             return this;
         }
 
         public Builder width(@Nullable Integer width) {
-            this.width = Input.ofNullable(width);
+            this.width = Output.ofNullable(width);
             return this;
         }
         public GoogleCloudRetailV2betaImageArgs build() {

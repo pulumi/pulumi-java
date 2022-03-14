@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicyWeeklyCycleDayOfWeekArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dayOfWeeks")
-      private final @Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
+      private final @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
-    public Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> getDayOfWeeks() {
-        return this.dayOfWeeks == null ? Input.empty() : this.dayOfWeeks;
+    public Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> getDayOfWeeks() {
+        return this.dayOfWeeks == null ? Output.empty() : this.dayOfWeeks;
     }
 
-    public ResourcePolicyWeeklyCycleArgs(@Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
+    public ResourcePolicyWeeklyCycleArgs(@Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
         this.dayOfWeeks = dayOfWeeks;
     }
 
     private ResourcePolicyWeeklyCycleArgs() {
-        this.dayOfWeeks = Input.empty();
+        this.dayOfWeeks = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
+        private @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
     	      this.dayOfWeeks = defaults.dayOfWeeks;
         }
 
-        public Builder dayOfWeeks(@Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
+        public Builder dayOfWeeks(@Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
             this.dayOfWeeks = dayOfWeeks;
             return this;
         }
 
         public Builder dayOfWeeks(@Nullable List<ResourcePolicyWeeklyCycleDayOfWeekArgs> dayOfWeeks) {
-            this.dayOfWeeks = Input.ofNullable(dayOfWeeks);
+            this.dayOfWeeks = Output.ofNullable(dayOfWeeks);
             return this;
         }
         public ResourcePolicyWeeklyCycleArgs build() {

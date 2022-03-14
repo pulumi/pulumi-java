@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildSignatureArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="builderVersion", required=true)
-      private final Input<String> builderVersion;
+      private final Output<String> builderVersion;
 
-    public Input<String> getBuilderVersion() {
+    public Output<String> getBuilderVersion() {
         return this.builderVersion;
     }
 
@@ -35,22 +35,22 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signature")
-      private final @Nullable Input<BuildSignatureArgs> signature;
+      private final @Nullable Output<BuildSignatureArgs> signature;
 
-    public Input<BuildSignatureArgs> getSignature() {
-        return this.signature == null ? Input.empty() : this.signature;
+    public Output<BuildSignatureArgs> getSignature() {
+        return this.signature == null ? Output.empty() : this.signature;
     }
 
     public BuildArgs(
-        Input<String> builderVersion,
-        @Nullable Input<BuildSignatureArgs> signature) {
+        Output<String> builderVersion,
+        @Nullable Output<BuildSignatureArgs> signature) {
         this.builderVersion = Objects.requireNonNull(builderVersion, "expected parameter 'builderVersion' to be non-null");
         this.signature = signature;
     }
 
     private BuildArgs() {
-        this.builderVersion = Input.empty();
-        this.signature = Input.empty();
+        this.builderVersion = Output.empty();
+        this.signature = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> builderVersion;
-        private @Nullable Input<BuildSignatureArgs> signature;
+        private Output<String> builderVersion;
+        private @Nullable Output<BuildSignatureArgs> signature;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signature = defaults.signature;
         }
 
-        public Builder builderVersion(Input<String> builderVersion) {
+        public Builder builderVersion(Output<String> builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
 
         public Builder builderVersion(String builderVersion) {
-            this.builderVersion = Input.of(Objects.requireNonNull(builderVersion));
+            this.builderVersion = Output.of(Objects.requireNonNull(builderVersion));
             return this;
         }
 
-        public Builder signature(@Nullable Input<BuildSignatureArgs> signature) {
+        public Builder signature(@Nullable Output<BuildSignatureArgs> signature) {
             this.signature = signature;
             return this;
         }
 
         public Builder signature(@Nullable BuildSignatureArgs signature) {
-            this.signature = Input.ofNullable(signature);
+            this.signature = Output.ofNullable(signature);
             return this;
         }
         public BuildArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxInstances")
-      private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Output<Integer> maxInstances;
 
-    public Input<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Input.empty() : this.maxInstances;
+    public Output<Integer> getMaxInstances() {
+        return this.maxInstances == null ? Output.empty() : this.maxInstances;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minInstances")
-      private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Output<Integer> minInstances;
 
-    public Input<Integer> getMinInstances() {
-        return this.minInstances == null ? Input.empty() : this.minInstances;
+    public Output<Integer> getMinInstances() {
+        return this.minInstances == null ? Output.empty() : this.minInstances;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scaleType", required=true)
-      private final Input<String> scaleType;
+      private final Output<String> scaleType;
 
-    public Input<String> getScaleType() {
+    public Output<String> getScaleType() {
         return this.scaleType;
     }
 
     public ManualScaleSettingsArgs(
-        @Nullable Input<Integer> instanceCount,
-        @Nullable Input<Integer> maxInstances,
-        @Nullable Input<Integer> minInstances,
-        Input<String> scaleType) {
+        @Nullable Output<Integer> instanceCount,
+        @Nullable Output<Integer> maxInstances,
+        @Nullable Output<Integer> minInstances,
+        Output<String> scaleType) {
         this.instanceCount = instanceCount;
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
@@ -71,10 +71,10 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private ManualScaleSettingsArgs() {
-        this.instanceCount = Input.empty();
-        this.maxInstances = Input.empty();
-        this.minInstances = Input.empty();
-        this.scaleType = Input.empty();
+        this.instanceCount = Output.empty();
+        this.maxInstances = Output.empty();
+        this.minInstances = Output.empty();
+        this.scaleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> instanceCount;
-        private @Nullable Input<Integer> maxInstances;
-        private @Nullable Input<Integer> minInstances;
-        private Input<String> scaleType;
+        private @Nullable Output<Integer> instanceCount;
+        private @Nullable Output<Integer> maxInstances;
+        private @Nullable Output<Integer> minInstances;
+        private Output<String> scaleType;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder maxInstances(@Nullable Input<Integer> maxInstances) {
+        public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Input.ofNullable(maxInstances);
+            this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
 
-        public Builder minInstances(@Nullable Input<Integer> minInstances) {
+        public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Input.ofNullable(minInstances);
+            this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
 
-        public Builder scaleType(Input<String> scaleType) {
+        public Builder scaleType(Output<String> scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
 
         public Builder scaleType(String scaleType) {
-            this.scaleType = Input.of(Objects.requireNonNull(scaleType));
+            this.scaleType = Output.of(Objects.requireNonNull(scaleType));
             return this;
         }
         public ManualScaleSettingsArgs build() {

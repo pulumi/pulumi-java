@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
     public static final AuthorizationActionMappingArgs Empty = new AuthorizationActionMappingArgs();
 
     @InputImport(name="desired")
-      private final @Nullable Input<String> desired;
+      private final @Nullable Output<String> desired;
 
-    public Input<String> getDesired() {
-        return this.desired == null ? Input.empty() : this.desired;
+    public Output<String> getDesired() {
+        return this.desired == null ? Output.empty() : this.desired;
     }
 
     @InputImport(name="original")
-      private final @Nullable Input<String> original;
+      private final @Nullable Output<String> original;
 
-    public Input<String> getOriginal() {
-        return this.original == null ? Input.empty() : this.original;
+    public Output<String> getOriginal() {
+        return this.original == null ? Output.empty() : this.original;
     }
 
     public AuthorizationActionMappingArgs(
-        @Nullable Input<String> desired,
-        @Nullable Input<String> original) {
+        @Nullable Output<String> desired,
+        @Nullable Output<String> original) {
         this.desired = desired;
         this.original = original;
     }
 
     private AuthorizationActionMappingArgs() {
-        this.desired = Input.empty();
-        this.original = Input.empty();
+        this.desired = Output.empty();
+        this.original = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> desired;
-        private @Nullable Input<String> original;
+        private @Nullable Output<String> desired;
+        private @Nullable Output<String> original;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
     	      this.original = defaults.original;
         }
 
-        public Builder desired(@Nullable Input<String> desired) {
+        public Builder desired(@Nullable Output<String> desired) {
             this.desired = desired;
             return this;
         }
 
         public Builder desired(@Nullable String desired) {
-            this.desired = Input.ofNullable(desired);
+            this.desired = Output.ofNullable(desired);
             return this;
         }
 
-        public Builder original(@Nullable Input<String> original) {
+        public Builder original(@Nullable Output<String> original) {
             this.original = original;
             return this;
         }
 
         public Builder original(@Nullable String original) {
-            this.original = Input.ofNullable(original);
+            this.original = Output.ofNullable(original);
             return this;
         }
         public AuthorizationActionMappingArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcIpv4CidrBlockAssociationArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpv4CidrBlockAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -128,14 +127,14 @@ public class VpcIpv4CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpv4CidrBlockAssociation(String name, VpcIpv4CidrBlockAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation", name, args == null ? VpcIpv4CidrBlockAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation", name, args == null ? VpcIpv4CidrBlockAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VpcIpv4CidrBlockAssociation(String name, Input<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VpcIpv4CidrBlockAssociation(String name, Output<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -151,7 +150,7 @@ public class VpcIpv4CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcIpv4CidrBlockAssociation get(String name, Input<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VpcIpv4CidrBlockAssociation get(String name, Output<String> id, @Nullable VpcIpv4CidrBlockAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpcIpv4CidrBlockAssociation(name, id, state, options);
     }
 }

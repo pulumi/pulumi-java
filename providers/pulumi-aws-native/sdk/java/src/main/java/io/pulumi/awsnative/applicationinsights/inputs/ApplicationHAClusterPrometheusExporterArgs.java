@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="prometheusPort")
-      private final @Nullable Input<String> prometheusPort;
+      private final @Nullable Output<String> prometheusPort;
 
-    public Input<String> getPrometheusPort() {
-        return this.prometheusPort == null ? Input.empty() : this.prometheusPort;
+    public Output<String> getPrometheusPort() {
+        return this.prometheusPort == null ? Output.empty() : this.prometheusPort;
     }
 
-    public ApplicationHAClusterPrometheusExporterArgs(@Nullable Input<String> prometheusPort) {
+    public ApplicationHAClusterPrometheusExporterArgs(@Nullable Output<String> prometheusPort) {
         this.prometheusPort = prometheusPort;
     }
 
     private ApplicationHAClusterPrometheusExporterArgs() {
-        this.prometheusPort = Input.empty();
+        this.prometheusPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> prometheusPort;
+        private @Nullable Output<String> prometheusPort;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder prometheusPort(@Nullable Input<String> prometheusPort) {
+        public Builder prometheusPort(@Nullable Output<String> prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }
 
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = Input.ofNullable(prometheusPort);
+            this.prometheusPort = Output.ofNullable(prometheusPort);
             return this;
         }
         public ApplicationHAClusterPrometheusExporterArgs build() {

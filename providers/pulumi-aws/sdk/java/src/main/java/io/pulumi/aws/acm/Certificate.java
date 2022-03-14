@@ -8,7 +8,6 @@ import io.pulumi.aws.acm.CertificateArgs;
 import io.pulumi.aws.acm.inputs.CertificateState;
 import io.pulumi.aws.acm.outputs.CertificateDomainValidationOption;
 import io.pulumi.aws.acm.outputs.CertificateOptions;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -285,14 +284,14 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, @Nullable CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:acm/certificate:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:acm/certificate:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Certificate(String name, Input<String> id, @Nullable CertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Certificate(String name, Output<String> id, @Nullable CertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:acm/certificate:Certificate", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -308,7 +307,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Certificate get(String name, Input<String> id, @Nullable CertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Certificate get(String name, Output<String> id, @Nullable CertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Certificate(name, id, state, options);
     }
 }

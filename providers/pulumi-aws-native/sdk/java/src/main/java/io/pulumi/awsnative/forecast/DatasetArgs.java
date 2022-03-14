@@ -8,7 +8,7 @@ import io.pulumi.awsnative.forecast.enums.DatasetType;
 import io.pulumi.awsnative.forecast.inputs.EncryptionConfigPropertiesArgs;
 import io.pulumi.awsnative.forecast.inputs.SchemaPropertiesArgs;
 import io.pulumi.awsnative.forecast.inputs.TagsItemPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFrequency")
-      private final @Nullable Input<String> dataFrequency;
+      private final @Nullable Output<String> dataFrequency;
 
-    public Input<String> getDataFrequency() {
-        return this.dataFrequency == null ? Input.empty() : this.dataFrequency;
+    public Output<String> getDataFrequency() {
+        return this.dataFrequency == null ? Output.empty() : this.dataFrequency;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetName")
-      private final @Nullable Input<String> datasetName;
+      private final @Nullable Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
-        return this.datasetName == null ? Input.empty() : this.datasetName;
+    public Output<String> getDatasetName() {
+        return this.datasetName == null ? Output.empty() : this.datasetName;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetType", required=true)
-      private final Input<DatasetType> datasetType;
+      private final Output<DatasetType> datasetType;
 
-    public Input<DatasetType> getDatasetType() {
+    public Output<DatasetType> getDatasetType() {
         return this.datasetType;
     }
 
@@ -58,41 +58,41 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<DatasetDomain> domain;
+      private final Output<DatasetDomain> domain;
 
-    public Input<DatasetDomain> getDomain() {
+    public Output<DatasetDomain> getDomain() {
         return this.domain;
     }
 
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig;
+      private final @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
 
-    public Input<EncryptionConfigPropertiesArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigPropertiesArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     @InputImport(name="schema", required=true)
-      private final Input<SchemaPropertiesArgs> schema;
+      private final Output<SchemaPropertiesArgs> schema;
 
-    public Input<SchemaPropertiesArgs> getSchema() {
+    public Output<SchemaPropertiesArgs> getSchema() {
         return this.schema;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
+      private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Input<List<TagsItemPropertiesArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TagsItemPropertiesArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DatasetArgs(
-        @Nullable Input<String> dataFrequency,
-        @Nullable Input<String> datasetName,
-        Input<DatasetType> datasetType,
-        Input<DatasetDomain> domain,
-        @Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig,
-        Input<SchemaPropertiesArgs> schema,
-        @Nullable Input<List<TagsItemPropertiesArgs>> tags) {
+        @Nullable Output<String> dataFrequency,
+        @Nullable Output<String> datasetName,
+        Output<DatasetType> datasetType,
+        Output<DatasetDomain> domain,
+        @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig,
+        Output<SchemaPropertiesArgs> schema,
+        @Nullable Output<List<TagsItemPropertiesArgs>> tags) {
         this.dataFrequency = dataFrequency;
         this.datasetName = datasetName;
         this.datasetType = Objects.requireNonNull(datasetType, "expected parameter 'datasetType' to be non-null");
@@ -103,13 +103,13 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.dataFrequency = Input.empty();
-        this.datasetName = Input.empty();
-        this.datasetType = Input.empty();
-        this.domain = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.schema = Input.empty();
-        this.tags = Input.empty();
+        this.dataFrequency = Output.empty();
+        this.datasetName = Output.empty();
+        this.datasetType = Output.empty();
+        this.domain = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.schema = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,13 +121,13 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataFrequency;
-        private @Nullable Input<String> datasetName;
-        private Input<DatasetType> datasetType;
-        private Input<DatasetDomain> domain;
-        private @Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig;
-        private Input<SchemaPropertiesArgs> schema;
-        private @Nullable Input<List<TagsItemPropertiesArgs>> tags;
+        private @Nullable Output<String> dataFrequency;
+        private @Nullable Output<String> datasetName;
+        private Output<DatasetType> datasetType;
+        private Output<DatasetDomain> domain;
+        private @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
+        private Output<SchemaPropertiesArgs> schema;
+        private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -144,73 +144,73 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataFrequency(@Nullable Input<String> dataFrequency) {
+        public Builder dataFrequency(@Nullable Output<String> dataFrequency) {
             this.dataFrequency = dataFrequency;
             return this;
         }
 
         public Builder dataFrequency(@Nullable String dataFrequency) {
-            this.dataFrequency = Input.ofNullable(dataFrequency);
+            this.dataFrequency = Output.ofNullable(dataFrequency);
             return this;
         }
 
-        public Builder datasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Input.ofNullable(datasetName);
+            this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
 
-        public Builder datasetType(Input<DatasetType> datasetType) {
+        public Builder datasetType(Output<DatasetType> datasetType) {
             this.datasetType = Objects.requireNonNull(datasetType);
             return this;
         }
 
         public Builder datasetType(DatasetType datasetType) {
-            this.datasetType = Input.of(Objects.requireNonNull(datasetType));
+            this.datasetType = Output.of(Objects.requireNonNull(datasetType));
             return this;
         }
 
-        public Builder domain(Input<DatasetDomain> domain) {
+        public Builder domain(Output<DatasetDomain> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(DatasetDomain domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable EncryptionConfigPropertiesArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder schema(Input<SchemaPropertiesArgs> schema) {
+        public Builder schema(Output<SchemaPropertiesArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
         public Builder schema(SchemaPropertiesArgs schema) {
-            this.schema = Input.of(Objects.requireNonNull(schema));
+            this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TagsItemPropertiesArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DatasetArgs build() {

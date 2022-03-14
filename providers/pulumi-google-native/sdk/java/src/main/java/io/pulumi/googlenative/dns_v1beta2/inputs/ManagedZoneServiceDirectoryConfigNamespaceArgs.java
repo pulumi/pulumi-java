@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
      * 
      */
     @InputImport(name="deletionTime")
-      private final @Nullable Input<String> deletionTime;
+      private final @Nullable Output<String> deletionTime;
 
-    public Input<String> getDeletionTime() {
-        return this.deletionTime == null ? Input.empty() : this.deletionTime;
+    public Output<String> getDeletionTime() {
+        return this.deletionTime == null ? Output.empty() : this.deletionTime;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -37,25 +37,25 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
      * 
      */
     @InputImport(name="namespaceUrl")
-      private final @Nullable Input<String> namespaceUrl;
+      private final @Nullable Output<String> namespaceUrl;
 
-    public Input<String> getNamespaceUrl() {
-        return this.namespaceUrl == null ? Input.empty() : this.namespaceUrl;
+    public Output<String> getNamespaceUrl() {
+        return this.namespaceUrl == null ? Output.empty() : this.namespaceUrl;
     }
 
     public ManagedZoneServiceDirectoryConfigNamespaceArgs(
-        @Nullable Input<String> deletionTime,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> namespaceUrl) {
+        @Nullable Output<String> deletionTime,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> namespaceUrl) {
         this.deletionTime = deletionTime;
         this.kind = kind;
         this.namespaceUrl = namespaceUrl;
     }
 
     private ManagedZoneServiceDirectoryConfigNamespaceArgs() {
-        this.deletionTime = Input.empty();
-        this.kind = Input.empty();
-        this.namespaceUrl = Input.empty();
+        this.deletionTime = Output.empty();
+        this.kind = Output.empty();
+        this.namespaceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deletionTime;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> namespaceUrl;
+        private @Nullable Output<String> deletionTime;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> namespaceUrl;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     	      this.namespaceUrl = defaults.namespaceUrl;
         }
 
-        public Builder deletionTime(@Nullable Input<String> deletionTime) {
+        public Builder deletionTime(@Nullable Output<String> deletionTime) {
             this.deletionTime = deletionTime;
             return this;
         }
 
         public Builder deletionTime(@Nullable String deletionTime) {
-            this.deletionTime = Input.ofNullable(deletionTime);
+            this.deletionTime = Output.ofNullable(deletionTime);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder namespaceUrl(@Nullable Input<String> namespaceUrl) {
+        public Builder namespaceUrl(@Nullable Output<String> namespaceUrl) {
             this.namespaceUrl = namespaceUrl;
             return this;
         }
 
         public Builder namespaceUrl(@Nullable String namespaceUrl) {
-            this.namespaceUrl = Input.ofNullable(namespaceUrl);
+            this.namespaceUrl = Output.ofNullable(namespaceUrl);
             return this;
         }
         public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {

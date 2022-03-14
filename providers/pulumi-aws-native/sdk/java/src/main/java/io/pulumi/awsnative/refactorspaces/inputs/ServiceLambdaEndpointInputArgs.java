@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.refactorspaces.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
     public static final ServiceLambdaEndpointInputArgs Empty = new ServiceLambdaEndpointInputArgs();
 
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
-    public ServiceLambdaEndpointInputArgs(Input<String> arn) {
+    public ServiceLambdaEndpointInputArgs(Output<String> arn) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
     }
 
     private ServiceLambdaEndpointInputArgs() {
-        this.arn = Input.empty();
+        this.arn = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> arn;
+        private Output<String> arn;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
     	      this.arn = defaults.arn;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
         public ServiceLambdaEndpointInputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="retries")
-      private final @Nullable Input<Integer> retries;
+      private final @Nullable Output<Integer> retries;
 
-    public Input<Integer> getRetries() {
-        return this.retries == null ? Input.empty() : this.retries;
+    public Output<Integer> getRetries() {
+        return this.retries == null ? Output.empty() : this.retries;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="startPeriod")
-      private final @Nullable Input<Integer> startPeriod;
+      private final @Nullable Output<Integer> startPeriod;
 
-    public Input<Integer> getStartPeriod() {
-        return this.startPeriod == null ? Input.empty() : this.startPeriod;
+    public Output<Integer> getStartPeriod() {
+        return this.startPeriod == null ? Output.empty() : this.startPeriod;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public TaskDefinitionHealthCheckArgs(
-        @Nullable Input<List<String>> command,
-        @Nullable Input<Integer> interval,
-        @Nullable Input<Integer> retries,
-        @Nullable Input<Integer> startPeriod,
-        @Nullable Input<Integer> timeout) {
+        @Nullable Output<List<String>> command,
+        @Nullable Output<Integer> interval,
+        @Nullable Output<Integer> retries,
+        @Nullable Output<Integer> startPeriod,
+        @Nullable Output<Integer> timeout) {
         this.command = command;
         this.interval = interval;
         this.retries = retries;
@@ -89,11 +89,11 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
     }
 
     private TaskDefinitionHealthCheckArgs() {
-        this.command = Input.empty();
-        this.interval = Input.empty();
-        this.retries = Input.empty();
-        this.startPeriod = Input.empty();
-        this.timeout = Input.empty();
+        this.command = Output.empty();
+        this.interval = Output.empty();
+        this.retries = Output.empty();
+        this.startPeriod = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> command;
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<Integer> retries;
-        private @Nullable Input<Integer> startPeriod;
-        private @Nullable Input<Integer> timeout;
+        private @Nullable Output<List<String>> command;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<Integer> retries;
+        private @Nullable Output<Integer> startPeriod;
+        private @Nullable Output<Integer> timeout;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder retries(@Nullable Input<Integer> retries) {
+        public Builder retries(@Nullable Output<Integer> retries) {
             this.retries = retries;
             return this;
         }
 
         public Builder retries(@Nullable Integer retries) {
-            this.retries = Input.ofNullable(retries);
+            this.retries = Output.ofNullable(retries);
             return this;
         }
 
-        public Builder startPeriod(@Nullable Input<Integer> startPeriod) {
+        public Builder startPeriod(@Nullable Output<Integer> startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
 
         public Builder startPeriod(@Nullable Integer startPeriod) {
-            this.startPeriod = Input.ofNullable(startPeriod);
+            this.startPeriod = Output.ofNullable(startPeriod);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public TaskDefinitionHealthCheckArgs build() {

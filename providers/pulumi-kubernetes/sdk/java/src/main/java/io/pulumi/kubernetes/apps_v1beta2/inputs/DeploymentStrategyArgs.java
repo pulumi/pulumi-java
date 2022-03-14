@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.RollingUpdateDeploymentArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rollingUpdate")
-      private final @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate;
+      private final @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate;
 
-    public Input<RollingUpdateDeploymentArgs> getRollingUpdate() {
-        return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
+    public Output<RollingUpdateDeploymentArgs> getRollingUpdate() {
+        return this.rollingUpdate == null ? Output.empty() : this.rollingUpdate;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public DeploymentStrategyArgs(
-        @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate,
-        @Nullable Input<String> type) {
+        @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate,
+        @Nullable Output<String> type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }
 
     private DeploymentStrategyArgs() {
-        this.rollingUpdate = Input.empty();
-        this.type = Input.empty();
+        this.rollingUpdate = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate;
-        private @Nullable Input<String> type;
+        private @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder rollingUpdate(@Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate) {
+        public Builder rollingUpdate(@Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
         public Builder rollingUpdate(@Nullable RollingUpdateDeploymentArgs rollingUpdate) {
-            this.rollingUpdate = Input.ofNullable(rollingUpdate);
+            this.rollingUpdate = Output.ofNullable(rollingUpdate);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public DeploymentStrategyArgs build() {

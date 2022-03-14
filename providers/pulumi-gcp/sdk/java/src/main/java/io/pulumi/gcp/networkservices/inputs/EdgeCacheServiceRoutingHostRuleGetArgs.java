@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="hosts", required=true)
-      private final Input<List<String>> hosts;
+      private final Output<List<String>> hosts;
 
-    public Input<List<String>> getHosts() {
+    public Output<List<String>> getHosts() {
         return this.hosts;
     }
 
@@ -45,25 +45,25 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="pathMatcher", required=true)
-      private final Input<String> pathMatcher;
+      private final Output<String> pathMatcher;
 
-    public Input<String> getPathMatcher() {
+    public Output<String> getPathMatcher() {
         return this.pathMatcher;
     }
 
     public EdgeCacheServiceRoutingHostRuleGetArgs(
-        @Nullable Input<String> description,
-        Input<List<String>> hosts,
-        Input<String> pathMatcher) {
+        @Nullable Output<String> description,
+        Output<List<String>> hosts,
+        Output<String> pathMatcher) {
         this.description = description;
         this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
         this.pathMatcher = Objects.requireNonNull(pathMatcher, "expected parameter 'pathMatcher' to be non-null");
     }
 
     private EdgeCacheServiceRoutingHostRuleGetArgs() {
-        this.description = Input.empty();
-        this.hosts = Input.empty();
-        this.pathMatcher = Input.empty();
+        this.description = Output.empty();
+        this.hosts = Output.empty();
+        this.pathMatcher = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<String>> hosts;
-        private Input<String> pathMatcher;
+        private @Nullable Output<String> description;
+        private Output<List<String>> hosts;
+        private Output<String> pathMatcher;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
     	      this.pathMatcher = defaults.pathMatcher;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder hosts(Input<List<String>> hosts) {
+        public Builder hosts(Output<List<String>> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
         public Builder hosts(List<String> hosts) {
-            this.hosts = Input.of(Objects.requireNonNull(hosts));
+            this.hosts = Output.of(Objects.requireNonNull(hosts));
             return this;
         }
 
-        public Builder pathMatcher(Input<String> pathMatcher) {
+        public Builder pathMatcher(Output<String> pathMatcher) {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }
 
         public Builder pathMatcher(String pathMatcher) {
-            this.pathMatcher = Input.of(Objects.requireNonNull(pathMatcher));
+            this.pathMatcher = Output.of(Objects.requireNonNull(pathMatcher));
             return this;
         }
         public EdgeCacheServiceRoutingHostRuleGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="namespaceId")
-      private final @Nullable Input<String> namespaceId;
+      private final @Nullable Output<String> namespaceId;
 
-    public Input<String> getNamespaceId() {
-        return this.namespaceId == null ? Input.empty() : this.namespaceId;
+    public Output<String> getNamespaceId() {
+        return this.namespaceId == null ? Output.empty() : this.namespaceId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public GooglePrivacyDlpV2PartitionIdArgs(
-        @Nullable Input<String> namespaceId,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> namespaceId,
+        @Nullable Output<String> project) {
         this.namespaceId = namespaceId;
         this.project = project;
     }
 
     private GooglePrivacyDlpV2PartitionIdArgs() {
-        this.namespaceId = Input.empty();
-        this.project = Input.empty();
+        this.namespaceId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> namespaceId;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> namespaceId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
     	      this.project = defaults.project;
         }
 
-        public Builder namespaceId(@Nullable Input<String> namespaceId) {
+        public Builder namespaceId(@Nullable Output<String> namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
 
         public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Input.ofNullable(namespaceId);
+            this.namespaceId = Output.ofNullable(namespaceId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public GooglePrivacyDlpV2PartitionIdArgs build() {

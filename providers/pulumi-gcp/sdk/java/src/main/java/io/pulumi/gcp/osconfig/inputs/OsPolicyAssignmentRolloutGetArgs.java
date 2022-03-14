@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutDisruptionBudgetGetArgs;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class OsPolicyAssignmentRolloutGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-      private final Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget;
+      private final Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget;
 
-    public Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
+    public Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
         return this.disruptionBudget;
     }
 
@@ -30,22 +30,22 @@ public final class OsPolicyAssignmentRolloutGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minWaitDuration", required=true)
-      private final Input<String> minWaitDuration;
+      private final Output<String> minWaitDuration;
 
-    public Input<String> getMinWaitDuration() {
+    public Output<String> getMinWaitDuration() {
         return this.minWaitDuration;
     }
 
     public OsPolicyAssignmentRolloutGetArgs(
-        Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget,
-        Input<String> minWaitDuration) {
+        Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget,
+        Output<String> minWaitDuration) {
         this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
         this.minWaitDuration = Objects.requireNonNull(minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
     }
 
     private OsPolicyAssignmentRolloutGetArgs() {
-        this.disruptionBudget = Input.empty();
-        this.minWaitDuration = Input.empty();
+        this.disruptionBudget = Output.empty();
+        this.minWaitDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class OsPolicyAssignmentRolloutGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget;
-        private Input<String> minWaitDuration;
+        private Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget;
+        private Output<String> minWaitDuration;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class OsPolicyAssignmentRolloutGetArgs extends io.pulumi.resources.
     	      this.minWaitDuration = defaults.minWaitDuration;
         }
 
-        public Builder disruptionBudget(Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget) {
+        public Builder disruptionBudget(Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
         public Builder disruptionBudget(OsPolicyAssignmentRolloutDisruptionBudgetGetArgs disruptionBudget) {
-            this.disruptionBudget = Input.of(Objects.requireNonNull(disruptionBudget));
+            this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
             return this;
         }
 
-        public Builder minWaitDuration(Input<String> minWaitDuration) {
+        public Builder minWaitDuration(Output<String> minWaitDuration) {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }
 
         public Builder minWaitDuration(String minWaitDuration) {
-            this.minWaitDuration = Input.of(Objects.requireNonNull(minWaitDuration));
+            this.minWaitDuration = Output.of(Objects.requireNonNull(minWaitDuration));
             return this;
         }
         public OsPolicyAssignmentRolloutGetArgs build() {

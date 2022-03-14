@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.EncryptionKeySourceType;
 import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesIdentityArgs;
 import io.pulumi.azurenative.automation.inputs.KeyVaultPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<EncryptionPropertiesIdentityArgs> identity;
+      private final @Nullable Output<EncryptionPropertiesIdentityArgs> identity;
 
-    public Input<EncryptionPropertiesIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<EncryptionPropertiesIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keySource")
-      private final @Nullable Input<EncryptionKeySourceType> keySource;
+      private final @Nullable Output<EncryptionKeySourceType> keySource;
 
-    public Input<EncryptionKeySourceType> getKeySource() {
-        return this.keySource == null ? Input.empty() : this.keySource;
+    public Output<EncryptionKeySourceType> getKeySource() {
+        return this.keySource == null ? Output.empty() : this.keySource;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultProperties")
-      private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
     }
 
     public EncryptionPropertiesArgs(
-        @Nullable Input<EncryptionPropertiesIdentityArgs> identity,
-        @Nullable Input<EncryptionKeySourceType> keySource,
-        @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        @Nullable Output<EncryptionPropertiesIdentityArgs> identity,
+        @Nullable Output<EncryptionKeySourceType> keySource,
+        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
         this.identity = identity;
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;
     }
 
     private EncryptionPropertiesArgs() {
-        this.identity = Input.empty();
-        this.keySource = Input.empty();
-        this.keyVaultProperties = Input.empty();
+        this.identity = Output.empty();
+        this.keySource = Output.empty();
+        this.keyVaultProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<EncryptionPropertiesIdentityArgs> identity;
-        private @Nullable Input<EncryptionKeySourceType> keySource;
-        private @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private @Nullable Output<EncryptionPropertiesIdentityArgs> identity;
+        private @Nullable Output<EncryptionKeySourceType> keySource;
+        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder identity(@Nullable Input<EncryptionPropertiesIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<EncryptionPropertiesIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable EncryptionPropertiesIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder keySource(@Nullable Input<EncryptionKeySourceType> keySource) {
+        public Builder keySource(@Nullable Output<EncryptionKeySourceType> keySource) {
             this.keySource = keySource;
             return this;
         }
 
         public Builder keySource(@Nullable EncryptionKeySourceType keySource) {
-            this.keySource = Input.ofNullable(keySource);
+            this.keySource = Output.ofNullable(keySource);
             return this;
         }
 
-        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
         public EncryptionPropertiesArgs build() {

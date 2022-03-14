@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="css")
-      private final @Nullable Input<String> css;
+      private final @Nullable Output<String> css;
 
-    public Input<String> getCss() {
-        return this.css == null ? Input.empty() : this.css;
+    public Output<String> getCss() {
+        return this.css == null ? Output.empty() : this.css;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="imageFile")
-      private final @Nullable Input<String> imageFile;
+      private final @Nullable Output<String> imageFile;
 
-    public Input<String> getImageFile() {
-        return this.imageFile == null ? Input.empty() : this.imageFile;
+    public Output<String> getImageFile() {
+        return this.imageFile == null ? Output.empty() : this.imageFile;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userPoolId", required=true)
-      private final Input<String> userPoolId;
+      private final Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
+    public Output<String> getUserPoolId() {
         return this.userPoolId;
     }
 
     public UserPoolUICustomizationArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> css,
-        @Nullable Input<String> imageFile,
-        Input<String> userPoolId) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> css,
+        @Nullable Output<String> imageFile,
+        Output<String> userPoolId) {
         this.clientId = clientId;
         this.css = css;
         this.imageFile = imageFile;
@@ -70,10 +70,10 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     }
 
     private UserPoolUICustomizationArgs() {
-        this.clientId = Input.empty();
-        this.css = Input.empty();
-        this.imageFile = Input.empty();
-        this.userPoolId = Input.empty();
+        this.clientId = Output.empty();
+        this.css = Output.empty();
+        this.imageFile = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> css;
-        private @Nullable Input<String> imageFile;
-        private Input<String> userPoolId;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> css;
+        private @Nullable Output<String> imageFile;
+        private Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder css(@Nullable Input<String> css) {
+        public Builder css(@Nullable Output<String> css) {
             this.css = css;
             return this;
         }
 
         public Builder css(@Nullable String css) {
-            this.css = Input.ofNullable(css);
+            this.css = Output.ofNullable(css);
             return this;
         }
 
-        public Builder imageFile(@Nullable Input<String> imageFile) {
+        public Builder imageFile(@Nullable Output<String> imageFile) {
             this.imageFile = imageFile;
             return this;
         }
 
         public Builder imageFile(@Nullable String imageFile) {
-            this.imageFile = Input.ofNullable(imageFile);
+            this.imageFile = Output.ofNullable(imageFile);
             return this;
         }
 
-        public Builder userPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
+            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
         }
         public UserPoolUICustomizationArgs build() {

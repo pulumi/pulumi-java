@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.TargetSslProxyProxyHeader;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateMap")
-      private final @Nullable Input<String> certificateMap;
+      private final @Nullable Output<String> certificateMap;
 
-    public Input<String> getCertificateMap() {
-        return this.certificateMap == null ? Input.empty() : this.certificateMap;
+    public Output<String> getCertificateMap() {
+        return this.certificateMap == null ? Output.empty() : this.certificateMap;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,17 +43,17 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyHeader")
-      private final @Nullable Input<TargetSslProxyProxyHeader> proxyHeader;
+      private final @Nullable Output<TargetSslProxyProxyHeader> proxyHeader;
 
-    public Input<TargetSslProxyProxyHeader> getProxyHeader() {
-        return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
+    public Output<TargetSslProxyProxyHeader> getProxyHeader() {
+        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslCertificates")
-      private final @Nullable Input<List<String>> sslCertificates;
+      private final @Nullable Output<List<String>> sslCertificates;
 
-    public Input<List<String>> getSslCertificates() {
-        return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
+    public Output<List<String>> getSslCertificates() {
+        return this.sslCertificates == null ? Output.empty() : this.sslCertificates;
     }
 
     /**
@@ -101,22 +101,22 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslPolicy")
-      private final @Nullable Input<String> sslPolicy;
+      private final @Nullable Output<String> sslPolicy;
 
-    public Input<String> getSslPolicy() {
-        return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
+    public Output<String> getSslPolicy() {
+        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
     }
 
     public TargetSslProxyArgs(
-        @Nullable Input<String> certificateMap,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<TargetSslProxyProxyHeader> proxyHeader,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> service,
-        @Nullable Input<List<String>> sslCertificates,
-        @Nullable Input<String> sslPolicy) {
+        @Nullable Output<String> certificateMap,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<TargetSslProxyProxyHeader> proxyHeader,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> service,
+        @Nullable Output<List<String>> sslCertificates,
+        @Nullable Output<String> sslPolicy) {
         this.certificateMap = certificateMap;
         this.description = description;
         this.name = name;
@@ -129,15 +129,15 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetSslProxyArgs() {
-        this.certificateMap = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.proxyHeader = Input.empty();
-        this.requestId = Input.empty();
-        this.service = Input.empty();
-        this.sslCertificates = Input.empty();
-        this.sslPolicy = Input.empty();
+        this.certificateMap = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.proxyHeader = Output.empty();
+        this.requestId = Output.empty();
+        this.service = Output.empty();
+        this.sslCertificates = Output.empty();
+        this.sslPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,15 +149,15 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateMap;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<TargetSslProxyProxyHeader> proxyHeader;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> service;
-        private @Nullable Input<List<String>> sslCertificates;
-        private @Nullable Input<String> sslPolicy;
+        private @Nullable Output<String> certificateMap;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<TargetSslProxyProxyHeader> proxyHeader;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> service;
+        private @Nullable Output<List<String>> sslCertificates;
+        private @Nullable Output<String> sslPolicy;
 
         public Builder() {
     	      // Empty
@@ -176,93 +176,93 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder certificateMap(@Nullable Input<String> certificateMap) {
+        public Builder certificateMap(@Nullable Output<String> certificateMap) {
             this.certificateMap = certificateMap;
             return this;
         }
 
         public Builder certificateMap(@Nullable String certificateMap) {
-            this.certificateMap = Input.ofNullable(certificateMap);
+            this.certificateMap = Output.ofNullable(certificateMap);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder proxyHeader(@Nullable Input<TargetSslProxyProxyHeader> proxyHeader) {
+        public Builder proxyHeader(@Nullable Output<TargetSslProxyProxyHeader> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
         public Builder proxyHeader(@Nullable TargetSslProxyProxyHeader proxyHeader) {
-            this.proxyHeader = Input.ofNullable(proxyHeader);
+            this.proxyHeader = Output.ofNullable(proxyHeader);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder sslCertificates(@Nullable Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
         public Builder sslCertificates(@Nullable List<String> sslCertificates) {
-            this.sslCertificates = Input.ofNullable(sslCertificates);
+            this.sslCertificates = Output.ofNullable(sslCertificates);
             return this;
         }
 
-        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
         public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Input.ofNullable(sslPolicy);
+            this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
         public TargetSslProxyArgs build() {

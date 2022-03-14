@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="inputStartingPosition")
-      private final @Nullable Input<String> inputStartingPosition;
+      private final @Nullable Output<String> inputStartingPosition;
 
-    public Input<String> getInputStartingPosition() {
-        return this.inputStartingPosition == null ? Input.empty() : this.inputStartingPosition;
+    public Output<String> getInputStartingPosition() {
+        return this.inputStartingPosition == null ? Output.empty() : this.inputStartingPosition;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs(@Nullable Input<String> inputStartingPosition) {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs(@Nullable Output<String> inputStartingPosition) {
         this.inputStartingPosition = inputStartingPosition;
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs() {
-        this.inputStartingPosition = Input.empty();
+        this.inputStartingPosition = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private @Nullable Input<String> inputStartingPosition;
+        private @Nullable Output<String> inputStartingPosition;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.inputStartingPosition = defaults.inputStartingPosition;
         }
 
-        public Builder inputStartingPosition(@Nullable Input<String> inputStartingPosition) {
+        public Builder inputStartingPosition(@Nullable Output<String> inputStartingPosition) {
             this.inputStartingPosition = inputStartingPosition;
             return this;
         }
 
         public Builder inputStartingPosition(@Nullable String inputStartingPosition) {
-            this.inputStartingPosition = Input.ofNullable(inputStartingPosition);
+            this.inputStartingPosition = Output.ofNullable(inputStartingPosition);
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.enums.ApplicationArtifactType;
 import io.pulumi.azurenative.solutions.enums.ApplicationDefinitionArtifactName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,ApplicationDefinitionArtifactName>> name;
+      private final Output<Either<String,ApplicationDefinitionArtifactName>> name;
 
-    public Input<Either<String,ApplicationDefinitionArtifactName>> getName() {
+    public Output<Either<String,ApplicationDefinitionArtifactName>> getName() {
         return this.name;
     }
 
@@ -36,9 +36,9 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ApplicationArtifactType> type;
+      private final Output<ApplicationArtifactType> type;
 
-    public Input<ApplicationArtifactType> getType() {
+    public Output<ApplicationArtifactType> getType() {
         return this.type;
     }
 
@@ -47,25 +47,25 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public ApplicationDefinitionArtifactArgs(
-        Input<Either<String,ApplicationDefinitionArtifactName>> name,
-        Input<ApplicationArtifactType> type,
-        Input<String> uri) {
+        Output<Either<String,ApplicationDefinitionArtifactName>> name,
+        Output<ApplicationArtifactType> type,
+        Output<String> uri) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private ApplicationDefinitionArtifactArgs() {
-        this.name = Input.empty();
-        this.type = Input.empty();
-        this.uri = Input.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Either<String,ApplicationDefinitionArtifactName>> name;
-        private Input<ApplicationArtifactType> type;
-        private Input<String> uri;
+        private Output<Either<String,ApplicationDefinitionArtifactName>> name;
+        private Output<ApplicationArtifactType> type;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
     	      this.uri = defaults.uri;
         }
 
-        public Builder name(Input<Either<String,ApplicationDefinitionArtifactName>> name) {
+        public Builder name(Output<Either<String,ApplicationDefinitionArtifactName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,ApplicationDefinitionArtifactName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<ApplicationArtifactType> type) {
+        public Builder type(Output<ApplicationArtifactType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ApplicationArtifactType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public ApplicationDefinitionArtifactArgs build() {

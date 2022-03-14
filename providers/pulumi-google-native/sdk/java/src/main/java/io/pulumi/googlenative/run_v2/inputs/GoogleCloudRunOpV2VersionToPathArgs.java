@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Integer> mode;
+      private final @Nullable Output<Integer> mode;
 
-    public Input<Integer> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Integer> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -46,25 +46,25 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public GoogleCloudRunOpV2VersionToPathArgs(
-        @Nullable Input<Integer> mode,
-        Input<String> path,
-        @Nullable Input<String> version) {
+        @Nullable Output<Integer> mode,
+        Output<String> path,
+        @Nullable Output<String> version) {
         this.mode = mode;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.version = version;
     }
 
     private GoogleCloudRunOpV2VersionToPathArgs() {
-        this.mode = Input.empty();
-        this.path = Input.empty();
-        this.version = Input.empty();
+        this.mode = Output.empty();
+        this.path = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> mode;
-        private Input<String> path;
-        private @Nullable Input<String> version;
+        private @Nullable Output<Integer> mode;
+        private Output<String> path;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     	      this.version = defaults.version;
         }
 
-        public Builder mode(@Nullable Input<Integer> mode) {
+        public Builder mode(@Nullable Output<Integer> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public GoogleCloudRunOpV2VersionToPathArgs build() {

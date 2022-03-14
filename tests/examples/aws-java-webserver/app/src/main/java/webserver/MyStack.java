@@ -1,7 +1,6 @@
 package webserver;
 
 import io.pulumi.Stack;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.deployment.InvokeOptions;
@@ -23,11 +22,12 @@ public final class MyStack extends Stack {
     private final Output<String> publicHostName;
 
     public MyStack() throws InterruptedException, ExecutionException {
-        final var ami = GetAmi.invokeAsync(
-            $ -> $.filters(List.of(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs"))))
+        final var ami = GetAmi.invokeAsync($ ->
+        {
+            $.filters(List.of(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs"))))
                 .owners(List.of("137112412989"))
-                .mostRecent(true)
-        , null).thenApply(fn -> fn.getId());
+                .mostRecent(true);
+        }, null).thenApply(fn -> fn.getId());
 
         final var group = new io.pulumi.aws.ec2.SecurityGroup("web-secgrp", $ ->
         {
@@ -47,12 +47,13 @@ public final class MyStack extends Stack {
             "echo \"Hello, World!\" > index.html\n"+
             "nohup python -m SimpleHTTPServer 80 &";
 
-        final var server = new Instance("web-server-www",
-            $ -> $.tags(Map.of("Name", "web-server-www"))
-                .instanceType(Input.ofRight(io.pulumi.aws.ec2.enums.InstanceType.T2_Micro))
-                .vpcSecurityGroupIds(group.getId().applyValue(List::of).toInput())
-                .ami(Input.of(ami))
-                .userData(userData));
+        final var server = new Instance("web-server-www", $ -> {
+                $.tags(Map.of("Name", "web-server-www"))
+                    .instanceType(Output.ofRight(io.pulumi.aws.ec2.enums.InstanceType.T2_Micro))
+                    .vpcSecurityGroupIds(group.getId().applyValue(List::of))
+                    .ami(Output.of(ami))
+                    .userData(userData);
+        });
 
         this.publicIp = server.getPublicIp();
         this.publicHostName = server.getPublicDns();

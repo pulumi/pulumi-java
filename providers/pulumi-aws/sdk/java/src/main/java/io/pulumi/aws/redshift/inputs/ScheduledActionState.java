@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iamRole")
-      private final @Nullable Input<String> iamRole;
+      private final @Nullable Output<String> iamRole;
 
-    public Input<String> getIamRole() {
-        return this.iamRole == null ? Input.empty() : this.iamRole;
+    public Output<String> getIamRole() {
+        return this.iamRole == null ? Output.empty() : this.iamRole;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetAction")
-      private final @Nullable Input<ScheduledActionTargetActionGetArgs> targetAction;
+      private final @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction;
 
-    public Input<ScheduledActionTargetActionGetArgs> getTargetAction() {
-        return this.targetAction == null ? Input.empty() : this.targetAction;
+    public Output<ScheduledActionTargetActionGetArgs> getTargetAction() {
+        return this.targetAction == null ? Output.empty() : this.targetAction;
     }
 
     public ScheduledActionState(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> iamRole,
-        @Nullable Input<String> name,
-        @Nullable Input<String> schedule,
-        @Nullable Input<String> startTime,
-        @Nullable Input<ScheduledActionTargetActionGetArgs> targetAction) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> iamRole,
+        @Nullable Output<String> name,
+        @Nullable Output<String> schedule,
+        @Nullable Output<String> startTime,
+        @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction) {
         this.description = description;
         this.enable = enable;
         this.endTime = endTime;
@@ -124,14 +124,14 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     }
 
     private ScheduledActionState() {
-        this.description = Input.empty();
-        this.enable = Input.empty();
-        this.endTime = Input.empty();
-        this.iamRole = Input.empty();
-        this.name = Input.empty();
-        this.schedule = Input.empty();
-        this.startTime = Input.empty();
-        this.targetAction = Input.empty();
+        this.description = Output.empty();
+        this.enable = Output.empty();
+        this.endTime = Output.empty();
+        this.iamRole = Output.empty();
+        this.name = Output.empty();
+        this.schedule = Output.empty();
+        this.startTime = Output.empty();
+        this.targetAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> iamRole;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<ScheduledActionTargetActionGetArgs> targetAction;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> iamRole;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     	      this.targetAction = defaults.targetAction;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder iamRole(@Nullable Input<String> iamRole) {
+        public Builder iamRole(@Nullable Output<String> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
         public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Input.ofNullable(iamRole);
+            this.iamRole = Output.ofNullable(iamRole);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder targetAction(@Nullable Input<ScheduledActionTargetActionGetArgs> targetAction) {
+        public Builder targetAction(@Nullable Output<ScheduledActionTargetActionGetArgs> targetAction) {
             this.targetAction = targetAction;
             return this;
         }
 
         public Builder targetAction(@Nullable ScheduledActionTargetActionGetArgs targetAction) {
-            this.targetAction = Input.ofNullable(targetAction);
+            this.targetAction = Output.ofNullable(targetAction);
             return this;
         }
         public ScheduledActionState build() {

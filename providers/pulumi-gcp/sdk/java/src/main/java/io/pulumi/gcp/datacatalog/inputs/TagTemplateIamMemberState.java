@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,62 +16,62 @@ public final class TagTemplateIamMemberState extends io.pulumi.resources.Resourc
     public static final TagTemplateIamMemberState Empty = new TagTemplateIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TagTemplateIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<TagTemplateIamMemberConditionGetArgs> condition;
 
-    public Input<TagTemplateIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TagTemplateIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     @InputImport(name="tagTemplate")
-      private final @Nullable Input<String> tagTemplate;
+      private final @Nullable Output<String> tagTemplate;
 
-    public Input<String> getTagTemplate() {
-        return this.tagTemplate == null ? Input.empty() : this.tagTemplate;
+    public Output<String> getTagTemplate() {
+        return this.tagTemplate == null ? Output.empty() : this.tagTemplate;
     }
 
     public TagTemplateIamMemberState(
-        @Nullable Input<TagTemplateIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> member,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> role,
-        @Nullable Input<String> tagTemplate) {
+        @Nullable Output<TagTemplateIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> member,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> role,
+        @Nullable Output<String> tagTemplate) {
         this.condition = condition;
         this.etag = etag;
         this.member = member;
@@ -82,13 +82,13 @@ public final class TagTemplateIamMemberState extends io.pulumi.resources.Resourc
     }
 
     private TagTemplateIamMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
-        this.tagTemplate = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
+        this.tagTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,13 +100,13 @@ public final class TagTemplateIamMemberState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<TagTemplateIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> tagTemplate;
+        private @Nullable Output<TagTemplateIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> tagTemplate;
 
         public Builder() {
     	      // Empty
@@ -123,73 +123,73 @@ public final class TagTemplateIamMemberState extends io.pulumi.resources.Resourc
     	      this.tagTemplate = defaults.tagTemplate;
         }
 
-        public Builder condition(@Nullable Input<TagTemplateIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TagTemplateIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TagTemplateIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder tagTemplate(@Nullable Input<String> tagTemplate) {
+        public Builder tagTemplate(@Nullable Output<String> tagTemplate) {
             this.tagTemplate = tagTemplate;
             return this;
         }
 
         public Builder tagTemplate(@Nullable String tagTemplate) {
-            this.tagTemplate = Input.ofNullable(tagTemplate);
+            this.tagTemplate = Output.ofNullable(tagTemplate);
             return this;
         }
         public TagTemplateIamMemberState build() {

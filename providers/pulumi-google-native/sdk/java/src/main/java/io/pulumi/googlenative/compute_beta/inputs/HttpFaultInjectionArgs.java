@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.HttpFaultAbortArgs;
 import io.pulumi.googlenative.compute_beta.inputs.HttpFaultDelayArgs;
@@ -24,10 +24,10 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="abort")
-      private final @Nullable Input<HttpFaultAbortArgs> abort;
+      private final @Nullable Output<HttpFaultAbortArgs> abort;
 
-    public Input<HttpFaultAbortArgs> getAbort() {
-        return this.abort == null ? Input.empty() : this.abort;
+    public Output<HttpFaultAbortArgs> getAbort() {
+        return this.abort == null ? Output.empty() : this.abort;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="delay")
-      private final @Nullable Input<HttpFaultDelayArgs> delay;
+      private final @Nullable Output<HttpFaultDelayArgs> delay;
 
-    public Input<HttpFaultDelayArgs> getDelay() {
-        return this.delay == null ? Input.empty() : this.delay;
+    public Output<HttpFaultDelayArgs> getDelay() {
+        return this.delay == null ? Output.empty() : this.delay;
     }
 
     public HttpFaultInjectionArgs(
-        @Nullable Input<HttpFaultAbortArgs> abort,
-        @Nullable Input<HttpFaultDelayArgs> delay) {
+        @Nullable Output<HttpFaultAbortArgs> abort,
+        @Nullable Output<HttpFaultDelayArgs> delay) {
         this.abort = abort;
         this.delay = delay;
     }
 
     private HttpFaultInjectionArgs() {
-        this.abort = Input.empty();
-        this.delay = Input.empty();
+        this.abort = Output.empty();
+        this.delay = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<HttpFaultAbortArgs> abort;
-        private @Nullable Input<HttpFaultDelayArgs> delay;
+        private @Nullable Output<HttpFaultAbortArgs> abort;
+        private @Nullable Output<HttpFaultDelayArgs> delay;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
     	      this.delay = defaults.delay;
         }
 
-        public Builder abort(@Nullable Input<HttpFaultAbortArgs> abort) {
+        public Builder abort(@Nullable Output<HttpFaultAbortArgs> abort) {
             this.abort = abort;
             return this;
         }
 
         public Builder abort(@Nullable HttpFaultAbortArgs abort) {
-            this.abort = Input.ofNullable(abort);
+            this.abort = Output.ofNullable(abort);
             return this;
         }
 
-        public Builder delay(@Nullable Input<HttpFaultDelayArgs> delay) {
+        public Builder delay(@Nullable Output<HttpFaultDelayArgs> delay) {
             this.delay = delay;
             return this;
         }
 
         public Builder delay(@Nullable HttpFaultDelayArgs delay) {
-            this.delay = Input.ofNullable(delay);
+            this.delay = Output.ofNullable(delay);
             return this;
         }
         public HttpFaultInjectionArgs build() {

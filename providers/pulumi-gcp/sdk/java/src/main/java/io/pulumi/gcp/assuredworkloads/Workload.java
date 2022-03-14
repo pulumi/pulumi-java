@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.assuredworkloads;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -247,14 +246,14 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workload(String name, WorkloadArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:assuredworkloads/workload:Workload", name, args == null ? WorkloadArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:assuredworkloads/workload:Workload", name, args == null ? WorkloadArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Workload(String name, Input<String> id, @Nullable WorkloadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Workload(String name, Output<String> id, @Nullable WorkloadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:assuredworkloads/workload:Workload", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -270,7 +269,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Workload get(String name, Input<String> id, @Nullable WorkloadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Workload get(String name, Output<String> id, @Nullable WorkloadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workload(name, id, state, options);
     }
 }

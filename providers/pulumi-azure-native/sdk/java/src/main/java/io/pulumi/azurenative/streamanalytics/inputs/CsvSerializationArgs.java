@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.enums.Encoding;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<Either<String,Encoding>> encoding;
+      private final @Nullable Output<Either<String,Encoding>> encoding;
 
-    public Input<Either<String,Encoding>> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<Either<String,Encoding>> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fieldDelimiter")
-      private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Output<String> fieldDelimiter;
 
-    public Input<String> getFieldDelimiter() {
-        return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
+    public Output<String> getFieldDelimiter() {
+        return this.fieldDelimiter == null ? Output.empty() : this.fieldDelimiter;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public CsvSerializationArgs(
-        @Nullable Input<Either<String,Encoding>> encoding,
-        @Nullable Input<String> fieldDelimiter,
-        Input<String> type) {
+        @Nullable Output<Either<String,Encoding>> encoding,
+        @Nullable Output<String> fieldDelimiter,
+        Output<String> type) {
         this.encoding = encoding;
         this.fieldDelimiter = fieldDelimiter;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private CsvSerializationArgs() {
-        this.encoding = Input.empty();
-        this.fieldDelimiter = Input.empty();
-        this.type = Input.empty();
+        this.encoding = Output.empty();
+        this.fieldDelimiter = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Encoding>> encoding;
-        private @Nullable Input<String> fieldDelimiter;
-        private Input<String> type;
+        private @Nullable Output<Either<String,Encoding>> encoding;
+        private @Nullable Output<String> fieldDelimiter;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder encoding(@Nullable Input<Either<String,Encoding>> encoding) {
+        public Builder encoding(@Nullable Output<Either<String,Encoding>> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable Either<String,Encoding> encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
+            this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CsvSerializationArgs build() {

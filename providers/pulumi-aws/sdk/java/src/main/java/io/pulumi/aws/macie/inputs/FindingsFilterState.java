@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.aws.macie.inputs.FindingsFilterFindingCriteriaGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="findingCriteria")
-      private final @Nullable Input<FindingsFilterFindingCriteriaGetArgs> findingCriteria;
+      private final @Nullable Output<FindingsFilterFindingCriteriaGetArgs> findingCriteria;
 
-    public Input<FindingsFilterFindingCriteriaGetArgs> getFindingCriteria() {
-        return this.findingCriteria == null ? Input.empty() : this.findingCriteria;
+    public Output<FindingsFilterFindingCriteriaGetArgs> getFindingCriteria() {
+        return this.findingCriteria == null ? Output.empty() : this.findingCriteria;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="position")
-      private final @Nullable Input<Integer> position;
+      private final @Nullable Output<Integer> position;
 
-    public Input<Integer> getPosition() {
-        return this.position == null ? Input.empty() : this.position;
+    public Output<Integer> getPosition() {
+        return this.position == null ? Output.empty() : this.position;
     }
 
     /**
@@ -95,29 +95,29 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public FindingsFilterState(
-        @Nullable Input<String> action,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<FindingsFilterFindingCriteriaGetArgs> findingCriteria,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<Integer> position,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> action,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<FindingsFilterFindingCriteriaGetArgs> findingCriteria,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<Integer> position,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.action = action;
         this.arn = arn;
         this.description = description;
@@ -130,15 +130,15 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
     }
 
     private FindingsFilterState() {
-        this.action = Input.empty();
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.findingCriteria = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.position = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.action = Output.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.findingCriteria = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.position = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,15 +150,15 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<FindingsFilterFindingCriteriaGetArgs> findingCriteria;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<Integer> position;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> action;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<FindingsFilterFindingCriteriaGetArgs> findingCriteria;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<Integer> position;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -177,93 +177,93 @@ public final class FindingsFilterState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder findingCriteria(@Nullable Input<FindingsFilterFindingCriteriaGetArgs> findingCriteria) {
+        public Builder findingCriteria(@Nullable Output<FindingsFilterFindingCriteriaGetArgs> findingCriteria) {
             this.findingCriteria = findingCriteria;
             return this;
         }
 
         public Builder findingCriteria(@Nullable FindingsFilterFindingCriteriaGetArgs findingCriteria) {
-            this.findingCriteria = Input.ofNullable(findingCriteria);
+            this.findingCriteria = Output.ofNullable(findingCriteria);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder position(@Nullable Input<Integer> position) {
+        public Builder position(@Nullable Output<Integer> position) {
             this.position = position;
             return this;
         }
 
         public Builder position(@Nullable Integer position) {
-            this.position = Input.ofNullable(position);
+            this.position = Output.ofNullable(position);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public FindingsFilterState build() {

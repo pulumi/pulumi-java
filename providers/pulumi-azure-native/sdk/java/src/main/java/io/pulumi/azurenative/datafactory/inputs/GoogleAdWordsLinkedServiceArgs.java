@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
+      private final @Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
 
-    public Input<Either<String,GoogleAdWordsAuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<Either<String,GoogleAdWordsAuthenticationType>> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientCustomerID")
-      private final @Nullable Input<Object> clientCustomerID;
+      private final @Nullable Output<Object> clientCustomerID;
 
-    public Input<Object> getClientCustomerID() {
-        return this.clientCustomerID == null ? Input.empty() : this.clientCustomerID;
+    public Output<Object> getClientCustomerID() {
+        return this.clientCustomerID == null ? Output.empty() : this.clientCustomerID;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<Object> clientId;
+      private final @Nullable Output<Object> clientId;
 
-    public Input<Object> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<Object> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectionProperties")
-      private final @Nullable Input<Object> connectionProperties;
+      private final @Nullable Output<Object> connectionProperties;
 
-    public Input<Object> getConnectionProperties() {
-        return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
+    public Output<Object> getConnectionProperties() {
+        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="developerToken")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getDeveloperToken() {
-        return this.developerToken == null ? Input.empty() : this.developerToken;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getDeveloperToken() {
+        return this.developerToken == null ? Output.empty() : this.developerToken;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<Object> email;
+      private final @Nullable Output<Object> email;
 
-    public Input<Object> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<Object> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyFilePath")
-      private final @Nullable Input<Object> keyFilePath;
+      private final @Nullable Output<Object> keyFilePath;
 
-    public Input<Object> getKeyFilePath() {
-        return this.keyFilePath == null ? Input.empty() : this.keyFilePath;
+    public Output<Object> getKeyFilePath() {
+        return this.keyFilePath == null ? Output.empty() : this.keyFilePath;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="refreshToken")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getRefreshToken() {
-        return this.refreshToken == null ? Input.empty() : this.refreshToken;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getRefreshToken() {
+        return this.refreshToken == null ? Output.empty() : this.refreshToken;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="trustedCertPath")
-      private final @Nullable Input<Object> trustedCertPath;
+      private final @Nullable Output<Object> trustedCertPath;
 
-    public Input<Object> getTrustedCertPath() {
-        return this.trustedCertPath == null ? Input.empty() : this.trustedCertPath;
+    public Output<Object> getTrustedCertPath() {
+        return this.trustedCertPath == null ? Output.empty() : this.trustedCertPath;
     }
 
     /**
@@ -198,9 +198,9 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -209,30 +209,30 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="useSystemTrustStore")
-      private final @Nullable Input<Object> useSystemTrustStore;
+      private final @Nullable Output<Object> useSystemTrustStore;
 
-    public Input<Object> getUseSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Input.empty() : this.useSystemTrustStore;
+    public Output<Object> getUseSystemTrustStore() {
+        return this.useSystemTrustStore == null ? Output.empty() : this.useSystemTrustStore;
     }
 
     public GoogleAdWordsLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Either<String,GoogleAdWordsAuthenticationType>> authenticationType,
-        @Nullable Input<Object> clientCustomerID,
-        @Nullable Input<Object> clientId,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<Object> connectionProperties,
-        @Nullable Input<String> description,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken,
-        @Nullable Input<Object> email,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> keyFilePath,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken,
-        @Nullable Input<Object> trustedCertPath,
-        Input<String> type,
-        @Nullable Input<Object> useSystemTrustStore) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType,
+        @Nullable Output<Object> clientCustomerID,
+        @Nullable Output<Object> clientId,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<Object> connectionProperties,
+        @Nullable Output<String> description,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken,
+        @Nullable Output<Object> email,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> keyFilePath,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken,
+        @Nullable Output<Object> trustedCertPath,
+        Output<String> type,
+        @Nullable Output<Object> useSystemTrustStore) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.clientCustomerID = clientCustomerID;
@@ -253,23 +253,23 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
     }
 
     private GoogleAdWordsLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.authenticationType = Input.empty();
-        this.clientCustomerID = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.connectVia = Input.empty();
-        this.connectionProperties = Input.empty();
-        this.description = Input.empty();
-        this.developerToken = Input.empty();
-        this.email = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.keyFilePath = Input.empty();
-        this.parameters = Input.empty();
-        this.refreshToken = Input.empty();
-        this.trustedCertPath = Input.empty();
-        this.type = Input.empty();
-        this.useSystemTrustStore = Input.empty();
+        this.annotations = Output.empty();
+        this.authenticationType = Output.empty();
+        this.clientCustomerID = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.connectVia = Output.empty();
+        this.connectionProperties = Output.empty();
+        this.description = Output.empty();
+        this.developerToken = Output.empty();
+        this.email = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.keyFilePath = Output.empty();
+        this.parameters = Output.empty();
+        this.refreshToken = Output.empty();
+        this.trustedCertPath = Output.empty();
+        this.type = Output.empty();
+        this.useSystemTrustStore = Output.empty();
     }
 
     public static Builder builder() {
@@ -281,23 +281,23 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
-        private @Nullable Input<Object> clientCustomerID;
-        private @Nullable Input<Object> clientId;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<Object> connectionProperties;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
-        private @Nullable Input<Object> email;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> keyFilePath;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
-        private @Nullable Input<Object> trustedCertPath;
-        private Input<String> type;
-        private @Nullable Input<Object> useSystemTrustStore;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
+        private @Nullable Output<Object> clientCustomerID;
+        private @Nullable Output<Object> clientId;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<Object> connectionProperties;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
+        private @Nullable Output<Object> email;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> keyFilePath;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
+        private @Nullable Output<Object> trustedCertPath;
+        private Output<String> type;
+        private @Nullable Output<Object> useSystemTrustStore;
 
         public Builder() {
     	      // Empty
@@ -324,173 +324,173 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
     	      this.useSystemTrustStore = defaults.useSystemTrustStore;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder authenticationType(@Nullable Input<Either<String,GoogleAdWordsAuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable Either<String,GoogleAdWordsAuthenticationType> authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder clientCustomerID(@Nullable Input<Object> clientCustomerID) {
+        public Builder clientCustomerID(@Nullable Output<Object> clientCustomerID) {
             this.clientCustomerID = clientCustomerID;
             return this;
         }
 
         public Builder clientCustomerID(@Nullable Object clientCustomerID) {
-            this.clientCustomerID = Input.ofNullable(clientCustomerID);
+            this.clientCustomerID = Output.ofNullable(clientCustomerID);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<Object> clientId) {
+        public Builder clientId(@Nullable Output<Object> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
+        public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder connectionProperties(@Nullable Input<Object> connectionProperties) {
+        public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
         public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Input.ofNullable(connectionProperties);
+            this.connectionProperties = Output.ofNullable(connectionProperties);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder developerToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken) {
+        public Builder developerToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken) {
             this.developerToken = developerToken;
             return this;
         }
 
         public Builder developerToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> developerToken) {
-            this.developerToken = Input.ofNullable(developerToken);
+            this.developerToken = Output.ofNullable(developerToken);
             return this;
         }
 
-        public Builder email(@Nullable Input<Object> email) {
+        public Builder email(@Nullable Output<Object> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable Object email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder keyFilePath(@Nullable Input<Object> keyFilePath) {
+        public Builder keyFilePath(@Nullable Output<Object> keyFilePath) {
             this.keyFilePath = keyFilePath;
             return this;
         }
 
         public Builder keyFilePath(@Nullable Object keyFilePath) {
-            this.keyFilePath = Input.ofNullable(keyFilePath);
+            this.keyFilePath = Output.ofNullable(keyFilePath);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder refreshToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken) {
+        public Builder refreshToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
-            this.refreshToken = Input.ofNullable(refreshToken);
+            this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder trustedCertPath(@Nullable Input<Object> trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = Input.ofNullable(trustedCertPath);
+            this.trustedCertPath = Output.ofNullable(trustedCertPath);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder useSystemTrustStore(@Nullable Input<Object> useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = Input.ofNullable(useSystemTrustStore);
+            this.useSystemTrustStore = Output.ofNullable(useSystemTrustStore);
             return this;
         }
         public GoogleAdWordsLinkedServiceArgs build() {

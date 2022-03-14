@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -26,10 +26,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowOpenGop")
-      private final @Nullable Input<Boolean> allowOpenGop;
+      private final @Nullable Output<Boolean> allowOpenGop;
 
-    public Input<Boolean> getAllowOpenGop() {
-        return this.allowOpenGop == null ? Input.empty() : this.allowOpenGop;
+    public Output<Boolean> getAllowOpenGop() {
+        return this.allowOpenGop == null ? Output.empty() : this.allowOpenGop;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="aqStrength")
-      private final @Nullable Input<Double> aqStrength;
+      private final @Nullable Output<Double> aqStrength;
 
-    public Input<Double> getAqStrength() {
-        return this.aqStrength == null ? Input.empty() : this.aqStrength;
+    public Output<Double> getAqStrength() {
+        return this.aqStrength == null ? Output.empty() : this.aqStrength;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bFrameCount")
-      private final @Nullable Input<Integer> bFrameCount;
+      private final @Nullable Output<Integer> bFrameCount;
 
-    public Input<Integer> getBFrameCount() {
-        return this.bFrameCount == null ? Input.empty() : this.bFrameCount;
+    public Output<Integer> getBFrameCount() {
+        return this.bFrameCount == null ? Output.empty() : this.bFrameCount;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bPyramid")
-      private final @Nullable Input<Boolean> bPyramid;
+      private final @Nullable Output<Boolean> bPyramid;
 
-    public Input<Boolean> getBPyramid() {
-        return this.bPyramid == null ? Input.empty() : this.bPyramid;
+    public Output<Boolean> getBPyramid() {
+        return this.bPyramid == null ? Output.empty() : this.bPyramid;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bitrateBps", required=true)
-      private final Input<Integer> bitrateBps;
+      private final Output<Integer> bitrateBps;
 
-    public Input<Integer> getBitrateBps() {
+    public Output<Integer> getBitrateBps() {
         return this.bitrateBps;
     }
 
@@ -81,10 +81,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="crfLevel")
-      private final @Nullable Input<Integer> crfLevel;
+      private final @Nullable Output<Integer> crfLevel;
 
-    public Input<Integer> getCrfLevel() {
-        return this.crfLevel == null ? Input.empty() : this.crfLevel;
+    public Output<Integer> getCrfLevel() {
+        return this.crfLevel == null ? Output.empty() : this.crfLevel;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableTwoPass")
-      private final @Nullable Input<Boolean> enableTwoPass;
+      private final @Nullable Output<Boolean> enableTwoPass;
 
-    public Input<Boolean> getEnableTwoPass() {
-        return this.enableTwoPass == null ? Input.empty() : this.enableTwoPass;
+    public Output<Boolean> getEnableTwoPass() {
+        return this.enableTwoPass == null ? Output.empty() : this.enableTwoPass;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frameRate", required=true)
-      private final Input<Double> frameRate;
+      private final Output<Double> frameRate;
 
-    public Input<Double> getFrameRate() {
+    public Output<Double> getFrameRate() {
         return this.frameRate;
     }
 
@@ -114,10 +114,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gopDuration")
-      private final @Nullable Input<String> gopDuration;
+      private final @Nullable Output<String> gopDuration;
 
-    public Input<String> getGopDuration() {
-        return this.gopDuration == null ? Input.empty() : this.gopDuration;
+    public Output<String> getGopDuration() {
+        return this.gopDuration == null ? Output.empty() : this.gopDuration;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gopFrameCount")
-      private final @Nullable Input<Integer> gopFrameCount;
+      private final @Nullable Output<Integer> gopFrameCount;
 
-    public Input<Integer> getGopFrameCount() {
-        return this.gopFrameCount == null ? Input.empty() : this.gopFrameCount;
+    public Output<Integer> getGopFrameCount() {
+        return this.gopFrameCount == null ? Output.empty() : this.gopFrameCount;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="heightPixels")
-      private final @Nullable Input<Integer> heightPixels;
+      private final @Nullable Output<Integer> heightPixels;
 
-    public Input<Integer> getHeightPixels() {
-        return this.heightPixels == null ? Input.empty() : this.heightPixels;
+    public Output<Integer> getHeightPixels() {
+        return this.heightPixels == null ? Output.empty() : this.heightPixels;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pixelFormat")
-      private final @Nullable Input<String> pixelFormat;
+      private final @Nullable Output<String> pixelFormat;
 
-    public Input<String> getPixelFormat() {
-        return this.pixelFormat == null ? Input.empty() : this.pixelFormat;
+    public Output<String> getPixelFormat() {
+        return this.pixelFormat == null ? Output.empty() : this.pixelFormat;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="preset")
-      private final @Nullable Input<String> preset;
+      private final @Nullable Output<String> preset;
 
-    public Input<String> getPreset() {
-        return this.preset == null ? Input.empty() : this.preset;
+    public Output<String> getPreset() {
+        return this.preset == null ? Output.empty() : this.preset;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="profile")
-      private final @Nullable Input<String> profile;
+      private final @Nullable Output<String> profile;
 
-    public Input<String> getProfile() {
-        return this.profile == null ? Input.empty() : this.profile;
+    public Output<String> getProfile() {
+        return this.profile == null ? Output.empty() : this.profile;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rateControlMode")
-      private final @Nullable Input<String> rateControlMode;
+      private final @Nullable Output<String> rateControlMode;
 
-    public Input<String> getRateControlMode() {
-        return this.rateControlMode == null ? Input.empty() : this.rateControlMode;
+    public Output<String> getRateControlMode() {
+        return this.rateControlMode == null ? Output.empty() : this.rateControlMode;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tune")
-      private final @Nullable Input<String> tune;
+      private final @Nullable Output<String> tune;
 
-    public Input<String> getTune() {
-        return this.tune == null ? Input.empty() : this.tune;
+    public Output<String> getTune() {
+        return this.tune == null ? Output.empty() : this.tune;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vbvFullnessBits")
-      private final @Nullable Input<Integer> vbvFullnessBits;
+      private final @Nullable Output<Integer> vbvFullnessBits;
 
-    public Input<Integer> getVbvFullnessBits() {
-        return this.vbvFullnessBits == null ? Input.empty() : this.vbvFullnessBits;
+    public Output<Integer> getVbvFullnessBits() {
+        return this.vbvFullnessBits == null ? Output.empty() : this.vbvFullnessBits;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vbvSizeBits")
-      private final @Nullable Input<Integer> vbvSizeBits;
+      private final @Nullable Output<Integer> vbvSizeBits;
 
-    public Input<Integer> getVbvSizeBits() {
-        return this.vbvSizeBits == null ? Input.empty() : this.vbvSizeBits;
+    public Output<Integer> getVbvSizeBits() {
+        return this.vbvSizeBits == null ? Output.empty() : this.vbvSizeBits;
     }
 
     /**
@@ -224,32 +224,32 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="widthPixels")
-      private final @Nullable Input<Integer> widthPixels;
+      private final @Nullable Output<Integer> widthPixels;
 
-    public Input<Integer> getWidthPixels() {
-        return this.widthPixels == null ? Input.empty() : this.widthPixels;
+    public Output<Integer> getWidthPixels() {
+        return this.widthPixels == null ? Output.empty() : this.widthPixels;
     }
 
     public H265CodecSettingsArgs(
-        @Nullable Input<Boolean> allowOpenGop,
-        @Nullable Input<Double> aqStrength,
-        @Nullable Input<Integer> bFrameCount,
-        @Nullable Input<Boolean> bPyramid,
-        Input<Integer> bitrateBps,
-        @Nullable Input<Integer> crfLevel,
-        @Nullable Input<Boolean> enableTwoPass,
-        Input<Double> frameRate,
-        @Nullable Input<String> gopDuration,
-        @Nullable Input<Integer> gopFrameCount,
-        @Nullable Input<Integer> heightPixels,
-        @Nullable Input<String> pixelFormat,
-        @Nullable Input<String> preset,
-        @Nullable Input<String> profile,
-        @Nullable Input<String> rateControlMode,
-        @Nullable Input<String> tune,
-        @Nullable Input<Integer> vbvFullnessBits,
-        @Nullable Input<Integer> vbvSizeBits,
-        @Nullable Input<Integer> widthPixels) {
+        @Nullable Output<Boolean> allowOpenGop,
+        @Nullable Output<Double> aqStrength,
+        @Nullable Output<Integer> bFrameCount,
+        @Nullable Output<Boolean> bPyramid,
+        Output<Integer> bitrateBps,
+        @Nullable Output<Integer> crfLevel,
+        @Nullable Output<Boolean> enableTwoPass,
+        Output<Double> frameRate,
+        @Nullable Output<String> gopDuration,
+        @Nullable Output<Integer> gopFrameCount,
+        @Nullable Output<Integer> heightPixels,
+        @Nullable Output<String> pixelFormat,
+        @Nullable Output<String> preset,
+        @Nullable Output<String> profile,
+        @Nullable Output<String> rateControlMode,
+        @Nullable Output<String> tune,
+        @Nullable Output<Integer> vbvFullnessBits,
+        @Nullable Output<Integer> vbvSizeBits,
+        @Nullable Output<Integer> widthPixels) {
         this.allowOpenGop = allowOpenGop;
         this.aqStrength = aqStrength;
         this.bFrameCount = bFrameCount;
@@ -272,25 +272,25 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private H265CodecSettingsArgs() {
-        this.allowOpenGop = Input.empty();
-        this.aqStrength = Input.empty();
-        this.bFrameCount = Input.empty();
-        this.bPyramid = Input.empty();
-        this.bitrateBps = Input.empty();
-        this.crfLevel = Input.empty();
-        this.enableTwoPass = Input.empty();
-        this.frameRate = Input.empty();
-        this.gopDuration = Input.empty();
-        this.gopFrameCount = Input.empty();
-        this.heightPixels = Input.empty();
-        this.pixelFormat = Input.empty();
-        this.preset = Input.empty();
-        this.profile = Input.empty();
-        this.rateControlMode = Input.empty();
-        this.tune = Input.empty();
-        this.vbvFullnessBits = Input.empty();
-        this.vbvSizeBits = Input.empty();
-        this.widthPixels = Input.empty();
+        this.allowOpenGop = Output.empty();
+        this.aqStrength = Output.empty();
+        this.bFrameCount = Output.empty();
+        this.bPyramid = Output.empty();
+        this.bitrateBps = Output.empty();
+        this.crfLevel = Output.empty();
+        this.enableTwoPass = Output.empty();
+        this.frameRate = Output.empty();
+        this.gopDuration = Output.empty();
+        this.gopFrameCount = Output.empty();
+        this.heightPixels = Output.empty();
+        this.pixelFormat = Output.empty();
+        this.preset = Output.empty();
+        this.profile = Output.empty();
+        this.rateControlMode = Output.empty();
+        this.tune = Output.empty();
+        this.vbvFullnessBits = Output.empty();
+        this.vbvSizeBits = Output.empty();
+        this.widthPixels = Output.empty();
     }
 
     public static Builder builder() {
@@ -302,25 +302,25 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowOpenGop;
-        private @Nullable Input<Double> aqStrength;
-        private @Nullable Input<Integer> bFrameCount;
-        private @Nullable Input<Boolean> bPyramid;
-        private Input<Integer> bitrateBps;
-        private @Nullable Input<Integer> crfLevel;
-        private @Nullable Input<Boolean> enableTwoPass;
-        private Input<Double> frameRate;
-        private @Nullable Input<String> gopDuration;
-        private @Nullable Input<Integer> gopFrameCount;
-        private @Nullable Input<Integer> heightPixels;
-        private @Nullable Input<String> pixelFormat;
-        private @Nullable Input<String> preset;
-        private @Nullable Input<String> profile;
-        private @Nullable Input<String> rateControlMode;
-        private @Nullable Input<String> tune;
-        private @Nullable Input<Integer> vbvFullnessBits;
-        private @Nullable Input<Integer> vbvSizeBits;
-        private @Nullable Input<Integer> widthPixels;
+        private @Nullable Output<Boolean> allowOpenGop;
+        private @Nullable Output<Double> aqStrength;
+        private @Nullable Output<Integer> bFrameCount;
+        private @Nullable Output<Boolean> bPyramid;
+        private Output<Integer> bitrateBps;
+        private @Nullable Output<Integer> crfLevel;
+        private @Nullable Output<Boolean> enableTwoPass;
+        private Output<Double> frameRate;
+        private @Nullable Output<String> gopDuration;
+        private @Nullable Output<Integer> gopFrameCount;
+        private @Nullable Output<Integer> heightPixels;
+        private @Nullable Output<String> pixelFormat;
+        private @Nullable Output<String> preset;
+        private @Nullable Output<String> profile;
+        private @Nullable Output<String> rateControlMode;
+        private @Nullable Output<String> tune;
+        private @Nullable Output<Integer> vbvFullnessBits;
+        private @Nullable Output<Integer> vbvSizeBits;
+        private @Nullable Output<Integer> widthPixels;
 
         public Builder() {
     	      // Empty
@@ -349,193 +349,193 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.widthPixels = defaults.widthPixels;
         }
 
-        public Builder allowOpenGop(@Nullable Input<Boolean> allowOpenGop) {
+        public Builder allowOpenGop(@Nullable Output<Boolean> allowOpenGop) {
             this.allowOpenGop = allowOpenGop;
             return this;
         }
 
         public Builder allowOpenGop(@Nullable Boolean allowOpenGop) {
-            this.allowOpenGop = Input.ofNullable(allowOpenGop);
+            this.allowOpenGop = Output.ofNullable(allowOpenGop);
             return this;
         }
 
-        public Builder aqStrength(@Nullable Input<Double> aqStrength) {
+        public Builder aqStrength(@Nullable Output<Double> aqStrength) {
             this.aqStrength = aqStrength;
             return this;
         }
 
         public Builder aqStrength(@Nullable Double aqStrength) {
-            this.aqStrength = Input.ofNullable(aqStrength);
+            this.aqStrength = Output.ofNullable(aqStrength);
             return this;
         }
 
-        public Builder bFrameCount(@Nullable Input<Integer> bFrameCount) {
+        public Builder bFrameCount(@Nullable Output<Integer> bFrameCount) {
             this.bFrameCount = bFrameCount;
             return this;
         }
 
         public Builder bFrameCount(@Nullable Integer bFrameCount) {
-            this.bFrameCount = Input.ofNullable(bFrameCount);
+            this.bFrameCount = Output.ofNullable(bFrameCount);
             return this;
         }
 
-        public Builder bPyramid(@Nullable Input<Boolean> bPyramid) {
+        public Builder bPyramid(@Nullable Output<Boolean> bPyramid) {
             this.bPyramid = bPyramid;
             return this;
         }
 
         public Builder bPyramid(@Nullable Boolean bPyramid) {
-            this.bPyramid = Input.ofNullable(bPyramid);
+            this.bPyramid = Output.ofNullable(bPyramid);
             return this;
         }
 
-        public Builder bitrateBps(Input<Integer> bitrateBps) {
+        public Builder bitrateBps(Output<Integer> bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
 
         public Builder bitrateBps(Integer bitrateBps) {
-            this.bitrateBps = Input.of(Objects.requireNonNull(bitrateBps));
+            this.bitrateBps = Output.of(Objects.requireNonNull(bitrateBps));
             return this;
         }
 
-        public Builder crfLevel(@Nullable Input<Integer> crfLevel) {
+        public Builder crfLevel(@Nullable Output<Integer> crfLevel) {
             this.crfLevel = crfLevel;
             return this;
         }
 
         public Builder crfLevel(@Nullable Integer crfLevel) {
-            this.crfLevel = Input.ofNullable(crfLevel);
+            this.crfLevel = Output.ofNullable(crfLevel);
             return this;
         }
 
-        public Builder enableTwoPass(@Nullable Input<Boolean> enableTwoPass) {
+        public Builder enableTwoPass(@Nullable Output<Boolean> enableTwoPass) {
             this.enableTwoPass = enableTwoPass;
             return this;
         }
 
         public Builder enableTwoPass(@Nullable Boolean enableTwoPass) {
-            this.enableTwoPass = Input.ofNullable(enableTwoPass);
+            this.enableTwoPass = Output.ofNullable(enableTwoPass);
             return this;
         }
 
-        public Builder frameRate(Input<Double> frameRate) {
+        public Builder frameRate(Output<Double> frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
 
         public Builder frameRate(Double frameRate) {
-            this.frameRate = Input.of(Objects.requireNonNull(frameRate));
+            this.frameRate = Output.of(Objects.requireNonNull(frameRate));
             return this;
         }
 
-        public Builder gopDuration(@Nullable Input<String> gopDuration) {
+        public Builder gopDuration(@Nullable Output<String> gopDuration) {
             this.gopDuration = gopDuration;
             return this;
         }
 
         public Builder gopDuration(@Nullable String gopDuration) {
-            this.gopDuration = Input.ofNullable(gopDuration);
+            this.gopDuration = Output.ofNullable(gopDuration);
             return this;
         }
 
-        public Builder gopFrameCount(@Nullable Input<Integer> gopFrameCount) {
+        public Builder gopFrameCount(@Nullable Output<Integer> gopFrameCount) {
             this.gopFrameCount = gopFrameCount;
             return this;
         }
 
         public Builder gopFrameCount(@Nullable Integer gopFrameCount) {
-            this.gopFrameCount = Input.ofNullable(gopFrameCount);
+            this.gopFrameCount = Output.ofNullable(gopFrameCount);
             return this;
         }
 
-        public Builder heightPixels(@Nullable Input<Integer> heightPixels) {
+        public Builder heightPixels(@Nullable Output<Integer> heightPixels) {
             this.heightPixels = heightPixels;
             return this;
         }
 
         public Builder heightPixels(@Nullable Integer heightPixels) {
-            this.heightPixels = Input.ofNullable(heightPixels);
+            this.heightPixels = Output.ofNullable(heightPixels);
             return this;
         }
 
-        public Builder pixelFormat(@Nullable Input<String> pixelFormat) {
+        public Builder pixelFormat(@Nullable Output<String> pixelFormat) {
             this.pixelFormat = pixelFormat;
             return this;
         }
 
         public Builder pixelFormat(@Nullable String pixelFormat) {
-            this.pixelFormat = Input.ofNullable(pixelFormat);
+            this.pixelFormat = Output.ofNullable(pixelFormat);
             return this;
         }
 
-        public Builder preset(@Nullable Input<String> preset) {
+        public Builder preset(@Nullable Output<String> preset) {
             this.preset = preset;
             return this;
         }
 
         public Builder preset(@Nullable String preset) {
-            this.preset = Input.ofNullable(preset);
+            this.preset = Output.ofNullable(preset);
             return this;
         }
 
-        public Builder profile(@Nullable Input<String> profile) {
+        public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
 
         public Builder profile(@Nullable String profile) {
-            this.profile = Input.ofNullable(profile);
+            this.profile = Output.ofNullable(profile);
             return this;
         }
 
-        public Builder rateControlMode(@Nullable Input<String> rateControlMode) {
+        public Builder rateControlMode(@Nullable Output<String> rateControlMode) {
             this.rateControlMode = rateControlMode;
             return this;
         }
 
         public Builder rateControlMode(@Nullable String rateControlMode) {
-            this.rateControlMode = Input.ofNullable(rateControlMode);
+            this.rateControlMode = Output.ofNullable(rateControlMode);
             return this;
         }
 
-        public Builder tune(@Nullable Input<String> tune) {
+        public Builder tune(@Nullable Output<String> tune) {
             this.tune = tune;
             return this;
         }
 
         public Builder tune(@Nullable String tune) {
-            this.tune = Input.ofNullable(tune);
+            this.tune = Output.ofNullable(tune);
             return this;
         }
 
-        public Builder vbvFullnessBits(@Nullable Input<Integer> vbvFullnessBits) {
+        public Builder vbvFullnessBits(@Nullable Output<Integer> vbvFullnessBits) {
             this.vbvFullnessBits = vbvFullnessBits;
             return this;
         }
 
         public Builder vbvFullnessBits(@Nullable Integer vbvFullnessBits) {
-            this.vbvFullnessBits = Input.ofNullable(vbvFullnessBits);
+            this.vbvFullnessBits = Output.ofNullable(vbvFullnessBits);
             return this;
         }
 
-        public Builder vbvSizeBits(@Nullable Input<Integer> vbvSizeBits) {
+        public Builder vbvSizeBits(@Nullable Output<Integer> vbvSizeBits) {
             this.vbvSizeBits = vbvSizeBits;
             return this;
         }
 
         public Builder vbvSizeBits(@Nullable Integer vbvSizeBits) {
-            this.vbvSizeBits = Input.ofNullable(vbvSizeBits);
+            this.vbvSizeBits = Output.ofNullable(vbvSizeBits);
             return this;
         }
 
-        public Builder widthPixels(@Nullable Input<Integer> widthPixels) {
+        public Builder widthPixels(@Nullable Output<Integer> widthPixels) {
             this.widthPixels = widthPixels;
             return this;
         }
 
         public Builder widthPixels(@Nullable Integer widthPixels) {
-            this.widthPixels = Input.ofNullable(widthPixels);
+            this.widthPixels = Output.ofNullable(widthPixels);
             return this;
         }
         public H265CodecSettingsArgs build() {

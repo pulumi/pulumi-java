@@ -10,7 +10,6 @@ import io.pulumi.azurenative.netapp.outputs.HourlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.MonthlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.WeeklyScheduleResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -216,29 +215,29 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotPolicy(String name, SnapshotPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:netapp:SnapshotPolicy", name, args == null ? SnapshotPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:netapp:SnapshotPolicy", name, args == null ? SnapshotPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SnapshotPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SnapshotPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:netapp:SnapshotPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:netapp/v20200501:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20200601:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20200701:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20200801:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20200901:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20201101:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20201201:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20210201:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20210401:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20210401preview:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20210601:SnapshotPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:netapp/v20210801:SnapshotPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200501:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200601:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200701:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200801:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20200901:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20201101:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20201201:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210201:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210401:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210401preview:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210601:SnapshotPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:netapp/v20210801:SnapshotPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -252,7 +251,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SnapshotPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SnapshotPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SnapshotPolicy(name, id, options);
     }
 }

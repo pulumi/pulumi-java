@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.LinkedIntegrationRuntimeKeyAuthorizationArgs;
 import io.pulumi.azurenative.synapse.inputs.LinkedIntegrationRuntimeRbacAuthorizationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="linkedInfo")
-      private final @Nullable Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
+      private final @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
 
-    public Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> getLinkedInfo() {
-        return this.linkedInfo == null ? Input.empty() : this.linkedInfo;
+    public Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> getLinkedInfo() {
+        return this.linkedInfo == null ? Output.empty() : this.linkedInfo;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SelfHostedIntegrationRuntimeArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo,
-        Input<String> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo,
+        Output<String> type) {
         this.description = description;
         this.linkedInfo = linkedInfo;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SelfHostedIntegrationRuntimeArgs() {
-        this.description = Input.empty();
-        this.linkedInfo = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.linkedInfo = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
-        private Input<String> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder linkedInfo(@Nullable Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo) {
+        public Builder linkedInfo(@Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo) {
             this.linkedInfo = linkedInfo;
             return this;
         }
 
         public Builder linkedInfo(@Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs> linkedInfo) {
-            this.linkedInfo = Input.ofNullable(linkedInfo);
+            this.linkedInfo = Output.ofNullable(linkedInfo);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SelfHostedIntegrationRuntimeArgs build() {

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.batch.inputs.ScaleSettingsArgs;
 import io.pulumi.azurenative.batch.inputs.StartTaskArgs;
 import io.pulumi.azurenative.batch.inputs.TaskSchedulingPolicyArgs;
 import io.pulumi.azurenative.batch.inputs.UserAccountArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,9 +33,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -44,10 +44,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationLicenses")
-      private final @Nullable Input<List<String>> applicationLicenses;
+      private final @Nullable Output<List<String>> applicationLicenses;
 
-    public Input<List<String>> getApplicationLicenses() {
-        return this.applicationLicenses == null ? Input.empty() : this.applicationLicenses;
+    public Output<List<String>> getApplicationLicenses() {
+        return this.applicationLicenses == null ? Output.empty() : this.applicationLicenses;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationPackages")
-      private final @Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages;
+      private final @Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages;
 
-    public Input<List<ApplicationPackageReferenceArgs>> getApplicationPackages() {
-        return this.applicationPackages == null ? Input.empty() : this.applicationPackages;
+    public Output<List<ApplicationPackageReferenceArgs>> getApplicationPackages() {
+        return this.applicationPackages == null ? Output.empty() : this.applicationPackages;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificates")
-      private final @Nullable Input<List<CertificateReferenceArgs>> certificates;
+      private final @Nullable Output<List<CertificateReferenceArgs>> certificates;
 
-    public Input<List<CertificateReferenceArgs>> getCertificates() {
-        return this.certificates == null ? Input.empty() : this.certificates;
+    public Output<List<CertificateReferenceArgs>> getCertificates() {
+        return this.certificates == null ? Output.empty() : this.certificates;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentConfiguration")
-      private final @Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration;
+      private final @Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration;
 
-    public Input<DeploymentConfigurationArgs> getDeploymentConfiguration() {
-        return this.deploymentConfiguration == null ? Input.empty() : this.deploymentConfiguration;
+    public Output<DeploymentConfigurationArgs> getDeploymentConfiguration() {
+        return this.deploymentConfiguration == null ? Output.empty() : this.deploymentConfiguration;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<BatchPoolIdentityArgs> identity;
+      private final @Nullable Output<BatchPoolIdentityArgs> identity;
 
-    public Input<BatchPoolIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<BatchPoolIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interNodeCommunication")
-      private final @Nullable Input<InterNodeCommunicationState> interNodeCommunication;
+      private final @Nullable Output<InterNodeCommunicationState> interNodeCommunication;
 
-    public Input<InterNodeCommunicationState> getInterNodeCommunication() {
-        return this.interNodeCommunication == null ? Input.empty() : this.interNodeCommunication;
+    public Output<InterNodeCommunicationState> getInterNodeCommunication() {
+        return this.interNodeCommunication == null ? Output.empty() : this.interNodeCommunication;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<List<MetadataItemArgs>> metadata;
+      private final @Nullable Output<List<MetadataItemArgs>> metadata;
 
-    public Input<List<MetadataItemArgs>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<List<MetadataItemArgs>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountConfiguration")
-      private final @Nullable Input<List<MountConfigurationArgs>> mountConfiguration;
+      private final @Nullable Output<List<MountConfigurationArgs>> mountConfiguration;
 
-    public Input<List<MountConfigurationArgs>> getMountConfiguration() {
-        return this.mountConfiguration == null ? Input.empty() : this.mountConfiguration;
+    public Output<List<MountConfigurationArgs>> getMountConfiguration() {
+        return this.mountConfiguration == null ? Output.empty() : this.mountConfiguration;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfiguration")
-      private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
-    public Input<NetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
+    public Output<NetworkConfigurationArgs> getNetworkConfiguration() {
+        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName")
-      private final @Nullable Input<String> poolName;
+      private final @Nullable Output<String> poolName;
 
-    public Input<String> getPoolName() {
-        return this.poolName == null ? Input.empty() : this.poolName;
+    public Output<String> getPoolName() {
+        return this.poolName == null ? Output.empty() : this.poolName;
     }
 
     /**
@@ -165,9 +165,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -176,10 +176,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleSettings")
-      private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
+      private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
-    public Input<ScaleSettingsArgs> getScaleSettings() {
-        return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
+    public Output<ScaleSettingsArgs> getScaleSettings() {
+        return this.scaleSettings == null ? Output.empty() : this.scaleSettings;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTask")
-      private final @Nullable Input<StartTaskArgs> startTask;
+      private final @Nullable Output<StartTaskArgs> startTask;
 
-    public Input<StartTaskArgs> getStartTask() {
-        return this.startTask == null ? Input.empty() : this.startTask;
+    public Output<StartTaskArgs> getStartTask() {
+        return this.startTask == null ? Output.empty() : this.startTask;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSchedulingPolicy")
-      private final @Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
+      private final @Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
 
-    public Input<TaskSchedulingPolicyArgs> getTaskSchedulingPolicy() {
-        return this.taskSchedulingPolicy == null ? Input.empty() : this.taskSchedulingPolicy;
+    public Output<TaskSchedulingPolicyArgs> getTaskSchedulingPolicy() {
+        return this.taskSchedulingPolicy == null ? Output.empty() : this.taskSchedulingPolicy;
     }
 
     /**
@@ -209,17 +209,17 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSlotsPerNode")
-      private final @Nullable Input<Integer> taskSlotsPerNode;
+      private final @Nullable Output<Integer> taskSlotsPerNode;
 
-    public Input<Integer> getTaskSlotsPerNode() {
-        return this.taskSlotsPerNode == null ? Input.empty() : this.taskSlotsPerNode;
+    public Output<Integer> getTaskSlotsPerNode() {
+        return this.taskSlotsPerNode == null ? Output.empty() : this.taskSlotsPerNode;
     }
 
     @InputImport(name="userAccounts")
-      private final @Nullable Input<List<UserAccountArgs>> userAccounts;
+      private final @Nullable Output<List<UserAccountArgs>> userAccounts;
 
-    public Input<List<UserAccountArgs>> getUserAccounts() {
-        return this.userAccounts == null ? Input.empty() : this.userAccounts;
+    public Output<List<UserAccountArgs>> getUserAccounts() {
+        return this.userAccounts == null ? Output.empty() : this.userAccounts;
     }
 
     /**
@@ -227,32 +227,32 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     public PoolArgs(
-        Input<String> accountName,
-        @Nullable Input<List<String>> applicationLicenses,
-        @Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages,
-        @Nullable Input<List<CertificateReferenceArgs>> certificates,
-        @Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration,
-        @Nullable Input<String> displayName,
-        @Nullable Input<BatchPoolIdentityArgs> identity,
-        @Nullable Input<InterNodeCommunicationState> interNodeCommunication,
-        @Nullable Input<List<MetadataItemArgs>> metadata,
-        @Nullable Input<List<MountConfigurationArgs>> mountConfiguration,
-        @Nullable Input<NetworkConfigurationArgs> networkConfiguration,
-        @Nullable Input<String> poolName,
-        Input<String> resourceGroupName,
-        @Nullable Input<ScaleSettingsArgs> scaleSettings,
-        @Nullable Input<StartTaskArgs> startTask,
-        @Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy,
-        @Nullable Input<Integer> taskSlotsPerNode,
-        @Nullable Input<List<UserAccountArgs>> userAccounts,
-        @Nullable Input<String> vmSize) {
+        Output<String> accountName,
+        @Nullable Output<List<String>> applicationLicenses,
+        @Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages,
+        @Nullable Output<List<CertificateReferenceArgs>> certificates,
+        @Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration,
+        @Nullable Output<String> displayName,
+        @Nullable Output<BatchPoolIdentityArgs> identity,
+        @Nullable Output<InterNodeCommunicationState> interNodeCommunication,
+        @Nullable Output<List<MetadataItemArgs>> metadata,
+        @Nullable Output<List<MountConfigurationArgs>> mountConfiguration,
+        @Nullable Output<NetworkConfigurationArgs> networkConfiguration,
+        @Nullable Output<String> poolName,
+        Output<String> resourceGroupName,
+        @Nullable Output<ScaleSettingsArgs> scaleSettings,
+        @Nullable Output<StartTaskArgs> startTask,
+        @Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy,
+        @Nullable Output<Integer> taskSlotsPerNode,
+        @Nullable Output<List<UserAccountArgs>> userAccounts,
+        @Nullable Output<String> vmSize) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.applicationLicenses = applicationLicenses;
         this.applicationPackages = applicationPackages;
@@ -275,25 +275,25 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PoolArgs() {
-        this.accountName = Input.empty();
-        this.applicationLicenses = Input.empty();
-        this.applicationPackages = Input.empty();
-        this.certificates = Input.empty();
-        this.deploymentConfiguration = Input.empty();
-        this.displayName = Input.empty();
-        this.identity = Input.empty();
-        this.interNodeCommunication = Input.empty();
-        this.metadata = Input.empty();
-        this.mountConfiguration = Input.empty();
-        this.networkConfiguration = Input.empty();
-        this.poolName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scaleSettings = Input.empty();
-        this.startTask = Input.empty();
-        this.taskSchedulingPolicy = Input.empty();
-        this.taskSlotsPerNode = Input.empty();
-        this.userAccounts = Input.empty();
-        this.vmSize = Input.empty();
+        this.accountName = Output.empty();
+        this.applicationLicenses = Output.empty();
+        this.applicationPackages = Output.empty();
+        this.certificates = Output.empty();
+        this.deploymentConfiguration = Output.empty();
+        this.displayName = Output.empty();
+        this.identity = Output.empty();
+        this.interNodeCommunication = Output.empty();
+        this.metadata = Output.empty();
+        this.mountConfiguration = Output.empty();
+        this.networkConfiguration = Output.empty();
+        this.poolName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scaleSettings = Output.empty();
+        this.startTask = Output.empty();
+        this.taskSchedulingPolicy = Output.empty();
+        this.taskSlotsPerNode = Output.empty();
+        this.userAccounts = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -305,25 +305,25 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<List<String>> applicationLicenses;
-        private @Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages;
-        private @Nullable Input<List<CertificateReferenceArgs>> certificates;
-        private @Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<BatchPoolIdentityArgs> identity;
-        private @Nullable Input<InterNodeCommunicationState> interNodeCommunication;
-        private @Nullable Input<List<MetadataItemArgs>> metadata;
-        private @Nullable Input<List<MountConfigurationArgs>> mountConfiguration;
-        private @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Input<String> poolName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ScaleSettingsArgs> scaleSettings;
-        private @Nullable Input<StartTaskArgs> startTask;
-        private @Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
-        private @Nullable Input<Integer> taskSlotsPerNode;
-        private @Nullable Input<List<UserAccountArgs>> userAccounts;
-        private @Nullable Input<String> vmSize;
+        private Output<String> accountName;
+        private @Nullable Output<List<String>> applicationLicenses;
+        private @Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages;
+        private @Nullable Output<List<CertificateReferenceArgs>> certificates;
+        private @Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<BatchPoolIdentityArgs> identity;
+        private @Nullable Output<InterNodeCommunicationState> interNodeCommunication;
+        private @Nullable Output<List<MetadataItemArgs>> metadata;
+        private @Nullable Output<List<MountConfigurationArgs>> mountConfiguration;
+        private @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
+        private @Nullable Output<String> poolName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ScaleSettingsArgs> scaleSettings;
+        private @Nullable Output<StartTaskArgs> startTask;
+        private @Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
+        private @Nullable Output<Integer> taskSlotsPerNode;
+        private @Nullable Output<List<UserAccountArgs>> userAccounts;
+        private @Nullable Output<String> vmSize;
 
         public Builder() {
     	      // Empty
@@ -352,193 +352,193 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder applicationLicenses(@Nullable Input<List<String>> applicationLicenses) {
+        public Builder applicationLicenses(@Nullable Output<List<String>> applicationLicenses) {
             this.applicationLicenses = applicationLicenses;
             return this;
         }
 
         public Builder applicationLicenses(@Nullable List<String> applicationLicenses) {
-            this.applicationLicenses = Input.ofNullable(applicationLicenses);
+            this.applicationLicenses = Output.ofNullable(applicationLicenses);
             return this;
         }
 
-        public Builder applicationPackages(@Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages) {
+        public Builder applicationPackages(@Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages) {
             this.applicationPackages = applicationPackages;
             return this;
         }
 
         public Builder applicationPackages(@Nullable List<ApplicationPackageReferenceArgs> applicationPackages) {
-            this.applicationPackages = Input.ofNullable(applicationPackages);
+            this.applicationPackages = Output.ofNullable(applicationPackages);
             return this;
         }
 
-        public Builder certificates(@Nullable Input<List<CertificateReferenceArgs>> certificates) {
+        public Builder certificates(@Nullable Output<List<CertificateReferenceArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
 
         public Builder certificates(@Nullable List<CertificateReferenceArgs> certificates) {
-            this.certificates = Input.ofNullable(certificates);
+            this.certificates = Output.ofNullable(certificates);
             return this;
         }
 
-        public Builder deploymentConfiguration(@Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration) {
+        public Builder deploymentConfiguration(@Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
 
         public Builder deploymentConfiguration(@Nullable DeploymentConfigurationArgs deploymentConfiguration) {
-            this.deploymentConfiguration = Input.ofNullable(deploymentConfiguration);
+            this.deploymentConfiguration = Output.ofNullable(deploymentConfiguration);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<BatchPoolIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<BatchPoolIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable BatchPoolIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder interNodeCommunication(@Nullable Input<InterNodeCommunicationState> interNodeCommunication) {
+        public Builder interNodeCommunication(@Nullable Output<InterNodeCommunicationState> interNodeCommunication) {
             this.interNodeCommunication = interNodeCommunication;
             return this;
         }
 
         public Builder interNodeCommunication(@Nullable InterNodeCommunicationState interNodeCommunication) {
-            this.interNodeCommunication = Input.ofNullable(interNodeCommunication);
+            this.interNodeCommunication = Output.ofNullable(interNodeCommunication);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<List<MetadataItemArgs>> metadata) {
+        public Builder metadata(@Nullable Output<List<MetadataItemArgs>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable List<MetadataItemArgs> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder mountConfiguration(@Nullable Input<List<MountConfigurationArgs>> mountConfiguration) {
+        public Builder mountConfiguration(@Nullable Output<List<MountConfigurationArgs>> mountConfiguration) {
             this.mountConfiguration = mountConfiguration;
             return this;
         }
 
         public Builder mountConfiguration(@Nullable List<MountConfigurationArgs> mountConfiguration) {
-            this.mountConfiguration = Input.ofNullable(mountConfiguration);
+            this.mountConfiguration = Output.ofNullable(mountConfiguration);
             return this;
         }
 
-        public Builder networkConfiguration(@Nullable Input<NetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
         public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Input.ofNullable(networkConfiguration);
+            this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder poolName(@Nullable Input<String> poolName) {
+        public Builder poolName(@Nullable Output<String> poolName) {
             this.poolName = poolName;
             return this;
         }
 
         public Builder poolName(@Nullable String poolName) {
-            this.poolName = Input.ofNullable(poolName);
+            this.poolName = Output.ofNullable(poolName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scaleSettings(@Nullable Input<ScaleSettingsArgs> scaleSettings) {
+        public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
         public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
-            this.scaleSettings = Input.ofNullable(scaleSettings);
+            this.scaleSettings = Output.ofNullable(scaleSettings);
             return this;
         }
 
-        public Builder startTask(@Nullable Input<StartTaskArgs> startTask) {
+        public Builder startTask(@Nullable Output<StartTaskArgs> startTask) {
             this.startTask = startTask;
             return this;
         }
 
         public Builder startTask(@Nullable StartTaskArgs startTask) {
-            this.startTask = Input.ofNullable(startTask);
+            this.startTask = Output.ofNullable(startTask);
             return this;
         }
 
-        public Builder taskSchedulingPolicy(@Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy) {
+        public Builder taskSchedulingPolicy(@Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy) {
             this.taskSchedulingPolicy = taskSchedulingPolicy;
             return this;
         }
 
         public Builder taskSchedulingPolicy(@Nullable TaskSchedulingPolicyArgs taskSchedulingPolicy) {
-            this.taskSchedulingPolicy = Input.ofNullable(taskSchedulingPolicy);
+            this.taskSchedulingPolicy = Output.ofNullable(taskSchedulingPolicy);
             return this;
         }
 
-        public Builder taskSlotsPerNode(@Nullable Input<Integer> taskSlotsPerNode) {
+        public Builder taskSlotsPerNode(@Nullable Output<Integer> taskSlotsPerNode) {
             this.taskSlotsPerNode = taskSlotsPerNode;
             return this;
         }
 
         public Builder taskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
-            this.taskSlotsPerNode = Input.ofNullable(taskSlotsPerNode);
+            this.taskSlotsPerNode = Output.ofNullable(taskSlotsPerNode);
             return this;
         }
 
-        public Builder userAccounts(@Nullable Input<List<UserAccountArgs>> userAccounts) {
+        public Builder userAccounts(@Nullable Output<List<UserAccountArgs>> userAccounts) {
             this.userAccounts = userAccounts;
             return this;
         }
 
         public Builder userAccounts(@Nullable List<UserAccountArgs> userAccounts) {
-            this.userAccounts = Input.ofNullable(userAccounts);
+            this.userAccounts = Output.ofNullable(userAccounts);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public PoolArgs build() {

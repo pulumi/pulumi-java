@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleS3OutputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class MonitoringScheduleMonitoringOutputArgs extends io.pulumi.reso
     public static final MonitoringScheduleMonitoringOutputArgs Empty = new MonitoringScheduleMonitoringOutputArgs();
 
     @InputImport(name="s3Output", required=true)
-      private final Input<MonitoringScheduleS3OutputArgs> s3Output;
+      private final Output<MonitoringScheduleS3OutputArgs> s3Output;
 
-    public Input<MonitoringScheduleS3OutputArgs> getS3Output() {
+    public Output<MonitoringScheduleS3OutputArgs> getS3Output() {
         return this.s3Output;
     }
 
-    public MonitoringScheduleMonitoringOutputArgs(Input<MonitoringScheduleS3OutputArgs> s3Output) {
+    public MonitoringScheduleMonitoringOutputArgs(Output<MonitoringScheduleS3OutputArgs> s3Output) {
         this.s3Output = Objects.requireNonNull(s3Output, "expected parameter 's3Output' to be non-null");
     }
 
     private MonitoringScheduleMonitoringOutputArgs() {
-        this.s3Output = Input.empty();
+        this.s3Output = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MonitoringScheduleMonitoringOutputArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<MonitoringScheduleS3OutputArgs> s3Output;
+        private Output<MonitoringScheduleS3OutputArgs> s3Output;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MonitoringScheduleMonitoringOutputArgs extends io.pulumi.reso
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder s3Output(Input<MonitoringScheduleS3OutputArgs> s3Output) {
+        public Builder s3Output(Output<MonitoringScheduleS3OutputArgs> s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
 
         public Builder s3Output(MonitoringScheduleS3OutputArgs s3Output) {
-            this.s3Output = Input.of(Objects.requireNonNull(s3Output));
+            this.s3Output = Output.of(Objects.requireNonNull(s3Output));
             return this;
         }
         public MonitoringScheduleMonitoringOutputArgs build() {

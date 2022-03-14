@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportDefinitionArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryInfoArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportScheduleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition", required=true)
-      private final Input<ExportDefinitionArgs> definition;
+      private final Output<ExportDefinitionArgs> definition;
 
-    public Input<ExportDefinitionArgs> getDefinition() {
+    public Output<ExportDefinitionArgs> getDefinition() {
         return this.definition;
     }
 
@@ -35,9 +35,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryInfo", required=true)
-      private final Input<ExportDeliveryInfoArgs> deliveryInfo;
+      private final Output<ExportDeliveryInfoArgs> deliveryInfo;
 
-    public Input<ExportDeliveryInfoArgs> getDeliveryInfo() {
+    public Output<ExportDeliveryInfoArgs> getDeliveryInfo() {
         return this.deliveryInfo;
     }
 
@@ -46,10 +46,10 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportName")
-      private final @Nullable Input<String> exportName;
+      private final @Nullable Output<String> exportName;
 
-    public Input<String> getExportName() {
-        return this.exportName == null ? Input.empty() : this.exportName;
+    public Output<String> getExportName() {
+        return this.exportName == null ? Output.empty() : this.exportName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<Either<String,FormatType>> format;
+      private final @Nullable Output<Either<String,FormatType>> format;
 
-    public Input<Either<String,FormatType>> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<Either<String,FormatType>> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<ExportScheduleArgs> schedule;
+      private final @Nullable Output<ExportScheduleArgs> schedule;
 
-    public Input<ExportScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<ExportScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public ExportArgs(
-        Input<ExportDefinitionArgs> definition,
-        Input<ExportDeliveryInfoArgs> deliveryInfo,
-        @Nullable Input<String> eTag,
-        @Nullable Input<String> exportName,
-        @Nullable Input<Either<String,FormatType>> format,
-        @Nullable Input<ExportScheduleArgs> schedule,
-        Input<String> scope) {
+        Output<ExportDefinitionArgs> definition,
+        Output<ExportDeliveryInfoArgs> deliveryInfo,
+        @Nullable Output<String> eTag,
+        @Nullable Output<String> exportName,
+        @Nullable Output<Either<String,FormatType>> format,
+        @Nullable Output<ExportScheduleArgs> schedule,
+        Output<String> scope) {
         this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
         this.deliveryInfo = Objects.requireNonNull(deliveryInfo, "expected parameter 'deliveryInfo' to be non-null");
         this.eTag = eTag;
@@ -114,13 +114,13 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportArgs() {
-        this.definition = Input.empty();
-        this.deliveryInfo = Input.empty();
-        this.eTag = Input.empty();
-        this.exportName = Input.empty();
-        this.format = Input.empty();
-        this.schedule = Input.empty();
-        this.scope = Input.empty();
+        this.definition = Output.empty();
+        this.deliveryInfo = Output.empty();
+        this.eTag = Output.empty();
+        this.exportName = Output.empty();
+        this.format = Output.empty();
+        this.schedule = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<ExportDefinitionArgs> definition;
-        private Input<ExportDeliveryInfoArgs> deliveryInfo;
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<String> exportName;
-        private @Nullable Input<Either<String,FormatType>> format;
-        private @Nullable Input<ExportScheduleArgs> schedule;
-        private Input<String> scope;
+        private Output<ExportDefinitionArgs> definition;
+        private Output<ExportDeliveryInfoArgs> deliveryInfo;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<String> exportName;
+        private @Nullable Output<Either<String,FormatType>> format;
+        private @Nullable Output<ExportScheduleArgs> schedule;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder definition(Input<ExportDefinitionArgs> definition) {
+        public Builder definition(Output<ExportDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
         public Builder definition(ExportDefinitionArgs definition) {
-            this.definition = Input.of(Objects.requireNonNull(definition));
+            this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder deliveryInfo(Input<ExportDeliveryInfoArgs> deliveryInfo) {
+        public Builder deliveryInfo(Output<ExportDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
         public Builder deliveryInfo(ExportDeliveryInfoArgs deliveryInfo) {
-            this.deliveryInfo = Input.of(Objects.requireNonNull(deliveryInfo));
+            this.deliveryInfo = Output.of(Objects.requireNonNull(deliveryInfo));
             return this;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder exportName(@Nullable Input<String> exportName) {
+        public Builder exportName(@Nullable Output<String> exportName) {
             this.exportName = exportName;
             return this;
         }
 
         public Builder exportName(@Nullable String exportName) {
-            this.exportName = Input.ofNullable(exportName);
+            this.exportName = Output.ofNullable(exportName);
             return this;
         }
 
-        public Builder format(@Nullable Input<Either<String,FormatType>> format) {
+        public Builder format(@Nullable Output<Either<String,FormatType>> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable Either<String,FormatType> format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<ExportScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<ExportScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable ExportScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public ExportArgs build() {

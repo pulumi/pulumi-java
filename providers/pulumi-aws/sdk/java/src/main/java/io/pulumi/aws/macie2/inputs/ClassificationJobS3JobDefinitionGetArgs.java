@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionBucketDefinitionGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="bucketDefinitions")
-      private final @Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
+      private final @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
 
-    public Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> getBucketDefinitions() {
-        return this.bucketDefinitions == null ? Input.empty() : this.bucketDefinitions;
+    public Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> getBucketDefinitions() {
+        return this.bucketDefinitions == null ? Output.empty() : this.bucketDefinitions;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="scoping")
-      private final @Nullable Input<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
+      private final @Nullable Output<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
 
-    public Input<ClassificationJobS3JobDefinitionScopingGetArgs> getScoping() {
-        return this.scoping == null ? Input.empty() : this.scoping;
+    public Output<ClassificationJobS3JobDefinitionScopingGetArgs> getScoping() {
+        return this.scoping == null ? Output.empty() : this.scoping;
     }
 
     public ClassificationJobS3JobDefinitionGetArgs(
-        @Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions,
-        @Nullable Input<ClassificationJobS3JobDefinitionScopingGetArgs> scoping) {
+        @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions,
+        @Nullable Output<ClassificationJobS3JobDefinitionScopingGetArgs> scoping) {
         this.bucketDefinitions = bucketDefinitions;
         this.scoping = scoping;
     }
 
     private ClassificationJobS3JobDefinitionGetArgs() {
-        this.bucketDefinitions = Input.empty();
-        this.scoping = Input.empty();
+        this.bucketDefinitions = Output.empty();
+        this.scoping = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
-        private @Nullable Input<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
+        private @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
+        private @Nullable Output<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
     	      this.scoping = defaults.scoping;
         }
 
-        public Builder bucketDefinitions(@Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions) {
+        public Builder bucketDefinitions(@Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions) {
             this.bucketDefinitions = bucketDefinitions;
             return this;
         }
 
         public Builder bucketDefinitions(@Nullable List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs> bucketDefinitions) {
-            this.bucketDefinitions = Input.ofNullable(bucketDefinitions);
+            this.bucketDefinitions = Output.ofNullable(bucketDefinitions);
             return this;
         }
 
-        public Builder scoping(@Nullable Input<ClassificationJobS3JobDefinitionScopingGetArgs> scoping) {
+        public Builder scoping(@Nullable Output<ClassificationJobS3JobDefinitionScopingGetArgs> scoping) {
             this.scoping = scoping;
             return this;
         }
 
         public Builder scoping(@Nullable ClassificationJobS3JobDefinitionScopingGetArgs scoping) {
-            this.scoping = Input.ofNullable(scoping);
+            this.scoping = Output.ofNullable(scoping);
             return this;
         }
         public ClassificationJobS3JobDefinitionGetArgs build() {

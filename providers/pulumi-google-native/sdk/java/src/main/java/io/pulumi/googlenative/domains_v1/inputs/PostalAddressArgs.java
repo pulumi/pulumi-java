@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressLines")
-      private final @Nullable Input<List<String>> addressLines;
+      private final @Nullable Output<List<String>> addressLines;
 
-    public Input<List<String>> getAddressLines() {
-        return this.addressLines == null ? Input.empty() : this.addressLines;
+    public Output<List<String>> getAddressLines() {
+        return this.addressLines == null ? Output.empty() : this.addressLines;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administrativeArea")
-      private final @Nullable Input<String> administrativeArea;
+      private final @Nullable Output<String> administrativeArea;
 
-    public Input<String> getAdministrativeArea() {
-        return this.administrativeArea == null ? Input.empty() : this.administrativeArea;
+    public Output<String> getAdministrativeArea() {
+        return this.administrativeArea == null ? Output.empty() : this.administrativeArea;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locality")
-      private final @Nullable Input<String> locality;
+      private final @Nullable Output<String> locality;
 
-    public Input<String> getLocality() {
-        return this.locality == null ? Input.empty() : this.locality;
+    public Output<String> getLocality() {
+        return this.locality == null ? Output.empty() : this.locality;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organization")
-      private final @Nullable Input<String> organization;
+      private final @Nullable Output<String> organization;
 
-    public Input<String> getOrganization() {
-        return this.organization == null ? Input.empty() : this.organization;
+    public Output<String> getOrganization() {
+        return this.organization == null ? Output.empty() : this.organization;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postalCode")
-      private final @Nullable Input<String> postalCode;
+      private final @Nullable Output<String> postalCode;
 
-    public Input<String> getPostalCode() {
-        return this.postalCode == null ? Input.empty() : this.postalCode;
+    public Output<String> getPostalCode() {
+        return this.postalCode == null ? Output.empty() : this.postalCode;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipients")
-      private final @Nullable Input<List<String>> recipients;
+      private final @Nullable Output<List<String>> recipients;
 
-    public Input<List<String>> getRecipients() {
-        return this.recipients == null ? Input.empty() : this.recipients;
+    public Output<List<String>> getRecipients() {
+        return this.recipients == null ? Output.empty() : this.recipients;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionCode", required=true)
-      private final Input<String> regionCode;
+      private final Output<String> regionCode;
 
-    public Input<String> getRegionCode() {
+    public Output<String> getRegionCode() {
         return this.regionCode;
     }
 
@@ -113,10 +113,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Integer> revision;
+      private final @Nullable Output<Integer> revision;
 
-    public Input<Integer> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Integer> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sortingCode")
-      private final @Nullable Input<String> sortingCode;
+      private final @Nullable Output<String> sortingCode;
 
-    public Input<String> getSortingCode() {
-        return this.sortingCode == null ? Input.empty() : this.sortingCode;
+    public Output<String> getSortingCode() {
+        return this.sortingCode == null ? Output.empty() : this.sortingCode;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sublocality")
-      private final @Nullable Input<String> sublocality;
+      private final @Nullable Output<String> sublocality;
 
-    public Input<String> getSublocality() {
-        return this.sublocality == null ? Input.empty() : this.sublocality;
+    public Output<String> getSublocality() {
+        return this.sublocality == null ? Output.empty() : this.sublocality;
     }
 
     public PostalAddressArgs(
-        @Nullable Input<List<String>> addressLines,
-        @Nullable Input<String> administrativeArea,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> locality,
-        @Nullable Input<String> organization,
-        @Nullable Input<String> postalCode,
-        @Nullable Input<List<String>> recipients,
-        Input<String> regionCode,
-        @Nullable Input<Integer> revision,
-        @Nullable Input<String> sortingCode,
-        @Nullable Input<String> sublocality) {
+        @Nullable Output<List<String>> addressLines,
+        @Nullable Output<String> administrativeArea,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> locality,
+        @Nullable Output<String> organization,
+        @Nullable Output<String> postalCode,
+        @Nullable Output<List<String>> recipients,
+        Output<String> regionCode,
+        @Nullable Output<Integer> revision,
+        @Nullable Output<String> sortingCode,
+        @Nullable Output<String> sublocality) {
         this.addressLines = addressLines;
         this.administrativeArea = administrativeArea;
         this.languageCode = languageCode;
@@ -167,17 +167,17 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PostalAddressArgs() {
-        this.addressLines = Input.empty();
-        this.administrativeArea = Input.empty();
-        this.languageCode = Input.empty();
-        this.locality = Input.empty();
-        this.organization = Input.empty();
-        this.postalCode = Input.empty();
-        this.recipients = Input.empty();
-        this.regionCode = Input.empty();
-        this.revision = Input.empty();
-        this.sortingCode = Input.empty();
-        this.sublocality = Input.empty();
+        this.addressLines = Output.empty();
+        this.administrativeArea = Output.empty();
+        this.languageCode = Output.empty();
+        this.locality = Output.empty();
+        this.organization = Output.empty();
+        this.postalCode = Output.empty();
+        this.recipients = Output.empty();
+        this.regionCode = Output.empty();
+        this.revision = Output.empty();
+        this.sortingCode = Output.empty();
+        this.sublocality = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addressLines;
-        private @Nullable Input<String> administrativeArea;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> locality;
-        private @Nullable Input<String> organization;
-        private @Nullable Input<String> postalCode;
-        private @Nullable Input<List<String>> recipients;
-        private Input<String> regionCode;
-        private @Nullable Input<Integer> revision;
-        private @Nullable Input<String> sortingCode;
-        private @Nullable Input<String> sublocality;
+        private @Nullable Output<List<String>> addressLines;
+        private @Nullable Output<String> administrativeArea;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> locality;
+        private @Nullable Output<String> organization;
+        private @Nullable Output<String> postalCode;
+        private @Nullable Output<List<String>> recipients;
+        private Output<String> regionCode;
+        private @Nullable Output<Integer> revision;
+        private @Nullable Output<String> sortingCode;
+        private @Nullable Output<String> sublocality;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sublocality = defaults.sublocality;
         }
 
-        public Builder addressLines(@Nullable Input<List<String>> addressLines) {
+        public Builder addressLines(@Nullable Output<List<String>> addressLines) {
             this.addressLines = addressLines;
             return this;
         }
 
         public Builder addressLines(@Nullable List<String> addressLines) {
-            this.addressLines = Input.ofNullable(addressLines);
+            this.addressLines = Output.ofNullable(addressLines);
             return this;
         }
 
-        public Builder administrativeArea(@Nullable Input<String> administrativeArea) {
+        public Builder administrativeArea(@Nullable Output<String> administrativeArea) {
             this.administrativeArea = administrativeArea;
             return this;
         }
 
         public Builder administrativeArea(@Nullable String administrativeArea) {
-            this.administrativeArea = Input.ofNullable(administrativeArea);
+            this.administrativeArea = Output.ofNullable(administrativeArea);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder locality(@Nullable Input<String> locality) {
+        public Builder locality(@Nullable Output<String> locality) {
             this.locality = locality;
             return this;
         }
 
         public Builder locality(@Nullable String locality) {
-            this.locality = Input.ofNullable(locality);
+            this.locality = Output.ofNullable(locality);
             return this;
         }
 
-        public Builder organization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
 
         public Builder organization(@Nullable String organization) {
-            this.organization = Input.ofNullable(organization);
+            this.organization = Output.ofNullable(organization);
             return this;
         }
 
-        public Builder postalCode(@Nullable Input<String> postalCode) {
+        public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Input.ofNullable(postalCode);
+            this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
 
-        public Builder recipients(@Nullable Input<List<String>> recipients) {
+        public Builder recipients(@Nullable Output<List<String>> recipients) {
             this.recipients = recipients;
             return this;
         }
 
         public Builder recipients(@Nullable List<String> recipients) {
-            this.recipients = Input.ofNullable(recipients);
+            this.recipients = Output.ofNullable(recipients);
             return this;
         }
 
-        public Builder regionCode(Input<String> regionCode) {
+        public Builder regionCode(Output<String> regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
 
         public Builder regionCode(String regionCode) {
-            this.regionCode = Input.of(Objects.requireNonNull(regionCode));
+            this.regionCode = Output.of(Objects.requireNonNull(regionCode));
             return this;
         }
 
-        public Builder revision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder sortingCode(@Nullable Input<String> sortingCode) {
+        public Builder sortingCode(@Nullable Output<String> sortingCode) {
             this.sortingCode = sortingCode;
             return this;
         }
 
         public Builder sortingCode(@Nullable String sortingCode) {
-            this.sortingCode = Input.ofNullable(sortingCode);
+            this.sortingCode = Output.ofNullable(sortingCode);
             return this;
         }
 
-        public Builder sublocality(@Nullable Input<String> sublocality) {
+        public Builder sublocality(@Nullable Output<String> sublocality) {
             this.sublocality = sublocality;
             return this;
         }
 
         public Builder sublocality(@Nullable String sublocality) {
-            this.sublocality = Input.ofNullable(sublocality);
+            this.sublocality = Output.ofNullable(sublocality);
             return this;
         }
         public PostalAddressArgs build() {

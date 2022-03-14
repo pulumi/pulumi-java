@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageTestsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -22,10 +22,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerRecipeArn")
-      private final @Nullable Input<String> containerRecipeArn;
+      private final @Nullable Output<String> containerRecipeArn;
 
-    public Input<String> getContainerRecipeArn() {
-        return this.containerRecipeArn == null ? Input.empty() : this.containerRecipeArn;
+    public Output<String> getContainerRecipeArn() {
+        return this.containerRecipeArn == null ? Output.empty() : this.containerRecipeArn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionConfigurationArn")
-      private final @Nullable Input<String> distributionConfigurationArn;
+      private final @Nullable Output<String> distributionConfigurationArn;
 
-    public Input<String> getDistributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Input.empty() : this.distributionConfigurationArn;
+    public Output<String> getDistributionConfigurationArn() {
+        return this.distributionConfigurationArn == null ? Output.empty() : this.distributionConfigurationArn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enhancedImageMetadataEnabled")
-      private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
+      private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Input<Boolean> getEnhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Input.empty() : this.enhancedImageMetadataEnabled;
+    public Output<Boolean> getEnhancedImageMetadataEnabled() {
+        return this.enhancedImageMetadataEnabled == null ? Output.empty() : this.enhancedImageMetadataEnabled;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageRecipeArn")
-      private final @Nullable Input<String> imageRecipeArn;
+      private final @Nullable Output<String> imageRecipeArn;
 
-    public Input<String> getImageRecipeArn() {
-        return this.imageRecipeArn == null ? Input.empty() : this.imageRecipeArn;
+    public Output<String> getImageRecipeArn() {
+        return this.imageRecipeArn == null ? Output.empty() : this.imageRecipeArn;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTestsConfiguration")
-      private final @Nullable Input<ImageTestsConfigurationArgs> imageTestsConfiguration;
+      private final @Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration;
 
-    public Input<ImageTestsConfigurationArgs> getImageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Input.empty() : this.imageTestsConfiguration;
+    public Output<ImageTestsConfigurationArgs> getImageTestsConfiguration() {
+        return this.imageTestsConfiguration == null ? Output.empty() : this.imageTestsConfiguration;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="infrastructureConfigurationArn")
-      private final @Nullable Input<String> infrastructureConfigurationArn;
+      private final @Nullable Output<String> infrastructureConfigurationArn;
 
-    public Input<String> getInfrastructureConfigurationArn() {
-        return this.infrastructureConfigurationArn == null ? Input.empty() : this.infrastructureConfigurationArn;
+    public Output<String> getInfrastructureConfigurationArn() {
+        return this.infrastructureConfigurationArn == null ? Output.empty() : this.infrastructureConfigurationArn;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ImageArgs(
-        @Nullable Input<String> containerRecipeArn,
-        @Nullable Input<String> distributionConfigurationArn,
-        @Nullable Input<Boolean> enhancedImageMetadataEnabled,
-        @Nullable Input<String> imageRecipeArn,
-        @Nullable Input<ImageTestsConfigurationArgs> imageTestsConfiguration,
-        @Nullable Input<String> infrastructureConfigurationArn,
-        @Nullable Input<Object> tags) {
+        @Nullable Output<String> containerRecipeArn,
+        @Nullable Output<String> distributionConfigurationArn,
+        @Nullable Output<Boolean> enhancedImageMetadataEnabled,
+        @Nullable Output<String> imageRecipeArn,
+        @Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration,
+        @Nullable Output<String> infrastructureConfigurationArn,
+        @Nullable Output<Object> tags) {
         this.containerRecipeArn = containerRecipeArn;
         this.distributionConfigurationArn = distributionConfigurationArn;
         this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
@@ -112,13 +112,13 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.containerRecipeArn = Input.empty();
-        this.distributionConfigurationArn = Input.empty();
-        this.enhancedImageMetadataEnabled = Input.empty();
-        this.imageRecipeArn = Input.empty();
-        this.imageTestsConfiguration = Input.empty();
-        this.infrastructureConfigurationArn = Input.empty();
-        this.tags = Input.empty();
+        this.containerRecipeArn = Output.empty();
+        this.distributionConfigurationArn = Output.empty();
+        this.enhancedImageMetadataEnabled = Output.empty();
+        this.imageRecipeArn = Output.empty();
+        this.imageTestsConfiguration = Output.empty();
+        this.infrastructureConfigurationArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerRecipeArn;
-        private @Nullable Input<String> distributionConfigurationArn;
-        private @Nullable Input<Boolean> enhancedImageMetadataEnabled;
-        private @Nullable Input<String> imageRecipeArn;
-        private @Nullable Input<ImageTestsConfigurationArgs> imageTestsConfiguration;
-        private @Nullable Input<String> infrastructureConfigurationArn;
-        private @Nullable Input<Object> tags;
+        private @Nullable Output<String> containerRecipeArn;
+        private @Nullable Output<String> distributionConfigurationArn;
+        private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
+        private @Nullable Output<String> imageRecipeArn;
+        private @Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration;
+        private @Nullable Output<String> infrastructureConfigurationArn;
+        private @Nullable Output<Object> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder containerRecipeArn(@Nullable Input<String> containerRecipeArn) {
+        public Builder containerRecipeArn(@Nullable Output<String> containerRecipeArn) {
             this.containerRecipeArn = containerRecipeArn;
             return this;
         }
 
         public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
-            this.containerRecipeArn = Input.ofNullable(containerRecipeArn);
+            this.containerRecipeArn = Output.ofNullable(containerRecipeArn);
             return this;
         }
 
-        public Builder distributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
         public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Input.ofNullable(distributionConfigurationArn);
+            this.distributionConfigurationArn = Output.ofNullable(distributionConfigurationArn);
             return this;
         }
 
-        public Builder enhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
         public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Input.ofNullable(enhancedImageMetadataEnabled);
+            this.enhancedImageMetadataEnabled = Output.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
 
-        public Builder imageRecipeArn(@Nullable Input<String> imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
             this.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
         public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
-            this.imageRecipeArn = Input.ofNullable(imageRecipeArn);
+            this.imageRecipeArn = Output.ofNullable(imageRecipeArn);
             return this;
         }
 
-        public Builder imageTestsConfiguration(@Nullable Input<ImageTestsConfigurationArgs> imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
         public Builder imageTestsConfiguration(@Nullable ImageTestsConfigurationArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Input.ofNullable(imageTestsConfiguration);
+            this.imageTestsConfiguration = Output.ofNullable(imageTestsConfiguration);
             return this;
         }
 
-        public Builder infrastructureConfigurationArn(@Nullable Input<String> infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
         public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Input.ofNullable(infrastructureConfigurationArn);
+            this.infrastructureConfigurationArn = Output.ofNullable(infrastructureConfigurationArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ImageArgs build() {

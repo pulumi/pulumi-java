@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.ImageOutputResourceAmiArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="amis")
-      private final @Nullable Input<List<ImageOutputResourceAmiArgs>> amis;
+      private final @Nullable Output<List<ImageOutputResourceAmiArgs>> amis;
 
-    public Input<List<ImageOutputResourceAmiArgs>> getAmis() {
-        return this.amis == null ? Input.empty() : this.amis;
+    public Output<List<ImageOutputResourceAmiArgs>> getAmis() {
+        return this.amis == null ? Output.empty() : this.amis;
     }
 
-    public ImageOutputResourceArgs(@Nullable Input<List<ImageOutputResourceAmiArgs>> amis) {
+    public ImageOutputResourceArgs(@Nullable Output<List<ImageOutputResourceAmiArgs>> amis) {
         this.amis = amis;
     }
 
     private ImageOutputResourceArgs() {
-        this.amis = Input.empty();
+        this.amis = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImageOutputResourceAmiArgs>> amis;
+        private @Nullable Output<List<ImageOutputResourceAmiArgs>> amis;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
     	      this.amis = defaults.amis;
         }
 
-        public Builder amis(@Nullable Input<List<ImageOutputResourceAmiArgs>> amis) {
+        public Builder amis(@Nullable Output<List<ImageOutputResourceAmiArgs>> amis) {
             this.amis = amis;
             return this;
         }
 
         public Builder amis(@Nullable List<ImageOutputResourceAmiArgs> amis) {
-            this.amis = Input.ofNullable(amis);
+            this.amis = Output.ofNullable(amis);
             return this;
         }
         public ImageOutputResourceArgs build() {

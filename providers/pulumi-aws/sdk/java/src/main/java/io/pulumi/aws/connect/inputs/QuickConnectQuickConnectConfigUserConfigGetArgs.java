@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="contactFlowId", required=true)
-      private final Input<String> contactFlowId;
+      private final Output<String> contactFlowId;
 
-    public Input<String> getContactFlowId() {
+    public Output<String> getContactFlowId() {
         return this.contactFlowId;
     }
 
@@ -29,22 +29,22 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public QuickConnectQuickConnectConfigUserConfigGetArgs(
-        Input<String> contactFlowId,
-        Input<String> userId) {
+        Output<String> contactFlowId,
+        Output<String> userId) {
         this.contactFlowId = Objects.requireNonNull(contactFlowId, "expected parameter 'contactFlowId' to be non-null");
         this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
     }
 
     private QuickConnectQuickConnectConfigUserConfigGetArgs() {
-        this.contactFlowId = Input.empty();
-        this.userId = Input.empty();
+        this.contactFlowId = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> contactFlowId;
-        private Input<String> userId;
+        private Output<String> contactFlowId;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends io.pu
     	      this.userId = defaults.userId;
         }
 
-        public Builder contactFlowId(Input<String> contactFlowId) {
+        public Builder contactFlowId(Output<String> contactFlowId) {
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
 
         public Builder contactFlowId(String contactFlowId) {
-            this.contactFlowId = Input.of(Objects.requireNonNull(contactFlowId));
+            this.contactFlowId = Output.of(Objects.requireNonNull(contactFlowId));
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public QuickConnectQuickConnectConfigUserConfigGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,38 +16,38 @@ public final class TopicRuleIotEventsActionArgs extends io.pulumi.resources.Reso
     public static final TopicRuleIotEventsActionArgs Empty = new TopicRuleIotEventsActionArgs();
 
     @InputImport(name="batchMode")
-      private final @Nullable Input<Boolean> batchMode;
+      private final @Nullable Output<Boolean> batchMode;
 
-    public Input<Boolean> getBatchMode() {
-        return this.batchMode == null ? Input.empty() : this.batchMode;
+    public Output<Boolean> getBatchMode() {
+        return this.batchMode == null ? Output.empty() : this.batchMode;
     }
 
     @InputImport(name="inputName", required=true)
-      private final Input<String> inputName;
+      private final Output<String> inputName;
 
-    public Input<String> getInputName() {
+    public Output<String> getInputName() {
         return this.inputName;
     }
 
     @InputImport(name="messageId")
-      private final @Nullable Input<String> messageId;
+      private final @Nullable Output<String> messageId;
 
-    public Input<String> getMessageId() {
-        return this.messageId == null ? Input.empty() : this.messageId;
+    public Output<String> getMessageId() {
+        return this.messageId == null ? Output.empty() : this.messageId;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public TopicRuleIotEventsActionArgs(
-        @Nullable Input<Boolean> batchMode,
-        Input<String> inputName,
-        @Nullable Input<String> messageId,
-        Input<String> roleArn) {
+        @Nullable Output<Boolean> batchMode,
+        Output<String> inputName,
+        @Nullable Output<String> messageId,
+        Output<String> roleArn) {
         this.batchMode = batchMode;
         this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
         this.messageId = messageId;
@@ -55,10 +55,10 @@ public final class TopicRuleIotEventsActionArgs extends io.pulumi.resources.Reso
     }
 
     private TopicRuleIotEventsActionArgs() {
-        this.batchMode = Input.empty();
-        this.inputName = Input.empty();
-        this.messageId = Input.empty();
-        this.roleArn = Input.empty();
+        this.batchMode = Output.empty();
+        this.inputName = Output.empty();
+        this.messageId = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class TopicRuleIotEventsActionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> batchMode;
-        private Input<String> inputName;
-        private @Nullable Input<String> messageId;
-        private Input<String> roleArn;
+        private @Nullable Output<Boolean> batchMode;
+        private Output<String> inputName;
+        private @Nullable Output<String> messageId;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class TopicRuleIotEventsActionArgs extends io.pulumi.resources.Reso
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder batchMode(@Nullable Input<Boolean> batchMode) {
+        public Builder batchMode(@Nullable Output<Boolean> batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = Input.ofNullable(batchMode);
+            this.batchMode = Output.ofNullable(batchMode);
             return this;
         }
 
-        public Builder inputName(Input<String> inputName) {
+        public Builder inputName(Output<String> inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
         public Builder inputName(String inputName) {
-            this.inputName = Input.of(Objects.requireNonNull(inputName));
+            this.inputName = Output.of(Objects.requireNonNull(inputName));
             return this;
         }
 
-        public Builder messageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Input.ofNullable(messageId);
+            this.messageId = Output.ofNullable(messageId);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public TopicRuleIotEventsActionArgs build() {

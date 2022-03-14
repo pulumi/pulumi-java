@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ForwardProxyArgs;
 import io.pulumi.azurenative.web.inputs.HttpSettingsRoutesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardProxy")
-      private final @Nullable Input<ForwardProxyArgs> forwardProxy;
+      private final @Nullable Output<ForwardProxyArgs> forwardProxy;
 
-    public Input<ForwardProxyArgs> getForwardProxy() {
-        return this.forwardProxy == null ? Input.empty() : this.forwardProxy;
+    public Output<ForwardProxyArgs> getForwardProxy() {
+        return this.forwardProxy == null ? Output.empty() : this.forwardProxy;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireHttps")
-      private final @Nullable Input<Boolean> requireHttps;
+      private final @Nullable Output<Boolean> requireHttps;
 
-    public Input<Boolean> getRequireHttps() {
-        return this.requireHttps == null ? Input.empty() : this.requireHttps;
+    public Output<Boolean> getRequireHttps() {
+        return this.requireHttps == null ? Output.empty() : this.requireHttps;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-      private final @Nullable Input<HttpSettingsRoutesArgs> routes;
+      private final @Nullable Output<HttpSettingsRoutesArgs> routes;
 
-    public Input<HttpSettingsRoutesArgs> getRoutes() {
-        return this.routes == null ? Input.empty() : this.routes;
+    public Output<HttpSettingsRoutesArgs> getRoutes() {
+        return this.routes == null ? Output.empty() : this.routes;
     }
 
     public HttpSettingsArgs(
-        @Nullable Input<ForwardProxyArgs> forwardProxy,
-        @Nullable Input<Boolean> requireHttps,
-        @Nullable Input<HttpSettingsRoutesArgs> routes) {
+        @Nullable Output<ForwardProxyArgs> forwardProxy,
+        @Nullable Output<Boolean> requireHttps,
+        @Nullable Output<HttpSettingsRoutesArgs> routes) {
         this.forwardProxy = forwardProxy;
         this.requireHttps = requireHttps;
         this.routes = routes;
     }
 
     private HttpSettingsArgs() {
-        this.forwardProxy = Input.empty();
-        this.requireHttps = Input.empty();
-        this.routes = Input.empty();
+        this.forwardProxy = Output.empty();
+        this.requireHttps = Output.empty();
+        this.routes = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ForwardProxyArgs> forwardProxy;
-        private @Nullable Input<Boolean> requireHttps;
-        private @Nullable Input<HttpSettingsRoutesArgs> routes;
+        private @Nullable Output<ForwardProxyArgs> forwardProxy;
+        private @Nullable Output<Boolean> requireHttps;
+        private @Nullable Output<HttpSettingsRoutesArgs> routes;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routes = defaults.routes;
         }
 
-        public Builder forwardProxy(@Nullable Input<ForwardProxyArgs> forwardProxy) {
+        public Builder forwardProxy(@Nullable Output<ForwardProxyArgs> forwardProxy) {
             this.forwardProxy = forwardProxy;
             return this;
         }
 
         public Builder forwardProxy(@Nullable ForwardProxyArgs forwardProxy) {
-            this.forwardProxy = Input.ofNullable(forwardProxy);
+            this.forwardProxy = Output.ofNullable(forwardProxy);
             return this;
         }
 
-        public Builder requireHttps(@Nullable Input<Boolean> requireHttps) {
+        public Builder requireHttps(@Nullable Output<Boolean> requireHttps) {
             this.requireHttps = requireHttps;
             return this;
         }
 
         public Builder requireHttps(@Nullable Boolean requireHttps) {
-            this.requireHttps = Input.ofNullable(requireHttps);
+            this.requireHttps = Output.ofNullable(requireHttps);
             return this;
         }
 
-        public Builder routes(@Nullable Input<HttpSettingsRoutesArgs> routes) {
+        public Builder routes(@Nullable Output<HttpSettingsRoutesArgs> routes) {
             this.routes = routes;
             return this;
         }
 
         public Builder routes(@Nullable HttpSettingsRoutesArgs routes) {
-            this.routes = Input.ofNullable(routes);
+            this.routes = Output.ofNullable(routes);
             return this;
         }
         public HttpSettingsArgs build() {

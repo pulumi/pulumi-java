@@ -10,7 +10,6 @@ import io.pulumi.aws.glue.outputs.ClassifierCsvClassifier;
 import io.pulumi.aws.glue.outputs.ClassifierGrokClassifier;
 import io.pulumi.aws.glue.outputs.ClassifierJsonClassifier;
 import io.pulumi.aws.glue.outputs.ClassifierXmlClassifier;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -144,14 +143,14 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Classifier(String name, @Nullable ClassifierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/classifier:Classifier", name, args == null ? ClassifierArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:glue/classifier:Classifier", name, args == null ? ClassifierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Classifier(String name, Input<String> id, @Nullable ClassifierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Classifier(String name, Output<String> id, @Nullable ClassifierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:glue/classifier:Classifier", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -167,7 +166,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Classifier get(String name, Input<String> id, @Nullable ClassifierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Classifier get(String name, Output<String> id, @Nullable ClassifierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Classifier(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineMathArgs Empty = new PipelineMathArgs();
 
     @InputImport(name="attribute", required=true)
-      private final Input<String> attribute;
+      private final Output<String> attribute;
 
-    public Input<String> getAttribute() {
+    public Output<String> getAttribute() {
         return this.attribute;
     }
 
     @InputImport(name="math", required=true)
-      private final Input<String> math;
+      private final Output<String> math;
 
-    public Input<String> getMath() {
+    public Output<String> getMath() {
         return this.math;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-      private final @Nullable Input<String> next;
+      private final @Nullable Output<String> next;
 
-    public Input<String> getNext() {
-        return this.next == null ? Input.empty() : this.next;
+    public Output<String> getNext() {
+        return this.next == null ? Output.empty() : this.next;
     }
 
     public PipelineMathArgs(
-        Input<String> attribute,
-        Input<String> math,
-        Input<String> name,
-        @Nullable Input<String> next) {
+        Output<String> attribute,
+        Output<String> math,
+        Output<String> name,
+        @Nullable Output<String> next) {
         this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
         this.math = Objects.requireNonNull(math, "expected parameter 'math' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -54,10 +54,10 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineMathArgs() {
-        this.attribute = Input.empty();
-        this.math = Input.empty();
-        this.name = Input.empty();
-        this.next = Input.empty();
+        this.attribute = Output.empty();
+        this.math = Output.empty();
+        this.name = Output.empty();
+        this.next = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> attribute;
-        private Input<String> math;
-        private Input<String> name;
-        private @Nullable Input<String> next;
+        private Output<String> attribute;
+        private Output<String> math;
+        private Output<String> name;
+        private @Nullable Output<String> next;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
     	      this.next = defaults.next;
         }
 
-        public Builder attribute(Input<String> attribute) {
+        public Builder attribute(Output<String> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Input.of(Objects.requireNonNull(attribute));
+            this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder math(Input<String> math) {
+        public Builder math(Output<String> math) {
             this.math = Objects.requireNonNull(math);
             return this;
         }
 
         public Builder math(String math) {
-            this.math = Input.of(Objects.requireNonNull(math));
+            this.math = Output.of(Objects.requireNonNull(math));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder next(@Nullable Input<String> next) {
+        public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
 
         public Builder next(@Nullable String next) {
-            this.next = Input.ofNullable(next);
+            this.next = Output.ofNullable(next);
             return this;
         }
         public PipelineMathArgs build() {

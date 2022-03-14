@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<String> category;
+      private final @Nullable Output<String> category;
 
-    public Input<String> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<String> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public SubscriptionLogSettingsArgs(
-        @Nullable Input<String> category,
-        Input<Boolean> enabled) {
+        @Nullable Output<String> category,
+        Output<Boolean> enabled) {
         this.category = category;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private SubscriptionLogSettingsArgs() {
-        this.category = Input.empty();
-        this.enabled = Input.empty();
+        this.category = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> category;
-        private Input<Boolean> enabled;
+        private @Nullable Output<String> category;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder category(@Nullable Input<String> category) {
+        public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable String category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public SubscriptionLogSettingsArgs build() {

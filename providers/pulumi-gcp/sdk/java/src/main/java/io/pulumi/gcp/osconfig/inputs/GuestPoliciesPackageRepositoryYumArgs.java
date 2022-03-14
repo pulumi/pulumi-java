@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class GuestPoliciesPackageRepositoryYumArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="baseUrl", required=true)
-      private final Input<String> baseUrl;
+      private final Output<String> baseUrl;
 
-    public Input<String> getBaseUrl() {
+    public Output<String> getBaseUrl() {
         return this.baseUrl;
     }
 
@@ -31,10 +31,10 @@ public final class GuestPoliciesPackageRepositoryYumArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GuestPoliciesPackageRepositoryYumArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="gpgKeys")
-      private final @Nullable Input<List<String>> gpgKeys;
+      private final @Nullable Output<List<String>> gpgKeys;
 
-    public Input<List<String>> getGpgKeys() {
-        return this.gpgKeys == null ? Input.empty() : this.gpgKeys;
+    public Output<List<String>> getGpgKeys() {
+        return this.gpgKeys == null ? Output.empty() : this.gpgKeys;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class GuestPoliciesPackageRepositoryYumArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     public GuestPoliciesPackageRepositoryYumArgs(
-        Input<String> baseUrl,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<String>> gpgKeys,
-        Input<String> id) {
+        Output<String> baseUrl,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<String>> gpgKeys,
+        Output<String> id) {
         this.baseUrl = Objects.requireNonNull(baseUrl, "expected parameter 'baseUrl' to be non-null");
         this.displayName = displayName;
         this.gpgKeys = gpgKeys;
@@ -72,10 +72,10 @@ public final class GuestPoliciesPackageRepositoryYumArgs extends io.pulumi.resou
     }
 
     private GuestPoliciesPackageRepositoryYumArgs() {
-        this.baseUrl = Input.empty();
-        this.displayName = Input.empty();
-        this.gpgKeys = Input.empty();
-        this.id = Input.empty();
+        this.baseUrl = Output.empty();
+        this.displayName = Output.empty();
+        this.gpgKeys = Output.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class GuestPoliciesPackageRepositoryYumArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> baseUrl;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<String>> gpgKeys;
-        private Input<String> id;
+        private Output<String> baseUrl;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<String>> gpgKeys;
+        private Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class GuestPoliciesPackageRepositoryYumArgs extends io.pulumi.resou
     	      this.id = defaults.id;
         }
 
-        public Builder baseUrl(Input<String> baseUrl) {
+        public Builder baseUrl(Output<String> baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
 
         public Builder baseUrl(String baseUrl) {
-            this.baseUrl = Input.of(Objects.requireNonNull(baseUrl));
+            this.baseUrl = Output.of(Objects.requireNonNull(baseUrl));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder gpgKeys(@Nullable Input<List<String>> gpgKeys) {
+        public Builder gpgKeys(@Nullable Output<List<String>> gpgKeys) {
             this.gpgKeys = gpgKeys;
             return this;
         }
 
         public Builder gpgKeys(@Nullable List<String> gpgKeys) {
-            this.gpgKeys = Input.ofNullable(gpgKeys);
+            this.gpgKeys = Output.ofNullable(gpgKeys);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
         public GuestPoliciesPackageRepositoryYumArgs build() {

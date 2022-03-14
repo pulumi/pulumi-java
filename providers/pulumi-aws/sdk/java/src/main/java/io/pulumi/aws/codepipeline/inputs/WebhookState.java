@@ -5,7 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationGetArgs;
 import io.pulumi.aws.codepipeline.inputs.WebhookFilterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<String> authentication;
+      private final @Nullable Output<String> authentication;
 
-    public Input<String> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<String> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationConfiguration")
-      private final @Nullable Input<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
+      private final @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
-    public Input<WebhookAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
+    public Output<WebhookAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
+        return this.authenticationConfiguration == null ? Output.empty() : this.authenticationConfiguration;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<List<WebhookFilterGetArgs>> filters;
+      private final @Nullable Output<List<WebhookFilterGetArgs>> filters;
 
-    public Input<List<WebhookFilterGetArgs>> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<List<WebhookFilterGetArgs>> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetAction")
-      private final @Nullable Input<String> targetAction;
+      private final @Nullable Output<String> targetAction;
 
-    public Input<String> getTargetAction() {
-        return this.targetAction == null ? Input.empty() : this.targetAction;
+    public Output<String> getTargetAction() {
+        return this.targetAction == null ? Output.empty() : this.targetAction;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPipeline")
-      private final @Nullable Input<String> targetPipeline;
+      private final @Nullable Output<String> targetPipeline;
 
-    public Input<String> getTargetPipeline() {
-        return this.targetPipeline == null ? Input.empty() : this.targetPipeline;
+    public Output<String> getTargetPipeline() {
+        return this.targetPipeline == null ? Output.empty() : this.targetPipeline;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public WebhookState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> authentication,
-        @Nullable Input<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration,
-        @Nullable Input<List<WebhookFilterGetArgs>> filters,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> targetAction,
-        @Nullable Input<String> targetPipeline,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> authentication,
+        @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration,
+        @Nullable Output<List<WebhookFilterGetArgs>> filters,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> targetAction,
+        @Nullable Output<String> targetPipeline,
+        @Nullable Output<String> url) {
         this.arn = arn;
         this.authentication = authentication;
         this.authenticationConfiguration = authenticationConfiguration;
@@ -152,16 +152,16 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookState() {
-        this.arn = Input.empty();
-        this.authentication = Input.empty();
-        this.authenticationConfiguration = Input.empty();
-        this.filters = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.targetAction = Input.empty();
-        this.targetPipeline = Input.empty();
-        this.url = Input.empty();
+        this.arn = Output.empty();
+        this.authentication = Output.empty();
+        this.authenticationConfiguration = Output.empty();
+        this.filters = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.targetAction = Output.empty();
+        this.targetPipeline = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> authentication;
-        private @Nullable Input<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
-        private @Nullable Input<List<WebhookFilterGetArgs>> filters;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> targetAction;
-        private @Nullable Input<String> targetPipeline;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> authentication;
+        private @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
+        private @Nullable Output<List<WebhookFilterGetArgs>> filters;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> targetAction;
+        private @Nullable Output<String> targetPipeline;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder authentication(@Nullable Input<String> authentication) {
+        public Builder authentication(@Nullable Output<String> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable String authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder authenticationConfiguration(@Nullable Input<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
         public Builder authenticationConfiguration(@Nullable WebhookAuthenticationConfigurationGetArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
+            this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder filters(@Nullable Input<List<WebhookFilterGetArgs>> filters) {
+        public Builder filters(@Nullable Output<List<WebhookFilterGetArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<WebhookFilterGetArgs> filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder targetAction(@Nullable Input<String> targetAction) {
+        public Builder targetAction(@Nullable Output<String> targetAction) {
             this.targetAction = targetAction;
             return this;
         }
 
         public Builder targetAction(@Nullable String targetAction) {
-            this.targetAction = Input.ofNullable(targetAction);
+            this.targetAction = Output.ofNullable(targetAction);
             return this;
         }
 
-        public Builder targetPipeline(@Nullable Input<String> targetPipeline) {
+        public Builder targetPipeline(@Nullable Output<String> targetPipeline) {
             this.targetPipeline = targetPipeline;
             return this;
         }
 
         public Builder targetPipeline(@Nullable String targetPipeline) {
-            this.targetPipeline = Input.ofNullable(targetPipeline);
+            this.targetPipeline = Output.ofNullable(targetPipeline);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public WebhookState build() {

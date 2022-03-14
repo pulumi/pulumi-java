@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appautoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxCapacity")
-      private final @Nullable Input<Integer> maxCapacity;
+      private final @Nullable Output<Integer> maxCapacity;
 
-    public Input<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
+    public Output<Integer> getMaxCapacity() {
+        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="minCapacity")
-      private final @Nullable Input<Integer> minCapacity;
+      private final @Nullable Output<Integer> minCapacity;
 
-    public Input<Integer> getMinCapacity() {
-        return this.minCapacity == null ? Input.empty() : this.minCapacity;
+    public Output<Integer> getMinCapacity() {
+        return this.minCapacity == null ? Output.empty() : this.minCapacity;
     }
 
     public ScheduledActionScalableTargetActionGetArgs(
-        @Nullable Input<Integer> maxCapacity,
-        @Nullable Input<Integer> minCapacity) {
+        @Nullable Output<Integer> maxCapacity,
+        @Nullable Output<Integer> minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }
 
     private ScheduledActionScalableTargetActionGetArgs() {
-        this.maxCapacity = Input.empty();
-        this.minCapacity = Input.empty();
+        this.maxCapacity = Output.empty();
+        this.minCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxCapacity;
-        private @Nullable Input<Integer> minCapacity;
+        private @Nullable Output<Integer> maxCapacity;
+        private @Nullable Output<Integer> minCapacity;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Input.ofNullable(maxCapacity);
+            this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder minCapacity(@Nullable Input<Integer> minCapacity) {
+        public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
         public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Input.ofNullable(minCapacity);
+            this.minCapacity = Output.ofNullable(minCapacity);
             return this;
         }
         public ScheduledActionScalableTargetActionGetArgs build() {

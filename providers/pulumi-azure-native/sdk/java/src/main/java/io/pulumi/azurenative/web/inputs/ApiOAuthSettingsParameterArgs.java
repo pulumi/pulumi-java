@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<Object> options;
+      private final @Nullable Output<Object> options;
 
-    public Input<Object> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<Object> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="uiDefinition")
-      private final @Nullable Input<Object> uiDefinition;
+      private final @Nullable Output<Object> uiDefinition;
 
-    public Input<Object> getUiDefinition() {
-        return this.uiDefinition == null ? Input.empty() : this.uiDefinition;
+    public Output<Object> getUiDefinition() {
+        return this.uiDefinition == null ? Output.empty() : this.uiDefinition;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ApiOAuthSettingsParameterArgs(
-        @Nullable Input<Object> options,
-        @Nullable Input<Object> uiDefinition,
-        @Nullable Input<String> value) {
+        @Nullable Output<Object> options,
+        @Nullable Output<Object> uiDefinition,
+        @Nullable Output<String> value) {
         this.options = options;
         this.uiDefinition = uiDefinition;
         this.value = value;
     }
 
     private ApiOAuthSettingsParameterArgs() {
-        this.options = Input.empty();
-        this.uiDefinition = Input.empty();
-        this.value = Input.empty();
+        this.options = Output.empty();
+        this.uiDefinition = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> options;
-        private @Nullable Input<Object> uiDefinition;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Object> options;
+        private @Nullable Output<Object> uiDefinition;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
     	      this.value = defaults.value;
         }
 
-        public Builder options(@Nullable Input<Object> options) {
+        public Builder options(@Nullable Output<Object> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable Object options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder uiDefinition(@Nullable Input<Object> uiDefinition) {
+        public Builder uiDefinition(@Nullable Output<Object> uiDefinition) {
             this.uiDefinition = uiDefinition;
             return this;
         }
 
         public Builder uiDefinition(@Nullable Object uiDefinition) {
-            this.uiDefinition = Input.ofNullable(uiDefinition);
+            this.uiDefinition = Output.ofNullable(uiDefinition);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ApiOAuthSettingsParameterArgs build() {

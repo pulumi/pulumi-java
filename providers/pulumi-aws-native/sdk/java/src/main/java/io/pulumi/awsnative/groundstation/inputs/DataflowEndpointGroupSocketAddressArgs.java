@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
     public static final DataflowEndpointGroupSocketAddressArgs Empty = new DataflowEndpointGroupSocketAddressArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public DataflowEndpointGroupSocketAddressArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> port) {
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> port) {
         this.name = name;
         this.port = port;
     }
 
     private DataflowEndpointGroupSocketAddressArgs() {
-        this.name = Input.empty();
-        this.port = Input.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> port;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
     	      this.port = defaults.port;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public DataflowEndpointGroupSocketAddressArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ZoneVpcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
@@ -30,22 +30,22 @@ public final class ZoneVpcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcRegion")
-      private final @Nullable Input<String> vpcRegion;
+      private final @Nullable Output<String> vpcRegion;
 
-    public Input<String> getVpcRegion() {
-        return this.vpcRegion == null ? Input.empty() : this.vpcRegion;
+    public Output<String> getVpcRegion() {
+        return this.vpcRegion == null ? Output.empty() : this.vpcRegion;
     }
 
     public ZoneVpcArgs(
-        Input<String> vpcId,
-        @Nullable Input<String> vpcRegion) {
+        Output<String> vpcId,
+        @Nullable Output<String> vpcRegion) {
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
         this.vpcRegion = vpcRegion;
     }
 
     private ZoneVpcArgs() {
-        this.vpcId = Input.empty();
-        this.vpcRegion = Input.empty();
+        this.vpcId = Output.empty();
+        this.vpcRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ZoneVpcArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> vpcId;
-        private @Nullable Input<String> vpcRegion;
+        private Output<String> vpcId;
+        private @Nullable Output<String> vpcRegion;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ZoneVpcArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcRegion = defaults.vpcRegion;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
 
-        public Builder vpcRegion(@Nullable Input<String> vpcRegion) {
+        public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
 
         public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Input.ofNullable(vpcRegion);
+            this.vpcRegion = Output.ofNullable(vpcRegion);
             return this;
         }
         public ZoneVpcArgs build() {

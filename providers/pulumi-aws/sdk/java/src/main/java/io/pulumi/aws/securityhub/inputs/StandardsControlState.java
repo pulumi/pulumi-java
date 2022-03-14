@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="controlId")
-      private final @Nullable Input<String> controlId;
+      private final @Nullable Output<String> controlId;
 
-    public Input<String> getControlId() {
-        return this.controlId == null ? Input.empty() : this.controlId;
+    public Output<String> getControlId() {
+        return this.controlId == null ? Output.empty() : this.controlId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="controlStatus")
-      private final @Nullable Input<String> controlStatus;
+      private final @Nullable Output<String> controlStatus;
 
-    public Input<String> getControlStatus() {
-        return this.controlStatus == null ? Input.empty() : this.controlStatus;
+    public Output<String> getControlStatus() {
+        return this.controlStatus == null ? Output.empty() : this.controlStatus;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="controlStatusUpdatedAt")
-      private final @Nullable Input<String> controlStatusUpdatedAt;
+      private final @Nullable Output<String> controlStatusUpdatedAt;
 
-    public Input<String> getControlStatusUpdatedAt() {
-        return this.controlStatusUpdatedAt == null ? Input.empty() : this.controlStatusUpdatedAt;
+    public Output<String> getControlStatusUpdatedAt() {
+        return this.controlStatusUpdatedAt == null ? Output.empty() : this.controlStatusUpdatedAt;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disabledReason")
-      private final @Nullable Input<String> disabledReason;
+      private final @Nullable Output<String> disabledReason;
 
-    public Input<String> getDisabledReason() {
-        return this.disabledReason == null ? Input.empty() : this.disabledReason;
+    public Output<String> getDisabledReason() {
+        return this.disabledReason == null ? Output.empty() : this.disabledReason;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="relatedRequirements")
-      private final @Nullable Input<List<String>> relatedRequirements;
+      private final @Nullable Output<List<String>> relatedRequirements;
 
-    public Input<List<String>> getRelatedRequirements() {
-        return this.relatedRequirements == null ? Input.empty() : this.relatedRequirements;
+    public Output<List<String>> getRelatedRequirements() {
+        return this.relatedRequirements == null ? Output.empty() : this.relatedRequirements;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remediationUrl")
-      private final @Nullable Input<String> remediationUrl;
+      private final @Nullable Output<String> remediationUrl;
 
-    public Input<String> getRemediationUrl() {
-        return this.remediationUrl == null ? Input.empty() : this.remediationUrl;
+    public Output<String> getRemediationUrl() {
+        return this.remediationUrl == null ? Output.empty() : this.remediationUrl;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="severityRating")
-      private final @Nullable Input<String> severityRating;
+      private final @Nullable Output<String> severityRating;
 
-    public Input<String> getSeverityRating() {
-        return this.severityRating == null ? Input.empty() : this.severityRating;
+    public Output<String> getSeverityRating() {
+        return this.severityRating == null ? Output.empty() : this.severityRating;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="standardsControlArn")
-      private final @Nullable Input<String> standardsControlArn;
+      private final @Nullable Output<String> standardsControlArn;
 
-    public Input<String> getStandardsControlArn() {
-        return this.standardsControlArn == null ? Input.empty() : this.standardsControlArn;
+    public Output<String> getStandardsControlArn() {
+        return this.standardsControlArn == null ? Output.empty() : this.standardsControlArn;
     }
 
     /**
@@ -119,23 +119,23 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public StandardsControlState(
-        @Nullable Input<String> controlId,
-        @Nullable Input<String> controlStatus,
-        @Nullable Input<String> controlStatusUpdatedAt,
-        @Nullable Input<String> description,
-        @Nullable Input<String> disabledReason,
-        @Nullable Input<List<String>> relatedRequirements,
-        @Nullable Input<String> remediationUrl,
-        @Nullable Input<String> severityRating,
-        @Nullable Input<String> standardsControlArn,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> controlId,
+        @Nullable Output<String> controlStatus,
+        @Nullable Output<String> controlStatusUpdatedAt,
+        @Nullable Output<String> description,
+        @Nullable Output<String> disabledReason,
+        @Nullable Output<List<String>> relatedRequirements,
+        @Nullable Output<String> remediationUrl,
+        @Nullable Output<String> severityRating,
+        @Nullable Output<String> standardsControlArn,
+        @Nullable Output<String> title) {
         this.controlId = controlId;
         this.controlStatus = controlStatus;
         this.controlStatusUpdatedAt = controlStatusUpdatedAt;
@@ -149,16 +149,16 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     }
 
     private StandardsControlState() {
-        this.controlId = Input.empty();
-        this.controlStatus = Input.empty();
-        this.controlStatusUpdatedAt = Input.empty();
-        this.description = Input.empty();
-        this.disabledReason = Input.empty();
-        this.relatedRequirements = Input.empty();
-        this.remediationUrl = Input.empty();
-        this.severityRating = Input.empty();
-        this.standardsControlArn = Input.empty();
-        this.title = Input.empty();
+        this.controlId = Output.empty();
+        this.controlStatus = Output.empty();
+        this.controlStatusUpdatedAt = Output.empty();
+        this.description = Output.empty();
+        this.disabledReason = Output.empty();
+        this.relatedRequirements = Output.empty();
+        this.remediationUrl = Output.empty();
+        this.severityRating = Output.empty();
+        this.standardsControlArn = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,16 +170,16 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> controlId;
-        private @Nullable Input<String> controlStatus;
-        private @Nullable Input<String> controlStatusUpdatedAt;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> disabledReason;
-        private @Nullable Input<List<String>> relatedRequirements;
-        private @Nullable Input<String> remediationUrl;
-        private @Nullable Input<String> severityRating;
-        private @Nullable Input<String> standardsControlArn;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> controlId;
+        private @Nullable Output<String> controlStatus;
+        private @Nullable Output<String> controlStatusUpdatedAt;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> disabledReason;
+        private @Nullable Output<List<String>> relatedRequirements;
+        private @Nullable Output<String> remediationUrl;
+        private @Nullable Output<String> severityRating;
+        private @Nullable Output<String> standardsControlArn;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -199,103 +199,103 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     	      this.title = defaults.title;
         }
 
-        public Builder controlId(@Nullable Input<String> controlId) {
+        public Builder controlId(@Nullable Output<String> controlId) {
             this.controlId = controlId;
             return this;
         }
 
         public Builder controlId(@Nullable String controlId) {
-            this.controlId = Input.ofNullable(controlId);
+            this.controlId = Output.ofNullable(controlId);
             return this;
         }
 
-        public Builder controlStatus(@Nullable Input<String> controlStatus) {
+        public Builder controlStatus(@Nullable Output<String> controlStatus) {
             this.controlStatus = controlStatus;
             return this;
         }
 
         public Builder controlStatus(@Nullable String controlStatus) {
-            this.controlStatus = Input.ofNullable(controlStatus);
+            this.controlStatus = Output.ofNullable(controlStatus);
             return this;
         }
 
-        public Builder controlStatusUpdatedAt(@Nullable Input<String> controlStatusUpdatedAt) {
+        public Builder controlStatusUpdatedAt(@Nullable Output<String> controlStatusUpdatedAt) {
             this.controlStatusUpdatedAt = controlStatusUpdatedAt;
             return this;
         }
 
         public Builder controlStatusUpdatedAt(@Nullable String controlStatusUpdatedAt) {
-            this.controlStatusUpdatedAt = Input.ofNullable(controlStatusUpdatedAt);
+            this.controlStatusUpdatedAt = Output.ofNullable(controlStatusUpdatedAt);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabledReason(@Nullable Input<String> disabledReason) {
+        public Builder disabledReason(@Nullable Output<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
 
         public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Input.ofNullable(disabledReason);
+            this.disabledReason = Output.ofNullable(disabledReason);
             return this;
         }
 
-        public Builder relatedRequirements(@Nullable Input<List<String>> relatedRequirements) {
+        public Builder relatedRequirements(@Nullable Output<List<String>> relatedRequirements) {
             this.relatedRequirements = relatedRequirements;
             return this;
         }
 
         public Builder relatedRequirements(@Nullable List<String> relatedRequirements) {
-            this.relatedRequirements = Input.ofNullable(relatedRequirements);
+            this.relatedRequirements = Output.ofNullable(relatedRequirements);
             return this;
         }
 
-        public Builder remediationUrl(@Nullable Input<String> remediationUrl) {
+        public Builder remediationUrl(@Nullable Output<String> remediationUrl) {
             this.remediationUrl = remediationUrl;
             return this;
         }
 
         public Builder remediationUrl(@Nullable String remediationUrl) {
-            this.remediationUrl = Input.ofNullable(remediationUrl);
+            this.remediationUrl = Output.ofNullable(remediationUrl);
             return this;
         }
 
-        public Builder severityRating(@Nullable Input<String> severityRating) {
+        public Builder severityRating(@Nullable Output<String> severityRating) {
             this.severityRating = severityRating;
             return this;
         }
 
         public Builder severityRating(@Nullable String severityRating) {
-            this.severityRating = Input.ofNullable(severityRating);
+            this.severityRating = Output.ofNullable(severityRating);
             return this;
         }
 
-        public Builder standardsControlArn(@Nullable Input<String> standardsControlArn) {
+        public Builder standardsControlArn(@Nullable Output<String> standardsControlArn) {
             this.standardsControlArn = standardsControlArn;
             return this;
         }
 
         public Builder standardsControlArn(@Nullable String standardsControlArn) {
-            this.standardsControlArn = Input.ofNullable(standardsControlArn);
+            this.standardsControlArn = Output.ofNullable(standardsControlArn);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public StandardsControlState build() {

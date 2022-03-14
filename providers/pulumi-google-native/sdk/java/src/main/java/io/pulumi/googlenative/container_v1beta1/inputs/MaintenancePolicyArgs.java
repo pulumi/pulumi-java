@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.MaintenanceWindowArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceVersion")
-      private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Output<String> resourceVersion;
 
-    public Input<String> getResourceVersion() {
-        return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
+    public Output<String> getResourceVersion() {
+        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="window")
-      private final @Nullable Input<MaintenanceWindowArgs> window;
+      private final @Nullable Output<MaintenanceWindowArgs> window;
 
-    public Input<MaintenanceWindowArgs> getWindow() {
-        return this.window == null ? Input.empty() : this.window;
+    public Output<MaintenanceWindowArgs> getWindow() {
+        return this.window == null ? Output.empty() : this.window;
     }
 
     public MaintenancePolicyArgs(
-        @Nullable Input<String> resourceVersion,
-        @Nullable Input<MaintenanceWindowArgs> window) {
+        @Nullable Output<String> resourceVersion,
+        @Nullable Output<MaintenanceWindowArgs> window) {
         this.resourceVersion = resourceVersion;
         this.window = window;
     }
 
     private MaintenancePolicyArgs() {
-        this.resourceVersion = Input.empty();
-        this.window = Input.empty();
+        this.resourceVersion = Output.empty();
+        this.window = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceVersion;
-        private @Nullable Input<MaintenanceWindowArgs> window;
+        private @Nullable Output<String> resourceVersion;
+        private @Nullable Output<MaintenanceWindowArgs> window;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.window = defaults.window;
         }
 
-        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Input.ofNullable(resourceVersion);
+            this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder window(@Nullable Input<MaintenanceWindowArgs> window) {
+        public Builder window(@Nullable Output<MaintenanceWindowArgs> window) {
             this.window = window;
             return this;
         }
 
         public Builder window(@Nullable MaintenanceWindowArgs window) {
-            this.window = Input.ofNullable(window);
+            this.window = Output.ofNullable(window);
             return this;
         }
         public MaintenancePolicyArgs build() {

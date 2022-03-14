@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.IdentityConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.KerberosConfigArgs;
@@ -24,10 +24,10 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityConfig")
-      private final @Nullable Input<IdentityConfigArgs> identityConfig;
+      private final @Nullable Output<IdentityConfigArgs> identityConfig;
 
-    public Input<IdentityConfigArgs> getIdentityConfig() {
-        return this.identityConfig == null ? Input.empty() : this.identityConfig;
+    public Output<IdentityConfigArgs> getIdentityConfig() {
+        return this.identityConfig == null ? Output.empty() : this.identityConfig;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosConfig")
-      private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
+      private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
-    public Input<KerberosConfigArgs> getKerberosConfig() {
-        return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
+    public Output<KerberosConfigArgs> getKerberosConfig() {
+        return this.kerberosConfig == null ? Output.empty() : this.kerberosConfig;
     }
 
     public SecurityConfigArgs(
-        @Nullable Input<IdentityConfigArgs> identityConfig,
-        @Nullable Input<KerberosConfigArgs> kerberosConfig) {
+        @Nullable Output<IdentityConfigArgs> identityConfig,
+        @Nullable Output<KerberosConfigArgs> kerberosConfig) {
         this.identityConfig = identityConfig;
         this.kerberosConfig = kerberosConfig;
     }
 
     private SecurityConfigArgs() {
-        this.identityConfig = Input.empty();
-        this.kerberosConfig = Input.empty();
+        this.identityConfig = Output.empty();
+        this.kerberosConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IdentityConfigArgs> identityConfig;
-        private @Nullable Input<KerberosConfigArgs> kerberosConfig;
+        private @Nullable Output<IdentityConfigArgs> identityConfig;
+        private @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder identityConfig(@Nullable Input<IdentityConfigArgs> identityConfig) {
+        public Builder identityConfig(@Nullable Output<IdentityConfigArgs> identityConfig) {
             this.identityConfig = identityConfig;
             return this;
         }
 
         public Builder identityConfig(@Nullable IdentityConfigArgs identityConfig) {
-            this.identityConfig = Input.ofNullable(identityConfig);
+            this.identityConfig = Output.ofNullable(identityConfig);
             return this;
         }
 
-        public Builder kerberosConfig(@Nullable Input<KerberosConfigArgs> kerberosConfig) {
+        public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
 
         public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Input.ofNullable(kerberosConfig);
+            this.kerberosConfig = Output.ofNullable(kerberosConfig);
             return this;
         }
         public SecurityConfigArgs build() {

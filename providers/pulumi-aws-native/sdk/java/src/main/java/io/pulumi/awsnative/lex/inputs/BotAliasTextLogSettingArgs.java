@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasTextLogDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
     public static final BotAliasTextLogSettingArgs Empty = new BotAliasTextLogSettingArgs();
 
     @InputImport(name="destination")
-      private final @Nullable Input<BotAliasTextLogDestinationArgs> destination;
+      private final @Nullable Output<BotAliasTextLogDestinationArgs> destination;
 
-    public Input<BotAliasTextLogDestinationArgs> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<BotAliasTextLogDestinationArgs> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public BotAliasTextLogSettingArgs(
-        @Nullable Input<BotAliasTextLogDestinationArgs> destination,
-        @Nullable Input<Boolean> enabled) {
+        @Nullable Output<BotAliasTextLogDestinationArgs> destination,
+        @Nullable Output<Boolean> enabled) {
         this.destination = destination;
         this.enabled = enabled;
     }
 
     private BotAliasTextLogSettingArgs() {
-        this.destination = Input.empty();
-        this.enabled = Input.empty();
+        this.destination = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<BotAliasTextLogDestinationArgs> destination;
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<BotAliasTextLogDestinationArgs> destination;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder destination(@Nullable Input<BotAliasTextLogDestinationArgs> destination) {
+        public Builder destination(@Nullable Output<BotAliasTextLogDestinationArgs> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable BotAliasTextLogDestinationArgs destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public BotAliasTextLogSettingArgs build() {

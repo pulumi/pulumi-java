@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="externalTablesToExclude")
-      private final @Nullable Input<List<String>> externalTablesToExclude;
+      private final @Nullable Output<List<String>> externalTablesToExclude;
 
-    public Input<List<String>> getExternalTablesToExclude() {
-        return this.externalTablesToExclude == null ? Input.empty() : this.externalTablesToExclude;
+    public Output<List<String>> getExternalTablesToExclude() {
+        return this.externalTablesToExclude == null ? Output.empty() : this.externalTablesToExclude;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="externalTablesToInclude")
-      private final @Nullable Input<List<String>> externalTablesToInclude;
+      private final @Nullable Output<List<String>> externalTablesToInclude;
 
-    public Input<List<String>> getExternalTablesToInclude() {
-        return this.externalTablesToInclude == null ? Input.empty() : this.externalTablesToInclude;
+    public Output<List<String>> getExternalTablesToInclude() {
+        return this.externalTablesToInclude == null ? Output.empty() : this.externalTablesToInclude;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="materializedViewsToExclude")
-      private final @Nullable Input<List<String>> materializedViewsToExclude;
+      private final @Nullable Output<List<String>> materializedViewsToExclude;
 
-    public Input<List<String>> getMaterializedViewsToExclude() {
-        return this.materializedViewsToExclude == null ? Input.empty() : this.materializedViewsToExclude;
+    public Output<List<String>> getMaterializedViewsToExclude() {
+        return this.materializedViewsToExclude == null ? Output.empty() : this.materializedViewsToExclude;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="materializedViewsToInclude")
-      private final @Nullable Input<List<String>> materializedViewsToInclude;
+      private final @Nullable Output<List<String>> materializedViewsToInclude;
 
-    public Input<List<String>> getMaterializedViewsToInclude() {
-        return this.materializedViewsToInclude == null ? Input.empty() : this.materializedViewsToInclude;
+    public Output<List<String>> getMaterializedViewsToInclude() {
+        return this.materializedViewsToInclude == null ? Output.empty() : this.materializedViewsToInclude;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tablesToExclude")
-      private final @Nullable Input<List<String>> tablesToExclude;
+      private final @Nullable Output<List<String>> tablesToExclude;
 
-    public Input<List<String>> getTablesToExclude() {
-        return this.tablesToExclude == null ? Input.empty() : this.tablesToExclude;
+    public Output<List<String>> getTablesToExclude() {
+        return this.tablesToExclude == null ? Output.empty() : this.tablesToExclude;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tablesToInclude")
-      private final @Nullable Input<List<String>> tablesToInclude;
+      private final @Nullable Output<List<String>> tablesToInclude;
 
-    public Input<List<String>> getTablesToInclude() {
-        return this.tablesToInclude == null ? Input.empty() : this.tablesToInclude;
+    public Output<List<String>> getTablesToInclude() {
+        return this.tablesToInclude == null ? Output.empty() : this.tablesToInclude;
     }
 
     public TableLevelSharingPropertiesArgs(
-        @Nullable Input<List<String>> externalTablesToExclude,
-        @Nullable Input<List<String>> externalTablesToInclude,
-        @Nullable Input<List<String>> materializedViewsToExclude,
-        @Nullable Input<List<String>> materializedViewsToInclude,
-        @Nullable Input<List<String>> tablesToExclude,
-        @Nullable Input<List<String>> tablesToInclude) {
+        @Nullable Output<List<String>> externalTablesToExclude,
+        @Nullable Output<List<String>> externalTablesToInclude,
+        @Nullable Output<List<String>> materializedViewsToExclude,
+        @Nullable Output<List<String>> materializedViewsToInclude,
+        @Nullable Output<List<String>> tablesToExclude,
+        @Nullable Output<List<String>> tablesToInclude) {
         this.externalTablesToExclude = externalTablesToExclude;
         this.externalTablesToInclude = externalTablesToInclude;
         this.materializedViewsToExclude = materializedViewsToExclude;
@@ -101,12 +101,12 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
     }
 
     private TableLevelSharingPropertiesArgs() {
-        this.externalTablesToExclude = Input.empty();
-        this.externalTablesToInclude = Input.empty();
-        this.materializedViewsToExclude = Input.empty();
-        this.materializedViewsToInclude = Input.empty();
-        this.tablesToExclude = Input.empty();
-        this.tablesToInclude = Input.empty();
+        this.externalTablesToExclude = Output.empty();
+        this.externalTablesToInclude = Output.empty();
+        this.materializedViewsToExclude = Output.empty();
+        this.materializedViewsToInclude = Output.empty();
+        this.tablesToExclude = Output.empty();
+        this.tablesToInclude = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> externalTablesToExclude;
-        private @Nullable Input<List<String>> externalTablesToInclude;
-        private @Nullable Input<List<String>> materializedViewsToExclude;
-        private @Nullable Input<List<String>> materializedViewsToInclude;
-        private @Nullable Input<List<String>> tablesToExclude;
-        private @Nullable Input<List<String>> tablesToInclude;
+        private @Nullable Output<List<String>> externalTablesToExclude;
+        private @Nullable Output<List<String>> externalTablesToInclude;
+        private @Nullable Output<List<String>> materializedViewsToExclude;
+        private @Nullable Output<List<String>> materializedViewsToInclude;
+        private @Nullable Output<List<String>> tablesToExclude;
+        private @Nullable Output<List<String>> tablesToInclude;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
     	      this.tablesToInclude = defaults.tablesToInclude;
         }
 
-        public Builder externalTablesToExclude(@Nullable Input<List<String>> externalTablesToExclude) {
+        public Builder externalTablesToExclude(@Nullable Output<List<String>> externalTablesToExclude) {
             this.externalTablesToExclude = externalTablesToExclude;
             return this;
         }
 
         public Builder externalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
-            this.externalTablesToExclude = Input.ofNullable(externalTablesToExclude);
+            this.externalTablesToExclude = Output.ofNullable(externalTablesToExclude);
             return this;
         }
 
-        public Builder externalTablesToInclude(@Nullable Input<List<String>> externalTablesToInclude) {
+        public Builder externalTablesToInclude(@Nullable Output<List<String>> externalTablesToInclude) {
             this.externalTablesToInclude = externalTablesToInclude;
             return this;
         }
 
         public Builder externalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
-            this.externalTablesToInclude = Input.ofNullable(externalTablesToInclude);
+            this.externalTablesToInclude = Output.ofNullable(externalTablesToInclude);
             return this;
         }
 
-        public Builder materializedViewsToExclude(@Nullable Input<List<String>> materializedViewsToExclude) {
+        public Builder materializedViewsToExclude(@Nullable Output<List<String>> materializedViewsToExclude) {
             this.materializedViewsToExclude = materializedViewsToExclude;
             return this;
         }
 
         public Builder materializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
-            this.materializedViewsToExclude = Input.ofNullable(materializedViewsToExclude);
+            this.materializedViewsToExclude = Output.ofNullable(materializedViewsToExclude);
             return this;
         }
 
-        public Builder materializedViewsToInclude(@Nullable Input<List<String>> materializedViewsToInclude) {
+        public Builder materializedViewsToInclude(@Nullable Output<List<String>> materializedViewsToInclude) {
             this.materializedViewsToInclude = materializedViewsToInclude;
             return this;
         }
 
         public Builder materializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
-            this.materializedViewsToInclude = Input.ofNullable(materializedViewsToInclude);
+            this.materializedViewsToInclude = Output.ofNullable(materializedViewsToInclude);
             return this;
         }
 
-        public Builder tablesToExclude(@Nullable Input<List<String>> tablesToExclude) {
+        public Builder tablesToExclude(@Nullable Output<List<String>> tablesToExclude) {
             this.tablesToExclude = tablesToExclude;
             return this;
         }
 
         public Builder tablesToExclude(@Nullable List<String> tablesToExclude) {
-            this.tablesToExclude = Input.ofNullable(tablesToExclude);
+            this.tablesToExclude = Output.ofNullable(tablesToExclude);
             return this;
         }
 
-        public Builder tablesToInclude(@Nullable Input<List<String>> tablesToInclude) {
+        public Builder tablesToInclude(@Nullable Output<List<String>> tablesToInclude) {
             this.tablesToInclude = tablesToInclude;
             return this;
         }
 
         public Builder tablesToInclude(@Nullable List<String> tablesToInclude) {
-            this.tablesToInclude = Input.ofNullable(tablesToInclude);
+            this.tablesToInclude = Output.ofNullable(tablesToInclude);
             return this;
         }
         public TableLevelSharingPropertiesArgs build() {

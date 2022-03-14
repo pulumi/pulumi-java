@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -33,22 +33,22 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public KeyVaultReferenceArgs(
-        Input<String> id,
-        Input<String> url) {
+        Output<String> id,
+        Output<String> url) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private KeyVaultReferenceArgs() {
-        this.id = Input.empty();
-        this.url = Input.empty();
+        this.id = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<String> url;
+        private Output<String> id;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
     	      this.url = defaults.url;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public KeyVaultReferenceArgs build() {

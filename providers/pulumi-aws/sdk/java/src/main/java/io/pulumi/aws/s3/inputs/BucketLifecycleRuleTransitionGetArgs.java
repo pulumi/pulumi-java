@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="date")
-      private final @Nullable Input<String> date;
+      private final @Nullable Output<String> date;
 
-    public Input<String> getDate() {
-        return this.date == null ? Input.empty() : this.date;
+    public Output<String> getDate() {
+        return this.date == null ? Output.empty() : this.date;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageClass", required=true)
-      private final Input<String> storageClass;
+      private final Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
+    public Output<String> getStorageClass() {
         return this.storageClass;
     }
 
     public BucketLifecycleRuleTransitionGetArgs(
-        @Nullable Input<String> date,
-        @Nullable Input<Integer> days,
-        Input<String> storageClass) {
+        @Nullable Output<String> date,
+        @Nullable Output<Integer> days,
+        Output<String> storageClass) {
         this.date = date;
         this.days = days;
         this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
     }
 
     private BucketLifecycleRuleTransitionGetArgs() {
-        this.date = Input.empty();
-        this.days = Input.empty();
-        this.storageClass = Input.empty();
+        this.date = Output.empty();
+        this.days = Output.empty();
+        this.storageClass = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> date;
-        private @Nullable Input<Integer> days;
-        private Input<String> storageClass;
+        private @Nullable Output<String> date;
+        private @Nullable Output<Integer> days;
+        private Output<String> storageClass;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder date(@Nullable Input<String> date) {
+        public Builder date(@Nullable Output<String> date) {
             this.date = date;
             return this;
         }
 
         public Builder date(@Nullable String date) {
-            this.date = Input.ofNullable(date);
+            this.date = Output.ofNullable(date);
             return this;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder storageClass(Input<String> storageClass) {
+        public Builder storageClass(Output<String> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
         public Builder storageClass(String storageClass) {
-            this.storageClass = Input.of(Objects.requireNonNull(storageClass));
+            this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
         public BucketLifecycleRuleTransitionGetArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.enums.HealthStateName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthStateName", required=true)
-      private final Input<Either<String,HealthStateName>> healthStateName;
+      private final Output<Either<String,HealthStateName>> healthStateName;
 
-    public Input<Either<String,HealthStateName>> getHealthStateName() {
+    public Output<Either<String,HealthStateName>> getHealthStateName() {
         return this.healthStateName;
     }
 
@@ -36,22 +36,22 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-      private final Input<Double> severity;
+      private final Output<Double> severity;
 
-    public Input<Double> getSeverity() {
+    public Output<Double> getSeverity() {
         return this.severity;
     }
 
     public HealthStateArgs(
-        Input<Either<String,HealthStateName>> healthStateName,
-        Input<Double> severity) {
+        Output<Either<String,HealthStateName>> healthStateName,
+        Output<Double> severity) {
         this.healthStateName = Objects.requireNonNull(healthStateName, "expected parameter 'healthStateName' to be non-null");
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
     }
 
     private HealthStateArgs() {
-        this.healthStateName = Input.empty();
-        this.severity = Input.empty();
+        this.healthStateName = Output.empty();
+        this.severity = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,HealthStateName>> healthStateName;
-        private Input<Double> severity;
+        private Output<Either<String,HealthStateName>> healthStateName;
+        private Output<Double> severity;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.severity = defaults.severity;
         }
 
-        public Builder healthStateName(Input<Either<String,HealthStateName>> healthStateName) {
+        public Builder healthStateName(Output<Either<String,HealthStateName>> healthStateName) {
             this.healthStateName = Objects.requireNonNull(healthStateName);
             return this;
         }
 
         public Builder healthStateName(Either<String,HealthStateName> healthStateName) {
-            this.healthStateName = Input.of(Objects.requireNonNull(healthStateName));
+            this.healthStateName = Output.of(Objects.requireNonNull(healthStateName));
             return this;
         }
 
-        public Builder severity(Input<Double> severity) {
+        public Builder severity(Output<Double> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
         public Builder severity(Double severity) {
-            this.severity = Input.of(Objects.requireNonNull(severity));
+            this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
         public HealthStateArgs build() {

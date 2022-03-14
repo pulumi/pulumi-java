@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticsearch.DomainSamlOptionsArgs;
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsState;
 import io.pulumi.aws.elasticsearch.outputs.DomainSamlOptionsSamlOptions;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -97,14 +96,14 @@ public class DomainSamlOptions extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainSamlOptions(String name, DomainSamlOptionsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticsearch/domainSamlOptions:DomainSamlOptions", name, args == null ? DomainSamlOptionsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elasticsearch/domainSamlOptions:DomainSamlOptions", name, args == null ? DomainSamlOptionsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DomainSamlOptions(String name, Input<String> id, @Nullable DomainSamlOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DomainSamlOptions(String name, Output<String> id, @Nullable DomainSamlOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elasticsearch/domainSamlOptions:DomainSamlOptions", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -120,7 +119,7 @@ public class DomainSamlOptions extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DomainSamlOptions get(String name, Input<String> id, @Nullable DomainSamlOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DomainSamlOptions get(String name, Output<String> id, @Nullable DomainSamlOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DomainSamlOptions(name, id, state, options);
     }
 }

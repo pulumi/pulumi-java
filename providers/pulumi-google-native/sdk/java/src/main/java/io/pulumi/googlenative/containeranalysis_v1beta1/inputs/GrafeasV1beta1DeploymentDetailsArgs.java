@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DeploymentArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deployment", required=true)
-      private final Input<DeploymentArgs> deployment;
+      private final Output<DeploymentArgs> deployment;
 
-    public Input<DeploymentArgs> getDeployment() {
+    public Output<DeploymentArgs> getDeployment() {
         return this.deployment;
     }
 
-    public GrafeasV1beta1DeploymentDetailsArgs(Input<DeploymentArgs> deployment) {
+    public GrafeasV1beta1DeploymentDetailsArgs(Output<DeploymentArgs> deployment) {
         this.deployment = Objects.requireNonNull(deployment, "expected parameter 'deployment' to be non-null");
     }
 
     private GrafeasV1beta1DeploymentDetailsArgs() {
-        this.deployment = Input.empty();
+        this.deployment = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<DeploymentArgs> deployment;
+        private Output<DeploymentArgs> deployment;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends io.pulumi.resourc
     	      this.deployment = defaults.deployment;
         }
 
-        public Builder deployment(Input<DeploymentArgs> deployment) {
+        public Builder deployment(Output<DeploymentArgs> deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
 
         public Builder deployment(DeploymentArgs deployment) {
-            this.deployment = Input.of(Objects.requireNonNull(deployment));
+            this.deployment = Output.of(Objects.requireNonNull(deployment));
             return this;
         }
         public GrafeasV1beta1DeploymentDetailsArgs build() {

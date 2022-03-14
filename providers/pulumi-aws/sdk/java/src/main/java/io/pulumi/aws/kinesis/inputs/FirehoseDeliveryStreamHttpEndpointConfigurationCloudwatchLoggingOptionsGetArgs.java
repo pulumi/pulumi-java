@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
      * 
      */
     @InputImport(name="logStreamName")
-      private final @Nullable Input<String> logStreamName;
+      private final @Nullable Output<String> logStreamName;
 
-    public Input<String> getLogStreamName() {
-        return this.logStreamName == null ? Input.empty() : this.logStreamName;
+    public Output<String> getLogStreamName() {
+        return this.logStreamName == null ? Output.empty() : this.logStreamName;
     }
 
     public FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> logGroupName,
-        @Nullable Input<String> logStreamName) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> logGroupName,
+        @Nullable Output<String> logStreamName) {
         this.enabled = enabled;
         this.logGroupName = logGroupName;
         this.logStreamName = logStreamName;
     }
 
     private FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs() {
-        this.enabled = Input.empty();
-        this.logGroupName = Input.empty();
-        this.logStreamName = Input.empty();
+        this.enabled = Output.empty();
+        this.logGroupName = Output.empty();
+        this.logStreamName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> logGroupName;
-        private @Nullable Input<String> logStreamName;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> logGroupName;
+        private @Nullable Output<String> logStreamName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
     	      this.logStreamName = defaults.logStreamName;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder logStreamName(@Nullable Input<String> logStreamName) {
+        public Builder logStreamName(@Nullable Output<String> logStreamName) {
             this.logStreamName = logStreamName;
             return this;
         }
 
         public Builder logStreamName(@Nullable String logStreamName) {
-            this.logStreamName = Input.ofNullable(logStreamName);
+            this.logStreamName = Output.ofNullable(logStreamName);
             return this;
         }
         public FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs build() {

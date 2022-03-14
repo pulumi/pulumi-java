@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="analyticalStorageTtl")
-      private final @Nullable Input<Integer> analyticalStorageTtl;
+      private final @Nullable Output<Integer> analyticalStorageTtl;
 
-    public Input<Integer> getAnalyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Input.empty() : this.analyticalStorageTtl;
+    public Output<Integer> getAnalyticalStorageTtl() {
+        return this.analyticalStorageTtl == null ? Output.empty() : this.analyticalStorageTtl;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -49,10 +49,10 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="indexes")
-      private final @Nullable Input<List<MongoIndexArgs>> indexes;
+      private final @Nullable Output<List<MongoIndexArgs>> indexes;
 
-    public Input<List<MongoIndexArgs>> getIndexes() {
-        return this.indexes == null ? Input.empty() : this.indexes;
+    public Output<List<MongoIndexArgs>> getIndexes() {
+        return this.indexes == null ? Output.empty() : this.indexes;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="shardKey")
-      private final @Nullable Input<Map<String,String>> shardKey;
+      private final @Nullable Output<Map<String,String>> shardKey;
 
-    public Input<Map<String,String>> getShardKey() {
-        return this.shardKey == null ? Input.empty() : this.shardKey;
+    public Output<Map<String,String>> getShardKey() {
+        return this.shardKey == null ? Output.empty() : this.shardKey;
     }
 
     public MongoDBCollectionResourceArgs(
-        @Nullable Input<Integer> analyticalStorageTtl,
-        Input<String> id,
-        @Nullable Input<List<MongoIndexArgs>> indexes,
-        @Nullable Input<Map<String,String>> shardKey) {
+        @Nullable Output<Integer> analyticalStorageTtl,
+        Output<String> id,
+        @Nullable Output<List<MongoIndexArgs>> indexes,
+        @Nullable Output<Map<String,String>> shardKey) {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.indexes = indexes;
@@ -78,10 +78,10 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
     }
 
     private MongoDBCollectionResourceArgs() {
-        this.analyticalStorageTtl = Input.empty();
-        this.id = Input.empty();
-        this.indexes = Input.empty();
-        this.shardKey = Input.empty();
+        this.analyticalStorageTtl = Output.empty();
+        this.id = Output.empty();
+        this.indexes = Output.empty();
+        this.shardKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> analyticalStorageTtl;
-        private Input<String> id;
-        private @Nullable Input<List<MongoIndexArgs>> indexes;
-        private @Nullable Input<Map<String,String>> shardKey;
+        private @Nullable Output<Integer> analyticalStorageTtl;
+        private Output<String> id;
+        private @Nullable Output<List<MongoIndexArgs>> indexes;
+        private @Nullable Output<Map<String,String>> shardKey;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
     	      this.shardKey = defaults.shardKey;
         }
 
-        public Builder analyticalStorageTtl(@Nullable Input<Integer> analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Output<Integer> analyticalStorageTtl) {
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = Input.ofNullable(analyticalStorageTtl);
+            this.analyticalStorageTtl = Output.ofNullable(analyticalStorageTtl);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder indexes(@Nullable Input<List<MongoIndexArgs>> indexes) {
+        public Builder indexes(@Nullable Output<List<MongoIndexArgs>> indexes) {
             this.indexes = indexes;
             return this;
         }
 
         public Builder indexes(@Nullable List<MongoIndexArgs> indexes) {
-            this.indexes = Input.ofNullable(indexes);
+            this.indexes = Output.ofNullable(indexes);
             return this;
         }
 
-        public Builder shardKey(@Nullable Input<Map<String,String>> shardKey) {
+        public Builder shardKey(@Nullable Output<Map<String,String>> shardKey) {
             this.shardKey = shardKey;
             return this;
         }
 
         public Builder shardKey(@Nullable Map<String,String> shardKey) {
-            this.shardKey = Input.ofNullable(shardKey);
+            this.shardKey = Output.ofNullable(shardKey);
             return this;
         }
         public MongoDBCollectionResourceArgs build() {

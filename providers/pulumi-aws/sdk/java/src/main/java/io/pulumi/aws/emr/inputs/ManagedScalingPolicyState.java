@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ManagedScalingPolicyState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clusterId")
-      private final @Nullable Input<String> clusterId;
+      private final @Nullable Output<String> clusterId;
 
-    public Input<String> getClusterId() {
-        return this.clusterId == null ? Input.empty() : this.clusterId;
+    public Output<String> getClusterId() {
+        return this.clusterId == null ? Output.empty() : this.clusterId;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ManagedScalingPolicyState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="computeLimits")
-      private final @Nullable Input<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
+      private final @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
 
-    public Input<List<ManagedScalingPolicyComputeLimitGetArgs>> getComputeLimits() {
-        return this.computeLimits == null ? Input.empty() : this.computeLimits;
+    public Output<List<ManagedScalingPolicyComputeLimitGetArgs>> getComputeLimits() {
+        return this.computeLimits == null ? Output.empty() : this.computeLimits;
     }
 
     public ManagedScalingPolicyState(
-        @Nullable Input<String> clusterId,
-        @Nullable Input<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits) {
+        @Nullable Output<String> clusterId,
+        @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits) {
         this.clusterId = clusterId;
         this.computeLimits = computeLimits;
     }
 
     private ManagedScalingPolicyState() {
-        this.clusterId = Input.empty();
-        this.computeLimits = Input.empty();
+        this.clusterId = Output.empty();
+        this.computeLimits = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ManagedScalingPolicyState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterId;
-        private @Nullable Input<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
+        private @Nullable Output<String> clusterId;
+        private @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ManagedScalingPolicyState extends io.pulumi.resources.Resourc
     	      this.computeLimits = defaults.computeLimits;
         }
 
-        public Builder clusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Input.ofNullable(clusterId);
+            this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
 
-        public Builder computeLimits(@Nullable Input<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits) {
+        public Builder computeLimits(@Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits) {
             this.computeLimits = computeLimits;
             return this;
         }
 
         public Builder computeLimits(@Nullable List<ManagedScalingPolicyComputeLimitGetArgs> computeLimits) {
-            this.computeLimits = Input.ofNullable(computeLimits);
+            this.computeLimits = Output.ofNullable(computeLimits);
             return this;
         }
         public ManagedScalingPolicyState build() {

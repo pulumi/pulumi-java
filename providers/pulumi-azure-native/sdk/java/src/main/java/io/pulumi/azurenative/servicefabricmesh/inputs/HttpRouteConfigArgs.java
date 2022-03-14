@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<GatewayDestinationArgs> destination;
+      private final Output<GatewayDestinationArgs> destination;
 
-    public Input<GatewayDestinationArgs> getDestination() {
+    public Output<GatewayDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -35,9 +35,9 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="match", required=true)
-      private final Input<HttpRouteMatchRuleArgs> match;
+      private final Output<HttpRouteMatchRuleArgs> match;
 
-    public Input<HttpRouteMatchRuleArgs> getMatch() {
+    public Output<HttpRouteMatchRuleArgs> getMatch() {
         return this.match;
     }
 
@@ -46,25 +46,25 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public HttpRouteConfigArgs(
-        Input<GatewayDestinationArgs> destination,
-        Input<HttpRouteMatchRuleArgs> match,
-        Input<String> name) {
+        Output<GatewayDestinationArgs> destination,
+        Output<HttpRouteMatchRuleArgs> match,
+        Output<String> name) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private HttpRouteConfigArgs() {
-        this.destination = Input.empty();
-        this.match = Input.empty();
-        this.name = Input.empty();
+        this.destination = Output.empty();
+        this.match = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<GatewayDestinationArgs> destination;
-        private Input<HttpRouteMatchRuleArgs> match;
-        private Input<String> name;
+        private Output<GatewayDestinationArgs> destination;
+        private Output<HttpRouteMatchRuleArgs> match;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder destination(Input<GatewayDestinationArgs> destination) {
+        public Builder destination(Output<GatewayDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(GatewayDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder match(Input<HttpRouteMatchRuleArgs> match) {
+        public Builder match(Output<HttpRouteMatchRuleArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
         public Builder match(HttpRouteMatchRuleArgs match) {
-            this.match = Input.of(Objects.requireNonNull(match));
+            this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public HttpRouteConfigArgs build() {

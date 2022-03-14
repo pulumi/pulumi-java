@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PrivatePoolV1ConfigArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -50,41 +50,41 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privatePoolV1Config")
-      private final @Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config;
+      private final @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
 
-    public Input<PrivatePoolV1ConfigArgs> getPrivatePoolV1Config() {
-        return this.privatePoolV1Config == null ? Input.empty() : this.privatePoolV1Config;
+    public Output<PrivatePoolV1ConfigArgs> getPrivatePoolV1Config() {
+        return this.privatePoolV1Config == null ? Output.empty() : this.privatePoolV1Config;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="validateOnly")
-      private final @Nullable Input<String> validateOnly;
+      private final @Nullable Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<String> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     @InputImport(name="workerPoolId", required=true)
-      private final Input<String> workerPoolId;
+      private final Output<String> workerPoolId;
 
-    public Input<String> getWorkerPoolId() {
+    public Output<String> getWorkerPoolId() {
         return this.workerPoolId;
     }
 
     public WorkerPoolArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config,
-        @Nullable Input<String> project,
-        @Nullable Input<String> validateOnly,
-        Input<String> workerPoolId) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config,
+        @Nullable Output<String> project,
+        @Nullable Output<String> validateOnly,
+        Output<String> workerPoolId) {
         this.annotations = annotations;
         this.displayName = displayName;
         this.location = location;
@@ -95,13 +95,13 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolArgs() {
-        this.annotations = Input.empty();
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.privatePoolV1Config = Input.empty();
-        this.project = Input.empty();
-        this.validateOnly = Input.empty();
-        this.workerPoolId = Input.empty();
+        this.annotations = Output.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.privatePoolV1Config = Output.empty();
+        this.project = Output.empty();
+        this.validateOnly = Output.empty();
+        this.workerPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,13 +113,13 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> validateOnly;
-        private Input<String> workerPoolId;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> validateOnly;
+        private Output<String> workerPoolId;
 
         public Builder() {
     	      // Empty
@@ -136,73 +136,73 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerPoolId = defaults.workerPoolId;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privatePoolV1Config(@Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
+        public Builder privatePoolV1Config(@Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
             this.privatePoolV1Config = privatePoolV1Config;
             return this;
         }
 
         public Builder privatePoolV1Config(@Nullable PrivatePoolV1ConfigArgs privatePoolV1Config) {
-            this.privatePoolV1Config = Input.ofNullable(privatePoolV1Config);
+            this.privatePoolV1Config = Output.ofNullable(privatePoolV1Config);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
 
-        public Builder workerPoolId(Input<String> workerPoolId) {
+        public Builder workerPoolId(Output<String> workerPoolId) {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }
 
         public Builder workerPoolId(String workerPoolId) {
-            this.workerPoolId = Input.of(Objects.requireNonNull(workerPoolId));
+            this.workerPoolId = Output.of(Objects.requireNonNull(workerPoolId));
             return this;
         }
         public WorkerPoolArgs build() {

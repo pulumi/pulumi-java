@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.inputs.BgpSessionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bgpSession")
-      private final @Nullable Input<BgpSessionArgs> bgpSession;
+      private final @Nullable Output<BgpSessionArgs> bgpSession;
 
-    public Input<BgpSessionArgs> getBgpSession() {
-        return this.bgpSession == null ? Input.empty() : this.bgpSession;
+    public Output<BgpSessionArgs> getBgpSession() {
+        return this.bgpSession == null ? Output.empty() : this.bgpSession;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionIdentifier")
-      private final @Nullable Input<String> connectionIdentifier;
+      private final @Nullable Output<String> connectionIdentifier;
 
-    public Input<String> getConnectionIdentifier() {
-        return this.connectionIdentifier == null ? Input.empty() : this.connectionIdentifier;
+    public Output<String> getConnectionIdentifier() {
+        return this.connectionIdentifier == null ? Output.empty() : this.connectionIdentifier;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="peeringDBFacilityId")
-      private final @Nullable Input<Integer> peeringDBFacilityId;
+      private final @Nullable Output<Integer> peeringDBFacilityId;
 
-    public Input<Integer> getPeeringDBFacilityId() {
-        return this.peeringDBFacilityId == null ? Input.empty() : this.peeringDBFacilityId;
+    public Output<Integer> getPeeringDBFacilityId() {
+        return this.peeringDBFacilityId == null ? Output.empty() : this.peeringDBFacilityId;
     }
 
     public ExchangeConnectionArgs(
-        @Nullable Input<BgpSessionArgs> bgpSession,
-        @Nullable Input<String> connectionIdentifier,
-        @Nullable Input<Integer> peeringDBFacilityId) {
+        @Nullable Output<BgpSessionArgs> bgpSession,
+        @Nullable Output<String> connectionIdentifier,
+        @Nullable Output<Integer> peeringDBFacilityId) {
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;
         this.peeringDBFacilityId = peeringDBFacilityId;
     }
 
     private ExchangeConnectionArgs() {
-        this.bgpSession = Input.empty();
-        this.connectionIdentifier = Input.empty();
-        this.peeringDBFacilityId = Input.empty();
+        this.bgpSession = Output.empty();
+        this.connectionIdentifier = Output.empty();
+        this.peeringDBFacilityId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<BgpSessionArgs> bgpSession;
-        private @Nullable Input<String> connectionIdentifier;
-        private @Nullable Input<Integer> peeringDBFacilityId;
+        private @Nullable Output<BgpSessionArgs> bgpSession;
+        private @Nullable Output<String> connectionIdentifier;
+        private @Nullable Output<Integer> peeringDBFacilityId;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
     	      this.peeringDBFacilityId = defaults.peeringDBFacilityId;
         }
 
-        public Builder bgpSession(@Nullable Input<BgpSessionArgs> bgpSession) {
+        public Builder bgpSession(@Nullable Output<BgpSessionArgs> bgpSession) {
             this.bgpSession = bgpSession;
             return this;
         }
 
         public Builder bgpSession(@Nullable BgpSessionArgs bgpSession) {
-            this.bgpSession = Input.ofNullable(bgpSession);
+            this.bgpSession = Output.ofNullable(bgpSession);
             return this;
         }
 
-        public Builder connectionIdentifier(@Nullable Input<String> connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable Output<String> connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
-            this.connectionIdentifier = Input.ofNullable(connectionIdentifier);
+            this.connectionIdentifier = Output.ofNullable(connectionIdentifier);
             return this;
         }
 
-        public Builder peeringDBFacilityId(@Nullable Input<Integer> peeringDBFacilityId) {
+        public Builder peeringDBFacilityId(@Nullable Output<Integer> peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
 
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
-            this.peeringDBFacilityId = Input.ofNullable(peeringDBFacilityId);
+            this.peeringDBFacilityId = Output.ofNullable(peeringDBFacilityId);
             return this;
         }
         public ExchangeConnectionArgs build() {

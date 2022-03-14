@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.TokenType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiresIn")
-      private final @Nullable Input<Integer> expiresIn;
+      private final @Nullable Output<Integer> expiresIn;
 
-    public Input<Integer> getExpiresIn() {
-        return this.expiresIn == null ? Input.empty() : this.expiresIn;
+    public Output<Integer> getExpiresIn() {
+        return this.expiresIn == null ? Output.empty() : this.expiresIn;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshToken")
-      private final @Nullable Input<String> refreshToken;
+      private final @Nullable Output<String> refreshToken;
 
-    public Input<String> getRefreshToken() {
-        return this.refreshToken == null ? Input.empty() : this.refreshToken;
+    public Output<String> getRefreshToken() {
+        return this.refreshToken == null ? Output.empty() : this.refreshToken;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token", required=true)
-      private final Input<String> token;
+      private final Output<String> token;
 
-    public Input<String> getToken() {
+    public Output<String> getToken() {
         return this.token;
     }
 
@@ -70,18 +70,18 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenType", required=true)
-      private final Input<Either<String,TokenType>> tokenType;
+      private final Output<Either<String,TokenType>> tokenType;
 
-    public Input<Either<String,TokenType>> getTokenType() {
+    public Output<Either<String,TokenType>> getTokenType() {
         return this.tokenType;
     }
 
     public AuthInfoArgs(
-        @Nullable Input<Integer> expiresIn,
-        @Nullable Input<String> refreshToken,
-        @Nullable Input<String> scope,
-        Input<String> token,
-        Input<Either<String,TokenType>> tokenType) {
+        @Nullable Output<Integer> expiresIn,
+        @Nullable Output<String> refreshToken,
+        @Nullable Output<String> scope,
+        Output<String> token,
+        Output<Either<String,TokenType>> tokenType) {
         this.expiresIn = expiresIn;
         this.refreshToken = refreshToken;
         this.scope = scope;
@@ -90,11 +90,11 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthInfoArgs() {
-        this.expiresIn = Input.empty();
-        this.refreshToken = Input.empty();
-        this.scope = Input.empty();
-        this.token = Input.empty();
-        this.tokenType = Input.empty();
+        this.expiresIn = Output.empty();
+        this.refreshToken = Output.empty();
+        this.scope = Output.empty();
+        this.token = Output.empty();
+        this.tokenType = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> expiresIn;
-        private @Nullable Input<String> refreshToken;
-        private @Nullable Input<String> scope;
-        private Input<String> token;
-        private Input<Either<String,TokenType>> tokenType;
+        private @Nullable Output<Integer> expiresIn;
+        private @Nullable Output<String> refreshToken;
+        private @Nullable Output<String> scope;
+        private Output<String> token;
+        private Output<Either<String,TokenType>> tokenType;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenType = defaults.tokenType;
         }
 
-        public Builder expiresIn(@Nullable Input<Integer> expiresIn) {
+        public Builder expiresIn(@Nullable Output<Integer> expiresIn) {
             this.expiresIn = expiresIn;
             return this;
         }
 
         public Builder expiresIn(@Nullable Integer expiresIn) {
-            this.expiresIn = Input.ofNullable(expiresIn);
+            this.expiresIn = Output.ofNullable(expiresIn);
             return this;
         }
 
-        public Builder refreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Input.ofNullable(refreshToken);
+            this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder token(Input<String> token) {
+        public Builder token(Output<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
 
         public Builder token(String token) {
-            this.token = Input.of(Objects.requireNonNull(token));
+            this.token = Output.of(Objects.requireNonNull(token));
             return this;
         }
 
-        public Builder tokenType(Input<Either<String,TokenType>> tokenType) {
+        public Builder tokenType(Output<Either<String,TokenType>> tokenType) {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }
 
         public Builder tokenType(Either<String,TokenType> tokenType) {
-            this.tokenType = Input.of(Objects.requireNonNull(tokenType));
+            this.tokenType = Output.of(Objects.requireNonNull(tokenType));
             return this;
         }
         public AuthInfoArgs build() {

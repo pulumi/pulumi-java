@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.IdentityProviderInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * 
      */
     @InputImport(name="authenticationIdentityInput", required=true)
-      private final Input<IdentityProviderInputArgs> authenticationIdentityInput;
+      private final Output<IdentityProviderInputArgs> authenticationIdentityInput;
 
-    public Input<IdentityProviderInputArgs> getAuthenticationIdentityInput() {
+    public Output<IdentityProviderInputArgs> getAuthenticationIdentityInput() {
         return this.authenticationIdentityInput;
     }
 
@@ -35,10 +35,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * 
      */
     @InputImport(name="dataPlaneAuthenticationIdentityInput")
-      private final @Nullable Input<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
+      private final @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
 
-    public Input<IdentityProviderInputArgs> getDataPlaneAuthenticationIdentityInput() {
-        return this.dataPlaneAuthenticationIdentityInput == null ? Input.empty() : this.dataPlaneAuthenticationIdentityInput;
+    public Output<IdentityProviderInputArgs> getDataPlaneAuthenticationIdentityInput() {
+        return this.dataPlaneAuthenticationIdentityInput == null ? Output.empty() : this.dataPlaneAuthenticationIdentityInput;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * 
      */
     @InputImport(name="machineId")
-      private final @Nullable Input<String> machineId;
+      private final @Nullable Output<String> machineId;
 
-    public Input<String> getMachineId() {
-        return this.machineId == null ? Input.empty() : this.machineId;
+    public Output<String> getMachineId() {
+        return this.machineId == null ? Output.empty() : this.machineId;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * 
      */
     @InputImport(name="machineName", required=true)
-      private final Input<String> machineName;
+      private final Output<String> machineName;
 
-    public Input<String> getMachineName() {
+    public Output<String> getMachineName() {
         return this.machineName;
     }
 
@@ -68,18 +68,18 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * 
      */
     @InputImport(name="resourceAccessIdentityInput", required=true)
-      private final Input<IdentityProviderInputArgs> resourceAccessIdentityInput;
+      private final Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
 
-    public Input<IdentityProviderInputArgs> getResourceAccessIdentityInput() {
+    public Output<IdentityProviderInputArgs> getResourceAccessIdentityInput() {
         return this.resourceAccessIdentityInput;
     }
 
     public AddRecoveryServicesProviderInputPropertiesArgs(
-        Input<IdentityProviderInputArgs> authenticationIdentityInput,
-        @Nullable Input<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput,
-        @Nullable Input<String> machineId,
-        Input<String> machineName,
-        Input<IdentityProviderInputArgs> resourceAccessIdentityInput) {
+        Output<IdentityProviderInputArgs> authenticationIdentityInput,
+        @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput,
+        @Nullable Output<String> machineId,
+        Output<String> machineName,
+        Output<IdentityProviderInputArgs> resourceAccessIdentityInput) {
         this.authenticationIdentityInput = Objects.requireNonNull(authenticationIdentityInput, "expected parameter 'authenticationIdentityInput' to be non-null");
         this.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
         this.machineId = machineId;
@@ -88,11 +88,11 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     }
 
     private AddRecoveryServicesProviderInputPropertiesArgs() {
-        this.authenticationIdentityInput = Input.empty();
-        this.dataPlaneAuthenticationIdentityInput = Input.empty();
-        this.machineId = Input.empty();
-        this.machineName = Input.empty();
-        this.resourceAccessIdentityInput = Input.empty();
+        this.authenticationIdentityInput = Output.empty();
+        this.dataPlaneAuthenticationIdentityInput = Output.empty();
+        this.machineId = Output.empty();
+        this.machineName = Output.empty();
+        this.resourceAccessIdentityInput = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<IdentityProviderInputArgs> authenticationIdentityInput;
-        private @Nullable Input<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
-        private @Nullable Input<String> machineId;
-        private Input<String> machineName;
-        private Input<IdentityProviderInputArgs> resourceAccessIdentityInput;
+        private Output<IdentityProviderInputArgs> authenticationIdentityInput;
+        private @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
+        private @Nullable Output<String> machineId;
+        private Output<String> machineName;
+        private Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     	      this.resourceAccessIdentityInput = defaults.resourceAccessIdentityInput;
         }
 
-        public Builder authenticationIdentityInput(Input<IdentityProviderInputArgs> authenticationIdentityInput) {
+        public Builder authenticationIdentityInput(Output<IdentityProviderInputArgs> authenticationIdentityInput) {
             this.authenticationIdentityInput = Objects.requireNonNull(authenticationIdentityInput);
             return this;
         }
 
         public Builder authenticationIdentityInput(IdentityProviderInputArgs authenticationIdentityInput) {
-            this.authenticationIdentityInput = Input.of(Objects.requireNonNull(authenticationIdentityInput));
+            this.authenticationIdentityInput = Output.of(Objects.requireNonNull(authenticationIdentityInput));
             return this;
         }
 
-        public Builder dataPlaneAuthenticationIdentityInput(@Nullable Input<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput) {
+        public Builder dataPlaneAuthenticationIdentityInput(@Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput) {
             this.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
             return this;
         }
 
         public Builder dataPlaneAuthenticationIdentityInput(@Nullable IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
-            this.dataPlaneAuthenticationIdentityInput = Input.ofNullable(dataPlaneAuthenticationIdentityInput);
+            this.dataPlaneAuthenticationIdentityInput = Output.ofNullable(dataPlaneAuthenticationIdentityInput);
             return this;
         }
 
-        public Builder machineId(@Nullable Input<String> machineId) {
+        public Builder machineId(@Nullable Output<String> machineId) {
             this.machineId = machineId;
             return this;
         }
 
         public Builder machineId(@Nullable String machineId) {
-            this.machineId = Input.ofNullable(machineId);
+            this.machineId = Output.ofNullable(machineId);
             return this;
         }
 
-        public Builder machineName(Input<String> machineName) {
+        public Builder machineName(Output<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
         public Builder machineName(String machineName) {
-            this.machineName = Input.of(Objects.requireNonNull(machineName));
+            this.machineName = Output.of(Objects.requireNonNull(machineName));
             return this;
         }
 
-        public Builder resourceAccessIdentityInput(Input<IdentityProviderInputArgs> resourceAccessIdentityInput) {
+        public Builder resourceAccessIdentityInput(Output<IdentityProviderInputArgs> resourceAccessIdentityInput) {
             this.resourceAccessIdentityInput = Objects.requireNonNull(resourceAccessIdentityInput);
             return this;
         }
 
         public Builder resourceAccessIdentityInput(IdentityProviderInputArgs resourceAccessIdentityInput) {
-            this.resourceAccessIdentityInput = Input.of(Objects.requireNonNull(resourceAccessIdentityInput));
+            this.resourceAccessIdentityInput = Output.of(Objects.requireNonNull(resourceAccessIdentityInput));
             return this;
         }
         public AddRecoveryServicesProviderInputPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="backupRunId", required=true)
-      private final Input<Integer> backupRunId;
+      private final Output<Integer> backupRunId;
 
-    public Input<Integer> getBackupRunId() {
+    public Output<Integer> getBackupRunId() {
         return this.backupRunId;
     }
 
@@ -32,10 +32,10 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DatabaseInstanceRestoreBackupContextArgs(
-        Input<Integer> backupRunId,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> project) {
+        Output<Integer> backupRunId,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> project) {
         this.backupRunId = Objects.requireNonNull(backupRunId, "expected parameter 'backupRunId' to be non-null");
         this.instanceId = instanceId;
         this.project = project;
     }
 
     private DatabaseInstanceRestoreBackupContextArgs() {
-        this.backupRunId = Input.empty();
-        this.instanceId = Input.empty();
-        this.project = Input.empty();
+        this.backupRunId = Output.empty();
+        this.instanceId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<Integer> backupRunId;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> project;
+        private Output<Integer> backupRunId;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     	      this.project = defaults.project;
         }
 
-        public Builder backupRunId(Input<Integer> backupRunId) {
+        public Builder backupRunId(Output<Integer> backupRunId) {
             this.backupRunId = Objects.requireNonNull(backupRunId);
             return this;
         }
 
         public Builder backupRunId(Integer backupRunId) {
-            this.backupRunId = Input.of(Objects.requireNonNull(backupRunId));
+            this.backupRunId = Output.of(Objects.requireNonNull(backupRunId));
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DatabaseInstanceRestoreBackupContextArgs build() {

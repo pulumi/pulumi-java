@@ -3,7 +3,7 @@
 
 package io.pulumi.random.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="result")
-      private final @Nullable Input<String> result;
+      private final @Nullable Output<String> result;
 
-    public Input<String> getResult() {
-        return this.result == null ? Input.empty() : this.result;
+    public Output<String> getResult() {
+        return this.result == null ? Output.empty() : this.result;
     }
 
     public RandomUuidState(
-        @Nullable Input<Map<String,Object>> keepers,
-        @Nullable Input<String> result) {
+        @Nullable Output<Map<String,Object>> keepers,
+        @Nullable Output<String> result) {
         this.keepers = keepers;
         this.result = result;
     }
 
     private RandomUuidState() {
-        this.keepers = Input.empty();
-        this.result = Input.empty();
+        this.keepers = Output.empty();
+        this.result = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> keepers;
-        private @Nullable Input<String> result;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private @Nullable Output<String> result;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
     	      this.result = defaults.result;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder result(@Nullable Input<String> result) {
+        public Builder result(@Nullable Output<String> result) {
             this.result = result;
             return this;
         }
 
         public Builder result(@Nullable String result) {
-            this.result = Input.ofNullable(result);
+            this.result = Output.ofNullable(result);
             return this;
         }
         public RandomUuidState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildStepVolumeArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dir")
-      private final @Nullable Input<String> dir;
+      private final @Nullable Output<String> dir;
 
-    public Input<String> getDir() {
-        return this.dir == null ? Input.empty() : this.dir;
+    public Output<String> getDir() {
+        return this.dir == null ? Output.empty() : this.dir;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="entrypoint")
-      private final @Nullable Input<String> entrypoint;
+      private final @Nullable Output<String> entrypoint;
 
-    public Input<String> getEntrypoint() {
-        return this.entrypoint == null ? Input.empty() : this.entrypoint;
+    public Output<String> getEntrypoint() {
+        return this.entrypoint == null ? Output.empty() : this.entrypoint;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="envs")
-      private final @Nullable Input<List<String>> envs;
+      private final @Nullable Output<List<String>> envs;
 
-    public Input<List<String>> getEnvs() {
-        return this.envs == null ? Input.empty() : this.envs;
+    public Output<List<String>> getEnvs() {
+        return this.envs == null ? Output.empty() : this.envs;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -109,10 +109,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secretEnvs")
-      private final @Nullable Input<List<String>> secretEnvs;
+      private final @Nullable Output<List<String>> secretEnvs;
 
-    public Input<List<String>> getSecretEnvs() {
-        return this.secretEnvs == null ? Input.empty() : this.secretEnvs;
+    public Output<List<String>> getSecretEnvs() {
+        return this.secretEnvs == null ? Output.empty() : this.secretEnvs;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timing")
-      private final @Nullable Input<String> timing;
+      private final @Nullable Output<String> timing;
 
-    public Input<String> getTiming() {
-        return this.timing == null ? Input.empty() : this.timing;
+    public Output<String> getTiming() {
+        return this.timing == null ? Output.empty() : this.timing;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<TriggerBuildStepVolumeArgs>> volumes;
+      private final @Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes;
 
-    public Input<List<TriggerBuildStepVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<TriggerBuildStepVolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     /**
@@ -168,24 +168,24 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="waitFors")
-      private final @Nullable Input<List<String>> waitFors;
+      private final @Nullable Output<List<String>> waitFors;
 
-    public Input<List<String>> getWaitFors() {
-        return this.waitFors == null ? Input.empty() : this.waitFors;
+    public Output<List<String>> getWaitFors() {
+        return this.waitFors == null ? Output.empty() : this.waitFors;
     }
 
     public TriggerBuildStepArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<String> dir,
-        @Nullable Input<String> entrypoint,
-        @Nullable Input<List<String>> envs,
-        @Nullable Input<String> id,
-        Input<String> name,
-        @Nullable Input<List<String>> secretEnvs,
-        @Nullable Input<String> timeout,
-        @Nullable Input<String> timing,
-        @Nullable Input<List<TriggerBuildStepVolumeArgs>> volumes,
-        @Nullable Input<List<String>> waitFors) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<String> dir,
+        @Nullable Output<String> entrypoint,
+        @Nullable Output<List<String>> envs,
+        @Nullable Output<String> id,
+        Output<String> name,
+        @Nullable Output<List<String>> secretEnvs,
+        @Nullable Output<String> timeout,
+        @Nullable Output<String> timing,
+        @Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes,
+        @Nullable Output<List<String>> waitFors) {
         this.args = args;
         this.dir = dir;
         this.entrypoint = entrypoint;
@@ -200,17 +200,17 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TriggerBuildStepArgs() {
-        this.args = Input.empty();
-        this.dir = Input.empty();
-        this.entrypoint = Input.empty();
-        this.envs = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.secretEnvs = Input.empty();
-        this.timeout = Input.empty();
-        this.timing = Input.empty();
-        this.volumes = Input.empty();
-        this.waitFors = Input.empty();
+        this.args = Output.empty();
+        this.dir = Output.empty();
+        this.entrypoint = Output.empty();
+        this.envs = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.secretEnvs = Output.empty();
+        this.timeout = Output.empty();
+        this.timing = Output.empty();
+        this.volumes = Output.empty();
+        this.waitFors = Output.empty();
     }
 
     public static Builder builder() {
@@ -222,17 +222,17 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<String> dir;
-        private @Nullable Input<String> entrypoint;
-        private @Nullable Input<List<String>> envs;
-        private @Nullable Input<String> id;
-        private Input<String> name;
-        private @Nullable Input<List<String>> secretEnvs;
-        private @Nullable Input<String> timeout;
-        private @Nullable Input<String> timing;
-        private @Nullable Input<List<TriggerBuildStepVolumeArgs>> volumes;
-        private @Nullable Input<List<String>> waitFors;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<String> dir;
+        private @Nullable Output<String> entrypoint;
+        private @Nullable Output<List<String>> envs;
+        private @Nullable Output<String> id;
+        private Output<String> name;
+        private @Nullable Output<List<String>> secretEnvs;
+        private @Nullable Output<String> timeout;
+        private @Nullable Output<String> timing;
+        private @Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes;
+        private @Nullable Output<List<String>> waitFors;
 
         public Builder() {
     	      // Empty
@@ -253,113 +253,113 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     	      this.waitFors = defaults.waitFors;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder dir(@Nullable Input<String> dir) {
+        public Builder dir(@Nullable Output<String> dir) {
             this.dir = dir;
             return this;
         }
 
         public Builder dir(@Nullable String dir) {
-            this.dir = Input.ofNullable(dir);
+            this.dir = Output.ofNullable(dir);
             return this;
         }
 
-        public Builder entrypoint(@Nullable Input<String> entrypoint) {
+        public Builder entrypoint(@Nullable Output<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
         public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Input.ofNullable(entrypoint);
+            this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder envs(@Nullable Input<List<String>> envs) {
+        public Builder envs(@Nullable Output<List<String>> envs) {
             this.envs = envs;
             return this;
         }
 
         public Builder envs(@Nullable List<String> envs) {
-            this.envs = Input.ofNullable(envs);
+            this.envs = Output.ofNullable(envs);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder secretEnvs(@Nullable Input<List<String>> secretEnvs) {
+        public Builder secretEnvs(@Nullable Output<List<String>> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
 
         public Builder secretEnvs(@Nullable List<String> secretEnvs) {
-            this.secretEnvs = Input.ofNullable(secretEnvs);
+            this.secretEnvs = Output.ofNullable(secretEnvs);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder timing(@Nullable Input<String> timing) {
+        public Builder timing(@Nullable Output<String> timing) {
             this.timing = timing;
             return this;
         }
 
         public Builder timing(@Nullable String timing) {
-            this.timing = Input.ofNullable(timing);
+            this.timing = Output.ofNullable(timing);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<TriggerBuildStepVolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<TriggerBuildStepVolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
 
-        public Builder waitFors(@Nullable Input<List<String>> waitFors) {
+        public Builder waitFors(@Nullable Output<List<String>> waitFors) {
             this.waitFors = waitFors;
             return this;
         }
 
         public Builder waitFors(@Nullable List<String> waitFors) {
-            this.waitFors = Input.ofNullable(waitFors);
+            this.waitFors = Output.ofNullable(waitFors);
             return this;
         }
         public TriggerBuildStepArgs build() {

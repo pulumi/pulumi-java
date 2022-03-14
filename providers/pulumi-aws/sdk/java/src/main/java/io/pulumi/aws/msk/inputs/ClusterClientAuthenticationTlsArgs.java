@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class ClusterClientAuthenticationTlsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateAuthorityArns")
-      private final @Nullable Input<List<String>> certificateAuthorityArns;
+      private final @Nullable Output<List<String>> certificateAuthorityArns;
 
-    public Input<List<String>> getCertificateAuthorityArns() {
-        return this.certificateAuthorityArns == null ? Input.empty() : this.certificateAuthorityArns;
+    public Output<List<String>> getCertificateAuthorityArns() {
+        return this.certificateAuthorityArns == null ? Output.empty() : this.certificateAuthorityArns;
     }
 
-    public ClusterClientAuthenticationTlsArgs(@Nullable Input<List<String>> certificateAuthorityArns) {
+    public ClusterClientAuthenticationTlsArgs(@Nullable Output<List<String>> certificateAuthorityArns) {
         this.certificateAuthorityArns = certificateAuthorityArns;
     }
 
     private ClusterClientAuthenticationTlsArgs() {
-        this.certificateAuthorityArns = Input.empty();
+        this.certificateAuthorityArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ClusterClientAuthenticationTlsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> certificateAuthorityArns;
+        private @Nullable Output<List<String>> certificateAuthorityArns;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ClusterClientAuthenticationTlsArgs extends io.pulumi.resource
     	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
         }
 
-        public Builder certificateAuthorityArns(@Nullable Input<List<String>> certificateAuthorityArns) {
+        public Builder certificateAuthorityArns(@Nullable Output<List<String>> certificateAuthorityArns) {
             this.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }
 
         public Builder certificateAuthorityArns(@Nullable List<String> certificateAuthorityArns) {
-            this.certificateAuthorityArns = Input.ofNullable(certificateAuthorityArns);
+            this.certificateAuthorityArns = Output.ofNullable(certificateAuthorityArns);
             return this;
         }
         public ClusterClientAuthenticationTlsArgs build() {

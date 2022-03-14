@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.RuleWithOperationsArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.WebhookClientConfigArgs;
@@ -28,9 +28,9 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="admissionReviewVersions", required=true)
-      private final Input<List<String>> admissionReviewVersions;
+      private final Output<List<String>> admissionReviewVersions;
 
-    public Input<List<String>> getAdmissionReviewVersions() {
+    public Output<List<String>> getAdmissionReviewVersions() {
         return this.admissionReviewVersions;
     }
 
@@ -39,9 +39,9 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clientConfig", required=true)
-      private final Input<WebhookClientConfigArgs> clientConfig;
+      private final Output<WebhookClientConfigArgs> clientConfig;
 
-    public Input<WebhookClientConfigArgs> getClientConfig() {
+    public Output<WebhookClientConfigArgs> getClientConfig() {
         return this.clientConfig;
     }
 
@@ -50,10 +50,10 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="failurePolicy")
-      private final @Nullable Input<String> failurePolicy;
+      private final @Nullable Output<String> failurePolicy;
 
-    public Input<String> getFailurePolicy() {
-        return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
+    public Output<String> getFailurePolicy() {
+        return this.failurePolicy == null ? Output.empty() : this.failurePolicy;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="matchPolicy")
-      private final @Nullable Input<String> matchPolicy;
+      private final @Nullable Output<String> matchPolicy;
 
-    public Input<String> getMatchPolicy() {
-        return this.matchPolicy == null ? Input.empty() : this.matchPolicy;
+    public Output<String> getMatchPolicy() {
+        return this.matchPolicy == null ? Output.empty() : this.matchPolicy;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -119,10 +119,10 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaceSelector")
-      private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
+      private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Input<LabelSelectorArgs> getNamespaceSelector() {
-        return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
+    public Output<LabelSelectorArgs> getNamespaceSelector() {
+        return this.namespaceSelector == null ? Output.empty() : this.namespaceSelector;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectSelector")
-      private final @Nullable Input<LabelSelectorArgs> objectSelector;
+      private final @Nullable Output<LabelSelectorArgs> objectSelector;
 
-    public Input<LabelSelectorArgs> getObjectSelector() {
-        return this.objectSelector == null ? Input.empty() : this.objectSelector;
+    public Output<LabelSelectorArgs> getObjectSelector() {
+        return this.objectSelector == null ? Output.empty() : this.objectSelector;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="reinvocationPolicy")
-      private final @Nullable Input<String> reinvocationPolicy;
+      private final @Nullable Output<String> reinvocationPolicy;
 
-    public Input<String> getReinvocationPolicy() {
-        return this.reinvocationPolicy == null ? Input.empty() : this.reinvocationPolicy;
+    public Output<String> getReinvocationPolicy() {
+        return this.reinvocationPolicy == null ? Output.empty() : this.reinvocationPolicy;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<RuleWithOperationsArgs>> rules;
+      private final @Nullable Output<List<RuleWithOperationsArgs>> rules;
 
-    public Input<List<RuleWithOperationsArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<RuleWithOperationsArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -169,9 +169,9 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sideEffects", required=true)
-      private final Input<String> sideEffects;
+      private final Output<String> sideEffects;
 
-    public Input<String> getSideEffects() {
+    public Output<String> getSideEffects() {
         return this.sideEffects;
     }
 
@@ -180,24 +180,24 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeoutSeconds")
-      private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Input<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
+    public Output<Integer> getTimeoutSeconds() {
+        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
     }
 
     public MutatingWebhookArgs(
-        Input<List<String>> admissionReviewVersions,
-        Input<WebhookClientConfigArgs> clientConfig,
-        @Nullable Input<String> failurePolicy,
-        @Nullable Input<String> matchPolicy,
-        Input<String> name,
-        @Nullable Input<LabelSelectorArgs> namespaceSelector,
-        @Nullable Input<LabelSelectorArgs> objectSelector,
-        @Nullable Input<String> reinvocationPolicy,
-        @Nullable Input<List<RuleWithOperationsArgs>> rules,
-        Input<String> sideEffects,
-        @Nullable Input<Integer> timeoutSeconds) {
+        Output<List<String>> admissionReviewVersions,
+        Output<WebhookClientConfigArgs> clientConfig,
+        @Nullable Output<String> failurePolicy,
+        @Nullable Output<String> matchPolicy,
+        Output<String> name,
+        @Nullable Output<LabelSelectorArgs> namespaceSelector,
+        @Nullable Output<LabelSelectorArgs> objectSelector,
+        @Nullable Output<String> reinvocationPolicy,
+        @Nullable Output<List<RuleWithOperationsArgs>> rules,
+        Output<String> sideEffects,
+        @Nullable Output<Integer> timeoutSeconds) {
         this.admissionReviewVersions = Objects.requireNonNull(admissionReviewVersions, "expected parameter 'admissionReviewVersions' to be non-null");
         this.clientConfig = Objects.requireNonNull(clientConfig, "expected parameter 'clientConfig' to be non-null");
         this.failurePolicy = failurePolicy;
@@ -212,17 +212,17 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private MutatingWebhookArgs() {
-        this.admissionReviewVersions = Input.empty();
-        this.clientConfig = Input.empty();
-        this.failurePolicy = Input.empty();
-        this.matchPolicy = Input.empty();
-        this.name = Input.empty();
-        this.namespaceSelector = Input.empty();
-        this.objectSelector = Input.empty();
-        this.reinvocationPolicy = Input.empty();
-        this.rules = Input.empty();
-        this.sideEffects = Input.empty();
-        this.timeoutSeconds = Input.empty();
+        this.admissionReviewVersions = Output.empty();
+        this.clientConfig = Output.empty();
+        this.failurePolicy = Output.empty();
+        this.matchPolicy = Output.empty();
+        this.name = Output.empty();
+        this.namespaceSelector = Output.empty();
+        this.objectSelector = Output.empty();
+        this.reinvocationPolicy = Output.empty();
+        this.rules = Output.empty();
+        this.sideEffects = Output.empty();
+        this.timeoutSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -234,17 +234,17 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<List<String>> admissionReviewVersions;
-        private Input<WebhookClientConfigArgs> clientConfig;
-        private @Nullable Input<String> failurePolicy;
-        private @Nullable Input<String> matchPolicy;
-        private Input<String> name;
-        private @Nullable Input<LabelSelectorArgs> namespaceSelector;
-        private @Nullable Input<LabelSelectorArgs> objectSelector;
-        private @Nullable Input<String> reinvocationPolicy;
-        private @Nullable Input<List<RuleWithOperationsArgs>> rules;
-        private Input<String> sideEffects;
-        private @Nullable Input<Integer> timeoutSeconds;
+        private Output<List<String>> admissionReviewVersions;
+        private Output<WebhookClientConfigArgs> clientConfig;
+        private @Nullable Output<String> failurePolicy;
+        private @Nullable Output<String> matchPolicy;
+        private Output<String> name;
+        private @Nullable Output<LabelSelectorArgs> namespaceSelector;
+        private @Nullable Output<LabelSelectorArgs> objectSelector;
+        private @Nullable Output<String> reinvocationPolicy;
+        private @Nullable Output<List<RuleWithOperationsArgs>> rules;
+        private Output<String> sideEffects;
+        private @Nullable Output<Integer> timeoutSeconds;
 
         public Builder() {
     	      // Empty
@@ -265,113 +265,113 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder admissionReviewVersions(Input<List<String>> admissionReviewVersions) {
+        public Builder admissionReviewVersions(Output<List<String>> admissionReviewVersions) {
             this.admissionReviewVersions = Objects.requireNonNull(admissionReviewVersions);
             return this;
         }
 
         public Builder admissionReviewVersions(List<String> admissionReviewVersions) {
-            this.admissionReviewVersions = Input.of(Objects.requireNonNull(admissionReviewVersions));
+            this.admissionReviewVersions = Output.of(Objects.requireNonNull(admissionReviewVersions));
             return this;
         }
 
-        public Builder clientConfig(Input<WebhookClientConfigArgs> clientConfig) {
+        public Builder clientConfig(Output<WebhookClientConfigArgs> clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
 
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
-            this.clientConfig = Input.of(Objects.requireNonNull(clientConfig));
+            this.clientConfig = Output.of(Objects.requireNonNull(clientConfig));
             return this;
         }
 
-        public Builder failurePolicy(@Nullable Input<String> failurePolicy) {
+        public Builder failurePolicy(@Nullable Output<String> failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
 
         public Builder failurePolicy(@Nullable String failurePolicy) {
-            this.failurePolicy = Input.ofNullable(failurePolicy);
+            this.failurePolicy = Output.ofNullable(failurePolicy);
             return this;
         }
 
-        public Builder matchPolicy(@Nullable Input<String> matchPolicy) {
+        public Builder matchPolicy(@Nullable Output<String> matchPolicy) {
             this.matchPolicy = matchPolicy;
             return this;
         }
 
         public Builder matchPolicy(@Nullable String matchPolicy) {
-            this.matchPolicy = Input.ofNullable(matchPolicy);
+            this.matchPolicy = Output.ofNullable(matchPolicy);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
+        public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
-            this.namespaceSelector = Input.ofNullable(namespaceSelector);
+            this.namespaceSelector = Output.ofNullable(namespaceSelector);
             return this;
         }
 
-        public Builder objectSelector(@Nullable Input<LabelSelectorArgs> objectSelector) {
+        public Builder objectSelector(@Nullable Output<LabelSelectorArgs> objectSelector) {
             this.objectSelector = objectSelector;
             return this;
         }
 
         public Builder objectSelector(@Nullable LabelSelectorArgs objectSelector) {
-            this.objectSelector = Input.ofNullable(objectSelector);
+            this.objectSelector = Output.ofNullable(objectSelector);
             return this;
         }
 
-        public Builder reinvocationPolicy(@Nullable Input<String> reinvocationPolicy) {
+        public Builder reinvocationPolicy(@Nullable Output<String> reinvocationPolicy) {
             this.reinvocationPolicy = reinvocationPolicy;
             return this;
         }
 
         public Builder reinvocationPolicy(@Nullable String reinvocationPolicy) {
-            this.reinvocationPolicy = Input.ofNullable(reinvocationPolicy);
+            this.reinvocationPolicy = Output.ofNullable(reinvocationPolicy);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<RuleWithOperationsArgs>> rules) {
+        public Builder rules(@Nullable Output<List<RuleWithOperationsArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<RuleWithOperationsArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder sideEffects(Input<String> sideEffects) {
+        public Builder sideEffects(Output<String> sideEffects) {
             this.sideEffects = Objects.requireNonNull(sideEffects);
             return this;
         }
 
         public Builder sideEffects(String sideEffects) {
-            this.sideEffects = Input.of(Objects.requireNonNull(sideEffects));
+            this.sideEffects = Output.of(Objects.requireNonNull(sideEffects));
             return this;
         }
 
-        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
         public MutatingWebhookArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.aws.backup.inputs.PlanRuleCopyActionLifecycleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationVaultArn", required=true)
-      private final Input<String> destinationVaultArn;
+      private final Output<String> destinationVaultArn;
 
-    public Input<String> getDestinationVaultArn() {
+    public Output<String> getDestinationVaultArn() {
         return this.destinationVaultArn;
     }
 
@@ -31,22 +31,22 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lifecycle")
-      private final @Nullable Input<PlanRuleCopyActionLifecycleArgs> lifecycle;
+      private final @Nullable Output<PlanRuleCopyActionLifecycleArgs> lifecycle;
 
-    public Input<PlanRuleCopyActionLifecycleArgs> getLifecycle() {
-        return this.lifecycle == null ? Input.empty() : this.lifecycle;
+    public Output<PlanRuleCopyActionLifecycleArgs> getLifecycle() {
+        return this.lifecycle == null ? Output.empty() : this.lifecycle;
     }
 
     public PlanRuleCopyActionArgs(
-        Input<String> destinationVaultArn,
-        @Nullable Input<PlanRuleCopyActionLifecycleArgs> lifecycle) {
+        Output<String> destinationVaultArn,
+        @Nullable Output<PlanRuleCopyActionLifecycleArgs> lifecycle) {
         this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn, "expected parameter 'destinationVaultArn' to be non-null");
         this.lifecycle = lifecycle;
     }
 
     private PlanRuleCopyActionArgs() {
-        this.destinationVaultArn = Input.empty();
-        this.lifecycle = Input.empty();
+        this.destinationVaultArn = Output.empty();
+        this.lifecycle = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> destinationVaultArn;
-        private @Nullable Input<PlanRuleCopyActionLifecycleArgs> lifecycle;
+        private Output<String> destinationVaultArn;
+        private @Nullable Output<PlanRuleCopyActionLifecycleArgs> lifecycle;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
     	      this.lifecycle = defaults.lifecycle;
         }
 
-        public Builder destinationVaultArn(Input<String> destinationVaultArn) {
+        public Builder destinationVaultArn(Output<String> destinationVaultArn) {
             this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn);
             return this;
         }
 
         public Builder destinationVaultArn(String destinationVaultArn) {
-            this.destinationVaultArn = Input.of(Objects.requireNonNull(destinationVaultArn));
+            this.destinationVaultArn = Output.of(Objects.requireNonNull(destinationVaultArn));
             return this;
         }
 
-        public Builder lifecycle(@Nullable Input<PlanRuleCopyActionLifecycleArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Output<PlanRuleCopyActionLifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
         public Builder lifecycle(@Nullable PlanRuleCopyActionLifecycleArgs lifecycle) {
-            this.lifecycle = Input.ofNullable(lifecycle);
+            this.lifecycle = Output.ofNullable(lifecycle);
             return this;
         }
         public PlanRuleCopyActionArgs build() {

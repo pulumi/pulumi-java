@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.WorkloadMetadataConfigMode;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<WorkloadMetadataConfigMode> mode;
+      private final @Nullable Output<WorkloadMetadataConfigMode> mode;
 
-    public Input<WorkloadMetadataConfigMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<WorkloadMetadataConfigMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
-    public WorkloadMetadataConfigArgs(@Nullable Input<WorkloadMetadataConfigMode> mode) {
+    public WorkloadMetadataConfigArgs(@Nullable Output<WorkloadMetadataConfigMode> mode) {
         this.mode = mode;
     }
 
     private WorkloadMetadataConfigArgs() {
-        this.mode = Input.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkloadMetadataConfigMode> mode;
+        private @Nullable Output<WorkloadMetadataConfigMode> mode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     	      this.mode = defaults.mode;
         }
 
-        public Builder mode(@Nullable Input<WorkloadMetadataConfigMode> mode) {
+        public Builder mode(@Nullable Output<WorkloadMetadataConfigMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable WorkloadMetadataConfigMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public WorkloadMetadataConfigArgs build() {

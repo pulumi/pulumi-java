@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="repositoryName", required=true)
-      private final Input<String> repositoryName;
+      private final Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
+    public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
 
@@ -29,22 +29,22 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs(
-        Input<String> repositoryName,
-        Input<String> service) {
+        Output<String> repositoryName,
+        Output<String> service) {
         this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs() {
-        this.repositoryName = Input.empty();
-        this.service = Input.empty();
+        this.repositoryName = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     }
 
     public static final class Builder {
-        private Input<String> repositoryName;
-        private Input<String> service;
+        private Output<String> repositoryName;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.service = defaults.service;
         }
 
-        public Builder repositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
+            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs build() {

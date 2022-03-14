@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigInfoTypeGetArgs;
@@ -26,10 +26,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="contentOptions")
-      private final @Nullable Input<List<String>> contentOptions;
+      private final @Nullable Output<List<String>> contentOptions;
 
-    public Input<List<String>> getContentOptions() {
-        return this.contentOptions == null ? Input.empty() : this.contentOptions;
+    public Output<List<String>> getContentOptions() {
+        return this.contentOptions == null ? Output.empty() : this.contentOptions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="customInfoTypes")
-      private final @Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
+      private final @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
 
-    public Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> getCustomInfoTypes() {
-        return this.customInfoTypes == null ? Input.empty() : this.customInfoTypes;
+    public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> getCustomInfoTypes() {
+        return this.customInfoTypes == null ? Output.empty() : this.customInfoTypes;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="excludeInfoTypes")
-      private final @Nullable Input<Boolean> excludeInfoTypes;
+      private final @Nullable Output<Boolean> excludeInfoTypes;
 
-    public Input<Boolean> getExcludeInfoTypes() {
-        return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
+    public Output<Boolean> getExcludeInfoTypes() {
+        return this.excludeInfoTypes == null ? Output.empty() : this.excludeInfoTypes;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="includeQuote")
-      private final @Nullable Input<Boolean> includeQuote;
+      private final @Nullable Output<Boolean> includeQuote;
 
-    public Input<Boolean> getIncludeQuote() {
-        return this.includeQuote == null ? Input.empty() : this.includeQuote;
+    public Output<Boolean> getIncludeQuote() {
+        return this.includeQuote == null ? Output.empty() : this.includeQuote;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="infoTypes")
-      private final @Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
+      private final @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
 
-    public Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> getInfoTypes() {
-        return this.infoTypes == null ? Input.empty() : this.infoTypes;
+    public Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> getInfoTypes() {
+        return this.infoTypes == null ? Output.empty() : this.infoTypes;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="limits")
-      private final @Nullable Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
+      private final @Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
 
-    public Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="minLikelihood")
-      private final @Nullable Input<String> minLikelihood;
+      private final @Nullable Output<String> minLikelihood;
 
-    public Input<String> getMinLikelihood() {
-        return this.minLikelihood == null ? Input.empty() : this.minLikelihood;
+    public Output<String> getMinLikelihood() {
+        return this.minLikelihood == null ? Output.empty() : this.minLikelihood;
     }
 
     /**
@@ -111,21 +111,21 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="ruleSets")
-      private final @Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
+      private final @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
 
-    public Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> getRuleSets() {
-        return this.ruleSets == null ? Input.empty() : this.ruleSets;
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> getRuleSets() {
+        return this.ruleSets == null ? Output.empty() : this.ruleSets;
     }
 
     public PreventionInspectTemplateInspectConfigGetArgs(
-        @Nullable Input<List<String>> contentOptions,
-        @Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes,
-        @Nullable Input<Boolean> excludeInfoTypes,
-        @Nullable Input<Boolean> includeQuote,
-        @Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes,
-        @Nullable Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits,
-        @Nullable Input<String> minLikelihood,
-        @Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets) {
+        @Nullable Output<List<String>> contentOptions,
+        @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes,
+        @Nullable Output<Boolean> excludeInfoTypes,
+        @Nullable Output<Boolean> includeQuote,
+        @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes,
+        @Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits,
+        @Nullable Output<String> minLikelihood,
+        @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets) {
         this.contentOptions = contentOptions;
         this.customInfoTypes = customInfoTypes;
         this.excludeInfoTypes = excludeInfoTypes;
@@ -137,14 +137,14 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     }
 
     private PreventionInspectTemplateInspectConfigGetArgs() {
-        this.contentOptions = Input.empty();
-        this.customInfoTypes = Input.empty();
-        this.excludeInfoTypes = Input.empty();
-        this.includeQuote = Input.empty();
-        this.infoTypes = Input.empty();
-        this.limits = Input.empty();
-        this.minLikelihood = Input.empty();
-        this.ruleSets = Input.empty();
+        this.contentOptions = Output.empty();
+        this.customInfoTypes = Output.empty();
+        this.excludeInfoTypes = Output.empty();
+        this.includeQuote = Output.empty();
+        this.infoTypes = Output.empty();
+        this.limits = Output.empty();
+        this.minLikelihood = Output.empty();
+        this.ruleSets = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,14 +156,14 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> contentOptions;
-        private @Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
-        private @Nullable Input<Boolean> excludeInfoTypes;
-        private @Nullable Input<Boolean> includeQuote;
-        private @Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
-        private @Nullable Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
-        private @Nullable Input<String> minLikelihood;
-        private @Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
+        private @Nullable Output<List<String>> contentOptions;
+        private @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
+        private @Nullable Output<Boolean> excludeInfoTypes;
+        private @Nullable Output<Boolean> includeQuote;
+        private @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
+        private @Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
+        private @Nullable Output<String> minLikelihood;
+        private @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
 
         public Builder() {
     	      // Empty
@@ -181,83 +181,83 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     	      this.ruleSets = defaults.ruleSets;
         }
 
-        public Builder contentOptions(@Nullable Input<List<String>> contentOptions) {
+        public Builder contentOptions(@Nullable Output<List<String>> contentOptions) {
             this.contentOptions = contentOptions;
             return this;
         }
 
         public Builder contentOptions(@Nullable List<String> contentOptions) {
-            this.contentOptions = Input.ofNullable(contentOptions);
+            this.contentOptions = Output.ofNullable(contentOptions);
             return this;
         }
 
-        public Builder customInfoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes) {
+        public Builder customInfoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes) {
             this.customInfoTypes = customInfoTypes;
             return this;
         }
 
         public Builder customInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs> customInfoTypes) {
-            this.customInfoTypes = Input.ofNullable(customInfoTypes);
+            this.customInfoTypes = Output.ofNullable(customInfoTypes);
             return this;
         }
 
-        public Builder excludeInfoTypes(@Nullable Input<Boolean> excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Output<Boolean> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
         public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
-            this.excludeInfoTypes = Input.ofNullable(excludeInfoTypes);
+            this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
 
-        public Builder includeQuote(@Nullable Input<Boolean> includeQuote) {
+        public Builder includeQuote(@Nullable Output<Boolean> includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
 
         public Builder includeQuote(@Nullable Boolean includeQuote) {
-            this.includeQuote = Input.ofNullable(includeQuote);
+            this.includeQuote = Output.ofNullable(includeQuote);
             return this;
         }
 
-        public Builder infoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
         public Builder infoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs> infoTypes) {
-            this.infoTypes = Input.ofNullable(infoTypes);
+            this.infoTypes = Output.ofNullable(infoTypes);
             return this;
         }
 
-        public Builder limits(@Nullable Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits) {
+        public Builder limits(@Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable PreventionInspectTemplateInspectConfigLimitsGetArgs limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder minLikelihood(@Nullable Input<String> minLikelihood) {
+        public Builder minLikelihood(@Nullable Output<String> minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
 
         public Builder minLikelihood(@Nullable String minLikelihood) {
-            this.minLikelihood = Input.ofNullable(minLikelihood);
+            this.minLikelihood = Output.ofNullable(minLikelihood);
             return this;
         }
 
-        public Builder ruleSets(@Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets) {
+        public Builder ruleSets(@Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
 
         public Builder ruleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSetGetArgs> ruleSets) {
-            this.ruleSets = Input.ofNullable(ruleSets);
+            this.ruleSets = Output.ofNullable(ruleSets);
             return this;
         }
         public PreventionInspectTemplateInspectConfigGetArgs build() {

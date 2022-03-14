@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enforced", required=true)
-      private final Input<Boolean> enforced;
+      private final Output<Boolean> enforced;
 
-    public Input<Boolean> getEnforced() {
+    public Output<Boolean> getEnforced() {
         return this.enforced;
     }
 
-    public OrganizationPolicyBooleanPolicyGetArgs(Input<Boolean> enforced) {
+    public OrganizationPolicyBooleanPolicyGetArgs(Output<Boolean> enforced) {
         this.enforced = Objects.requireNonNull(enforced, "expected parameter 'enforced' to be non-null");
     }
 
     private OrganizationPolicyBooleanPolicyGetArgs() {
-        this.enforced = Input.empty();
+        this.enforced = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<Boolean> enforced;
+        private Output<Boolean> enforced;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends io.pulumi.reso
     	      this.enforced = defaults.enforced;
         }
 
-        public Builder enforced(Input<Boolean> enforced) {
+        public Builder enforced(Output<Boolean> enforced) {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }
 
         public Builder enforced(Boolean enforced) {
-            this.enforced = Input.of(Objects.requireNonNull(enforced));
+            this.enforced = Output.of(Objects.requireNonNull(enforced));
             return this;
         }
         public OrganizationPolicyBooleanPolicyGetArgs build() {

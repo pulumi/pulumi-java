@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.LinuxConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUsername")
-      private final @Nullable Input<String> adminUsername;
+      private final @Nullable Output<String> adminUsername;
 
-    public Input<String> getAdminUsername() {
-        return this.adminUsername == null ? Input.empty() : this.adminUsername;
+    public Output<String> getAdminUsername() {
+        return this.adminUsername == null ? Output.empty() : this.adminUsername;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customData")
-      private final @Nullable Input<String> customData;
+      private final @Nullable Output<String> customData;
 
-    public Input<String> getCustomData() {
-        return this.customData == null ? Input.empty() : this.customData;
+    public Output<String> getCustomData() {
+        return this.customData == null ? Output.empty() : this.customData;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDataRequired")
-      private final @Nullable Input<Boolean> customDataRequired;
+      private final @Nullable Output<Boolean> customDataRequired;
 
-    public Input<Boolean> getCustomDataRequired() {
-        return this.customDataRequired == null ? Input.empty() : this.customDataRequired;
+    public Output<Boolean> getCustomDataRequired() {
+        return this.customDataRequired == null ? Output.empty() : this.customDataRequired;
     }
 
     /**
@@ -58,28 +58,28 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxConfiguration")
-      private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
+      private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Input<LinuxConfigurationArgs> getLinuxConfiguration() {
-        return this.linuxConfiguration == null ? Input.empty() : this.linuxConfiguration;
+    public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
+        return this.linuxConfiguration == null ? Output.empty() : this.linuxConfiguration;
     }
 
     public OsProfileArgs(
-        @Nullable Input<String> adminUsername,
-        @Nullable Input<String> customData,
-        @Nullable Input<Boolean> customDataRequired,
-        @Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
+        @Nullable Output<String> adminUsername,
+        @Nullable Output<String> customData,
+        @Nullable Output<Boolean> customDataRequired,
+        @Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
         this.adminUsername = adminUsername;
         this.customData = customData;
-        this.customDataRequired = customDataRequired == null ? Input.ofNullable(true) : customDataRequired;
+        this.customDataRequired = customDataRequired == null ? Output.ofNullable(true) : customDataRequired;
         this.linuxConfiguration = linuxConfiguration;
     }
 
     private OsProfileArgs() {
-        this.adminUsername = Input.empty();
-        this.customData = Input.empty();
-        this.customDataRequired = Input.empty();
-        this.linuxConfiguration = Input.empty();
+        this.adminUsername = Output.empty();
+        this.customData = Output.empty();
+        this.customDataRequired = Output.empty();
+        this.linuxConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminUsername;
-        private @Nullable Input<String> customData;
-        private @Nullable Input<Boolean> customDataRequired;
-        private @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
+        private @Nullable Output<String> adminUsername;
+        private @Nullable Output<String> customData;
+        private @Nullable Output<Boolean> customDataRequired;
+        private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.linuxConfiguration = defaults.linuxConfiguration;
         }
 
-        public Builder adminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Output<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Input.ofNullable(adminUsername);
+            this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder customData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
 
         public Builder customData(@Nullable String customData) {
-            this.customData = Input.ofNullable(customData);
+            this.customData = Output.ofNullable(customData);
             return this;
         }
 
-        public Builder customDataRequired(@Nullable Input<Boolean> customDataRequired) {
+        public Builder customDataRequired(@Nullable Output<Boolean> customDataRequired) {
             this.customDataRequired = customDataRequired;
             return this;
         }
 
         public Builder customDataRequired(@Nullable Boolean customDataRequired) {
-            this.customDataRequired = Input.ofNullable(customDataRequired);
+            this.customDataRequired = Output.ofNullable(customDataRequired);
             return this;
         }
 
-        public Builder linuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Input.ofNullable(linuxConfiguration);
+            this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
             return this;
         }
         public OsProfileArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleConditionGetArgs;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleValuesGetArgs;
@@ -21,10 +21,10 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowAll")
-      private final @Nullable Input<String> allowAll;
+      private final @Nullable Output<String> allowAll;
 
-    public Input<String> getAllowAll() {
-        return this.allowAll == null ? Input.empty() : this.allowAll;
+    public Output<String> getAllowAll() {
+        return this.allowAll == null ? Output.empty() : this.allowAll;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<PolicySpecRuleConditionGetArgs> condition;
+      private final @Nullable Output<PolicySpecRuleConditionGetArgs> condition;
 
-    public Input<PolicySpecRuleConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<PolicySpecRuleConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="denyAll")
-      private final @Nullable Input<String> denyAll;
+      private final @Nullable Output<String> denyAll;
 
-    public Input<String> getDenyAll() {
-        return this.denyAll == null ? Input.empty() : this.denyAll;
+    public Output<String> getDenyAll() {
+        return this.denyAll == null ? Output.empty() : this.denyAll;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enforce")
-      private final @Nullable Input<String> enforce;
+      private final @Nullable Output<String> enforce;
 
-    public Input<String> getEnforce() {
-        return this.enforce == null ? Input.empty() : this.enforce;
+    public Output<String> getEnforce() {
+        return this.enforce == null ? Output.empty() : this.enforce;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<PolicySpecRuleValuesGetArgs> values;
+      private final @Nullable Output<PolicySpecRuleValuesGetArgs> values;
 
-    public Input<PolicySpecRuleValuesGetArgs> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<PolicySpecRuleValuesGetArgs> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public PolicySpecRuleGetArgs(
-        @Nullable Input<String> allowAll,
-        @Nullable Input<PolicySpecRuleConditionGetArgs> condition,
-        @Nullable Input<String> denyAll,
-        @Nullable Input<String> enforce,
-        @Nullable Input<PolicySpecRuleValuesGetArgs> values) {
+        @Nullable Output<String> allowAll,
+        @Nullable Output<PolicySpecRuleConditionGetArgs> condition,
+        @Nullable Output<String> denyAll,
+        @Nullable Output<String> enforce,
+        @Nullable Output<PolicySpecRuleValuesGetArgs> values) {
         this.allowAll = allowAll;
         this.condition = condition;
         this.denyAll = denyAll;
@@ -85,11 +85,11 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PolicySpecRuleGetArgs() {
-        this.allowAll = Input.empty();
-        this.condition = Input.empty();
-        this.denyAll = Input.empty();
-        this.enforce = Input.empty();
-        this.values = Input.empty();
+        this.allowAll = Output.empty();
+        this.condition = Output.empty();
+        this.denyAll = Output.empty();
+        this.enforce = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allowAll;
-        private @Nullable Input<PolicySpecRuleConditionGetArgs> condition;
-        private @Nullable Input<String> denyAll;
-        private @Nullable Input<String> enforce;
-        private @Nullable Input<PolicySpecRuleValuesGetArgs> values;
+        private @Nullable Output<String> allowAll;
+        private @Nullable Output<PolicySpecRuleConditionGetArgs> condition;
+        private @Nullable Output<String> denyAll;
+        private @Nullable Output<String> enforce;
+        private @Nullable Output<PolicySpecRuleValuesGetArgs> values;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     	      this.values = defaults.values;
         }
 
-        public Builder allowAll(@Nullable Input<String> allowAll) {
+        public Builder allowAll(@Nullable Output<String> allowAll) {
             this.allowAll = allowAll;
             return this;
         }
 
         public Builder allowAll(@Nullable String allowAll) {
-            this.allowAll = Input.ofNullable(allowAll);
+            this.allowAll = Output.ofNullable(allowAll);
             return this;
         }
 
-        public Builder condition(@Nullable Input<PolicySpecRuleConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<PolicySpecRuleConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable PolicySpecRuleConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder denyAll(@Nullable Input<String> denyAll) {
+        public Builder denyAll(@Nullable Output<String> denyAll) {
             this.denyAll = denyAll;
             return this;
         }
 
         public Builder denyAll(@Nullable String denyAll) {
-            this.denyAll = Input.ofNullable(denyAll);
+            this.denyAll = Output.ofNullable(denyAll);
             return this;
         }
 
-        public Builder enforce(@Nullable Input<String> enforce) {
+        public Builder enforce(@Nullable Output<String> enforce) {
             this.enforce = enforce;
             return this;
         }
 
         public Builder enforce(@Nullable String enforce) {
-            this.enforce = Input.ofNullable(enforce);
+            this.enforce = Output.ofNullable(enforce);
             return this;
         }
 
-        public Builder values(@Nullable Input<PolicySpecRuleValuesGetArgs> values) {
+        public Builder values(@Nullable Output<PolicySpecRuleValuesGetArgs> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable PolicySpecRuleValuesGetArgs values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public PolicySpecRuleGetArgs build() {

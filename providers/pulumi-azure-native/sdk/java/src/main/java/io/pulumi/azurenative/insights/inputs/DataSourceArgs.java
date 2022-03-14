@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DataSourceConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.SinkConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
     @InputImport(name="configuration", required=true)
-      private final Input<DataSourceConfigurationArgs> configuration;
+      private final Output<DataSourceConfigurationArgs> configuration;
 
-    public Input<DataSourceConfigurationArgs> getConfiguration() {
+    public Output<DataSourceConfigurationArgs> getConfiguration() {
         return this.configuration;
     }
 
@@ -32,32 +32,32 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
     @InputImport(name="sinks", required=true)
-      private final Input<List<SinkConfigurationArgs>> sinks;
+      private final Output<List<SinkConfigurationArgs>> sinks;
 
-    public Input<List<SinkConfigurationArgs>> getSinks() {
+    public Output<List<SinkConfigurationArgs>> getSinks() {
         return this.sinks;
     }
 
     public DataSourceArgs(
-        Input<DataSourceConfigurationArgs> configuration,
-        Input<String> kind,
-        Input<List<SinkConfigurationArgs>> sinks) {
+        Output<DataSourceConfigurationArgs> configuration,
+        Output<String> kind,
+        Output<List<SinkConfigurationArgs>> sinks) {
         this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.sinks = Objects.requireNonNull(sinks, "expected parameter 'sinks' to be non-null");
     }
 
     private DataSourceArgs() {
-        this.configuration = Input.empty();
-        this.kind = Input.empty();
-        this.sinks = Input.empty();
+        this.configuration = Output.empty();
+        this.kind = Output.empty();
+        this.sinks = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DataSourceConfigurationArgs> configuration;
-        private Input<String> kind;
-        private Input<List<SinkConfigurationArgs>> sinks;
+        private Output<DataSourceConfigurationArgs> configuration;
+        private Output<String> kind;
+        private Output<List<SinkConfigurationArgs>> sinks;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sinks = defaults.sinks;
         }
 
-        public Builder configuration(Input<DataSourceConfigurationArgs> configuration) {
+        public Builder configuration(Output<DataSourceConfigurationArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
         public Builder configuration(DataSourceConfigurationArgs configuration) {
-            this.configuration = Input.of(Objects.requireNonNull(configuration));
+            this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder sinks(Input<List<SinkConfigurationArgs>> sinks) {
+        public Builder sinks(Output<List<SinkConfigurationArgs>> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
 
         public Builder sinks(List<SinkConfigurationArgs> sinks) {
-            this.sinks = Input.of(Objects.requireNonNull(sinks));
+            this.sinks = Output.of(Objects.requireNonNull(sinks));
             return this;
         }
         public DataSourceArgs build() {

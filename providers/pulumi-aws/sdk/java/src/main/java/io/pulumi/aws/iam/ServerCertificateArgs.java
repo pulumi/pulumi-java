@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateBody", required=true)
-      private final Input<String> certificateBody;
+      private final Output<String> certificateBody;
 
-    public Input<String> getCertificateBody() {
+    public Output<String> getCertificateBody() {
         return this.certificateBody;
     }
 
@@ -34,10 +34,10 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateChain")
-      private final @Nullable Input<String> certificateChain;
+      private final @Nullable Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
-        return this.certificateChain == null ? Input.empty() : this.certificateChain;
+    public Output<String> getCertificateChain() {
+        return this.certificateChain == null ? Output.empty() : this.certificateChain;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -83,9 +83,9 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateKey", required=true)
-      private final Input<String> privateKey;
+      private final Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
+    public Output<String> getPrivateKey() {
         return this.privateKey;
     }
 
@@ -94,20 +94,20 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ServerCertificateArgs(
-        Input<String> certificateBody,
-        @Nullable Input<String> certificateChain,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> path,
-        Input<String> privateKey,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> certificateBody,
+        @Nullable Output<String> certificateChain,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> path,
+        Output<String> privateKey,
+        @Nullable Output<Map<String,String>> tags) {
         this.certificateBody = Objects.requireNonNull(certificateBody, "expected parameter 'certificateBody' to be non-null");
         this.certificateChain = certificateChain;
         this.name = name;
@@ -118,13 +118,13 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServerCertificateArgs() {
-        this.certificateBody = Input.empty();
-        this.certificateChain = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.path = Input.empty();
-        this.privateKey = Input.empty();
-        this.tags = Input.empty();
+        this.certificateBody = Output.empty();
+        this.certificateChain = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.path = Output.empty();
+        this.privateKey = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> certificateBody;
-        private @Nullable Input<String> certificateChain;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> path;
-        private Input<String> privateKey;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> certificateBody;
+        private @Nullable Output<String> certificateChain;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> path;
+        private Output<String> privateKey;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder certificateBody(Input<String> certificateBody) {
+        public Builder certificateBody(Output<String> certificateBody) {
             this.certificateBody = Objects.requireNonNull(certificateBody);
             return this;
         }
 
         public Builder certificateBody(String certificateBody) {
-            this.certificateBody = Input.of(Objects.requireNonNull(certificateBody));
+            this.certificateBody = Output.of(Objects.requireNonNull(certificateBody));
             return this;
         }
 
-        public Builder certificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Input.ofNullable(certificateChain);
+            this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder privateKey(Input<String> privateKey) {
+        public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
         public Builder privateKey(String privateKey) {
-            this.privateKey = Input.of(Objects.requireNonNull(privateKey));
+            this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ServerCertificateArgs build() {

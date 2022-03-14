@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="emails")
-      private final @Nullable Input<List<String>> emails;
+      private final @Nullable Output<List<String>> emails;
 
-    public Input<List<String>> getEmails() {
-        return this.emails == null ? Input.empty() : this.emails;
+    public Output<List<String>> getEmails() {
+        return this.emails == null ? Output.empty() : this.emails;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instruction")
-      private final @Nullable Input<String> instruction;
+      private final @Nullable Output<String> instruction;
 
-    public Input<String> getInstruction() {
-        return this.instruction == null ? Input.empty() : this.instruction;
+    public Output<String> getInstruction() {
+        return this.instruction == null ? Output.empty() : this.instruction;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uris")
-      private final @Nullable Input<List<String>> uris;
+      private final @Nullable Output<List<String>> uris;
 
-    public Input<List<String>> getUris() {
-        return this.uris == null ? Input.empty() : this.uris;
+    public Output<List<String>> getUris() {
+        return this.uris == null ? Output.empty() : this.uris;
     }
 
     public ApplicationInfoArgs(
-        @Nullable Input<List<String>> emails,
-        @Nullable Input<String> instruction,
-        @Nullable Input<List<String>> uris) {
+        @Nullable Output<List<String>> emails,
+        @Nullable Output<String> instruction,
+        @Nullable Output<List<String>> uris) {
         this.emails = emails;
         this.instruction = instruction;
         this.uris = uris;
     }
 
     private ApplicationInfoArgs() {
-        this.emails = Input.empty();
-        this.instruction = Input.empty();
-        this.uris = Input.empty();
+        this.emails = Output.empty();
+        this.instruction = Output.empty();
+        this.uris = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> emails;
-        private @Nullable Input<String> instruction;
-        private @Nullable Input<List<String>> uris;
+        private @Nullable Output<List<String>> emails;
+        private @Nullable Output<String> instruction;
+        private @Nullable Output<List<String>> uris;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uris = defaults.uris;
         }
 
-        public Builder emails(@Nullable Input<List<String>> emails) {
+        public Builder emails(@Nullable Output<List<String>> emails) {
             this.emails = emails;
             return this;
         }
 
         public Builder emails(@Nullable List<String> emails) {
-            this.emails = Input.ofNullable(emails);
+            this.emails = Output.ofNullable(emails);
             return this;
         }
 
-        public Builder instruction(@Nullable Input<String> instruction) {
+        public Builder instruction(@Nullable Output<String> instruction) {
             this.instruction = instruction;
             return this;
         }
 
         public Builder instruction(@Nullable String instruction) {
-            this.instruction = Input.ofNullable(instruction);
+            this.instruction = Output.ofNullable(instruction);
             return this;
         }
 
-        public Builder uris(@Nullable Input<List<String>> uris) {
+        public Builder uris(@Nullable Output<List<String>> uris) {
             this.uris = uris;
             return this;
         }
 
         public Builder uris(@Nullable List<String> uris) {
-            this.uris = Input.ofNullable(uris);
+            this.uris = Output.ofNullable(uris);
             return this;
         }
         public ApplicationInfoArgs build() {

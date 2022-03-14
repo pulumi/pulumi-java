@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.enums.Name;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="blobType")
-      private final @Nullable Input<List<String>> blobType;
+      private final @Nullable Output<List<String>> blobType;
 
-    public Input<List<String>> getBlobType() {
-        return this.blobType == null ? Input.empty() : this.blobType;
+    public Output<List<String>> getBlobType() {
+        return this.blobType == null ? Output.empty() : this.blobType;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enable", required=true)
-      private final Input<Boolean> enable;
+      private final Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
+    public Output<Boolean> getEnable() {
         return this.enable;
     }
 
@@ -50,10 +50,10 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,Name>> name;
+      private final @Nullable Output<Either<String,Name>> name;
 
-    public Input<Either<String,Name>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,Name>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="trackingGranularityInDays")
-      private final @Nullable Input<Integer> trackingGranularityInDays;
+      private final @Nullable Output<Integer> trackingGranularityInDays;
 
-    public Input<Integer> getTrackingGranularityInDays() {
-        return this.trackingGranularityInDays == null ? Input.empty() : this.trackingGranularityInDays;
+    public Output<Integer> getTrackingGranularityInDays() {
+        return this.trackingGranularityInDays == null ? Output.empty() : this.trackingGranularityInDays;
     }
 
     public LastAccessTimeTrackingPolicyArgs(
-        @Nullable Input<List<String>> blobType,
-        Input<Boolean> enable,
-        @Nullable Input<Either<String,Name>> name,
-        @Nullable Input<Integer> trackingGranularityInDays) {
+        @Nullable Output<List<String>> blobType,
+        Output<Boolean> enable,
+        @Nullable Output<Either<String,Name>> name,
+        @Nullable Output<Integer> trackingGranularityInDays) {
         this.blobType = blobType;
         this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
         this.name = name;
@@ -79,10 +79,10 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     }
 
     private LastAccessTimeTrackingPolicyArgs() {
-        this.blobType = Input.empty();
-        this.enable = Input.empty();
-        this.name = Input.empty();
-        this.trackingGranularityInDays = Input.empty();
+        this.blobType = Output.empty();
+        this.enable = Output.empty();
+        this.name = Output.empty();
+        this.trackingGranularityInDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> blobType;
-        private Input<Boolean> enable;
-        private @Nullable Input<Either<String,Name>> name;
-        private @Nullable Input<Integer> trackingGranularityInDays;
+        private @Nullable Output<List<String>> blobType;
+        private Output<Boolean> enable;
+        private @Nullable Output<Either<String,Name>> name;
+        private @Nullable Output<Integer> trackingGranularityInDays;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     	      this.trackingGranularityInDays = defaults.trackingGranularityInDays;
         }
 
-        public Builder blobType(@Nullable Input<List<String>> blobType) {
+        public Builder blobType(@Nullable Output<List<String>> blobType) {
             this.blobType = blobType;
             return this;
         }
 
         public Builder blobType(@Nullable List<String> blobType) {
-            this.blobType = Input.ofNullable(blobType);
+            this.blobType = Output.ofNullable(blobType);
             return this;
         }
 
-        public Builder enable(Input<Boolean> enable) {
+        public Builder enable(Output<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Input.of(Objects.requireNonNull(enable));
+            this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
 
-        public Builder name(@Nullable Input<Either<String,Name>> name) {
+        public Builder name(@Nullable Output<Either<String,Name>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,Name> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder trackingGranularityInDays(@Nullable Input<Integer> trackingGranularityInDays) {
+        public Builder trackingGranularityInDays(@Nullable Output<Integer> trackingGranularityInDays) {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }
 
         public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
-            this.trackingGranularityInDays = Input.ofNullable(trackingGranularityInDays);
+            this.trackingGranularityInDays = Output.ofNullable(trackingGranularityInDays);
             return this;
         }
         public LastAccessTimeTrackingPolicyArgs build() {

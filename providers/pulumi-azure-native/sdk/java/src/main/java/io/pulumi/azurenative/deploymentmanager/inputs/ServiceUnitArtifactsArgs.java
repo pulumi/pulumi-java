@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parametersArtifactSourceRelativePath")
-      private final @Nullable Input<String> parametersArtifactSourceRelativePath;
+      private final @Nullable Output<String> parametersArtifactSourceRelativePath;
 
-    public Input<String> getParametersArtifactSourceRelativePath() {
-        return this.parametersArtifactSourceRelativePath == null ? Input.empty() : this.parametersArtifactSourceRelativePath;
+    public Output<String> getParametersArtifactSourceRelativePath() {
+        return this.parametersArtifactSourceRelativePath == null ? Output.empty() : this.parametersArtifactSourceRelativePath;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parametersUri")
-      private final @Nullable Input<String> parametersUri;
+      private final @Nullable Output<String> parametersUri;
 
-    public Input<String> getParametersUri() {
-        return this.parametersUri == null ? Input.empty() : this.parametersUri;
+    public Output<String> getParametersUri() {
+        return this.parametersUri == null ? Output.empty() : this.parametersUri;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="templateArtifactSourceRelativePath")
-      private final @Nullable Input<String> templateArtifactSourceRelativePath;
+      private final @Nullable Output<String> templateArtifactSourceRelativePath;
 
-    public Input<String> getTemplateArtifactSourceRelativePath() {
-        return this.templateArtifactSourceRelativePath == null ? Input.empty() : this.templateArtifactSourceRelativePath;
+    public Output<String> getTemplateArtifactSourceRelativePath() {
+        return this.templateArtifactSourceRelativePath == null ? Output.empty() : this.templateArtifactSourceRelativePath;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="templateUri")
-      private final @Nullable Input<String> templateUri;
+      private final @Nullable Output<String> templateUri;
 
-    public Input<String> getTemplateUri() {
-        return this.templateUri == null ? Input.empty() : this.templateUri;
+    public Output<String> getTemplateUri() {
+        return this.templateUri == null ? Output.empty() : this.templateUri;
     }
 
     public ServiceUnitArtifactsArgs(
-        @Nullable Input<String> parametersArtifactSourceRelativePath,
-        @Nullable Input<String> parametersUri,
-        @Nullable Input<String> templateArtifactSourceRelativePath,
-        @Nullable Input<String> templateUri) {
+        @Nullable Output<String> parametersArtifactSourceRelativePath,
+        @Nullable Output<String> parametersUri,
+        @Nullable Output<String> templateArtifactSourceRelativePath,
+        @Nullable Output<String> templateUri) {
         this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
         this.parametersUri = parametersUri;
         this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
@@ -74,10 +74,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     }
 
     private ServiceUnitArtifactsArgs() {
-        this.parametersArtifactSourceRelativePath = Input.empty();
-        this.parametersUri = Input.empty();
-        this.templateArtifactSourceRelativePath = Input.empty();
-        this.templateUri = Input.empty();
+        this.parametersArtifactSourceRelativePath = Output.empty();
+        this.parametersUri = Output.empty();
+        this.templateArtifactSourceRelativePath = Output.empty();
+        this.templateUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> parametersArtifactSourceRelativePath;
-        private @Nullable Input<String> parametersUri;
-        private @Nullable Input<String> templateArtifactSourceRelativePath;
-        private @Nullable Input<String> templateUri;
+        private @Nullable Output<String> parametersArtifactSourceRelativePath;
+        private @Nullable Output<String> parametersUri;
+        private @Nullable Output<String> templateArtifactSourceRelativePath;
+        private @Nullable Output<String> templateUri;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     	      this.templateUri = defaults.templateUri;
         }
 
-        public Builder parametersArtifactSourceRelativePath(@Nullable Input<String> parametersArtifactSourceRelativePath) {
+        public Builder parametersArtifactSourceRelativePath(@Nullable Output<String> parametersArtifactSourceRelativePath) {
             this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
             return this;
         }
 
         public Builder parametersArtifactSourceRelativePath(@Nullable String parametersArtifactSourceRelativePath) {
-            this.parametersArtifactSourceRelativePath = Input.ofNullable(parametersArtifactSourceRelativePath);
+            this.parametersArtifactSourceRelativePath = Output.ofNullable(parametersArtifactSourceRelativePath);
             return this;
         }
 
-        public Builder parametersUri(@Nullable Input<String> parametersUri) {
+        public Builder parametersUri(@Nullable Output<String> parametersUri) {
             this.parametersUri = parametersUri;
             return this;
         }
 
         public Builder parametersUri(@Nullable String parametersUri) {
-            this.parametersUri = Input.ofNullable(parametersUri);
+            this.parametersUri = Output.ofNullable(parametersUri);
             return this;
         }
 
-        public Builder templateArtifactSourceRelativePath(@Nullable Input<String> templateArtifactSourceRelativePath) {
+        public Builder templateArtifactSourceRelativePath(@Nullable Output<String> templateArtifactSourceRelativePath) {
             this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
             return this;
         }
 
         public Builder templateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
-            this.templateArtifactSourceRelativePath = Input.ofNullable(templateArtifactSourceRelativePath);
+            this.templateArtifactSourceRelativePath = Output.ofNullable(templateArtifactSourceRelativePath);
             return this;
         }
 
-        public Builder templateUri(@Nullable Input<String> templateUri) {
+        public Builder templateUri(@Nullable Output<String> templateUri) {
             this.templateUri = templateUri;
             return this;
         }
 
         public Builder templateUri(@Nullable String templateUri) {
-            this.templateUri = Input.ofNullable(templateUri);
+            this.templateUri = Output.ofNullable(templateUri);
             return this;
         }
         public ServiceUnitArtifactsArgs build() {

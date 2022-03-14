@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup;
 
 import io.pulumi.awsnative.backup.inputs.FrameworkControlArgs;
 import io.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkControls", required=true)
-      private final Input<List<FrameworkControlArgs>> frameworkControls;
+      private final Output<List<FrameworkControlArgs>> frameworkControls;
 
-    public Input<List<FrameworkControlArgs>> getFrameworkControls() {
+    public Output<List<FrameworkControlArgs>> getFrameworkControls() {
         return this.frameworkControls;
     }
 
@@ -33,10 +33,10 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkDescription")
-      private final @Nullable Input<String> frameworkDescription;
+      private final @Nullable Output<String> frameworkDescription;
 
-    public Input<String> getFrameworkDescription() {
-        return this.frameworkDescription == null ? Input.empty() : this.frameworkDescription;
+    public Output<String> getFrameworkDescription() {
+        return this.frameworkDescription == null ? Output.empty() : this.frameworkDescription;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkName")
-      private final @Nullable Input<String> frameworkName;
+      private final @Nullable Output<String> frameworkName;
 
-    public Input<String> getFrameworkName() {
-        return this.frameworkName == null ? Input.empty() : this.frameworkName;
+    public Output<String> getFrameworkName() {
+        return this.frameworkName == null ? Output.empty() : this.frameworkName;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkTags")
-      private final @Nullable Input<List<FrameworkTagArgs>> frameworkTags;
+      private final @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
 
-    public Input<List<FrameworkTagArgs>> getFrameworkTags() {
-        return this.frameworkTags == null ? Input.empty() : this.frameworkTags;
+    public Output<List<FrameworkTagArgs>> getFrameworkTags() {
+        return this.frameworkTags == null ? Output.empty() : this.frameworkTags;
     }
 
     public FrameworkArgs(
-        Input<List<FrameworkControlArgs>> frameworkControls,
-        @Nullable Input<String> frameworkDescription,
-        @Nullable Input<String> frameworkName,
-        @Nullable Input<List<FrameworkTagArgs>> frameworkTags) {
+        Output<List<FrameworkControlArgs>> frameworkControls,
+        @Nullable Output<String> frameworkDescription,
+        @Nullable Output<String> frameworkName,
+        @Nullable Output<List<FrameworkTagArgs>> frameworkTags) {
         this.frameworkControls = Objects.requireNonNull(frameworkControls, "expected parameter 'frameworkControls' to be non-null");
         this.frameworkDescription = frameworkDescription;
         this.frameworkName = frameworkName;
@@ -73,10 +73,10 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FrameworkArgs() {
-        this.frameworkControls = Input.empty();
-        this.frameworkDescription = Input.empty();
-        this.frameworkName = Input.empty();
-        this.frameworkTags = Input.empty();
+        this.frameworkControls = Output.empty();
+        this.frameworkDescription = Output.empty();
+        this.frameworkName = Output.empty();
+        this.frameworkTags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<FrameworkControlArgs>> frameworkControls;
-        private @Nullable Input<String> frameworkDescription;
-        private @Nullable Input<String> frameworkName;
-        private @Nullable Input<List<FrameworkTagArgs>> frameworkTags;
+        private Output<List<FrameworkControlArgs>> frameworkControls;
+        private @Nullable Output<String> frameworkDescription;
+        private @Nullable Output<String> frameworkName;
+        private @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.frameworkTags = defaults.frameworkTags;
         }
 
-        public Builder frameworkControls(Input<List<FrameworkControlArgs>> frameworkControls) {
+        public Builder frameworkControls(Output<List<FrameworkControlArgs>> frameworkControls) {
             this.frameworkControls = Objects.requireNonNull(frameworkControls);
             return this;
         }
 
         public Builder frameworkControls(List<FrameworkControlArgs> frameworkControls) {
-            this.frameworkControls = Input.of(Objects.requireNonNull(frameworkControls));
+            this.frameworkControls = Output.of(Objects.requireNonNull(frameworkControls));
             return this;
         }
 
-        public Builder frameworkDescription(@Nullable Input<String> frameworkDescription) {
+        public Builder frameworkDescription(@Nullable Output<String> frameworkDescription) {
             this.frameworkDescription = frameworkDescription;
             return this;
         }
 
         public Builder frameworkDescription(@Nullable String frameworkDescription) {
-            this.frameworkDescription = Input.ofNullable(frameworkDescription);
+            this.frameworkDescription = Output.ofNullable(frameworkDescription);
             return this;
         }
 
-        public Builder frameworkName(@Nullable Input<String> frameworkName) {
+        public Builder frameworkName(@Nullable Output<String> frameworkName) {
             this.frameworkName = frameworkName;
             return this;
         }
 
         public Builder frameworkName(@Nullable String frameworkName) {
-            this.frameworkName = Input.ofNullable(frameworkName);
+            this.frameworkName = Output.ofNullable(frameworkName);
             return this;
         }
 
-        public Builder frameworkTags(@Nullable Input<List<FrameworkTagArgs>> frameworkTags) {
+        public Builder frameworkTags(@Nullable Output<List<FrameworkTagArgs>> frameworkTags) {
             this.frameworkTags = frameworkTags;
             return this;
         }
 
         public Builder frameworkTags(@Nullable List<FrameworkTagArgs> frameworkTags) {
-            this.frameworkTags = Input.ofNullable(frameworkTags);
+            this.frameworkTags = Output.ofNullable(frameworkTags);
             return this;
         }
         public FrameworkArgs build() {

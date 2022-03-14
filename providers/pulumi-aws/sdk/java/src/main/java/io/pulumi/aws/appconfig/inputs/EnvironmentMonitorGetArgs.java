@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alarmArn", required=true)
-      private final Input<String> alarmArn;
+      private final Output<String> alarmArn;
 
-    public Input<String> getAlarmArn() {
+    public Output<String> getAlarmArn() {
         return this.alarmArn;
     }
 
@@ -30,22 +30,22 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alarmRoleArn")
-      private final @Nullable Input<String> alarmRoleArn;
+      private final @Nullable Output<String> alarmRoleArn;
 
-    public Input<String> getAlarmRoleArn() {
-        return this.alarmRoleArn == null ? Input.empty() : this.alarmRoleArn;
+    public Output<String> getAlarmRoleArn() {
+        return this.alarmRoleArn == null ? Output.empty() : this.alarmRoleArn;
     }
 
     public EnvironmentMonitorGetArgs(
-        Input<String> alarmArn,
-        @Nullable Input<String> alarmRoleArn) {
+        Output<String> alarmArn,
+        @Nullable Output<String> alarmRoleArn) {
         this.alarmArn = Objects.requireNonNull(alarmArn, "expected parameter 'alarmArn' to be non-null");
         this.alarmRoleArn = alarmRoleArn;
     }
 
     private EnvironmentMonitorGetArgs() {
-        this.alarmArn = Input.empty();
-        this.alarmRoleArn = Input.empty();
+        this.alarmArn = Output.empty();
+        this.alarmRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> alarmArn;
-        private @Nullable Input<String> alarmRoleArn;
+        private Output<String> alarmArn;
+        private @Nullable Output<String> alarmRoleArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
     	      this.alarmRoleArn = defaults.alarmRoleArn;
         }
 
-        public Builder alarmArn(Input<String> alarmArn) {
+        public Builder alarmArn(Output<String> alarmArn) {
             this.alarmArn = Objects.requireNonNull(alarmArn);
             return this;
         }
 
         public Builder alarmArn(String alarmArn) {
-            this.alarmArn = Input.of(Objects.requireNonNull(alarmArn));
+            this.alarmArn = Output.of(Objects.requireNonNull(alarmArn));
             return this;
         }
 
-        public Builder alarmRoleArn(@Nullable Input<String> alarmRoleArn) {
+        public Builder alarmRoleArn(@Nullable Output<String> alarmRoleArn) {
             this.alarmRoleArn = alarmRoleArn;
             return this;
         }
 
         public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
-            this.alarmRoleArn = Input.ofNullable(alarmRoleArn);
+            this.alarmRoleArn = Output.ofNullable(alarmRoleArn);
             return this;
         }
         public EnvironmentMonitorGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.binaryauthorization_v1.inputs.PkixPublicKeyArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="asciiArmoredPgpPublicKey")
-      private final @Nullable Input<String> asciiArmoredPgpPublicKey;
+      private final @Nullable Output<String> asciiArmoredPgpPublicKey;
 
-    public Input<String> getAsciiArmoredPgpPublicKey() {
-        return this.asciiArmoredPgpPublicKey == null ? Input.empty() : this.asciiArmoredPgpPublicKey;
+    public Output<String> getAsciiArmoredPgpPublicKey() {
+        return this.asciiArmoredPgpPublicKey == null ? Output.empty() : this.asciiArmoredPgpPublicKey;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pkixPublicKey")
-      private final @Nullable Input<PkixPublicKeyArgs> pkixPublicKey;
+      private final @Nullable Output<PkixPublicKeyArgs> pkixPublicKey;
 
-    public Input<PkixPublicKeyArgs> getPkixPublicKey() {
-        return this.pkixPublicKey == null ? Input.empty() : this.pkixPublicKey;
+    public Output<PkixPublicKeyArgs> getPkixPublicKey() {
+        return this.pkixPublicKey == null ? Output.empty() : this.pkixPublicKey;
     }
 
     public AttestorPublicKeyArgs(
-        @Nullable Input<String> asciiArmoredPgpPublicKey,
-        @Nullable Input<String> comment,
-        @Nullable Input<String> id,
-        @Nullable Input<PkixPublicKeyArgs> pkixPublicKey) {
+        @Nullable Output<String> asciiArmoredPgpPublicKey,
+        @Nullable Output<String> comment,
+        @Nullable Output<String> id,
+        @Nullable Output<PkixPublicKeyArgs> pkixPublicKey) {
         this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
         this.comment = comment;
         this.id = id;
@@ -75,10 +75,10 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AttestorPublicKeyArgs() {
-        this.asciiArmoredPgpPublicKey = Input.empty();
-        this.comment = Input.empty();
-        this.id = Input.empty();
-        this.pkixPublicKey = Input.empty();
+        this.asciiArmoredPgpPublicKey = Output.empty();
+        this.comment = Output.empty();
+        this.id = Output.empty();
+        this.pkixPublicKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> asciiArmoredPgpPublicKey;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> id;
-        private @Nullable Input<PkixPublicKeyArgs> pkixPublicKey;
+        private @Nullable Output<String> asciiArmoredPgpPublicKey;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> id;
+        private @Nullable Output<PkixPublicKeyArgs> pkixPublicKey;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
     	      this.pkixPublicKey = defaults.pkixPublicKey;
         }
 
-        public Builder asciiArmoredPgpPublicKey(@Nullable Input<String> asciiArmoredPgpPublicKey) {
+        public Builder asciiArmoredPgpPublicKey(@Nullable Output<String> asciiArmoredPgpPublicKey) {
             this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
             return this;
         }
 
         public Builder asciiArmoredPgpPublicKey(@Nullable String asciiArmoredPgpPublicKey) {
-            this.asciiArmoredPgpPublicKey = Input.ofNullable(asciiArmoredPgpPublicKey);
+            this.asciiArmoredPgpPublicKey = Output.ofNullable(asciiArmoredPgpPublicKey);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder pkixPublicKey(@Nullable Input<PkixPublicKeyArgs> pkixPublicKey) {
+        public Builder pkixPublicKey(@Nullable Output<PkixPublicKeyArgs> pkixPublicKey) {
             this.pkixPublicKey = pkixPublicKey;
             return this;
         }
 
         public Builder pkixPublicKey(@Nullable PkixPublicKeyArgs pkixPublicKey) {
-            this.pkixPublicKey = Input.ofNullable(pkixPublicKey);
+            this.pkixPublicKey = Output.ofNullable(pkixPublicKey);
             return this;
         }
         public AttestorPublicKeyArgs build() {

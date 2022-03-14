@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketDataExportArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.Re
     public static final BucketStorageClassAnalysisArgs Empty = new BucketStorageClassAnalysisArgs();
 
     @InputImport(name="dataExport")
-      private final @Nullable Input<BucketDataExportArgs> dataExport;
+      private final @Nullable Output<BucketDataExportArgs> dataExport;
 
-    public Input<BucketDataExportArgs> getDataExport() {
-        return this.dataExport == null ? Input.empty() : this.dataExport;
+    public Output<BucketDataExportArgs> getDataExport() {
+        return this.dataExport == null ? Output.empty() : this.dataExport;
     }
 
-    public BucketStorageClassAnalysisArgs(@Nullable Input<BucketDataExportArgs> dataExport) {
+    public BucketStorageClassAnalysisArgs(@Nullable Output<BucketDataExportArgs> dataExport) {
         this.dataExport = dataExport;
     }
 
     private BucketStorageClassAnalysisArgs() {
-        this.dataExport = Input.empty();
+        this.dataExport = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketDataExportArgs> dataExport;
+        private @Nullable Output<BucketDataExportArgs> dataExport;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.Re
     	      this.dataExport = defaults.dataExport;
         }
 
-        public Builder dataExport(@Nullable Input<BucketDataExportArgs> dataExport) {
+        public Builder dataExport(@Nullable Output<BucketDataExportArgs> dataExport) {
             this.dataExport = dataExport;
             return this;
         }
 
         public Builder dataExport(@Nullable BucketDataExportArgs dataExport) {
-            this.dataExport = Input.ofNullable(dataExport);
+            this.dataExport = Output.ofNullable(dataExport);
             return this;
         }
         public BucketStorageClassAnalysisArgs build() {

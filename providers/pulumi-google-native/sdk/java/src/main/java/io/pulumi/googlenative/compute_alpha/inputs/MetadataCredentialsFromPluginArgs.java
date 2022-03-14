@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="structConfig")
-      private final @Nullable Input<String> structConfig;
+      private final @Nullable Output<String> structConfig;
 
-    public Input<String> getStructConfig() {
-        return this.structConfig == null ? Input.empty() : this.structConfig;
+    public Output<String> getStructConfig() {
+        return this.structConfig == null ? Output.empty() : this.structConfig;
     }
 
     public MetadataCredentialsFromPluginArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> structConfig) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> structConfig) {
         this.name = name;
         this.structConfig = structConfig;
     }
 
     private MetadataCredentialsFromPluginArgs() {
-        this.name = Input.empty();
-        this.structConfig = Input.empty();
+        this.name = Output.empty();
+        this.structConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> structConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> structConfig;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
     	      this.structConfig = defaults.structConfig;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder structConfig(@Nullable Input<String> structConfig) {
+        public Builder structConfig(@Nullable Output<String> structConfig) {
             this.structConfig = structConfig;
             return this;
         }
 
         public Builder structConfig(@Nullable String structConfig) {
-            this.structConfig = Input.ofNullable(structConfig);
+            this.structConfig = Output.ofNullable(structConfig);
             return this;
         }
         public MetadataCredentialsFromPluginArgs build() {

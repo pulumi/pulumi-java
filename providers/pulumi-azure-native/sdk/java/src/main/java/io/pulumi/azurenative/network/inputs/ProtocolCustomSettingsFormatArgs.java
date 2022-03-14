@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.DdosCustomPolicyProtocol;
 import io.pulumi.azurenative.network.enums.DdosCustomPolicyTriggerSensitivityOverride;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol;
+      private final @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol;
 
-    public Input<Either<String,DdosCustomPolicyProtocol>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,DdosCustomPolicyProtocol>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceRateOverride")
-      private final @Nullable Input<String> sourceRateOverride;
+      private final @Nullable Output<String> sourceRateOverride;
 
-    public Input<String> getSourceRateOverride() {
-        return this.sourceRateOverride == null ? Input.empty() : this.sourceRateOverride;
+    public Output<String> getSourceRateOverride() {
+        return this.sourceRateOverride == null ? Output.empty() : this.sourceRateOverride;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="triggerRateOverride")
-      private final @Nullable Input<String> triggerRateOverride;
+      private final @Nullable Output<String> triggerRateOverride;
 
-    public Input<String> getTriggerRateOverride() {
-        return this.triggerRateOverride == null ? Input.empty() : this.triggerRateOverride;
+    public Output<String> getTriggerRateOverride() {
+        return this.triggerRateOverride == null ? Output.empty() : this.triggerRateOverride;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="triggerSensitivityOverride")
-      private final @Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
+      private final @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
 
-    public Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> getTriggerSensitivityOverride() {
-        return this.triggerSensitivityOverride == null ? Input.empty() : this.triggerSensitivityOverride;
+    public Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> getTriggerSensitivityOverride() {
+        return this.triggerSensitivityOverride == null ? Output.empty() : this.triggerSensitivityOverride;
     }
 
     public ProtocolCustomSettingsFormatArgs(
-        @Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol,
-        @Nullable Input<String> sourceRateOverride,
-        @Nullable Input<String> triggerRateOverride,
-        @Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
+        @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol,
+        @Nullable Output<String> sourceRateOverride,
+        @Nullable Output<String> triggerRateOverride,
+        @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
         this.protocol = protocol;
         this.sourceRateOverride = sourceRateOverride;
         this.triggerRateOverride = triggerRateOverride;
@@ -77,10 +77,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
     }
 
     private ProtocolCustomSettingsFormatArgs() {
-        this.protocol = Input.empty();
-        this.sourceRateOverride = Input.empty();
-        this.triggerRateOverride = Input.empty();
-        this.triggerSensitivityOverride = Input.empty();
+        this.protocol = Output.empty();
+        this.sourceRateOverride = Output.empty();
+        this.triggerRateOverride = Output.empty();
+        this.triggerSensitivityOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol;
-        private @Nullable Input<String> sourceRateOverride;
-        private @Nullable Input<String> triggerRateOverride;
-        private @Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
+        private @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol;
+        private @Nullable Output<String> sourceRateOverride;
+        private @Nullable Output<String> triggerRateOverride;
+        private @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
     	      this.triggerSensitivityOverride = defaults.triggerSensitivityOverride;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,DdosCustomPolicyProtocol> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder sourceRateOverride(@Nullable Input<String> sourceRateOverride) {
+        public Builder sourceRateOverride(@Nullable Output<String> sourceRateOverride) {
             this.sourceRateOverride = sourceRateOverride;
             return this;
         }
 
         public Builder sourceRateOverride(@Nullable String sourceRateOverride) {
-            this.sourceRateOverride = Input.ofNullable(sourceRateOverride);
+            this.sourceRateOverride = Output.ofNullable(sourceRateOverride);
             return this;
         }
 
-        public Builder triggerRateOverride(@Nullable Input<String> triggerRateOverride) {
+        public Builder triggerRateOverride(@Nullable Output<String> triggerRateOverride) {
             this.triggerRateOverride = triggerRateOverride;
             return this;
         }
 
         public Builder triggerRateOverride(@Nullable String triggerRateOverride) {
-            this.triggerRateOverride = Input.ofNullable(triggerRateOverride);
+            this.triggerRateOverride = Output.ofNullable(triggerRateOverride);
             return this;
         }
 
-        public Builder triggerSensitivityOverride(@Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
+        public Builder triggerSensitivityOverride(@Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
             this.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }
 
         public Builder triggerSensitivityOverride(@Nullable Either<String,DdosCustomPolicyTriggerSensitivityOverride> triggerSensitivityOverride) {
-            this.triggerSensitivityOverride = Input.ofNullable(triggerSensitivityOverride);
+            this.triggerSensitivityOverride = Output.ofNullable(triggerSensitivityOverride);
             return this;
         }
         public ProtocolCustomSettingsFormatArgs build() {

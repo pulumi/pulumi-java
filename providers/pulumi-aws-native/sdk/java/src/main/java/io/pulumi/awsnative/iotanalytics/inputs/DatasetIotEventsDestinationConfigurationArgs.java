@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class DatasetIotEventsDestinationConfigurationArgs extends io.pulum
     public static final DatasetIotEventsDestinationConfigurationArgs Empty = new DatasetIotEventsDestinationConfigurationArgs();
 
     @InputImport(name="inputName", required=true)
-      private final Input<String> inputName;
+      private final Output<String> inputName;
 
-    public Input<String> getInputName() {
+    public Output<String> getInputName() {
         return this.inputName;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public DatasetIotEventsDestinationConfigurationArgs(
-        Input<String> inputName,
-        Input<String> roleArn) {
+        Output<String> inputName,
+        Output<String> roleArn) {
         this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private DatasetIotEventsDestinationConfigurationArgs() {
-        this.inputName = Input.empty();
-        this.roleArn = Input.empty();
+        this.inputName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class DatasetIotEventsDestinationConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> inputName;
-        private Input<String> roleArn;
+        private Output<String> inputName;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class DatasetIotEventsDestinationConfigurationArgs extends io.pulum
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder inputName(Input<String> inputName) {
+        public Builder inputName(Output<String> inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
         public Builder inputName(String inputName) {
-            this.inputName = Input.of(Objects.requireNonNull(inputName));
+            this.inputName = Output.of(Objects.requireNonNull(inputName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public DatasetIotEventsDestinationConfigurationArgs build() {

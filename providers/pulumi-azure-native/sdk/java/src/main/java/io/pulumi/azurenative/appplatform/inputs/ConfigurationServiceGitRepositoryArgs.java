@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hostKey")
-      private final @Nullable Input<String> hostKey;
+      private final @Nullable Output<String> hostKey;
 
-    public Input<String> getHostKey() {
-        return this.hostKey == null ? Input.empty() : this.hostKey;
+    public Output<String> getHostKey() {
+        return this.hostKey == null ? Output.empty() : this.hostKey;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hostKeyAlgorithm")
-      private final @Nullable Input<String> hostKeyAlgorithm;
+      private final @Nullable Output<String> hostKeyAlgorithm;
 
-    public Input<String> getHostKeyAlgorithm() {
-        return this.hostKeyAlgorithm == null ? Input.empty() : this.hostKeyAlgorithm;
+    public Output<String> getHostKeyAlgorithm() {
+        return this.hostKeyAlgorithm == null ? Output.empty() : this.hostKeyAlgorithm;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="label", required=true)
-      private final Input<String> label;
+      private final Output<String> label;
 
-    public Input<String> getLabel() {
+    public Output<String> getLabel() {
         return this.label;
     }
 
@@ -58,9 +58,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -69,10 +69,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="patterns", required=true)
-      private final Input<List<String>> patterns;
+      private final Output<List<String>> patterns;
 
-    public Input<List<String>> getPatterns() {
+    public Output<List<String>> getPatterns() {
         return this.patterns;
     }
 
@@ -91,10 +91,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="searchPaths")
-      private final @Nullable Input<List<String>> searchPaths;
+      private final @Nullable Output<List<String>> searchPaths;
 
-    public Input<List<String>> getSearchPaths() {
-        return this.searchPaths == null ? Input.empty() : this.searchPaths;
+    public Output<List<String>> getSearchPaths() {
+        return this.searchPaths == null ? Output.empty() : this.searchPaths;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="strictHostKeyChecking")
-      private final @Nullable Input<Boolean> strictHostKeyChecking;
+      private final @Nullable Output<Boolean> strictHostKeyChecking;
 
-    public Input<Boolean> getStrictHostKeyChecking() {
-        return this.strictHostKeyChecking == null ? Input.empty() : this.strictHostKeyChecking;
+    public Output<Boolean> getStrictHostKeyChecking() {
+        return this.strictHostKeyChecking == null ? Output.empty() : this.strictHostKeyChecking;
     }
 
     /**
@@ -124,9 +124,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
@@ -135,24 +135,24 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public ConfigurationServiceGitRepositoryArgs(
-        @Nullable Input<String> hostKey,
-        @Nullable Input<String> hostKeyAlgorithm,
-        Input<String> label,
-        Input<String> name,
-        @Nullable Input<String> password,
-        Input<List<String>> patterns,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<List<String>> searchPaths,
-        @Nullable Input<Boolean> strictHostKeyChecking,
-        Input<String> uri,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> hostKey,
+        @Nullable Output<String> hostKeyAlgorithm,
+        Output<String> label,
+        Output<String> name,
+        @Nullable Output<String> password,
+        Output<List<String>> patterns,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<List<String>> searchPaths,
+        @Nullable Output<Boolean> strictHostKeyChecking,
+        Output<String> uri,
+        @Nullable Output<String> username) {
         this.hostKey = hostKey;
         this.hostKeyAlgorithm = hostKeyAlgorithm;
         this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
@@ -167,17 +167,17 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     }
 
     private ConfigurationServiceGitRepositoryArgs() {
-        this.hostKey = Input.empty();
-        this.hostKeyAlgorithm = Input.empty();
-        this.label = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.patterns = Input.empty();
-        this.privateKey = Input.empty();
-        this.searchPaths = Input.empty();
-        this.strictHostKeyChecking = Input.empty();
-        this.uri = Input.empty();
-        this.username = Input.empty();
+        this.hostKey = Output.empty();
+        this.hostKeyAlgorithm = Output.empty();
+        this.label = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.patterns = Output.empty();
+        this.privateKey = Output.empty();
+        this.searchPaths = Output.empty();
+        this.strictHostKeyChecking = Output.empty();
+        this.uri = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostKey;
-        private @Nullable Input<String> hostKeyAlgorithm;
-        private Input<String> label;
-        private Input<String> name;
-        private @Nullable Input<String> password;
-        private Input<List<String>> patterns;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<List<String>> searchPaths;
-        private @Nullable Input<Boolean> strictHostKeyChecking;
-        private Input<String> uri;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> hostKey;
+        private @Nullable Output<String> hostKeyAlgorithm;
+        private Output<String> label;
+        private Output<String> name;
+        private @Nullable Output<String> password;
+        private Output<List<String>> patterns;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<List<String>> searchPaths;
+        private @Nullable Output<Boolean> strictHostKeyChecking;
+        private Output<String> uri;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     	      this.username = defaults.username;
         }
 
-        public Builder hostKey(@Nullable Input<String> hostKey) {
+        public Builder hostKey(@Nullable Output<String> hostKey) {
             this.hostKey = hostKey;
             return this;
         }
 
         public Builder hostKey(@Nullable String hostKey) {
-            this.hostKey = Input.ofNullable(hostKey);
+            this.hostKey = Output.ofNullable(hostKey);
             return this;
         }
 
-        public Builder hostKeyAlgorithm(@Nullable Input<String> hostKeyAlgorithm) {
+        public Builder hostKeyAlgorithm(@Nullable Output<String> hostKeyAlgorithm) {
             this.hostKeyAlgorithm = hostKeyAlgorithm;
             return this;
         }
 
         public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
-            this.hostKeyAlgorithm = Input.ofNullable(hostKeyAlgorithm);
+            this.hostKeyAlgorithm = Output.ofNullable(hostKeyAlgorithm);
             return this;
         }
 
-        public Builder label(Input<String> label) {
+        public Builder label(Output<String> label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
         public Builder label(String label) {
-            this.label = Input.of(Objects.requireNonNull(label));
+            this.label = Output.of(Objects.requireNonNull(label));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder patterns(Input<List<String>> patterns) {
+        public Builder patterns(Output<List<String>> patterns) {
             this.patterns = Objects.requireNonNull(patterns);
             return this;
         }
 
         public Builder patterns(List<String> patterns) {
-            this.patterns = Input.of(Objects.requireNonNull(patterns));
+            this.patterns = Output.of(Objects.requireNonNull(patterns));
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder searchPaths(@Nullable Input<List<String>> searchPaths) {
+        public Builder searchPaths(@Nullable Output<List<String>> searchPaths) {
             this.searchPaths = searchPaths;
             return this;
         }
 
         public Builder searchPaths(@Nullable List<String> searchPaths) {
-            this.searchPaths = Input.ofNullable(searchPaths);
+            this.searchPaths = Output.ofNullable(searchPaths);
             return this;
         }
 
-        public Builder strictHostKeyChecking(@Nullable Input<Boolean> strictHostKeyChecking) {
+        public Builder strictHostKeyChecking(@Nullable Output<Boolean> strictHostKeyChecking) {
             this.strictHostKeyChecking = strictHostKeyChecking;
             return this;
         }
 
         public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
-            this.strictHostKeyChecking = Input.ofNullable(strictHostKeyChecking);
+            this.strictHostKeyChecking = Output.ofNullable(strictHostKeyChecking);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public ConfigurationServiceGitRepositoryArgs build() {

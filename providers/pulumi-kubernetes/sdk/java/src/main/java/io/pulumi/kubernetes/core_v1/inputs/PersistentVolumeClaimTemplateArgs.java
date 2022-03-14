@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -24,10 +24,10 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="spec", required=true)
-      private final Input<PersistentVolumeClaimSpecArgs> spec;
+      private final Output<PersistentVolumeClaimSpecArgs> spec;
 
-    public Input<PersistentVolumeClaimSpecArgs> getSpec() {
+    public Output<PersistentVolumeClaimSpecArgs> getSpec() {
         return this.spec;
     }
 
     public PersistentVolumeClaimTemplateArgs(
-        @Nullable Input<ObjectMetaArgs> metadata,
-        Input<PersistentVolumeClaimSpecArgs> spec) {
+        @Nullable Output<ObjectMetaArgs> metadata,
+        Output<PersistentVolumeClaimSpecArgs> spec) {
         this.metadata = metadata;
         this.spec = Objects.requireNonNull(spec, "expected parameter 'spec' to be non-null");
     }
 
     private PersistentVolumeClaimTemplateArgs() {
-        this.metadata = Input.empty();
-        this.spec = Input.empty();
+        this.metadata = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private Input<PersistentVolumeClaimSpecArgs> spec;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private Output<PersistentVolumeClaimSpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
     	      this.spec = defaults.spec;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder spec(Input<PersistentVolumeClaimSpecArgs> spec) {
+        public Builder spec(Output<PersistentVolumeClaimSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
         public Builder spec(PersistentVolumeClaimSpecArgs spec) {
-            this.spec = Input.of(Objects.requireNonNull(spec));
+            this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
         }
         public PersistentVolumeClaimTemplateArgs build() {

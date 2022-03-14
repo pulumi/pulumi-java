@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AccountAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountAlias", required=true)
-      private final Input<String> accountAlias;
+      private final Output<String> accountAlias;
 
-    public Input<String> getAccountAlias() {
+    public Output<String> getAccountAlias() {
         return this.accountAlias;
     }
 
-    public AccountAliasArgs(Input<String> accountAlias) {
+    public AccountAliasArgs(Output<String> accountAlias) {
         this.accountAlias = Objects.requireNonNull(accountAlias, "expected parameter 'accountAlias' to be non-null");
     }
 
     private AccountAliasArgs() {
-        this.accountAlias = Input.empty();
+        this.accountAlias = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AccountAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountAlias;
+        private Output<String> accountAlias;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AccountAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accountAlias = defaults.accountAlias;
         }
 
-        public Builder accountAlias(Input<String> accountAlias) {
+        public Builder accountAlias(Output<String> accountAlias) {
             this.accountAlias = Objects.requireNonNull(accountAlias);
             return this;
         }
 
         public Builder accountAlias(String accountAlias) {
-            this.accountAlias = Input.of(Objects.requireNonNull(accountAlias));
+            this.accountAlias = Output.of(Objects.requireNonNull(accountAlias));
             return this;
         }
         public AccountAliasArgs build() {

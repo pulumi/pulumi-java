@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.EndpointAuthMode;
 import io.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode")
-      private final @Nullable Input<Either<String,EndpointAuthMode>> authMode;
+      private final @Nullable Output<Either<String,EndpointAuthMode>> authMode;
 
-    public Input<Either<String,EndpointAuthMode>> getAuthMode() {
-        return this.authMode == null ? Input.empty() : this.authMode;
+    public Output<Either<String,EndpointAuthMode>> getAuthMode() {
+        return this.authMode == null ? Output.empty() : this.authMode;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<EndpointAuthKeysArgs> keys;
+      private final @Nullable Output<EndpointAuthKeysArgs> keys;
 
-    public Input<EndpointAuthKeysArgs> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<EndpointAuthKeysArgs> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-      private final @Nullable Input<Map<String,Integer>> traffic;
+      private final @Nullable Output<Map<String,Integer>> traffic;
 
-    public Input<Map<String,Integer>> getTraffic() {
-        return this.traffic == null ? Input.empty() : this.traffic;
+    public Output<Map<String,Integer>> getTraffic() {
+        return this.traffic == null ? Output.empty() : this.traffic;
     }
 
     public BatchEndpointArgs(
-        @Nullable Input<Either<String,EndpointAuthMode>> authMode,
-        @Nullable Input<String> description,
-        @Nullable Input<EndpointAuthKeysArgs> keys,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<Map<String,Integer>> traffic) {
+        @Nullable Output<Either<String,EndpointAuthMode>> authMode,
+        @Nullable Output<String> description,
+        @Nullable Output<EndpointAuthKeysArgs> keys,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<Map<String,Integer>> traffic) {
         this.authMode = authMode;
         this.description = description;
         this.keys = keys;
@@ -93,11 +93,11 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BatchEndpointArgs() {
-        this.authMode = Input.empty();
-        this.description = Input.empty();
-        this.keys = Input.empty();
-        this.properties = Input.empty();
-        this.traffic = Input.empty();
+        this.authMode = Output.empty();
+        this.description = Output.empty();
+        this.keys = Output.empty();
+        this.properties = Output.empty();
+        this.traffic = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EndpointAuthMode>> authMode;
-        private @Nullable Input<String> description;
-        private @Nullable Input<EndpointAuthKeysArgs> keys;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<Map<String,Integer>> traffic;
+        private @Nullable Output<Either<String,EndpointAuthMode>> authMode;
+        private @Nullable Output<String> description;
+        private @Nullable Output<EndpointAuthKeysArgs> keys;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<Map<String,Integer>> traffic;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder authMode(@Nullable Input<Either<String,EndpointAuthMode>> authMode) {
+        public Builder authMode(@Nullable Output<Either<String,EndpointAuthMode>> authMode) {
             this.authMode = authMode;
             return this;
         }
 
         public Builder authMode(@Nullable Either<String,EndpointAuthMode> authMode) {
-            this.authMode = Input.ofNullable(authMode);
+            this.authMode = Output.ofNullable(authMode);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder keys(@Nullable Input<EndpointAuthKeysArgs> keys) {
+        public Builder keys(@Nullable Output<EndpointAuthKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable EndpointAuthKeysArgs keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder traffic(@Nullable Input<Map<String,Integer>> traffic) {
+        public Builder traffic(@Nullable Output<Map<String,Integer>> traffic) {
             this.traffic = traffic;
             return this;
         }
 
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
-            this.traffic = Input.ofNullable(traffic);
+            this.traffic = Output.ofNullable(traffic);
             return this;
         }
         public BatchEndpointArgs build() {

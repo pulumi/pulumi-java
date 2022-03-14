@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.inputs.CloudAuditOptionsArgs;
 import io.pulumi.googlenative.gameservices_v1.inputs.CounterOptionsArgs;
@@ -25,10 +25,10 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudAudit")
-      private final @Nullable Input<CloudAuditOptionsArgs> cloudAudit;
+      private final @Nullable Output<CloudAuditOptionsArgs> cloudAudit;
 
-    public Input<CloudAuditOptionsArgs> getCloudAudit() {
-        return this.cloudAudit == null ? Input.empty() : this.cloudAudit;
+    public Output<CloudAuditOptionsArgs> getCloudAudit() {
+        return this.cloudAudit == null ? Output.empty() : this.cloudAudit;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="counter")
-      private final @Nullable Input<CounterOptionsArgs> counter;
+      private final @Nullable Output<CounterOptionsArgs> counter;
 
-    public Input<CounterOptionsArgs> getCounter() {
-        return this.counter == null ? Input.empty() : this.counter;
+    public Output<CounterOptionsArgs> getCounter() {
+        return this.counter == null ? Output.empty() : this.counter;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataAccess")
-      private final @Nullable Input<DataAccessOptionsArgs> dataAccess;
+      private final @Nullable Output<DataAccessOptionsArgs> dataAccess;
 
-    public Input<DataAccessOptionsArgs> getDataAccess() {
-        return this.dataAccess == null ? Input.empty() : this.dataAccess;
+    public Output<DataAccessOptionsArgs> getDataAccess() {
+        return this.dataAccess == null ? Output.empty() : this.dataAccess;
     }
 
     public LogConfigArgs(
-        @Nullable Input<CloudAuditOptionsArgs> cloudAudit,
-        @Nullable Input<CounterOptionsArgs> counter,
-        @Nullable Input<DataAccessOptionsArgs> dataAccess) {
+        @Nullable Output<CloudAuditOptionsArgs> cloudAudit,
+        @Nullable Output<CounterOptionsArgs> counter,
+        @Nullable Output<DataAccessOptionsArgs> dataAccess) {
         this.cloudAudit = cloudAudit;
         this.counter = counter;
         this.dataAccess = dataAccess;
     }
 
     private LogConfigArgs() {
-        this.cloudAudit = Input.empty();
-        this.counter = Input.empty();
-        this.dataAccess = Input.empty();
+        this.cloudAudit = Output.empty();
+        this.counter = Output.empty();
+        this.dataAccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudAuditOptionsArgs> cloudAudit;
-        private @Nullable Input<CounterOptionsArgs> counter;
-        private @Nullable Input<DataAccessOptionsArgs> dataAccess;
+        private @Nullable Output<CloudAuditOptionsArgs> cloudAudit;
+        private @Nullable Output<CounterOptionsArgs> counter;
+        private @Nullable Output<DataAccessOptionsArgs> dataAccess;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.dataAccess = defaults.dataAccess;
         }
 
-        public Builder cloudAudit(@Nullable Input<CloudAuditOptionsArgs> cloudAudit) {
+        public Builder cloudAudit(@Nullable Output<CloudAuditOptionsArgs> cloudAudit) {
             this.cloudAudit = cloudAudit;
             return this;
         }
 
         public Builder cloudAudit(@Nullable CloudAuditOptionsArgs cloudAudit) {
-            this.cloudAudit = Input.ofNullable(cloudAudit);
+            this.cloudAudit = Output.ofNullable(cloudAudit);
             return this;
         }
 
-        public Builder counter(@Nullable Input<CounterOptionsArgs> counter) {
+        public Builder counter(@Nullable Output<CounterOptionsArgs> counter) {
             this.counter = counter;
             return this;
         }
 
         public Builder counter(@Nullable CounterOptionsArgs counter) {
-            this.counter = Input.ofNullable(counter);
+            this.counter = Output.ofNullable(counter);
             return this;
         }
 
-        public Builder dataAccess(@Nullable Input<DataAccessOptionsArgs> dataAccess) {
+        public Builder dataAccess(@Nullable Output<DataAccessOptionsArgs> dataAccess) {
             this.dataAccess = dataAccess;
             return this;
         }
 
         public Builder dataAccess(@Nullable DataAccessOptionsArgs dataAccess) {
-            this.dataAccess = Input.ofNullable(dataAccess);
+            this.dataAccess = Output.ofNullable(dataAccess);
             return this;
         }
         public LogConfigArgs build() {

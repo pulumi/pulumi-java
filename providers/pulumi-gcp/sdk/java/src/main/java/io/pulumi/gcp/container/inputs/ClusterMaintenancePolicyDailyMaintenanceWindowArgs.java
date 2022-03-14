@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowArgs extends io
     public static final ClusterMaintenancePolicyDailyMaintenanceWindowArgs Empty = new ClusterMaintenancePolicyDailyMaintenanceWindowArgs();
 
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
     public ClusterMaintenancePolicyDailyMaintenanceWindowArgs(
-        @Nullable Input<String> duration,
-        Input<String> startTime) {
+        @Nullable Output<String> duration,
+        Output<String> startTime) {
         this.duration = duration;
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private ClusterMaintenancePolicyDailyMaintenanceWindowArgs() {
-        this.duration = Input.empty();
-        this.startTime = Input.empty();
+        this.duration = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<String> duration;
-        private Input<String> startTime;
+        private @Nullable Output<String> duration;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowArgs extends io
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public ClusterMaintenancePolicyDailyMaintenanceWindowArgs build() {

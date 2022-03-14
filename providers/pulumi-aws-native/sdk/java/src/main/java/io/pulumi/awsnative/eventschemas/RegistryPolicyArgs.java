@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eventschemas;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final RegistryPolicyArgs Empty = new RegistryPolicyArgs();
 
     @InputImport(name="policy", required=true)
-      private final Input<Object> policy;
+      private final Output<Object> policy;
 
-    public Input<Object> getPolicy() {
+    public Output<Object> getPolicy() {
         return this.policy;
     }
 
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
     @InputImport(name="revisionId")
-      private final @Nullable Input<String> revisionId;
+      private final @Nullable Output<String> revisionId;
 
-    public Input<String> getRevisionId() {
-        return this.revisionId == null ? Input.empty() : this.revisionId;
+    public Output<String> getRevisionId() {
+        return this.revisionId == null ? Output.empty() : this.revisionId;
     }
 
     public RegistryPolicyArgs(
-        Input<Object> policy,
-        Input<String> registryName,
-        @Nullable Input<String> revisionId) {
+        Output<Object> policy,
+        Output<String> registryName,
+        @Nullable Output<String> revisionId) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
         this.revisionId = revisionId;
     }
 
     private RegistryPolicyArgs() {
-        this.policy = Input.empty();
-        this.registryName = Input.empty();
-        this.revisionId = Input.empty();
+        this.policy = Output.empty();
+        this.registryName = Output.empty();
+        this.revisionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Object> policy;
-        private Input<String> registryName;
-        private @Nullable Input<String> revisionId;
+        private Output<Object> policy;
+        private Output<String> registryName;
+        private @Nullable Output<String> revisionId;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder policy(Input<Object> policy) {
+        public Builder policy(Output<Object> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(Object policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder revisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Input.ofNullable(revisionId);
+            this.revisionId = Output.ofNullable(revisionId);
             return this;
         }
         public RegistryPolicyArgs build() {

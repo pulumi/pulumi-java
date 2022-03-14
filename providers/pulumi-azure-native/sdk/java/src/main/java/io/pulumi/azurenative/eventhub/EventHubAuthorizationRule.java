@@ -6,7 +6,6 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventhub.EventHubAuthorizationRuleArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,24 +111,24 @@ public class EventHubAuthorizationRule extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public EventHubAuthorizationRule(String name, EventHubAuthorizationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventhub:EventHubAuthorizationRule", name, args == null ? EventHubAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:eventhub:EventHubAuthorizationRule", name, args == null ? EventHubAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventHubAuthorizationRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventHubAuthorizationRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventhub:EventHubAuthorizationRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20140901:EventHubAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20150801:EventHubAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20170401:EventHubAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20180101preview:EventHubAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20210101preview:EventHubAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20210601preview:EventHubAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20211101:EventHubAuthorizationRule").build())
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20140901:EventHubAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20150801:EventHubAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20170401:EventHubAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20180101preview:EventHubAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20210101preview:EventHubAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20210601preview:EventHubAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20211101:EventHubAuthorizationRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -143,7 +142,7 @@ public class EventHubAuthorizationRule extends io.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventHubAuthorizationRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventHubAuthorizationRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventHubAuthorizationRule(name, id, options);
     }
 }

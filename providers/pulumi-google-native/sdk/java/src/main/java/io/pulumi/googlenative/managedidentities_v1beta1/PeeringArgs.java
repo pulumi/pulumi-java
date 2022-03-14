@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork", required=true)
-      private final Input<String> authorizedNetwork;
+      private final Output<String> authorizedNetwork;
 
-    public Input<String> getAuthorizedNetwork() {
+    public Output<String> getAuthorizedNetwork() {
         return this.authorizedNetwork;
     }
 
@@ -31,9 +31,9 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainResource", required=true)
-      private final Input<String> domainResource;
+      private final Output<String> domainResource;
 
-    public Input<String> getDomainResource() {
+    public Output<String> getDomainResource() {
         return this.domainResource;
     }
 
@@ -42,32 +42,32 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="peeringId", required=true)
-      private final Input<String> peeringId;
+      private final Output<String> peeringId;
 
-    public Input<String> getPeeringId() {
+    public Output<String> getPeeringId() {
         return this.peeringId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public PeeringArgs(
-        Input<String> authorizedNetwork,
-        Input<String> domainResource,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> peeringId,
-        @Nullable Input<String> project) {
+        Output<String> authorizedNetwork,
+        Output<String> domainResource,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> peeringId,
+        @Nullable Output<String> project) {
         this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork, "expected parameter 'authorizedNetwork' to be non-null");
         this.domainResource = Objects.requireNonNull(domainResource, "expected parameter 'domainResource' to be non-null");
         this.labels = labels;
@@ -76,11 +76,11 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PeeringArgs() {
-        this.authorizedNetwork = Input.empty();
-        this.domainResource = Input.empty();
-        this.labels = Input.empty();
-        this.peeringId = Input.empty();
-        this.project = Input.empty();
+        this.authorizedNetwork = Output.empty();
+        this.domainResource = Output.empty();
+        this.labels = Output.empty();
+        this.peeringId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> authorizedNetwork;
-        private Input<String> domainResource;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> peeringId;
-        private @Nullable Input<String> project;
+        private Output<String> authorizedNetwork;
+        private Output<String> domainResource;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> peeringId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder authorizedNetwork(Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(Output<String> authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
 
         public Builder authorizedNetwork(String authorizedNetwork) {
-            this.authorizedNetwork = Input.of(Objects.requireNonNull(authorizedNetwork));
+            this.authorizedNetwork = Output.of(Objects.requireNonNull(authorizedNetwork));
             return this;
         }
 
-        public Builder domainResource(Input<String> domainResource) {
+        public Builder domainResource(Output<String> domainResource) {
             this.domainResource = Objects.requireNonNull(domainResource);
             return this;
         }
 
         public Builder domainResource(String domainResource) {
-            this.domainResource = Input.of(Objects.requireNonNull(domainResource));
+            this.domainResource = Output.of(Objects.requireNonNull(domainResource));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder peeringId(Input<String> peeringId) {
+        public Builder peeringId(Output<String> peeringId) {
             this.peeringId = Objects.requireNonNull(peeringId);
             return this;
         }
 
         public Builder peeringId(String peeringId) {
-            this.peeringId = Input.of(Objects.requireNonNull(peeringId));
+            this.peeringId = Output.of(Objects.requireNonNull(peeringId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public PeeringArgs build() {

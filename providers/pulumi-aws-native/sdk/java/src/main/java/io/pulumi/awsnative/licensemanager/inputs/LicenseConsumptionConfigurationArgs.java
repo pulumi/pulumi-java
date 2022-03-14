@@ -5,7 +5,7 @@ package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.awsnative.licensemanager.inputs.LicenseBorrowConfigurationArgs;
 import io.pulumi.awsnative.licensemanager.inputs.LicenseProvisionalConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,39 +17,39 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
     public static final LicenseConsumptionConfigurationArgs Empty = new LicenseConsumptionConfigurationArgs();
 
     @InputImport(name="borrowConfiguration")
-      private final @Nullable Input<LicenseBorrowConfigurationArgs> borrowConfiguration;
+      private final @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration;
 
-    public Input<LicenseBorrowConfigurationArgs> getBorrowConfiguration() {
-        return this.borrowConfiguration == null ? Input.empty() : this.borrowConfiguration;
+    public Output<LicenseBorrowConfigurationArgs> getBorrowConfiguration() {
+        return this.borrowConfiguration == null ? Output.empty() : this.borrowConfiguration;
     }
 
     @InputImport(name="provisionalConfiguration")
-      private final @Nullable Input<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
+      private final @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
 
-    public Input<LicenseProvisionalConfigurationArgs> getProvisionalConfiguration() {
-        return this.provisionalConfiguration == null ? Input.empty() : this.provisionalConfiguration;
+    public Output<LicenseProvisionalConfigurationArgs> getProvisionalConfiguration() {
+        return this.provisionalConfiguration == null ? Output.empty() : this.provisionalConfiguration;
     }
 
     @InputImport(name="renewType")
-      private final @Nullable Input<String> renewType;
+      private final @Nullable Output<String> renewType;
 
-    public Input<String> getRenewType() {
-        return this.renewType == null ? Input.empty() : this.renewType;
+    public Output<String> getRenewType() {
+        return this.renewType == null ? Output.empty() : this.renewType;
     }
 
     public LicenseConsumptionConfigurationArgs(
-        @Nullable Input<LicenseBorrowConfigurationArgs> borrowConfiguration,
-        @Nullable Input<LicenseProvisionalConfigurationArgs> provisionalConfiguration,
-        @Nullable Input<String> renewType) {
+        @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration,
+        @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration,
+        @Nullable Output<String> renewType) {
         this.borrowConfiguration = borrowConfiguration;
         this.provisionalConfiguration = provisionalConfiguration;
         this.renewType = renewType;
     }
 
     private LicenseConsumptionConfigurationArgs() {
-        this.borrowConfiguration = Input.empty();
-        this.provisionalConfiguration = Input.empty();
-        this.renewType = Input.empty();
+        this.borrowConfiguration = Output.empty();
+        this.provisionalConfiguration = Output.empty();
+        this.renewType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<LicenseBorrowConfigurationArgs> borrowConfiguration;
-        private @Nullable Input<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
-        private @Nullable Input<String> renewType;
+        private @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration;
+        private @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
+        private @Nullable Output<String> renewType;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
     	      this.renewType = defaults.renewType;
         }
 
-        public Builder borrowConfiguration(@Nullable Input<LicenseBorrowConfigurationArgs> borrowConfiguration) {
+        public Builder borrowConfiguration(@Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration) {
             this.borrowConfiguration = borrowConfiguration;
             return this;
         }
 
         public Builder borrowConfiguration(@Nullable LicenseBorrowConfigurationArgs borrowConfiguration) {
-            this.borrowConfiguration = Input.ofNullable(borrowConfiguration);
+            this.borrowConfiguration = Output.ofNullable(borrowConfiguration);
             return this;
         }
 
-        public Builder provisionalConfiguration(@Nullable Input<LicenseProvisionalConfigurationArgs> provisionalConfiguration) {
+        public Builder provisionalConfiguration(@Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration) {
             this.provisionalConfiguration = provisionalConfiguration;
             return this;
         }
 
         public Builder provisionalConfiguration(@Nullable LicenseProvisionalConfigurationArgs provisionalConfiguration) {
-            this.provisionalConfiguration = Input.ofNullable(provisionalConfiguration);
+            this.provisionalConfiguration = Output.ofNullable(provisionalConfiguration);
             return this;
         }
 
-        public Builder renewType(@Nullable Input<String> renewType) {
+        public Builder renewType(@Nullable Output<String> renewType) {
             this.renewType = renewType;
             return this;
         }
 
         public Builder renewType(@Nullable String renewType) {
-            this.renewType = Input.ofNullable(renewType);
+            this.renewType = Output.ofNullable(renewType);
             return this;
         }
         public LicenseConsumptionConfigurationArgs build() {

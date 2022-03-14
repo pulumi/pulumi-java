@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternateId")
-      private final @Nullable Input<String> alternateId;
+      private final @Nullable Output<String> alternateId;
 
-    public Input<String> getAlternateId() {
-        return this.alternateId == null ? Input.empty() : this.alternateId;
+    public Output<String> getAlternateId() {
+        return this.alternateId == null ? Output.empty() : this.alternateId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName")
-      private final @Nullable Input<String> assetName;
+      private final @Nullable Output<String> assetName;
 
-    public Input<String> getAssetName() {
-        return this.assetName == null ? Input.empty() : this.assetName;
+    public Output<String> getAssetName() {
+        return this.assetName == null ? Output.empty() : this.assetName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-      private final @Nullable Input<String> container;
+      private final @Nullable Output<String> container;
 
-    public Input<String> getContainer() {
-        return this.container == null ? Input.empty() : this.container;
+    public Output<String> getContainer() {
+        return this.container == null ? Output.empty() : this.container;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -85,20 +85,20 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountName")
-      private final @Nullable Input<String> storageAccountName;
+      private final @Nullable Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
+    public Output<String> getStorageAccountName() {
+        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
     }
 
     public AssetArgs(
-        Input<String> accountName,
-        @Nullable Input<String> alternateId,
-        @Nullable Input<String> assetName,
-        @Nullable Input<String> container,
-        @Nullable Input<String> description,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> storageAccountName) {
+        Output<String> accountName,
+        @Nullable Output<String> alternateId,
+        @Nullable Output<String> assetName,
+        @Nullable Output<String> container,
+        @Nullable Output<String> description,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> storageAccountName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.alternateId = alternateId;
         this.assetName = assetName;
@@ -109,13 +109,13 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetArgs() {
-        this.accountName = Input.empty();
-        this.alternateId = Input.empty();
-        this.assetName = Input.empty();
-        this.container = Input.empty();
-        this.description = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccountName = Input.empty();
+        this.accountName = Output.empty();
+        this.alternateId = Output.empty();
+        this.assetName = Output.empty();
+        this.container = Output.empty();
+        this.description = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> alternateId;
-        private @Nullable Input<String> assetName;
-        private @Nullable Input<String> container;
-        private @Nullable Input<String> description;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> storageAccountName;
+        private Output<String> accountName;
+        private @Nullable Output<String> alternateId;
+        private @Nullable Output<String> assetName;
+        private @Nullable Output<String> container;
+        private @Nullable Output<String> description;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> storageAccountName;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder alternateId(@Nullable Input<String> alternateId) {
+        public Builder alternateId(@Nullable Output<String> alternateId) {
             this.alternateId = alternateId;
             return this;
         }
 
         public Builder alternateId(@Nullable String alternateId) {
-            this.alternateId = Input.ofNullable(alternateId);
+            this.alternateId = Output.ofNullable(alternateId);
             return this;
         }
 
-        public Builder assetName(@Nullable Input<String> assetName) {
+        public Builder assetName(@Nullable Output<String> assetName) {
             this.assetName = assetName;
             return this;
         }
 
         public Builder assetName(@Nullable String assetName) {
-            this.assetName = Input.ofNullable(assetName);
+            this.assetName = Output.ofNullable(assetName);
             return this;
         }
 
-        public Builder container(@Nullable Input<String> container) {
+        public Builder container(@Nullable Output<String> container) {
             this.container = container;
             return this;
         }
 
         public Builder container(@Nullable String container) {
-            this.container = Input.ofNullable(container);
+            this.container = Output.ofNullable(container);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Input.ofNullable(storageAccountName);
+            this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
         }
         public AssetArgs build() {

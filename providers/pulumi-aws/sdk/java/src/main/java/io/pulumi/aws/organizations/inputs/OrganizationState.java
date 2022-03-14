@@ -6,7 +6,7 @@ package io.pulumi.aws.organizations.inputs;
 import io.pulumi.aws.organizations.inputs.OrganizationAccountGetArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationNonMasterAccountGetArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationRootGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accounts")
-      private final @Nullable Input<List<OrganizationAccountGetArgs>> accounts;
+      private final @Nullable Output<List<OrganizationAccountGetArgs>> accounts;
 
-    public Input<List<OrganizationAccountGetArgs>> getAccounts() {
-        return this.accounts == null ? Input.empty() : this.accounts;
+    public Output<List<OrganizationAccountGetArgs>> getAccounts() {
+        return this.accounts == null ? Output.empty() : this.accounts;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsServiceAccessPrincipals")
-      private final @Nullable Input<List<String>> awsServiceAccessPrincipals;
+      private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
-    public Input<List<String>> getAwsServiceAccessPrincipals() {
-        return this.awsServiceAccessPrincipals == null ? Input.empty() : this.awsServiceAccessPrincipals;
+    public Output<List<String>> getAwsServiceAccessPrincipals() {
+        return this.awsServiceAccessPrincipals == null ? Output.empty() : this.awsServiceAccessPrincipals;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledPolicyTypes")
-      private final @Nullable Input<List<String>> enabledPolicyTypes;
+      private final @Nullable Output<List<String>> enabledPolicyTypes;
 
-    public Input<List<String>> getEnabledPolicyTypes() {
-        return this.enabledPolicyTypes == null ? Input.empty() : this.enabledPolicyTypes;
+    public Output<List<String>> getEnabledPolicyTypes() {
+        return this.enabledPolicyTypes == null ? Output.empty() : this.enabledPolicyTypes;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureSet")
-      private final @Nullable Input<String> featureSet;
+      private final @Nullable Output<String> featureSet;
 
-    public Input<String> getFeatureSet() {
-        return this.featureSet == null ? Input.empty() : this.featureSet;
+    public Output<String> getFeatureSet() {
+        return this.featureSet == null ? Output.empty() : this.featureSet;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAccountArn")
-      private final @Nullable Input<String> masterAccountArn;
+      private final @Nullable Output<String> masterAccountArn;
 
-    public Input<String> getMasterAccountArn() {
-        return this.masterAccountArn == null ? Input.empty() : this.masterAccountArn;
+    public Output<String> getMasterAccountArn() {
+        return this.masterAccountArn == null ? Output.empty() : this.masterAccountArn;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAccountEmail")
-      private final @Nullable Input<String> masterAccountEmail;
+      private final @Nullable Output<String> masterAccountEmail;
 
-    public Input<String> getMasterAccountEmail() {
-        return this.masterAccountEmail == null ? Input.empty() : this.masterAccountEmail;
+    public Output<String> getMasterAccountEmail() {
+        return this.masterAccountEmail == null ? Output.empty() : this.masterAccountEmail;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAccountId")
-      private final @Nullable Input<String> masterAccountId;
+      private final @Nullable Output<String> masterAccountId;
 
-    public Input<String> getMasterAccountId() {
-        return this.masterAccountId == null ? Input.empty() : this.masterAccountId;
+    public Output<String> getMasterAccountId() {
+        return this.masterAccountId == null ? Output.empty() : this.masterAccountId;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonMasterAccounts")
-      private final @Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
+      private final @Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
 
-    public Input<List<OrganizationNonMasterAccountGetArgs>> getNonMasterAccounts() {
-        return this.nonMasterAccounts == null ? Input.empty() : this.nonMasterAccounts;
+    public Output<List<OrganizationNonMasterAccountGetArgs>> getNonMasterAccounts() {
+        return this.nonMasterAccounts == null ? Output.empty() : this.nonMasterAccounts;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roots")
-      private final @Nullable Input<List<OrganizationRootGetArgs>> roots;
+      private final @Nullable Output<List<OrganizationRootGetArgs>> roots;
 
-    public Input<List<OrganizationRootGetArgs>> getRoots() {
-        return this.roots == null ? Input.empty() : this.roots;
+    public Output<List<OrganizationRootGetArgs>> getRoots() {
+        return this.roots == null ? Output.empty() : this.roots;
     }
 
     public OrganizationState(
-        @Nullable Input<List<OrganizationAccountGetArgs>> accounts,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> awsServiceAccessPrincipals,
-        @Nullable Input<List<String>> enabledPolicyTypes,
-        @Nullable Input<String> featureSet,
-        @Nullable Input<String> masterAccountArn,
-        @Nullable Input<String> masterAccountEmail,
-        @Nullable Input<String> masterAccountId,
-        @Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts,
-        @Nullable Input<List<OrganizationRootGetArgs>> roots) {
+        @Nullable Output<List<OrganizationAccountGetArgs>> accounts,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> awsServiceAccessPrincipals,
+        @Nullable Output<List<String>> enabledPolicyTypes,
+        @Nullable Output<String> featureSet,
+        @Nullable Output<String> masterAccountArn,
+        @Nullable Output<String> masterAccountEmail,
+        @Nullable Output<String> masterAccountId,
+        @Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts,
+        @Nullable Output<List<OrganizationRootGetArgs>> roots) {
         this.accounts = accounts;
         this.arn = arn;
         this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
@@ -152,16 +152,16 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationState() {
-        this.accounts = Input.empty();
-        this.arn = Input.empty();
-        this.awsServiceAccessPrincipals = Input.empty();
-        this.enabledPolicyTypes = Input.empty();
-        this.featureSet = Input.empty();
-        this.masterAccountArn = Input.empty();
-        this.masterAccountEmail = Input.empty();
-        this.masterAccountId = Input.empty();
-        this.nonMasterAccounts = Input.empty();
-        this.roots = Input.empty();
+        this.accounts = Output.empty();
+        this.arn = Output.empty();
+        this.awsServiceAccessPrincipals = Output.empty();
+        this.enabledPolicyTypes = Output.empty();
+        this.featureSet = Output.empty();
+        this.masterAccountArn = Output.empty();
+        this.masterAccountEmail = Output.empty();
+        this.masterAccountId = Output.empty();
+        this.nonMasterAccounts = Output.empty();
+        this.roots = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OrganizationAccountGetArgs>> accounts;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> awsServiceAccessPrincipals;
-        private @Nullable Input<List<String>> enabledPolicyTypes;
-        private @Nullable Input<String> featureSet;
-        private @Nullable Input<String> masterAccountArn;
-        private @Nullable Input<String> masterAccountEmail;
-        private @Nullable Input<String> masterAccountId;
-        private @Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
-        private @Nullable Input<List<OrganizationRootGetArgs>> roots;
+        private @Nullable Output<List<OrganizationAccountGetArgs>> accounts;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> awsServiceAccessPrincipals;
+        private @Nullable Output<List<String>> enabledPolicyTypes;
+        private @Nullable Output<String> featureSet;
+        private @Nullable Output<String> masterAccountArn;
+        private @Nullable Output<String> masterAccountEmail;
+        private @Nullable Output<String> masterAccountId;
+        private @Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
+        private @Nullable Output<List<OrganizationRootGetArgs>> roots;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     	      this.roots = defaults.roots;
         }
 
-        public Builder accounts(@Nullable Input<List<OrganizationAccountGetArgs>> accounts) {
+        public Builder accounts(@Nullable Output<List<OrganizationAccountGetArgs>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
         public Builder accounts(@Nullable List<OrganizationAccountGetArgs> accounts) {
-            this.accounts = Input.ofNullable(accounts);
+            this.accounts = Output.ofNullable(accounts);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder awsServiceAccessPrincipals(@Nullable Input<List<String>> awsServiceAccessPrincipals) {
+        public Builder awsServiceAccessPrincipals(@Nullable Output<List<String>> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
             return this;
         }
 
         public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
-            this.awsServiceAccessPrincipals = Input.ofNullable(awsServiceAccessPrincipals);
+            this.awsServiceAccessPrincipals = Output.ofNullable(awsServiceAccessPrincipals);
             return this;
         }
 
-        public Builder enabledPolicyTypes(@Nullable Input<List<String>> enabledPolicyTypes) {
+        public Builder enabledPolicyTypes(@Nullable Output<List<String>> enabledPolicyTypes) {
             this.enabledPolicyTypes = enabledPolicyTypes;
             return this;
         }
 
         public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
-            this.enabledPolicyTypes = Input.ofNullable(enabledPolicyTypes);
+            this.enabledPolicyTypes = Output.ofNullable(enabledPolicyTypes);
             return this;
         }
 
-        public Builder featureSet(@Nullable Input<String> featureSet) {
+        public Builder featureSet(@Nullable Output<String> featureSet) {
             this.featureSet = featureSet;
             return this;
         }
 
         public Builder featureSet(@Nullable String featureSet) {
-            this.featureSet = Input.ofNullable(featureSet);
+            this.featureSet = Output.ofNullable(featureSet);
             return this;
         }
 
-        public Builder masterAccountArn(@Nullable Input<String> masterAccountArn) {
+        public Builder masterAccountArn(@Nullable Output<String> masterAccountArn) {
             this.masterAccountArn = masterAccountArn;
             return this;
         }
 
         public Builder masterAccountArn(@Nullable String masterAccountArn) {
-            this.masterAccountArn = Input.ofNullable(masterAccountArn);
+            this.masterAccountArn = Output.ofNullable(masterAccountArn);
             return this;
         }
 
-        public Builder masterAccountEmail(@Nullable Input<String> masterAccountEmail) {
+        public Builder masterAccountEmail(@Nullable Output<String> masterAccountEmail) {
             this.masterAccountEmail = masterAccountEmail;
             return this;
         }
 
         public Builder masterAccountEmail(@Nullable String masterAccountEmail) {
-            this.masterAccountEmail = Input.ofNullable(masterAccountEmail);
+            this.masterAccountEmail = Output.ofNullable(masterAccountEmail);
             return this;
         }
 
-        public Builder masterAccountId(@Nullable Input<String> masterAccountId) {
+        public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
 
         public Builder masterAccountId(@Nullable String masterAccountId) {
-            this.masterAccountId = Input.ofNullable(masterAccountId);
+            this.masterAccountId = Output.ofNullable(masterAccountId);
             return this;
         }
 
-        public Builder nonMasterAccounts(@Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts) {
+        public Builder nonMasterAccounts(@Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts) {
             this.nonMasterAccounts = nonMasterAccounts;
             return this;
         }
 
         public Builder nonMasterAccounts(@Nullable List<OrganizationNonMasterAccountGetArgs> nonMasterAccounts) {
-            this.nonMasterAccounts = Input.ofNullable(nonMasterAccounts);
+            this.nonMasterAccounts = Output.ofNullable(nonMasterAccounts);
             return this;
         }
 
-        public Builder roots(@Nullable Input<List<OrganizationRootGetArgs>> roots) {
+        public Builder roots(@Nullable Output<List<OrganizationRootGetArgs>> roots) {
             this.roots = roots;
             return this;
         }
 
         public Builder roots(@Nullable List<OrganizationRootGetArgs> roots) {
-            this.roots = Input.ofNullable(roots);
+            this.roots = Output.ofNullable(roots);
             return this;
         }
         public OrganizationState build() {

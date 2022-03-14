@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -30,10 +30,10 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ApprovalRuleTemplateArgs(
-        Input<String> content,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name) {
+        Output<String> content,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.description = description;
         this.name = name;
     }
 
     private ApprovalRuleTemplateArgs() {
-        this.content = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
+        this.content = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> content;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
+        private Output<String> content;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ApprovalRuleTemplateArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.ContentSourceArgs;
 import io.pulumi.azurenative.automation.inputs.DscConfigurationAssociationPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -34,9 +34,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configuration", required=true)
-      private final Input<DscConfigurationAssociationPropertyArgs> configuration;
+      private final Output<DscConfigurationAssociationPropertyArgs> configuration;
 
-    public Input<DscConfigurationAssociationPropertyArgs> getConfiguration() {
+    public Output<DscConfigurationAssociationPropertyArgs> getConfiguration() {
         return this.configuration;
     }
 
@@ -45,10 +45,10 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="incrementNodeConfigurationBuild")
-      private final @Nullable Input<Boolean> incrementNodeConfigurationBuild;
+      private final @Nullable Output<Boolean> incrementNodeConfigurationBuild;
 
-    public Input<Boolean> getIncrementNodeConfigurationBuild() {
-        return this.incrementNodeConfigurationBuild == null ? Input.empty() : this.incrementNodeConfigurationBuild;
+    public Output<Boolean> getIncrementNodeConfigurationBuild() {
+        return this.incrementNodeConfigurationBuild == null ? Output.empty() : this.incrementNodeConfigurationBuild;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nodeConfigurationName")
-      private final @Nullable Input<String> nodeConfigurationName;
+      private final @Nullable Output<String> nodeConfigurationName;
 
-    public Input<String> getNodeConfigurationName() {
-        return this.nodeConfigurationName == null ? Input.empty() : this.nodeConfigurationName;
+    public Output<String> getNodeConfigurationName() {
+        return this.nodeConfigurationName == null ? Output.empty() : this.nodeConfigurationName;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,9 +89,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<ContentSourceArgs> source;
+      private final Output<ContentSourceArgs> source;
 
-    public Input<ContentSourceArgs> getSource() {
+    public Output<ContentSourceArgs> getSource() {
         return this.source;
     }
 
@@ -100,21 +100,21 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DscNodeConfigurationArgs(
-        Input<String> automationAccountName,
-        Input<DscConfigurationAssociationPropertyArgs> configuration,
-        @Nullable Input<Boolean> incrementNodeConfigurationBuild,
-        @Nullable Input<String> name,
-        @Nullable Input<String> nodeConfigurationName,
-        Input<String> resourceGroupName,
-        Input<ContentSourceArgs> source,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> automationAccountName,
+        Output<DscConfigurationAssociationPropertyArgs> configuration,
+        @Nullable Output<Boolean> incrementNodeConfigurationBuild,
+        @Nullable Output<String> name,
+        @Nullable Output<String> nodeConfigurationName,
+        Output<String> resourceGroupName,
+        Output<ContentSourceArgs> source,
+        @Nullable Output<Map<String,String>> tags) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
         this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
@@ -126,14 +126,14 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private DscNodeConfigurationArgs() {
-        this.automationAccountName = Input.empty();
-        this.configuration = Input.empty();
-        this.incrementNodeConfigurationBuild = Input.empty();
-        this.name = Input.empty();
-        this.nodeConfigurationName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.source = Input.empty();
-        this.tags = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.configuration = Output.empty();
+        this.incrementNodeConfigurationBuild = Output.empty();
+        this.name = Output.empty();
+        this.nodeConfigurationName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.source = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private Input<DscConfigurationAssociationPropertyArgs> configuration;
-        private @Nullable Input<Boolean> incrementNodeConfigurationBuild;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> nodeConfigurationName;
-        private Input<String> resourceGroupName;
-        private Input<ContentSourceArgs> source;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> automationAccountName;
+        private Output<DscConfigurationAssociationPropertyArgs> configuration;
+        private @Nullable Output<Boolean> incrementNodeConfigurationBuild;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> nodeConfigurationName;
+        private Output<String> resourceGroupName;
+        private Output<ContentSourceArgs> source;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder configuration(Input<DscConfigurationAssociationPropertyArgs> configuration) {
+        public Builder configuration(Output<DscConfigurationAssociationPropertyArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
         public Builder configuration(DscConfigurationAssociationPropertyArgs configuration) {
-            this.configuration = Input.of(Objects.requireNonNull(configuration));
+            this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder incrementNodeConfigurationBuild(@Nullable Input<Boolean> incrementNodeConfigurationBuild) {
+        public Builder incrementNodeConfigurationBuild(@Nullable Output<Boolean> incrementNodeConfigurationBuild) {
             this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
             return this;
         }
 
         public Builder incrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
-            this.incrementNodeConfigurationBuild = Input.ofNullable(incrementNodeConfigurationBuild);
+            this.incrementNodeConfigurationBuild = Output.ofNullable(incrementNodeConfigurationBuild);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodeConfigurationName(@Nullable Input<String> nodeConfigurationName) {
+        public Builder nodeConfigurationName(@Nullable Output<String> nodeConfigurationName) {
             this.nodeConfigurationName = nodeConfigurationName;
             return this;
         }
 
         public Builder nodeConfigurationName(@Nullable String nodeConfigurationName) {
-            this.nodeConfigurationName = Input.ofNullable(nodeConfigurationName);
+            this.nodeConfigurationName = Output.ofNullable(nodeConfigurationName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder source(Input<ContentSourceArgs> source) {
+        public Builder source(Output<ContentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(ContentSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DscNodeConfigurationArgs build() {

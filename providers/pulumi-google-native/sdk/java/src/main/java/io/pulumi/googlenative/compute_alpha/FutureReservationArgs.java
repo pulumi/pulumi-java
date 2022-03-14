@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.FutureReservationSpecificSKUPropertiesArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.FutureReservationTimeWindowArgs;
@@ -22,17 +22,17 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -51,24 +51,24 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shareSettings")
-      private final @Nullable Input<ShareSettingsArgs> shareSettings;
+      private final @Nullable Output<ShareSettingsArgs> shareSettings;
 
-    public Input<ShareSettingsArgs> getShareSettings() {
-        return this.shareSettings == null ? Input.empty() : this.shareSettings;
+    public Output<ShareSettingsArgs> getShareSettings() {
+        return this.shareSettings == null ? Output.empty() : this.shareSettings;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="specificSkuProperties")
-      private final @Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
+      private final @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
 
-    public Input<FutureReservationSpecificSKUPropertiesArgs> getSpecificSkuProperties() {
-        return this.specificSkuProperties == null ? Input.empty() : this.specificSkuProperties;
+    public Output<FutureReservationSpecificSKUPropertiesArgs> getSpecificSkuProperties() {
+        return this.specificSkuProperties == null ? Output.empty() : this.specificSkuProperties;
     }
 
     /**
@@ -98,30 +98,30 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeWindow")
-      private final @Nullable Input<FutureReservationTimeWindowArgs> timeWindow;
+      private final @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
 
-    public Input<FutureReservationTimeWindowArgs> getTimeWindow() {
-        return this.timeWindow == null ? Input.empty() : this.timeWindow;
+    public Output<FutureReservationTimeWindowArgs> getTimeWindow() {
+        return this.timeWindow == null ? Output.empty() : this.timeWindow;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public FutureReservationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<ShareSettingsArgs> shareSettings,
-        @Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties,
-        @Nullable Input<FutureReservationTimeWindowArgs> timeWindow,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<ShareSettingsArgs> shareSettings,
+        @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties,
+        @Nullable Output<FutureReservationTimeWindowArgs> timeWindow,
+        @Nullable Output<String> zone) {
         this.description = description;
         this.kind = kind;
         this.name = name;
@@ -135,16 +135,16 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FutureReservationArgs() {
-        this.description = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.shareSettings = Input.empty();
-        this.specificSkuProperties = Input.empty();
-        this.timeWindow = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.shareSettings = Output.empty();
+        this.specificSkuProperties = Output.empty();
+        this.timeWindow = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,16 +156,16 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<ShareSettingsArgs> shareSettings;
-        private @Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
-        private @Nullable Input<FutureReservationTimeWindowArgs> timeWindow;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<ShareSettingsArgs> shareSettings;
+        private @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
+        private @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -185,103 +185,103 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder shareSettings(@Nullable Input<ShareSettingsArgs> shareSettings) {
+        public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
 
         public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
-            this.shareSettings = Input.ofNullable(shareSettings);
+            this.shareSettings = Output.ofNullable(shareSettings);
             return this;
         }
 
-        public Builder specificSkuProperties(@Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties) {
+        public Builder specificSkuProperties(@Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties) {
             this.specificSkuProperties = specificSkuProperties;
             return this;
         }
 
         public Builder specificSkuProperties(@Nullable FutureReservationSpecificSKUPropertiesArgs specificSkuProperties) {
-            this.specificSkuProperties = Input.ofNullable(specificSkuProperties);
+            this.specificSkuProperties = Output.ofNullable(specificSkuProperties);
             return this;
         }
 
-        public Builder timeWindow(@Nullable Input<FutureReservationTimeWindowArgs> timeWindow) {
+        public Builder timeWindow(@Nullable Output<FutureReservationTimeWindowArgs> timeWindow) {
             this.timeWindow = timeWindow;
             return this;
         }
 
         public Builder timeWindow(@Nullable FutureReservationTimeWindowArgs timeWindow) {
-            this.timeWindow = Input.ofNullable(timeWindow);
+            this.timeWindow = Output.ofNullable(timeWindow);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public FutureReservationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class GatewayRouteSpecHttpRouteMatchArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="prefix", required=true)
-      private final Input<String> prefix;
+      private final Output<String> prefix;
 
-    public Input<String> getPrefix() {
+    public Output<String> getPrefix() {
         return this.prefix;
     }
 
-    public GatewayRouteSpecHttpRouteMatchArgs(Input<String> prefix) {
+    public GatewayRouteSpecHttpRouteMatchArgs(Output<String> prefix) {
         this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
     }
 
     private GatewayRouteSpecHttpRouteMatchArgs() {
-        this.prefix = Input.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GatewayRouteSpecHttpRouteMatchArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> prefix;
+        private Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GatewayRouteSpecHttpRouteMatchArgs extends io.pulumi.resource
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder prefix(Input<String> prefix) {
+        public Builder prefix(Output<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
         public Builder prefix(String prefix) {
-            this.prefix = Input.of(Objects.requireNonNull(prefix));
+            this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
         }
         public GatewayRouteSpecHttpRouteMatchArgs build() {

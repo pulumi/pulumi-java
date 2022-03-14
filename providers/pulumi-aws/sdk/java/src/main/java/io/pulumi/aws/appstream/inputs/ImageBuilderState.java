@@ -6,7 +6,7 @@ package io.pulumi.aws.appstream.inputs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderAccessEndpointGetArgs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderDomainJoinInfoGetArgs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderVpcConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessEndpoints")
-      private final @Nullable Input<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
+      private final @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
 
-    public Input<List<ImageBuilderAccessEndpointGetArgs>> getAccessEndpoints() {
-        return this.accessEndpoints == null ? Input.empty() : this.accessEndpoints;
+    public Output<List<ImageBuilderAccessEndpointGetArgs>> getAccessEndpoints() {
+        return this.accessEndpoints == null ? Output.empty() : this.accessEndpoints;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appstreamAgentVersion")
-      private final @Nullable Input<String> appstreamAgentVersion;
+      private final @Nullable Output<String> appstreamAgentVersion;
 
-    public Input<String> getAppstreamAgentVersion() {
-        return this.appstreamAgentVersion == null ? Input.empty() : this.appstreamAgentVersion;
+    public Output<String> getAppstreamAgentVersion() {
+        return this.appstreamAgentVersion == null ? Output.empty() : this.appstreamAgentVersion;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainJoinInfo")
-      private final @Nullable Input<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
+      private final @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
 
-    public Input<ImageBuilderDomainJoinInfoGetArgs> getDomainJoinInfo() {
-        return this.domainJoinInfo == null ? Input.empty() : this.domainJoinInfo;
+    public Output<ImageBuilderDomainJoinInfoGetArgs> getDomainJoinInfo() {
+        return this.domainJoinInfo == null ? Output.empty() : this.domainJoinInfo;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDefaultInternetAccess")
-      private final @Nullable Input<Boolean> enableDefaultInternetAccess;
+      private final @Nullable Output<Boolean> enableDefaultInternetAccess;
 
-    public Input<Boolean> getEnableDefaultInternetAccess() {
-        return this.enableDefaultInternetAccess == null ? Input.empty() : this.enableDefaultInternetAccess;
+    public Output<Boolean> getEnableDefaultInternetAccess() {
+        return this.enableDefaultInternetAccess == null ? Output.empty() : this.enableDefaultInternetAccess;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn")
-      private final @Nullable Input<String> iamRoleArn;
+      private final @Nullable Output<String> iamRoleArn;
 
-    public Input<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Input.empty() : this.iamRoleArn;
+    public Output<String> getIamRoleArn() {
+        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageArn")
-      private final @Nullable Input<String> imageArn;
+      private final @Nullable Output<String> imageArn;
 
-    public Input<String> getImageArn() {
-        return this.imageArn == null ? Input.empty() : this.imageArn;
+    public Output<String> getImageArn() {
+        return this.imageArn == null ? Output.empty() : this.imageArn;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -201,30 +201,30 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<ImageBuilderVpcConfigGetArgs> vpcConfig;
+      private final @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
 
-    public Input<ImageBuilderVpcConfigGetArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<ImageBuilderVpcConfigGetArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public ImageBuilderState(
-        @Nullable Input<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints,
-        @Nullable Input<String> appstreamAgentVersion,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo,
-        @Nullable Input<Boolean> enableDefaultInternetAccess,
-        @Nullable Input<String> iamRoleArn,
-        @Nullable Input<String> imageArn,
-        @Nullable Input<String> imageName,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<ImageBuilderVpcConfigGetArgs> vpcConfig) {
+        @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints,
+        @Nullable Output<String> appstreamAgentVersion,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo,
+        @Nullable Output<Boolean> enableDefaultInternetAccess,
+        @Nullable Output<String> iamRoleArn,
+        @Nullable Output<String> imageArn,
+        @Nullable Output<String> imageName,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig) {
         this.accessEndpoints = accessEndpoints;
         this.appstreamAgentVersion = appstreamAgentVersion;
         this.arn = arn;
@@ -245,23 +245,23 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageBuilderState() {
-        this.accessEndpoints = Input.empty();
-        this.appstreamAgentVersion = Input.empty();
-        this.arn = Input.empty();
-        this.createdTime = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.domainJoinInfo = Input.empty();
-        this.enableDefaultInternetAccess = Input.empty();
-        this.iamRoleArn = Input.empty();
-        this.imageArn = Input.empty();
-        this.imageName = Input.empty();
-        this.instanceType = Input.empty();
-        this.name = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.accessEndpoints = Output.empty();
+        this.appstreamAgentVersion = Output.empty();
+        this.arn = Output.empty();
+        this.createdTime = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.domainJoinInfo = Output.empty();
+        this.enableDefaultInternetAccess = Output.empty();
+        this.iamRoleArn = Output.empty();
+        this.imageArn = Output.empty();
+        this.imageName = Output.empty();
+        this.instanceType = Output.empty();
+        this.name = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -273,23 +273,23 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
-        private @Nullable Input<String> appstreamAgentVersion;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
-        private @Nullable Input<Boolean> enableDefaultInternetAccess;
-        private @Nullable Input<String> iamRoleArn;
-        private @Nullable Input<String> imageArn;
-        private @Nullable Input<String> imageName;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<ImageBuilderVpcConfigGetArgs> vpcConfig;
+        private @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
+        private @Nullable Output<String> appstreamAgentVersion;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
+        private @Nullable Output<Boolean> enableDefaultInternetAccess;
+        private @Nullable Output<String> iamRoleArn;
+        private @Nullable Output<String> imageArn;
+        private @Nullable Output<String> imageName;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -316,173 +316,173 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder accessEndpoints(@Nullable Input<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints) {
+        public Builder accessEndpoints(@Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints) {
             this.accessEndpoints = accessEndpoints;
             return this;
         }
 
         public Builder accessEndpoints(@Nullable List<ImageBuilderAccessEndpointGetArgs> accessEndpoints) {
-            this.accessEndpoints = Input.ofNullable(accessEndpoints);
+            this.accessEndpoints = Output.ofNullable(accessEndpoints);
             return this;
         }
 
-        public Builder appstreamAgentVersion(@Nullable Input<String> appstreamAgentVersion) {
+        public Builder appstreamAgentVersion(@Nullable Output<String> appstreamAgentVersion) {
             this.appstreamAgentVersion = appstreamAgentVersion;
             return this;
         }
 
         public Builder appstreamAgentVersion(@Nullable String appstreamAgentVersion) {
-            this.appstreamAgentVersion = Input.ofNullable(appstreamAgentVersion);
+            this.appstreamAgentVersion = Output.ofNullable(appstreamAgentVersion);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder domainJoinInfo(@Nullable Input<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo) {
+        public Builder domainJoinInfo(@Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo) {
             this.domainJoinInfo = domainJoinInfo;
             return this;
         }
 
         public Builder domainJoinInfo(@Nullable ImageBuilderDomainJoinInfoGetArgs domainJoinInfo) {
-            this.domainJoinInfo = Input.ofNullable(domainJoinInfo);
+            this.domainJoinInfo = Output.ofNullable(domainJoinInfo);
             return this;
         }
 
-        public Builder enableDefaultInternetAccess(@Nullable Input<Boolean> enableDefaultInternetAccess) {
+        public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
 
         public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = Input.ofNullable(enableDefaultInternetAccess);
+            this.enableDefaultInternetAccess = Output.ofNullable(enableDefaultInternetAccess);
             return this;
         }
 
-        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Input.ofNullable(iamRoleArn);
+            this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder imageArn(@Nullable Input<String> imageArn) {
+        public Builder imageArn(@Nullable Output<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
 
         public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Input.ofNullable(imageArn);
+            this.imageArn = Output.ofNullable(imageArn);
             return this;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<ImageBuilderVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable ImageBuilderVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public ImageBuilderState build() {

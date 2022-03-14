@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeEngineTargetDefaultsArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.SchedulePolicyArgs;
@@ -22,10 +22,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeEngineTargetDefaults")
-      private final @Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
+      private final @Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
 
-    public Input<ComputeEngineTargetDefaultsArgs> getComputeEngineTargetDefaults() {
-        return this.computeEngineTargetDefaults == null ? Input.empty() : this.computeEngineTargetDefaults;
+    public Output<ComputeEngineTargetDefaultsArgs> getComputeEngineTargetDefaults() {
+        return this.computeEngineTargetDefaults == null ? Output.empty() : this.computeEngineTargetDefaults;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -55,23 +55,23 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="migratingVmId", required=true)
-      private final Input<String> migratingVmId;
+      private final Output<String> migratingVmId;
 
-    public Input<String> getMigratingVmId() {
+    public Output<String> getMigratingVmId() {
         return this.migratingVmId;
     }
 
@@ -80,30 +80,30 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<SchedulePolicyArgs> policy;
+      private final @Nullable Output<SchedulePolicyArgs> policy;
 
-    public Input<SchedulePolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<SchedulePolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="sourceId", required=true)
-      private final Input<String> sourceId;
+      private final Output<String> sourceId;
 
-    public Input<String> getSourceId() {
+    public Output<String> getSourceId() {
         return this.sourceId;
     }
 
@@ -112,24 +112,24 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceVmId")
-      private final @Nullable Input<String> sourceVmId;
+      private final @Nullable Output<String> sourceVmId;
 
-    public Input<String> getSourceVmId() {
-        return this.sourceVmId == null ? Input.empty() : this.sourceVmId;
+    public Output<String> getSourceVmId() {
+        return this.sourceVmId == null ? Output.empty() : this.sourceVmId;
     }
 
     public MigratingVmArgs(
-        @Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        Input<String> migratingVmId,
-        @Nullable Input<SchedulePolicyArgs> policy,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        Input<String> sourceId,
-        @Nullable Input<String> sourceVmId) {
+        @Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        Output<String> migratingVmId,
+        @Nullable Output<SchedulePolicyArgs> policy,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        Output<String> sourceId,
+        @Nullable Output<String> sourceVmId) {
         this.computeEngineTargetDefaults = computeEngineTargetDefaults;
         this.description = description;
         this.displayName = displayName;
@@ -144,17 +144,17 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MigratingVmArgs() {
-        this.computeEngineTargetDefaults = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.migratingVmId = Input.empty();
-        this.policy = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.sourceId = Input.empty();
-        this.sourceVmId = Input.empty();
+        this.computeEngineTargetDefaults = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.migratingVmId = Output.empty();
+        this.policy = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.sourceId = Output.empty();
+        this.sourceVmId = Output.empty();
     }
 
     public static Builder builder() {
@@ -166,17 +166,17 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private Input<String> migratingVmId;
-        private @Nullable Input<SchedulePolicyArgs> policy;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private Input<String> sourceId;
-        private @Nullable Input<String> sourceVmId;
+        private @Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private Output<String> migratingVmId;
+        private @Nullable Output<SchedulePolicyArgs> policy;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private Output<String> sourceId;
+        private @Nullable Output<String> sourceVmId;
 
         public Builder() {
     	      // Empty
@@ -197,113 +197,113 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceVmId = defaults.sourceVmId;
         }
 
-        public Builder computeEngineTargetDefaults(@Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults) {
+        public Builder computeEngineTargetDefaults(@Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults) {
             this.computeEngineTargetDefaults = computeEngineTargetDefaults;
             return this;
         }
 
         public Builder computeEngineTargetDefaults(@Nullable ComputeEngineTargetDefaultsArgs computeEngineTargetDefaults) {
-            this.computeEngineTargetDefaults = Input.ofNullable(computeEngineTargetDefaults);
+            this.computeEngineTargetDefaults = Output.ofNullable(computeEngineTargetDefaults);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder migratingVmId(Input<String> migratingVmId) {
+        public Builder migratingVmId(Output<String> migratingVmId) {
             this.migratingVmId = Objects.requireNonNull(migratingVmId);
             return this;
         }
 
         public Builder migratingVmId(String migratingVmId) {
-            this.migratingVmId = Input.of(Objects.requireNonNull(migratingVmId));
+            this.migratingVmId = Output.of(Objects.requireNonNull(migratingVmId));
             return this;
         }
 
-        public Builder policy(@Nullable Input<SchedulePolicyArgs> policy) {
+        public Builder policy(@Nullable Output<SchedulePolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable SchedulePolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder sourceId(Input<String> sourceId) {
+        public Builder sourceId(Output<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
         public Builder sourceId(String sourceId) {
-            this.sourceId = Input.of(Objects.requireNonNull(sourceId));
+            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
             return this;
         }
 
-        public Builder sourceVmId(@Nullable Input<String> sourceVmId) {
+        public Builder sourceVmId(@Nullable Output<String> sourceVmId) {
             this.sourceVmId = sourceVmId;
             return this;
         }
 
         public Builder sourceVmId(@Nullable String sourceVmId) {
-            this.sourceVmId = Input.ofNullable(sourceVmId);
+            this.sourceVmId = Output.ofNullable(sourceVmId);
             return this;
         }
         public MigratingVmArgs build() {

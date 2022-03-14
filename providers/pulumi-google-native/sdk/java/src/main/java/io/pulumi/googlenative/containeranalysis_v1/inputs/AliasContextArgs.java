@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.enums.AliasContextKind;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<AliasContextKind> kind;
+      private final @Nullable Output<AliasContextKind> kind;
 
-    public Input<AliasContextKind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<AliasContextKind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public AliasContextArgs(
-        @Nullable Input<AliasContextKind> kind,
-        @Nullable Input<String> name) {
+        @Nullable Output<AliasContextKind> kind,
+        @Nullable Output<String> name) {
         this.kind = kind;
         this.name = name;
     }
 
     private AliasContextArgs() {
-        this.kind = Input.empty();
-        this.name = Input.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AliasContextKind> kind;
-        private @Nullable Input<String> name;
+        private @Nullable Output<AliasContextKind> kind;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder kind(@Nullable Input<AliasContextKind> kind) {
+        public Builder kind(@Nullable Output<AliasContextKind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable AliasContextKind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public AliasContextArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.ProductPortfolioAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.ProductPortfolioAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,14 +123,14 @@ public class ProductPortfolioAssociation extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public ProductPortfolioAssociation(String name, ProductPortfolioAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation", name, args == null ? ProductPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation", name, args == null ? ProductPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProductPortfolioAssociation(String name, Input<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProductPortfolioAssociation(String name, Output<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicecatalog/productPortfolioAssociation:ProductPortfolioAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -147,7 +146,7 @@ public class ProductPortfolioAssociation extends io.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProductPortfolioAssociation get(String name, Input<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProductPortfolioAssociation get(String name, Output<String> id, @Nullable ProductPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProductPortfolioAssociation(name, id, state, options);
     }
 }

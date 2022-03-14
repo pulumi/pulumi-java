@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="authToken")
-      private final @Nullable Input<String> authToken;
+      private final @Nullable Output<String> authToken;
 
-    public Input<String> getAuthToken() {
-        return this.authToken == null ? Input.empty() : this.authToken;
+    public Output<String> getAuthToken() {
+        return this.authToken == null ? Output.empty() : this.authToken;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="serviceKey")
-      private final @Nullable Input<String> serviceKey;
+      private final @Nullable Output<String> serviceKey;
 
-    public Input<String> getServiceKey() {
-        return this.serviceKey == null ? Input.empty() : this.serviceKey;
+    public Output<String> getServiceKey() {
+        return this.serviceKey == null ? Output.empty() : this.serviceKey;
     }
 
     public NotificationChannelSensitiveLabelsGetArgs(
-        @Nullable Input<String> authToken,
-        @Nullable Input<String> password,
-        @Nullable Input<String> serviceKey) {
+        @Nullable Output<String> authToken,
+        @Nullable Output<String> password,
+        @Nullable Output<String> serviceKey) {
         this.authToken = authToken;
         this.password = password;
         this.serviceKey = serviceKey;
     }
 
     private NotificationChannelSensitiveLabelsGetArgs() {
-        this.authToken = Input.empty();
-        this.password = Input.empty();
-        this.serviceKey = Input.empty();
+        this.authToken = Output.empty();
+        this.password = Output.empty();
+        this.serviceKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authToken;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> serviceKey;
+        private @Nullable Output<String> authToken;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> serviceKey;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
     	      this.serviceKey = defaults.serviceKey;
         }
 
-        public Builder authToken(@Nullable Input<String> authToken) {
+        public Builder authToken(@Nullable Output<String> authToken) {
             this.authToken = authToken;
             return this;
         }
 
         public Builder authToken(@Nullable String authToken) {
-            this.authToken = Input.ofNullable(authToken);
+            this.authToken = Output.ofNullable(authToken);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder serviceKey(@Nullable Input<String> serviceKey) {
+        public Builder serviceKey(@Nullable Output<String> serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
 
         public Builder serviceKey(@Nullable String serviceKey) {
-            this.serviceKey = Input.ofNullable(serviceKey);
+            this.serviceKey = Output.ofNullable(serviceKey);
             return this;
         }
         public NotificationChannelSensitiveLabelsGetArgs build() {

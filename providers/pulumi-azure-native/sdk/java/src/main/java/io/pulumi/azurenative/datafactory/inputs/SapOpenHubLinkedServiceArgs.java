@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<Object> clientId;
+      private final @Nullable Output<Object> clientId;
 
-    public Input<Object> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<Object> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="language")
-      private final @Nullable Input<Object> language;
+      private final @Nullable Output<Object> language;
 
-    public Input<Object> getLanguage() {
-        return this.language == null ? Input.empty() : this.language;
+    public Output<Object> getLanguage() {
+        return this.language == null ? Output.empty() : this.language;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logonGroup")
-      private final @Nullable Input<Object> logonGroup;
+      private final @Nullable Output<Object> logonGroup;
 
-    public Input<Object> getLogonGroup() {
-        return this.logonGroup == null ? Input.empty() : this.logonGroup;
+    public Output<Object> getLogonGroup() {
+        return this.logonGroup == null ? Output.empty() : this.logonGroup;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageServer")
-      private final @Nullable Input<Object> messageServer;
+      private final @Nullable Output<Object> messageServer;
 
-    public Input<Object> getMessageServer() {
-        return this.messageServer == null ? Input.empty() : this.messageServer;
+    public Output<Object> getMessageServer() {
+        return this.messageServer == null ? Output.empty() : this.messageServer;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageServerService")
-      private final @Nullable Input<Object> messageServerService;
+      private final @Nullable Output<Object> messageServerService;
 
-    public Input<Object> getMessageServerService() {
-        return this.messageServerService == null ? Input.empty() : this.messageServerService;
+    public Output<Object> getMessageServerService() {
+        return this.messageServerService == null ? Output.empty() : this.messageServerService;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="server")
-      private final @Nullable Input<Object> server;
+      private final @Nullable Output<Object> server;
 
-    public Input<Object> getServer() {
-        return this.server == null ? Input.empty() : this.server;
+    public Output<Object> getServer() {
+        return this.server == null ? Output.empty() : this.server;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="systemId")
-      private final @Nullable Input<Object> systemId;
+      private final @Nullable Output<Object> systemId;
 
-    public Input<Object> getSystemId() {
-        return this.systemId == null ? Input.empty() : this.systemId;
+    public Output<Object> getSystemId() {
+        return this.systemId == null ? Output.empty() : this.systemId;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="systemNumber")
-      private final @Nullable Input<Object> systemNumber;
+      private final @Nullable Output<Object> systemNumber;
 
-    public Input<Object> getSystemNumber() {
-        return this.systemNumber == null ? Input.empty() : this.systemNumber;
+    public Output<Object> getSystemNumber() {
+        return this.systemNumber == null ? Output.empty() : this.systemNumber;
     }
 
     /**
@@ -186,9 +186,9 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -197,29 +197,29 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<Object> userName;
+      private final @Nullable Output<Object> userName;
 
-    public Input<Object> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<Object> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public SapOpenHubLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Object> clientId,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> language,
-        @Nullable Input<Object> logonGroup,
-        @Nullable Input<Object> messageServer,
-        @Nullable Input<Object> messageServerService,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Object> server,
-        @Nullable Input<Object> systemId,
-        @Nullable Input<Object> systemNumber,
-        Input<String> type,
-        @Nullable Input<Object> userName) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Object> clientId,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> language,
+        @Nullable Output<Object> logonGroup,
+        @Nullable Output<Object> messageServer,
+        @Nullable Output<Object> messageServerService,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Object> server,
+        @Nullable Output<Object> systemId,
+        @Nullable Output<Object> systemNumber,
+        Output<String> type,
+        @Nullable Output<Object> userName) {
         this.annotations = annotations;
         this.clientId = clientId;
         this.connectVia = connectVia;
@@ -239,22 +239,22 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     private SapOpenHubLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.clientId = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.language = Input.empty();
-        this.logonGroup = Input.empty();
-        this.messageServer = Input.empty();
-        this.messageServerService = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.server = Input.empty();
-        this.systemId = Input.empty();
-        this.systemNumber = Input.empty();
-        this.type = Input.empty();
-        this.userName = Input.empty();
+        this.annotations = Output.empty();
+        this.clientId = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.language = Output.empty();
+        this.logonGroup = Output.empty();
+        this.messageServer = Output.empty();
+        this.messageServerService = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.server = Output.empty();
+        this.systemId = Output.empty();
+        this.systemNumber = Output.empty();
+        this.type = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -266,22 +266,22 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Object> clientId;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> language;
-        private @Nullable Input<Object> logonGroup;
-        private @Nullable Input<Object> messageServer;
-        private @Nullable Input<Object> messageServerService;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Object> server;
-        private @Nullable Input<Object> systemId;
-        private @Nullable Input<Object> systemNumber;
-        private Input<String> type;
-        private @Nullable Input<Object> userName;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Object> clientId;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> language;
+        private @Nullable Output<Object> logonGroup;
+        private @Nullable Output<Object> messageServer;
+        private @Nullable Output<Object> messageServerService;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Object> server;
+        private @Nullable Output<Object> systemId;
+        private @Nullable Output<Object> systemNumber;
+        private Output<String> type;
+        private @Nullable Output<Object> userName;
 
         public Builder() {
     	      // Empty
@@ -307,163 +307,163 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     	      this.userName = defaults.userName;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<Object> clientId) {
+        public Builder clientId(@Nullable Output<Object> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder language(@Nullable Input<Object> language) {
+        public Builder language(@Nullable Output<Object> language) {
             this.language = language;
             return this;
         }
 
         public Builder language(@Nullable Object language) {
-            this.language = Input.ofNullable(language);
+            this.language = Output.ofNullable(language);
             return this;
         }
 
-        public Builder logonGroup(@Nullable Input<Object> logonGroup) {
+        public Builder logonGroup(@Nullable Output<Object> logonGroup) {
             this.logonGroup = logonGroup;
             return this;
         }
 
         public Builder logonGroup(@Nullable Object logonGroup) {
-            this.logonGroup = Input.ofNullable(logonGroup);
+            this.logonGroup = Output.ofNullable(logonGroup);
             return this;
         }
 
-        public Builder messageServer(@Nullable Input<Object> messageServer) {
+        public Builder messageServer(@Nullable Output<Object> messageServer) {
             this.messageServer = messageServer;
             return this;
         }
 
         public Builder messageServer(@Nullable Object messageServer) {
-            this.messageServer = Input.ofNullable(messageServer);
+            this.messageServer = Output.ofNullable(messageServer);
             return this;
         }
 
-        public Builder messageServerService(@Nullable Input<Object> messageServerService) {
+        public Builder messageServerService(@Nullable Output<Object> messageServerService) {
             this.messageServerService = messageServerService;
             return this;
         }
 
         public Builder messageServerService(@Nullable Object messageServerService) {
-            this.messageServerService = Input.ofNullable(messageServerService);
+            this.messageServerService = Output.ofNullable(messageServerService);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder server(@Nullable Input<Object> server) {
+        public Builder server(@Nullable Output<Object> server) {
             this.server = server;
             return this;
         }
 
         public Builder server(@Nullable Object server) {
-            this.server = Input.ofNullable(server);
+            this.server = Output.ofNullable(server);
             return this;
         }
 
-        public Builder systemId(@Nullable Input<Object> systemId) {
+        public Builder systemId(@Nullable Output<Object> systemId) {
             this.systemId = systemId;
             return this;
         }
 
         public Builder systemId(@Nullable Object systemId) {
-            this.systemId = Input.ofNullable(systemId);
+            this.systemId = Output.ofNullable(systemId);
             return this;
         }
 
-        public Builder systemNumber(@Nullable Input<Object> systemNumber) {
+        public Builder systemNumber(@Nullable Output<Object> systemNumber) {
             this.systemNumber = systemNumber;
             return this;
         }
 
         public Builder systemNumber(@Nullable Object systemNumber) {
-            this.systemNumber = Input.ofNullable(systemNumber);
+            this.systemNumber = Output.ofNullable(systemNumber);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userName(@Nullable Input<Object> userName) {
+        public Builder userName(@Nullable Output<Object> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable Object userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public SapOpenHubLinkedServiceArgs build() {

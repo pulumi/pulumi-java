@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lun")
-      private final @Nullable Input<Integer> lun;
+      private final @Nullable Output<Integer> lun;
 
-    public Input<Integer> getLun() {
-        return this.lun == null ? Input.empty() : this.lun;
+    public Output<Integer> getLun() {
+        return this.lun == null ? Output.empty() : this.lun;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetWWNs")
-      private final @Nullable Input<List<String>> targetWWNs;
+      private final @Nullable Output<List<String>> targetWWNs;
 
-    public Input<List<String>> getTargetWWNs() {
-        return this.targetWWNs == null ? Input.empty() : this.targetWWNs;
+    public Output<List<String>> getTargetWWNs() {
+        return this.targetWWNs == null ? Output.empty() : this.targetWWNs;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="wwids")
-      private final @Nullable Input<List<String>> wwids;
+      private final @Nullable Output<List<String>> wwids;
 
-    public Input<List<String>> getWwids() {
-        return this.wwids == null ? Input.empty() : this.wwids;
+    public Output<List<String>> getWwids() {
+        return this.wwids == null ? Output.empty() : this.wwids;
     }
 
     public FCVolumeSourceArgs(
-        @Nullable Input<String> fsType,
-        @Nullable Input<Integer> lun,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<List<String>> targetWWNs,
-        @Nullable Input<List<String>> wwids) {
+        @Nullable Output<String> fsType,
+        @Nullable Output<Integer> lun,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<List<String>> targetWWNs,
+        @Nullable Output<List<String>> wwids) {
         this.fsType = fsType;
         this.lun = lun;
         this.readOnly = readOnly;
@@ -90,11 +90,11 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FCVolumeSourceArgs() {
-        this.fsType = Input.empty();
-        this.lun = Input.empty();
-        this.readOnly = Input.empty();
-        this.targetWWNs = Input.empty();
-        this.wwids = Input.empty();
+        this.fsType = Output.empty();
+        this.lun = Output.empty();
+        this.readOnly = Output.empty();
+        this.targetWWNs = Output.empty();
+        this.wwids = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fsType;
-        private @Nullable Input<Integer> lun;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<List<String>> targetWWNs;
-        private @Nullable Input<List<String>> wwids;
+        private @Nullable Output<String> fsType;
+        private @Nullable Output<Integer> lun;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<List<String>> targetWWNs;
+        private @Nullable Output<List<String>> wwids;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.wwids = defaults.wwids;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder lun(@Nullable Input<Integer> lun) {
+        public Builder lun(@Nullable Output<Integer> lun) {
             this.lun = lun;
             return this;
         }
 
         public Builder lun(@Nullable Integer lun) {
-            this.lun = Input.ofNullable(lun);
+            this.lun = Output.ofNullable(lun);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder targetWWNs(@Nullable Input<List<String>> targetWWNs) {
+        public Builder targetWWNs(@Nullable Output<List<String>> targetWWNs) {
             this.targetWWNs = targetWWNs;
             return this;
         }
 
         public Builder targetWWNs(@Nullable List<String> targetWWNs) {
-            this.targetWWNs = Input.ofNullable(targetWWNs);
+            this.targetWWNs = Output.ofNullable(targetWWNs);
             return this;
         }
 
-        public Builder wwids(@Nullable Input<List<String>> wwids) {
+        public Builder wwids(@Nullable Output<List<String>> wwids) {
             this.wwids = wwids;
             return this;
         }
 
         public Builder wwids(@Nullable List<String> wwids) {
-            this.wwids = Input.ofNullable(wwids);
+            this.wwids = Output.ofNullable(wwids);
             return this;
         }
         public FCVolumeSourceArgs build() {

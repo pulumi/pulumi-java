@@ -6,7 +6,6 @@ package io.pulumi.aws.dms;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dms.ReplicationTaskArgs;
 import io.pulumi.aws.dms.inputs.ReplicationTaskState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -237,14 +236,14 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationTask(String name, ReplicationTaskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/replicationTask:ReplicationTask", name, args == null ? ReplicationTaskArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:dms/replicationTask:ReplicationTask", name, args == null ? ReplicationTaskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReplicationTask(String name, Input<String> id, @Nullable ReplicationTaskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReplicationTask(String name, Output<String> id, @Nullable ReplicationTaskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:dms/replicationTask:ReplicationTask", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -260,7 +259,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReplicationTask get(String name, Input<String> id, @Nullable ReplicationTaskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReplicationTask get(String name, Output<String> id, @Nullable ReplicationTaskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationTask(name, id, state, options);
     }
 }

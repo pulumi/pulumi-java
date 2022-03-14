@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="apiName")
-      private final @Nullable Input<String> apiName;
+      private final @Nullable Output<String> apiName;
 
-    public Input<String> getApiName() {
-        return this.apiName == null ? Input.empty() : this.apiName;
+    public Output<String> getApiName() {
+        return this.apiName == null ? Output.empty() : this.apiName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="deploymentParameters")
-      private final @Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
+      private final @Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
 
-    public Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> getDeploymentParameters() {
-        return this.deploymentParameters == null ? Input.empty() : this.deploymentParameters;
+    public Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> getDeploymentParameters() {
+        return this.deploymentParameters == null ? Output.empty() : this.deploymentParameters;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="integrationServiceEnvironment")
-      private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
+      private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Input<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
+    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
+        return this.integrationServiceEnvironment == null ? Output.empty() : this.integrationServiceEnvironment;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="integrationServiceEnvironmentName", required=true)
-      private final Input<String> integrationServiceEnvironmentName;
+      private final Output<String> integrationServiceEnvironmentName;
 
-    public Input<String> getIntegrationServiceEnvironmentName() {
+    public Output<String> getIntegrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
 
@@ -66,10 +66,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
@@ -88,20 +88,20 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IntegrationServiceEnvironmentManagedApiArgs(
-        @Nullable Input<String> apiName,
-        @Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters,
-        @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment,
-        Input<String> integrationServiceEnvironmentName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroup,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> apiName,
+        @Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters,
+        @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment,
+        Output<String> integrationServiceEnvironmentName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroup,
+        @Nullable Output<Map<String,String>> tags) {
         this.apiName = apiName;
         this.deploymentParameters = deploymentParameters;
         this.integrationServiceEnvironment = integrationServiceEnvironment;
@@ -112,13 +112,13 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     }
 
     private IntegrationServiceEnvironmentManagedApiArgs() {
-        this.apiName = Input.empty();
-        this.deploymentParameters = Input.empty();
-        this.integrationServiceEnvironment = Input.empty();
-        this.integrationServiceEnvironmentName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.tags = Input.empty();
+        this.apiName = Output.empty();
+        this.deploymentParameters = Output.empty();
+        this.integrationServiceEnvironment = Output.empty();
+        this.integrationServiceEnvironmentName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiName;
-        private @Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
-        private @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
-        private Input<String> integrationServiceEnvironmentName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroup;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> apiName;
+        private @Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
+        private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
+        private Output<String> integrationServiceEnvironmentName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroup;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     	      this.tags = defaults.tags;
         }
 
-        public Builder apiName(@Nullable Input<String> apiName) {
+        public Builder apiName(@Nullable Output<String> apiName) {
             this.apiName = apiName;
             return this;
         }
 
         public Builder apiName(@Nullable String apiName) {
-            this.apiName = Input.ofNullable(apiName);
+            this.apiName = Output.ofNullable(apiName);
             return this;
         }
 
-        public Builder deploymentParameters(@Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters) {
+        public Builder deploymentParameters(@Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters) {
             this.deploymentParameters = deploymentParameters;
             return this;
         }
 
         public Builder deploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs deploymentParameters) {
-            this.deploymentParameters = Input.ofNullable(deploymentParameters);
+            this.deploymentParameters = Output.ofNullable(deploymentParameters);
             return this;
         }
 
-        public Builder integrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Input.ofNullable(integrationServiceEnvironment);
+            this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
             return this;
         }
 
-        public Builder integrationServiceEnvironmentName(Input<String> integrationServiceEnvironmentName) {
+        public Builder integrationServiceEnvironmentName(Output<String> integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName);
             return this;
         }
 
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
-            this.integrationServiceEnvironmentName = Input.of(Objects.requireNonNull(integrationServiceEnvironmentName));
+            this.integrationServiceEnvironmentName = Output.of(Objects.requireNonNull(integrationServiceEnvironmentName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IntegrationServiceEnvironmentManagedApiArgs build() {

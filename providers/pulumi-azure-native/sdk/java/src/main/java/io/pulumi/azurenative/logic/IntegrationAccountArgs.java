@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.WorkflowState;
 import io.pulumi.azurenative.logic.inputs.IntegrationAccountSkuArgs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integrationAccountName")
-      private final @Nullable Input<String> integrationAccountName;
+      private final @Nullable Output<String> integrationAccountName;
 
-    public Input<String> getIntegrationAccountName() {
-        return this.integrationAccountName == null ? Input.empty() : this.integrationAccountName;
+    public Output<String> getIntegrationAccountName() {
+        return this.integrationAccountName == null ? Output.empty() : this.integrationAccountName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integrationServiceEnvironment")
-      private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
+      private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Input<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
+    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
+        return this.integrationServiceEnvironment == null ? Output.empty() : this.integrationServiceEnvironment;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,10 +68,10 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<IntegrationAccountSkuArgs> sku;
+      private final @Nullable Output<IntegrationAccountSkuArgs> sku;
 
-    public Input<IntegrationAccountSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<IntegrationAccountSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,WorkflowState>> state;
+      private final @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Input<Either<String,WorkflowState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,WorkflowState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IntegrationAccountArgs(
-        @Nullable Input<String> integrationAccountName,
-        @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<IntegrationAccountSkuArgs> sku,
-        @Nullable Input<Either<String,WorkflowState>> state,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> integrationAccountName,
+        @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<IntegrationAccountSkuArgs> sku,
+        @Nullable Output<Either<String,WorkflowState>> state,
+        @Nullable Output<Map<String,String>> tags) {
         this.integrationAccountName = integrationAccountName;
         this.integrationServiceEnvironment = integrationServiceEnvironment;
         this.location = location;
@@ -114,13 +114,13 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     }
 
     private IntegrationAccountArgs() {
-        this.integrationAccountName = Input.empty();
-        this.integrationServiceEnvironment = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
+        this.integrationAccountName = Output.empty();
+        this.integrationServiceEnvironment = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> integrationAccountName;
-        private @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<IntegrationAccountSkuArgs> sku;
-        private @Nullable Input<Either<String,WorkflowState>> state;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> integrationAccountName;
+        private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<IntegrationAccountSkuArgs> sku;
+        private @Nullable Output<Either<String,WorkflowState>> state;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder integrationAccountName(@Nullable Input<String> integrationAccountName) {
+        public Builder integrationAccountName(@Nullable Output<String> integrationAccountName) {
             this.integrationAccountName = integrationAccountName;
             return this;
         }
 
         public Builder integrationAccountName(@Nullable String integrationAccountName) {
-            this.integrationAccountName = Input.ofNullable(integrationAccountName);
+            this.integrationAccountName = Output.ofNullable(integrationAccountName);
             return this;
         }
 
-        public Builder integrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Input.ofNullable(integrationServiceEnvironment);
+            this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<IntegrationAccountSkuArgs> sku) {
+        public Builder sku(@Nullable Output<IntegrationAccountSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable IntegrationAccountSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,WorkflowState>> state) {
+        public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IntegrationAccountArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInputS3InputMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -26,16 +26,16 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="endTimeOffset")
-      private final @Nullable Input<String> endTimeOffset;
+      private final @Nullable Output<String> endTimeOffset;
 
-    public Input<String> getEndTimeOffset() {
-        return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
+    public Output<String> getEndTimeOffset() {
+        return this.endTimeOffset == null ? Output.empty() : this.endTimeOffset;
     }
 
     @InputImport(name="endpointName", required=true)
-      private final Input<String> endpointName;
+      private final Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
+    public Output<String> getEndpointName() {
         return this.endpointName;
     }
 
@@ -44,10 +44,10 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="inferenceAttribute")
-      private final @Nullable Input<String> inferenceAttribute;
+      private final @Nullable Output<String> inferenceAttribute;
 
-    public Input<String> getInferenceAttribute() {
-        return this.inferenceAttribute == null ? Input.empty() : this.inferenceAttribute;
+    public Output<String> getInferenceAttribute() {
+        return this.inferenceAttribute == null ? Output.empty() : this.inferenceAttribute;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="localPath", required=true)
-      private final Input<String> localPath;
+      private final Output<String> localPath;
 
-    public Input<String> getLocalPath() {
+    public Output<String> getLocalPath() {
         return this.localPath;
     }
 
@@ -66,17 +66,17 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="probabilityAttribute")
-      private final @Nullable Input<String> probabilityAttribute;
+      private final @Nullable Output<String> probabilityAttribute;
 
-    public Input<String> getProbabilityAttribute() {
-        return this.probabilityAttribute == null ? Input.empty() : this.probabilityAttribute;
+    public Output<String> getProbabilityAttribute() {
+        return this.probabilityAttribute == null ? Output.empty() : this.probabilityAttribute;
     }
 
     @InputImport(name="probabilityThresholdAttribute")
-      private final @Nullable Input<Double> probabilityThresholdAttribute;
+      private final @Nullable Output<Double> probabilityThresholdAttribute;
 
-    public Input<Double> getProbabilityThresholdAttribute() {
-        return this.probabilityThresholdAttribute == null ? Input.empty() : this.probabilityThresholdAttribute;
+    public Output<Double> getProbabilityThresholdAttribute() {
+        return this.probabilityThresholdAttribute == null ? Output.empty() : this.probabilityThresholdAttribute;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="s3DataDistributionType")
-      private final @Nullable Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
+      private final @Nullable Output<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
-    public Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
-        return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
+    public Output<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
+        return this.s3DataDistributionType == null ? Output.empty() : this.s3DataDistributionType;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="s3InputMode")
-      private final @Nullable Input<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
+      private final @Nullable Output<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
-    public Input<ModelQualityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
-        return this.s3InputMode == null ? Input.empty() : this.s3InputMode;
+    public Output<ModelQualityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
+        return this.s3InputMode == null ? Output.empty() : this.s3InputMode;
     }
 
     /**
@@ -106,22 +106,22 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="startTimeOffset")
-      private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Output<String> startTimeOffset;
 
-    public Input<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
+    public Output<String> getStartTimeOffset() {
+        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
     }
 
     public ModelQualityJobDefinitionEndpointInputArgs(
-        @Nullable Input<String> endTimeOffset,
-        Input<String> endpointName,
-        @Nullable Input<String> inferenceAttribute,
-        Input<String> localPath,
-        @Nullable Input<String> probabilityAttribute,
-        @Nullable Input<Double> probabilityThresholdAttribute,
-        @Nullable Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType,
-        @Nullable Input<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode,
-        @Nullable Input<String> startTimeOffset) {
+        @Nullable Output<String> endTimeOffset,
+        Output<String> endpointName,
+        @Nullable Output<String> inferenceAttribute,
+        Output<String> localPath,
+        @Nullable Output<String> probabilityAttribute,
+        @Nullable Output<Double> probabilityThresholdAttribute,
+        @Nullable Output<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType,
+        @Nullable Output<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode,
+        @Nullable Output<String> startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
         this.inferenceAttribute = inferenceAttribute;
@@ -134,15 +134,15 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
     }
 
     private ModelQualityJobDefinitionEndpointInputArgs() {
-        this.endTimeOffset = Input.empty();
-        this.endpointName = Input.empty();
-        this.inferenceAttribute = Input.empty();
-        this.localPath = Input.empty();
-        this.probabilityAttribute = Input.empty();
-        this.probabilityThresholdAttribute = Input.empty();
-        this.s3DataDistributionType = Input.empty();
-        this.s3InputMode = Input.empty();
-        this.startTimeOffset = Input.empty();
+        this.endTimeOffset = Output.empty();
+        this.endpointName = Output.empty();
+        this.inferenceAttribute = Output.empty();
+        this.localPath = Output.empty();
+        this.probabilityAttribute = Output.empty();
+        this.probabilityThresholdAttribute = Output.empty();
+        this.s3DataDistributionType = Output.empty();
+        this.s3InputMode = Output.empty();
+        this.startTimeOffset = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,15 +154,15 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endTimeOffset;
-        private Input<String> endpointName;
-        private @Nullable Input<String> inferenceAttribute;
-        private Input<String> localPath;
-        private @Nullable Input<String> probabilityAttribute;
-        private @Nullable Input<Double> probabilityThresholdAttribute;
-        private @Nullable Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
-        private @Nullable Input<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
-        private @Nullable Input<String> startTimeOffset;
+        private @Nullable Output<String> endTimeOffset;
+        private Output<String> endpointName;
+        private @Nullable Output<String> inferenceAttribute;
+        private Output<String> localPath;
+        private @Nullable Output<String> probabilityAttribute;
+        private @Nullable Output<Double> probabilityThresholdAttribute;
+        private @Nullable Output<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
+        private @Nullable Output<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
+        private @Nullable Output<String> startTimeOffset;
 
         public Builder() {
     	      // Empty
@@ -181,93 +181,93 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder endTimeOffset(@Nullable Input<String> endTimeOffset) {
+        public Builder endTimeOffset(@Nullable Output<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Input.ofNullable(endTimeOffset);
+            this.endTimeOffset = Output.ofNullable(endTimeOffset);
             return this;
         }
 
-        public Builder endpointName(Input<String> endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Input.of(Objects.requireNonNull(endpointName));
+            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder inferenceAttribute(@Nullable Input<String> inferenceAttribute) {
+        public Builder inferenceAttribute(@Nullable Output<String> inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
 
         public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
-            this.inferenceAttribute = Input.ofNullable(inferenceAttribute);
+            this.inferenceAttribute = Output.ofNullable(inferenceAttribute);
             return this;
         }
 
-        public Builder localPath(Input<String> localPath) {
+        public Builder localPath(Output<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
         public Builder localPath(String localPath) {
-            this.localPath = Input.of(Objects.requireNonNull(localPath));
+            this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
 
-        public Builder probabilityAttribute(@Nullable Input<String> probabilityAttribute) {
+        public Builder probabilityAttribute(@Nullable Output<String> probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
 
         public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
-            this.probabilityAttribute = Input.ofNullable(probabilityAttribute);
+            this.probabilityAttribute = Output.ofNullable(probabilityAttribute);
             return this;
         }
 
-        public Builder probabilityThresholdAttribute(@Nullable Input<Double> probabilityThresholdAttribute) {
+        public Builder probabilityThresholdAttribute(@Nullable Output<Double> probabilityThresholdAttribute) {
             this.probabilityThresholdAttribute = probabilityThresholdAttribute;
             return this;
         }
 
         public Builder probabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
-            this.probabilityThresholdAttribute = Input.ofNullable(probabilityThresholdAttribute);
+            this.probabilityThresholdAttribute = Output.ofNullable(probabilityThresholdAttribute);
             return this;
         }
 
-        public Builder s3DataDistributionType(@Nullable Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable Output<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
         public Builder s3DataDistributionType(@Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
-            this.s3DataDistributionType = Input.ofNullable(s3DataDistributionType);
+            this.s3DataDistributionType = Output.ofNullable(s3DataDistributionType);
             return this;
         }
 
-        public Builder s3InputMode(@Nullable Input<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
+        public Builder s3InputMode(@Nullable Output<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
 
         public Builder s3InputMode(@Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
-            this.s3InputMode = Input.ofNullable(s3InputMode);
+            this.s3InputMode = Output.ofNullable(s3InputMode);
             return this;
         }
 
-        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Input.ofNullable(startTimeOffset);
+            this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
         }
         public ModelQualityJobDefinitionEndpointInputArgs build() {

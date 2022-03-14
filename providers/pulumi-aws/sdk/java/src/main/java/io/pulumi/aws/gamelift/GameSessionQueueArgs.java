@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift;
 
 import io.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="destinations")
-      private final @Nullable Input<List<String>> destinations;
+      private final @Nullable Output<List<String>> destinations;
 
-    public Input<List<String>> getDestinations() {
-        return this.destinations == null ? Input.empty() : this.destinations;
+    public Output<List<String>> getDestinations() {
+        return this.destinations == null ? Output.empty() : this.destinations;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="playerLatencyPolicies")
-      private final @Nullable Input<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
+      private final @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
 
-    public Input<List<GameSessionQueuePlayerLatencyPolicyArgs>> getPlayerLatencyPolicies() {
-        return this.playerLatencyPolicies == null ? Input.empty() : this.playerLatencyPolicies;
+    public Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> getPlayerLatencyPolicies() {
+        return this.playerLatencyPolicies == null ? Output.empty() : this.playerLatencyPolicies;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeoutInSeconds")
-      private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Input<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
+    public Output<Integer> getTimeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
     }
 
     public GameSessionQueueArgs(
-        @Nullable Input<List<String>> destinations,
-        @Nullable Input<String> name,
-        @Nullable Input<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> timeoutInSeconds) {
+        @Nullable Output<List<String>> destinations,
+        @Nullable Output<String> name,
+        @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> timeoutInSeconds) {
         this.destinations = destinations;
         this.name = name;
         this.playerLatencyPolicies = playerLatencyPolicies;
@@ -87,11 +87,11 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GameSessionQueueArgs() {
-        this.destinations = Input.empty();
-        this.name = Input.empty();
-        this.playerLatencyPolicies = Input.empty();
-        this.tags = Input.empty();
-        this.timeoutInSeconds = Input.empty();
+        this.destinations = Output.empty();
+        this.name = Output.empty();
+        this.playerLatencyPolicies = Output.empty();
+        this.tags = Output.empty();
+        this.timeoutInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> destinations;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> timeoutInSeconds;
+        private @Nullable Output<List<String>> destinations;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> timeoutInSeconds;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder destinations(@Nullable Input<List<String>> destinations) {
+        public Builder destinations(@Nullable Output<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Input.ofNullable(destinations);
+            this.destinations = Output.ofNullable(destinations);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder playerLatencyPolicies(@Nullable Input<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies) {
+        public Builder playerLatencyPolicies(@Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies) {
             this.playerLatencyPolicies = playerLatencyPolicies;
             return this;
         }
 
         public Builder playerLatencyPolicies(@Nullable List<GameSessionQueuePlayerLatencyPolicyArgs> playerLatencyPolicies) {
-            this.playerLatencyPolicies = Input.ofNullable(playerLatencyPolicies);
+            this.playerLatencyPolicies = Output.ofNullable(playerLatencyPolicies);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
         public GameSessionQueueArgs build() {

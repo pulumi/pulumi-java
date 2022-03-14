@@ -3,7 +3,7 @@
 
 package io.pulumi.random.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,10 +22,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="b64Std")
-      private final @Nullable Input<String> b64Std;
+      private final @Nullable Output<String> b64Std;
 
-    public Input<String> getB64Std() {
-        return this.b64Std == null ? Input.empty() : this.b64Std;
+    public Output<String> getB64Std() {
+        return this.b64Std == null ? Output.empty() : this.b64Std;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="b64Url")
-      private final @Nullable Input<String> b64Url;
+      private final @Nullable Output<String> b64Url;
 
-    public Input<String> getB64Url() {
-        return this.b64Url == null ? Input.empty() : this.b64Url;
+    public Output<String> getB64Url() {
+        return this.b64Url == null ? Output.empty() : this.b64Url;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="byteLength")
-      private final @Nullable Input<Integer> byteLength;
+      private final @Nullable Output<Integer> byteLength;
 
-    public Input<Integer> getByteLength() {
-        return this.byteLength == null ? Input.empty() : this.byteLength;
+    public Output<Integer> getByteLength() {
+        return this.byteLength == null ? Output.empty() : this.byteLength;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dec")
-      private final @Nullable Input<String> dec;
+      private final @Nullable Output<String> dec;
 
-    public Input<String> getDec() {
-        return this.dec == null ? Input.empty() : this.dec;
+    public Output<String> getDec() {
+        return this.dec == null ? Output.empty() : this.dec;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hex")
-      private final @Nullable Input<String> hex;
+      private final @Nullable Output<String> hex;
 
-    public Input<String> getHex() {
-        return this.hex == null ? Input.empty() : this.hex;
+    public Output<String> getHex() {
+        return this.hex == null ? Output.empty() : this.hex;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public RandomIdState(
-        @Nullable Input<String> b64Std,
-        @Nullable Input<String> b64Url,
-        @Nullable Input<Integer> byteLength,
-        @Nullable Input<String> dec,
-        @Nullable Input<String> hex,
-        @Nullable Input<Map<String,Object>> keepers,
-        @Nullable Input<String> prefix) {
+        @Nullable Output<String> b64Std,
+        @Nullable Output<String> b64Url,
+        @Nullable Output<Integer> byteLength,
+        @Nullable Output<String> dec,
+        @Nullable Output<String> hex,
+        @Nullable Output<Map<String,Object>> keepers,
+        @Nullable Output<String> prefix) {
         this.b64Std = b64Std;
         this.b64Url = b64Url;
         this.byteLength = byteLength;
@@ -112,13 +112,13 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomIdState() {
-        this.b64Std = Input.empty();
-        this.b64Url = Input.empty();
-        this.byteLength = Input.empty();
-        this.dec = Input.empty();
-        this.hex = Input.empty();
-        this.keepers = Input.empty();
-        this.prefix = Input.empty();
+        this.b64Std = Output.empty();
+        this.b64Url = Output.empty();
+        this.byteLength = Output.empty();
+        this.dec = Output.empty();
+        this.hex = Output.empty();
+        this.keepers = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> b64Std;
-        private @Nullable Input<String> b64Url;
-        private @Nullable Input<Integer> byteLength;
-        private @Nullable Input<String> dec;
-        private @Nullable Input<String> hex;
-        private @Nullable Input<Map<String,Object>> keepers;
-        private @Nullable Input<String> prefix;
+        private @Nullable Output<String> b64Std;
+        private @Nullable Output<String> b64Url;
+        private @Nullable Output<Integer> byteLength;
+        private @Nullable Output<String> dec;
+        private @Nullable Output<String> hex;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder b64Std(@Nullable Input<String> b64Std) {
+        public Builder b64Std(@Nullable Output<String> b64Std) {
             this.b64Std = b64Std;
             return this;
         }
 
         public Builder b64Std(@Nullable String b64Std) {
-            this.b64Std = Input.ofNullable(b64Std);
+            this.b64Std = Output.ofNullable(b64Std);
             return this;
         }
 
-        public Builder b64Url(@Nullable Input<String> b64Url) {
+        public Builder b64Url(@Nullable Output<String> b64Url) {
             this.b64Url = b64Url;
             return this;
         }
 
         public Builder b64Url(@Nullable String b64Url) {
-            this.b64Url = Input.ofNullable(b64Url);
+            this.b64Url = Output.ofNullable(b64Url);
             return this;
         }
 
-        public Builder byteLength(@Nullable Input<Integer> byteLength) {
+        public Builder byteLength(@Nullable Output<Integer> byteLength) {
             this.byteLength = byteLength;
             return this;
         }
 
         public Builder byteLength(@Nullable Integer byteLength) {
-            this.byteLength = Input.ofNullable(byteLength);
+            this.byteLength = Output.ofNullable(byteLength);
             return this;
         }
 
-        public Builder dec(@Nullable Input<String> dec) {
+        public Builder dec(@Nullable Output<String> dec) {
             this.dec = dec;
             return this;
         }
 
         public Builder dec(@Nullable String dec) {
-            this.dec = Input.ofNullable(dec);
+            this.dec = Output.ofNullable(dec);
             return this;
         }
 
-        public Builder hex(@Nullable Input<String> hex) {
+        public Builder hex(@Nullable Output<String> hex) {
             this.hex = hex;
             return this;
         }
 
         public Builder hex(@Nullable String hex) {
-            this.hex = Input.ofNullable(hex);
+            this.hex = Output.ofNullable(hex);
             return this;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public RandomIdState build() {

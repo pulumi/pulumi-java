@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationServerProcessGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gameSessionActivationTimeoutSeconds")
-      private final @Nullable Input<Integer> gameSessionActivationTimeoutSeconds;
+      private final @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
 
-    public Input<Integer> getGameSessionActivationTimeoutSeconds() {
-        return this.gameSessionActivationTimeoutSeconds == null ? Input.empty() : this.gameSessionActivationTimeoutSeconds;
+    public Output<Integer> getGameSessionActivationTimeoutSeconds() {
+        return this.gameSessionActivationTimeoutSeconds == null ? Output.empty() : this.gameSessionActivationTimeoutSeconds;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxConcurrentGameSessionActivations")
-      private final @Nullable Input<Integer> maxConcurrentGameSessionActivations;
+      private final @Nullable Output<Integer> maxConcurrentGameSessionActivations;
 
-    public Input<Integer> getMaxConcurrentGameSessionActivations() {
-        return this.maxConcurrentGameSessionActivations == null ? Input.empty() : this.maxConcurrentGameSessionActivations;
+    public Output<Integer> getMaxConcurrentGameSessionActivations() {
+        return this.maxConcurrentGameSessionActivations == null ? Output.empty() : this.maxConcurrentGameSessionActivations;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverProcesses")
-      private final @Nullable Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
+      private final @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
 
-    public Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> getServerProcesses() {
-        return this.serverProcesses == null ? Input.empty() : this.serverProcesses;
+    public Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> getServerProcesses() {
+        return this.serverProcesses == null ? Output.empty() : this.serverProcesses;
     }
 
     public FleetRuntimeConfigurationGetArgs(
-        @Nullable Input<Integer> gameSessionActivationTimeoutSeconds,
-        @Nullable Input<Integer> maxConcurrentGameSessionActivations,
-        @Nullable Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses) {
+        @Nullable Output<Integer> gameSessionActivationTimeoutSeconds,
+        @Nullable Output<Integer> maxConcurrentGameSessionActivations,
+        @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses) {
         this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
         this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
         this.serverProcesses = serverProcesses;
     }
 
     private FleetRuntimeConfigurationGetArgs() {
-        this.gameSessionActivationTimeoutSeconds = Input.empty();
-        this.maxConcurrentGameSessionActivations = Input.empty();
-        this.serverProcesses = Input.empty();
+        this.gameSessionActivationTimeoutSeconds = Output.empty();
+        this.maxConcurrentGameSessionActivations = Output.empty();
+        this.serverProcesses = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> gameSessionActivationTimeoutSeconds;
-        private @Nullable Input<Integer> maxConcurrentGameSessionActivations;
-        private @Nullable Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
+        private @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
+        private @Nullable Output<Integer> maxConcurrentGameSessionActivations;
+        private @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
     	      this.serverProcesses = defaults.serverProcesses;
         }
 
-        public Builder gameSessionActivationTimeoutSeconds(@Nullable Input<Integer> gameSessionActivationTimeoutSeconds) {
+        public Builder gameSessionActivationTimeoutSeconds(@Nullable Output<Integer> gameSessionActivationTimeoutSeconds) {
             this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
 
         public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
-            this.gameSessionActivationTimeoutSeconds = Input.ofNullable(gameSessionActivationTimeoutSeconds);
+            this.gameSessionActivationTimeoutSeconds = Output.ofNullable(gameSessionActivationTimeoutSeconds);
             return this;
         }
 
-        public Builder maxConcurrentGameSessionActivations(@Nullable Input<Integer> maxConcurrentGameSessionActivations) {
+        public Builder maxConcurrentGameSessionActivations(@Nullable Output<Integer> maxConcurrentGameSessionActivations) {
             this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
 
         public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
-            this.maxConcurrentGameSessionActivations = Input.ofNullable(maxConcurrentGameSessionActivations);
+            this.maxConcurrentGameSessionActivations = Output.ofNullable(maxConcurrentGameSessionActivations);
             return this;
         }
 
-        public Builder serverProcesses(@Nullable Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses) {
+        public Builder serverProcesses(@Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses) {
             this.serverProcesses = serverProcesses;
             return this;
         }
 
         public Builder serverProcesses(@Nullable List<FleetRuntimeConfigurationServerProcessGetArgs> serverProcesses) {
-            this.serverProcesses = Input.ofNullable(serverProcesses);
+            this.serverProcesses = Output.ofNullable(serverProcesses);
             return this;
         }
         public FleetRuntimeConfigurationGetArgs build() {

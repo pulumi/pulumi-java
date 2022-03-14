@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
      * 
      */
     @InputImport(name="isNonRepudiationRequired", required=true)
-      private final Input<Boolean> isNonRepudiationRequired;
+      private final Output<Boolean> isNonRepudiationRequired;
 
-    public Input<Boolean> getIsNonRepudiationRequired() {
+    public Output<Boolean> getIsNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
     }
 
@@ -34,22 +34,22 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
      * 
      */
     @InputImport(name="timeToAcknowledgeInSeconds", required=true)
-      private final Input<Integer> timeToAcknowledgeInSeconds;
+      private final Output<Integer> timeToAcknowledgeInSeconds;
 
-    public Input<Integer> getTimeToAcknowledgeInSeconds() {
+    public Output<Integer> getTimeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }
 
     public RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(
-        Input<Boolean> isNonRepudiationRequired,
-        Input<Integer> timeToAcknowledgeInSeconds) {
+        Output<Boolean> isNonRepudiationRequired,
+        Output<Integer> timeToAcknowledgeInSeconds) {
         this.isNonRepudiationRequired = Objects.requireNonNull(isNonRepudiationRequired, "expected parameter 'isNonRepudiationRequired' to be non-null");
         this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds, "expected parameter 'timeToAcknowledgeInSeconds' to be non-null");
     }
 
     private RosettaNetPipAcknowledgmentOfReceiptSettingsArgs() {
-        this.isNonRepudiationRequired = Input.empty();
-        this.timeToAcknowledgeInSeconds = Input.empty();
+        this.isNonRepudiationRequired = Output.empty();
+        this.timeToAcknowledgeInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<Boolean> isNonRepudiationRequired;
-        private Input<Integer> timeToAcknowledgeInSeconds;
+        private Output<Boolean> isNonRepudiationRequired;
+        private Output<Integer> timeToAcknowledgeInSeconds;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
     	      this.timeToAcknowledgeInSeconds = defaults.timeToAcknowledgeInSeconds;
         }
 
-        public Builder isNonRepudiationRequired(Input<Boolean> isNonRepudiationRequired) {
+        public Builder isNonRepudiationRequired(Output<Boolean> isNonRepudiationRequired) {
             this.isNonRepudiationRequired = Objects.requireNonNull(isNonRepudiationRequired);
             return this;
         }
 
         public Builder isNonRepudiationRequired(Boolean isNonRepudiationRequired) {
-            this.isNonRepudiationRequired = Input.of(Objects.requireNonNull(isNonRepudiationRequired));
+            this.isNonRepudiationRequired = Output.of(Objects.requireNonNull(isNonRepudiationRequired));
             return this;
         }
 
-        public Builder timeToAcknowledgeInSeconds(Input<Integer> timeToAcknowledgeInSeconds) {
+        public Builder timeToAcknowledgeInSeconds(Output<Integer> timeToAcknowledgeInSeconds) {
             this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds);
             return this;
         }
 
         public Builder timeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
-            this.timeToAcknowledgeInSeconds = Input.of(Objects.requireNonNull(timeToAcknowledgeInSeconds));
+            this.timeToAcknowledgeInSeconds = Output.of(Objects.requireNonNull(timeToAcknowledgeInSeconds));
             return this;
         }
         public RosettaNetPipAcknowledgmentOfReceiptSettingsArgs build() {

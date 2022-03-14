@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.ClusterIdentityOidcGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ClusterIdentityGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="oidcs")
-      private final @Nullable Input<List<ClusterIdentityOidcGetArgs>> oidcs;
+      private final @Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs;
 
-    public Input<List<ClusterIdentityOidcGetArgs>> getOidcs() {
-        return this.oidcs == null ? Input.empty() : this.oidcs;
+    public Output<List<ClusterIdentityOidcGetArgs>> getOidcs() {
+        return this.oidcs == null ? Output.empty() : this.oidcs;
     }
 
-    public ClusterIdentityGetArgs(@Nullable Input<List<ClusterIdentityOidcGetArgs>> oidcs) {
+    public ClusterIdentityGetArgs(@Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs) {
         this.oidcs = oidcs;
     }
 
     private ClusterIdentityGetArgs() {
-        this.oidcs = Input.empty();
+        this.oidcs = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ClusterIdentityGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClusterIdentityOidcGetArgs>> oidcs;
+        private @Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ClusterIdentityGetArgs extends io.pulumi.resources.ResourceAr
     	      this.oidcs = defaults.oidcs;
         }
 
-        public Builder oidcs(@Nullable Input<List<ClusterIdentityOidcGetArgs>> oidcs) {
+        public Builder oidcs(@Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs) {
             this.oidcs = oidcs;
             return this;
         }
 
         public Builder oidcs(@Nullable List<ClusterIdentityOidcGetArgs> oidcs) {
-            this.oidcs = Input.ofNullable(oidcs);
+            this.oidcs = Output.ofNullable(oidcs);
             return this;
         }
         public ClusterIdentityGetArgs build() {

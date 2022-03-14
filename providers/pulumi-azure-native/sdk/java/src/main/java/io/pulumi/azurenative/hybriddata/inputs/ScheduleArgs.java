@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyList")
-      private final @Nullable Input<List<String>> policyList;
+      private final @Nullable Output<List<String>> policyList;
 
-    public Input<List<String>> getPolicyList() {
-        return this.policyList == null ? Input.empty() : this.policyList;
+    public Output<List<String>> getPolicyList() {
+        return this.policyList == null ? Output.empty() : this.policyList;
     }
 
     public ScheduleArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> policyList) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> policyList) {
         this.name = name;
         this.policyList = policyList;
     }
 
     private ScheduleArgs() {
-        this.name = Input.empty();
-        this.policyList = Input.empty();
+        this.name = Output.empty();
+        this.policyList = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> policyList;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> policyList;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyList = defaults.policyList;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyList(@Nullable Input<List<String>> policyList) {
+        public Builder policyList(@Nullable Output<List<String>> policyList) {
             this.policyList = policyList;
             return this;
         }
 
         public Builder policyList(@Nullable List<String> policyList) {
-            this.policyList = Input.ofNullable(policyList);
+            this.policyList = Output.ofNullable(policyList);
             return this;
         }
         public ScheduleArgs build() {

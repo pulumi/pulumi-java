@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.enums.VMSwitchType;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceIPConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipConfigurations")
-      private final @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+      private final @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
-    public Input<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
+    public Output<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
+        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="macAddress")
-      private final @Nullable Input<String> macAddress;
+      private final @Nullable Output<String> macAddress;
 
-    public Input<String> getMacAddress() {
-        return this.macAddress == null ? Input.empty() : this.macAddress;
+    public Output<String> getMacAddress() {
+        return this.macAddress == null ? Output.empty() : this.macAddress;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkInterfaceName")
-      private final @Nullable Input<String> networkInterfaceName;
+      private final @Nullable Output<String> networkInterfaceName;
 
-    public Input<String> getNetworkInterfaceName() {
-        return this.networkInterfaceName == null ? Input.empty() : this.networkInterfaceName;
+    public Output<String> getNetworkInterfaceName() {
+        return this.networkInterfaceName == null ? Output.empty() : this.networkInterfaceName;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vmSwitchType")
-      private final @Nullable Input<Either<String,VMSwitchType>> vmSwitchType;
+      private final @Nullable Output<Either<String,VMSwitchType>> vmSwitchType;
 
-    public Input<Either<String,VMSwitchType>> getVmSwitchType() {
-        return this.vmSwitchType == null ? Input.empty() : this.vmSwitchType;
+    public Output<Either<String,VMSwitchType>> getVmSwitchType() {
+        return this.vmSwitchType == null ? Output.empty() : this.vmSwitchType;
     }
 
     public NetworkInterfaceArgs(
-        @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations,
-        @Nullable Input<String> macAddress,
-        @Nullable Input<String> networkInterfaceName,
-        @Nullable Input<Either<String,VMSwitchType>> vmSwitchType) {
+        @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations,
+        @Nullable Output<String> macAddress,
+        @Nullable Output<String> networkInterfaceName,
+        @Nullable Output<Either<String,VMSwitchType>> vmSwitchType) {
         this.ipConfigurations = ipConfigurations;
         this.macAddress = macAddress;
         this.networkInterfaceName = networkInterfaceName;
@@ -78,10 +78,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.ipConfigurations = Input.empty();
-        this.macAddress = Input.empty();
-        this.networkInterfaceName = Input.empty();
-        this.vmSwitchType = Input.empty();
+        this.ipConfigurations = Output.empty();
+        this.macAddress = Output.empty();
+        this.networkInterfaceName = Output.empty();
+        this.vmSwitchType = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
-        private @Nullable Input<String> macAddress;
-        private @Nullable Input<String> networkInterfaceName;
-        private @Nullable Input<Either<String,VMSwitchType>> vmSwitchType;
+        private @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+        private @Nullable Output<String> macAddress;
+        private @Nullable Output<String> networkInterfaceName;
+        private @Nullable Output<Either<String,VMSwitchType>> vmSwitchType;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.vmSwitchType = defaults.vmSwitchType;
         }
 
-        public Builder ipConfigurations(@Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Input.ofNullable(ipConfigurations);
+            this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder macAddress(@Nullable Input<String> macAddress) {
+        public Builder macAddress(@Nullable Output<String> macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
         public Builder macAddress(@Nullable String macAddress) {
-            this.macAddress = Input.ofNullable(macAddress);
+            this.macAddress = Output.ofNullable(macAddress);
             return this;
         }
 
-        public Builder networkInterfaceName(@Nullable Input<String> networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable Output<String> networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
         public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
-            this.networkInterfaceName = Input.ofNullable(networkInterfaceName);
+            this.networkInterfaceName = Output.ofNullable(networkInterfaceName);
             return this;
         }
 
-        public Builder vmSwitchType(@Nullable Input<Either<String,VMSwitchType>> vmSwitchType) {
+        public Builder vmSwitchType(@Nullable Output<Either<String,VMSwitchType>> vmSwitchType) {
             this.vmSwitchType = vmSwitchType;
             return this;
         }
 
         public Builder vmSwitchType(@Nullable Either<String,VMSwitchType> vmSwitchType) {
-            this.vmSwitchType = Input.ofNullable(vmSwitchType);
+            this.vmSwitchType = Output.ofNullable(vmSwitchType);
             return this;
         }
         public NetworkInterfaceArgs build() {

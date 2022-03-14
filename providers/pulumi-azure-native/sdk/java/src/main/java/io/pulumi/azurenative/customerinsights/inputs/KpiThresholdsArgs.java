@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -23,9 +23,9 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="increasingKpi", required=true)
-      private final Input<Boolean> increasingKpi;
+      private final Output<Boolean> increasingKpi;
 
-    public Input<Boolean> getIncreasingKpi() {
+    public Output<Boolean> getIncreasingKpi() {
         return this.increasingKpi;
     }
 
@@ -34,9 +34,9 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lowerLimit", required=true)
-      private final Input<Double> lowerLimit;
+      private final Output<Double> lowerLimit;
 
-    public Input<Double> getLowerLimit() {
+    public Output<Double> getLowerLimit() {
         return this.lowerLimit;
     }
 
@@ -45,25 +45,25 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upperLimit", required=true)
-      private final Input<Double> upperLimit;
+      private final Output<Double> upperLimit;
 
-    public Input<Double> getUpperLimit() {
+    public Output<Double> getUpperLimit() {
         return this.upperLimit;
     }
 
     public KpiThresholdsArgs(
-        Input<Boolean> increasingKpi,
-        Input<Double> lowerLimit,
-        Input<Double> upperLimit) {
+        Output<Boolean> increasingKpi,
+        Output<Double> lowerLimit,
+        Output<Double> upperLimit) {
         this.increasingKpi = Objects.requireNonNull(increasingKpi, "expected parameter 'increasingKpi' to be non-null");
         this.lowerLimit = Objects.requireNonNull(lowerLimit, "expected parameter 'lowerLimit' to be non-null");
         this.upperLimit = Objects.requireNonNull(upperLimit, "expected parameter 'upperLimit' to be non-null");
     }
 
     private KpiThresholdsArgs() {
-        this.increasingKpi = Input.empty();
-        this.lowerLimit = Input.empty();
-        this.upperLimit = Input.empty();
+        this.increasingKpi = Output.empty();
+        this.lowerLimit = Output.empty();
+        this.upperLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> increasingKpi;
-        private Input<Double> lowerLimit;
-        private Input<Double> upperLimit;
+        private Output<Boolean> increasingKpi;
+        private Output<Double> lowerLimit;
+        private Output<Double> upperLimit;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upperLimit = defaults.upperLimit;
         }
 
-        public Builder increasingKpi(Input<Boolean> increasingKpi) {
+        public Builder increasingKpi(Output<Boolean> increasingKpi) {
             this.increasingKpi = Objects.requireNonNull(increasingKpi);
             return this;
         }
 
         public Builder increasingKpi(Boolean increasingKpi) {
-            this.increasingKpi = Input.of(Objects.requireNonNull(increasingKpi));
+            this.increasingKpi = Output.of(Objects.requireNonNull(increasingKpi));
             return this;
         }
 
-        public Builder lowerLimit(Input<Double> lowerLimit) {
+        public Builder lowerLimit(Output<Double> lowerLimit) {
             this.lowerLimit = Objects.requireNonNull(lowerLimit);
             return this;
         }
 
         public Builder lowerLimit(Double lowerLimit) {
-            this.lowerLimit = Input.of(Objects.requireNonNull(lowerLimit));
+            this.lowerLimit = Output.of(Objects.requireNonNull(lowerLimit));
             return this;
         }
 
-        public Builder upperLimit(Input<Double> upperLimit) {
+        public Builder upperLimit(Output<Double> upperLimit) {
             this.upperLimit = Objects.requireNonNull(upperLimit);
             return this;
         }
 
         public Builder upperLimit(Double upperLimit) {
-            this.upperLimit = Input.of(Objects.requireNonNull(upperLimit));
+            this.upperLimit = Output.of(Objects.requireNonNull(upperLimit));
             return this;
         }
         public KpiThresholdsArgs build() {

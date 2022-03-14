@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.CertificateExtensionConstraintsKnownExtensionsItem;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
@@ -25,10 +25,10 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="additionalExtensions")
-      private final @Nullable Input<List<ObjectIdArgs>> additionalExtensions;
+      private final @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
 
-    public Input<List<ObjectIdArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
+    public Output<List<ObjectIdArgs>> getAdditionalExtensions() {
+        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="knownExtensions")
-      private final @Nullable Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
+      private final @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
 
-    public Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> getKnownExtensions() {
-        return this.knownExtensions == null ? Input.empty() : this.knownExtensions;
+    public Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> getKnownExtensions() {
+        return this.knownExtensions == null ? Output.empty() : this.knownExtensions;
     }
 
     public CertificateExtensionConstraintsArgs(
-        @Nullable Input<List<ObjectIdArgs>> additionalExtensions,
-        @Nullable Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
+        @Nullable Output<List<ObjectIdArgs>> additionalExtensions,
+        @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
         this.additionalExtensions = additionalExtensions;
         this.knownExtensions = knownExtensions;
     }
 
     private CertificateExtensionConstraintsArgs() {
-        this.additionalExtensions = Input.empty();
-        this.knownExtensions = Input.empty();
+        this.additionalExtensions = Output.empty();
+        this.knownExtensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ObjectIdArgs>> additionalExtensions;
-        private @Nullable Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
+        private @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
+        private @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
     	      this.knownExtensions = defaults.knownExtensions;
         }
 
-        public Builder additionalExtensions(@Nullable Input<List<ObjectIdArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Output<List<ObjectIdArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
         public Builder additionalExtensions(@Nullable List<ObjectIdArgs> additionalExtensions) {
-            this.additionalExtensions = Input.ofNullable(additionalExtensions);
+            this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder knownExtensions(@Nullable Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
+        public Builder knownExtensions(@Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
             this.knownExtensions = knownExtensions;
             return this;
         }
 
         public Builder knownExtensions(@Nullable List<CertificateExtensionConstraintsKnownExtensionsItem> knownExtensions) {
-            this.knownExtensions = Input.ofNullable(knownExtensions);
+            this.knownExtensions = Output.ofNullable(knownExtensions);
             return this;
         }
         public CertificateExtensionConstraintsArgs build() {

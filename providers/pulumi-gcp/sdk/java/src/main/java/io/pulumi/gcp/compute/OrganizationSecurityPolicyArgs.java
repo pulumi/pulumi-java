@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -42,9 +42,9 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
@@ -57,17 +57,17 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public OrganizationSecurityPolicyArgs(
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        Input<String> parent,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        Output<String> parent,
+        @Nullable Output<String> type) {
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
@@ -75,10 +75,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     }
 
     private OrganizationSecurityPolicyArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.parent = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.parent = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private Input<String> parent;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private Output<String> parent;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public OrganizationSecurityPolicyArgs build() {

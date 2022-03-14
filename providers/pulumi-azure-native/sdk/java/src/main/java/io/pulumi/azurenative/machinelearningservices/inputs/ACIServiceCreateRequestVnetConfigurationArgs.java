@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetName")
-      private final @Nullable Input<String> subnetName;
+      private final @Nullable Output<String> subnetName;
 
-    public Input<String> getSubnetName() {
-        return this.subnetName == null ? Input.empty() : this.subnetName;
+    public Output<String> getSubnetName() {
+        return this.subnetName == null ? Output.empty() : this.subnetName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="vnetName")
-      private final @Nullable Input<String> vnetName;
+      private final @Nullable Output<String> vnetName;
 
-    public Input<String> getVnetName() {
-        return this.vnetName == null ? Input.empty() : this.vnetName;
+    public Output<String> getVnetName() {
+        return this.vnetName == null ? Output.empty() : this.vnetName;
     }
 
     public ACIServiceCreateRequestVnetConfigurationArgs(
-        @Nullable Input<String> subnetName,
-        @Nullable Input<String> vnetName) {
+        @Nullable Output<String> subnetName,
+        @Nullable Output<String> vnetName) {
         this.subnetName = subnetName;
         this.vnetName = vnetName;
     }
 
     private ACIServiceCreateRequestVnetConfigurationArgs() {
-        this.subnetName = Input.empty();
-        this.vnetName = Input.empty();
+        this.subnetName = Output.empty();
+        this.vnetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> subnetName;
-        private @Nullable Input<String> vnetName;
+        private @Nullable Output<String> subnetName;
+        private @Nullable Output<String> vnetName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
     	      this.vnetName = defaults.vnetName;
         }
 
-        public Builder subnetName(@Nullable Input<String> subnetName) {
+        public Builder subnetName(@Nullable Output<String> subnetName) {
             this.subnetName = subnetName;
             return this;
         }
 
         public Builder subnetName(@Nullable String subnetName) {
-            this.subnetName = Input.ofNullable(subnetName);
+            this.subnetName = Output.ofNullable(subnetName);
             return this;
         }
 
-        public Builder vnetName(@Nullable Input<String> vnetName) {
+        public Builder vnetName(@Nullable Output<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
 
         public Builder vnetName(@Nullable String vnetName) {
-            this.vnetName = Input.ofNullable(vnetName);
+            this.vnetName = Output.ofNullable(vnetName);
             return this;
         }
         public ACIServiceCreateRequestVnetConfigurationArgs build() {

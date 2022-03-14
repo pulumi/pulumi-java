@@ -5,7 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.azurenative.desktopvirtualization.enums.Operation;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="migrationPath")
-      private final @Nullable Input<String> migrationPath;
+      private final @Nullable Output<String> migrationPath;
 
-    public Input<String> getMigrationPath() {
-        return this.migrationPath == null ? Input.empty() : this.migrationPath;
+    public Output<String> getMigrationPath() {
+        return this.migrationPath == null ? Output.empty() : this.migrationPath;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="operation")
-      private final @Nullable Input<Either<String,Operation>> operation;
+      private final @Nullable Output<Either<String,Operation>> operation;
 
-    public Input<Either<String,Operation>> getOperation() {
-        return this.operation == null ? Input.empty() : this.operation;
+    public Output<Either<String,Operation>> getOperation() {
+        return this.operation == null ? Output.empty() : this.operation;
     }
 
     public MigrationRequestPropertiesArgs(
-        @Nullable Input<String> migrationPath,
-        @Nullable Input<Either<String,Operation>> operation) {
+        @Nullable Output<String> migrationPath,
+        @Nullable Output<Either<String,Operation>> operation) {
         this.migrationPath = migrationPath;
         this.operation = operation;
     }
 
     private MigrationRequestPropertiesArgs() {
-        this.migrationPath = Input.empty();
-        this.operation = Input.empty();
+        this.migrationPath = Output.empty();
+        this.operation = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> migrationPath;
-        private @Nullable Input<Either<String,Operation>> operation;
+        private @Nullable Output<String> migrationPath;
+        private @Nullable Output<Either<String,Operation>> operation;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
     	      this.operation = defaults.operation;
         }
 
-        public Builder migrationPath(@Nullable Input<String> migrationPath) {
+        public Builder migrationPath(@Nullable Output<String> migrationPath) {
             this.migrationPath = migrationPath;
             return this;
         }
 
         public Builder migrationPath(@Nullable String migrationPath) {
-            this.migrationPath = Input.ofNullable(migrationPath);
+            this.migrationPath = Output.ofNullable(migrationPath);
             return this;
         }
 
-        public Builder operation(@Nullable Input<Either<String,Operation>> operation) {
+        public Builder operation(@Nullable Output<Either<String,Operation>> operation) {
             this.operation = operation;
             return this;
         }
 
         public Builder operation(@Nullable Either<String,Operation> operation) {
-            this.operation = Input.ofNullable(operation);
+            this.operation = Output.ofNullable(operation);
             return this;
         }
         public MigrationRequestPropertiesArgs build() {

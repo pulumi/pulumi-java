@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atomKey", required=true)
-      private final Input<String> atomKey;
+      private final Output<String> atomKey;
 
-    public Input<String> getAtomKey() {
+    public Output<String> getAtomKey() {
         return this.atomKey;
     }
 
@@ -36,10 +36,10 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gainDb")
-      private final @Nullable Input<Double> gainDb;
+      private final @Nullable Output<Double> gainDb;
 
-    public Input<Double> getGainDb() {
-        return this.gainDb == null ? Input.empty() : this.gainDb;
+    public Output<Double> getGainDb() {
+        return this.gainDb == null ? Output.empty() : this.gainDb;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputChannel", required=true)
-      private final Input<Integer> inputChannel;
+      private final Output<Integer> inputChannel;
 
-    public Input<Integer> getInputChannel() {
+    public Output<Integer> getInputChannel() {
         return this.inputChannel;
     }
 
@@ -58,9 +58,9 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputKey", required=true)
-      private final Input<String> inputKey;
+      private final Output<String> inputKey;
 
-    public Input<String> getInputKey() {
+    public Output<String> getInputKey() {
         return this.inputKey;
     }
 
@@ -69,9 +69,9 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputTrack", required=true)
-      private final Input<Integer> inputTrack;
+      private final Output<Integer> inputTrack;
 
-    public Input<Integer> getInputTrack() {
+    public Output<Integer> getInputTrack() {
         return this.inputTrack;
     }
 
@@ -80,19 +80,19 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputChannel", required=true)
-      private final Input<Integer> outputChannel;
+      private final Output<Integer> outputChannel;
 
-    public Input<Integer> getOutputChannel() {
+    public Output<Integer> getOutputChannel() {
         return this.outputChannel;
     }
 
     public AudioMappingArgs(
-        Input<String> atomKey,
-        @Nullable Input<Double> gainDb,
-        Input<Integer> inputChannel,
-        Input<String> inputKey,
-        Input<Integer> inputTrack,
-        Input<Integer> outputChannel) {
+        Output<String> atomKey,
+        @Nullable Output<Double> gainDb,
+        Output<Integer> inputChannel,
+        Output<String> inputKey,
+        Output<Integer> inputTrack,
+        Output<Integer> outputChannel) {
         this.atomKey = Objects.requireNonNull(atomKey, "expected parameter 'atomKey' to be non-null");
         this.gainDb = gainDb;
         this.inputChannel = Objects.requireNonNull(inputChannel, "expected parameter 'inputChannel' to be non-null");
@@ -102,12 +102,12 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AudioMappingArgs() {
-        this.atomKey = Input.empty();
-        this.gainDb = Input.empty();
-        this.inputChannel = Input.empty();
-        this.inputKey = Input.empty();
-        this.inputTrack = Input.empty();
-        this.outputChannel = Input.empty();
+        this.atomKey = Output.empty();
+        this.gainDb = Output.empty();
+        this.inputChannel = Output.empty();
+        this.inputKey = Output.empty();
+        this.inputTrack = Output.empty();
+        this.outputChannel = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> atomKey;
-        private @Nullable Input<Double> gainDb;
-        private Input<Integer> inputChannel;
-        private Input<String> inputKey;
-        private Input<Integer> inputTrack;
-        private Input<Integer> outputChannel;
+        private Output<String> atomKey;
+        private @Nullable Output<Double> gainDb;
+        private Output<Integer> inputChannel;
+        private Output<String> inputKey;
+        private Output<Integer> inputTrack;
+        private Output<Integer> outputChannel;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outputChannel = defaults.outputChannel;
         }
 
-        public Builder atomKey(Input<String> atomKey) {
+        public Builder atomKey(Output<String> atomKey) {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
 
         public Builder atomKey(String atomKey) {
-            this.atomKey = Input.of(Objects.requireNonNull(atomKey));
+            this.atomKey = Output.of(Objects.requireNonNull(atomKey));
             return this;
         }
 
-        public Builder gainDb(@Nullable Input<Double> gainDb) {
+        public Builder gainDb(@Nullable Output<Double> gainDb) {
             this.gainDb = gainDb;
             return this;
         }
 
         public Builder gainDb(@Nullable Double gainDb) {
-            this.gainDb = Input.ofNullable(gainDb);
+            this.gainDb = Output.ofNullable(gainDb);
             return this;
         }
 
-        public Builder inputChannel(Input<Integer> inputChannel) {
+        public Builder inputChannel(Output<Integer> inputChannel) {
             this.inputChannel = Objects.requireNonNull(inputChannel);
             return this;
         }
 
         public Builder inputChannel(Integer inputChannel) {
-            this.inputChannel = Input.of(Objects.requireNonNull(inputChannel));
+            this.inputChannel = Output.of(Objects.requireNonNull(inputChannel));
             return this;
         }
 
-        public Builder inputKey(Input<String> inputKey) {
+        public Builder inputKey(Output<String> inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
 
         public Builder inputKey(String inputKey) {
-            this.inputKey = Input.of(Objects.requireNonNull(inputKey));
+            this.inputKey = Output.of(Objects.requireNonNull(inputKey));
             return this;
         }
 
-        public Builder inputTrack(Input<Integer> inputTrack) {
+        public Builder inputTrack(Output<Integer> inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
 
         public Builder inputTrack(Integer inputTrack) {
-            this.inputTrack = Input.of(Objects.requireNonNull(inputTrack));
+            this.inputTrack = Output.of(Objects.requireNonNull(inputTrack));
             return this;
         }
 
-        public Builder outputChannel(Input<Integer> outputChannel) {
+        public Builder outputChannel(Output<Integer> outputChannel) {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
         }
 
         public Builder outputChannel(Integer outputChannel) {
-            this.outputChannel = Input.of(Objects.requireNonNull(outputChannel));
+            this.outputChannel = Output.of(Objects.requireNonNull(outputChannel));
             return this;
         }
         public AudioMappingArgs build() {

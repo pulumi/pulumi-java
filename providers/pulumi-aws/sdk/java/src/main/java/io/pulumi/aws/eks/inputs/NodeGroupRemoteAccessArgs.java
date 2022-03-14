@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ec2SshKey")
-      private final @Nullable Input<String> ec2SshKey;
+      private final @Nullable Output<String> ec2SshKey;
 
-    public Input<String> getEc2SshKey() {
-        return this.ec2SshKey == null ? Input.empty() : this.ec2SshKey;
+    public Output<String> getEc2SshKey() {
+        return this.ec2SshKey == null ? Output.empty() : this.ec2SshKey;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceSecurityGroupIds")
-      private final @Nullable Input<List<String>> sourceSecurityGroupIds;
+      private final @Nullable Output<List<String>> sourceSecurityGroupIds;
 
-    public Input<List<String>> getSourceSecurityGroupIds() {
-        return this.sourceSecurityGroupIds == null ? Input.empty() : this.sourceSecurityGroupIds;
+    public Output<List<String>> getSourceSecurityGroupIds() {
+        return this.sourceSecurityGroupIds == null ? Output.empty() : this.sourceSecurityGroupIds;
     }
 
     public NodeGroupRemoteAccessArgs(
-        @Nullable Input<String> ec2SshKey,
-        @Nullable Input<List<String>> sourceSecurityGroupIds) {
+        @Nullable Output<String> ec2SshKey,
+        @Nullable Output<List<String>> sourceSecurityGroupIds) {
         this.ec2SshKey = ec2SshKey;
         this.sourceSecurityGroupIds = sourceSecurityGroupIds;
     }
 
     private NodeGroupRemoteAccessArgs() {
-        this.ec2SshKey = Input.empty();
-        this.sourceSecurityGroupIds = Input.empty();
+        this.ec2SshKey = Output.empty();
+        this.sourceSecurityGroupIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ec2SshKey;
-        private @Nullable Input<List<String>> sourceSecurityGroupIds;
+        private @Nullable Output<String> ec2SshKey;
+        private @Nullable Output<List<String>> sourceSecurityGroupIds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
     	      this.sourceSecurityGroupIds = defaults.sourceSecurityGroupIds;
         }
 
-        public Builder ec2SshKey(@Nullable Input<String> ec2SshKey) {
+        public Builder ec2SshKey(@Nullable Output<String> ec2SshKey) {
             this.ec2SshKey = ec2SshKey;
             return this;
         }
 
         public Builder ec2SshKey(@Nullable String ec2SshKey) {
-            this.ec2SshKey = Input.ofNullable(ec2SshKey);
+            this.ec2SshKey = Output.ofNullable(ec2SshKey);
             return this;
         }
 
-        public Builder sourceSecurityGroupIds(@Nullable Input<List<String>> sourceSecurityGroupIds) {
+        public Builder sourceSecurityGroupIds(@Nullable Output<List<String>> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }
 
         public Builder sourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
-            this.sourceSecurityGroupIds = Input.ofNullable(sourceSecurityGroupIds);
+            this.sourceSecurityGroupIds = Output.ofNullable(sourceSecurityGroupIds);
             return this;
         }
         public NodeGroupRemoteAccessArgs build() {

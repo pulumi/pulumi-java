@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intentName", required=true)
-      private final Input<String> intentName;
+      private final Output<String> intentName;
 
-    public Input<String> getIntentName() {
+    public Output<String> getIntentName() {
         return this.intentName;
     }
 
@@ -29,22 +29,22 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intentVersion", required=true)
-      private final Input<String> intentVersion;
+      private final Output<String> intentVersion;
 
-    public Input<String> getIntentVersion() {
+    public Output<String> getIntentVersion() {
         return this.intentVersion;
     }
 
     public BotIntentArgs(
-        Input<String> intentName,
-        Input<String> intentVersion) {
+        Output<String> intentName,
+        Output<String> intentVersion) {
         this.intentName = Objects.requireNonNull(intentName, "expected parameter 'intentName' to be non-null");
         this.intentVersion = Objects.requireNonNull(intentVersion, "expected parameter 'intentVersion' to be non-null");
     }
 
     private BotIntentArgs() {
-        this.intentName = Input.empty();
-        this.intentVersion = Input.empty();
+        this.intentName = Output.empty();
+        this.intentVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> intentName;
-        private Input<String> intentVersion;
+        private Output<String> intentName;
+        private Output<String> intentVersion;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.intentVersion = defaults.intentVersion;
         }
 
-        public Builder intentName(Input<String> intentName) {
+        public Builder intentName(Output<String> intentName) {
             this.intentName = Objects.requireNonNull(intentName);
             return this;
         }
 
         public Builder intentName(String intentName) {
-            this.intentName = Input.of(Objects.requireNonNull(intentName));
+            this.intentName = Output.of(Objects.requireNonNull(intentName));
             return this;
         }
 
-        public Builder intentVersion(Input<String> intentVersion) {
+        public Builder intentVersion(Output<String> intentVersion) {
             this.intentVersion = Objects.requireNonNull(intentVersion);
             return this;
         }
 
         public Builder intentVersion(String intentVersion) {
-            this.intentVersion = Input.of(Objects.requireNonNull(intentVersion));
+            this.intentVersion = Output.of(Objects.requireNonNull(intentVersion));
             return this;
         }
         public BotIntentArgs build() {

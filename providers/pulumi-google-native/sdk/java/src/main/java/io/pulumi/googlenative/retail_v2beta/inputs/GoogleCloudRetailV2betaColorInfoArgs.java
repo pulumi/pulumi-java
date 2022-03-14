@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="colorFamilies")
-      private final @Nullable Input<List<String>> colorFamilies;
+      private final @Nullable Output<List<String>> colorFamilies;
 
-    public Input<List<String>> getColorFamilies() {
-        return this.colorFamilies == null ? Input.empty() : this.colorFamilies;
+    public Output<List<String>> getColorFamilies() {
+        return this.colorFamilies == null ? Output.empty() : this.colorFamilies;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="colors")
-      private final @Nullable Input<List<String>> colors;
+      private final @Nullable Output<List<String>> colors;
 
-    public Input<List<String>> getColors() {
-        return this.colors == null ? Input.empty() : this.colors;
+    public Output<List<String>> getColors() {
+        return this.colors == null ? Output.empty() : this.colors;
     }
 
     public GoogleCloudRetailV2betaColorInfoArgs(
-        @Nullable Input<List<String>> colorFamilies,
-        @Nullable Input<List<String>> colors) {
+        @Nullable Output<List<String>> colorFamilies,
+        @Nullable Output<List<String>> colors) {
         this.colorFamilies = colorFamilies;
         this.colors = colors;
     }
 
     private GoogleCloudRetailV2betaColorInfoArgs() {
-        this.colorFamilies = Input.empty();
-        this.colors = Input.empty();
+        this.colorFamilies = Output.empty();
+        this.colors = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> colorFamilies;
-        private @Nullable Input<List<String>> colors;
+        private @Nullable Output<List<String>> colorFamilies;
+        private @Nullable Output<List<String>> colors;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
     	      this.colors = defaults.colors;
         }
 
-        public Builder colorFamilies(@Nullable Input<List<String>> colorFamilies) {
+        public Builder colorFamilies(@Nullable Output<List<String>> colorFamilies) {
             this.colorFamilies = colorFamilies;
             return this;
         }
 
         public Builder colorFamilies(@Nullable List<String> colorFamilies) {
-            this.colorFamilies = Input.ofNullable(colorFamilies);
+            this.colorFamilies = Output.ofNullable(colorFamilies);
             return this;
         }
 
-        public Builder colors(@Nullable Input<List<String>> colors) {
+        public Builder colors(@Nullable Output<List<String>> colors) {
             this.colors = colors;
             return this;
         }
 
         public Builder colors(@Nullable List<String> colors) {
-            this.colors = Input.ofNullable(colors);
+            this.colors = Output.ofNullable(colors);
             return this;
         }
         public GoogleCloudRetailV2betaColorInfoArgs build() {

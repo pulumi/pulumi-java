@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.DeinterlaceMode;
 import io.pulumi.azurenative.media.enums.DeinterlaceParity;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,DeinterlaceMode>> mode;
+      private final @Nullable Output<Either<String,DeinterlaceMode>> mode;
 
-    public Input<Either<String,DeinterlaceMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,DeinterlaceMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parity")
-      private final @Nullable Input<Either<String,DeinterlaceParity>> parity;
+      private final @Nullable Output<Either<String,DeinterlaceParity>> parity;
 
-    public Input<Either<String,DeinterlaceParity>> getParity() {
-        return this.parity == null ? Input.empty() : this.parity;
+    public Output<Either<String,DeinterlaceParity>> getParity() {
+        return this.parity == null ? Output.empty() : this.parity;
     }
 
     public DeinterlaceArgs(
-        @Nullable Input<Either<String,DeinterlaceMode>> mode,
-        @Nullable Input<Either<String,DeinterlaceParity>> parity) {
+        @Nullable Output<Either<String,DeinterlaceMode>> mode,
+        @Nullable Output<Either<String,DeinterlaceParity>> parity) {
         this.mode = mode;
         this.parity = parity;
     }
 
     private DeinterlaceArgs() {
-        this.mode = Input.empty();
-        this.parity = Input.empty();
+        this.mode = Output.empty();
+        this.parity = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DeinterlaceMode>> mode;
-        private @Nullable Input<Either<String,DeinterlaceParity>> parity;
+        private @Nullable Output<Either<String,DeinterlaceMode>> mode;
+        private @Nullable Output<Either<String,DeinterlaceParity>> parity;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parity = defaults.parity;
         }
 
-        public Builder mode(@Nullable Input<Either<String,DeinterlaceMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,DeinterlaceMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,DeinterlaceMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder parity(@Nullable Input<Either<String,DeinterlaceParity>> parity) {
+        public Builder parity(@Nullable Output<Either<String,DeinterlaceParity>> parity) {
             this.parity = parity;
             return this;
         }
 
         public Builder parity(@Nullable Either<String,DeinterlaceParity> parity) {
-            this.parity = Input.ofNullable(parity);
+            this.parity = Output.ofNullable(parity);
             return this;
         }
         public DeinterlaceArgs build() {

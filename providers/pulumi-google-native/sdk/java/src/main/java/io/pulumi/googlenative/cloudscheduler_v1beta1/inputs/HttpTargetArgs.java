@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.enums.HttpTargetHttpMethod;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.OAuthTokenArgs;
@@ -27,10 +27,10 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Output<Map<String,String>> headers;
 
-    public Input<Map<String,String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<Map<String,String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-      private final @Nullable Input<HttpTargetHttpMethod> httpMethod;
+      private final @Nullable Output<HttpTargetHttpMethod> httpMethod;
 
-    public Input<HttpTargetHttpMethod> getHttpMethod() {
-        return this.httpMethod == null ? Input.empty() : this.httpMethod;
+    public Output<HttpTargetHttpMethod> getHttpMethod() {
+        return this.httpMethod == null ? Output.empty() : this.httpMethod;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthToken")
-      private final @Nullable Input<OAuthTokenArgs> oauthToken;
+      private final @Nullable Output<OAuthTokenArgs> oauthToken;
 
-    public Input<OAuthTokenArgs> getOauthToken() {
-        return this.oauthToken == null ? Input.empty() : this.oauthToken;
+    public Output<OAuthTokenArgs> getOauthToken() {
+        return this.oauthToken == null ? Output.empty() : this.oauthToken;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcToken")
-      private final @Nullable Input<OidcTokenArgs> oidcToken;
+      private final @Nullable Output<OidcTokenArgs> oidcToken;
 
-    public Input<OidcTokenArgs> getOidcToken() {
-        return this.oidcToken == null ? Input.empty() : this.oidcToken;
+    public Output<OidcTokenArgs> getOidcToken() {
+        return this.oidcToken == null ? Output.empty() : this.oidcToken;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public HttpTargetArgs(
-        @Nullable Input<String> body,
-        @Nullable Input<Map<String,String>> headers,
-        @Nullable Input<HttpTargetHttpMethod> httpMethod,
-        @Nullable Input<OAuthTokenArgs> oauthToken,
-        @Nullable Input<OidcTokenArgs> oidcToken,
-        Input<String> uri) {
+        @Nullable Output<String> body,
+        @Nullable Output<Map<String,String>> headers,
+        @Nullable Output<HttpTargetHttpMethod> httpMethod,
+        @Nullable Output<OAuthTokenArgs> oauthToken,
+        @Nullable Output<OidcTokenArgs> oidcToken,
+        Output<String> uri) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;
@@ -104,12 +104,12 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpTargetArgs() {
-        this.body = Input.empty();
-        this.headers = Input.empty();
-        this.httpMethod = Input.empty();
-        this.oauthToken = Input.empty();
-        this.oidcToken = Input.empty();
-        this.uri = Input.empty();
+        this.body = Output.empty();
+        this.headers = Output.empty();
+        this.httpMethod = Output.empty();
+        this.oauthToken = Output.empty();
+        this.oidcToken = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> body;
-        private @Nullable Input<Map<String,String>> headers;
-        private @Nullable Input<HttpTargetHttpMethod> httpMethod;
-        private @Nullable Input<OAuthTokenArgs> oauthToken;
-        private @Nullable Input<OidcTokenArgs> oidcToken;
-        private Input<String> uri;
+        private @Nullable Output<String> body;
+        private @Nullable Output<Map<String,String>> headers;
+        private @Nullable Output<HttpTargetHttpMethod> httpMethod;
+        private @Nullable Output<OAuthTokenArgs> oauthToken;
+        private @Nullable Output<OidcTokenArgs> oidcToken;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder headers(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder httpMethod(@Nullable Input<HttpTargetHttpMethod> httpMethod) {
+        public Builder httpMethod(@Nullable Output<HttpTargetHttpMethod> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
         public Builder httpMethod(@Nullable HttpTargetHttpMethod httpMethod) {
-            this.httpMethod = Input.ofNullable(httpMethod);
+            this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder oauthToken(@Nullable Input<OAuthTokenArgs> oauthToken) {
+        public Builder oauthToken(@Nullable Output<OAuthTokenArgs> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
 
         public Builder oauthToken(@Nullable OAuthTokenArgs oauthToken) {
-            this.oauthToken = Input.ofNullable(oauthToken);
+            this.oauthToken = Output.ofNullable(oauthToken);
             return this;
         }
 
-        public Builder oidcToken(@Nullable Input<OidcTokenArgs> oidcToken) {
+        public Builder oidcToken(@Nullable Output<OidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
         public Builder oidcToken(@Nullable OidcTokenArgs oidcToken) {
-            this.oidcToken = Input.ofNullable(oidcToken);
+            this.oidcToken = Output.ofNullable(oidcToken);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public HttpTargetArgs build() {

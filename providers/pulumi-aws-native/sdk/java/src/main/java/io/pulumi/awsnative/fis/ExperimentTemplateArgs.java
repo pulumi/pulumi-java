@@ -6,7 +6,7 @@ package io.pulumi.awsnative.fis;
 import io.pulumi.awsnative.fis.inputs.ExperimentTemplateActionMapArgs;
 import io.pulumi.awsnative.fis.inputs.ExperimentTemplateStopConditionArgs;
 import io.pulumi.awsnative.fis.inputs.ExperimentTemplateTargetMapArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,54 +20,54 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
     public static final ExperimentTemplateArgs Empty = new ExperimentTemplateArgs();
 
     @InputImport(name="actions")
-      private final @Nullable Input<ExperimentTemplateActionMapArgs> actions;
+      private final @Nullable Output<ExperimentTemplateActionMapArgs> actions;
 
-    public Input<ExperimentTemplateActionMapArgs> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<ExperimentTemplateActionMapArgs> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stopConditions", required=true)
-      private final Input<List<ExperimentTemplateStopConditionArgs>> stopConditions;
+      private final Output<List<ExperimentTemplateStopConditionArgs>> stopConditions;
 
-    public Input<List<ExperimentTemplateStopConditionArgs>> getStopConditions() {
+    public Output<List<ExperimentTemplateStopConditionArgs>> getStopConditions() {
         return this.stopConditions;
     }
 
     @InputImport(name="tags", required=true)
-      private final Input<Object> tags;
+      private final Output<Object> tags;
 
-    public Input<Object> getTags() {
+    public Output<Object> getTags() {
         return this.tags;
     }
 
     @InputImport(name="targets", required=true)
-      private final Input<ExperimentTemplateTargetMapArgs> targets;
+      private final Output<ExperimentTemplateTargetMapArgs> targets;
 
-    public Input<ExperimentTemplateTargetMapArgs> getTargets() {
+    public Output<ExperimentTemplateTargetMapArgs> getTargets() {
         return this.targets;
     }
 
     public ExperimentTemplateArgs(
-        @Nullable Input<ExperimentTemplateActionMapArgs> actions,
-        Input<String> description,
-        Input<String> roleArn,
-        Input<List<ExperimentTemplateStopConditionArgs>> stopConditions,
-        Input<Object> tags,
-        Input<ExperimentTemplateTargetMapArgs> targets) {
+        @Nullable Output<ExperimentTemplateActionMapArgs> actions,
+        Output<String> description,
+        Output<String> roleArn,
+        Output<List<ExperimentTemplateStopConditionArgs>> stopConditions,
+        Output<Object> tags,
+        Output<ExperimentTemplateTargetMapArgs> targets) {
         this.actions = actions;
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
@@ -77,12 +77,12 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ExperimentTemplateArgs() {
-        this.actions = Input.empty();
-        this.description = Input.empty();
-        this.roleArn = Input.empty();
-        this.stopConditions = Input.empty();
-        this.tags = Input.empty();
-        this.targets = Input.empty();
+        this.actions = Output.empty();
+        this.description = Output.empty();
+        this.roleArn = Output.empty();
+        this.stopConditions = Output.empty();
+        this.tags = Output.empty();
+        this.targets = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,12 +94,12 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ExperimentTemplateActionMapArgs> actions;
-        private Input<String> description;
-        private Input<String> roleArn;
-        private Input<List<ExperimentTemplateStopConditionArgs>> stopConditions;
-        private Input<Object> tags;
-        private Input<ExperimentTemplateTargetMapArgs> targets;
+        private @Nullable Output<ExperimentTemplateActionMapArgs> actions;
+        private Output<String> description;
+        private Output<String> roleArn;
+        private Output<List<ExperimentTemplateStopConditionArgs>> stopConditions;
+        private Output<Object> tags;
+        private Output<ExperimentTemplateTargetMapArgs> targets;
 
         public Builder() {
     	      // Empty
@@ -115,63 +115,63 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
     	      this.targets = defaults.targets;
         }
 
-        public Builder actions(@Nullable Input<ExperimentTemplateActionMapArgs> actions) {
+        public Builder actions(@Nullable Output<ExperimentTemplateActionMapArgs> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable ExperimentTemplateActionMapArgs actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder stopConditions(Input<List<ExperimentTemplateStopConditionArgs>> stopConditions) {
+        public Builder stopConditions(Output<List<ExperimentTemplateStopConditionArgs>> stopConditions) {
             this.stopConditions = Objects.requireNonNull(stopConditions);
             return this;
         }
 
         public Builder stopConditions(List<ExperimentTemplateStopConditionArgs> stopConditions) {
-            this.stopConditions = Input.of(Objects.requireNonNull(stopConditions));
+            this.stopConditions = Output.of(Objects.requireNonNull(stopConditions));
             return this;
         }
 
-        public Builder tags(Input<Object> tags) {
+        public Builder tags(Output<Object> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
         public Builder tags(Object tags) {
-            this.tags = Input.of(Objects.requireNonNull(tags));
+            this.tags = Output.of(Objects.requireNonNull(tags));
             return this;
         }
 
-        public Builder targets(Input<ExperimentTemplateTargetMapArgs> targets) {
+        public Builder targets(Output<ExperimentTemplateTargetMapArgs> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
 
         public Builder targets(ExperimentTemplateTargetMapArgs targets) {
-            this.targets = Input.of(Objects.requireNonNull(targets));
+            this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
         }
         public ExperimentTemplateArgs build() {

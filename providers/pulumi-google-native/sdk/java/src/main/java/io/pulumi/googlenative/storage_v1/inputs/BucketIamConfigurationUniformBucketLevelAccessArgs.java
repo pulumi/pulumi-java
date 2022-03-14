@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
      * 
      */
     @InputImport(name="lockedTime")
-      private final @Nullable Input<String> lockedTime;
+      private final @Nullable Output<String> lockedTime;
 
-    public Input<String> getLockedTime() {
-        return this.lockedTime == null ? Input.empty() : this.lockedTime;
+    public Output<String> getLockedTime() {
+        return this.lockedTime == null ? Output.empty() : this.lockedTime;
     }
 
     public BucketIamConfigurationUniformBucketLevelAccessArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> lockedTime) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> lockedTime) {
         this.enabled = enabled;
         this.lockedTime = lockedTime;
     }
 
     private BucketIamConfigurationUniformBucketLevelAccessArgs() {
-        this.enabled = Input.empty();
-        this.lockedTime = Input.empty();
+        this.enabled = Output.empty();
+        this.lockedTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> lockedTime;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> lockedTime;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
     	      this.lockedTime = defaults.lockedTime;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder lockedTime(@Nullable Input<String> lockedTime) {
+        public Builder lockedTime(@Nullable Output<String> lockedTime) {
             this.lockedTime = lockedTime;
             return this;
         }
 
         public Builder lockedTime(@Nullable String lockedTime) {
-            this.lockedTime = Input.ofNullable(lockedTime);
+            this.lockedTime = Output.ofNullable(lockedTime);
             return this;
         }
         public BucketIamConfigurationUniformBucketLevelAccessArgs build() {

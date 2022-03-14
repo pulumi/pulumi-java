@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.docdb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -31,17 +31,17 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -61,34 +61,34 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterIdentifier", required=true)
-      private final Input<String> globalClusterIdentifier;
+      private final Output<String> globalClusterIdentifier;
 
-    public Input<String> getGlobalClusterIdentifier() {
+    public Output<String> getGlobalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
 
     @InputImport(name="sourceDbClusterIdentifier")
-      private final @Nullable Input<String> sourceDbClusterIdentifier;
+      private final @Nullable Output<String> sourceDbClusterIdentifier;
 
-    public Input<String> getSourceDbClusterIdentifier() {
-        return this.sourceDbClusterIdentifier == null ? Input.empty() : this.sourceDbClusterIdentifier;
+    public Output<String> getSourceDbClusterIdentifier() {
+        return this.sourceDbClusterIdentifier == null ? Output.empty() : this.sourceDbClusterIdentifier;
     }
 
     @InputImport(name="storageEncrypted")
-      private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Input<Boolean> getStorageEncrypted() {
-        return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;
+    public Output<Boolean> getStorageEncrypted() {
+        return this.storageEncrypted == null ? Output.empty() : this.storageEncrypted;
     }
 
     public GlobalClusterArgs(
-        @Nullable Input<String> databaseName,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersion,
-        Input<String> globalClusterIdentifier,
-        @Nullable Input<String> sourceDbClusterIdentifier,
-        @Nullable Input<Boolean> storageEncrypted) {
+        @Nullable Output<String> databaseName,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersion,
+        Output<String> globalClusterIdentifier,
+        @Nullable Output<String> sourceDbClusterIdentifier,
+        @Nullable Output<Boolean> storageEncrypted) {
         this.databaseName = databaseName;
         this.deletionProtection = deletionProtection;
         this.engine = engine;
@@ -99,13 +99,13 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalClusterArgs() {
-        this.databaseName = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersion = Input.empty();
-        this.globalClusterIdentifier = Input.empty();
-        this.sourceDbClusterIdentifier = Input.empty();
-        this.storageEncrypted = Input.empty();
+        this.databaseName = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersion = Output.empty();
+        this.globalClusterIdentifier = Output.empty();
+        this.sourceDbClusterIdentifier = Output.empty();
+        this.storageEncrypted = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,13 +117,13 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersion;
-        private Input<String> globalClusterIdentifier;
-        private @Nullable Input<String> sourceDbClusterIdentifier;
-        private @Nullable Input<Boolean> storageEncrypted;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersion;
+        private Output<String> globalClusterIdentifier;
+        private @Nullable Output<String> sourceDbClusterIdentifier;
+        private @Nullable Output<Boolean> storageEncrypted;
 
         public Builder() {
     	      // Empty
@@ -140,73 +140,73 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageEncrypted = defaults.storageEncrypted;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder globalClusterIdentifier(Input<String> globalClusterIdentifier) {
+        public Builder globalClusterIdentifier(Output<String> globalClusterIdentifier) {
             this.globalClusterIdentifier = Objects.requireNonNull(globalClusterIdentifier);
             return this;
         }
 
         public Builder globalClusterIdentifier(String globalClusterIdentifier) {
-            this.globalClusterIdentifier = Input.of(Objects.requireNonNull(globalClusterIdentifier));
+            this.globalClusterIdentifier = Output.of(Objects.requireNonNull(globalClusterIdentifier));
             return this;
         }
 
-        public Builder sourceDbClusterIdentifier(@Nullable Input<String> sourceDbClusterIdentifier) {
+        public Builder sourceDbClusterIdentifier(@Nullable Output<String> sourceDbClusterIdentifier) {
             this.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
             return this;
         }
 
         public Builder sourceDbClusterIdentifier(@Nullable String sourceDbClusterIdentifier) {
-            this.sourceDbClusterIdentifier = Input.ofNullable(sourceDbClusterIdentifier);
+            this.sourceDbClusterIdentifier = Output.ofNullable(sourceDbClusterIdentifier);
             return this;
         }
 
-        public Builder storageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
 
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Input.ofNullable(storageEncrypted);
+            this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
         public GlobalClusterArgs build() {

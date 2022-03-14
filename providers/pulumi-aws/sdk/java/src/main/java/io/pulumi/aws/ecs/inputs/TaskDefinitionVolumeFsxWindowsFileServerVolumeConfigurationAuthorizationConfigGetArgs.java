@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * 
      */
     @InputImport(name="credentialsParameter", required=true)
-      private final Input<String> credentialsParameter;
+      private final Output<String> credentialsParameter;
 
-    public Input<String> getCredentialsParameter() {
+    public Output<String> getCredentialsParameter() {
         return this.credentialsParameter;
     }
 
@@ -29,22 +29,22 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
     public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs(
-        Input<String> credentialsParameter,
-        Input<String> domain) {
+        Output<String> credentialsParameter,
+        Output<String> domain) {
         this.credentialsParameter = Objects.requireNonNull(credentialsParameter, "expected parameter 'credentialsParameter' to be non-null");
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
     }
 
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs() {
-        this.credentialsParameter = Input.empty();
-        this.domain = Input.empty();
+        this.credentialsParameter = Output.empty();
+        this.domain = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
     }
 
     public static final class Builder {
-        private Input<String> credentialsParameter;
-        private Input<String> domain;
+        private Output<String> credentialsParameter;
+        private Output<String> domain;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
     	      this.domain = defaults.domain;
         }
 
-        public Builder credentialsParameter(Input<String> credentialsParameter) {
+        public Builder credentialsParameter(Output<String> credentialsParameter) {
             this.credentialsParameter = Objects.requireNonNull(credentialsParameter);
             return this;
         }
 
         public Builder credentialsParameter(String credentialsParameter) {
-            this.credentialsParameter = Input.of(Objects.requireNonNull(credentialsParameter));
+            this.credentialsParameter = Output.of(Objects.requireNonNull(credentialsParameter));
             return this;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
         public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs build() {

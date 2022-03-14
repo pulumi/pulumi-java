@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.inputs.DeadLetterPolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.inputs.ExpirationPolicyArgs;
@@ -26,10 +26,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ackDeadlineSeconds")
-      private final @Nullable Input<Integer> ackDeadlineSeconds;
+      private final @Nullable Output<Integer> ackDeadlineSeconds;
 
-    public Input<Integer> getAckDeadlineSeconds() {
-        return this.ackDeadlineSeconds == null ? Input.empty() : this.ackDeadlineSeconds;
+    public Output<Integer> getAckDeadlineSeconds() {
+        return this.ackDeadlineSeconds == null ? Output.empty() : this.ackDeadlineSeconds;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterPolicy")
-      private final @Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy;
+      private final @Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy;
 
-    public Input<DeadLetterPolicyArgs> getDeadLetterPolicy() {
-        return this.deadLetterPolicy == null ? Input.empty() : this.deadLetterPolicy;
+    public Output<DeadLetterPolicyArgs> getDeadLetterPolicy() {
+        return this.deadLetterPolicy == null ? Output.empty() : this.deadLetterPolicy;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detached")
-      private final @Nullable Input<Boolean> detached;
+      private final @Nullable Output<Boolean> detached;
 
-    public Input<Boolean> getDetached() {
-        return this.detached == null ? Input.empty() : this.detached;
+    public Output<Boolean> getDetached() {
+        return this.detached == null ? Output.empty() : this.detached;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableMessageOrdering")
-      private final @Nullable Input<Boolean> enableMessageOrdering;
+      private final @Nullable Output<Boolean> enableMessageOrdering;
 
-    public Input<Boolean> getEnableMessageOrdering() {
-        return this.enableMessageOrdering == null ? Input.empty() : this.enableMessageOrdering;
+    public Output<Boolean> getEnableMessageOrdering() {
+        return this.enableMessageOrdering == null ? Output.empty() : this.enableMessageOrdering;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationPolicy")
-      private final @Nullable Input<ExpirationPolicyArgs> expirationPolicy;
+      private final @Nullable Output<ExpirationPolicyArgs> expirationPolicy;
 
-    public Input<ExpirationPolicyArgs> getExpirationPolicy() {
-        return this.expirationPolicy == null ? Input.empty() : this.expirationPolicy;
+    public Output<ExpirationPolicyArgs> getExpirationPolicy() {
+        return this.expirationPolicy == null ? Output.empty() : this.expirationPolicy;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionDuration")
-      private final @Nullable Input<String> messageRetentionDuration;
+      private final @Nullable Output<String> messageRetentionDuration;
 
-    public Input<String> getMessageRetentionDuration() {
-        return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
+    public Output<String> getMessageRetentionDuration() {
+        return this.messageRetentionDuration == null ? Output.empty() : this.messageRetentionDuration;
     }
 
     /**
@@ -114,17 +114,17 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushConfig")
-      private final @Nullable Input<PushConfigArgs> pushConfig;
+      private final @Nullable Output<PushConfigArgs> pushConfig;
 
-    public Input<PushConfigArgs> getPushConfig() {
-        return this.pushConfig == null ? Input.empty() : this.pushConfig;
+    public Output<PushConfigArgs> getPushConfig() {
+        return this.pushConfig == null ? Output.empty() : this.pushConfig;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retainAckedMessages")
-      private final @Nullable Input<Boolean> retainAckedMessages;
+      private final @Nullable Output<Boolean> retainAckedMessages;
 
-    public Input<Boolean> getRetainAckedMessages() {
-        return this.retainAckedMessages == null ? Input.empty() : this.retainAckedMessages;
+    public Output<Boolean> getRetainAckedMessages() {
+        return this.retainAckedMessages == null ? Output.empty() : this.retainAckedMessages;
     }
 
     /**
@@ -154,16 +154,16 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryPolicy")
-      private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+      private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Input<RetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
+    public Output<RetryPolicyArgs> getRetryPolicy() {
+        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
     }
 
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
@@ -172,28 +172,28 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public SubscriptionArgs(
-        @Nullable Input<Integer> ackDeadlineSeconds,
-        @Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy,
-        @Nullable Input<Boolean> detached,
-        @Nullable Input<Boolean> enableMessageOrdering,
-        @Nullable Input<ExpirationPolicyArgs> expirationPolicy,
-        @Nullable Input<String> filter,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> messageRetentionDuration,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<PushConfigArgs> pushConfig,
-        @Nullable Input<Boolean> retainAckedMessages,
-        @Nullable Input<RetryPolicyArgs> retryPolicy,
-        Input<String> subscriptionId,
-        Input<String> topic) {
+        @Nullable Output<Integer> ackDeadlineSeconds,
+        @Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy,
+        @Nullable Output<Boolean> detached,
+        @Nullable Output<Boolean> enableMessageOrdering,
+        @Nullable Output<ExpirationPolicyArgs> expirationPolicy,
+        @Nullable Output<String> filter,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> messageRetentionDuration,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<PushConfigArgs> pushConfig,
+        @Nullable Output<Boolean> retainAckedMessages,
+        @Nullable Output<RetryPolicyArgs> retryPolicy,
+        Output<String> subscriptionId,
+        Output<String> topic) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.deadLetterPolicy = deadLetterPolicy;
         this.detached = detached;
@@ -212,21 +212,21 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.ackDeadlineSeconds = Input.empty();
-        this.deadLetterPolicy = Input.empty();
-        this.detached = Input.empty();
-        this.enableMessageOrdering = Input.empty();
-        this.expirationPolicy = Input.empty();
-        this.filter = Input.empty();
-        this.labels = Input.empty();
-        this.messageRetentionDuration = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.pushConfig = Input.empty();
-        this.retainAckedMessages = Input.empty();
-        this.retryPolicy = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.topic = Input.empty();
+        this.ackDeadlineSeconds = Output.empty();
+        this.deadLetterPolicy = Output.empty();
+        this.detached = Output.empty();
+        this.enableMessageOrdering = Output.empty();
+        this.expirationPolicy = Output.empty();
+        this.filter = Output.empty();
+        this.labels = Output.empty();
+        this.messageRetentionDuration = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.pushConfig = Output.empty();
+        this.retainAckedMessages = Output.empty();
+        this.retryPolicy = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -238,21 +238,21 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> ackDeadlineSeconds;
-        private @Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy;
-        private @Nullable Input<Boolean> detached;
-        private @Nullable Input<Boolean> enableMessageOrdering;
-        private @Nullable Input<ExpirationPolicyArgs> expirationPolicy;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> messageRetentionDuration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<PushConfigArgs> pushConfig;
-        private @Nullable Input<Boolean> retainAckedMessages;
-        private @Nullable Input<RetryPolicyArgs> retryPolicy;
-        private Input<String> subscriptionId;
-        private Input<String> topic;
+        private @Nullable Output<Integer> ackDeadlineSeconds;
+        private @Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy;
+        private @Nullable Output<Boolean> detached;
+        private @Nullable Output<Boolean> enableMessageOrdering;
+        private @Nullable Output<ExpirationPolicyArgs> expirationPolicy;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> messageRetentionDuration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<PushConfigArgs> pushConfig;
+        private @Nullable Output<Boolean> retainAckedMessages;
+        private @Nullable Output<RetryPolicyArgs> retryPolicy;
+        private Output<String> subscriptionId;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -277,153 +277,153 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder ackDeadlineSeconds(@Nullable Input<Integer> ackDeadlineSeconds) {
+        public Builder ackDeadlineSeconds(@Nullable Output<Integer> ackDeadlineSeconds) {
             this.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
 
         public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = Input.ofNullable(ackDeadlineSeconds);
+            this.ackDeadlineSeconds = Output.ofNullable(ackDeadlineSeconds);
             return this;
         }
 
-        public Builder deadLetterPolicy(@Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy) {
+        public Builder deadLetterPolicy(@Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy) {
             this.deadLetterPolicy = deadLetterPolicy;
             return this;
         }
 
         public Builder deadLetterPolicy(@Nullable DeadLetterPolicyArgs deadLetterPolicy) {
-            this.deadLetterPolicy = Input.ofNullable(deadLetterPolicy);
+            this.deadLetterPolicy = Output.ofNullable(deadLetterPolicy);
             return this;
         }
 
-        public Builder detached(@Nullable Input<Boolean> detached) {
+        public Builder detached(@Nullable Output<Boolean> detached) {
             this.detached = detached;
             return this;
         }
 
         public Builder detached(@Nullable Boolean detached) {
-            this.detached = Input.ofNullable(detached);
+            this.detached = Output.ofNullable(detached);
             return this;
         }
 
-        public Builder enableMessageOrdering(@Nullable Input<Boolean> enableMessageOrdering) {
+        public Builder enableMessageOrdering(@Nullable Output<Boolean> enableMessageOrdering) {
             this.enableMessageOrdering = enableMessageOrdering;
             return this;
         }
 
         public Builder enableMessageOrdering(@Nullable Boolean enableMessageOrdering) {
-            this.enableMessageOrdering = Input.ofNullable(enableMessageOrdering);
+            this.enableMessageOrdering = Output.ofNullable(enableMessageOrdering);
             return this;
         }
 
-        public Builder expirationPolicy(@Nullable Input<ExpirationPolicyArgs> expirationPolicy) {
+        public Builder expirationPolicy(@Nullable Output<ExpirationPolicyArgs> expirationPolicy) {
             this.expirationPolicy = expirationPolicy;
             return this;
         }
 
         public Builder expirationPolicy(@Nullable ExpirationPolicyArgs expirationPolicy) {
-            this.expirationPolicy = Input.ofNullable(expirationPolicy);
+            this.expirationPolicy = Output.ofNullable(expirationPolicy);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder messageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
         public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
-            this.messageRetentionDuration = Input.ofNullable(messageRetentionDuration);
+            this.messageRetentionDuration = Output.ofNullable(messageRetentionDuration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder pushConfig(@Nullable Input<PushConfigArgs> pushConfig) {
+        public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
             this.pushConfig = pushConfig;
             return this;
         }
 
         public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
-            this.pushConfig = Input.ofNullable(pushConfig);
+            this.pushConfig = Output.ofNullable(pushConfig);
             return this;
         }
 
-        public Builder retainAckedMessages(@Nullable Input<Boolean> retainAckedMessages) {
+        public Builder retainAckedMessages(@Nullable Output<Boolean> retainAckedMessages) {
             this.retainAckedMessages = retainAckedMessages;
             return this;
         }
 
         public Builder retainAckedMessages(@Nullable Boolean retainAckedMessages) {
-            this.retainAckedMessages = Input.ofNullable(retainAckedMessages);
+            this.retainAckedMessages = Output.ofNullable(retainAckedMessages);
             return this;
         }
 
-        public Builder retryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Input.ofNullable(retryPolicy);
+            this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public SubscriptionArgs build() {

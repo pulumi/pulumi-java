@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.EventHubDataConnectionArgs;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -255,10 +254,10 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventHubDataConnection(String name, EventHubDataConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:EventHubDataConnection", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:EventHubDataConnection", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private EventHubDataConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventHubDataConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:EventHubDataConnection", name, null, makeResourceOptions(options, id));
     }
 
@@ -269,12 +268,12 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:EventHubDataConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:EventHubDataConnection").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:EventHubDataConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:EventHubDataConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -288,7 +287,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventHubDataConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventHubDataConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventHubDataConnection(name, id, options);
     }
 }

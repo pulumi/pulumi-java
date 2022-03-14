@@ -6,7 +6,6 @@ package io.pulumi.aws.redshift;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.redshift.SnapshotScheduleArgs;
 import io.pulumi.aws.redshift.inputs.SnapshotScheduleState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -183,14 +182,14 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotSchedule(String name, SnapshotScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:redshift/snapshotSchedule:SnapshotSchedule", name, args == null ? SnapshotScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:redshift/snapshotSchedule:SnapshotSchedule", name, args == null ? SnapshotScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SnapshotSchedule(String name, Input<String> id, @Nullable SnapshotScheduleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SnapshotSchedule(String name, Output<String> id, @Nullable SnapshotScheduleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:redshift/snapshotSchedule:SnapshotSchedule", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -206,7 +205,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SnapshotSchedule get(String name, Input<String> id, @Nullable SnapshotScheduleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SnapshotSchedule get(String name, Output<String> id, @Nullable SnapshotScheduleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SnapshotSchedule(name, id, state, options);
     }
 }

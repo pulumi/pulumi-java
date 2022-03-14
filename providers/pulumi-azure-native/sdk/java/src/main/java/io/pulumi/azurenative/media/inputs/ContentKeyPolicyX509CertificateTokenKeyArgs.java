@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -34,22 +34,22 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * 
      */
     @InputImport(name="rawBody", required=true)
-      private final Input<String> rawBody;
+      private final Output<String> rawBody;
 
-    public Input<String> getRawBody() {
+    public Output<String> getRawBody() {
         return this.rawBody;
     }
 
     public ContentKeyPolicyX509CertificateTokenKeyArgs(
-        Input<String> odataType,
-        Input<String> rawBody) {
+        Output<String> odataType,
+        Output<String> rawBody) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.rawBody = Objects.requireNonNull(rawBody, "expected parameter 'rawBody' to be non-null");
     }
 
     private ContentKeyPolicyX509CertificateTokenKeyArgs() {
-        this.odataType = Input.empty();
-        this.rawBody = Input.empty();
+        this.odataType = Output.empty();
+        this.rawBody = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private Input<String> rawBody;
+        private Output<String> odataType;
+        private Output<String> rawBody;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
     	      this.rawBody = defaults.rawBody;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder rawBody(Input<String> rawBody) {
+        public Builder rawBody(Output<String> rawBody) {
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }
 
         public Builder rawBody(String rawBody) {
-            this.rawBody = Input.of(Objects.requireNonNull(rawBody));
+            this.rawBody = Output.of(Objects.requireNonNull(rawBody));
             return this;
         }
         public ContentKeyPolicyX509CertificateTokenKeyArgs build() {

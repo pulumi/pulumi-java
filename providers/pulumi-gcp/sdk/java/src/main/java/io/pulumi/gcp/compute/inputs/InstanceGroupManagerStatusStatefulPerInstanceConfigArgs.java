@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigArgs exten
      * 
      */
     @InputImport(name="allEffective")
-      private final @Nullable Input<Boolean> allEffective;
+      private final @Nullable Output<Boolean> allEffective;
 
-    public Input<Boolean> getAllEffective() {
-        return this.allEffective == null ? Input.empty() : this.allEffective;
+    public Output<Boolean> getAllEffective() {
+        return this.allEffective == null ? Output.empty() : this.allEffective;
     }
 
-    public InstanceGroupManagerStatusStatefulPerInstanceConfigArgs(@Nullable Input<Boolean> allEffective) {
+    public InstanceGroupManagerStatusStatefulPerInstanceConfigArgs(@Nullable Output<Boolean> allEffective) {
         this.allEffective = allEffective;
     }
 
     private InstanceGroupManagerStatusStatefulPerInstanceConfigArgs() {
-        this.allEffective = Input.empty();
+        this.allEffective = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allEffective;
+        private @Nullable Output<Boolean> allEffective;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigArgs exten
     	      this.allEffective = defaults.allEffective;
         }
 
-        public Builder allEffective(@Nullable Input<Boolean> allEffective) {
+        public Builder allEffective(@Nullable Output<Boolean> allEffective) {
             this.allEffective = allEffective;
             return this;
         }
 
         public Builder allEffective(@Nullable Boolean allEffective) {
-            this.allEffective = Input.ofNullable(allEffective);
+            this.allEffective = Output.ofNullable(allEffective);
             return this;
         }
         public InstanceGroupManagerStatusStatefulPerInstanceConfigArgs build() {

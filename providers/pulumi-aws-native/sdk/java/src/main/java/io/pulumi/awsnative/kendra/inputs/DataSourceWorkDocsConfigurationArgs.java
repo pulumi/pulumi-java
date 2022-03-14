@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,54 +18,54 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
     public static final DataSourceWorkDocsConfigurationArgs Empty = new DataSourceWorkDocsConfigurationArgs();
 
     @InputImport(name="crawlComments")
-      private final @Nullable Input<Boolean> crawlComments;
+      private final @Nullable Output<Boolean> crawlComments;
 
-    public Input<Boolean> getCrawlComments() {
-        return this.crawlComments == null ? Input.empty() : this.crawlComments;
+    public Output<Boolean> getCrawlComments() {
+        return this.crawlComments == null ? Output.empty() : this.crawlComments;
     }
 
     @InputImport(name="exclusionPatterns")
-      private final @Nullable Input<List<String>> exclusionPatterns;
+      private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Input<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
+    public Output<List<String>> getExclusionPatterns() {
+        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
+    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-      private final @Nullable Input<List<String>> inclusionPatterns;
+      private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Input<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
+    public Output<List<String>> getInclusionPatterns() {
+        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="useChangeLog")
-      private final @Nullable Input<Boolean> useChangeLog;
+      private final @Nullable Output<Boolean> useChangeLog;
 
-    public Input<Boolean> getUseChangeLog() {
-        return this.useChangeLog == null ? Input.empty() : this.useChangeLog;
+    public Output<Boolean> getUseChangeLog() {
+        return this.useChangeLog == null ? Output.empty() : this.useChangeLog;
     }
 
     public DataSourceWorkDocsConfigurationArgs(
-        @Nullable Input<Boolean> crawlComments,
-        @Nullable Input<List<String>> exclusionPatterns,
-        @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings,
-        @Nullable Input<List<String>> inclusionPatterns,
-        Input<String> organizationId,
-        @Nullable Input<Boolean> useChangeLog) {
+        @Nullable Output<Boolean> crawlComments,
+        @Nullable Output<List<String>> exclusionPatterns,
+        @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings,
+        @Nullable Output<List<String>> inclusionPatterns,
+        Output<String> organizationId,
+        @Nullable Output<Boolean> useChangeLog) {
         this.crawlComments = crawlComments;
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;
@@ -75,12 +75,12 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
     }
 
     private DataSourceWorkDocsConfigurationArgs() {
-        this.crawlComments = Input.empty();
-        this.exclusionPatterns = Input.empty();
-        this.fieldMappings = Input.empty();
-        this.inclusionPatterns = Input.empty();
-        this.organizationId = Input.empty();
-        this.useChangeLog = Input.empty();
+        this.crawlComments = Output.empty();
+        this.exclusionPatterns = Output.empty();
+        this.fieldMappings = Output.empty();
+        this.inclusionPatterns = Output.empty();
+        this.organizationId = Output.empty();
+        this.useChangeLog = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,12 +92,12 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> crawlComments;
-        private @Nullable Input<List<String>> exclusionPatterns;
-        private @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
-        private @Nullable Input<List<String>> inclusionPatterns;
-        private Input<String> organizationId;
-        private @Nullable Input<Boolean> useChangeLog;
+        private @Nullable Output<Boolean> crawlComments;
+        private @Nullable Output<List<String>> exclusionPatterns;
+        private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private @Nullable Output<List<String>> inclusionPatterns;
+        private Output<String> organizationId;
+        private @Nullable Output<Boolean> useChangeLog;
 
         public Builder() {
     	      // Empty
@@ -113,63 +113,63 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
     	      this.useChangeLog = defaults.useChangeLog;
         }
 
-        public Builder crawlComments(@Nullable Input<Boolean> crawlComments) {
+        public Builder crawlComments(@Nullable Output<Boolean> crawlComments) {
             this.crawlComments = crawlComments;
             return this;
         }
 
         public Builder crawlComments(@Nullable Boolean crawlComments) {
-            this.crawlComments = Input.ofNullable(crawlComments);
+            this.crawlComments = Output.ofNullable(crawlComments);
             return this;
         }
 
-        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Input.ofNullable(fieldMappings);
+            this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder useChangeLog(@Nullable Input<Boolean> useChangeLog) {
+        public Builder useChangeLog(@Nullable Output<Boolean> useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }
 
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
-            this.useChangeLog = Input.ofNullable(useChangeLog);
+            this.useChangeLog = Output.ofNullable(useChangeLog);
             return this;
         }
         public DataSourceWorkDocsConfigurationArgs build() {

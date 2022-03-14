@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionName")
-      private final @Nullable Input<String> subscriptionName;
+      private final @Nullable Output<String> subscriptionName;
 
-    public Input<String> getSubscriptionName() {
-        return this.subscriptionName == null ? Input.empty() : this.subscriptionName;
+    public Output<String> getSubscriptionName() {
+        return this.subscriptionName == null ? Output.empty() : this.subscriptionName;
     }
 
     public SubscriptionReceiverValueArgs(
-        @Nullable Input<String> role,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<String> subscriptionName) {
+        @Nullable Output<String> role,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<String> subscriptionName) {
         this.role = role;
         this.subscriptionId = subscriptionId;
         this.subscriptionName = subscriptionName;
     }
 
     private SubscriptionReceiverValueArgs() {
-        this.role = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.subscriptionName = Input.empty();
+        this.role = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.subscriptionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<String> subscriptionName;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<String> subscriptionName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
     	      this.subscriptionName = defaults.subscriptionName;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder subscriptionName(@Nullable Input<String> subscriptionName) {
+        public Builder subscriptionName(@Nullable Output<String> subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
         }
 
         public Builder subscriptionName(@Nullable String subscriptionName) {
-            this.subscriptionName = Input.ofNullable(subscriptionName);
+            this.subscriptionName = Output.ofNullable(subscriptionName);
             return this;
         }
         public SubscriptionReceiverValueArgs build() {

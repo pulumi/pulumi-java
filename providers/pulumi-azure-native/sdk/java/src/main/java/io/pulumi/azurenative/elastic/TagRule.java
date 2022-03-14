@@ -8,7 +8,6 @@ import io.pulumi.azurenative.elastic.TagRuleArgs;
 import io.pulumi.azurenative.elastic.outputs.MonitoringTagRulesPropertiesResponse;
 import io.pulumi.azurenative.elastic.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -128,21 +127,21 @@ public class TagRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagRule(String name, TagRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:elastic:TagRule", name, args == null ? TagRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:elastic:TagRule", name, args == null ? TagRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TagRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TagRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:elastic:TagRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:elastic/v20200701:TagRule").build()),
-                Input.of(Alias.builder().setType("azure-native:elastic/v20200701preview:TagRule").build()),
-                Input.of(Alias.builder().setType("azure-native:elastic/v20210901preview:TagRule").build()),
-                Input.of(Alias.builder().setType("azure-native:elastic/v20211001preview:TagRule").build())
+                Output.of(Alias.builder().setType("azure-native:elastic/v20200701:TagRule").build()),
+                Output.of(Alias.builder().setType("azure-native:elastic/v20200701preview:TagRule").build()),
+                Output.of(Alias.builder().setType("azure-native:elastic/v20210901preview:TagRule").build()),
+                Output.of(Alias.builder().setType("azure-native:elastic/v20211001preview:TagRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -156,7 +155,7 @@ public class TagRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TagRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TagRule(name, id, options);
     }
 }

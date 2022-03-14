@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusStatefulArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusVersionTargetArgs;
@@ -22,10 +22,10 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isStable")
-      private final @Nullable Input<Boolean> isStable;
+      private final @Nullable Output<Boolean> isStable;
 
-    public Input<Boolean> getIsStable() {
-        return this.isStable == null ? Input.empty() : this.isStable;
+    public Output<Boolean> getIsStable() {
+        return this.isStable == null ? Output.empty() : this.isStable;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="statefuls")
-      private final @Nullable Input<List<InstanceGroupManagerStatusStatefulArgs>> statefuls;
+      private final @Nullable Output<List<InstanceGroupManagerStatusStatefulArgs>> statefuls;
 
-    public Input<List<InstanceGroupManagerStatusStatefulArgs>> getStatefuls() {
-        return this.statefuls == null ? Input.empty() : this.statefuls;
+    public Output<List<InstanceGroupManagerStatusStatefulArgs>> getStatefuls() {
+        return this.statefuls == null ? Output.empty() : this.statefuls;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="versionTargets")
-      private final @Nullable Input<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
+      private final @Nullable Output<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
-    public Input<List<InstanceGroupManagerStatusVersionTargetArgs>> getVersionTargets() {
-        return this.versionTargets == null ? Input.empty() : this.versionTargets;
+    public Output<List<InstanceGroupManagerStatusVersionTargetArgs>> getVersionTargets() {
+        return this.versionTargets == null ? Output.empty() : this.versionTargets;
     }
 
     public InstanceGroupManagerStatusArgs(
-        @Nullable Input<Boolean> isStable,
-        @Nullable Input<List<InstanceGroupManagerStatusStatefulArgs>> statefuls,
-        @Nullable Input<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
+        @Nullable Output<Boolean> isStable,
+        @Nullable Output<List<InstanceGroupManagerStatusStatefulArgs>> statefuls,
+        @Nullable Output<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
         this.isStable = isStable;
         this.statefuls = statefuls;
         this.versionTargets = versionTargets;
     }
 
     private InstanceGroupManagerStatusArgs() {
-        this.isStable = Input.empty();
-        this.statefuls = Input.empty();
-        this.versionTargets = Input.empty();
+        this.isStable = Output.empty();
+        this.statefuls = Output.empty();
+        this.versionTargets = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isStable;
-        private @Nullable Input<List<InstanceGroupManagerStatusStatefulArgs>> statefuls;
-        private @Nullable Input<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
+        private @Nullable Output<Boolean> isStable;
+        private @Nullable Output<List<InstanceGroupManagerStatusStatefulArgs>> statefuls;
+        private @Nullable Output<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
     	      this.versionTargets = defaults.versionTargets;
         }
 
-        public Builder isStable(@Nullable Input<Boolean> isStable) {
+        public Builder isStable(@Nullable Output<Boolean> isStable) {
             this.isStable = isStable;
             return this;
         }
 
         public Builder isStable(@Nullable Boolean isStable) {
-            this.isStable = Input.ofNullable(isStable);
+            this.isStable = Output.ofNullable(isStable);
             return this;
         }
 
-        public Builder statefuls(@Nullable Input<List<InstanceGroupManagerStatusStatefulArgs>> statefuls) {
+        public Builder statefuls(@Nullable Output<List<InstanceGroupManagerStatusStatefulArgs>> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
 
         public Builder statefuls(@Nullable List<InstanceGroupManagerStatusStatefulArgs> statefuls) {
-            this.statefuls = Input.ofNullable(statefuls);
+            this.statefuls = Output.ofNullable(statefuls);
             return this;
         }
 
-        public Builder versionTargets(@Nullable Input<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
+        public Builder versionTargets(@Nullable Output<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }
 
         public Builder versionTargets(@Nullable List<InstanceGroupManagerStatusVersionTargetArgs> versionTargets) {
-            this.versionTargets = Input.ofNullable(versionTargets);
+            this.versionTargets = Output.ofNullable(versionTargets);
             return this;
         }
         public InstanceGroupManagerStatusArgs build() {

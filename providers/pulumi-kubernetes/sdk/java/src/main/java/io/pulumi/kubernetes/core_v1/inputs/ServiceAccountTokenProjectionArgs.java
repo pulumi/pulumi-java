@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="expirationSeconds")
-      private final @Nullable Input<Integer> expirationSeconds;
+      private final @Nullable Output<Integer> expirationSeconds;
 
-    public Input<Integer> getExpirationSeconds() {
-        return this.expirationSeconds == null ? Input.empty() : this.expirationSeconds;
+    public Output<Integer> getExpirationSeconds() {
+        return this.expirationSeconds == null ? Output.empty() : this.expirationSeconds;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public ServiceAccountTokenProjectionArgs(
-        @Nullable Input<String> audience,
-        @Nullable Input<Integer> expirationSeconds,
-        Input<String> path) {
+        @Nullable Output<String> audience,
+        @Nullable Output<Integer> expirationSeconds,
+        Output<String> path) {
         this.audience = audience;
         this.expirationSeconds = expirationSeconds;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private ServiceAccountTokenProjectionArgs() {
-        this.audience = Input.empty();
-        this.expirationSeconds = Input.empty();
-        this.path = Input.empty();
+        this.audience = Output.empty();
+        this.expirationSeconds = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audience;
-        private @Nullable Input<Integer> expirationSeconds;
-        private Input<String> path;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<Integer> expirationSeconds;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
     	      this.path = defaults.path;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder expirationSeconds(@Nullable Input<Integer> expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
 
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Input.ofNullable(expirationSeconds);
+            this.expirationSeconds = Output.ofNullable(expirationSeconds);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public ServiceAccountTokenProjectionArgs build() {

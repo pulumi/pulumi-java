@@ -5,7 +5,7 @@ package io.pulumi.awsnative.accessanalyzer;
 
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerArchiveRuleArgs;
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,17 +22,17 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyzerName")
-      private final @Nullable Input<String> analyzerName;
+      private final @Nullable Output<String> analyzerName;
 
-    public Input<String> getAnalyzerName() {
-        return this.analyzerName == null ? Input.empty() : this.analyzerName;
+    public Output<String> getAnalyzerName() {
+        return this.analyzerName == null ? Output.empty() : this.analyzerName;
     }
 
     @InputImport(name="archiveRules")
-      private final @Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules;
+      private final @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
 
-    public Input<List<AnalyzerArchiveRuleArgs>> getArchiveRules() {
-        return this.archiveRules == null ? Input.empty() : this.archiveRules;
+    public Output<List<AnalyzerArchiveRuleArgs>> getArchiveRules() {
+        return this.archiveRules == null ? Output.empty() : this.archiveRules;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AnalyzerTagArgs>> tags;
+      private final @Nullable Output<List<AnalyzerTagArgs>> tags;
 
-    public Input<List<AnalyzerTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AnalyzerTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AnalyzerArgs(
-        @Nullable Input<String> analyzerName,
-        @Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules,
-        @Nullable Input<List<AnalyzerTagArgs>> tags,
-        Input<String> type) {
+        @Nullable Output<String> analyzerName,
+        @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules,
+        @Nullable Output<List<AnalyzerTagArgs>> tags,
+        Output<String> type) {
         this.analyzerName = analyzerName;
         this.archiveRules = archiveRules;
         this.tags = tags;
@@ -69,10 +69,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalyzerArgs() {
-        this.analyzerName = Input.empty();
-        this.archiveRules = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.analyzerName = Output.empty();
+        this.archiveRules = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> analyzerName;
-        private @Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules;
-        private @Nullable Input<List<AnalyzerTagArgs>> tags;
-        private Input<String> type;
+        private @Nullable Output<String> analyzerName;
+        private @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
+        private @Nullable Output<List<AnalyzerTagArgs>> tags;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder analyzerName(@Nullable Input<String> analyzerName) {
+        public Builder analyzerName(@Nullable Output<String> analyzerName) {
             this.analyzerName = analyzerName;
             return this;
         }
 
         public Builder analyzerName(@Nullable String analyzerName) {
-            this.analyzerName = Input.ofNullable(analyzerName);
+            this.analyzerName = Output.ofNullable(analyzerName);
             return this;
         }
 
-        public Builder archiveRules(@Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules) {
+        public Builder archiveRules(@Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules) {
             this.archiveRules = archiveRules;
             return this;
         }
 
         public Builder archiveRules(@Nullable List<AnalyzerArchiveRuleArgs> archiveRules) {
-            this.archiveRules = Input.ofNullable(archiveRules);
+            this.archiveRules = Output.ofNullable(archiveRules);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AnalyzerTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AnalyzerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AnalyzerTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AnalyzerArgs build() {

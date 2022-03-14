@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
     public static final InstantRPAdditionalDetailsArgs Empty = new InstantRPAdditionalDetailsArgs();
 
     @InputImport(name="azureBackupRGNamePrefix")
-      private final @Nullable Input<String> azureBackupRGNamePrefix;
+      private final @Nullable Output<String> azureBackupRGNamePrefix;
 
-    public Input<String> getAzureBackupRGNamePrefix() {
-        return this.azureBackupRGNamePrefix == null ? Input.empty() : this.azureBackupRGNamePrefix;
+    public Output<String> getAzureBackupRGNamePrefix() {
+        return this.azureBackupRGNamePrefix == null ? Output.empty() : this.azureBackupRGNamePrefix;
     }
 
     @InputImport(name="azureBackupRGNameSuffix")
-      private final @Nullable Input<String> azureBackupRGNameSuffix;
+      private final @Nullable Output<String> azureBackupRGNameSuffix;
 
-    public Input<String> getAzureBackupRGNameSuffix() {
-        return this.azureBackupRGNameSuffix == null ? Input.empty() : this.azureBackupRGNameSuffix;
+    public Output<String> getAzureBackupRGNameSuffix() {
+        return this.azureBackupRGNameSuffix == null ? Output.empty() : this.azureBackupRGNameSuffix;
     }
 
     public InstantRPAdditionalDetailsArgs(
-        @Nullable Input<String> azureBackupRGNamePrefix,
-        @Nullable Input<String> azureBackupRGNameSuffix) {
+        @Nullable Output<String> azureBackupRGNamePrefix,
+        @Nullable Output<String> azureBackupRGNameSuffix) {
         this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
         this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
     }
 
     private InstantRPAdditionalDetailsArgs() {
-        this.azureBackupRGNamePrefix = Input.empty();
-        this.azureBackupRGNameSuffix = Input.empty();
+        this.azureBackupRGNamePrefix = Output.empty();
+        this.azureBackupRGNameSuffix = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> azureBackupRGNamePrefix;
-        private @Nullable Input<String> azureBackupRGNameSuffix;
+        private @Nullable Output<String> azureBackupRGNamePrefix;
+        private @Nullable Output<String> azureBackupRGNameSuffix;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
     	      this.azureBackupRGNameSuffix = defaults.azureBackupRGNameSuffix;
         }
 
-        public Builder azureBackupRGNamePrefix(@Nullable Input<String> azureBackupRGNamePrefix) {
+        public Builder azureBackupRGNamePrefix(@Nullable Output<String> azureBackupRGNamePrefix) {
             this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
             return this;
         }
 
         public Builder azureBackupRGNamePrefix(@Nullable String azureBackupRGNamePrefix) {
-            this.azureBackupRGNamePrefix = Input.ofNullable(azureBackupRGNamePrefix);
+            this.azureBackupRGNamePrefix = Output.ofNullable(azureBackupRGNamePrefix);
             return this;
         }
 
-        public Builder azureBackupRGNameSuffix(@Nullable Input<String> azureBackupRGNameSuffix) {
+        public Builder azureBackupRGNameSuffix(@Nullable Output<String> azureBackupRGNameSuffix) {
             this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
             return this;
         }
 
         public Builder azureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
-            this.azureBackupRGNameSuffix = Input.ofNullable(azureBackupRGNameSuffix);
+            this.azureBackupRGNameSuffix = Output.ofNullable(azureBackupRGNameSuffix);
             return this;
         }
         public InstantRPAdditionalDetailsArgs build() {

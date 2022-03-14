@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.deploymentmanager.enums.DeploymentMode;
 import io.pulumi.azurenative.deploymentmanager.inputs.ServiceUnitArtifactsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts")
-      private final @Nullable Input<ServiceUnitArtifactsArgs> artifacts;
+      private final @Nullable Output<ServiceUnitArtifactsArgs> artifacts;
 
-    public Input<ServiceUnitArtifactsArgs> getArtifacts() {
-        return this.artifacts == null ? Input.empty() : this.artifacts;
+    public Output<ServiceUnitArtifactsArgs> getArtifacts() {
+        return this.artifacts == null ? Output.empty() : this.artifacts;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMode", required=true)
-      private final Input<DeploymentMode> deploymentMode;
+      private final Output<DeploymentMode> deploymentMode;
 
-    public Input<DeploymentMode> getDeploymentMode() {
+    public Output<DeploymentMode> getDeploymentMode() {
         return this.deploymentMode;
     }
 
@@ -44,10 +44,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,9 +66,9 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -77,9 +77,9 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceTopologyName", required=true)
-      private final Input<String> serviceTopologyName;
+      private final Output<String> serviceTopologyName;
 
-    public Input<String> getServiceTopologyName() {
+    public Output<String> getServiceTopologyName() {
         return this.serviceTopologyName;
     }
 
@@ -88,10 +88,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceUnitName")
-      private final @Nullable Input<String> serviceUnitName;
+      private final @Nullable Output<String> serviceUnitName;
 
-    public Input<String> getServiceUnitName() {
-        return this.serviceUnitName == null ? Input.empty() : this.serviceUnitName;
+    public Output<String> getServiceUnitName() {
+        return this.serviceUnitName == null ? Output.empty() : this.serviceUnitName;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceGroup", required=true)
-      private final Input<String> targetResourceGroup;
+      private final Output<String> targetResourceGroup;
 
-    public Input<String> getTargetResourceGroup() {
+    public Output<String> getTargetResourceGroup() {
         return this.targetResourceGroup;
     }
 
     public ServiceUnitArgs(
-        @Nullable Input<ServiceUnitArtifactsArgs> artifacts,
-        Input<DeploymentMode> deploymentMode,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        Input<String> serviceTopologyName,
-        @Nullable Input<String> serviceUnitName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> targetResourceGroup) {
+        @Nullable Output<ServiceUnitArtifactsArgs> artifacts,
+        Output<DeploymentMode> deploymentMode,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        Output<String> serviceTopologyName,
+        @Nullable Output<String> serviceUnitName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> targetResourceGroup) {
         this.artifacts = artifacts;
         this.deploymentMode = Objects.requireNonNull(deploymentMode, "expected parameter 'deploymentMode' to be non-null");
         this.location = location;
@@ -138,15 +138,15 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceUnitArgs() {
-        this.artifacts = Input.empty();
-        this.deploymentMode = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.serviceTopologyName = Input.empty();
-        this.serviceUnitName = Input.empty();
-        this.tags = Input.empty();
-        this.targetResourceGroup = Input.empty();
+        this.artifacts = Output.empty();
+        this.deploymentMode = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.serviceTopologyName = Output.empty();
+        this.serviceUnitName = Output.empty();
+        this.tags = Output.empty();
+        this.targetResourceGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceUnitArtifactsArgs> artifacts;
-        private Input<DeploymentMode> deploymentMode;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private Input<String> serviceTopologyName;
-        private @Nullable Input<String> serviceUnitName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> targetResourceGroup;
+        private @Nullable Output<ServiceUnitArtifactsArgs> artifacts;
+        private Output<DeploymentMode> deploymentMode;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private Output<String> serviceTopologyName;
+        private @Nullable Output<String> serviceUnitName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> targetResourceGroup;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetResourceGroup = defaults.targetResourceGroup;
         }
 
-        public Builder artifacts(@Nullable Input<ServiceUnitArtifactsArgs> artifacts) {
+        public Builder artifacts(@Nullable Output<ServiceUnitArtifactsArgs> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         public Builder artifacts(@Nullable ServiceUnitArtifactsArgs artifacts) {
-            this.artifacts = Input.ofNullable(artifacts);
+            this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
 
-        public Builder deploymentMode(Input<DeploymentMode> deploymentMode) {
+        public Builder deploymentMode(Output<DeploymentMode> deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
 
         public Builder deploymentMode(DeploymentMode deploymentMode) {
-            this.deploymentMode = Input.of(Objects.requireNonNull(deploymentMode));
+            this.deploymentMode = Output.of(Objects.requireNonNull(deploymentMode));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder serviceTopologyName(Input<String> serviceTopologyName) {
+        public Builder serviceTopologyName(Output<String> serviceTopologyName) {
             this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
             return this;
         }
 
         public Builder serviceTopologyName(String serviceTopologyName) {
-            this.serviceTopologyName = Input.of(Objects.requireNonNull(serviceTopologyName));
+            this.serviceTopologyName = Output.of(Objects.requireNonNull(serviceTopologyName));
             return this;
         }
 
-        public Builder serviceUnitName(@Nullable Input<String> serviceUnitName) {
+        public Builder serviceUnitName(@Nullable Output<String> serviceUnitName) {
             this.serviceUnitName = serviceUnitName;
             return this;
         }
 
         public Builder serviceUnitName(@Nullable String serviceUnitName) {
-            this.serviceUnitName = Input.ofNullable(serviceUnitName);
+            this.serviceUnitName = Output.ofNullable(serviceUnitName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetResourceGroup(Input<String> targetResourceGroup) {
+        public Builder targetResourceGroup(Output<String> targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
 
         public Builder targetResourceGroup(String targetResourceGroup) {
-            this.targetResourceGroup = Input.of(Objects.requireNonNull(targetResourceGroup));
+            this.targetResourceGroup = Output.of(Objects.requireNonNull(targetResourceGroup));
             return this;
         }
         public ServiceUnitArgs build() {

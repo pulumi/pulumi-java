@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<InventoryDestinationBucketArgs> bucket;
+      private final Output<InventoryDestinationBucketArgs> bucket;
 
-    public Input<InventoryDestinationBucketArgs> getBucket() {
+    public Output<InventoryDestinationBucketArgs> getBucket() {
         return this.bucket;
     }
 
-    public InventoryDestinationArgs(Input<InventoryDestinationBucketArgs> bucket) {
+    public InventoryDestinationArgs(Output<InventoryDestinationBucketArgs> bucket) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
     }
 
     private InventoryDestinationArgs() {
-        this.bucket = Input.empty();
+        this.bucket = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<InventoryDestinationBucketArgs> bucket;
+        private Output<InventoryDestinationBucketArgs> bucket;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder bucket(Input<InventoryDestinationBucketArgs> bucket) {
+        public Builder bucket(Output<InventoryDestinationBucketArgs> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(InventoryDestinationBucketArgs bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
         public InventoryDestinationArgs build() {

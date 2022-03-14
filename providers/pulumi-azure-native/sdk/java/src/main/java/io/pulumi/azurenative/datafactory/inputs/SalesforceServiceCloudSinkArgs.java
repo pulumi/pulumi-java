@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.SalesforceSinkWriteBehavior;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="externalIdFieldName")
-      private final @Nullable Input<Object> externalIdFieldName;
+      private final @Nullable Output<Object> externalIdFieldName;
 
-    public Input<Object> getExternalIdFieldName() {
-        return this.externalIdFieldName == null ? Input.empty() : this.externalIdFieldName;
+    public Output<Object> getExternalIdFieldName() {
+        return this.externalIdFieldName == null ? Output.empty() : this.externalIdFieldName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ignoreNullValues")
-      private final @Nullable Input<Object> ignoreNullValues;
+      private final @Nullable Output<Object> ignoreNullValues;
 
-    public Input<Object> getIgnoreNullValues() {
-        return this.ignoreNullValues == null ? Input.empty() : this.ignoreNullValues;
+    public Output<Object> getIgnoreNullValues() {
+        return this.ignoreNullValues == null ? Output.empty() : this.ignoreNullValues;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sinkRetryCount")
-      private final @Nullable Input<Object> sinkRetryCount;
+      private final @Nullable Output<Object> sinkRetryCount;
 
-    public Input<Object> getSinkRetryCount() {
-        return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
+    public Output<Object> getSinkRetryCount() {
+        return this.sinkRetryCount == null ? Output.empty() : this.sinkRetryCount;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sinkRetryWait")
-      private final @Nullable Input<Object> sinkRetryWait;
+      private final @Nullable Output<Object> sinkRetryWait;
 
-    public Input<Object> getSinkRetryWait() {
-        return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
+    public Output<Object> getSinkRetryWait() {
+        return this.sinkRetryWait == null ? Output.empty() : this.sinkRetryWait;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -104,10 +104,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="writeBatchSize")
-      private final @Nullable Input<Object> writeBatchSize;
+      private final @Nullable Output<Object> writeBatchSize;
 
-    public Input<Object> getWriteBatchSize() {
-        return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
+    public Output<Object> getWriteBatchSize() {
+        return this.writeBatchSize == null ? Output.empty() : this.writeBatchSize;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="writeBatchTimeout")
-      private final @Nullable Input<Object> writeBatchTimeout;
+      private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Input<Object> getWriteBatchTimeout() {
-        return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
+    public Output<Object> getWriteBatchTimeout() {
+        return this.writeBatchTimeout == null ? Output.empty() : this.writeBatchTimeout;
     }
 
     /**
@@ -126,23 +126,23 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="writeBehavior")
-      private final @Nullable Input<Either<String,SalesforceSinkWriteBehavior>> writeBehavior;
+      private final @Nullable Output<Either<String,SalesforceSinkWriteBehavior>> writeBehavior;
 
-    public Input<Either<String,SalesforceSinkWriteBehavior>> getWriteBehavior() {
-        return this.writeBehavior == null ? Input.empty() : this.writeBehavior;
+    public Output<Either<String,SalesforceSinkWriteBehavior>> getWriteBehavior() {
+        return this.writeBehavior == null ? Output.empty() : this.writeBehavior;
     }
 
     public SalesforceServiceCloudSinkArgs(
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<Object> externalIdFieldName,
-        @Nullable Input<Object> ignoreNullValues,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> sinkRetryCount,
-        @Nullable Input<Object> sinkRetryWait,
-        Input<String> type,
-        @Nullable Input<Object> writeBatchSize,
-        @Nullable Input<Object> writeBatchTimeout,
-        @Nullable Input<Either<String,SalesforceSinkWriteBehavior>> writeBehavior) {
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<Object> externalIdFieldName,
+        @Nullable Output<Object> ignoreNullValues,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> sinkRetryCount,
+        @Nullable Output<Object> sinkRetryWait,
+        Output<String> type,
+        @Nullable Output<Object> writeBatchSize,
+        @Nullable Output<Object> writeBatchTimeout,
+        @Nullable Output<Either<String,SalesforceSinkWriteBehavior>> writeBehavior) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.externalIdFieldName = externalIdFieldName;
         this.ignoreNullValues = ignoreNullValues;
@@ -156,16 +156,16 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
     }
 
     private SalesforceServiceCloudSinkArgs() {
-        this.disableMetricsCollection = Input.empty();
-        this.externalIdFieldName = Input.empty();
-        this.ignoreNullValues = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.sinkRetryCount = Input.empty();
-        this.sinkRetryWait = Input.empty();
-        this.type = Input.empty();
-        this.writeBatchSize = Input.empty();
-        this.writeBatchTimeout = Input.empty();
-        this.writeBehavior = Input.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.externalIdFieldName = Output.empty();
+        this.ignoreNullValues = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.sinkRetryCount = Output.empty();
+        this.sinkRetryWait = Output.empty();
+        this.type = Output.empty();
+        this.writeBatchSize = Output.empty();
+        this.writeBatchTimeout = Output.empty();
+        this.writeBehavior = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,16 +177,16 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<Object> externalIdFieldName;
-        private @Nullable Input<Object> ignoreNullValues;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> sinkRetryCount;
-        private @Nullable Input<Object> sinkRetryWait;
-        private Input<String> type;
-        private @Nullable Input<Object> writeBatchSize;
-        private @Nullable Input<Object> writeBatchTimeout;
-        private @Nullable Input<Either<String,SalesforceSinkWriteBehavior>> writeBehavior;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<Object> externalIdFieldName;
+        private @Nullable Output<Object> ignoreNullValues;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> sinkRetryCount;
+        private @Nullable Output<Object> sinkRetryWait;
+        private Output<String> type;
+        private @Nullable Output<Object> writeBatchSize;
+        private @Nullable Output<Object> writeBatchTimeout;
+        private @Nullable Output<Either<String,SalesforceSinkWriteBehavior>> writeBehavior;
 
         public Builder() {
     	      // Empty
@@ -206,103 +206,103 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder externalIdFieldName(@Nullable Input<Object> externalIdFieldName) {
+        public Builder externalIdFieldName(@Nullable Output<Object> externalIdFieldName) {
             this.externalIdFieldName = externalIdFieldName;
             return this;
         }
 
         public Builder externalIdFieldName(@Nullable Object externalIdFieldName) {
-            this.externalIdFieldName = Input.ofNullable(externalIdFieldName);
+            this.externalIdFieldName = Output.ofNullable(externalIdFieldName);
             return this;
         }
 
-        public Builder ignoreNullValues(@Nullable Input<Object> ignoreNullValues) {
+        public Builder ignoreNullValues(@Nullable Output<Object> ignoreNullValues) {
             this.ignoreNullValues = ignoreNullValues;
             return this;
         }
 
         public Builder ignoreNullValues(@Nullable Object ignoreNullValues) {
-            this.ignoreNullValues = Input.ofNullable(ignoreNullValues);
+            this.ignoreNullValues = Output.ofNullable(ignoreNullValues);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder sinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Input.ofNullable(sinkRetryCount);
+            this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
             return this;
         }
 
-        public Builder sinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Input.ofNullable(sinkRetryWait);
+            this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder writeBatchSize(@Nullable Input<Object> writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Input.ofNullable(writeBatchSize);
+            this.writeBatchSize = Output.ofNullable(writeBatchSize);
             return this;
         }
 
-        public Builder writeBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Input.ofNullable(writeBatchTimeout);
+            this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
             return this;
         }
 
-        public Builder writeBehavior(@Nullable Input<Either<String,SalesforceSinkWriteBehavior>> writeBehavior) {
+        public Builder writeBehavior(@Nullable Output<Either<String,SalesforceSinkWriteBehavior>> writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }
 
         public Builder writeBehavior(@Nullable Either<String,SalesforceSinkWriteBehavior> writeBehavior) {
-            this.writeBehavior = Input.ofNullable(writeBehavior);
+            this.writeBehavior = Output.ofNullable(writeBehavior);
             return this;
         }
         public SalesforceServiceCloudSinkArgs build() {

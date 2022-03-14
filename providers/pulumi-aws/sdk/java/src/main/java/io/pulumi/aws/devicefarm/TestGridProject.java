@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.devicefarm.TestGridProjectArgs;
 import io.pulumi.aws.devicefarm.inputs.TestGridProjectState;
 import io.pulumi.aws.devicefarm.outputs.TestGridProjectVpcConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -154,14 +153,14 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TestGridProject(String name, @Nullable TestGridProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:devicefarm/testGridProject:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:devicefarm/testGridProject:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TestGridProject(String name, Input<String> id, @Nullable TestGridProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TestGridProject(String name, Output<String> id, @Nullable TestGridProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:devicefarm/testGridProject:TestGridProject", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -177,7 +176,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TestGridProject get(String name, Input<String> id, @Nullable TestGridProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TestGridProject get(String name, Output<String> id, @Nullable TestGridProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TestGridProject(name, id, state, options);
     }
 }

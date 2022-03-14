@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ptrdname")
-      private final @Nullable Input<String> ptrdname;
+      private final @Nullable Output<String> ptrdname;
 
-    public Input<String> getPtrdname() {
-        return this.ptrdname == null ? Input.empty() : this.ptrdname;
+    public Output<String> getPtrdname() {
+        return this.ptrdname == null ? Output.empty() : this.ptrdname;
     }
 
-    public PtrRecordArgs(@Nullable Input<String> ptrdname) {
+    public PtrRecordArgs(@Nullable Output<String> ptrdname) {
         this.ptrdname = ptrdname;
     }
 
     private PtrRecordArgs() {
-        this.ptrdname = Input.empty();
+        this.ptrdname = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ptrdname;
+        private @Nullable Output<String> ptrdname;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ptrdname = defaults.ptrdname;
         }
 
-        public Builder ptrdname(@Nullable Input<String> ptrdname) {
+        public Builder ptrdname(@Nullable Output<String> ptrdname) {
             this.ptrdname = ptrdname;
             return this;
         }
 
         public Builder ptrdname(@Nullable String ptrdname) {
-            this.ptrdname = Input.ofNullable(ptrdname);
+            this.ptrdname = Output.ofNullable(ptrdname);
             return this;
         }
         public PtrRecordArgs build() {

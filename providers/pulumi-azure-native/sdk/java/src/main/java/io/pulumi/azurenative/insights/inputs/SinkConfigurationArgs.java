@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class SinkConfigurationArgs extends io.pulumi.resources.ResourceArg
     public static final SinkConfigurationArgs Empty = new SinkConfigurationArgs();
 
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
-    public SinkConfigurationArgs(Input<String> kind) {
+    public SinkConfigurationArgs(Output<String> kind) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
     }
 
     private SinkConfigurationArgs() {
-        this.kind = Input.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class SinkConfigurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> kind;
+        private Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class SinkConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.kind = defaults.kind;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
         public SinkConfigurationArgs build() {

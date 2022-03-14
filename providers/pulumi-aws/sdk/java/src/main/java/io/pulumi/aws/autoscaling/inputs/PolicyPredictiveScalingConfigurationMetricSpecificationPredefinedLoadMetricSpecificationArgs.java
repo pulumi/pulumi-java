@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      * 
      */
     @InputImport(name="predefinedMetricType", required=true)
-      private final Input<String> predefinedMetricType;
+      private final Output<String> predefinedMetricType;
 
-    public Input<String> getPredefinedMetricType() {
+    public Output<String> getPredefinedMetricType() {
         return this.predefinedMetricType;
     }
 
@@ -29,22 +29,22 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      * 
      */
     @InputImport(name="resourceLabel", required=true)
-      private final Input<String> resourceLabel;
+      private final Output<String> resourceLabel;
 
-    public Input<String> getResourceLabel() {
+    public Output<String> getResourceLabel() {
         return this.resourceLabel;
     }
 
     public PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs(
-        Input<String> predefinedMetricType,
-        Input<String> resourceLabel) {
+        Output<String> predefinedMetricType,
+        Output<String> resourceLabel) {
         this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType, "expected parameter 'predefinedMetricType' to be non-null");
         this.resourceLabel = Objects.requireNonNull(resourceLabel, "expected parameter 'resourceLabel' to be non-null");
     }
 
     private PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs() {
-        this.predefinedMetricType = Input.empty();
-        this.resourceLabel = Input.empty();
+        this.predefinedMetricType = Output.empty();
+        this.resourceLabel = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     }
 
     public static final class Builder {
-        private Input<String> predefinedMetricType;
-        private Input<String> resourceLabel;
+        private Output<String> predefinedMetricType;
+        private Output<String> resourceLabel;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder predefinedMetricType(Input<String> predefinedMetricType) {
+        public Builder predefinedMetricType(Output<String> predefinedMetricType) {
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
 
         public Builder predefinedMetricType(String predefinedMetricType) {
-            this.predefinedMetricType = Input.of(Objects.requireNonNull(predefinedMetricType));
+            this.predefinedMetricType = Output.of(Objects.requireNonNull(predefinedMetricType));
             return this;
         }
 
-        public Builder resourceLabel(Input<String> resourceLabel) {
+        public Builder resourceLabel(Output<String> resourceLabel) {
             this.resourceLabel = Objects.requireNonNull(resourceLabel);
             return this;
         }
 
         public Builder resourceLabel(String resourceLabel) {
-            this.resourceLabel = Input.of(Objects.requireNonNull(resourceLabel));
+            this.resourceLabel = Output.of(Objects.requireNonNull(resourceLabel));
             return this;
         }
         public PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs build() {

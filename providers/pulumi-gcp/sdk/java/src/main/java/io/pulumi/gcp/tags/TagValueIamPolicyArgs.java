@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -30,22 +30,22 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagValue", required=true)
-      private final Input<String> tagValue;
+      private final Output<String> tagValue;
 
-    public Input<String> getTagValue() {
+    public Output<String> getTagValue() {
         return this.tagValue;
     }
 
     public TagValueIamPolicyArgs(
-        Input<String> policyData,
-        Input<String> tagValue) {
+        Output<String> policyData,
+        Output<String> tagValue) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.tagValue = Objects.requireNonNull(tagValue, "expected parameter 'tagValue' to be non-null");
     }
 
     private TagValueIamPolicyArgs() {
-        this.policyData = Input.empty();
-        this.tagValue = Input.empty();
+        this.policyData = Output.empty();
+        this.tagValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private Input<String> tagValue;
+        private Output<String> policyData;
+        private Output<String> tagValue;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder tagValue(Input<String> tagValue) {
+        public Builder tagValue(Output<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
         public Builder tagValue(String tagValue) {
-            this.tagValue = Input.of(Objects.requireNonNull(tagValue));
+            this.tagValue = Output.of(Objects.requireNonNull(tagValue));
             return this;
         }
         public TagValueIamPolicyArgs build() {

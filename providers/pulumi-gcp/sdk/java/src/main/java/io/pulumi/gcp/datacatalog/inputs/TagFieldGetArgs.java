@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -22,10 +22,10 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boolValue")
-      private final @Nullable Input<Boolean> boolValue;
+      private final @Nullable Output<Boolean> boolValue;
 
-    public Input<Boolean> getBoolValue() {
-        return this.boolValue == null ? Input.empty() : this.boolValue;
+    public Output<Boolean> getBoolValue() {
+        return this.boolValue == null ? Output.empty() : this.boolValue;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="doubleValue")
-      private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Output<Double> doubleValue;
 
-    public Input<Double> getDoubleValue() {
-        return this.doubleValue == null ? Input.empty() : this.doubleValue;
+    public Output<Double> getDoubleValue() {
+        return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enumValue")
-      private final @Nullable Input<String> enumValue;
+      private final @Nullable Output<String> enumValue;
 
-    public Input<String> getEnumValue() {
-        return this.enumValue == null ? Input.empty() : this.enumValue;
+    public Output<String> getEnumValue() {
+        return this.enumValue == null ? Output.empty() : this.enumValue;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldName", required=true)
-      private final Input<String> fieldName;
+      private final Output<String> fieldName;
 
-    public Input<String> getFieldName() {
+    public Output<String> getFieldName() {
         return this.fieldName;
     }
 
@@ -82,10 +82,10 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order")
-      private final @Nullable Input<Integer> order;
+      private final @Nullable Output<Integer> order;
 
-    public Input<Integer> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<Integer> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     /**
@@ -104,21 +104,21 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timestampValue")
-      private final @Nullable Input<String> timestampValue;
+      private final @Nullable Output<String> timestampValue;
 
-    public Input<String> getTimestampValue() {
-        return this.timestampValue == null ? Input.empty() : this.timestampValue;
+    public Output<String> getTimestampValue() {
+        return this.timestampValue == null ? Output.empty() : this.timestampValue;
     }
 
     public TagFieldGetArgs(
-        @Nullable Input<Boolean> boolValue,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Double> doubleValue,
-        @Nullable Input<String> enumValue,
-        Input<String> fieldName,
-        @Nullable Input<Integer> order,
-        @Nullable Input<String> stringValue,
-        @Nullable Input<String> timestampValue) {
+        @Nullable Output<Boolean> boolValue,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Double> doubleValue,
+        @Nullable Output<String> enumValue,
+        Output<String> fieldName,
+        @Nullable Output<Integer> order,
+        @Nullable Output<String> stringValue,
+        @Nullable Output<String> timestampValue) {
         this.boolValue = boolValue;
         this.displayName = displayName;
         this.doubleValue = doubleValue;
@@ -130,14 +130,14 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagFieldGetArgs() {
-        this.boolValue = Input.empty();
-        this.displayName = Input.empty();
-        this.doubleValue = Input.empty();
-        this.enumValue = Input.empty();
-        this.fieldName = Input.empty();
-        this.order = Input.empty();
-        this.stringValue = Input.empty();
-        this.timestampValue = Input.empty();
+        this.boolValue = Output.empty();
+        this.displayName = Output.empty();
+        this.doubleValue = Output.empty();
+        this.enumValue = Output.empty();
+        this.fieldName = Output.empty();
+        this.order = Output.empty();
+        this.stringValue = Output.empty();
+        this.timestampValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,14 +149,14 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> boolValue;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Double> doubleValue;
-        private @Nullable Input<String> enumValue;
-        private Input<String> fieldName;
-        private @Nullable Input<Integer> order;
-        private @Nullable Input<String> stringValue;
-        private @Nullable Input<String> timestampValue;
+        private @Nullable Output<Boolean> boolValue;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Double> doubleValue;
+        private @Nullable Output<String> enumValue;
+        private Output<String> fieldName;
+        private @Nullable Output<Integer> order;
+        private @Nullable Output<String> stringValue;
+        private @Nullable Output<String> timestampValue;
 
         public Builder() {
     	      // Empty
@@ -174,83 +174,83 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder boolValue(@Nullable Input<Boolean> boolValue) {
+        public Builder boolValue(@Nullable Output<Boolean> boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
         public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Input.ofNullable(boolValue);
+            this.boolValue = Output.ofNullable(boolValue);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Input.ofNullable(doubleValue);
+            this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder enumValue(@Nullable Input<String> enumValue) {
+        public Builder enumValue(@Nullable Output<String> enumValue) {
             this.enumValue = enumValue;
             return this;
         }
 
         public Builder enumValue(@Nullable String enumValue) {
-            this.enumValue = Input.ofNullable(enumValue);
+            this.enumValue = Output.ofNullable(enumValue);
             return this;
         }
 
-        public Builder fieldName(Input<String> fieldName) {
+        public Builder fieldName(Output<String> fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
         public Builder fieldName(String fieldName) {
-            this.fieldName = Input.of(Objects.requireNonNull(fieldName));
+            this.fieldName = Output.of(Objects.requireNonNull(fieldName));
             return this;
         }
 
-        public Builder order(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable Integer order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
 
-        public Builder timestampValue(@Nullable Input<String> timestampValue) {
+        public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
 
         public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Input.ofNullable(timestampValue);
+            this.timestampValue = Output.ofNullable(timestampValue);
             return this;
         }
         public TagFieldGetArgs build() {

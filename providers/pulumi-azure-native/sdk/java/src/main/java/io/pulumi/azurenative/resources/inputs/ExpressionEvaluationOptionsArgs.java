@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.enums.ExpressionEvaluationOptionsScopeType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
+      private final @Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
 
-    public Input<Either<String,ExpressionEvaluationOptionsScopeType>> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<Either<String,ExpressionEvaluationOptionsScopeType>> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
-    public ExpressionEvaluationOptionsArgs(@Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
+    public ExpressionEvaluationOptionsArgs(@Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
         this.scope = scope;
     }
 
     private ExpressionEvaluationOptionsArgs() {
-        this.scope = Input.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
+        private @Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
     	      this.scope = defaults.scope;
         }
 
-        public Builder scope(@Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
+        public Builder scope(@Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable Either<String,ExpressionEvaluationOptionsScopeType> scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public ExpressionEvaluationOptionsArgs build() {

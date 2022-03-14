@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationPosition;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,39 +16,39 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
     public static final WebACLIPSetForwardedIPConfigurationArgs Empty = new WebACLIPSetForwardedIPConfigurationArgs();
 
     @InputImport(name="fallbackBehavior", required=true)
-      private final Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+      private final Output<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
-    public Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
+    public Output<WebACLIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
     @InputImport(name="position", required=true)
-      private final Input<WebACLIPSetForwardedIPConfigurationPosition> position;
+      private final Output<WebACLIPSetForwardedIPConfigurationPosition> position;
 
-    public Input<WebACLIPSetForwardedIPConfigurationPosition> getPosition() {
+    public Output<WebACLIPSetForwardedIPConfigurationPosition> getPosition() {
         return this.position;
     }
 
     public WebACLIPSetForwardedIPConfigurationArgs(
-        Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior,
-        Input<String> headerName,
-        Input<WebACLIPSetForwardedIPConfigurationPosition> position) {
+        Output<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior,
+        Output<String> headerName,
+        Output<WebACLIPSetForwardedIPConfigurationPosition> position) {
         this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
     }
 
     private WebACLIPSetForwardedIPConfigurationArgs() {
-        this.fallbackBehavior = Input.empty();
-        this.headerName = Input.empty();
-        this.position = Input.empty();
+        this.fallbackBehavior = Output.empty();
+        this.headerName = Output.empty();
+        this.position = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
-        private Input<String> headerName;
-        private Input<WebACLIPSetForwardedIPConfigurationPosition> position;
+        private Output<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+        private Output<String> headerName;
+        private Output<WebACLIPSetForwardedIPConfigurationPosition> position;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
     	      this.position = defaults.position;
         }
 
-        public Builder fallbackBehavior(Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
+        public Builder fallbackBehavior(Output<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
         public Builder fallbackBehavior(WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
-            this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
+            this.fallbackBehavior = Output.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder position(Input<WebACLIPSetForwardedIPConfigurationPosition> position) {
+        public Builder position(Output<WebACLIPSetForwardedIPConfigurationPosition> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(WebACLIPSetForwardedIPConfigurationPosition position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
         public WebACLIPSetForwardedIPConfigurationArgs build() {

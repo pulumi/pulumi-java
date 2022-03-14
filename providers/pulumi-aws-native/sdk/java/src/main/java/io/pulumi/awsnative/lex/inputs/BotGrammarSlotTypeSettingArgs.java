@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotGrammarSlotTypeSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
     public static final BotGrammarSlotTypeSettingArgs Empty = new BotGrammarSlotTypeSettingArgs();
 
     @InputImport(name="source")
-      private final @Nullable Input<BotGrammarSlotTypeSourceArgs> source;
+      private final @Nullable Output<BotGrammarSlotTypeSourceArgs> source;
 
-    public Input<BotGrammarSlotTypeSourceArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<BotGrammarSlotTypeSourceArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
-    public BotGrammarSlotTypeSettingArgs(@Nullable Input<BotGrammarSlotTypeSourceArgs> source) {
+    public BotGrammarSlotTypeSettingArgs(@Nullable Output<BotGrammarSlotTypeSourceArgs> source) {
         this.source = source;
     }
 
     private BotGrammarSlotTypeSettingArgs() {
-        this.source = Input.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<BotGrammarSlotTypeSourceArgs> source;
+        private @Nullable Output<BotGrammarSlotTypeSourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
     	      this.source = defaults.source;
         }
 
-        public Builder source(@Nullable Input<BotGrammarSlotTypeSourceArgs> source) {
+        public Builder source(@Nullable Output<BotGrammarSlotTypeSourceArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable BotGrammarSlotTypeSourceArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public BotGrammarSlotTypeSettingArgs build() {

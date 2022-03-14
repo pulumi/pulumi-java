@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
      * 
      */
     @InputImport(name="maxRetentionDays", required=true)
-      private final Input<Integer> maxRetentionDays;
+      private final Output<Integer> maxRetentionDays;
 
-    public Input<Integer> getMaxRetentionDays() {
+    public Output<Integer> getMaxRetentionDays() {
         return this.maxRetentionDays;
     }
 
@@ -34,22 +34,22 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
      * 
      */
     @InputImport(name="onSourceDiskDelete")
-      private final @Nullable Input<String> onSourceDiskDelete;
+      private final @Nullable Output<String> onSourceDiskDelete;
 
-    public Input<String> getOnSourceDiskDelete() {
-        return this.onSourceDiskDelete == null ? Input.empty() : this.onSourceDiskDelete;
+    public Output<String> getOnSourceDiskDelete() {
+        return this.onSourceDiskDelete == null ? Output.empty() : this.onSourceDiskDelete;
     }
 
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs(
-        Input<Integer> maxRetentionDays,
-        @Nullable Input<String> onSourceDiskDelete) {
+        Output<Integer> maxRetentionDays,
+        @Nullable Output<String> onSourceDiskDelete) {
         this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays, "expected parameter 'maxRetentionDays' to be non-null");
         this.onSourceDiskDelete = onSourceDiskDelete;
     }
 
     private ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs() {
-        this.maxRetentionDays = Input.empty();
-        this.onSourceDiskDelete = Input.empty();
+        this.maxRetentionDays = Output.empty();
+        this.onSourceDiskDelete = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
     }
 
     public static final class Builder {
-        private Input<Integer> maxRetentionDays;
-        private @Nullable Input<String> onSourceDiskDelete;
+        private Output<Integer> maxRetentionDays;
+        private @Nullable Output<String> onSourceDiskDelete;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
     	      this.onSourceDiskDelete = defaults.onSourceDiskDelete;
         }
 
-        public Builder maxRetentionDays(Input<Integer> maxRetentionDays) {
+        public Builder maxRetentionDays(Output<Integer> maxRetentionDays) {
             this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays);
             return this;
         }
 
         public Builder maxRetentionDays(Integer maxRetentionDays) {
-            this.maxRetentionDays = Input.of(Objects.requireNonNull(maxRetentionDays));
+            this.maxRetentionDays = Output.of(Objects.requireNonNull(maxRetentionDays));
             return this;
         }
 
-        public Builder onSourceDiskDelete(@Nullable Input<String> onSourceDiskDelete) {
+        public Builder onSourceDiskDelete(@Nullable Output<String> onSourceDiskDelete) {
             this.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
 
         public Builder onSourceDiskDelete(@Nullable String onSourceDiskDelete) {
-            this.onSourceDiskDelete = Input.ofNullable(onSourceDiskDelete);
+            this.onSourceDiskDelete = Output.ofNullable(onSourceDiskDelete);
             return this;
         }
         public ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs build() {

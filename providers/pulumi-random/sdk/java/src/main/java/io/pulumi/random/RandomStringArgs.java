@@ -3,7 +3,7 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="length", required=true)
-      private final Input<Integer> length;
+      private final Output<Integer> length;
 
-    public Input<Integer> getLength() {
+    public Output<Integer> getLength() {
         return this.length;
     }
 
@@ -45,10 +45,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lower")
-      private final @Nullable Input<Boolean> lower;
+      private final @Nullable Output<Boolean> lower;
 
-    public Input<Boolean> getLower() {
-        return this.lower == null ? Input.empty() : this.lower;
+    public Output<Boolean> getLower() {
+        return this.lower == null ? Output.empty() : this.lower;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minLower")
-      private final @Nullable Input<Integer> minLower;
+      private final @Nullable Output<Integer> minLower;
 
-    public Input<Integer> getMinLower() {
-        return this.minLower == null ? Input.empty() : this.minLower;
+    public Output<Integer> getMinLower() {
+        return this.minLower == null ? Output.empty() : this.minLower;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minNumeric")
-      private final @Nullable Input<Integer> minNumeric;
+      private final @Nullable Output<Integer> minNumeric;
 
-    public Input<Integer> getMinNumeric() {
-        return this.minNumeric == null ? Input.empty() : this.minNumeric;
+    public Output<Integer> getMinNumeric() {
+        return this.minNumeric == null ? Output.empty() : this.minNumeric;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minSpecial")
-      private final @Nullable Input<Integer> minSpecial;
+      private final @Nullable Output<Integer> minSpecial;
 
-    public Input<Integer> getMinSpecial() {
-        return this.minSpecial == null ? Input.empty() : this.minSpecial;
+    public Output<Integer> getMinSpecial() {
+        return this.minSpecial == null ? Output.empty() : this.minSpecial;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minUpper")
-      private final @Nullable Input<Integer> minUpper;
+      private final @Nullable Output<Integer> minUpper;
 
-    public Input<Integer> getMinUpper() {
-        return this.minUpper == null ? Input.empty() : this.minUpper;
+    public Output<Integer> getMinUpper() {
+        return this.minUpper == null ? Output.empty() : this.minUpper;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-      private final @Nullable Input<Boolean> number;
+      private final @Nullable Output<Boolean> number;
 
-    public Input<Boolean> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Boolean> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideSpecial")
-      private final @Nullable Input<String> overrideSpecial;
+      private final @Nullable Output<String> overrideSpecial;
 
-    public Input<String> getOverrideSpecial() {
-        return this.overrideSpecial == null ? Input.empty() : this.overrideSpecial;
+    public Output<String> getOverrideSpecial() {
+        return this.overrideSpecial == null ? Output.empty() : this.overrideSpecial;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="special")
-      private final @Nullable Input<Boolean> special;
+      private final @Nullable Output<Boolean> special;
 
-    public Input<Boolean> getSpecial() {
-        return this.special == null ? Input.empty() : this.special;
+    public Output<Boolean> getSpecial() {
+        return this.special == null ? Output.empty() : this.special;
     }
 
     /**
@@ -133,24 +133,24 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upper")
-      private final @Nullable Input<Boolean> upper;
+      private final @Nullable Output<Boolean> upper;
 
-    public Input<Boolean> getUpper() {
-        return this.upper == null ? Input.empty() : this.upper;
+    public Output<Boolean> getUpper() {
+        return this.upper == null ? Output.empty() : this.upper;
     }
 
     public RandomStringArgs(
-        @Nullable Input<Map<String,Object>> keepers,
-        Input<Integer> length,
-        @Nullable Input<Boolean> lower,
-        @Nullable Input<Integer> minLower,
-        @Nullable Input<Integer> minNumeric,
-        @Nullable Input<Integer> minSpecial,
-        @Nullable Input<Integer> minUpper,
-        @Nullable Input<Boolean> number,
-        @Nullable Input<String> overrideSpecial,
-        @Nullable Input<Boolean> special,
-        @Nullable Input<Boolean> upper) {
+        @Nullable Output<Map<String,Object>> keepers,
+        Output<Integer> length,
+        @Nullable Output<Boolean> lower,
+        @Nullable Output<Integer> minLower,
+        @Nullable Output<Integer> minNumeric,
+        @Nullable Output<Integer> minSpecial,
+        @Nullable Output<Integer> minUpper,
+        @Nullable Output<Boolean> number,
+        @Nullable Output<String> overrideSpecial,
+        @Nullable Output<Boolean> special,
+        @Nullable Output<Boolean> upper) {
         this.keepers = keepers;
         this.length = Objects.requireNonNull(length, "expected parameter 'length' to be non-null");
         this.lower = lower;
@@ -165,17 +165,17 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomStringArgs() {
-        this.keepers = Input.empty();
-        this.length = Input.empty();
-        this.lower = Input.empty();
-        this.minLower = Input.empty();
-        this.minNumeric = Input.empty();
-        this.minSpecial = Input.empty();
-        this.minUpper = Input.empty();
-        this.number = Input.empty();
-        this.overrideSpecial = Input.empty();
-        this.special = Input.empty();
-        this.upper = Input.empty();
+        this.keepers = Output.empty();
+        this.length = Output.empty();
+        this.lower = Output.empty();
+        this.minLower = Output.empty();
+        this.minNumeric = Output.empty();
+        this.minSpecial = Output.empty();
+        this.minUpper = Output.empty();
+        this.number = Output.empty();
+        this.overrideSpecial = Output.empty();
+        this.special = Output.empty();
+        this.upper = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> keepers;
-        private Input<Integer> length;
-        private @Nullable Input<Boolean> lower;
-        private @Nullable Input<Integer> minLower;
-        private @Nullable Input<Integer> minNumeric;
-        private @Nullable Input<Integer> minSpecial;
-        private @Nullable Input<Integer> minUpper;
-        private @Nullable Input<Boolean> number;
-        private @Nullable Input<String> overrideSpecial;
-        private @Nullable Input<Boolean> special;
-        private @Nullable Input<Boolean> upper;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private Output<Integer> length;
+        private @Nullable Output<Boolean> lower;
+        private @Nullable Output<Integer> minLower;
+        private @Nullable Output<Integer> minNumeric;
+        private @Nullable Output<Integer> minSpecial;
+        private @Nullable Output<Integer> minUpper;
+        private @Nullable Output<Boolean> number;
+        private @Nullable Output<String> overrideSpecial;
+        private @Nullable Output<Boolean> special;
+        private @Nullable Output<Boolean> upper;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upper = defaults.upper;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder length(Input<Integer> length) {
+        public Builder length(Output<Integer> length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
 
         public Builder length(Integer length) {
-            this.length = Input.of(Objects.requireNonNull(length));
+            this.length = Output.of(Objects.requireNonNull(length));
             return this;
         }
 
-        public Builder lower(@Nullable Input<Boolean> lower) {
+        public Builder lower(@Nullable Output<Boolean> lower) {
             this.lower = lower;
             return this;
         }
 
         public Builder lower(@Nullable Boolean lower) {
-            this.lower = Input.ofNullable(lower);
+            this.lower = Output.ofNullable(lower);
             return this;
         }
 
-        public Builder minLower(@Nullable Input<Integer> minLower) {
+        public Builder minLower(@Nullable Output<Integer> minLower) {
             this.minLower = minLower;
             return this;
         }
 
         public Builder minLower(@Nullable Integer minLower) {
-            this.minLower = Input.ofNullable(minLower);
+            this.minLower = Output.ofNullable(minLower);
             return this;
         }
 
-        public Builder minNumeric(@Nullable Input<Integer> minNumeric) {
+        public Builder minNumeric(@Nullable Output<Integer> minNumeric) {
             this.minNumeric = minNumeric;
             return this;
         }
 
         public Builder minNumeric(@Nullable Integer minNumeric) {
-            this.minNumeric = Input.ofNullable(minNumeric);
+            this.minNumeric = Output.ofNullable(minNumeric);
             return this;
         }
 
-        public Builder minSpecial(@Nullable Input<Integer> minSpecial) {
+        public Builder minSpecial(@Nullable Output<Integer> minSpecial) {
             this.minSpecial = minSpecial;
             return this;
         }
 
         public Builder minSpecial(@Nullable Integer minSpecial) {
-            this.minSpecial = Input.ofNullable(minSpecial);
+            this.minSpecial = Output.ofNullable(minSpecial);
             return this;
         }
 
-        public Builder minUpper(@Nullable Input<Integer> minUpper) {
+        public Builder minUpper(@Nullable Output<Integer> minUpper) {
             this.minUpper = minUpper;
             return this;
         }
 
         public Builder minUpper(@Nullable Integer minUpper) {
-            this.minUpper = Input.ofNullable(minUpper);
+            this.minUpper = Output.ofNullable(minUpper);
             return this;
         }
 
-        public Builder number(@Nullable Input<Boolean> number) {
+        public Builder number(@Nullable Output<Boolean> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Boolean number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
 
-        public Builder overrideSpecial(@Nullable Input<String> overrideSpecial) {
+        public Builder overrideSpecial(@Nullable Output<String> overrideSpecial) {
             this.overrideSpecial = overrideSpecial;
             return this;
         }
 
         public Builder overrideSpecial(@Nullable String overrideSpecial) {
-            this.overrideSpecial = Input.ofNullable(overrideSpecial);
+            this.overrideSpecial = Output.ofNullable(overrideSpecial);
             return this;
         }
 
-        public Builder special(@Nullable Input<Boolean> special) {
+        public Builder special(@Nullable Output<Boolean> special) {
             this.special = special;
             return this;
         }
 
         public Builder special(@Nullable Boolean special) {
-            this.special = Input.ofNullable(special);
+            this.special = Output.ofNullable(special);
             return this;
         }
 
-        public Builder upper(@Nullable Input<Boolean> upper) {
+        public Builder upper(@Nullable Output<Boolean> upper) {
             this.upper = upper;
             return this;
         }
 
         public Builder upper(@Nullable Boolean upper) {
-            this.upper = Input.ofNullable(upper);
+            this.upper = Output.ofNullable(upper);
             return this;
         }
         public RandomStringArgs build() {

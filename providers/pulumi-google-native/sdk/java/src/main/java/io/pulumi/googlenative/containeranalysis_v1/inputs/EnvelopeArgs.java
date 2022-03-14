@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeSignatureArgs;
 import java.lang.String;
@@ -21,39 +21,39 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
     public static final EnvelopeArgs Empty = new EnvelopeArgs();
 
     @InputImport(name="payload")
-      private final @Nullable Input<String> payload;
+      private final @Nullable Output<String> payload;
 
-    public Input<String> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<String> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     @InputImport(name="payloadType")
-      private final @Nullable Input<String> payloadType;
+      private final @Nullable Output<String> payloadType;
 
-    public Input<String> getPayloadType() {
-        return this.payloadType == null ? Input.empty() : this.payloadType;
+    public Output<String> getPayloadType() {
+        return this.payloadType == null ? Output.empty() : this.payloadType;
     }
 
     @InputImport(name="signatures")
-      private final @Nullable Input<List<EnvelopeSignatureArgs>> signatures;
+      private final @Nullable Output<List<EnvelopeSignatureArgs>> signatures;
 
-    public Input<List<EnvelopeSignatureArgs>> getSignatures() {
-        return this.signatures == null ? Input.empty() : this.signatures;
+    public Output<List<EnvelopeSignatureArgs>> getSignatures() {
+        return this.signatures == null ? Output.empty() : this.signatures;
     }
 
     public EnvelopeArgs(
-        @Nullable Input<String> payload,
-        @Nullable Input<String> payloadType,
-        @Nullable Input<List<EnvelopeSignatureArgs>> signatures) {
+        @Nullable Output<String> payload,
+        @Nullable Output<String> payloadType,
+        @Nullable Output<List<EnvelopeSignatureArgs>> signatures) {
         this.payload = payload;
         this.payloadType = payloadType;
         this.signatures = signatures;
     }
 
     private EnvelopeArgs() {
-        this.payload = Input.empty();
-        this.payloadType = Input.empty();
-        this.signatures = Input.empty();
+        this.payload = Output.empty();
+        this.payloadType = Output.empty();
+        this.signatures = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> payload;
-        private @Nullable Input<String> payloadType;
-        private @Nullable Input<List<EnvelopeSignatureArgs>> signatures;
+        private @Nullable Output<String> payload;
+        private @Nullable Output<String> payloadType;
+        private @Nullable Output<List<EnvelopeSignatureArgs>> signatures;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder payload(@Nullable Input<String> payload) {
+        public Builder payload(@Nullable Output<String> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable String payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder payloadType(@Nullable Input<String> payloadType) {
+        public Builder payloadType(@Nullable Output<String> payloadType) {
             this.payloadType = payloadType;
             return this;
         }
 
         public Builder payloadType(@Nullable String payloadType) {
-            this.payloadType = Input.ofNullable(payloadType);
+            this.payloadType = Output.ofNullable(payloadType);
             return this;
         }
 
-        public Builder signatures(@Nullable Input<List<EnvelopeSignatureArgs>> signatures) {
+        public Builder signatures(@Nullable Output<List<EnvelopeSignatureArgs>> signatures) {
             this.signatures = signatures;
             return this;
         }
 
         public Builder signatures(@Nullable List<EnvelopeSignatureArgs> signatures) {
-            this.signatures = Input.ofNullable(signatures);
+            this.signatures = Output.ofNullable(signatures);
             return this;
         }
         public EnvelopeArgs build() {

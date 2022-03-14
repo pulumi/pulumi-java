@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs exte
      * 
      */
     @InputImport(name="cases")
-      private final @Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases;
+      private final @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases;
 
-    public Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> getCases() {
-        return this.cases == null ? Input.empty() : this.cases;
+    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> getCases() {
+        return this.cases == null ? Output.empty() : this.cases;
     }
 
-    public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases) {
+    public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases) {
         this.cases = cases;
     }
 
     private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs() {
-        this.cases = Input.empty();
+        this.cases = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases;
+        private @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs exte
     	      this.cases = defaults.cases;
         }
 
-        public Builder cases(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases) {
+        public Builder cases(@Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases) {
             this.cases = cases;
             return this;
         }
 
         public Builder cases(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs> cases) {
-            this.cases = Input.ofNullable(cases);
+            this.cases = Output.ofNullable(cases);
             return this;
         }
         public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs build() {

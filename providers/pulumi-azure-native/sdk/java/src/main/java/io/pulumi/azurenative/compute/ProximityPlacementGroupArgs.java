@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.enums.ProximityPlacementGroupType;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="colocationStatus")
-      private final @Nullable Input<InstanceViewStatusArgs> colocationStatus;
+      private final @Nullable Output<InstanceViewStatusArgs> colocationStatus;
 
-    public Input<InstanceViewStatusArgs> getColocationStatus() {
-        return this.colocationStatus == null ? Input.empty() : this.colocationStatus;
+    public Output<InstanceViewStatusArgs> getColocationStatus() {
+        return this.colocationStatus == null ? Output.empty() : this.colocationStatus;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="proximityPlacementGroupName")
-      private final @Nullable Input<String> proximityPlacementGroupName;
+      private final @Nullable Output<String> proximityPlacementGroupName;
 
-    public Input<String> getProximityPlacementGroupName() {
-        return this.proximityPlacementGroupName == null ? Input.empty() : this.proximityPlacementGroupName;
+    public Output<String> getProximityPlacementGroupName() {
+        return this.proximityPlacementGroupName == null ? Output.empty() : this.proximityPlacementGroupName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="proximityPlacementGroupType")
-      private final @Nullable Input<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
+      private final @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
 
-    public Input<Either<String,ProximityPlacementGroupType>> getProximityPlacementGroupType() {
-        return this.proximityPlacementGroupType == null ? Input.empty() : this.proximityPlacementGroupType;
+    public Output<Either<String,ProximityPlacementGroupType>> getProximityPlacementGroupType() {
+        return this.proximityPlacementGroupType == null ? Output.empty() : this.proximityPlacementGroupType;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,19 +78,19 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProximityPlacementGroupArgs(
-        @Nullable Input<InstanceViewStatusArgs> colocationStatus,
-        @Nullable Input<String> location,
-        @Nullable Input<String> proximityPlacementGroupName,
-        @Nullable Input<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<InstanceViewStatusArgs> colocationStatus,
+        @Nullable Output<String> location,
+        @Nullable Output<String> proximityPlacementGroupName,
+        @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.colocationStatus = colocationStatus;
         this.location = location;
         this.proximityPlacementGroupName = proximityPlacementGroupName;
@@ -100,12 +100,12 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
     }
 
     private ProximityPlacementGroupArgs() {
-        this.colocationStatus = Input.empty();
-        this.location = Input.empty();
-        this.proximityPlacementGroupName = Input.empty();
-        this.proximityPlacementGroupType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.colocationStatus = Output.empty();
+        this.location = Output.empty();
+        this.proximityPlacementGroupName = Output.empty();
+        this.proximityPlacementGroupType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceViewStatusArgs> colocationStatus;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> proximityPlacementGroupName;
-        private @Nullable Input<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<InstanceViewStatusArgs> colocationStatus;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> proximityPlacementGroupName;
+        private @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder colocationStatus(@Nullable Input<InstanceViewStatusArgs> colocationStatus) {
+        public Builder colocationStatus(@Nullable Output<InstanceViewStatusArgs> colocationStatus) {
             this.colocationStatus = colocationStatus;
             return this;
         }
 
         public Builder colocationStatus(@Nullable InstanceViewStatusArgs colocationStatus) {
-            this.colocationStatus = Input.ofNullable(colocationStatus);
+            this.colocationStatus = Output.ofNullable(colocationStatus);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder proximityPlacementGroupName(@Nullable Input<String> proximityPlacementGroupName) {
+        public Builder proximityPlacementGroupName(@Nullable Output<String> proximityPlacementGroupName) {
             this.proximityPlacementGroupName = proximityPlacementGroupName;
             return this;
         }
 
         public Builder proximityPlacementGroupName(@Nullable String proximityPlacementGroupName) {
-            this.proximityPlacementGroupName = Input.ofNullable(proximityPlacementGroupName);
+            this.proximityPlacementGroupName = Output.ofNullable(proximityPlacementGroupName);
             return this;
         }
 
-        public Builder proximityPlacementGroupType(@Nullable Input<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType) {
+        public Builder proximityPlacementGroupType(@Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType) {
             this.proximityPlacementGroupType = proximityPlacementGroupType;
             return this;
         }
 
         public Builder proximityPlacementGroupType(@Nullable Either<String,ProximityPlacementGroupType> proximityPlacementGroupType) {
-            this.proximityPlacementGroupType = Input.ofNullable(proximityPlacementGroupType);
+            this.proximityPlacementGroupType = Output.ofNullable(proximityPlacementGroupType);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProximityPlacementGroupArgs build() {

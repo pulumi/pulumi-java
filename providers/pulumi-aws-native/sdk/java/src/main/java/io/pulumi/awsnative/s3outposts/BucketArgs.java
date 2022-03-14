@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts;
 
 import io.pulumi.awsnative.s3outposts.inputs.BucketLifecycleConfigurationArgs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName")
-      private final @Nullable Input<String> bucketName;
+      private final @Nullable Output<String> bucketName;
 
-    public Input<String> getBucketName() {
-        return this.bucketName == null ? Input.empty() : this.bucketName;
+    public Output<String> getBucketName() {
+        return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleConfiguration")
-      private final @Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
+      private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
-    public Input<BucketLifecycleConfigurationArgs> getLifecycleConfiguration() {
-        return this.lifecycleConfiguration == null ? Input.empty() : this.lifecycleConfiguration;
+    public Output<BucketLifecycleConfigurationArgs> getLifecycleConfiguration() {
+        return this.lifecycleConfiguration == null ? Output.empty() : this.lifecycleConfiguration;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId", required=true)
-      private final Input<String> outpostId;
+      private final Output<String> outpostId;
 
-    public Input<String> getOutpostId() {
+    public Output<String> getOutpostId() {
         return this.outpostId;
     }
 
@@ -55,17 +55,17 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<BucketTagArgs>> tags;
+      private final @Nullable Output<List<BucketTagArgs>> tags;
 
-    public Input<List<BucketTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<BucketTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public BucketArgs(
-        @Nullable Input<String> bucketName,
-        @Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration,
-        Input<String> outpostId,
-        @Nullable Input<List<BucketTagArgs>> tags) {
+        @Nullable Output<String> bucketName,
+        @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration,
+        Output<String> outpostId,
+        @Nullable Output<List<BucketTagArgs>> tags) {
         this.bucketName = bucketName;
         this.lifecycleConfiguration = lifecycleConfiguration;
         this.outpostId = Objects.requireNonNull(outpostId, "expected parameter 'outpostId' to be non-null");
@@ -73,10 +73,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketArgs() {
-        this.bucketName = Input.empty();
-        this.lifecycleConfiguration = Input.empty();
-        this.outpostId = Input.empty();
-        this.tags = Input.empty();
+        this.bucketName = Output.empty();
+        this.lifecycleConfiguration = Output.empty();
+        this.outpostId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketName;
-        private @Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
-        private Input<String> outpostId;
-        private @Nullable Input<List<BucketTagArgs>> tags;
+        private @Nullable Output<String> bucketName;
+        private @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
+        private Output<String> outpostId;
+        private @Nullable Output<List<BucketTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder bucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Input.ofNullable(bucketName);
+            this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
 
-        public Builder lifecycleConfiguration(@Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
+        public Builder lifecycleConfiguration(@Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
             this.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
 
         public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
-            this.lifecycleConfiguration = Input.ofNullable(lifecycleConfiguration);
+            this.lifecycleConfiguration = Output.ofNullable(lifecycleConfiguration);
             return this;
         }
 
-        public Builder outpostId(Input<String> outpostId) {
+        public Builder outpostId(Output<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
         public Builder outpostId(String outpostId) {
-            this.outpostId = Input.of(Objects.requireNonNull(outpostId));
+            this.outpostId = Output.of(Objects.requireNonNull(outpostId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<BucketTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<BucketTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public BucketArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.DNSConfigClusterDns;
 import io.pulumi.googlenative.container_v1beta1.enums.DNSConfigClusterDnsScope;
@@ -25,10 +25,10 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterDns")
-      private final @Nullable Input<DNSConfigClusterDns> clusterDns;
+      private final @Nullable Output<DNSConfigClusterDns> clusterDns;
 
-    public Input<DNSConfigClusterDns> getClusterDns() {
-        return this.clusterDns == null ? Input.empty() : this.clusterDns;
+    public Output<DNSConfigClusterDns> getClusterDns() {
+        return this.clusterDns == null ? Output.empty() : this.clusterDns;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterDnsDomain")
-      private final @Nullable Input<String> clusterDnsDomain;
+      private final @Nullable Output<String> clusterDnsDomain;
 
-    public Input<String> getClusterDnsDomain() {
-        return this.clusterDnsDomain == null ? Input.empty() : this.clusterDnsDomain;
+    public Output<String> getClusterDnsDomain() {
+        return this.clusterDnsDomain == null ? Output.empty() : this.clusterDnsDomain;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterDnsScope")
-      private final @Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope;
+      private final @Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope;
 
-    public Input<DNSConfigClusterDnsScope> getClusterDnsScope() {
-        return this.clusterDnsScope == null ? Input.empty() : this.clusterDnsScope;
+    public Output<DNSConfigClusterDnsScope> getClusterDnsScope() {
+        return this.clusterDnsScope == null ? Output.empty() : this.clusterDnsScope;
     }
 
     public DNSConfigArgs(
-        @Nullable Input<DNSConfigClusterDns> clusterDns,
-        @Nullable Input<String> clusterDnsDomain,
-        @Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope) {
+        @Nullable Output<DNSConfigClusterDns> clusterDns,
+        @Nullable Output<String> clusterDnsDomain,
+        @Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope) {
         this.clusterDns = clusterDns;
         this.clusterDnsDomain = clusterDnsDomain;
         this.clusterDnsScope = clusterDnsScope;
     }
 
     private DNSConfigArgs() {
-        this.clusterDns = Input.empty();
-        this.clusterDnsDomain = Input.empty();
-        this.clusterDnsScope = Input.empty();
+        this.clusterDns = Output.empty();
+        this.clusterDnsDomain = Output.empty();
+        this.clusterDnsScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DNSConfigClusterDns> clusterDns;
-        private @Nullable Input<String> clusterDnsDomain;
-        private @Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope;
+        private @Nullable Output<DNSConfigClusterDns> clusterDns;
+        private @Nullable Output<String> clusterDnsDomain;
+        private @Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterDnsScope = defaults.clusterDnsScope;
         }
 
-        public Builder clusterDns(@Nullable Input<DNSConfigClusterDns> clusterDns) {
+        public Builder clusterDns(@Nullable Output<DNSConfigClusterDns> clusterDns) {
             this.clusterDns = clusterDns;
             return this;
         }
 
         public Builder clusterDns(@Nullable DNSConfigClusterDns clusterDns) {
-            this.clusterDns = Input.ofNullable(clusterDns);
+            this.clusterDns = Output.ofNullable(clusterDns);
             return this;
         }
 
-        public Builder clusterDnsDomain(@Nullable Input<String> clusterDnsDomain) {
+        public Builder clusterDnsDomain(@Nullable Output<String> clusterDnsDomain) {
             this.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
 
         public Builder clusterDnsDomain(@Nullable String clusterDnsDomain) {
-            this.clusterDnsDomain = Input.ofNullable(clusterDnsDomain);
+            this.clusterDnsDomain = Output.ofNullable(clusterDnsDomain);
             return this;
         }
 
-        public Builder clusterDnsScope(@Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope) {
+        public Builder clusterDnsScope(@Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope) {
             this.clusterDnsScope = clusterDnsScope;
             return this;
         }
 
         public Builder clusterDnsScope(@Nullable DNSConfigClusterDnsScope clusterDnsScope) {
-            this.clusterDnsScope = Input.ofNullable(clusterDnsScope);
+            this.clusterDnsScope = Output.ofNullable(clusterDnsScope);
             return this;
         }
         public DNSConfigArgs build() {

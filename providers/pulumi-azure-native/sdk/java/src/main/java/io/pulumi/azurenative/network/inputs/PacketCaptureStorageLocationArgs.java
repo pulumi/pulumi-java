@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="filePath")
-      private final @Nullable Input<String> filePath;
+      private final @Nullable Output<String> filePath;
 
-    public Input<String> getFilePath() {
-        return this.filePath == null ? Input.empty() : this.filePath;
+    public Output<String> getFilePath() {
+        return this.filePath == null ? Output.empty() : this.filePath;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageId")
-      private final @Nullable Input<String> storageId;
+      private final @Nullable Output<String> storageId;
 
-    public Input<String> getStorageId() {
-        return this.storageId == null ? Input.empty() : this.storageId;
+    public Output<String> getStorageId() {
+        return this.storageId == null ? Output.empty() : this.storageId;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storagePath")
-      private final @Nullable Input<String> storagePath;
+      private final @Nullable Output<String> storagePath;
 
-    public Input<String> getStoragePath() {
-        return this.storagePath == null ? Input.empty() : this.storagePath;
+    public Output<String> getStoragePath() {
+        return this.storagePath == null ? Output.empty() : this.storagePath;
     }
 
     public PacketCaptureStorageLocationArgs(
-        @Nullable Input<String> filePath,
-        @Nullable Input<String> storageId,
-        @Nullable Input<String> storagePath) {
+        @Nullable Output<String> filePath,
+        @Nullable Output<String> storageId,
+        @Nullable Output<String> storagePath) {
         this.filePath = filePath;
         this.storageId = storageId;
         this.storagePath = storagePath;
     }
 
     private PacketCaptureStorageLocationArgs() {
-        this.filePath = Input.empty();
-        this.storageId = Input.empty();
-        this.storagePath = Input.empty();
+        this.filePath = Output.empty();
+        this.storageId = Output.empty();
+        this.storagePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filePath;
-        private @Nullable Input<String> storageId;
-        private @Nullable Input<String> storagePath;
+        private @Nullable Output<String> filePath;
+        private @Nullable Output<String> storageId;
+        private @Nullable Output<String> storagePath;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
     	      this.storagePath = defaults.storagePath;
         }
 
-        public Builder filePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Input.ofNullable(filePath);
+            this.filePath = Output.ofNullable(filePath);
             return this;
         }
 
-        public Builder storageId(@Nullable Input<String> storageId) {
+        public Builder storageId(@Nullable Output<String> storageId) {
             this.storageId = storageId;
             return this;
         }
 
         public Builder storageId(@Nullable String storageId) {
-            this.storageId = Input.ofNullable(storageId);
+            this.storageId = Output.ofNullable(storageId);
             return this;
         }
 
-        public Builder storagePath(@Nullable Input<String> storagePath) {
+        public Builder storagePath(@Nullable Output<String> storagePath) {
             this.storagePath = storagePath;
             return this;
         }
 
         public Builder storagePath(@Nullable String storagePath) {
-            this.storagePath = Input.ofNullable(storagePath);
+            this.storagePath = Output.ofNullable(storagePath);
             return this;
         }
         public PacketCaptureStorageLocationArgs build() {

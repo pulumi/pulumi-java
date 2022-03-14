@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="assignedTo")
-      private final @Nullable Input<String> assignedTo;
+      private final @Nullable Output<String> assignedTo;
 
-    public Input<String> getAssignedTo() {
-        return this.assignedTo == null ? Input.empty() : this.assignedTo;
+    public Output<String> getAssignedTo() {
+        return this.assignedTo == null ? Output.empty() : this.assignedTo;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userPrincipalName")
-      private final @Nullable Input<String> userPrincipalName;
+      private final @Nullable Output<String> userPrincipalName;
 
-    public Input<String> getUserPrincipalName() {
-        return this.userPrincipalName == null ? Input.empty() : this.userPrincipalName;
+    public Output<String> getUserPrincipalName() {
+        return this.userPrincipalName == null ? Output.empty() : this.userPrincipalName;
     }
 
     public IncidentOwnerInfoArgs(
-        @Nullable Input<String> assignedTo,
-        @Nullable Input<String> email,
-        @Nullable Input<String> objectId,
-        @Nullable Input<String> userPrincipalName) {
+        @Nullable Output<String> assignedTo,
+        @Nullable Output<String> email,
+        @Nullable Output<String> objectId,
+        @Nullable Output<String> userPrincipalName) {
         this.assignedTo = assignedTo;
         this.email = email;
         this.objectId = objectId;
@@ -74,10 +74,10 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IncidentOwnerInfoArgs() {
-        this.assignedTo = Input.empty();
-        this.email = Input.empty();
-        this.objectId = Input.empty();
-        this.userPrincipalName = Input.empty();
+        this.assignedTo = Output.empty();
+        this.email = Output.empty();
+        this.objectId = Output.empty();
+        this.userPrincipalName = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assignedTo;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> objectId;
-        private @Nullable Input<String> userPrincipalName;
+        private @Nullable Output<String> assignedTo;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> objectId;
+        private @Nullable Output<String> userPrincipalName;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.userPrincipalName = defaults.userPrincipalName;
         }
 
-        public Builder assignedTo(@Nullable Input<String> assignedTo) {
+        public Builder assignedTo(@Nullable Output<String> assignedTo) {
             this.assignedTo = assignedTo;
             return this;
         }
 
         public Builder assignedTo(@Nullable String assignedTo) {
-            this.assignedTo = Input.ofNullable(assignedTo);
+            this.assignedTo = Output.ofNullable(assignedTo);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
 
-        public Builder userPrincipalName(@Nullable Input<String> userPrincipalName) {
+        public Builder userPrincipalName(@Nullable Output<String> userPrincipalName) {
             this.userPrincipalName = userPrincipalName;
             return this;
         }
 
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            this.userPrincipalName = Input.ofNullable(userPrincipalName);
+            this.userPrincipalName = Output.ofNullable(userPrincipalName);
             return this;
         }
         public IncidentOwnerInfoArgs build() {

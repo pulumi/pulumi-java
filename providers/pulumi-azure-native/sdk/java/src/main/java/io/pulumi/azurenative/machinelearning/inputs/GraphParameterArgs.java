@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.enums.ParameterType;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterLinkArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="links", required=true)
-      private final Input<List<GraphParameterLinkArgs>> links;
+      private final Output<List<GraphParameterLinkArgs>> links;
 
-    public Input<List<GraphParameterLinkArgs>> getLinks() {
+    public Output<List<GraphParameterLinkArgs>> getLinks() {
         return this.links;
     }
 
@@ -49,25 +49,25 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ParameterType>> type;
+      private final Output<Either<String,ParameterType>> type;
 
-    public Input<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> getType() {
         return this.type;
     }
 
     public GraphParameterArgs(
-        @Nullable Input<String> description,
-        Input<List<GraphParameterLinkArgs>> links,
-        Input<Either<String,ParameterType>> type) {
+        @Nullable Output<String> description,
+        Output<List<GraphParameterLinkArgs>> links,
+        Output<Either<String,ParameterType>> type) {
         this.description = description;
         this.links = Objects.requireNonNull(links, "expected parameter 'links' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private GraphParameterArgs() {
-        this.description = Input.empty();
-        this.links = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.links = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<GraphParameterLinkArgs>> links;
-        private Input<Either<String,ParameterType>> type;
+        private @Nullable Output<String> description;
+        private Output<List<GraphParameterLinkArgs>> links;
+        private Output<Either<String,ParameterType>> type;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder links(Input<List<GraphParameterLinkArgs>> links) {
+        public Builder links(Output<List<GraphParameterLinkArgs>> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
         public Builder links(List<GraphParameterLinkArgs> links) {
-            this.links = Input.of(Objects.requireNonNull(links));
+            this.links = Output.of(Objects.requireNonNull(links));
             return this;
         }
 
-        public Builder type(Input<Either<String,ParameterType>> type) {
+        public Builder type(Output<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ParameterType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public GraphParameterArgs build() {

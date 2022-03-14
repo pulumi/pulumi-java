@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ttl", required=true)
-      private final Input<String> ttl;
+      private final Output<String> ttl;
 
-    public Input<String> getTtl() {
+    public Output<String> getTtl() {
         return this.ttl;
     }
 
-    public SubscriptionExpirationPolicyGetArgs(Input<String> ttl) {
+    public SubscriptionExpirationPolicyGetArgs(Output<String> ttl) {
         this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
     }
 
     private SubscriptionExpirationPolicyGetArgs() {
-        this.ttl = Input.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> ttl;
+        private Output<String> ttl;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder ttl(Input<String> ttl) {
+        public Builder ttl(Output<String> ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
         public Builder ttl(String ttl) {
-            this.ttl = Input.of(Objects.requireNonNull(ttl));
+            this.ttl = Output.of(Objects.requireNonNull(ttl));
             return this;
         }
         public SubscriptionExpirationPolicyGetArgs build() {

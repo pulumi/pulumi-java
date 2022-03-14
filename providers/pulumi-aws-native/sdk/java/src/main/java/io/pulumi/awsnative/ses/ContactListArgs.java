@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ses;
 
 import io.pulumi.awsnative.ses.inputs.ContactListTagArgs;
 import io.pulumi.awsnative.ses.inputs.ContactListTopicArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactListName")
-      private final @Nullable Input<String> contactListName;
+      private final @Nullable Output<String> contactListName;
 
-    public Input<String> getContactListName() {
-        return this.contactListName == null ? Input.empty() : this.contactListName;
+    public Output<String> getContactListName() {
+        return this.contactListName == null ? Output.empty() : this.contactListName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ContactListTagArgs>> tags;
+      private final @Nullable Output<List<ContactListTagArgs>> tags;
 
-    public Input<List<ContactListTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ContactListTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topics")
-      private final @Nullable Input<List<ContactListTopicArgs>> topics;
+      private final @Nullable Output<List<ContactListTopicArgs>> topics;
 
-    public Input<List<ContactListTopicArgs>> getTopics() {
-        return this.topics == null ? Input.empty() : this.topics;
+    public Output<List<ContactListTopicArgs>> getTopics() {
+        return this.topics == null ? Output.empty() : this.topics;
     }
 
     public ContactListArgs(
-        @Nullable Input<String> contactListName,
-        @Nullable Input<String> description,
-        @Nullable Input<List<ContactListTagArgs>> tags,
-        @Nullable Input<List<ContactListTopicArgs>> topics) {
+        @Nullable Output<String> contactListName,
+        @Nullable Output<String> description,
+        @Nullable Output<List<ContactListTagArgs>> tags,
+        @Nullable Output<List<ContactListTopicArgs>> topics) {
         this.contactListName = contactListName;
         this.description = description;
         this.tags = tags;
@@ -73,10 +73,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactListArgs() {
-        this.contactListName = Input.empty();
-        this.description = Input.empty();
-        this.tags = Input.empty();
-        this.topics = Input.empty();
+        this.contactListName = Output.empty();
+        this.description = Output.empty();
+        this.tags = Output.empty();
+        this.topics = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contactListName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<ContactListTagArgs>> tags;
-        private @Nullable Input<List<ContactListTopicArgs>> topics;
+        private @Nullable Output<String> contactListName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<ContactListTagArgs>> tags;
+        private @Nullable Output<List<ContactListTopicArgs>> topics;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topics = defaults.topics;
         }
 
-        public Builder contactListName(@Nullable Input<String> contactListName) {
+        public Builder contactListName(@Nullable Output<String> contactListName) {
             this.contactListName = contactListName;
             return this;
         }
 
         public Builder contactListName(@Nullable String contactListName) {
-            this.contactListName = Input.ofNullable(contactListName);
+            this.contactListName = Output.ofNullable(contactListName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ContactListTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ContactListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ContactListTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder topics(@Nullable Input<List<ContactListTopicArgs>> topics) {
+        public Builder topics(@Nullable Output<List<ContactListTopicArgs>> topics) {
             this.topics = topics;
             return this;
         }
 
         public Builder topics(@Nullable List<ContactListTopicArgs> topics) {
-            this.topics = Input.ofNullable(topics);
+            this.topics = Output.ofNullable(topics);
             return this;
         }
         public ContactListArgs build() {

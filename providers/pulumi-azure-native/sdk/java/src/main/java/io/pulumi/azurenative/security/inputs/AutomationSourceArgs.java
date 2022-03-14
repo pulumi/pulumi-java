@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.EventSource;
 import io.pulumi.azurenative.security.inputs.AutomationRuleSetArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventSource")
-      private final @Nullable Input<Either<String,EventSource>> eventSource;
+      private final @Nullable Output<Either<String,EventSource>> eventSource;
 
-    public Input<Either<String,EventSource>> getEventSource() {
-        return this.eventSource == null ? Input.empty() : this.eventSource;
+    public Output<Either<String,EventSource>> getEventSource() {
+        return this.eventSource == null ? Output.empty() : this.eventSource;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ruleSets")
-      private final @Nullable Input<List<AutomationRuleSetArgs>> ruleSets;
+      private final @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
 
-    public Input<List<AutomationRuleSetArgs>> getRuleSets() {
-        return this.ruleSets == null ? Input.empty() : this.ruleSets;
+    public Output<List<AutomationRuleSetArgs>> getRuleSets() {
+        return this.ruleSets == null ? Output.empty() : this.ruleSets;
     }
 
     public AutomationSourceArgs(
-        @Nullable Input<Either<String,EventSource>> eventSource,
-        @Nullable Input<List<AutomationRuleSetArgs>> ruleSets) {
+        @Nullable Output<Either<String,EventSource>> eventSource,
+        @Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
         this.eventSource = eventSource;
         this.ruleSets = ruleSets;
     }
 
     private AutomationSourceArgs() {
-        this.eventSource = Input.empty();
-        this.ruleSets = Input.empty();
+        this.eventSource = Output.empty();
+        this.ruleSets = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EventSource>> eventSource;
-        private @Nullable Input<List<AutomationRuleSetArgs>> ruleSets;
+        private @Nullable Output<Either<String,EventSource>> eventSource;
+        private @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.ruleSets = defaults.ruleSets;
         }
 
-        public Builder eventSource(@Nullable Input<Either<String,EventSource>> eventSource) {
+        public Builder eventSource(@Nullable Output<Either<String,EventSource>> eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
         public Builder eventSource(@Nullable Either<String,EventSource> eventSource) {
-            this.eventSource = Input.ofNullable(eventSource);
+            this.eventSource = Output.ofNullable(eventSource);
             return this;
         }
 
-        public Builder ruleSets(@Nullable Input<List<AutomationRuleSetArgs>> ruleSets) {
+        public Builder ruleSets(@Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
 
         public Builder ruleSets(@Nullable List<AutomationRuleSetArgs> ruleSets) {
-            this.ruleSets = Input.ofNullable(ruleSets);
+            this.ruleSets = Output.ofNullable(ruleSets);
             return this;
         }
         public AutomationSourceArgs build() {

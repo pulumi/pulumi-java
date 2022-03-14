@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="server")
-      private final @Nullable Input<String> server;
+      private final @Nullable Output<String> server;
 
-    public Input<String> getServer() {
-        return this.server == null ? Input.empty() : this.server;
+    public Output<String> getServer() {
+        return this.server == null ? Output.empty() : this.server;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<String> table;
+      private final @Nullable Output<String> table;
 
-    public Input<String> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<String> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -79,19 +79,19 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public AzureSqlDatabaseOutputDataSourceArgs(
-        @Nullable Input<String> database,
-        @Nullable Input<String> password,
-        @Nullable Input<String> server,
-        @Nullable Input<String> table,
-        Input<String> type,
-        @Nullable Input<String> user) {
+        @Nullable Output<String> database,
+        @Nullable Output<String> password,
+        @Nullable Output<String> server,
+        @Nullable Output<String> table,
+        Output<String> type,
+        @Nullable Output<String> user) {
         this.database = database;
         this.password = password;
         this.server = server;
@@ -101,12 +101,12 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     }
 
     private AzureSqlDatabaseOutputDataSourceArgs() {
-        this.database = Input.empty();
-        this.password = Input.empty();
-        this.server = Input.empty();
-        this.table = Input.empty();
-        this.type = Input.empty();
-        this.user = Input.empty();
+        this.database = Output.empty();
+        this.password = Output.empty();
+        this.server = Output.empty();
+        this.table = Output.empty();
+        this.type = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> database;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> server;
-        private @Nullable Input<String> table;
-        private Input<String> type;
-        private @Nullable Input<String> user;
+        private @Nullable Output<String> database;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> server;
+        private @Nullable Output<String> table;
+        private Output<String> type;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     	      this.user = defaults.user;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder server(@Nullable Input<String> server) {
+        public Builder server(@Nullable Output<String> server) {
             this.server = server;
             return this;
         }
 
         public Builder server(@Nullable String server) {
-            this.server = Input.ofNullable(server);
+            this.server = Output.ofNullable(server);
             return this;
         }
 
-        public Builder table(@Nullable Input<String> table) {
+        public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable String table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public AzureSqlDatabaseOutputDataSourceArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.devtestlab.inputs.EnvironmentDeploymentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="armTemplateDisplayName")
-      private final @Nullable Input<String> armTemplateDisplayName;
+      private final @Nullable Output<String> armTemplateDisplayName;
 
-    public Input<String> getArmTemplateDisplayName() {
-        return this.armTemplateDisplayName == null ? Input.empty() : this.armTemplateDisplayName;
+    public Output<String> getArmTemplateDisplayName() {
+        return this.armTemplateDisplayName == null ? Output.empty() : this.armTemplateDisplayName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentProperties")
-      private final @Nullable Input<EnvironmentDeploymentPropertiesArgs> deploymentProperties;
+      private final @Nullable Output<EnvironmentDeploymentPropertiesArgs> deploymentProperties;
 
-    public Input<EnvironmentDeploymentPropertiesArgs> getDeploymentProperties() {
-        return this.deploymentProperties == null ? Input.empty() : this.deploymentProperties;
+    public Output<EnvironmentDeploymentPropertiesArgs> getDeploymentProperties() {
+        return this.deploymentProperties == null ? Output.empty() : this.deploymentProperties;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -54,10 +54,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,10 +87,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public EnvironmentArgs(
-        @Nullable Input<String> armTemplateDisplayName,
-        @Nullable Input<EnvironmentDeploymentPropertiesArgs> deploymentProperties,
-        Input<String> labName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> userName) {
+        @Nullable Output<String> armTemplateDisplayName,
+        @Nullable Output<EnvironmentDeploymentPropertiesArgs> deploymentProperties,
+        Output<String> labName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> userName) {
         this.armTemplateDisplayName = armTemplateDisplayName;
         this.deploymentProperties = deploymentProperties;
         this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
@@ -124,14 +124,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.armTemplateDisplayName = Input.empty();
-        this.deploymentProperties = Input.empty();
-        this.labName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.userName = Input.empty();
+        this.armTemplateDisplayName = Output.empty();
+        this.deploymentProperties = Output.empty();
+        this.labName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> armTemplateDisplayName;
-        private @Nullable Input<EnvironmentDeploymentPropertiesArgs> deploymentProperties;
-        private Input<String> labName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> userName;
+        private @Nullable Output<String> armTemplateDisplayName;
+        private @Nullable Output<EnvironmentDeploymentPropertiesArgs> deploymentProperties;
+        private Output<String> labName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder armTemplateDisplayName(@Nullable Input<String> armTemplateDisplayName) {
+        public Builder armTemplateDisplayName(@Nullable Output<String> armTemplateDisplayName) {
             this.armTemplateDisplayName = armTemplateDisplayName;
             return this;
         }
 
         public Builder armTemplateDisplayName(@Nullable String armTemplateDisplayName) {
-            this.armTemplateDisplayName = Input.ofNullable(armTemplateDisplayName);
+            this.armTemplateDisplayName = Output.ofNullable(armTemplateDisplayName);
             return this;
         }
 
-        public Builder deploymentProperties(@Nullable Input<EnvironmentDeploymentPropertiesArgs> deploymentProperties) {
+        public Builder deploymentProperties(@Nullable Output<EnvironmentDeploymentPropertiesArgs> deploymentProperties) {
             this.deploymentProperties = deploymentProperties;
             return this;
         }
 
         public Builder deploymentProperties(@Nullable EnvironmentDeploymentPropertiesArgs deploymentProperties) {
-            this.deploymentProperties = Input.ofNullable(deploymentProperties);
+            this.deploymentProperties = Output.ofNullable(deploymentProperties);
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public EnvironmentArgs build() {

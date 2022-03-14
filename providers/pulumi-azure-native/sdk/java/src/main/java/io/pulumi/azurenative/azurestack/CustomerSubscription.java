@@ -6,7 +6,6 @@ package io.pulumi.azurenative.azurestack;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azurestack.CustomerSubscriptionArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,19 +125,19 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomerSubscription(String name, CustomerSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:azurestack:CustomerSubscription", name, args == null ? CustomerSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:azurestack:CustomerSubscription", name, args == null ? CustomerSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CustomerSubscription(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CustomerSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azurestack:CustomerSubscription", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:azurestack/v20170601:CustomerSubscription").build()),
-                Input.of(Alias.builder().setType("azure-native:azurestack/v20200601preview:CustomerSubscription").build())
+                Output.of(Alias.builder().setType("azure-native:azurestack/v20170601:CustomerSubscription").build()),
+                Output.of(Alias.builder().setType("azure-native:azurestack/v20200601preview:CustomerSubscription").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -152,7 +151,7 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CustomerSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CustomerSubscription get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomerSubscription(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.LoggingConfigArgs;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveUris")
-      private final @Nullable Input<List<String>> archiveUris;
+      private final @Nullable Output<List<String>> archiveUris;
 
-    public Input<List<String>> getArchiveUris() {
-        return this.archiveUris == null ? Input.empty() : this.archiveUris;
+    public Output<List<String>> getArchiveUris() {
+        return this.archiveUris == null ? Output.empty() : this.archiveUris;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUris")
-      private final @Nullable Input<List<String>> fileUris;
+      private final @Nullable Output<List<String>> fileUris;
 
-    public Input<List<String>> getFileUris() {
-        return this.fileUris == null ? Input.empty() : this.fileUris;
+    public Output<List<String>> getFileUris() {
+        return this.fileUris == null ? Output.empty() : this.fileUris;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jarFileUris")
-      private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Output<List<String>> jarFileUris;
 
-    public Input<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
+    public Output<List<String>> getJarFileUris() {
+        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<LoggingConfigArgs> loggingConfig;
+      private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Input<LoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<LoggingConfigArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainClass")
-      private final @Nullable Input<String> mainClass;
+      private final @Nullable Output<String> mainClass;
 
-    public Input<String> getMainClass() {
-        return this.mainClass == null ? Input.empty() : this.mainClass;
+    public Output<String> getMainClass() {
+        return this.mainClass == null ? Output.empty() : this.mainClass;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainJarFileUri")
-      private final @Nullable Input<String> mainJarFileUri;
+      private final @Nullable Output<String> mainJarFileUri;
 
-    public Input<String> getMainJarFileUri() {
-        return this.mainJarFileUri == null ? Input.empty() : this.mainJarFileUri;
+    public Output<String> getMainJarFileUri() {
+        return this.mainJarFileUri == null ? Output.empty() : this.mainJarFileUri;
     }
 
     /**
@@ -103,21 +103,21 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public SparkJobArgs(
-        @Nullable Input<List<String>> archiveUris,
-        @Nullable Input<List<String>> args,
-        @Nullable Input<List<String>> fileUris,
-        @Nullable Input<List<String>> jarFileUris,
-        @Nullable Input<LoggingConfigArgs> loggingConfig,
-        @Nullable Input<String> mainClass,
-        @Nullable Input<String> mainJarFileUri,
-        @Nullable Input<Map<String,String>> properties) {
+        @Nullable Output<List<String>> archiveUris,
+        @Nullable Output<List<String>> args,
+        @Nullable Output<List<String>> fileUris,
+        @Nullable Output<List<String>> jarFileUris,
+        @Nullable Output<LoggingConfigArgs> loggingConfig,
+        @Nullable Output<String> mainClass,
+        @Nullable Output<String> mainJarFileUri,
+        @Nullable Output<Map<String,String>> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -129,14 +129,14 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SparkJobArgs() {
-        this.archiveUris = Input.empty();
-        this.args = Input.empty();
-        this.fileUris = Input.empty();
-        this.jarFileUris = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.mainClass = Input.empty();
-        this.mainJarFileUri = Input.empty();
-        this.properties = Input.empty();
+        this.archiveUris = Output.empty();
+        this.args = Output.empty();
+        this.fileUris = Output.empty();
+        this.jarFileUris = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.mainClass = Output.empty();
+        this.mainJarFileUri = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> archiveUris;
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<List<String>> fileUris;
-        private @Nullable Input<List<String>> jarFileUris;
-        private @Nullable Input<LoggingConfigArgs> loggingConfig;
-        private @Nullable Input<String> mainClass;
-        private @Nullable Input<String> mainJarFileUri;
-        private @Nullable Input<Map<String,String>> properties;
+        private @Nullable Output<List<String>> archiveUris;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<List<String>> fileUris;
+        private @Nullable Output<List<String>> jarFileUris;
+        private @Nullable Output<LoggingConfigArgs> loggingConfig;
+        private @Nullable Output<String> mainClass;
+        private @Nullable Output<String> mainJarFileUri;
+        private @Nullable Output<Map<String,String>> properties;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class SparkJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder archiveUris(@Nullable Input<List<String>> archiveUris) {
+        public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
         public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Input.ofNullable(archiveUris);
+            this.archiveUris = Output.ofNullable(archiveUris);
             return this;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder fileUris(@Nullable Input<List<String>> fileUris) {
+        public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
         public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Input.ofNullable(fileUris);
+            this.fileUris = Output.ofNullable(fileUris);
             return this;
         }
 
-        public Builder jarFileUris(@Nullable Input<List<String>> jarFileUris) {
+        public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Input.ofNullable(jarFileUris);
+            this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<LoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<LoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable LoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder mainClass(@Nullable Input<String> mainClass) {
+        public Builder mainClass(@Nullable Output<String> mainClass) {
             this.mainClass = mainClass;
             return this;
         }
 
         public Builder mainClass(@Nullable String mainClass) {
-            this.mainClass = Input.ofNullable(mainClass);
+            this.mainClass = Output.ofNullable(mainClass);
             return this;
         }
 
-        public Builder mainJarFileUri(@Nullable Input<String> mainJarFileUri) {
+        public Builder mainJarFileUri(@Nullable Output<String> mainJarFileUri) {
             this.mainJarFileUri = mainJarFileUri;
             return this;
         }
 
         public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
-            this.mainJarFileUri = Input.ofNullable(mainJarFileUri);
+            this.mainJarFileUri = Output.ofNullable(mainJarFileUri);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public SparkJobArgs build() {

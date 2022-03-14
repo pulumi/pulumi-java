@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<String> code;
+      private final @Nullable Output<String> code;
 
-    public Input<String> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<String> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     public OperationErrorArgs(
-        @Nullable Input<String> code,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> message) {
+        @Nullable Output<String> code,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> message) {
         this.code = code;
         this.kind = kind;
         this.message = message;
     }
 
     private OperationErrorArgs() {
-        this.code = Input.empty();
-        this.kind = Input.empty();
-        this.message = Input.empty();
+        this.code = Output.empty();
+        this.kind = Output.empty();
+        this.message = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> code;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> message;
+        private @Nullable Output<String> code;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> message;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.message = defaults.message;
         }
 
-        public Builder code(@Nullable Input<String> code) {
+        public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable String code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
         public OperationErrorArgs build() {

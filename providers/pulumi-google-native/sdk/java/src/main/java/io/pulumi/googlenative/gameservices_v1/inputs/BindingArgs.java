@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.inputs.ExprArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final BindingArgs Empty = new BindingArgs();
 
     @InputImport(name="bindingId")
-      private final @Nullable Input<String> bindingId;
+      private final @Nullable Output<String> bindingId;
 
-    public Input<String> getBindingId() {
-        return this.bindingId == null ? Input.empty() : this.bindingId;
+    public Output<String> getBindingId() {
+        return this.bindingId == null ? Output.empty() : this.bindingId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<ExprArgs> condition;
+      private final @Nullable Output<ExprArgs> condition;
 
-    public Input<ExprArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ExprArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public BindingArgs(
-        @Nullable Input<String> bindingId,
-        @Nullable Input<ExprArgs> condition,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> role) {
+        @Nullable Output<String> bindingId,
+        @Nullable Output<ExprArgs> condition,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> role) {
         this.bindingId = bindingId;
         this.condition = condition;
         this.members = members;
@@ -72,10 +72,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BindingArgs() {
-        this.bindingId = Input.empty();
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.bindingId = Output.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bindingId;
-        private @Nullable Input<ExprArgs> condition;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> role;
+        private @Nullable Output<String> bindingId;
+        private @Nullable Output<ExprArgs> condition;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder bindingId(@Nullable Input<String> bindingId) {
+        public Builder bindingId(@Nullable Output<String> bindingId) {
             this.bindingId = bindingId;
             return this;
         }
 
         public Builder bindingId(@Nullable String bindingId) {
-            this.bindingId = Input.ofNullable(bindingId);
+            this.bindingId = Output.ofNullable(bindingId);
             return this;
         }
 
-        public Builder condition(@Nullable Input<ExprArgs> condition) {
+        public Builder condition(@Nullable Output<ExprArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ExprArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public BindingArgs build() {

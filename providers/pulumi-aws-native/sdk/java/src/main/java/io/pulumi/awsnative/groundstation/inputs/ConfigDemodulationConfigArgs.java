@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
     public static final ConfigDemodulationConfigArgs Empty = new ConfigDemodulationConfigArgs();
 
     @InputImport(name="unvalidatedJSON")
-      private final @Nullable Input<String> unvalidatedJSON;
+      private final @Nullable Output<String> unvalidatedJSON;
 
-    public Input<String> getUnvalidatedJSON() {
-        return this.unvalidatedJSON == null ? Input.empty() : this.unvalidatedJSON;
+    public Output<String> getUnvalidatedJSON() {
+        return this.unvalidatedJSON == null ? Output.empty() : this.unvalidatedJSON;
     }
 
-    public ConfigDemodulationConfigArgs(@Nullable Input<String> unvalidatedJSON) {
+    public ConfigDemodulationConfigArgs(@Nullable Output<String> unvalidatedJSON) {
         this.unvalidatedJSON = unvalidatedJSON;
     }
 
     private ConfigDemodulationConfigArgs() {
-        this.unvalidatedJSON = Input.empty();
+        this.unvalidatedJSON = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> unvalidatedJSON;
+        private @Nullable Output<String> unvalidatedJSON;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
     	      this.unvalidatedJSON = defaults.unvalidatedJSON;
         }
 
-        public Builder unvalidatedJSON(@Nullable Input<String> unvalidatedJSON) {
+        public Builder unvalidatedJSON(@Nullable Output<String> unvalidatedJSON) {
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
         }
 
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
-            this.unvalidatedJSON = Input.ofNullable(unvalidatedJSON);
+            this.unvalidatedJSON = Output.ofNullable(unvalidatedJSON);
             return this;
         }
         public ConfigDemodulationConfigArgs build() {

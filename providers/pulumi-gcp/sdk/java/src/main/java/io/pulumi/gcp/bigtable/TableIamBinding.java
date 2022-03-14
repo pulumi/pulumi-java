@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.bigtable;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,14 +181,14 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableIamBinding(String name, TableIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigtable/tableIamBinding:TableIamBinding", name, args == null ? TableIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:bigtable/tableIamBinding:TableIamBinding", name, args == null ? TableIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TableIamBinding(String name, Input<String> id, @Nullable TableIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TableIamBinding(String name, Output<String> id, @Nullable TableIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:bigtable/tableIamBinding:TableIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -205,7 +204,7 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TableIamBinding get(String name, Input<String> id, @Nullable TableIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TableIamBinding get(String name, Output<String> id, @Nullable TableIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TableIamBinding(name, id, state, options);
     }
 }

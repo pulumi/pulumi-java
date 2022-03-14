@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoGkeClusterReferenceGetArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="gkeClusterReference", required=true)
-      private final Input<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
+      private final Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
 
-    public Input<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> getGkeClusterReference() {
+    public Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> getGkeClusterReference() {
         return this.gkeClusterReference;
     }
 
@@ -33,22 +33,22 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
     public GameServerClusterConnectionInfoGetArgs(
-        Input<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference,
-        Input<String> namespace) {
+        Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference,
+        Output<String> namespace) {
         this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference, "expected parameter 'gkeClusterReference' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
     }
 
     private GameServerClusterConnectionInfoGetArgs() {
-        this.gkeClusterReference = Input.empty();
-        this.namespace = Input.empty();
+        this.gkeClusterReference = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
-        private Input<String> namespace;
+        private Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder gkeClusterReference(Input<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference) {
+        public Builder gkeClusterReference(Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference) {
             this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
             return this;
         }
 
         public Builder gkeClusterReference(GameServerClusterConnectionInfoGkeClusterReferenceGetArgs gkeClusterReference) {
-            this.gkeClusterReference = Input.of(Objects.requireNonNull(gkeClusterReference));
+            this.gkeClusterReference = Output.of(Objects.requireNonNull(gkeClusterReference));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public GameServerClusterConnectionInfoGetArgs build() {

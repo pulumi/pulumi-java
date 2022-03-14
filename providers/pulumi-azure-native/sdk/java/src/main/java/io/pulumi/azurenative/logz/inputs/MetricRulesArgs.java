@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.FilteringTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filteringTags")
-      private final @Nullable Input<List<FilteringTagArgs>> filteringTags;
+      private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
-    public Input<List<FilteringTagArgs>> getFilteringTags() {
-        return this.filteringTags == null ? Input.empty() : this.filteringTags;
+    public Output<List<FilteringTagArgs>> getFilteringTags() {
+        return this.filteringTags == null ? Output.empty() : this.filteringTags;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     public MetricRulesArgs(
-        @Nullable Input<List<FilteringTagArgs>> filteringTags,
-        @Nullable Input<String> subscriptionId) {
+        @Nullable Output<List<FilteringTagArgs>> filteringTags,
+        @Nullable Output<String> subscriptionId) {
         this.filteringTags = filteringTags;
         this.subscriptionId = subscriptionId;
     }
 
     private MetricRulesArgs() {
-        this.filteringTags = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.filteringTags = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FilteringTagArgs>> filteringTags;
-        private @Nullable Input<String> subscriptionId;
+        private @Nullable Output<List<FilteringTagArgs>> filteringTags;
+        private @Nullable Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder filteringTags(@Nullable Input<List<FilteringTagArgs>> filteringTags) {
+        public Builder filteringTags(@Nullable Output<List<FilteringTagArgs>> filteringTags) {
             this.filteringTags = filteringTags;
             return this;
         }
 
         public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
-            this.filteringTags = Input.ofNullable(filteringTags);
+            this.filteringTags = Output.ofNullable(filteringTags);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
         public MetricRulesArgs build() {

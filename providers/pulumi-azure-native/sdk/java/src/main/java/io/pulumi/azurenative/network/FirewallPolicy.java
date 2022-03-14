@@ -15,7 +15,6 @@ import io.pulumi.azurenative.network.outputs.FirewallPolicyTransportSecurityResp
 import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -346,33 +345,33 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallPolicy(String name, FirewallPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:FirewallPolicy", name, args == null ? FirewallPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:FirewallPolicy", name, args == null ? FirewallPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FirewallPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FirewallPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:FirewallPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:FirewallPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:FirewallPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:FirewallPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:FirewallPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -386,7 +385,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FirewallPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FirewallPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallPolicy(name, id, options);
     }
 }

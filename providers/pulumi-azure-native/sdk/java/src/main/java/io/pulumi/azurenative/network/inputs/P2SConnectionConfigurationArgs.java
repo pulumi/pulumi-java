@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AddressSpaceArgs;
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableInternetSecurity")
-      private final @Nullable Input<Boolean> enableInternetSecurity;
+      private final @Nullable Output<Boolean> enableInternetSecurity;
 
-    public Input<Boolean> getEnableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
+    public Output<Boolean> getEnableInternetSecurity() {
+        return this.enableInternetSecurity == null ? Output.empty() : this.enableInternetSecurity;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routingConfiguration")
-      private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
+      private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
-    public Input<RoutingConfigurationArgs> getRoutingConfiguration() {
-        return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
+    public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
+        return this.routingConfiguration == null ? Output.empty() : this.routingConfiguration;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vpnClientAddressPool")
-      private final @Nullable Input<AddressSpaceArgs> vpnClientAddressPool;
+      private final @Nullable Output<AddressSpaceArgs> vpnClientAddressPool;
 
-    public Input<AddressSpaceArgs> getVpnClientAddressPool() {
-        return this.vpnClientAddressPool == null ? Input.empty() : this.vpnClientAddressPool;
+    public Output<AddressSpaceArgs> getVpnClientAddressPool() {
+        return this.vpnClientAddressPool == null ? Output.empty() : this.vpnClientAddressPool;
     }
 
     public P2SConnectionConfigurationArgs(
-        @Nullable Input<Boolean> enableInternetSecurity,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<RoutingConfigurationArgs> routingConfiguration,
-        @Nullable Input<AddressSpaceArgs> vpnClientAddressPool) {
+        @Nullable Output<Boolean> enableInternetSecurity,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<RoutingConfigurationArgs> routingConfiguration,
+        @Nullable Output<AddressSpaceArgs> vpnClientAddressPool) {
         this.enableInternetSecurity = enableInternetSecurity;
         this.id = id;
         this.name = name;
@@ -90,11 +90,11 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private P2SConnectionConfigurationArgs() {
-        this.enableInternetSecurity = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.routingConfiguration = Input.empty();
-        this.vpnClientAddressPool = Input.empty();
+        this.enableInternetSecurity = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.routingConfiguration = Output.empty();
+        this.vpnClientAddressPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableInternetSecurity;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
-        private @Nullable Input<AddressSpaceArgs> vpnClientAddressPool;
+        private @Nullable Output<Boolean> enableInternetSecurity;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
+        private @Nullable Output<AddressSpaceArgs> vpnClientAddressPool;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     	      this.vpnClientAddressPool = defaults.vpnClientAddressPool;
         }
 
-        public Builder enableInternetSecurity(@Nullable Input<Boolean> enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = Input.ofNullable(enableInternetSecurity);
+            this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder routingConfiguration(@Nullable Input<RoutingConfigurationArgs> routingConfiguration) {
+        public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
 
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
-            this.routingConfiguration = Input.ofNullable(routingConfiguration);
+            this.routingConfiguration = Output.ofNullable(routingConfiguration);
             return this;
         }
 
-        public Builder vpnClientAddressPool(@Nullable Input<AddressSpaceArgs> vpnClientAddressPool) {
+        public Builder vpnClientAddressPool(@Nullable Output<AddressSpaceArgs> vpnClientAddressPool) {
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }
 
         public Builder vpnClientAddressPool(@Nullable AddressSpaceArgs vpnClientAddressPool) {
-            this.vpnClientAddressPool = Input.ofNullable(vpnClientAddressPool);
+            this.vpnClientAddressPool = Output.ofNullable(vpnClientAddressPool);
             return this;
         }
         public P2SConnectionConfigurationArgs build() {

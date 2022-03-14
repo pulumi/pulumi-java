@@ -21,7 +21,6 @@ import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateVmProfile
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateWindowsUpdateCustomizerResponse;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ProvisioningErrorResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -270,22 +269,22 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineImageTemplate(String name, VirtualMachineImageTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, args == null ? VirtualMachineImageTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, args == null ? VirtualMachineImageTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualMachineImageTemplate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualMachineImageTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:virtualmachineimages/v20180201preview:VirtualMachineImageTemplate").build()),
-                Input.of(Alias.builder().setType("azure-native:virtualmachineimages/v20190201preview:VirtualMachineImageTemplate").build()),
-                Input.of(Alias.builder().setType("azure-native:virtualmachineimages/v20190501preview:VirtualMachineImageTemplate").build()),
-                Input.of(Alias.builder().setType("azure-native:virtualmachineimages/v20200214:VirtualMachineImageTemplate").build()),
-                Input.of(Alias.builder().setType("azure-native:virtualmachineimages/v20211001:VirtualMachineImageTemplate").build())
+                Output.of(Alias.builder().setType("azure-native:virtualmachineimages/v20180201preview:VirtualMachineImageTemplate").build()),
+                Output.of(Alias.builder().setType("azure-native:virtualmachineimages/v20190201preview:VirtualMachineImageTemplate").build()),
+                Output.of(Alias.builder().setType("azure-native:virtualmachineimages/v20190501preview:VirtualMachineImageTemplate").build()),
+                Output.of(Alias.builder().setType("azure-native:virtualmachineimages/v20200214:VirtualMachineImageTemplate").build()),
+                Output.of(Alias.builder().setType("azure-native:virtualmachineimages/v20211001:VirtualMachineImageTemplate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -299,7 +298,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualMachineImageTemplate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualMachineImageTemplate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineImageTemplate(name, id, options);
     }
 }

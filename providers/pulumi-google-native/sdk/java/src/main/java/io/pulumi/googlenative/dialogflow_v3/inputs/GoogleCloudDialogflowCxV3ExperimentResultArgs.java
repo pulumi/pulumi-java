@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
      * 
      */
     @InputImport(name="lastUpdateTime")
-      private final @Nullable Input<String> lastUpdateTime;
+      private final @Nullable Output<String> lastUpdateTime;
 
-    public Input<String> getLastUpdateTime() {
-        return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
+    public Output<String> getLastUpdateTime() {
+        return this.lastUpdateTime == null ? Output.empty() : this.lastUpdateTime;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
      * 
      */
     @InputImport(name="versionMetrics")
-      private final @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
+      private final @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
 
-    public Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> getVersionMetrics() {
-        return this.versionMetrics == null ? Input.empty() : this.versionMetrics;
+    public Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> getVersionMetrics() {
+        return this.versionMetrics == null ? Output.empty() : this.versionMetrics;
     }
 
     public GoogleCloudDialogflowCxV3ExperimentResultArgs(
-        @Nullable Input<String> lastUpdateTime,
-        @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics) {
+        @Nullable Output<String> lastUpdateTime,
+        @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics) {
         this.lastUpdateTime = lastUpdateTime;
         this.versionMetrics = versionMetrics;
     }
 
     private GoogleCloudDialogflowCxV3ExperimentResultArgs() {
-        this.lastUpdateTime = Input.empty();
-        this.versionMetrics = Input.empty();
+        this.lastUpdateTime = Output.empty();
+        this.versionMetrics = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> lastUpdateTime;
-        private @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
+        private @Nullable Output<String> lastUpdateTime;
+        private @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
     	      this.versionMetrics = defaults.versionMetrics;
         }
 
-        public Builder lastUpdateTime(@Nullable Input<String> lastUpdateTime) {
+        public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
 
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
-            this.lastUpdateTime = Input.ofNullable(lastUpdateTime);
+            this.lastUpdateTime = Output.ofNullable(lastUpdateTime);
             return this;
         }
 
-        public Builder versionMetrics(@Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics) {
+        public Builder versionMetrics(@Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics) {
             this.versionMetrics = versionMetrics;
             return this;
         }
 
         public Builder versionMetrics(@Nullable List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs> versionMetrics) {
-            this.versionMetrics = Input.ofNullable(versionMetrics);
+            this.versionMetrics = Output.ofNullable(versionMetrics);
             return this;
         }
         public GoogleCloudDialogflowCxV3ExperimentResultArgs build() {

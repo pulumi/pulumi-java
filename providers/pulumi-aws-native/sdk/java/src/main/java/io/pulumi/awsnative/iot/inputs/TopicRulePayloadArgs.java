@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,54 +18,54 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     public static final TopicRulePayloadArgs Empty = new TopicRulePayloadArgs();
 
     @InputImport(name="actions", required=true)
-      private final Input<List<TopicRuleActionArgs>> actions;
+      private final Output<List<TopicRuleActionArgs>> actions;
 
-    public Input<List<TopicRuleActionArgs>> getActions() {
+    public Output<List<TopicRuleActionArgs>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="awsIotSqlVersion")
-      private final @Nullable Input<String> awsIotSqlVersion;
+      private final @Nullable Output<String> awsIotSqlVersion;
 
-    public Input<String> getAwsIotSqlVersion() {
-        return this.awsIotSqlVersion == null ? Input.empty() : this.awsIotSqlVersion;
+    public Output<String> getAwsIotSqlVersion() {
+        return this.awsIotSqlVersion == null ? Output.empty() : this.awsIotSqlVersion;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="errorAction")
-      private final @Nullable Input<TopicRuleActionArgs> errorAction;
+      private final @Nullable Output<TopicRuleActionArgs> errorAction;
 
-    public Input<TopicRuleActionArgs> getErrorAction() {
-        return this.errorAction == null ? Input.empty() : this.errorAction;
+    public Output<TopicRuleActionArgs> getErrorAction() {
+        return this.errorAction == null ? Output.empty() : this.errorAction;
     }
 
     @InputImport(name="ruleDisabled")
-      private final @Nullable Input<Boolean> ruleDisabled;
+      private final @Nullable Output<Boolean> ruleDisabled;
 
-    public Input<Boolean> getRuleDisabled() {
-        return this.ruleDisabled == null ? Input.empty() : this.ruleDisabled;
+    public Output<Boolean> getRuleDisabled() {
+        return this.ruleDisabled == null ? Output.empty() : this.ruleDisabled;
     }
 
     @InputImport(name="sql", required=true)
-      private final Input<String> sql;
+      private final Output<String> sql;
 
-    public Input<String> getSql() {
+    public Output<String> getSql() {
         return this.sql;
     }
 
     public TopicRulePayloadArgs(
-        Input<List<TopicRuleActionArgs>> actions,
-        @Nullable Input<String> awsIotSqlVersion,
-        @Nullable Input<String> description,
-        @Nullable Input<TopicRuleActionArgs> errorAction,
-        @Nullable Input<Boolean> ruleDisabled,
-        Input<String> sql) {
+        Output<List<TopicRuleActionArgs>> actions,
+        @Nullable Output<String> awsIotSqlVersion,
+        @Nullable Output<String> description,
+        @Nullable Output<TopicRuleActionArgs> errorAction,
+        @Nullable Output<Boolean> ruleDisabled,
+        Output<String> sql) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.awsIotSqlVersion = awsIotSqlVersion;
         this.description = description;
@@ -75,12 +75,12 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TopicRulePayloadArgs() {
-        this.actions = Input.empty();
-        this.awsIotSqlVersion = Input.empty();
-        this.description = Input.empty();
-        this.errorAction = Input.empty();
-        this.ruleDisabled = Input.empty();
-        this.sql = Input.empty();
+        this.actions = Output.empty();
+        this.awsIotSqlVersion = Output.empty();
+        this.description = Output.empty();
+        this.errorAction = Output.empty();
+        this.ruleDisabled = Output.empty();
+        this.sql = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,12 +92,12 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<TopicRuleActionArgs>> actions;
-        private @Nullable Input<String> awsIotSqlVersion;
-        private @Nullable Input<String> description;
-        private @Nullable Input<TopicRuleActionArgs> errorAction;
-        private @Nullable Input<Boolean> ruleDisabled;
-        private Input<String> sql;
+        private Output<List<TopicRuleActionArgs>> actions;
+        private @Nullable Output<String> awsIotSqlVersion;
+        private @Nullable Output<String> description;
+        private @Nullable Output<TopicRuleActionArgs> errorAction;
+        private @Nullable Output<Boolean> ruleDisabled;
+        private Output<String> sql;
 
         public Builder() {
     	      // Empty
@@ -113,63 +113,63 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     	      this.sql = defaults.sql;
         }
 
-        public Builder actions(Input<List<TopicRuleActionArgs>> actions) {
+        public Builder actions(Output<List<TopicRuleActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<TopicRuleActionArgs> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder awsIotSqlVersion(@Nullable Input<String> awsIotSqlVersion) {
+        public Builder awsIotSqlVersion(@Nullable Output<String> awsIotSqlVersion) {
             this.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
 
         public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
-            this.awsIotSqlVersion = Input.ofNullable(awsIotSqlVersion);
+            this.awsIotSqlVersion = Output.ofNullable(awsIotSqlVersion);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder errorAction(@Nullable Input<TopicRuleActionArgs> errorAction) {
+        public Builder errorAction(@Nullable Output<TopicRuleActionArgs> errorAction) {
             this.errorAction = errorAction;
             return this;
         }
 
         public Builder errorAction(@Nullable TopicRuleActionArgs errorAction) {
-            this.errorAction = Input.ofNullable(errorAction);
+            this.errorAction = Output.ofNullable(errorAction);
             return this;
         }
 
-        public Builder ruleDisabled(@Nullable Input<Boolean> ruleDisabled) {
+        public Builder ruleDisabled(@Nullable Output<Boolean> ruleDisabled) {
             this.ruleDisabled = ruleDisabled;
             return this;
         }
 
         public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
-            this.ruleDisabled = Input.ofNullable(ruleDisabled);
+            this.ruleDisabled = Output.ofNullable(ruleDisabled);
             return this;
         }
 
-        public Builder sql(Input<String> sql) {
+        public Builder sql(Output<String> sql) {
             this.sql = Objects.requireNonNull(sql);
             return this;
         }
 
         public Builder sql(String sql) {
-            this.sql = Input.of(Objects.requireNonNull(sql));
+            this.sql = Output.of(Objects.requireNonNull(sql));
             return this;
         }
         public TopicRulePayloadArgs build() {

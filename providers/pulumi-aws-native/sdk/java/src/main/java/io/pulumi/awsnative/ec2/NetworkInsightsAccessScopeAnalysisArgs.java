@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeAnalysisTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
     public static final NetworkInsightsAccessScopeAnalysisArgs Empty = new NetworkInsightsAccessScopeAnalysisArgs();
 
     @InputImport(name="networkInsightsAccessScopeId", required=true)
-      private final Input<String> networkInsightsAccessScopeId;
+      private final Output<String> networkInsightsAccessScopeId;
 
-    public Input<String> getNetworkInsightsAccessScopeId() {
+    public Output<String> getNetworkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
+      private final @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
 
-    public Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkInsightsAccessScopeAnalysisArgs(
-        Input<String> networkInsightsAccessScopeId,
-        @Nullable Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags) {
+        Output<String> networkInsightsAccessScopeId,
+        @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags) {
         this.networkInsightsAccessScopeId = Objects.requireNonNull(networkInsightsAccessScopeId, "expected parameter 'networkInsightsAccessScopeId' to be non-null");
         this.tags = tags;
     }
 
     private NetworkInsightsAccessScopeAnalysisArgs() {
-        this.networkInsightsAccessScopeId = Input.empty();
-        this.tags = Input.empty();
+        this.networkInsightsAccessScopeId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> networkInsightsAccessScopeId;
-        private @Nullable Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
+        private Output<String> networkInsightsAccessScopeId;
+        private @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder networkInsightsAccessScopeId(Input<String> networkInsightsAccessScopeId) {
+        public Builder networkInsightsAccessScopeId(Output<String> networkInsightsAccessScopeId) {
             this.networkInsightsAccessScopeId = Objects.requireNonNull(networkInsightsAccessScopeId);
             return this;
         }
 
         public Builder networkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
-            this.networkInsightsAccessScopeId = Input.of(Objects.requireNonNull(networkInsightsAccessScopeId));
+            this.networkInsightsAccessScopeId = Output.of(Objects.requireNonNull(networkInsightsAccessScopeId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<NetworkInsightsAccessScopeAnalysisTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkInsightsAccessScopeAnalysisArgs build() {

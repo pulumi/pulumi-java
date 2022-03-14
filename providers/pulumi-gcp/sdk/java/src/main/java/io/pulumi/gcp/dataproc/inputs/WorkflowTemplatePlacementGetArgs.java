@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementClusterSelectorGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterGetArgs;
@@ -20,10 +20,10 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clusterSelector")
-      private final @Nullable Input<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector;
+      private final @Nullable Output<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector;
 
-    public Input<WorkflowTemplatePlacementClusterSelectorGetArgs> getClusterSelector() {
-        return this.clusterSelector == null ? Input.empty() : this.clusterSelector;
+    public Output<WorkflowTemplatePlacementClusterSelectorGetArgs> getClusterSelector() {
+        return this.clusterSelector == null ? Output.empty() : this.clusterSelector;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="managedCluster")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster;
 
-    public Input<WorkflowTemplatePlacementManagedClusterGetArgs> getManagedCluster() {
-        return this.managedCluster == null ? Input.empty() : this.managedCluster;
+    public Output<WorkflowTemplatePlacementManagedClusterGetArgs> getManagedCluster() {
+        return this.managedCluster == null ? Output.empty() : this.managedCluster;
     }
 
     public WorkflowTemplatePlacementGetArgs(
-        @Nullable Input<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster) {
+        @Nullable Output<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster) {
         this.clusterSelector = clusterSelector;
         this.managedCluster = managedCluster;
     }
 
     private WorkflowTemplatePlacementGetArgs() {
-        this.clusterSelector = Input.empty();
-        this.managedCluster = Input.empty();
+        this.clusterSelector = Output.empty();
+        this.managedCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster;
+        private @Nullable Output<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
     	      this.managedCluster = defaults.managedCluster;
         }
 
-        public Builder clusterSelector(@Nullable Input<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector) {
+        public Builder clusterSelector(@Nullable Output<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector) {
             this.clusterSelector = clusterSelector;
             return this;
         }
 
         public Builder clusterSelector(@Nullable WorkflowTemplatePlacementClusterSelectorGetArgs clusterSelector) {
-            this.clusterSelector = Input.ofNullable(clusterSelector);
+            this.clusterSelector = Output.ofNullable(clusterSelector);
             return this;
         }
 
-        public Builder managedCluster(@Nullable Input<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster) {
+        public Builder managedCluster(@Nullable Output<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster) {
             this.managedCluster = managedCluster;
             return this;
         }
 
         public Builder managedCluster(@Nullable WorkflowTemplatePlacementManagedClusterGetArgs managedCluster) {
-            this.managedCluster = Input.ofNullable(managedCluster);
+            this.managedCluster = Output.ofNullable(managedCluster);
             return this;
         }
         public WorkflowTemplatePlacementGetArgs build() {

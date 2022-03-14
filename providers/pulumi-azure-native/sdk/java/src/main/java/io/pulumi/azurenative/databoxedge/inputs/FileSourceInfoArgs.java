@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class FileSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareId", required=true)
-      private final Input<String> shareId;
+      private final Output<String> shareId;
 
-    public Input<String> getShareId() {
+    public Output<String> getShareId() {
         return this.shareId;
     }
 
-    public FileSourceInfoArgs(Input<String> shareId) {
+    public FileSourceInfoArgs(Output<String> shareId) {
         this.shareId = Objects.requireNonNull(shareId, "expected parameter 'shareId' to be non-null");
     }
 
     private FileSourceInfoArgs() {
-        this.shareId = Input.empty();
+        this.shareId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class FileSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> shareId;
+        private Output<String> shareId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class FileSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder shareId(Input<String> shareId) {
+        public Builder shareId(Output<String> shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
 
         public Builder shareId(String shareId) {
-            this.shareId = Input.of(Objects.requireNonNull(shareId));
+            this.shareId = Output.of(Objects.requireNonNull(shareId));
             return this;
         }
         public FileSourceInfoArgs build() {

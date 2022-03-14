@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amp;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="data", required=true)
-      private final Input<String> data;
+      private final Output<String> data;
 
-    public Input<String> getData() {
+    public Output<String> getData() {
         return this.data;
     }
 
@@ -30,10 +30,10 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workspaceId", required=true)
-      private final Input<String> workspaceId;
+      private final Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
+    public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
     public RuleGroupNamespaceArgs(
-        Input<String> data,
-        @Nullable Input<String> name,
-        Input<String> workspaceId) {
+        Output<String> data,
+        @Nullable Output<String> name,
+        Output<String> workspaceId) {
         this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
         this.name = name;
         this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
     }
 
     private RuleGroupNamespaceArgs() {
-        this.data = Input.empty();
-        this.name = Input.empty();
-        this.workspaceId = Input.empty();
+        this.data = Output.empty();
+        this.name = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> data;
-        private @Nullable Input<String> name;
-        private Input<String> workspaceId;
+        private Output<String> data;
+        private @Nullable Output<String> name;
+        private Output<String> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder data(Input<String> data) {
+        public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
         public Builder data(String data) {
-            this.data = Input.of(Objects.requireNonNull(data));
+            this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder workspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
+            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
         public RuleGroupNamespaceArgs build() {

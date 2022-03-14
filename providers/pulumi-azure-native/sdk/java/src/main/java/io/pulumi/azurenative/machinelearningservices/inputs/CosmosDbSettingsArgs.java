@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collectionsThroughput")
-      private final @Nullable Input<Integer> collectionsThroughput;
+      private final @Nullable Output<Integer> collectionsThroughput;
 
-    public Input<Integer> getCollectionsThroughput() {
-        return this.collectionsThroughput == null ? Input.empty() : this.collectionsThroughput;
+    public Output<Integer> getCollectionsThroughput() {
+        return this.collectionsThroughput == null ? Output.empty() : this.collectionsThroughput;
     }
 
-    public CosmosDbSettingsArgs(@Nullable Input<Integer> collectionsThroughput) {
+    public CosmosDbSettingsArgs(@Nullable Output<Integer> collectionsThroughput) {
         this.collectionsThroughput = collectionsThroughput;
     }
 
     private CosmosDbSettingsArgs() {
-        this.collectionsThroughput = Input.empty();
+        this.collectionsThroughput = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> collectionsThroughput;
+        private @Nullable Output<Integer> collectionsThroughput;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.collectionsThroughput = defaults.collectionsThroughput;
         }
 
-        public Builder collectionsThroughput(@Nullable Input<Integer> collectionsThroughput) {
+        public Builder collectionsThroughput(@Nullable Output<Integer> collectionsThroughput) {
             this.collectionsThroughput = collectionsThroughput;
             return this;
         }
 
         public Builder collectionsThroughput(@Nullable Integer collectionsThroughput) {
-            this.collectionsThroughput = Input.ofNullable(collectionsThroughput);
+            this.collectionsThroughput = Output.ofNullable(collectionsThroughput);
             return this;
         }
         public CosmosDbSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,70 +15,70 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
     public static final RegistryImageBuildAuthConfigGetArgs Empty = new RegistryImageBuildAuthConfigGetArgs();
 
     @InputImport(name="auth")
-      private final @Nullable Input<String> auth;
+      private final @Nullable Output<String> auth;
 
-    public Input<String> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<String> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
     @InputImport(name="identityToken")
-      private final @Nullable Input<String> identityToken;
+      private final @Nullable Output<String> identityToken;
 
-    public Input<String> getIdentityToken() {
-        return this.identityToken == null ? Input.empty() : this.identityToken;
+    public Output<String> getIdentityToken() {
+        return this.identityToken == null ? Output.empty() : this.identityToken;
     }
 
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     @InputImport(name="registryToken")
-      private final @Nullable Input<String> registryToken;
+      private final @Nullable Output<String> registryToken;
 
-    public Input<String> getRegistryToken() {
-        return this.registryToken == null ? Input.empty() : this.registryToken;
+    public Output<String> getRegistryToken() {
+        return this.registryToken == null ? Output.empty() : this.registryToken;
     }
 
     @InputImport(name="serverAddress")
-      private final @Nullable Input<String> serverAddress;
+      private final @Nullable Output<String> serverAddress;
 
-    public Input<String> getServerAddress() {
-        return this.serverAddress == null ? Input.empty() : this.serverAddress;
+    public Output<String> getServerAddress() {
+        return this.serverAddress == null ? Output.empty() : this.serverAddress;
     }
 
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public RegistryImageBuildAuthConfigGetArgs(
-        @Nullable Input<String> auth,
-        @Nullable Input<String> email,
-        Input<String> hostName,
-        @Nullable Input<String> identityToken,
-        @Nullable Input<String> password,
-        @Nullable Input<String> registryToken,
-        @Nullable Input<String> serverAddress,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> auth,
+        @Nullable Output<String> email,
+        Output<String> hostName,
+        @Nullable Output<String> identityToken,
+        @Nullable Output<String> password,
+        @Nullable Output<String> registryToken,
+        @Nullable Output<String> serverAddress,
+        @Nullable Output<String> userName) {
         this.auth = auth;
         this.email = email;
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
@@ -90,14 +90,14 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
     }
 
     private RegistryImageBuildAuthConfigGetArgs() {
-        this.auth = Input.empty();
-        this.email = Input.empty();
-        this.hostName = Input.empty();
-        this.identityToken = Input.empty();
-        this.password = Input.empty();
-        this.registryToken = Input.empty();
-        this.serverAddress = Input.empty();
-        this.userName = Input.empty();
+        this.auth = Output.empty();
+        this.email = Output.empty();
+        this.hostName = Output.empty();
+        this.identityToken = Output.empty();
+        this.password = Output.empty();
+        this.registryToken = Output.empty();
+        this.serverAddress = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,14 +109,14 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> auth;
-        private @Nullable Input<String> email;
-        private Input<String> hostName;
-        private @Nullable Input<String> identityToken;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> registryToken;
-        private @Nullable Input<String> serverAddress;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> auth;
+        private @Nullable Output<String> email;
+        private Output<String> hostName;
+        private @Nullable Output<String> identityToken;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> registryToken;
+        private @Nullable Output<String> serverAddress;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -134,83 +134,83 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
     	      this.userName = defaults.userName;
         }
 
-        public Builder auth(@Nullable Input<String> auth) {
+        public Builder auth(@Nullable Output<String> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable String auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder identityToken(@Nullable Input<String> identityToken) {
+        public Builder identityToken(@Nullable Output<String> identityToken) {
             this.identityToken = identityToken;
             return this;
         }
 
         public Builder identityToken(@Nullable String identityToken) {
-            this.identityToken = Input.ofNullable(identityToken);
+            this.identityToken = Output.ofNullable(identityToken);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder registryToken(@Nullable Input<String> registryToken) {
+        public Builder registryToken(@Nullable Output<String> registryToken) {
             this.registryToken = registryToken;
             return this;
         }
 
         public Builder registryToken(@Nullable String registryToken) {
-            this.registryToken = Input.ofNullable(registryToken);
+            this.registryToken = Output.ofNullable(registryToken);
             return this;
         }
 
-        public Builder serverAddress(@Nullable Input<String> serverAddress) {
+        public Builder serverAddress(@Nullable Output<String> serverAddress) {
             this.serverAddress = serverAddress;
             return this;
         }
 
         public Builder serverAddress(@Nullable String serverAddress) {
-            this.serverAddress = Input.ofNullable(serverAddress);
+            this.serverAddress = Output.ofNullable(serverAddress);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public RegistryImageBuildAuthConfigGetArgs build() {

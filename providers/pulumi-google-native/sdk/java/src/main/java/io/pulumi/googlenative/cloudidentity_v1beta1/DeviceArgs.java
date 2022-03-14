@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetTag")
-      private final @Nullable Input<String> assetTag;
+      private final @Nullable Output<String> assetTag;
 
-    public Input<String> getAssetTag() {
-        return this.assetTag == null ? Input.empty() : this.assetTag;
+    public Output<String> getAssetTag() {
+        return this.assetTag == null ? Output.empty() : this.assetTag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastSyncTime")
-      private final @Nullable Input<String> lastSyncTime;
+      private final @Nullable Output<String> lastSyncTime;
 
-    public Input<String> getLastSyncTime() {
-        return this.lastSyncTime == null ? Input.empty() : this.lastSyncTime;
+    public Output<String> getLastSyncTime() {
+        return this.lastSyncTime == null ? Output.empty() : this.lastSyncTime;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialNumber")
-      private final @Nullable Input<String> serialNumber;
+      private final @Nullable Output<String> serialNumber;
 
-    public Input<String> getSerialNumber() {
-        return this.serialNumber == null ? Input.empty() : this.serialNumber;
+    public Output<String> getSerialNumber() {
+        return this.serialNumber == null ? Output.empty() : this.serialNumber;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="wifiMacAddresses")
-      private final @Nullable Input<List<String>> wifiMacAddresses;
+      private final @Nullable Output<List<String>> wifiMacAddresses;
 
-    public Input<List<String>> getWifiMacAddresses() {
-        return this.wifiMacAddresses == null ? Input.empty() : this.wifiMacAddresses;
+    public Output<List<String>> getWifiMacAddresses() {
+        return this.wifiMacAddresses == null ? Output.empty() : this.wifiMacAddresses;
     }
 
     public DeviceArgs(
-        @Nullable Input<String> assetTag,
-        @Nullable Input<String> lastSyncTime,
-        @Nullable Input<String> serialNumber,
-        @Nullable Input<List<String>> wifiMacAddresses) {
+        @Nullable Output<String> assetTag,
+        @Nullable Output<String> lastSyncTime,
+        @Nullable Output<String> serialNumber,
+        @Nullable Output<List<String>> wifiMacAddresses) {
         this.assetTag = assetTag;
         this.lastSyncTime = lastSyncTime;
         this.serialNumber = serialNumber;
@@ -71,10 +71,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.assetTag = Input.empty();
-        this.lastSyncTime = Input.empty();
-        this.serialNumber = Input.empty();
-        this.wifiMacAddresses = Input.empty();
+        this.assetTag = Output.empty();
+        this.lastSyncTime = Output.empty();
+        this.serialNumber = Output.empty();
+        this.wifiMacAddresses = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assetTag;
-        private @Nullable Input<String> lastSyncTime;
-        private @Nullable Input<String> serialNumber;
-        private @Nullable Input<List<String>> wifiMacAddresses;
+        private @Nullable Output<String> assetTag;
+        private @Nullable Output<String> lastSyncTime;
+        private @Nullable Output<String> serialNumber;
+        private @Nullable Output<List<String>> wifiMacAddresses;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.wifiMacAddresses = defaults.wifiMacAddresses;
         }
 
-        public Builder assetTag(@Nullable Input<String> assetTag) {
+        public Builder assetTag(@Nullable Output<String> assetTag) {
             this.assetTag = assetTag;
             return this;
         }
 
         public Builder assetTag(@Nullable String assetTag) {
-            this.assetTag = Input.ofNullable(assetTag);
+            this.assetTag = Output.ofNullable(assetTag);
             return this;
         }
 
-        public Builder lastSyncTime(@Nullable Input<String> lastSyncTime) {
+        public Builder lastSyncTime(@Nullable Output<String> lastSyncTime) {
             this.lastSyncTime = lastSyncTime;
             return this;
         }
 
         public Builder lastSyncTime(@Nullable String lastSyncTime) {
-            this.lastSyncTime = Input.ofNullable(lastSyncTime);
+            this.lastSyncTime = Output.ofNullable(lastSyncTime);
             return this;
         }
 
-        public Builder serialNumber(@Nullable Input<String> serialNumber) {
+        public Builder serialNumber(@Nullable Output<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
         public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Input.ofNullable(serialNumber);
+            this.serialNumber = Output.ofNullable(serialNumber);
             return this;
         }
 
-        public Builder wifiMacAddresses(@Nullable Input<List<String>> wifiMacAddresses) {
+        public Builder wifiMacAddresses(@Nullable Output<List<String>> wifiMacAddresses) {
             this.wifiMacAddresses = wifiMacAddresses;
             return this;
         }
 
         public Builder wifiMacAddresses(@Nullable List<String> wifiMacAddresses) {
-            this.wifiMacAddresses = Input.ofNullable(wifiMacAddresses);
+            this.wifiMacAddresses = Output.ofNullable(wifiMacAddresses);
             return this;
         }
         public DeviceArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.ClientGroupInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientGroupInfo")
-      private final @Nullable Input<ClientGroupInfoArgs> clientGroupInfo;
+      private final @Nullable Output<ClientGroupInfoArgs> clientGroupInfo;
 
-    public Input<ClientGroupInfoArgs> getClientGroupInfo() {
-        return this.clientGroupInfo == null ? Input.empty() : this.clientGroupInfo;
+    public Output<ClientGroupInfoArgs> getClientGroupInfo() {
+        return this.clientGroupInfo == null ? Output.empty() : this.clientGroupInfo;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configurationOverride")
-      private final @Nullable Input<Map<String,String>> configurationOverride;
+      private final @Nullable Output<Map<String,String>> configurationOverride;
 
-    public Input<Map<String,String>> getConfigurationOverride() {
-        return this.configurationOverride == null ? Input.empty() : this.configurationOverride;
+    public Output<Map<String,String>> getConfigurationOverride() {
+        return this.configurationOverride == null ? Output.empty() : this.configurationOverride;
     }
 
     public KafkaRestPropertiesArgs(
-        @Nullable Input<ClientGroupInfoArgs> clientGroupInfo,
-        @Nullable Input<Map<String,String>> configurationOverride) {
+        @Nullable Output<ClientGroupInfoArgs> clientGroupInfo,
+        @Nullable Output<Map<String,String>> configurationOverride) {
         this.clientGroupInfo = clientGroupInfo;
         this.configurationOverride = configurationOverride;
     }
 
     private KafkaRestPropertiesArgs() {
-        this.clientGroupInfo = Input.empty();
-        this.configurationOverride = Input.empty();
+        this.clientGroupInfo = Output.empty();
+        this.configurationOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<ClientGroupInfoArgs> clientGroupInfo;
-        private @Nullable Input<Map<String,String>> configurationOverride;
+        private @Nullable Output<ClientGroupInfoArgs> clientGroupInfo;
+        private @Nullable Output<Map<String,String>> configurationOverride;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.configurationOverride = defaults.configurationOverride;
         }
 
-        public Builder clientGroupInfo(@Nullable Input<ClientGroupInfoArgs> clientGroupInfo) {
+        public Builder clientGroupInfo(@Nullable Output<ClientGroupInfoArgs> clientGroupInfo) {
             this.clientGroupInfo = clientGroupInfo;
             return this;
         }
 
         public Builder clientGroupInfo(@Nullable ClientGroupInfoArgs clientGroupInfo) {
-            this.clientGroupInfo = Input.ofNullable(clientGroupInfo);
+            this.clientGroupInfo = Output.ofNullable(clientGroupInfo);
             return this;
         }
 
-        public Builder configurationOverride(@Nullable Input<Map<String,String>> configurationOverride) {
+        public Builder configurationOverride(@Nullable Output<Map<String,String>> configurationOverride) {
             this.configurationOverride = configurationOverride;
             return this;
         }
 
         public Builder configurationOverride(@Nullable Map<String,String> configurationOverride) {
-            this.configurationOverride = Input.ofNullable(configurationOverride);
+            this.configurationOverride = Output.ofNullable(configurationOverride);
             return this;
         }
         public KafkaRestPropertiesArgs build() {

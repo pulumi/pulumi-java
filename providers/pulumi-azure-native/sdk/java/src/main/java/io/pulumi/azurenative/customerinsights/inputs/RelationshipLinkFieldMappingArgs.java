@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.LinkTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="interactionFieldName", required=true)
-      private final Input<String> interactionFieldName;
+      private final Output<String> interactionFieldName;
 
-    public Input<String> getInteractionFieldName() {
+    public Output<String> getInteractionFieldName() {
         return this.interactionFieldName;
     }
 
@@ -35,10 +35,10 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="linkType")
-      private final @Nullable Input<LinkTypes> linkType;
+      private final @Nullable Output<LinkTypes> linkType;
 
-    public Input<LinkTypes> getLinkType() {
-        return this.linkType == null ? Input.empty() : this.linkType;
+    public Output<LinkTypes> getLinkType() {
+        return this.linkType == null ? Output.empty() : this.linkType;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="relationshipFieldName", required=true)
-      private final Input<String> relationshipFieldName;
+      private final Output<String> relationshipFieldName;
 
-    public Input<String> getRelationshipFieldName() {
+    public Output<String> getRelationshipFieldName() {
         return this.relationshipFieldName;
     }
 
     public RelationshipLinkFieldMappingArgs(
-        Input<String> interactionFieldName,
-        @Nullable Input<LinkTypes> linkType,
-        Input<String> relationshipFieldName) {
+        Output<String> interactionFieldName,
+        @Nullable Output<LinkTypes> linkType,
+        Output<String> relationshipFieldName) {
         this.interactionFieldName = Objects.requireNonNull(interactionFieldName, "expected parameter 'interactionFieldName' to be non-null");
         this.linkType = linkType;
         this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName, "expected parameter 'relationshipFieldName' to be non-null");
     }
 
     private RelationshipLinkFieldMappingArgs() {
-        this.interactionFieldName = Input.empty();
-        this.linkType = Input.empty();
-        this.relationshipFieldName = Input.empty();
+        this.interactionFieldName = Output.empty();
+        this.linkType = Output.empty();
+        this.relationshipFieldName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> interactionFieldName;
-        private @Nullable Input<LinkTypes> linkType;
-        private Input<String> relationshipFieldName;
+        private Output<String> interactionFieldName;
+        private @Nullable Output<LinkTypes> linkType;
+        private Output<String> relationshipFieldName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     	      this.relationshipFieldName = defaults.relationshipFieldName;
         }
 
-        public Builder interactionFieldName(Input<String> interactionFieldName) {
+        public Builder interactionFieldName(Output<String> interactionFieldName) {
             this.interactionFieldName = Objects.requireNonNull(interactionFieldName);
             return this;
         }
 
         public Builder interactionFieldName(String interactionFieldName) {
-            this.interactionFieldName = Input.of(Objects.requireNonNull(interactionFieldName));
+            this.interactionFieldName = Output.of(Objects.requireNonNull(interactionFieldName));
             return this;
         }
 
-        public Builder linkType(@Nullable Input<LinkTypes> linkType) {
+        public Builder linkType(@Nullable Output<LinkTypes> linkType) {
             this.linkType = linkType;
             return this;
         }
 
         public Builder linkType(@Nullable LinkTypes linkType) {
-            this.linkType = Input.ofNullable(linkType);
+            this.linkType = Output.ofNullable(linkType);
             return this;
         }
 
-        public Builder relationshipFieldName(Input<String> relationshipFieldName) {
+        public Builder relationshipFieldName(Output<String> relationshipFieldName) {
             this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
             return this;
         }
 
         public Builder relationshipFieldName(String relationshipFieldName) {
-            this.relationshipFieldName = Input.of(Objects.requireNonNull(relationshipFieldName));
+            this.relationshipFieldName = Output.of(Objects.requireNonNull(relationshipFieldName));
             return this;
         }
         public RelationshipLinkFieldMappingArgs build() {

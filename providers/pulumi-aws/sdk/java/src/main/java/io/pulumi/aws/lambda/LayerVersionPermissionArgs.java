@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -31,9 +31,9 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="layerName", required=true)
-      private final Input<String> layerName;
+      private final Output<String> layerName;
 
-    public Input<String> getLayerName() {
+    public Output<String> getLayerName() {
         return this.layerName;
     }
 
@@ -42,10 +42,10 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="organizationId")
-      private final @Nullable Input<String> organizationId;
+      private final @Nullable Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
-        return this.organizationId == null ? Input.empty() : this.organizationId;
+    public Output<String> getOrganizationId() {
+        return this.organizationId == null ? Output.empty() : this.organizationId;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="principal", required=true)
-      private final Input<String> principal;
+      private final Output<String> principal;
 
-    public Input<String> getPrincipal() {
+    public Output<String> getPrincipal() {
         return this.principal;
     }
 
@@ -64,9 +64,9 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="statementId", required=true)
-      private final Input<String> statementId;
+      private final Output<String> statementId;
 
-    public Input<String> getStatementId() {
+    public Output<String> getStatementId() {
         return this.statementId;
     }
 
@@ -75,19 +75,19 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="versionNumber", required=true)
-      private final Input<Integer> versionNumber;
+      private final Output<Integer> versionNumber;
 
-    public Input<Integer> getVersionNumber() {
+    public Output<Integer> getVersionNumber() {
         return this.versionNumber;
     }
 
     public LayerVersionPermissionArgs(
-        Input<String> action,
-        Input<String> layerName,
-        @Nullable Input<String> organizationId,
-        Input<String> principal,
-        Input<String> statementId,
-        Input<Integer> versionNumber) {
+        Output<String> action,
+        Output<String> layerName,
+        @Nullable Output<String> organizationId,
+        Output<String> principal,
+        Output<String> statementId,
+        Output<Integer> versionNumber) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.layerName = Objects.requireNonNull(layerName, "expected parameter 'layerName' to be non-null");
         this.organizationId = organizationId;
@@ -97,12 +97,12 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     }
 
     private LayerVersionPermissionArgs() {
-        this.action = Input.empty();
-        this.layerName = Input.empty();
-        this.organizationId = Input.empty();
-        this.principal = Input.empty();
-        this.statementId = Input.empty();
-        this.versionNumber = Input.empty();
+        this.action = Output.empty();
+        this.layerName = Output.empty();
+        this.organizationId = Output.empty();
+        this.principal = Output.empty();
+        this.statementId = Output.empty();
+        this.versionNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private Input<String> layerName;
-        private @Nullable Input<String> organizationId;
-        private Input<String> principal;
-        private Input<String> statementId;
-        private Input<Integer> versionNumber;
+        private Output<String> action;
+        private Output<String> layerName;
+        private @Nullable Output<String> organizationId;
+        private Output<String> principal;
+        private Output<String> statementId;
+        private Output<Integer> versionNumber;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder layerName(Input<String> layerName) {
+        public Builder layerName(Output<String> layerName) {
             this.layerName = Objects.requireNonNull(layerName);
             return this;
         }
 
         public Builder layerName(String layerName) {
-            this.layerName = Input.of(Objects.requireNonNull(layerName));
+            this.layerName = Output.of(Objects.requireNonNull(layerName));
             return this;
         }
 
-        public Builder organizationId(@Nullable Input<String> organizationId) {
+        public Builder organizationId(@Nullable Output<String> organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
         public Builder organizationId(@Nullable String organizationId) {
-            this.organizationId = Input.ofNullable(organizationId);
+            this.organizationId = Output.ofNullable(organizationId);
             return this;
         }
 
-        public Builder principal(Input<String> principal) {
+        public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
         public Builder principal(String principal) {
-            this.principal = Input.of(Objects.requireNonNull(principal));
+            this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder statementId(Input<String> statementId) {
+        public Builder statementId(Output<String> statementId) {
             this.statementId = Objects.requireNonNull(statementId);
             return this;
         }
 
         public Builder statementId(String statementId) {
-            this.statementId = Input.of(Objects.requireNonNull(statementId));
+            this.statementId = Output.of(Objects.requireNonNull(statementId));
             return this;
         }
 
-        public Builder versionNumber(Input<Integer> versionNumber) {
+        public Builder versionNumber(Output<Integer> versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }
 
         public Builder versionNumber(Integer versionNumber) {
-            this.versionNumber = Input.of(Objects.requireNonNull(versionNumber));
+            this.versionNumber = Output.of(Objects.requireNonNull(versionNumber));
             return this;
         }
         public LayerVersionPermissionArgs build() {

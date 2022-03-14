@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusIngressPolicyGetArgs;
@@ -31,10 +31,10 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessLevels")
-      private final @Nullable Input<List<String>> accessLevels;
+      private final @Nullable Output<List<String>> accessLevels;
 
-    public Input<List<String>> getAccessLevels() {
-        return this.accessLevels == null ? Input.empty() : this.accessLevels;
+    public Output<List<String>> getAccessLevels() {
+        return this.accessLevels == null ? Output.empty() : this.accessLevels;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="egressPolicies")
-      private final @Nullable Input<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies;
+      private final @Nullable Output<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies;
 
-    public Input<List<ServicePerimeterStatusEgressPolicyGetArgs>> getEgressPolicies() {
-        return this.egressPolicies == null ? Input.empty() : this.egressPolicies;
+    public Output<List<ServicePerimeterStatusEgressPolicyGetArgs>> getEgressPolicies() {
+        return this.egressPolicies == null ? Output.empty() : this.egressPolicies;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ingressPolicies")
-      private final @Nullable Input<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies;
+      private final @Nullable Output<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies;
 
-    public Input<List<ServicePerimeterStatusIngressPolicyGetArgs>> getIngressPolicies() {
-        return this.ingressPolicies == null ? Input.empty() : this.ingressPolicies;
+    public Output<List<ServicePerimeterStatusIngressPolicyGetArgs>> getIngressPolicies() {
+        return this.ingressPolicies == null ? Output.empty() : this.ingressPolicies;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="restrictedServices")
-      private final @Nullable Input<List<String>> restrictedServices;
+      private final @Nullable Output<List<String>> restrictedServices;
 
-    public Input<List<String>> getRestrictedServices() {
-        return this.restrictedServices == null ? Input.empty() : this.restrictedServices;
+    public Output<List<String>> getRestrictedServices() {
+        return this.restrictedServices == null ? Output.empty() : this.restrictedServices;
     }
 
     /**
@@ -104,19 +104,19 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vpcAccessibleServices")
-      private final @Nullable Input<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices;
+      private final @Nullable Output<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices;
 
-    public Input<ServicePerimeterStatusVpcAccessibleServicesGetArgs> getVpcAccessibleServices() {
-        return this.vpcAccessibleServices == null ? Input.empty() : this.vpcAccessibleServices;
+    public Output<ServicePerimeterStatusVpcAccessibleServicesGetArgs> getVpcAccessibleServices() {
+        return this.vpcAccessibleServices == null ? Output.empty() : this.vpcAccessibleServices;
     }
 
     public ServicePerimeterStatusGetArgs(
-        @Nullable Input<List<String>> accessLevels,
-        @Nullable Input<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies,
-        @Nullable Input<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies,
-        @Nullable Input<List<String>> resources,
-        @Nullable Input<List<String>> restrictedServices,
-        @Nullable Input<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices) {
+        @Nullable Output<List<String>> accessLevels,
+        @Nullable Output<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies,
+        @Nullable Output<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies,
+        @Nullable Output<List<String>> resources,
+        @Nullable Output<List<String>> restrictedServices,
+        @Nullable Output<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.egressPolicies = egressPolicies;
         this.ingressPolicies = ingressPolicies;
@@ -126,12 +126,12 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
     }
 
     private ServicePerimeterStatusGetArgs() {
-        this.accessLevels = Input.empty();
-        this.egressPolicies = Input.empty();
-        this.ingressPolicies = Input.empty();
-        this.resources = Input.empty();
-        this.restrictedServices = Input.empty();
-        this.vpcAccessibleServices = Input.empty();
+        this.accessLevels = Output.empty();
+        this.egressPolicies = Output.empty();
+        this.ingressPolicies = Output.empty();
+        this.resources = Output.empty();
+        this.restrictedServices = Output.empty();
+        this.vpcAccessibleServices = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,12 +143,12 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> accessLevels;
-        private @Nullable Input<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies;
-        private @Nullable Input<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies;
-        private @Nullable Input<List<String>> resources;
-        private @Nullable Input<List<String>> restrictedServices;
-        private @Nullable Input<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices;
+        private @Nullable Output<List<String>> accessLevels;
+        private @Nullable Output<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies;
+        private @Nullable Output<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies;
+        private @Nullable Output<List<String>> resources;
+        private @Nullable Output<List<String>> restrictedServices;
+        private @Nullable Output<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices;
 
         public Builder() {
     	      // Empty
@@ -164,63 +164,63 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
-        public Builder accessLevels(@Nullable Input<List<String>> accessLevels) {
+        public Builder accessLevels(@Nullable Output<List<String>> accessLevels) {
             this.accessLevels = accessLevels;
             return this;
         }
 
         public Builder accessLevels(@Nullable List<String> accessLevels) {
-            this.accessLevels = Input.ofNullable(accessLevels);
+            this.accessLevels = Output.ofNullable(accessLevels);
             return this;
         }
 
-        public Builder egressPolicies(@Nullable Input<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies) {
+        public Builder egressPolicies(@Nullable Output<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
 
         public Builder egressPolicies(@Nullable List<ServicePerimeterStatusEgressPolicyGetArgs> egressPolicies) {
-            this.egressPolicies = Input.ofNullable(egressPolicies);
+            this.egressPolicies = Output.ofNullable(egressPolicies);
             return this;
         }
 
-        public Builder ingressPolicies(@Nullable Input<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies) {
+        public Builder ingressPolicies(@Nullable Output<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
 
         public Builder ingressPolicies(@Nullable List<ServicePerimeterStatusIngressPolicyGetArgs> ingressPolicies) {
-            this.ingressPolicies = Input.ofNullable(ingressPolicies);
+            this.ingressPolicies = Output.ofNullable(ingressPolicies);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder restrictedServices(@Nullable Input<List<String>> restrictedServices) {
+        public Builder restrictedServices(@Nullable Output<List<String>> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
 
         public Builder restrictedServices(@Nullable List<String> restrictedServices) {
-            this.restrictedServices = Input.ofNullable(restrictedServices);
+            this.restrictedServices = Output.ofNullable(restrictedServices);
             return this;
         }
 
-        public Builder vpcAccessibleServices(@Nullable Input<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(@Nullable Output<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
 
         public Builder vpcAccessibleServices(@Nullable ServicePerimeterStatusVpcAccessibleServicesGetArgs vpcAccessibleServices) {
-            this.vpcAccessibleServices = Input.ofNullable(vpcAccessibleServices);
+            this.vpcAccessibleServices = Output.ofNullable(vpcAccessibleServices);
             return this;
         }
         public ServicePerimeterStatusGetArgs build() {

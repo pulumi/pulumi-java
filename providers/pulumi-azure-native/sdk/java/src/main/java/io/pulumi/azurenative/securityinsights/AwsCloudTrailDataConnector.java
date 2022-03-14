@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.AwsCloudTrailDataConnectorArgs;
 import io.pulumi.azurenative.securityinsights.outputs.AwsCloudTrailDataConnectorDataTypesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,10 +156,10 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AwsCloudTrailDataConnector(String name, AwsCloudTrailDataConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:AwsCloudTrailDataConnector", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:securityinsights:AwsCloudTrailDataConnector", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private AwsCloudTrailDataConnector(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AwsCloudTrailDataConnector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:AwsCloudTrailDataConnector", name, null, makeResourceOptions(options, id));
     }
 
@@ -171,14 +170,14 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:AwsCloudTrailDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20200101:AwsCloudTrailDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:AwsCloudTrailDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:AwsCloudTrailDataConnector").build())
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:AwsCloudTrailDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20200101:AwsCloudTrailDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:AwsCloudTrailDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:AwsCloudTrailDataConnector").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -192,7 +191,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AwsCloudTrailDataConnector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AwsCloudTrailDataConnector get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AwsCloudTrailDataConnector(name, id, options);
     }
 }

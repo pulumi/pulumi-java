@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.EndpointAuthMode;
 import io.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,9 +28,9 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode", required=true)
-      private final Input<Either<String,EndpointAuthMode>> authMode;
+      private final Output<Either<String,EndpointAuthMode>> authMode;
 
-    public Input<Either<String,EndpointAuthMode>> getAuthMode() {
+    public Output<Either<String,EndpointAuthMode>> getAuthMode() {
         return this.authMode;
     }
 
@@ -39,10 +39,10 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<EndpointAuthKeysArgs> keys;
+      private final @Nullable Output<EndpointAuthKeysArgs> keys;
 
-    public Input<EndpointAuthKeysArgs> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<EndpointAuthKeysArgs> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -85,19 +85,19 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-      private final @Nullable Input<Map<String,Integer>> traffic;
+      private final @Nullable Output<Map<String,Integer>> traffic;
 
-    public Input<Map<String,Integer>> getTraffic() {
-        return this.traffic == null ? Input.empty() : this.traffic;
+    public Output<Map<String,Integer>> getTraffic() {
+        return this.traffic == null ? Output.empty() : this.traffic;
     }
 
     public OnlineEndpointArgs(
-        Input<Either<String,EndpointAuthMode>> authMode,
-        @Nullable Input<String> description,
-        @Nullable Input<EndpointAuthKeysArgs> keys,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<String> target,
-        @Nullable Input<Map<String,Integer>> traffic) {
+        Output<Either<String,EndpointAuthMode>> authMode,
+        @Nullable Output<String> description,
+        @Nullable Output<EndpointAuthKeysArgs> keys,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<String> target,
+        @Nullable Output<Map<String,Integer>> traffic) {
         this.authMode = Objects.requireNonNull(authMode, "expected parameter 'authMode' to be non-null");
         this.description = description;
         this.keys = keys;
@@ -107,12 +107,12 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OnlineEndpointArgs() {
-        this.authMode = Input.empty();
-        this.description = Input.empty();
-        this.keys = Input.empty();
-        this.properties = Input.empty();
-        this.target = Input.empty();
-        this.traffic = Input.empty();
+        this.authMode = Output.empty();
+        this.description = Output.empty();
+        this.keys = Output.empty();
+        this.properties = Output.empty();
+        this.target = Output.empty();
+        this.traffic = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,EndpointAuthMode>> authMode;
-        private @Nullable Input<String> description;
-        private @Nullable Input<EndpointAuthKeysArgs> keys;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<String> target;
-        private @Nullable Input<Map<String,Integer>> traffic;
+        private Output<Either<String,EndpointAuthMode>> authMode;
+        private @Nullable Output<String> description;
+        private @Nullable Output<EndpointAuthKeysArgs> keys;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<String> target;
+        private @Nullable Output<Map<String,Integer>> traffic;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder authMode(Input<Either<String,EndpointAuthMode>> authMode) {
+        public Builder authMode(Output<Either<String,EndpointAuthMode>> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
         public Builder authMode(Either<String,EndpointAuthMode> authMode) {
-            this.authMode = Input.of(Objects.requireNonNull(authMode));
+            this.authMode = Output.of(Objects.requireNonNull(authMode));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder keys(@Nullable Input<EndpointAuthKeysArgs> keys) {
+        public Builder keys(@Nullable Output<EndpointAuthKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable EndpointAuthKeysArgs keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder traffic(@Nullable Input<Map<String,Integer>> traffic) {
+        public Builder traffic(@Nullable Output<Map<String,Integer>> traffic) {
             this.traffic = traffic;
             return this;
         }
 
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
-            this.traffic = Input.ofNullable(traffic);
+            this.traffic = Output.ofNullable(traffic);
             return this;
         }
         public OnlineEndpointArgs build() {

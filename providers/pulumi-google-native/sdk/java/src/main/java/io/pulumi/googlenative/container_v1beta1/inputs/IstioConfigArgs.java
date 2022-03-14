@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.IstioConfigAuth;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth")
-      private final @Nullable Input<IstioConfigAuth> auth;
+      private final @Nullable Output<IstioConfigAuth> auth;
 
-    public Input<IstioConfigAuth> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<IstioConfigAuth> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     public IstioConfigArgs(
-        @Nullable Input<IstioConfigAuth> auth,
-        @Nullable Input<Boolean> disabled) {
+        @Nullable Output<IstioConfigAuth> auth,
+        @Nullable Output<Boolean> disabled) {
         this.auth = auth;
         this.disabled = disabled;
     }
 
     private IstioConfigArgs() {
-        this.auth = Input.empty();
-        this.disabled = Input.empty();
+        this.auth = Output.empty();
+        this.disabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IstioConfigAuth> auth;
-        private @Nullable Input<Boolean> disabled;
+        private @Nullable Output<IstioConfigAuth> auth;
+        private @Nullable Output<Boolean> disabled;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder auth(@Nullable Input<IstioConfigAuth> auth) {
+        public Builder auth(@Nullable Output<IstioConfigAuth> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable IstioConfigAuth auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
         public IstioConfigArgs build() {

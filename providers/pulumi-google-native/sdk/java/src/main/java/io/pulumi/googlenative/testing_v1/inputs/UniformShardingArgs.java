@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class UniformShardingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numShards", required=true)
-      private final Input<Integer> numShards;
+      private final Output<Integer> numShards;
 
-    public Input<Integer> getNumShards() {
+    public Output<Integer> getNumShards() {
         return this.numShards;
     }
 
-    public UniformShardingArgs(Input<Integer> numShards) {
+    public UniformShardingArgs(Output<Integer> numShards) {
         this.numShards = Objects.requireNonNull(numShards, "expected parameter 'numShards' to be non-null");
     }
 
     private UniformShardingArgs() {
-        this.numShards = Input.empty();
+        this.numShards = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class UniformShardingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Integer> numShards;
+        private Output<Integer> numShards;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class UniformShardingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.numShards = defaults.numShards;
         }
 
-        public Builder numShards(Input<Integer> numShards) {
+        public Builder numShards(Output<Integer> numShards) {
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }
 
         public Builder numShards(Integer numShards) {
-            this.numShards = Input.of(Objects.requireNonNull(numShards));
+            this.numShards = Output.of(Objects.requireNonNull(numShards));
             return this;
         }
         public UniformShardingArgs build() {

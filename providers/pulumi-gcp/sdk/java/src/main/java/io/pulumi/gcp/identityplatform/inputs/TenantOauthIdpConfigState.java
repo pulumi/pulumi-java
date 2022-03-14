@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tenant")
-      private final @Nullable Input<String> tenant;
+      private final @Nullable Output<String> tenant;
 
-    public Input<String> getTenant() {
-        return this.tenant == null ? Input.empty() : this.tenant;
+    public Output<String> getTenant() {
+        return this.tenant == null ? Output.empty() : this.tenant;
     }
 
     public TenantOauthIdpConfigState(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> issuer,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> tenant) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> issuer,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> tenant) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.displayName = displayName;
@@ -124,14 +124,14 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     }
 
     private TenantOauthIdpConfigState() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.displayName = Input.empty();
-        this.enabled = Input.empty();
-        this.issuer = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.tenant = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.displayName = Output.empty();
+        this.enabled = Output.empty();
+        this.issuer = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.tenant = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> issuer;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> tenant;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> issuer;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> tenant;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     	      this.tenant = defaults.tenant;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tenant(@Nullable Input<String> tenant) {
+        public Builder tenant(@Nullable Output<String> tenant) {
             this.tenant = tenant;
             return this;
         }
 
         public Builder tenant(@Nullable String tenant) {
-            this.tenant = Input.ofNullable(tenant);
+            this.tenant = Output.ofNullable(tenant);
             return this;
         }
         public TenantOauthIdpConfigState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialArgs;
 import io.pulumi.gcp.iot.inputs.DeviceGatewayConfigArgs;
@@ -24,10 +24,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blocked")
-      private final @Nullable Input<Boolean> blocked;
+      private final @Nullable Output<Boolean> blocked;
 
-    public Input<Boolean> getBlocked() {
-        return this.blocked == null ? Input.empty() : this.blocked;
+    public Output<Boolean> getBlocked() {
+        return this.blocked == null ? Output.empty() : this.blocked;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<List<DeviceCredentialArgs>> credentials;
+      private final @Nullable Output<List<DeviceCredentialArgs>> credentials;
 
-    public Input<List<DeviceCredentialArgs>> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<List<DeviceCredentialArgs>> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayConfig")
-      private final @Nullable Input<DeviceGatewayConfigArgs> gatewayConfig;
+      private final @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
 
-    public Input<DeviceGatewayConfigArgs> getGatewayConfig() {
-        return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
+    public Output<DeviceGatewayConfigArgs> getGatewayConfig() {
+        return this.gatewayConfig == null ? Output.empty() : this.gatewayConfig;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-      private final @Nullable Input<String> logLevel;
+      private final @Nullable Output<String> logLevel;
 
-    public Input<String> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<String> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registry", required=true)
-      private final Input<String> registry;
+      private final Output<String> registry;
 
-    public Input<String> getRegistry() {
+    public Output<String> getRegistry() {
         return this.registry;
     }
 
     public DeviceArgs(
-        @Nullable Input<Boolean> blocked,
-        @Nullable Input<List<DeviceCredentialArgs>> credentials,
-        @Nullable Input<DeviceGatewayConfigArgs> gatewayConfig,
-        @Nullable Input<String> logLevel,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        Input<String> registry) {
+        @Nullable Output<Boolean> blocked,
+        @Nullable Output<List<DeviceCredentialArgs>> credentials,
+        @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig,
+        @Nullable Output<String> logLevel,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        Output<String> registry) {
         this.blocked = blocked;
         this.credentials = credentials;
         this.gatewayConfig = gatewayConfig;
@@ -117,13 +117,13 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.blocked = Input.empty();
-        this.credentials = Input.empty();
-        this.gatewayConfig = Input.empty();
-        this.logLevel = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.registry = Input.empty();
+        this.blocked = Output.empty();
+        this.credentials = Output.empty();
+        this.gatewayConfig = Output.empty();
+        this.logLevel = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.registry = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> blocked;
-        private @Nullable Input<List<DeviceCredentialArgs>> credentials;
-        private @Nullable Input<DeviceGatewayConfigArgs> gatewayConfig;
-        private @Nullable Input<String> logLevel;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private Input<String> registry;
+        private @Nullable Output<Boolean> blocked;
+        private @Nullable Output<List<DeviceCredentialArgs>> credentials;
+        private @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
+        private @Nullable Output<String> logLevel;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private Output<String> registry;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registry = defaults.registry;
         }
 
-        public Builder blocked(@Nullable Input<Boolean> blocked) {
+        public Builder blocked(@Nullable Output<Boolean> blocked) {
             this.blocked = blocked;
             return this;
         }
 
         public Builder blocked(@Nullable Boolean blocked) {
-            this.blocked = Input.ofNullable(blocked);
+            this.blocked = Output.ofNullable(blocked);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<List<DeviceCredentialArgs>> credentials) {
+        public Builder credentials(@Nullable Output<List<DeviceCredentialArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable List<DeviceCredentialArgs> credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder gatewayConfig(@Nullable Input<DeviceGatewayConfigArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
         public Builder gatewayConfig(@Nullable DeviceGatewayConfigArgs gatewayConfig) {
-            this.gatewayConfig = Input.ofNullable(gatewayConfig);
+            this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder registry(Input<String> registry) {
+        public Builder registry(Output<String> registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
 
         public Builder registry(String registry) {
-            this.registry = Input.of(Objects.requireNonNull(registry));
+            this.registry = Output.of(Objects.requireNonNull(registry));
             return this;
         }
         public DeviceArgs build() {

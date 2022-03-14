@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podCidr")
-      private final @Nullable Input<String> podCidr;
+      private final @Nullable Output<String> podCidr;
 
-    public Input<String> getPodCidr() {
-        return this.podCidr == null ? Input.empty() : this.podCidr;
+    public Output<String> getPodCidr() {
+        return this.podCidr == null ? Output.empty() : this.podCidr;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCidr")
-      private final @Nullable Input<String> serviceCidr;
+      private final @Nullable Output<String> serviceCidr;
 
-    public Input<String> getServiceCidr() {
-        return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
+    public Output<String> getServiceCidr() {
+        return this.serviceCidr == null ? Output.empty() : this.serviceCidr;
     }
 
     public NetworkProfileArgs(
-        @Nullable Input<String> podCidr,
-        @Nullable Input<String> serviceCidr) {
+        @Nullable Output<String> podCidr,
+        @Nullable Output<String> serviceCidr) {
         this.podCidr = podCidr;
         this.serviceCidr = serviceCidr;
     }
 
     private NetworkProfileArgs() {
-        this.podCidr = Input.empty();
-        this.serviceCidr = Input.empty();
+        this.podCidr = Output.empty();
+        this.serviceCidr = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> podCidr;
-        private @Nullable Input<String> serviceCidr;
+        private @Nullable Output<String> podCidr;
+        private @Nullable Output<String> serviceCidr;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceCidr = defaults.serviceCidr;
         }
 
-        public Builder podCidr(@Nullable Input<String> podCidr) {
+        public Builder podCidr(@Nullable Output<String> podCidr) {
             this.podCidr = podCidr;
             return this;
         }
 
         public Builder podCidr(@Nullable String podCidr) {
-            this.podCidr = Input.ofNullable(podCidr);
+            this.podCidr = Output.ofNullable(podCidr);
             return this;
         }
 
-        public Builder serviceCidr(@Nullable Input<String> serviceCidr) {
+        public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
         public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = Input.ofNullable(serviceCidr);
+            this.serviceCidr = Output.ofNullable(serviceCidr);
             return this;
         }
         public NetworkProfileArgs build() {

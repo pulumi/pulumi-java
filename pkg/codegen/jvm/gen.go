@@ -127,8 +127,8 @@ func (mod *modContext) typeString(
 	requireInitializers bool,
 	// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
 	outerOptional bool,
-	// Called in the context of an overload without an `Input<T>` wrapper. We
-	// should act like we are inside an Input<T>.
+	// Called in the context of an overload without an `Output<T>` wrapper. We
+	// should act like we are inside an Output<T>.
 	inputlessOverload bool,
 ) TypeShape {
 	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, state, requireInitializers, inputlessOverload)
@@ -161,15 +161,15 @@ func (mod *modContext) typeStringRecHelper(
 		}
 		inner := mod.typeStringRecHelper(ctx, elem, qualifier, true, state, requireInitializers, true)
 
-		// Simplify Input<Input<T>> to Input<T> here. This is
+		// Simplify Output<Output<T>> to Output<T> here. This is
 		// safe to do since:
 		//
-		//     serialize(Input<Input<T>> x) == serialize(Input<T> x)
-		if inner.Type.Equal(names.Input) {
+		//     serialize(Output<Output<T>> x) == serialize(Output<T> x)
+		if inner.Type.Equal(names.Output) {
 			return inner
 		}
 		return TypeShape{
-			Type:       names.Input,
+			Type:       names.Output,
 			Parameters: []TypeShape{inner},
 		}
 
@@ -356,7 +356,7 @@ func (mod *modContext) typeStringRecHelper(
 // In general, `outerOptional` <=> `!optionalAsNull`.
 func emptyTypeInitializer(ctx *classFileContext, t schema.Type, optionalAsNull bool) string {
 	if isInputType(t) {
-		return fmt.Sprintf("%s.empty()", ctx.ref(names.Input))
+		return fmt.Sprintf("%s.empty()", ctx.ref(names.Output))
 	}
 	if _, ok := t.(*schema.OptionalType); ok && !optionalAsNull {
 		return fmt.Sprintf("%s.empty()", ctx.ref(names.Optional))
@@ -408,15 +408,15 @@ func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nested
 	case *schema.InputType:
 		switch t := t.ElementType.(type) {
 		case *schema.ArrayType:
-			return fmt.Sprintf("%s.ofList(%s)", ctx.ref(names.Input), nested)
+			return fmt.Sprintf("%s.ofList(%s)", ctx.ref(names.Output), nested)
 		case *schema.MapType:
-			return fmt.Sprintf("%s.ofMap(%s)", ctx.ref(names.Input), nested)
+			return fmt.Sprintf("%s.ofMap(%s)", ctx.ref(names.Output), nested)
 		case *schema.UnionType:
 			return handleUnion(t,
-				fmt.Sprintf("%s.ofLeft", ctx.ref(names.Input)),
-				fmt.Sprintf("%s.ofRight", ctx.ref(names.Input)))
+				fmt.Sprintf("%s.ofLeft", ctx.ref(names.Output)),
+				fmt.Sprintf("%s.ofRight", ctx.ref(names.Output)))
 		default:
-			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Input), nested)
+			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Output), nested)
 		}
 
 	case *schema.ArrayType:
@@ -636,7 +636,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
 			}
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -670,13 +670,13 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
+					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
 				}
 				if prop.IsRequired() {
 					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
-						propertyName, ctx.ref(names.Input), ctx.ref(names.Objects), propertyName)
+						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
 				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Input), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Output), propertyName)
 			}
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
@@ -839,7 +839,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
 			}
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -873,13 +873,13 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
+					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
 				}
 				if prop.IsRequired() {
 					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
-						propertyName, ctx.ref(names.Input), ctx.ref(names.Objects), propertyName)
+						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
 				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Input), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Output), propertyName)
 			}
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
@@ -1041,9 +1041,9 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 				getterType = getterTypeNonOptional
 				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", paramName, paramName)
 			default:
-				// Option<Input<T>> are stored as @Nullable Input<T>. We don't
+				// Option<Output<T>> are stored as @Nullable Output<T>. We don't
 				// need to perform the nullable conversion for them.
-				if !getterType.Type.Equal(names.Input) {
+				if !getterType.Type.Equal(names.Output) {
 					returnStatement = fmt.Sprintf("%s.ofNullable(this.%s)", ctx.ref(names.Optional), paramName)
 				}
 			}
@@ -1267,9 +1267,9 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 				getterType = getterTypeNonOptional
 				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", paramName, paramName)
 			default:
-				// Option<Input<T>> are stored as @Nullable Input<T>. We don't
+				// Option<Output<T>> are stored as @Nullable Output<T>. We don't
 				// need to perform the nullable conversion for them.
-				if !getterType.Type.Equal(names.Input) {
+				if !getterType.Type.Equal(names.Output) {
 					returnStatement = fmt.Sprintf("%s.ofNullable(this.%s)", ctx.ref(names.Optional), paramName)
 				}
 			}
@@ -1444,7 +1444,7 @@ func (mod *modContext) getDefaultValue(
 
 func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	w := ctx.writer
-	fprintf(w, "%s.of(", ctx.ref(names.Input))
+	fprintf(w, "%s.of(", ctx.ref(names.Output))
 	fprintf(w, "%s.builder()", ctx.ref(names.Alias))
 	if alias.Name != nil {
 		fprintf(w, ".setName(\"%v\")", *alias.Name)
@@ -1662,7 +1662,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
 	fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty())%s);\n",
-		tok, argsOverride, ctx.imports.Ref(names.Input), isComponent)
+		tok, argsOverride, ctx.imports.Ref(names.Output), isComponent)
 	fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.
@@ -1674,7 +1674,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		fprintf(w, "\n")
 		fprintf(w, "    private %s(String name, %s<String> id, %s@%s %s options) {\n",
-			className, ctx.ref(names.Input), stateParam, ctx.ref(names.Nullable), optionsType)
+			className, ctx.ref(names.Output), stateParam, ctx.ref(names.Nullable), optionsType)
 		fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, id));\n", tok, stateRef)
 		fprintf(w, "    }\n")
 	}
@@ -1704,7 +1704,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "\n")
 	fprintf(w,
 		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
-		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Input))
+		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	fprintf(w, "            .setVersion(%s.getVersion())\n", mod.utilitiesRef(ctx))
 
@@ -1761,7 +1761,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "     */\n")
 
 		fprintf(w, "    public static %s get(String name, %s<String> id, %s@%s %s options) {\n",
-			className, ctx.ref(names.Input), stateParam, ctx.ref(names.Nullable), optionsType)
+			className, ctx.ref(names.Output), stateParam, ctx.ref(names.Nullable), optionsType)
 		fprintf(w, "        return new %s(name, id, %soptions);\n", className, stateRef)
 		fprintf(w, "    }\n")
 	}

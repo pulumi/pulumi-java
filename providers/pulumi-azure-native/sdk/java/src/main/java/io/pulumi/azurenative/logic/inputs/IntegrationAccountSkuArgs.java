@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.IntegrationAccountSkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,IntegrationAccountSkuName>> name;
+      private final Output<Either<String,IntegrationAccountSkuName>> name;
 
-    public Input<Either<String,IntegrationAccountSkuName>> getName() {
+    public Output<Either<String,IntegrationAccountSkuName>> getName() {
         return this.name;
     }
 
-    public IntegrationAccountSkuArgs(Input<Either<String,IntegrationAccountSkuName>> name) {
+    public IntegrationAccountSkuArgs(Output<Either<String,IntegrationAccountSkuName>> name) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private IntegrationAccountSkuArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Either<String,IntegrationAccountSkuName>> name;
+        private Output<Either<String,IntegrationAccountSkuName>> name;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder name(Input<Either<String,IntegrationAccountSkuName>> name) {
+        public Builder name(Output<Either<String,IntegrationAccountSkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,IntegrationAccountSkuName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public IntegrationAccountSkuArgs build() {

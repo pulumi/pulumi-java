@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.ProvisioningState;
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesSpecificationArgs;
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesStatusArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,39 +23,39 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     public static final DefaultRolloutPropertiesArgs Empty = new DefaultRolloutPropertiesArgs();
 
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     @InputImport(name="specification")
-      private final @Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification;
+      private final @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
 
-    public Input<DefaultRolloutPropertiesSpecificationArgs> getSpecification() {
-        return this.specification == null ? Input.empty() : this.specification;
+    public Output<DefaultRolloutPropertiesSpecificationArgs> getSpecification() {
+        return this.specification == null ? Output.empty() : this.specification;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<DefaultRolloutPropertiesStatusArgs> status;
+      private final @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
 
-    public Input<DefaultRolloutPropertiesStatusArgs> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<DefaultRolloutPropertiesStatusArgs> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public DefaultRolloutPropertiesArgs(
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification,
-        @Nullable Input<DefaultRolloutPropertiesStatusArgs> status) {
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
+        @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification,
+        @Nullable Output<DefaultRolloutPropertiesStatusArgs> status) {
         this.provisioningState = provisioningState;
         this.specification = specification;
         this.status = status;
     }
 
     private DefaultRolloutPropertiesArgs() {
-        this.provisioningState = Input.empty();
-        this.specification = Input.empty();
-        this.status = Input.empty();
+        this.provisioningState = Output.empty();
+        this.specification = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification;
-        private @Nullable Input<DefaultRolloutPropertiesStatusArgs> status;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
+        private @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     	      this.status = defaults.status;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder specification(@Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification) {
+        public Builder specification(@Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification) {
             this.specification = specification;
             return this;
         }
 
         public Builder specification(@Nullable DefaultRolloutPropertiesSpecificationArgs specification) {
-            this.specification = Input.ofNullable(specification);
+            this.specification = Output.ofNullable(specification);
             return this;
         }
 
-        public Builder status(@Nullable Input<DefaultRolloutPropertiesStatusArgs> status) {
+        public Builder status(@Nullable Output<DefaultRolloutPropertiesStatusArgs> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable DefaultRolloutPropertiesStatusArgs status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public DefaultRolloutPropertiesArgs build() {

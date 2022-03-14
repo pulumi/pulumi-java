@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.inputs.SqlAclEntryArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetworks")
-      private final @Nullable Input<List<SqlAclEntryArgs>> authorizedNetworks;
+      private final @Nullable Output<List<SqlAclEntryArgs>> authorizedNetworks;
 
-    public Input<List<SqlAclEntryArgs>> getAuthorizedNetworks() {
-        return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
+    public Output<List<SqlAclEntryArgs>> getAuthorizedNetworks() {
+        return this.authorizedNetworks == null ? Output.empty() : this.authorizedNetworks;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableIpv4")
-      private final @Nullable Input<Boolean> enableIpv4;
+      private final @Nullable Output<Boolean> enableIpv4;
 
-    public Input<Boolean> getEnableIpv4() {
-        return this.enableIpv4 == null ? Input.empty() : this.enableIpv4;
+    public Output<Boolean> getEnableIpv4() {
+        return this.enableIpv4 == null ? Output.empty() : this.enableIpv4;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateNetwork")
-      private final @Nullable Input<String> privateNetwork;
+      private final @Nullable Output<String> privateNetwork;
 
-    public Input<String> getPrivateNetwork() {
-        return this.privateNetwork == null ? Input.empty() : this.privateNetwork;
+    public Output<String> getPrivateNetwork() {
+        return this.privateNetwork == null ? Output.empty() : this.privateNetwork;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireSsl")
-      private final @Nullable Input<Boolean> requireSsl;
+      private final @Nullable Output<Boolean> requireSsl;
 
-    public Input<Boolean> getRequireSsl() {
-        return this.requireSsl == null ? Input.empty() : this.requireSsl;
+    public Output<Boolean> getRequireSsl() {
+        return this.requireSsl == null ? Output.empty() : this.requireSsl;
     }
 
     public SqlIpConfigArgs(
-        @Nullable Input<List<SqlAclEntryArgs>> authorizedNetworks,
-        @Nullable Input<Boolean> enableIpv4,
-        @Nullable Input<String> privateNetwork,
-        @Nullable Input<Boolean> requireSsl) {
+        @Nullable Output<List<SqlAclEntryArgs>> authorizedNetworks,
+        @Nullable Output<Boolean> enableIpv4,
+        @Nullable Output<String> privateNetwork,
+        @Nullable Output<Boolean> requireSsl) {
         this.authorizedNetworks = authorizedNetworks;
         this.enableIpv4 = enableIpv4;
         this.privateNetwork = privateNetwork;
@@ -77,10 +77,10 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlIpConfigArgs() {
-        this.authorizedNetworks = Input.empty();
-        this.enableIpv4 = Input.empty();
-        this.privateNetwork = Input.empty();
-        this.requireSsl = Input.empty();
+        this.authorizedNetworks = Output.empty();
+        this.enableIpv4 = Output.empty();
+        this.privateNetwork = Output.empty();
+        this.requireSsl = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SqlAclEntryArgs>> authorizedNetworks;
-        private @Nullable Input<Boolean> enableIpv4;
-        private @Nullable Input<String> privateNetwork;
-        private @Nullable Input<Boolean> requireSsl;
+        private @Nullable Output<List<SqlAclEntryArgs>> authorizedNetworks;
+        private @Nullable Output<Boolean> enableIpv4;
+        private @Nullable Output<String> privateNetwork;
+        private @Nullable Output<Boolean> requireSsl;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder authorizedNetworks(@Nullable Input<List<SqlAclEntryArgs>> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable Output<List<SqlAclEntryArgs>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
         public Builder authorizedNetworks(@Nullable List<SqlAclEntryArgs> authorizedNetworks) {
-            this.authorizedNetworks = Input.ofNullable(authorizedNetworks);
+            this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
 
-        public Builder enableIpv4(@Nullable Input<Boolean> enableIpv4) {
+        public Builder enableIpv4(@Nullable Output<Boolean> enableIpv4) {
             this.enableIpv4 = enableIpv4;
             return this;
         }
 
         public Builder enableIpv4(@Nullable Boolean enableIpv4) {
-            this.enableIpv4 = Input.ofNullable(enableIpv4);
+            this.enableIpv4 = Output.ofNullable(enableIpv4);
             return this;
         }
 
-        public Builder privateNetwork(@Nullable Input<String> privateNetwork) {
+        public Builder privateNetwork(@Nullable Output<String> privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
 
         public Builder privateNetwork(@Nullable String privateNetwork) {
-            this.privateNetwork = Input.ofNullable(privateNetwork);
+            this.privateNetwork = Output.ofNullable(privateNetwork);
             return this;
         }
 
-        public Builder requireSsl(@Nullable Input<Boolean> requireSsl) {
+        public Builder requireSsl(@Nullable Output<Boolean> requireSsl) {
             this.requireSsl = requireSsl;
             return this;
         }
 
         public Builder requireSsl(@Nullable Boolean requireSsl) {
-            this.requireSsl = Input.ofNullable(requireSsl);
+            this.requireSsl = Output.ofNullable(requireSsl);
             return this;
         }
         public SqlIpConfigArgs build() {

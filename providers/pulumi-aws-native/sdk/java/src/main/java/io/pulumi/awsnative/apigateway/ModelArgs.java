@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
@@ -64,18 +64,18 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<Object> schema;
+      private final @Nullable Output<Object> schema;
 
-    public Input<Object> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<Object> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     public ModelArgs(
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> restApiId,
-        @Nullable Input<Object> schema) {
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> restApiId,
+        @Nullable Output<Object> schema) {
         this.contentType = contentType;
         this.description = description;
         this.name = name;
@@ -84,11 +84,11 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.contentType = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.restApiId = Input.empty();
-        this.schema = Input.empty();
+        this.contentType = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.restApiId = Output.empty();
+        this.schema = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> restApiId;
-        private @Nullable Input<Object> schema;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> restApiId;
+        private @Nullable Output<Object> schema;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schema = defaults.schema;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder schema(@Nullable Input<Object> schema) {
+        public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable Object schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
         public ModelArgs build() {

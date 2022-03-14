@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NodePoolManagementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoRepair")
-      private final @Nullable Input<Boolean> autoRepair;
+      private final @Nullable Output<Boolean> autoRepair;
 
-    public Input<Boolean> getAutoRepair() {
-        return this.autoRepair == null ? Input.empty() : this.autoRepair;
+    public Output<Boolean> getAutoRepair() {
+        return this.autoRepair == null ? Output.empty() : this.autoRepair;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class NodePoolManagementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoUpgrade")
-      private final @Nullable Input<Boolean> autoUpgrade;
+      private final @Nullable Output<Boolean> autoUpgrade;
 
-    public Input<Boolean> getAutoUpgrade() {
-        return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;
+    public Output<Boolean> getAutoUpgrade() {
+        return this.autoUpgrade == null ? Output.empty() : this.autoUpgrade;
     }
 
     public NodePoolManagementArgs(
-        @Nullable Input<Boolean> autoRepair,
-        @Nullable Input<Boolean> autoUpgrade) {
+        @Nullable Output<Boolean> autoRepair,
+        @Nullable Output<Boolean> autoUpgrade) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
     }
 
     private NodePoolManagementArgs() {
-        this.autoRepair = Input.empty();
-        this.autoUpgrade = Input.empty();
+        this.autoRepair = Output.empty();
+        this.autoUpgrade = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class NodePoolManagementArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoRepair;
-        private @Nullable Input<Boolean> autoUpgrade;
+        private @Nullable Output<Boolean> autoRepair;
+        private @Nullable Output<Boolean> autoUpgrade;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class NodePoolManagementArgs extends io.pulumi.resources.ResourceAr
     	      this.autoUpgrade = defaults.autoUpgrade;
         }
 
-        public Builder autoRepair(@Nullable Input<Boolean> autoRepair) {
+        public Builder autoRepair(@Nullable Output<Boolean> autoRepair) {
             this.autoRepair = autoRepair;
             return this;
         }
 
         public Builder autoRepair(@Nullable Boolean autoRepair) {
-            this.autoRepair = Input.ofNullable(autoRepair);
+            this.autoRepair = Output.ofNullable(autoRepair);
             return this;
         }
 
-        public Builder autoUpgrade(@Nullable Input<Boolean> autoUpgrade) {
+        public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
 
         public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
-            this.autoUpgrade = Input.ofNullable(autoUpgrade);
+            this.autoUpgrade = Output.ofNullable(autoUpgrade);
             return this;
         }
         public NodePoolManagementArgs build() {

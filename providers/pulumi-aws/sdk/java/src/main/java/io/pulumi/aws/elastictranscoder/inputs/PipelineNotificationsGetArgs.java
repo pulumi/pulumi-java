@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elastictranscoder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="completed")
-      private final @Nullable Input<String> completed;
+      private final @Nullable Output<String> completed;
 
-    public Input<String> getCompleted() {
-        return this.completed == null ? Input.empty() : this.completed;
+    public Output<String> getCompleted() {
+        return this.completed == null ? Output.empty() : this.completed;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="error")
-      private final @Nullable Input<String> error;
+      private final @Nullable Output<String> error;
 
-    public Input<String> getError() {
-        return this.error == null ? Input.empty() : this.error;
+    public Output<String> getError() {
+        return this.error == null ? Output.empty() : this.error;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="progressing")
-      private final @Nullable Input<String> progressing;
+      private final @Nullable Output<String> progressing;
 
-    public Input<String> getProgressing() {
-        return this.progressing == null ? Input.empty() : this.progressing;
+    public Output<String> getProgressing() {
+        return this.progressing == null ? Output.empty() : this.progressing;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="warning")
-      private final @Nullable Input<String> warning;
+      private final @Nullable Output<String> warning;
 
-    public Input<String> getWarning() {
-        return this.warning == null ? Input.empty() : this.warning;
+    public Output<String> getWarning() {
+        return this.warning == null ? Output.empty() : this.warning;
     }
 
     public PipelineNotificationsGetArgs(
-        @Nullable Input<String> completed,
-        @Nullable Input<String> error,
-        @Nullable Input<String> progressing,
-        @Nullable Input<String> warning) {
+        @Nullable Output<String> completed,
+        @Nullable Output<String> error,
+        @Nullable Output<String> progressing,
+        @Nullable Output<String> warning) {
         this.completed = completed;
         this.error = error;
         this.progressing = progressing;
@@ -70,10 +70,10 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
     }
 
     private PipelineNotificationsGetArgs() {
-        this.completed = Input.empty();
-        this.error = Input.empty();
-        this.progressing = Input.empty();
-        this.warning = Input.empty();
+        this.completed = Output.empty();
+        this.error = Output.empty();
+        this.progressing = Output.empty();
+        this.warning = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> completed;
-        private @Nullable Input<String> error;
-        private @Nullable Input<String> progressing;
-        private @Nullable Input<String> warning;
+        private @Nullable Output<String> completed;
+        private @Nullable Output<String> error;
+        private @Nullable Output<String> progressing;
+        private @Nullable Output<String> warning;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
     	      this.warning = defaults.warning;
         }
 
-        public Builder completed(@Nullable Input<String> completed) {
+        public Builder completed(@Nullable Output<String> completed) {
             this.completed = completed;
             return this;
         }
 
         public Builder completed(@Nullable String completed) {
-            this.completed = Input.ofNullable(completed);
+            this.completed = Output.ofNullable(completed);
             return this;
         }
 
-        public Builder error(@Nullable Input<String> error) {
+        public Builder error(@Nullable Output<String> error) {
             this.error = error;
             return this;
         }
 
         public Builder error(@Nullable String error) {
-            this.error = Input.ofNullable(error);
+            this.error = Output.ofNullable(error);
             return this;
         }
 
-        public Builder progressing(@Nullable Input<String> progressing) {
+        public Builder progressing(@Nullable Output<String> progressing) {
             this.progressing = progressing;
             return this;
         }
 
         public Builder progressing(@Nullable String progressing) {
-            this.progressing = Input.ofNullable(progressing);
+            this.progressing = Output.ofNullable(progressing);
             return this;
         }
 
-        public Builder warning(@Nullable Input<String> warning) {
+        public Builder warning(@Nullable Output<String> warning) {
             this.warning = warning;
             return this;
         }
 
         public Builder warning(@Nullable String warning) {
-            this.warning = Input.ofNullable(warning);
+            this.warning = Output.ofNullable(warning);
             return this;
         }
         public PipelineNotificationsGetArgs build() {

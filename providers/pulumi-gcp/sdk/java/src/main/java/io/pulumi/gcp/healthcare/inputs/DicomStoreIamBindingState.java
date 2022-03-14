@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
     public static final DicomStoreIamBindingState Empty = new DicomStoreIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<DicomStoreIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<DicomStoreIamBindingConditionGetArgs> condition;
 
-    public Input<DicomStoreIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<DicomStoreIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dicomStoreId")
-      private final @Nullable Input<String> dicomStoreId;
+      private final @Nullable Output<String> dicomStoreId;
 
-    public Input<String> getDicomStoreId() {
-        return this.dicomStoreId == null ? Input.empty() : this.dicomStoreId;
+    public Output<String> getDicomStoreId() {
+        return this.dicomStoreId == null ? Output.empty() : this.dicomStoreId;
     }
 
     /**
@@ -42,17 +42,17 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -62,18 +62,18 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public DicomStoreIamBindingState(
-        @Nullable Input<DicomStoreIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> dicomStoreId,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> role) {
+        @Nullable Output<DicomStoreIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> dicomStoreId,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.dicomStoreId = dicomStoreId;
         this.etag = etag;
@@ -82,11 +82,11 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
     }
 
     private DicomStoreIamBindingState() {
-        this.condition = Input.empty();
-        this.dicomStoreId = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.dicomStoreId = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,11 +98,11 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<DicomStoreIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> dicomStoreId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> role;
+        private @Nullable Output<DicomStoreIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> dicomStoreId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -117,53 +117,53 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<DicomStoreIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DicomStoreIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable DicomStoreIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder dicomStoreId(@Nullable Input<String> dicomStoreId) {
+        public Builder dicomStoreId(@Nullable Output<String> dicomStoreId) {
             this.dicomStoreId = dicomStoreId;
             return this;
         }
 
         public Builder dicomStoreId(@Nullable String dicomStoreId) {
-            this.dicomStoreId = Input.ofNullable(dicomStoreId);
+            this.dicomStoreId = Output.ofNullable(dicomStoreId);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public DicomStoreIamBindingState build() {

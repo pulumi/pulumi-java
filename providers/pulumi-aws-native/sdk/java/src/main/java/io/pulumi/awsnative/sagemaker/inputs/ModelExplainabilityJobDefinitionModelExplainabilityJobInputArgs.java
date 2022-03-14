@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionEndpointInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     public static final ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs Empty = new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs();
 
     @InputImport(name="endpointInput", required=true)
-      private final Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
+      private final Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
 
-    public Input<ModelExplainabilityJobDefinitionEndpointInputArgs> getEndpointInput() {
+    public Output<ModelExplainabilityJobDefinitionEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;
     }
 
-    public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs(Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
+    public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs(Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
         this.endpointInput = Objects.requireNonNull(endpointInput, "expected parameter 'endpointInput' to be non-null");
     }
 
     private ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs() {
-        this.endpointInput = Input.empty();
+        this.endpointInput = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     }
 
     public static final class Builder {
-        private Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
+        private Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder endpointInput(Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
+        public Builder endpointInput(Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
 
         public Builder endpointInput(ModelExplainabilityJobDefinitionEndpointInputArgs endpointInput) {
-            this.endpointInput = Input.of(Objects.requireNonNull(endpointInput));
+            this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
             return this;
         }
         public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs build() {

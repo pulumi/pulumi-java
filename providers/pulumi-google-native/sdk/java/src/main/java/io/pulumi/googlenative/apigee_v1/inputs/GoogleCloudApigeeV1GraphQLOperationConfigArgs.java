@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationArgs;
@@ -27,9 +27,9 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="apiSource", required=true)
-      private final Input<String> apiSource;
+      private final Output<String> apiSource;
 
-    public Input<String> getApiSource() {
+    public Output<String> getApiSource() {
         return this.apiSource;
     }
 
@@ -38,10 +38,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="operations", required=true)
-      private final Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
+      private final Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
 
-    public Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> getOperations() {
+    public Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> getOperations() {
         return this.operations;
     }
 
@@ -60,17 +60,17 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="quota")
-      private final @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota;
+      private final @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
 
-    public Input<GoogleCloudApigeeV1QuotaArgs> getQuota() {
-        return this.quota == null ? Input.empty() : this.quota;
+    public Output<GoogleCloudApigeeV1QuotaArgs> getQuota() {
+        return this.quota == null ? Output.empty() : this.quota;
     }
 
     public GoogleCloudApigeeV1GraphQLOperationConfigArgs(
-        Input<String> apiSource,
-        @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
-        Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations,
-        @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota) {
+        Output<String> apiSource,
+        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
+        Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations,
+        @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota) {
         this.apiSource = Objects.requireNonNull(apiSource, "expected parameter 'apiSource' to be non-null");
         this.attributes = attributes;
         this.operations = Objects.requireNonNull(operations, "expected parameter 'operations' to be non-null");
@@ -78,10 +78,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
     }
 
     private GoogleCloudApigeeV1GraphQLOperationConfigArgs() {
-        this.apiSource = Input.empty();
-        this.attributes = Input.empty();
-        this.operations = Input.empty();
-        this.quota = Input.empty();
+        this.apiSource = Output.empty();
+        this.attributes = Output.empty();
+        this.operations = Output.empty();
+        this.quota = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> apiSource;
-        private @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
-        private Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
-        private @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota;
+        private Output<String> apiSource;
+        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+        private Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
+        private @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
     	      this.quota = defaults.quota;
         }
 
-        public Builder apiSource(Input<String> apiSource) {
+        public Builder apiSource(Output<String> apiSource) {
             this.apiSource = Objects.requireNonNull(apiSource);
             return this;
         }
 
         public Builder apiSource(String apiSource) {
-            this.apiSource = Input.of(Objects.requireNonNull(apiSource));
+            this.apiSource = Output.of(Objects.requireNonNull(apiSource));
             return this;
         }
 
-        public Builder attributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder operations(Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations) {
+        public Builder operations(Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
 
         public Builder operations(List<GoogleCloudApigeeV1GraphQLOperationArgs> operations) {
-            this.operations = Input.of(Objects.requireNonNull(operations));
+            this.operations = Output.of(Objects.requireNonNull(operations));
             return this;
         }
 
-        public Builder quota(@Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota) {
+        public Builder quota(@Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
 
         public Builder quota(@Nullable GoogleCloudApigeeV1QuotaArgs quota) {
-            this.quota = Input.ofNullable(quota);
+            this.quota = Output.ofNullable(quota);
             return this;
         }
         public GoogleCloudApigeeV1GraphQLOperationConfigArgs build() {

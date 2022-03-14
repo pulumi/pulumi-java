@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ClientIPConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientIP")
-      private final @Nullable Input<ClientIPConfigArgs> clientIP;
+      private final @Nullable Output<ClientIPConfigArgs> clientIP;
 
-    public Input<ClientIPConfigArgs> getClientIP() {
-        return this.clientIP == null ? Input.empty() : this.clientIP;
+    public Output<ClientIPConfigArgs> getClientIP() {
+        return this.clientIP == null ? Output.empty() : this.clientIP;
     }
 
-    public SessionAffinityConfigArgs(@Nullable Input<ClientIPConfigArgs> clientIP) {
+    public SessionAffinityConfigArgs(@Nullable Output<ClientIPConfigArgs> clientIP) {
         this.clientIP = clientIP;
     }
 
     private SessionAffinityConfigArgs() {
-        this.clientIP = Input.empty();
+        this.clientIP = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ClientIPConfigArgs> clientIP;
+        private @Nullable Output<ClientIPConfigArgs> clientIP;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
     	      this.clientIP = defaults.clientIP;
         }
 
-        public Builder clientIP(@Nullable Input<ClientIPConfigArgs> clientIP) {
+        public Builder clientIP(@Nullable Output<ClientIPConfigArgs> clientIP) {
             this.clientIP = clientIP;
             return this;
         }
 
         public Builder clientIP(@Nullable ClientIPConfigArgs clientIP) {
-            this.clientIP = Input.ofNullable(clientIP);
+            this.clientIP = Output.ofNullable(clientIP);
             return this;
         }
         public SessionAffinityConfigArgs build() {

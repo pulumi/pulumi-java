@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketFilterRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArg
     public static final BucketS3KeyFilterArgs Empty = new BucketS3KeyFilterArgs();
 
     @InputImport(name="rules", required=true)
-      private final Input<List<BucketFilterRuleArgs>> rules;
+      private final Output<List<BucketFilterRuleArgs>> rules;
 
-    public Input<List<BucketFilterRuleArgs>> getRules() {
+    public Output<List<BucketFilterRuleArgs>> getRules() {
         return this.rules;
     }
 
-    public BucketS3KeyFilterArgs(Input<List<BucketFilterRuleArgs>> rules) {
+    public BucketS3KeyFilterArgs(Output<List<BucketFilterRuleArgs>> rules) {
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private BucketS3KeyFilterArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<BucketFilterRuleArgs>> rules;
+        private Output<List<BucketFilterRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArg
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(Input<List<BucketFilterRuleArgs>> rules) {
+        public Builder rules(Output<List<BucketFilterRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<BucketFilterRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public BucketS3KeyFilterArgs build() {

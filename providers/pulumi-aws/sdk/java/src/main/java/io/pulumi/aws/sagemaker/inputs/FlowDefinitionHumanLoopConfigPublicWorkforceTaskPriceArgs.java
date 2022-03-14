@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs ext
      * 
      */
     @InputImport(name="amountInUsd")
-      private final @Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd;
+      private final @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd;
 
-    public Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> getAmountInUsd() {
-        return this.amountInUsd == null ? Input.empty() : this.amountInUsd;
+    public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> getAmountInUsd() {
+        return this.amountInUsd == null ? Output.empty() : this.amountInUsd;
     }
 
-    public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs(@Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd) {
+    public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs(@Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd) {
         this.amountInUsd = amountInUsd;
     }
 
     private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs() {
-        this.amountInUsd = Input.empty();
+        this.amountInUsd = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd;
+        private @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs ext
     	      this.amountInUsd = defaults.amountInUsd;
         }
 
-        public Builder amountInUsd(@Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd) {
+        public Builder amountInUsd(@Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs> amountInUsd) {
             this.amountInUsd = amountInUsd;
             return this;
         }
 
         public Builder amountInUsd(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs amountInUsd) {
-            this.amountInUsd = Input.ofNullable(amountInUsd);
+            this.amountInUsd = Output.ofNullable(amountInUsd);
             return this;
         }
         public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs build() {

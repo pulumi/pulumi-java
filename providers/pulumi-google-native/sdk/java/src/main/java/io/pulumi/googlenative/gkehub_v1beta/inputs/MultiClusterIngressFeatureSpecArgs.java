@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="configMembership")
-      private final @Nullable Input<String> configMembership;
+      private final @Nullable Output<String> configMembership;
 
-    public Input<String> getConfigMembership() {
-        return this.configMembership == null ? Input.empty() : this.configMembership;
+    public Output<String> getConfigMembership() {
+        return this.configMembership == null ? Output.empty() : this.configMembership;
     }
 
-    public MultiClusterIngressFeatureSpecArgs(@Nullable Input<String> configMembership) {
+    public MultiClusterIngressFeatureSpecArgs(@Nullable Output<String> configMembership) {
         this.configMembership = configMembership;
     }
 
     private MultiClusterIngressFeatureSpecArgs() {
-        this.configMembership = Input.empty();
+        this.configMembership = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configMembership;
+        private @Nullable Output<String> configMembership;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
     	      this.configMembership = defaults.configMembership;
         }
 
-        public Builder configMembership(@Nullable Input<String> configMembership) {
+        public Builder configMembership(@Nullable Output<String> configMembership) {
             this.configMembership = configMembership;
             return this;
         }
 
         public Builder configMembership(@Nullable String configMembership) {
-            this.configMembership = Input.ofNullable(configMembership);
+            this.configMembership = Output.ofNullable(configMembership);
             return this;
         }
         public MultiClusterIngressFeatureSpecArgs build() {

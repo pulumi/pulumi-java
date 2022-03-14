@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.enums.BackupRetentionSettingsRetentionUnit;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retainedBackups")
-      private final @Nullable Input<Integer> retainedBackups;
+      private final @Nullable Output<Integer> retainedBackups;
 
-    public Input<Integer> getRetainedBackups() {
-        return this.retainedBackups == null ? Input.empty() : this.retainedBackups;
+    public Output<Integer> getRetainedBackups() {
+        return this.retainedBackups == null ? Output.empty() : this.retainedBackups;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retentionUnit")
-      private final @Nullable Input<BackupRetentionSettingsRetentionUnit> retentionUnit;
+      private final @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;
 
-    public Input<BackupRetentionSettingsRetentionUnit> getRetentionUnit() {
-        return this.retentionUnit == null ? Input.empty() : this.retentionUnit;
+    public Output<BackupRetentionSettingsRetentionUnit> getRetentionUnit() {
+        return this.retentionUnit == null ? Output.empty() : this.retentionUnit;
     }
 
     public BackupRetentionSettingsArgs(
-        @Nullable Input<Integer> retainedBackups,
-        @Nullable Input<BackupRetentionSettingsRetentionUnit> retentionUnit) {
+        @Nullable Output<Integer> retainedBackups,
+        @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit) {
         this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }
 
     private BackupRetentionSettingsArgs() {
-        this.retainedBackups = Input.empty();
-        this.retentionUnit = Input.empty();
+        this.retainedBackups = Output.empty();
+        this.retentionUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> retainedBackups;
-        private @Nullable Input<BackupRetentionSettingsRetentionUnit> retentionUnit;
+        private @Nullable Output<Integer> retainedBackups;
+        private @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
     	      this.retentionUnit = defaults.retentionUnit;
         }
 
-        public Builder retainedBackups(@Nullable Input<Integer> retainedBackups) {
+        public Builder retainedBackups(@Nullable Output<Integer> retainedBackups) {
             this.retainedBackups = retainedBackups;
             return this;
         }
 
         public Builder retainedBackups(@Nullable Integer retainedBackups) {
-            this.retainedBackups = Input.ofNullable(retainedBackups);
+            this.retainedBackups = Output.ofNullable(retainedBackups);
             return this;
         }
 
-        public Builder retentionUnit(@Nullable Input<BackupRetentionSettingsRetentionUnit> retentionUnit) {
+        public Builder retentionUnit(@Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit) {
             this.retentionUnit = retentionUnit;
             return this;
         }
 
         public Builder retentionUnit(@Nullable BackupRetentionSettingsRetentionUnit retentionUnit) {
-            this.retentionUnit = Input.ofNullable(retentionUnit);
+            this.retentionUnit = Output.ofNullable(retentionUnit);
             return this;
         }
         public BackupRetentionSettingsArgs build() {

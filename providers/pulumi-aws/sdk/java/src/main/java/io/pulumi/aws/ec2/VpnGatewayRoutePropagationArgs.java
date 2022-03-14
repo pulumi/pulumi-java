@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routeTableId", required=true)
-      private final Input<String> routeTableId;
+      private final Output<String> routeTableId;
 
-    public Input<String> getRouteTableId() {
+    public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
 
@@ -29,22 +29,22 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vpnGatewayId", required=true)
-      private final Input<String> vpnGatewayId;
+      private final Output<String> vpnGatewayId;
 
-    public Input<String> getVpnGatewayId() {
+    public Output<String> getVpnGatewayId() {
         return this.vpnGatewayId;
     }
 
     public VpnGatewayRoutePropagationArgs(
-        Input<String> routeTableId,
-        Input<String> vpnGatewayId) {
+        Output<String> routeTableId,
+        Output<String> vpnGatewayId) {
         this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
         this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId, "expected parameter 'vpnGatewayId' to be non-null");
     }
 
     private VpnGatewayRoutePropagationArgs() {
-        this.routeTableId = Input.empty();
-        this.vpnGatewayId = Input.empty();
+        this.routeTableId = Output.empty();
+        this.vpnGatewayId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> routeTableId;
-        private Input<String> vpnGatewayId;
+        private Output<String> routeTableId;
+        private Output<String> vpnGatewayId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder routeTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
+            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder vpnGatewayId(Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(Output<String> vpnGatewayId) {
             this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId);
             return this;
         }
 
         public Builder vpnGatewayId(String vpnGatewayId) {
-            this.vpnGatewayId = Input.of(Objects.requireNonNull(vpnGatewayId));
+            this.vpnGatewayId = Output.of(Objects.requireNonNull(vpnGatewayId));
             return this;
         }
         public VpnGatewayRoutePropagationArgs build() {

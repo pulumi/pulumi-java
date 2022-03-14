@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class CustomerManagedEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-      private final Input<String> kmsKeyName;
+      private final Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
+    public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public CustomerManagedEncryptionArgs(Input<String> kmsKeyName) {
+    public CustomerManagedEncryptionArgs(Output<String> kmsKeyName) {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
     }
 
     private CustomerManagedEncryptionArgs() {
-        this.kmsKeyName = Input.empty();
+        this.kmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class CustomerManagedEncryptionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> kmsKeyName;
+        private Output<String> kmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class CustomerManagedEncryptionArgs extends io.pulumi.resources.Res
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder kmsKeyName(Input<String> kmsKeyName) {
+        public Builder kmsKeyName(Output<String> kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
+            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
         public CustomerManagedEncryptionArgs build() {

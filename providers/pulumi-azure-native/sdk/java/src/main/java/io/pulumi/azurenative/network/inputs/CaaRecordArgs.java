@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flags")
-      private final @Nullable Input<Integer> flags;
+      private final @Nullable Output<Integer> flags;
 
-    public Input<Integer> getFlags() {
-        return this.flags == null ? Input.empty() : this.flags;
+    public Output<Integer> getFlags() {
+        return this.flags == null ? Output.empty() : this.flags;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public CaaRecordArgs(
-        @Nullable Input<Integer> flags,
-        @Nullable Input<String> tag,
-        @Nullable Input<String> value) {
+        @Nullable Output<Integer> flags,
+        @Nullable Output<String> tag,
+        @Nullable Output<String> value) {
         this.flags = flags;
         this.tag = tag;
         this.value = value;
     }
 
     private CaaRecordArgs() {
-        this.flags = Input.empty();
-        this.tag = Input.empty();
-        this.value = Input.empty();
+        this.flags = Output.empty();
+        this.tag = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> flags;
-        private @Nullable Input<String> tag;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Integer> flags;
+        private @Nullable Output<String> tag;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder flags(@Nullable Input<Integer> flags) {
+        public Builder flags(@Nullable Output<Integer> flags) {
             this.flags = flags;
             return this;
         }
 
         public Builder flags(@Nullable Integer flags) {
-            this.flags = Input.ofNullable(flags);
+            this.flags = Output.ofNullable(flags);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public CaaRecordArgs build() {

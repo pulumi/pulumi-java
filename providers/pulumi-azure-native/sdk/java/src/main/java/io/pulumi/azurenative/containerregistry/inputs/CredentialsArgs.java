@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.CustomRegistryCredentialsArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SourceRegistryCredentialsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -28,10 +28,10 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRegistries")
-      private final @Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
+      private final @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
 
-    public Input<Map<String,CustomRegistryCredentialsArgs>> getCustomRegistries() {
-        return this.customRegistries == null ? Input.empty() : this.customRegistries;
+    public Output<Map<String,CustomRegistryCredentialsArgs>> getCustomRegistries() {
+        return this.customRegistries == null ? Output.empty() : this.customRegistries;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRegistry")
-      private final @Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry;
+      private final @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;
 
-    public Input<SourceRegistryCredentialsArgs> getSourceRegistry() {
-        return this.sourceRegistry == null ? Input.empty() : this.sourceRegistry;
+    public Output<SourceRegistryCredentialsArgs> getSourceRegistry() {
+        return this.sourceRegistry == null ? Output.empty() : this.sourceRegistry;
     }
 
     public CredentialsArgs(
-        @Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries,
-        @Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry) {
+        @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries,
+        @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry) {
         this.customRegistries = customRegistries;
         this.sourceRegistry = sourceRegistry;
     }
 
     private CredentialsArgs() {
-        this.customRegistries = Input.empty();
-        this.sourceRegistry = Input.empty();
+        this.customRegistries = Output.empty();
+        this.sourceRegistry = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
-        private @Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry;
+        private @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
+        private @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceRegistry = defaults.sourceRegistry;
         }
 
-        public Builder customRegistries(@Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries) {
+        public Builder customRegistries(@Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries) {
             this.customRegistries = customRegistries;
             return this;
         }
 
         public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsArgs> customRegistries) {
-            this.customRegistries = Input.ofNullable(customRegistries);
+            this.customRegistries = Output.ofNullable(customRegistries);
             return this;
         }
 
-        public Builder sourceRegistry(@Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry) {
+        public Builder sourceRegistry(@Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry) {
             this.sourceRegistry = sourceRegistry;
             return this;
         }
 
         public Builder sourceRegistry(@Nullable SourceRegistryCredentialsArgs sourceRegistry) {
-            this.sourceRegistry = Input.ofNullable(sourceRegistry);
+            this.sourceRegistry = Output.ofNullable(sourceRegistry);
             return this;
         }
         public CredentialsArgs build() {

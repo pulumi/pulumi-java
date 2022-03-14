@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -34,10 +34,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowHostNameCNMismatch")
-      private final @Nullable Input<Object> allowHostNameCNMismatch;
+      private final @Nullable Output<Object> allowHostNameCNMismatch;
 
-    public Input<Object> getAllowHostNameCNMismatch() {
-        return this.allowHostNameCNMismatch == null ? Input.empty() : this.allowHostNameCNMismatch;
+    public Output<Object> getAllowHostNameCNMismatch() {
+        return this.allowHostNameCNMismatch == null ? Output.empty() : this.allowHostNameCNMismatch;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowSelfSignedServerCert")
-      private final @Nullable Input<Object> allowSelfSignedServerCert;
+      private final @Nullable Output<Object> allowSelfSignedServerCert;
 
-    public Input<Object> getAllowSelfSignedServerCert() {
-        return this.allowSelfSignedServerCert == null ? Input.empty() : this.allowSelfSignedServerCert;
+    public Output<Object> getAllowSelfSignedServerCert() {
+        return this.allowSelfSignedServerCert == null ? Output.empty() : this.allowSelfSignedServerCert;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<Either<String,HiveAuthenticationType>> authenticationType;
+      private final Output<Either<String,HiveAuthenticationType>> authenticationType;
 
-    public Input<Either<String,HiveAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,HiveAuthenticationType>> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -78,10 +78,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableSsl")
-      private final @Nullable Input<Object> enableSsl;
+      private final @Nullable Output<Object> enableSsl;
 
-    public Input<Object> getEnableSsl() {
-        return this.enableSsl == null ? Input.empty() : this.enableSsl;
+    public Output<Object> getEnableSsl() {
+        return this.enableSsl == null ? Output.empty() : this.enableSsl;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<Object> host;
+      private final Output<Object> host;
 
-    public Input<Object> getHost() {
+    public Output<Object> getHost() {
         return this.host;
     }
 
@@ -133,10 +133,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="httpPath")
-      private final @Nullable Input<Object> httpPath;
+      private final @Nullable Output<Object> httpPath;
 
-    public Input<Object> getHttpPath() {
-        return this.httpPath == null ? Input.empty() : this.httpPath;
+    public Output<Object> getHttpPath() {
+        return this.httpPath == null ? Output.empty() : this.httpPath;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Object> port;
+      private final @Nullable Output<Object> port;
 
-    public Input<Object> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Object> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serverType")
-      private final @Nullable Input<Either<String,HiveServerType>> serverType;
+      private final @Nullable Output<Either<String,HiveServerType>> serverType;
 
-    public Input<Either<String,HiveServerType>> getServerType() {
-        return this.serverType == null ? Input.empty() : this.serverType;
+    public Output<Either<String,HiveServerType>> getServerType() {
+        return this.serverType == null ? Output.empty() : this.serverType;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceDiscoveryMode")
-      private final @Nullable Input<Object> serviceDiscoveryMode;
+      private final @Nullable Output<Object> serviceDiscoveryMode;
 
-    public Input<Object> getServiceDiscoveryMode() {
-        return this.serviceDiscoveryMode == null ? Input.empty() : this.serviceDiscoveryMode;
+    public Output<Object> getServiceDiscoveryMode() {
+        return this.serviceDiscoveryMode == null ? Output.empty() : this.serviceDiscoveryMode;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="thriftTransportProtocol")
-      private final @Nullable Input<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
+      private final @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
 
-    public Input<Either<String,HiveThriftTransportProtocol>> getThriftTransportProtocol() {
-        return this.thriftTransportProtocol == null ? Input.empty() : this.thriftTransportProtocol;
+    public Output<Either<String,HiveThriftTransportProtocol>> getThriftTransportProtocol() {
+        return this.thriftTransportProtocol == null ? Output.empty() : this.thriftTransportProtocol;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trustedCertPath")
-      private final @Nullable Input<Object> trustedCertPath;
+      private final @Nullable Output<Object> trustedCertPath;
 
-    public Input<Object> getTrustedCertPath() {
-        return this.trustedCertPath == null ? Input.empty() : this.trustedCertPath;
+    public Output<Object> getTrustedCertPath() {
+        return this.trustedCertPath == null ? Output.empty() : this.trustedCertPath;
     }
 
     /**
@@ -222,9 +222,9 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -233,10 +233,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useNativeQuery")
-      private final @Nullable Input<Object> useNativeQuery;
+      private final @Nullable Output<Object> useNativeQuery;
 
-    public Input<Object> getUseNativeQuery() {
-        return this.useNativeQuery == null ? Input.empty() : this.useNativeQuery;
+    public Output<Object> getUseNativeQuery() {
+        return this.useNativeQuery == null ? Output.empty() : this.useNativeQuery;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useSystemTrustStore")
-      private final @Nullable Input<Object> useSystemTrustStore;
+      private final @Nullable Output<Object> useSystemTrustStore;
 
-    public Input<Object> getUseSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Input.empty() : this.useSystemTrustStore;
+    public Output<Object> getUseSystemTrustStore() {
+        return this.useSystemTrustStore == null ? Output.empty() : this.useSystemTrustStore;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<Object> username;
+      private final @Nullable Output<Object> username;
 
-    public Input<Object> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<Object> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     /**
@@ -266,35 +266,35 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zooKeeperNameSpace")
-      private final @Nullable Input<Object> zooKeeperNameSpace;
+      private final @Nullable Output<Object> zooKeeperNameSpace;
 
-    public Input<Object> getZooKeeperNameSpace() {
-        return this.zooKeeperNameSpace == null ? Input.empty() : this.zooKeeperNameSpace;
+    public Output<Object> getZooKeeperNameSpace() {
+        return this.zooKeeperNameSpace == null ? Output.empty() : this.zooKeeperNameSpace;
     }
 
     public HiveLinkedServiceArgs(
-        @Nullable Input<Object> allowHostNameCNMismatch,
-        @Nullable Input<Object> allowSelfSignedServerCert,
-        @Nullable Input<List<Object>> annotations,
-        Input<Either<String,HiveAuthenticationType>> authenticationType,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> enableSsl,
-        @Nullable Input<Object> encryptedCredential,
-        Input<Object> host,
-        @Nullable Input<Object> httpPath,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Object> port,
-        @Nullable Input<Either<String,HiveServerType>> serverType,
-        @Nullable Input<Object> serviceDiscoveryMode,
-        @Nullable Input<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol,
-        @Nullable Input<Object> trustedCertPath,
-        Input<String> type,
-        @Nullable Input<Object> useNativeQuery,
-        @Nullable Input<Object> useSystemTrustStore,
-        @Nullable Input<Object> username,
-        @Nullable Input<Object> zooKeeperNameSpace) {
+        @Nullable Output<Object> allowHostNameCNMismatch,
+        @Nullable Output<Object> allowSelfSignedServerCert,
+        @Nullable Output<List<Object>> annotations,
+        Output<Either<String,HiveAuthenticationType>> authenticationType,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> enableSsl,
+        @Nullable Output<Object> encryptedCredential,
+        Output<Object> host,
+        @Nullable Output<Object> httpPath,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Object> port,
+        @Nullable Output<Either<String,HiveServerType>> serverType,
+        @Nullable Output<Object> serviceDiscoveryMode,
+        @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol,
+        @Nullable Output<Object> trustedCertPath,
+        Output<String> type,
+        @Nullable Output<Object> useNativeQuery,
+        @Nullable Output<Object> useSystemTrustStore,
+        @Nullable Output<Object> username,
+        @Nullable Output<Object> zooKeeperNameSpace) {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;
@@ -320,28 +320,28 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private HiveLinkedServiceArgs() {
-        this.allowHostNameCNMismatch = Input.empty();
-        this.allowSelfSignedServerCert = Input.empty();
-        this.annotations = Input.empty();
-        this.authenticationType = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.enableSsl = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.host = Input.empty();
-        this.httpPath = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.port = Input.empty();
-        this.serverType = Input.empty();
-        this.serviceDiscoveryMode = Input.empty();
-        this.thriftTransportProtocol = Input.empty();
-        this.trustedCertPath = Input.empty();
-        this.type = Input.empty();
-        this.useNativeQuery = Input.empty();
-        this.useSystemTrustStore = Input.empty();
-        this.username = Input.empty();
-        this.zooKeeperNameSpace = Input.empty();
+        this.allowHostNameCNMismatch = Output.empty();
+        this.allowSelfSignedServerCert = Output.empty();
+        this.annotations = Output.empty();
+        this.authenticationType = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.enableSsl = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.host = Output.empty();
+        this.httpPath = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.port = Output.empty();
+        this.serverType = Output.empty();
+        this.serviceDiscoveryMode = Output.empty();
+        this.thriftTransportProtocol = Output.empty();
+        this.trustedCertPath = Output.empty();
+        this.type = Output.empty();
+        this.useNativeQuery = Output.empty();
+        this.useSystemTrustStore = Output.empty();
+        this.username = Output.empty();
+        this.zooKeeperNameSpace = Output.empty();
     }
 
     public static Builder builder() {
@@ -353,28 +353,28 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> allowHostNameCNMismatch;
-        private @Nullable Input<Object> allowSelfSignedServerCert;
-        private @Nullable Input<List<Object>> annotations;
-        private Input<Either<String,HiveAuthenticationType>> authenticationType;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> enableSsl;
-        private @Nullable Input<Object> encryptedCredential;
-        private Input<Object> host;
-        private @Nullable Input<Object> httpPath;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Object> port;
-        private @Nullable Input<Either<String,HiveServerType>> serverType;
-        private @Nullable Input<Object> serviceDiscoveryMode;
-        private @Nullable Input<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
-        private @Nullable Input<Object> trustedCertPath;
-        private Input<String> type;
-        private @Nullable Input<Object> useNativeQuery;
-        private @Nullable Input<Object> useSystemTrustStore;
-        private @Nullable Input<Object> username;
-        private @Nullable Input<Object> zooKeeperNameSpace;
+        private @Nullable Output<Object> allowHostNameCNMismatch;
+        private @Nullable Output<Object> allowSelfSignedServerCert;
+        private @Nullable Output<List<Object>> annotations;
+        private Output<Either<String,HiveAuthenticationType>> authenticationType;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> enableSsl;
+        private @Nullable Output<Object> encryptedCredential;
+        private Output<Object> host;
+        private @Nullable Output<Object> httpPath;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Object> port;
+        private @Nullable Output<Either<String,HiveServerType>> serverType;
+        private @Nullable Output<Object> serviceDiscoveryMode;
+        private @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
+        private @Nullable Output<Object> trustedCertPath;
+        private Output<String> type;
+        private @Nullable Output<Object> useNativeQuery;
+        private @Nullable Output<Object> useSystemTrustStore;
+        private @Nullable Output<Object> username;
+        private @Nullable Output<Object> zooKeeperNameSpace;
 
         public Builder() {
     	      // Empty
@@ -406,223 +406,223 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     	      this.zooKeeperNameSpace = defaults.zooKeeperNameSpace;
         }
 
-        public Builder allowHostNameCNMismatch(@Nullable Input<Object> allowHostNameCNMismatch) {
+        public Builder allowHostNameCNMismatch(@Nullable Output<Object> allowHostNameCNMismatch) {
             this.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
 
         public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
-            this.allowHostNameCNMismatch = Input.ofNullable(allowHostNameCNMismatch);
+            this.allowHostNameCNMismatch = Output.ofNullable(allowHostNameCNMismatch);
             return this;
         }
 
-        public Builder allowSelfSignedServerCert(@Nullable Input<Object> allowSelfSignedServerCert) {
+        public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = Input.ofNullable(allowSelfSignedServerCert);
+            this.allowSelfSignedServerCert = Output.ofNullable(allowSelfSignedServerCert);
             return this;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder authenticationType(Input<Either<String,HiveAuthenticationType>> authenticationType) {
+        public Builder authenticationType(Output<Either<String,HiveAuthenticationType>> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(Either<String,HiveAuthenticationType> authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableSsl(@Nullable Input<Object> enableSsl) {
+        public Builder enableSsl(@Nullable Output<Object> enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
         public Builder enableSsl(@Nullable Object enableSsl) {
-            this.enableSsl = Input.ofNullable(enableSsl);
+            this.enableSsl = Output.ofNullable(enableSsl);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder host(Input<Object> host) {
+        public Builder host(Output<Object> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(Object host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder httpPath(@Nullable Input<Object> httpPath) {
+        public Builder httpPath(@Nullable Output<Object> httpPath) {
             this.httpPath = httpPath;
             return this;
         }
 
         public Builder httpPath(@Nullable Object httpPath) {
-            this.httpPath = Input.ofNullable(httpPath);
+            this.httpPath = Output.ofNullable(httpPath);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder port(@Nullable Input<Object> port) {
+        public Builder port(@Nullable Output<Object> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Object port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder serverType(@Nullable Input<Either<String,HiveServerType>> serverType) {
+        public Builder serverType(@Nullable Output<Either<String,HiveServerType>> serverType) {
             this.serverType = serverType;
             return this;
         }
 
         public Builder serverType(@Nullable Either<String,HiveServerType> serverType) {
-            this.serverType = Input.ofNullable(serverType);
+            this.serverType = Output.ofNullable(serverType);
             return this;
         }
 
-        public Builder serviceDiscoveryMode(@Nullable Input<Object> serviceDiscoveryMode) {
+        public Builder serviceDiscoveryMode(@Nullable Output<Object> serviceDiscoveryMode) {
             this.serviceDiscoveryMode = serviceDiscoveryMode;
             return this;
         }
 
         public Builder serviceDiscoveryMode(@Nullable Object serviceDiscoveryMode) {
-            this.serviceDiscoveryMode = Input.ofNullable(serviceDiscoveryMode);
+            this.serviceDiscoveryMode = Output.ofNullable(serviceDiscoveryMode);
             return this;
         }
 
-        public Builder thriftTransportProtocol(@Nullable Input<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol) {
+        public Builder thriftTransportProtocol(@Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol) {
             this.thriftTransportProtocol = thriftTransportProtocol;
             return this;
         }
 
         public Builder thriftTransportProtocol(@Nullable Either<String,HiveThriftTransportProtocol> thriftTransportProtocol) {
-            this.thriftTransportProtocol = Input.ofNullable(thriftTransportProtocol);
+            this.thriftTransportProtocol = Output.ofNullable(thriftTransportProtocol);
             return this;
         }
 
-        public Builder trustedCertPath(@Nullable Input<Object> trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = Input.ofNullable(trustedCertPath);
+            this.trustedCertPath = Output.ofNullable(trustedCertPath);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder useNativeQuery(@Nullable Input<Object> useNativeQuery) {
+        public Builder useNativeQuery(@Nullable Output<Object> useNativeQuery) {
             this.useNativeQuery = useNativeQuery;
             return this;
         }
 
         public Builder useNativeQuery(@Nullable Object useNativeQuery) {
-            this.useNativeQuery = Input.ofNullable(useNativeQuery);
+            this.useNativeQuery = Output.ofNullable(useNativeQuery);
             return this;
         }
 
-        public Builder useSystemTrustStore(@Nullable Input<Object> useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = Input.ofNullable(useSystemTrustStore);
+            this.useSystemTrustStore = Output.ofNullable(useSystemTrustStore);
             return this;
         }
 
-        public Builder username(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable Object username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
 
-        public Builder zooKeeperNameSpace(@Nullable Input<Object> zooKeeperNameSpace) {
+        public Builder zooKeeperNameSpace(@Nullable Output<Object> zooKeeperNameSpace) {
             this.zooKeeperNameSpace = zooKeeperNameSpace;
             return this;
         }
 
         public Builder zooKeeperNameSpace(@Nullable Object zooKeeperNameSpace) {
-            this.zooKeeperNameSpace = Input.ofNullable(zooKeeperNameSpace);
+            this.zooKeeperNameSpace = Output.ofNullable(zooKeeperNameSpace);
             return this;
         }
         public HiveLinkedServiceArgs build() {

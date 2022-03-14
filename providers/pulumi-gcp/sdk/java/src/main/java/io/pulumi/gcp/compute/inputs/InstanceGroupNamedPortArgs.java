@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,22 +30,22 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
     public InstanceGroupNamedPortArgs(
-        Input<String> name,
-        Input<Integer> port) {
+        Output<String> name,
+        Output<Integer> port) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private InstanceGroupNamedPortArgs() {
-        this.name = Input.empty();
-        this.port = Input.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Integer> port;
+        private Output<String> name;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
     	      this.port = defaults.port;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public InstanceGroupNamedPortArgs build() {

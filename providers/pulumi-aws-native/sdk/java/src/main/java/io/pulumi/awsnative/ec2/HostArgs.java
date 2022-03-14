@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoPlacement")
-      private final @Nullable Input<String> autoPlacement;
+      private final @Nullable Output<String> autoPlacement;
 
-    public Input<String> getAutoPlacement() {
-        return this.autoPlacement == null ? Input.empty() : this.autoPlacement;
+    public Output<String> getAutoPlacement() {
+        return this.autoPlacement == null ? Output.empty() : this.autoPlacement;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-      private final Input<String> availabilityZone;
+      private final Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
+    public Output<String> getAvailabilityZone() {
         return this.availabilityZone;
     }
 
@@ -41,10 +41,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostRecovery")
-      private final @Nullable Input<String> hostRecovery;
+      private final @Nullable Output<String> hostRecovery;
 
-    public Input<String> getHostRecovery() {
-        return this.hostRecovery == null ? Input.empty() : this.hostRecovery;
+    public Output<String> getHostRecovery() {
+        return this.hostRecovery == null ? Output.empty() : this.hostRecovery;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
     public HostArgs(
-        @Nullable Input<String> autoPlacement,
-        Input<String> availabilityZone,
-        @Nullable Input<String> hostRecovery,
-        Input<String> instanceType) {
+        @Nullable Output<String> autoPlacement,
+        Output<String> availabilityZone,
+        @Nullable Output<String> hostRecovery,
+        Output<String> instanceType) {
         this.autoPlacement = autoPlacement;
         this.availabilityZone = Objects.requireNonNull(availabilityZone, "expected parameter 'availabilityZone' to be non-null");
         this.hostRecovery = hostRecovery;
@@ -70,10 +70,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostArgs() {
-        this.autoPlacement = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.hostRecovery = Input.empty();
-        this.instanceType = Input.empty();
+        this.autoPlacement = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.hostRecovery = Output.empty();
+        this.instanceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoPlacement;
-        private Input<String> availabilityZone;
-        private @Nullable Input<String> hostRecovery;
-        private Input<String> instanceType;
+        private @Nullable Output<String> autoPlacement;
+        private Output<String> availabilityZone;
+        private @Nullable Output<String> hostRecovery;
+        private Output<String> instanceType;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder autoPlacement(@Nullable Input<String> autoPlacement) {
+        public Builder autoPlacement(@Nullable Output<String> autoPlacement) {
             this.autoPlacement = autoPlacement;
             return this;
         }
 
         public Builder autoPlacement(@Nullable String autoPlacement) {
-            this.autoPlacement = Input.ofNullable(autoPlacement);
+            this.autoPlacement = Output.ofNullable(autoPlacement);
             return this;
         }
 
-        public Builder availabilityZone(Input<String> availabilityZone) {
+        public Builder availabilityZone(Output<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
         public Builder availabilityZone(String availabilityZone) {
-            this.availabilityZone = Input.of(Objects.requireNonNull(availabilityZone));
+            this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
 
-        public Builder hostRecovery(@Nullable Input<String> hostRecovery) {
+        public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }
 
         public Builder hostRecovery(@Nullable String hostRecovery) {
-            this.hostRecovery = Input.ofNullable(hostRecovery);
+            this.hostRecovery = Output.ofNullable(hostRecovery);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
         public HostArgs build() {

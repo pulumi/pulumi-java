@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="idleTimeout")
-      private final @Nullable Input<Integer> idleTimeout;
+      private final @Nullable Output<Integer> idleTimeout;
 
-    public Input<Integer> getIdleTimeout() {
-        return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
+    public Output<Integer> getIdleTimeout() {
+        return this.idleTimeout == null ? Output.empty() : this.idleTimeout;
     }
 
-    public ClusterAutoTerminationPolicyGetArgs(@Nullable Input<Integer> idleTimeout) {
+    public ClusterAutoTerminationPolicyGetArgs(@Nullable Output<Integer> idleTimeout) {
         this.idleTimeout = idleTimeout;
     }
 
     private ClusterAutoTerminationPolicyGetArgs() {
-        this.idleTimeout = Input.empty();
+        this.idleTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> idleTimeout;
+        private @Nullable Output<Integer> idleTimeout;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
     	      this.idleTimeout = defaults.idleTimeout;
         }
 
-        public Builder idleTimeout(@Nullable Input<Integer> idleTimeout) {
+        public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
-            this.idleTimeout = Input.ofNullable(idleTimeout);
+            this.idleTimeout = Output.ofNullable(idleTimeout);
             return this;
         }
         public ClusterAutoTerminationPolicyGetArgs build() {

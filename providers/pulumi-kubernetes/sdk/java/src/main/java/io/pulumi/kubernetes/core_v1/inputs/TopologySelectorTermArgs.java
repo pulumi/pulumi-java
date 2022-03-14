@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TopologySelectorLabelRequirementArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="matchLabelExpressions")
-      private final @Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
+      private final @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
-    public Input<List<TopologySelectorLabelRequirementArgs>> getMatchLabelExpressions() {
-        return this.matchLabelExpressions == null ? Input.empty() : this.matchLabelExpressions;
+    public Output<List<TopologySelectorLabelRequirementArgs>> getMatchLabelExpressions() {
+        return this.matchLabelExpressions == null ? Output.empty() : this.matchLabelExpressions;
     }
 
-    public TopologySelectorTermArgs(@Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
+    public TopologySelectorTermArgs(@Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
         this.matchLabelExpressions = matchLabelExpressions;
     }
 
     private TopologySelectorTermArgs() {
-        this.matchLabelExpressions = Input.empty();
+        this.matchLabelExpressions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
+        private @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
     	      this.matchLabelExpressions = defaults.matchLabelExpressions;
         }
 
-        public Builder matchLabelExpressions(@Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
+        public Builder matchLabelExpressions(@Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
             this.matchLabelExpressions = matchLabelExpressions;
             return this;
         }
 
         public Builder matchLabelExpressions(@Nullable List<TopologySelectorLabelRequirementArgs> matchLabelExpressions) {
-            this.matchLabelExpressions = Input.ofNullable(matchLabelExpressions);
+            this.matchLabelExpressions = Output.ofNullable(matchLabelExpressions);
             return this;
         }
         public TopologySelectorTermArgs build() {

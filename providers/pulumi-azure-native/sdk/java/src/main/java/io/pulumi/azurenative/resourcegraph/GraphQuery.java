@@ -6,7 +6,6 @@ package io.pulumi.azurenative.resourcegraph;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.resourcegraph.GraphQueryArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -197,19 +196,19 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GraphQuery(String name, GraphQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resourcegraph:GraphQuery", name, args == null ? GraphQueryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:resourcegraph:GraphQuery", name, args == null ? GraphQueryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GraphQuery(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GraphQuery(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resourcegraph:GraphQuery", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:resourcegraph/v20180901preview:GraphQuery").build()),
-                Input.of(Alias.builder().setType("azure-native:resourcegraph/v20200401preview:GraphQuery").build())
+                Output.of(Alias.builder().setType("azure-native:resourcegraph/v20180901preview:GraphQuery").build()),
+                Output.of(Alias.builder().setType("azure-native:resourcegraph/v20200401preview:GraphQuery").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -223,7 +222,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GraphQuery get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GraphQuery get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GraphQuery(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class IscsiLunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedDiskAzureResourceId", required=true)
-      private final Input<String> managedDiskAzureResourceId;
+      private final Output<String> managedDiskAzureResourceId;
 
-    public Input<String> getManagedDiskAzureResourceId() {
+    public Output<String> getManagedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
     }
 
@@ -33,22 +33,22 @@ public final class IscsiLunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public IscsiLunArgs(
-        Input<String> managedDiskAzureResourceId,
-        Input<String> name) {
+        Output<String> managedDiskAzureResourceId,
+        Output<String> name) {
         this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId, "expected parameter 'managedDiskAzureResourceId' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private IscsiLunArgs() {
-        this.managedDiskAzureResourceId = Input.empty();
-        this.name = Input.empty();
+        this.managedDiskAzureResourceId = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class IscsiLunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> managedDiskAzureResourceId;
-        private Input<String> name;
+        private Output<String> managedDiskAzureResourceId;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class IscsiLunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder managedDiskAzureResourceId(Input<String> managedDiskAzureResourceId) {
+        public Builder managedDiskAzureResourceId(Output<String> managedDiskAzureResourceId) {
             this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId);
             return this;
         }
 
         public Builder managedDiskAzureResourceId(String managedDiskAzureResourceId) {
-            this.managedDiskAzureResourceId = Input.of(Objects.requireNonNull(managedDiskAzureResourceId));
+            this.managedDiskAzureResourceId = Output.of(Objects.requireNonNull(managedDiskAzureResourceId));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public IscsiLunArgs build() {

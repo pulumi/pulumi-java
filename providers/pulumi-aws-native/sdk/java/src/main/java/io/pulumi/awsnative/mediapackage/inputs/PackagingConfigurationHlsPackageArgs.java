@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     public static final PackagingConfigurationHlsPackageArgs Empty = new PackagingConfigurationHlsPackageArgs();
 
     @InputImport(name="encryption")
-      private final @Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption;
+      private final @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption;
 
-    public Input<PackagingConfigurationHlsEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<PackagingConfigurationHlsEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -34,17 +34,17 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hlsManifests", required=true)
-      private final Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
+      private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
-    public Input<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
+    public Output<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
         return this.hlsManifests;
     }
 
     @InputImport(name="segmentDurationSeconds")
-      private final @Nullable Input<Integer> segmentDurationSeconds;
+      private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Input<Integer> getSegmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
+    public Output<Integer> getSegmentDurationSeconds() {
+        return this.segmentDurationSeconds == null ? Output.empty() : this.segmentDurationSeconds;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="useAudioRenditionGroup")
-      private final @Nullable Input<Boolean> useAudioRenditionGroup;
+      private final @Nullable Output<Boolean> useAudioRenditionGroup;
 
-    public Input<Boolean> getUseAudioRenditionGroup() {
-        return this.useAudioRenditionGroup == null ? Input.empty() : this.useAudioRenditionGroup;
+    public Output<Boolean> getUseAudioRenditionGroup() {
+        return this.useAudioRenditionGroup == null ? Output.empty() : this.useAudioRenditionGroup;
     }
 
     public PackagingConfigurationHlsPackageArgs(
-        @Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption,
-        Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests,
-        @Nullable Input<Integer> segmentDurationSeconds,
-        @Nullable Input<Boolean> useAudioRenditionGroup) {
+        @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption,
+        Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests,
+        @Nullable Output<Integer> segmentDurationSeconds,
+        @Nullable Output<Boolean> useAudioRenditionGroup) {
         this.encryption = encryption;
         this.hlsManifests = Objects.requireNonNull(hlsManifests, "expected parameter 'hlsManifests' to be non-null");
         this.segmentDurationSeconds = segmentDurationSeconds;
@@ -70,10 +70,10 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     }
 
     private PackagingConfigurationHlsPackageArgs() {
-        this.encryption = Input.empty();
-        this.hlsManifests = Input.empty();
-        this.segmentDurationSeconds = Input.empty();
-        this.useAudioRenditionGroup = Input.empty();
+        this.encryption = Output.empty();
+        this.hlsManifests = Output.empty();
+        this.segmentDurationSeconds = Output.empty();
+        this.useAudioRenditionGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption;
-        private Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
-        private @Nullable Input<Integer> segmentDurationSeconds;
-        private @Nullable Input<Boolean> useAudioRenditionGroup;
+        private @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption;
+        private Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
+        private @Nullable Output<Integer> segmentDurationSeconds;
+        private @Nullable Output<Boolean> useAudioRenditionGroup;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
         }
 
-        public Builder encryption(@Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable PackagingConfigurationHlsEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder hlsManifests(Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
+        public Builder hlsManifests(Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
 
         public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
-            this.hlsManifests = Input.of(Objects.requireNonNull(hlsManifests));
+            this.hlsManifests = Output.of(Objects.requireNonNull(hlsManifests));
             return this;
         }
 
-        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
+            this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
 
-        public Builder useAudioRenditionGroup(@Nullable Input<Boolean> useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Output<Boolean> useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
 
         public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
-            this.useAudioRenditionGroup = Input.ofNullable(useAudioRenditionGroup);
+            this.useAudioRenditionGroup = Output.ofNullable(useAudioRenditionGroup);
             return this;
         }
         public PackagingConfigurationHlsPackageArgs build() {

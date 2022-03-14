@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,17 +24,17 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deliveryStreamName", required=true)
-      private final Input<String> deliveryStreamName;
+      private final Output<String> deliveryStreamName;
 
-    public Input<String> getDeliveryStreamName() {
+    public Output<String> getDeliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @InputImport(name="payload")
-      private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Input<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="separator")
-      private final @Nullable Input<String> separator;
+      private final @Nullable Output<String> separator;
 
-    public Input<String> getSeparator() {
-        return this.separator == null ? Input.empty() : this.separator;
+    public Output<String> getSeparator() {
+        return this.separator == null ? Output.empty() : this.separator;
     }
 
     public DetectorModelFirehoseArgs(
-        Input<String> deliveryStreamName,
-        @Nullable Input<DetectorModelPayloadArgs> payload,
-        @Nullable Input<String> separator) {
+        Output<String> deliveryStreamName,
+        @Nullable Output<DetectorModelPayloadArgs> payload,
+        @Nullable Output<String> separator) {
         this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
         this.payload = payload;
         this.separator = separator;
     }
 
     private DetectorModelFirehoseArgs() {
-        this.deliveryStreamName = Input.empty();
-        this.payload = Input.empty();
-        this.separator = Input.empty();
+        this.deliveryStreamName = Output.empty();
+        this.payload = Output.empty();
+        this.separator = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> deliveryStreamName;
-        private @Nullable Input<DetectorModelPayloadArgs> payload;
-        private @Nullable Input<String> separator;
+        private Output<String> deliveryStreamName;
+        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private @Nullable Output<String> separator;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
     	      this.separator = defaults.separator;
         }
 
-        public Builder deliveryStreamName(Input<String> deliveryStreamName) {
+        public Builder deliveryStreamName(Output<String> deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
         public Builder deliveryStreamName(String deliveryStreamName) {
-            this.deliveryStreamName = Input.of(Objects.requireNonNull(deliveryStreamName));
+            this.deliveryStreamName = Output.of(Objects.requireNonNull(deliveryStreamName));
             return this;
         }
 
-        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder separator(@Nullable Input<String> separator) {
+        public Builder separator(@Nullable Output<String> separator) {
             this.separator = separator;
             return this;
         }
 
         public Builder separator(@Nullable String separator) {
-            this.separator = Input.ofNullable(separator);
+            this.separator = Output.ofNullable(separator);
             return this;
         }
         public DetectorModelFirehoseArgs build() {

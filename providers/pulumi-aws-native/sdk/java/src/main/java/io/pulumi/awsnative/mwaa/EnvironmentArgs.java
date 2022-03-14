@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mwaa;
 import io.pulumi.awsnative.mwaa.enums.EnvironmentWebserverAccessMode;
 import io.pulumi.awsnative.mwaa.inputs.EnvironmentLoggingConfigurationArgs;
 import io.pulumi.awsnative.mwaa.inputs.EnvironmentNetworkConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -32,122 +32,122 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="airflowConfigurationOptions")
-      private final @Nullable Input<Object> airflowConfigurationOptions;
+      private final @Nullable Output<Object> airflowConfigurationOptions;
 
-    public Input<Object> getAirflowConfigurationOptions() {
-        return this.airflowConfigurationOptions == null ? Input.empty() : this.airflowConfigurationOptions;
+    public Output<Object> getAirflowConfigurationOptions() {
+        return this.airflowConfigurationOptions == null ? Output.empty() : this.airflowConfigurationOptions;
     }
 
     @InputImport(name="airflowVersion")
-      private final @Nullable Input<String> airflowVersion;
+      private final @Nullable Output<String> airflowVersion;
 
-    public Input<String> getAirflowVersion() {
-        return this.airflowVersion == null ? Input.empty() : this.airflowVersion;
+    public Output<String> getAirflowVersion() {
+        return this.airflowVersion == null ? Output.empty() : this.airflowVersion;
     }
 
     @InputImport(name="dagS3Path")
-      private final @Nullable Input<String> dagS3Path;
+      private final @Nullable Output<String> dagS3Path;
 
-    public Input<String> getDagS3Path() {
-        return this.dagS3Path == null ? Input.empty() : this.dagS3Path;
+    public Output<String> getDagS3Path() {
+        return this.dagS3Path == null ? Output.empty() : this.dagS3Path;
     }
 
     @InputImport(name="environmentClass")
-      private final @Nullable Input<String> environmentClass;
+      private final @Nullable Output<String> environmentClass;
 
-    public Input<String> getEnvironmentClass() {
-        return this.environmentClass == null ? Input.empty() : this.environmentClass;
+    public Output<String> getEnvironmentClass() {
+        return this.environmentClass == null ? Output.empty() : this.environmentClass;
     }
 
     @InputImport(name="executionRoleArn")
-      private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
+    public Output<String> getExecutionRoleArn() {
+        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     @InputImport(name="loggingConfiguration")
-      private final @Nullable Input<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
+      private final @Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
 
-    public Input<EnvironmentLoggingConfigurationArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
+    public Output<EnvironmentLoggingConfigurationArgs> getLoggingConfiguration() {
+        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
     }
 
     @InputImport(name="maxWorkers")
-      private final @Nullable Input<Integer> maxWorkers;
+      private final @Nullable Output<Integer> maxWorkers;
 
-    public Input<Integer> getMaxWorkers() {
-        return this.maxWorkers == null ? Input.empty() : this.maxWorkers;
+    public Output<Integer> getMaxWorkers() {
+        return this.maxWorkers == null ? Output.empty() : this.maxWorkers;
     }
 
     @InputImport(name="minWorkers")
-      private final @Nullable Input<Integer> minWorkers;
+      private final @Nullable Output<Integer> minWorkers;
 
-    public Input<Integer> getMinWorkers() {
-        return this.minWorkers == null ? Input.empty() : this.minWorkers;
+    public Output<Integer> getMinWorkers() {
+        return this.minWorkers == null ? Output.empty() : this.minWorkers;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="networkConfiguration")
-      private final @Nullable Input<EnvironmentNetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Output<EnvironmentNetworkConfigurationArgs> networkConfiguration;
 
-    public Input<EnvironmentNetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
+    public Output<EnvironmentNetworkConfigurationArgs> getNetworkConfiguration() {
+        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
     }
 
     @InputImport(name="pluginsS3ObjectVersion")
-      private final @Nullable Input<String> pluginsS3ObjectVersion;
+      private final @Nullable Output<String> pluginsS3ObjectVersion;
 
-    public Input<String> getPluginsS3ObjectVersion() {
-        return this.pluginsS3ObjectVersion == null ? Input.empty() : this.pluginsS3ObjectVersion;
+    public Output<String> getPluginsS3ObjectVersion() {
+        return this.pluginsS3ObjectVersion == null ? Output.empty() : this.pluginsS3ObjectVersion;
     }
 
     @InputImport(name="pluginsS3Path")
-      private final @Nullable Input<String> pluginsS3Path;
+      private final @Nullable Output<String> pluginsS3Path;
 
-    public Input<String> getPluginsS3Path() {
-        return this.pluginsS3Path == null ? Input.empty() : this.pluginsS3Path;
+    public Output<String> getPluginsS3Path() {
+        return this.pluginsS3Path == null ? Output.empty() : this.pluginsS3Path;
     }
 
     @InputImport(name="requirementsS3ObjectVersion")
-      private final @Nullable Input<String> requirementsS3ObjectVersion;
+      private final @Nullable Output<String> requirementsS3ObjectVersion;
 
-    public Input<String> getRequirementsS3ObjectVersion() {
-        return this.requirementsS3ObjectVersion == null ? Input.empty() : this.requirementsS3ObjectVersion;
+    public Output<String> getRequirementsS3ObjectVersion() {
+        return this.requirementsS3ObjectVersion == null ? Output.empty() : this.requirementsS3ObjectVersion;
     }
 
     @InputImport(name="requirementsS3Path")
-      private final @Nullable Input<String> requirementsS3Path;
+      private final @Nullable Output<String> requirementsS3Path;
 
-    public Input<String> getRequirementsS3Path() {
-        return this.requirementsS3Path == null ? Input.empty() : this.requirementsS3Path;
+    public Output<String> getRequirementsS3Path() {
+        return this.requirementsS3Path == null ? Output.empty() : this.requirementsS3Path;
     }
 
     @InputImport(name="schedulers")
-      private final @Nullable Input<Integer> schedulers;
+      private final @Nullable Output<Integer> schedulers;
 
-    public Input<Integer> getSchedulers() {
-        return this.schedulers == null ? Input.empty() : this.schedulers;
+    public Output<Integer> getSchedulers() {
+        return this.schedulers == null ? Output.empty() : this.schedulers;
     }
 
     @InputImport(name="sourceBucketArn")
-      private final @Nullable Input<String> sourceBucketArn;
+      private final @Nullable Output<String> sourceBucketArn;
 
-    public Input<String> getSourceBucketArn() {
-        return this.sourceBucketArn == null ? Input.empty() : this.sourceBucketArn;
+    public Output<String> getSourceBucketArn() {
+        return this.sourceBucketArn == null ? Output.empty() : this.sourceBucketArn;
     }
 
     /**
@@ -155,47 +155,47 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="webserverAccessMode")
-      private final @Nullable Input<EnvironmentWebserverAccessMode> webserverAccessMode;
+      private final @Nullable Output<EnvironmentWebserverAccessMode> webserverAccessMode;
 
-    public Input<EnvironmentWebserverAccessMode> getWebserverAccessMode() {
-        return this.webserverAccessMode == null ? Input.empty() : this.webserverAccessMode;
+    public Output<EnvironmentWebserverAccessMode> getWebserverAccessMode() {
+        return this.webserverAccessMode == null ? Output.empty() : this.webserverAccessMode;
     }
 
     @InputImport(name="weeklyMaintenanceWindowStart")
-      private final @Nullable Input<String> weeklyMaintenanceWindowStart;
+      private final @Nullable Output<String> weeklyMaintenanceWindowStart;
 
-    public Input<String> getWeeklyMaintenanceWindowStart() {
-        return this.weeklyMaintenanceWindowStart == null ? Input.empty() : this.weeklyMaintenanceWindowStart;
+    public Output<String> getWeeklyMaintenanceWindowStart() {
+        return this.weeklyMaintenanceWindowStart == null ? Output.empty() : this.weeklyMaintenanceWindowStart;
     }
 
     public EnvironmentArgs(
-        @Nullable Input<Object> airflowConfigurationOptions,
-        @Nullable Input<String> airflowVersion,
-        @Nullable Input<String> dagS3Path,
-        @Nullable Input<String> environmentClass,
-        @Nullable Input<String> executionRoleArn,
-        @Nullable Input<String> kmsKey,
-        @Nullable Input<EnvironmentLoggingConfigurationArgs> loggingConfiguration,
-        @Nullable Input<Integer> maxWorkers,
-        @Nullable Input<Integer> minWorkers,
-        @Nullable Input<String> name,
-        @Nullable Input<EnvironmentNetworkConfigurationArgs> networkConfiguration,
-        @Nullable Input<String> pluginsS3ObjectVersion,
-        @Nullable Input<String> pluginsS3Path,
-        @Nullable Input<String> requirementsS3ObjectVersion,
-        @Nullable Input<String> requirementsS3Path,
-        @Nullable Input<Integer> schedulers,
-        @Nullable Input<String> sourceBucketArn,
-        @Nullable Input<Object> tags,
-        @Nullable Input<EnvironmentWebserverAccessMode> webserverAccessMode,
-        @Nullable Input<String> weeklyMaintenanceWindowStart) {
+        @Nullable Output<Object> airflowConfigurationOptions,
+        @Nullable Output<String> airflowVersion,
+        @Nullable Output<String> dagS3Path,
+        @Nullable Output<String> environmentClass,
+        @Nullable Output<String> executionRoleArn,
+        @Nullable Output<String> kmsKey,
+        @Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration,
+        @Nullable Output<Integer> maxWorkers,
+        @Nullable Output<Integer> minWorkers,
+        @Nullable Output<String> name,
+        @Nullable Output<EnvironmentNetworkConfigurationArgs> networkConfiguration,
+        @Nullable Output<String> pluginsS3ObjectVersion,
+        @Nullable Output<String> pluginsS3Path,
+        @Nullable Output<String> requirementsS3ObjectVersion,
+        @Nullable Output<String> requirementsS3Path,
+        @Nullable Output<Integer> schedulers,
+        @Nullable Output<String> sourceBucketArn,
+        @Nullable Output<Object> tags,
+        @Nullable Output<EnvironmentWebserverAccessMode> webserverAccessMode,
+        @Nullable Output<String> weeklyMaintenanceWindowStart) {
         this.airflowConfigurationOptions = airflowConfigurationOptions;
         this.airflowVersion = airflowVersion;
         this.dagS3Path = dagS3Path;
@@ -219,26 +219,26 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.airflowConfigurationOptions = Input.empty();
-        this.airflowVersion = Input.empty();
-        this.dagS3Path = Input.empty();
-        this.environmentClass = Input.empty();
-        this.executionRoleArn = Input.empty();
-        this.kmsKey = Input.empty();
-        this.loggingConfiguration = Input.empty();
-        this.maxWorkers = Input.empty();
-        this.minWorkers = Input.empty();
-        this.name = Input.empty();
-        this.networkConfiguration = Input.empty();
-        this.pluginsS3ObjectVersion = Input.empty();
-        this.pluginsS3Path = Input.empty();
-        this.requirementsS3ObjectVersion = Input.empty();
-        this.requirementsS3Path = Input.empty();
-        this.schedulers = Input.empty();
-        this.sourceBucketArn = Input.empty();
-        this.tags = Input.empty();
-        this.webserverAccessMode = Input.empty();
-        this.weeklyMaintenanceWindowStart = Input.empty();
+        this.airflowConfigurationOptions = Output.empty();
+        this.airflowVersion = Output.empty();
+        this.dagS3Path = Output.empty();
+        this.environmentClass = Output.empty();
+        this.executionRoleArn = Output.empty();
+        this.kmsKey = Output.empty();
+        this.loggingConfiguration = Output.empty();
+        this.maxWorkers = Output.empty();
+        this.minWorkers = Output.empty();
+        this.name = Output.empty();
+        this.networkConfiguration = Output.empty();
+        this.pluginsS3ObjectVersion = Output.empty();
+        this.pluginsS3Path = Output.empty();
+        this.requirementsS3ObjectVersion = Output.empty();
+        this.requirementsS3Path = Output.empty();
+        this.schedulers = Output.empty();
+        this.sourceBucketArn = Output.empty();
+        this.tags = Output.empty();
+        this.webserverAccessMode = Output.empty();
+        this.weeklyMaintenanceWindowStart = Output.empty();
     }
 
     public static Builder builder() {
@@ -250,26 +250,26 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> airflowConfigurationOptions;
-        private @Nullable Input<String> airflowVersion;
-        private @Nullable Input<String> dagS3Path;
-        private @Nullable Input<String> environmentClass;
-        private @Nullable Input<String> executionRoleArn;
-        private @Nullable Input<String> kmsKey;
-        private @Nullable Input<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
-        private @Nullable Input<Integer> maxWorkers;
-        private @Nullable Input<Integer> minWorkers;
-        private @Nullable Input<String> name;
-        private @Nullable Input<EnvironmentNetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Input<String> pluginsS3ObjectVersion;
-        private @Nullable Input<String> pluginsS3Path;
-        private @Nullable Input<String> requirementsS3ObjectVersion;
-        private @Nullable Input<String> requirementsS3Path;
-        private @Nullable Input<Integer> schedulers;
-        private @Nullable Input<String> sourceBucketArn;
-        private @Nullable Input<Object> tags;
-        private @Nullable Input<EnvironmentWebserverAccessMode> webserverAccessMode;
-        private @Nullable Input<String> weeklyMaintenanceWindowStart;
+        private @Nullable Output<Object> airflowConfigurationOptions;
+        private @Nullable Output<String> airflowVersion;
+        private @Nullable Output<String> dagS3Path;
+        private @Nullable Output<String> environmentClass;
+        private @Nullable Output<String> executionRoleArn;
+        private @Nullable Output<String> kmsKey;
+        private @Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
+        private @Nullable Output<Integer> maxWorkers;
+        private @Nullable Output<Integer> minWorkers;
+        private @Nullable Output<String> name;
+        private @Nullable Output<EnvironmentNetworkConfigurationArgs> networkConfiguration;
+        private @Nullable Output<String> pluginsS3ObjectVersion;
+        private @Nullable Output<String> pluginsS3Path;
+        private @Nullable Output<String> requirementsS3ObjectVersion;
+        private @Nullable Output<String> requirementsS3Path;
+        private @Nullable Output<Integer> schedulers;
+        private @Nullable Output<String> sourceBucketArn;
+        private @Nullable Output<Object> tags;
+        private @Nullable Output<EnvironmentWebserverAccessMode> webserverAccessMode;
+        private @Nullable Output<String> weeklyMaintenanceWindowStart;
 
         public Builder() {
     	      // Empty
@@ -299,203 +299,203 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weeklyMaintenanceWindowStart = defaults.weeklyMaintenanceWindowStart;
         }
 
-        public Builder airflowConfigurationOptions(@Nullable Input<Object> airflowConfigurationOptions) {
+        public Builder airflowConfigurationOptions(@Nullable Output<Object> airflowConfigurationOptions) {
             this.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
 
         public Builder airflowConfigurationOptions(@Nullable Object airflowConfigurationOptions) {
-            this.airflowConfigurationOptions = Input.ofNullable(airflowConfigurationOptions);
+            this.airflowConfigurationOptions = Output.ofNullable(airflowConfigurationOptions);
             return this;
         }
 
-        public Builder airflowVersion(@Nullable Input<String> airflowVersion) {
+        public Builder airflowVersion(@Nullable Output<String> airflowVersion) {
             this.airflowVersion = airflowVersion;
             return this;
         }
 
         public Builder airflowVersion(@Nullable String airflowVersion) {
-            this.airflowVersion = Input.ofNullable(airflowVersion);
+            this.airflowVersion = Output.ofNullable(airflowVersion);
             return this;
         }
 
-        public Builder dagS3Path(@Nullable Input<String> dagS3Path) {
+        public Builder dagS3Path(@Nullable Output<String> dagS3Path) {
             this.dagS3Path = dagS3Path;
             return this;
         }
 
         public Builder dagS3Path(@Nullable String dagS3Path) {
-            this.dagS3Path = Input.ofNullable(dagS3Path);
+            this.dagS3Path = Output.ofNullable(dagS3Path);
             return this;
         }
 
-        public Builder environmentClass(@Nullable Input<String> environmentClass) {
+        public Builder environmentClass(@Nullable Output<String> environmentClass) {
             this.environmentClass = environmentClass;
             return this;
         }
 
         public Builder environmentClass(@Nullable String environmentClass) {
-            this.environmentClass = Input.ofNullable(environmentClass);
+            this.environmentClass = Output.ofNullable(environmentClass);
             return this;
         }
 
-        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Input.ofNullable(executionRoleArn);
+            this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder loggingConfiguration(@Nullable Input<EnvironmentLoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
         public Builder loggingConfiguration(@Nullable EnvironmentLoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder maxWorkers(@Nullable Input<Integer> maxWorkers) {
+        public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
 
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
-            this.maxWorkers = Input.ofNullable(maxWorkers);
+            this.maxWorkers = Output.ofNullable(maxWorkers);
             return this;
         }
 
-        public Builder minWorkers(@Nullable Input<Integer> minWorkers) {
+        public Builder minWorkers(@Nullable Output<Integer> minWorkers) {
             this.minWorkers = minWorkers;
             return this;
         }
 
         public Builder minWorkers(@Nullable Integer minWorkers) {
-            this.minWorkers = Input.ofNullable(minWorkers);
+            this.minWorkers = Output.ofNullable(minWorkers);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkConfiguration(@Nullable Input<EnvironmentNetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<EnvironmentNetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
         public Builder networkConfiguration(@Nullable EnvironmentNetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Input.ofNullable(networkConfiguration);
+            this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder pluginsS3ObjectVersion(@Nullable Input<String> pluginsS3ObjectVersion) {
+        public Builder pluginsS3ObjectVersion(@Nullable Output<String> pluginsS3ObjectVersion) {
             this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
             return this;
         }
 
         public Builder pluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
-            this.pluginsS3ObjectVersion = Input.ofNullable(pluginsS3ObjectVersion);
+            this.pluginsS3ObjectVersion = Output.ofNullable(pluginsS3ObjectVersion);
             return this;
         }
 
-        public Builder pluginsS3Path(@Nullable Input<String> pluginsS3Path) {
+        public Builder pluginsS3Path(@Nullable Output<String> pluginsS3Path) {
             this.pluginsS3Path = pluginsS3Path;
             return this;
         }
 
         public Builder pluginsS3Path(@Nullable String pluginsS3Path) {
-            this.pluginsS3Path = Input.ofNullable(pluginsS3Path);
+            this.pluginsS3Path = Output.ofNullable(pluginsS3Path);
             return this;
         }
 
-        public Builder requirementsS3ObjectVersion(@Nullable Input<String> requirementsS3ObjectVersion) {
+        public Builder requirementsS3ObjectVersion(@Nullable Output<String> requirementsS3ObjectVersion) {
             this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
             return this;
         }
 
         public Builder requirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
-            this.requirementsS3ObjectVersion = Input.ofNullable(requirementsS3ObjectVersion);
+            this.requirementsS3ObjectVersion = Output.ofNullable(requirementsS3ObjectVersion);
             return this;
         }
 
-        public Builder requirementsS3Path(@Nullable Input<String> requirementsS3Path) {
+        public Builder requirementsS3Path(@Nullable Output<String> requirementsS3Path) {
             this.requirementsS3Path = requirementsS3Path;
             return this;
         }
 
         public Builder requirementsS3Path(@Nullable String requirementsS3Path) {
-            this.requirementsS3Path = Input.ofNullable(requirementsS3Path);
+            this.requirementsS3Path = Output.ofNullable(requirementsS3Path);
             return this;
         }
 
-        public Builder schedulers(@Nullable Input<Integer> schedulers) {
+        public Builder schedulers(@Nullable Output<Integer> schedulers) {
             this.schedulers = schedulers;
             return this;
         }
 
         public Builder schedulers(@Nullable Integer schedulers) {
-            this.schedulers = Input.ofNullable(schedulers);
+            this.schedulers = Output.ofNullable(schedulers);
             return this;
         }
 
-        public Builder sourceBucketArn(@Nullable Input<String> sourceBucketArn) {
+        public Builder sourceBucketArn(@Nullable Output<String> sourceBucketArn) {
             this.sourceBucketArn = sourceBucketArn;
             return this;
         }
 
         public Builder sourceBucketArn(@Nullable String sourceBucketArn) {
-            this.sourceBucketArn = Input.ofNullable(sourceBucketArn);
+            this.sourceBucketArn = Output.ofNullable(sourceBucketArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder webserverAccessMode(@Nullable Input<EnvironmentWebserverAccessMode> webserverAccessMode) {
+        public Builder webserverAccessMode(@Nullable Output<EnvironmentWebserverAccessMode> webserverAccessMode) {
             this.webserverAccessMode = webserverAccessMode;
             return this;
         }
 
         public Builder webserverAccessMode(@Nullable EnvironmentWebserverAccessMode webserverAccessMode) {
-            this.webserverAccessMode = Input.ofNullable(webserverAccessMode);
+            this.webserverAccessMode = Output.ofNullable(webserverAccessMode);
             return this;
         }
 
-        public Builder weeklyMaintenanceWindowStart(@Nullable Input<String> weeklyMaintenanceWindowStart) {
+        public Builder weeklyMaintenanceWindowStart(@Nullable Output<String> weeklyMaintenanceWindowStart) {
             this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }
 
         public Builder weeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
-            this.weeklyMaintenanceWindowStart = Input.ofNullable(weeklyMaintenanceWindowStart);
+            this.weeklyMaintenanceWindowStart = Output.ofNullable(weeklyMaintenanceWindowStart);
             return this;
         }
         public EnvironmentArgs build() {

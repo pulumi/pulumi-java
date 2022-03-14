@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementArgs e
      * 
      */
     @InputImport(name="statements", required=true)
-      private final Input<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements;
+      private final Output<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements;
 
-    public Input<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> getStatements() {
+    public Output<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> getStatements() {
         return this.statements;
     }
 
-    public RuleGroupRuleStatementAndStatementStatementAndStatementArgs(Input<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements) {
+    public RuleGroupRuleStatementAndStatementStatementAndStatementArgs(Output<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements) {
         this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
     }
 
     private RuleGroupRuleStatementAndStatementStatementAndStatementArgs() {
-        this.statements = Input.empty();
+        this.statements = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementArgs e
     }
 
     public static final class Builder {
-        private Input<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements;
+        private Output<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementArgs e
     	      this.statements = defaults.statements;
         }
 
-        public Builder statements(Input<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements) {
+        public Builder statements(Output<List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
         public Builder statements(List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs> statements) {
-            this.statements = Input.of(Objects.requireNonNull(statements));
+            this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
         public RuleGroupRuleStatementAndStatementStatementAndStatementArgs build() {

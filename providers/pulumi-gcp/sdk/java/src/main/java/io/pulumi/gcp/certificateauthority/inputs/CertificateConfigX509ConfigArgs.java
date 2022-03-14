@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigCaOptionsArgs;
@@ -25,10 +25,10 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="additionalExtensions")
-      private final @Nullable Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
+      private final @Nullable Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
 
-    public Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
+    public Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> getAdditionalExtensions() {
+        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aiaOcspServers")
-      private final @Nullable Input<List<String>> aiaOcspServers;
+      private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Input<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
+    public Output<List<String>> getAiaOcspServers() {
+        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="caOptions")
-      private final @Nullable Input<CertificateConfigX509ConfigCaOptionsArgs> caOptions;
+      private final @Nullable Output<CertificateConfigX509ConfigCaOptionsArgs> caOptions;
 
-    public Input<CertificateConfigX509ConfigCaOptionsArgs> getCaOptions() {
-        return this.caOptions == null ? Input.empty() : this.caOptions;
+    public Output<CertificateConfigX509ConfigCaOptionsArgs> getCaOptions() {
+        return this.caOptions == null ? Output.empty() : this.caOptions;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyUsage", required=true)
-      private final Input<CertificateConfigX509ConfigKeyUsageArgs> keyUsage;
+      private final Output<CertificateConfigX509ConfigKeyUsageArgs> keyUsage;
 
-    public Input<CertificateConfigX509ConfigKeyUsageArgs> getKeyUsage() {
+    public Output<CertificateConfigX509ConfigKeyUsageArgs> getKeyUsage() {
         return this.keyUsage;
     }
 
@@ -73,18 +73,18 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyIds")
-      private final @Nullable Input<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds;
+      private final @Nullable Output<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds;
 
-    public Input<List<CertificateConfigX509ConfigPolicyIdArgs>> getPolicyIds() {
-        return this.policyIds == null ? Input.empty() : this.policyIds;
+    public Output<List<CertificateConfigX509ConfigPolicyIdArgs>> getPolicyIds() {
+        return this.policyIds == null ? Output.empty() : this.policyIds;
     }
 
     public CertificateConfigX509ConfigArgs(
-        @Nullable Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions,
-        @Nullable Input<List<String>> aiaOcspServers,
-        @Nullable Input<CertificateConfigX509ConfigCaOptionsArgs> caOptions,
-        Input<CertificateConfigX509ConfigKeyUsageArgs> keyUsage,
-        @Nullable Input<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds) {
+        @Nullable Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions,
+        @Nullable Output<List<String>> aiaOcspServers,
+        @Nullable Output<CertificateConfigX509ConfigCaOptionsArgs> caOptions,
+        Output<CertificateConfigX509ConfigKeyUsageArgs> keyUsage,
+        @Nullable Output<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;
@@ -93,11 +93,11 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     }
 
     private CertificateConfigX509ConfigArgs() {
-        this.additionalExtensions = Input.empty();
-        this.aiaOcspServers = Input.empty();
-        this.caOptions = Input.empty();
-        this.keyUsage = Input.empty();
-        this.policyIds = Input.empty();
+        this.additionalExtensions = Output.empty();
+        this.aiaOcspServers = Output.empty();
+        this.caOptions = Output.empty();
+        this.keyUsage = Output.empty();
+        this.policyIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
-        private @Nullable Input<List<String>> aiaOcspServers;
-        private @Nullable Input<CertificateConfigX509ConfigCaOptionsArgs> caOptions;
-        private Input<CertificateConfigX509ConfigKeyUsageArgs> keyUsage;
-        private @Nullable Input<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds;
+        private @Nullable Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
+        private @Nullable Output<List<String>> aiaOcspServers;
+        private @Nullable Output<CertificateConfigX509ConfigCaOptionsArgs> caOptions;
+        private Output<CertificateConfigX509ConfigKeyUsageArgs> keyUsage;
+        private @Nullable Output<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder additionalExtensions(@Nullable Input<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
         public Builder additionalExtensions(@Nullable List<CertificateConfigX509ConfigAdditionalExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Input.ofNullable(additionalExtensions);
+            this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder aiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Input.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
             return this;
         }
 
-        public Builder caOptions(@Nullable Input<CertificateConfigX509ConfigCaOptionsArgs> caOptions) {
+        public Builder caOptions(@Nullable Output<CertificateConfigX509ConfigCaOptionsArgs> caOptions) {
             this.caOptions = caOptions;
             return this;
         }
 
         public Builder caOptions(@Nullable CertificateConfigX509ConfigCaOptionsArgs caOptions) {
-            this.caOptions = Input.ofNullable(caOptions);
+            this.caOptions = Output.ofNullable(caOptions);
             return this;
         }
 
-        public Builder keyUsage(Input<CertificateConfigX509ConfigKeyUsageArgs> keyUsage) {
+        public Builder keyUsage(Output<CertificateConfigX509ConfigKeyUsageArgs> keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
         public Builder keyUsage(CertificateConfigX509ConfigKeyUsageArgs keyUsage) {
-            this.keyUsage = Input.of(Objects.requireNonNull(keyUsage));
+            this.keyUsage = Output.of(Objects.requireNonNull(keyUsage));
             return this;
         }
 
-        public Builder policyIds(@Nullable Input<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds) {
+        public Builder policyIds(@Nullable Output<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
 
         public Builder policyIds(@Nullable List<CertificateConfigX509ConfigPolicyIdArgs> policyIds) {
-            this.policyIds = Input.ofNullable(policyIds);
+            this.policyIds = Output.ofNullable(policyIds);
             return this;
         }
         public CertificateConfigX509ConfigArgs build() {

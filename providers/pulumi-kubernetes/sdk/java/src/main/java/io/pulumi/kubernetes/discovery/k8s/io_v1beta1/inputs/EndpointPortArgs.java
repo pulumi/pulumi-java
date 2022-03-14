@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appProtocol")
-      private final @Nullable Input<String> appProtocol;
+      private final @Nullable Output<String> appProtocol;
 
-    public Input<String> getAppProtocol() {
-        return this.appProtocol == null ? Input.empty() : this.appProtocol;
+    public Output<String> getAppProtocol() {
+        return this.appProtocol == null ? Output.empty() : this.appProtocol;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public EndpointPortArgs(
-        @Nullable Input<String> appProtocol,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> protocol) {
+        @Nullable Output<String> appProtocol,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> protocol) {
         this.appProtocol = appProtocol;
         this.name = name;
         this.port = port;
@@ -75,10 +75,10 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointPortArgs() {
-        this.appProtocol = Input.empty();
-        this.name = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
+        this.appProtocol = Output.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appProtocol;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> protocol;
+        private @Nullable Output<String> appProtocol;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder appProtocol(@Nullable Input<String> appProtocol) {
+        public Builder appProtocol(@Nullable Output<String> appProtocol) {
             this.appProtocol = appProtocol;
             return this;
         }
 
         public Builder appProtocol(@Nullable String appProtocol) {
-            this.appProtocol = Input.ofNullable(appProtocol);
+            this.appProtocol = Output.ofNullable(appProtocol);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public EndpointPortArgs build() {

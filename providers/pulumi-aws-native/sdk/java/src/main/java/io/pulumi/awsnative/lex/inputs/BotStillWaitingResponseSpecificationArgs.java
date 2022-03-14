@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,38 +26,38 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowInterrupt")
-      private final @Nullable Input<Boolean> allowInterrupt;
+      private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Input<Boolean> getAllowInterrupt() {
-        return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
+    public Output<Boolean> getAllowInterrupt() {
+        return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
     }
 
     @InputImport(name="frequencyInSeconds", required=true)
-      private final Input<Integer> frequencyInSeconds;
+      private final Output<Integer> frequencyInSeconds;
 
-    public Input<Integer> getFrequencyInSeconds() {
+    public Output<Integer> getFrequencyInSeconds() {
         return this.frequencyInSeconds;
     }
 
     @InputImport(name="messageGroupsList", required=true)
-      private final Input<List<BotMessageGroupArgs>> messageGroupsList;
+      private final Output<List<BotMessageGroupArgs>> messageGroupsList;
 
-    public Input<List<BotMessageGroupArgs>> getMessageGroupsList() {
+    public Output<List<BotMessageGroupArgs>> getMessageGroupsList() {
         return this.messageGroupsList;
     }
 
     @InputImport(name="timeoutInSeconds", required=true)
-      private final Input<Integer> timeoutInSeconds;
+      private final Output<Integer> timeoutInSeconds;
 
-    public Input<Integer> getTimeoutInSeconds() {
+    public Output<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 
     public BotStillWaitingResponseSpecificationArgs(
-        @Nullable Input<Boolean> allowInterrupt,
-        Input<Integer> frequencyInSeconds,
-        Input<List<BotMessageGroupArgs>> messageGroupsList,
-        Input<Integer> timeoutInSeconds) {
+        @Nullable Output<Boolean> allowInterrupt,
+        Output<Integer> frequencyInSeconds,
+        Output<List<BotMessageGroupArgs>> messageGroupsList,
+        Output<Integer> timeoutInSeconds) {
         this.allowInterrupt = allowInterrupt;
         this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds, "expected parameter 'frequencyInSeconds' to be non-null");
         this.messageGroupsList = Objects.requireNonNull(messageGroupsList, "expected parameter 'messageGroupsList' to be non-null");
@@ -65,10 +65,10 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
     }
 
     private BotStillWaitingResponseSpecificationArgs() {
-        this.allowInterrupt = Input.empty();
-        this.frequencyInSeconds = Input.empty();
-        this.messageGroupsList = Input.empty();
-        this.timeoutInSeconds = Input.empty();
+        this.allowInterrupt = Output.empty();
+        this.frequencyInSeconds = Output.empty();
+        this.messageGroupsList = Output.empty();
+        this.timeoutInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowInterrupt;
-        private Input<Integer> frequencyInSeconds;
-        private Input<List<BotMessageGroupArgs>> messageGroupsList;
-        private Input<Integer> timeoutInSeconds;
+        private @Nullable Output<Boolean> allowInterrupt;
+        private Output<Integer> frequencyInSeconds;
+        private Output<List<BotMessageGroupArgs>> messageGroupsList;
+        private Output<Integer> timeoutInSeconds;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder allowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Input.ofNullable(allowInterrupt);
+            this.allowInterrupt = Output.ofNullable(allowInterrupt);
             return this;
         }
 
-        public Builder frequencyInSeconds(Input<Integer> frequencyInSeconds) {
+        public Builder frequencyInSeconds(Output<Integer> frequencyInSeconds) {
             this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
             return this;
         }
 
         public Builder frequencyInSeconds(Integer frequencyInSeconds) {
-            this.frequencyInSeconds = Input.of(Objects.requireNonNull(frequencyInSeconds));
+            this.frequencyInSeconds = Output.of(Objects.requireNonNull(frequencyInSeconds));
             return this;
         }
 
-        public Builder messageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
+        public Builder messageGroupsList(Output<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
 
         public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
-            this.messageGroupsList = Input.of(Objects.requireNonNull(messageGroupsList));
+            this.messageGroupsList = Output.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }
 
-        public Builder timeoutInSeconds(Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
 
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Input.of(Objects.requireNonNull(timeoutInSeconds));
+            this.timeoutInSeconds = Output.of(Objects.requireNonNull(timeoutInSeconds));
             return this;
         }
         public BotStillWaitingResponseSpecificationArgs build() {

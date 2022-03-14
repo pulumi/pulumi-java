@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingEndpointsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<EventSourceMappingEndpointsArgs> endpoints;
+      private final @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
 
-    public Input<EventSourceMappingEndpointsArgs> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<EventSourceMappingEndpointsArgs> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
-    public EventSourceMappingSelfManagedEventSourceArgs(@Nullable Input<EventSourceMappingEndpointsArgs> endpoints) {
+    public EventSourceMappingSelfManagedEventSourceArgs(@Nullable Output<EventSourceMappingEndpointsArgs> endpoints) {
         this.endpoints = endpoints;
     }
 
     private EventSourceMappingSelfManagedEventSourceArgs() {
-        this.endpoints = Input.empty();
+        this.endpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<EventSourceMappingEndpointsArgs> endpoints;
+        private @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder endpoints(@Nullable Input<EventSourceMappingEndpointsArgs> endpoints) {
+        public Builder endpoints(@Nullable Output<EventSourceMappingEndpointsArgs> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable EventSourceMappingEndpointsArgs endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
         public EventSourceMappingSelfManagedEventSourceArgs build() {

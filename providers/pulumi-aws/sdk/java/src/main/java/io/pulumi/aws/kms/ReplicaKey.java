@@ -6,7 +6,6 @@ package io.pulumi.aws.kms;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kms.ReplicaKeyArgs;
 import io.pulumi.aws.kms.inputs.ReplicaKeyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -253,14 +252,14 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicaKey(String name, ReplicaKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kms/replicaKey:ReplicaKey", name, args == null ? ReplicaKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:kms/replicaKey:ReplicaKey", name, args == null ? ReplicaKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReplicaKey(String name, Input<String> id, @Nullable ReplicaKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReplicaKey(String name, Output<String> id, @Nullable ReplicaKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:kms/replicaKey:ReplicaKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -276,7 +275,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReplicaKey get(String name, Input<String> id, @Nullable ReplicaKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReplicaKey get(String name, Output<String> id, @Nullable ReplicaKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicaKey(name, id, state, options);
     }
 }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowProfileCreation")
-      private final @Nullable Input<Boolean> allowProfileCreation;
+      private final @Nullable Output<Boolean> allowProfileCreation;
 
-    public Input<Boolean> getAllowProfileCreation() {
-        return this.allowProfileCreation == null ? Input.empty() : this.allowProfileCreation;
+    public Output<Boolean> getAllowProfileCreation() {
+        return this.allowProfileCreation == null ? Output.empty() : this.allowProfileCreation;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -58,10 +58,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-      private final @Nullable Input<String> encryptionKey;
+      private final @Nullable Output<String> encryptionKey;
 
-    public Input<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
+    public Output<String> getEncryptionKey() {
+        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationDays")
-      private final @Nullable Input<Integer> expirationDays;
+      private final @Nullable Output<Integer> expirationDays;
 
-    public Input<Integer> getExpirationDays() {
-        return this.expirationDays == null ? Input.empty() : this.expirationDays;
+    public Output<Integer> getExpirationDays() {
+        return this.expirationDays == null ? Output.empty() : this.expirationDays;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<ObjectTypeFieldMapArgs>> fields;
+      private final @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
 
-    public Input<List<ObjectTypeFieldMapArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<ObjectTypeFieldMapArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<List<ObjectTypeKeyMapArgs>> keys;
+      private final @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
 
-    public Input<List<ObjectTypeKeyMapArgs>> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<List<ObjectTypeKeyMapArgs>> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectTypeName")
-      private final @Nullable Input<String> objectTypeName;
+      private final @Nullable Output<String> objectTypeName;
 
-    public Input<String> getObjectTypeName() {
-        return this.objectTypeName == null ? Input.empty() : this.objectTypeName;
+    public Output<String> getObjectTypeName() {
+        return this.objectTypeName == null ? Output.empty() : this.objectTypeName;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ObjectTypeTagArgs>> tags;
+      private final @Nullable Output<List<ObjectTypeTagArgs>> tags;
 
-    public Input<List<ObjectTypeTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ObjectTypeTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateId")
-      private final @Nullable Input<String> templateId;
+      private final @Nullable Output<String> templateId;
 
-    public Input<String> getTemplateId() {
-        return this.templateId == null ? Input.empty() : this.templateId;
+    public Output<String> getTemplateId() {
+        return this.templateId == null ? Output.empty() : this.templateId;
     }
 
     public ObjectTypeArgs(
-        @Nullable Input<Boolean> allowProfileCreation,
-        @Nullable Input<String> description,
-        Input<String> domainName,
-        @Nullable Input<String> encryptionKey,
-        @Nullable Input<Integer> expirationDays,
-        @Nullable Input<List<ObjectTypeFieldMapArgs>> fields,
-        @Nullable Input<List<ObjectTypeKeyMapArgs>> keys,
-        @Nullable Input<String> objectTypeName,
-        @Nullable Input<List<ObjectTypeTagArgs>> tags,
-        @Nullable Input<String> templateId) {
+        @Nullable Output<Boolean> allowProfileCreation,
+        @Nullable Output<String> description,
+        Output<String> domainName,
+        @Nullable Output<String> encryptionKey,
+        @Nullable Output<Integer> expirationDays,
+        @Nullable Output<List<ObjectTypeFieldMapArgs>> fields,
+        @Nullable Output<List<ObjectTypeKeyMapArgs>> keys,
+        @Nullable Output<String> objectTypeName,
+        @Nullable Output<List<ObjectTypeTagArgs>> tags,
+        @Nullable Output<String> templateId) {
         this.allowProfileCreation = allowProfileCreation;
         this.description = description;
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
@@ -154,16 +154,16 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectTypeArgs() {
-        this.allowProfileCreation = Input.empty();
-        this.description = Input.empty();
-        this.domainName = Input.empty();
-        this.encryptionKey = Input.empty();
-        this.expirationDays = Input.empty();
-        this.fields = Input.empty();
-        this.keys = Input.empty();
-        this.objectTypeName = Input.empty();
-        this.tags = Input.empty();
-        this.templateId = Input.empty();
+        this.allowProfileCreation = Output.empty();
+        this.description = Output.empty();
+        this.domainName = Output.empty();
+        this.encryptionKey = Output.empty();
+        this.expirationDays = Output.empty();
+        this.fields = Output.empty();
+        this.keys = Output.empty();
+        this.objectTypeName = Output.empty();
+        this.tags = Output.empty();
+        this.templateId = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowProfileCreation;
-        private @Nullable Input<String> description;
-        private Input<String> domainName;
-        private @Nullable Input<String> encryptionKey;
-        private @Nullable Input<Integer> expirationDays;
-        private @Nullable Input<List<ObjectTypeFieldMapArgs>> fields;
-        private @Nullable Input<List<ObjectTypeKeyMapArgs>> keys;
-        private @Nullable Input<String> objectTypeName;
-        private @Nullable Input<List<ObjectTypeTagArgs>> tags;
-        private @Nullable Input<String> templateId;
+        private @Nullable Output<Boolean> allowProfileCreation;
+        private @Nullable Output<String> description;
+        private Output<String> domainName;
+        private @Nullable Output<String> encryptionKey;
+        private @Nullable Output<Integer> expirationDays;
+        private @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
+        private @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
+        private @Nullable Output<String> objectTypeName;
+        private @Nullable Output<List<ObjectTypeTagArgs>> tags;
+        private @Nullable Output<String> templateId;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateId = defaults.templateId;
         }
 
-        public Builder allowProfileCreation(@Nullable Input<Boolean> allowProfileCreation) {
+        public Builder allowProfileCreation(@Nullable Output<Boolean> allowProfileCreation) {
             this.allowProfileCreation = allowProfileCreation;
             return this;
         }
 
         public Builder allowProfileCreation(@Nullable Boolean allowProfileCreation) {
-            this.allowProfileCreation = Input.ofNullable(allowProfileCreation);
+            this.allowProfileCreation = Output.ofNullable(allowProfileCreation);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Input.ofNullable(encryptionKey);
+            this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder expirationDays(@Nullable Input<Integer> expirationDays) {
+        public Builder expirationDays(@Nullable Output<Integer> expirationDays) {
             this.expirationDays = expirationDays;
             return this;
         }
 
         public Builder expirationDays(@Nullable Integer expirationDays) {
-            this.expirationDays = Input.ofNullable(expirationDays);
+            this.expirationDays = Output.ofNullable(expirationDays);
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<ObjectTypeFieldMapArgs>> fields) {
+        public Builder fields(@Nullable Output<List<ObjectTypeFieldMapArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<ObjectTypeFieldMapArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder keys(@Nullable Input<List<ObjectTypeKeyMapArgs>> keys) {
+        public Builder keys(@Nullable Output<List<ObjectTypeKeyMapArgs>> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable List<ObjectTypeKeyMapArgs> keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder objectTypeName(@Nullable Input<String> objectTypeName) {
+        public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
 
         public Builder objectTypeName(@Nullable String objectTypeName) {
-            this.objectTypeName = Input.ofNullable(objectTypeName);
+            this.objectTypeName = Output.ofNullable(objectTypeName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ObjectTypeTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ObjectTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ObjectTypeTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = Input.ofNullable(templateId);
+            this.templateId = Output.ofNullable(templateId);
             return this;
         }
         public ObjectTypeArgs build() {

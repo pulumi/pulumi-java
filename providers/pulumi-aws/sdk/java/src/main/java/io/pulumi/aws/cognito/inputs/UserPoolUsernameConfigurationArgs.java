@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class UserPoolUsernameConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="caseSensitive", required=true)
-      private final Input<Boolean> caseSensitive;
+      private final Output<Boolean> caseSensitive;
 
-    public Input<Boolean> getCaseSensitive() {
+    public Output<Boolean> getCaseSensitive() {
         return this.caseSensitive;
     }
 
-    public UserPoolUsernameConfigurationArgs(Input<Boolean> caseSensitive) {
+    public UserPoolUsernameConfigurationArgs(Output<Boolean> caseSensitive) {
         this.caseSensitive = Objects.requireNonNull(caseSensitive, "expected parameter 'caseSensitive' to be non-null");
     }
 
     private UserPoolUsernameConfigurationArgs() {
-        this.caseSensitive = Input.empty();
+        this.caseSensitive = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class UserPoolUsernameConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Boolean> caseSensitive;
+        private Output<Boolean> caseSensitive;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class UserPoolUsernameConfigurationArgs extends io.pulumi.resources
     	      this.caseSensitive = defaults.caseSensitive;
         }
 
-        public Builder caseSensitive(Input<Boolean> caseSensitive) {
+        public Builder caseSensitive(Output<Boolean> caseSensitive) {
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
         }
 
         public Builder caseSensitive(Boolean caseSensitive) {
-            this.caseSensitive = Input.of(Objects.requireNonNull(caseSensitive));
+            this.caseSensitive = Output.of(Objects.requireNonNull(caseSensitive));
             return this;
         }
         public UserPoolUsernameConfigurationArgs build() {

@@ -4,7 +4,6 @@
 package io.pulumi.kubernetes.authentication.k8s.io_v1beta1;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,10 +123,10 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TokenReview(String name, TokenReviewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:authentication.k8s.io/v1beta1:TokenReview", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("kubernetes:authentication.k8s.io/v1beta1:TokenReview", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private TokenReview(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TokenReview(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:authentication.k8s.io/v1beta1:TokenReview", name, null, makeResourceOptions(options, id));
     }
 
@@ -139,11 +138,11 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("kubernetes:authentication.k8s.io/v1:TokenReview").build())
+                Output.of(Alias.builder().setType("kubernetes:authentication.k8s.io/v1:TokenReview").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -157,7 +156,7 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TokenReview get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TokenReview get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TokenReview(name, id, options);
     }
 }

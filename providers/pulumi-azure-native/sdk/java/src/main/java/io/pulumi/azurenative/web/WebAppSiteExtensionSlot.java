@@ -6,7 +6,6 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppSiteExtensionSlotArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -383,29 +382,29 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppSiteExtensionSlot(String name, WebAppSiteExtensionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppSiteExtensionSlot", name, args == null ? WebAppSiteExtensionSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppSiteExtensionSlot", name, args == null ? WebAppSiteExtensionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppSiteExtensionSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppSiteExtensionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppSiteExtensionSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSiteExtensionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSiteExtensionSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSiteExtensionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSiteExtensionSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -419,7 +418,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppSiteExtensionSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppSiteExtensionSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppSiteExtensionSlot(name, id, options);
     }
 }

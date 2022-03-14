@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="publishCaCert", required=true)
-      private final Input<Boolean> publishCaCert;
+      private final Output<Boolean> publishCaCert;
 
-    public Input<Boolean> getPublishCaCert() {
+    public Output<Boolean> getPublishCaCert() {
         return this.publishCaCert;
     }
 
@@ -34,22 +34,22 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="publishCrl", required=true)
-      private final Input<Boolean> publishCrl;
+      private final Output<Boolean> publishCrl;
 
-    public Input<Boolean> getPublishCrl() {
+    public Output<Boolean> getPublishCrl() {
         return this.publishCrl;
     }
 
     public CaPoolPublishingOptionsGetArgs(
-        Input<Boolean> publishCaCert,
-        Input<Boolean> publishCrl) {
+        Output<Boolean> publishCaCert,
+        Output<Boolean> publishCrl) {
         this.publishCaCert = Objects.requireNonNull(publishCaCert, "expected parameter 'publishCaCert' to be non-null");
         this.publishCrl = Objects.requireNonNull(publishCrl, "expected parameter 'publishCrl' to be non-null");
     }
 
     private CaPoolPublishingOptionsGetArgs() {
-        this.publishCaCert = Input.empty();
-        this.publishCrl = Input.empty();
+        this.publishCaCert = Output.empty();
+        this.publishCrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Boolean> publishCaCert;
-        private Input<Boolean> publishCrl;
+        private Output<Boolean> publishCaCert;
+        private Output<Boolean> publishCrl;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
     	      this.publishCrl = defaults.publishCrl;
         }
 
-        public Builder publishCaCert(Input<Boolean> publishCaCert) {
+        public Builder publishCaCert(Output<Boolean> publishCaCert) {
             this.publishCaCert = Objects.requireNonNull(publishCaCert);
             return this;
         }
 
         public Builder publishCaCert(Boolean publishCaCert) {
-            this.publishCaCert = Input.of(Objects.requireNonNull(publishCaCert));
+            this.publishCaCert = Output.of(Objects.requireNonNull(publishCaCert));
             return this;
         }
 
-        public Builder publishCrl(Input<Boolean> publishCrl) {
+        public Builder publishCrl(Output<Boolean> publishCrl) {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }
 
         public Builder publishCrl(Boolean publishCrl) {
-            this.publishCrl = Input.of(Objects.requireNonNull(publishCrl));
+            this.publishCrl = Output.of(Objects.requireNonNull(publishCrl));
             return this;
         }
         public CaPoolPublishingOptionsGetArgs build() {

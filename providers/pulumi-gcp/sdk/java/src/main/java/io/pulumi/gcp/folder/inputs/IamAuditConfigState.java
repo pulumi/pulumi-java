@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auditLogConfigs")
-      private final @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+      private final @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
-    public Input<List<IamAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
+    public Output<List<IamAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
+        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="folder")
-      private final @Nullable Input<String> folder;
+      private final @Nullable Output<String> folder;
 
-    public Input<String> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<String> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public IamAuditConfigState(
-        @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> folder,
-        @Nullable Input<String> service) {
+        @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> folder,
+        @Nullable Output<String> service) {
         this.auditLogConfigs = auditLogConfigs;
         this.etag = etag;
         this.folder = folder;
@@ -68,10 +68,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     private IamAuditConfigState() {
-        this.auditLogConfigs = Input.empty();
-        this.etag = Input.empty();
-        this.folder = Input.empty();
-        this.service = Input.empty();
+        this.auditLogConfigs = Output.empty();
+        this.etag = Output.empty();
+        this.folder = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> folder;
-        private @Nullable Input<String> service;
+        private @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> folder;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder auditLogConfigs(@Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
         public Builder auditLogConfigs(@Nullable List<IamAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
-            this.auditLogConfigs = Input.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder folder(@Nullable Input<String> folder) {
+        public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable String folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public IamAuditConfigState build() {

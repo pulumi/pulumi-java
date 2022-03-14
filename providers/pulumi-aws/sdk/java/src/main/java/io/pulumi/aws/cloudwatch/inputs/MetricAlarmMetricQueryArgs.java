@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryMetricArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expression")
-      private final @Nullable Input<String> expression;
+      private final @Nullable Output<String> expression;
 
-    public Input<String> getExpression() {
-        return this.expression == null ? Input.empty() : this.expression;
+    public Output<String> getExpression() {
+        return this.expression == null ? Output.empty() : this.expression;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -54,10 +54,10 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metric")
-      private final @Nullable Input<MetricAlarmMetricQueryMetricArgs> metric;
+      private final @Nullable Output<MetricAlarmMetricQueryMetricArgs> metric;
 
-    public Input<MetricAlarmMetricQueryMetricArgs> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<MetricAlarmMetricQueryMetricArgs> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="returnData")
-      private final @Nullable Input<Boolean> returnData;
+      private final @Nullable Output<Boolean> returnData;
 
-    public Input<Boolean> getReturnData() {
-        return this.returnData == null ? Input.empty() : this.returnData;
+    public Output<Boolean> getReturnData() {
+        return this.returnData == null ? Output.empty() : this.returnData;
     }
 
     public MetricAlarmMetricQueryArgs(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> expression,
-        Input<String> id,
-        @Nullable Input<String> label,
-        @Nullable Input<MetricAlarmMetricQueryMetricArgs> metric,
-        @Nullable Input<Boolean> returnData) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> expression,
+        Output<String> id,
+        @Nullable Output<String> label,
+        @Nullable Output<MetricAlarmMetricQueryMetricArgs> metric,
+        @Nullable Output<Boolean> returnData) {
         this.accountId = accountId;
         this.expression = expression;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
@@ -98,12 +98,12 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
     }
 
     private MetricAlarmMetricQueryArgs() {
-        this.accountId = Input.empty();
-        this.expression = Input.empty();
-        this.id = Input.empty();
-        this.label = Input.empty();
-        this.metric = Input.empty();
-        this.returnData = Input.empty();
+        this.accountId = Output.empty();
+        this.expression = Output.empty();
+        this.id = Output.empty();
+        this.label = Output.empty();
+        this.metric = Output.empty();
+        this.returnData = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> expression;
-        private Input<String> id;
-        private @Nullable Input<String> label;
-        private @Nullable Input<MetricAlarmMetricQueryMetricArgs> metric;
-        private @Nullable Input<Boolean> returnData;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> expression;
+        private Output<String> id;
+        private @Nullable Output<String> label;
+        private @Nullable Output<MetricAlarmMetricQueryMetricArgs> metric;
+        private @Nullable Output<Boolean> returnData;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
     	      this.returnData = defaults.returnData;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder expression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
 
         public Builder expression(@Nullable String expression) {
-            this.expression = Input.ofNullable(expression);
+            this.expression = Output.ofNullable(expression);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder metric(@Nullable Input<MetricAlarmMetricQueryMetricArgs> metric) {
+        public Builder metric(@Nullable Output<MetricAlarmMetricQueryMetricArgs> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable MetricAlarmMetricQueryMetricArgs metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
 
-        public Builder returnData(@Nullable Input<Boolean> returnData) {
+        public Builder returnData(@Nullable Output<Boolean> returnData) {
             this.returnData = returnData;
             return this;
         }
 
         public Builder returnData(@Nullable Boolean returnData) {
-            this.returnData = Input.ofNullable(returnData);
+            this.returnData = Output.ofNullable(returnData);
             return this;
         }
         public MetricAlarmMetricQueryArgs build() {

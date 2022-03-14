@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -29,22 +29,22 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public RuleGroupRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatementArgs(
-        Input<String> key,
-        Input<String> scope) {
+        Output<String> key,
+        Output<String> scope) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
     }
 
     private RuleGroupRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatementArgs() {
-        this.key = Input.empty();
-        this.scope = Input.empty();
+        this.key = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private Input<String> scope;
+        private Output<String> key;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     	      this.scope = defaults.scope;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public RuleGroupRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatementArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationArgs exte
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<String> status;
+      private final Output<String> status;
 
-    public Input<String> getStatus() {
+    public Output<String> getStatus() {
         return this.status;
     }
 
-    public BucketReplicationConfigRuleExistingObjectReplicationArgs(Input<String> status) {
+    public BucketReplicationConfigRuleExistingObjectReplicationArgs(Output<String> status) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private BucketReplicationConfigRuleExistingObjectReplicationArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationArgs exte
     }
 
     public static final class Builder {
-        private Input<String> status;
+        private Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationArgs exte
     	      this.status = defaults.status;
         }
 
-        public Builder status(Input<String> status) {
+        public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(String status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public BucketReplicationConfigRuleExistingObjectReplicationArgs build() {
